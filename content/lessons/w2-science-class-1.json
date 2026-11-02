@@ -1,0 +1,926 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-science-class-1",
+  "subject": "science",
+  "title": "Animals and Their Homes",
+  "summary": "Discover habitats, what animals need from their homes, and how animals are made to fit where they live.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Habitats",
+  "learning_objectives": [
+   "Say what a habitat is",
+   "Name land, water and sky habitats",
+   "Say what animals need from their home",
+   "Match an animal to the habitat it suits"
+  ],
+  "tags": [
+   "week-2",
+   "habitats",
+   "animals"
+  ],
+  "curriculum": {
+   "course": "science-class-1",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, Young Scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you sorted animals into groups.\n\nThis week we ask: where do animals live?\n\nLet's visit some animal homes!"
+  },
+  {
+   "type": "image",
+   "emoji": "🏞️",
+   "alt": "Animals live all over the world, in forests, deserts, oceans and mountains.",
+   "caption": "Animals live all over the world, in forests, deserts, oceans and mountains."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: What is a habitat?"
+  },
+  {
+   "type": "text",
+   "markdown": "A **habitat** is the place where an animal lives.\n\nIt is the animal's home. It has food, water and a safe place to hide."
+  },
+  {
+   "type": "image",
+   "emoji": "🐻🌲",
+   "alt": "A bear lives in a forest. The forest is its habitat.",
+   "caption": "A bear lives in a forest. The forest is its habitat."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "A fish lives in a pond. What is the pond?",
+    "hint": "It is the fish's home.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Its baby"
+     },
+     {
+      "id": "b",
+      "text": "Its habitat"
+     },
+     {
+      "id": "c",
+      "text": "Its food"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Land, water and sky"
+  },
+  {
+   "type": "text",
+   "markdown": "Some animals live on **land**, like goats and camels. Some live in **water**, like fish and whales.\n\nBirds spend a lot of time in the **sky**, and they nest in trees or on cliffs."
+  },
+  {
+   "type": "image",
+   "emoji": "🐪🐟🦅",
+   "alt": "A camel on land, a fish in water and an eagle in the sky.",
+   "caption": "A camel on land, a fish in water and an eagle in the sky."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which animal lives in water?",
+    "hint": "It swims all day.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A camel"
+     },
+     {
+      "id": "b",
+      "text": "A whale"
+     },
+     {
+      "id": "c",
+      "text": "An eagle"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "explainer",
+   "title": "Three habitats",
+   "scenes": [
+    {
+     "caption": "Some animals live on land.",
+     "items": [
+      {
+       "id": "g",
+       "emoji": "🐐",
+       "x": 20,
+       "y": 70,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "t",
+       "emoji": "🌳",
+       "x": 45,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "🐪",
+       "x": 75,
+       "y": 70,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Some animals live in the water.",
+     "items": [
+      {
+       "id": "f",
+       "emoji": "🐟",
+       "x": 25,
+       "y": 60,
+       "size": 3,
+       "anim": "float"
+      },
+      {
+       "id": "w",
+       "emoji": "🌊",
+       "x": 50,
+       "y": 80,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "wh",
+       "emoji": "🐋",
+       "x": 70,
+       "y": 55,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "Some animals spend time in the sky.",
+     "items": [
+      {
+       "id": "e",
+       "emoji": "🦅",
+       "x": 30,
+       "y": 25,
+       "size": 3,
+       "anim": "float"
+      },
+      {
+       "id": "c2",
+       "emoji": "☁️",
+       "x": 70,
+       "y": 20,
+       "size": 3,
+       "anim": "float"
+      },
+      {
+       "id": "b",
+       "emoji": "🪹",
+       "x": 50,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Match the animal to its home",
+   "goal": "Find the pairs. Which animal goes with which home?",
+   "emojis": [
+    "🐟",
+    "🌊",
+    "🐻",
+    "🌲",
+    "🐪",
+    "🏜️"
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: What animals need"
+  },
+  {
+   "type": "text",
+   "markdown": "Every animal needs **food**, **water** and **shelter** from its habitat.\n\nShelter is a safe place to sleep and hide from danger."
+  },
+  {
+   "type": "image",
+   "emoji": "🍃💧🏠",
+   "alt": "Food, water and a safe home: three things animals need.",
+   "caption": "Food, water and a safe home: three things animals need."
+  },
+  {
+   "type": "manipulative",
+   "title": "Fill the home",
+   "goal": "Help the squirrel. Put 5 acorns in the nest and 5 in the pile of food. Can you share them a different way?",
+   "emoji": "🌰",
+   "count": 10,
+   "zones": [
+    "Nest",
+    "Food pile"
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multi_select",
+    "prompt": "What does an animal need from its habitat? Pick all that apply.",
+    "hint": "Think about staying alive and safe.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shelter"
+     },
+     {
+      "id": "b",
+      "text": "A bicycle"
+     },
+     {
+      "id": "c",
+      "text": "A phone"
+     },
+     {
+      "id": "d",
+      "text": "Food"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Made to fit"
+  },
+  {
+   "type": "text",
+   "markdown": "Animals have body parts that help them live in their habitat. This is **adapting**.\n\nA polar bear has thick fur to stay warm in the snow. A camel has wide feet that do not sink in sand.\n\nSome animals use **camouflage**. Their colours match their habitat, so enemies cannot see them."
+  },
+  {
+   "type": "image",
+   "emoji": "🐻‍❄️🐪🦎",
+   "alt": "A polar bear in the snow, a camel in the desert and a lizard that matches the leaves.",
+   "caption": "A polar bear in the snow, a camel in the desert and a lizard that matches the leaves."
+  },
+  {
+   "type": "explainer",
+   "title": "Camouflage",
+   "scenes": [
+    {
+     "caption": "A green caterpillar sits on a leaf.",
+     "items": [
+      {
+       "id": "leaf",
+       "emoji": "🍃",
+       "x": 50,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "cat",
+       "emoji": "🐛",
+       "x": 50,
+       "y": 55,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "A hungry bird flies by.",
+     "items": [
+      {
+       "id": "leaf",
+       "emoji": "🍃",
+       "x": 50,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "cat",
+       "emoji": "🐛",
+       "x": 50,
+       "y": 55,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "bird",
+       "emoji": "🐦",
+       "x": 20,
+       "y": 20,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "The caterpillar's colour matches the leaf. The bird cannot see it!",
+     "items": [
+      {
+       "id": "leaf",
+       "emoji": "🍃",
+       "x": 50,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "cat",
+       "emoji": "🐛",
+       "x": 50,
+       "y": 55,
+       "size": 2,
+       "anim": "pulse"
+      },
+      {
+       "id": "bird",
+       "emoji": "🐦",
+       "x": 85,
+       "y": 20,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "fun_fact",
+   "markdown": "The markhor is a wild goat with long twisty horns. It lives high up in the mountains of Pakistan. It is Pakistan's national animal."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Why is a polar bear's fur thick?",
+    "hint": "Think about the cold.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make it fast"
+     },
+     {
+      "id": "b",
+      "text": "To help it fly"
+     },
+     {
+      "id": "c",
+      "text": "To keep it warm in the snow"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "Why do you think a frog lives near water?",
+   "answer_markdown": "Frogs need water to lay their eggs and to keep their skin damp."
+  },
+  {
+   "type": "summary",
+   "points": [
+    "A habitat is the place where an animal lives.",
+    "Animals live on land, in water and in the sky.",
+    "Animals need food, water and shelter.",
+    "Animals are made to fit their habitat, and camouflage helps them hide."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "Ready for the quiz? It has 15 questions and takes about 15 minutes. Think about what each animal needs!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "habitat",
+     "meaning": "The place where an animal lives. It has what the animal needs."
+    },
+    {
+     "term": "land",
+     "meaning": "The dry ground where many animals walk and run."
+    },
+    {
+     "term": "water",
+     "meaning": "Ponds, rivers, lakes and seas where fish, frogs and whales live."
+    },
+    {
+     "term": "sky",
+     "meaning": "The air above us where birds and insects fly."
+    },
+    {
+     "term": "food",
+     "meaning": "What animals eat to get energy and grow."
+    },
+    {
+     "term": "shelter",
+     "meaning": "A safe place to sleep and hide from danger."
+    },
+    {
+     "term": "adapting",
+     "meaning": "When an animal's body is made to suit the place where it lives."
+    },
+    {
+     "term": "camouflage",
+     "meaning": "Colours or patterns that help an animal blend in so it is hard to see."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a habitat?",
+    "hint": "It is an animal's home.",
+    "explanation": "A habitat is the place where an animal lives.",
+    "skill_tag": "habitats.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "What an animal eats"
+     },
+     {
+      "id": "b",
+      "text": "A farmer's tool"
+     },
+     {
+      "id": "c",
+      "text": "An animal's baby"
+     },
+     {
+      "id": "d",
+      "text": "The place where an animal lives"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Where does a goldfish live?",
+    "hint": "Fish need to breathe with gills.",
+    "explanation": "A goldfish lives in water.",
+    "skill_tag": "habitats.match",
+    "options": [
+     {
+      "id": "a",
+      "text": "In the sky"
+     },
+     {
+      "id": "b",
+      "text": "In the desert"
+     },
+     {
+      "id": "c",
+      "text": "In a tree"
+     },
+     {
+      "id": "d",
+      "text": "In water"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "hotspot",
+    "prompt": "Tap the animal that lives in the sky.",
+    "hint": "Look for the one with wings.",
+    "explanation": "An eagle has wings and flies in the sky.",
+    "skill_tag": "habitats.match",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐪",
+       "label": "camel",
+       "x": 20,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦅",
+       "label": "eagle",
+       "x": 50,
+       "y": 30,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐟",
+       "label": "fish",
+       "x": 80,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🐻",
+       "label": "bear",
+       "x": 50,
+       "y": 80,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h2"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which of these are things an animal needs from its habitat? Pick all that apply.",
+    "hint": "Think about staying alive.",
+    "explanation": "Animals need food, water and shelter.",
+    "skill_tag": "habitats.needs",
+    "options": [
+     {
+      "id": "a",
+      "text": "A television"
+     },
+     {
+      "id": "b",
+      "text": "A toy"
+     },
+     {
+      "id": "c",
+      "text": "Water"
+     },
+     {
+      "id": "d",
+      "text": "Food"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "true_false",
+    "prompt": "A camel lives in the Arctic snow.",
+    "hint": "Camels have wide feet for sand.",
+    "explanation": "Camels live in hot deserts. Polar bears live in the Arctic.",
+    "skill_tag": "habitats.match",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think of a cold place.",
+    "explanation": "Polar bears live in the snow and have thick fur.",
+    "skill_tag": "adapting.body",
+    "points": 2,
+    "text": "A polar bear lives in the {b1} and has thick {b2} to stay warm.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sea"
+       },
+       {
+        "id": "b",
+        "text": "snow"
+       },
+       {
+        "id": "c",
+        "text": "desert"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "scales"
+       },
+       {
+        "id": "b",
+        "text": "fur"
+       },
+       {
+        "id": "c",
+        "text": "feathers"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each animal to its home.",
+    "hint": "Think about where each one lives.",
+    "explanation": "Fish live in rivers, camels in deserts and bears in forests.",
+    "skill_tag": "habitats.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "🐟 Fish"
+     },
+     {
+      "id": "l2",
+      "text": "🐪 Camel"
+     },
+     {
+      "id": "l3",
+      "text": "🐻 Bear"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Forest"
+     },
+     {
+      "id": "r1",
+      "text": "River"
+     },
+     {
+      "id": "r2",
+      "text": "Desert"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "order",
+    "prompt": "Put the steps in order. A bird hides from the cat.",
+    "hint": "Start with the caterpillar on the leaf.",
+    "explanation": "The caterpillar sits on the leaf, the bird flies by and its colour matches, so it is hidden.",
+    "skill_tag": "adapting.camouflage",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A bird flies by"
+     },
+     {
+      "id": "i3",
+      "text": "The colours match the leaf"
+     },
+     {
+      "id": "i4",
+      "text": "The bird cannot see it"
+     },
+     {
+      "id": "i1",
+      "text": "A caterpillar sits on a leaf"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "What does camouflage help an animal to do?",
+    "hint": "Think of the green caterpillar.",
+    "explanation": "Camouflage helps an animal blend in so enemies cannot see it.",
+    "skill_tag": "adapting.camouflage",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fly"
+     },
+     {
+      "id": "b",
+      "text": "Sing"
+     },
+     {
+      "id": "c",
+      "text": "Dig"
+     },
+     {
+      "id": "d",
+      "text": "Hide"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Why does a camel have wide feet?",
+    "hint": "Think of a soft sandy place.",
+    "explanation": "Wide feet spread the camel's weight so it does not sink in sand.",
+    "skill_tag": "adapting.body",
+    "options": [
+     {
+      "id": "a",
+      "text": "To swim in water"
+     },
+     {
+      "id": "b",
+      "text": "To fly"
+     },
+     {
+      "id": "c",
+      "text": "To climb trees"
+     },
+     {
+      "id": "d",
+      "text": "So they do not sink in the sand"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "A pond has 3 frogs and 4 fish. How many animals live in the pond?",
+    "hint": "Add the frogs and the fish.",
+    "explanation": "3 and 4 make 7 animals.",
+    "skill_tag": "habitats.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q12",
+    "type": "short_text",
+    "prompt": "What word means a safe place to sleep and hide?",
+    "hint": "It starts with sh.",
+    "explanation": "A shelter is a safe place to sleep and hide.",
+    "skill_tag": "habitats.needs",
+    "answer": {
+     "accepted": [
+      "shelter",
+      "a shelter"
+     ]
+    }
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Which animal lives high in the mountains of Pakistan?",
+    "hint": "It is a wild goat.",
+    "explanation": "The markhor is a wild goat of the Pakistan mountains.",
+    "skill_tag": "habitats.pakistan",
+    "options": [
+     {
+      "id": "a",
+      "text": "The penguin"
+     },
+     {
+      "id": "b",
+      "text": "The crocodile"
+     },
+     {
+      "id": "c",
+      "text": "The whale"
+     },
+     {
+      "id": "d",
+      "text": "The markhor"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Why does a frog live near water?",
+    "hint": "Think about frogspawn.",
+    "explanation": "Frogs lay eggs in water and need damp skin.",
+    "skill_tag": "habitats.needs",
+    "options": [
+     {
+      "id": "a",
+      "text": "It likes the cold"
+     },
+     {
+      "id": "b",
+      "text": "It eats sand"
+     },
+     {
+      "id": "c",
+      "text": "It cannot walk"
+     },
+     {
+      "id": "d",
+      "text": "It needs water for its eggs and damp skin"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "A habitat that has no water is a problem for most animals because ...",
+    "hint": "Think about what keeps animals alive.",
+    "explanation": "All animals need water to live.",
+    "skill_tag": "habitats.needs",
+    "options": [
+     {
+      "id": "a",
+      "text": "They like puddles"
+     },
+     {
+      "id": "b",
+      "text": "They cannot see"
+     },
+     {
+      "id": "c",
+      "text": "They want to swim"
+     },
+     {
+      "id": "d",
+      "text": "They need water to live"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  ]
+ }
+}

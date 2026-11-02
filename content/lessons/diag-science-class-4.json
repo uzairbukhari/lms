@@ -1,917 +1,1199 @@
 {
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "diag-science-class-4",
-    "subject": "science",
-    "title": "Science Check-In: Where Am I?",
-    "summary": "Check what you know about states of matter, food chains, forces, light and the body so we can plan your science year.",
-    "age_band": "9-10",
-    "difficulty": 2,
-    "estimated_minutes": 60,
-    "unit": "Week 1: Where am I?",
-    "learning_objectives": [
-      "Show what I know about living things, food chains and the body",
-      "Show what I know about states of matter and the water cycle",
-      "Show what I know about forces, light and electricity"
-    ],
-    "tags": [
-      "diagnostic",
-      "week-1"
-    ],
-    "curriculum": {
-      "course": "science-class-4",
-      "semester": 1,
-      "week": 1
-    }
-  },
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Welcome, Scientist!"
-    },
-    {
-      "type": "text",
-      "markdown": "This is a **check-in**, not a test. Scientists are curious and not afraid to guess. Show us what you know and where you are curious to learn more."
-    },
-    {
-      "type": "image",
-      "emoji": "🧪",
-      "alt": "Science time!",
-      "caption": "Science time!"
-    },
-    {
-      "type": "heading",
-      "text": "Stop 1: Solids, liquids and gases"
-    },
-    {
-      "type": "text",
-      "markdown": "Matter comes in three main states. A **solid** keeps its shape. A **liquid** flows and takes the shape of its container. A **gas** spreads out to fill all the space. Heating can **melt** a solid or **boil** a liquid; cooling can **freeze** it or make a gas **condense**."
-    },
-    {
-      "type": "explainer",
-      "title": "Three states of water",
-      "scenes": [
-        {
-          "caption": "Ice is a solid. It keeps its shape.",
-          "items": [
-            {
-              "emoji": "🧊",
-              "x": 50,
-              "y": 50,
-              "id": "w",
-              "size": 3,
-              "label": "solid"
-            }
-          ]
-        },
-        {
-          "caption": "When it melts it becomes a liquid. A liquid flows and takes the shape of its container.",
-          "items": [
-            {
-              "emoji": "💧",
-              "x": 50,
-              "y": 50,
-              "id": "w",
-              "size": 3,
-              "label": "liquid",
-              "anim": "float"
-            }
-          ]
-        },
-        {
-          "caption": "When it boils it becomes a gas called water vapour. A gas spreads out to fill the space.",
-          "items": [
-            {
-              "emoji": "♨️",
-              "x": 50,
-              "y": 40,
-              "id": "w",
-              "size": 3,
-              "label": "gas",
-              "anim": "float"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "What do we call ice turning into water?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Freezing"
-          },
-          {
-            "id": "b",
-            "text": "Melting"
-          },
-          {
-            "id": "c",
-            "text": "Evaporating"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 2: The water cycle"
-    },
-    {
-      "type": "text",
-      "markdown": "Water **evaporates** from seas and puddles, rises as vapour, **condenses** into clouds and falls as **rain**. Rivers carry it back to the sea."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "What happens when water vapour cools in the sky?",
-        "options": [
-          {
-            "id": "a",
-            "text": "It condenses into clouds"
-          },
-          {
-            "id": "b",
-            "text": "It turns into rock"
-          },
-          {
-            "id": "c",
-            "text": "It disappears forever"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "explainer",
-      "title": "The water cycle",
-      "scenes": [
-        {
-          "caption": "The Sun warms the sea.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 85,
-              "y": 14,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌊",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "💧",
-              "x": 30,
-              "y": 78,
-              "id": "drop",
-              "label": "water"
-            }
-          ]
-        },
-        {
-          "caption": "The warm water evaporates and rises as invisible vapour.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 85,
-              "y": 14,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌊",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "💧",
-              "x": 30,
-              "y": 40,
-              "id": "drop",
-              "label": "evaporates",
-              "anim": "float"
-            }
-          ]
-        },
-        {
-          "caption": "High up it cools and condenses into a cloud.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 85,
-              "y": 14,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌊",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "☁️",
-              "x": 30,
-              "y": 25,
-              "id": "cloud",
-              "size": 3,
-              "label": "condenses",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "The cloud gets heavy and the water falls as rain. Then it starts all over again!",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 85,
-              "y": 14,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌊",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🌧️",
-              "x": 30,
-              "y": 25,
-              "id": "cloud",
-              "size": 3
-            },
-            {
-              "emoji": "💧",
-              "x": 30,
-              "y": 78,
-              "id": "drop",
-              "label": "rain",
-              "anim": "bounce"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 3: Food chains"
-    },
-    {
-      "type": "text",
-      "markdown": "Every food chain starts with a **producer**, a plant that makes its own food using sunlight. Animals that eat plants are **herbivores**; animals that eat other animals are **carnivores**. Grass, then rabbit, then fox is a food chain."
-    },
-    {
-      "type": "explainer",
-      "title": "A food chain",
-      "scenes": [
-        {
-          "caption": "Every food chain starts with a producer. A plant uses sunlight to make its own food.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 25,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌱",
-              "x": 20,
-              "y": 70,
-              "id": "plant",
-              "size": 3,
-              "label": "producer"
-            }
-          ]
-        },
-        {
-          "caption": "A rabbit eats the plant. It is a herbivore, because it eats only plants.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 25,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌱",
-              "x": 20,
-              "y": 70,
-              "id": "plant",
-              "size": 3,
-              "label": "producer"
-            },
-            {
-              "emoji": "🐰",
-              "x": 50,
-              "y": 70,
-              "id": "rabbit",
-              "size": 3,
-              "label": "herbivore",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "A fox eats the rabbit. It is a carnivore, because it eats other animals. Energy passes along the chain.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 25,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌱",
-              "x": 20,
-              "y": 70,
-              "id": "plant",
-              "size": 3,
-              "label": "producer"
-            },
-            {
-              "emoji": "🐰",
-              "x": 50,
-              "y": 70,
-              "id": "rabbit",
-              "size": 3,
-              "label": "herbivore"
-            },
-            {
-              "emoji": "🦊",
-              "x": 80,
-              "y": 70,
-              "id": "fox",
-              "size": 3,
-              "label": "carnivore",
-              "anim": "grow"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "In the chain grass, rabbit, fox, which one is the producer?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Grass"
-          },
-          {
-            "id": "b",
-            "text": "Rabbit"
-          },
-          {
-            "id": "c",
-            "text": "Fox"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "activity",
-      "title": "My food chain",
-      "materials": [
-        "paper",
-        "coloured pencils"
-      ],
-      "instructions": [
-        "Draw a food chain with at least 4 living things.",
-        "Label the producer, the herbivore and the carnivore.",
-        "Add arrows that point to what gets the energy."
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 4: Forces and magnets"
-    },
-    {
-      "type": "text",
-      "markdown": "Forces can speed things up, slow them down or change their shape. **Friction** slows things that rub together. **Gravity** pulls things toward the Earth. A **magnet** pulls some metals, like iron, but not wood or plastic."
-    },
-    {
-      "type": "explainer",
-      "title": "A magnet pulls",
-      "scenes": [
-        {
-          "caption": "A magnet has an invisible force around it. Here are a magnet, a nail and a piece of wood.",
-          "items": [
-            {
-              "emoji": "🧲",
-              "x": 20,
-              "y": 50,
-              "id": "mag",
-              "size": 3
-            },
-            {
-              "emoji": "🔩",
-              "x": 70,
-              "y": 30,
-              "id": "nail",
-              "size": 2,
-              "label": "iron nail"
-            },
-            {
-              "emoji": "🪵",
-              "x": 70,
-              "y": 75,
-              "id": "wood",
-              "size": 2,
-              "label": "wood"
-            }
-          ]
-        },
-        {
-          "caption": "The magnet pulls the iron nail towards it. The wood does not move, because wood is not magnetic.",
-          "items": [
-            {
-              "emoji": "🧲",
-              "x": 20,
-              "y": 50,
-              "id": "mag",
-              "size": 3
-            },
-            {
-              "emoji": "🔩",
-              "x": 38,
-              "y": 45,
-              "id": "nail",
-              "size": 2,
-              "label": "pulled!",
-              "anim": "pulse"
-            },
-            {
-              "emoji": "🪵",
-              "x": 70,
-              "y": 75,
-              "id": "wood",
-              "size": 2,
-              "label": "not magnetic"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which force pulls objects down to the ground?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Gravity"
-          },
-          {
-            "id": "b",
-            "text": "Friction"
-          },
-          {
-            "id": "c",
-            "text": "Magnetism"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 5: Light, sound and circuits"
-    },
-    {
-      "type": "text",
-      "markdown": "Light travels in straight lines, so objects block it and make **shadows**. Sound is made by **vibrations**. An electric **circuit** needs a complete loop with a battery, wires and a bulb for the bulb to light."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "true_false",
-        "prompt": "A bulb will light if the circuit has a gap in it.",
-        "answer": [
-          false
-        ]
-      }
-    },
-    {
-      "type": "reveal",
-      "prompt": "Why is your shadow longer in the evening than at noon?",
-      "answer_markdown": "The Sun is low in the sky in the evening, so light hits you at a shallow angle and the shadow stretches out."
-    },
-    {
-      "type": "brain_game",
-      "game": "remember_order",
-      "title": "Water cycle memory",
-      "goal": "Watch the order, then copy it.",
-      "emojis": [
-        "🌞",
-        "💧",
-        "☁️",
-        "🌧️"
-      ]
-    },
-    {
-      "type": "summary",
-      "points": [
-        "Solids, liquids and gases behave differently and can change state.",
-        "Water moves round in a cycle.",
-        "Food chains start with plants that make their own food.",
-        "Forces push or pull and gravity pulls things down.",
-        "A circuit must be a complete loop."
-      ]
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "markdown": "Ready? Start the quiz. It has 12 questions and about 15 minutes. A guess is better than a blank."
-    },
-    {
-      "type": "glossary",
-      "terms": [
-        {
-          "term": "evaporate",
-          "meaning": "Liquid water turns into an invisible gas called water vapour."
-        },
-        {
-          "term": "condense",
-          "meaning": "A gas cools down and turns back into tiny drops of liquid."
-        },
-        {
-          "term": "producer",
-          "meaning": "A plant that makes its own food using sunlight."
-        },
-        {
-          "term": "carnivore",
-          "meaning": "An animal that eats other animals."
-        },
-        {
-          "term": "herbivore",
-          "meaning": "An animal that eats only plants."
-        },
-        {
-          "term": "friction",
-          "meaning": "A force that slows things down when they rub together."
-        },
-        {
-          "term": "gravity",
-          "meaning": "The force that pulls things toward the ground."
-        },
-        {
-          "term": "circuit",
-          "meaning": "A complete loop that electricity can flow around."
-        },
-        {
-          "term": "boil",
-          "meaning": "When a liquid gets so hot it bubbles and turns into a gas."
-        },
-        {
-          "term": "freeze",
-          "meaning": "When a liquid gets so cold it turns into a solid."
-        },
-        {
-          "term": "gas",
-          "meaning": "Something with no fixed shape that spreads out to fill the space, like air."
-        },
-        {
-          "term": "liquid",
-          "meaning": "Something that flows and takes the shape of its container, like water."
-        },
-        {
-          "term": "solid",
-          "meaning": "Something that keeps its own shape, like a rock."
-        },
-        {
-          "term": "melt",
-          "meaning": "When a solid gets warm and turns into a liquid."
-        },
-        {
-          "term": "magnet",
-          "meaning": "An object that pulls iron and steel towards it."
-        },
-        {
-          "term": "rain",
-          "meaning": "Water drops that fall from clouds."
-        },
-        {
-          "term": "shadow",
-          "meaning": "A dark shape made when something blocks light."
-        },
-        {
-          "term": "vibrations",
-          "meaning": "Tiny, fast shakes that make sound."
-        }
-      ]
-    }
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "diag-science-class-4",
+  "subject": "science",
+  "title": "Science Check-In: Where Am I?",
+  "summary": "A friendly tour of states of matter, the water cycle, food chains, forces and magnets, light, sound and circuits.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 1: Where am I?",
+  "learning_objectives": [
+   "Show what I know about states of matter and the water cycle",
+   "Show what I know about food chains and plants",
+   "Show what I know about forces, light, sound and circuits"
   ],
-  "quiz": {
-    "pass_percent": 1,
-    "shuffle_questions": false,
-    "shuffle_options": true,
-    "max_attempts": null,
-    "questions": [
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these is a gas?",
-        "ref": "q1",
-        "skill_tag": "matter.states",
-        "options": [
-          {
-            "id": "a",
-            "text": "Milk"
-          },
-          {
-            "id": "b",
-            "text": "Steam"
-          },
-          {
-            "id": "c",
-            "text": "Ice"
-          },
-          {
-            "id": "d",
-            "text": "Sand"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What do we call water turning into water vapour?",
-        "ref": "q2",
-        "skill_tag": "matter.changes",
-        "options": [
-          {
-            "id": "a",
-            "text": "Condensing"
-          },
-          {
-            "id": "b",
-            "text": "Evaporating"
-          },
-          {
-            "id": "c",
-            "text": "Freezing"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these is part of the water cycle?",
-        "ref": "q3",
-        "skill_tag": "water.cycle",
-        "options": [
-          {
-            "id": "a",
-            "text": "Rain falling"
-          },
-          {
-            "id": "b",
-            "text": "Rocks melting"
-          },
-          {
-            "id": "c",
-            "text": "Plants singing"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "In a food chain, what do the arrows show?",
-        "ref": "q4",
-        "skill_tag": "food.chains",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "Which animal is biggest"
-          },
-          {
-            "id": "b",
-            "text": "The flow of energy (who eats whom)"
-          },
-          {
-            "id": "c",
-            "text": "The way animals walk"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multi_select",
-        "prompt": "Which of these are herbivores? Pick all that apply.",
-        "ref": "q5",
-        "skill_tag": "food.chains",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "Rabbit"
-          },
-          {
-            "id": "b",
-            "text": "Lion"
-          },
-          {
-            "id": "c",
-            "text": "Cow"
-          },
-          {
-            "id": "d",
-            "text": "Eagle"
-          }
-        ],
-        "answer": [
-          "a",
-          "c"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What do plants use sunlight for?",
-        "ref": "q6",
-        "skill_tag": "plants.photosynthesis",
-        "options": [
-          {
-            "id": "a",
-            "text": "To make their own food"
-          },
-          {
-            "id": "b",
-            "text": "To keep warm at night"
-          },
-          {
-            "id": "c",
-            "text": "To make noise"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What is the main job of the skeleton?",
-        "ref": "q7",
-        "skill_tag": "body.skeleton",
-        "options": [
-          {
-            "id": "a",
-            "text": "Support the body and protect organs"
-          },
-          {
-            "id": "b",
-            "text": "Digest food"
-          },
-          {
-            "id": "c",
-            "text": "Make sounds"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Where does most of our food get digested?",
-        "ref": "q8",
-        "skill_tag": "body.digestion",
-        "options": [
-          {
-            "id": "a",
-            "text": "Lungs"
-          },
-          {
-            "id": "b",
-            "text": "Stomach and intestines"
-          },
-          {
-            "id": "c",
-            "text": "Brain"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which object would a magnet pick up?",
-        "ref": "q9",
-        "skill_tag": "forces.magnets",
-        "options": [
-          {
-            "id": "a",
-            "text": "Iron nail"
-          },
-          {
-            "id": "b",
-            "text": "Wooden spoon"
-          },
-          {
-            "id": "c",
-            "text": "Plastic cup"
-          },
-          {
-            "id": "d",
-            "text": "Rubber band"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "true_false",
-        "prompt": "Friction makes things slide more easily.",
-        "explanation": "Friction slows things down when they rub together.",
-        "ref": "q10",
-        "skill_tag": "forces.friction",
-        "answer": [
-          false
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What makes a shadow?",
-        "ref": "q11",
-        "skill_tag": "light.shadows",
-        "options": [
-          {
-            "id": "a",
-            "text": "An object blocking light"
-          },
-          {
-            "id": "b",
-            "text": "Light bending round corners"
-          },
-          {
-            "id": "c",
-            "text": "Sound waves"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What does a circuit need so that a bulb lights up?",
-        "ref": "q12",
-        "skill_tag": "electricity.circuit",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "A complete loop with a battery"
-          },
-          {
-            "id": "b",
-            "text": "Only a bulb"
-          },
-          {
-            "id": "c",
-            "text": "Only wires"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    ]
+  "tags": [
+   "week-1",
+   "diagnostic"
+  ],
+  "curriculum": {
+   "course": "science-class-4",
+   "semester": 1,
+   "week": 1
   }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, Scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "This is a **check-in**, not a test.\n\nScientists are curious and not afraid to guess.\n\nShow us what you know and where you are curious to learn more."
+  },
+  {
+   "type": "image",
+   "emoji": "🧪",
+   "alt": "Science time! We will visit matter, water, food chains, forces, light and sound.",
+   "caption": "Science time! We will visit matter, water, food chains, forces, light and sound."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Solids, liquids and gases"
+  },
+  {
+   "type": "text",
+   "markdown": "Matter comes in three main states. A **solid** keeps its shape. A **liquid** flows and takes the shape of its container. A **gas** spreads out to fill all the space.\n\nHeating can **melt** a solid or **boil** a liquid. Cooling can **freeze** a liquid. Water freezes at 0 °C and boils at 100 °C."
+  },
+  {
+   "type": "explainer",
+   "title": "Three states of water",
+   "scenes": [
+    {
+     "caption": "Ice is a solid. It keeps its shape.",
+     "items": [
+      {
+       "id": "i",
+       "emoji": "🧊",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Heat melts the ice into a liquid.",
+     "items": [
+      {
+       "id": "i",
+       "emoji": "💧",
+       "x": 50,
+       "y": 60,
+       "size": 3,
+       "anim": "grow"
+      },
+      {
+       "id": "h",
+       "emoji": "🔥",
+       "x": 50,
+       "y": 85,
+       "size": 2,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "More heat boils it. It becomes a gas called steam.",
+     "items": [
+      {
+       "id": "i",
+       "emoji": "♨️",
+       "x": 50,
+       "y": 40,
+       "size": 3,
+       "anim": "float"
+      },
+      {
+       "id": "h",
+       "emoji": "🔥",
+       "x": 50,
+       "y": 85,
+       "size": 2,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "What do we call ice turning into water?",
+    "hint": "Heat makes it happen.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Freezing"
+     },
+     {
+      "id": "b",
+      "text": "Melting"
+     },
+     {
+      "id": "c",
+      "text": "Boiling"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: The water cycle"
+  },
+  {
+   "type": "text",
+   "markdown": "Water **evaporates** from seas and puddles and rises as vapour. High up it cools and **condenses** into clouds. Then it falls as rain, and rivers carry it back to the sea."
+  },
+  {
+   "type": "explainer",
+   "title": "The water cycle",
+   "scenes": [
+    {
+     "caption": "The Sun heats the sea. Water evaporates.",
+     "items": [
+      {
+       "id": "sea",
+       "emoji": "🌊",
+       "x": 25,
+       "y": 85,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 80,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "v",
+       "emoji": "💨",
+       "x": 25,
+       "y": 60,
+       "size": 2,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "Vapour rises and cools.",
+     "items": [
+      {
+       "id": "sea",
+       "emoji": "🌊",
+       "x": 25,
+       "y": 85,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 80,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "v",
+       "emoji": "💨",
+       "x": 28,
+       "y": 35,
+       "size": 2,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "It condenses into a cloud.",
+     "items": [
+      {
+       "id": "sea",
+       "emoji": "🌊",
+       "x": 25,
+       "y": 85,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 80,
+       "y": 15,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "cl",
+       "emoji": "☁️",
+       "x": 35,
+       "y": 20,
+       "size": 3,
+       "anim": "grow"
+      }
+     ]
+    },
+    {
+     "caption": "Rain falls and the cycle starts again.",
+     "items": [
+      {
+       "id": "sea",
+       "emoji": "🌊",
+       "x": 25,
+       "y": 85,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "cl",
+       "emoji": "☁️",
+       "x": 35,
+       "y": 20,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "r",
+       "emoji": "🌧️",
+       "x": 38,
+       "y": 50,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "What happens when water vapour cools in the sky?",
+    "hint": "Think about how clouds form.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It melts"
+     },
+     {
+      "id": "b",
+      "text": "It freezes into rock"
+     },
+     {
+      "id": "c",
+      "text": "It condenses into clouds"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Food chains"
+  },
+  {
+   "type": "text",
+   "markdown": "A food chain starts with a **producer**, a plant that makes its own food using sunlight. Animals that eat plants are **herbivores**. Animals that eat other animals are **carnivores**.\n\nThe arrows show where the energy goes."
+  },
+  {
+   "type": "explainer",
+   "title": "A food chain",
+   "scenes": [
+    {
+     "caption": "Grass makes food using sunlight.",
+     "items": [
+      {
+       "id": "g",
+       "emoji": "🌿",
+       "x": 20,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 20,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "A rabbit eats the grass.",
+     "items": [
+      {
+       "id": "g",
+       "emoji": "🌿",
+       "x": 20,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "a1",
+       "emoji": "➡️",
+       "x": 38,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "r",
+       "emoji": "🐇",
+       "x": 55,
+       "y": 60,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    },
+    {
+     "caption": "A fox eats the rabbit.",
+     "items": [
+      {
+       "id": "g",
+       "emoji": "🌿",
+       "x": 10,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "a1",
+       "emoji": "➡️",
+       "x": 28,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "r",
+       "emoji": "🐇",
+       "x": 45,
+       "y": 60,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "➡️",
+       "x": 62,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "f",
+       "emoji": "🦊",
+       "x": 82,
+       "y": 60,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "In the chain grass, rabbit, fox, which one is the producer?",
+    "hint": "It makes its own food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rabbit"
+     },
+     {
+      "id": "b",
+      "text": "Fox"
+     },
+     {
+      "id": "c",
+      "text": "Grass"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "My food chain",
+   "materials": [
+    "Paper and coloured pencils"
+   ],
+   "instructions": [
+    "Draw a plant, an animal that eats it, and an animal that eats that one.",
+    "Draw arrows to show where the food goes.",
+    "Name the producer, the herbivore and the carnivore."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Forces and magnets"
+  },
+  {
+   "type": "text",
+   "markdown": "A **force** can speed things up, slow them down or change their shape. **Friction** slows things that rub together. **Gravity** pulls things towards the Earth.\n\nA **magnet** pulls some metals, like iron, but not wood or plastic."
+  },
+  {
+   "type": "explainer",
+   "title": "A magnet pulls",
+   "scenes": [
+    {
+     "caption": "A magnet and some things on a table.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🧲",
+       "x": 20,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "n",
+       "emoji": "🔩",
+       "x": 55,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "w",
+       "emoji": "🪵",
+       "x": 75,
+       "y": 65,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "The magnet pulls the iron. The wood stays still.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🧲",
+       "x": 20,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "n",
+       "emoji": "🔩",
+       "x": 38,
+       "y": 42,
+       "size": 2,
+       "anim": "bounce"
+      },
+      {
+       "id": "w",
+       "emoji": "🪵",
+       "x": 75,
+       "y": 65,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which force pulls objects down to the ground?",
+    "hint": "It makes an apple fall.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Magnetism"
+     },
+     {
+      "id": "b",
+      "text": "Gravity"
+     },
+     {
+      "id": "c",
+      "text": "Friction"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 5: Light, sound and circuits"
+  },
+  {
+   "type": "text",
+   "markdown": "Light travels in straight lines. Objects block it and make **shadows**.\n\nSound is made by **vibrations**, tiny shakes that travel through the air.\n\nA **circuit** needs a complete loop with a battery, wires and a bulb for the bulb to light."
+  },
+  {
+   "type": "explainer",
+   "title": "A complete circuit",
+   "scenes": [
+    {
+     "caption": "A battery, wires and a bulb with a gap. The bulb is off.",
+     "items": [
+      {
+       "id": "b",
+       "emoji": "🔋",
+       "x": 20,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "l",
+       "emoji": "💡",
+       "x": 80,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "w",
+       "emoji": "➖",
+       "x": 50,
+       "y": 15,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Close the gap to make a loop. The bulb lights!",
+     "items": [
+      {
+       "id": "b",
+       "emoji": "🔋",
+       "x": 20,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "l",
+       "emoji": "💡",
+       "x": 80,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "w",
+       "emoji": "➖",
+       "x": 50,
+       "y": 15,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "w2",
+       "emoji": "➖",
+       "x": 50,
+       "y": 85,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "true_false",
+    "prompt": "A bulb will light if the circuit has a gap in it.",
+    "hint": "Electricity needs a loop.",
+    "answer": [
+     false
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "Why is your shadow longer in the evening than at noon?",
+   "answer_markdown": "In the evening the Sun is low, so light comes from the side and the shadow stretches out."
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Water cycle memory",
+   "goal": "Find the pairs.",
+   "emojis": [
+    "☀️",
+    "🌊",
+    "☁️",
+    "🌧️",
+    "🧊",
+    "💧"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "Matter is a solid, a liquid or a gas, and heating and cooling change its state.",
+    "The water cycle: evaporate, condense, rain.",
+    "A food chain starts with a producer.",
+    "Gravity, friction and magnets are forces.",
+    "Shadows, vibrations and complete circuits."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes. Do your best!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "check-in",
+     "meaning": "A friendly game that shows us what you know. It is not a test."
+    },
+    {
+     "term": "solid",
+     "meaning": "Matter that keeps its shape, like ice or wood."
+    },
+    {
+     "term": "liquid",
+     "meaning": "Matter that flows and takes the shape of its container, like water."
+    },
+    {
+     "term": "gas",
+     "meaning": "Matter that spreads out to fill all the space, like air or steam."
+    },
+    {
+     "term": "melt",
+     "meaning": "When a solid turns into a liquid because of heat."
+    },
+    {
+     "term": "boil",
+     "meaning": "When a liquid is heated so much that it turns into a gas quickly."
+    },
+    {
+     "term": "freeze",
+     "meaning": "When a liquid turns into a solid because it gets cold."
+    },
+    {
+     "term": "evaporates",
+     "meaning": "When a liquid slowly turns into a gas, like a puddle drying in the sun."
+    },
+    {
+     "term": "condenses",
+     "meaning": "When a gas cools and turns into a liquid, like vapour turning into cloud drops."
+    },
+    {
+     "term": "producer",
+     "meaning": "A plant that makes its own food using sunlight. A food chain starts with one."
+    },
+    {
+     "term": "herbivores",
+     "meaning": "Animals that eat only plants."
+    },
+    {
+     "term": "carnivores",
+     "meaning": "Animals that eat other animals."
+    },
+    {
+     "term": "force",
+     "meaning": "A push or a pull."
+    },
+    {
+     "term": "friction",
+     "meaning": "A force that slows things down when they rub together."
+    },
+    {
+     "term": "gravity",
+     "meaning": "A force that pulls things towards the Earth."
+    },
+    {
+     "term": "magnet",
+     "meaning": "An object that pulls some metals like iron towards it."
+    },
+    {
+     "term": "shadows",
+     "meaning": "Dark shapes made when an object blocks light."
+    },
+    {
+     "term": "vibrations",
+     "meaning": "Tiny, fast shakes. They make sounds."
+    },
+    {
+     "term": "circuit",
+     "meaning": "A complete loop for electricity, with a battery, wires and a bulb."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 1,
+  "shuffle_questions": false,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a gas?",
+    "hint": "A gas spreads out to fill the space.",
+    "explanation": "Steam is water as a gas.",
+    "skill_tag": "matter.states",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ice"
+     },
+     {
+      "id": "b",
+      "text": "A pencil"
+     },
+     {
+      "id": "c",
+      "text": "Milk"
+     },
+     {
+      "id": "d",
+      "text": "Steam"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "match",
+    "prompt": "Match each thing to its state of matter.",
+    "hint": "Does it keep its shape?",
+    "explanation": "Ice is a solid, juice is a liquid and steam is a gas.",
+    "skill_tag": "matter.states",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Ice cube"
+     },
+     {
+      "id": "l2",
+      "text": "Orange juice"
+     },
+     {
+      "id": "l3",
+      "text": "Steam"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Liquid"
+     },
+     {
+      "id": "r1",
+      "text": "Solid"
+     },
+     {
+      "id": "r3",
+      "text": "Gas"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q3",
+    "type": "slider",
+    "prompt": "At about what temperature does water boil?",
+    "hint": "It is a round number.",
+    "explanation": "Water boils at 100 °C.",
+    "skill_tag": "matter.changes",
+    "range": {
+     "step": 5,
+     "min": 0,
+     "max": 150,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 100,
+     "tolerance": 5
+    }
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "What do we call water turning into water vapour?",
+    "hint": "The Sun heats the water.",
+    "explanation": "Water turning into vapour is evaporation.",
+    "skill_tag": "water.cycle",
+    "options": [
+     {
+      "id": "a",
+      "text": "Freezing"
+     },
+     {
+      "id": "b",
+      "text": "Melting"
+     },
+     {
+      "id": "c",
+      "text": "Condensation"
+     },
+     {
+      "id": "d",
+      "text": "Evaporation"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "order",
+    "prompt": "Put the water cycle in order.",
+    "hint": "Start with the Sun.",
+    "explanation": "Heat, evaporation, condensation, then rain.",
+    "skill_tag": "water.cycle",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Water evaporates and rises"
+     },
+     {
+      "id": "i4",
+      "text": "Rain falls"
+     },
+     {
+      "id": "i3",
+      "text": "Vapour condenses into clouds"
+     },
+     {
+      "id": "i1",
+      "text": "The Sun heats the sea"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "In a food chain, what do the arrows show?",
+    "hint": "Follow the arrow from the plant.",
+    "explanation": "The arrow points to the animal that gets the energy.",
+    "skill_tag": "food.chains",
+    "options": [
+     {
+      "id": "a",
+      "text": "What is bigger"
+     },
+     {
+      "id": "b",
+      "text": "Who runs fastest"
+     },
+     {
+      "id": "c",
+      "text": "Where animals sleep"
+     },
+     {
+      "id": "d",
+      "text": "Where the energy goes"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which of these are herbivores? Pick all that apply.",
+    "hint": "Herbivores only eat plants.",
+    "explanation": "Rabbits and cows eat only plants.",
+    "skill_tag": "food.chains",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cow"
+     },
+     {
+      "id": "b",
+      "text": "Fox"
+     },
+     {
+      "id": "c",
+      "text": "Lion"
+     },
+     {
+      "id": "d",
+      "text": "Rabbit"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the producer in this food chain.",
+    "hint": "It makes its own food.",
+    "explanation": "Grass makes its own food, so it is the producer.",
+    "skill_tag": "food.chains",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌿",
+       "label": "grass",
+       "x": 15,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐇",
+       "label": "rabbit",
+       "x": 38,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🦊",
+       "label": "fox",
+       "x": 62,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🦅",
+       "label": "eagle",
+       "x": 85,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "What do plants use sunlight for?",
+    "hint": "Plants are producers.",
+    "explanation": "Plants use sunlight to make food.",
+    "skill_tag": "plants.photosynthesis",
+    "options": [
+     {
+      "id": "a",
+      "text": "To keep cool"
+     },
+     {
+      "id": "b",
+      "text": "To drink"
+     },
+     {
+      "id": "c",
+      "text": "To make shadows"
+     },
+     {
+      "id": "d",
+      "text": "To make their food"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps about forces.",
+    "hint": "One is a metal puller, one pulls things down.",
+    "explanation": "A magnet pulls iron and gravity pulls everything towards the Earth.",
+    "skill_tag": "forces.magnets",
+    "points": 2,
+    "text": "A {b1} pulls iron. {b2} pulls everything towards the Earth.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "mirror"
+       },
+       {
+        "id": "b",
+        "text": "magnet"
+       },
+       {
+        "id": "c",
+        "text": "battery"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Friction"
+       },
+       {
+        "id": "b",
+        "text": "Gravity"
+       },
+       {
+        "id": "c",
+        "text": "Sound"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "Friction makes things slide more easily.",
+    "hint": "Think about rubbing your hands.",
+    "explanation": "Friction slows things down.",
+    "skill_tag": "forces.friction",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "What makes a shadow?",
+    "hint": "Light travels in straight lines.",
+    "explanation": "A shadow forms when an object blocks light.",
+    "skill_tag": "light.shadows",
+    "options": [
+     {
+      "id": "a",
+      "text": "A magnet"
+     },
+     {
+      "id": "b",
+      "text": "Water vapour"
+     },
+     {
+      "id": "c",
+      "text": "Something making sound"
+     },
+     {
+      "id": "d",
+      "text": "Something blocking light"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "What does a circuit need so that a bulb lights up?",
+    "hint": "Think of the lit bulb picture.",
+    "explanation": "The electricity needs a complete loop.",
+    "skill_tag": "electricity.circuit",
+    "options": [
+     {
+      "id": "a",
+      "text": "A magnet"
+     },
+     {
+      "id": "b",
+      "text": "Water"
+     },
+     {
+      "id": "c",
+      "text": "A gap in the wire"
+     },
+     {
+      "id": "d",
+      "text": "A complete loop"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "short_text",
+    "prompt": "What do we call the tiny shakes that make sound?",
+    "hint": "It starts with v.",
+    "explanation": "Sounds are made by vibrations.",
+    "skill_tag": "sound.vibrations",
+    "answer": {
+     "accepted": [
+      "vibrations",
+      "vibration",
+      "vibrate"
+     ]
+    }
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a carnivore?",
+    "hint": "A carnivore eats other animals.",
+    "explanation": "A lion eats other animals, so it is a carnivore.",
+    "skill_tag": "food.chains",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rabbit"
+     },
+     {
+      "id": "b",
+      "text": "A goat"
+     },
+     {
+      "id": "c",
+      "text": "A cow"
+     },
+     {
+      "id": "d",
+      "text": "A lion"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  ]
+ }
 }

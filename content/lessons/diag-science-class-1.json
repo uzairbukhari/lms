@@ -1,773 +1,998 @@
 {
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "diag-science-class-1",
-    "subject": "science",
-    "title": "Science Check-In: Where Am I?",
-    "summary": "Explore living things, plants, materials, weather and forces so we can see what you already know about the world.",
-    "age_band": "7-8",
-    "difficulty": 1,
-    "estimated_minutes": 60,
-    "unit": "Week 1: Where am I?",
-    "learning_objectives": [
-      "Show what I know about living things and plants",
-      "Show what I know about materials and weather",
-      "Show what I know about pushes and pulls"
-    ],
-    "tags": [
-      "diagnostic",
-      "week-1"
-    ],
-    "curriculum": {
-      "course": "science-class-1",
-      "semester": 1,
-      "week": 1
-    }
-  },
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Welcome, Young Scientist!"
-    },
-    {
-      "type": "text",
-      "markdown": "Scientists ask questions and look closely at the world. Today is a **check-in**, not a test. Have a go at everything and tell a grown-up what you notice."
-    },
-    {
-      "type": "image",
-      "emoji": "🔬",
-      "alt": "Let's explore!",
-      "caption": "Let's explore!"
-    },
-    {
-      "type": "heading",
-      "text": "Stop 1: Living things"
-    },
-    {
-      "type": "text",
-      "markdown": "Living things **grow**, **need food and water**, **move**, **have babies** and **sense** the world. Animals, plants and people are living. Rocks, toys and water are not living."
-    },
-    {
-      "type": "image",
-      "emoji": "🐕🌳🧒",
-      "caption": "Living things grow, move, need food and water and have babies."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which one is living?",
-        "options": [
-          {
-            "id": "a",
-            "text": "A rock"
-          },
-          {
-            "id": "b",
-            "text": "A tree"
-          },
-          {
-            "id": "c",
-            "text": "A toy car"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 2: Animals"
-    },
-    {
-      "type": "text",
-      "markdown": "Animals can be sorted into groups. **Mammals** have fur or hair and feed their babies milk. **Birds** have feathers and wings. **Fish** live in water and have gills. **Insects** have six legs."
-    },
-    {
-      "type": "image",
-      "emoji": "🐕🐦🐟🐛",
-      "caption": "Mammals, birds, fish and insects are animal groups."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which animal is a bird?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Penguin"
-          },
-          {
-            "id": "b",
-            "text": "Dolphin"
-          },
-          {
-            "id": "c",
-            "text": "Ant"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 3: Plants"
-    },
-    {
-      "type": "text",
-      "markdown": "Plants have **roots** that drink water, a **stem** that holds them up, **leaves** that catch sunlight and often **flowers** that make seeds. Plants need sunlight, water and air to grow."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which part of a plant drinks water from the soil?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Leaves"
-          },
-          {
-            "id": "b",
-            "text": "Flower"
-          },
-          {
-            "id": "c",
-            "text": "Roots"
-          }
-        ],
-        "answer": [
-          "c"
-        ]
-      }
-    },
-    {
-      "type": "activity",
-      "title": "Seed hunt",
-      "materials": [
-        "a fruit such as an apple or orange",
-        "a plate"
-      ],
-      "instructions": [
-        "Ask a grown-up to cut the fruit open.",
-        "Find the seeds. How many can you count?",
-        "Think: what might each seed grow into?"
-      ]
-    },
-    {
-      "type": "explainer",
-      "title": "How a seed grows",
-      "scenes": [
-        {
-          "caption": "A tiny seed sits in the soil.",
-          "items": [
-            {
-              "emoji": "🟫",
-              "x": 30,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 70,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🌰",
-              "x": 50,
-              "y": 76,
-              "id": "plant"
-            }
-          ]
-        },
-        {
-          "caption": "Rain and sunshine give it water and light.",
-          "items": [
-            {
-              "emoji": "🟫",
-              "x": 30,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 70,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🌰",
-              "x": 50,
-              "y": 76,
-              "id": "plant"
-            },
-            {
-              "emoji": "☀️",
-              "x": 82,
-              "y": 15,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "💧",
-              "x": 50,
-              "y": 25,
-              "anim": "bounce",
-              "label": "water"
-            }
-          ]
-        },
-        {
-          "caption": "The roots grow down and a little shoot pushes up.",
-          "items": [
-            {
-              "emoji": "🟫",
-              "x": 30,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 70,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🌱",
-              "x": 50,
-              "y": 66,
-              "id": "plant",
-              "size": 3,
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "At last it grows into a big flower!",
-          "items": [
-            {
-              "emoji": "🟫",
-              "x": 30,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 50,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🟫",
-              "x": 70,
-              "y": 88,
-              "size": 3
-            },
-            {
-              "emoji": "🌻",
-              "x": 50,
-              "y": 50,
-              "id": "plant",
-              "size": 3,
-              "anim": "float"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 4: Materials"
-    },
-    {
-      "type": "text",
-      "markdown": "Things are made from **materials**. Glass is see-through and breakable. Metal is hard and shiny. Wood is strong. Rubber stretches. We pick materials that suit the job: a raincoat is **waterproof**."
-    },
-    {
-      "type": "image",
-      "emoji": "🪵🔩🧵",
-      "caption": "Wood, metal and cloth are different materials with different jobs."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which material is best for a window?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Wood"
-          },
-          {
-            "id": "b",
-            "text": "Glass"
-          },
-          {
-            "id": "c",
-            "text": "Wool"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 5: Weather and forces"
-    },
-    {
-      "type": "text",
-      "markdown": "Weather can be sunny, rainy, windy, cloudy or snowy. A **force** is a push or a pull. We push a door open and pull a wagon."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Kicking a ball is a...",
-        "options": [
-          {
-            "id": "a",
-            "text": "Push"
-          },
-          {
-            "id": "b",
-            "text": "Pull"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "reveal",
-      "prompt": "What do you think happens to a puddle on a sunny day?",
-      "answer_markdown": "The Sun warms the water and it slowly turns into an invisible gas in the air. This is called evaporation."
-    },
-    {
-      "type": "brain_game",
-      "game": "memory_match",
-      "title": "Find the living things",
-      "goal": "Match the pairs of animals and plants.",
-      "emojis": [
-        "🐶",
-        "🐟",
-        "🐦",
-        "🐛",
-        "🌻",
-        "🌳"
-      ]
-    },
-    {
-      "type": "summary",
-      "points": [
-        "Living things grow, need food and water, and have babies.",
-        "Plants have roots, stems, leaves and flowers.",
-        "Different materials suit different jobs.",
-        "A force is a push or a pull."
-      ]
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "markdown": "Ready? Start the quiz. There are 12 questions and about 15 minutes. If you are not sure, take your best guess!"
-    },
-    {
-      "type": "glossary",
-      "terms": [
-        {
-          "term": "check-in",
-          "meaning": "A friendly game that shows us what you know. It is not a test."
-        },
-        {
-          "term": "mammal",
-          "meaning": "An animal with fur or hair that feeds its babies milk, like a dog or a cow."
-        },
-        {
-          "term": "insect",
-          "meaning": "A small animal with 6 legs, like an ant or a bee."
-        },
-        {
-          "term": "roots",
-          "meaning": "The part of a plant under the ground that drinks water."
-        },
-        {
-          "term": "stem",
-          "meaning": "The part of a plant that holds it up and carries water."
-        },
-        {
-          "term": "force",
-          "meaning": "A push or a pull."
-        },
-        {
-          "term": "waterproof",
-          "meaning": "Water cannot get through it."
-        },
-        {
-          "term": "materials",
-          "meaning": "What things are made of, like wood, metal or plastic."
-        },
-        {
-          "term": "birds",
-          "meaning": "Animals with feathers and wings. Most can fly."
-        },
-        {
-          "term": "fish",
-          "meaning": "Animals that live in water and breathe with gills."
-        },
-        {
-          "term": "flowers",
-          "meaning": "The colourful part of a plant that makes seeds."
-        },
-        {
-          "term": "leaves",
-          "meaning": "The flat green parts of a plant that catch sunlight to make food."
-        },
-        {
-          "term": "grow",
-          "meaning": "To get bigger over time."
-        },
-        {
-          "term": "move",
-          "meaning": "To go from one place to another."
-        },
-        {
-          "term": "sense",
-          "meaning": "To notice the world with eyes, ears, nose, tongue and skin."
-        }
-      ]
-    }
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "diag-science-class-1",
+  "subject": "science",
+  "title": "Science Check-In: Where Am I?",
+  "summary": "A friendly tour of living things, animals, plants, materials, our senses and the weather, so we can see what you already know.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Week 1: Where am I?",
+  "learning_objectives": [
+   "Show what I know about living things, animals and plants",
+   "Show what I know about materials and our senses",
+   "Show what I know about the weather and pushes and pulls"
   ],
-  "quiz": {
-    "pass_percent": 1,
-    "shuffle_questions": false,
-    "shuffle_options": true,
-    "max_attempts": null,
-    "questions": [
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these is NOT living?",
-        "ref": "q1",
-        "skill_tag": "living.classify",
-        "options": [
-          {
-            "id": "a",
-            "text": "Cat"
-          },
-          {
-            "id": "b",
-            "text": "Flower"
-          },
-          {
-            "id": "c",
-            "text": "Pebble"
-          },
-          {
-            "id": "d",
-            "text": "Bird"
-          }
-        ],
-        "answer": [
-          "c"
-        ]
-      },
-      {
-        "type": "multi_select",
-        "prompt": "What do animals need to stay alive? Pick all that apply.",
-        "ref": "q2",
-        "skill_tag": "living.needs",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "Water"
-          },
-          {
-            "id": "b",
-            "text": "Food"
-          },
-          {
-            "id": "c",
-            "text": "Sweets only"
-          },
-          {
-            "id": "d",
-            "text": "Air"
-          }
-        ],
-        "answer": [
-          "a",
-          "b",
-          "d"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which animal is a mammal?",
-        "ref": "q3",
-        "skill_tag": "animals.groups",
-        "options": [
-          {
-            "id": "a",
-            "text": "Eagle"
-          },
-          {
-            "id": "b",
-            "text": "Cow"
-          },
-          {
-            "id": "c",
-            "text": "Frog"
-          },
-          {
-            "id": "d",
-            "text": "Snake"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "true_false",
-        "prompt": "A spider is an insect.",
-        "hint": "Insects have six legs.",
-        "explanation": "Spiders have eight legs, so they are not insects.",
-        "ref": "q4",
-        "skill_tag": "animals.groups",
-        "answer": [
-          false
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which part of a plant catches sunlight?",
-        "ref": "q5",
-        "skill_tag": "plants.parts",
-        "options": [
-          {
-            "id": "a",
-            "text": "Roots"
-          },
-          {
-            "id": "b",
-            "text": "Leaves"
-          },
-          {
-            "id": "c",
-            "text": "Seeds"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these does a plant need to grow?",
-        "ref": "q6",
-        "skill_tag": "plants.needs",
-        "options": [
-          {
-            "id": "a",
-            "text": "Sunlight and water"
-          },
-          {
-            "id": "b",
-            "text": "Only chocolate"
-          },
-          {
-            "id": "c",
-            "text": "Only darkness"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which part of your body do you use to smell?",
-        "ref": "q7",
-        "skill_tag": "body.senses",
-        "options": [
-          {
-            "id": "a",
-            "text": "Ears"
-          },
-          {
-            "id": "b",
-            "text": "Nose"
-          },
-          {
-            "id": "c",
-            "text": "Eyes"
-          },
-          {
-            "id": "d",
-            "text": "Hands"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "match",
-        "prompt": "Match the thing to the material it is made from.",
-        "ref": "q8",
-        "skill_tag": "materials.uses",
-        "points": 2,
-        "left": [
-          {
-            "id": "l1",
-            "text": "Window"
-          },
-          {
-            "id": "l2",
-            "text": "Wheels on a bike"
-          },
-          {
-            "id": "l3",
-            "text": "Cooking pot"
-          }
-        ],
-        "right": [
-          {
-            "id": "r1",
-            "text": "Glass"
-          },
-          {
-            "id": "r2",
-            "text": "Rubber"
-          },
-          {
-            "id": "r3",
-            "text": "Metal"
-          }
-        ],
-        "answer": {
-          "l1": "r1",
-          "l2": "r2",
-          "l3": "r3"
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which word describes a material that water cannot go through?",
-        "ref": "q9",
-        "skill_tag": "materials.properties",
-        "options": [
-          {
-            "id": "a",
-            "text": "Waterproof"
-          },
-          {
-            "id": "b",
-            "text": "Stretchy"
-          },
-          {
-            "id": "c",
-            "text": "Shiny"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which season is usually the coldest?",
-        "ref": "q10",
-        "skill_tag": "weather",
-        "options": [
-          {
-            "id": "a",
-            "text": "Summer"
-          },
-          {
-            "id": "b",
-            "text": "Winter"
-          },
-          {
-            "id": "c",
-            "text": "Spring"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What gives us light and warmth in the day?",
-        "ref": "q11",
-        "skill_tag": "earth.day_night",
-        "options": [
-          {
-            "id": "a",
-            "text": "The Moon"
-          },
-          {
-            "id": "b",
-            "text": "The Sun"
-          },
-          {
-            "id": "c",
-            "text": "A cloud"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these is a pull?",
-        "ref": "q12",
-        "skill_tag": "forces",
-        "options": [
-          {
-            "id": "a",
-            "text": "Kicking a ball"
-          },
-          {
-            "id": "b",
-            "text": "Pushing a swing"
-          },
-          {
-            "id": "c",
-            "text": "Pulling a wagon"
-          }
-        ],
-        "answer": [
-          "c"
-        ]
-      }
-    ]
+  "tags": [
+   "week-1",
+   "diagnostic"
+  ],
+  "curriculum": {
+   "course": "science-class-1",
+   "semester": 1,
+   "week": 1
   }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, Young Scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Scientists ask questions and look closely at the world.\n\nToday is a **check-in**, not a test.\n\nHave a go at everything and tell a grown-up what you notice."
+  },
+  {
+   "type": "image",
+   "emoji": "🔬",
+   "alt": "Let's explore plants, animals, materials and the weather!",
+   "caption": "Let's explore plants, animals, materials and the weather!"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Living things"
+  },
+  {
+   "type": "text",
+   "markdown": "**Living things** grow, move, need food and water, have babies and sense the world.\n\nAnimals, plants and people are living. Rocks, toys and water are not living."
+  },
+  {
+   "type": "image",
+   "emoji": "🐕🌳🧒",
+   "alt": "A dog, a tree and a child are living things. They all grow and need food and water.",
+   "caption": "A dog, a tree and a child are living things. They all grow and need food and water."
+  },
+  {
+   "type": "image",
+   "emoji": "🪨🧸🚗",
+   "alt": "A rock, a teddy and a car are not living. They do not grow or need food.",
+   "caption": "A rock, a teddy and a car are not living. They do not grow or need food."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which one is living?",
+    "hint": "Does it grow and need food?",
+    "options": [
+     {
+      "id": "a",
+      "text": "A toy car"
+     },
+     {
+      "id": "b",
+      "text": "A cat"
+     },
+     {
+      "id": "c",
+      "text": "A stone"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Animal groups"
+  },
+  {
+   "type": "text",
+   "markdown": "We sort animals into groups. **Mammals** have fur or hair and feed babies milk. **Birds** have feathers and wings.\n\n**Fish** live in water and have gills. **Insects** have six legs."
+  },
+  {
+   "type": "image",
+   "emoji": "🐐🐦🐟🐛",
+   "alt": "A goat is a mammal. A bird has feathers. A fish has gills. A beetle is an insect.",
+   "caption": "A goat is a mammal. A bird has feathers. A fish has gills. A beetle is an insect."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which animal is a bird?",
+    "hint": "Look for feathers.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cow"
+     },
+     {
+      "id": "b",
+      "text": "A parrot"
+     },
+     {
+      "id": "c",
+      "text": "A frog"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "explainer",
+   "title": "Animals sorted into groups",
+   "scenes": [
+    {
+     "caption": "Here are four animals.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🐕",
+       "x": 20,
+       "y": 30,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "🐦",
+       "x": 40,
+       "y": 30,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "🐟",
+       "x": 60,
+       "y": 30,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "d",
+       "emoji": "🐛",
+       "x": 80,
+       "y": 30,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Each goes into its group.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🐕",
+       "x": 20,
+       "y": 60,
+       "size": 3,
+       "anim": "none",
+       "label": "mammal"
+      },
+      {
+       "id": "b",
+       "emoji": "🐦",
+       "x": 40,
+       "y": 60,
+       "size": 3,
+       "anim": "none",
+       "label": "bird"
+      },
+      {
+       "id": "c",
+       "emoji": "🐟",
+       "x": 60,
+       "y": 60,
+       "size": 3,
+       "anim": "none",
+       "label": "fish"
+      },
+      {
+       "id": "d",
+       "emoji": "🐛",
+       "x": 80,
+       "y": 60,
+       "size": 3,
+       "anim": "none",
+       "label": "insect"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Plants"
+  },
+  {
+   "type": "text",
+   "markdown": "Plants have **roots** that drink water. A **stem** holds them up. **Leaves** catch sunlight. **Flowers** make seeds.\n\nPlants need sunlight, water and air to grow."
+  },
+  {
+   "type": "image",
+   "emoji": "🌱🌿🌻",
+   "alt": "A seedling, a leafy plant and a flower: the plant grows bigger.",
+   "caption": "A seedling, a leafy plant and a flower: the plant grows bigger."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant drinks water from the soil?",
+    "hint": "It grows under the ground.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The flower"
+     },
+     {
+      "id": "b",
+      "text": "The leaves"
+     },
+     {
+      "id": "c",
+      "text": "The roots"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "explainer",
+   "title": "How a seed grows",
+   "scenes": [
+    {
+     "caption": "A seed is planted in the soil.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "🌰",
+       "x": 50,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "w",
+       "emoji": "💧",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "It drinks water and a root grows down.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "🌱",
+       "x": 50,
+       "y": 70,
+       "size": 2,
+       "anim": "grow"
+      },
+      {
+       "id": "w",
+       "emoji": "💧",
+       "x": 50,
+       "y": 40,
+       "size": 2,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "A shoot grows up towards the sun.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "🌿",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "grow"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 85,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "It grows into a flower with seeds.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "🌻",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "grow"
+      },
+      {
+       "id": "sun",
+       "emoji": "☀️",
+       "x": 85,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "activity",
+   "title": "Seed hunt",
+   "materials": [
+    "A fruit like an apple or an orange",
+    "A spoon"
+   ],
+   "instructions": [
+    "Ask a grown-up to cut the fruit open.",
+    "Find the seeds inside. How many can you count?",
+    "Draw the seeds and the fruit."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Materials"
+  },
+  {
+   "type": "text",
+   "markdown": "Things are made from **materials**. Glass is see-through. Metal is hard and shiny. Clay can be shaped. Rubber stretches.\n\nWe pick materials that suit the job. A raincoat is **waterproof**."
+  },
+  {
+   "type": "image",
+   "emoji": "🪟🔩🏺☂️",
+   "alt": "Glass for a window, metal for a spoon, clay for a pot and a waterproof umbrella.",
+   "caption": "Glass for a window, metal for a spoon, clay for a pot and a waterproof umbrella."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which material is best for a window?",
+    "hint": "We need to see through it.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wool"
+     },
+     {
+      "id": "b",
+      "text": "Glass"
+     },
+     {
+      "id": "c",
+      "text": "Wood"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 5: Senses, weather and forces"
+  },
+  {
+   "type": "text",
+   "markdown": "We have five **senses**: sight, hearing, smell, taste and touch. We smell with our nose.\n\nThe Sun gives us light and warmth. Winter is the coldest **season**."
+  },
+  {
+   "type": "image",
+   "emoji": "👀👂👃👅✋",
+   "alt": "Eyes see, ears hear, a nose smells, a tongue tastes and a hand touches.",
+   "caption": "Eyes see, ears hear, a nose smells, a tongue tastes and a hand touches."
+  },
+  {
+   "type": "text",
+   "markdown": "A **force** is a push or a pull. We push a door open and pull a wagon."
+  },
+  {
+   "type": "image",
+   "emoji": "🚪🛒",
+   "alt": "Pushing a door open and pulling a trolley are both forces.",
+   "caption": "Pushing a door open and pulling a trolley are both forces."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Kicking a ball is a ...",
+    "hint": "Your foot moves the ball away.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pull"
+     },
+     {
+      "id": "b",
+      "text": "Push"
+     },
+     {
+      "id": "c",
+      "text": "Smell"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "What do you think happens to a puddle on a sunny day?",
+   "answer_markdown": "The Sun's heat dries it up. The water goes into the air."
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Find the living things",
+   "goal": "Turn over two cards. Can you find all the pairs?",
+   "emojis": [
+    "🐕",
+    "🌳",
+    "🐦",
+    "🌻",
+    "🐟",
+    "🐛"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "Living things grow, need food and water, and have babies.",
+    "Animals can be sorted into mammals, birds, fish and insects.",
+    "Plants have roots, a stem, leaves and flowers.",
+    "Materials suit different jobs.",
+    "We have five senses, and a force is a push or a pull."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes. Do your best!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "check-in",
+     "meaning": "A friendly game that shows us what you know. It is not a test."
+    },
+    {
+     "term": "living things",
+     "meaning": "Things that grow, move, need food and water, and have babies. Animals and plants are living things."
+    },
+    {
+     "term": "mammals",
+     "meaning": "Animals with fur or hair that feed their babies milk, like dogs and goats."
+    },
+    {
+     "term": "birds",
+     "meaning": "Animals with feathers and wings."
+    },
+    {
+     "term": "fish",
+     "meaning": "Animals that live in water and breathe with gills."
+    },
+    {
+     "term": "insects",
+     "meaning": "Small animals with six legs, like ants and beetles."
+    },
+    {
+     "term": "roots",
+     "meaning": "The part of a plant that grows in the soil and drinks water."
+    },
+    {
+     "term": "stem",
+     "meaning": "The part of a plant that holds it up."
+    },
+    {
+     "term": "leaves",
+     "meaning": "The flat green parts of a plant that catch sunlight."
+    },
+    {
+     "term": "flowers",
+     "meaning": "The part of a plant that makes seeds."
+    },
+    {
+     "term": "materials",
+     "meaning": "What things are made from, like glass, metal, clay and rubber."
+    },
+    {
+     "term": "waterproof",
+     "meaning": "A material that water cannot go through."
+    },
+    {
+     "term": "senses",
+     "meaning": "The five ways we find out about the world: sight, hearing, smell, taste and touch."
+    },
+    {
+     "term": "season",
+     "meaning": "A part of the year with its own weather, like summer or winter."
+    },
+    {
+     "term": "force",
+     "meaning": "A push or a pull."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 1,
+  "shuffle_questions": false,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which of these is NOT living?",
+    "hint": "Living things grow and need food.",
+    "explanation": "A rock does not grow, eat or have babies, so it is not living.",
+    "skill_tag": "living.classify",
+    "options": [
+     {
+      "id": "a",
+      "text": "A daisy"
+     },
+     {
+      "id": "b",
+      "text": "A fish"
+     },
+     {
+      "id": "c",
+      "text": "A bee"
+     },
+     {
+      "id": "d",
+      "text": "A rock"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "multi_select",
+    "prompt": "What do animals need to stay alive? Pick all that apply.",
+    "hint": "Think about what keeps your body going.",
+    "explanation": "Animals need food and water to live and grow.",
+    "skill_tag": "living.needs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Water"
+     },
+     {
+      "id": "b",
+      "text": "A toy"
+     },
+     {
+      "id": "c",
+      "text": "A television"
+     },
+     {
+      "id": "d",
+      "text": "Food"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Which animal is a mammal?",
+    "hint": "Mammals have fur or hair.",
+    "explanation": "A goat has hair and feeds its kid milk, so it is a mammal.",
+    "skill_tag": "animals.groups",
+    "options": [
+     {
+      "id": "a",
+      "text": "A trout"
+     },
+     {
+      "id": "b",
+      "text": "A butterfly"
+     },
+     {
+      "id": "c",
+      "text": "A sparrow"
+     },
+     {
+      "id": "d",
+      "text": "A goat"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "true_false",
+    "prompt": "A spider is an insect.",
+    "hint": "Count the legs. Insects have six.",
+    "explanation": "A spider has eight legs, so it is not an insect.",
+    "skill_tag": "animals.groups",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the bird.",
+    "hint": "A bird has feathers and wings.",
+    "explanation": "The bird has feathers and wings.",
+    "skill_tag": "animals.groups",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐕",
+       "label": "dog",
+       "x": 20,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐦",
+       "label": "bird",
+       "x": 50,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐟",
+       "label": "fish",
+       "x": 80,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🐛",
+       "label": "caterpillar",
+       "x": 50,
+       "y": 80,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h2"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant catches sunlight?",
+    "hint": "They are flat and green.",
+    "explanation": "Leaves are flat and green and catch the sunlight.",
+    "skill_tag": "plants.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "The roots"
+     },
+     {
+      "id": "b",
+      "text": "The seeds"
+     },
+     {
+      "id": "c",
+      "text": "The stem"
+     },
+     {
+      "id": "d",
+      "text": "The leaves"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps about plants.",
+    "hint": "One part is under the soil.",
+    "explanation": "Roots drink water from the soil and flowers make seeds.",
+    "skill_tag": "plants.parts",
+    "points": 2,
+    "text": "A plant drinks water with its {b1} and makes seeds in its {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "leaves"
+       },
+       {
+        "id": "b",
+        "text": "stem"
+       },
+       {
+        "id": "c",
+        "text": "roots"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stem"
+       },
+       {
+        "id": "b",
+        "text": "flowers"
+       },
+       {
+        "id": "c",
+        "text": "roots"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "order",
+    "prompt": "Put the steps of a growing plant in order.",
+    "hint": "Start with the seed.",
+    "explanation": "A plant starts as a seed, grows a root, then a shoot, then flowers.",
+    "skill_tag": "plants.life_cycle",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "A shoot grows up"
+     },
+     {
+      "id": "i4",
+      "text": "A flower makes new seeds"
+     },
+     {
+      "id": "i2",
+      "text": "A root grows down"
+     },
+     {
+      "id": "i1",
+      "text": "A seed in the soil"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Which of these does a plant need to grow?",
+    "hint": "Leaves catch it.",
+    "explanation": "Plants need sunlight, water and air to grow.",
+    "skill_tag": "plants.needs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Chocolate"
+     },
+     {
+      "id": "b",
+      "text": "A blanket"
+     },
+     {
+      "id": "c",
+      "text": "Toys"
+     },
+     {
+      "id": "d",
+      "text": "Sunlight"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Match each thing to the material it is made from.",
+    "hint": "Think about what suits the job.",
+    "explanation": "A window is glass, a spoon is metal and a boot is rubber.",
+    "skill_tag": "materials.uses",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Window"
+     },
+     {
+      "id": "l2",
+      "text": "Spoon"
+     },
+     {
+      "id": "l3",
+      "text": "Wellington boot"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Rubber"
+     },
+     {
+      "id": "r1",
+      "text": "Glass"
+     },
+     {
+      "id": "r2",
+      "text": "Metal"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which word describes a material that water cannot go through?",
+    "hint": "Raincoats are made of it.",
+    "explanation": "Waterproof materials keep water out.",
+    "skill_tag": "materials.properties",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bendy"
+     },
+     {
+      "id": "b",
+      "text": "Shiny"
+     },
+     {
+      "id": "c",
+      "text": "Rough"
+     },
+     {
+      "id": "d",
+      "text": "Waterproof"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "slider",
+    "prompt": "How many senses do we have?",
+    "hint": "Count: sight, hearing, smell ...",
+    "explanation": "We have five senses: sight, hearing, smell, taste and touch.",
+    "skill_tag": "body.senses",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10,
+     "unit": "senses"
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Which season is usually the coldest?",
+    "hint": "Think about wearing a coat.",
+    "explanation": "Winter is usually the coldest season.",
+    "skill_tag": "weather.seasons",
+    "options": [
+     {
+      "id": "a",
+      "text": "Summer"
+     },
+     {
+      "id": "b",
+      "text": "Spring"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     },
+     {
+      "id": "d",
+      "text": "Winter"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "What gives us light and warmth in the day?",
+    "hint": "It shines in the sky.",
+    "explanation": "The Sun gives us light and warmth.",
+    "skill_tag": "earth.sun",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cloud"
+     },
+     {
+      "id": "b",
+      "text": "The wind"
+     },
+     {
+      "id": "c",
+      "text": "The Moon"
+     },
+     {
+      "id": "d",
+      "text": "The Sun"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "short_text",
+    "prompt": "What do we call a push or a pull?",
+    "hint": "It starts with f.",
+    "explanation": "A push or a pull is called a force.",
+    "skill_tag": "forces.meaning",
+    "answer": {
+     "accepted": [
+      "force",
+      "a force",
+      "forces"
+     ]
+    }
+   }
+  ]
+ }
 }

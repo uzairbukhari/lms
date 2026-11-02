@@ -1,0 +1,966 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-english-class-4",
+  "subject": "english",
+  "title": "Writing with Style",
+  "summary": "Make writing come alive with similes, metaphors, joining words and well-planned paragraphs.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Writing",
+  "learning_objectives": [
+   "Tell a simile from a metaphor and use both",
+   "Join ideas with because, although and while",
+   "Plan a paragraph with a topic sentence and details",
+   "Build a strong description with an expanded noun phrase"
+  ],
+  "tags": [
+   "week-2",
+   "similes",
+   "conjunctions",
+   "paragraphs"
+  ],
+  "curriculum": {
+   "course": "english-class-4",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, Wordsmith!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you looked at the jobs words do.\n\nThis week you will use those words like a real author.\n\nWe will paint pictures with language."
+  },
+  {
+   "type": "image",
+   "emoji": "🖌️",
+   "alt": "Great writers paint pictures with words.",
+   "caption": "Great writers paint pictures with words."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Similes and metaphors"
+  },
+  {
+   "type": "text",
+   "markdown": "A **simile** compares two things using **like** or **as**. 'She was as quick as a cheetah.'\n\nA **metaphor** says one thing is another thing. 'The moon was a silver coin.'"
+  },
+  {
+   "type": "explainer",
+   "title": "Simile or metaphor?",
+   "scenes": [
+    {
+     "caption": "The moon.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🌙",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "Simile: The moon was like a silver coin.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🌙",
+       "x": 30,
+       "y": 50,
+       "size": 3,
+       "anim": "float"
+      },
+      {
+       "id": "c",
+       "emoji": "🪙",
+       "x": 70,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse",
+       "label": "like"
+      }
+     ]
+    },
+    {
+     "caption": "Metaphor: The moon was a silver coin.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🪙",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse",
+       "label": "was a coin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which one is a simile?",
+    "hint": "Look for 'as' or 'like'.",
+    "options": [
+     {
+      "id": "a",
+      "text": "She was brave."
+     },
+     {
+      "id": "b",
+      "text": "She was as brave as a lion."
+     },
+     {
+      "id": "c",
+      "text": "She was a lion."
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "'The classroom was a zoo.' What is this?",
+    "hint": "It does not use 'like' or 'as'.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A simile"
+     },
+     {
+      "id": "b",
+      "text": "A question"
+     },
+     {
+      "id": "c",
+      "text": "A metaphor"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "callout",
+   "style": "fun_fact",
+   "markdown": "Writers all over the world use similes. In Urdu poems too, a smile can be 'bright as the moon'."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Joining ideas"
+  },
+  {
+   "type": "text",
+   "markdown": "A **conjunction** joins two ideas. **Because** gives a reason. **Although** shows a surprise. **While** shows two things happening at once.\n\nFatima took an umbrella **because** it was raining. **Although** it was cold, she went outside. She read **while** the rain fell."
+  },
+  {
+   "type": "image",
+   "emoji": "☂️🌧️📖",
+   "alt": "Because, although and while join ideas.",
+   "caption": "Because, although and while join ideas."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which word fits? ___ the sun was hot, we played outside.",
+    "hint": "It shows a surprise.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because"
+     },
+     {
+      "id": "b",
+      "text": "Although"
+     },
+     {
+      "id": "c",
+      "text": "While"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "match",
+    "prompt": "Match the joining word to its job.",
+    "hint": "Think about each word.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "because"
+     },
+     {
+      "id": "l2",
+      "text": "although"
+     },
+     {
+      "id": "l3",
+      "text": "while"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "two things at once"
+     },
+     {
+      "id": "r1",
+      "text": "gives a reason"
+     },
+     {
+      "id": "r2",
+      "text": "shows a surprise"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Painting with noun phrases"
+  },
+  {
+   "type": "text",
+   "markdown": "An **expanded noun phrase** adds describing words to a noun. 'The tree' becomes 'the tall, old tree by the river'.\n\nEach describing word helps the reader see a clearer picture."
+  },
+  {
+   "type": "explainer",
+   "title": "Building a noun phrase",
+   "scenes": [
+    {
+     "caption": "The tree.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "🌳",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "none",
+       "label": "the tree"
+      }
+     ]
+    },
+    {
+     "caption": "The tall tree.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "🌳",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "grow",
+       "label": "the tall tree"
+      }
+     ]
+    },
+    {
+     "caption": "The tall, old tree by the river.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "🌳",
+       "x": 35,
+       "y": 50,
+       "size": 3,
+       "anim": "none",
+       "label": "tall, old tree"
+      },
+      {
+       "id": "r",
+       "emoji": "🌊",
+       "x": 75,
+       "y": 65,
+       "size": 3,
+       "anim": "float",
+       "label": "by the river"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which is an expanded noun phrase?",
+    "hint": "It has extra describing detail.",
+    "options": [
+     {
+      "id": "a",
+      "text": "the tree"
+     },
+     {
+      "id": "b",
+      "text": "the tall, old tree by the river"
+     },
+     {
+      "id": "c",
+      "text": "ran quickly"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Describe a picture",
+   "materials": [
+    "Paper and pencil"
+   ],
+   "instructions": [
+    "Look out of the window or at a photo.",
+    "Write one simple sentence about what you see.",
+    "Make it better with an expanded noun phrase, a simile and a joining word."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Paragraphs"
+  },
+  {
+   "type": "text",
+   "markdown": "A **paragraph** is a group of sentences about one idea. It starts with a **topic sentence** that tells the reader the main idea. The next sentences add details.\n\nWhen you change to a new idea, start a new paragraph on a new line."
+  },
+  {
+   "type": "explainer",
+   "title": "Building a paragraph",
+   "scenes": [
+    {
+     "caption": "The topic sentence says the main idea.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "📌",
+       "x": 30,
+       "y": 25,
+       "size": 3,
+       "anim": "pulse",
+       "label": "topic sentence"
+      }
+     ]
+    },
+    {
+     "caption": "Detail sentences add facts or description.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "📌",
+       "x": 30,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "🔹",
+       "x": 30,
+       "y": 50,
+       "size": 2,
+       "anim": "grow",
+       "label": "detail"
+      },
+      {
+       "id": "c",
+       "emoji": "🔹",
+       "x": 30,
+       "y": 70,
+       "size": 2,
+       "anim": "grow",
+       "label": "detail"
+      }
+     ]
+    },
+    {
+     "caption": "A new idea starts a new paragraph.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "📌",
+       "x": 20,
+       "y": 25,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "🔹",
+       "x": 20,
+       "y": 40,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "🔹",
+       "x": 20,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "d",
+       "emoji": "📌",
+       "x": 65,
+       "y": 25,
+       "size": 3,
+       "anim": "pulse",
+       "label": "new paragraph"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "true_false",
+    "prompt": "You should start a new paragraph when you move to a new idea.",
+    "hint": "Each paragraph has one main idea.",
+    "answer": [
+     true
+    ]
+   }
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Writer's pairs",
+   "goal": "Match the pairs.",
+   "emojis": [
+    "🌙",
+    "🪙",
+    "📌",
+    "📖",
+    "🖌️",
+    "☂️"
+   ]
+  },
+  {
+   "type": "reveal",
+   "prompt": "Why is it easier to read a text that has paragraphs?",
+   "answer_markdown": "Paragraphs break the text into chunks, so the reader can follow one idea at a time."
+  },
+  {
+   "type": "summary",
+   "points": [
+    "A simile compares with like or as. A metaphor says something is something else.",
+    "Conjunctions join ideas: because, although and while.",
+    "An expanded noun phrase paints a clear picture.",
+    "A paragraph has one idea and starts with a topic sentence."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "simile",
+     "meaning": "A comparison that uses like or as, such as 'as quick as a cheetah'."
+    },
+    {
+     "term": "like",
+     "meaning": "A word used in a simile to compare two things."
+    },
+    {
+     "term": "as",
+     "meaning": "A word used in a simile, like in 'as brave as a lion'."
+    },
+    {
+     "term": "metaphor",
+     "meaning": "A comparison that says one thing is another thing, such as 'the moon was a coin'."
+    },
+    {
+     "term": "conjunction",
+     "meaning": "A word that joins two ideas."
+    },
+    {
+     "term": "because",
+     "meaning": "A conjunction that gives a reason."
+    },
+    {
+     "term": "although",
+     "meaning": "A conjunction that shows a surprise or a difference."
+    },
+    {
+     "term": "while",
+     "meaning": "A conjunction that shows two things happening at the same time."
+    },
+    {
+     "term": "expanded noun phrase",
+     "meaning": "A noun with extra describing words, like 'the tall, old tree by the river'."
+    },
+    {
+     "term": "paragraph",
+     "meaning": "A group of sentences about one idea."
+    },
+    {
+     "term": "topic sentence",
+     "meaning": "The sentence that tells the reader the main idea of a paragraph."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a simile?",
+    "hint": "Look for 'like' or 'as'.",
+    "explanation": "A simile compares using like or as.",
+    "skill_tag": "figurative.simile",
+    "options": [
+     {
+      "id": "a",
+      "text": "He is a rocket."
+     },
+     {
+      "id": "b",
+      "text": "He ran fast."
+     },
+     {
+      "id": "c",
+      "text": "He ran like the wind."
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "'The sun is a golden coin.' What is this?",
+    "hint": "It says the sun IS a coin.",
+    "explanation": "A metaphor says one thing is another.",
+    "skill_tag": "figurative.metaphor",
+    "options": [
+     {
+      "id": "a",
+      "text": "A simile"
+     },
+     {
+      "id": "b",
+      "text": "A metaphor"
+     },
+     {
+      "id": "c",
+      "text": "A question"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "multi_select",
+    "prompt": "Which of these are similes? Pick all that apply.",
+    "hint": "Look for 'as' or 'like'.",
+    "explanation": "Similes use as or like. The others are metaphors.",
+    "skill_tag": "figurative.simile",
+    "options": [
+     {
+      "id": "a",
+      "text": "The sun is a golden coin"
+     },
+     {
+      "id": "b",
+      "text": "She is a star"
+     },
+     {
+      "id": "c",
+      "text": "ran like the wind"
+     },
+     {
+      "id": "d",
+      "text": "as quiet as a mouse"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think of two small words.",
+    "explanation": "Similes use like or as.",
+    "skill_tag": "figurative.simile",
+    "points": 2,
+    "text": "A simile compares using {b1} or {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "and"
+       },
+       {
+        "id": "b",
+        "text": "like"
+       },
+       {
+        "id": "c",
+        "text": "but"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "or"
+       },
+       {
+        "id": "b",
+        "text": "as"
+       },
+       {
+        "id": "c",
+        "text": "if"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "'The moon was a silver coin.' Tap the thing being described.",
+    "hint": "Which thing is being compared to a coin?",
+    "explanation": "The moon is described as a silver coin.",
+    "skill_tag": "figurative.metaphor",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌙",
+       "label": "moon",
+       "x": 20,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪙",
+       "label": "coin",
+       "x": 50,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "☀️",
+       "label": "sun",
+       "x": 80,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "⭐",
+       "label": "star",
+       "x": 50,
+       "y": 80,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each joining word to its job.",
+    "hint": "Think about each word.",
+    "explanation": "Because gives a reason, although shows a surprise and while shows two things at once.",
+    "skill_tag": "conjunctions.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "because"
+     },
+     {
+      "id": "l2",
+      "text": "although"
+     },
+     {
+      "id": "l3",
+      "text": "while"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "shows a surprise"
+     },
+     {
+      "id": "r1",
+      "text": "gives a reason"
+     },
+     {
+      "id": "r3",
+      "text": "two things at once"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "I wore my coat ___ it was cold.",
+    "hint": "It gives the reason.",
+    "explanation": "Because gives the reason for wearing a coat.",
+    "skill_tag": "conjunctions.because",
+    "options": [
+     {
+      "id": "a",
+      "text": "although"
+     },
+     {
+      "id": "b",
+      "text": "while"
+     },
+     {
+      "id": "c",
+      "text": "because"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "___ it was raining, we still had a picnic.",
+    "hint": "It shows a surprise.",
+    "explanation": "Although shows a surprise: rain, but still a picnic.",
+    "skill_tag": "conjunctions.although",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because"
+     },
+     {
+      "id": "b",
+      "text": "Although"
+     },
+     {
+      "id": "c",
+      "text": "So"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Which group of words is an expanded noun phrase?",
+    "hint": "It adds extra description.",
+    "explanation": "It adds describing words and a place to the noun.",
+    "skill_tag": "noun_phrases.expanded",
+    "options": [
+     {
+      "id": "a",
+      "text": "swam slowly"
+     },
+     {
+      "id": "b",
+      "text": "the shimmering lake beside the mountain"
+     },
+     {
+      "id": "c",
+      "text": "the lake"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "short_text",
+    "prompt": "What do we call a group of sentences about one idea?",
+    "hint": "It starts with p.",
+    "explanation": "A group of sentences about one idea is a paragraph.",
+    "skill_tag": "paragraphs.meaning",
+    "answer": {
+     "accepted": [
+      "paragraph",
+      "a paragraph"
+     ]
+    }
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "A topic sentence tells the reader the main idea of the paragraph.",
+    "hint": "It usually comes first.",
+    "explanation": "A topic sentence gives the main idea.",
+    "skill_tag": "paragraphs.topic",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "order",
+    "prompt": "Put the sentences in order to make a paragraph.",
+    "hint": "Start with the topic sentence.",
+    "explanation": "The topic sentence comes first and the ending sentence comes last.",
+    "skill_tag": "paragraphs.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "We wear new clothes."
+     },
+     {
+      "id": "i4",
+      "text": "It is a day full of joy."
+     },
+     {
+      "id": "i3",
+      "text": "We eat sweet food with family."
+     },
+     {
+      "id": "i1",
+      "text": "Eid is my favourite day."
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A story has 3 separate ideas. How many paragraphs would you use?",
+    "hint": "One paragraph for each idea.",
+    "explanation": "Each idea gets its own paragraph, so 3.",
+    "skill_tag": "paragraphs.when",
+    "range": {
+     "step": 1,
+     "min": 1,
+     "max": 8,
+     "unit": "paragraphs"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Which word is an adjective? The shimmering lake was calm.",
+    "hint": "It describes the lake.",
+    "explanation": "Shimmering describes the lake.",
+    "skill_tag": "grammar.adjectives",
+    "options": [
+     {
+      "id": "a",
+      "text": "was"
+     },
+     {
+      "id": "b",
+      "text": "shimmering"
+     },
+     {
+      "id": "c",
+      "text": "lake"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Which is the strongest description?",
+    "hint": "Look for the most detail.",
+    "explanation": "It adds colour, size and light to make a clear picture.",
+    "skill_tag": "writing.description",
+    "options": [
+     {
+      "id": "a",
+      "text": "The mosque was nice."
+     },
+     {
+      "id": "b",
+      "text": "The mosque was big."
+     },
+     {
+      "id": "c",
+      "text": "The huge, golden dome of the mosque glowed in the evening light."
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ }
+}

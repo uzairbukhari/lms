@@ -1,0 +1,1683 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-maths-class-4",
+  "subject": "maths",
+  "title": "Multiplying Big and Sharing Fairly",
+  "summary": "Use arrays and partitioning to multiply, share things with remainders, and find factors.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Multiplying and dividing",
+  "learning_objectives": [
+   "Multiply a 2-digit number by 1 digit using arrays and partitioning",
+   "Divide by sharing and say what the remainder is",
+   "Find factor pairs of numbers up to 40"
+  ],
+  "tags": [
+   "week-2",
+   "multiplication",
+   "division",
+   "factors"
+  ],
+  "curriculum": {
+   "course": "maths-class-4",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, Maths Detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you used times tables and fact families.\n\nThis week we use them to solve bigger problems.\n\nWe will multiply, share and find the building blocks of numbers."
+  },
+  {
+   "type": "image",
+   "emoji": "🍪",
+   "alt": "A tray of 24 cookies shared between friends. Is there any left over?",
+   "caption": "A tray of 24 cookies shared between friends. Is there any left over?"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Arrays"
+  },
+  {
+   "type": "text",
+   "markdown": "An **array** is objects in neat rows and columns.\n\n3 rows of 4 is 3 x 4 = 12. Turn it round and it is 4 rows of 3. The answer is the same!"
+  },
+  {
+   "type": "explainer",
+   "title": "A 3 by 4 array",
+   "scenes": [
+    {
+     "caption": "One row of 4 cookies.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Add two more rows: 3 rows of 4.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Count them: 3 x 4 = 12. Also 4 x 3 = 12.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 25,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "🍪",
+       "x": 40,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "🍪",
+       "x": 60,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c4",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "emoji": "1️⃣2️⃣",
+       "x": 92,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "A tray has 5 rows of 6 cookies. How many cookies are on the tray?",
+    "hint": "5 x 6.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which sum has the same answer as 4 x 7?",
+    "hint": "An array can be turned round.",
+    "options": [
+     {
+      "id": "a",
+      "text": "4 + 7"
+     },
+     {
+      "id": "b",
+      "text": "7 - 4"
+     },
+     {
+      "id": "c",
+      "text": "4 x 4"
+     },
+     {
+      "id": "d",
+      "text": "7 x 4"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Partitioning to multiply"
+  },
+  {
+   "type": "text",
+   "markdown": "To multiply a bigger number, **partition** it into tens and ones.\n\nFor 23 x 4: 20 x 4 = 80 and 3 x 4 = 12. Then add: 80 + 12 = 92."
+  },
+  {
+   "type": "explainer",
+   "title": "23 x 4 by partitioning",
+   "scenes": [
+    {
+     "caption": "23 split into 20 and 3.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "2️⃣0️⃣",
+       "x": 30,
+       "y": 40,
+       "size": 3,
+       "anim": "none",
+       "label": "20"
+      },
+      {
+       "id": "o",
+       "emoji": "3️⃣",
+       "x": 70,
+       "y": 40,
+       "size": 3,
+       "anim": "none",
+       "label": "3"
+      }
+     ]
+    },
+    {
+     "caption": "Multiply each part by 4. 20 x 4 = 80. 3 x 4 = 12.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "8️⃣0️⃣",
+       "x": 30,
+       "y": 40,
+       "size": 3,
+       "anim": "pulse",
+       "label": "80"
+      },
+      {
+       "id": "o",
+       "emoji": "1️⃣2️⃣",
+       "x": 70,
+       "y": 40,
+       "size": 3,
+       "anim": "pulse",
+       "label": "12"
+      }
+     ]
+    },
+    {
+     "caption": "Add the parts: 80 + 12 = 92.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "8️⃣0️⃣",
+       "x": 20,
+       "y": 40,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "o",
+       "emoji": "1️⃣2️⃣",
+       "x": 50,
+       "y": 40,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "emoji": "9️⃣2️⃣",
+       "x": 82,
+       "y": 40,
+       "size": 3,
+       "anim": "bounce",
+       "label": "92"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 34 x 3? Do 30 x 3 and 4 x 3, then add.",
+    "hint": "90 and 12.",
+    "answer": {
+     "value": 102,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "chart",
+   "kind": "table",
+   "title": "Partitioning 42 x 5",
+   "rows": [
+    {
+     "label": "40 x 5",
+     "value": 100
+    },
+    {
+     "label": "2 x 5",
+     "value": 10
+    }
+   ],
+   "caption": "Add the parts: 100 + 10 = 110. So 42 x 5 = 110."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 42 x 5?",
+    "hint": "Look at the table.",
+    "answer": {
+     "value": 110,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Sharing and remainders"
+  },
+  {
+   "type": "text",
+   "markdown": "Division is **sharing** equally. 12 sweets shared between 4 children is 12 / 4 = 3 each.\n\nSometimes there are sweets left over. The leftover is the **remainder**."
+  },
+  {
+   "type": "explainer",
+   "title": "11 sweets shared between 3",
+   "scenes": [
+    {
+     "caption": "11 sweets and 3 children.",
+     "items": [
+      {
+       "id": "s1",
+       "emoji": "🍬",
+       "x": 12,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s2",
+       "emoji": "🍬",
+       "x": 27.2,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s3",
+       "emoji": "🍬",
+       "x": 42.4,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s4",
+       "emoji": "🍬",
+       "x": 57.6,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s5",
+       "emoji": "🍬",
+       "x": 72.8,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s6",
+       "emoji": "🍬",
+       "x": 88,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "u1",
+       "emoji": "🍬",
+       "x": 20,
+       "y": 42,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "u2",
+       "emoji": "🍬",
+       "x": 35,
+       "y": 42,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "u3",
+       "emoji": "🍬",
+       "x": 50,
+       "y": 42,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "u4",
+       "emoji": "🍬",
+       "x": 65,
+       "y": 42,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "u5",
+       "emoji": "🍬",
+       "x": 80,
+       "y": 42,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "k1",
+       "emoji": "🧒",
+       "x": 20,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k2",
+       "emoji": "👧",
+       "x": 50,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k3",
+       "emoji": "🧒",
+       "x": 80,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Give each child 3 sweets. That uses 9 sweets.",
+     "items": [
+      {
+       "id": "s1",
+       "emoji": "🍬",
+       "x": 14,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s2",
+       "emoji": "🍬",
+       "x": 20,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s3",
+       "emoji": "🍬",
+       "x": 26,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s4",
+       "emoji": "🍬",
+       "x": 44,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s5",
+       "emoji": "🍬",
+       "x": 50,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s6",
+       "emoji": "🍬",
+       "x": 56,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s7",
+       "emoji": "🍬",
+       "x": 74,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s8",
+       "emoji": "🍬",
+       "x": 80,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s9",
+       "emoji": "🍬",
+       "x": 86,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "k1",
+       "emoji": "🧒",
+       "x": 20,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k2",
+       "emoji": "👧",
+       "x": 50,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k3",
+       "emoji": "🧒",
+       "x": 80,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "u1",
+       "emoji": "🍬",
+       "x": 40,
+       "y": 20,
+       "size": 1,
+       "anim": "float"
+      },
+      {
+       "id": "u2",
+       "emoji": "🍬",
+       "x": 60,
+       "y": 20,
+       "size": 1,
+       "anim": "float",
+       "label": "left over"
+      }
+     ]
+    },
+    {
+     "caption": "2 sweets cannot be shared equally. 11 / 3 = 3 remainder 2.",
+     "items": [
+      {
+       "id": "s1",
+       "emoji": "🍬",
+       "x": 14,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s2",
+       "emoji": "🍬",
+       "x": 20,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s3",
+       "emoji": "🍬",
+       "x": 26,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s4",
+       "emoji": "🍬",
+       "x": 44,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s5",
+       "emoji": "🍬",
+       "x": 50,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s6",
+       "emoji": "🍬",
+       "x": 56,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s7",
+       "emoji": "🍬",
+       "x": 74,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s8",
+       "emoji": "🍬",
+       "x": 80,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "s9",
+       "emoji": "🍬",
+       "x": 86,
+       "y": 62,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "k1",
+       "emoji": "🧒",
+       "x": 20,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k2",
+       "emoji": "👧",
+       "x": 50,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "k3",
+       "emoji": "🧒",
+       "x": 80,
+       "y": 82,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "u1",
+       "emoji": "🍬",
+       "x": 40,
+       "y": 20,
+       "size": 2,
+       "anim": "pulse"
+      },
+      {
+       "id": "u2",
+       "emoji": "🍬",
+       "x": 60,
+       "y": 20,
+       "size": 2,
+       "anim": "pulse",
+       "label": "remainder 2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "14 sweets are shared equally between 4 children. How many sweets are left over?",
+    "hint": "4 x 3 = 12. How far is that from 14?",
+    "options": [
+     {
+      "id": "a",
+      "text": "1"
+     },
+     {
+      "id": "b",
+      "text": "4"
+     },
+     {
+      "id": "c",
+      "text": "3"
+     },
+     {
+      "id": "d",
+      "text": "2"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  },
+  {
+   "type": "manipulative",
+   "title": "Share the sweets",
+   "goal": "Share the 14 sweets between 4 plates. Can every plate get the same? How many are left over?",
+   "emoji": "🍬",
+   "count": 14,
+   "zones": [
+    "Plate 1",
+    "Plate 2",
+    "Plate 3",
+    "Plate 4"
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "fun_fact",
+   "markdown": "In Pakistan, families often share sweets like jalebi and barfi at Eid. A fair share is the same for everyone!"
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "17 / 5 = 3 remainder ?. What is the remainder?",
+    "hint": "5 x 3 = 15.",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Factors and multiples"
+  },
+  {
+   "type": "text",
+   "markdown": "A **factor** is a number that divides exactly into another number.\n\nThe factors of 12 are 1, 2, 3, 4, 6 and 12. They come in pairs: 1 x 12, 2 x 6 and 3 x 4.\n\nA **multiple** is in the times table, like 12, 24 and 36 for 12."
+  },
+  {
+   "type": "explainer",
+   "title": "Factor pairs of 12",
+   "scenes": [
+    {
+     "caption": "12 tiles in a row: 1 x 12.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🟧",
+       "x": 5,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🟧",
+       "x": 12.727272727272727,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🟧",
+       "x": 20.454545454545453,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🟧",
+       "x": 28.181818181818183,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a5",
+       "emoji": "🟧",
+       "x": 35.90909090909091,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a6",
+       "emoji": "🟧",
+       "x": 43.63636363636363,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a7",
+       "emoji": "🟧",
+       "x": 51.36363636363637,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a8",
+       "emoji": "🟧",
+       "x": 59.09090909090909,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a9",
+       "emoji": "🟧",
+       "x": 66.81818181818181,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a10",
+       "emoji": "🟧",
+       "x": 74.54545454545455,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a11",
+       "emoji": "🟧",
+       "x": 82.27272727272727,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a12",
+       "emoji": "🟧",
+       "x": 90,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "2 rows of 6: 2 x 6.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🟧",
+       "x": 10,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🟧",
+       "x": 25,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🟧",
+       "x": 40,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🟧",
+       "x": 55,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a5",
+       "emoji": "🟧",
+       "x": 70,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a6",
+       "emoji": "🟧",
+       "x": 85,
+       "y": 35,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "🟧",
+       "x": 10,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "🟧",
+       "x": 25,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "🟧",
+       "x": 40,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "🟧",
+       "x": 55,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b5",
+       "emoji": "🟧",
+       "x": 70,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b6",
+       "emoji": "🟧",
+       "x": 85,
+       "y": 65,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "3 rows of 4: 3 x 4. Every pair is a factor pair.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "🟧",
+       "x": 20,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "🟧",
+       "x": 40,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "🟧",
+       "x": 60,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "🟧",
+       "x": 80,
+       "y": 22,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "🟧",
+       "x": 20,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "🟧",
+       "x": 40,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "🟧",
+       "x": 60,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "🟧",
+       "x": 80,
+       "y": 50,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "🟧",
+       "x": 20,
+       "y": 78,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "🟧",
+       "x": 40,
+       "y": 78,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "🟧",
+       "x": 60,
+       "y": 78,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c4",
+       "emoji": "🟧",
+       "x": 80,
+       "y": 78,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multi_select",
+    "prompt": "Which numbers are factors of 10? Pick all that apply.",
+    "hint": "Which numbers divide 10 exactly?",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "4"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     },
+     {
+      "id": "d",
+      "text": "2"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "Is 7 a factor of 20?",
+   "answer_markdown": "No. 7 x 2 = 14 and 7 x 3 = 21, so 20 is not in the 7 times table."
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Times table pairs",
+   "goal": "Match each number picture with its twin.",
+   "emojis": [
+    "2️⃣",
+    "3️⃣",
+    "4️⃣",
+    "6️⃣",
+    "🍪",
+    "🍬"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "An array shows multiplying as rows and columns.",
+    "Partition a number into tens and ones to multiply it.",
+    "Sharing equally is dividing. The leftover is the remainder.",
+    "Factors divide exactly into a number and come in pairs."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "array",
+     "meaning": "Objects set out in equal rows and columns."
+    },
+    {
+     "term": "partition",
+     "meaning": "To split a number into parts, like 23 into 20 and 3."
+    },
+    {
+     "term": "sharing",
+     "meaning": "Splitting into equal groups. Dividing is sharing equally."
+    },
+    {
+     "term": "remainder",
+     "meaning": "The amount left over when a number cannot be shared equally."
+    },
+    {
+     "term": "factor",
+     "meaning": "A number that divides exactly into another number."
+    },
+    {
+     "term": "multiple",
+     "meaning": "A number you get in a times table, like 12, 24 and 36."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "A garden has 6 rows of 7 plants. How many plants altogether?",
+    "hint": "6 x 7.",
+    "explanation": "6 rows of 7 is 6 x 7 = 42.",
+    "skill_tag": "multiply.arrays",
+    "answer": {
+     "value": 42,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which sum has the same answer as 6 x 8?",
+    "hint": "Turn the array round.",
+    "explanation": "6 x 8 and 8 x 6 are the same array turned round.",
+    "skill_tag": "multiply.arrays",
+    "options": [
+     {
+      "id": "a",
+      "text": "8 - 6"
+     },
+     {
+      "id": "b",
+      "text": "6 x 6"
+     },
+     {
+      "id": "c",
+      "text": "6 + 8"
+     },
+     {
+      "id": "d",
+      "text": "8 x 6"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "What is 23 x 4?",
+    "hint": "20 x 4 and 3 x 4.",
+    "explanation": "80 + 12 = 92.",
+    "skill_tag": "multiply.partition",
+    "answer": {
+     "value": 92,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q4",
+    "type": "number",
+    "prompt": "What is 45 x 3?",
+    "hint": "40 x 3 and 5 x 3.",
+    "explanation": "120 + 15 = 135.",
+    "skill_tag": "multiply.partition",
+    "answer": {
+     "value": 135,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps to multiply 31 x 5.",
+    "hint": "30 x 5 and 1 x 5.",
+    "explanation": "30 x 5 = 150 and 1 x 5 = 5. 150 + 5 = 155.",
+    "skill_tag": "multiply.partition",
+    "points": 2,
+    "text": "31 x 5 = {b1} + {b2} = 155.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "15"
+       },
+       {
+        "id": "b",
+        "text": "150"
+       },
+       {
+        "id": "c",
+        "text": "300"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the steps for 23 x 4 in order.",
+    "hint": "Split first, add last.",
+    "explanation": "We split, multiply each part, then add the parts.",
+    "skill_tag": "multiply.partition",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Work out 20 x 4 = 80"
+     },
+     {
+      "id": "i3",
+      "text": "Work out 3 x 4 = 12"
+     },
+     {
+      "id": "i4",
+      "text": "Add 80 + 12 = 92"
+     },
+     {
+      "id": "i1",
+      "text": "Split 23 into 20 and 3"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "number",
+    "prompt": "24 cookies are shared equally between 6 friends. How many does each friend get?",
+    "hint": "6 x ? = 24.",
+    "explanation": "24 / 6 = 4.",
+    "skill_tag": "divide.sharing",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "13 sweets are shared equally between 4 children. How many are left over?",
+    "hint": "4 x 3 = 12.",
+    "explanation": "Each child gets 3, which uses 12 sweets, so 1 is left over.",
+    "skill_tag": "divide.remainder",
+    "options": [
+     {
+      "id": "a",
+      "text": "0"
+     },
+     {
+      "id": "b",
+      "text": "2"
+     },
+     {
+      "id": "c",
+      "text": "3"
+     },
+     {
+      "id": "d",
+      "text": "1"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show the remainder when 19 is divided by 5.",
+    "hint": "5 x 3 = 15.",
+    "explanation": "19 - 15 = 4, so the remainder is 4.",
+    "skill_tag": "divide.remainder",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q10",
+    "type": "true_false",
+    "prompt": "17 / 5 has no remainder.",
+    "hint": "Is 17 in the 5 times table?",
+    "explanation": "5 x 3 = 15 and 5 x 4 = 20, so 17 leaves a remainder of 2.",
+    "skill_tag": "divide.remainder",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "Which of these are factors of 12? Pick all that apply.",
+    "hint": "Which numbers divide 12 exactly?",
+    "explanation": "3 x 4 = 12 and 6 x 2 = 12. 5 and 7 do not divide 12 exactly.",
+    "skill_tag": "factors.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "6"
+     },
+     {
+      "id": "b",
+      "text": "7"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     },
+     {
+      "id": "d",
+      "text": "3"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "match",
+    "prompt": "Match each factor pair to its number.",
+    "hint": "Multiply each pair.",
+    "explanation": "3 x 8 = 24, 4 x 5 = 20 and 2 x 9 = 18.",
+    "skill_tag": "factors.pairs",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3 and 8"
+     },
+     {
+      "id": "l2",
+      "text": "4 and 5"
+     },
+     {
+      "id": "l3",
+      "text": "2 and 9"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "18"
+     },
+     {
+      "id": "r1",
+      "text": "24"
+     },
+     {
+      "id": "r2",
+      "text": "20"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q13",
+    "type": "hotspot",
+    "prompt": "Tap the two numbers that are factors of 10.",
+    "hint": "Which numbers divide 10 exactly?",
+    "explanation": "2 x 5 = 10, so 2 and 5 are factors of 10.",
+    "skill_tag": "factors.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "2️⃣",
+       "label": "2",
+       "x": 15,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "3️⃣",
+       "label": "3",
+       "x": 38,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "5️⃣",
+       "label": "5",
+       "x": 62,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "7️⃣",
+       "label": "7",
+       "x": 85,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1",
+     "h3"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "short_text",
+    "prompt": "Write the missing word: a number that divides exactly into another number is called a ...",
+    "hint": "It starts with f.",
+    "explanation": "A factor divides exactly into a number.",
+    "skill_tag": "factors.vocab",
+    "answer": {
+     "accepted": [
+      "factor",
+      "a factor",
+      "factors"
+     ]
+    }
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A box holds 8 pencils. A teacher buys 14 boxes. How many pencils is that?",
+    "hint": "Split 14 into 10 and 4.",
+    "explanation": "10 x 8 = 80 and 4 x 8 = 32. 80 + 32 = 112.",
+    "skill_tag": "word_problem",
+    "answer": {
+     "value": 112,
+     "tolerance": 0
+    }
+   }
+  ]
+ }
+}

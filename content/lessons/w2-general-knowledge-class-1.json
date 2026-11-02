@@ -1,0 +1,992 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-general-knowledge-class-1",
+  "subject": "general-knowledge",
+  "title": "Maps and Places Near and Far",
+  "summary": "Learn what a map shows, use the compass directions, and find out about Pakistan and other places.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Maps and places",
+  "learning_objectives": [
+   "Say what a map shows",
+   "Use north, south, east and west",
+   "Name some facts about Pakistan",
+   "Say the difference between a mountain, a river and a desert"
+  ],
+  "tags": [
+   "week-2",
+   "maps",
+   "pakistan"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-1",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, World Explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you learned that we live on planet Earth.\n\nThis week we ask: how do we find places?\n\nWe use maps!"
+  },
+  {
+   "type": "image",
+   "emoji": "🗺️",
+   "alt": "A map is a picture of a place seen from above.",
+   "caption": "A map is a picture of a place seen from above."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Maps and directions"
+  },
+  {
+   "type": "text",
+   "markdown": "A **map** is a picture of a place seen from above. It helps us find our way.\n\nA **compass** shows four directions: **north**, **south**, **east** and **west**. North is usually at the top of a map."
+  },
+  {
+   "type": "explainer",
+   "title": "The four directions",
+   "scenes": [
+    {
+     "caption": "A compass has four main directions.",
+     "items": [
+      {
+       "id": "c",
+       "emoji": "🧭",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "North is at the top.",
+     "items": [
+      {
+       "id": "c",
+       "emoji": "🧭",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "n",
+       "emoji": "⬆️",
+       "x": 50,
+       "y": 15,
+       "size": 3,
+       "anim": "bounce",
+       "label": "North"
+      }
+     ]
+    },
+    {
+     "caption": "East is on the right. West is on the left. South is at the bottom.",
+     "items": [
+      {
+       "id": "c",
+       "emoji": "🧭",
+       "x": 50,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "n",
+       "emoji": "⬆️",
+       "x": 50,
+       "y": 15,
+       "size": 3,
+       "anim": "none",
+       "label": "North"
+      },
+      {
+       "id": "e",
+       "emoji": "➡️",
+       "x": 85,
+       "y": 50,
+       "size": 3,
+       "anim": "bounce",
+       "label": "East"
+      },
+      {
+       "id": "w",
+       "emoji": "⬅️",
+       "x": 15,
+       "y": 50,
+       "size": 3,
+       "anim": "bounce",
+       "label": "West"
+      },
+      {
+       "id": "s",
+       "emoji": "⬇️",
+       "x": 50,
+       "y": 88,
+       "size": 3,
+       "anim": "bounce",
+       "label": "South"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "On most maps, where is north?",
+    "hint": "Think of the arrow pointing up.",
+    "options": [
+     {
+      "id": "a",
+      "text": "On the left"
+     },
+     {
+      "id": "b",
+      "text": "At the top"
+     },
+     {
+      "id": "c",
+      "text": "At the bottom"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Treasure map",
+   "materials": [
+    "Paper and pencils",
+    "A small toy"
+   ],
+   "instructions": [
+    "Hide a toy in a room.",
+    "Draw a map of the room with an X for the treasure.",
+    "Ask a grown-up to follow your map. Add north, south, east and west."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Near and far"
+  },
+  {
+   "type": "text",
+   "markdown": "Places can be small or big. Your street is in your city. Your city is in your country. Your country is in a continent."
+  },
+  {
+   "type": "explainer",
+   "title": "Zooming out",
+   "scenes": [
+    {
+     "caption": "This is your street.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🏠",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Your street is in a city.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🏠",
+       "x": 50,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "🏙️",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Your city is in a country.",
+     "items": [
+      {
+       "id": "b",
+       "emoji": "🏙️",
+       "x": 50,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "🗺️",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Your country is in a continent on planet Earth.",
+     "items": [
+      {
+       "id": "c",
+       "emoji": "🗺️",
+       "x": 50,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "d",
+       "emoji": "🌏",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "spin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "order",
+    "prompt": "Put these places from smallest to biggest.",
+    "hint": "Start with the smallest.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Your city"
+     },
+     {
+      "id": "i3",
+      "text": "Your country"
+     },
+     {
+      "id": "i4",
+      "text": "Your continent"
+     },
+     {
+      "id": "i1",
+      "text": "Your street"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Pakistan"
+  },
+  {
+   "type": "text",
+   "markdown": "**Pakistan** is a country in Asia. Its capital city is **Islamabad**. The Pakistan flag is green and white, with a moon and a star.\n\nPakistan has four provinces: Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan."
+  },
+  {
+   "type": "image",
+   "emoji": "🇵🇰",
+   "alt": "The flag of Pakistan.",
+   "caption": "The flag of Pakistan."
+  },
+  {
+   "type": "image",
+   "emoji": "🏔️🌊🏜️",
+   "alt": "Pakistan has high mountains, the Indus river and deserts.",
+   "caption": "Pakistan has high mountains, the Indus river and deserts."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "What is the capital city of Pakistan?",
+    "hint": "It begins with I.",
+    "options": [
+     {
+      "id": "a",
+      "text": "London"
+     },
+     {
+      "id": "b",
+      "text": "Paris"
+     },
+     {
+      "id": "c",
+      "text": "Islamabad"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "callout",
+   "style": "fun_fact",
+   "markdown": "K2 is the second highest mountain in the world. It is in Pakistan!"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Mountains, rivers and deserts"
+  },
+  {
+   "type": "text",
+   "markdown": "A **mountain** is a very high piece of land. A **river** is water that flows towards the sea. A **desert** is a dry place with very little rain."
+  },
+  {
+   "type": "explainer",
+   "title": "Land and water",
+   "scenes": [
+    {
+     "caption": "A mountain rises high into the sky.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🏔️",
+       "x": 25,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Rain and snow melt and make a river.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🏔️",
+       "x": 25,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "r",
+       "emoji": "💧",
+       "x": 45,
+       "y": 60,
+       "size": 2,
+       "anim": "float"
+      },
+      {
+       "id": "r2",
+       "emoji": "🌊",
+       "x": 70,
+       "y": 75,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "The river flows to the sea. Far away, a desert is dry.",
+     "items": [
+      {
+       "id": "m",
+       "emoji": "🏔️",
+       "x": 15,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "r2",
+       "emoji": "🌊",
+       "x": 50,
+       "y": 75,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "d",
+       "emoji": "🏜️",
+       "x": 85,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which of these is a very dry place with little rain?",
+    "hint": "Camels live there.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A river"
+     },
+     {
+      "id": "b",
+      "text": "A desert"
+     },
+     {
+      "id": "c",
+      "text": "A mountain"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Places match",
+   "goal": "Turn over two cards and find the pairs.",
+   "emojis": [
+    "🏔️",
+    "🌊",
+    "🏜️",
+    "🧭",
+    "🗺️",
+    "🇵🇰"
+   ]
+  },
+  {
+   "type": "reveal",
+   "prompt": "What would you put on a map of your home?",
+   "answer_markdown": "Rooms, doors, the garden, a compass and maybe a key with symbols."
+  },
+  {
+   "type": "summary",
+   "points": [
+    "A map shows a place from above.",
+    "A compass shows north, south, east and west.",
+    "Pakistan is a country in Asia. Its capital is Islamabad.",
+    "Mountains, rivers and deserts are different kinds of land and water."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "Ready for the quiz? It has 15 questions and takes about 15 minutes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "map",
+     "meaning": "A picture of a place seen from above."
+    },
+    {
+     "term": "compass",
+     "meaning": "A tool that shows directions."
+    },
+    {
+     "term": "north",
+     "meaning": "The direction at the top of a map."
+    },
+    {
+     "term": "south",
+     "meaning": "The direction at the bottom of a map."
+    },
+    {
+     "term": "east",
+     "meaning": "The direction on the right of a map."
+    },
+    {
+     "term": "west",
+     "meaning": "The direction on the left of a map."
+    },
+    {
+     "term": "Pakistan",
+     "meaning": "A country in Asia with high mountains, rivers and deserts."
+    },
+    {
+     "term": "Islamabad",
+     "meaning": "The capital city of Pakistan."
+    },
+    {
+     "term": "mountain",
+     "meaning": "A very high piece of land."
+    },
+    {
+     "term": "river",
+     "meaning": "Water that flows towards the sea."
+    },
+    {
+     "term": "desert",
+     "meaning": "A very dry place with little rain."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a map?",
+    "hint": "It helps you find your way.",
+    "explanation": "A map shows a place seen from above.",
+    "skill_tag": "maps.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of food"
+     },
+     {
+      "id": "b",
+      "text": "A story book"
+     },
+     {
+      "id": "c",
+      "text": "A musical toy"
+     },
+     {
+      "id": "d",
+      "text": "A picture of a place from above"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which tool shows the directions north, south, east and west?",
+    "hint": "It has an arrow.",
+    "explanation": "A compass shows directions.",
+    "skill_tag": "maps.compass",
+    "options": [
+     {
+      "id": "a",
+      "text": "A clock"
+     },
+     {
+      "id": "b",
+      "text": "A scale"
+     },
+     {
+      "id": "c",
+      "text": "A ruler"
+     },
+     {
+      "id": "d",
+      "text": "A compass"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "hotspot",
+    "prompt": "The school is in the middle. Tap the place that is north of the school.",
+    "hint": "North is at the top.",
+    "explanation": "North is at the top of the map, where the park is.",
+    "skill_tag": "maps.directions",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏫",
+       "label": "school",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌳",
+       "label": "park",
+       "x": 50,
+       "y": 15,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏥",
+       "label": "hospital",
+       "x": 50,
+       "y": 85,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🛒",
+       "label": "shop",
+       "x": 15,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h5",
+       "emoji": "🕌",
+       "label": "mosque",
+       "x": 85,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each country to its capital city.",
+    "hint": "Think of the big city for each country.",
+    "explanation": "Islamabad is in Pakistan, London is in the UK and Paris is in France.",
+    "skill_tag": "places.capitals",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pakistan"
+     },
+     {
+      "id": "l2",
+      "text": "United Kingdom"
+     },
+     {
+      "id": "l3",
+      "text": "France"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "London"
+     },
+     {
+      "id": "r3",
+      "text": "Paris"
+     },
+     {
+      "id": "r1",
+      "text": "Islamabad"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Pakistan is in which continent?",
+    "hint": "It is the biggest continent.",
+    "explanation": "Pakistan is in Asia.",
+    "skill_tag": "places.continents",
+    "options": [
+     {
+      "id": "a",
+      "text": "Africa"
+     },
+     {
+      "id": "b",
+      "text": "Antarctica"
+     },
+     {
+      "id": "c",
+      "text": "Europe"
+     },
+     {
+      "id": "d",
+      "text": "Asia"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "true_false",
+    "prompt": "The flag of Pakistan has a moon and a star.",
+    "hint": "Think of green and white.",
+    "explanation": "The flag of Pakistan is green and white with a moon and a star.",
+    "skill_tag": "places.pakistan",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "One is high and one flows.",
+    "explanation": "A mountain is high land and a river is flowing water.",
+    "skill_tag": "landforms.words",
+    "points": 2,
+    "text": "A {b1} is a very high piece of land. A {b2} is water that flows towards the sea.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "island"
+       },
+       {
+        "id": "b",
+        "text": "mountain"
+       },
+       {
+        "id": "c",
+        "text": "desert"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "beach"
+       },
+       {
+        "id": "b",
+        "text": "river"
+       },
+       {
+        "id": "c",
+        "text": "hill"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "order",
+    "prompt": "Put these places from the smallest to the biggest.",
+    "hint": "Start with the smallest.",
+    "explanation": "A house is in a street, which is in a city, which is in a country.",
+    "skill_tag": "places.size",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A street"
+     },
+     {
+      "id": "i3",
+      "text": "A city"
+     },
+     {
+      "id": "i4",
+      "text": "A country"
+     },
+     {
+      "id": "i1",
+      "text": "A house"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "How many main directions are on a compass (north, south, east and west)?",
+    "hint": "Count them in the lesson.",
+    "explanation": "There are four main directions.",
+    "skill_tag": "maps.compass",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q10",
+    "type": "multi_select",
+    "prompt": "Which of these are compass directions? Pick all that apply.",
+    "hint": "Think of the compass.",
+    "explanation": "East and west are compass directions.",
+    "skill_tag": "maps.compass",
+    "options": [
+     {
+      "id": "a",
+      "text": "West"
+     },
+     {
+      "id": "b",
+      "text": "Up"
+     },
+     {
+      "id": "c",
+      "text": "Behind"
+     },
+     {
+      "id": "d",
+      "text": "East"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which is the second highest mountain in the world and is in Pakistan?",
+    "hint": "It is only two characters long.",
+    "explanation": "K2 is the second highest mountain in the world.",
+    "skill_tag": "landforms.pakistan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Big Ben"
+     },
+     {
+      "id": "b",
+      "text": "Sahara"
+     },
+     {
+      "id": "c",
+      "text": "The Nile"
+     },
+     {
+      "id": "d",
+      "text": "K2"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "What kind of place is the Thar?",
+    "hint": "It is dry and sandy.",
+    "explanation": "The Thar is a desert in the south-east of Pakistan.",
+    "skill_tag": "landforms.pakistan",
+    "options": [
+     {
+      "id": "a",
+      "text": "A sea"
+     },
+     {
+      "id": "b",
+      "text": "A mountain"
+     },
+     {
+      "id": "c",
+      "text": "A city"
+     },
+     {
+      "id": "d",
+      "text": "A desert"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "short_text",
+    "prompt": "What is the name of Pakistan's capital city?",
+    "hint": "It begins with I.",
+    "explanation": "Islamabad is the capital of Pakistan.",
+    "skill_tag": "places.capitals",
+    "answer": {
+     "accepted": [
+      "Islamabad"
+     ]
+    }
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Which river flows through Pakistan?",
+    "hint": "It starts with I.",
+    "explanation": "The Indus is a very long river in Pakistan.",
+    "skill_tag": "landforms.pakistan",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Thames"
+     },
+     {
+      "id": "b",
+      "text": "The Amazon"
+     },
+     {
+      "id": "c",
+      "text": "The Seine"
+     },
+     {
+      "id": "d",
+      "text": "The Indus"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "How many provinces does Pakistan have?",
+    "hint": "Punjab, Sindh, Khyber Pakhtunkhwa and ...",
+    "explanation": "Pakistan has four provinces.",
+    "skill_tag": "places.pakistan",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   }
+  ]
+ }
+}
