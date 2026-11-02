@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { api } from "../api";
 import { useAuth } from "../auth";
@@ -20,8 +20,109 @@ export const SUBJECT_LOOK: Record<string, { emoji: string; label: string }> = {
   "data-ai": { emoji: "🤖", label: "Computer Science, Data & AI" },
   gk: { emoji: "🌍", label: "General Knowledge" },
   "general-knowledge": { emoji: "🌍", label: "General Knowledge" },
+  english: { emoji: "📖", label: "English" },
 };
 const look = (id: string) => SUBJECT_LOOK[id] ?? { emoji: "📘", label: id };
+
+const TINT: Record<string, string> = {
+  maths: "var(--tint-maths)", science: "var(--tint-science)", "data-ai": "var(--tint-data-ai)",
+  gk: "var(--tint-gk)", "general-knowledge": "var(--tint-gk)", english: "var(--tint-english)",
+};
+
+/** Simple line icon per subject (decorative). Unknown subjects get a book. */
+function SubjectIcon({ subject, size }: { subject: string; size: number }) {
+  const paths: Record<string, ReactNode> = {
+    maths: <path d="M7 3.5v6M4 6.5h6M14 6.5h6M4.5 14.5l5 5M9.5 14.5l-5 5M14 15.5h6M14 19h6" />,
+    science: <path d="M9 3h6M10 3v6l-5.6 9.6A1.6 1.6 0 0 0 5.8 21h12.4a1.6 1.6 0 0 0 1.4-2.4L14 9V3M7.2 15h9.6" />,
+    "data-ai": <><rect x="5" y="8" width="14" height="11" rx="3" /><path d="M12 4v4M9.5 13h.01M14.5 13h.01M9.5 16.5h5M2.5 12.5v3M21.5 12.5v3" /></>,
+    gk: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18" /></>,
+    book: <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 0 4 21.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 1 1.5 1.5z" />,
+  };
+  const key = subject === "general-knowledge" ? "gk" : subject in paths ? subject : "book";
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[key]}</svg>
+  );
+}
+
+function Tick({ size }: { size: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+  );
+}
+
+/** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
+function QuestStop({ c, here }: { c: Card; here: boolean }) {
+  const s = look(c.subject);
+  const done = c.progress?.status === "completed";
+  const best = c.quiz?.bestPercent;
+  const percent = done ? 100 : c.progress ? Math.min(99, Math.round(((c.progress.lastBlock + 1) / Math.max(1, c.slideCount)) * 100)) : 0;
+  const ink = done ? "var(--done-text)" : "var(--text)";
+  const soft = done ? "var(--done-text)" : "var(--text-muted)";
+  return (
+    <article aria-label={`${s.label}: ${c.title}${done ? " (done)" : ""}`} className="flex flex-col gap-4">
+      <div className="flex h-[132px] flex-col items-center gap-2">
+        <div
+          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full"
+          style={{
+            background: done ? "var(--done-tint)" : (TINT[c.subject] ?? "var(--tint-english)"),
+            color: done ? "var(--done-text)" : "var(--on-tint)",
+            border: here ? "5px solid var(--accent)" : "var(--border-width) solid var(--surface-border)",
+            boxShadow: "var(--shadow)",
+          }}
+        >
+          <SubjectIcon subject={c.subject} size={52} />
+          {done && (
+            <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-10 w-10 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}>
+              <Tick size={24} />
+            </span>
+          )}
+        </div>
+        {here && <span className="rounded-full bg-accent px-3 text-base font-extrabold text-on-accent">You are here</span>}
+      </div>
+
+      <div
+        className="relative flex flex-1 flex-col gap-2.5 p-5"
+        style={{
+          background: done ? "var(--done-bg)" : "var(--surface)",
+          color: ink,
+          border: `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`,
+          borderRadius: "var(--radius)",
+          boxShadow: done ? "none" : "var(--shadow)",
+        }}
+      >
+        <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
+        <h3 className="font-display text-2xl font-bold leading-tight">{c.title}</h3>
+        <p className="text-base leading-snug" style={{ color: soft }}>{c.summary}</p>
+        {c.progress && !done && (
+          <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Lesson progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
+            <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
+          </div>
+        )}
+        <p className="font-extrabold" style={{ color: soft }} aria-live="polite">
+          {done
+            ? `Lesson done${c.quiz && c.quiz.attempts > 0 && typeof best === "number" ? ` · best quiz ${Math.round(best)}%` : ""}`
+            : c.progress ? `Slide ${Math.min(c.progress.lastBlock + 1, c.slideCount)} of ${c.slideCount}` : `About ${c.minutes} minutes`}
+        </p>
+        <div className="mt-auto flex flex-col gap-2.5 pt-1">
+          {done ? (
+            <div className="grid grid-cols-2 gap-2">
+              <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={`/lesson/${c.id}`}>Read again</Link>
+              <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={`/lesson/${c.id}/quiz`}>{c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
+            </div>
+          ) : (
+            <>
+              <Link className="btn btn-primary !min-h-[60px] !text-2xl" to={`/lesson/${c.id}`}>{c.progress ? "Keep going" : "Start"}</Link>
+              <Link className="btn !min-h-12" to={`/lesson/${c.id}/quiz`}>{c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
+            </>
+          )}
+        </div>
+        {done && (
+          <span aria-hidden="true" className="pointer-events-none absolute right-3 top-16 -rotate-12 rounded-xl border-4 px-3 py-1 font-display text-3xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>
+        )}
+      </div>
+    </article>
+  );
+}
 
 function LessonCard({ c, past }: { c: Card; past?: boolean }) {
   const s = look(c.subject);
@@ -67,6 +168,10 @@ export function StudentHome() {
   const lessonsDone = allMine.filter((c) => c.progress?.status === "completed").length;
   const quizzesPassed = allMine.filter((c) => (c.quiz?.bestPercent ?? 0) >= 70).length;
 
+  const weekCards = home ? [...home.thisWeek, ...home.early] : [];
+  const weekDone = weekCards.filter((c) => c.progress?.status === "completed").length;
+  const hereId = weekCards.find((c) => c.progress?.status !== "completed")?.id;
+
   const groups = new Map<string, Card[]>();
   for (const c of home?.lookBack ?? []) {
     const key = `Semester ${c.semester}, week ${c.week}`;
@@ -82,11 +187,19 @@ export function StudentHome() {
             <h1 className="font-display text-4xl font-extrabold">Hi, {user.displayName}!</h1>
             <p className="text-lg text-muted">
               {home?.now ? (home.now.exam ? `Semester ${home.now.semester} · exam week` : `Semester ${home.now.semester} · week ${home.now.week}`) : "Welcome back"}
-              {home && ` · ⭐ ${lessonsDone} lessons done · ${quizzesPassed} quizzes passed`}
+              {home && ` · ${quizzesPassed} quizzes passed`}
             </p>
           </div>
         </div>
-        <button type="button" className="btn" onClick={() => void logout()}>Log out</button>
+        <div className="flex items-center gap-3">
+          {home && (
+            <span className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 text-xl font-extrabold">
+              <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" fill="var(--star)" stroke="var(--text)" strokeWidth="1.2" strokeLinejoin="round" /></svg>
+              {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
+            </span>
+          )}
+          <button type="button" className="btn" onClick={() => void logout()}>Log out</button>
+        </div>
       </header>
 
       {failed && <p role="alert" className="text-xl">We couldn't load your lessons. Please refresh the page.</p>}
@@ -111,12 +224,30 @@ export function StudentHome() {
       )}
 
       {home && (
-        <section aria-labelledby="week" className="flex flex-col gap-3">
-          <h2 id="week" className="font-display text-2xl font-bold">🚀 This week</h2>
-          {home.thisWeek.length + home.early.length === 0 ? (
-            <p className="card p-5 text-lg">Nothing new this week. You can look back at old lessons below, or have a rest! 😴</p>
+        <section aria-labelledby="week" className="flex flex-col gap-4">
+          {weekCards.length === 0 ? (
+            <>
+              <h2 id="week" className="font-display text-3xl font-extrabold">This week</h2>
+              <p className="card p-5 text-lg">Nothing new this week. You can look back at old lessons below, or have a rest! 😴</p>
+            </>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2">{[...home.thisWeek, ...home.early].map((c) => <LessonCard key={c.id} c={c} />)}</div>
+            <>
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                  <h2 id="week" className="font-display text-3xl font-extrabold">Week {home.now?.week ?? ""} quest</h2>
+                  <p className="text-lg text-muted">Visit every stop on the trail. {weekDone} of {weekCards.length} done{weekDone === weekCards.length ? ", brilliant!" : "!"}</p>
+                </div>
+                <div role="img" aria-label={`${weekDone} of ${weekCards.length} lessons done`} className="flex gap-2">
+                  {weekCards.map((c, i) => (
+                    <span key={c.id} className="h-3.5 w-12 rounded-full border-[length:var(--border-width)] border-line" style={{ background: i < weekDone ? "var(--accent)" : "var(--track)" }} />
+                  ))}
+                </div>
+              </div>
+              <div className="relative grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))" }}>
+                <div aria-hidden="true" className="absolute left-[10%] right-[10%] top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)" }} />
+                {weekCards.map((c) => <div key={c.id} className="relative flex flex-col"><QuestStop c={c} here={c.id === hereId} /></div>)}
+              </div>
+            </>
           )}
         </section>
       )}

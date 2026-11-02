@@ -58,6 +58,14 @@ describe("theme tokens", () => {
           ["text", "surface"],
           ["text-muted", "surface"],
           ["accent-contrast", "accent"],
+          ["done-text", "done-bg"],
+          ["on-stamp", "stamp"],
+          ["done-text", "done-tint"],
+          ["on-tint", "tint-maths"],
+          ["on-tint", "tint-science"],
+          ["on-tint", "tint-data-ai"],
+          ["on-tint", "tint-gk"],
+          ["on-tint", "tint-english"],
         ];
         for (const [fg, bg] of pairs) {
           const ratio = contrast(t[fg] as string, t[bg] as string);
