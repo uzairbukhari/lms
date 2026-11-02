@@ -2,6 +2,7 @@ import { buildGlossary, findInGlossary, gradeQuestion, isLookupWord, normaliseWo
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
+import { LessonIntro } from "../components/LessonIntro";
 import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
 import { Chart } from "../components/Chart";
@@ -340,22 +341,7 @@ function SlideView(p: ViewProps) {
   const { slide } = p;
   switch (slide.kind) {
     case "title":
-      return (
-        <>
-          <div className="float text-center text-[clamp(5rem,14vw,9rem)]" aria-hidden="true">🚀</div>
-          <h1 className={`${titleCls} text-center`}>{slide.title}</h1>
-          <p className={`${bodyCls} text-center text-muted`}>{p.lesson.summary}</p>
-          <ul className="mx-auto flex max-w-2xl flex-col gap-2">
-            {p.lesson.objectives.map((o, i) => <li key={o} className={`pop-in ${bodyCls} card px-4 py-2`} style={{ animationDelay: `${0.15 + i * 0.12}s` }}>🎯 {o}</li>)}
-          </ul>
-          <p className="text-center text-xl text-muted">About {p.lesson.minutes} minutes</p>
-          <p className="text-center text-xl text-muted">💡 Press and hold any word to find out what it means.</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <button type="button" className="btn btn-primary !min-h-16 !px-8 text-2xl" onClick={() => { sfx("start"); p.onGo(1); }}>Let's go! 🚀</button>
-            {p.resumeAt > 0 && <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => p.onGo(p.resumeAt)}>Carry on where I was</button>}
-          </div>
-        </>
-      );
+      return <LessonIntro lesson={p.lesson} questionCount={p.quiz.questionCount} resumeAt={p.resumeAt} onGo={p.onGo} />;
     case "content":
       return <ContentSlide slide={slide} assetUrl={p.assetUrl} />;
     case "check":
