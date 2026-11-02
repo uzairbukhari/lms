@@ -142,6 +142,9 @@ CREATE TABLE classes (
   id          TEXT PRIMARY KEY,
   name        TEXT NOT NULL,
   description TEXT,
+  visibility_mode TEXT NOT NULL DEFAULT 'current_week'
+                    CHECK (visibility_mode IN ('current_week','all_published')),  -- 'all_published' = open library
+  revision_in_exam_week INTEGER NOT NULL DEFAULT 0,   -- 1 = reopen the semester's lessons read-only in exam week
   is_active   INTEGER NOT NULL DEFAULT 1,
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -198,6 +201,19 @@ CREATE TABLE course_assignments (
 );
 CREATE INDEX idx_assign_class ON course_assignments(class_id);
 CREATE INDEX idx_assign_user  ON course_assignments(user_id);
+
+-- Admin exceptions: reopen a past (or future) week for a class or one student.
+CREATE TABLE lesson_unlocks (
+  id          TEXT PRIMARY KEY,
+  course_id   TEXT NOT NULL REFERENCES courses(id),
+  semester    INTEGER NOT NULL CHECK (semester BETWEEN 1 AND 4),
+  week        INTEGER NOT NULL CHECK (week BETWEEN 1 AND 13),
+  class_id    TEXT REFERENCES classes(id),
+  user_id     TEXT REFERENCES users(id),
+  expires_at  TEXT,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  CHECK ((class_id IS NOT NULL) <> (user_id IS NOT NULL))
+);
 
 CREATE TABLE quizzes (
   id                TEXT PRIMARY KEY,          -- uuid
@@ -360,7 +376,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - Re-importing the same `slug` creates a new version (new quiz + questions rows); old attempts are untouched.
 - Asset upload to R2 (drag and drop images/audio), returning the filename to use in the JSON.
 - Lesson list with filters by subject/status, reorder, archive.
-- **Curriculum planner:** a grid of semester × week for one course (subject-year) where you drag lessons into slots, plus the **term calendar** for each class (start date of each semester). See section 4d.
+- **Curriculum planner:** a grid of semester × week for one course (subject-year) where you drag lessons into slots, with gap and draft warnings, a "preview as week N" mode, unlock tools for reopening weeks, plus the **term calendar** for each class (start date of each semester). See section 4d.
 - Admin **Classes and Courses** screens: create a class, add or remove students, build a course by picking and ordering lessons, assign it to a class or to one student (section 4c).
 - **Done when:** you can paste a Claude-generated lesson and see it previewed.
 
@@ -382,7 +398,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 ### Phase 6: Student dashboard (1 day)
 - Home: greeting with avatar, four subject tiles with progress rings, "Continue where you left off", "New lessons".
 - Subject page: lesson cards showing best score stars and attempt count.
-- **"This week" home:** this week's lessons for each subject up front, earlier weeks below, future weeks shown locked; semester map with an exam tile at the end (section 4d).
+- **"This week" home:** exactly this week's four lessons (one per subject), with a progress strip showing which are done and a "My progress" page for past scores. No browsing of other weeks. Exam tiles appear in exam week (section 4d).
 - Theme switcher (big, friendly button in the header: one small icon per theme) that sets `users.theme` and applies it instantly. Each child keeps her own choice across devices.
 - Light gamification: stars per lesson, streak counter. No leaderboards between sisters.
 - **Done when:** the full flow (login → subject → lesson → quiz → dashboard) works for both kids.
@@ -478,7 +494,7 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 - **Class:** a named group of students ("Family", "Saturday Club"). Your daughters live in a default "Family" class.
 - **Course:** an ordered list of lessons ("Fractions basics", "Robot basics"). Reusable across classes.
 - **Assignment:** a course given to a whole class or to one student, with an optional due date.
-- **What a student sees:** only lessons in courses assigned to their classes or to them, in the order you set. If a student has no assignments, they see nothing, so friends never stumble into lessons meant for your daughters. A per-class option "show all published lessons for my age band" gives the open-library behaviour for the Family class if you want it.
+- **What a student sees:** only lessons in courses assigned to their classes or to them, in the order you set. If a student has no assignments, they see nothing, so friends never stumble into lessons meant for your daughters. With `visibility_mode = 'current_week'` (the default) a student only gets the current week's lessons from their assigned courses (section 4d); a class can be switched to `all_published` for an open library.
 
 **Quick student setup (the "easy to create a login" requirement)**
 - **Add student** form: first name, pick an avatar, pick a class. That is all.
@@ -504,10 +520,18 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 
 **Where lessons sit.** A lesson belongs to a **course** (for example "Maths Year 1"), and `course_lessons` gives it a **semester (1 to 4) and a week (1 to 12)**. Courses are per subject, so each subject has its own 48-ish-lesson year plan. You can place a lesson by dragging it in the curriculum planner, or let the lesson JSON suggest a slot (section 5). One lesson per subject per week is the default pace (about 48 lessons per subject, about 190 across four subjects); a lighter pace of 2 to 3 lessons a week across all subjects works too.
 
-**What students see.**
-- The current week is worked out from the class's term dates. **This week's lessons appear first** on the home screen; earlier weeks stay open for catch-up; **future weeks are locked** (shown greyed with "opens in 2 weeks"). You can unlock ahead for a keen child or switch a class to "all unlocked".
-- A **semester map** shows 12 weekly stops and a trophy at the end for the exam.
-- Weekly lesson quizzes work as in the rest of the plan (unlimited retakes, every attempt recorded).
+**What students see: only the current week.**
+- The current week is worked out from the class's term dates (weeks run Monday to Sunday). On the home screen a student sees **only this week's lessons, one for each of the four subjects**, and nothing else from the curriculum: no earlier weeks, no future weeks, no lesson list to browse.
+- This is **enforced on the server**, not just hidden on screen: the API refuses to return a lesson or quiz that is not in the student's current week (or a currently open exam), so it cannot be reached by guessing a link.
+- Each week's lesson quizzes can be retaken as often as wanted **during that week**; every attempt is recorded. When the week ends, that week's lessons close.
+- A student can still see their **own score history** (stars and percentages for past weeks) on a "My progress" page, but not the lesson content.
+- In **exam week** the semester exam for each subject appears. By default nothing else is open. A per-class switch, `revision_in_exam_week`, can reopen that semester's lessons read-only during exam week for revision (off by default, as requested; I recommend turning it on because the exam covers the whole semester).
+- **Exceptions are yours to grant:** reopen a specific week for one student or a whole class (for a missed week, illness or holiday), or shift or pause the class calendar. Unlocks are logged in `lesson_unlocks` and can expire.
+
+**What the admin sees: everything, any time.** You are never limited by the calendar:
+- Open **any semester and week**, including future ones, to create, import, edit and **preview exactly as a child would see it** (the importer's preview can also simulate "as of week N").
+- Prepare an entire semester or year ahead with Claude (outline prompt in section 5.5, lessons with the prompt in 5.2) and park the lessons in their slots. Lessons marked `published` stay invisible to students until their week arrives, so there is no need to schedule anything by hand. Mark a lesson `draft` while you are still reviewing it; a week with no published lesson for a subject simply shows nothing for that subject.
+- The curriculum planner flags **gaps** (a week with no lesson in some subject) and **unreviewed drafts** so nothing is missing when the week starts.
 
 **Semester-end exams (one per subject per semester, so 16 a year).**
 - **Scope:** everything taught in that subject during that semester. By default Semester 4 is cumulative (the whole year) and earlier semesters can mix in a small share (default 20%) of earlier material as revision. You set this per exam in `blueprint_json`.
