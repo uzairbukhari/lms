@@ -149,11 +149,94 @@ const CHARTS = {
   },
 };
 
+
+// A picture for every stop: sections that still had only words get an emoji picture or an animated explainer.
+const img = (emoji, caption) => ({ type: "image", emoji, caption });
+const VISUALS = {
+  "diag-data-ai-class-1": {
+    "Stop 2: Patterns and sorting": [{ type: "explainer", title: "Sorting into groups", scenes: [
+      { caption: "Here are some fruits all mixed up.", items: [it("🍎", 20, 30, { id: "f1", size: 3 }), it("🍌", 45, 55, { id: "f2", size: 3 }), it("🍎", 70, 25, { id: "f3", size: 3 }), it("🍌", 25, 75, { id: "f4", size: 3 }), it("🍎", 60, 78, { id: "f5", size: 3 }), it("🍌", 85, 50, { id: "f6", size: 3 })] },
+      { caption: "To sort them, put things that are alike in the same group. Apples go together and bananas go together.", items: [it("🍎", 20, 30, { id: "f1", size: 3, label: "Apples" }), it("🍌", 75, 30, { id: "f2", size: 3, label: "Bananas" }), it("🍎", 20, 55, { id: "f3", size: 3 }), it("🍌", 75, 55, { id: "f4", size: 3 }), it("🍎", 20, 80, { id: "f5", size: 3 }), it("🍌", 75, 80, { id: "f6", size: 3 })] },
+    ] }],
+  },
+  "diag-data-ai-class-4": {
+    "Stop 2: Decisions": [{ type: "explainer", title: "If, then, else", scenes: [
+      { caption: "A program asks a question. Here it asks: is it raining?", items: [it("🤖", 20, 50, { size: 3, anim: "float" }), it("❓", 60, 40, { size: 3, anim: "pulse", label: "Is it raining?" })] },
+      { caption: "IF the answer is yes, THEN the program takes an umbrella.", items: [it("🌧️", 25, 45, { size: 3, label: "if yes" }), it("☂️", 70, 45, { size: 3, anim: "grow", label: "then umbrella" })] },
+      { caption: "ELSE, when the answer is no, it does something different. It puts on sunglasses.", items: [it("☀️", 25, 45, { size: 3, label: "else (no rain)" }), it("😎", 70, 45, { size: 3, anim: "grow", label: "sunglasses" })] },
+    ] }],
+    "Stop 4: How AI learns": [{ type: "explainer", title: "How an AI learns from examples", scenes: [
+      { caption: "First we show the AI lots of examples, each with the right answer. This is the training data.", items: [it("🐱", 20, 30, { size: 2, label: "cat" }), it("🐶", 45, 30, { size: 2, label: "dog" }), it("🐱", 70, 30, { size: 2, label: "cat" }), it("🐶", 30, 70, { size: 2, label: "dog" }), it("🐱", 60, 70, { size: 2, label: "cat" })] },
+      { caption: "The AI looks for patterns, such as pointy ears and whiskers.", items: [it("🤖", 50, 50, { id: "ai", size: 3, anim: "pulse" }), it("💭", 75, 30, { size: 2, anim: "float", label: "patterns" })] },
+      { caption: "Now it can guess about a new picture it has never seen. It says: cat!", items: [it("🤖", 25, 50, { id: "ai", size: 3 }), it("🐱", 70, 50, { size: 3, anim: "grow", label: "new picture" }), it("💬", 50, 20, { size: 2, label: "cat!", anim: "bounce" })] },
+    ] }],
+  },
+  "diag-general-knowledge-class-1": {
+    "Stop 1: Our planet": [img("🌍🌏🌎", "Planet Earth has 7 continents and 5 oceans.")],
+    "Stop 3: People who help us": [img("🚒🏥🏫🚜", "Firefighters, doctors and nurses, teachers and farmers all help us.")],
+    "Stop 4: Food and health": [img("🥕🍎🥛💧", "Fruit, vegetables, milk and water help our bodies stay healthy.")],
+  },
+  "diag-general-knowledge-class-4": {
+    "Stop 1: Maps and the world": [img("🗺️🧭", "A map shows where places are. A compass shows which way is north.")],
+    "Stop 2: Inventions and history": [{ type: "explainer", title: "A line of inventions", scenes: [
+      { caption: "Long ago people invented the wheel. It helped them carry heavy things.", items: [it("🛞", 15, 50, { id: "wheel", size: 3, label: "wheel", anim: "spin" })] },
+      { caption: "About 1440 the printing press made books quickly.", items: [it("🛞", 15, 50, { id: "wheel", size: 2, label: "wheel" }), it("🖨️", 38, 50, { id: "press", size: 3, label: "printing press", anim: "grow" })] },
+      { caption: "Then came the telephone, so people could talk from far away.", items: [it("🛞", 15, 50, { id: "wheel", size: 2, label: "wheel" }), it("🖨️", 38, 50, { id: "press", size: 2, label: "printing press" }), it("☎️", 62, 50, { id: "phone", size: 3, label: "telephone", anim: "grow" })] },
+      { caption: "The light bulb lit our homes at night. And the computer changed how we learn and work.", items: [it("🛞", 15, 50, { id: "wheel", size: 2, label: "wheel" }), it("🖨️", 35, 50, { id: "press", size: 2, label: "printing press" }), it("☎️", 55, 50, { id: "phone", size: 2, label: "telephone" }), it("💡", 73, 50, { id: "bulb", size: 2, label: "light bulb", anim: "grow" }), it("💻", 90, 50, { id: "pc", size: 2, label: "computer", anim: "grow" })] },
+    ] }],
+    "Stop 4: Healthy living and helpful habits": [img("😴🥦🏃🧼", "Sleep well, eat well, move your body and keep clean.")],
+  },
+  "diag-maths-class-1": {
+    "Stop 4: Shapes and measuring": [img("🔺🟦⭕", "A triangle has 3 sides. A square has 4 equal sides. A circle has no corners.")],
+  },
+  "diag-maths-class-4": {
+    "Stop 1: Place value and big numbers": [{ type: "chart", kind: "table", title: "Place value of 4,825", caption: "4 thousands, 8 hundreds, 2 tens and 5 ones make four thousand, eight hundred and twenty-five.", rows: [{ label: "Thousands", value: 4 }, { label: "Hundreds", value: 8 }, { label: "Tens", value: 2 }, { label: "Ones", value: 5 }] }],
+    "Stop 3: Adding and taking away big numbers": [{ type: "explainer", title: "What carrying means", scenes: [
+      { caption: "Add the ones: 8 ones and 7 ones.", items: [it("🟦", 25, 50, { id: "o8", size: 3, label: "8 ones" }), it("🟦", 70, 50, { id: "o7", size: 3, label: "7 ones" })] },
+      { caption: "That makes 15 ones. Ten of them make a group of ten, and 5 are left over.", items: [it("🔟", 28, 50, { id: "ten", size: 3, label: "1 ten", anim: "grow" }), it("🟦", 70, 50, { id: "o7", size: 3, label: "5 ones left" })] },
+      { caption: "Write the 5 in the ones column and carry the 1 ten across to the tens column.", items: [it("🔟", 80, 50, { id: "ten", size: 3, label: "tens column", anim: "bounce" }), it("🟦", 25, 50, { id: "o7", size: 3, label: "ones column" })] },
+    ] }],
+  },
+  "diag-science-class-1": {
+    "Stop 1: Living things": [img("🐕🌳🧒", "Living things grow, move, need food and water and have babies.")],
+    "Stop 2: Animals": [img("🐕🐦🐟🐛", "Mammals, birds, fish and insects are animal groups.")],
+    "Stop 4: Materials": [img("🪵🔩🧵", "Wood, metal and cloth are different materials with different jobs.")],
+  },
+  "diag-science-class-4": {
+    "Stop 1: Solids, liquids and gases": [{ type: "explainer", title: "Three states of water", scenes: [
+      { caption: "Ice is a solid. It keeps its shape.", items: [it("🧊", 50, 50, { id: "w", size: 3, label: "solid" })] },
+      { caption: "When it melts it becomes a liquid. A liquid flows and takes the shape of its container.", items: [it("💧", 50, 50, { id: "w", size: 3, label: "liquid", anim: "float" })] },
+      { caption: "When it boils it becomes a gas called water vapour. A gas spreads out to fill the space.", items: [it("♨️", 50, 40, { id: "w", size: 3, label: "gas", anim: "float" })] },
+    ] }],
+    "Stop 3: Food chains": [{ type: "explainer", title: "A food chain", scenes: [
+      { caption: "Every food chain starts with a producer. A plant uses sunlight to make its own food.", items: [it("☀️", 15, 25, { size: 3, anim: "spin" }), it("🌱", 20, 70, { id: "plant", size: 3, label: "producer" })] },
+      { caption: "A rabbit eats the plant. It is a herbivore, because it eats only plants.", items: [it("☀️", 15, 25, { size: 3, anim: "spin" }), it("🌱", 20, 70, { id: "plant", size: 3, label: "producer" }), it("🐰", 50, 70, { id: "rabbit", size: 3, label: "herbivore", anim: "grow" })] },
+      { caption: "A fox eats the rabbit. It is a carnivore, because it eats other animals. Energy passes along the chain.", items: [it("☀️", 15, 25, { size: 3, anim: "spin" }), it("🌱", 20, 70, { id: "plant", size: 3, label: "producer" }), it("🐰", 50, 70, { id: "rabbit", size: 3, label: "herbivore" }), it("🦊", 80, 70, { id: "fox", size: 3, label: "carnivore", anim: "grow" })] },
+    ] }],
+    "Stop 4: Forces and magnets": [{ type: "explainer", title: "A magnet pulls", scenes: [
+      { caption: "A magnet has an invisible force around it. Here are a magnet, a nail and a piece of wood.", items: [it("🧲", 20, 50, { id: "mag", size: 3 }), it("🔩", 70, 30, { id: "nail", size: 2, label: "iron nail" }), it("🪵", 70, 75, { id: "wood", size: 2, label: "wood" })] },
+      { caption: "The magnet pulls the iron nail towards it. The wood does not move, because wood is not magnetic.", items: [it("🧲", 20, 50, { id: "mag", size: 3 }), it("🔩", 38, 45, { id: "nail", size: 2, label: "pulled!", anim: "pulse" }), it("🪵", 70, 75, { id: "wood", size: 2, label: "not magnetic" })] },
+    ] }],
+  },
+};
+
+// More meanings, so the words a lesson puts in bold can all be explained.
+const MORE_TERMS = {
+  "diag-data-ai-class-1": [["AI", "Short for artificial intelligence: a computer that can learn from examples."], ["password", "A secret word or code that keeps your things safe. Never share it."], ["order", "The way things come one after another, first, next, last."]],
+  "diag-data-ai-class-4": [["data", "Facts and information we collect, like how many votes each sport got."], ["charts", "Pictures that show data so it is easy to compare, like bar charts."], ["tables", "Data written in rows and columns."], ["if", "A word that asks a question for the computer: if this is true..."], ["then", "What the computer does when the answer to the if question is yes."], ["else", "What the computer does when the answer to the if question is no."], ["examples", "Real cases we learn from, like lots of photos of cats."], ["mistakes", "Things that went wrong. Fixing them helps us learn."]],
+  "diag-general-knowledge-class-1": [["Earth", "The planet we live on."], ["doctor", "Someone who helps keep us healthy and treats us when we are ill."], ["firefighter", "Someone who puts out fires and rescues people."], ["teacher", "Someone who helps us learn."]],
+  "diag-general-knowledge-class-4": [["Amazon", "A giant rainforest and river in South America."], ["Asia", "The biggest continent on Earth."], ["Moon", "The big rock that travels around the Earth and shines by reflecting sunlight."], ["Pacific", "The biggest and deepest ocean on Earth."], ["Sahara", "The biggest hot desert in the world, in Africa."], ["computer", "A machine that follows instructions to store information and solve problems."], ["light bulb", "An invention that makes light from electricity so we can see at night."], ["telephone", "An invention that lets people talk to each other from far away."], ["wheel", "A round object that turns. It helps things roll and move."]],
+  "diag-maths-class-1": [["one more", "The number that comes straight after. One more than 3 is 4."]],
+  "diag-maths-class-4": [["fact family", "Numbers that go together, like 3 + 4 = 7 and 7 - 4 = 3."]],
+  "diag-science-class-1": [["birds", "Animals with feathers and wings. Most can fly."], ["fish", "Animals that live in water and breathe with gills."], ["flowers", "The colourful part of a plant that makes seeds."], ["leaves", "The flat green parts of a plant that catch sunlight to make food."], ["grow", "To get bigger over time."], ["move", "To go from one place to another."], ["sense", "To notice the world with eyes, ears, nose, tongue and skin."]],
+  "diag-science-class-4": [["boil", "When a liquid gets so hot it bubbles and turns into a gas."], ["freeze", "When a liquid gets so cold it turns into a solid."], ["gas", "Something with no fixed shape that spreads out to fill the space, like air."], ["liquid", "Something that flows and takes the shape of its container, like water."], ["solid", "Something that keeps its own shape, like a rock."], ["melt", "When a solid gets warm and turns into a liquid."], ["magnet", "An object that pulls iron and steel towards it."], ["rain", "Water drops that fall from clouds."], ["shadow", "A dark shape made when something blocks light."], ["vibrations", "Tiny, fast shakes that make sound."]],
+};
+
 for (const [slug, x] of Object.entries(EXTRAS)) {
   const path = join(dir, `${slug}.json`);
   const file = JSON.parse(readFileSync(path, "utf8"));
   const blocks = file.blocks;
-  const has = (b) => blocks.some((o) => o.type === b.type && (o.title ?? "") === (b.title ?? ""));
+  const has = (b) => blocks.some((o) => o.type === b.type && (o.title ?? o.caption ?? "") === (b.title ?? b.caption ?? ""));
   const insertAt = (heading, add) => {
     const h = blocks.findIndex((b) => b.type === "heading" && b.text === heading);
     if (h < 0) throw new Error(`${slug}: no heading "${heading}"`);
@@ -162,7 +245,9 @@ for (const [slug, x] of Object.entries(EXTRAS)) {
     for (const b of add) if (!has(b)) { blocks.splice(end, 0, b); end++; }
   };
   for (const [heading, add] of Object.entries(x.after)) insertAt(heading, add);
-  for (const [heading, add] of Object.entries(CHARTS[slug] ?? {})) {
+  const afterIntro = { ...(CHARTS[slug] ?? {}) };
+  for (const [heading, add] of Object.entries(VISUALS[slug] ?? {})) afterIntro[heading] = [...(afterIntro[heading] ?? []), ...add];
+  for (const [heading, add] of Object.entries(afterIntro)) {
     const h = blocks.findIndex((b) => b.type === "heading" && b.text === heading);
     if (h < 0) throw new Error(`${slug}: no heading "${heading}"`);
     let at = blocks.findIndex((b, i) => i > h && b.type === "text") + 1;
@@ -170,7 +255,9 @@ for (const [slug, x] of Object.entries(EXTRAS)) {
   }
   const brain = { type: "brain_game", ...x.brain };
   if (!has(brain)) { const s = blocks.findIndex((b) => b.type === "summary"); blocks.splice(s < 0 ? blocks.length : s, 0, brain); }
-  if (!blocks.some((b) => b.type === "glossary")) blocks.push({ type: "glossary", terms: x.glossary.map(([term, meaning]) => ({ term, meaning })) });
+  let glossary = blocks.find((b) => b.type === "glossary");
+  if (!glossary) { glossary = { type: "glossary", terms: [] }; blocks.push(glossary); }
+  for (const [term, meaning] of [...x.glossary, ...(MORE_TERMS[slug] ?? [])]) if (!glossary.terms.some((t) => t.term.toLowerCase() === term.toLowerCase())) glossary.terms.push({ term, meaning });
   writeFileSync(path, `${JSON.stringify(file, null, 2)}\n`);
   console.log(`${slug}: ${blocks.length} blocks`);
 }

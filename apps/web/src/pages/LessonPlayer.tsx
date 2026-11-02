@@ -6,6 +6,7 @@ import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
 import { Chart } from "../components/Chart";
 import { BrainGame } from "../components/BrainGame";
+import { VideoClip } from "../components/VideoClip";
 import { Explainer } from "../components/Explainer";
 import { Manipulative } from "../components/Manipulative";
 import { QuestionView } from "../components/QuestionView";
@@ -365,6 +366,16 @@ function SlideView(p: ViewProps) {
       return <ActivitySlide slide={slide} />;
     case "summary":
       return <SummarySlide slide={slide} />;
+    case "video": {
+      const b = slide.blocks[0] as Extract<Block, { type: "video" }>;
+      return (
+        <>
+          <p className="text-xl font-bold text-muted">🎬 Video time</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          <VideoClip key={b.youtube} title={b.title} id={b.youtube} start={b.start} end={b.end} caption={b.caption} />
+        </>
+      );
+    }
     case "explain": {
       const b = slide.blocks[0] as Extract<Block, { type: "explainer" }>;
       return (

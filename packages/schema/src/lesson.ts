@@ -176,6 +176,20 @@ export const blockSchema = z.discriminatedUnion("type", [
       }
       if (b.kind === "fraction" && (!b.parts || b.shaded === undefined || b.shaded > b.parts)) bad('A fraction needs "parts" and "shaded" (not more than parts)', "parts");
     }),
+  // A short clip (never longer than 100 seconds) played from YouTube's privacy-friendly player, cut to just the part we want.
+  z
+    .object({
+      type: z.literal("video"),
+      title: line(100),
+      youtube: z.string().regex(/^[A-Za-z0-9_-]{11}$/, "Use the 11 character video id from the YouTube link (the part after v=)"),
+      start: z.number().int().min(0).max(36000).default(0),
+      end: z.number().int().min(1).max(36000),
+      caption: line(200).optional(),
+    })
+    .superRefine((b, ctx) => {
+      if (b.end <= b.start) ctx.addIssue({ code: "custom", path: ["end"], message: '"end" must be after "start"' });
+      else if (b.end - b.start > 100) ctx.addIssue({ code: "custom", path: ["end"], message: "Clips must be 100 seconds or shorter: pick a shorter start and end" });
+    }),
   z.object({ type: z.literal("reveal"), prompt: line(300), answer_markdown: longText(800) }),
   z.object({ type: z.literal("check"), question: checkQuestionSchema }),
   z.object({ type: z.literal("steps"), items: z.array(line(300)).min(1).max(12) }),

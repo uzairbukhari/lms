@@ -139,6 +139,72 @@
       "markdown": "Programs make choices with **if** statements: **if** it is raining, **then** take an umbrella, **else** wear sunglasses."
     },
     {
+      "type": "explainer",
+      "title": "If, then, else",
+      "scenes": [
+        {
+          "caption": "A program asks a question. Here it asks: is it raining?",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 20,
+              "y": 50,
+              "size": 3,
+              "anim": "float"
+            },
+            {
+              "emoji": "❓",
+              "x": 60,
+              "y": 40,
+              "size": 3,
+              "anim": "pulse",
+              "label": "Is it raining?"
+            }
+          ]
+        },
+        {
+          "caption": "IF the answer is yes, THEN the program takes an umbrella.",
+          "items": [
+            {
+              "emoji": "🌧️",
+              "x": 25,
+              "y": 45,
+              "size": 3,
+              "label": "if yes"
+            },
+            {
+              "emoji": "☂️",
+              "x": 70,
+              "y": 45,
+              "size": 3,
+              "anim": "grow",
+              "label": "then umbrella"
+            }
+          ]
+        },
+        {
+          "caption": "ELSE, when the answer is no, it does something different. It puts on sunglasses.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 25,
+              "y": 45,
+              "size": 3,
+              "label": "else (no rain)"
+            },
+            {
+              "emoji": "😎",
+              "x": 70,
+              "y": 45,
+              "size": 3,
+              "anim": "grow",
+              "label": "sunglasses"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "multiple_choice",
@@ -252,6 +318,101 @@
       "markdown": "Some programs do not follow fixed rules. Instead they learn from many **examples**, called **training data**. If you show a computer thousands of cat and dog pictures, it learns to tell them apart. If the examples are unfair or missing, the AI can make **mistakes**, so people must check its answers."
     },
     {
+      "type": "explainer",
+      "title": "How an AI learns from examples",
+      "scenes": [
+        {
+          "caption": "First we show the AI lots of examples, each with the right answer. This is the training data.",
+          "items": [
+            {
+              "emoji": "🐱",
+              "x": 20,
+              "y": 30,
+              "size": 2,
+              "label": "cat"
+            },
+            {
+              "emoji": "🐶",
+              "x": 45,
+              "y": 30,
+              "size": 2,
+              "label": "dog"
+            },
+            {
+              "emoji": "🐱",
+              "x": 70,
+              "y": 30,
+              "size": 2,
+              "label": "cat"
+            },
+            {
+              "emoji": "🐶",
+              "x": 30,
+              "y": 70,
+              "size": 2,
+              "label": "dog"
+            },
+            {
+              "emoji": "🐱",
+              "x": 60,
+              "y": 70,
+              "size": 2,
+              "label": "cat"
+            }
+          ]
+        },
+        {
+          "caption": "The AI looks for patterns, such as pointy ears and whiskers.",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 50,
+              "y": 50,
+              "id": "ai",
+              "size": 3,
+              "anim": "pulse"
+            },
+            {
+              "emoji": "💭",
+              "x": 75,
+              "y": 30,
+              "size": 2,
+              "anim": "float",
+              "label": "patterns"
+            }
+          ]
+        },
+        {
+          "caption": "Now it can guess about a new picture it has never seen. It says: cat!",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 25,
+              "y": 50,
+              "id": "ai",
+              "size": 3
+            },
+            {
+              "emoji": "🐱",
+              "x": 70,
+              "y": 50,
+              "size": 3,
+              "anim": "grow",
+              "label": "new picture"
+            },
+            {
+              "emoji": "💬",
+              "x": 50,
+              "y": 20,
+              "size": 2,
+              "label": "cat!",
+              "anim": "bounce"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "true_false",
@@ -327,6 +488,38 @@
         {
           "term": "strong password",
           "meaning": "A long mix of letters, numbers and symbols that is hard to guess."
+        },
+        {
+          "term": "data",
+          "meaning": "Facts and information we collect, like how many votes each sport got."
+        },
+        {
+          "term": "charts",
+          "meaning": "Pictures that show data so it is easy to compare, like bar charts."
+        },
+        {
+          "term": "tables",
+          "meaning": "Data written in rows and columns."
+        },
+        {
+          "term": "if",
+          "meaning": "A word that asks a question for the computer: if this is true..."
+        },
+        {
+          "term": "then",
+          "meaning": "What the computer does when the answer to the if question is yes."
+        },
+        {
+          "term": "else",
+          "meaning": "What the computer does when the answer to the if question is no."
+        },
+        {
+          "term": "examples",
+          "meaning": "Real cases we learn from, like lots of photos of cats."
+        },
+        {
+          "term": "mistakes",
+          "meaning": "Things that went wrong. Fixing them helps us learn."
         }
       ]
     }
