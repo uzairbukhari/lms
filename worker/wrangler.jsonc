@@ -6,6 +6,10 @@
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
 
+  // Keep variables and secrets set in the Cloudflare dashboard (ADMIN_EMAIL, ACCESS_TEAM_DOMAIN, ACCESS_AUD)
+  // when deploying from here. See README.md.
+  "keep_vars": true,
+
   // The React app is served as static assets by this same Worker.
   // Only /api/* runs Worker code first; everything else is a static file or the SPA shell.
   "assets": {

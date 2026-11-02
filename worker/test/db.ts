@@ -1,23 +1,27 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { Miniflare } from "miniflare";
+import type { Bindings } from "../src/env";
 
-const MIGRATIONS_DIR = new URL("../../migrations/", import.meta.url);
+// Plain string paths: Workers and Node both define a global URL type, so avoid passing URL objects to node:fs.
+const MIGRATIONS_DIR = new URL("../../migrations/", import.meta.url).pathname;
 
 /** A real (local, in-memory) Cloudflare D1 database with all migrations applied, for tests. */
-export async function createTestDb(): Promise<{ db: D1Database; dispose: () => Promise<void> }> {
+export async function createTestDb(): Promise<{ db: D1Database; kv: KVNamespace; dispose: () => Promise<void> }> {
   const mf = new Miniflare({
     modules: true,
     script: "export default { fetch() { return new Response('ok') } }",
     d1Databases: { DB: crypto.randomUUID() },
+    kvNamespaces: ["SESSIONS"],
   });
   const db = (await mf.getD1Database("DB")) as unknown as D1Database;
-  const files = readdirSync(MIGRATIONS_DIR).filter((f) => f.endsWith(".sql")).sort();
+  const kv = (await mf.getKVNamespace("SESSIONS")) as unknown as KVNamespace;
+  const files = readdirSync(MIGRATIONS_DIR).filter((f: string) => f.endsWith(".sql")).sort();
   for (const file of files) {
-    const sql = readFileSync(new URL(file, MIGRATIONS_DIR), "utf8");
+    const sql = readFileSync(`${MIGRATIONS_DIR}${file}`, "utf8");
     // D1's exec() runs one statement per line, so run each statement separately.
     for (const stmt of splitStatements(sql)) await db.prepare(stmt).run();
   }
-  return { db, dispose: () => mf.dispose() };
+  return { db, kv, dispose: () => mf.dispose() };
 }
 
 /** Split a migration file into statements (our migrations have no semicolons inside strings, and no triggers). */
@@ -29,4 +33,18 @@ export function splitStatements(sql: string): string[] {
     .split(";")
     .map((s) => s.trim())
     .filter(Boolean);
+}
+
+/** A Worker `env` for calling `app.request(path, init, env)` in tests. */
+export async function createTestEnv(vars: Partial<Bindings> = {}) {
+  const { db, kv, dispose } = await createTestDb();
+  const env = {
+    DB: db,
+    SESSIONS: kv,
+    ENVIRONMENT: "development",
+    DEV_ADMIN_EMAIL: "parent@example.com",
+    ADMIN_EMAIL: "parent@example.com",
+    ...vars,
+  } as unknown as Bindings;
+  return { env, dispose };
 }
