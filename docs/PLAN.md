@@ -632,72 +632,12 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 | `order` | `items: [{id,text}]` | `["c","a","b"]` (correct sequence) |
 | `match` | `left: [{id,text}], right: [{id,text}]` | `{ "l1": "r2", "l2": "r1" }` |
 
-### 5.2 The meta-prompt
+### 5.2 The generation prompt and the block reference
 
-Copy everything inside the block, fill in the four `{{...}}` lines, and send it to Claude.
+The rules for making lessons and the ready-to-paste generation prompt live in **`docs/LESSON_GUIDELINES.md`** (the single
+source of truth, kept up to date). `docs/LESSON_CAPABILITIES.md` explains each block with examples. The exact JSON objects are:
 
 ````text
-You are an expert primary-school teacher and instructional designer creating ONE interactive lesson
-and quiz for my kids' learning platform. Output must import directly into the platform.
-
-=== THIS LESSON ===
-Subject: {{maths | science | data-ai | general-knowledge}}
-Topic: {{e.g. "Halves and quarters"}}
-Learner: {{age 7 (age_band "7-8") | age 9 (age_band "9-10") | both (age_band "7-10")}}
-Curriculum slot: {{semester 1-4, week 1-12, e.g. "semester 1, week 3", or "none"}}
-Extra notes (optional): {{e.g. "she loves animals", "build on last week's lesson on counting by 2s"}}
-
-=== TEACHING RULES ===
-- Reading level: age 7 → short sentences, max ~12 words, everyday words. Age 9 → up to ~18 words, can
-  introduce 2–3 new vocabulary words (use a "vocab" block for each).
-- Pictures: every new word or idea is shown, never only described (see `docs/LESSON_GUIDELINES.md`): use `chart`, `explainer`, `manipulative`, `brain_game` and big emoji `image` blocks.
-- Structure: hook (a question or story) → explain → 2–3 practice "check" blocks spread through the
-  lesson → real-world connection → summary.
-- 8–15 blocks; 8–15 minutes. One idea per block. Use emojis for visuals; no external image URLs.
-- Be accurate. For science and general knowledge, only use well-established facts suitable for kids.
-- For data-ai (Computer Science, Data & AI): cover three strands and say which one this lesson is in
-  `unit`: (1) Computer Science: step-by-step instructions (algorithms), loops, if/then, patterns,
-  debugging, binary, how computers work, staying safe online (mostly unplugged, no coding needed);
-  (2) Data: sorting, pictograms, charts, averages; (3) AI: concrete, kid-relatable examples ("how does
-  a robot learn the difference between cats and dogs") and honesty about what AI can't do.
-- Warm, encouraging tone. No scary content. UK/US neutral spelling where possible.
-
-=== QUIZ RULES ===
-- 6–10 questions (age 7: 6–8; age 9: 8–10). Every question must be answerable from the lesson.
-- Mix at least 3 question types. Order roughly easy → harder.
-- Do not reuse the exact wording of the lesson's "check" questions.
-- Multiple-choice: 3–4 options, one clearly correct, plausible distractors based on common
-  misconceptions, no "all of the above".
-- Each question has: ref (q1, q2, ...), a short hint that doesn't give the answer away, a 1–2
-  sentence explanation, points (1, or 2 for order/match), and a skill_tag in "topic.skill" snake_case.
-
-=== OUTPUT FORMAT (STRICT) ===
-Return ONLY one JSON object in a single ```json code block, nothing before or after it.
-It must follow schema_version "1.0" exactly:
-
-{
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "<subject>-<topic-in-kebab-case>",
-    "subject": "maths" | "science" | "data-ai" | "general-knowledge",
-    "title": string (max 50 chars),
-    "summary": string (one sentence),
-    "age_band": "7-8" | "9-10" | "7-10",
-    "difficulty": 1 | 2 | 3,
-    "estimated_minutes": integer,
-    "unit": string,
-    "learning_objectives": [2-4 strings],
-    "tags": [strings],
-    "curriculum": {"course": "<subject>-year-1", "semester": 1-4, "week": 1-12}   (omit if "none")
-  },
-  "blocks": [ ...block objects... ],
-  "quiz": {
-    "pass_percent": 70,
-    "shuffle_questions": true,
-    "questions": [ ...question objects... ]
-  }
-}
-
 Block objects (use only these):
   {"type":"heading","text":string}
   {"type":"text","markdown":string}
@@ -724,10 +664,6 @@ Question objects:
   short_text:      {"ref","type":"short_text","prompt","answer":{"accepted":[strings]},"hint","explanation","points","skill_tag"}
   order:           {"ref","type":"order","prompt","items":[{"id","text"}],"answer":[ids in correct order],"hint","explanation","points","skill_tag"}
   match:           {"ref","type":"match","prompt","left":[{"id":"l1","text"}],"right":[{"id":"r1","text"}],"answer":{"l1":"r2",...},"hint","explanation","points","skill_tag"}
-
-Before answering, silently check: valid JSON (double quotes, no trailing commas, no comments);
-every answer id exists in its options/items; short_text answers list common spellings; numbers are
-correct; every quiz question is covered by the lesson. Then output the JSON only.
 ````
 
 ### 5.3 Workflow for each new lesson
