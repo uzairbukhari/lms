@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-maths-class-4",
+    "subject": "maths",
+    "title": "Maths Check-In: Where Am I?",
+    "summary": "A tour of place value, times tables, fractions, shapes and problem solving, so we can see your strengths and what to practise.",
+    "age_band": "9-10",
+    "difficulty": 2,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show what I know about place value and the four operations",
+      "Show what I know about fractions and shapes",
+      "Show how I solve word problems"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "maths-class-4",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, Maths Detective!"
+    },
+    {
+      "type": "text",
+      "markdown": "This is a **check-in**, not a test. We want to find out what you already know so your next lessons fit you perfectly. In the lesson you can have a go, peek at hints and explore. Keep paper and a pencil nearby for working out."
+    },
+    {
+      "type": "image",
+      "emoji": "🔍",
+      "alt": "Detective mode on!",
+      "caption": "Detective mode on!"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Place value and big numbers"
+    },
+    {
+      "type": "text",
+      "markdown": "Each digit has a value that depends on its place. In **4,825** the 4 is worth 4,000, the 8 is worth 800, the 2 is worth 20 and the 5 is worth 5. We can **round** a number to the nearest 10, 100 or 1,000 to make it easier to work with."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is the value of the 7 in 3,742?",
+        "answer": {
+          "value": 700,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "Round 3,742 to the nearest hundred.",
+        "hint": "Look at the tens digit: 4 means round down.",
+        "answer": {
+          "value": 3700,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Times tables and division"
+    },
+    {
+      "type": "text",
+      "markdown": "Times tables are the building blocks of multiplication and division. If you know 6 x 7 = 42, you also know 42 / 7 = 6 and 42 / 6 = 7. These are called a **fact family**."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 8 x 6?",
+        "answer": {
+          "value": 48,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 54 / 9?",
+        "answer": {
+          "value": 6,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Fact family race",
+      "materials": [
+        "paper",
+        "pencil",
+        "timer"
+      ],
+      "instructions": [
+        "Pick a times table fact, for example 7 x 8 = 56.",
+        "Write the three other facts in its family.",
+        "Set a 2 minute timer and see how many families you can write.",
+        "Which table was trickiest? Note it down."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Adding and taking away big numbers"
+    },
+    {
+      "type": "text",
+      "markdown": "To add or subtract big numbers, line up the digits in columns: ones under ones, tens under tens. Remember to **carry** when a column makes 10 or more, and to **borrow** when you need more."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 468 + 357?",
+        "answer": {
+          "value": 825,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 1,000 - 365?",
+        "answer": {
+          "value": 635,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Fractions"
+    },
+    {
+      "type": "text",
+      "markdown": "A **fraction** is part of a whole. In 3/4 the bottom number (4) says how many equal parts, and the top number (3) says how many we have. Fractions like 1/2 and 2/4 are **equivalent**: they are the same amount."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which fraction is equal to 1/2?",
+        "options": [
+          {
+            "id": "a",
+            "text": "2/3"
+          },
+          {
+            "id": "b",
+            "text": "2/4"
+          },
+          {
+            "id": "c",
+            "text": "1/4"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "vocab",
+      "word": "denominator",
+      "meaning": "The bottom number of a fraction. It tells you how many equal parts the whole is split into.",
+      "example": "In 3/5 the denominator is 5."
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Shapes and measuring"
+    },
+    {
+      "type": "text",
+      "markdown": "The **perimeter** of a shape is the distance all the way around its edges. For a rectangle, add up all four sides. The **area** is the space inside, which you find by multiplying length by width."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "A rectangle is 6 cm long and 3 cm wide. What is its perimeter in cm?",
+        "hint": "6 + 3 + 6 + 3",
+        "answer": {
+          "value": 18,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "reveal",
+      "prompt": "A garden is 5 m by 4 m. What is its area?",
+      "answer_markdown": "5 x 4 = 20 square metres."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Place value tells us what each digit is worth.",
+        "Times tables and division belong together in fact families.",
+        "Column methods help with big adding and taking away.",
+        "Equivalent fractions are the same amount written differently.",
+        "Perimeter goes around a shape, area fills it."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "When you are ready, start the quiz. It has 12 questions and takes about 15 minutes. Do your best. If you do not know one, have a go anyway: it helps us plan."
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "number",
+        "prompt": "What is the value of the 6 in 4,568?",
+        "ref": "q1",
+        "skill_tag": "number.place_value",
+        "answer": {
+          "value": 60,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "Round 6,482 to the nearest thousand.",
+        "ref": "q2",
+        "skill_tag": "number.rounding",
+        "answer": {
+          "value": 6000,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 7 x 8?",
+        "ref": "q3",
+        "skill_tag": "multiply.tables",
+        "answer": {
+          "value": 56,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 72 / 8?",
+        "ref": "q4",
+        "skill_tag": "divide.tables",
+        "answer": {
+          "value": 9,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 5,274 + 1,368?",
+        "ref": "q5",
+        "skill_tag": "add.column",
+        "answer": {
+          "value": 6642,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 7,005 - 2,468?",
+        "ref": "q6",
+        "skill_tag": "subtract.column",
+        "points": 2,
+        "answer": {
+          "value": 4537,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What is 34 x 6?",
+        "ref": "q7",
+        "skill_tag": "multiply.written",
+        "points": 2,
+        "options": [
+          {
+            "id": "a",
+            "text": "184"
+          },
+          {
+            "id": "b",
+            "text": "204"
+          },
+          {
+            "id": "c",
+            "text": "224"
+          },
+          {
+            "id": "d",
+            "text": "214"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which fraction is the biggest?",
+        "hint": "Think of pizza slices.",
+        "ref": "q8",
+        "skill_tag": "fractions.compare",
+        "options": [
+          {
+            "id": "a",
+            "text": "1/2"
+          },
+          {
+            "id": "b",
+            "text": "3/4"
+          },
+          {
+            "id": "c",
+            "text": "2/3"
+          },
+          {
+            "id": "d",
+            "text": "1/3"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which fraction is equal to 3/6?",
+        "ref": "q9",
+        "skill_tag": "fractions.equivalent",
+        "options": [
+          {
+            "id": "a",
+            "text": "1/3"
+          },
+          {
+            "id": "b",
+            "text": "1/2"
+          },
+          {
+            "id": "c",
+            "text": "2/3"
+          },
+          {
+            "id": "d",
+            "text": "3/4"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "A square has sides of 9 cm. What is its perimeter in cm?",
+        "ref": "q10",
+        "skill_tag": "measure.perimeter",
+        "answer": {
+          "value": 36,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "A film starts at 2:45 pm and ends at 4:15 pm. How many minutes long is it?",
+        "ref": "q11",
+        "skill_tag": "time.duration",
+        "points": 2,
+        "answer": {
+          "value": 90,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "A box holds 6 eggs. Mum buys 7 boxes and 5 eggs break. How many eggs are left?",
+        "hint": "First find the total eggs.",
+        "ref": "q12",
+        "skill_tag": "word_problem",
+        "points": 2,
+        "answer": {
+          "value": 37,
+          "tolerance": 0
+        }
+      }
+    ]
+  }
+}

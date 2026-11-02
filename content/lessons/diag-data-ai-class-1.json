@@ -1,0 +1,489 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-data-ai-class-1",
+    "subject": "data-ai",
+    "title": "Computers, Data & AI Check-In: Where Am I?",
+    "summary": "Explore step-by-step instructions, patterns, sorting, simple graphs and smart machines so we can see what you already know.",
+    "age_band": "7-8",
+    "difficulty": 1,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show I can follow and put instructions in order",
+      "Show I can spot patterns and sort things",
+      "Show what I know about computers, data and safe online habits"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "data-ai-class-1",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, Computer Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "Computers follow **instructions** exactly, one step at a time. A list of clear steps is called an **algorithm**. Today is a **check-in** to see what you already know. No computer is needed!"
+    },
+    {
+      "type": "image",
+      "emoji": "🤖",
+      "alt": "Beep boop!",
+      "caption": "Beep boop!"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Instructions in order"
+    },
+    {
+      "type": "text",
+      "markdown": "If you give a robot the steps for making a sandwich in the wrong order, you get a very silly sandwich! The **order** of steps matters."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "order",
+        "prompt": "Put these steps for brushing teeth in order.",
+        "items": [
+          {
+            "id": "a",
+            "text": "Put toothpaste on the brush"
+          },
+          {
+            "id": "b",
+            "text": "Brush your teeth"
+          },
+          {
+            "id": "c",
+            "text": "Rinse your mouth"
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Patterns and sorting"
+    },
+    {
+      "type": "text",
+      "markdown": "Computers love **patterns**. We can also **sort** things into groups, such as animals that fly and animals that swim."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which one belongs in the group of fruits?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Banana"
+          },
+          {
+            "id": "b",
+            "text": "Chair"
+          },
+          {
+            "id": "c",
+            "text": "Pencil"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Be the robot",
+      "materials": [
+        "a grown-up helper",
+        "a small toy to hide"
+      ],
+      "instructions": [
+        "Hide the toy in the room while your helper closes their eyes.",
+        "Tell your helper the steps to find it, one at a time, such as walk forward 3 steps, turn left.",
+        "Does your helper find the toy? If not, which step needs fixing?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Data and graphs"
+    },
+    {
+      "type": "text",
+      "markdown": "**Data** is information we collect. We can count things with tally marks and draw a **pictogram** where each picture stands for one item."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "A pictogram shows 3 🍎 for apples and 5 🍌 for bananas. Which fruit is more popular?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Apples"
+          },
+          {
+            "id": "b",
+            "text": "Bananas"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Smart machines and staying safe"
+    },
+    {
+      "type": "text",
+      "markdown": "Some machines can learn from examples. They are called **AI**, short for **artificial intelligence**. A phone that recognises your voice uses AI. But computers do not think or feel like people.\n\nOnline, keep your **password secret** and always ask a grown-up before you share anything or talk to someone."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "true_false",
+        "prompt": "It is safe to tell strangers online your password.",
+        "answer": [
+          false
+        ]
+      }
+    },
+    {
+      "type": "reveal",
+      "prompt": "Can you think of a machine at home that follows instructions?",
+      "answer_markdown": "A washing machine, microwave or toy robot all follow steps. They do not decide by themselves."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "An algorithm is a list of steps in order.",
+        "A pattern repeats and helps us predict.",
+        "Data can be counted and shown in a picture graph.",
+        "AI is a machine that learns from examples, but it is not a person.",
+        "Keep passwords secret and ask a grown-up first."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Have fun!"
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "order",
+        "prompt": "Put these steps for planting a seed in order.",
+        "ref": "q1",
+        "skill_tag": "algorithms.order",
+        "points": 2,
+        "items": [
+          {
+            "id": "a",
+            "text": "Dig a small hole"
+          },
+          {
+            "id": "b",
+            "text": "Put the seed in"
+          },
+          {
+            "id": "c",
+            "text": "Cover it with soil"
+          },
+          {
+            "id": "d",
+            "text": "Water it"
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What is an algorithm?",
+        "ref": "q2",
+        "skill_tag": "algorithms.meaning",
+        "options": [
+          {
+            "id": "a",
+            "text": "A list of steps to do something"
+          },
+          {
+            "id": "b",
+            "text": "A kind of animal"
+          },
+          {
+            "id": "c",
+            "text": "A type of fruit"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What comes next? 🔺 🔵 🔺 🔵 🔺 ...",
+        "ref": "q3",
+        "skill_tag": "patterns.next",
+        "options": [
+          {
+            "id": "a",
+            "text": "🔺"
+          },
+          {
+            "id": "b",
+            "text": "🔵"
+          },
+          {
+            "id": "c",
+            "text": "🟩"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What comes next? 1, 2, 3, 1, 2, 3, 1, ...",
+        "ref": "q4",
+        "skill_tag": "patterns.sequence",
+        "options": [
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "2"
+          },
+          {
+            "id": "c",
+            "text": "3"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which one does NOT belong in the group? 🐶 🐱 🐰 🚗",
+        "ref": "q5",
+        "skill_tag": "sorting.groups",
+        "options": [
+          {
+            "id": "a",
+            "text": "🐶"
+          },
+          {
+            "id": "b",
+            "text": "🐱"
+          },
+          {
+            "id": "c",
+            "text": "🚗"
+          },
+          {
+            "id": "d",
+            "text": "🐰"
+          }
+        ],
+        "answer": [
+          "c"
+        ]
+      },
+      {
+        "type": "match",
+        "prompt": "Match each thing to where it belongs.",
+        "ref": "q6",
+        "skill_tag": "sorting.match",
+        "points": 2,
+        "left": [
+          {
+            "id": "l1",
+            "text": "Apple"
+          },
+          {
+            "id": "l2",
+            "text": "Carrot"
+          },
+          {
+            "id": "l3",
+            "text": "Milk"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "Fruit"
+          },
+          {
+            "id": "r2",
+            "text": "Vegetable"
+          },
+          {
+            "id": "r3",
+            "text": "Drink"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "A tally chart shows ||||. How many is that?",
+        "ref": "q7",
+        "skill_tag": "data.tally",
+        "answer": {
+          "value": 4,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "In a pictogram, red cars have 5 pictures and blue cars have 2. How many more red cars are there?",
+        "ref": "q8",
+        "skill_tag": "data.read_graph",
+        "points": 2,
+        "options": [
+          {
+            "id": "a",
+            "text": "2"
+          },
+          {
+            "id": "b",
+            "text": "3"
+          },
+          {
+            "id": "c",
+            "text": "7"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A robot must go forward 2 steps then turn left, but it turned left first. What is the problem?",
+        "ref": "q9",
+        "skill_tag": "debugging.spot",
+        "options": [
+          {
+            "id": "a",
+            "text": "The steps are in the wrong order"
+          },
+          {
+            "id": "b",
+            "text": "The robot is broken"
+          },
+          {
+            "id": "c",
+            "text": "The floor is wet"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which one is an INPUT device (you use it to tell the computer something)?",
+        "ref": "q10",
+        "skill_tag": "computers.input_output",
+        "options": [
+          {
+            "id": "a",
+            "text": "Keyboard"
+          },
+          {
+            "id": "b",
+            "text": "Screen"
+          },
+          {
+            "id": "c",
+            "text": "Speaker"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which of these uses AI?",
+        "ref": "q11",
+        "skill_tag": "ai.meaning",
+        "options": [
+          {
+            "id": "a",
+            "text": "A voice assistant that answers questions"
+          },
+          {
+            "id": "b",
+            "text": "A plain book"
+          },
+          {
+            "id": "c",
+            "text": "A wooden spoon"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which is the safest thing to do with your password?",
+        "ref": "q12",
+        "skill_tag": "safety.password",
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep it secret"
+          },
+          {
+            "id": "b",
+            "text": "Tell a friend"
+          },
+          {
+            "id": "c",
+            "text": "Write it on the door"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-maths-class-1",
+    "subject": "maths",
+    "title": "Maths Check-In: Where Am I?",
+    "summary": "A friendly tour of counting, adding, taking away, shapes and patterns, so we can see what you already know.",
+    "age_band": "7-8",
+    "difficulty": 1,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show what I know about counting and place value",
+      "Show what I can do with adding and taking away",
+      "Show what I know about shapes, patterns and measuring"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "maths-class-1",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, Maths Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "This is a **check-in**, not a test. There are no wrong answers in the lesson, only chances to show what you already know. Take your time, use your fingers or draw if it helps, and ask a grown-up if you get stuck.\n\nToday we will visit five maths places: counting, adding, taking away, shapes and patterns."
+    },
+    {
+      "type": "image",
+      "emoji": "🧮",
+      "alt": "Let's explore maths!",
+      "caption": "Let's explore maths!"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Counting and numbers"
+    },
+    {
+      "type": "text",
+      "markdown": "Numbers are like a ladder. Each step up is **one more**. Counting in 2s, 5s and 10s helps us count big groups quickly."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "Count by 2s: 2, 4, 6, 8, ... what comes next?",
+        "hint": "Add 2 to 8.",
+        "answer": {
+          "value": 10,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which number is the biggest?",
+        "hint": "Look at the tens first.",
+        "options": [
+          {
+            "id": "a",
+            "text": "19"
+          },
+          {
+            "id": "b",
+            "text": "91"
+          },
+          {
+            "id": "c",
+            "text": "29"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "vocab",
+      "word": "tens and ones",
+      "meaning": "In the number 47, the 4 means 4 tens (40) and the 7 means 7 ones.",
+      "example": "47 = 40 + 7"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Adding"
+    },
+    {
+      "type": "text",
+      "markdown": "**Adding** means putting groups together. 3 apples and 2 apples make 5 apples. You can count on from the bigger number: for 6 + 3, start at 6 and count 7, 8, 9."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 6 + 3?",
+        "answer": {
+          "value": 9,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 10 + 7?",
+        "answer": {
+          "value": 17,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Counting treasure",
+      "materials": [
+        "10 small things such as coins, buttons or pasta"
+      ],
+      "instructions": [
+        "Put the things in a pile and count them.",
+        "Split them into two groups. How many in each?",
+        "Say the adding sentence, for example 4 + 6 = 10.",
+        "Try a different split and say the new sum."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Taking away"
+    },
+    {
+      "type": "text",
+      "markdown": "**Taking away** (subtracting) means some things go away. You had 8 sweets and ate 3. Count back 3 from 8: 7, 6, 5. You have 5 left."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "What is 9 - 4?",
+        "answer": {
+          "value": 5,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "true_false",
+        "prompt": "If you have 5 pencils and add 0 more, you still have 5.",
+        "answer": [
+          true
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Shapes and measuring"
+    },
+    {
+      "type": "text",
+      "markdown": "A **triangle** has 3 sides. A **square** has 4 equal sides. A **circle** has no corners at all. We measure how long things are with a ruler, and tell the time with a clock."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "How many sides does a triangle have?",
+        "options": [
+          {
+            "id": "a",
+            "text": "2"
+          },
+          {
+            "id": "b",
+            "text": "3"
+          },
+          {
+            "id": "c",
+            "text": "4"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Patterns"
+    },
+    {
+      "type": "text",
+      "markdown": "A pattern repeats. Red, blue, red, blue, red, ... the next one is blue!"
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "What comes next? 🔴 🔵 🔵 🔴 🔵 🔵 🔴 ...",
+        "hint": "The pattern is red, blue, blue.",
+        "options": [
+          {
+            "id": "a",
+            "text": "🔴"
+          },
+          {
+            "id": "b",
+            "text": "🔵"
+          },
+          {
+            "id": "c",
+            "text": "🟢"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "reveal",
+      "prompt": "Can you make up your own pattern with 3 different colours or shapes?",
+      "answer_markdown": "Any repeating group works. For example: star, heart, moon, star, heart, moon!"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Counting in 2s, 5s and 10s is quick.",
+        "Adding puts groups together and taking away makes a group smaller.",
+        "Shapes have a fixed number of sides.",
+        "A pattern repeats, so you can guess what comes next."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "When you are ready, start the quiz. It has 12 questions and takes about 15 minutes. Do your best. Everything you show us helps plan your next lessons!"
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "How many stars? ⭐⭐⭐⭐⭐⭐⭐",
+        "emoji": "⭐",
+        "ref": "q1",
+        "skill_tag": "number.count",
+        "options": [
+          {
+            "id": "a",
+            "text": "6"
+          },
+          {
+            "id": "b",
+            "text": "7"
+          },
+          {
+            "id": "c",
+            "text": "8"
+          },
+          {
+            "id": "d",
+            "text": "9"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "Count by 5s: 5, 10, 15, ... what comes next?",
+        "ref": "q2",
+        "skill_tag": "number.skip_count",
+        "answer": {
+          "value": 20,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which number is the smallest?",
+        "ref": "q3",
+        "skill_tag": "number.compare",
+        "options": [
+          {
+            "id": "a",
+            "text": "34"
+          },
+          {
+            "id": "b",
+            "text": "43"
+          },
+          {
+            "id": "c",
+            "text": "24"
+          },
+          {
+            "id": "d",
+            "text": "42"
+          }
+        ],
+        "answer": [
+          "c"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "In the number 36, how many tens are there?",
+        "hint": "36 = 30 + 6",
+        "ref": "q4",
+        "skill_tag": "number.place_value",
+        "answer": {
+          "value": 3,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 8 + 7?",
+        "ref": "q5",
+        "skill_tag": "add.within_20",
+        "answer": {
+          "value": 15,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 12 + 5?",
+        "ref": "q6",
+        "skill_tag": "add.within_20",
+        "answer": {
+          "value": 17,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "What is 15 - 6?",
+        "ref": "q7",
+        "skill_tag": "subtract.within_20",
+        "answer": {
+          "value": 9,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "Sam has 14 marbles. He gives 5 to his sister. How many marbles does Sam have now?",
+        "ref": "q8",
+        "skill_tag": "word_problem",
+        "points": 2,
+        "answer": {
+          "value": 9,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which shape has 4 equal sides?",
+        "ref": "q9",
+        "skill_tag": "shape.properties",
+        "options": [
+          {
+            "id": "a",
+            "text": "Triangle"
+          },
+          {
+            "id": "b",
+            "text": "Circle"
+          },
+          {
+            "id": "c",
+            "text": "Square"
+          },
+          {
+            "id": "d",
+            "text": "Rectangle with 2 long sides"
+          }
+        ],
+        "answer": [
+          "c"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The short hand points to 3 and the long hand points to 12. What time is it?",
+        "hint": "The long hand on 12 means o'clock.",
+        "ref": "q10",
+        "skill_tag": "time.hours",
+        "options": [
+          {
+            "id": "a",
+            "text": "12 o'clock"
+          },
+          {
+            "id": "b",
+            "text": "3 o'clock"
+          },
+          {
+            "id": "c",
+            "text": "6 o'clock"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What comes next? 2, 4, 6, 8, ...",
+        "ref": "q11",
+        "skill_tag": "pattern.next",
+        "options": [
+          {
+            "id": "a",
+            "text": "9"
+          },
+          {
+            "id": "b",
+            "text": "10"
+          },
+          {
+            "id": "c",
+            "text": "12"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "There are 3 bags with 2 apples in each bag. How many apples are there altogether?",
+        "hint": "Add 2 + 2 + 2.",
+        "ref": "q12",
+        "skill_tag": "word_problem",
+        "points": 2,
+        "answer": {
+          "value": 6,
+          "tolerance": 0
+        }
+      }
+    ]
+  }
+}

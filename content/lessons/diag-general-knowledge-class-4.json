@@ -1,0 +1,503 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-general-knowledge-class-4",
+    "subject": "general-knowledge",
+    "title": "General Knowledge Check-In: Where Am I?",
+    "summary": "A tour of the world: maps and continents, famous places, history, inventions, nature and healthy living, so we can see what you know.",
+    "age_band": "9-10",
+    "difficulty": 2,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show what I know about maps, continents and oceans",
+      "Show what I know about history, inventions and famous places",
+      "Show what I know about nature, space and healthy living"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "general-knowledge-class-4",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, World Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "This is a **check-in**, not a test. It helps us find out what you already know about our world so your lessons can be a perfect fit. Have a go at everything!"
+    },
+    {
+      "type": "image",
+      "emoji": "🗺️",
+      "alt": "Explore the world",
+      "caption": "Explore the world"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Maps and the world"
+    },
+    {
+      "type": "text",
+      "markdown": "Earth has **7 continents**: Asia, Africa, North America, South America, Antarctica, Europe and Australia/Oceania. There are **5 oceans**: Pacific, Atlantic, Indian, Southern and Arctic. **Asia** is the biggest continent and the **Pacific** is the biggest ocean."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which is the largest continent?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Africa"
+          },
+          {
+            "id": "b",
+            "text": "Asia"
+          },
+          {
+            "id": "c",
+            "text": "Europe"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Inventions and history"
+    },
+    {
+      "type": "text",
+      "markdown": "People have invented things that changed the world: the **wheel**, the **printing press**, the **light bulb**, the **telephone** and the **computer**. History is the story of what happened long ago, and we learn about it from objects, buildings and writing."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which invention helps us make light at night?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Light bulb"
+          },
+          {
+            "id": "b",
+            "text": "Wheel"
+          },
+          {
+            "id": "c",
+            "text": "Printing press"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Inventor's challenge",
+      "materials": [
+        "paper",
+        "pencil"
+      ],
+      "instructions": [
+        "Think of a problem at home, like a heavy school bag.",
+        "Draw an invention that solves it.",
+        "Label the parts and explain how it works."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Space and nature"
+    },
+    {
+      "type": "text",
+      "markdown": "Our Solar System has **8 planets** that go round the Sun. Earth is the third planet from the Sun. The **Moon** goes around the Earth. The **Amazon** is the biggest rainforest and the **Sahara** is a huge desert."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "How many planets are in our Solar System?",
+        "options": [
+          {
+            "id": "a",
+            "text": "7"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "9"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Healthy living and helpful habits"
+    },
+    {
+      "type": "text",
+      "markdown": "A healthy body needs a **balanced diet**: fruit, vegetables, protein, grains and water. We need exercise and **8 to 10 hours of sleep** at your age. Good habits include washing hands and brushing teeth."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "true_false",
+        "prompt": "A balanced diet means eating only one kind of food.",
+        "answer": [
+          false
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Languages, flags and fun facts"
+    },
+    {
+      "type": "text",
+      "markdown": "People around the world speak thousands of languages. Every country has a **flag** and a **capital city**. For example, Paris is the capital of France and Tokyo is the capital of Japan."
+    },
+    {
+      "type": "reveal",
+      "prompt": "What is a fact you know about another country?",
+      "answer_markdown": "Any fact is good! Ask a grown-up and look it up on a map together."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "There are 7 continents and 5 oceans.",
+        "Inventions change how we live.",
+        "Our Solar System has 8 planets.",
+        "A balanced diet, exercise and sleep keep us healthy.",
+        "Countries have flags and capital cities."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Good luck!"
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "number",
+        "prompt": "How many continents are there?",
+        "ref": "q1",
+        "skill_tag": "geography.continents",
+        "answer": {
+          "value": 7,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which is the biggest ocean?",
+        "ref": "q2",
+        "skill_tag": "geography.oceans",
+        "options": [
+          {
+            "id": "a",
+            "text": "Atlantic"
+          },
+          {
+            "id": "b",
+            "text": "Pacific"
+          },
+          {
+            "id": "c",
+            "text": "Indian"
+          },
+          {
+            "id": "d",
+            "text": "Arctic"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Paris is the capital city of which country?",
+        "ref": "q3",
+        "skill_tag": "geography.countries",
+        "options": [
+          {
+            "id": "a",
+            "text": "Italy"
+          },
+          {
+            "id": "b",
+            "text": "France"
+          },
+          {
+            "id": "c",
+            "text": "Spain"
+          },
+          {
+            "id": "d",
+            "text": "Germany"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "match",
+        "prompt": "Match each country to its capital city.",
+        "ref": "q4",
+        "skill_tag": "geography.capitals",
+        "points": 2,
+        "left": [
+          {
+            "id": "l1",
+            "text": "Japan"
+          },
+          {
+            "id": "l2",
+            "text": "Egypt"
+          },
+          {
+            "id": "l3",
+            "text": "Australia"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "Tokyo"
+          },
+          {
+            "id": "r2",
+            "text": "Cairo"
+          },
+          {
+            "id": "r3",
+            "text": "Canberra"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which planet do we live on?",
+        "ref": "q5",
+        "skill_tag": "space.planets",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mars"
+          },
+          {
+            "id": "b",
+            "text": "Earth"
+          },
+          {
+            "id": "c",
+            "text": "Venus"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What goes around the Earth?",
+        "ref": "q6",
+        "skill_tag": "space.moon",
+        "options": [
+          {
+            "id": "a",
+            "text": "The Moon"
+          },
+          {
+            "id": "b",
+            "text": "The Sun"
+          },
+          {
+            "id": "c",
+            "text": "Mars"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which invention helps people talk to others far away?",
+        "ref": "q7",
+        "skill_tag": "inventions.who",
+        "options": [
+          {
+            "id": "a",
+            "text": "Telephone"
+          },
+          {
+            "id": "b",
+            "text": "Wheel"
+          },
+          {
+            "id": "c",
+            "text": "Bicycle"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "order",
+        "prompt": "Put these in order from oldest to newest.",
+        "ref": "q8",
+        "skill_tag": "history.order",
+        "points": 2,
+        "items": [
+          {
+            "id": "a",
+            "text": "Wheel"
+          },
+          {
+            "id": "b",
+            "text": "Printing press"
+          },
+          {
+            "id": "c",
+            "text": "Light bulb"
+          },
+          {
+            "id": "d",
+            "text": "Smartphone"
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which animal is the fastest on land?",
+        "ref": "q9",
+        "skill_tag": "nature.animals",
+        "options": [
+          {
+            "id": "a",
+            "text": "Horse"
+          },
+          {
+            "id": "b",
+            "text": "Cheetah"
+          },
+          {
+            "id": "c",
+            "text": "Lion"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which is the biggest hot desert in the world?",
+        "ref": "q10",
+        "skill_tag": "nature.habitats",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sahara"
+          },
+          {
+            "id": "b",
+            "text": "Gobi"
+          },
+          {
+            "id": "c",
+            "text": "Kalahari"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which of these is part of a balanced diet?",
+        "ref": "q11",
+        "skill_tag": "health.diet",
+        "options": [
+          {
+            "id": "a",
+            "text": "Fruit and vegetables"
+          },
+          {
+            "id": "b",
+            "text": "Only crisps"
+          },
+          {
+            "id": "c",
+            "text": "Only sweets"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "About how many hours of sleep does a child your age need each night?",
+        "ref": "q12",
+        "skill_tag": "health.sleep",
+        "points": 2,
+        "options": [
+          {
+            "id": "a",
+            "text": "4 to 5"
+          },
+          {
+            "id": "b",
+            "text": "6"
+          },
+          {
+            "id": "c",
+            "text": "9 to 11"
+          }
+        ],
+        "answer": [
+          "c"
+        ]
+      }
+    ]
+  }
+}
