@@ -15,6 +15,7 @@ export type Block =
   | { type: "activity"; title: string; materials?: string[]; instructions: string[] }
   | { type: "manipulative"; title: string; goal?: string; emoji: string; count: number; zones: string[] }
   | { type: "chart"; kind: "pictogram" | "bar_chart" | "tally" | "table" | "number_line" | "fraction"; title: string; caption?: string; rows?: { label: string; value: number; emoji?: string }[]; each?: number; from?: number; to?: number; step?: number; marks?: number[]; parts?: number; shaded?: number }
+  | { type: "video"; title: string; youtube: string; start: number; end: number; caption?: string }
   | { type: "explainer"; title: string; scenes: { caption: string; items: { id?: string; emoji: string; label?: string; x: number; y: number; size: number; anim: "none" | "bounce" | "float" | "spin" | "pulse" | "grow" }[] }[] }
   | { type: "brain_game"; game: "memory_match" | "remember_order"; title: string; goal?: string; emojis: string[] }
   | { type: "glossary"; terms: { term: string; meaning: string }[] }
@@ -23,7 +24,7 @@ export type Block =
 
 export type LessonMeta = { title: string; summary: string; minutes: number; objectives: string[] };
 
-export type SlideKind = "title" | "content" | "check" | "reveal" | "activity" | "summary" | "embed" | "play" | "explain" | "brain" | "finish";
+export type SlideKind = "title" | "content" | "check" | "reveal" | "activity" | "summary" | "embed" | "play" | "explain" | "brain" | "video" | "finish";
 
 export type Slide = {
   kind: SlideKind;
@@ -114,6 +115,8 @@ export function blockNarration(b: Block): string {
       return `Let's play! ${plain(b.title)}. ${b.goal ? plain(b.goal) : `Move the ${b.count} things into ${b.zones.map(plain).join(" and ")}.`}`;
     case "chart":
       return `${plain(b.title)}. ${chartReadout(b)}${b.caption ? ` ${plain(b.caption)}` : ""}`;
+    case "video":
+      return `Video time! ${plain(b.title)}. Press play to watch. It lasts about ${b.end - b.start} seconds.`;
     case "explainer":
       return `Watch! ${plain(b.title)}. ${plain(b.scenes[0]?.caption ?? "")}`;
     case "brain_game":
@@ -123,7 +126,7 @@ export function blockNarration(b: Block): string {
   }
 }
 
-const INTERACTIVE = new Set(["check", "reveal", "activity", "summary", "html_embed", "manipulative", "explainer", "brain_game"]);
+const INTERACTIVE = new Set(["check", "reveal", "activity", "summary", "html_embed", "manipulative", "explainer", "brain_game", "video"]);
 /** A content slide holds at most this many blocks (pictures do not count), so slides stay light. */
 const MAX_CONTENT_BLOCKS = 3;
 
@@ -162,8 +165,8 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
     }
     if (INTERACTIVE.has(b.type)) {
       flush();
-      const kind: SlideKind = b.type === "check" ? "check" : b.type === "reveal" ? "reveal" : b.type === "activity" ? "activity" : b.type === "summary" ? "summary" : b.type === "manipulative" ? "play" : b.type === "explainer" ? "explain" : b.type === "brain_game" ? "brain" : "embed";
-      const title = b.type === "manipulative" || b.type === "explainer" || b.type === "brain_game" ? b.title : b.type === "activity" ? `Try it: ${b.title}` : b.type === "html_embed" ? b.title : b.type === "check" ? "Check yourself" : b.type === "reveal" ? "Think about it" : "Remember";
+      const kind: SlideKind = b.type === "check" ? "check" : b.type === "reveal" ? "reveal" : b.type === "activity" ? "activity" : b.type === "summary" ? "summary" : b.type === "manipulative" ? "play" : b.type === "explainer" ? "explain" : b.type === "brain_game" ? "brain" : b.type === "video" ? "video" : "embed";
+      const title = b.type === "manipulative" || b.type === "explainer" || b.type === "brain_game" || b.type === "video" ? b.title : b.type === "activity" ? `Try it: ${b.title}` : b.type === "html_embed" ? b.title : b.type === "check" ? "Check yourself" : b.type === "reveal" ? "Think about it" : "Remember";
       slides.push({ kind, title, eyebrow: heading || undefined, blocks: [b], narration: blockNarration(b) });
       if (b.type === "summary") afterSummary = true;
       continue;

@@ -48,6 +48,30 @@
       "markdown": "Each digit has a value that depends on its place. In **4,825** the 4 is worth 4,000, the 8 is worth 800, the 2 is worth 20 and the 5 is worth 5. We can **round** a number to the nearest 10, 100 or 1,000 to make it easier to work with."
     },
     {
+      "type": "chart",
+      "kind": "table",
+      "title": "Place value of 4,825",
+      "caption": "4 thousands, 8 hundreds, 2 tens and 5 ones make four thousand, eight hundred and twenty-five.",
+      "rows": [
+        {
+          "label": "Thousands",
+          "value": 4
+        },
+        {
+          "label": "Hundreds",
+          "value": 8
+        },
+        {
+          "label": "Tens",
+          "value": 2
+        },
+        {
+          "label": "Ones",
+          "value": 5
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "number",
@@ -281,6 +305,77 @@
       "markdown": "To add or subtract big numbers, line up the digits in columns: ones under ones, tens under tens. Remember to **carry** when a column makes 10 or more, and to **borrow** when you need more."
     },
     {
+      "type": "explainer",
+      "title": "What carrying means",
+      "scenes": [
+        {
+          "caption": "Add the ones: 8 ones and 7 ones.",
+          "items": [
+            {
+              "emoji": "🟦",
+              "x": 25,
+              "y": 50,
+              "id": "o8",
+              "size": 3,
+              "label": "8 ones"
+            },
+            {
+              "emoji": "🟦",
+              "x": 70,
+              "y": 50,
+              "id": "o7",
+              "size": 3,
+              "label": "7 ones"
+            }
+          ]
+        },
+        {
+          "caption": "That makes 15 ones. Ten of them make a group of ten, and 5 are left over.",
+          "items": [
+            {
+              "emoji": "🔟",
+              "x": 28,
+              "y": 50,
+              "id": "ten",
+              "size": 3,
+              "label": "1 ten",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🟦",
+              "x": 70,
+              "y": 50,
+              "id": "o7",
+              "size": 3,
+              "label": "5 ones left"
+            }
+          ]
+        },
+        {
+          "caption": "Write the 5 in the ones column and carry the 1 ten across to the tens column.",
+          "items": [
+            {
+              "emoji": "🔟",
+              "x": 80,
+              "y": 50,
+              "id": "ten",
+              "size": 3,
+              "label": "tens column",
+              "anim": "bounce"
+            },
+            {
+              "emoji": "🟦",
+              "x": 25,
+              "y": 50,
+              "id": "o7",
+              "size": 3,
+              "label": "ones column"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "number",
@@ -442,6 +537,10 @@
         {
           "term": "round",
           "meaning": "Change a number to a nearby simpler one, like 47 to 50."
+        },
+        {
+          "term": "fact family",
+          "meaning": "Numbers that go together, like 3 + 4 = 7 and 7 - 4 = 3."
         }
       ]
     }

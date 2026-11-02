@@ -48,6 +48,53 @@
       "markdown": "Matter comes in three main states. A **solid** keeps its shape. A **liquid** flows and takes the shape of its container. A **gas** spreads out to fill all the space. Heating can **melt** a solid or **boil** a liquid; cooling can **freeze** it or make a gas **condense**."
     },
     {
+      "type": "explainer",
+      "title": "Three states of water",
+      "scenes": [
+        {
+          "caption": "Ice is a solid. It keeps its shape.",
+          "items": [
+            {
+              "emoji": "🧊",
+              "x": 50,
+              "y": 50,
+              "id": "w",
+              "size": 3,
+              "label": "solid"
+            }
+          ]
+        },
+        {
+          "caption": "When it melts it becomes a liquid. A liquid flows and takes the shape of its container.",
+          "items": [
+            {
+              "emoji": "💧",
+              "x": 50,
+              "y": 50,
+              "id": "w",
+              "size": 3,
+              "label": "liquid",
+              "anim": "float"
+            }
+          ]
+        },
+        {
+          "caption": "When it boils it becomes a gas called water vapour. A gas spreads out to fill the space.",
+          "items": [
+            {
+              "emoji": "♨️",
+              "x": 50,
+              "y": 40,
+              "id": "w",
+              "size": 3,
+              "label": "gas",
+              "anim": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "multiple_choice",
@@ -229,6 +276,98 @@
       "markdown": "Every food chain starts with a **producer**, a plant that makes its own food using sunlight. Animals that eat plants are **herbivores**; animals that eat other animals are **carnivores**. Grass, then rabbit, then fox is a food chain."
     },
     {
+      "type": "explainer",
+      "title": "A food chain",
+      "scenes": [
+        {
+          "caption": "Every food chain starts with a producer. A plant uses sunlight to make its own food.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 25,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌱",
+              "x": 20,
+              "y": 70,
+              "id": "plant",
+              "size": 3,
+              "label": "producer"
+            }
+          ]
+        },
+        {
+          "caption": "A rabbit eats the plant. It is a herbivore, because it eats only plants.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 25,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌱",
+              "x": 20,
+              "y": 70,
+              "id": "plant",
+              "size": 3,
+              "label": "producer"
+            },
+            {
+              "emoji": "🐰",
+              "x": 50,
+              "y": 70,
+              "id": "rabbit",
+              "size": 3,
+              "label": "herbivore",
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "A fox eats the rabbit. It is a carnivore, because it eats other animals. Energy passes along the chain.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 25,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌱",
+              "x": 20,
+              "y": 70,
+              "id": "plant",
+              "size": 3,
+              "label": "producer"
+            },
+            {
+              "emoji": "🐰",
+              "x": 50,
+              "y": 70,
+              "id": "rabbit",
+              "size": 3,
+              "label": "herbivore"
+            },
+            {
+              "emoji": "🦊",
+              "x": 80,
+              "y": 70,
+              "id": "fox",
+              "size": 3,
+              "label": "carnivore",
+              "anim": "grow"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "multiple_choice",
@@ -272,6 +411,69 @@
     {
       "type": "text",
       "markdown": "Forces can speed things up, slow them down or change their shape. **Friction** slows things that rub together. **Gravity** pulls things toward the Earth. A **magnet** pulls some metals, like iron, but not wood or plastic."
+    },
+    {
+      "type": "explainer",
+      "title": "A magnet pulls",
+      "scenes": [
+        {
+          "caption": "A magnet has an invisible force around it. Here are a magnet, a nail and a piece of wood.",
+          "items": [
+            {
+              "emoji": "🧲",
+              "x": 20,
+              "y": 50,
+              "id": "mag",
+              "size": 3
+            },
+            {
+              "emoji": "🔩",
+              "x": 70,
+              "y": 30,
+              "id": "nail",
+              "size": 2,
+              "label": "iron nail"
+            },
+            {
+              "emoji": "🪵",
+              "x": 70,
+              "y": 75,
+              "id": "wood",
+              "size": 2,
+              "label": "wood"
+            }
+          ]
+        },
+        {
+          "caption": "The magnet pulls the iron nail towards it. The wood does not move, because wood is not magnetic.",
+          "items": [
+            {
+              "emoji": "🧲",
+              "x": 20,
+              "y": 50,
+              "id": "mag",
+              "size": 3
+            },
+            {
+              "emoji": "🔩",
+              "x": 38,
+              "y": 45,
+              "id": "nail",
+              "size": 2,
+              "label": "pulled!",
+              "anim": "pulse"
+            },
+            {
+              "emoji": "🪵",
+              "x": 70,
+              "y": 75,
+              "id": "wood",
+              "size": 2,
+              "label": "not magnetic"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "check",
@@ -381,6 +583,46 @@
         {
           "term": "circuit",
           "meaning": "A complete loop that electricity can flow around."
+        },
+        {
+          "term": "boil",
+          "meaning": "When a liquid gets so hot it bubbles and turns into a gas."
+        },
+        {
+          "term": "freeze",
+          "meaning": "When a liquid gets so cold it turns into a solid."
+        },
+        {
+          "term": "gas",
+          "meaning": "Something with no fixed shape that spreads out to fill the space, like air."
+        },
+        {
+          "term": "liquid",
+          "meaning": "Something that flows and takes the shape of its container, like water."
+        },
+        {
+          "term": "solid",
+          "meaning": "Something that keeps its own shape, like a rock."
+        },
+        {
+          "term": "melt",
+          "meaning": "When a solid gets warm and turns into a liquid."
+        },
+        {
+          "term": "magnet",
+          "meaning": "An object that pulls iron and steel towards it."
+        },
+        {
+          "term": "rain",
+          "meaning": "Water drops that fall from clouds."
+        },
+        {
+          "term": "shadow",
+          "meaning": "A dark shape made when something blocks light."
+        },
+        {
+          "term": "vibrations",
+          "meaning": "Tiny, fast shakes that make sound."
         }
       ]
     }

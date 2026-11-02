@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { parseLessonFile } from "@lms/schema";
+import { parseLessonFile, sectionsWithoutVisual, type Block } from "@lms/schema";
 
 // Every lesson file committed under content/lessons must pass the same validation the admin importer uses.
 const dir = join(process.cwd(), "../content/lessons");
@@ -17,6 +17,10 @@ describe("content/lessons", () => {
       if (!result.ok) throw new Error(JSON.stringify(result.issues, null, 1));
       expect(result.lesson.lesson.curriculum).toMatchObject({ semester: 1, week: 1 });
       expect(result.lesson.quiz.questions.length).toBe(12);
+    });
+    it(`${f} shows something for every stop`, () => {
+      const blocks = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: Block[] }).blocks;
+      expect(sectionsWithoutVisual(blocks)).toEqual([]);
     });
     it(`${f} has a glossary, an animated explainer and a brain game`, () => {
       const types = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: { type: string }[] }).blocks.map((b) => b.type);
@@ -69,5 +73,16 @@ describe("chart block", () => {
     expect(withChart({ kind: "number_line", from: 0, to: 1000, step: 1 })).toBe(false);
     expect(withChart({ kind: "fraction", parts: 4, shaded: 2 })).toBe(true);
     expect(withChart({ kind: "fraction", parts: 4, shaded: 5 })).toBe(false);
+  });
+});
+
+describe("video block", () => {
+  it("is limited to clips of 100 seconds or less", async () => {
+    const { lessonFixture } = await import("../test/fixtures");
+    const withVideo = (v: object) => { const f = lessonFixture(); f.blocks.push({ type: "video", title: "A clip", youtube: "aaaaaaaaaaa", ...v } as never); return parseLessonFile(f).ok; };
+    expect(withVideo({ start: 10, end: 110 })).toBe(true);
+    expect(withVideo({ start: 10, end: 111 })).toBe(false);
+    expect(withVideo({ start: 50, end: 40 })).toBe(false);
+    expect(withVideo({ end: 60, youtube: "not-an-id" })).toBe(false);
   });
 });
