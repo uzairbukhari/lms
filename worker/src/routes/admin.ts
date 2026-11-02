@@ -17,6 +17,7 @@ import { serveAsset } from "../lib/assets";
 import { requireAdmin } from "../middleware/auth";
 import { adminClassRoutes } from "./admin-classes";
 import { adminContentRoutes } from "./admin-content";
+import { adminExamRoutes } from "./admin-exams";
 
 export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
@@ -25,6 +26,7 @@ adminRoutes.get("/me", (c) => c.json({ admin: c.get("admin") }));
 adminRoutes.get("/assets/file/:filename", (c) => serveAsset(c, c.req.param("filename")));
 adminRoutes.route("/", adminContentRoutes);
 adminRoutes.route("/", adminClassRoutes);
+adminRoutes.route("/", adminExamRoutes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 

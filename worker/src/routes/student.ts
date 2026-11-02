@@ -8,7 +8,7 @@ import { requireStudent } from "../middleware/auth";
 /** What a signed-in child can see and do. Every lesson request goes through visibleLessonsFor. */
 export const studentRoutes = new Hono<AppEnv>();
 // Scoped paths (not "*") so unknown /api routes still fall through to the JSON 404.
-for (const path of ["/home", "/lessons/*", "/quiz/*", "/ai/*", "/progress", "/exams/*"]) studentRoutes.use(path, requireStudent);
+for (const path of ["/home", "/lessons/:id", "/lessons/:id/progress"]) studentRoutes.use(path, requireStudent);
 
 type LessonRow = {
   id: string; slug: string; title: string; subject: string; summary: string; minutes: number;
