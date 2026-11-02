@@ -1,0 +1,1005 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-english-class-1",
+    "subject": "english",
+    "title": "English Check-In: Where Am I?",
+    "summary": "Play with letters, sounds, rhymes, sentences, opposites and a tiny story so we can see what you already know.",
+    "age_band": "7-8",
+    "difficulty": 1,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show I can hear sounds in words and match rhymes",
+      "Show I can build a sentence with a capital letter and a full stop",
+      "Show I can spot naming words, action words and opposites, and read a short story"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "english-class-1",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, Word Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "Today is a **check-in**. We will play with letters, sounds, words and a little story. There are no wrong guesses, only tries!"
+    },
+    {
+      "type": "image",
+      "emoji": "📚",
+      "alt": "A pile of books",
+      "caption": "Let us explore words!"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Letters and sounds"
+    },
+    {
+      "type": "text",
+      "markdown": "The **alphabet** has 26 letters. Each letter makes a **sound**. Put the sounds together and you can read a word!"
+    },
+    {
+      "type": "explainer",
+      "title": "Sounds make a word",
+      "scenes": [
+        {
+          "caption": "Say the first sound: c.",
+          "items": [
+            {
+              "emoji": "c",
+              "x": 30,
+              "y": 50,
+              "id": "c",
+              "size": 3,
+              "anim": "bounce"
+            }
+          ]
+        },
+        {
+          "caption": "Now the next sound: a.",
+          "items": [
+            {
+              "emoji": "c",
+              "x": 30,
+              "y": 50,
+              "id": "c",
+              "size": 3
+            },
+            {
+              "emoji": "a",
+              "x": 50,
+              "y": 50,
+              "id": "a",
+              "size": 3,
+              "anim": "bounce"
+            }
+          ]
+        },
+        {
+          "caption": "And the last sound: t.",
+          "items": [
+            {
+              "emoji": "c",
+              "x": 30,
+              "y": 50,
+              "id": "c",
+              "size": 3
+            },
+            {
+              "emoji": "a",
+              "x": 50,
+              "y": 50,
+              "id": "a",
+              "size": 3
+            },
+            {
+              "emoji": "t",
+              "x": 70,
+              "y": 50,
+              "id": "t",
+              "size": 3,
+              "anim": "bounce"
+            }
+          ]
+        },
+        {
+          "caption": "Push the sounds together: c, a, t says cat!",
+          "items": [
+            {
+              "emoji": "c",
+              "x": 38,
+              "y": 50,
+              "id": "c",
+              "size": 3
+            },
+            {
+              "emoji": "a",
+              "x": 50,
+              "y": 50,
+              "id": "a",
+              "size": 3
+            },
+            {
+              "emoji": "t",
+              "x": 62,
+              "y": 50,
+              "id": "t",
+              "size": 3
+            },
+            {
+              "emoji": "🐱",
+              "x": 50,
+              "y": 18,
+              "size": 3,
+              "anim": "grow",
+              "label": "cat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which word starts with the same sound as snake?",
+        "emoji": "🐍",
+        "options": [
+          {
+            "id": "a",
+            "text": "sun"
+          },
+          {
+            "id": "b",
+            "text": "hat"
+          },
+          {
+            "id": "c",
+            "text": "dog"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Rhymes"
+    },
+    {
+      "type": "text",
+      "markdown": "Words that **rhyme** sound the same at the end. Cat and hat rhyme. They both end in the sound at."
+    },
+    {
+      "type": "image",
+      "emoji": "🐱🎩",
+      "alt": "A cat and a hat",
+      "caption": "cat and hat rhyme"
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "match",
+        "prompt": "Match the words that rhyme.",
+        "ref": "c1",
+        "skill_tag": "rhyme.match",
+        "left": [
+          {
+            "id": "l1",
+            "text": "cat"
+          },
+          {
+            "id": "l2",
+            "text": "bee"
+          },
+          {
+            "id": "l3",
+            "text": "sun"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "hat"
+          },
+          {
+            "id": "r2",
+            "text": "tree"
+          },
+          {
+            "id": "r3",
+            "text": "run"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Sentences"
+    },
+    {
+      "type": "text",
+      "markdown": "A **sentence** tells us a whole idea. It starts with a **capital letter** and ends with a **full stop**."
+    },
+    {
+      "type": "explainer",
+      "title": "Building a sentence",
+      "scenes": [
+        {
+          "caption": "A sentence starts with a capital letter. Here is a capital T.",
+          "items": [
+            {
+              "emoji": "The",
+              "x": 15,
+              "y": 50,
+              "id": "w1",
+              "size": 3,
+              "anim": "pulse",
+              "label": "capital T"
+            }
+          ]
+        },
+        {
+          "caption": "Add the next word.",
+          "items": [
+            {
+              "emoji": "The",
+              "x": 15,
+              "y": 50,
+              "id": "w1",
+              "size": 3
+            },
+            {
+              "emoji": "dog",
+              "x": 40,
+              "y": 50,
+              "id": "w2",
+              "size": 3,
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "Add the action word.",
+          "items": [
+            {
+              "emoji": "The",
+              "x": 15,
+              "y": 50,
+              "id": "w1",
+              "size": 3
+            },
+            {
+              "emoji": "dog",
+              "x": 40,
+              "y": 50,
+              "id": "w2",
+              "size": 3
+            },
+            {
+              "emoji": "runs",
+              "x": 68,
+              "y": 50,
+              "id": "w3",
+              "size": 3,
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "A full stop goes at the end. Now it is a sentence!",
+          "items": [
+            {
+              "emoji": "The",
+              "x": 15,
+              "y": 50,
+              "id": "w1",
+              "size": 3
+            },
+            {
+              "emoji": "dog",
+              "x": 40,
+              "y": 50,
+              "id": "w2",
+              "size": 3
+            },
+            {
+              "emoji": "runs",
+              "x": 68,
+              "y": 50,
+              "id": "w3",
+              "size": 3
+            },
+            {
+              "emoji": "🔴",
+              "x": 90,
+              "y": 62,
+              "id": "dot",
+              "size": 1,
+              "anim": "pulse",
+              "label": "full stop"
+            },
+            {
+              "emoji": "🐕",
+              "x": 50,
+              "y": 18,
+              "size": 3,
+              "anim": "bounce"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "manipulative",
+      "title": "Word bricks",
+      "goal": "Think of a sentence, like I like red apples. Move one brick for every word. How many words is your sentence?",
+      "emoji": "🧱",
+      "count": 8,
+      "zones": [
+        "Words in my sentence",
+        "Spare bricks"
+      ]
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "order",
+        "prompt": "Put the words in order to make a sentence.",
+        "ref": "c2",
+        "skill_tag": "sentences.order",
+        "items": [
+          {
+            "id": "a",
+            "text": "The"
+          },
+          {
+            "id": "b",
+            "text": "cat"
+          },
+          {
+            "id": "c",
+            "text": "sat"
+          },
+          {
+            "id": "d",
+            "text": "down."
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Naming words and action words"
+    },
+    {
+      "type": "text",
+      "markdown": "A **noun** is a naming word, like frog, ball or Mum. A **verb** is an action word, like jump, run or eat."
+    },
+    {
+      "type": "explainer",
+      "title": "Noun and verb",
+      "scenes": [
+        {
+          "caption": "This is a frog. Frog is a noun. It names something.",
+          "items": [
+            {
+              "emoji": "🐸",
+              "x": 30,
+              "y": 55,
+              "id": "frog",
+              "size": 3,
+              "label": "frog (noun)"
+            }
+          ]
+        },
+        {
+          "caption": "Now the frog is doing something. Jump is a verb. It is an action word.",
+          "items": [
+            {
+              "emoji": "🐸",
+              "x": 70,
+              "y": 35,
+              "id": "frog",
+              "size": 3,
+              "anim": "bounce",
+              "label": "jump (verb)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which one is an action word?",
+        "ref": "c3",
+        "skill_tag": "grammar.verbs",
+        "options": [
+          {
+            "id": "a",
+            "text": "table"
+          },
+          {
+            "id": "b",
+            "text": "jump"
+          },
+          {
+            "id": "c",
+            "text": "red"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Opposites"
+    },
+    {
+      "type": "text",
+      "markdown": "**Opposites** are words that mean the very opposite. Hot and cold are opposites."
+    },
+    {
+      "type": "explainer",
+      "title": "Opposites",
+      "scenes": [
+        {
+          "caption": "The sun is hot.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 50,
+              "y": 45,
+              "id": "t1",
+              "size": 3,
+              "anim": "spin",
+              "label": "hot"
+            }
+          ]
+        },
+        {
+          "caption": "The snow is cold. Hot and cold are opposites!",
+          "items": [
+            {
+              "emoji": "❄️",
+              "x": 50,
+              "y": 45,
+              "id": "t1",
+              "size": 3,
+              "anim": "pulse",
+              "label": "cold"
+            }
+          ]
+        },
+        {
+          "caption": "An elephant is big. A mouse is small. Big and small are opposites too!",
+          "items": [
+            {
+              "emoji": "🐘",
+              "x": 30,
+              "y": 50,
+              "size": 3,
+              "label": "big"
+            },
+            {
+              "emoji": "🐭",
+              "x": 75,
+              "y": 60,
+              "size": 1,
+              "label": "small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "match",
+        "prompt": "Match each word to its opposite.",
+        "ref": "c4",
+        "skill_tag": "vocab.opposites",
+        "left": [
+          {
+            "id": "l1",
+            "text": "up"
+          },
+          {
+            "id": "l2",
+            "text": "happy"
+          },
+          {
+            "id": "l3",
+            "text": "day"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "down"
+          },
+          {
+            "id": "r2",
+            "text": "sad"
+          },
+          {
+            "id": "r3",
+            "text": "night"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        }
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Rhyme hunt",
+      "materials": [
+        "a pencil",
+        "paper",
+        "a grown-up helper"
+      ],
+      "instructions": [
+        "Say cat. Can you think of two words that rhyme with cat?",
+        "Say dog. Can you think of a word that rhymes with dog?",
+        "Write your favourite rhyming pair and draw a picture of each word."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 6: A little story"
+    },
+    {
+      "type": "text",
+      "markdown": "Read this story. Pip has a red kite. The wind is strong. Pip runs and the kite goes up, up, up!"
+    },
+    {
+      "type": "image",
+      "emoji": "🪁",
+      "alt": "A red kite flying",
+      "caption": "Pip's kite"
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "What colour is Pip's kite?",
+        "ref": "c5",
+        "skill_tag": "reading.literal",
+        "options": [
+          {
+            "id": "a",
+            "text": "red"
+          },
+          {
+            "id": "b",
+            "text": "blue"
+          },
+          {
+            "id": "c",
+            "text": "green"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "reveal",
+      "prompt": "What do you think Pip does next?",
+      "answer_markdown": "Any answer is great! Maybe Pip keeps running, or the kite flies over the trees. Making a guess about what happens next is a big reading skill."
+    },
+    {
+      "type": "brain_game",
+      "game": "memory_match",
+      "title": "Match the pictures",
+      "goal": "Turn over two cards. Can you find all the pairs?",
+      "emojis": [
+        "🐱",
+        "🐶",
+        "🐸",
+        "🍎",
+        "🌞",
+        "🪁"
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Letters make sounds, and sounds make words.",
+        "Rhyming words sound the same at the end.",
+        "A sentence starts with a capital letter and ends with a full stop.",
+        "A noun names something and a verb is an action.",
+        "Opposites are words that mean the very opposite."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "Ready? Start the quiz. It has 12 questions and takes about 15 minutes. A guess is better than a blank."
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "check-in",
+          "meaning": "A friendly game that shows us what you know. It is not a test."
+        },
+        {
+          "term": "alphabet",
+          "meaning": "All the letters we use for reading and writing. There are 26 of them."
+        },
+        {
+          "term": "sound",
+          "meaning": "What you hear when you say a letter, like sss for s."
+        },
+        {
+          "term": "rhyme",
+          "meaning": "Words that sound the same at the end, like cat and hat."
+        },
+        {
+          "term": "sentence",
+          "meaning": "Words that tell a whole idea. It starts with a capital letter and ends with a full stop."
+        },
+        {
+          "term": "capital letter",
+          "meaning": "A big letter, like T, used at the start of a sentence or a name."
+        },
+        {
+          "term": "full stop",
+          "meaning": "A little dot at the end of a sentence."
+        },
+        {
+          "term": "noun",
+          "meaning": "A naming word, like frog, ball or Mum."
+        },
+        {
+          "term": "verb",
+          "meaning": "An action word, like jump, run or eat."
+        },
+        {
+          "term": "opposites",
+          "meaning": "Words that mean the very opposite, like hot and cold."
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "Which word starts with the same sound as fish?",
+        "ref": "q1",
+        "skill_tag": "phonics.initial_sound",
+        "options": [
+          {
+            "id": "a",
+            "text": "fan"
+          },
+          {
+            "id": "b",
+            "text": "sun"
+          },
+          {
+            "id": "c",
+            "text": "bat"
+          }
+        ],
+        "answer": [
+          "a"
+        ],
+        "emoji": "🐟",
+        "hint": "Say fish slowly. What is the first sound?",
+        "explanation": "Fish and fan both start with the sound fff."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which letter comes after b in the alphabet?",
+        "ref": "q2",
+        "skill_tag": "alphabet.order",
+        "options": [
+          {
+            "id": "a",
+            "text": "a"
+          },
+          {
+            "id": "b",
+            "text": "c"
+          },
+          {
+            "id": "c",
+            "text": "d"
+          }
+        ],
+        "answer": [
+          "b"
+        ],
+        "hint": "Say it: a, b, ...",
+        "explanation": "The order is a, b, c, d."
+      },
+      {
+        "type": "number",
+        "prompt": "How many sounds do you hear in the word dog? (d, o, g)",
+        "ref": "q3",
+        "skill_tag": "phonics.segmenting",
+        "answer": {
+          "value": 3,
+          "tolerance": 0
+        },
+        "hint": "Say each sound and count them on your fingers.",
+        "explanation": "d, o, g is 3 sounds."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which word rhymes with cake?",
+        "ref": "q4",
+        "skill_tag": "rhyme.match",
+        "options": [
+          {
+            "id": "a",
+            "text": "lake"
+          },
+          {
+            "id": "b",
+            "text": "kite"
+          },
+          {
+            "id": "c",
+            "text": "cat"
+          }
+        ],
+        "answer": [
+          "a"
+        ],
+        "hint": "Listen to the end of cake.",
+        "explanation": "Cake and lake both end in the sound ake."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which word is spelled correctly?",
+        "ref": "q5",
+        "skill_tag": "spelling.sight_words",
+        "options": [
+          {
+            "id": "a",
+            "text": "sed"
+          },
+          {
+            "id": "b",
+            "text": "said"
+          },
+          {
+            "id": "c",
+            "text": "siad"
+          }
+        ],
+        "answer": [
+          "b"
+        ],
+        "hint": "It has the letters s, a, i, d.",
+        "explanation": "The right spelling is said."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is written correctly?",
+        "ref": "q6",
+        "skill_tag": "sentences.punctuation",
+        "options": [
+          {
+            "id": "a",
+            "text": "the dog runs."
+          },
+          {
+            "id": "b",
+            "text": "The dog runs."
+          },
+          {
+            "id": "c",
+            "text": "The dog runs"
+          }
+        ],
+        "answer": [
+          "b"
+        ],
+        "points": 2,
+        "hint": "Look for a capital letter at the start and a full stop at the end.",
+        "explanation": "A sentence starts with a capital letter and ends with a full stop."
+      },
+      {
+        "type": "order",
+        "prompt": "Put the words in order to make a sentence.",
+        "ref": "q7",
+        "skill_tag": "sentences.order",
+        "items": [
+          {
+            "id": "a",
+            "text": "I"
+          },
+          {
+            "id": "b",
+            "text": "like"
+          },
+          {
+            "id": "c",
+            "text": "red"
+          },
+          {
+            "id": "d",
+            "text": "apples."
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "points": 2,
+        "hint": "Start with the word I.",
+        "explanation": "I like red apples. makes sense and ends with a full stop."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which word is a naming word (a noun)?",
+        "ref": "q8",
+        "skill_tag": "grammar.nouns",
+        "options": [
+          {
+            "id": "a",
+            "text": "run"
+          },
+          {
+            "id": "b",
+            "text": "apple"
+          },
+          {
+            "id": "c",
+            "text": "jump"
+          }
+        ],
+        "answer": [
+          "b"
+        ],
+        "hint": "A noun is a thing you could see or hold.",
+        "explanation": "Apple names a thing, so it is a noun. Run and jump are actions."
+      },
+      {
+        "type": "true_false",
+        "prompt": "Jump is an action word.",
+        "ref": "q9",
+        "skill_tag": "grammar.verbs",
+        "answer": [
+          true
+        ],
+        "hint": "Can you do it with your body?",
+        "explanation": "Yes! Jump is something you do, so it is a verb."
+      },
+      {
+        "type": "match",
+        "prompt": "Match each word to its opposite.",
+        "ref": "q10",
+        "skill_tag": "vocab.opposites",
+        "left": [
+          {
+            "id": "l1",
+            "text": "hot"
+          },
+          {
+            "id": "l2",
+            "text": "big"
+          },
+          {
+            "id": "l3",
+            "text": "in"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "cold"
+          },
+          {
+            "id": "r2",
+            "text": "small"
+          },
+          {
+            "id": "r3",
+            "text": "out"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        },
+        "points": 2,
+        "hint": "Think of the very opposite.",
+        "explanation": "Hot and cold, big and small, in and out are opposites."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Sam has a blue hat. He puts it on his head. What does Sam put on his head?",
+        "ref": "q11",
+        "skill_tag": "reading.literal",
+        "options": [
+          {
+            "id": "a",
+            "text": "a hat"
+          },
+          {
+            "id": "b",
+            "text": "a shoe"
+          },
+          {
+            "id": "c",
+            "text": "a bag"
+          }
+        ],
+        "answer": [
+          "a"
+        ],
+        "hint": "Read the second sentence again.",
+        "explanation": "The story says Sam puts his blue hat on his head."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Ben puts on his coat and boots. Then he picks up his umbrella. What is the weather like?",
+        "ref": "q12",
+        "skill_tag": "reading.inference",
+        "options": [
+          {
+            "id": "a",
+            "text": "rainy"
+          },
+          {
+            "id": "b",
+            "text": "sunny"
+          },
+          {
+            "id": "c",
+            "text": "hot"
+          }
+        ],
+        "answer": [
+          "a"
+        ],
+        "points": 2,
+        "hint": "Why would Ben need an umbrella and boots?",
+        "explanation": "Coats, boots and umbrellas are for rainy days, so we can guess it is raining."
+      }
+    ]
+  }
+}

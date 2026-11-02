@@ -10,9 +10,9 @@ beforeAll(async () => {
 afterAll(async () => dispose());
 
 describe("schema", () => {
-  it("seeds the four subjects in order", async () => {
+  it("seeds the five subjects in order", async () => {
     const { results } = await db.prepare("SELECT id FROM subjects ORDER BY sort_order").all<{ id: string }>();
-    expect(results.map((r) => r.id)).toEqual(["maths", "science", "data-ai", "general-knowledge"]);
+    expect(results.map((r) => r.id)).toEqual(["maths", "science", "data-ai", "general-knowledge", "english"]);
   });
 
   it("numbers attempts uniquely per user and scope", async () => {

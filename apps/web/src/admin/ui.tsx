@@ -311,7 +311,7 @@ export function ago(iso: string | null | undefined): string {
   return iso.slice(0, 10);
 }
 export const SUBJECT_NAMES: Record<string, string> = {
-  maths: "Maths", science: "Science", "data-ai": "Computer Science, Data & AI", "general-knowledge": "General Knowledge",
+  maths: "Maths", science: "Science", "data-ai": "Computer Science, Data & AI", "general-knowledge": "General Knowledge", english: "English",
 };
 /** Sort helper for table headers. */
 export function useSort<K extends string>(initial: K, dir: 1 | -1 = 1) {

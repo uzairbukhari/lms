@@ -9,6 +9,6 @@ export function isThemeId(value: unknown): value is ThemeId {
   return typeof value === "string" && (THEMES as readonly string[]).includes(value);
 }
 
-export const SUBJECTS = ["maths", "science", "data-ai", "general-knowledge"] as const;
+export const SUBJECTS = ["maths", "science", "data-ai", "general-knowledge", "english"] as const;
 export type SubjectId = (typeof SUBJECTS)[number];
 
