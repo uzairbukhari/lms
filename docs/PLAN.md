@@ -142,9 +142,8 @@ CREATE TABLE classes (
   id          TEXT PRIMARY KEY,
   name        TEXT NOT NULL,
   description TEXT,
-  visibility_mode TEXT NOT NULL DEFAULT 'current_week'
-                    CHECK (visibility_mode IN ('current_week','all_published')),  -- 'all_published' = open library
-  revision_in_exam_week INTEGER NOT NULL DEFAULT 0,   -- 1 = reopen the semester's lessons read-only in exam week
+  visibility_mode TEXT NOT NULL DEFAULT 'released'
+                    CHECK (visibility_mode IN ('released','all_published')),  -- 'released' = weeks up to the current one; 'all_published' = open library
   is_active   INTEGER NOT NULL DEFAULT 1,
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -202,7 +201,7 @@ CREATE TABLE course_assignments (
 CREATE INDEX idx_assign_class ON course_assignments(class_id);
 CREATE INDEX idx_assign_user  ON course_assignments(user_id);
 
--- Admin exceptions: reopen a past (or future) week for a class or one student.
+-- Admin exception: open a FUTURE week early for a class or one student (past weeks are always open).
 CREATE TABLE lesson_unlocks (
   id          TEXT PRIMARY KEY,
   course_id   TEXT NOT NULL REFERENCES courses(id),
@@ -281,6 +280,7 @@ CREATE TABLE quiz_attempts (
   lesson_id        TEXT REFERENCES lessons(id),            -- denormalised for reporting; NULL for exams
   scope_key        TEXT NOT NULL,                          -- 'lesson:<id>' or 'exam:<course>:<semester>'; attempts are numbered within it
   attempt_number   INTEGER NOT NULL,           -- 1,2,3... per user per lesson
+  mode             TEXT NOT NULL DEFAULT 'graded' CHECK (mode IN ('graded','practice')),  -- 'practice' = taken after the lesson's week ended
   status           TEXT NOT NULL DEFAULT 'in_progress'
                      CHECK (status IN ('in_progress','submitted','abandoned')),
   started_at       TEXT NOT NULL DEFAULT (datetime('now')),
@@ -376,7 +376,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - Re-importing the same `slug` creates a new version (new quiz + questions rows); old attempts are untouched.
 - Asset upload to R2 (drag and drop images/audio), returning the filename to use in the JSON.
 - Lesson list with filters by subject/status, reorder, archive.
-- **Curriculum planner:** a grid of semester × week for one course (subject-year) where you drag lessons into slots, with gap and draft warnings, a "preview as week N" mode, unlock tools for reopening weeks, plus the **term calendar** for each class (start date of each semester). See section 4d.
+- **Curriculum planner:** a grid of semester × week for one course (subject-year) where you drag lessons into slots, with gap and draft warnings, a "preview as week N" mode, unlock tools for opening a future week early, plus the **term calendar** for each class (start date of each semester). See section 4d.
 - Admin **Classes and Courses** screens: create a class, add or remove students, build a course by picking and ordering lessons, assign it to a class or to one student (section 4c).
 - **Done when:** you can paste a Claude-generated lesson and see it previewed.
 
@@ -398,7 +398,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 ### Phase 6: Student dashboard (1 day)
 - Home: greeting with avatar, four subject tiles with progress rings, "Continue where you left off", "New lessons".
 - Subject page: lesson cards showing best score stars and attempt count.
-- **"This week" home:** exactly this week's four lessons (one per subject), with a progress strip showing which are done and a "My progress" page for past scores. No browsing of other weeks. Exam tiles appear in exam week (section 4d).
+- **"This week" home:** this week's four lessons (one per subject) up front with a progress strip, a read-only **"Look back"** area for earlier weeks and semesters (reopen any old lesson, retake its quiz for practice), and a "My progress" page with scores and attempt history. Future weeks never appear. Exam tiles appear in exam week (section 4d).
 - Theme switcher (big, friendly button in the header: one small icon per theme) that sets `users.theme` and applies it instantly. Each child keeps her own choice across devices.
 - Light gamification: stars per lesson, streak counter. No leaderboards between sisters.
 - **Done when:** the full flow (login → subject → lesson → quiz → dashboard) works for both kids.
@@ -408,6 +408,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - **Learning curve chart** per lesson (score vs attempt number) and over time (all attempts by date).
 - Attempt drill-down: every answer the child gave, right/wrong, time taken.
 - Weakest skills table (from `skill_tag`), which feeds back into what lessons you ask Claude to make next.
+- Graded versus practice attempts are shown separately (graded drives the averages and learning curve; practice is shown as extra effort and improvement).
 - **Semester report card** per student: for each subject, lessons done, average quiz score, exam score and attempts, compared with the previous semester.
 - **Class view:** a table of every student in a class against every lesson (first, best and latest score, attempts), plus class averages and who hasn't started.
 - CSV export of attempts.
@@ -494,7 +495,7 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 - **Class:** a named group of students ("Family", "Saturday Club"). Your daughters live in a default "Family" class.
 - **Course:** an ordered list of lessons ("Fractions basics", "Robot basics"). Reusable across classes.
 - **Assignment:** a course given to a whole class or to one student, with an optional due date.
-- **What a student sees:** only lessons in courses assigned to their classes or to them, in the order you set. If a student has no assignments, they see nothing, so friends never stumble into lessons meant for your daughters. With `visibility_mode = 'current_week'` (the default) a student only gets the current week's lessons from their assigned courses (section 4d); a class can be switched to `all_published` for an open library.
+- **What a student sees:** only lessons in courses assigned to their classes or to them, in the order you set. If a student has no assignments, they see nothing, so friends never stumble into lessons meant for your daughters. With `visibility_mode = 'released'` (the default) a student sees the lessons of their assigned courses up to and including the current week (section 4d); a class can be switched to `all_published` for an open library.
 
 **Quick student setup (the "easy to create a login" requirement)**
 - **Add student** form: first name, pick an avatar, pick a class. That is all.
@@ -520,13 +521,13 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 
 **Where lessons sit.** A lesson belongs to a **course** (for example "Maths Year 1"), and `course_lessons` gives it a **semester (1 to 4) and a week (1 to 12)**. Courses are per subject, so each subject has its own 48-ish-lesson year plan. You can place a lesson by dragging it in the curriculum planner, or let the lesson JSON suggest a slot (section 5). One lesson per subject per week is the default pace (about 48 lessons per subject, about 190 across four subjects); a lighter pace of 2 to 3 lessons a week across all subjects works too.
 
-**What students see: only the current week.**
-- The current week is worked out from the class's term dates (weeks run Monday to Sunday). On the home screen a student sees **only this week's lessons, one for each of the four subjects**, and nothing else from the curriculum: no earlier weeks, no future weeks, no lesson list to browse.
-- This is **enforced on the server**, not just hidden on screen: the API refuses to return a lesson or quiz that is not in the student's current week (or a currently open exam), so it cannot be reached by guessing a link.
-- Each week's lesson quizzes can be retaken as often as wanted **during that week**; every attempt is recorded. When the week ends, that week's lessons close.
-- A student can still see their **own score history** (stars and percentages for past weeks) on a "My progress" page, but not the lesson content.
-- In **exam week** the semester exam for each subject appears. By default nothing else is open. A per-class switch, `revision_in_exam_week`, can reopen that semester's lessons read-only during exam week for revision (off by default, as requested; I recommend turning it on because the exam covers the whole semester).
-- **Exceptions are yours to grant:** reopen a specific week for one student or a whole class (for a missed week, illness or holiday), or shift or pause the class calendar. Unlocks are logged in `lesson_unlocks` and can expire.
+**What students see: this week, plus everything already taught.**
+- The current week is worked out from the class's term dates (weeks run Monday to Sunday). The home screen leads with **this week's four lessons, one for each subject**.
+- **Past weeks stay available to read.** A "Look back" area lists earlier weeks and semesters, so a child can reopen any old lesson and quiz. Old lessons are **read-only**: nothing in the lesson, its quiz questions or any recorded score can be edited or deleted, and revisiting does not change completion status or progress.
+- **Future weeks stay hidden.** A student cannot see or open a lesson from a week that has not started. This is **enforced on the server**: the API refuses a lesson or quiz outside the released weeks, so it cannot be reached by guessing a link.
+- **Quiz retakes, graded and practice.** A quiz can always be retaken. Attempts made **during the lesson's own week** are recorded as `graded`; attempts made **after that week** are recorded as `practice` ("just for fun, to get better"). Both are saved in full with every answer, nothing is overwritten, and you see both. By default your reports and the "first, best and latest" figures use graded attempts, with practice attempts shown as a separate line, so extra practice shows effort without rewriting the history of how the child did in the week. A child sees their own scores and attempt history for every lesson.
+- **Exams:** a semester exam appears in exam week and follows its own attempt limit (section below). Practice retakes apply to lesson quizzes, not to the exam itself. Because all of the semester's lessons are open to read, children can revise before the exam, so no separate revision setting is needed.
+- **Exceptions are yours to grant:** open a future week early for a keen child or class, or shift or pause the class calendar (holidays, illness). Early unlocks are logged in `lesson_unlocks` and can expire.
 
 **What the admin sees: everything, any time.** You are never limited by the calendar:
 - Open **any semester and week**, including future ones, to create, import, edit and **preview exactly as a child would see it** (the importer's preview can also simulate "as of week N").
