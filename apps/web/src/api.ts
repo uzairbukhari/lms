@@ -3,6 +3,8 @@ export class ApiError extends Error {
     public status: number,
     public code: string,
     message: string,
+    /** The full JSON body of the error response (for example the list of lesson problems). */
+    public body: Record<string, unknown> = {},
   ) {
     super(message);
   }
@@ -17,6 +19,6 @@ export async function api<T>(path: string, opts: { method?: string; body?: unkno
     credentials: "same-origin",
   });
   const data = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
-  if (!res.ok) throw new ApiError(res.status, data.error ?? "error", data.message ?? "Something went wrong. Please try again.");
+  if (!res.ok) throw new ApiError(res.status, data.error ?? "error", data.message ?? "Something went wrong. Please try again.", data);
   return data as T;
 }

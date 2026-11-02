@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { NavLink, Route, Routes } from "react-router";
 import { api, ApiError } from "../../api";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
+import { Classes } from "./Classes";
+import { Curriculum } from "./Curriculum";
+import { Lessons } from "./Lessons";
 import { Students } from "./Students";
 
 type Gate = "checking" | "ok" | { error: string };
@@ -35,10 +38,16 @@ export function AdminApp() {
         <p className="font-display text-2xl font-extrabold">Parent area</p>
         <nav aria-label="Admin" className="flex flex-wrap gap-2">
           <NavLink to="/admin/students" className={link}>Students</NavLink>
+          <NavLink to="/admin/classes" className={link}>Classes</NavLink>
+          <NavLink to="/admin/lessons" className={link}>Lessons</NavLink>
+          <NavLink to="/admin/plan" className={link}>Year plan</NavLink>
         </nav>
       </header>
       <Routes>
         <Route path="students" element={<Students />} />
+        <Route path="classes" element={<Classes />} />
+        <Route path="lessons" element={<Lessons />} />
+        <Route path="plan" element={<Curriculum />} />
         <Route path="*" element={<Students />} />
       </Routes>
       <footer className="mt-auto pt-6">
