@@ -618,7 +618,7 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 }
 ```
 
-**Block types** (the maintained list, including ideas still to build, is in `docs/LESSON_CAPABILITIES.md`): `heading`, `text` (markdown), `image` (`emoji` or `asset` filename uploaded to R2, plus `alt`), `callout` (`tip` | `fun_fact` | `warning`), `reveal` (tap to show), `check` (one ungraded practice question, any quiz type), `steps` (numbered list), `vocab` (word + kid-friendly meaning), `glossary` (meanings for the bold key words, shown when a child presses and holds a word; never a slide), `activity` (offline hands-on task), `manipulative` (move-the-items play area), `summary`, `html_embed` (sandboxed self-contained HTML for a special simulation; use sparingly).
+**Block types** (the maintained list, including ideas still to build, is in `docs/LESSON_CAPABILITIES.md`): `heading`, `text` (markdown), `image` (`emoji` or `asset` filename uploaded to R2, plus `alt`), `callout` (`tip` | `fun_fact` | `warning`), `reveal` (tap to show), `check` (one ungraded practice question, any quiz type), `steps` (numbered list), `vocab` (word + kid-friendly meaning), `glossary` (meanings for the bold key words, shown when a child presses and holds a word; never a slide), `activity` (offline hands-on task), `manipulative` (move-the-items play area), `explainer` (animated steps), `brain_game` (memory and sequence exercises), `summary`, `html_embed` (sandboxed self-contained HTML for a special simulation; use sparingly).
 
 **Question types and `answer` shape:**
 
@@ -707,6 +707,8 @@ Block objects (use only these):
   {"type":"steps","items":[strings]}
   {"type":"vocab","word":string,"meaning":string,"example":string}
   {"type":"manipulative","title":string,"goal":string,"emoji":string,"count":1-20,"zones":[string, 1-4 labels]}   // drag things between a pile and labelled places; never graded
+  {"type":"explainer","title":string,"scenes":[{"caption":string,"items":[{"id"?,"emoji","label"?,"x":0-100,"y":0-100,"size":1-3,"anim":"none|bounce|float|spin|pulse|grow"}]}]}   // animated steps, 2-8 scenes
+  {"type":"brain_game","game":"memory_match|remember_order","title":string,"goal"?:string,"emojis":[3-8]}
   {"type":"glossary","terms":[{"term":string,"meaning":string}]}   // one per lesson, covering the **bold** words; kid-friendly, 1-2 short sentences
   {"type":"activity","title":string,"materials":[strings],"instructions":[strings]}
   {"type":"summary","points":[strings]}

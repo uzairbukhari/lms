@@ -59,6 +59,78 @@
       }
     },
     {
+      "type": "explainer",
+      "title": "A loop draws a square",
+      "scenes": [
+        {
+          "caption": "A robot starts in the corner. The loop says: move forward, turn right.",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 20,
+              "y": 25,
+              "id": "r",
+              "size": 3,
+              "label": "start"
+            }
+          ]
+        },
+        {
+          "caption": "Forward and turn right. That was one time round the loop.",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 75,
+              "y": 25,
+              "id": "r",
+              "size": 3,
+              "label": "1"
+            }
+          ]
+        },
+        {
+          "caption": "Repeat! Forward and turn right again.",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 75,
+              "y": 75,
+              "id": "r",
+              "size": 3,
+              "label": "2"
+            }
+          ]
+        },
+        {
+          "caption": "And again. Three times so far.",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 20,
+              "y": 75,
+              "id": "r",
+              "size": 3,
+              "label": "3"
+            }
+          ]
+        },
+        {
+          "caption": "Repeat 4 times and the robot is back at the start, having drawn a square. One loop saved lots of writing!",
+          "items": [
+            {
+              "emoji": "🤖",
+              "x": 20,
+              "y": 25,
+              "id": "r",
+              "size": 3,
+              "label": "4",
+              "anim": "bounce"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 2: Decisions"
     },
@@ -163,6 +235,18 @@
       "answer_markdown": "Because it learned from a narrow set of examples. Good training data needs variety."
     },
     {
+      "type": "brain_game",
+      "game": "remember_order",
+      "title": "Copy the sequence",
+      "goal": "Computers follow steps in order. Watch, then copy the order.",
+      "emojis": [
+        "🟥",
+        "🟨",
+        "🟩",
+        "🟦"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "Algorithms are exact steps and loops repeat them.",
@@ -176,6 +260,35 @@
       "type": "callout",
       "style": "tip",
       "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Do your best!"
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "algorithm",
+          "meaning": "A precise list of steps to solve a problem."
+        },
+        {
+          "term": "loop",
+          "meaning": "Steps that repeat so you do not have to write them again."
+        },
+        {
+          "term": "debugging",
+          "meaning": "Finding and fixing mistakes in a program."
+        },
+        {
+          "term": "bar chart",
+          "meaning": "A graph that uses bars to compare amounts."
+        },
+        {
+          "term": "training data",
+          "meaning": "The examples an AI learns from."
+        },
+        {
+          "term": "strong password",
+          "meaning": "A long mix of letters, numbers and symbols that is hard to guess."
+        }
+      ]
     }
   ],
   "quiz": {

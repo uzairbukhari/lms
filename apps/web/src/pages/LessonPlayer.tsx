@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
+import { BrainGame } from "../components/BrainGame";
+import { Explainer } from "../components/Explainer";
 import { Manipulative } from "../components/Manipulative";
 import { QuestionView } from "../components/QuestionView";
 import { WordBubble, type BubbleState } from "../components/WordBubble";
@@ -362,6 +364,27 @@ function SlideView(p: ViewProps) {
       return <ActivitySlide slide={slide} />;
     case "summary":
       return <SummarySlide slide={slide} />;
+    case "explain": {
+      const b = slide.blocks[0] as Extract<Block, { type: "explainer" }>;
+      return (
+        <>
+          <p className="text-xl font-bold text-muted">🎬 Watch and learn</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          <Explainer scenes={b.scenes} />
+        </>
+      );
+    }
+    case "brain": {
+      const b = slide.blocks[0] as Extract<Block, { type: "brain_game" }>;
+      return (
+        <>
+          <p className="text-xl font-bold text-muted">🧠 Brain game</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          {b.goal && <p className={`${bodyCls} card px-5 py-3`}>{b.goal}</p>}
+          <BrainGame key={slide.title} game={b.game} emojis={b.emojis} />
+        </>
+      );
+    }
     case "play": {
       const b = slide.blocks[0] as Extract<Block, { type: "manipulative" }>;
       return (

@@ -149,6 +149,104 @@
       }
     },
     {
+      "type": "explainer",
+      "title": "Our Solar System",
+      "scenes": [
+        {
+          "caption": "At the centre of our Solar System is the Sun, a star.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            }
+          ]
+        },
+        {
+          "caption": "8 planets travel around it. Earth is the third one from the Sun.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌍",
+              "x": 45,
+              "y": 50,
+              "id": "earth",
+              "size": 2,
+              "label": "Earth",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🔴",
+              "x": 62,
+              "y": 50,
+              "size": 1,
+              "label": "Mars",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🪐",
+              "x": 85,
+              "y": 50,
+              "size": 2,
+              "label": "Saturn",
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "The Moon travels around the Earth.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌍",
+              "x": 45,
+              "y": 50,
+              "id": "earth",
+              "size": 2,
+              "label": "Earth"
+            },
+            {
+              "emoji": "🔴",
+              "x": 62,
+              "y": 50,
+              "size": 1,
+              "label": "Mars"
+            },
+            {
+              "emoji": "🪐",
+              "x": 85,
+              "y": 50,
+              "size": 2,
+              "label": "Saturn"
+            },
+            {
+              "emoji": "🌙",
+              "x": 45,
+              "y": 22,
+              "id": "moon",
+              "size": 1,
+              "anim": "float",
+              "label": "Moon"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 4: Healthy living and helpful habits"
     },
@@ -180,6 +278,18 @@
       "answer_markdown": "Any fact is good! Ask a grown-up and look it up on a map together."
     },
     {
+      "type": "brain_game",
+      "game": "remember_order",
+      "title": "Space memory",
+      "goal": "Watch the order, then copy it.",
+      "emojis": [
+        "🌍",
+        "🌙",
+        "⭐",
+        "🪐"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "There are 7 continents and 5 oceans.",
@@ -193,6 +303,35 @@
       "type": "callout",
       "style": "tip",
       "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Good luck!"
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "capital city",
+          "meaning": "The city where a country's government is based."
+        },
+        {
+          "term": "continent",
+          "meaning": "A very large area of land. There are 7 on Earth."
+        },
+        {
+          "term": "balanced diet",
+          "meaning": "Eating a mix of different foods so your body gets what it needs."
+        },
+        {
+          "term": "flag",
+          "meaning": "A piece of cloth with colours and a design that stands for a country."
+        },
+        {
+          "term": "printing press",
+          "meaning": "A machine that made books quickly, invented about 1440."
+        },
+        {
+          "term": "planet",
+          "meaning": "A big world that travels around a star. Our Sun has 8."
+        }
+      ]
     }
   ],
   "quiz": {

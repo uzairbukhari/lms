@@ -116,6 +116,163 @@
       ]
     },
     {
+      "type": "explainer",
+      "title": "Multiplying is repeated adding",
+      "scenes": [
+        {
+          "caption": "One plate has 4 cookies.",
+          "items": [
+            {
+              "emoji": "🍽️",
+              "x": 50,
+              "y": 70,
+              "id": "p1",
+              "size": 3
+            },
+            {
+              "emoji": "🍪",
+              "x": 38,
+              "y": 40,
+              "id": "c1"
+            },
+            {
+              "emoji": "🍪",
+              "x": 46,
+              "y": 40,
+              "id": "c2"
+            },
+            {
+              "emoji": "🍪",
+              "x": 54,
+              "y": 40,
+              "id": "c3"
+            },
+            {
+              "emoji": "🍪",
+              "x": 62,
+              "y": 40,
+              "id": "c4"
+            }
+          ]
+        },
+        {
+          "caption": "Now there are 3 plates with 4 cookies on each.",
+          "items": [
+            {
+              "emoji": "🍽️",
+              "x": 20,
+              "y": 70,
+              "id": "p1",
+              "size": 3
+            },
+            {
+              "emoji": "🍽️",
+              "x": 50,
+              "y": 70,
+              "id": "p2",
+              "size": 3,
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍽️",
+              "x": 80,
+              "y": 70,
+              "id": "p3",
+              "size": 3,
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 14,
+              "y": 40,
+              "id": "c1"
+            },
+            {
+              "emoji": "🍪",
+              "x": 22,
+              "y": 40,
+              "id": "c2"
+            },
+            {
+              "emoji": "🍪",
+              "x": 14,
+              "y": 52,
+              "id": "c3"
+            },
+            {
+              "emoji": "🍪",
+              "x": 22,
+              "y": 52,
+              "id": "c4"
+            },
+            {
+              "emoji": "🍪",
+              "x": 44,
+              "y": 40,
+              "id": "d1",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 52,
+              "y": 40,
+              "id": "d2",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 44,
+              "y": 52,
+              "id": "d3",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 52,
+              "y": 52,
+              "id": "d4",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 74,
+              "y": 40,
+              "id": "e1",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 82,
+              "y": 40,
+              "id": "e2",
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍪",
+              "x": 74,
+              "y": 52,
+              "id": "e3",
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "4 + 4 + 4 is the same as 3 × 4. That makes 12 cookies!",
+          "items": [
+            {
+              "emoji": "🍪",
+              "x": 50,
+              "y": 45,
+              "id": "total",
+              "size": 3,
+              "anim": "pulse",
+              "label": "3 × 4 = 12"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 3: Adding and taking away big numbers"
     },
@@ -209,6 +366,18 @@
       "answer_markdown": "5 x 4 = 20 square metres."
     },
     {
+      "type": "brain_game",
+      "game": "remember_order",
+      "title": "Copy the colours",
+      "goal": "Watch the colours light up, then tap them in the same order.",
+      "emojis": [
+        "🟥",
+        "🟨",
+        "🟩",
+        "🟦"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "Place value tells us what each digit is worth.",
@@ -222,6 +391,43 @@
       "type": "callout",
       "style": "tip",
       "markdown": "When you are ready, start the quiz. It has 12 questions and takes about 15 minutes. Do your best. If you do not know one, have a go anyway: it helps us plan."
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "place value",
+          "meaning": "The value of a digit depends on where it sits in the number: ones, tens, hundreds, thousands."
+        },
+        {
+          "term": "carry",
+          "meaning": "When a column adds to more than 9, you move the extra ten to the next column."
+        },
+        {
+          "term": "borrow",
+          "meaning": "When you cannot take away in a column, you swap a ten from the next column."
+        },
+        {
+          "term": "fraction",
+          "meaning": "A part of a whole, like one half or three quarters."
+        },
+        {
+          "term": "equivalent",
+          "meaning": "Looks different but has the same value, like 1/2 and 2/4."
+        },
+        {
+          "term": "perimeter",
+          "meaning": "The distance all the way around the outside of a shape."
+        },
+        {
+          "term": "area",
+          "meaning": "How much flat space is inside a shape."
+        },
+        {
+          "term": "round",
+          "meaning": "Change a number to a nearby simpler one, like 47 to 50."
+        }
+      ]
     }
   ],
   "quiz": {

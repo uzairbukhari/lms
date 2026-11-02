@@ -74,6 +74,76 @@
       }
     },
     {
+      "type": "explainer",
+      "title": "A sandwich in the right order",
+      "scenes": [
+        {
+          "caption": "First, put the bread on the plate.",
+          "items": [
+            {
+              "emoji": "🍽️",
+              "x": 50,
+              "y": 75,
+              "size": 3
+            },
+            {
+              "emoji": "🍞",
+              "x": 50,
+              "y": 55,
+              "id": "b1",
+              "size": 3,
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "Next, add the cheese.",
+          "items": [
+            {
+              "emoji": "🍽️",
+              "x": 50,
+              "y": 75,
+              "size": 3
+            },
+            {
+              "emoji": "🍞",
+              "x": 50,
+              "y": 55,
+              "id": "b1",
+              "size": 3
+            },
+            {
+              "emoji": "🧀",
+              "x": 50,
+              "y": 38,
+              "id": "ch",
+              "size": 2,
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "Last, put the other bread on top. Now it is a sandwich! Order matters.",
+          "items": [
+            {
+              "emoji": "🍽️",
+              "x": 50,
+              "y": 75,
+              "size": 3
+            },
+            {
+              "emoji": "🥪",
+              "x": 50,
+              "y": 52,
+              "id": "b1",
+              "size": 3,
+              "anim": "bounce"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 2: Patterns and sorting"
     },
@@ -170,6 +240,20 @@
       "answer_markdown": "A washing machine, microwave or toy robot all follow steps. They do not decide by themselves."
     },
     {
+      "type": "brain_game",
+      "game": "memory_match",
+      "title": "Computer pairs",
+      "goal": "Find the matching pairs.",
+      "emojis": [
+        "🤖",
+        "💻",
+        "📊",
+        "🔢",
+        "🔒",
+        "🧩"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "An algorithm is a list of steps in order.",
@@ -183,6 +267,39 @@
       "type": "callout",
       "style": "tip",
       "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Have fun!"
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "instructions",
+          "meaning": "Clear steps that tell someone exactly what to do."
+        },
+        {
+          "term": "algorithm",
+          "meaning": "A list of steps to solve a problem, in the right order."
+        },
+        {
+          "term": "pattern",
+          "meaning": "Something that repeats again and again."
+        },
+        {
+          "term": "sort",
+          "meaning": "Put things into groups that are alike."
+        },
+        {
+          "term": "data",
+          "meaning": "Information we collect, like how many of each fruit."
+        },
+        {
+          "term": "pictogram",
+          "meaning": "A graph that uses little pictures to show numbers."
+        },
+        {
+          "term": "artificial intelligence",
+          "meaning": "A computer that learns from examples to do clever things."
+        }
+      ]
     }
   ],
   "quiz": {
