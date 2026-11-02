@@ -180,6 +180,46 @@
       "markdown": "**Data** is facts we collect. We store it in **tables** (rows and columns) and show it in **charts**. A **bar chart** makes comparing categories easy. Always check the labels and the scale."
     },
     {
+      "type": "chart",
+      "kind": "table",
+      "title": "A table: our favourite sports",
+      "caption": "A table stores data in rows and columns.",
+      "rows": [
+        {
+          "label": "Cricket",
+          "value": 8
+        },
+        {
+          "label": "Football",
+          "value": 12
+        },
+        {
+          "label": "Swimming",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "kind": "bar_chart",
+      "title": "A bar chart of the same data",
+      "caption": "The taller the bar, the more votes. Football is the tallest.",
+      "rows": [
+        {
+          "label": "Cricket",
+          "value": 8
+        },
+        {
+          "label": "Football",
+          "value": 12
+        },
+        {
+          "label": "Swimming",
+          "value": 5
+        }
+      ]
+    },
+    {
       "type": "check",
       "question": {
         "type": "multiple_choice",

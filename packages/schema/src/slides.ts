@@ -14,6 +14,7 @@ export type Block =
   | { type: "vocab"; word: string; meaning: string; example?: string }
   | { type: "activity"; title: string; materials?: string[]; instructions: string[] }
   | { type: "manipulative"; title: string; goal?: string; emoji: string; count: number; zones: string[] }
+  | { type: "chart"; kind: "pictogram" | "bar_chart" | "tally" | "table" | "number_line" | "fraction"; title: string; caption?: string; rows?: { label: string; value: number; emoji?: string }[]; each?: number; from?: number; to?: number; step?: number; marks?: number[]; parts?: number; shaded?: number }
   | { type: "explainer"; title: string; scenes: { caption: string; items: { id?: string; emoji: string; label?: string; x: number; y: number; size: number; anim: "none" | "bounce" | "float" | "spin" | "pulse" | "grow" }[] }[] }
   | { type: "brain_game"; game: "memory_match" | "remember_order"; title: string; goal?: string; emojis: string[] }
   | { type: "glossary"; terms: { term: string; meaning: string }[] }
@@ -73,6 +74,14 @@ function optionTexts(q: CheckQuestion): string[] {
   return (any.options ?? any.items ?? []).map((o) => o.text);
 }
 
+/** A chart's numbers in words, for reading aloud and screen readers. */
+export function chartReadout(b: Extract<Block, { type: "chart" }>): string {
+  if (b.kind === "number_line") return `A number line from ${b.from} to ${b.to}.${b.marks?.length ? ` Marked: ${b.marks.join(", ")}.` : ""}`;
+  if (b.kind === "fraction") return `${b.shaded} out of ${b.parts} equal parts are coloured.`;
+  const each = b.kind === "pictogram" && (b.each ?? 1) > 1 ? ` Each picture stands for ${b.each}.` : "";
+  return `${(b.rows ?? []).map((r) => `${plain(r.label)}: ${r.value}`).join(". ")}.${each}`;
+}
+
 /** What to read aloud for one block. */
 export function blockNarration(b: Block): string {
   switch (b.type) {
@@ -103,6 +112,8 @@ export function blockNarration(b: Block): string {
       return plain(b.title);
     case "manipulative":
       return `Let's play! ${plain(b.title)}. ${b.goal ? plain(b.goal) : `Move the ${b.count} things into ${b.zones.map(plain).join(" and ")}.`}`;
+    case "chart":
+      return `${plain(b.title)}. ${chartReadout(b)}${b.caption ? ` ${plain(b.caption)}` : ""}`;
     case "explainer":
       return `Watch! ${plain(b.title)}. ${plain(b.scenes[0]?.caption ?? "")}`;
     case "brain_game":
@@ -157,7 +168,8 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
       if (b.type === "summary") afterSummary = true;
       continue;
     }
-    if (pending.filter((p) => p.type !== "image").length >= MAX_CONTENT_BLOCKS) flush();
+    if (b.type === "chart" && pending.some((p) => p.type === "chart")) flush(); // one drawn picture per slide, so each is big enough to read
+    if (pending.filter((p) => p.type !== "image" && p.type !== "chart").length >= MAX_CONTENT_BLOCKS) flush();
     pending.push(b);
   }
   flush();

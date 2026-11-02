@@ -46,3 +46,19 @@ describe("manipulative block", () => {
     expect(s?.narration).toContain("Move the 10 things into Left hand and Right hand");
   });
 });
+
+describe("chart block", () => {
+  const meta = { title: "T", summary: "S", minutes: 5, objectives: ["o"] };
+  const chart = (title: string): Block => ({ type: "chart", kind: "bar_chart", title, rows: [{ label: "A", value: 3 }, { label: "B", value: 5 }] });
+  it("rides along with the text and gets one picture per slide", () => {
+    const slides = buildSlides(meta, [{ type: "heading", text: "Data" }, { type: "text", markdown: "A chart." }, chart("One"), chart("Two")]);
+    const content = slides.filter((s) => s.kind === "content");
+    expect(content).toHaveLength(2);
+    expect(content[0]?.blocks.map((b) => b.type)).toEqual(["text", "chart"]);
+    expect(content[1]?.blocks.map((b) => b.type)).toEqual(["chart"]);
+  });
+  it("reads its numbers aloud", () => {
+    const s = buildSlides(meta, [chart("Votes")]).find((x) => x.kind === "content");
+    expect(s?.narration).toContain("A: 3. B: 5.");
+  });
+});

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
+import { Chart } from "../components/Chart";
 import { BrainGame } from "../components/BrainGame";
 import { Explainer } from "../components/Explainer";
 import { Manipulative } from "../components/Manipulative";
@@ -462,6 +463,8 @@ function ContentSlide({ slide, assetUrl }: { slide: Slide; assetUrl: (n: string)
             );
           case "callout":
             return <Callout key={bi} b={b} />;
+          case "chart":
+            return <Chart key={bi} b={b} />;
           case "vocab":
             return (
               <button key={bi} type="button" data-words className={`pop-in card flex flex-col gap-1 px-5 py-4 text-left ${bodyCls}`} onClick={() => { sfx("tap"); speak(`${plain(b.word)}. ${plain(b.meaning)}`); }}>

@@ -122,6 +122,33 @@ const EXTRAS = {
   },
 };
 
+// Drawn pictures for words the lesson introduces (a new word should never come without something to look at).
+// They sit right after the paragraph that introduces the word.
+const CHARTS = {
+  "diag-maths-class-1": {
+    "Stop 1: Counting and numbers": [{ type: "chart", kind: "number_line", title: "Each step up is one more", caption: "3 is on the line. One more than 3 is 4.", from: 0, to: 10, marks: [3, 4] }],
+    "Stop 3: Taking away": [{ type: "chart", kind: "number_line", title: "Taking away 3 from 8", caption: "Start at 8 and hop back 3 steps. You land on 5.", from: 0, to: 10, marks: [8, 5] }],
+  },
+  "diag-maths-class-4": {
+    "Stop 4: Fractions": [
+      { type: "chart", kind: "fraction", title: "One half", caption: "The whole is cut into 2 equal parts and 1 is coloured.", parts: 2, shaded: 1 },
+      { type: "chart", kind: "fraction", title: "Two quarters is also one half", caption: "Equivalent fractions look different but cover the same amount.", parts: 4, shaded: 2 },
+    ],
+  },
+  "diag-data-ai-class-1": {
+    "Stop 3: Data and graphs": [
+      { type: "chart", kind: "tally", title: "Tally marks: favourite pets", caption: "Every pet we count gets one line. The fifth line crosses the other four.", rows: [{ label: "Dogs", value: 7, emoji: "🐶" }, { label: "Cats", value: 4, emoji: "🐱" }, { label: "Fish", value: 5, emoji: "🐟" }] },
+      { type: "chart", kind: "pictogram", title: "A pictogram: fruit we like", caption: "Each picture stands for one child. Bananas have more pictures, so bananas are more popular.", rows: [{ label: "Apples", value: 3, emoji: "🍎" }, { label: "Bananas", value: 5, emoji: "🍌" }, { label: "Grapes", value: 2, emoji: "🍇" }] },
+    ],
+  },
+  "diag-data-ai-class-4": {
+    "Stop 3: Data": [
+      { type: "chart", kind: "table", title: "A table: our favourite sports", caption: "A table stores data in rows and columns.", rows: [{ label: "Cricket", value: 8 }, { label: "Football", value: 12 }, { label: "Swimming", value: 5 }] },
+      { type: "chart", kind: "bar_chart", title: "A bar chart of the same data", caption: "The taller the bar, the more votes. Football is the tallest.", rows: [{ label: "Cricket", value: 8 }, { label: "Football", value: 12 }, { label: "Swimming", value: 5 }] },
+    ],
+  },
+};
+
 for (const [slug, x] of Object.entries(EXTRAS)) {
   const path = join(dir, `${slug}.json`);
   const file = JSON.parse(readFileSync(path, "utf8"));
@@ -135,6 +162,12 @@ for (const [slug, x] of Object.entries(EXTRAS)) {
     for (const b of add) if (!has(b)) { blocks.splice(end, 0, b); end++; }
   };
   for (const [heading, add] of Object.entries(x.after)) insertAt(heading, add);
+  for (const [heading, add] of Object.entries(CHARTS[slug] ?? {})) {
+    const h = blocks.findIndex((b) => b.type === "heading" && b.text === heading);
+    if (h < 0) throw new Error(`${slug}: no heading "${heading}"`);
+    let at = blocks.findIndex((b, i) => i > h && b.type === "text") + 1;
+    for (const b of add) if (!has(b)) { blocks.splice(at, 0, b); at++; }
+  }
   const brain = { type: "brain_game", ...x.brain };
   if (!has(brain)) { const s = blocks.findIndex((b) => b.type === "summary"); blocks.splice(s < 0 ? blocks.length : s, 0, brain); }
   if (!blocks.some((b) => b.type === "glossary")) blocks.push({ type: "glossary", terms: x.glossary.map(([term, meaning]) => ({ term, meaning })) });
