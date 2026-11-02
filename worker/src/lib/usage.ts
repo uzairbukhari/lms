@@ -12,7 +12,7 @@ const TOKEN_RATES: Record<string, { inPerM: number; outPerM: number }> = {
 const DEFAULT_TOKEN_RATE = TOKEN_RATES["@cf/meta/llama-3.1-8b-instruct"] as { inPerM: number; outPerM: number };
 const SPEECH_NEURONS_PER_1K_CHARS: Record<string, number> = { "@cf/deepgram/aura-2-en": 2_727 };
 
-export type UsageKind = "hint" | "explain" | "narration";
+export type UsageKind = "hint" | "explain" | "narration" | "define";
 
 export function neuronsFor(model: string, u: { inputTokens?: number; outputTokens?: number; characters?: number }): number {
   const speech = SPEECH_NEURONS_PER_1K_CHARS[model];

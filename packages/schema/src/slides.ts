@@ -13,6 +13,7 @@ export type Block =
   | { type: "steps"; items: string[] }
   | { type: "vocab"; word: string; meaning: string; example?: string }
   | { type: "activity"; title: string; materials?: string[]; instructions: string[] }
+  | { type: "glossary"; terms: { term: string; meaning: string }[] }
   | { type: "summary"; points: string[] }
   | { type: "html_embed"; title: string; html: string };
 
@@ -97,6 +98,8 @@ export function blockNarration(b: Block): string {
       return `Remember! ${b.points.map(plain).join(" ")}`;
     case "html_embed":
       return plain(b.title);
+    case "glossary":
+      return "";
   }
 }
 
@@ -131,6 +134,7 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
   };
 
   for (const b of blocks) {
+    if (b.type === "glossary") continue; // reference data for long-press word help, never a slide
     if (b.type === "heading") {
       flush();
       heading = b.text;

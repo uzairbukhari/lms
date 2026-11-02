@@ -158,6 +158,8 @@ export const blockSchema = z.discriminatedUnion("type", [
     materials: z.array(line(100)).max(12).optional(),
     instructions: z.array(line(300)).min(1).max(12),
   }),
+  // Kid-friendly meanings for key words in the lesson (the bold ones). Not shown as a slide: a child long-presses a word to see it.
+  z.object({ type: z.literal("glossary"), terms: z.array(z.object({ term: line(40), meaning: line(300) })).min(1).max(40) }),
   z.object({ type: z.literal("summary"), points: z.array(line(200)).min(1).max(8) }),
   z.object({ type: z.literal("html_embed"), title: line(100), html: longText(50_000) }),
 ]);

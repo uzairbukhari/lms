@@ -10,7 +10,7 @@ export type AiUsageData = {
   byKind: { kind: string; requests: number; tokens: number; characters: number; neurons: number }[];
 };
 
-const KIND_LABEL: Record<string, string> = { hint: "Quiz hints", explain: "Why was I wrong?", narration: "Lesson narration (voice)" };
+const KIND_LABEL: Record<string, string> = { hint: "Quiz hints", explain: "Why was I wrong?", narration: "Lesson narration (voice)", define: "Word explanations (long-press)" };
 const num = new Intl.NumberFormat("en");
 const compact = (n: number) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e4 ? `${Math.round(n / 1e3)}k` : num.format(Math.round(n)));
 const usd = (n: number) => (n === 0 ? "$0.00" : n < 0.01 ? "< $0.01" : `$${n.toFixed(2)}`);
