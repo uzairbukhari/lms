@@ -148,6 +148,34 @@ export const blockSchema = z.discriminatedUnion("type", [
     })
     .refine((b) => b.emoji || b.asset, { message: 'An image block needs an "emoji" or an uploaded "asset" name' }),
   z.object({ type: z.literal("callout"), style: z.enum(["tip", "fun_fact", "warning"]), markdown: longText(800) }),
+  // A picture drawn from a few numbers: pictogram, bar chart, tally chart, table, number line or fraction bar.
+  z
+    .object({
+      type: z.literal("chart"),
+      kind: z.enum(["pictogram", "bar_chart", "tally", "table", "number_line", "fraction"]),
+      title: line(100),
+      caption: line(200).optional(),
+      rows: z.array(z.object({ label: line(30), value: z.number().min(0).max(100), emoji: z.string().trim().min(1).max(16).optional() })).min(1).max(8).optional(),
+      /** Pictogram only: how many each picture stands for (default 1). */
+      each: z.number().int().min(1).max(20).optional(),
+      /** Number line only. */
+      from: z.number().min(-1000).max(1000).optional(),
+      to: z.number().min(-1000).max(1000).optional(),
+      step: z.number().positive().optional(),
+      marks: z.array(z.number()).max(6).optional(),
+      /** Fraction bar only: the whole is split into `parts` equal pieces and `shaded` of them are coloured. */
+      parts: z.number().int().min(2).max(12).optional(),
+      shaded: z.number().int().min(0).max(12).optional(),
+    })
+    .superRefine((b, ctx) => {
+      const bad = (message: string, path: string) => ctx.addIssue({ code: "custom", path: [path], message });
+      if (["pictogram", "bar_chart", "tally", "table"].includes(b.kind) && !b.rows?.length) bad(`A ${b.kind} needs "rows" (label and value)`, "rows");
+      if (b.kind === "number_line") {
+        if (b.from === undefined || b.to === undefined || b.from >= b.to) bad('A number line needs "from" smaller than "to"', "from");
+        else if ((b.to - b.from) / (b.step ?? 1) > 40) bad("Too many tick marks: raise the step", "step");
+      }
+      if (b.kind === "fraction" && (!b.parts || b.shaded === undefined || b.shaded > b.parts)) bad('A fraction needs "parts" and "shaded" (not more than parts)', "parts");
+    }),
   z.object({ type: z.literal("reveal"), prompt: line(300), answer_markdown: longText(800) }),
   z.object({ type: z.literal("check"), question: checkQuestionSchema }),
   z.object({ type: z.literal("steps"), items: z.array(line(300)).min(1).max(12) }),

@@ -650,6 +650,7 @@ Extra notes (optional): {{e.g. "she loves animals", "build on last week's lesson
 === TEACHING RULES ===
 - Reading level: age 7 → short sentences, max ~12 words, everyday words. Age 9 → up to ~18 words, can
   introduce 2–3 new vocabulary words (use a "vocab" block for each).
+- Pictures: every new word or idea is shown, never only described (see `docs/LESSON_GUIDELINES.md`): use `chart`, `explainer`, `manipulative`, `brain_game` and big emoji `image` blocks.
 - Structure: hook (a question or story) → explain → 2–3 practice "check" blocks spread through the
   lesson → real-world connection → summary.
 - 8–15 blocks; 8–15 minutes. One idea per block. Use emojis for visuals; no external image URLs.
@@ -707,6 +708,7 @@ Block objects (use only these):
   {"type":"steps","items":[strings]}
   {"type":"vocab","word":string,"meaning":string,"example":string}
   {"type":"manipulative","title":string,"goal":string,"emoji":string,"count":1-20,"zones":[string, 1-4 labels]}   // drag things between a pile and labelled places; never graded
+  {"type":"chart","kind":"pictogram|bar_chart|tally|table|number_line|fraction","title":string,"caption"?,"rows":[{"label","value","emoji"?}],"each"?,"from"?,"to"?,"step"?,"marks"?,"parts"?,"shaded"?}
   {"type":"explainer","title":string,"scenes":[{"caption":string,"items":[{"id"?,"emoji","label"?,"x":0-100,"y":0-100,"size":1-3,"anim":"none|bounce|float|spin|pulse|grow"}]}]}   // animated steps, 2-8 scenes
   {"type":"brain_game","game":"memory_match|remember_order","title":string,"goal"?:string,"emojis":[3-8]}
   {"type":"glossary","terms":[{"term":string,"meaning":string}]}   // one per lesson, covering the **bold** words; kid-friendly, 1-2 short sentences

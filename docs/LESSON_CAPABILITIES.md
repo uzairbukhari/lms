@@ -19,6 +19,7 @@ up and update the lesson format (`packages/schema/src/lesson.ts`), the player an
 | `check` | One ungraded practice question (any quiz question type) | Instant feedback, never saved |
 | `activity` | An offline hands-on task with a materials list | |
 | `manipulative` | **Move-the-items play area**: a pile of emoji things (1 to 20) and 1 to 4 labelled places to drag them into, with a live sum | For counting, adding, splitting, sharing, grouping. Replaces needing real coins, buttons or pasta. Fields: `title`, `goal`, `emoji`, `count`, `zones` (labels). Never graded or saved |
+| `chart` | **Drawn picture from a few numbers**: `pictogram`, `bar_chart`, `tally`, `table`, `number_line`, `fraction`. Use it whenever a lesson names one of these | Needs `title`. Pictogram, bar chart, tally, table: `rows` of `label`, `value` (0 to 100), optional `emoji`; pictogram also `each` (how many one picture stands for). Number line: `from`, `to`, optional `step`, `marks` (values to highlight). Fraction: `parts` (2 to 12), `shaded`. Optional `caption`. Sits with the text before it; one chart per slide |
 | `explainer` | **Animated, step-by-step picture** (water cycle, a plant growing, a loop drawing a square). Each scene puts emoji on a stage; things that share an `id` glide to their new spot between steps; each step has a caption that is read aloud | 2 to 8 scenes, up to 14 things each. `x`, `y` are 0 to 100 (percent of the stage). `size` 1 to 3. `anim`: `none`, `bounce`, `float`, `spin`, `pulse`, `grow`. Give the same `id` to a thing that moves or stays across scenes; things missing from a scene fade out. Add a short `label` when naming a part helps |
 | `brain_game` | **Mind-sharpening exercise**: `memory_match` (find the pairs) or `remember_order` (watch the order, then copy it; gets longer each win) | `title`, optional `goal`, 3 to 8 `emojis`. Never graded or saved. Use one near the end of a lesson as a brain break |
 | `summary` | "Remember" points | Last block before the quiz |
@@ -47,14 +48,16 @@ Example explainer (two scenes, one thing moves):
   { "caption": "A friend gives you one more.", "items": [ { "id": "a1", "emoji": "🍎", "x": 40, "y": 50, "size": 3 }, { "id": "a2", "emoji": "🍎", "x": 65, "y": 50, "size": 3, "anim": "grow" } ] } ] }
 ```
 
+For how and when to use each block, see `docs/LESSON_GUIDELINES.md` (rule 1: show it before you name it).
+
 The eight Week 1 lessons in `content/lessons` were enriched with these blocks by `node scripts/enrich-lessons.mjs` (safe to re-run).
 Importing a lesson file in the parent area saves it as a new version.
 
 ## Wanted next (backlog)
 
-- Number line the child can hop along (addition, subtraction, fractions).
+- Number line the child can hop along (the drawn `chart` number line is built; hopping is not).
 - Ten frame and base-ten blocks (place value).
-- Fraction bars and pizza slicing (halves, quarters, equivalence).
+- Pizza slicing and tapping to shade fractions (drawn fraction bars are built).
 - Balance scale (equals, comparing weights).
 - Clock with draggable hands.
 - Sorting into groups with labelled boxes, including Venn diagrams (science, data).
@@ -62,6 +65,6 @@ Importing a lesson file in the parent area saves it as a new version.
 - More brain games: spot the difference, odd one out, number puzzles, speed counting.
 - Drawn (SVG) diagrams and animated number lines for maths and science, beyond emoji.
 - Label the diagram (drag labels onto a picture).
-- Bar chart builder from tapped data (data and AI).
+- Bar chart builder from tapped data (data and AI); drawn bar charts are built.
 - Simple "program the robot" grid for loops and sequences (computer science).
 - A check on a `manipulative` ("make 7 on the left"), once we want it scored.

@@ -57,3 +57,17 @@ describe("explainer and brain game blocks", () => {
     expect(parseLessonFile(fewCards).ok).toBe(false);
   });
 });
+
+describe("chart block", () => {
+  it("needs the right fields for its kind", async () => {
+    const { lessonFixture } = await import("../test/fixtures");
+    const withChart = (chart: object) => { const f = lessonFixture(); f.blocks.push({ type: "chart", title: "T", ...chart } as never); return parseLessonFile(f).ok; };
+    expect(withChart({ kind: "pictogram", rows: [{ label: "Apples", value: 3, emoji: "🍎" }] })).toBe(true);
+    expect(withChart({ kind: "bar_chart" })).toBe(false);
+    expect(withChart({ kind: "number_line", from: 0, to: 10, marks: [3] })).toBe(true);
+    expect(withChart({ kind: "number_line", from: 10, to: 0 })).toBe(false);
+    expect(withChart({ kind: "number_line", from: 0, to: 1000, step: 1 })).toBe(false);
+    expect(withChart({ kind: "fraction", parts: 4, shaded: 2 })).toBe(true);
+    expect(withChart({ kind: "fraction", parts: 4, shaded: 5 })).toBe(false);
+  });
+});
