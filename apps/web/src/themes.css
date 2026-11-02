@@ -1,0 +1,75 @@
+/*
+ * Theme tokens (docs/PLAN.md section 4a).
+ * Components never hard-code colours, fonts, radii or shadows: they use these variables
+ * (via the Tailwind names in index.css). Adding a theme means adding one block here.
+ * Text pairs are checked for WCAG AA contrast (4.5:1) by src/themes.test.ts.
+ */
+
+/* Space Explorers (default) */
+:root,
+[data-theme="space"] {
+  --bg: #0f1535;
+  --bg-image: radial-gradient(circle at 80% 10%, #2a2f7a 0%, #0f1535 55%, #090c24 100%);
+  --surface: #1c2557;
+  --surface-border: #3b4896;
+  --text: #ffffff;
+  --text-muted: #c9d3ff;
+  --accent: #ffd166;
+  --accent-contrast: #0f1535;
+  --radius: 24px;
+  --border-width: 2px;
+  --shadow: none;
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Baloo 2", system-ui, sans-serif;
+}
+
+/* Candy Arcade */
+[data-theme="candy"] {
+  --bg: #ffd6f0;
+  --bg-image: linear-gradient(135deg, #ffd6f0 0%, #d9c8ff 100%);
+  --surface: #ffffff;
+  --surface-border: #3a1466;
+  --text: #3a1466;
+  --text-muted: #5b2d91;
+  --accent: #d61f7f;
+  --accent-contrast: #ffffff;
+  --radius: 26px;
+  --border-width: 4px;
+  --shadow: 0 8px 0 #3a1466;
+  --font-display: "Lilita One", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+}
+
+/* Sunny Playground */
+[data-theme="sunny"] {
+  --bg: #fff4c2;
+  --bg-image: none;
+  --surface: #ffffff;
+  --surface-border: #2b2b52;
+  --text: #2b2b52;
+  --text-muted: #44447a;
+  --accent: #2b2b52;
+  --accent-contrast: #ffffff;
+  --radius: 28px;
+  --border-width: 4px;
+  --shadow: 6px 6px 0 #2b2b52;
+  --font-display: "Fredoka", system-ui, sans-serif;
+  --font-body: "Fredoka", system-ui, sans-serif;
+}
+
+/* Storybook Forest */
+[data-theme="forest"] {
+  --bg: #e8f3dc;
+  --bg-image: none;
+  --surface: #fff9e8;
+  --surface-border: #7a9a5a;
+  --text: #2f4a2a;
+  --text-muted: #3f5c38;
+  --accent: #3f7a38;
+  --accent-contrast: #ffffff;
+  --radius: 24px;
+  --border-width: 3px;
+  --shadow: none;
+  --font-display: "Caveat Brush", cursive;
+  --font-body: "Nunito", system-ui, sans-serif;
+}

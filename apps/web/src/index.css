@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "./themes.css";
+
+/* Map theme variables to Tailwind utilities: bg-bg, bg-surface, text-text, text-muted, bg-accent, ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--surface-border);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--accent-contrast);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --radius-card: var(--radius);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+/* A themed card: surface colour, border, corner radius and shadow all come from the active theme. */
+@layer components {
+  .card {
+    background: var(--surface);
+    color: var(--text);
+    border: var(--border-width) solid var(--surface-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}

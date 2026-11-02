@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lms",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+
+  // The React app is served as static assets by this same Worker.
+  // Only /api/* runs Worker code first; everything else is a static file or the SPA shell.
+  "assets": {
+    "directory": "../apps/web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lms-db",
+      "database_id": "848b2f89-c242-4f72-a314-dfffdde1b8ae",
+      "migrations_dir": "../migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "ASSETS_BUCKET", "bucket_name": "lms-assets" }],
+  "kv_namespaces": [{ "binding": "SESSIONS", "id": "22d48e3293d2496d881ef662ad96200e" }],
+
+  // Workers AI for hints and explanations (docs/PLAN.md section 4b). Not used until Phase 5.
+  "ai": { "binding": "AI" }
+}
