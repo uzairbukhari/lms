@@ -8,8 +8,8 @@ const dir = join(process.cwd(), "../content/lessons");
 const files = readdirSync(dir).filter((f: string) => f.endsWith(".json"));
 
 describe("content/lessons", () => {
-  it("has the 8 week-1 diagnostic lessons", () => {
-    expect(files.filter((f: string) => f.startsWith("diag-"))).toHaveLength(8);
+  it("has the 10 week-1 diagnostic lessons", () => {
+    expect(files.filter((f: string) => f.startsWith("diag-"))).toHaveLength(10);
   });
   for (const f of files) {
     it(`${f} is valid`, () => {
