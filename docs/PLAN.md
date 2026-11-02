@@ -95,7 +95,7 @@ CREATE TABLE users (
   admin_email   TEXT UNIQUE,                   -- admin only, matched against Access JWT
   avatar        TEXT,                          -- emoji or R2 key
   birth_year    INTEGER,                       -- drives default age band
-  theme         TEXT NOT NULL DEFAULT 'space' CHECK (theme IN ('space','candy')),  -- UI theme, switchable by the child
+  theme         TEXT NOT NULL DEFAULT 'space' CHECK (theme IN ('space','candy','sunny','forest')),  -- UI theme, switchable by the child
   theme_color   TEXT,
   is_active     INTEGER NOT NULL DEFAULT 1,
   created_at    TEXT NOT NULL DEFAULT (datetime('now'))
@@ -268,7 +268,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - Scaffold the repo: `apps/web` (React + Vite + Tailwind), `worker/` (Hono API), `packages/schema` (Zod lesson schema shared by both), `migrations/`.
 - `wrangler.jsonc` with bindings: `DB` (D1), `ASSETS_BUCKET` (R2), `SESSIONS` (KV), static assets from `apps/web/dist`.
 - Create resources: D1 `lms-db`, R2 bucket `lms-assets`, KV namespace `lms-sessions`.
-- Theming foundation: all colours, fonts, radii and shadows live in CSS variables (design tokens) under `[data-theme="space"]` and `[data-theme="candy"]`; components never hard-code a colour. See section 4a.
+- Theming foundation: all colours, fonts, radii and shadows live in CSS variables (design tokens) under `[data-theme="space"]`, `[data-theme="candy"]`, `[data-theme="sunny"]` and `[data-theme="forest"]`; components never hard-code a colour. See section 4a.
 - GitHub Action: on push to `main`, run tests, apply D1 migrations, `wrangler deploy`.
 - **Done when:** a "Hello" page is live on a `*.workers.dev` URL.
 
@@ -309,7 +309,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 ### Phase 6: Student dashboard (1 day)
 - Home: greeting with avatar, four subject tiles with progress rings, "Continue where you left off", "New lessons".
 - Subject page: lesson cards showing best score stars and attempt count.
-- Theme switcher (big, friendly button in the header: a planet and a candy icon) that sets `users.theme` and applies it instantly. Each child keeps her own choice across devices.
+- Theme switcher (big, friendly button in the header: one small icon per theme) that sets `users.theme` and applies it instantly. Each child keeps her own choice across devices.
 - Light gamification: stars per lesson, streak counter. No leaderboards between sisters.
 - **Done when:** the full flow (login → subject → lesson → quiz → dashboard) works for both kids.
 
@@ -340,15 +340,22 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 
 ## 4a. Design and themes
 
-Chosen direction (2026-11-02): **Space Explorers** as the default theme, plus **Candy Arcade** as a second theme, with a switcher. Mockups of all four explored directions are on the [design canvas](https://claude.ai/artifact/Mf2nkFQSzwtYYM8MC59wgF).
+Chosen direction (2026-11-02): all four explored directions ship as themes, with **Space Explorers as the default** and a theme switcher. Mockups are on the [design canvas](https://claude.ai/artifact/Mf2nkFQSzwtYYM8MC59wgF).
 
-How the two themes stay cheap to maintain:
+| Theme id | Name | Feel |
+|---|---|---|
+| `space` (default) | Space Explorers | Dark navy, planets, ranks and XP |
+| `candy` | Candy Arcade | Pink and purple, level map, coins |
+| `sunny` | Sunny Playground | Bright yellow, chunky sticker cards |
+| `forest` | Storybook Forest | Soft greens, paper cards, fox guide |
+
+How the themes stay cheap to maintain:
 - **One set of components, two sets of tokens.** Colours, fonts, corner radii, borders and shadows are CSS variables defined per theme (`[data-theme="space"]`, `[data-theme="candy"]`). The `<html>` element carries the active `data-theme`.
-- **Words change per theme, layout does not.** A small copy map renames things (Space: "planets", "missions", "XP", "Launch!". Candy: "worlds", "levels", "coins", "PLAY"). Lesson and quiz content are identical in both.
+- **Words change per theme, layout does not.** A small copy map renames things (Space: "planets", "missions", "XP", "Launch!". Candy: "worlds", "levels", "coins", "PLAY". Sunny: "subjects", "lessons", "stars". Forest: "trails", "stepping stones", "acorns"). Lesson and quiz content are identical in both.
 - **Persistence.** The choice is stored in `users.theme`, so each daughter keeps her own theme on any device. The admin can change it too. The theme is also cached in `localStorage` so the correct theme paints before the page loads (no flash).
-- **Decorations are swappable assets.** Mascot, background stars, planets and level-map art are theme-specific SVG components behind one interface, so adding a third theme later means adding one token set and one art pack.
+- **Decorations are swappable assets.** Mascot, background stars, planets and level-map art are theme-specific SVG components behind one interface, so every additional theme is one token set plus one art pack.
 - **Accessibility holds in both.** Both themes must keep text contrast at 4.5:1 or better and tap targets at 44px or larger; a check runs against the token sets in CI.
-- **Estimated extra effort:** about 1 day on top of a single theme if tokens are used from Phase 0. Retrofitting later would cost much more, which is why the foundation goes in first.
+- **Estimated extra effort:** about 1 day for the token system and switcher, then roughly half a day per extra theme (tokens, art pack, copy map, contrast check): about 2.5 days in total for four themes. If time is tight, ship Space and Candy first and add Sunny and Forest in Phase 9; nothing else changes. Retrofitting theming later would cost much more, which is why the foundation goes in first.
 
 ## 5. Lesson generation framework
 
