@@ -13,13 +13,14 @@ export type Block =
   | { type: "steps"; items: string[] }
   | { type: "vocab"; word: string; meaning: string; example?: string }
   | { type: "activity"; title: string; materials?: string[]; instructions: string[] }
+  | { type: "manipulative"; title: string; goal?: string; emoji: string; count: number; zones: string[] }
   | { type: "glossary"; terms: { term: string; meaning: string }[] }
   | { type: "summary"; points: string[] }
   | { type: "html_embed"; title: string; html: string };
 
 export type LessonMeta = { title: string; summary: string; minutes: number; objectives: string[] };
 
-export type SlideKind = "title" | "content" | "check" | "reveal" | "activity" | "summary" | "embed" | "finish";
+export type SlideKind = "title" | "content" | "check" | "reveal" | "activity" | "summary" | "embed" | "play" | "finish";
 
 export type Slide = {
   kind: SlideKind;
@@ -98,12 +99,14 @@ export function blockNarration(b: Block): string {
       return `Remember! ${b.points.map(plain).join(" ")}`;
     case "html_embed":
       return plain(b.title);
+    case "manipulative":
+      return `Let's play! ${plain(b.title)}. ${b.goal ? plain(b.goal) : `Move the ${b.count} things into ${b.zones.map(plain).join(" and ")}.`}`;
     case "glossary":
       return "";
   }
 }
 
-const INTERACTIVE = new Set(["check", "reveal", "activity", "summary", "html_embed"]);
+const INTERACTIVE = new Set(["check", "reveal", "activity", "summary", "html_embed", "manipulative"]);
 /** A content slide holds at most this many blocks (pictures do not count), so slides stay light. */
 const MAX_CONTENT_BLOCKS = 3;
 
@@ -142,8 +145,8 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
     }
     if (INTERACTIVE.has(b.type)) {
       flush();
-      const kind: SlideKind = b.type === "check" ? "check" : b.type === "reveal" ? "reveal" : b.type === "activity" ? "activity" : b.type === "summary" ? "summary" : "embed";
-      const title = b.type === "activity" ? `Try it: ${b.title}` : b.type === "html_embed" ? b.title : b.type === "check" ? "Check yourself" : b.type === "reveal" ? "Think about it" : "Remember";
+      const kind: SlideKind = b.type === "check" ? "check" : b.type === "reveal" ? "reveal" : b.type === "activity" ? "activity" : b.type === "summary" ? "summary" : b.type === "manipulative" ? "play" : "embed";
+      const title = b.type === "manipulative" ? b.title : b.type === "activity" ? `Try it: ${b.title}` : b.type === "html_embed" ? b.title : b.type === "check" ? "Check yourself" : b.type === "reveal" ? "Think about it" : "Remember";
       slides.push({ kind, title, eyebrow: heading || undefined, blocks: [b], narration: blockNarration(b) });
       if (b.type === "summary") afterSummary = true;
       continue;

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
+import { Manipulative } from "../components/Manipulative";
 import { QuestionView } from "../components/QuestionView";
 import { WordBubble, type BubbleState } from "../components/WordBubble";
 import { buildSlides, plain, splitSentences, type Block, type Slide } from "../lib/slides";
@@ -59,6 +60,14 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" }) {
   if (error) return <Frame><p role="alert" className="text-2xl">{error}</p><Link className="btn" to={back}>← Back</Link></Frame>;
   if (!data) return <Loader label="Opening your lesson…" fullScreen />;
   return <Deck data={data} mode={mode} lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} />;
+}
+
+/** The admin preview opens in its own window: Exit closes it, or goes back to the lessons list if the browser won't close it. */
+function closePreviewWindow(e: { preventDefault: () => void }, back: string) {
+  if (!window.location.pathname.startsWith("/admin/") || window.history.length > 1) return;
+  e.preventDefault();
+  window.close();
+  window.setTimeout(() => window.location.assign(back), 150);
 }
 
 function Frame({ children }: { children: ReactNode }) {
@@ -224,7 +233,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
   return (
     <main className="fixed inset-0 flex flex-col" aria-label={lesson.title}>
       <header className="flex items-center gap-3 px-3 pb-2 pt-3 sm:px-6">
-        <Link className="btn !min-h-12 !px-4" to={back} onClick={() => { stopSpeech(); save(index, index === last); }} aria-label="Leave the lesson">✕<span className="hidden sm:inline"> Exit</span></Link>
+        <Link className="btn !min-h-12 !px-4" to={back} onClick={(e) => { stopSpeech(); save(index, index === last); closePreviewWindow(e, back); }} aria-label="Leave the lesson">✕<span className="hidden sm:inline"> Exit</span></Link>
         <div className="flex-1" role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={index + 1} aria-label="Lesson progress">
           <div className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
             <div className="h-full rounded-full bg-accent transition-all duration-500" style={{ width: `${((index + 1) / slides.length) * 100}%` }} />
@@ -353,6 +362,17 @@ function SlideView(p: ViewProps) {
       return <ActivitySlide slide={slide} />;
     case "summary":
       return <SummarySlide slide={slide} />;
+    case "play": {
+      const b = slide.blocks[0] as Extract<Block, { type: "manipulative" }>;
+      return (
+        <>
+          <p className="text-xl font-bold text-muted">🧩 Play with it</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          {b.goal && <p className={`${bodyCls} card px-5 py-3`}>{b.goal}</p>}
+          <Manipulative emoji={b.emoji} count={b.count} zones={b.zones} />
+        </>
+      );
+    }
     case "embed": {
       const b = slide.blocks[0] as Extract<Block, { type: "html_embed" }>;
       // Scripts may run, but with no same-origin access: the page cannot read the session or call the API.

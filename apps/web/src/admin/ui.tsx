@@ -56,9 +56,9 @@ export function Button({ variant, size, icon, className = "", children, type = "
   );
 }
 
-export function LinkButton({ to, variant, size, icon, children }: { to: string; variant?: "primary"; size?: "sm"; icon?: string; children: ReactNode }) {
+export function LinkButton({ to, variant, size, icon, newWindow, children }: { to: string; variant?: "primary"; size?: "sm"; icon?: string; newWindow?: boolean; children: ReactNode }) {
   return (
-    <Link to={to} className={["a-btn", variant ?? "", size ?? ""].filter(Boolean).join(" ")}>
+    <Link to={to} className={["a-btn", variant ?? "", size ?? ""].filter(Boolean).join(" ")} {...(newWindow ? { target: "_blank", rel: "noopener" } : {})}>
       {icon && <Icon name={icon} size={size === "sm" ? 14 : 16} />}
       {children}
     </Link>

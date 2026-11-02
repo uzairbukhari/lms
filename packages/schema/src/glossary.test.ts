@@ -36,3 +36,13 @@ describe("word help", () => {
     expect(buildSlides(meta, blocks).some((s) => s.blocks.some((b) => b.type === "glossary"))).toBe(false);
   });
 });
+
+describe("manipulative block", () => {
+  const play: Block = { type: "manipulative", title: "Counting treasure", emoji: "🪙", count: 10, zones: ["Left hand", "Right hand"] };
+  it("becomes its own play slide with a spoken intro", () => {
+    const slides = buildSlides({ title: "T", summary: "S", minutes: 5, objectives: ["o"] }, [play]);
+    const s = slides.find((x) => x.kind === "play");
+    expect(s?.title).toBe("Counting treasure");
+    expect(s?.narration).toContain("Move the 10 things into Left hand and Right hand");
+  });
+});
