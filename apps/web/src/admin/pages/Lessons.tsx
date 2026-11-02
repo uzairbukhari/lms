@@ -9,23 +9,27 @@ import {
 type LessonRow = {
   id: string; slug: string; title: string; subject: string; status: "draft" | "published" | "archived";
   version: number; unit: string | null; ageBand: string; questionCount: number; updatedAt: string | null;
-  slots: { courseTitle: string; semester: number | null; week: number | null }[];
+  slots: { courseTitle: string; semester: number | null; week: number | null; classIds: string[] }[];
 };
 
 export function Lessons() {
-  const lessons = useLoad<{ lessons: LessonRow[] }>("/api/admin/lessons");
+  const lessons = useLoad<{ lessons: LessonRow[]; classes: { id: string; name: string }[] }>("/api/admin/lessons");
   const { toast } = useFeedback();
   const [q, setQ] = useState("");
   const [subject, setSubject] = useState("");
   const [status, setStatus] = useState("");
+  const [cls, setCls] = useState("");
+  const [semester, setSemester] = useState("");
+  const [week, setWeek] = useState("");
   const sort = useSort<"title" | "subject" | "updated">("subject");
 
   const rows = useMemo(() => {
     const list = (lessons.data?.lessons ?? []).filter((l) =>
-      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (!status || l.status === status));
+      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (!status || l.status === status) &&
+      (!cls && !semester && !week ? true : l.slots.some((s) => (!cls || s.classIds.includes(cls)) && (!semester || String(s.semester) === semester) && (!week || String(s.week) === week))));
     const val = (l: LessonRow) => (sort.key === "title" ? l.title : sort.key === "subject" ? `${SUBJECT_NAMES[l.subject] ?? l.subject}${l.title}` : l.updatedAt);
     return list.sort((a, b) => compare(val(a), val(b)) * sort.dir);
-  }, [lessons.data, q, subject, status, sort.key, sort.dir]);
+  }, [lessons.data, q, subject, status, cls, semester, week, sort.key, sort.dir]);
 
   async function setLessonStatus(l: LessonRow, next: LessonRow["status"]) {
     try { await api(`/api/admin/lessons/${l.id}`, { method: "PATCH", body: { status: next } }); toast(`"${l.title}" is now ${next}.`); await lessons.reload(); }
@@ -52,6 +56,15 @@ export function Lessons() {
           </select>
           <select className="a-select" aria-label="Status" value={status} onChange={(e) => setStatus(e.target.value)}>
             <option value="">Any status</option><option value="published">Published</option><option value="draft">Draft</option><option value="archived">Archived</option>
+          </select>
+          <select className="a-select" aria-label="Class" value={cls} onChange={(e) => setCls(e.target.value)}>
+            <option value="">All classes</option>{(lessons.data?.classes ?? []).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+          </select>
+          <select className="a-select" aria-label="Semester" value={semester} onChange={(e) => setSemester(e.target.value)}>
+            <option value="">Any semester</option>{[1, 2, 3, 4].map((n) => <option key={n} value={n}>Semester {n}</option>)}
+          </select>
+          <select className="a-select" aria-label="Week" value={week} onChange={(e) => setWeek(e.target.value)}>
+            <option value="">Any week</option>{Array.from({ length: 13 }, (_, i) => i + 1).map((n) => <option key={n} value={n}>{n === 13 ? "Week 13 (exam)" : `Week ${n}`}</option>)}
           </select>
           <span className="a-spacer" /><span className="a-faint">{rows.length} of {all.length}</span>
         </div>

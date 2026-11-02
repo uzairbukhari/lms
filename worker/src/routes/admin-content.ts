@@ -63,9 +63,20 @@ adminContentRoutes.get("/lessons", async (c) => {
       `SELECT cl.lesson_id AS lessonId, cl.course_id AS courseId, co.title AS courseTitle, cl.semester, cl.week
          FROM course_lessons cl JOIN courses co ON co.id = cl.course_id`,
     )
-    .all<{ lessonId: string }>();
+    .all<{ lessonId: string; courseId: string }>();
+  // Which classes each course is assigned to, so the admin can filter lessons by class.
+  const assigned = await c.env.DB
+    .prepare("SELECT course_id AS courseId, class_id AS classId FROM course_assignments WHERE class_id IS NOT NULL")
+    .all<{ courseId: string; classId: string }>();
+  const classes = await c.env.DB.prepare("SELECT id, name FROM classes ORDER BY name").all<{ id: string; name: string }>();
   return c.json({
-    lessons: results.map((l) => ({ ...l, slots: slots.results.filter((s) => s.lessonId === l.id) })),
+    classes: classes.results,
+    lessons: results.map((l) => ({
+      ...l,
+      slots: slots.results
+        .filter((s) => s.lessonId === l.id)
+        .map((s) => ({ ...s, classIds: assigned.results.filter((a) => a.courseId === s.courseId).map((a) => a.classId) })),
+    })),
   });
 });
 
