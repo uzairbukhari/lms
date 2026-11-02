@@ -10,6 +10,7 @@ import { Classes } from "./pages/Classes";
 import { Dashboard } from "./pages/Dashboard";
 import { Exams } from "./pages/Exams";
 import { LessonImport } from "./pages/LessonImport";
+import { LessonVideos } from "./pages/LessonVideos";
 import { Lessons } from "./pages/Lessons";
 import { Media } from "./pages/Media";
 import { PlanDetail, PlanList } from "./pages/Plan";
@@ -51,6 +52,7 @@ export function AdminApp() {
                 <Route path="classes/:id" element={<ClassDetail />} />
                 <Route path="lessons" element={<Lessons />} />
                 <Route path="lessons/import" element={<LessonImport />} />
+                <Route path="lessons/:id/videos" element={<LessonVideos />} />
                 <Route path="media" element={<Media />} />
                 <Route path="plan" element={<PlanList />} />
                 <Route path="plan/:courseId" element={<PlanDetail />} />

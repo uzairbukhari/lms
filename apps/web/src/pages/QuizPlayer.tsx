@@ -28,6 +28,14 @@ function words(q: Question, v: unknown): string {
       return Array.isArray(v) ? v.map((id) => text(q.items, id)).join(" → ") : "(no answer)";
     case "match":
       return Object.entries(v as Record<string, string>).map(([l, r]) => `${text(q.left, l)} = ${text(q.right, r)}`).join("; ");
+    case "fill_blank":
+      return Object.entries(v as Record<string, string>).map(([b, o]) => `${b.replace(/^b/, "gap ")}: ${q.blanks?.find((x) => x.id === b)?.options.find((x) => x.id === o)?.text ?? o}`).join("; ");
+    case "hotspot":
+      return (Array.isArray(v) ? v : [v]).map((id) => q.scene?.items.find((i) => i.id === id)?.label ?? String(id)).join(", ");
+    case "slider": {
+      const n = typeof v === "object" && v !== null ? (v as { value: number }).value : v;
+      return `${n}${q.range?.unit ? ` ${q.range.unit}` : ""}`;
+    }
   }
 }
 

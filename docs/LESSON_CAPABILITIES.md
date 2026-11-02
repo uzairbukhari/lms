@@ -26,7 +26,15 @@ up and update the lesson format (`packages/schema/src/lesson.ts`), the player an
 | `summary` | "Remember" points | Last block before the quiz |
 | `html_embed` | A special sandboxed simulation | Use only when nothing above fits |
 
-Question types for `check` and the quiz: multiple choice, multi select, true/false, number, short text, order, match.
+Question types for `check` and the quiz (all nine): multiple choice (radio), multi select (checkboxes), true/false, number and short text (typed), order (drag to reorder), match (drag or tap to pair), `fill_blank` (dropdown gaps in a sentence), `hotspot` (tap the right picture), `slider` (estimate on a scale).
+
+```json
+{"ref":"q4","type":"fill_blank","prompt":"Fill the gaps","text":"Plants need {b1} and {b2} to grow.","points":2,
+ "blanks":[{"id":"b1","options":[{"id":"x","text":"light"},{"id":"y","text":"sand"}]},{"id":"b2","options":[{"id":"x","text":"water"},{"id":"y","text":"milk"}]}],
+ "answer":{"b1":"x","b2":"x"}}
+{"ref":"q5","type":"hotspot","prompt":"Tap the heart","scene":{"items":[{"id":"h","emoji":"❤️","label":"heart","x":30,"y":45,"size":3},{"id":"l","emoji":"🫁","label":"lungs","x":70,"y":45,"size":3}],"show_labels":false},"answer":["h"]}
+{"ref":"q6","type":"slider","prompt":"About how many days are in a week?","range":{"min":0,"max":14,"step":1,"unit":"days"},"answer":{"value":7,"tolerance":0}}
+```
 
 Every lesson should have: a `glossary` for its bold words, at least one `explainer` for the hardest idea, at least one
 hands-on or brain moment (`manipulative`, `brain_game` or `activity`), and a `check` after each new idea.

@@ -85,6 +85,7 @@ export function Lessons() {
                 <td className="a-muted">{ago(l.updatedAt)}</td>
                 <td className="actions"><div className="a-row" style={{ flexWrap: "nowrap", justifyContent: "flex-end" }}>
                   <LinkButton to={`/admin/lessons/${l.id}/preview`} size="sm" newWindow>Preview</LinkButton>
+                  <LinkButton to={`/admin/lessons/${l.id}/videos`} size="sm">Videos</LinkButton>
                   {l.status !== "published" && <Button size="sm" variant="primary" onClick={() => void setLessonStatus(l, "published")}>Publish</Button>}
                   <RowMenu label={`Actions for ${l.title}`} items={[
                     ...(l.status === "published" ? [{ label: "Unpublish", onClick: () => void setLessonStatus(l, "draft") }] : []),

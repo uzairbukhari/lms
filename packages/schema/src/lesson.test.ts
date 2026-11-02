@@ -176,3 +176,57 @@ describe("grading", () => {
     expect(pub).toContain("id1");
   });
 });
+
+describe("fill_blank, hotspot and slider questions", () => {
+  const blank = () => q({
+    type: "fill_blank", points: 2, text: "Plants make food using {b1} and {b2}.",
+    blanks: [
+      { id: "b1", options: [{ id: "x", text: "sunlight" }, { id: "y", text: "sand" }] },
+      { id: "b2", options: [{ id: "x", text: "water" }, { id: "y", text: "milk" }] },
+    ],
+    answer: { b1: "x", b2: "x" },
+  });
+  const hot = () => q({
+    type: "hotspot", prompt: "Tap the heart",
+    scene: { items: [{ id: "h", emoji: "❤️", label: "heart", x: 30, y: 40, size: 2 }, { id: "l", emoji: "🫁", label: "lungs", x: 70, y: 40, size: 2 }], show_labels: false },
+    answer: ["h"],
+  });
+  const slide = () => q({ type: "slider", range: { min: 0, max: 100, step: 5 }, answer: { value: 50, tolerance: 5 } });
+
+  it("fill_blank grades each gap with part credit", () => {
+    expect(gradeQuestion(blank(), { b1: "x", b2: "x" })).toMatchObject({ correct: true, points: 2 });
+    expect(gradeQuestion(blank(), { b1: "x", b2: "y" })).toMatchObject({ correct: false, points: 1 });
+    expect(gradeQuestion(blank(), undefined).correct).toBe(false);
+  });
+
+  it("hotspot needs exactly the right pictures", () => {
+    expect(gradeQuestion(hot(), ["h"]).correct).toBe(true);
+    expect(gradeQuestion(hot(), ["l"]).correct).toBe(false);
+    expect(gradeQuestion(hot(), ["h", "l"]).correct).toBe(false);
+    expect(gradeQuestion(hot(), []).correct).toBe(false);
+  });
+
+  it("slider accepts values within tolerance", () => {
+    expect(gradeQuestion(slide(), 50).correct).toBe(true);
+    expect(gradeQuestion(slide(), 55).correct).toBe(true);
+    expect(gradeQuestion(slide(), 60).correct).toBe(false);
+    expect(gradeQuestion(slide(), undefined).correct).toBe(false);
+  });
+
+  it("the file is checked: gaps must match the text, answers must exist, slider answer must be in range", () => {
+    const base = (extra: object) => {
+      const f = valid();
+      f.quiz.questions.push({ ref: "q9", prompt: "x", ...extra } as never);
+      return parseLessonFile(f).ok;
+    };
+    expect(base(blank())).toBe(true);
+    expect(base(hot())).toBe(true);
+    expect(base(slide())).toBe(true);
+    expect(base({ ...blank(), text: "No gaps here" })).toBe(false);
+    expect(base({ ...blank(), text: "A {b1} and {zz}", })).toBe(false);
+    expect(base({ ...blank(), answer: { b1: "x", b2: "nope" } })).toBe(false);
+    expect(base({ ...hot(), answer: ["ghost"] })).toBe(false);
+    expect(base({ ...slide(), answer: { value: 500, tolerance: 0 } })).toBe(false);
+    expect(base({ ...slide(), range: { min: 10, max: 10, step: 1 } })).toBe(false);
+  });
+});

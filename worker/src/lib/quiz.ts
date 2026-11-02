@@ -48,13 +48,18 @@ function gradable(q: QuestionRow) {
 
 /** What the child sees: the prompt and choices, without the answer, hint text or explanation. */
 export function publicQuestion(q: QuestionRow, attemptId: string, shuffleOptions: boolean) {
-  const opts = parse<{ options?: unknown[]; items?: unknown[]; left?: unknown[]; right?: unknown[] }>(q.options_json) ?? {};
+  const opts = parse<{ options?: unknown[]; items?: unknown[]; left?: unknown[]; right?: unknown[]; blanks?: unknown[]; text?: string; scene?: unknown; range?: unknown }>(q.options_json) ?? {};
   const rand = seeded(`${attemptId}:${q.id}`);
   const out: Record<string, unknown> = { id: q.id, type: q.type, prompt: q.prompt, points: q.points, hasHint: q.hint !== null, ...(parse<{ emoji?: string }>(q.media_json) ?? {}) };
   if (opts.options) out.options = shuffleOptions ? shuffled(opts.options, rand) : opts.options;
   // Items to put in order must not start in the right order, so they are always shuffled.
   if (opts.items) out.items = shuffled(opts.items, rand);
   if (opts.left) out.left = opts.left;
+  // Extra shapes: gaps with their choices (shuffled per gap), a scene to tap, a slider range.
+  if (opts.blanks) out.blanks = (opts.blanks as { id: string; options: unknown[] }[]).map((b) => ({ ...b, options: shuffleOptions ? shuffled(b.options, seeded(`${attemptId}:${q.id}:${b.id}`)) : b.options }));
+  if (opts.text) out.text = opts.text;
+  if (opts.scene) out.scene = opts.scene;
+  if (opts.range) out.range = opts.range;
   if (opts.right) out.right = shuffleOptions ? shuffled(opts.right ?? [], rand) : opts.right;
   return out;
 }

@@ -15,6 +15,6 @@ export async function parseBody<T>(c: Context, schema: ZodType<T>): Promise<T> {
   return result.data;
 }
 
-export function fail(c: Context, status: 400 | 401 | 403 | 404 | 409 | 429, error: string, message?: string) {
+export function fail(c: Context, status: 400 | 401 | 403 | 404 | 409 | 422 | 429 | 502 | 503, error: string, message?: string) {
   return c.json({ error, ...(message ? { message } : {}) }, status);
 }
