@@ -71,7 +71,7 @@ export function Lessons() {
                 <td>{l.slots.length === 0 ? <span className="a-faint">Not in a course</span> : l.slots.map((s, i) => <div key={i}>{s.courseTitle} {s.semester ? <Badge tone="blue" plain>S{s.semester} W{s.week}</Badge> : <Badge tone="amber" plain>Not placed</Badge>}</div>)}</td>
                 <td className="a-muted">{ago(l.updatedAt)}</td>
                 <td className="actions"><div className="a-row" style={{ flexWrap: "nowrap", justifyContent: "flex-end" }}>
-                  <LinkButton to={`/admin/lessons/${l.id}/preview`} size="sm">Preview</LinkButton>
+                  <LinkButton to={`/admin/lessons/${l.id}/preview`} size="sm" newWindow>Preview</LinkButton>
                   {l.status !== "published" && <Button size="sm" variant="primary" onClick={() => void setLessonStatus(l, "published")}>Publish</Button>}
                   <RowMenu label={`Actions for ${l.title}`} items={[
                     ...(l.status === "published" ? [{ label: "Unpublish", onClick: () => void setLessonStatus(l, "draft") }] : []),

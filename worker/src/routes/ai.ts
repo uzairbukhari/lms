@@ -1,11 +1,12 @@
+import { isLookupWord, normaliseWord, sentenceWith, wordVariants, type Block } from "@lms/schema";
 import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
-import { AI_MODEL, DEFAULT_DAILY_CAP, explainPrompt, hintPrompt, leaksAnswer, runModel, sha, takeDailyAllowance } from "../lib/ai";
+import { AI_MODEL, DEFAULT_DAILY_CAP, definePrompt, explainPrompt, hintPrompt, leaksAnswer, runModel, sha, takeDailyAllowance } from "../lib/ai";
 import { fail, parseBody } from "../lib/http";
 import type { AttemptRow, QuestionRow } from "../lib/quiz";
 import { narrate } from "../lib/tts";
-import { todayIn } from "../lib/visibility";
+import { todayIn, visibleLessonsFor } from "../lib/visibility";
 import { requireStudent } from "../middleware/auth";
 
 /** Optional AI help inside a quiz. Fixed prompts only: there is no free-form chat. Always falls back to the stored text. */
@@ -86,4 +87,39 @@ aiRoutes.post("/ai/explain", async (c) => {
   await c.env.SESSIONS.put(key, text, { expirationTtl: 7 * 24 * 3600 });
   await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, text, false);
   return c.json({ explanation: text, source: "ai" });
+});
+
+// --- Long-press word help ------------------------------------------------------------------------
+
+const DEFINE_DAILY_CAP = 40;
+const NO_IDEA = "Hmm, I'm not sure about that word yet. Ask a grown-up to help!";
+
+/**
+ * A child pressed and held a word in a lesson. Only words that really appear in a lesson the child may open are
+ * explained (so this is not a chat), the reply is a short kid-safe explanation, cached per lesson and word, and every real
+ * model call is metered. Meanings written in the lesson are answered in the browser and never get here.
+ */
+aiRoutes.post("/ai/define", async (c) => {
+  const user = c.get("user");
+  const { lessonId, word: raw } = await parseBody(c, z.object({ lessonId: z.string().max(80), word: z.string().max(60) }));
+  const word = normaliseWord(raw);
+  if (!isLookupWord(word)) return fail(c, 400, "bad_word");
+
+  const vis = await visibleLessonsFor(c.env.DB, user.id, todayIn(c.env.TIMEZONE));
+  if (!vis.lessons.some((l) => l.lessonId === lessonId)) return fail(c, 404, "not_found");
+  const row = await c.env.DB.prepare("SELECT subject_id AS subject, content_json FROM lessons WHERE id = ?").bind(lessonId).first<{ subject: string; content_json: string }>();
+  if (!row) return fail(c, 404, "not_found");
+  const sentence = sentenceWith(JSON.parse(row.content_json) as Block[], word);
+  if (!sentence) return fail(c, 404, "not_found");
+
+  const key = `ai:define:v1:${lessonId}:${wordVariants(word)[0]}`;
+  const cached = await c.env.SESSIONS.get(key);
+  if (cached) return c.json({ word, meaning: cached, source: "ai" });
+  if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, `define:${user.id}`, todayIn(c.env.TIMEZONE), DEFINE_DAILY_CAP))) {
+    return c.json({ word, meaning: NO_IDEA, source: "static" });
+  }
+  const text = await runModel(c.env.AI, definePrompt(word, sentence, row.subject), { db: c.env.DB, userId: user.id, kind: "define" });
+  if (!text) return c.json({ word, meaning: NO_IDEA, source: "static" });
+  await c.env.SESSIONS.put(key, text, { expirationTtl: 30 * 24 * 3600 });
+  return c.json({ word, meaning: text, source: "ai" });
 });

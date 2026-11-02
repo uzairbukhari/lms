@@ -1,11 +1,14 @@
-import { gradeQuestion, type CheckQuestion, type Response } from "@lms/schema";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode, type TouchEvent } from "react";
+import { buildGlossary, findInGlossary, gradeQuestion, isLookupWord, normaliseWord, type CheckQuestion, type Response } from "@lms/schema";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
+import { Manipulative } from "../components/Manipulative";
 import { QuestionView } from "../components/QuestionView";
+import { WordBubble, type BubbleState } from "../components/WordBubble";
 import { buildSlides, plain, splitSentences, type Block, type Slide } from "../lib/slides";
+import { isControl, wordAtPoint, type PressedWord } from "../lib/wordHelp";
 import { getSoundOn, hasTapped, isSpeaking, preloadNarration, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
 
 export type LessonPayload = {
@@ -57,6 +60,14 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" }) {
   if (error) return <Frame><p role="alert" className="text-2xl">{error}</p><Link className="btn" to={back}>← Back</Link></Frame>;
   if (!data) return <Loader label="Opening your lesson…" fullScreen />;
   return <Deck data={data} mode={mode} lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} />;
+}
+
+/** The admin preview opens in its own window: Exit closes it, or goes back to the lessons list if the browser won't close it. */
+function closePreviewWindow(e: { preventDefault: () => void }, back: string) {
+  if (!window.location.pathname.startsWith("/admin/") || window.history.length > 1) return;
+  e.preventDefault();
+  window.close();
+  window.setTimeout(() => window.location.assign(back), 150);
 }
 
 function Frame({ children }: { children: ReactNode }) {
@@ -158,12 +169,71 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
     if (Math.abs(dx) > 70 && Math.abs(dy) < 80) go(index + (dx < 0 ? 1 : -1));
   };
 
+  // --- Press and hold a word to hear what it means ---
+  const glossary = useMemo(() => buildGlossary(data.blocks), [data.blocks]);
+  const defined = useRef(new Map<string, { meaning: string; source: "ai" | "static" }>());
+  const [bubble, setBubble] = useState<{ pressed: PressedWord; state: BubbleState } | null>(null);
+  const holding = useRef<{ x: number; y: number; timer: number } | null>(null);
+  const swallowClick = useRef(false);
+  const lookup = useRef(0);
+
+  const closeBubble = useCallback(() => { lookup.current++; setBubble(null); }, []);
+  useEffect(closeBubble, [index, closeBubble]);
+
+  const explain = useCallback((pressed: PressedWord) => {
+    const id = ++lookup.current;
+    const set = (state: BubbleState) => { if (lookup.current === id) setBubble({ pressed, state }); };
+    const word = normaliseWord(pressed.word);
+    const mine = findInGlossary(glossary, word);
+    const say = (text: string) => { if (soundOn && unlocked) speak(`${pressed.word}. ${text}`); };
+    sfx("tap");
+    if (mine) {
+      set({ status: "ready", meaning: mine.meaning, example: mine.example, source: "lesson" });
+      say(mine.meaning);
+    } else if (!isLookupWord(word)) {
+      set({ status: "ready", meaning: "That one is too tricky for me to explain. Try another word!", source: "static" });
+    } else if (mode === "preview") {
+      // Previews never use AI: only meanings saved in the lesson show here.
+      set({ status: "ready", meaning: "Preview: this word has no meaning saved in the lesson, so children will get a short helper explanation instead. No AI is used in previews.", source: "preview" });
+    } else {
+      const known = defined.current.get(word);
+      if (known) { set({ status: "ready", meaning: known.meaning, source: known.source }); say(known.meaning); return; }
+      set({ status: "loading" });
+      api<{ meaning: string; source: "ai" | "static" }>("/api/ai/define", { method: "POST", body: { lessonId, word } })
+        .then((r) => { defined.current.set(word, { meaning: r.meaning, source: r.source }); set({ status: "ready", meaning: r.meaning, source: r.source }); say(r.meaning); })
+        .catch(() => set({ status: "ready", meaning: "I couldn't find out just now. Try again in a moment!", source: "static" }));
+    }
+  }, [glossary, lessonId, mode, soundOn, unlocked]);
+
+  const cancelHold = () => { if (holding.current) { window.clearTimeout(holding.current.timer); holding.current = null; } };
+  const onHoldStart = (e: PointerEvent<HTMLElement>) => {
+    if ((e.pointerType === "mouse" && e.button !== 0) || isControl(e.target as Element)) return;
+    cancelHold();
+    const { clientX: x, clientY: y } = e;
+    const root = e.currentTarget;
+    const timer = window.setTimeout(() => {
+      holding.current = null;
+      const hit = wordAtPoint(root, x, y);
+      if (!hit) return;
+      // The press that opened the bubble must not also count as a tap on the sentence under it.
+      swallowClick.current = true;
+      window.setTimeout(() => { swallowClick.current = false; }, 700);
+      explain(hit);
+    }, 450);
+    holding.current = { x, y, timer };
+  };
+  const onHoldMove = (e: PointerEvent) => {
+    const h = holding.current;
+    if (h && Math.hypot(e.clientX - h.x, e.clientY - h.y) > 12) cancelHold();
+  };
+  useEffect(() => cancelHold, []);
+
   const toggleSound = () => { const on = !soundOn; setSoundOn(on); setSound(on); if (on) sfx("tap"); else setSpeaking(false); };
 
   return (
     <main className="fixed inset-0 flex flex-col" aria-label={lesson.title}>
       <header className="flex items-center gap-3 px-3 pb-2 pt-3 sm:px-6">
-        <Link className="btn !min-h-12 !px-4" to={back} onClick={() => { stopSpeech(); save(index, index === last); }} aria-label="Leave the lesson">✕<span className="hidden sm:inline"> Exit</span></Link>
+        <Link className="btn !min-h-12 !px-4" to={back} onClick={(e) => { stopSpeech(); save(index, index === last); closePreviewWindow(e, back); }} aria-label="Leave the lesson">✕<span className="hidden sm:inline"> Exit</span></Link>
         <div className="flex-1" role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={index + 1} aria-label="Lesson progress">
           <div className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
             <div className="h-full rounded-full bg-accent transition-all duration-500" style={{ width: `${((index + 1) / slides.length) * 100}%` }} />
@@ -176,11 +246,16 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
         <p className="mx-3 card px-4 py-2 text-center font-bold sm:mx-6" role="note">{data.preview ? "👀 Preview. Nothing here is saved." : "📖 Looking back: your progress stays as it was."}</p>
       )}
 
-      <section key={index} className={`min-h-0 flex-1 px-4 py-3 sm:px-10 ${dir === "next" ? "slide-in-next" : "slide-in-back"}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} aria-live="polite">
+      <section key={index} className={`no-select min-h-0 flex-1 px-4 py-3 sm:px-10 ${dir === "next" ? "slide-in-next" : "slide-in-back"}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
+        onPointerDown={onHoldStart} onPointerMove={onHoldMove} onPointerUp={cancelHold} onPointerCancel={cancelHold} onPointerLeave={cancelHold}
+        onContextMenu={(e) => e.preventDefault()}
+        onClickCapture={(e) => { if (swallowClick.current) { swallowClick.current = false; e.preventDefault(); e.stopPropagation(); } }} aria-live="polite">
         <FitToScreen>
           <SlideView slide={slide} lesson={lesson} quiz={data.quiz} mode={mode} lessonId={lessonId} assetUrl={assetUrl} resumeAt={resumeAt} onGo={go} onLeave={() => { stopSpeech(); save(index, true); }} />
         </FitToScreen>
       </section>
+
+      {bubble && <WordBubble pressed={bubble.pressed} state={bubble.state} canSpeak={speechSupported()} onSpeak={() => speak(`${bubble.pressed.word}. ${bubble.state.status === "ready" ? bubble.state.meaning : ""}`)} onClose={closeBubble} />}
 
       <footer className="flex items-center gap-2 border-t-2 border-line bg-surface px-3 py-3 sm:gap-4 sm:px-6">
         <button type="button" className="btn !min-h-16 !px-5 text-xl" onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous slide">← <span className="hidden sm:inline">Back</span></button>
@@ -270,6 +345,7 @@ function SlideView(p: ViewProps) {
             {p.lesson.objectives.map((o, i) => <li key={o} className={`pop-in ${bodyCls} card px-4 py-2`} style={{ animationDelay: `${0.15 + i * 0.12}s` }}>🎯 {o}</li>)}
           </ul>
           <p className="text-center text-xl text-muted">About {p.lesson.minutes} minutes</p>
+          <p className="text-center text-xl text-muted">💡 Press and hold any word to find out what it means.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <button type="button" className="btn btn-primary !min-h-16 !px-8 text-2xl" onClick={() => { sfx("start"); p.onGo(1); }}>Let's go! 🚀</button>
             {p.resumeAt > 0 && <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => p.onGo(p.resumeAt)}>Carry on where I was</button>}
@@ -286,6 +362,17 @@ function SlideView(p: ViewProps) {
       return <ActivitySlide slide={slide} />;
     case "summary":
       return <SummarySlide slide={slide} />;
+    case "play": {
+      const b = slide.blocks[0] as Extract<Block, { type: "manipulative" }>;
+      return (
+        <>
+          <p className="text-xl font-bold text-muted">🧩 Play with it</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          {b.goal && <p className={`${bodyCls} card px-5 py-3`}>{b.goal}</p>}
+          <Manipulative emoji={b.emoji} count={b.count} zones={b.zones} />
+        </>
+      );
+    }
     case "embed": {
       const b = slide.blocks[0] as Extract<Block, { type: "html_embed" }>;
       // Scripts may run, but with no same-origin access: the page cannot read the session or call the API.
@@ -336,7 +423,7 @@ function ContentSlide({ slide, assetUrl }: { slide: Slide; assetUrl: (n: string)
               <ul key={bi} className="flex flex-col gap-3">
                 {splitSentences(b.markdown).map((s) => (
                   <li key={s}>
-                    <button type="button" className={`pop-in card w-full px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + n++ * 0.15}s` }} onClick={() => { sfx("tap"); speak(plain(s)); }}>
+                    <button type="button" data-words className={`pop-in card w-full px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + n++ * 0.15}s` }} onClick={() => { sfx("tap"); speak(plain(s)); }}>
                       <Markdown text={s} />
                     </button>
                   </li>
@@ -354,7 +441,7 @@ function ContentSlide({ slide, assetUrl }: { slide: Slide; assetUrl: (n: string)
             return <Callout key={bi} b={b} />;
           case "vocab":
             return (
-              <button key={bi} type="button" className={`pop-in card flex flex-col gap-1 px-5 py-4 text-left ${bodyCls}`} onClick={() => { sfx("tap"); speak(`${plain(b.word)}. ${plain(b.meaning)}`); }}>
+              <button key={bi} type="button" data-words className={`pop-in card flex flex-col gap-1 px-5 py-4 text-left ${bodyCls}`} onClick={() => { sfx("tap"); speak(`${plain(b.word)}. ${plain(b.meaning)}`); }}>
                 <span className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold">📚 {b.word}</span>
                 <span>{b.meaning}</span>
                 {b.example && <span className="text-muted">Example: {b.example}</span>}
@@ -377,7 +464,7 @@ function StepList({ items }: { items: string[] }) {
     <ol className="flex flex-col gap-3">
       {items.map((s, i) => (
         <li key={s}>
-          <button type="button" aria-pressed={done.has(i)} className={`pop-in card flex w-full items-center gap-4 px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${i * 0.12}s` }}
+          <button type="button" data-words aria-pressed={done.has(i)} className={`pop-in card flex w-full items-center gap-4 px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${i * 0.12}s` }}
             onClick={() => { sfx("tap"); setDone((d) => { const x = new Set(d); if (x.has(i)) x.delete(i); else x.add(i); return x; }); }}>
             <span className="grid size-12 shrink-0 place-items-center rounded-full border-2 border-line font-display text-2xl font-bold" aria-hidden="true">{done.has(i) ? "✅" : i + 1}</span>
             <span className={done.has(i) ? "line-through opacity-70" : ""}>{s}</span>
@@ -456,7 +543,7 @@ function SummarySlide({ slide }: { slide: Slide }) {
       <ul className="flex flex-col gap-3">
         {b.points.map((pt, i) => (
           <li key={pt}>
-            <button type="button" className={`pop-in card flex w-full items-center gap-4 px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + i * 0.2}s` }} onClick={() => { sfx("tap"); speak(plain(pt)); }}>
+            <button type="button" data-words className={`pop-in card flex w-full items-center gap-4 px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + i * 0.2}s` }} onClick={() => { sfx("tap"); speak(plain(pt)); }}>
               <span aria-hidden="true" className="text-4xl">⭐</span>{pt}
             </button>
           </li>

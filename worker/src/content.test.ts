@@ -20,3 +20,15 @@ describe("content/lessons", () => {
     });
   }
 });
+
+describe("manipulative block", () => {
+  it("is accepted by the lesson format, with limits", async () => {
+    const { lessonFixture } = await import("../test/fixtures");
+    const ok = lessonFixture();
+    ok.blocks.push({ type: "manipulative", title: "Split it", emoji: "🪙", count: 10, zones: ["A", "B"] } as never);
+    expect(parseLessonFile(ok).ok).toBe(true);
+    const bad = lessonFixture();
+    bad.blocks.push({ type: "manipulative", title: "Too many", emoji: "🪙", count: 99, zones: ["A"] } as never);
+    expect(parseLessonFile(bad).ok).toBe(false);
+  });
+});

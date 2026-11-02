@@ -11,3 +11,5 @@ Apply it with `cd worker && npx wrangler d1 execute lms-db --remote --file ../co
 
 Reading the diagnostic: every quiz question has a `skill_tag`, so the Reports page shows strengths and gaps by skill.
 Use each child's first attempt as the baseline.
+
+What a lesson can contain (and what is planned) is kept in `docs/LESSON_CAPABILITIES.md`.

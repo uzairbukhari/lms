@@ -158,6 +158,17 @@ export const blockSchema = z.discriminatedUnion("type", [
     materials: z.array(line(100)).max(12).optional(),
     instructions: z.array(line(300)).min(1).max(12),
   }),
+  // Kid-friendly meanings for key words in the lesson (the bold ones). Not shown as a slide: a child long-presses a word to see it.
+  z.object({ type: z.literal("glossary"), terms: z.array(z.object({ term: line(40), meaning: line(300) })).min(1).max(40) }),
+  // Move-the-items play area (counters, coins, sweets...) so a child can try a counting, sharing or grouping idea without real objects.
+  z.object({
+    type: z.literal("manipulative"),
+    title: line(100),
+    goal: line(300).optional(),
+    emoji: z.string().trim().min(1).max(16),
+    count: z.number().int().min(1).max(20),
+    zones: z.array(line(30)).min(1).max(4),
+  }),
   z.object({ type: z.literal("summary"), points: z.array(line(200)).min(1).max(8) }),
   z.object({ type: z.literal("html_embed"), title: line(100), html: longText(50_000) }),
 ]);
