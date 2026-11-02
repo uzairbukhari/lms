@@ -1,15 +1,15 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { parseLessonFile } from "./lesson";
+import { parseLessonFile } from "@lms/schema";
 
 // Every lesson file committed under content/lessons must pass the same validation the admin importer uses.
-const dir = join(__dirname, "../../../content/lessons");
-const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+const dir = join(process.cwd(), "../content/lessons");
+const files = readdirSync(dir).filter((f: string) => f.endsWith(".json"));
 
 describe("content/lessons", () => {
   it("has the 8 week-1 diagnostic lessons", () => {
-    expect(files.filter((f) => f.startsWith("diag-"))).toHaveLength(8);
+    expect(files.filter((f: string) => f.startsWith("diag-"))).toHaveLength(8);
   });
   for (const f of files) {
     it(`${f} is valid`, () => {
