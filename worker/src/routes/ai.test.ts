@@ -109,3 +109,36 @@ describe("AI hints and explanations", () => {
     expect(res).toMatchObject({ source: "ai", explanation: said });
   });
 });
+
+describe("narration voice", () => {
+  let cookie = "";
+  let calls = 0;
+  const saved = () => env.AI;
+
+  beforeAll(async () => {
+    const cls = (await json<{ class: { id: string } }>(await call("/api/admin/classes", { body: { name: "Voice" } }))).class.id;
+    const creds = (await json<{ credentials: { username: string; password: string } }>(await call("/api/admin/students", { body: { displayName: "Ben", classIds: [cls] } }))).credentials;
+    cookie = ((await call("/api/login", { body: { username: creds.username, password: creds.password } })).headers.get("set-cookie") ?? "").split(";")[0] ?? "";
+  });
+
+  it("voices a sentence once, then serves it from R2", async () => {
+    const before = saved();
+    env.AI = { run: async () => { calls++; return new Response(new Uint8Array(500), { headers: { "Content-Type": "audio/mpeg" } }); } } as unknown as Ai;
+    const first = await call("/api/ai/voice", { body: { text: "Let's count to ten!" }, cookie });
+    expect(first.status).toBe(200);
+    expect(first.headers.get("content-type")).toBe("audio/mpeg");
+    expect((await first.arrayBuffer()).byteLength).toBe(500);
+    expect((await call("/api/ai/voice", { body: { text: "Let's count to ten!" }, cookie })).status).toBe(200);
+    expect(calls).toBe(1);
+    env.AI = before;
+  });
+
+  it("answers 503 without AI, and needs a signed-in child", async () => {
+    const before = saved();
+    env.AI = undefined;
+    expect((await call("/api/ai/voice", { body: { text: "A brand new sentence." }, cookie })).status).toBe(503);
+    env.AI = before;
+    expect((await call("/api/ai/voice", { body: { text: "Hello." } })).status).toBe(401);
+    expect((await call("/api/ai/voice", { body: { text: "x".repeat(601) }, cookie })).status).toBe(400);
+  });
+});

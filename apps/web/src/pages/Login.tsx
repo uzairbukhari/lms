@@ -50,6 +50,11 @@ export function Login() {
         </section>
       )}
 
+      <section aria-labelledby="pick-look" className="flex flex-col items-center gap-3">
+        <h2 id="pick-look" className="font-display text-2xl font-bold">🎨 Pick your look</h2>
+        <ThemeSwitcher />
+      </section>
+
       <form onSubmit={submit} className="card flex flex-col gap-4 p-6">
         <label className="flex flex-col gap-1 text-lg font-bold">
           My username
@@ -83,8 +88,6 @@ export function Login() {
           {busy ? "Checking…" : "Let's go!"}
         </button>
       </form>
-
-      <ThemeSwitcher />
     </main>
   );
 }

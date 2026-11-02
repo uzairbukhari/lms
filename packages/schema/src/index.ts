@@ -11,3 +11,4 @@ export interface HealthResponse {
 }
 export * from "./lesson";
 export * from "./grading";
+export { blockNarration, buildSlides, plain, splitSentences, type Slide, type SlideKind } from "./slides";

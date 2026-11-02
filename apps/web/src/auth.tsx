@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { SessionUser, ThemeId } from "@lms/schema";
 import { api } from "./api";
 import { applyTheme, getStoredTheme } from "./theme";
@@ -39,6 +39,8 @@ const Ctx = createContext<AuthState | null>(null);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<SessionUser | null | undefined>(undefined);
   const [theme, setThemeState] = useState<ThemeId>(getStoredTheme);
+  /** A look picked on the login screen, before signing in. It wins over the one saved on the profile and is then saved there. */
+  const pickedBeforeLogin = useRef<ThemeId | null>(null);
 
   useEffect(() => {
     api<{ user: SessionUser | null }>("/api/me")
@@ -55,9 +57,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = useCallback(async (username: string, password: string) => {
     const { user: u } = await api<{ user: SessionUser }>("/api/login", { body: { username, password } });
     rememberUser(u);
-    applyTheme(u.theme);
-    setThemeState(u.theme);
-    setUser(u);
+    const picked = pickedBeforeLogin.current;
+    pickedBeforeLogin.current = null;
+    const chosen = picked ?? u.theme;
+    applyTheme(chosen);
+    setThemeState(chosen);
+    setUser({ ...u, theme: chosen });
+    if (picked && picked !== u.theme) api("/api/me/theme", { method: "PATCH", body: { theme: picked } }).catch(() => undefined);
   }, []);
 
   const logout = useCallback(async () => {
@@ -69,6 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     (next: ThemeId) => {
       applyTheme(next);
       setThemeState(next);
+      if (!user) pickedBeforeLogin.current = next;
       if (user) {
         setUser({ ...user, theme: next });
         api("/api/me/theme", { method: "PATCH", body: { theme: next } }).catch(() => undefined);

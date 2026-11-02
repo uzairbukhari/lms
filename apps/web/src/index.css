@@ -43,8 +43,18 @@ body {
 
 @layer components {
   .btn {
-    min-height: 48px;
-    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 0 22px;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     border-radius: calc(var(--radius) * 0.7);
     border: var(--border-width) solid var(--surface-border);
     background: var(--surface);
@@ -54,6 +64,9 @@ body {
     font-weight: 700;
     cursor: pointer;
     box-shadow: var(--shadow);
+  }
+  .btn:active:not(:disabled) {
+    transform: scale(0.97);
   }
   .btn:disabled {
     opacity: 0.55;
@@ -109,3 +122,23 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Slide deck: slide changes, pop-in points, floating pictures and feedback (all switched off by "reduce motion" above). */
+@keyframes slide-in-next { from { opacity: 0; transform: translateX(72px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes slide-in-back { from { opacity: 0; transform: translateX(-72px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes pop-in { 0% { opacity: 0; transform: translateY(18px) scale(0.92); } 70% { transform: translateY(-3px) scale(1.02); } 100% { opacity: 1; transform: none; } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-14px) rotate(3deg); } }
+@keyframes shake { 0%, 100% { transform: none; } 20% { transform: translateX(-10px); } 40% { transform: translateX(10px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
+.slide-in-next { animation: slide-in-next 0.38s ease-out both; }
+.slide-in-back { animation: slide-in-back 0.38s ease-out both; }
+.pop-in { animation: pop-in 0.5s ease-out both; }
+.float { animation: float 3.2s ease-in-out infinite; }
+.shake { animation: shake 0.45s ease-in-out; }
+
+/* Loader: planets circling the rocket, bouncing dots, and a jump when the rocket is tapped. */
+@keyframes loader-orbit { to { transform: rotate(360deg); } }
+@keyframes loader-dot { 0%, 80%, 100% { transform: translateY(0); opacity: 0.4; } 40% { transform: translateY(-10px); opacity: 1; } }
+@keyframes loader-jump { 0% { transform: none; } 40% { transform: translate(18px, -40px) rotate(12deg) scale(1.2); } 100% { transform: none; } }
+.loader-orbit { animation: loader-orbit 8s linear infinite; }
+.loader-dot { animation: loader-dot 1s ease-in-out infinite; }
+.loader-jump { animation: loader-jump 0.6s ease-out; }
