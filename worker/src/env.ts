@@ -18,6 +18,8 @@ export type Bindings = {
   ACCESS_AUD?: string;
   /** The one email address allowed to be the admin (the parent). */
   ADMIN_EMAIL?: string;
+  /** IANA timezone that decides when a school week starts, e.g. "Asia/Karachi". Defaults to UTC. */
+  TIMEZONE?: string;
 };
 
 export type AdminContext = { userId: string; email: string };

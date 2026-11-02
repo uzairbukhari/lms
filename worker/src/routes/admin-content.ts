@@ -79,6 +79,24 @@ adminContentRoutes.get("/lessons/:id", async (c) => {
   return c.json({ lesson: { id: row.id, slug: row.slug, status: row.status, version: row.version, file: JSON.parse(row.source_json) } });
 });
 
+/** The lesson exactly as a child's player receives it, so the parent can preview any lesson, published or not. */
+adminContentRoutes.get("/lessons/:id/preview", async (c) => {
+  const row = await c.env.DB
+    .prepare("SELECT id, slug, title, subject_id AS subject, summary, estimated_minutes AS minutes, unit, content_json, source_json FROM lessons WHERE id = ?")
+    .bind(c.req.param("id"))
+    .first<{ id: string; slug: string; title: string; subject: string; summary: string; minutes: number; unit: string | null; content_json: string; source_json: string }>();
+  if (!row) return fail(c, 404, "not_found");
+  const file = JSON.parse(row.source_json) as { lesson: { learning_objectives: string[] }; quiz: { questions: unknown[]; pass_percent?: number } };
+  return c.json({
+    lesson: { id: row.id, slug: row.slug, title: row.title, subject: row.subject, summary: row.summary, minutes: row.minutes, unit: row.unit, objectives: file.lesson.learning_objectives, semester: null, week: null, phase: "current" },
+    blocks: JSON.parse(row.content_json),
+    quiz: { questionCount: file.quiz.questions.length, passPercent: file.quiz.pass_percent ?? 70 },
+    progress: null,
+    readOnly: true, // previews never record progress
+    preview: true,
+  });
+});
+
 adminContentRoutes.patch("/lessons/:id", async (c) => {
   const { status } = await parseBody(c, z.object({ status: z.enum(["draft", "published", "archived"]) }));
   const res = await c.env.DB
