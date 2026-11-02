@@ -166,3 +166,20 @@ describe("curriculum planner, classes and assignments", () => {
     expect((await json<{ count: number }>(res)).count).toBe(students.length);
   });
 });
+
+describe("backups", () => {
+  it("writes a database backup to R2 and keeps only the newest few", async () => {
+    const first = await call("/api/admin/backups", { method: "POST", body: {} });
+    expect(first.status).toBe(201);
+    const { key, rows } = await json<{ key: string; rows: number }>(first);
+    expect(key).toMatch(/^backups\/\d{4}-\d{2}-\d{2}\.json$/);
+    expect(rows).toBeGreaterThan(0);
+    const stored = JSON.parse(await (await env.ASSETS_BUCKET.get(key))!.text()) as { tables: { subjects: unknown[] } };
+    expect(stored.tables.subjects.length).toBeGreaterThan(0);
+    for (let d = 1; d <= 10; d++) await env.ASSETS_BUCKET.put(`backups/2020-01-${String(d).padStart(2, "0")}.json`, "{}");
+    await call("/api/admin/backups", { method: "POST", body: {} });
+    const list = await json<{ backups: { key: string }[] }>(await call("/api/admin/backups"));
+    expect(list.backups).toHaveLength(8);
+    expect(list.backups[0]?.key).toBe(key);
+  });
+});

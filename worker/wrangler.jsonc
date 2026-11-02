@@ -30,6 +30,9 @@
   "r2_buckets": [{ "binding": "ASSETS_BUCKET", "bucket_name": "lms-assets" }],
   "kv_namespaces": [{ "binding": "SESSIONS", "id": "22d48e3293d2496d881ef662ad96200e" }],
 
-  // Workers AI for hints and explanations (docs/PLAN.md section 4b). Not used until Phase 5.
+  // Weekly backup of the database to R2 (Sundays 03:00 UTC). See src/lib/backup.ts.
+  "triggers": { "crons": ["0 3 * * 0"] },
+
+  // Workers AI for hints and explanations (docs/PLAN.md section 4b).
   "ai": { "binding": "AI" }
 }

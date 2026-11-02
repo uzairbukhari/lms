@@ -1,7 +1,8 @@
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 import type { HealthResponse } from "@lms/schema";
-import type { AppEnv } from "./env";
+import type { AppEnv, Bindings } from "./env";
+import { runBackup } from "./lib/backup";
 import { adminRoutes } from "./routes/admin";
 import { serveAsset } from "./lib/assets";
 import { requireStudent } from "./middleware/auth";
@@ -35,4 +36,10 @@ app.onError((err, c) => {
   return c.json({ error: "internal_error" }, 500);
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  // Weekly cron (see wrangler.jsonc): copy the database to R2.
+  scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
+    ctx.waitUntil(runBackup(env));
+  },
+};

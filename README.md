@@ -21,14 +21,20 @@ npm run dev:web      # front end on http://localhost:5173 (proxies /api to the W
 npm run typecheck && npm test
 ```
 
+## What it does
+
+- Children sign in with a simple username and password, see this week's lessons (one per subject), work through the lesson,
+  then take a quiz as many times as they like. Older weeks stay readable as "Look back"; future weeks stay hidden.
+- Semester exams (4 semesters a year) are built from the quizzes taught in that semester.
+- Optional Workers AI hints and "why was I wrong" explanations, with guardrails: the answer is never given away, there is
+  no free chat, there is a daily limit, and a stored hint is used whenever AI is unavailable.
+- The parent area (behind Cloudflare Access) manages students and classes, imports lessons written with Claude, plans the
+  year, builds exams and shows reports: learning curves, report cards, weak skills, every answer, CSV export.
+
 ## Deploy
 
-Cloudflare resources used by `worker/wrangler.jsonc`: D1 `lms-db`, R2 bucket `lms-assets`,
-KV namespace `lms-sessions`, Workers AI binding `AI`.
+See [`docs/DEPLOY.md`](docs/DEPLOY.md) for the full checklist (secrets, Cloudflare Access, first run, backups).
 
 ```bash
 npm run deploy
 ```
-
-To deploy automatically from GitHub, add repository secrets `CLOUDFLARE_API_TOKEN`
-(permissions: Workers Scripts, D1, Workers KV, Workers R2 Storage: Edit) and `CLOUDFLARE_ACCOUNT_ID`.

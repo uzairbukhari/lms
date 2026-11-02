@@ -12,6 +12,7 @@ import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { hashPassword } from "../lib/password";
 import { getUserById, getUserByUsername, isReservedUsername, uniqueUsername } from "../lib/users";
+import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
 import { serveAsset } from "../lib/assets";
 import { requireAdmin } from "../middleware/auth";
@@ -24,6 +25,8 @@ export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
 
 adminRoutes.get("/me", (c) => c.json({ admin: c.get("admin") }));
+adminRoutes.get("/backups", async (c) => c.json({ backups: await listBackups(c.env) }));
+adminRoutes.post("/backups", async (c) => c.json(await runBackup(c.env), 201));
 adminRoutes.get("/assets/file/:filename", (c) => serveAsset(c, c.req.param("filename")));
 adminRoutes.route("/", adminContentRoutes);
 adminRoutes.route("/", adminClassRoutes);

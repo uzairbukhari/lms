@@ -98,3 +98,14 @@ body {
     color: #000;
   }
 }
+
+/* Respect "reduce motion" settings: no animated transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
