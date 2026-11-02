@@ -57,6 +57,7 @@ const class1 = {
 
     heading("Stop 1: Letters and sounds"),
     para("The **alphabet** has 26 letters. Each letter makes a **sound**. Put the sounds together and you can read a word!"),
+    { type: "image", emoji: "🔤", alt: "Letters A B C", caption: "The alphabet: a, b, c and 23 more letters" },
     { type: "explainer", title: "Sounds make a word", scenes: [
       { caption: "Say the first sound: c.", items: [it("c", 30, 50, { id: "c", size: 3, anim: "bounce" })] },
       { caption: "Now the next sound: a.", items: [it("c", 30, 50, { id: "c", size: 3 }), it("a", 50, 50, { id: "a", size: 3, anim: "bounce" })] },
@@ -189,6 +190,11 @@ const class4 = {
 
     heading("Stop 2: Punctuation"),
     para("**Capital letters** begin sentences and names. A **comma** separates the things in a list. **Speech marks** go round the exact words someone says. An **apostrophe** shows that letters are missing, or that something belongs to someone."),
+    { type: "explainer", title: "Capitals, commas and speech marks", scenes: [
+      { caption: "Capital letters start sentences and names. Mia has a capital M.", items: [it("Mia", 50, 50, { id: "name", size: 3, anim: "pulse", label: "capital letter" })] },
+      { caption: "Commas separate things in a list. Mia packed apples, bananas and grapes.", items: [it("🍎", 22, 45, { id: "f1", size: 3 }), it(",", 33, 60, { id: "c1", size: 3, anim: "grow", label: "comma" }), it("🍌", 48, 45, { id: "f2", size: 3 }), it(",", 59, 60, { id: "c2", size: 3, anim: "grow", label: "comma" }), it("🍇", 75, 45, { id: "f3", size: 3 })] },
+      { caption: "Speech marks go round the exact words someone says.", items: [it("🗣️", 18, 50, { size: 3 }), it("“", 38, 40, { id: "q1", size: 3, anim: "grow", label: "speech marks" }), it("Hello!", 56, 50, { id: "say", size: 3 }), it("”", 78, 40, { id: "q2", size: 3, anim: "grow" })] },
+    ] },
     { type: "explainer", title: "What the apostrophe does", scenes: [
       { caption: "Two words: do and not.", items: [it("do", 30, 50, { id: "a", size: 3 }), it("not", 65, 50, { id: "b", size: 3 })] },
       { caption: "Squash them together and the letter o falls out.", items: [it("do", 40, 50, { id: "a", size: 3 }), it("n't", 62, 50, { id: "b", size: 3, anim: "pulse" })] },
