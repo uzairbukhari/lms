@@ -86,16 +86,21 @@ let waiting = false;
 let current: AudioBufferSourceNode | null = null;
 let voiceUrl = "/api/ai/voice";
 let serverVoiceOff = false;
+let narrationOn = true;
 const clips = new Map<string, Promise<AudioBuffer | null>>();
 
-/** Where narration audio comes from: the child's route by default, the admin route in the lesson preview. */
-export function setVoiceUrl(url: string): void {
-  voiceUrl = url;
-  serverVoiceOff = false;
+/** Narration is off in the admin preview: nothing is fetched from the voice service and nothing is read aloud. */
+export function setNarrationEnabled(on: boolean): void {
+  narrationOn = on;
+  if (!on) stopSpeech();
+}
+
+export function narrationEnabled(): boolean {
+  return narrationOn;
 }
 
 export function speechSupported(): boolean {
-  return typeof window !== "undefined" && "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
+  return narrationOn && typeof window !== "undefined" && "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
 }
 
 function sentences(text: string): string[] {
@@ -106,7 +111,7 @@ function clip(sentence: string): Promise<AudioBuffer | null> {
   const known = clips.get(sentence);
   if (known) return known;
   const c = audio();
-  if (serverVoiceOff || !c) return Promise.resolve(null);
+  if (!narrationOn || serverVoiceOff || !c) return Promise.resolve(null);
   const p = fetch(voiceUrl, { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: sentence }) })
     .then(async (res) => {
       if (!res.ok) throw new Error(String(res.status));
@@ -125,7 +130,7 @@ function clip(sentence: string): Promise<AudioBuffer | null> {
 
 /** Start fetching a slide's narration so it plays without a pause when the child gets there. */
 export function preloadNarration(text: string): void {
-  if (!getSoundOn()) return;
+  if (!narrationOn || !getSoundOn()) return;
   for (const s of sentences(text)) void clip(s);
 }
 
@@ -177,7 +182,7 @@ function deviceSpeak(parts: string[], mine: number): Promise<void> {
 
 /** Speak text sentence by sentence. Replaces anything already being said. */
 export function speak(text: string, onState?: (speaking: boolean) => void): void {
-  if (!getSoundOn()) return;
+  if (!narrationOn || !getSoundOn()) return;
   stopSpeech();
   const mine = ++token;
   const parts = sentences(text);

@@ -6,7 +6,7 @@ import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
 import { QuestionView } from "../components/QuestionView";
 import { buildSlides, plain, splitSentences, type Block, type Slide } from "../lib/slides";
-import { getSoundOn, hasTapped, isSpeaking, preloadNarration, setSoundOn, setVoiceUrl, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
+import { getSoundOn, hasTapped, isSpeaking, preloadNarration, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
 
 export type LessonPayload = {
   lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[]; semester: number | null; week: number | null; phase: string };
@@ -34,11 +34,12 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" }) {
 
   useEffect(() => {
     const path = mode === "preview" ? `/api/admin/lessons/${id}/preview` : `/api/lessons/${id}`;
-    setVoiceUrl(mode === "preview" ? "/api/admin/voice" : "/api/ai/voice");
+    // The parent's preview never uses the voice service (it costs AI usage); the children's lessons always do.
+    setNarrationEnabled(mode !== "preview");
     api<LessonPayload>(path)
       .then(setData)
       .catch((e: unknown) => setError(e instanceof ApiError && e.status === 404 ? "That lesson isn't available yet." : "We couldn't load this lesson. Please try again."));
-    return () => stopSpeech();
+    return () => { stopSpeech(); setNarrationEnabled(true); };
   }, [id, mode]);
 
   /** Progress is only saved for real lessons that are open for doing; previews and look-back never change anything. */

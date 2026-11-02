@@ -1,5 +1,6 @@
 import { normaliseText } from "@lms/schema";
 import type { QuestionRow } from "./quiz";
+import { recordUsage, tokensFrom, type UsageKind } from "./usage";
 
 // Workers AI helpers with child-safety guardrails (docs/PLAN.md section 4b):
 // fixed prompts only (no open chat), answers are never given away in a hint (checked in code, not trusted to the model),
@@ -87,10 +88,12 @@ export function cleanOutput(raw: unknown): string | null {
   return text;
 }
 
-export async function runModel(ai: Ai | undefined, p: { system: string; user: string }): Promise<string | null> {
+/** Runs the model. Every real call is metered (tokens, neurons) when `meter` is given, even if the reply is then rejected. */
+export async function runModel(ai: Ai | undefined, p: { system: string; user: string }, meter?: { db: D1Database; userId: string; kind: UsageKind }): Promise<string | null> {
   if (!ai) return null;
   try {
     const out = (await ai.run(AI_MODEL as never, { messages: [{ role: "system", content: p.system }, { role: "user", content: p.user }], max_tokens: 120, temperature: 0.4 } as never)) as { response?: unknown };
+    if (meter) await recordUsage(meter.db, { kind: meter.kind, model: AI_MODEL, userId: meter.userId, ...tokensFrom(out, p.system.length + p.user.length, out?.response) });
     return cleanOutput(out?.response);
   } catch (e) {
     console.error("workers ai failed", e);

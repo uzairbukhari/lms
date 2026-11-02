@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { AiUsage } from "../AiUsage";
 import { Badge, Card, EmptyState, ErrorNote, Icon, LinkButton, PageHeader, Skeleton, StatTile, ago, pct, useLoad } from "../ui";
 
 export type Overview = {
@@ -75,6 +76,8 @@ export function Dashboard() {
               )}
             </Card>
           </div>
+
+          <AiUsage />
         </>
       )}
     </>

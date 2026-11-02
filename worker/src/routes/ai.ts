@@ -51,7 +51,7 @@ aiRoutes.post("/ai/hint", async (c) => {
   if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), cap))) {
     return c.json({ hint: fallback, source: "static" });
   }
-  const text = await runModel(c.env.AI, hintPrompt(question));
+  const text = await runModel(c.env.AI, hintPrompt(question), { db: c.env.DB, userId: user.id, kind: "hint" });
   if (!text || leaksAnswer(question, text)) {
     await log(c.env.DB, user.id, question.id, "hint", "static-fallback", fallback, false);
     return c.json({ hint: fallback, source: "static" });
@@ -81,7 +81,7 @@ aiRoutes.post("/ai/explain", async (c) => {
   if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), DEFAULT_DAILY_CAP))) {
     return c.json({ explanation: fallback, source: "static" });
   }
-  const text = await runModel(c.env.AI, explainPrompt(question, answer.response_json));
+  const text = await runModel(c.env.AI, explainPrompt(question, answer.response_json), { db: c.env.DB, userId: user.id, kind: "explain" });
   if (!text) return c.json({ explanation: fallback, source: "static" });
   await c.env.SESSIONS.put(key, text, { expirationTtl: 7 * 24 * 3600 });
   await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, text, false);

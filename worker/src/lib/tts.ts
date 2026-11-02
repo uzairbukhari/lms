@@ -3,6 +3,7 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { parseBody } from "./http";
 import { sha, takeDailyAllowance } from "./ai";
+import { recordUsage } from "./usage";
 import { todayIn } from "./visibility";
 
 // Lesson narration in a natural voice (Deepgram Aura-2 on Workers AI). Each sentence is generated once and kept in R2,
@@ -36,6 +37,7 @@ export async function narrate(c: Context<AppEnv>): Promise<Response> {
     const res = (await c.env.AI.run(TTS_MODEL, { text, speaker: TTS_VOICE, encoding: "mp3" }, { returnRawResponse: true })) as unknown as Response;
     const audio = await res.arrayBuffer();
     if (!res.ok || audio.byteLength < 100) throw new Error(`tts failed: ${res.status}`);
+    await recordUsage(c.env.DB, { kind: "narration", model: TTS_MODEL, userId: user?.id, characters: text.length });
     await c.env.ASSETS_BUCKET.put(key, audio, { httpMetadata: { contentType: "audio/mpeg" } });
     return new Response(audio, { headers });
   } catch (err) {

@@ -61,7 +61,7 @@ describe("AI hints and explanations", () => {
     const start = await json(await call(`/api/lessons/${lesson.lesson.lessonId}/quiz/start`, { method: "POST", body: {}, cookie }));
     state.attempt = start.attemptId;
     state.numberQ = start.questions.find((q: { type: string }) => q.type === "number").id;
-    env.AI = { run: async () => { calls++; return { response: said }; } } as unknown as Ai;
+    env.AI = { run: async () => { calls++; return { response: said, usage: { prompt_tokens: 100, completion_tokens: 20, total_tokens: 120 } }; } } as unknown as Ai;
   });
 
   it("gives an AI hint, caches it, and logs both", async () => {
@@ -72,6 +72,19 @@ describe("AI hints and explanations", () => {
     expect(calls).toBe(1);
     const log = await env.DB.prepare("SELECT from_cache FROM ai_events WHERE user_id = ? ORDER BY created_at, rowid").bind(userId).all();
     expect(log.results.map((r) => r.from_cache)).toEqual([0, 1]);
+  });
+
+  it("meters real model calls (not cache hits) and reports them to the admin", async () => {
+    const rows = await env.DB.prepare("SELECT kind, input_tokens, output_tokens, neurons FROM ai_usage").all<{ kind: string; input_tokens: number; output_tokens: number; neurons: number }>();
+    expect(rows.results).toHaveLength(1);
+    expect(rows.results[0]).toMatchObject({ kind: "hint", input_tokens: 100, output_tokens: 20 });
+    expect(rows.results[0]?.neurons).toBeCloseTo((100 / 1e6) * 25608 + (20 / 1e6) * 75147, 6);
+    const usage = await json(await call("/api/admin/ai-usage?days=7"));
+    expect(usage.totals).toMatchObject({ requests: 1, inputTokens: 100, outputTokens: 20, tokens: 120 });
+    expect(usage.daily).toHaveLength(7);
+    expect(usage.daily[6]).toMatchObject({ requests: 1, tokens: 120 });
+    expect(usage.byKind[0]).toMatchObject({ kind: "hint", requests: 1 });
+    expect(usage.totals.billableUsd).toBe(0); // far under the 10,000 free neurons a day
   });
 
   it("replaces a hint that gives the answer away with the stored one", async () => {
