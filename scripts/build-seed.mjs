@@ -74,7 +74,8 @@ for (const f of files) {
       `SELECT ${q(quizId)} || ':' || ${v("ref")}, ${q(quizId)}, ${v("ref")}, e.key + 1, ${v("type")}, ${v("prompt")}, ` +
       `CASE WHEN ${v("emoji")} IS NOT NULL THEN json_object('emoji', ${v("emoji")}) END, ` +
       `CASE ${v("type")} WHEN 'multiple_choice' THEN json_object('options', ${v("options")}) WHEN 'multi_select' THEN json_object('options', ${v("options")}) ` +
-      `WHEN 'order' THEN json_object('items', ${v("items")}) WHEN 'match' THEN json_object('left', ${v("left")}, 'right', ${v("right")}) ELSE 'null' END, ` +
+      `WHEN 'order' THEN json_object('items', ${v("items")}) WHEN 'match' THEN json_object('left', ${v("left")}, 'right', ${v("right")}) ` +
+      `WHEN 'fill_blank' THEN json_object('text', ${v("text")}, 'blanks', ${v("blanks")}) WHEN 'hotspot' THEN json_object('scene', ${v("scene")}) WHEN 'slider' THEN json_object('range', ${v("range")}) ELSE 'null' END, ` +
       `${v("answer")}, ${v("hint")}, ${v("explanation")}, COALESCE(${v("points")}, 1), ${v("skill_tag")} ` +
       `FROM lessons l, json_each(l.source_json, '$.quiz.questions') e WHERE l.id = ${q(lessonId)};`,
   );

@@ -26,6 +26,12 @@ function publicOptions(q: LessonFile["quiz"]["questions"][number]): unknown {
       return { items: q.items };
     case "match":
       return { left: q.left, right: q.right };
+    case "fill_blank":
+      return { text: q.text, blanks: q.blanks };
+    case "hotspot":
+      return { scene: q.scene };
+    case "slider":
+      return { range: q.range };
     default:
       return null;
   }

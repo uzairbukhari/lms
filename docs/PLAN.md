@@ -238,7 +238,7 @@ CREATE TABLE questions (
   ref          TEXT NOT NULL,                  -- 'q1','q2' from the JSON
   position     INTEGER NOT NULL,
   type         TEXT NOT NULL CHECK (type IN
-                 ('multiple_choice','multi_select','true_false','number','short_text','order','match')),
+                 ('multiple_choice','multi_select','true_false','number','short_text','order','match','fill_blank','hotspot','slider')),
   prompt       TEXT NOT NULL,
   media_json   TEXT,                           -- optional image/emoji
   options_json TEXT,                           -- choices / items / pairs (no answers)
@@ -631,6 +631,9 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 | `short_text` | none | `{ "accepted": ["photosynthesis"] }` (case/space-insensitive) |
 | `order` | `items: [{id,text}]` | `["c","a","b"]` (correct sequence) |
 | `match` | `left: [{id,text}], right: [{id,text}]` | `{ "l1": "r2", "l2": "r1" }` |
+| `fill_blank` | `text` with `{b1}` gaps, `blanks: [{id, options:[{id,text}]}]` | `{ "b1": "x" }` |
+| `hotspot` | `scene: {items:[{id,emoji,label,x,y,size}], show_labels}` | `["h"]` |
+| `slider` | `range: {min,max,step,unit}` | `{ "value": 7, "tolerance": 0 }` |
 
 ### 5.2 The generation prompt and the block reference
 

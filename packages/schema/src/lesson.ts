@@ -80,6 +80,33 @@ function buildQuestionSchema(inQuiz: boolean) {
       right: z.array(optionSchema).min(2).max(6),
       answer: z.record(shortId, shortId),
     }),
+    z.object({
+      // A sentence with gaps. Write each gap as {id} inside `text`, for example "Plants make food using {b1} and water."
+      type: z.literal("fill_blank"),
+      ...commonFields,
+      ...extras,
+      text: line(500),
+      blanks: z.array(z.object({ id: shortId, options: z.array(optionSchema).min(2).max(6) })).min(1).max(5),
+      answer: z.record(shortId, shortId),
+    }),
+    z.object({
+      // A picture made of emoji (like an explainer scene); the child taps the right thing or things.
+      type: z.literal("hotspot"),
+      ...commonFields,
+      ...extras,
+      scene: z.object({
+        items: z.array(z.object({ id: shortId, emoji: z.string().min(1).max(16), label: line(40), x: z.number().min(0).max(100), y: z.number().min(0).max(100), size: z.number().int().min(1).max(3).default(2) })).min(2).max(12),
+        show_labels: z.boolean().default(false),
+      }),
+      answer: z.array(shortId).min(1).max(4),
+    }),
+    z.object({
+      type: z.literal("slider"),
+      ...commonFields,
+      ...extras,
+      range: z.object({ min: z.number().finite(), max: z.number().finite(), step: z.number().positive().default(1), unit: line(20).optional() }),
+      answer: z.object({ value: z.number().finite(), tolerance: z.number().min(0).default(0) }),
+    }),
   ]);
 }
 
@@ -119,6 +146,37 @@ function checkQuestion(q: RawQuestion, ctx: z.RefinementCtx): void {
         if (!l.includes(k)) add(["answer", k], `"${k}" is not a left id`);
         if (!r.includes(v)) add(["answer", k], `"${v}" is not a right id`);
       }
+      break;
+    }
+    case "fill_blank": {
+      const ids = q.blanks.map((b) => b.id);
+      if (dup(ids)) add(["blanks"], "Blank ids must be unique");
+      for (const id of ids) {
+        if (!q.text.includes(`{${id}}`)) add(["text"], `The text must contain {${id}} where the gap goes`);
+      }
+      for (const m of q.text.matchAll(/\{([A-Za-z0-9_-]+)\}/g)) if (!ids.includes(m[1] as string)) add(["text"], `{${m[1]}} has no matching blank`);
+      for (const b of q.blanks) {
+        const o = b.options.map((x) => x.id);
+        if (dup(o)) add(["blanks"], `Option ids in blank "${b.id}" must be unique`);
+        const a = q.answer[b.id];
+        if (a === undefined) add(["answer"], `Answer is missing blank "${b.id}"`);
+        else if (!o.includes(a)) add(["answer", b.id], `"${a}" is not an option of blank "${b.id}"`);
+      }
+      for (const k of Object.keys(q.answer)) if (!ids.includes(k)) add(["answer", k], `"${k}" is not a blank id`);
+      break;
+    }
+    case "hotspot": {
+      const ids = q.scene.items.map((i) => i.id);
+      if (dup(ids)) add(["scene", "items"], "Item ids must be unique");
+      for (const a of q.answer) if (!ids.includes(a)) add(["answer"], `Answer "${a}" is not an item id`);
+      if (new Set(q.answer).size !== q.answer.length) add(["answer"], "Answer lists the same item twice");
+      break;
+    }
+    case "slider": {
+      const { min, max, step } = q.range;
+      if (min >= max) add(["range"], "min must be smaller than max");
+      if (q.answer.value < min || q.answer.value > max) add(["answer", "value"], "The answer must be inside the range");
+      if (max > min && step > max - min) add(["range", "step"], "step is bigger than the range");
       break;
     }
     default:

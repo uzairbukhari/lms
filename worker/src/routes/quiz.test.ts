@@ -179,3 +179,31 @@ describe("exam blueprint", () => {
     expect([...plan.keys()].sort()).toEqual([1, 2, 3, 4]);
   });
 });
+
+describe("new question types end to end", () => {
+  it("imports, hides answers, shuffles gaps and grades fill_blank, hotspot and slider", async () => {
+    const file = lessonFixture({ slug: "maths-new-types", curriculum: { course: "maths-y3", semester: 1, week: 2 } }) as any;
+    file.quiz.questions = [
+      { ref: "q1", type: "fill_blank", points: 2, prompt: "Fill the gaps", text: "Plants need {b1} and {b2}.", blanks: [
+        { id: "b1", options: [{ id: "x", text: "light" }, { id: "y", text: "sand" }] },
+        { id: "b2", options: [{ id: "x", text: "water" }, { id: "y", text: "milk" }] } ], answer: { b1: "x", b2: "x" } },
+      { ref: "q2", type: "hotspot", prompt: "Tap the heart", scene: { items: [{ id: "h", emoji: "❤️", label: "heart", x: 30, y: 40, size: 2 }, { id: "l", emoji: "🫁", label: "lungs", x: 70, y: 40, size: 2 }], show_labels: false }, answer: ["h"] },
+      { ref: "q3", type: "slider", prompt: "About how many?", range: { min: 0, max: 100, step: 5 }, answer: { value: 50, tolerance: 5 } },
+    ];
+    const imp = await json<{ lesson: { lessonId: string } }>(await call("/api/admin/lessons/import", { body: { publish: true, file } }));
+    const lid = imp.lesson.lessonId;
+    await call("/api/admin/assignments", { body: { courseId, classId } });
+    const start = await json(await call(`/api/lessons/${lid}/quiz/start`, { method: "POST", body: {}, cookie: ava.cookie }));
+    const qs = start.questions as any[];
+    expect(JSON.stringify(qs)).not.toContain('"answer"');
+    const byType = Object.fromEntries(qs.map((x) => [x.type, x]));
+    expect(byType.fill_blank.text).toContain("{b1}");
+    expect(byType.fill_blank.blanks).toHaveLength(2);
+    expect(byType.hotspot.scene.items).toHaveLength(2);
+    expect(byType.slider.range.max).toBe(100);
+    const res = await json(await call(`/api/quiz/attempts/${start.attemptId}/submit`, {
+      body: { answers: { [byType.fill_blank.id]: { b1: "x", b2: "x" }, [byType.hotspot.id]: ["h"], [byType.slider.id]: 52 } }, cookie: ava.cookie }));
+    expect(res.score).toBe(4);
+    expect(res.maxScore).toBe(4);
+  });
+});

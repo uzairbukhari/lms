@@ -93,7 +93,7 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 ## 7. Quizzes
 
 - **15 questions** for the ~15 minute quiz (decided), for both age bands. Every question can be answered from the lesson.
-- Every 15-question quiz uses **all nine** question types below at least once (decided: "use all of these quiz control types"); the other six questions repeat the types that suit the topic best. Until the three new types are built, use all six built ones. Order roughly easy to harder. Pass mark 70% unless told otherwise.
+- Every 15-question quiz uses **all nine** question types below at least once (decided: "use all of these quiz control types"); the other six questions repeat the types that suit the topic best.  Order roughly easy to harder. Pass mark 70% unless told otherwise.
 - Never reuse the exact wording of the lesson's `check` questions.
 - Multiple choice: 3 to 4 options, one clearly right, plausible wrong answers based on common misconceptions, no "all of the above".
 - Each question has a `ref` (q1, q2...), a short `hint` that does not give the answer away, a 1 to 2 sentence `explanation`,
@@ -107,13 +107,16 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 | 2 | Checkboxes (more than one right) | `multi_select` | built |
 | 3 | True / false | `true_false` | built |
 | 4 | Text input (word, number, short phrase) | `short_text`, `number` | built |
-| 5 | Inline dropdowns (fill in the blanks) | `fill_blank` | **to build** |
+| 5 | Inline dropdowns (fill in the blanks) | `fill_blank` | built |
 | 6 | Drag and drop matching | `match` | built |
 | 7 | Drag and drop ordering | `order` | built |
-| 8 | Image hotspots (click the right area) | `hotspot` | **to build** |
-| 9 | Slider (estimate or point on a scale) | `slider` | **to build** |
+| 8 | Image hotspots (click the right area) | `hotspot` | built |
+| 9 | Slider (estimate or point on a scale) | `slider` | built |
 
-Until the three new types exist, quizzes use the six built ones. Do not invent the new types in lesson JSON before they are built.
+All nine are built. Shapes (full examples in docs/LESSON_CAPABILITIES.md):
+- `fill_blank`: `text` with `{b1}` gaps, `blanks: [{id, options:[{id,text}]}]` (2 to 6 choices each), `answer: {b1: "optionId"}`. Part credit per gap (points 2 or more).
+- `hotspot`: `scene: {items:[{id, emoji, label, x, y, size}], show_labels}` (emoji picture, 2 to 12 things), `answer: ["id"]`.
+- `slider`: `range: {min, max, step, unit}`, `answer: {value, tolerance}`; answer inside the range.
 Use each type for what it does best: hotspot for "point to the part" (diagrams, maps), slider for estimates and scales
 (number lines, years, temperatures), dropdown blanks for sentences and vocabulary, checkboxes for "select all that apply".
 
@@ -195,6 +198,8 @@ a picture, or too long", then "output the corrected JSON only". Then:
 3. Videos: preferably **animated** and **under 100 seconds**. Uzair approves each clip before it is used.
 4. Examples and stories: preferably **Islamic and Muslim** where natural (see part 8).
 5. Minimum per lesson: 1 explainer, 1 brain game, 1 hands-on, a picture on every stop. **Agreed.**
-6. Quiz controls: all nine types in part 7. Three still need building (`fill_blank`, `hotspot`, `slider`).
+6. Quiz controls: all nine types in part 7. All built.
+
+Three question types (`fill_blank`, `hotspot`, `slider`) were built on 2 Nov, and the quiz screen was reworked: real drag and drop with arrow fallback for ordering, drag or tap-to-pair for matching.
 
 Still open: which channels or creators Uzair trusts for videos (he will send links), and whether the guidelines are now fully done.

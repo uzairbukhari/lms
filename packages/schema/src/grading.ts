@@ -10,7 +10,7 @@ export type Response = string[] | boolean | number | string | Record<string, str
 
 export interface GradeResult {
   correct: boolean;
-  /** Points earned: all of them when correct; order and match questions give part credit. */
+  /** Points earned: all of them when correct; order, match and fill-in-the-blank questions give part credit. */
   points: number;
   /** 0 to 1: how much of the answer was right. */
   fraction: number;
@@ -44,7 +44,7 @@ export function gradeQuestion(q: AnyQuestion, response: Response): GradeResult {
   const points = q.points ?? 1;
   const result = (fraction: number): GradeResult => {
     if (fraction >= 1) return { correct: true, points, fraction: 1 };
-    const partial = q.type === "order" || q.type === "match" ? Math.floor(points * fraction) : 0;
+    const partial = q.type === "order" || q.type === "match" || q.type === "fill_blank" ? Math.floor(points * fraction) : 0;
     return { correct: false, points: partial, fraction };
   };
 
@@ -81,6 +81,21 @@ export function gradeQuestion(q: AnyQuestion, response: Response): GradeResult {
       const pairs = Object.entries(q.answer);
       const right = pairs.filter(([l, r]) => (response as Record<string, string>)[l] === r).length;
       return result(right / pairs.length);
+    }
+    case "fill_blank": {
+      if (!response || typeof response !== "object" || Array.isArray(response)) return NONE;
+      const pairs = Object.entries(q.answer);
+      const right = pairs.filter(([b, o]) => (response as Record<string, string>)[b] === o).length;
+      return result(right / pairs.length);
+    }
+    case "hotspot": {
+      const picked = Array.isArray(response) ? [...new Set(response)] : [];
+      return result(sameSet(picked, q.answer) ? 1 : 0);
+    }
+    case "slider": {
+      const n = parseNumber(response);
+      if (n === null) return NONE;
+      return result(Math.abs(n - q.answer.value) <= q.answer.tolerance + 1e-9 ? 1 : 0);
     }
   }
 }
