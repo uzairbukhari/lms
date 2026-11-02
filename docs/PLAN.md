@@ -667,7 +667,7 @@ Question objects:
 ````
 
 ### 5.3 Workflow for each new lesson
-1. Fill in the meta-prompt and send it to Claude.
+1. Fill in the generation prompt (docs/LESSON_GUIDELINES.md part 9) and send it to Claude.
 2. Optional: ask Claude "Review this lesson as a 7-year-old would experience it and fix anything confusing", then "output the corrected JSON only".
 3. In the admin area, paste the JSON → fix any validation errors (or paste the error back to Claude) → preview → publish.
 4. After the kids take the quiz, check the weakest-skills report and ask Claude for a follow-up lesson targeting those `skill_tag`s.
@@ -706,7 +706,7 @@ Output ONLY a JSON array of 12 objects:
 [{"week":1,"title":"","slug":"","summary":"","objectives":["",""],"difficulty":1,"skill_tags":["",""]}, ...]
 ````
 
-Then generate each week's lesson with the main meta-prompt (5.2), pasting that week's outline entry into "Extra notes" and setting the curriculum slot.
+Then generate each week's lesson with the generation prompt in docs/LESSON_GUIDELINES.md (part 9), pasting that week's outline entry into "Extra notes" and setting the curriculum slot.
 
 ### 5.6 Exam top-up prompt (optional)
 
