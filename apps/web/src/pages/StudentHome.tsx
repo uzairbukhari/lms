@@ -24,13 +24,13 @@ export const SUBJECT_LOOK: Record<string, { emoji: string; label: string }> = {
 };
 const look = (id: string) => SUBJECT_LOOK[id] ?? { emoji: "📘", label: id };
 
-const TINT: Record<string, string> = {
+export const TINT: Record<string, string> = {
   maths: "var(--tint-maths)", science: "var(--tint-science)", "data-ai": "var(--tint-data-ai)",
   gk: "var(--tint-gk)", "general-knowledge": "var(--tint-gk)", english: "var(--tint-english)",
 };
 
 /** Simple line icon per subject (decorative). Unknown subjects get a book. */
-function SubjectIcon({ subject, size }: { subject: string; size: number }) {
+export function SubjectIcon({ subject, size }: { subject: string; size: number }) {
   const paths: Record<string, ReactNode> = {
     maths: <path d="M7 3.5v6M4 6.5h6M14 6.5h6M4.5 14.5l5 5M9.5 14.5l-5 5M14 15.5h6M14 19h6" />,
     science: <path d="M9 3h6M10 3v6l-5.6 9.6A1.6 1.6 0 0 0 5.8 21h12.4a1.6 1.6 0 0 0 1.4-2.4L14 9V3M7.2 15h9.6" />,
