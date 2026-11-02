@@ -1,782 +1,1043 @@
 {
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "diag-data-ai-class-4",
-    "subject": "data-ai",
-    "title": "Computing, Data & AI Check-In: Where Am I?",
-    "summary": "Check what you know about algorithms, loops, decisions, data, and how AI learns so we can plan your coding and data year.",
-    "age_band": "9-10",
-    "difficulty": 2,
-    "estimated_minutes": 60,
-    "unit": "Week 1: Where am I?",
-    "learning_objectives": [
-      "Show I can read and fix simple algorithms",
-      "Show I can read and use data tables and charts",
-      "Show what I understand about how AI learns and staying safe online"
-    ],
-    "tags": [
-      "diagnostic",
-      "week-1"
-    ],
-    "curriculum": {
-      "course": "data-ai-class-4",
-      "semester": 1,
-      "week": 1
-    }
-  },
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Welcome, Digital Explorer!"
-    },
-    {
-      "type": "text",
-      "markdown": "This is a **check-in** to see what you already know about computing, data and AI. No computer is needed, just your brain and a pencil."
-    },
-    {
-      "type": "image",
-      "emoji": "💻",
-      "alt": "Code, data and AI",
-      "caption": "Code, data and AI"
-    },
-    {
-      "type": "heading",
-      "text": "Stop 1: Algorithms and loops"
-    },
-    {
-      "type": "text",
-      "markdown": "An **algorithm** is a precise list of steps. A **loop** repeats steps so you do not have to write them again: repeat 4 times (move forward, turn right) draws a square. **Debugging** means finding and fixing mistakes."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "A robot does this 3 times: move 2 steps forward. How many steps does it move in total?",
-        "answer": {
-          "value": 6,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "explainer",
-      "title": "A loop draws a square",
-      "scenes": [
-        {
-          "caption": "A robot starts in the corner. The loop says: move forward, turn right.",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 20,
-              "y": 25,
-              "id": "r",
-              "size": 3,
-              "label": "start"
-            }
-          ]
-        },
-        {
-          "caption": "Forward and turn right. That was one time round the loop.",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 75,
-              "y": 25,
-              "id": "r",
-              "size": 3,
-              "label": "1"
-            }
-          ]
-        },
-        {
-          "caption": "Repeat! Forward and turn right again.",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 75,
-              "y": 75,
-              "id": "r",
-              "size": 3,
-              "label": "2"
-            }
-          ]
-        },
-        {
-          "caption": "And again. Three times so far.",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 20,
-              "y": 75,
-              "id": "r",
-              "size": 3,
-              "label": "3"
-            }
-          ]
-        },
-        {
-          "caption": "Repeat 4 times and the robot is back at the start, having drawn a square. One loop saved lots of writing!",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 20,
-              "y": 25,
-              "id": "r",
-              "size": 3,
-              "label": "4",
-              "anim": "bounce"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 2: Decisions"
-    },
-    {
-      "type": "text",
-      "markdown": "Programs make choices with **if** statements: **if** it is raining, **then** take an umbrella, **else** wear sunglasses."
-    },
-    {
-      "type": "explainer",
-      "title": "If, then, else",
-      "scenes": [
-        {
-          "caption": "A program asks a question. Here it asks: is it raining?",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 20,
-              "y": 50,
-              "size": 3,
-              "anim": "float"
-            },
-            {
-              "emoji": "❓",
-              "x": 60,
-              "y": 40,
-              "size": 3,
-              "anim": "pulse",
-              "label": "Is it raining?"
-            }
-          ]
-        },
-        {
-          "caption": "IF the answer is yes, THEN the program takes an umbrella.",
-          "items": [
-            {
-              "emoji": "🌧️",
-              "x": 25,
-              "y": 45,
-              "size": 3,
-              "label": "if yes"
-            },
-            {
-              "emoji": "☂️",
-              "x": 70,
-              "y": 45,
-              "size": 3,
-              "anim": "grow",
-              "label": "then umbrella"
-            }
-          ]
-        },
-        {
-          "caption": "ELSE, when the answer is no, it does something different. It puts on sunglasses.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 25,
-              "y": 45,
-              "size": 3,
-              "label": "else (no rain)"
-            },
-            {
-              "emoji": "😎",
-              "x": 70,
-              "y": 45,
-              "size": 3,
-              "anim": "grow",
-              "label": "sunglasses"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "If it is raining take an umbrella, else wear sunglasses. It is sunny. What do you take?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Umbrella"
-          },
-          {
-            "id": "b",
-            "text": "Sunglasses"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "activity",
-      "title": "Debug the sandwich",
-      "materials": [
-        "paper",
-        "pencil"
-      ],
-      "instructions": [
-        "Write a 6 step algorithm for making a sandwich.",
-        "Swap with a grown-up who follows it exactly like a robot.",
-        "Find any step that was unclear and fix (debug) it."
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 3: Data"
-    },
-    {
-      "type": "text",
-      "markdown": "**Data** is facts we collect. We store it in **tables** (rows and columns) and show it in **charts**. A **bar chart** makes comparing categories easy. Always check the labels and the scale."
-    },
-    {
-      "type": "chart",
-      "kind": "table",
-      "title": "A table: our favourite sports",
-      "caption": "A table stores data in rows and columns.",
-      "rows": [
-        {
-          "label": "Cricket",
-          "value": 8
-        },
-        {
-          "label": "Football",
-          "value": 12
-        },
-        {
-          "label": "Swimming",
-          "value": 5
-        }
-      ]
-    },
-    {
-      "type": "chart",
-      "kind": "bar_chart",
-      "title": "A bar chart of the same data",
-      "caption": "The taller the bar, the more votes. Football is the tallest.",
-      "rows": [
-        {
-          "label": "Cricket",
-          "value": 8
-        },
-        {
-          "label": "Football",
-          "value": 12
-        },
-        {
-          "label": "Swimming",
-          "value": 5
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "A bar chart shows Cricket 8, Football 12, Swimming 5 votes. Which is most popular?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Cricket"
-          },
-          {
-            "id": "b",
-            "text": "Football"
-          },
-          {
-            "id": "c",
-            "text": "Swimming"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 4: How AI learns"
-    },
-    {
-      "type": "text",
-      "markdown": "Some programs do not follow fixed rules. Instead they learn from many **examples**, called **training data**. If you show a computer thousands of cat and dog pictures, it learns to tell them apart. If the examples are unfair or missing, the AI can make **mistakes**, so people must check its answers."
-    },
-    {
-      "type": "explainer",
-      "title": "How an AI learns from examples",
-      "scenes": [
-        {
-          "caption": "First we show the AI lots of examples, each with the right answer. This is the training data.",
-          "items": [
-            {
-              "emoji": "🐱",
-              "x": 20,
-              "y": 30,
-              "size": 2,
-              "label": "cat"
-            },
-            {
-              "emoji": "🐶",
-              "x": 45,
-              "y": 30,
-              "size": 2,
-              "label": "dog"
-            },
-            {
-              "emoji": "🐱",
-              "x": 70,
-              "y": 30,
-              "size": 2,
-              "label": "cat"
-            },
-            {
-              "emoji": "🐶",
-              "x": 30,
-              "y": 70,
-              "size": 2,
-              "label": "dog"
-            },
-            {
-              "emoji": "🐱",
-              "x": 60,
-              "y": 70,
-              "size": 2,
-              "label": "cat"
-            }
-          ]
-        },
-        {
-          "caption": "The AI looks for patterns, such as pointy ears and whiskers.",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 50,
-              "y": 50,
-              "id": "ai",
-              "size": 3,
-              "anim": "pulse"
-            },
-            {
-              "emoji": "💭",
-              "x": 75,
-              "y": 30,
-              "size": 2,
-              "anim": "float",
-              "label": "patterns"
-            }
-          ]
-        },
-        {
-          "caption": "Now it can guess about a new picture it has never seen. It says: cat!",
-          "items": [
-            {
-              "emoji": "🤖",
-              "x": 25,
-              "y": 50,
-              "id": "ai",
-              "size": 3
-            },
-            {
-              "emoji": "🐱",
-              "x": 70,
-              "y": 50,
-              "size": 3,
-              "anim": "grow",
-              "label": "new picture"
-            },
-            {
-              "emoji": "💬",
-              "x": 50,
-              "y": 20,
-              "size": 2,
-              "label": "cat!",
-              "anim": "bounce"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "true_false",
-        "prompt": "An AI learns by looking at lots of examples.",
-        "answer": [
-          true
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 5: Safe and kind online"
-    },
-    {
-      "type": "text",
-      "markdown": "A **strong password** is long and mixes words, numbers and symbols. Never share it. Think before you click or post, and tell a trusted adult if something feels wrong."
-    },
-    {
-      "type": "reveal",
-      "prompt": "Why might an AI that only saw pictures of golden retrievers get confused by a poodle?",
-      "answer_markdown": "Because it learned from a narrow set of examples. Good training data needs variety."
-    },
-    {
-      "type": "brain_game",
-      "game": "remember_order",
-      "title": "Copy the sequence",
-      "goal": "Computers follow steps in order. Watch, then copy the order.",
-      "emojis": [
-        "🟥",
-        "🟨",
-        "🟩",
-        "🟦"
-      ]
-    },
-    {
-      "type": "summary",
-      "points": [
-        "Algorithms are exact steps and loops repeat them.",
-        "If / else lets programs make decisions.",
-        "Tables and charts help us understand data.",
-        "AI learns from examples and can make mistakes.",
-        "Strong, secret passwords keep us safe."
-      ]
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Do your best!"
-    },
-    {
-      "type": "glossary",
-      "terms": [
-        {
-          "term": "algorithm",
-          "meaning": "A precise list of steps to solve a problem."
-        },
-        {
-          "term": "loop",
-          "meaning": "Steps that repeat so you do not have to write them again."
-        },
-        {
-          "term": "debugging",
-          "meaning": "Finding and fixing mistakes in a program."
-        },
-        {
-          "term": "bar chart",
-          "meaning": "A graph that uses bars to compare amounts."
-        },
-        {
-          "term": "training data",
-          "meaning": "The examples an AI learns from."
-        },
-        {
-          "term": "strong password",
-          "meaning": "A long mix of letters, numbers and symbols that is hard to guess."
-        },
-        {
-          "term": "data",
-          "meaning": "Facts and information we collect, like how many votes each sport got."
-        },
-        {
-          "term": "charts",
-          "meaning": "Pictures that show data so it is easy to compare, like bar charts."
-        },
-        {
-          "term": "tables",
-          "meaning": "Data written in rows and columns."
-        },
-        {
-          "term": "if",
-          "meaning": "A word that asks a question for the computer: if this is true..."
-        },
-        {
-          "term": "then",
-          "meaning": "What the computer does when the answer to the if question is yes."
-        },
-        {
-          "term": "else",
-          "meaning": "What the computer does when the answer to the if question is no."
-        },
-        {
-          "term": "examples",
-          "meaning": "Real cases we learn from, like lots of photos of cats."
-        },
-        {
-          "term": "mistakes",
-          "meaning": "Things that went wrong. Fixing them helps us learn."
-        }
-      ]
-    }
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "diag-data-ai-class-4",
+  "subject": "data-ai",
+  "title": "Computing, Data & AI Check-In: Where Am I?",
+  "summary": "A friendly tour of algorithms, loops, decisions, data, how AI learns and staying safe online, so we can see what you already know.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 1: Where am I?",
+  "learning_objectives": [
+   "Show what I know about algorithms, loops and decisions",
+   "Show what I know about reading tables and charts",
+   "Show what I know about how AI learns and staying safe online"
   ],
-  "quiz": {
-    "pass_percent": 1,
-    "shuffle_questions": false,
-    "shuffle_options": true,
-    "max_attempts": null,
-    "questions": [
-      {
-        "type": "order",
-        "prompt": "Put the steps for making toast in a sensible order.",
-        "ref": "q1",
-        "skill_tag": "algorithms.order",
-        "points": 2,
-        "items": [
-          {
-            "id": "a",
-            "text": "Put bread in the toaster"
-          },
-          {
-            "id": "b",
-            "text": "Press the lever down"
-          },
-          {
-            "id": "c",
-            "text": "Wait for it to pop up"
-          },
-          {
-            "id": "d",
-            "text": "Spread butter"
-          }
-        ],
-        "answer": [
-          "a",
-          "b",
-          "c",
-          "d"
-        ]
-      },
-      {
-        "type": "number",
-        "prompt": "Repeat 5 times: clap twice. How many claps in total?",
-        "ref": "q2",
-        "skill_tag": "loops.count",
-        "answer": {
-          "value": 10,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What does a loop do in a program?",
-        "ref": "q3",
-        "skill_tag": "loops.meaning",
-        "options": [
-          {
-            "id": "a",
-            "text": "Repeats instructions"
-          },
-          {
-            "id": "b",
-            "text": "Stops the computer"
-          },
-          {
-            "id": "c",
-            "text": "Draws a circle only"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "IF the number is bigger than 10 say BIG, ELSE say SMALL. The number is 7. What does the program say?",
-        "ref": "q4",
-        "skill_tag": "conditionals.if_else",
-        "options": [
-          {
-            "id": "a",
-            "text": "BIG"
-          },
-          {
-            "id": "b",
-            "text": "SMALL"
-          },
-          {
-            "id": "c",
-            "text": "Nothing"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "A robot should draw a square: forward, turn, forward, turn, forward, turn, forward. It draws a triangle-like shape. What bug is most likely?",
-        "ref": "q5",
-        "skill_tag": "debugging.find",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "A missing step or wrong turn count"
-          },
-          {
-            "id": "b",
-            "text": "The robot is too heavy"
-          },
-          {
-            "id": "c",
-            "text": "The paper is blue"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "In a table: Mon 3 cars, Tue 7 cars, Wed 5 cars. On which day were there most cars?",
-        "ref": "q6",
-        "skill_tag": "data.read_table",
-        "options": [
-          {
-            "id": "a",
-            "text": "Mon"
-          },
-          {
-            "id": "b",
-            "text": "Tue"
-          },
-          {
-            "id": "c",
-            "text": "Wed"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "number",
-        "prompt": "Using that table (3, 7 and 5 cars), how many cars were counted in total?",
-        "ref": "q7",
-        "skill_tag": "data.calculate",
-        "points": 2,
-        "answer": {
-          "value": 15,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which chart is best for comparing how many students like each fruit?",
-        "ref": "q8",
-        "skill_tag": "data.chart_type",
-        "options": [
-          {
-            "id": "a",
-            "text": "Bar chart"
-          },
-          {
-            "id": "b",
-            "text": "A photo"
-          },
-          {
-            "id": "c",
-            "text": "A map"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What does an AI need to learn to recognise cats?",
-        "ref": "q9",
-        "skill_tag": "ai.training",
-        "options": [
-          {
-            "id": "a",
-            "text": "Lots of cat examples"
-          },
-          {
-            "id": "b",
-            "text": "A cat as a pet"
-          },
-          {
-            "id": "c",
-            "text": "Nothing at all"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "true_false",
-        "prompt": "An AI answer is always right, so we never need to check it.",
-        "explanation": "AI can make mistakes, so people should check.",
-        "ref": "q10",
-        "skill_tag": "ai.limits",
-        "answer": [
-          false
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which is the strongest password?",
-        "ref": "q11",
-        "skill_tag": "safety.password",
-        "options": [
-          {
-            "id": "a",
-            "text": "password"
-          },
-          {
-            "id": "b",
-            "text": "football1"
-          },
-          {
-            "id": "c",
-            "text": "R7!blue-kite-42"
-          }
-        ],
-        "answer": [
-          "c"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "A stranger online asks where you live. What should you do?",
-        "ref": "q12",
-        "skill_tag": "safety.online",
-        "options": [
-          {
-            "id": "a",
-            "text": "Tell them"
-          },
-          {
-            "id": "b",
-            "text": "Do not answer and tell a trusted adult"
-          },
-          {
-            "id": "c",
-            "text": "Ask them for their address first"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    ]
+  "tags": [
+   "week-1",
+   "diagnostic"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4",
+   "semester": 1,
+   "week": 1
   }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, Digital Explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "This is a **check-in** to see what you already know about computing, data and AI.\n\nNo computer is needed. Just your brain and a pencil."
+  },
+  {
+   "type": "image",
+   "emoji": "💻",
+   "alt": "Code, data and AI: three big ideas in the digital world.",
+   "caption": "Code, data and AI: three big ideas in the digital world."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Algorithms and loops"
+  },
+  {
+   "type": "text",
+   "markdown": "An **algorithm** is a precise list of steps. A **loop** repeats steps so you do not have to write them again.\n\nRepeat 4 times (move forward, turn right) draws a square. **Debugging** means finding and fixing mistakes."
+  },
+  {
+   "type": "explainer",
+   "title": "A loop draws a square",
+   "scenes": [
+    {
+     "caption": "Start with the robot at the corner.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 20,
+       "y": 75,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Forward, turn right.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 70,
+       "y": 75,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "l1",
+       "emoji": "➖",
+       "x": 45,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Forward, turn right.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 70,
+       "y": 30,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "l1",
+       "emoji": "➖",
+       "x": 45,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "l2",
+       "emoji": "🔹",
+       "x": 70,
+       "y": 52,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Forward, turn right. Repeat 4 times to finish the square.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 20,
+       "y": 30,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "l1",
+       "emoji": "➖",
+       "x": 45,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "l2",
+       "emoji": "🔹",
+       "x": 70,
+       "y": 52,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "l3",
+       "emoji": "➖",
+       "x": 45,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Back at the start. The loop made a square.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 20,
+       "y": 75,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "l1",
+       "emoji": "➖",
+       "x": 45,
+       "y": 75,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "l2",
+       "emoji": "🔹",
+       "x": 70,
+       "y": 52,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "l3",
+       "emoji": "➖",
+       "x": 45,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "l4",
+       "emoji": "🔹",
+       "x": 20,
+       "y": 52,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "A robot does this 3 times: move 2 steps forward. How many steps does it move in total?",
+    "hint": "Three lots of 2.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Decisions"
+  },
+  {
+   "type": "text",
+   "markdown": "Programs make choices with **if** statements: **if** it is raining, **then** take an umbrella, **else** wear sunglasses."
+  },
+  {
+   "type": "explainer",
+   "title": "If, then, else",
+   "scenes": [
+    {
+     "caption": "If it is raining ...",
+     "items": [
+      {
+       "id": "w",
+       "emoji": "🌧️",
+       "x": 25,
+       "y": 40,
+       "size": 3,
+       "anim": "float"
+      }
+     ]
+    },
+    {
+     "caption": "... then take an umbrella.",
+     "items": [
+      {
+       "id": "w",
+       "emoji": "🌧️",
+       "x": 25,
+       "y": 40,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "u",
+       "emoji": "☂️",
+       "x": 75,
+       "y": 40,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    },
+    {
+     "caption": "Else (if it is sunny), wear sunglasses.",
+     "items": [
+      {
+       "id": "w",
+       "emoji": "☀️",
+       "x": 25,
+       "y": 40,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "u",
+       "emoji": "😎",
+       "x": 75,
+       "y": 40,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "If it is raining take an umbrella, else wear sunglasses. It is sunny. What do you take?",
+    "hint": "Check the 'else'.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Both"
+     },
+     {
+      "id": "b",
+      "text": "Sunglasses"
+     },
+     {
+      "id": "c",
+      "text": "An umbrella"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Debug the sandwich",
+   "materials": [
+    "Paper and pencil"
+   ],
+   "instructions": [
+    "Write the steps to make a jam sandwich, but put one step in the wrong place.",
+    "Swap with a grown-up. Can they find the bug?",
+    "Fix it together."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Data"
+  },
+  {
+   "type": "text",
+   "markdown": "**Data** is facts we collect. We store it in **tables** (rows and columns) and show it in **charts**.\n\nA **bar chart** makes comparing groups easy. Always check the labels."
+  },
+  {
+   "type": "chart",
+   "kind": "table",
+   "title": "A table: our favourite sports",
+   "rows": [
+    {
+     "label": "Cricket",
+     "value": 8
+    },
+    {
+     "label": "Football",
+     "value": 12
+    },
+    {
+     "label": "Swimming",
+     "value": 5
+    }
+   ],
+   "caption": "Each row is one sport. The number is how many votes."
+  },
+  {
+   "type": "chart",
+   "kind": "bar_chart",
+   "title": "A bar chart of the same data",
+   "rows": [
+    {
+     "label": "Cricket",
+     "value": 8
+    },
+    {
+     "label": "Football",
+     "value": 12
+    },
+    {
+     "label": "Swimming",
+     "value": 5
+    }
+   ],
+   "caption": "The tallest bar is the most popular. It is football."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "A bar chart shows Cricket 8, Football 12, Swimming 5 votes. Which is most popular?",
+    "hint": "Which bar is longest?",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cricket"
+     },
+     {
+      "id": "b",
+      "text": "Swimming"
+     },
+     {
+      "id": "c",
+      "text": "Football"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: How AI learns"
+  },
+  {
+   "type": "text",
+   "markdown": "Some programs do not follow fixed rules. They learn from many **examples**, called **training data**.\n\nShow a computer thousands of cat and dog pictures and it learns to tell them apart.\n\nIf the examples are unfair or missing, the AI can make mistakes. So we always check what an AI tells us."
+  },
+  {
+   "type": "explainer",
+   "title": "How an AI learns from examples",
+   "scenes": [
+    {
+     "caption": "We show the AI lots of pictures of cats and dogs.",
+     "items": [
+      {
+       "id": "c1",
+       "emoji": "🐱",
+       "x": 15,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "🐱",
+       "x": 30,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "d1",
+       "emoji": "🐶",
+       "x": 60,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "d2",
+       "emoji": "🐶",
+       "x": 75,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "It looks for patterns in the pictures.",
+     "items": [
+      {
+       "id": "ai",
+       "emoji": "🤖",
+       "x": 50,
+       "y": 60,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "c1",
+       "emoji": "🐱",
+       "x": 15,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "d1",
+       "emoji": "🐶",
+       "x": 85,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Now it can guess: this is a cat!",
+     "items": [
+      {
+       "id": "ai",
+       "emoji": "🤖",
+       "x": 30,
+       "y": 50,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "n",
+       "emoji": "🐱",
+       "x": 70,
+       "y": 50,
+       "size": 3,
+       "anim": "bounce",
+       "label": "cat?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "true_false",
+    "prompt": "An AI learns by looking at lots of examples.",
+    "hint": "Think of the cats and dogs.",
+    "answer": [
+     true
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 5: Safe and kind online"
+  },
+  {
+   "type": "text",
+   "markdown": "A **strong password** is long and mixes words, numbers and symbols. Never share it.\n\nThink before you click or post. Tell a trusted adult if something feels wrong."
+  },
+  {
+   "type": "image",
+   "emoji": "🔐🧑‍💻",
+   "alt": "A strong password keeps your account locked, like a key.",
+   "caption": "A strong password keeps your account locked, like a key."
+  },
+  {
+   "type": "reveal",
+   "prompt": "Why might an AI that only saw pictures of golden retrievers get confused by a poodle?",
+   "answer_markdown": "It has not seen any examples that look like a poodle, so it has nothing to compare with."
+  },
+  {
+   "type": "brain_game",
+   "game": "remember_order",
+   "title": "Copy the sequence",
+   "goal": "Watch the order of the colours, then copy it.",
+   "emojis": [
+    "🔴",
+    "🔵",
+    "🟡",
+    "🟢",
+    "🟣"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "An algorithm is a list of steps. Loops repeat steps.",
+    "If statements make choices.",
+    "Tables and bar charts help us compare data.",
+    "AI learns from training data, so the examples must be fair.",
+    "Keep your password strong and secret."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes. Do your best!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "check-in",
+     "meaning": "A friendly game that shows us what you know. It is not a test."
+    },
+    {
+     "term": "algorithm",
+     "meaning": "A precise list of steps to do a job."
+    },
+    {
+     "term": "loop",
+     "meaning": "A way to repeat steps so you do not have to write them again."
+    },
+    {
+     "term": "debugging",
+     "meaning": "Finding and fixing mistakes in a program."
+    },
+    {
+     "term": "if",
+     "meaning": "A word that starts a choice in a program."
+    },
+    {
+     "term": "then",
+     "meaning": "What the program does if the answer is yes."
+    },
+    {
+     "term": "else",
+     "meaning": "What the program does if the answer is no."
+    },
+    {
+     "term": "data",
+     "meaning": "Facts that we collect."
+    },
+    {
+     "term": "tables",
+     "meaning": "Facts in rows and columns."
+    },
+    {
+     "term": "charts",
+     "meaning": "Pictures that show data, like bar charts."
+    },
+    {
+     "term": "bar chart",
+     "meaning": "A chart with bars. A taller bar means a bigger number."
+    },
+    {
+     "term": "examples",
+     "meaning": "Pictures or facts that an AI looks at to learn."
+    },
+    {
+     "term": "training data",
+     "meaning": "The many examples an AI learns from."
+    },
+    {
+     "term": "strong password",
+     "meaning": "A long password that mixes words, numbers and symbols."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 1,
+  "shuffle_questions": false,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "order",
+    "prompt": "Put the steps for making toast in a sensible order.",
+    "hint": "What happens first?",
+    "explanation": "Bread goes in, lever down, wait, then butter.",
+    "skill_tag": "algorithms.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Press the lever down"
+     },
+     {
+      "id": "i3",
+      "text": "Wait for it to pop up"
+     },
+     {
+      "id": "i4",
+      "text": "Spread the butter"
+     },
+     {
+      "id": "i1",
+      "text": "Put bread in the toaster"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "Repeat 5 times: clap twice. How many claps in total?",
+    "hint": "Five lots of 2.",
+    "explanation": "5 x 2 = 10.",
+    "skill_tag": "loops.count",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "What does a loop do in a program?",
+    "hint": "Remember the square.",
+    "explanation": "A loop repeats steps.",
+    "skill_tag": "loops.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "Stops the program"
+     },
+     {
+      "id": "b",
+      "text": "Draws a picture"
+     },
+     {
+      "id": "c",
+      "text": "Saves a file"
+     },
+     {
+      "id": "d",
+      "text": "Repeats steps"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "IF the number is bigger than 10 say BIG, ELSE say SMALL. The number is 7. What does the program say?",
+    "hint": "Is 7 bigger than 10?",
+    "explanation": "7 is not bigger than 10, so the else part runs and says SMALL.",
+    "skill_tag": "conditionals.if_else",
+    "options": [
+     {
+      "id": "a",
+      "text": "BIG"
+     },
+     {
+      "id": "b",
+      "text": "Nothing"
+     },
+     {
+      "id": "c",
+      "text": "7"
+     },
+     {
+      "id": "d",
+      "text": "SMALL"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think of the words from the lesson.",
+    "explanation": "A loop repeats steps and an if statement makes a choice.",
+    "skill_tag": "loops.vocab",
+    "points": 2,
+    "text": "A {b1} repeats steps. An {b2} statement makes a choice.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "table"
+       },
+       {
+        "id": "b",
+        "text": "loop"
+       },
+       {
+        "id": "c",
+        "text": "bug"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "print"
+       },
+       {
+        "id": "b",
+        "text": "if"
+       },
+       {
+        "id": "c",
+        "text": "end"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "A robot should draw a square: forward, turn, forward, turn, forward, turn, forward. It draws a triangle. What is the bug?",
+    "hint": "Count the sides of a square.",
+    "explanation": "A square needs 4 sides and 4 turns, so something is missing.",
+    "skill_tag": "debugging.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "A square has three sides"
+     },
+     {
+      "id": "b",
+      "text": "The robot is too fast"
+     },
+     {
+      "id": "c",
+      "text": "It has too many turns"
+     },
+     {
+      "id": "d",
+      "text": "It is missing the last turn or step"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "hotspot",
+    "prompt": "Tap the one that is an algorithm.",
+    "hint": "It is a list of steps.",
+    "explanation": "A recipe is a list of steps, so it is an algorithm.",
+    "skill_tag": "algorithms.recognise",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📋",
+       "label": "recipe steps",
+       "x": 20,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎈",
+       "label": "balloon",
+       "x": 50,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⚽",
+       "label": "football",
+       "x": 80,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🌈",
+       "label": "rainbow",
+       "x": 50,
+       "y": 80,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1"
+    ]
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "In a table: Mon 3 cars, Tue 7 cars, Wed 5 cars. On which day were there most cars?",
+    "hint": "Find the biggest number.",
+    "explanation": "7 is the biggest number, which is Tuesday.",
+    "skill_tag": "data.read_table",
+    "options": [
+     {
+      "id": "a",
+      "text": "Monday"
+     },
+     {
+      "id": "b",
+      "text": "Tuesday"
+     },
+     {
+      "id": "c",
+      "text": "Wednesday"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "Using that table (3, 7 and 5 cars), how many cars were counted in total?",
+    "hint": "Add the three numbers.",
+    "explanation": "3 + 7 + 5 = 15.",
+    "skill_tag": "data.calculate",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Which chart is best for comparing how many students like each fruit?",
+    "hint": "You compare lengths of bars.",
+    "explanation": "A bar chart makes it easy to compare groups.",
+    "skill_tag": "data.chart_type",
+    "options": [
+     {
+      "id": "a",
+      "text": "A clock"
+     },
+     {
+      "id": "b",
+      "text": "A bar chart"
+     },
+     {
+      "id": "c",
+      "text": "A weather map"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "What can make an AI wrong or unfair? Pick all that apply.",
+    "hint": "Think about what it learns from.",
+    "explanation": "If its training examples are missing or unfair, the AI makes mistakes.",
+    "skill_tag": "ai.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Unfair examples"
+     },
+     {
+      "id": "b",
+      "text": "A bright screen"
+     },
+     {
+      "id": "c",
+      "text": "A charged battery"
+     },
+     {
+      "id": "d",
+      "text": "Missing examples"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "An AI answer is always right, so we never need to check it.",
+    "hint": "AI can make mistakes.",
+    "explanation": "AI can be wrong, so we check what it says.",
+    "skill_tag": "ai.limits",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A robot does this 4 times: move 3 steps forward. Slide to show how many steps in total.",
+    "hint": "Four lots of 3.",
+    "explanation": "4 x 3 = 12.",
+    "skill_tag": "loops.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q14",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think about what each one does.",
+    "explanation": "An algorithm is a list of steps, a loop repeats steps and debugging fixes mistakes.",
+    "skill_tag": "algorithms.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Algorithm"
+     },
+     {
+      "id": "l2",
+      "text": "Loop"
+     },
+     {
+      "id": "l3",
+      "text": "Debugging"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Repeats steps"
+     },
+     {
+      "id": "r3",
+      "text": "Fixing mistakes"
+     },
+     {
+      "id": "r1",
+      "text": "A list of steps"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Which is the strongest password?",
+    "hint": "Long and mixed.",
+    "explanation": "A long password that mixes words, numbers and symbols is strong.",
+    "skill_tag": "safety.password",
+    "options": [
+     {
+      "id": "a",
+      "text": "password"
+     },
+     {
+      "id": "b",
+      "text": "12345"
+     },
+     {
+      "id": "c",
+      "text": "ali"
+     },
+     {
+      "id": "d",
+      "text": "T!ger-Cup7-Rain"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  ]
+ }
 }

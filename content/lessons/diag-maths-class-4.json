@@ -1,733 +1,1162 @@
 {
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "diag-maths-class-4",
-    "subject": "maths",
-    "title": "Maths Check-In: Where Am I?",
-    "summary": "A tour of place value, times tables, fractions, shapes and problem solving, so we can see your strengths and what to practise.",
-    "age_band": "9-10",
-    "difficulty": 2,
-    "estimated_minutes": 60,
-    "unit": "Week 1: Where am I?",
-    "learning_objectives": [
-      "Show what I know about place value and the four operations",
-      "Show what I know about fractions and shapes",
-      "Show how I solve word problems"
-    ],
-    "tags": [
-      "diagnostic",
-      "week-1"
-    ],
-    "curriculum": {
-      "course": "maths-class-4",
-      "semester": 1,
-      "week": 1
-    }
-  },
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Welcome, Maths Detective!"
-    },
-    {
-      "type": "text",
-      "markdown": "This is a **check-in**, not a test. We want to find out what you already know so your next lessons fit you perfectly. In the lesson you can have a go, peek at hints and explore. Keep paper and a pencil nearby for working out."
-    },
-    {
-      "type": "image",
-      "emoji": "🔍",
-      "alt": "Detective mode on!",
-      "caption": "Detective mode on!"
-    },
-    {
-      "type": "heading",
-      "text": "Stop 1: Place value and big numbers"
-    },
-    {
-      "type": "text",
-      "markdown": "Each digit has a value that depends on its place. In **4,825** the 4 is worth 4,000, the 8 is worth 800, the 2 is worth 20 and the 5 is worth 5. We can **round** a number to the nearest 10, 100 or 1,000 to make it easier to work with."
-    },
-    {
-      "type": "chart",
-      "kind": "table",
-      "title": "Place value of 4,825",
-      "caption": "4 thousands, 8 hundreds, 2 tens and 5 ones make four thousand, eight hundred and twenty-five.",
-      "rows": [
-        {
-          "label": "Thousands",
-          "value": 4
-        },
-        {
-          "label": "Hundreds",
-          "value": 8
-        },
-        {
-          "label": "Tens",
-          "value": 2
-        },
-        {
-          "label": "Ones",
-          "value": 5
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "What is the value of the 7 in 3,742?",
-        "answer": {
-          "value": 700,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "Round 3,742 to the nearest hundred.",
-        "hint": "Look at the tens digit: 4 means round down.",
-        "answer": {
-          "value": 3700,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 2: Times tables and division"
-    },
-    {
-      "type": "text",
-      "markdown": "Times tables are the building blocks of multiplication and division. If you know 6 x 7 = 42, you also know 42 / 7 = 6 and 42 / 6 = 7. These are called a **fact family**."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "What is 8 x 6?",
-        "answer": {
-          "value": 48,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "What is 54 / 9?",
-        "answer": {
-          "value": 6,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "activity",
-      "title": "Fact family race",
-      "materials": [
-        "paper",
-        "pencil",
-        "timer"
-      ],
-      "instructions": [
-        "Pick a times table fact, for example 7 x 8 = 56.",
-        "Write the three other facts in its family.",
-        "Set a 2 minute timer and see how many families you can write.",
-        "Which table was trickiest? Note it down."
-      ]
-    },
-    {
-      "type": "explainer",
-      "title": "Multiplying is repeated adding",
-      "scenes": [
-        {
-          "caption": "One plate has 4 cookies.",
-          "items": [
-            {
-              "emoji": "🍽️",
-              "x": 50,
-              "y": 70,
-              "id": "p1",
-              "size": 3
-            },
-            {
-              "emoji": "🍪",
-              "x": 38,
-              "y": 40,
-              "id": "c1"
-            },
-            {
-              "emoji": "🍪",
-              "x": 46,
-              "y": 40,
-              "id": "c2"
-            },
-            {
-              "emoji": "🍪",
-              "x": 54,
-              "y": 40,
-              "id": "c3"
-            },
-            {
-              "emoji": "🍪",
-              "x": 62,
-              "y": 40,
-              "id": "c4"
-            }
-          ]
-        },
-        {
-          "caption": "Now there are 3 plates with 4 cookies on each.",
-          "items": [
-            {
-              "emoji": "🍽️",
-              "x": 20,
-              "y": 70,
-              "id": "p1",
-              "size": 3
-            },
-            {
-              "emoji": "🍽️",
-              "x": 50,
-              "y": 70,
-              "id": "p2",
-              "size": 3,
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍽️",
-              "x": 80,
-              "y": 70,
-              "id": "p3",
-              "size": 3,
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 14,
-              "y": 40,
-              "id": "c1"
-            },
-            {
-              "emoji": "🍪",
-              "x": 22,
-              "y": 40,
-              "id": "c2"
-            },
-            {
-              "emoji": "🍪",
-              "x": 14,
-              "y": 52,
-              "id": "c3"
-            },
-            {
-              "emoji": "🍪",
-              "x": 22,
-              "y": 52,
-              "id": "c4"
-            },
-            {
-              "emoji": "🍪",
-              "x": 44,
-              "y": 40,
-              "id": "d1",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 52,
-              "y": 40,
-              "id": "d2",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 44,
-              "y": 52,
-              "id": "d3",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 52,
-              "y": 52,
-              "id": "d4",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 74,
-              "y": 40,
-              "id": "e1",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 82,
-              "y": 40,
-              "id": "e2",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🍪",
-              "x": 74,
-              "y": 52,
-              "id": "e3",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "4 + 4 + 4 is the same as 3 × 4. That makes 12 cookies!",
-          "items": [
-            {
-              "emoji": "🍪",
-              "x": 50,
-              "y": 45,
-              "id": "total",
-              "size": 3,
-              "anim": "pulse",
-              "label": "3 × 4 = 12"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 3: Adding and taking away big numbers"
-    },
-    {
-      "type": "text",
-      "markdown": "To add or subtract big numbers, line up the digits in columns: ones under ones, tens under tens. Remember to **carry** when a column makes 10 or more, and to **borrow** when you need more."
-    },
-    {
-      "type": "explainer",
-      "title": "What carrying means",
-      "scenes": [
-        {
-          "caption": "Add the ones: 8 ones and 7 ones.",
-          "items": [
-            {
-              "emoji": "🟦",
-              "x": 25,
-              "y": 50,
-              "id": "o8",
-              "size": 3,
-              "label": "8 ones"
-            },
-            {
-              "emoji": "🟦",
-              "x": 70,
-              "y": 50,
-              "id": "o7",
-              "size": 3,
-              "label": "7 ones"
-            }
-          ]
-        },
-        {
-          "caption": "That makes 15 ones. Ten of them make a group of ten, and 5 are left over.",
-          "items": [
-            {
-              "emoji": "🔟",
-              "x": 28,
-              "y": 50,
-              "id": "ten",
-              "size": 3,
-              "label": "1 ten",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🟦",
-              "x": 70,
-              "y": 50,
-              "id": "o7",
-              "size": 3,
-              "label": "5 ones left"
-            }
-          ]
-        },
-        {
-          "caption": "Write the 5 in the ones column and carry the 1 ten across to the tens column.",
-          "items": [
-            {
-              "emoji": "🔟",
-              "x": 80,
-              "y": 50,
-              "id": "ten",
-              "size": 3,
-              "label": "tens column",
-              "anim": "bounce"
-            },
-            {
-              "emoji": "🟦",
-              "x": 25,
-              "y": 50,
-              "id": "o7",
-              "size": 3,
-              "label": "ones column"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "What is 468 + 357?",
-        "answer": {
-          "value": 825,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "What is 1,000 - 365?",
-        "answer": {
-          "value": 635,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 4: Fractions"
-    },
-    {
-      "type": "text",
-      "markdown": "A **fraction** is part of a whole. In 3/4 the bottom number (4) says how many equal parts, and the top number (3) says how many we have. Fractions like 1/2 and 2/4 are **equivalent**: they are the same amount."
-    },
-    {
-      "type": "chart",
-      "kind": "fraction",
-      "title": "One half",
-      "caption": "The whole is cut into 2 equal parts and 1 is coloured.",
-      "parts": 2,
-      "shaded": 1
-    },
-    {
-      "type": "chart",
-      "kind": "fraction",
-      "title": "Two quarters is also one half",
-      "caption": "Equivalent fractions look different but cover the same amount.",
-      "parts": 4,
-      "shaded": 2
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which fraction is equal to 1/2?",
-        "options": [
-          {
-            "id": "a",
-            "text": "2/3"
-          },
-          {
-            "id": "b",
-            "text": "2/4"
-          },
-          {
-            "id": "c",
-            "text": "1/4"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "vocab",
-      "word": "denominator",
-      "meaning": "The bottom number of a fraction. It tells you how many equal parts the whole is split into.",
-      "example": "In 3/5 the denominator is 5."
-    },
-    {
-      "type": "heading",
-      "text": "Stop 5: Shapes and measuring"
-    },
-    {
-      "type": "text",
-      "markdown": "The **perimeter** of a shape is the distance all the way around its edges. For a rectangle, add up all four sides. The **area** is the space inside, which you find by multiplying length by width."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "number",
-        "prompt": "A rectangle is 6 cm long and 3 cm wide. What is its perimeter in cm?",
-        "hint": "6 + 3 + 6 + 3",
-        "answer": {
-          "value": 18,
-          "tolerance": 0
-        }
-      }
-    },
-    {
-      "type": "reveal",
-      "prompt": "A garden is 5 m by 4 m. What is its area?",
-      "answer_markdown": "5 x 4 = 20 square metres."
-    },
-    {
-      "type": "brain_game",
-      "game": "remember_order",
-      "title": "Copy the colours",
-      "goal": "Watch the colours light up, then tap them in the same order.",
-      "emojis": [
-        "🟥",
-        "🟨",
-        "🟩",
-        "🟦"
-      ]
-    },
-    {
-      "type": "summary",
-      "points": [
-        "Place value tells us what each digit is worth.",
-        "Times tables and division belong together in fact families.",
-        "Column methods help with big adding and taking away.",
-        "Equivalent fractions are the same amount written differently.",
-        "Perimeter goes around a shape, area fills it."
-      ]
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "markdown": "When you are ready, start the quiz. It has 12 questions and takes about 15 minutes. Do your best. If you do not know one, have a go anyway: it helps us plan."
-    },
-    {
-      "type": "glossary",
-      "terms": [
-        {
-          "term": "place value",
-          "meaning": "The value of a digit depends on where it sits in the number: ones, tens, hundreds, thousands."
-        },
-        {
-          "term": "carry",
-          "meaning": "When a column adds to more than 9, you move the extra ten to the next column."
-        },
-        {
-          "term": "borrow",
-          "meaning": "When you cannot take away in a column, you swap a ten from the next column."
-        },
-        {
-          "term": "fraction",
-          "meaning": "A part of a whole, like one half or three quarters."
-        },
-        {
-          "term": "equivalent",
-          "meaning": "Looks different but has the same value, like 1/2 and 2/4."
-        },
-        {
-          "term": "perimeter",
-          "meaning": "The distance all the way around the outside of a shape."
-        },
-        {
-          "term": "area",
-          "meaning": "How much flat space is inside a shape."
-        },
-        {
-          "term": "round",
-          "meaning": "Change a number to a nearby simpler one, like 47 to 50."
-        },
-        {
-          "term": "fact family",
-          "meaning": "Numbers that go together, like 3 + 4 = 7 and 7 - 4 = 3."
-        }
-      ]
-    }
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "diag-maths-class-4",
+  "subject": "maths",
+  "title": "Maths Check-In: Where Am I?",
+  "summary": "A friendly tour of place value, times tables, column methods, fractions, perimeter and time, so we can see what you already know.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 1: Where am I?",
+  "learning_objectives": [
+   "Show what I know about place value and rounding",
+   "Show my times tables, division and column methods",
+   "Show what I know about fractions, perimeter, area and time"
   ],
-  "quiz": {
-    "pass_percent": 1,
-    "shuffle_questions": false,
-    "shuffle_options": true,
-    "max_attempts": null,
-    "questions": [
-      {
-        "type": "number",
-        "prompt": "What is the value of the 6 in 4,568?",
-        "ref": "q1",
-        "skill_tag": "number.place_value",
-        "answer": {
-          "value": 60,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "Round 6,482 to the nearest thousand.",
-        "ref": "q2",
-        "skill_tag": "number.rounding",
-        "answer": {
-          "value": 6000,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "What is 7 x 8?",
-        "ref": "q3",
-        "skill_tag": "multiply.tables",
-        "answer": {
-          "value": 56,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "What is 72 / 8?",
-        "ref": "q4",
-        "skill_tag": "divide.tables",
-        "answer": {
-          "value": 9,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "What is 5,274 + 1,368?",
-        "ref": "q5",
-        "skill_tag": "add.column",
-        "answer": {
-          "value": 6642,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "What is 7,005 - 2,468?",
-        "ref": "q6",
-        "skill_tag": "subtract.column",
-        "points": 2,
-        "answer": {
-          "value": 4537,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What is 34 x 6?",
-        "ref": "q7",
-        "skill_tag": "multiply.written",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "184"
-          },
-          {
-            "id": "b",
-            "text": "204"
-          },
-          {
-            "id": "c",
-            "text": "224"
-          },
-          {
-            "id": "d",
-            "text": "214"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which fraction is the biggest?",
-        "hint": "Think of pizza slices.",
-        "ref": "q8",
-        "skill_tag": "fractions.compare",
-        "options": [
-          {
-            "id": "a",
-            "text": "1/2"
-          },
-          {
-            "id": "b",
-            "text": "3/4"
-          },
-          {
-            "id": "c",
-            "text": "2/3"
-          },
-          {
-            "id": "d",
-            "text": "1/3"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which fraction is equal to 3/6?",
-        "ref": "q9",
-        "skill_tag": "fractions.equivalent",
-        "options": [
-          {
-            "id": "a",
-            "text": "1/3"
-          },
-          {
-            "id": "b",
-            "text": "1/2"
-          },
-          {
-            "id": "c",
-            "text": "2/3"
-          },
-          {
-            "id": "d",
-            "text": "3/4"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "number",
-        "prompt": "A square has sides of 9 cm. What is its perimeter in cm?",
-        "ref": "q10",
-        "skill_tag": "measure.perimeter",
-        "answer": {
-          "value": 36,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "A film starts at 2:45 pm and ends at 4:15 pm. How many minutes long is it?",
-        "ref": "q11",
-        "skill_tag": "time.duration",
-        "points": 2,
-        "answer": {
-          "value": 90,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "number",
-        "prompt": "A box holds 6 eggs. Mum buys 7 boxes and 5 eggs break. How many eggs are left?",
-        "hint": "First find the total eggs.",
-        "ref": "q12",
-        "skill_tag": "word_problem",
-        "points": 2,
-        "answer": {
-          "value": 37,
-          "tolerance": 0
-        }
-      }
-    ]
+  "tags": [
+   "week-1",
+   "diagnostic"
+  ],
+  "curriculum": {
+   "course": "maths-class-4",
+   "semester": 1,
+   "week": 1
   }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, Maths Detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "This is a **check-in**, not a test.\n\nWe want to find out what you already know, so your next lessons fit you perfectly.\n\nKeep paper and a pencil nearby for working out."
+  },
+  {
+   "type": "image",
+   "emoji": "🔍",
+   "alt": "Detective mode on! We are looking for clues about what you know.",
+   "caption": "Detective mode on! We are looking for clues about what you know."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Place value and rounding"
+  },
+  {
+   "type": "text",
+   "markdown": "Each digit has a value that depends on its **place value**.\n\nIn 4,825 the 4 is worth 4,000, the 8 is worth 800, the 2 is worth 20 and the 5 is worth 5."
+  },
+  {
+   "type": "chart",
+   "kind": "table",
+   "title": "Place value of 4,825",
+   "rows": [
+    {
+     "label": "Thousands",
+     "value": 4
+    },
+    {
+     "label": "Hundreds",
+     "value": 8
+    },
+    {
+     "label": "Tens",
+     "value": 2
+    },
+    {
+     "label": "Ones",
+     "value": 5
+    }
+   ],
+   "caption": "Read the digits: four thousand, eight hundred and twenty-five."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is the value of the 7 in 3,742?",
+    "hint": "Which column is the 7 in?",
+    "answer": {
+     "value": 700,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "text",
+   "markdown": "We can **round** a number to make it easier to work with. 3,742 is nearer to 3,700 than 3,800, so it rounds to 3,700.\n\nRounding also helps us **estimate**: 398 + 402 is about 400 + 400 = 800."
+  },
+  {
+   "type": "chart",
+   "kind": "number_line",
+   "title": "Is 42 nearer to 0 or to 100?",
+   "from": 0,
+   "to": 100,
+   "step": 10,
+   "marks": [
+    0,
+    42,
+    100
+   ],
+   "caption": "The last two digits of 3,742 are 42. That is nearer to 0, so we round down to 3,700."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Round 3,742 to the nearest hundred.",
+    "hint": "Is the tens digit 5 or more?",
+    "answer": {
+     "value": 3700,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Times tables and division"
+  },
+  {
+   "type": "text",
+   "markdown": "Times tables are the building blocks of multiplying and dividing.\n\nIf you know 6 x 7 = 42, you also know 42 / 7 = 6 and 42 / 6 = 7. These make a **fact family**."
+  },
+  {
+   "type": "explainer",
+   "title": "Multiplying is repeated adding",
+   "scenes": [
+    {
+     "caption": "3 groups of 4 stars.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "⭐",
+       "x": 8,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "⭐",
+       "x": 16,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "⭐",
+       "x": 24,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "⭐",
+       "x": 32,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Add 4 more, then 4 more.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "⭐",
+       "x": 8,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "⭐",
+       "x": 16,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "⭐",
+       "x": 24,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "⭐",
+       "x": 32,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "⭐",
+       "x": 38,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "⭐",
+       "x": 46,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "⭐",
+       "x": 54,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "⭐",
+       "x": 62,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "⭐",
+       "x": 68,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "⭐",
+       "x": 76,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "⭐",
+       "x": 84,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c4",
+       "emoji": "⭐",
+       "x": 92,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "4 + 4 + 4 = 12, which is 3 x 4.",
+     "items": [
+      {
+       "id": "a1",
+       "emoji": "⭐",
+       "x": 8,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a2",
+       "emoji": "⭐",
+       "x": 16,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a3",
+       "emoji": "⭐",
+       "x": 24,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "a4",
+       "emoji": "⭐",
+       "x": 32,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b1",
+       "emoji": "⭐",
+       "x": 38,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b2",
+       "emoji": "⭐",
+       "x": 46,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b3",
+       "emoji": "⭐",
+       "x": 54,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b4",
+       "emoji": "⭐",
+       "x": 62,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "⭐",
+       "x": 68,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "⭐",
+       "x": 76,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "⭐",
+       "x": 84,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c4",
+       "emoji": "⭐",
+       "x": 92,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "emoji": "1️⃣2️⃣",
+       "x": 50,
+       "y": 15,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 8 x 6?",
+    "hint": "6 x 8 gives the same answer. Try 5 x 8 and add 8.",
+    "answer": {
+     "value": 48,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 54 / 9?",
+    "hint": "Which number times 9 gives 54?",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "text",
+   "markdown": "To multiply a 2-digit number, **partition** it. For 34 x 6: do 30 x 6 = 180 and 4 x 6 = 24, then add them to get 204."
+  },
+  {
+   "type": "activity",
+   "title": "Fact family race",
+   "materials": [
+    "Paper and pencil",
+    "A timer or clock"
+   ],
+   "instructions": [
+    "Pick three numbers, like 6, 7 and 42.",
+    "Write all four facts in the family.",
+    "Try with 8, 9 and 72. How fast can you go?"
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Adding and taking away big numbers"
+  },
+  {
+   "type": "text",
+   "markdown": "Line up the digits in columns: ones under ones, tens under tens.\n\n**Carry** when a column makes 10 or more. **Borrow** (exchange) when you need more."
+  },
+  {
+   "type": "explainer",
+   "title": "What carrying means",
+   "scenes": [
+    {
+     "caption": "7 ones + 5 ones is 12 ones.",
+     "items": [
+      {
+       "id": "o1",
+       "emoji": "🔹",
+       "x": 8,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o2",
+       "emoji": "🔹",
+       "x": 14,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o3",
+       "emoji": "🔹",
+       "x": 20,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o4",
+       "emoji": "🔹",
+       "x": 26,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o5",
+       "emoji": "🔹",
+       "x": 32,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o6",
+       "emoji": "🔹",
+       "x": 38,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "o7",
+       "emoji": "🔹",
+       "x": 44,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p1",
+       "emoji": "🔸",
+       "x": 52,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2",
+       "emoji": "🔸",
+       "x": 60,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3",
+       "emoji": "🔸",
+       "x": 68,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p4",
+       "emoji": "🔸",
+       "x": 76,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p5",
+       "emoji": "🔸",
+       "x": 84,
+       "y": 30,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "10 ones swap for 1 ten. Carry the ten!",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "🔟",
+       "x": 50,
+       "y": 28,
+       "size": 3,
+       "anim": "bounce",
+       "label": "1 ten"
+      },
+      {
+       "id": "r",
+       "emoji": "🔹",
+       "x": 30,
+       "y": 70,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "s",
+       "emoji": "🔹",
+       "x": 55,
+       "y": 70,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Now we have 1 ten and 2 ones left.",
+     "items": [
+      {
+       "id": "t",
+       "emoji": "🔟",
+       "x": 30,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse",
+       "label": "carry 1 ten"
+      },
+      {
+       "id": "r",
+       "emoji": "🔹",
+       "x": 60,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "s",
+       "emoji": "🔹",
+       "x": 75,
+       "y": 50,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 468 + 357?",
+    "hint": "Add the ones first: 8 + 7 = 15.",
+    "answer": {
+     "value": 825,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "What is 1,000 - 365?",
+    "hint": "Count up from 365 to 1,000.",
+    "answer": {
+     "value": 635,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Fractions"
+  },
+  {
+   "type": "text",
+   "markdown": "A **fraction** is part of a whole. In 3/4 the bottom number says how many equal parts there are.\n\nFractions like 1/2 and 2/4 are **equivalent**: they are the same amount."
+  },
+  {
+   "type": "chart",
+   "kind": "fraction",
+   "title": "One half",
+   "parts": 2,
+   "shaded": 1,
+   "caption": "1 out of 2 equal parts is 1/2."
+  },
+  {
+   "type": "chart",
+   "kind": "fraction",
+   "title": "Two quarters",
+   "parts": 4,
+   "shaded": 2,
+   "caption": "2 out of 4 equal parts is 2/4. It covers the same amount as 1/2."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which fraction is equal to 1/2?",
+    "hint": "Look at the two pictures.",
+    "options": [
+     {
+      "id": "a",
+      "text": "3/4"
+     },
+     {
+      "id": "b",
+      "text": "2/4"
+     },
+     {
+      "id": "c",
+      "text": "1/4"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "vocab",
+   "word": "denominator",
+   "meaning": "The bottom number of a fraction. It tells how many equal parts the whole is split into.",
+   "example": "In 3/4 the denominator is 4."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 5: Perimeter, area and time"
+  },
+  {
+   "type": "text",
+   "markdown": "The **perimeter** is the distance all the way round a shape. For a rectangle add all four sides.\n\nThe **area** is the space inside. Multiply length by width."
+  },
+  {
+   "type": "image",
+   "emoji": "📐",
+   "alt": "A rectangle 6 cm long and 3 cm wide: add 6 + 3 + 6 + 3 to find its perimeter.",
+   "caption": "A rectangle 6 cm long and 3 cm wide: add 6 + 3 + 6 + 3 to find its perimeter."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "A rectangle is 6 cm long and 3 cm wide. What is its perimeter in cm?",
+    "hint": "Add all four sides.",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "text",
+   "markdown": "For **duration**, jump to the next hour. From 2:45 pm to 3:00 pm is 15 minutes, then 3:00 to 4:00 is 60 minutes.\n\nA clock face shows half past (30 minutes) with the long hand on 6."
+  },
+  {
+   "type": "chart",
+   "kind": "table",
+   "title": "How long from 2:45 pm to 4:15 pm?",
+   "rows": [
+    {
+     "label": "2:45 to 3:00",
+     "value": 15
+    },
+    {
+     "label": "3:00 to 4:00",
+     "value": 60
+    },
+    {
+     "label": "4:00 to 4:15",
+     "value": 15
+    }
+   ],
+   "caption": "Add the jumps: 15 + 60 + 15 = 90 minutes."
+  },
+  {
+   "type": "image",
+   "emoji": "🕓🕟🕔",
+   "alt": "From left to right: 4 o'clock, half past 4 and 5 o'clock.",
+   "caption": "From left to right: 4 o'clock, half past 4 and 5 o'clock."
+  },
+  {
+   "type": "reveal",
+   "prompt": "A garden is 5 m by 4 m. What is its area?",
+   "answer_markdown": "Area = 5 x 4 = 20 square metres."
+  },
+  {
+   "type": "brain_game",
+   "game": "remember_order",
+   "title": "Copy the colours",
+   "goal": "Watch the colours light up, then copy the order.",
+   "emojis": [
+    "🔴",
+    "🔵",
+    "🟡",
+    "🟢",
+    "🟣"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "Digits have values that depend on their place.",
+    "Multiply by partitioning, and use fact families to divide.",
+    "Line up columns to add and take away, and carry or borrow.",
+    "Equivalent fractions are the same amount.",
+    "Perimeter goes round the edge. Area fills the space inside."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes. Do your best!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "check-in",
+     "meaning": "A friendly game that shows us what you know. It is not a test."
+    },
+    {
+     "term": "place value",
+     "meaning": "The value of a digit depends on its place. In 4,825 the 8 is worth 800."
+    },
+    {
+     "term": "round",
+     "meaning": "To change a number to a nearby, easier one, like 3,742 to 3,700."
+    },
+    {
+     "term": "estimate",
+     "meaning": "A sensible guess that is close to the real answer."
+    },
+    {
+     "term": "fact family",
+     "meaning": "Multiplying and dividing facts that use the same three numbers."
+    },
+    {
+     "term": "partition",
+     "meaning": "To split a number into parts, like 34 into 30 and 4."
+    },
+    {
+     "term": "carry",
+     "meaning": "Moving a ten to the next column when a column adds up to 10 or more."
+    },
+    {
+     "term": "borrow",
+     "meaning": "Exchanging 1 ten for 10 ones so you can take away."
+    },
+    {
+     "term": "fraction",
+     "meaning": "A part of a whole, like 3/4."
+    },
+    {
+     "term": "equivalent",
+     "meaning": "Fractions that are the same amount, like 1/2 and 2/4."
+    },
+    {
+     "term": "perimeter",
+     "meaning": "The distance all the way around the edge of a shape."
+    },
+    {
+     "term": "area",
+     "meaning": "The amount of space inside a shape."
+    },
+    {
+     "term": "duration",
+     "meaning": "How long something takes."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 1,
+  "shuffle_questions": false,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What is the value of the 6 in 4,568?",
+    "hint": "Which column is the 6 in?",
+    "explanation": "The 6 is in the tens column, so it is worth 60.",
+    "skill_tag": "number.place_value",
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "Round 6,482 to the nearest thousand.",
+    "hint": "Look at the hundreds digit.",
+    "explanation": "The hundreds digit is 4, so we round down to 6,000.",
+    "skill_tag": "number.rounding",
+    "answer": {
+     "value": 6000,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps about 7,305.",
+    "hint": "Name the column each digit is in.",
+    "explanation": "The 3 is in the hundreds column and the 7 is in the thousands column.",
+    "skill_tag": "number.place_value",
+    "points": 2,
+    "text": "In 7,305 the 3 is worth {b1} and the 7 is worth {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "30"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "300"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "700"
+       },
+       {
+        "id": "b",
+        "text": "7,000"
+       },
+       {
+        "id": "c",
+        "text": "70"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q4",
+    "type": "order",
+    "prompt": "Put these numbers in order, smallest first.",
+    "hint": "Compare thousands, then hundreds.",
+    "explanation": "They all have 4 thousands, so compare hundreds: 0, 2, 2, 8. Then tens decide 4,208 and 4,280.",
+    "skill_tag": "number.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "4,208"
+     },
+     {
+      "id": "i4",
+      "text": "4,802"
+     },
+     {
+      "id": "i3",
+      "text": "4,280"
+     },
+     {
+      "id": "i1",
+      "text": "4,082"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Which multiplication is in the same fact family as 42 / 6 = 7?",
+    "hint": "The family uses 6, 7 and 42.",
+    "explanation": "42 / 6 = 7 and 6 x 7 = 42 use the same three numbers.",
+    "skill_tag": "divide.fact_family",
+    "options": [
+     {
+      "id": "a",
+      "text": "6 + 7 = 13"
+     },
+     {
+      "id": "b",
+      "text": "42 x 6 = 7"
+     },
+     {
+      "id": "c",
+      "text": "7 - 6 = 1"
+     },
+     {
+      "id": "d",
+      "text": "6 x 7 = 42"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "What is 34 x 6?",
+    "hint": "Partition 34 into 30 and 4.",
+    "explanation": "30 x 6 = 180 and 4 x 6 = 24. 180 + 24 = 204.",
+    "skill_tag": "multiply.written",
+    "answer": {
+     "value": 204,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q7",
+    "type": "number",
+    "prompt": "What is 5,274 + 1,368?",
+    "hint": "Start with the ones column.",
+    "explanation": "4 + 8 = 12, carry 1, and so on. The total is 6,642.",
+    "skill_tag": "add.column",
+    "answer": {
+     "value": 6642,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "What is 7,005 - 2,468?",
+    "hint": "You will need to exchange across the zeros.",
+    "explanation": "Count up from 2,468 to 7,005 to get 4,537.",
+    "skill_tag": "subtract.column",
+    "answer": {
+     "value": 4537,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Estimate: about how much is 398 + 402?",
+    "hint": "Round each number to the nearest hundred.",
+    "explanation": "398 is about 400 and 402 is about 400, so the answer is about 800.",
+    "skill_tag": "number.estimate",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 1000
+    },
+    "answer": {
+     "value": 800,
+     "tolerance": 20
+    }
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Match each fraction to an equivalent fraction.",
+    "hint": "Multiply the top and bottom by the same number.",
+    "explanation": "1/2 = 4/8, 1/4 = 2/8 and 3/4 = 6/8.",
+    "skill_tag": "fractions.equivalent",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/2"
+     },
+     {
+      "id": "l2",
+      "text": "1/4"
+     },
+     {
+      "id": "l3",
+      "text": "3/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "2/8"
+     },
+     {
+      "id": "r3",
+      "text": "6/8"
+     },
+     {
+      "id": "r1",
+      "text": "4/8"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "Which of these are equal to 1/2? Pick all that apply.",
+    "hint": "The top is half of the bottom.",
+    "explanation": "2/4 and 4/8 both cover half the whole.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "4/8"
+     },
+     {
+      "id": "b",
+      "text": "2/3"
+     },
+     {
+      "id": "c",
+      "text": "1/3"
+     },
+     {
+      "id": "d",
+      "text": "2/4"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "The perimeter of a shape is the space inside it.",
+    "hint": "Think about walking round the edge.",
+    "explanation": "Perimeter is the distance round the edge. The space inside is the area.",
+    "skill_tag": "measure.perimeter",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows half past 4.",
+    "hint": "The long hand points to 6.",
+    "explanation": "The clock with the long hand on 6 and the short hand just past 4 shows half past 4.",
+    "skill_tag": "time.read_clock",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕓",
+       "label": "4 o'clock",
+       "x": 20,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕟",
+       "label": "half past 4",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕔",
+       "label": "5 o'clock",
+       "x": 80,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h2"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "A film starts at 2:45 pm and ends at 4:15 pm. How many minutes long is it?",
+    "hint": "Jump to the next hour first.",
+    "explanation": "15 minutes to 3:00, 60 minutes to 4:00 and 15 minutes to 4:15 makes 90 minutes.",
+    "skill_tag": "time.duration",
+    "answer": {
+     "value": 90,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A box holds 6 eggs. Mum buys 7 boxes and 5 eggs break. How many eggs are left?",
+    "hint": "First find the total eggs bought.",
+    "explanation": "7 x 6 = 42 eggs. 42 - 5 = 37 eggs.",
+    "skill_tag": "word_problem",
+    "answer": {
+     "value": 37,
+     "tolerance": 0
+    }
+   }
+  ]
+ }
 }

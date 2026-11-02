@@ -1,0 +1,974 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-data-ai-class-1",
+  "subject": "data-ai",
+  "title": "Robot Directions and Loops",
+  "summary": "Give a robot directions, use a loop to repeat steps, and fix a bug in a robot's path.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Directions and loops",
+  "learning_objectives": [
+   "Give a robot clear directions with forward, left and right",
+   "Use a loop to repeat steps",
+   "Find and fix a bug in a set of directions"
+  ],
+  "tags": [
+   "week-2",
+   "algorithms",
+   "loops"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, Computer Explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you learned that an algorithm is a list of steps.\n\nThis week we teach a robot to find a star.\n\nWe will use directions and loops!"
+  },
+  {
+   "type": "image",
+   "emoji": "🤖⭐",
+   "alt": "Can you help the robot reach the star?",
+   "caption": "Can you help the robot reach the star?"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Directions for a robot"
+  },
+  {
+   "type": "text",
+   "markdown": "A robot needs very clear directions. **Forward** means move one step ahead.\n\n**Turn left** and **turn right** change which way the robot faces."
+  },
+  {
+   "type": "explainer",
+   "title": "Reach the star",
+   "scenes": [
+    {
+     "caption": "The robot is at the start.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 15,
+       "y": 70,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "Forward, forward.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 40,
+       "y": 70,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "Forward again.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 65,
+       "y": 70,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "Turn left, then forward. The robot reaches the star!",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 65,
+       "y": 40,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "A robot walks forward 3 steps. Which way does it go?",
+    "hint": "Forward means ahead.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Backwards"
+     },
+     {
+      "id": "b",
+      "text": "Straight ahead"
+     },
+     {
+      "id": "c",
+      "text": "Round in a circle"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "You are facing the door. You turn right. Which hand is on the side you turn to?",
+    "hint": "Hold up your hands.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Left hand"
+     },
+     {
+      "id": "b",
+      "text": "Both hands"
+     },
+     {
+      "id": "c",
+      "text": "Right hand"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Be the robot",
+   "materials": [
+    "A grown-up",
+    "A small toy for a star"
+   ],
+   "instructions": [
+    "Put the toy across the room. This is the star.",
+    "A grown-up gives you directions: forward, forward, turn left, forward.",
+    "Follow them exactly. Did you reach the star?"
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Loops"
+  },
+  {
+   "type": "text",
+   "markdown": "A **loop** repeats steps. Instead of saying 'clap, clap, clap', we say 'repeat 3 times: clap'.\n\nA loop saves us writing the same step again and again."
+  },
+  {
+   "type": "explainer",
+   "title": "Repeat 3 times: clap",
+   "scenes": [
+    {
+     "caption": "Repeat 3 times: clap.",
+     "items": [
+      {
+       "id": "l",
+       "emoji": "🔁",
+       "x": 50,
+       "y": 20,
+       "size": 3,
+       "anim": "spin"
+      }
+     ]
+    },
+    {
+     "caption": "Clap number 1.",
+     "items": [
+      {
+       "id": "l",
+       "emoji": "🔁",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "👏",
+       "x": 25,
+       "y": 65,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    },
+    {
+     "caption": "Clap number 2.",
+     "items": [
+      {
+       "id": "l",
+       "emoji": "🔁",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "👏",
+       "x": 25,
+       "y": 65,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "👏",
+       "x": 50,
+       "y": 65,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    },
+    {
+     "caption": "Clap number 3. Three claps in all!",
+     "items": [
+      {
+       "id": "l",
+       "emoji": "🔁",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c1",
+       "emoji": "👏",
+       "x": 25,
+       "y": 65,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "c2",
+       "emoji": "👏",
+       "x": 50,
+       "y": 65,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "c3",
+       "emoji": "👏",
+       "x": 75,
+       "y": 65,
+       "size": 3,
+       "anim": "bounce"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Repeat 4 times: jump. How many jumps is that?",
+    "hint": "One jump each time.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Repeat 3 times: clap, then stomp. How many claps in all?",
+    "hint": "One clap in each round.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "manipulative",
+   "title": "Build a loop",
+   "goal": "Put the 6 hearts into the loop box in groups of 2. How many groups of 2 can you make?",
+   "emoji": "💖",
+   "count": 6,
+   "zones": [
+    "Loop box",
+    "Spare"
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Debugging"
+  },
+  {
+   "type": "text",
+   "markdown": "A **bug** is a mistake in a set of directions. **Debugging** means finding the bug and fixing it.\n\nLook at each step in order. Where does the robot go wrong?"
+  },
+  {
+   "type": "explainer",
+   "title": "Find the bug",
+   "scenes": [
+    {
+     "caption": "The plan: forward, forward, then turn left.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 15,
+       "y": 70,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "But the robot only goes forward ONE step. There is a bug!",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 35,
+       "y": 70,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      },
+      {
+       "id": "b",
+       "emoji": "🐛",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "bounce",
+       "label": "bug"
+      }
+     ]
+    },
+    {
+     "caption": "Fix it: add the missing forward step. Now the robot gets there.",
+     "items": [
+      {
+       "id": "r",
+       "emoji": "🤖",
+       "x": 65,
+       "y": 70,
+       "size": 3,
+       "anim": "bounce"
+      },
+      {
+       "id": "s",
+       "emoji": "⭐",
+       "x": 65,
+       "y": 30,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "A robot should go forward 3 steps but only does 2. What is the bug?",
+    "hint": "Count the steps.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The robot is sleepy"
+     },
+     {
+      "id": "b",
+      "text": "A step is missing"
+     },
+     {
+      "id": "c",
+      "text": "The floor is wet"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "Can you think of a bug in a recipe?",
+   "answer_markdown": "If a recipe forgets to say 'add water', the cake will not work. That is a bug!"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: A dance pattern with a loop"
+  },
+  {
+   "type": "text",
+   "markdown": "Patterns and loops go together. Clap, stomp, clap, stomp is a pattern.\n\nA loop can repeat the pattern: repeat 2 times: clap, stomp."
+  },
+  {
+   "type": "image",
+   "emoji": "👏🦶👏🦶",
+   "alt": "Clap, stomp, clap, stomp: a pattern that a loop can repeat.",
+   "caption": "Clap, stomp, clap, stomp: a pattern that a loop can repeat."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "What comes next? 👏 🦶 👏 🦶 👏 ...",
+    "hint": "Say the pattern out loud.",
+    "options": [
+     {
+      "id": "a",
+      "text": "👏"
+     },
+     {
+      "id": "b",
+      "text": "💃"
+     },
+     {
+      "id": "c",
+      "text": "🦶"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "brain_game",
+   "game": "remember_order",
+   "title": "Robot dance",
+   "goal": "Watch the robot's moves, then copy them in the same order.",
+   "emojis": [
+    "⬆️",
+    "⬅️",
+    "➡️",
+    "🔁"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "A robot follows directions: forward, turn left and turn right.",
+    "A loop repeats steps so we do not write them again.",
+    "A bug is a mistake. Debugging finds and fixes it."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "forward",
+     "meaning": "To move one step ahead, the way you are facing."
+    },
+    {
+     "term": "turn left",
+     "meaning": "To turn your body so you face the way your left hand points."
+    },
+    {
+     "term": "turn right",
+     "meaning": "To turn your body so you face the way your right hand points."
+    },
+    {
+     "term": "loop",
+     "meaning": "A way to repeat steps so we do not write them again and again."
+    },
+    {
+     "term": "bug",
+     "meaning": "A mistake in a set of directions."
+    },
+    {
+     "term": "debugging",
+     "meaning": "Finding a bug and fixing it."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What does a loop do?",
+    "hint": "Think of 'repeat 3 times'.",
+    "explanation": "A loop repeats steps.",
+    "skill_tag": "loops.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "It stops a robot"
+     },
+     {
+      "id": "b",
+      "text": "It draws a picture"
+     },
+     {
+      "id": "c",
+      "text": "It turns off a screen"
+     },
+     {
+      "id": "d",
+      "text": "It repeats steps"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "Repeat 4 times: clap 2 times. How many claps in all?",
+    "hint": "Count in 2s four times.",
+    "explanation": "4 rounds of 2 claps makes 8 claps.",
+    "skill_tag": "loops.count",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put the robot's steps in order to walk through a door.",
+    "hint": "What happens first?",
+    "explanation": "Walk to the door, turn the handle, push, then walk through.",
+    "skill_tag": "algorithms.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Push the door open"
+     },
+     {
+      "id": "i4",
+      "text": "Walk through"
+     },
+     {
+      "id": "i2",
+      "text": "Turn the handle"
+     },
+     {
+      "id": "i1",
+      "text": "Walk to the door"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q4",
+    "type": "hotspot",
+    "prompt": "A robot starts at the red square. It moves forward 2 steps to the right. Tap where it lands.",
+    "hint": "Count the steps from the red square.",
+    "explanation": "Two steps from the start is the third square.",
+    "skill_tag": "directions.follow",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟥",
+       "label": "start",
+       "x": 15,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⬜",
+       "label": "1 step",
+       "x": 38,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⬜",
+       "label": "2 steps",
+       "x": 62,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "⬜",
+       "label": "3 steps",
+       "x": 85,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h3"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think of the words from the lesson.",
+    "explanation": "A mistake is a bug and fixing it is debugging.",
+    "skill_tag": "debugging.vocab",
+    "points": 2,
+    "text": "A mistake in directions is called a {b1}. Fixing it is called {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "star"
+       },
+       {
+        "id": "b",
+        "text": "bug"
+       },
+       {
+        "id": "c",
+        "text": "loop"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "counting"
+       },
+       {
+        "id": "b",
+        "text": "debugging"
+       },
+       {
+        "id": "c",
+        "text": "dancing"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each direction to what it means.",
+    "hint": "Think about what the robot does.",
+    "explanation": "Forward moves ahead, turn left turns to the left and repeat does it again.",
+    "skill_tag": "directions.meaning",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Forward"
+     },
+     {
+      "id": "l2",
+      "text": "Turn left"
+     },
+     {
+      "id": "l3",
+      "text": "Repeat"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Face towards your left hand"
+     },
+     {
+      "id": "r1",
+      "text": "Move one step ahead"
+     },
+     {
+      "id": "r3",
+      "text": "Do it again"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which of these can a robot follow? Pick all that apply.",
+    "hint": "Robots need very clear directions.",
+    "explanation": "Robots follow clear directions, not feelings or guesses.",
+    "skill_tag": "algorithms.clear",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn left"
+     },
+     {
+      "id": "b",
+      "text": "Guess what I mean"
+     },
+     {
+      "id": "c",
+      "text": "Be happy"
+     },
+     {
+      "id": "d",
+      "text": "Forward 2 steps"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q8",
+    "type": "true_false",
+    "prompt": "A robot can guess what you mean if the directions are not clear.",
+    "hint": "A robot does exactly what it is told.",
+    "explanation": "A robot only does what the instructions say, so they must be clear.",
+    "skill_tag": "algorithms.clear",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Repeat 3 times: go forward 2 steps. How many steps in all?",
+    "hint": "Count in 2s three times.",
+    "explanation": "3 rounds of 2 steps makes 6 steps.",
+    "skill_tag": "loops.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "A robot is meant to move forward 3 steps to reach a toy, but it stops after 2. What is the bug?",
+    "hint": "Compare 3 and 2.",
+    "explanation": "One forward step is missing.",
+    "skill_tag": "debugging.spot",
+    "options": [
+     {
+      "id": "a",
+      "text": "The robot is too big"
+     },
+     {
+      "id": "b",
+      "text": "A step is missing"
+     },
+     {
+      "id": "c",
+      "text": "The toy is blue"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "number",
+    "prompt": "Repeat 2 times: clap, stomp. How many stomps?",
+    "hint": "One stomp in each round.",
+    "explanation": "There is one stomp in each of the 2 rounds.",
+    "skill_tag": "loops.count",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Why do we use a loop?",
+    "hint": "Think of 'repeat 3 times'.",
+    "explanation": "A loop repeats steps, so we write them only once.",
+    "skill_tag": "loops.why",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make the screen bigger"
+     },
+     {
+      "id": "b",
+      "text": "To hide a bug"
+     },
+     {
+      "id": "c",
+      "text": "To make a robot sleep"
+     },
+     {
+      "id": "d",
+      "text": "To avoid writing the same step again and again"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "What comes next? 👏 👏 🦶 👏 👏 🦶 👏 👏 ...",
+    "hint": "Two claps, then a stomp.",
+    "explanation": "The pattern is clap, clap, stomp, so a stomp comes next.",
+    "skill_tag": "patterns.next",
+    "options": [
+     {
+      "id": "a",
+      "text": "🎵"
+     },
+     {
+      "id": "b",
+      "text": "🦶"
+     },
+     {
+      "id": "c",
+      "text": "👏"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "You turn right, then forward. Which way do you go first?",
+    "hint": "Hold up your right hand.",
+    "explanation": "Turn right means you face the right-hand side.",
+    "skill_tag": "directions.left_right",
+    "options": [
+     {
+      "id": "a",
+      "text": "Backwards"
+     },
+     {
+      "id": "b",
+      "text": "To the right"
+     },
+     {
+      "id": "c",
+      "text": "To the left"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "short_text",
+    "prompt": "What do we call a list of clear steps for a computer?",
+    "hint": "It starts with a.",
+    "explanation": "A list of clear steps is an algorithm.",
+    "skill_tag": "algorithms.meaning",
+    "answer": {
+     "accepted": [
+      "algorithm",
+      "an algorithm",
+      "algorithms"
+     ]
+    }
+   }
+  ]
+ }
+}

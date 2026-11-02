@@ -1,0 +1,1028 @@
+{
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "w2-data-ai-class-4",
+  "subject": "data-ai",
+  "title": "Surveys, Averages and Honest Charts",
+  "summary": "Collect data with a survey, find the mode, range and mean, and spot charts that mislead.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 2: Data",
+  "learning_objectives": [
+   "Plan a fair survey and record it with tally marks",
+   "Find the mode, range and mean of a small set of numbers",
+   "Explain what makes a chart honest or misleading"
+  ],
+  "tags": [
+   "week-2",
+   "data",
+   "averages",
+   "charts"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4",
+   "semester": 1,
+   "week": 2
+  }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, Digital Explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Last week you read tables and bar charts.\n\nThis week you become a data scientist.\n\nYou will collect data, find the middle and spot charts that cheat."
+  },
+  {
+   "type": "image",
+   "emoji": "📊",
+   "alt": "Data scientists collect facts and look for stories in the numbers.",
+   "caption": "Data scientists collect facts and look for stories in the numbers."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Collecting data"
+  },
+  {
+   "type": "text",
+   "markdown": "A **survey** asks many people the same question. We record each answer with a **tally** mark.\n\nA fair question has clear choices. Ask lots of people, not just your best friend, to get a fair picture."
+  },
+  {
+   "type": "chart",
+   "kind": "tally",
+   "title": "A survey: favourite fruit at Eid party",
+   "rows": [
+    {
+     "label": "Mango",
+     "value": 7
+    },
+    {
+     "label": "Apple",
+     "value": 4
+    },
+    {
+     "label": "Dates",
+     "value": 5
+    },
+    {
+     "label": "Banana",
+     "value": 2
+    }
+   ],
+   "caption": "Each stroke is one vote. Bundles of five make counting quick."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which survey question is the clearest?",
+    "hint": "It should have clear choices.",
+    "options": [
+     {
+      "id": "a",
+      "text": "What is the best thing ever?"
+     },
+     {
+      "id": "b",
+      "text": "Which fruit do you like best: mango, apple, dates or banana?"
+     },
+     {
+      "id": "c",
+      "text": "Do you like stuff?"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Class survey",
+   "materials": [
+    "Paper and pencil",
+    "Family or friends to ask"
+   ],
+   "instructions": [
+    "Think of a question with 3 or 4 choices, like 'Which pet do you like best?'",
+    "Ask at least 10 people and make a tally mark for each answer.",
+    "Count the marks. Which choice won?"
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Mode and range"
+  },
+  {
+   "type": "text",
+   "markdown": "The **mode** is the value that appears most often. In 2, 3, 3, 4, 3 the mode is 3.\n\nThe **range** shows how spread out the data is. It is the biggest number take away the smallest."
+  },
+  {
+   "type": "chart",
+   "kind": "bar_chart",
+   "title": "Goals scored in 6 matches",
+   "rows": [
+    {
+     "label": "Match 1",
+     "value": 2
+    },
+    {
+     "label": "Match 2",
+     "value": 3
+    },
+    {
+     "label": "Match 3",
+     "value": 3
+    },
+    {
+     "label": "Match 4",
+     "value": 5
+    },
+    {
+     "label": "Match 5",
+     "value": 3
+    },
+    {
+     "label": "Match 6",
+     "value": 1
+    }
+   ],
+   "caption": "3 goals appears three times, so the mode is 3. The range is 5 - 1 = 4."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Find the mode of 4, 6, 4, 5, 4, 7.",
+    "hint": "Which number appears most?",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Find the range of 8, 3, 12, 5.",
+    "hint": "Biggest take away smallest.",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: The mean (fair share)"
+  },
+  {
+   "type": "text",
+   "markdown": "The **mean** is a fair share average. Add all the numbers, then divide by how many there are.\n\nIf three friends have 2, 4 and 6 cookies, the mean is 12 / 3 = 4. Each could have 4 if they shared fairly."
+  },
+  {
+   "type": "explainer",
+   "title": "Sharing cookies fairly",
+   "scenes": [
+    {
+     "caption": "Three plates: 2, 4 and 6 cookies.",
+     "items": [
+      {
+       "id": "p1a",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p1b",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2a",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2b",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2c",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2d",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3a",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3b",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3c",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3d",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3e",
+       "emoji": "🍪",
+       "x": 70,
+       "y": 80,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "p3f",
+       "emoji": "🍪",
+       "x": 70,
+       "y": 60,
+       "size": 1,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Move cookies from the big pile to the small pile.",
+     "items": [
+      {
+       "id": "p1a",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p1b",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3e",
+       "emoji": "🍪",
+       "x": 22,
+       "y": 40,
+       "size": 2,
+       "anim": "bounce"
+      },
+      {
+       "id": "p3f",
+       "emoji": "🍪",
+       "x": 22,
+       "y": 20,
+       "size": 2,
+       "anim": "bounce"
+      },
+      {
+       "id": "p2a",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2b",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2c",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2d",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3a",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3b",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3c",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3d",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    },
+    {
+     "caption": "Now every plate has 4. The mean is 4.",
+     "items": [
+      {
+       "id": "p1a",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p1b",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3e",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3f",
+       "emoji": "🍪",
+       "x": 20,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2a",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2b",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2c",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p2d",
+       "emoji": "🍪",
+       "x": 50,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3a",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 80,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3b",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 60,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3c",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 40,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "p3d",
+       "emoji": "🍪",
+       "x": 80,
+       "y": 20,
+       "size": 2,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "manipulative",
+   "title": "Find the mean",
+   "goal": "Share the 12 cookies fairly between the 3 plates. How many go on each plate?",
+   "emoji": "🍪",
+   "count": 12,
+   "zones": [
+    "Plate 1",
+    "Plate 2",
+    "Plate 3"
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "number",
+    "prompt": "Find the mean of 3, 5 and 7.",
+    "hint": "Add them up and divide by 3.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    }
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Does the chart tell the truth?"
+  },
+  {
+   "type": "text",
+   "markdown": "Charts can help us, but some can **mislead** us. An honest chart has a clear title, labels on both sides, and bars that start at zero.\n\nA chart that starts at a big number can make a small difference look huge."
+  },
+  {
+   "type": "chart",
+   "kind": "bar_chart",
+   "title": "An honest chart: books read this week",
+   "rows": [
+    {
+     "label": "Ali",
+     "value": 5
+    },
+    {
+     "label": "Sara",
+     "value": 7
+    },
+    {
+     "label": "Omar",
+     "value": 3
+    }
+   ],
+   "caption": "The bars start at zero, so the sizes are fair. Sara read the most."
+  },
+  {
+   "type": "image",
+   "emoji": "🔎📊",
+   "alt": "Check the title, the labels and where the bars start.",
+   "caption": "Check the title, the labels and where the bars start."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "true_false",
+    "prompt": "A chart with no labels is easy to trust.",
+    "hint": "You could not tell what it is about.",
+    "answer": [
+     false
+    ]
+   }
+  },
+  {
+   "type": "reveal",
+   "prompt": "Why would a shop make its bar chart start at 50 instead of 0?",
+   "answer_markdown": "A small difference, like 52 and 54, would look huge. It could trick people into thinking one is much better."
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Data pairs",
+   "goal": "Find the matching pairs.",
+   "emojis": [
+    "📊",
+    "📈",
+    "✍️",
+    "🔢",
+    "📏",
+    "🍪"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "A survey asks many people the same clear question. We record with tally marks.",
+    "The mode is the most common value. The range is biggest minus smallest.",
+    "The mean is the fair share: add up, then divide.",
+    "Honest charts have labels and bars that start at zero."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "survey",
+     "meaning": "Asking many people the same question to collect data."
+    },
+    {
+     "term": "tally",
+     "meaning": "A mark for each answer. Every fifth mark crosses the other four."
+    },
+    {
+     "term": "mode",
+     "meaning": "The value that appears most often."
+    },
+    {
+     "term": "range",
+     "meaning": "How spread out data is: the biggest number take away the smallest."
+    },
+    {
+     "term": "mean",
+     "meaning": "The fair share average: add all the numbers, then divide by how many there are."
+    },
+    {
+     "term": "mislead",
+     "meaning": "To give someone the wrong idea."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a survey?",
+    "hint": "Think of collecting facts from people.",
+    "explanation": "A survey asks many people the same question.",
+    "skill_tag": "data.survey",
+    "options": [
+     {
+      "id": "a",
+      "text": "Counting your own toys"
+     },
+     {
+      "id": "b",
+      "text": "Fixing a bug"
+     },
+     {
+      "id": "c",
+      "text": "Drawing a bar chart"
+     },
+     {
+      "id": "d",
+      "text": "Asking many people the same question"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What is the mode of 3, 4, 4, 5, 4, 6?",
+    "hint": "Which appears most often?",
+    "explanation": "4 appears three times, more than any other number.",
+    "skill_tag": "data.mode",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "6"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     },
+     {
+      "id": "d",
+      "text": "4"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "What is the range of 8, 3, 12, 5?",
+    "hint": "Biggest take away smallest.",
+    "explanation": "12 - 3 = 9.",
+    "skill_tag": "data.range",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q4",
+    "type": "number",
+    "prompt": "What is the mean of 4, 6, 8 and 2?",
+    "hint": "Add them up, then divide by 4.",
+    "explanation": "4 + 6 + 8 + 2 = 20 and 20 / 4 = 5.",
+    "skill_tag": "data.mean",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q5",
+    "type": "slider",
+    "prompt": "Estimate: slide to the mean of 2, 4 and 6.",
+    "hint": "It is the fair share.",
+    "explanation": "2 + 4 + 6 = 12 and 12 / 3 = 4.",
+    "skill_tag": "data.mean",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the steps of a survey in order.",
+    "hint": "Start with the question.",
+    "explanation": "Choose the question, ask, record, then count and draw a chart.",
+    "skill_tag": "data.survey",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask lots of people"
+     },
+     {
+      "id": "i4",
+      "text": "Count the marks and draw a chart"
+     },
+     {
+      "id": "i3",
+      "text": "Record answers with tally marks"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a clear question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think of the words from the lesson.",
+    "explanation": "The mode is the most common value and the range is biggest minus smallest.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "text": "The most common value is the {b1}. The biggest minus the smallest is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "range"
+       },
+       {
+        "id": "b",
+        "text": "mode"
+       },
+       {
+        "id": "c",
+        "text": "mean"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "total"
+       },
+       {
+        "id": "b",
+        "text": "range"
+       },
+       {
+        "id": "c",
+        "text": "mode"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think about what you do for each one.",
+    "explanation": "Mode is the most common value, range is biggest minus smallest and mean is the fair share average.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Mode"
+     },
+     {
+      "id": "l2",
+      "text": "Range"
+     },
+     {
+      "id": "l3",
+      "text": "Mean"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Biggest minus smallest"
+     },
+     {
+      "id": "r3",
+      "text": "Fair share average"
+     },
+     {
+      "id": "r1",
+      "text": "Most common value"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q9",
+    "type": "multi_select",
+    "prompt": "Which of these make a chart misleading? Pick all that apply.",
+    "hint": "Think about what makes a chart honest.",
+    "explanation": "Charts without labels or with bars that do not start at zero can trick us.",
+    "skill_tag": "charts.honest",
+    "options": [
+     {
+      "id": "a",
+      "text": "It has a clear title"
+     },
+     {
+      "id": "b",
+      "text": "Both sides are labelled"
+     },
+     {
+      "id": "c",
+      "text": "There are no labels"
+     },
+     {
+      "id": "d",
+      "text": "The bars do not start at zero"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "true_false",
+    "prompt": "A bar chart with no labels is easy to trust.",
+    "hint": "Could you tell what it shows?",
+    "explanation": "Without labels, you cannot tell what the bars mean.",
+    "skill_tag": "charts.honest",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the tool that is quickest for counting votes as they happen.",
+    "hint": "Each vote is one stroke.",
+    "explanation": "Tally marks are the quickest way to record votes.",
+    "skill_tag": "data.tally",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "✍️",
+       "label": "tally marks",
+       "x": 20,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧩",
+       "label": "puzzle",
+       "x": 50,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⚽",
+       "label": "football",
+       "x": 80,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🎨",
+       "label": "paint",
+       "x": 50,
+       "y": 80,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "Books read: Ali 5, Sara 7, Omar 3. How many books altogether?",
+    "hint": "Add all three.",
+    "explanation": "5 + 7 + 3 = 15.",
+    "skill_tag": "data.calculate",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Books read: Ali 5, Sara 7, Omar 3. Who read the most?",
+    "hint": "Find the biggest number.",
+    "explanation": "7 is the biggest number, so Sara read the most.",
+    "skill_tag": "data.read_chart",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ali"
+     },
+     {
+      "id": "b",
+      "text": "Sara"
+     },
+     {
+      "id": "c",
+      "text": "Omar"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "ref": "q14",
+    "type": "short_text",
+    "prompt": "What word means the most common value in a set of data?",
+    "hint": "It starts with m and has 4 letters.",
+    "explanation": "The mode is the value that appears most often.",
+    "skill_tag": "data.mode",
+    "answer": {
+     "accepted": [
+      "mode",
+      "the mode"
+     ]
+    }
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why should a survey ask many people instead of one?",
+    "hint": "One person might not be like everyone.",
+    "explanation": "Asking more people gives a fairer picture.",
+    "skill_tag": "data.survey",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the survey longer"
+     },
+     {
+      "id": "b",
+      "text": "It is more fun"
+     },
+     {
+      "id": "c",
+      "text": "It makes the chart pretty"
+     },
+     {
+      "id": "d",
+      "text": "It gives a fairer picture of the group"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  ]
+ }
+}

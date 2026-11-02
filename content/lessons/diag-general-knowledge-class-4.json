@@ -1,807 +1,1010 @@
 {
-  "schema_version": "1.0",
-  "lesson": {
-    "slug": "diag-general-knowledge-class-4",
-    "subject": "general-knowledge",
-    "title": "General Knowledge Check-In: Where Am I?",
-    "summary": "A tour of the world: maps and continents, famous places, history, inventions, nature and healthy living, so we can see what you know.",
-    "age_band": "9-10",
-    "difficulty": 2,
-    "estimated_minutes": 60,
-    "unit": "Week 1: Where am I?",
-    "learning_objectives": [
-      "Show what I know about maps, continents and oceans",
-      "Show what I know about history, inventions and famous places",
-      "Show what I know about nature, space and healthy living"
-    ],
-    "tags": [
-      "diagnostic",
-      "week-1"
-    ],
-    "curriculum": {
-      "course": "general-knowledge-class-4",
-      "semester": 1,
-      "week": 1
-    }
-  },
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Welcome, World Explorer!"
-    },
-    {
-      "type": "text",
-      "markdown": "This is a **check-in**, not a test. It helps us find out what you already know about our world so your lessons can be a perfect fit. Have a go at everything!"
-    },
-    {
-      "type": "image",
-      "emoji": "🗺️",
-      "alt": "Explore the world",
-      "caption": "Explore the world"
-    },
-    {
-      "type": "heading",
-      "text": "Stop 1: Maps and the world"
-    },
-    {
-      "type": "text",
-      "markdown": "Earth has **7 continents**: Asia, Africa, North America, South America, Antarctica, Europe and Australia/Oceania. There are **5 oceans**: Pacific, Atlantic, Indian, Southern and Arctic. **Asia** is the biggest continent and the **Pacific** is the biggest ocean."
-    },
-    {
-      "type": "image",
-      "emoji": "🗺️🧭",
-      "caption": "A map shows where places are. A compass shows which way is north."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which is the largest continent?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Africa"
-          },
-          {
-            "id": "b",
-            "text": "Asia"
-          },
-          {
-            "id": "c",
-            "text": "Europe"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 2: Inventions and history"
-    },
-    {
-      "type": "text",
-      "markdown": "People have invented things that changed the world: the **wheel**, the **printing press**, the **light bulb**, the **telephone** and the **computer**. History is the story of what happened long ago, and we learn about it from objects, buildings and writing."
-    },
-    {
-      "type": "explainer",
-      "title": "A line of inventions",
-      "scenes": [
-        {
-          "caption": "Long ago people invented the wheel. It helped them carry heavy things.",
-          "items": [
-            {
-              "emoji": "🛞",
-              "x": 15,
-              "y": 50,
-              "id": "wheel",
-              "size": 3,
-              "label": "wheel",
-              "anim": "spin"
-            }
-          ]
-        },
-        {
-          "caption": "About 1440 the printing press made books quickly.",
-          "items": [
-            {
-              "emoji": "🛞",
-              "x": 15,
-              "y": 50,
-              "id": "wheel",
-              "size": 2,
-              "label": "wheel"
-            },
-            {
-              "emoji": "🖨️",
-              "x": 38,
-              "y": 50,
-              "id": "press",
-              "size": 3,
-              "label": "printing press",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "Then came the telephone, so people could talk from far away.",
-          "items": [
-            {
-              "emoji": "🛞",
-              "x": 15,
-              "y": 50,
-              "id": "wheel",
-              "size": 2,
-              "label": "wheel"
-            },
-            {
-              "emoji": "🖨️",
-              "x": 38,
-              "y": 50,
-              "id": "press",
-              "size": 2,
-              "label": "printing press"
-            },
-            {
-              "emoji": "☎️",
-              "x": 62,
-              "y": 50,
-              "id": "phone",
-              "size": 3,
-              "label": "telephone",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "The light bulb lit our homes at night. And the computer changed how we learn and work.",
-          "items": [
-            {
-              "emoji": "🛞",
-              "x": 15,
-              "y": 50,
-              "id": "wheel",
-              "size": 2,
-              "label": "wheel"
-            },
-            {
-              "emoji": "🖨️",
-              "x": 35,
-              "y": 50,
-              "id": "press",
-              "size": 2,
-              "label": "printing press"
-            },
-            {
-              "emoji": "☎️",
-              "x": 55,
-              "y": 50,
-              "id": "phone",
-              "size": 2,
-              "label": "telephone"
-            },
-            {
-              "emoji": "💡",
-              "x": 73,
-              "y": 50,
-              "id": "bulb",
-              "size": 2,
-              "label": "light bulb",
-              "anim": "grow"
-            },
-            {
-              "emoji": "💻",
-              "x": 90,
-              "y": 50,
-              "id": "pc",
-              "size": 2,
-              "label": "computer",
-              "anim": "grow"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "Which invention helps us make light at night?",
-        "options": [
-          {
-            "id": "a",
-            "text": "Light bulb"
-          },
-          {
-            "id": "b",
-            "text": "Wheel"
-          },
-          {
-            "id": "c",
-            "text": "Printing press"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      }
-    },
-    {
-      "type": "activity",
-      "title": "Inventor's challenge",
-      "materials": [
-        "paper",
-        "pencil"
-      ],
-      "instructions": [
-        "Think of a problem at home, like a heavy school bag.",
-        "Draw an invention that solves it.",
-        "Label the parts and explain how it works."
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 3: Space and nature"
-    },
-    {
-      "type": "text",
-      "markdown": "Our Solar System has **8 planets** that go round the Sun. Earth is the third planet from the Sun. The **Moon** goes around the Earth. The **Amazon** is the biggest rainforest and the **Sahara** is a huge desert."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "multiple_choice",
-        "prompt": "How many planets are in our Solar System?",
-        "options": [
-          {
-            "id": "a",
-            "text": "7"
-          },
-          {
-            "id": "b",
-            "text": "8"
-          },
-          {
-            "id": "c",
-            "text": "9"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      }
-    },
-    {
-      "type": "explainer",
-      "title": "Our Solar System",
-      "scenes": [
-        {
-          "caption": "At the centre of our Solar System is the Sun, a star.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 50,
-              "size": 3,
-              "anim": "spin"
-            }
-          ]
-        },
-        {
-          "caption": "8 planets travel around it. Earth is the third one from the Sun.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 50,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌍",
-              "x": 45,
-              "y": 50,
-              "id": "earth",
-              "size": 2,
-              "label": "Earth",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🔴",
-              "x": 62,
-              "y": 50,
-              "size": 1,
-              "label": "Mars",
-              "anim": "grow"
-            },
-            {
-              "emoji": "🪐",
-              "x": 85,
-              "y": 50,
-              "size": 2,
-              "label": "Saturn",
-              "anim": "grow"
-            }
-          ]
-        },
-        {
-          "caption": "The Moon travels around the Earth.",
-          "items": [
-            {
-              "emoji": "☀️",
-              "x": 15,
-              "y": 50,
-              "size": 3,
-              "anim": "spin"
-            },
-            {
-              "emoji": "🌍",
-              "x": 45,
-              "y": 50,
-              "id": "earth",
-              "size": 2,
-              "label": "Earth"
-            },
-            {
-              "emoji": "🔴",
-              "x": 62,
-              "y": 50,
-              "size": 1,
-              "label": "Mars"
-            },
-            {
-              "emoji": "🪐",
-              "x": 85,
-              "y": 50,
-              "size": 2,
-              "label": "Saturn"
-            },
-            {
-              "emoji": "🌙",
-              "x": 45,
-              "y": 22,
-              "id": "moon",
-              "size": 1,
-              "anim": "float",
-              "label": "Moon"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Stop 4: Healthy living and helpful habits"
-    },
-    {
-      "type": "text",
-      "markdown": "A healthy body needs a **balanced diet**: fruit, vegetables, protein, grains and water. We need exercise and **8 to 10 hours of sleep** at your age. Good habits include washing hands and brushing teeth."
-    },
-    {
-      "type": "image",
-      "emoji": "😴🥦🏃🧼",
-      "caption": "Sleep well, eat well, move your body and keep clean."
-    },
-    {
-      "type": "check",
-      "question": {
-        "type": "true_false",
-        "prompt": "A balanced diet means eating only one kind of food.",
-        "answer": [
-          false
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "text": "Stop 5: Languages, flags and fun facts"
-    },
-    {
-      "type": "text",
-      "markdown": "People around the world speak thousands of languages. Every country has a **flag** and a **capital city**. For example, Paris is the capital of France and Tokyo is the capital of Japan."
-    },
-    {
-      "type": "reveal",
-      "prompt": "What is a fact you know about another country?",
-      "answer_markdown": "Any fact is good! Ask a grown-up and look it up on a map together."
-    },
-    {
-      "type": "brain_game",
-      "game": "remember_order",
-      "title": "Space memory",
-      "goal": "Watch the order, then copy it.",
-      "emojis": [
-        "🌍",
-        "🌙",
-        "⭐",
-        "🪐"
-      ]
-    },
-    {
-      "type": "summary",
-      "points": [
-        "There are 7 continents and 5 oceans.",
-        "Inventions change how we live.",
-        "Our Solar System has 8 planets.",
-        "A balanced diet, exercise and sleep keep us healthy.",
-        "Countries have flags and capital cities."
-      ]
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Good luck!"
-    },
-    {
-      "type": "glossary",
-      "terms": [
-        {
-          "term": "capital city",
-          "meaning": "The city where a country's government is based."
-        },
-        {
-          "term": "continent",
-          "meaning": "A very large area of land. There are 7 on Earth."
-        },
-        {
-          "term": "balanced diet",
-          "meaning": "Eating a mix of different foods so your body gets what it needs."
-        },
-        {
-          "term": "flag",
-          "meaning": "A piece of cloth with colours and a design that stands for a country."
-        },
-        {
-          "term": "printing press",
-          "meaning": "A machine that made books quickly, invented about 1440."
-        },
-        {
-          "term": "planet",
-          "meaning": "A big world that travels around a star. Our Sun has 8."
-        },
-        {
-          "term": "Amazon",
-          "meaning": "A giant rainforest and river in South America."
-        },
-        {
-          "term": "Asia",
-          "meaning": "The biggest continent on Earth."
-        },
-        {
-          "term": "Moon",
-          "meaning": "The big rock that travels around the Earth and shines by reflecting sunlight."
-        },
-        {
-          "term": "Pacific",
-          "meaning": "The biggest and deepest ocean on Earth."
-        },
-        {
-          "term": "Sahara",
-          "meaning": "The biggest hot desert in the world, in Africa."
-        },
-        {
-          "term": "computer",
-          "meaning": "A machine that follows instructions to store information and solve problems."
-        },
-        {
-          "term": "light bulb",
-          "meaning": "An invention that makes light from electricity so we can see at night."
-        },
-        {
-          "term": "telephone",
-          "meaning": "An invention that lets people talk to each other from far away."
-        },
-        {
-          "term": "wheel",
-          "meaning": "A round object that turns. It helps things roll and move."
-        }
-      ]
-    }
+ "schema_version": "1.0",
+ "lesson": {
+  "slug": "diag-general-knowledge-class-4",
+  "subject": "general-knowledge",
+  "title": "General Knowledge Check-In: Where Am I?",
+  "summary": "A friendly tour of maps, inventions, space, nature, healthy living and countries, so we can see what you already know.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Week 1: Where am I?",
+  "learning_objectives": [
+   "Show what I know about continents, oceans and capitals",
+   "Show what I know about inventions and history",
+   "Show what I know about space, nature and healthy living"
   ],
-  "quiz": {
-    "pass_percent": 1,
-    "shuffle_questions": false,
-    "shuffle_options": true,
-    "max_attempts": null,
-    "questions": [
-      {
-        "type": "number",
-        "prompt": "How many continents are there?",
-        "ref": "q1",
-        "skill_tag": "geography.continents",
-        "answer": {
-          "value": 7,
-          "tolerance": 0
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which is the biggest ocean?",
-        "ref": "q2",
-        "skill_tag": "geography.oceans",
-        "options": [
-          {
-            "id": "a",
-            "text": "Atlantic"
-          },
-          {
-            "id": "b",
-            "text": "Pacific"
-          },
-          {
-            "id": "c",
-            "text": "Indian"
-          },
-          {
-            "id": "d",
-            "text": "Arctic"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Paris is the capital city of which country?",
-        "ref": "q3",
-        "skill_tag": "geography.countries",
-        "options": [
-          {
-            "id": "a",
-            "text": "Italy"
-          },
-          {
-            "id": "b",
-            "text": "France"
-          },
-          {
-            "id": "c",
-            "text": "Spain"
-          },
-          {
-            "id": "d",
-            "text": "Germany"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "match",
-        "prompt": "Match each country to its capital city.",
-        "ref": "q4",
-        "skill_tag": "geography.capitals",
-        "points": 2,
-        "left": [
-          {
-            "id": "l1",
-            "text": "Japan"
-          },
-          {
-            "id": "l2",
-            "text": "Egypt"
-          },
-          {
-            "id": "l3",
-            "text": "Australia"
-          }
-        ],
-        "right": [
-          {
-            "id": "r1",
-            "text": "Tokyo"
-          },
-          {
-            "id": "r2",
-            "text": "Cairo"
-          },
-          {
-            "id": "r3",
-            "text": "Canberra"
-          }
-        ],
-        "answer": {
-          "l1": "r1",
-          "l2": "r2",
-          "l3": "r3"
-        }
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which planet do we live on?",
-        "ref": "q5",
-        "skill_tag": "space.planets",
-        "options": [
-          {
-            "id": "a",
-            "text": "Mars"
-          },
-          {
-            "id": "b",
-            "text": "Earth"
-          },
-          {
-            "id": "c",
-            "text": "Venus"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "What goes around the Earth?",
-        "ref": "q6",
-        "skill_tag": "space.moon",
-        "options": [
-          {
-            "id": "a",
-            "text": "The Moon"
-          },
-          {
-            "id": "b",
-            "text": "The Sun"
-          },
-          {
-            "id": "c",
-            "text": "Mars"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which invention helps people talk to others far away?",
-        "ref": "q7",
-        "skill_tag": "inventions.who",
-        "options": [
-          {
-            "id": "a",
-            "text": "Telephone"
-          },
-          {
-            "id": "b",
-            "text": "Wheel"
-          },
-          {
-            "id": "c",
-            "text": "Bicycle"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "order",
-        "prompt": "Put these in order from oldest to newest.",
-        "ref": "q8",
-        "skill_tag": "history.order",
-        "points": 2,
-        "items": [
-          {
-            "id": "a",
-            "text": "Wheel"
-          },
-          {
-            "id": "b",
-            "text": "Printing press"
-          },
-          {
-            "id": "c",
-            "text": "Light bulb"
-          },
-          {
-            "id": "d",
-            "text": "Smartphone"
-          }
-        ],
-        "answer": [
-          "a",
-          "b",
-          "c",
-          "d"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which animal is the fastest on land?",
-        "ref": "q9",
-        "skill_tag": "nature.animals",
-        "options": [
-          {
-            "id": "a",
-            "text": "Horse"
-          },
-          {
-            "id": "b",
-            "text": "Cheetah"
-          },
-          {
-            "id": "c",
-            "text": "Lion"
-          }
-        ],
-        "answer": [
-          "b"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which is the biggest hot desert in the world?",
-        "ref": "q10",
-        "skill_tag": "nature.habitats",
-        "options": [
-          {
-            "id": "a",
-            "text": "Sahara"
-          },
-          {
-            "id": "b",
-            "text": "Gobi"
-          },
-          {
-            "id": "c",
-            "text": "Kalahari"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "Which of these is part of a balanced diet?",
-        "ref": "q11",
-        "skill_tag": "health.diet",
-        "options": [
-          {
-            "id": "a",
-            "text": "Fruit and vegetables"
-          },
-          {
-            "id": "b",
-            "text": "Only crisps"
-          },
-          {
-            "id": "c",
-            "text": "Only sweets"
-          }
-        ],
-        "answer": [
-          "a"
-        ]
-      },
-      {
-        "type": "multiple_choice",
-        "prompt": "About how many hours of sleep does a child your age need each night?",
-        "ref": "q12",
-        "skill_tag": "health.sleep",
-        "points": 2,
-        "options": [
-          {
-            "id": "a",
-            "text": "4 to 5"
-          },
-          {
-            "id": "b",
-            "text": "6"
-          },
-          {
-            "id": "c",
-            "text": "9 to 11"
-          }
-        ],
-        "answer": [
-          "c"
-        ]
-      }
-    ]
+  "tags": [
+   "week-1",
+   "diagnostic"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-4",
+   "semester": 1,
+   "week": 1
   }
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, World Explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "This is a **check-in**, not a test.\n\nIt helps us find out what you already know about our world so your lessons can be a perfect fit.\n\nHave a go at everything!"
+  },
+  {
+   "type": "image",
+   "emoji": "🗺️",
+   "alt": "Explore the world with us!",
+   "caption": "Explore the world with us!"
+  },
+  {
+   "type": "heading",
+   "text": "Stop 1: Maps and the world"
+  },
+  {
+   "type": "text",
+   "markdown": "Earth has **7 continents**: Asia, Africa, North America, South America, Antarctica, Europe and Australia/Oceania.\n\nThere are **5 oceans**: Pacific, Atlantic, Indian, Southern and Arctic. **Asia** is the biggest continent and the **Pacific** is the biggest ocean."
+  },
+  {
+   "type": "image",
+   "emoji": "🗺️🧭",
+   "alt": "A map shows where places are. A compass shows which way is north.",
+   "caption": "A map shows where places are. A compass shows which way is north."
+  },
+  {
+   "type": "chart",
+   "kind": "table",
+   "title": "The 5 oceans",
+   "rows": [
+    {
+     "label": "Pacific",
+     "value": 1
+    },
+    {
+     "label": "Atlantic",
+     "value": 2
+    },
+    {
+     "label": "Indian",
+     "value": 3
+    },
+    {
+     "label": "Southern",
+     "value": 4
+    },
+    {
+     "label": "Arctic",
+     "value": 5
+    }
+   ],
+   "caption": "The Pacific is the biggest. The numbers are just the order they are listed in."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which is the largest continent?",
+    "hint": "Pakistan is in it.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Europe"
+     },
+     {
+      "id": "b",
+      "text": "Asia"
+     },
+     {
+      "id": "c",
+      "text": "Africa"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 2: Inventions and history"
+  },
+  {
+   "type": "text",
+   "markdown": "People have invented things that changed the world: the **wheel**, the **printing press**, the **light bulb**, the **telephone** and the **computer**.\n\nHistory is the story of what happened long ago. We learn about it from objects, buildings and writing."
+  },
+  {
+   "type": "explainer",
+   "title": "A line of inventions",
+   "scenes": [
+    {
+     "caption": "Long ago, people invented the wheel.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🛞",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "spin"
+      }
+     ]
+    },
+    {
+     "caption": "Later came the printing press, which made books.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🛞",
+       "x": 15,
+       "y": 55,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "📚",
+       "x": 50,
+       "y": 55,
+       "size": 3,
+       "anim": "grow"
+      }
+     ]
+    },
+    {
+     "caption": "Then the light bulb, to light up the night.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🛞",
+       "x": 10,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "📚",
+       "x": 30,
+       "y": 55,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "💡",
+       "x": 62,
+       "y": 55,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "Now we have the computer and the telephone.",
+     "items": [
+      {
+       "id": "a",
+       "emoji": "🛞",
+       "x": 8,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "b",
+       "emoji": "📚",
+       "x": 24,
+       "y": 55,
+       "size": 1,
+       "anim": "none"
+      },
+      {
+       "id": "c",
+       "emoji": "💡",
+       "x": 42,
+       "y": 55,
+       "size": 2,
+       "anim": "none"
+      },
+      {
+       "id": "d",
+       "emoji": "💻",
+       "x": 65,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "e",
+       "emoji": "📞",
+       "x": 88,
+       "y": 55,
+       "size": 3,
+       "anim": "none"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "Which invention helps us make light at night?",
+    "hint": "You switch it on.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The wheel"
+     },
+     {
+      "id": "b",
+      "text": "The light bulb"
+     },
+     {
+      "id": "c",
+      "text": "The printing press"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  },
+  {
+   "type": "activity",
+   "title": "Inventor's challenge",
+   "materials": [
+    "Paper and pencil"
+   ],
+   "instructions": [
+    "Think of a problem in your home.",
+    "Draw an invention that could fix it.",
+    "Explain your invention to a grown-up."
+   ]
+  },
+  {
+   "type": "heading",
+   "text": "Stop 3: Space and nature"
+  },
+  {
+   "type": "text",
+   "markdown": "Our Solar System has **8 planets** that go around the Sun. Earth is the third planet from the Sun. The **Moon** goes around the Earth.\n\nThe **Amazon** is the biggest rainforest. The **Sahara** is the biggest hot desert."
+  },
+  {
+   "type": "explainer",
+   "title": "Our Solar System",
+   "scenes": [
+    {
+     "caption": "The Sun is in the middle.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "☀️",
+       "x": 15,
+       "y": 50,
+       "size": 3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    {
+     "caption": "Planets travel around it. Earth is the third planet.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "☀️",
+       "x": 15,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "m",
+       "emoji": "⚫",
+       "x": 30,
+       "y": 50,
+       "size": 1,
+       "anim": "none",
+       "label": "Mercury"
+      },
+      {
+       "id": "v",
+       "emoji": "🟠",
+       "x": 40,
+       "y": 50,
+       "size": 1,
+       "anim": "none",
+       "label": "Venus"
+      },
+      {
+       "id": "e",
+       "emoji": "🌍",
+       "x": 55,
+       "y": 50,
+       "size": 2,
+       "anim": "pulse",
+       "label": "Earth"
+      },
+      {
+       "id": "ma",
+       "emoji": "🔴",
+       "x": 70,
+       "y": 50,
+       "size": 1,
+       "anim": "none",
+       "label": "Mars"
+      }
+     ]
+    },
+    {
+     "caption": "The Moon goes around the Earth.",
+     "items": [
+      {
+       "id": "s",
+       "emoji": "☀️",
+       "x": 15,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "e",
+       "emoji": "🌍",
+       "x": 55,
+       "y": 50,
+       "size": 3,
+       "anim": "none"
+      },
+      {
+       "id": "mo",
+       "emoji": "🌙",
+       "x": 75,
+       "y": 30,
+       "size": 2,
+       "anim": "float",
+       "label": "Moon"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "multiple_choice",
+    "prompt": "How many planets are in our Solar System?",
+    "hint": "Earth is number three.",
+    "options": [
+     {
+      "id": "a",
+      "text": "7"
+     },
+     {
+      "id": "b",
+      "text": "9"
+     },
+     {
+      "id": "c",
+      "text": "8"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  },
+  {
+   "type": "image",
+   "emoji": "🌳🌴🏜️",
+   "alt": "A rainforest like the Amazon and a hot desert like the Sahara.",
+   "caption": "A rainforest like the Amazon and a hot desert like the Sahara."
+  },
+  {
+   "type": "heading",
+   "text": "Stop 4: Healthy living"
+  },
+  {
+   "type": "text",
+   "markdown": "A healthy body needs a **balanced diet**: fruit, vegetables, protein, grains and water.\n\nAt your age you need about **9 to 11 hours of sleep** and plenty of exercise. Washing hands and brushing teeth are good habits."
+  },
+  {
+   "type": "image",
+   "emoji": "😴🥦🏃🧼",
+   "alt": "Sleep well, eat well, move your body and keep clean.",
+   "caption": "Sleep well, eat well, move your body and keep clean."
+  },
+  {
+   "type": "check",
+   "question": {
+    "type": "true_false",
+    "prompt": "A balanced diet means eating only one kind of food.",
+    "hint": "Balanced means a mix.",
+    "answer": [
+     false
+    ]
+   }
+  },
+  {
+   "type": "heading",
+   "text": "Stop 5: Countries, capitals and languages"
+  },
+  {
+   "type": "text",
+   "markdown": "People around the world speak thousands of languages. Every country has a **flag** and a **capital city**.\n\nParis is the capital of France and Tokyo is the capital of Japan. Islamabad is the capital of Pakistan and London is the capital of the United Kingdom."
+  },
+  {
+   "type": "image",
+   "emoji": "🇵🇰🇬🇧🇫🇷🇯🇵",
+   "alt": "The flags of Pakistan, the United Kingdom, France and Japan.",
+   "caption": "The flags of Pakistan, the United Kingdom, France and Japan."
+  },
+  {
+   "type": "reveal",
+   "prompt": "What is a fact you know about another country?",
+   "answer_markdown": "Any fact you can tell is great. Ask a grown-up to check it with you."
+  },
+  {
+   "type": "brain_game",
+   "game": "memory_match",
+   "title": "Space memory",
+   "goal": "Find the matching pairs.",
+   "emojis": [
+    "☀️",
+    "🌍",
+    "🌙",
+    "🪐",
+    "🚀",
+    "⭐"
+   ]
+  },
+  {
+   "type": "summary",
+   "points": [
+    "There are 7 continents and 5 oceans.",
+    "Inventions change how we live, and history tells us what happened long ago.",
+    "The Solar System has 8 planets and the Moon goes around the Earth.",
+    "A balanced diet, sleep and exercise keep us healthy.",
+    "Countries have flags and capital cities."
+   ]
+  },
+  {
+   "type": "callout",
+   "style": "tip",
+   "markdown": "When you are ready, start the quiz. It has 15 questions and takes about 15 minutes. Do your best!"
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "check-in",
+     "meaning": "A friendly game that shows us what you know. It is not a test."
+    },
+    {
+     "term": "7 continents",
+     "meaning": "The seven big areas of land: Asia, Africa, North America, South America, Antarctica, Europe and Australia/Oceania."
+    },
+    {
+     "term": "5 oceans",
+     "meaning": "The five huge areas of sea: Pacific, Atlantic, Indian, Southern and Arctic."
+    },
+    {
+     "term": "Asia",
+     "meaning": "The biggest continent. Pakistan is in Asia."
+    },
+    {
+     "term": "Pacific",
+     "meaning": "The biggest ocean."
+    },
+    {
+     "term": "wheel",
+     "meaning": "An invention that rolls, used for carts, cars and bikes."
+    },
+    {
+     "term": "printing press",
+     "meaning": "A machine that prints many copies of a book quickly."
+    },
+    {
+     "term": "light bulb",
+     "meaning": "An invention that makes light from electricity."
+    },
+    {
+     "term": "telephone",
+     "meaning": "An invention for talking to someone far away."
+    },
+    {
+     "term": "computer",
+     "meaning": "A machine that stores information and follows instructions."
+    },
+    {
+     "term": "8 planets",
+     "meaning": "The planets that travel around the Sun in our Solar System."
+    },
+    {
+     "term": "Moon",
+     "meaning": "The big rock that goes around the Earth."
+    },
+    {
+     "term": "Amazon",
+     "meaning": "The biggest rainforest in the world, in South America."
+    },
+    {
+     "term": "Sahara",
+     "meaning": "The biggest hot desert in the world, in Africa."
+    },
+    {
+     "term": "balanced diet",
+     "meaning": "Eating a mix of fruit, vegetables, protein, grains and water."
+    },
+    {
+     "term": "9 to 11 hours of sleep",
+     "meaning": "How much sleep a child of your age needs each night."
+    },
+    {
+     "term": "flag",
+     "meaning": "A piece of cloth with colours and a design that stands for a country."
+    },
+    {
+     "term": "capital city",
+     "meaning": "The city where a country's government is."
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 1,
+  "shuffle_questions": false,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "How many continents are there?",
+    "hint": "Asia is one of them.",
+    "explanation": "There are 7 continents.",
+    "skill_tag": "geography.continents",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which is the biggest ocean?",
+    "hint": "Its name means peaceful.",
+    "explanation": "The Pacific is the biggest ocean.",
+    "skill_tag": "geography.oceans",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Atlantic"
+     },
+     {
+      "id": "b",
+      "text": "The Arctic"
+     },
+     {
+      "id": "c",
+      "text": "The Indian"
+     },
+     {
+      "id": "d",
+      "text": "The Pacific"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Match each country to its capital city.",
+    "hint": "Think of the big city for each country.",
+    "explanation": "Paris is in France, Tokyo is in Japan and Islamabad is in Pakistan.",
+    "skill_tag": "geography.capitals",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "France"
+     },
+     {
+      "id": "l2",
+      "text": "Japan"
+     },
+     {
+      "id": "l3",
+      "text": "Pakistan"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Tokyo"
+     },
+     {
+      "id": "r3",
+      "text": "Islamabad"
+     },
+     {
+      "id": "r1",
+      "text": "Paris"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    }
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "Paris is the capital city of which country?",
+    "hint": "Think of the Eiffel Tower.",
+    "explanation": "Paris is the capital of France.",
+    "skill_tag": "geography.countries",
+    "options": [
+     {
+      "id": "a",
+      "text": "Japan"
+     },
+     {
+      "id": "b",
+      "text": "Pakistan"
+     },
+     {
+      "id": "c",
+      "text": "Egypt"
+     },
+     {
+      "id": "d",
+      "text": "France"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q5",
+    "type": "order",
+    "prompt": "Put these in order from oldest to newest.",
+    "hint": "Think of which came first.",
+    "explanation": "The wheel is the oldest and the computer is the newest.",
+    "skill_tag": "history.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The printing press"
+     },
+     {
+      "id": "i4",
+      "text": "The computer"
+     },
+     {
+      "id": "i3",
+      "text": "The light bulb"
+     },
+     {
+      "id": "i1",
+      "text": "The wheel"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ]
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Which invention helps people talk to others far away?",
+    "hint": "You hold it to your ear.",
+    "explanation": "The telephone lets us talk to people far away.",
+    "skill_tag": "inventions.who",
+    "options": [
+     {
+      "id": "a",
+      "text": "The light bulb"
+     },
+     {
+      "id": "b",
+      "text": "The printing press"
+     },
+     {
+      "id": "c",
+      "text": "The wheel"
+     },
+     {
+      "id": "d",
+      "text": "The telephone"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Which planet do we live on?",
+    "hint": "It is the third planet.",
+    "explanation": "We live on Earth.",
+    "skill_tag": "space.planets",
+    "options": [
+     {
+      "id": "a",
+      "text": "Venus"
+     },
+     {
+      "id": "b",
+      "text": "Jupiter"
+     },
+     {
+      "id": "c",
+      "text": "Mars"
+     },
+     {
+      "id": "d",
+      "text": "Earth"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q8",
+    "type": "slider",
+    "prompt": "Slide to show how many planets travel around our Sun.",
+    "hint": "Earth is number three.",
+    "explanation": "There are 8 planets.",
+    "skill_tag": "space.planets",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "What goes around the Earth?",
+    "hint": "You can see it at night.",
+    "explanation": "The Moon goes around the Earth.",
+    "skill_tag": "space.moon",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mars"
+     },
+     {
+      "id": "b",
+      "text": "A comet"
+     },
+     {
+      "id": "c",
+      "text": "The Sun"
+     },
+     {
+      "id": "d",
+      "text": "The Moon"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the fastest land animal.",
+    "hint": "It has spots.",
+    "explanation": "The cheetah is the fastest land animal.",
+    "skill_tag": "nature.animals",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐆",
+       "label": "cheetah",
+       "x": 20,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐘",
+       "label": "elephant",
+       "x": 50,
+       "y": 70,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐢",
+       "label": "tortoise",
+       "x": 80,
+       "y": 40,
+       "size": 3
+      },
+      {
+       "id": "h4",
+       "emoji": "🐪",
+       "label": "camel",
+       "x": 50,
+       "y": 15,
+       "size": 3
+      }
+     ],
+     "show_labels": false
+    },
+    "answer": [
+     "h1"
+    ]
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which is the biggest hot desert in the world?",
+    "hint": "It is in Africa.",
+    "explanation": "The Sahara is the biggest hot desert.",
+    "skill_tag": "nature.habitats",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Thar"
+     },
+     {
+      "id": "b",
+      "text": "The Gobi"
+     },
+     {
+      "id": "c",
+      "text": "The Amazon"
+     },
+     {
+      "id": "d",
+      "text": "The Sahara"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   },
+   {
+    "ref": "q12",
+    "type": "multi_select",
+    "prompt": "Which of these are part of a balanced diet? Pick all that apply.",
+    "hint": "Think of a mix.",
+    "explanation": "Fruit, vegetables and water are part of a balanced diet.",
+    "skill_tag": "health.diet",
+    "options": [
+     {
+      "id": "a",
+      "text": "Water"
+     },
+     {
+      "id": "b",
+      "text": "Only crisps"
+     },
+     {
+      "id": "c",
+      "text": "Only sweets"
+     },
+     {
+      "id": "d",
+      "text": "Fruit and vegetables"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ]
+   },
+   {
+    "ref": "q13",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think about what represents a country.",
+    "explanation": "Every country has a flag and a capital city.",
+    "skill_tag": "geography.countries",
+    "points": 2,
+    "text": "Every country has a {b1} and a {b2} city.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wheel"
+       },
+       {
+        "id": "b",
+        "text": "flag"
+       },
+       {
+        "id": "c",
+        "text": "tail"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "tiny"
+       },
+       {
+        "id": "b",
+        "text": "capital"
+       },
+       {
+        "id": "c",
+        "text": "ocean"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    }
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "A child of your age needs about 9 to 11 hours of sleep.",
+    "hint": "Think of a full night.",
+    "explanation": "A child your age needs about 9 to 11 hours of sleep.",
+    "skill_tag": "health.sleep",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Pakistan, India and China are all in which continent?",
+    "hint": "It is the biggest continent.",
+    "explanation": "Asia is the biggest continent.",
+    "skill_tag": "geography.continents",
+    "options": [
+     {
+      "id": "a",
+      "text": "Europe"
+     },
+     {
+      "id": "b",
+      "text": "Antarctica"
+     },
+     {
+      "id": "c",
+      "text": "Australia"
+     },
+     {
+      "id": "d",
+      "text": "Asia"
+     }
+    ],
+    "answer": [
+     "d"
+    ]
+   }
+  ]
+ }
 }

@@ -8,23 +8,40 @@ const dir = join(process.cwd(), "../content/lessons");
 const files = readdirSync(dir).filter((f: string) => f.endsWith(".json"));
 
 describe("content/lessons", () => {
-  it("has the 10 week-1 diagnostic lessons", () => {
+  it("has the 10 week-1 diagnostic lessons and the 10 week-2 lessons", () => {
     expect(files.filter((f: string) => f.startsWith("diag-"))).toHaveLength(10);
+    expect(files.filter((f: string) => f.startsWith("w2-"))).toHaveLength(10);
   });
   for (const f of files) {
     it(`${f} is valid`, () => {
       const result = parseLessonFile(JSON.parse(readFileSync(join(dir, f), "utf8")));
       if (!result.ok) throw new Error(JSON.stringify(result.issues, null, 1));
-      expect(result.lesson.lesson.curriculum).toMatchObject({ semester: 1, week: 1 });
-      expect(result.lesson.quiz.questions.length).toBe(12);
+      expect(result.lesson.lesson.curriculum).toMatchObject({ semester: 1, week: f.startsWith("diag-") ? 1 : 2 });
+      const { questions } = result.lesson.quiz;
+      expect(questions.length).toBe(15);
+      // every quiz uses all nine controls (number and short_text both count as typed answers)
+      const kinds = new Set(questions.map((q) => (q.type === "number" ? "short_text" : q.type)));
+      expect([...kinds].sort()).toEqual(["fill_blank", "hotspot", "match", "multi_select", "multiple_choice", "order", "short_text", "slider", "true_false"]);
     });
     it(`${f} shows something for every stop`, () => {
       const blocks = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: Block[] }).blocks;
       expect(sectionsWithoutVisual(blocks)).toEqual([]);
     });
-    it(`${f} has a glossary, an animated explainer and a brain game`, () => {
+    it(`${f} has a glossary, an explainer, a brain game and something hands-on`, () => {
       const types = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: { type: string }[] }).blocks.map((b) => b.type);
       for (const t of ["glossary", "explainer", "brain_game"]) expect(types).toContain(t);
+      expect(types.includes("manipulative") || types.includes("activity")).toBe(true);
+    });
+    it(`${f} explains every bold word in its glossary`, () => {
+      const blocks = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: { type: string; markdown?: string; terms?: { term: string }[] }[] }).blocks;
+      const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+      const terms = (blocks.find((b) => b.type === "glossary")?.terms ?? []).map((t) => norm(t.term));
+      const bold = blocks.flatMap((b) => [...(b.markdown ?? "").matchAll(/\*\*(.+?)\*\*/g)].map((m) => norm(m[1] as string)));
+      expect(bold.filter((w) => !terms.some((t) => t === w || t.includes(w) || w.includes(t)))).toEqual([]);
+    });
+    it(`${f} has no video unless its id looks real`, () => {
+      const blocks = (JSON.parse(readFileSync(join(dir, f), "utf8")) as { blocks: { type: string; youtube?: string; start?: number; end?: number }[] }).blocks;
+      for (const b of blocks.filter((x) => x.type === "video")) expect((b.end ?? 0) - (b.start ?? 0)).toBeLessThanOrEqual(100);
     });
   }
 });
