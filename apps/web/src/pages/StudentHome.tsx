@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import { api } from "../api";
 import { useAuth } from "../auth";
 import { Avatar } from "../components/Avatar";
-import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 type Card = {
   id: string; title: string; subject: string; summary: string; minutes: number; semester: number | null; week: number | null; phase: string;
@@ -35,9 +34,9 @@ function LessonCard({ c, past }: { c: Card; past?: boolean }) {
         {done ? "✅ Lesson done" : c.progress ? "📖 In progress" : `⏱️ About ${c.minutes} minutes`}
         {c.quiz && c.quiz.attempts > 0 && typeof best === "number" ? ` · best quiz ${Math.round(best)}%` : ""}
       </p>
-      <div className="mt-auto flex flex-wrap gap-2">
-        <Link className={"btn " + (past || done ? "" : "btn-primary")} to={`/lesson/${c.id}`}>{past ? "Read again" : done ? "Read again" : c.progress ? "Keep going" : "Start"}</Link>
-        <Link className={"btn " + (!past && done && !c.quiz?.attempts ? "btn-primary" : "")} to={`/lesson/${c.id}/quiz`}>{past ? "Practise quiz" : c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
+      <div className="mt-auto grid grid-cols-2 gap-3 pt-1">
+        <Link className={"btn !min-h-14 " + (past || done ? "" : "btn-primary")} to={`/lesson/${c.id}`}>{past ? "Read again" : done ? "Read again" : c.progress ? "Keep going" : "Start"}</Link>
+        <Link className={"btn !min-h-14 " + (!past && done && !c.quiz?.attempts ? "btn-primary" : "")} to={`/lesson/${c.id}/quiz`}>{past ? "Practise quiz" : c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
       </div>
     </article>
   );
@@ -132,11 +131,6 @@ export function StudentHome() {
           ))}
         </section>
       )}
-
-      <section aria-labelledby="look" className="flex flex-col gap-3">
-        <h2 id="look" className="font-display text-2xl font-bold">Pick a look</h2>
-        <ThemeSwitcher />
-      </section>
     </main>
   );
 }
