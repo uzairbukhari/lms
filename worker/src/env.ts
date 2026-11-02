@@ -6,7 +6,8 @@ export type Bindings = {
   DB: D1Database;
   ASSETS_BUCKET: R2Bucket;
   SESSIONS: KVNamespace;
-  AI: Ai;
+  /** Workers AI. Missing in local development, so always check before use. */
+  AI?: Ai;
   /** "development" turns on the local admin bypass below. Never set it in production. */
   ENVIRONMENT?: string;
   /** Local development only: act as this admin without Cloudflare Access. Ignored unless ENVIRONMENT is "development". */
