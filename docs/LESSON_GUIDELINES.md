@@ -93,7 +93,7 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 ## 7. Quizzes
 
 - **15 questions** for the ~15 minute quiz (decided), for both age bands. Every question can be answered from the lesson.
-- Mix at least 5 of the question types below in every quiz, and use every type regularly across a subject. Order roughly easy to harder. Pass mark 70% unless told otherwise.
+- Every 15-question quiz uses **all nine** question types below at least once (decided: "use all of these quiz control types"); the other six questions repeat the types that suit the topic best. Until the three new types are built, use all six built ones. Order roughly easy to harder. Pass mark 70% unless told otherwise.
 - Never reuse the exact wording of the lesson's `check` questions.
 - Multiple choice: 3 to 4 options, one clearly right, plausible wrong answers based on common misconceptions, no "all of the above".
 - Each question has a `ref` (q1, q2...), a short `hint` that does not give the answer away, a 1 to 2 sentence `explanation`,
