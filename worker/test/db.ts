@@ -6,7 +6,7 @@ import type { Bindings } from "../src/env";
 const MIGRATIONS_DIR = new URL("../../migrations/", import.meta.url).pathname;
 
 /** A real (local, in-memory) Cloudflare D1 database with all migrations applied, for tests. */
-export async function createTestDb(): Promise<{ db: D1Database; kv: KVNamespace; bucket: R2Bucket; dispose: () => Promise<void> }> {
+export async function createTestDb(opts: { only?: (file: string) => boolean } = {}): Promise<{ db: D1Database; kv: KVNamespace; bucket: R2Bucket; dispose: () => Promise<void> }> {
   const mf = new Miniflare({
     modules: true,
     script: "export default { fetch() { return new Response('ok') } }",
@@ -17,13 +17,15 @@ export async function createTestDb(): Promise<{ db: D1Database; kv: KVNamespace;
   const db = (await mf.getD1Database("DB")) as unknown as D1Database;
   const kv = (await mf.getKVNamespace("SESSIONS")) as unknown as KVNamespace;
   const bucket = (await mf.getR2Bucket("ASSETS_BUCKET")) as unknown as R2Bucket;
-  const files = readdirSync(MIGRATIONS_DIR).filter((f: string) => f.endsWith(".sql")).sort();
-  for (const file of files) {
-    const sql = readFileSync(`${MIGRATIONS_DIR}${file}`, "utf8");
-    // D1's exec() runs one statement per line, so run each statement separately.
-    for (const stmt of splitStatements(sql)) await db.prepare(stmt).run();
-  }
+  const files = readdirSync(MIGRATIONS_DIR).filter((f: string) => f.endsWith(".sql") && (opts.only?.(f) ?? true)).sort();
+  for (const file of files) await applyMigration(db, file);
   return { db, kv, bucket, dispose: () => mf.dispose() };
+}
+
+/** Run one migration file as a single batch, which D1 runs as one transaction, the way `wrangler d1 migrations apply` does. */
+export async function applyMigration(db: D1Database, file: string): Promise<void> {
+  const sql = readFileSync(`${MIGRATIONS_DIR}${file}`, "utf8");
+  await db.batch(splitStatements(sql).map((stmt) => db.prepare(stmt)));
 }
 
 /** Split a migration file into statements (our migrations have no semicolons inside strings, and no triggers). */
