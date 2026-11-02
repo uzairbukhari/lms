@@ -5,14 +5,14 @@ whenever it generates or reviews a lesson. Part 9 is the ready-to-paste generati
 `docs/PLAN.md` sections 5.1 and 5.2.
 
 **Status: draft v2, being finished with Uzair. No lessons are rebuilt until he says these guidelines are done.**
-Items marked **(open)** are still to be decided; part 11 lists them.
+Decisions were confirmed by Uzair on 2 Nov 2026 (part 11). Items marked **(open)** are still to be decided.
 
 ## 1. Who the lessons are for
 
 - Two girls, aged 7 (Class 1) and 9 (Class 4), and possibly friends of similar age. Lessons are tagged `age_band` 7-8, 9-10 or 7-10.
 - They use a tablet or laptop, on their own, with narration on. A parent reviews scores afterwards, so quizzes must be fair and clear.
 - Subjects: Maths, Science, Computer Science / Data & AI, General Knowledge, English.
-- Spelling and examples **(open)**: British spelling by default; everyday examples (food, money, places, names) that both a UK
+- Spelling and examples (decided): British spelling by default; everyday examples (food, money, places, names) that both a UK
   reader and a child in Pakistan would recognise.
 
 ## 2. The golden rules
@@ -54,7 +54,7 @@ If a picture the lesson needs cannot be made with these blocks, say so in the le
 
 ## 4. Shape and size of a lesson
 
-About 45 minutes of lesson plus a quiz of about 15 minutes **(open)**. Weekly lessons are due on Sunday; week 1 is a
+About 45 minutes of lesson plus a quiz of about 15 minutes (decided). Weekly lessons are due on Sunday; week 1 is a
 diagnostic "check-in" in each subject.
 
 1. **Welcome / hook**: a question or short story, with a big picture. Say it is a game, not a test.
@@ -88,16 +88,35 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 - **General Knowledge:** geography, history, people, nature, health and habits. Maps, timelines (`explainer`) and
   pictures for every place or thing. Check facts and dates; avoid anything that changes often unless dated.
 - **English:** phonics and spelling, vocabulary, reading short passages, grammar, writing. Pictures carry meaning for each
-  new word; listening (the read-aloud button) is part of the lesson. **(open)** whether to include spelling-by-speaking tasks.
+  new word; listening (the read-aloud button) is part of the lesson.
 
 ## 7. Quizzes
 
-- 10 to 12 questions for a ~15 minute quiz **(open)** (age 7: nearer 10; age 9: nearer 12). Every question can be answered from the lesson.
-- Mix at least 3 question types. Order roughly easy to harder. Pass mark 70% unless told otherwise.
+- **15 questions** for the ~15 minute quiz (decided), for both age bands. Every question can be answered from the lesson.
+- Mix at least 5 of the question types below in every quiz, and use every type regularly across a subject. Order roughly easy to harder. Pass mark 70% unless told otherwise.
 - Never reuse the exact wording of the lesson's `check` questions.
 - Multiple choice: 3 to 4 options, one clearly right, plausible wrong answers based on common misconceptions, no "all of the above".
 - Each question has a `ref` (q1, q2...), a short `hint` that does not give the answer away, a 1 to 2 sentence `explanation`,
   `points` (1, or 2 for order and match), and a `skill_tag` ("topic.skill", snake_case) so the parent report shows strengths and gaps.
+
+### Quiz question types (all nine, decided 2 Nov)
+
+| # | Control | Schema type | Status |
+|---|---|---|---|
+| 1 | Radio buttons (single choice) | `multiple_choice` | built |
+| 2 | Checkboxes (more than one right) | `multi_select` | built |
+| 3 | True / false | `true_false` | built |
+| 4 | Text input (word, number, short phrase) | `short_text`, `number` | built |
+| 5 | Inline dropdowns (fill in the blanks) | `fill_blank` | **to build** |
+| 6 | Drag and drop matching | `match` | built |
+| 7 | Drag and drop ordering | `order` | built |
+| 8 | Image hotspots (click the right area) | `hotspot` | **to build** |
+| 9 | Slider (estimate or point on a scale) | `slider` | **to build** |
+
+Until the three new types exist, quizzes use the six built ones. Do not invent the new types in lesson JSON before they are built.
+Use each type for what it does best: hotspot for "point to the part" (diagrams, maps), slider for estimates and scales
+(number lines, years, temperatures), dropdown blanks for sentences and vocabulary, checkboxes for "select all that apply".
+
 - `short_text` answers list common spellings. Number answers are correct and have a sensible `tolerance`.
 - Charts and pictures used in a question must also have appeared in the lesson. When updating a lesson, keep `slug` and quiz
   `ref`s unchanged so earlier attempts keep their meaning.
@@ -107,16 +126,16 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 - Warm and encouraging; mistakes are part of learning ("Not quite. Have another go!"). Never scary, shaming or competitive.
 - No personal information, no links, no external images, no adverts. First names only.
 - Be honest about AI: it can be wrong; it learns from examples; it does not "think" like a person.
-- Culturally and religiously neutral examples **(open)**: check with Uzair before touching beliefs, politics or sensitive history.
+- Examples and stories should preferably be Islamic and Muslim where they fit naturally (decided): names such as Fatima, Zainab, Ali, Omar, Aisha; foods like dates and samosas; Eid, Ramadan, mosques, Hajj, Islamic history and scientists (for example Al-Khwarizmi, Ibn al-Haytham, Fatima al-Fihri). Keep them accurate and respectful, never forced into a topic where they do not belong, and never quote religious text from memory: check facts with Uzair first. Stay neutral and kind about other beliefs; avoid politics and contested history.
 - Do not put essential words inside pictures: the picture needs a caption or label that can be read aloud.
 - Do not rely on colour alone; keep text large; every `image` needs a caption, and charts need real labels (the player reads them out).
 - Motion is switched off for children who prefer reduced motion, so the caption must carry the meaning, not the movement.
 
 ### Choosing a video
 
-- Educational and made for children: for example Khan Academy Kids, SciShow Kids, National Geographic Kids, BBC Bitesize, Code.org.
+- Preferably animated, and under 100 seconds (decided). Educational and made for children: for example Khan Academy Kids, SciShow Kids, National Geographic Kids, BBC Bitesize, Code.org.
   No ads for other things, nothing scary, clear voice, right level.
-- Must be allowed to play embedded. **A grown-up opens it first and watches the part that will be used (open: who approves).**
+- Must be allowed to play embedded. **Uzair (or a grown-up he names) opens it first and watches the part that will be used.**
 - Use `start` and `end` (seconds) to play just the useful part. The longest allowed clip is 100 seconds.
 - Fill in `youtube` (the 11 character id after `v=`), `title` and a one-line `caption`.
 - **Never guess an id.** Use only a video a person has opened and approved. If none is approved yet, leave the video out and
@@ -169,11 +188,13 @@ a picture, or too long", then "output the corrected JSON only". Then:
 - [ ] Validates in the importer (it lists any problems); previewed once in the admin preview (no AI is used there).
 - [ ] Slug and quiz refs unchanged when updating an existing lesson.
 
-## 11. Still to decide with Uzair (defaults in brackets)
+## 11. Decisions with Uzair (2 Nov 2026)
 
-1. Spelling and examples: British spelling, and examples that suit both the UK and Pakistan? (default: yes)
-2. Lesson length: about 45 minutes of lesson plus a 15 minute quiz of 10 to 12 questions? (default: yes)
-3. Who approves videos, and which channels are allowed? (default: Uzair approves each clip; children's educational channels only)
-4. Sensitive topics (beliefs, evolution, history, politics) to avoid or handle in a particular way? (default: avoid; ask first)
-5. Minimum per lesson: 1 explainer, 1 brain game, 1 hands-on, a picture on every stop? (default: yes)
-6. Anything missing: more subject rules, languages (for example Urdu words), rewards, lesson length by age? (default: none yet)
+1. Spelling and examples: British spelling, examples that suit both the UK and Pakistan. **Agreed.**
+2. Quiz length: **15 questions** per quiz (about 45 minute lesson plus 15 minute quiz).
+3. Videos: preferably **animated** and **under 100 seconds**. Uzair approves each clip before it is used.
+4. Examples and stories: preferably **Islamic and Muslim** where natural (see part 8).
+5. Minimum per lesson: 1 explainer, 1 brain game, 1 hands-on, a picture on every stop. **Agreed.**
+6. Quiz controls: all nine types in part 7. Three still need building (`fill_blank`, `hotspot`, `slider`).
+
+Still open: which channels or creators Uzair trusts for videos (he will send links), and whether the guidelines are now fully done.
