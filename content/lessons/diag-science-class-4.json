@@ -104,6 +104,123 @@
       }
     },
     {
+      "type": "explainer",
+      "title": "The water cycle",
+      "scenes": [
+        {
+          "caption": "The Sun warms the sea.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 85,
+              "y": 14,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌊",
+              "x": 50,
+              "y": 88,
+              "size": 3
+            },
+            {
+              "emoji": "💧",
+              "x": 30,
+              "y": 78,
+              "id": "drop",
+              "label": "water"
+            }
+          ]
+        },
+        {
+          "caption": "The warm water evaporates and rises as invisible vapour.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 85,
+              "y": 14,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌊",
+              "x": 50,
+              "y": 88,
+              "size": 3
+            },
+            {
+              "emoji": "💧",
+              "x": 30,
+              "y": 40,
+              "id": "drop",
+              "label": "evaporates",
+              "anim": "float"
+            }
+          ]
+        },
+        {
+          "caption": "High up it cools and condenses into a cloud.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 85,
+              "y": 14,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌊",
+              "x": 50,
+              "y": 88,
+              "size": 3
+            },
+            {
+              "emoji": "☁️",
+              "x": 30,
+              "y": 25,
+              "id": "cloud",
+              "size": 3,
+              "label": "condenses",
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "The cloud gets heavy and the water falls as rain. Then it starts all over again!",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 85,
+              "y": 14,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌊",
+              "x": 50,
+              "y": 88,
+              "size": 3
+            },
+            {
+              "emoji": "🌧️",
+              "x": 30,
+              "y": 25,
+              "id": "cloud",
+              "size": 3
+            },
+            {
+              "emoji": "💧",
+              "x": 30,
+              "y": 78,
+              "id": "drop",
+              "label": "rain",
+              "anim": "bounce"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 3: Food chains"
     },
@@ -204,6 +321,18 @@
       "answer_markdown": "The Sun is low in the sky in the evening, so light hits you at a shallow angle and the shadow stretches out."
     },
     {
+      "type": "brain_game",
+      "game": "remember_order",
+      "title": "Water cycle memory",
+      "goal": "Watch the order, then copy it.",
+      "emojis": [
+        "🌞",
+        "💧",
+        "☁️",
+        "🌧️"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "Solids, liquids and gases behave differently and can change state.",
@@ -217,6 +346,43 @@
       "type": "callout",
       "style": "tip",
       "markdown": "Ready? Start the quiz. It has 12 questions and about 15 minutes. A guess is better than a blank."
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "evaporate",
+          "meaning": "Liquid water turns into an invisible gas called water vapour."
+        },
+        {
+          "term": "condense",
+          "meaning": "A gas cools down and turns back into tiny drops of liquid."
+        },
+        {
+          "term": "producer",
+          "meaning": "A plant that makes its own food using sunlight."
+        },
+        {
+          "term": "carnivore",
+          "meaning": "An animal that eats other animals."
+        },
+        {
+          "term": "herbivore",
+          "meaning": "An animal that eats only plants."
+        },
+        {
+          "term": "friction",
+          "meaning": "A force that slows things down when they rub together."
+        },
+        {
+          "term": "gravity",
+          "meaning": "The force that pulls things toward the ground."
+        },
+        {
+          "term": "circuit",
+          "meaning": "A complete loop that electricity can flow around."
+        }
+      ]
     }
   ],
   "quiz": {

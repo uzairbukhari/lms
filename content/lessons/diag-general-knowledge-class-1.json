@@ -104,6 +104,77 @@
       ]
     },
     {
+      "type": "explainer",
+      "title": "Why we have day and night",
+      "scenes": [
+        {
+          "caption": "The Sun shines on one side of the Earth. It is day there.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌍",
+              "x": 60,
+              "y": 50,
+              "id": "earth",
+              "size": 3
+            }
+          ]
+        },
+        {
+          "caption": "The Earth slowly spins around.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌍",
+              "x": 60,
+              "y": 50,
+              "id": "earth",
+              "size": 3,
+              "anim": "spin"
+            }
+          ]
+        },
+        {
+          "caption": "The side facing away from the Sun is dark. That is night. One whole spin takes a day.",
+          "items": [
+            {
+              "emoji": "☀️",
+              "x": 15,
+              "y": 50,
+              "size": 3,
+              "anim": "spin"
+            },
+            {
+              "emoji": "🌍",
+              "x": 60,
+              "y": 50,
+              "id": "earth",
+              "size": 3
+            },
+            {
+              "emoji": "🌙",
+              "x": 88,
+              "y": 25,
+              "size": 2,
+              "anim": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 3: People who help us"
     },
@@ -181,6 +252,20 @@
       "answer_markdown": "Any answer is great! Ask a grown-up to help you find out more."
     },
     {
+      "type": "brain_game",
+      "game": "memory_match",
+      "title": "Match the explorers",
+      "goal": "Find the matching pairs.",
+      "emojis": [
+        "🌍",
+        "🐋",
+        "🐆",
+        "🌾",
+        "🍎",
+        "🐘"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "Earth has oceans and 7 continents.",
@@ -194,6 +279,39 @@
       "type": "callout",
       "style": "tip",
       "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Have fun!"
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "check-in",
+          "meaning": "A friendly game that shows us what you know. It is not a test."
+        },
+        {
+          "term": "continent",
+          "meaning": "A very large area of land. There are 7 on Earth."
+        },
+        {
+          "term": "ocean",
+          "meaning": "A huge area of salty water. There are 5 on Earth."
+        },
+        {
+          "term": "farmer",
+          "meaning": "Someone who grows our food and looks after farm animals."
+        },
+        {
+          "term": "nurse",
+          "meaning": "Someone who helps people feel better when they are ill."
+        },
+        {
+          "term": "cheetah",
+          "meaning": "The fastest animal on land."
+        },
+        {
+          "term": "blue whale",
+          "meaning": "The biggest animal in the world."
+        }
+      ]
     }
   ],
   "quiz": {

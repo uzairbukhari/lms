@@ -134,6 +134,144 @@
       ]
     },
     {
+      "type": "explainer",
+      "title": "Apples and more apples",
+      "scenes": [
+        {
+          "caption": "You have 3 apples.",
+          "items": [
+            {
+              "emoji": "🍎",
+              "x": 20,
+              "y": 50,
+              "id": "a1",
+              "size": 3
+            },
+            {
+              "emoji": "🍎",
+              "x": 35,
+              "y": 50,
+              "id": "a2",
+              "size": 3
+            },
+            {
+              "emoji": "🍎",
+              "x": 50,
+              "y": 50,
+              "id": "a3",
+              "size": 3
+            }
+          ]
+        },
+        {
+          "caption": "A friend gives you 2 more apples.",
+          "items": [
+            {
+              "emoji": "🍎",
+              "x": 20,
+              "y": 50,
+              "id": "a1",
+              "size": 3
+            },
+            {
+              "emoji": "🍎",
+              "x": 35,
+              "y": 50,
+              "id": "a2",
+              "size": 3
+            },
+            {
+              "emoji": "🍎",
+              "x": 50,
+              "y": 50,
+              "id": "a3",
+              "size": 3
+            },
+            {
+              "emoji": "🍎",
+              "x": 70,
+              "y": 50,
+              "id": "a4",
+              "size": 3,
+              "anim": "grow"
+            },
+            {
+              "emoji": "🍎",
+              "x": 85,
+              "y": 50,
+              "id": "a5",
+              "size": 3,
+              "anim": "grow"
+            }
+          ]
+        },
+        {
+          "caption": "Count them all together: 3 and 2 make 5 apples!",
+          "items": [
+            {
+              "emoji": "🍎",
+              "x": 20,
+              "y": 55,
+              "id": "a1",
+              "size": 3,
+              "anim": "bounce"
+            },
+            {
+              "emoji": "🍎",
+              "x": 35,
+              "y": 55,
+              "id": "a2",
+              "size": 3,
+              "anim": "bounce"
+            },
+            {
+              "emoji": "🍎",
+              "x": 50,
+              "y": 55,
+              "id": "a3",
+              "size": 3,
+              "anim": "bounce"
+            },
+            {
+              "emoji": "🍎",
+              "x": 65,
+              "y": 55,
+              "id": "a4",
+              "size": 3,
+              "anim": "bounce"
+            },
+            {
+              "emoji": "🍎",
+              "x": 80,
+              "y": 55,
+              "id": "a5",
+              "size": 3,
+              "anim": "bounce"
+            },
+            {
+              "emoji": "5",
+              "x": 50,
+              "y": 15,
+              "label": "3 + 2 = 5",
+              "size": 3,
+              "anim": "pulse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "manipulative",
+      "title": "Split the treasure",
+      "goal": "Split the 10 coins between your two hands. How many can you put in each? Try a different split!",
+      "emoji": "🪙",
+      "count": 10,
+      "zones": [
+        "Left hand",
+        "Right hand"
+      ]
+    },
+    {
       "type": "heading",
       "text": "Stop 3: Taking away"
     },
@@ -233,6 +371,20 @@
       "answer_markdown": "Any repeating group works. For example: star, heart, moon, star, heart, moon!"
     },
     {
+      "type": "brain_game",
+      "game": "memory_match",
+      "title": "Find the matching pairs",
+      "goal": "Turn over two cards. Can you find all the pairs?",
+      "emojis": [
+        "1️⃣",
+        "2️⃣",
+        "3️⃣",
+        "🔺",
+        "🟦",
+        "⭕"
+      ]
+    },
+    {
       "type": "summary",
       "points": [
         "Counting in 2s, 5s and 10s is quick.",
@@ -245,6 +397,39 @@
       "type": "callout",
       "style": "tip",
       "markdown": "When you are ready, start the quiz. It has 12 questions and takes about 15 minutes. Do your best. Everything you show us helps plan your next lessons!"
+    },
+    {
+      "type": "glossary",
+      "terms": [
+        {
+          "term": "check-in",
+          "meaning": "A friendly game that shows us what you know. It is not a test."
+        },
+        {
+          "term": "adding",
+          "meaning": "Putting groups together to find how many there are altogether."
+        },
+        {
+          "term": "taking away",
+          "meaning": "Some things go away, so you count what is left."
+        },
+        {
+          "term": "triangle",
+          "meaning": "A shape with 3 sides and 3 corners."
+        },
+        {
+          "term": "square",
+          "meaning": "A shape with 4 equal sides and 4 corners."
+        },
+        {
+          "term": "circle",
+          "meaning": "A round shape with no corners."
+        },
+        {
+          "term": "pattern",
+          "meaning": "Something that repeats again and again, like red, blue, red, blue."
+        }
+      ]
     }
   ],
   "quiz": {

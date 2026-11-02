@@ -169,6 +169,41 @@ export const blockSchema = z.discriminatedUnion("type", [
     count: z.number().int().min(1).max(20),
     zones: z.array(line(30)).min(1).max(4),
   }),
+  // An animated, step-by-step picture: each scene places emoji on a stage; things sharing an `id` glide to their new spot between steps.
+  z.object({
+    type: z.literal("explainer"),
+    title: line(100),
+    scenes: z
+      .array(
+        z.object({
+          caption: line(200),
+          items: z
+            .array(
+              z.object({
+                id: shortId.optional(),
+                emoji: z.string().trim().min(1).max(16),
+                label: line(30).optional(),
+                x: z.number().min(0).max(100),
+                y: z.number().min(0).max(100),
+                size: z.number().int().min(1).max(3).default(2),
+                anim: z.enum(["none", "bounce", "float", "spin", "pulse", "grow"]).default("none"),
+              }),
+            )
+            .min(1)
+            .max(14),
+        }),
+      )
+      .min(2)
+      .max(8),
+  }),
+  // A short brain exercise. Never graded or saved.
+  z.object({
+    type: z.literal("brain_game"),
+    game: z.enum(["memory_match", "remember_order"]),
+    title: line(100),
+    goal: line(200).optional(),
+    emojis: z.array(z.string().trim().min(1).max(16)).min(3).max(8),
+  }),
   z.object({ type: z.literal("summary"), points: z.array(line(200)).min(1).max(8) }),
   z.object({ type: z.literal("html_embed"), title: line(100), html: longText(50_000) }),
 ]);
