@@ -3,6 +3,8 @@ import { HTTPException } from "hono/http-exception";
 import type { HealthResponse } from "@lms/schema";
 import type { AppEnv } from "./env";
 import { adminRoutes } from "./routes/admin";
+import { serveAsset } from "./lib/assets";
+import { requireStudent } from "./middleware/auth";
 import { authRoutes } from "./routes/auth";
 
 export type { Bindings } from "./env";
@@ -15,6 +17,7 @@ app.get("/api/health", (c) => {
 });
 
 app.route("/api", authRoutes);
+app.get("/api/assets/:filename", requireStudent, (c) => serveAsset(c, c.req.param("filename")));
 app.route("/api/admin", adminRoutes);
 
 // Unknown API routes return JSON, never the SPA shell.

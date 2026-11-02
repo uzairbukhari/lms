@@ -9,3 +9,5 @@ export interface HealthResponse {
   service: "lms";
   time: string;
 }
+export * from "./lesson";
+export * from "./grading";

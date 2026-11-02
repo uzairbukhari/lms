@@ -13,12 +13,18 @@ import { fail, parseBody } from "../lib/http";
 import { hashPassword } from "../lib/password";
 import { getUserById, getUserByUsername, isReservedUsername, uniqueUsername } from "../lib/users";
 import { generatePassword, randomInt } from "../lib/words";
+import { serveAsset } from "../lib/assets";
 import { requireAdmin } from "../middleware/auth";
+import { adminClassRoutes } from "./admin-classes";
+import { adminContentRoutes } from "./admin-content";
 
 export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
 
 adminRoutes.get("/me", (c) => c.json({ admin: c.get("admin") }));
+adminRoutes.get("/assets/file/:filename", (c) => serveAsset(c, c.req.param("filename")));
+adminRoutes.route("/", adminContentRoutes);
+adminRoutes.route("/", adminClassRoutes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 
