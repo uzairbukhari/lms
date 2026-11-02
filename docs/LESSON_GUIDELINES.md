@@ -141,6 +141,7 @@ Use each type for what it does best: hotspot for "point to the part" (diagrams, 
 - Must be allowed to play embedded. **Uzair (or a grown-up he names) opens it first and watches the part that will be used.**
 - Use `start` and `end` (seconds) to play just the useful part. The longest allowed clip is 100 seconds.
 - Fill in `youtube` (the 11 character id after `v=`), `title` and a one-line `caption`.
+- **Videos are found in the admin screen, not written by hand (decided 2 Nov):** Lessons, then Videos on a lesson row. It searches YouTube (embeddable, strict safe search, made-for-kids first, short clips first), Uzair watches the clip and presses Add, and the `video` block is added for you. Approved clips are kept and re-added automatically when a lesson is re-imported, so the lesson JSON does not need a `video` block at all.
 - **Never guess an id.** Use only a video a person has opened and approved. If none is approved yet, leave the video out and
   note which concept still needs one.
 - The player loads nothing from YouTube until the child presses play, then uses the privacy-friendly player and keeps

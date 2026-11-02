@@ -7,7 +7,7 @@ import { sfx, stopSpeech } from "../lib/sound";
  */
 export function VideoClip({ title, id, start, end, caption }: { title: string; id: string; start: number; end: number; caption?: string }) {
   const [playing, setPlaying] = useState(false);
-  const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?start=${start}&end=${end}&autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=1&iv_load_policy=3&disablekb=0`;
+  const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?start=${start}&end=${end}&autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=1&iv_load_policy=3&disablekb=0&fs=1`;
   const seconds = end - start;
   return (
     <div className="flex flex-col gap-3" onTouchStart={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()}>

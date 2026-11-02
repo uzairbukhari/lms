@@ -1,4 +1,5 @@
 import type { LessonFile } from "@lms/schema";
+import { withVideos, type ApprovedVideo } from "./videos";
 
 export type ImportResult = {
   lessonId: string;
@@ -42,12 +43,18 @@ function publicOptions(q: LessonFile["quiz"]["questions"][number]): unknown {
  * (new quiz and questions) so earlier attempts keep pointing at the exact questions the child saw.
  * Everything is written in one batch, so a failure leaves nothing half-saved.
  */
-export async function importLesson(db: D1Database, file: LessonFile, opts: { publish?: boolean } = {}): Promise<ImportResult> {
-  const { lesson, blocks, quiz } = file;
+export async function importLesson(db: D1Database, incoming: LessonFile, opts: { publish?: boolean } = {}): Promise<ImportResult> {
   const existing = await db
     .prepare("SELECT id, current_version, status FROM lessons WHERE slug = ?")
-    .bind(lesson.slug)
+    .bind(incoming.lesson.slug)
     .first<{ id: string; current_version: number; status: ImportResult["status"] }>();
+
+  // Videos the parent already approved for this lesson come back automatically when the lesson is re-imported.
+  const approved = existing
+    ? (await db.prepare("SELECT youtube, title, start_sec, end_sec, caption FROM approved_videos WHERE lesson_id = ? ORDER BY created_at").bind(existing.id).all<ApprovedVideo>()).results
+    : [];
+  const file: LessonFile = approved.length ? { ...incoming, blocks: withVideos(incoming.blocks as never, approved) as LessonFile["blocks"] } : incoming;
+  const { lesson, blocks, quiz } = file;
 
   const lessonId = existing?.id ?? crypto.randomUUID();
   const version = existing ? existing.current_version + 1 : 1;
