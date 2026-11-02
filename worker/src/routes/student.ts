@@ -1,3 +1,4 @@
+import { buildSlides } from "@lms/schema";
 import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
@@ -18,6 +19,8 @@ type LessonRow = {
 type Card = {
   id: string; slug: string; title: string; subject: string; summary: string; minutes: number;
   semester: number | null; week: number | null; phase: Phase;
+  /** How many slides the lesson deck has, so the home screen can show how far through the child is. */
+  slideCount: number;
   progress: { status: "started" | "completed"; lastBlock: number } | null;
   quiz: { attempts: number; bestPercent: number | null; latestPercent: number | null } | null;
 };
@@ -27,7 +30,7 @@ async function cardsFor(db: D1Database, userId: string, visible: VisibleLesson[]
   const ids = visible.map((v) => v.lessonId);
   const marks = ids.map(() => "?").join(",");
   const [lessons, progress, attempts] = await Promise.all([
-    db.prepare(`SELECT id, slug, title, subject_id AS subject, summary, estimated_minutes AS minutes FROM lessons WHERE id IN (${marks})`).bind(...ids).all<{ id: string; slug: string; title: string; subject: string; summary: string; minutes: number }>(),
+    db.prepare(`SELECT id, slug, title, subject_id AS subject, summary, estimated_minutes AS minutes, content_json FROM lessons WHERE id IN (${marks})`).bind(...ids).all<{ id: string; slug: string; title: string; subject: string; summary: string; minutes: number; content_json: string }>(),
     db.prepare(`SELECT lesson_id, status, last_block FROM lesson_progress WHERE user_id = ? AND lesson_id IN (${marks})`).bind(userId, ...ids).all<{ lesson_id: string; status: "started" | "completed"; last_block: number }>(),
     db
       .prepare(
@@ -43,10 +46,12 @@ async function cardsFor(db: D1Database, userId: string, visible: VisibleLesson[]
     .map((v): Card | null => {
       const l = lessons.results.find((x) => x.id === v.lessonId);
       if (!l) return null;
+      const { content_json, ...lesson } = l;
       const p = progress.results.find((x) => x.lesson_id === v.lessonId);
       const a = attempts.results.find((x) => x.lesson_id === v.lessonId);
       return {
-        ...l,
+        ...lesson,
+        slideCount: buildSlides({ title: "", summary: "", minutes: 0, objectives: [] }, JSON.parse(content_json)).length,
         semester: v.semester,
         week: v.week,
         phase: v.phase,

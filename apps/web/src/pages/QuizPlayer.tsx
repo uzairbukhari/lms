@@ -2,6 +2,7 @@ import type { Response } from "@lms/schema";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
+import { Loader } from "../components/Loader";
 import { QuestionView, type ViewQuestion } from "../components/QuestionView";
 
 type Question = ViewQuestion & { id: string; hasHint: boolean };
@@ -56,7 +57,7 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
   const back = kind === "lesson" ? `/lesson/${id}` : "/";
 
   if (error) return <Shell><p role="alert" className="text-xl">{error.message}</p><Link className="btn" to="/">Back home</Link></Shell>;
-  if (!quiz) return <Shell><p role="status" className="text-xl">Getting your questions ready…</p></Shell>;
+  if (!quiz) return <Loader label="Getting your questions ready…" fullScreen />;
 
   if (result) return <Results result={result} quiz={quiz} again={() => void start()} kind={kind} />;
 

@@ -4,12 +4,16 @@ import type { AppEnv } from "../env";
 import { AI_MODEL, DEFAULT_DAILY_CAP, explainPrompt, hintPrompt, leaksAnswer, runModel, sha, takeDailyAllowance } from "../lib/ai";
 import { fail, parseBody } from "../lib/http";
 import type { AttemptRow, QuestionRow } from "../lib/quiz";
+import { narrate } from "../lib/tts";
 import { todayIn } from "../lib/visibility";
 import { requireStudent } from "../middleware/auth";
 
 /** Optional AI help inside a quiz. Fixed prompts only: there is no free-form chat. Always falls back to the stored text. */
 export const aiRoutes = new Hono<AppEnv>();
 aiRoutes.use("/ai/*", requireStudent);
+
+/** Lesson narration in a natural voice (see lib/tts.ts). */
+aiRoutes.post("/ai/voice", narrate);
 
 const bodySchema = z.object({ attemptId: z.string(), questionId: z.string() });
 const GENERIC_HINT = "Read the question again, slowly. Take your time!";

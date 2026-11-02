@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { AuthProvider, useAuth } from "./auth";
 import { AdminApp } from "./admin/AdminApp";
+import { Loader } from "./components/Loader";
 import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
 import { QuizPlayer } from "./pages/QuizPlayer";
@@ -8,7 +9,7 @@ import { StudentHome } from "./pages/StudentHome";
 
 function StudentApp() {
   const { user } = useAuth();
-  if (user === undefined) return <p className="p-8 text-xl" role="status">Loading…</p>;
+  if (user === undefined) return <Loader label="Getting ready…" fullScreen />;
   if (user === null) return <Login />;
   return (
     <Routes>

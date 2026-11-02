@@ -3,9 +3,11 @@ import { Link } from "react-router";
 import { api } from "../api";
 import { useAuth } from "../auth";
 import { Avatar } from "../components/Avatar";
+import { Loader } from "../components/Loader";
 
 type Card = {
   id: string; title: string; subject: string; summary: string; minutes: number; semester: number | null; week: number | null; phase: string;
+  slideCount: number;
   progress: { status: "started" | "completed"; lastBlock: number } | null;
   quiz: { attempts: number; bestPercent: number | null; latestPercent: number | null } | null;
 };
@@ -25,15 +27,22 @@ function LessonCard({ c, past }: { c: Card; past?: boolean }) {
   const s = look(c.subject);
   const done = c.progress?.status === "completed";
   const best = c.quiz?.bestPercent;
+  // Same measure as the bar inside the lesson: being on a slide counts as having seen it.
+  const percent = done ? 100 : c.progress ? Math.min(99, Math.round(((c.progress.lastBlock + 1) / Math.max(1, c.slideCount)) * 100)) : 0;
   return (
     <article className="card flex flex-col gap-3 p-5" aria-label={`${s.label}: ${c.title}`}>
       <p className="font-bold text-muted"><span aria-hidden="true">{s.emoji} </span>{s.label}{past && c.week ? ` · Semester ${c.semester}, week ${c.week}` : ""}</p>
       <h3 className="font-display text-2xl font-bold">{c.title}</h3>
       {!past && <p className="text-lg">{c.summary}</p>}
       <p className="text-muted" aria-live="polite">
-        {done ? "✅ Lesson done" : c.progress ? "📖 In progress" : `⏱️ About ${c.minutes} minutes`}
+        {done ? "✅ Lesson done" : c.progress ? `📖 ${percent}% done · slide ${Math.min(c.progress.lastBlock + 1, c.slideCount)} of ${c.slideCount}` : `⏱️ About ${c.minutes} minutes`}
         {c.quiz && c.quiz.attempts > 0 && typeof best === "number" ? ` · best quiz ${Math.round(best)}%` : ""}
       </p>
+      {c.progress && (
+        <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Lesson progress" className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
+          <div className="h-full rounded-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
+        </div>
+      )}
       <div className="mt-auto grid grid-cols-2 gap-3 pt-1">
         <Link className={"btn !min-h-14 " + (past || done ? "" : "btn-primary")} to={`/lesson/${c.id}`}>{past ? "Read again" : done ? "Read again" : c.progress ? "Keep going" : "Start"}</Link>
         <Link className={"btn !min-h-14 " + (!past && done && !c.quiz?.attempts ? "btn-primary" : "")} to={`/lesson/${c.id}/quiz`}>{past ? "Practise quiz" : c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
@@ -81,7 +90,7 @@ export function StudentHome() {
       </header>
 
       {failed && <p role="alert" className="text-xl">We couldn't load your lessons. Please refresh the page.</p>}
-      {!home && !failed && <p role="status" className="text-xl">Loading your lessons…</p>}
+      {!home && !failed && <Loader label="Loading your lessons…" />}
 
       {exams.length > 0 && (
         <section aria-labelledby="exams" className="flex flex-col gap-3">

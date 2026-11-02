@@ -33,6 +33,11 @@ authRoutes.post("/login", async (c) => {
       : (await burnPasswordCheck(password), false);
 
   if (!ok || !row) {
+    // TEMP DEBUG (remove): why local login fails. Local development only; reason codes, no identifying data.
+    if (c.env.ENVIRONMENT === "development") {
+      const reason = !row ? "no_user" : row.role !== "student" ? "not_student" : row.is_active !== 1 ? "inactive" : row.password_hash === null ? "no_password" : !row.password_hash.startsWith("pbkdf2$100000$") ? "other_hash_format" : "password_mismatch";
+      console.log("LOGIN_DEBUG", JSON.stringify({ reason, edgeSpaces: password !== password.trim() }));
+    }
     await recordFailure(c.env.SESSIONS, keys);
     // The same answer for "no such user", "wrong password" and "switched off", so usernames cannot be guessed.
     return fail(c, 401, "bad_login", "That username or password is not right.");
