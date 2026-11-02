@@ -5,6 +5,7 @@ import type { AppEnv } from "./env";
 import { adminRoutes } from "./routes/admin";
 import { serveAsset } from "./lib/assets";
 import { requireStudent } from "./middleware/auth";
+import { aiRoutes } from "./routes/ai";
 import { authRoutes } from "./routes/auth";
 import { quizRoutes } from "./routes/quiz";
 import { studentRoutes } from "./routes/student";
@@ -23,6 +24,7 @@ app.get("/api/assets/:filename", requireStudent, (c) => serveAsset(c, c.req.para
 app.route("/api/admin", adminRoutes);
 app.route("/api", studentRoutes);
 app.route("/api", quizRoutes);
+app.route("/api", aiRoutes);
 
 // Unknown API routes return JSON, never the SPA shell.
 app.all("/api/*", (c) => c.json({ error: "not_found" }, 404));
