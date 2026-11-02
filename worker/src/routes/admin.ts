@@ -15,11 +15,11 @@ import { getUserById, getUserByUsername, isReservedUsername, uniqueUsername } fr
 import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
 import { serveAsset } from "../lib/assets";
-import { narrate } from "../lib/tts";
 import { requireAdmin } from "../middleware/auth";
 import { adminClassRoutes } from "./admin-classes";
 import { adminContentRoutes } from "./admin-content";
 import { adminExamRoutes } from "./admin-exams";
+import { adminAiUsageRoutes } from "./admin-ai-usage";
 import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 
@@ -30,13 +30,12 @@ adminRoutes.get("/me", (c) => c.json({ admin: c.get("admin") }));
 adminRoutes.get("/backups", async (c) => c.json({ backups: await listBackups(c.env) }));
 adminRoutes.post("/backups", async (c) => c.json(await runBackup(c.env), 201));
 adminRoutes.get("/assets/file/:filename", (c) => serveAsset(c, c.req.param("filename")));
-// Lets the lesson preview use the same narration voice the children hear.
-adminRoutes.post("/voice", narrate);
 adminRoutes.route("/", adminContentRoutes);
 adminRoutes.route("/", adminClassRoutes);
 adminRoutes.route("/", adminExamRoutes);
 adminRoutes.route("/", adminReportRoutes);
 adminRoutes.route("/", adminOverviewRoutes);
+adminRoutes.route("/", adminAiUsageRoutes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 
