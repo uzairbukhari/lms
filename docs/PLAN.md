@@ -37,7 +37,8 @@ Everything runs on your paid Cloudflare account. With two users the cost is effe
 | Validation | **Zod** schemas shared by frontend and API | One source of truth for the lesson JSON format |
 | Charts | **Recharts** | Learning-curve charts in the parent dashboard |
 | Tooling | **Wrangler**, D1 migrations, Vitest, GitHub Actions deploy | Reproducible deploys from the repo |
-| Optional later | Workers AI / Claude API for "explain this answer to me" hints; Cloudflare Turnstile on the login page | Nice-to-haves, not in v1 |
+| AI helper | **Cloudflare Workers AI** (binding `AI`) for hints, answer explanations and draft text generation; optionally behind **AI Gateway** for logging, caching and rate limits | Same account and bill, no external keys, nothing leaves Cloudflare. See section 4b. |
+| Optional later | Cloudflare Turnstile on the login page | Nice-to-have, not in v1 |
 
 **Why structured JSON lessons instead of raw HTML from Claude:** a fixed block format means every lesson looks consistent, works on a tablet, can be validated before publishing, and lets quiz answers be graded on the server (so a curious 9-year-old can't find answers in the page source). For the occasional special interactive (a simulation, a mini-game) there is an `html_embed` block that runs in a sandboxed iframe.
 
@@ -303,6 +304,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 ### Phase 5: Quiz engine and attempt tracking (2 days)
 - `POST /api/quizzes/:lessonId/attempts` → creates attempt, returns questions **without answers** (shuffled per settings).
 - `POST /api/attempts/:id/submit` → server-side grading per type (exact match, tolerance for numbers, normalised text for short answers, partial credit optional for match/order), writes `attempt_answers`, finalises score.
+- AI hints and explanations (section 4b): `POST /api/ai/hint` and `/api/ai/explain` with caching, output check, daily cap and static fallback. Admin "Suggest" drafts in the importer.
 - Results screen: stars/score, which questions were right, explanations, **Try again** button.
 - **Done when:** retaking a quiz three times produces three attempt rows with separate scores.
 
@@ -330,7 +332,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 
 ### Phase 9: Later ideas
 - Spaced review: auto-suggest retaking quizzes scored under 70% after 3 and 7 days.
-- "Ask for help" button using Claude/Workers AI with a kid-safe system prompt.
+- Free-form "Ask the helper" chat (only after the guardrails in section 4b have proven themselves with hints).
 - Weekly email summary to you (Cron + Email Workers).
 - Lesson "units" and simple unlock paths.
 
@@ -356,6 +358,42 @@ How the themes stay cheap to maintain:
 - **Decorations are swappable assets.** Mascot, background stars, planets and level-map art are theme-specific SVG components behind one interface, so every additional theme is one token set plus one art pack.
 - **Accessibility holds in both.** Both themes must keep text contrast at 4.5:1 or better and tap targets at 44px or larger; a check runs against the token sets in CI.
 - **Estimated extra effort:** about 1 day for the token system and switcher, then roughly half a day per extra theme (tokens, art pack, copy map, contrast check): about 2.5 days in total for four themes. If time is tight, ship Space and Candy first and add Sunny and Forest in Phase 9; nothing else changes. Retrofitting theming later would cost much more, which is why the foundation goes in first.
+
+## 4b. AI helper (Cloudflare Workers AI)
+
+Use Workers AI where short, low-risk text is needed; keep Claude for authoring the lessons themselves.
+
+| Use | Who triggers it | How it works |
+|---|---|---|
+| **Smarter hints** during a quiz | Child taps "Need a hint?" | The Worker sends the question, the child's wrong answer and the lesson text to the model, asking for a nudge that never states the answer. Cached per question and wrong answer. |
+| **"Why was I wrong?" explanations** | After submitting | Short, friendly explanation at the child's age level, based on the stored `explanation` plus the child's actual answer. |
+| **Draft text for you** (admin) | Parent taps "Suggest" in the lesson importer | Proposes a summary, extra practice questions or a simpler rewrite as a draft. Nothing is published without your review. |
+| **Parent insights** (later) | Weekly job | Plain-English summary of each child's attempts and weakest skills. |
+
+Guardrails (these matter more than the model choice):
+- **The model never sees or returns the answer key to the child.** Hints are generated from the question and the child's response, and the output is checked server-side: if it contains a correct option's exact text or value, it is discarded and the stored static hint is shown instead.
+- **No open chat in v1.** Children only trigger fixed prompts (hint, explain). Free-form chat is Phase 9, behind the same guardrails.
+- **Kid-safe system prompt**, fixed server-side: age-appropriate vocabulary, 1 to 3 short sentences, encouraging, no off-topic answers, no personal questions. Children cannot edit or see it.
+- **Graceful fallback.** If the AI call fails, is slow or is rate-limited, the stored static `hint` and `explanation` from the lesson JSON are used. The lesson format therefore still requires them, so the platform works with AI switched off.
+- **Rate limits and cost control.** Per-child daily cap (for example 30 AI hints a day), responses cached in KV by question and answer, and optional AI Gateway for spend visibility. At two users this stays inside free allowances or costs cents.
+- **Parent visibility.** Every AI response shown to a child is logged (`ai_events`: user, question, prompt type, response, timestamp) so you can review what was said and tell if any model output was poor.
+- **Model choice is a config value**, not hard-coded, because Workers AI models change. Start with a small instruction-tuned model and compare a few on real questions before launch.
+- **Quality caveat.** Smaller models can make mistakes, especially in Maths. Hints for number and calculation questions use the stored explanation as the source of truth rather than letting the model recompute.
+
+Schema addition:
+
+```sql
+CREATE TABLE ai_events (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT REFERENCES users(id),
+  question_id TEXT REFERENCES questions(id),
+  kind        TEXT NOT NULL CHECK (kind IN ('hint','explain','admin_draft','insight')),
+  model       TEXT NOT NULL,
+  response    TEXT NOT NULL,
+  from_cache  INTEGER NOT NULL DEFAULT 0,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);
+```
 
 ## 5. Lesson generation framework
 
