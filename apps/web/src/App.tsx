@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { AuthProvider, useAuth } from "./auth";
 import { AdminApp } from "./pages/admin/AdminApp";
+import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
 import { StudentHome } from "./pages/StudentHome";
 
@@ -10,6 +11,7 @@ function StudentApp() {
   if (user === null) return <Login />;
   return (
     <Routes>
+      <Route path="/lesson/:id" element={<LessonPlayer mode="student" />} />
       <Route path="*" element={<StudentHome />} />
     </Routes>
   );

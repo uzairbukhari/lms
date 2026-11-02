@@ -4,6 +4,7 @@ import { api, ApiError } from "../../api";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { Classes } from "./Classes";
 import { Curriculum } from "./Curriculum";
+import { LessonPlayer } from "../LessonPlayer";
 import { Lessons } from "./Lessons";
 import { Students } from "./Students";
 
@@ -47,6 +48,7 @@ export function AdminApp() {
         <Route path="students" element={<Students />} />
         <Route path="classes" element={<Classes />} />
         <Route path="lessons" element={<Lessons />} />
+        <Route path="lessons/:id/preview" element={<LessonPlayer mode="preview" />} />
         <Route path="plan" element={<Curriculum />} />
         <Route path="*" element={<Students />} />
       </Routes>
