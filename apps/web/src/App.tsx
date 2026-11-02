@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { AuthProvider, useAuth } from "./auth";
-import { AdminApp } from "./pages/admin/AdminApp";
+import { AdminApp } from "./admin/AdminApp";
 import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
 import { QuizPlayer } from "./pages/QuizPlayer";

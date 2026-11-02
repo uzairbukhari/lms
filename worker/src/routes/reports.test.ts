@@ -115,3 +115,18 @@ describe("drill-down, class view and export", () => {
     expect([401, 403]).toContain(res.status);
   });
 });
+
+describe("admin overview", () => {
+  it("summarises students, classes and recent quizzes for the dashboard", async () => {
+    const res = await json(await call("/api/admin/overview"));
+    expect(res.totals.activeStudents).toBeGreaterThanOrEqual(1);
+    expect(res.totals.publishedLessons).toBe(2);
+    expect(res.totals.attemptsThisWeek).toBe(3);
+    expect(res.recent).toHaveLength(3);
+    const year3 = res.classes.find((c: { name: string }) => c.name === "Year 3");
+    expect(year3.hasCalendar).toBe(true);
+    expect(year3.courses).toHaveLength(1);
+    const ava = res.students.find((s: { id: string }) => s.id === studentId);
+    expect(ava.gradedAttempts).toBe(2);
+  });
+});

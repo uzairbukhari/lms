@@ -19,6 +19,7 @@ import { requireAdmin } from "../middleware/auth";
 import { adminClassRoutes } from "./admin-classes";
 import { adminContentRoutes } from "./admin-content";
 import { adminExamRoutes } from "./admin-exams";
+import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 
 export const adminRoutes = new Hono<AppEnv>();
@@ -32,6 +33,7 @@ adminRoutes.route("/", adminContentRoutes);
 adminRoutes.route("/", adminClassRoutes);
 adminRoutes.route("/", adminExamRoutes);
 adminRoutes.route("/", adminReportRoutes);
+adminRoutes.route("/", adminOverviewRoutes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 
