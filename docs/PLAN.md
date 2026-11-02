@@ -81,6 +81,9 @@ users ─┬─< lesson_progress >── lessons ──< quizzes ──< questio
               │                  │
               └─< attempt_answers >── questions
 subjects ──< lessons            assets (R2 files) used by lessons
+classes ──< class_members >── users
+courses ──< course_lessons >── lessons
+courses ──< course_assignments >── classes | users
 ```
 
 ### Tables
@@ -99,6 +102,7 @@ CREATE TABLE users (
   theme         TEXT NOT NULL DEFAULT 'space' CHECK (theme IN ('space','candy','sunny','forest')),  -- UI theme, switchable by the child
   theme_color   TEXT,
   is_active     INTEGER NOT NULL DEFAULT 1,
+  must_change_password INTEGER NOT NULL DEFAULT 0,  -- 1 for freshly generated passwords
   created_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -131,12 +135,53 @@ CREATE TABLE lessons (
 );
 CREATE INDEX idx_lessons_subject ON lessons(subject_id, status, sort_order);
 
--- Optional: which kid can see which lesson (default: all published lessons matching age band)
-CREATE TABLE lesson_assignments (
-  lesson_id TEXT NOT NULL REFERENCES lessons(id),
-  user_id   TEXT NOT NULL REFERENCES users(id),
-  PRIMARY KEY (lesson_id, user_id)
+-- Classes, courses and who sees what -------------------------------------
+-- A class is a group of students (e.g. "Family", "Saturday Club").
+CREATE TABLE classes (
+  id          TEXT PRIMARY KEY,
+  name        TEXT NOT NULL,
+  description TEXT,
+  is_active   INTEGER NOT NULL DEFAULT 1,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE class_members (
+  class_id  TEXT NOT NULL REFERENCES classes(id),
+  user_id   TEXT NOT NULL REFERENCES users(id),
+  joined_at TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (class_id, user_id)          -- a student can be in several classes
+);
+
+-- A course is an ordered collection of lessons (e.g. "Year 3 Fractions", "Robot Basics").
+CREATE TABLE courses (
+  id          TEXT PRIMARY KEY,
+  title       TEXT NOT NULL,
+  description TEXT,
+  subject_id  TEXT REFERENCES subjects(id),   -- NULL = mixed-subject course
+  age_band    TEXT,
+  status      TEXT NOT NULL DEFAULT 'draft' CHECK (status IN ('draft','published','archived')),
+  created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE course_lessons (
+  course_id TEXT NOT NULL REFERENCES courses(id),
+  lesson_id TEXT NOT NULL REFERENCES lessons(id),
+  position  INTEGER NOT NULL,
+  PRIMARY KEY (course_id, lesson_id)
+);
+
+-- Assign a course to a whole class, or to one student.
+CREATE TABLE course_assignments (
+  id          TEXT PRIMARY KEY,
+  course_id   TEXT NOT NULL REFERENCES courses(id),
+  class_id    TEXT REFERENCES classes(id),
+  user_id     TEXT REFERENCES users(id),
+  due_date    TEXT,                          -- optional
+  assigned_at TEXT NOT NULL DEFAULT (datetime('now')),
+  CHECK ((class_id IS NOT NULL) <> (user_id IS NOT NULL))   -- exactly one target
+);
+CREATE INDEX idx_assign_class ON course_assignments(class_id);
+CREATE INDEX idx_assign_user  ON course_assignments(user_id);
 
 CREATE TABLE quizzes (
   id                TEXT PRIMARY KEY,          -- uuid
@@ -283,7 +328,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - `POST /api/login` verifies PBKDF2 hash, stores session in KV (30-day TTL), sets HttpOnly, Secure, SameSite=Lax cookie. Rate-limit failed logins per username.
 - `POST /api/logout`, `GET /api/me`.
 - Cloudflare Access application on `/admin*` and `/api/admin*` (your email only); Worker validates the `Cf-Access-Jwt-Assertion` header.
-- Admin page to reset a child's password.
+- Admin page to reset a child's password (see "Quick student setup" in section 4c).
 - **Done when:** each daughter can log in and out; `/admin` asks you to sign in with Access.
 
 ### Phase 3: Lesson format and admin upload (1–2 days)
@@ -292,6 +337,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - Re-importing the same `slug` creates a new version (new quiz + questions rows); old attempts are untouched.
 - Asset upload to R2 (drag and drop images/audio), returning the filename to use in the JSON.
 - Lesson list with filters by subject/status, reorder, archive.
+- Admin **Classes and Courses** screens: create a class, add or remove students, build a course by picking and ordering lessons, assign it to a class or to one student (section 4c).
 - **Done when:** you can paste a Claude-generated lesson and see it previewed.
 
 ### Phase 4: Lesson player (2 days)
@@ -320,8 +366,9 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - **Learning curve chart** per lesson (score vs attempt number) and over time (all attempts by date).
 - Attempt drill-down: every answer the child gave, right/wrong, time taken.
 - Weakest skills table (from `skill_tag`), which feeds back into what lessons you ask Claude to make next.
+- **Class view:** a table of every student in a class against every lesson (first, best and latest score, attempts), plus class averages and who hasn't started.
 - CSV export of attempts.
-- **Done when:** you can see every attempt each daughter has made.
+- **Done when:** you can see every attempt each student has made, per student and per class.
 
 ### Phase 8: Polish and launch (1 day)
 - Custom domain (e.g. `learn.yourdomain.com`) on the Worker.
@@ -394,6 +441,35 @@ CREATE TABLE ai_events (
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 ```
+
+## 4c. Classes, courses and student accounts
+
+You (the admin) act as the teacher. Daughters' friends are simply more students, grouped into classes.
+
+**Concepts**
+- **Student:** a login with a username and password. Can belong to several classes.
+- **Class:** a named group of students ("Family", "Saturday Club"). Your daughters live in a default "Family" class.
+- **Course:** an ordered list of lessons ("Fractions basics", "Robot basics"). Reusable across classes.
+- **Assignment:** a course given to a whole class or to one student, with an optional due date.
+- **What a student sees:** only lessons in courses assigned to their classes or to them, in the order you set. If a student has no assignments, they see nothing, so friends never stumble into lessons meant for your daughters. A per-class option "show all published lessons for my age band" gives the open-library behaviour for the Family class if you want it.
+
+**Quick student setup (the "easy to create a login" requirement)**
+- **Add student** form: first name, pick an avatar, pick a class. That is all.
+- Username is auto-suggested from the first name (`maya`, then `maya2` if taken) and the password is auto-generated as three simple words plus a number (`blue-tiger-42`), easy for a child to read and type. You can overwrite either.
+- **Bulk add:** paste a list of names, get all accounts at once.
+- **Login card:** a printable or shareable card per student with the site address, username, password and a QR code, ready to hand to a parent.
+- **Reset password** in one tap (new generated password, shown once). `must_change_password` can prompt the child to choose their own on first login.
+- **Deactivate** a student without deleting their history; **delete** removes the student and all their records for good (needed for privacy requests).
+
+**Privacy and safety for friends' children** (important because other families are involved)
+- Get the friend's parent to agree before creating the account, and tell them what is stored (first name, scores, time spent, AI hint logs).
+- Students never see other students: no leaderboards, no shared names or avatars, no messaging. Each student's data is visible only to you.
+- Store the minimum: first name only, no email, no surname, no photo, no tracking or ads.
+- Keep the Workers AI helper limited to fixed hints and explanations for everyone (section 4b).
+- You are responsible for the data, so keep delete-on-request and export-on-request available. Depending on where you live (for example the UK or EU, or the US for under-13s), child-data laws may apply to a service used by other families; for a small friends-and-family group this is usually manageable but worth checking before opening it up beyond close friends.
+- **Parent access for friends' families (later):** a read-only "guardian" login scoped to one child's progress, so other parents can see their own child's scores without seeing anyone else's. Not in v1; until then you can share a CSV export.
+
+**Effort:** about 2 to 3 extra days (schema, admin screens for classes, courses and assignments, student creation and login cards, class report). The data model is in place from Phase 1, so nothing needs reworking later.
 
 ## 5. Lesson generation framework
 
@@ -584,7 +660,7 @@ correct; every quiz question is covered by the lesson. Then output the JSON only
 ---
 
 ## 6. Security and privacy notes
-- Only first names stored; no email addresses for the kids; no third-party tracking or analytics.
+- Only first names stored; no email addresses for the kids; no third-party tracking or analytics. Students cannot see each other (section 4c).
 - Admin protected by Cloudflare Access, never by a password stored in the app.
 - Kid passwords hashed (PBKDF2, 100k+ iterations, per-user salt); sessions in HttpOnly cookies.
 - `html_embed` blocks run in `<iframe sandbox="allow-scripts">` with no same-origin access.
