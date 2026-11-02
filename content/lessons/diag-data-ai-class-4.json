@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-data-ai-class-4",
+    "subject": "data-ai",
+    "title": "Computing, Data & AI Check-In: Where Am I?",
+    "summary": "Check what you know about algorithms, loops, decisions, data, and how AI learns so we can plan your coding and data year.",
+    "age_band": "9-10",
+    "difficulty": 2,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show I can read and fix simple algorithms",
+      "Show I can read and use data tables and charts",
+      "Show what I understand about how AI learns and staying safe online"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "data-ai-class-4",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, Digital Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "This is a **check-in** to see what you already know about computing, data and AI. No computer is needed, just your brain and a pencil."
+    },
+    {
+      "type": "image",
+      "emoji": "💻",
+      "alt": "Code, data and AI",
+      "caption": "Code, data and AI"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Algorithms and loops"
+    },
+    {
+      "type": "text",
+      "markdown": "An **algorithm** is a precise list of steps. A **loop** repeats steps so you do not have to write them again: repeat 4 times (move forward, turn right) draws a square. **Debugging** means finding and fixing mistakes."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "A robot does this 3 times: move 2 steps forward. How many steps does it move in total?",
+        "answer": {
+          "value": 6,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Decisions"
+    },
+    {
+      "type": "text",
+      "markdown": "Programs make choices with **if** statements: **if** it is raining, **then** take an umbrella, **else** wear sunglasses."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "If it is raining take an umbrella, else wear sunglasses. It is sunny. What do you take?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Umbrella"
+          },
+          {
+            "id": "b",
+            "text": "Sunglasses"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Debug the sandwich",
+      "materials": [
+        "paper",
+        "pencil"
+      ],
+      "instructions": [
+        "Write a 6 step algorithm for making a sandwich.",
+        "Swap with a grown-up who follows it exactly like a robot.",
+        "Find any step that was unclear and fix (debug) it."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: Data"
+    },
+    {
+      "type": "text",
+      "markdown": "**Data** is facts we collect. We store it in **tables** (rows and columns) and show it in **charts**. A **bar chart** makes comparing categories easy. Always check the labels and the scale."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "A bar chart shows Cricket 8, Football 12, Swimming 5 votes. Which is most popular?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Cricket"
+          },
+          {
+            "id": "b",
+            "text": "Football"
+          },
+          {
+            "id": "c",
+            "text": "Swimming"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: How AI learns"
+    },
+    {
+      "type": "text",
+      "markdown": "Some programs do not follow fixed rules. Instead they learn from many **examples**, called **training data**. If you show a computer thousands of cat and dog pictures, it learns to tell them apart. If the examples are unfair or missing, the AI can make **mistakes**, so people must check its answers."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "true_false",
+        "prompt": "An AI learns by looking at lots of examples.",
+        "answer": [
+          true
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Safe and kind online"
+    },
+    {
+      "type": "text",
+      "markdown": "A **strong password** is long and mixes words, numbers and symbols. Never share it. Think before you click or post, and tell a trusted adult if something feels wrong."
+    },
+    {
+      "type": "reveal",
+      "prompt": "Why might an AI that only saw pictures of golden retrievers get confused by a poodle?",
+      "answer_markdown": "Because it learned from a narrow set of examples. Good training data needs variety."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Algorithms are exact steps and loops repeat them.",
+        "If / else lets programs make decisions.",
+        "Tables and charts help us understand data.",
+        "AI learns from examples and can make mistakes.",
+        "Strong, secret passwords keep us safe."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Do your best!"
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "order",
+        "prompt": "Put the steps for making toast in a sensible order.",
+        "ref": "q1",
+        "skill_tag": "algorithms.order",
+        "points": 2,
+        "items": [
+          {
+            "id": "a",
+            "text": "Put bread in the toaster"
+          },
+          {
+            "id": "b",
+            "text": "Press the lever down"
+          },
+          {
+            "id": "c",
+            "text": "Wait for it to pop up"
+          },
+          {
+            "id": "d",
+            "text": "Spread butter"
+          }
+        ],
+        "answer": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "Repeat 5 times: clap twice. How many claps in total?",
+        "ref": "q2",
+        "skill_tag": "loops.count",
+        "answer": {
+          "value": 10,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What does a loop do in a program?",
+        "ref": "q3",
+        "skill_tag": "loops.meaning",
+        "options": [
+          {
+            "id": "a",
+            "text": "Repeats instructions"
+          },
+          {
+            "id": "b",
+            "text": "Stops the computer"
+          },
+          {
+            "id": "c",
+            "text": "Draws a circle only"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "IF the number is bigger than 10 say BIG, ELSE say SMALL. The number is 7. What does the program say?",
+        "ref": "q4",
+        "skill_tag": "conditionals.if_else",
+        "options": [
+          {
+            "id": "a",
+            "text": "BIG"
+          },
+          {
+            "id": "b",
+            "text": "SMALL"
+          },
+          {
+            "id": "c",
+            "text": "Nothing"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A robot should draw a square: forward, turn, forward, turn, forward, turn, forward. It draws a triangle-like shape. What bug is most likely?",
+        "ref": "q5",
+        "skill_tag": "debugging.find",
+        "points": 2,
+        "options": [
+          {
+            "id": "a",
+            "text": "A missing step or wrong turn count"
+          },
+          {
+            "id": "b",
+            "text": "The robot is too heavy"
+          },
+          {
+            "id": "c",
+            "text": "The paper is blue"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "In a table: Mon 3 cars, Tue 7 cars, Wed 5 cars. On which day were there most cars?",
+        "ref": "q6",
+        "skill_tag": "data.read_table",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mon"
+          },
+          {
+            "id": "b",
+            "text": "Tue"
+          },
+          {
+            "id": "c",
+            "text": "Wed"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "Using that table (3, 7 and 5 cars), how many cars were counted in total?",
+        "ref": "q7",
+        "skill_tag": "data.calculate",
+        "points": 2,
+        "answer": {
+          "value": 15,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which chart is best for comparing how many students like each fruit?",
+        "ref": "q8",
+        "skill_tag": "data.chart_type",
+        "options": [
+          {
+            "id": "a",
+            "text": "Bar chart"
+          },
+          {
+            "id": "b",
+            "text": "A photo"
+          },
+          {
+            "id": "c",
+            "text": "A map"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What does an AI need to learn to recognise cats?",
+        "ref": "q9",
+        "skill_tag": "ai.training",
+        "options": [
+          {
+            "id": "a",
+            "text": "Lots of cat examples"
+          },
+          {
+            "id": "b",
+            "text": "A cat as a pet"
+          },
+          {
+            "id": "c",
+            "text": "Nothing at all"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "true_false",
+        "prompt": "An AI answer is always right, so we never need to check it.",
+        "explanation": "AI can make mistakes, so people should check.",
+        "ref": "q10",
+        "skill_tag": "ai.limits",
+        "answer": [
+          false
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which is the strongest password?",
+        "ref": "q11",
+        "skill_tag": "safety.password",
+        "options": [
+          {
+            "id": "a",
+            "text": "password"
+          },
+          {
+            "id": "b",
+            "text": "football1"
+          },
+          {
+            "id": "c",
+            "text": "R7!blue-kite-42"
+          }
+        ],
+        "answer": [
+          "c"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A stranger online asks where you live. What should you do?",
+        "ref": "q12",
+        "skill_tag": "safety.online",
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell them"
+          },
+          {
+            "id": "b",
+            "text": "Do not answer and tell a trusted adult"
+          },
+          {
+            "id": "c",
+            "text": "Ask them for their address first"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      }
+    ]
+  }
+}

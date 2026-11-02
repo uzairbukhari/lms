@@ -1,0 +1,474 @@
+{
+  "schema_version": "1.0",
+  "lesson": {
+    "slug": "diag-general-knowledge-class-1",
+    "subject": "general-knowledge",
+    "title": "General Knowledge Check-In: Where Am I?",
+    "summary": "Visit our world: planet Earth, animals, time, people who help us and food, so we can see what you already know.",
+    "age_band": "7-8",
+    "difficulty": 1,
+    "estimated_minutes": 60,
+    "unit": "Week 1: Where am I?",
+    "learning_objectives": [
+      "Show what I know about our planet and the world",
+      "Show what I know about time, calendars and community helpers",
+      "Show what I know about food, health and animals"
+    ],
+    "tags": [
+      "diagnostic",
+      "week-1"
+    ],
+    "curriculum": {
+      "course": "general-knowledge-class-1",
+      "semester": 1,
+      "week": 1
+    }
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Welcome, World Explorer!"
+    },
+    {
+      "type": "text",
+      "markdown": "Let's explore the world and everything in it! This is a **check-in**, not a test. Tell a grown-up what you already know."
+    },
+    {
+      "type": "image",
+      "emoji": "🌍",
+      "alt": "Our home planet",
+      "caption": "Our home planet"
+    },
+    {
+      "type": "heading",
+      "text": "Stop 1: Our planet"
+    },
+    {
+      "type": "text",
+      "markdown": "We live on planet **Earth**. Most of Earth is covered by water in big **oceans**. The land is split into seven big areas called **continents**. The Sun is a star that gives us light and heat."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "What do we call the big areas of land on Earth?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Continents"
+          },
+          {
+            "id": "b",
+            "text": "Pools"
+          },
+          {
+            "id": "c",
+            "text": "Houses"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 2: Time"
+    },
+    {
+      "type": "text",
+      "markdown": "There are **7 days** in a week and **12 months** in a year. The days are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. A day has 24 hours."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "number",
+        "prompt": "How many days are in a week?",
+        "answer": {
+          "value": 7,
+          "tolerance": 0
+        }
+      }
+    },
+    {
+      "type": "activity",
+      "title": "My week",
+      "materials": [
+        "paper",
+        "crayons"
+      ],
+      "instructions": [
+        "Draw 7 boxes for the days of the week.",
+        "Draw one thing you do on each day.",
+        "Which day is your favourite and why?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Stop 3: People who help us"
+    },
+    {
+      "type": "text",
+      "markdown": "**Doctors** and **nurses** keep us healthy. **Teachers** help us learn. **Firefighters** put out fires. **Farmers** grow our food. Every job helps the community."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Who helps us when we are ill?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Doctor"
+          },
+          {
+            "id": "b",
+            "text": "Baker"
+          },
+          {
+            "id": "c",
+            "text": "Pilot"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 4: Food and health"
+    },
+    {
+      "type": "text",
+      "markdown": "To stay healthy we eat fruit, vegetables, and drink water, sleep well and wash our hands. Sweets and fizzy drinks are only for treats."
+    },
+    {
+      "type": "check",
+      "question": {
+        "type": "multiple_choice",
+        "prompt": "Which of these is the healthiest snack?",
+        "options": [
+          {
+            "id": "a",
+            "text": "An apple"
+          },
+          {
+            "id": "b",
+            "text": "A bag of sweets"
+          },
+          {
+            "id": "c",
+            "text": "A fizzy drink"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Stop 5: Amazing animals"
+    },
+    {
+      "type": "text",
+      "markdown": "The **blue whale** is the biggest animal in the world. The **cheetah** is the fastest land animal. Camels can live in hot deserts and polar bears live in the cold Arctic."
+    },
+    {
+      "type": "reveal",
+      "prompt": "Which animal would you like to meet, and why?",
+      "answer_markdown": "Any answer is great! Ask a grown-up to help you find out more."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Earth has oceans and 7 continents.",
+        "A week has 7 days and a year has 12 months.",
+        "Many people do jobs that help the community.",
+        "Healthy habits keep us strong.",
+        "Animals live in lots of different places."
+      ]
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "markdown": "Ready? Start the quiz. 12 questions, about 15 minutes. Have fun!"
+    }
+  ],
+  "quiz": {
+    "pass_percent": 1,
+    "shuffle_questions": false,
+    "shuffle_options": true,
+    "max_attempts": null,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What is the name of the planet we live on?",
+        "ref": "q1",
+        "skill_tag": "earth.planet",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mars"
+          },
+          {
+            "id": "b",
+            "text": "Earth"
+          },
+          {
+            "id": "c",
+            "text": "Moon"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What gives us light and heat in the day?",
+        "ref": "q2",
+        "skill_tag": "earth.sun",
+        "options": [
+          {
+            "id": "a",
+            "text": "The Sun"
+          },
+          {
+            "id": "b",
+            "text": "A lamp"
+          },
+          {
+            "id": "c",
+            "text": "The Moon"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "number",
+        "prompt": "How many days are in a week?",
+        "ref": "q3",
+        "skill_tag": "time.week",
+        "answer": {
+          "value": 7,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "number",
+        "prompt": "How many months are in a year?",
+        "ref": "q4",
+        "skill_tag": "time.year",
+        "answer": {
+          "value": 12,
+          "tolerance": 0
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which day comes after Monday?",
+        "ref": "q5",
+        "skill_tag": "time.days",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sunday"
+          },
+          {
+            "id": "b",
+            "text": "Tuesday"
+          },
+          {
+            "id": "c",
+            "text": "Friday"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Who puts out fires?",
+        "ref": "q6",
+        "skill_tag": "community.helpers",
+        "options": [
+          {
+            "id": "a",
+            "text": "Firefighter"
+          },
+          {
+            "id": "b",
+            "text": "Teacher"
+          },
+          {
+            "id": "c",
+            "text": "Farmer"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Who grows crops like wheat and rice for us to eat?",
+        "ref": "q7",
+        "skill_tag": "community.helpers",
+        "options": [
+          {
+            "id": "a",
+            "text": "Farmer"
+          },
+          {
+            "id": "b",
+            "text": "Pilot"
+          },
+          {
+            "id": "c",
+            "text": "Police officer"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "match",
+        "prompt": "Match the person to their job.",
+        "ref": "q8",
+        "skill_tag": "community.match",
+        "points": 2,
+        "left": [
+          {
+            "id": "l1",
+            "text": "Teacher"
+          },
+          {
+            "id": "l2",
+            "text": "Doctor"
+          },
+          {
+            "id": "l3",
+            "text": "Pilot"
+          }
+        ],
+        "right": [
+          {
+            "id": "r1",
+            "text": "Helps children learn"
+          },
+          {
+            "id": "r2",
+            "text": "Helps people feel better"
+          },
+          {
+            "id": "r3",
+            "text": "Flies aeroplanes"
+          }
+        ],
+        "answer": {
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3"
+        }
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which food helps you grow strong?",
+        "ref": "q9",
+        "skill_tag": "health.food",
+        "options": [
+          {
+            "id": "a",
+            "text": "Vegetables"
+          },
+          {
+            "id": "b",
+            "text": "Sweets only"
+          },
+          {
+            "id": "c",
+            "text": "Nothing"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which animal is the biggest in the world?",
+        "ref": "q10",
+        "skill_tag": "animals.facts",
+        "options": [
+          {
+            "id": "a",
+            "text": "Elephant"
+          },
+          {
+            "id": "b",
+            "text": "Blue whale"
+          },
+          {
+            "id": "c",
+            "text": "Giraffe"
+          }
+        ],
+        "answer": [
+          "b"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Where does a fish live?",
+        "ref": "q11",
+        "skill_tag": "animals.habitats",
+        "options": [
+          {
+            "id": "a",
+            "text": "In water"
+          },
+          {
+            "id": "b",
+            "text": "In a tree"
+          },
+          {
+            "id": "c",
+            "text": "In the sky"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What covers most of Earth's surface?",
+        "ref": "q12",
+        "skill_tag": "earth.oceans",
+        "options": [
+          {
+            "id": "a",
+            "text": "Water"
+          },
+          {
+            "id": "b",
+            "text": "Sand"
+          },
+          {
+            "id": "c",
+            "text": "Ice cream"
+          }
+        ],
+        "answer": [
+          "a"
+        ]
+      }
+    ]
+  }
+}
