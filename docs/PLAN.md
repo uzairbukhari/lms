@@ -84,6 +84,7 @@ subjects ──< lessons            assets (R2 files) used by lessons
 classes ──< class_members >── users
 courses ──< course_lessons >── lessons
 courses ──< course_assignments >── classes | users
+classes ──< terms (4 semesters)      quizzes(kind='exam') ── semester-end exams per course
 ```
 
 ### Tables
@@ -167,7 +168,22 @@ CREATE TABLE course_lessons (
   course_id TEXT NOT NULL REFERENCES courses(id),
   lesson_id TEXT NOT NULL REFERENCES lessons(id),
   position  INTEGER NOT NULL,
+  semester  INTEGER CHECK (semester BETWEEN 1 AND 4),   -- curriculum slot (NULL = unscheduled)
+  week      INTEGER CHECK (week BETWEEN 1 AND 13),
   PRIMARY KEY (course_id, lesson_id)
+);
+
+-- Term calendar: 4 semesters of about 3 months per class (see section 4d).
+CREATE TABLE terms (
+  id              TEXT PRIMARY KEY,
+  class_id        TEXT NOT NULL REFERENCES classes(id),
+  number          INTEGER NOT NULL CHECK (number BETWEEN 1 AND 4),
+  name            TEXT NOT NULL,                 -- 'Semester 1'
+  start_date      TEXT NOT NULL,                 -- Monday of week 1
+  end_date        TEXT NOT NULL,
+  teaching_weeks  INTEGER NOT NULL DEFAULT 12,
+  exam_week       INTEGER NOT NULL DEFAULT 13,   -- semester-end exam week
+  UNIQUE (class_id, number)
 );
 
 -- Assign a course to a whole class, or to one student.
@@ -185,7 +201,12 @@ CREATE INDEX idx_assign_user  ON course_assignments(user_id);
 
 CREATE TABLE quizzes (
   id                TEXT PRIMARY KEY,          -- uuid
-  lesson_id         TEXT NOT NULL REFERENCES lessons(id),
+  kind              TEXT NOT NULL DEFAULT 'lesson' CHECK (kind IN ('lesson','exam')),
+  lesson_id         TEXT REFERENCES lessons(id),            -- NULL for exams
+  course_id         TEXT REFERENCES courses(id),            -- exams: the course (subject-year) examined
+  subject_id        TEXT REFERENCES subjects(id),           -- exams: the subject examined
+  semester          INTEGER CHECK (semester BETWEEN 1 AND 4), -- exams: which semester
+  blueprint_json    TEXT,                                   -- exams: how questions were chosen (section 4d)
   version           INTEGER NOT NULL,          -- matches lessons.current_version at creation
   is_current        INTEGER NOT NULL DEFAULT 1,
   pass_percent      INTEGER NOT NULL DEFAULT 70,
@@ -211,6 +232,7 @@ CREATE TABLE questions (
   explanation  TEXT,                           -- shown after submitting
   points       INTEGER NOT NULL DEFAULT 1,
   skill_tag    TEXT,                           -- e.g. 'fractions.compare' for skill-level reports
+  source_question_id TEXT REFERENCES questions(id),  -- exam questions are snapshots copied from lesson quizzes
   UNIQUE (quiz_id, ref)
 );
 
@@ -240,7 +262,8 @@ CREATE TABLE quiz_attempts (
   id               TEXT PRIMARY KEY,           -- uuid
   user_id          TEXT NOT NULL REFERENCES users(id),
   quiz_id          TEXT NOT NULL REFERENCES quizzes(id),   -- pins the exact version
-  lesson_id        TEXT NOT NULL REFERENCES lessons(id),   -- denormalised for easy reporting
+  lesson_id        TEXT REFERENCES lessons(id),            -- denormalised for reporting; NULL for exams
+  scope_key        TEXT NOT NULL,                          -- 'lesson:<id>' or 'exam:<course>:<semester>'; attempts are numbered within it
   attempt_number   INTEGER NOT NULL,           -- 1,2,3... per user per lesson
   status           TEXT NOT NULL DEFAULT 'in_progress'
                      CHECK (status IN ('in_progress','submitted','abandoned')),
@@ -252,7 +275,7 @@ CREATE TABLE quiz_attempts (
   percent          REAL,
   passed           INTEGER,
   question_order   TEXT,                       -- JSON array of question ids as shown
-  UNIQUE (user_id, lesson_id, attempt_number)
+  UNIQUE (user_id, scope_key, attempt_number)
 );
 CREATE INDEX idx_attempts_user_lesson ON quiz_attempts(user_id, lesson_id, attempt_number);
 CREATE INDEX idx_attempts_user_time   ON quiz_attempts(user_id, submitted_at);
@@ -337,6 +360,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - Re-importing the same `slug` creates a new version (new quiz + questions rows); old attempts are untouched.
 - Asset upload to R2 (drag and drop images/audio), returning the filename to use in the JSON.
 - Lesson list with filters by subject/status, reorder, archive.
+- **Curriculum planner:** a grid of semester × week for one course (subject-year) where you drag lessons into slots, plus the **term calendar** for each class (start date of each semester). See section 4d.
 - Admin **Classes and Courses** screens: create a class, add or remove students, build a course by picking and ordering lessons, assign it to a class or to one student (section 4c).
 - **Done when:** you can paste a Claude-generated lesson and see it previewed.
 
@@ -351,12 +375,14 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - `POST /api/quizzes/:lessonId/attempts` → creates attempt, returns questions **without answers** (shuffled per settings).
 - `POST /api/attempts/:id/submit` → server-side grading per type (exact match, tolerance for numbers, normalised text for short answers, partial credit optional for match/order), writes `attempt_answers`, finalises score.
 - AI hints and explanations (section 4b): `POST /api/ai/hint` and `/api/ai/explain` with caching, output check, daily cap and static fallback. Admin "Suggest" drafts in the importer.
+- **Semester exams:** exam builder (auto-pick questions from that semester's lesson quizzes, preview, publish) and the exam attempt flow, which reuses the quiz engine (section 4d).
 - Results screen: stars/score, which questions were right, explanations, **Try again** button.
 - **Done when:** retaking a quiz three times produces three attempt rows with separate scores.
 
 ### Phase 6: Student dashboard (1 day)
 - Home: greeting with avatar, four subject tiles with progress rings, "Continue where you left off", "New lessons".
 - Subject page: lesson cards showing best score stars and attempt count.
+- **"This week" home:** this week's lessons for each subject up front, earlier weeks below, future weeks shown locked; semester map with an exam tile at the end (section 4d).
 - Theme switcher (big, friendly button in the header: one small icon per theme) that sets `users.theme` and applies it instantly. Each child keeps her own choice across devices.
 - Light gamification: stars per lesson, streak counter. No leaderboards between sisters.
 - **Done when:** the full flow (login → subject → lesson → quiz → dashboard) works for both kids.
@@ -366,6 +392,7 @@ Each phase ends with something you can click on. Planning is done with Claude Op
 - **Learning curve chart** per lesson (score vs attempt number) and over time (all attempts by date).
 - Attempt drill-down: every answer the child gave, right/wrong, time taken.
 - Weakest skills table (from `skill_tag`), which feeds back into what lessons you ask Claude to make next.
+- **Semester report card** per student: for each subject, lessons done, average quiz score, exam score and attempts, compared with the previous semester.
 - **Class view:** a table of every student in a class against every lesson (first, best and latest score, attempts), plus class averages and who hasn't started.
 - CSV export of attempts.
 - **Done when:** you can see every attempt each student has made, per student and per class.
@@ -471,6 +498,31 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 
 **Effort:** about 2 to 3 extra days (schema, admin screens for classes, courses and assignments, student creation and login cards, class report). The data model is in place from Phase 1, so nothing needs reworking later.
 
+## 4d. School year: semesters, weeks and exams
+
+**Calendar.** A school year has **4 semesters of about 3 months**. Each semester is **12 teaching weeks plus an exam week** (13 weeks). Each class has its own dates in `terms`, so you can start a friend's class later than the Family class, shift dates for holidays or pause a term.
+
+**Where lessons sit.** A lesson belongs to a **course** (for example "Maths Year 1"), and `course_lessons` gives it a **semester (1 to 4) and a week (1 to 12)**. Courses are per subject, so each subject has its own 48-ish-lesson year plan. You can place a lesson by dragging it in the curriculum planner, or let the lesson JSON suggest a slot (section 5). One lesson per subject per week is the default pace (about 48 lessons per subject, about 190 across four subjects); a lighter pace of 2 to 3 lessons a week across all subjects works too.
+
+**What students see.**
+- The current week is worked out from the class's term dates. **This week's lessons appear first** on the home screen; earlier weeks stay open for catch-up; **future weeks are locked** (shown greyed with "opens in 2 weeks"). You can unlock ahead for a keen child or switch a class to "all unlocked".
+- A **semester map** shows 12 weekly stops and a trophy at the end for the exam.
+- Weekly lesson quizzes work as in the rest of the plan (unlimited retakes, every attempt recorded).
+
+**Semester-end exams (one per subject per semester, so 16 a year).**
+- **Scope:** everything taught in that subject during that semester. By default Semester 4 is cumulative (the whole year) and earlier semesters can mix in a small share (default 20%) of earlier material as revision. You set this per exam in `blueprint_json`.
+- **How the exam is built:** the platform samples questions from the quizzes of that semester's lessons (even coverage: 2 or 3 per lesson, harder ones favoured, around 20 to 30 questions in total), copies them as a **frozen snapshot** with `source_question_id`, and lets you preview, swap or remove questions before publishing. Because the snapshot is frozen, later edits to a lesson never change an exam that children have already taken.
+- **Optional top-up with Claude:** a prompt in section 5.6 writes extra "apply what you know" questions that combine several lessons, which you import into the exam.
+- **Opens** in the exam week of the class's semester, or whenever you open it manually.
+- **Attempts:** the same engine as quizzes, so every attempt is recorded and graded server-side. The number of attempts is a setting (`max_attempts`); I suggest **2** for exams (a first go and one retake after revising), keeping both scores for your review. Set it to unlimited if you prefer.
+- **Pass mark** default 70%, with a friendly results screen ("Semester 1 Maths: 82%! Strongest topics: ..., revise: ...") built from the `skill_tag`s.
+
+**Parent reporting.** Semester report card per child and subject (lessons completed on time, average quiz score, exam score and attempts, change from last semester), plus a year-at-a-glance across the four semesters.
+
+**Effort:** about 3 to 4 extra days (term calendar, curriculum planner, week locking, exam builder, report cards). The tables are created in Phase 1, so nothing needs reworking later.
+
+**Content workload.** The bigger task is authoring about 190 lessons a year with Claude. Section 5.5 gives a prompt that first drafts a 12-week outline per subject per semester, so every lesson is generated against an agreed plan and the exam coverage is even.
+
 ## 5. Lesson generation framework
 
 ### 5.1 Lesson JSON format (v1.0)
@@ -491,7 +543,8 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
       "Explain what 'equal parts' means",
       "Recognise one half and one quarter of a shape or group"
     ],
-    "tags": ["fractions", "shapes"]
+    "tags": ["fractions", "shapes"],
+    "curriculum": { "course": "maths-year-1", "semester": 1, "week": 3 }
   },
   "blocks": [
     { "type": "heading", "text": "Sharing a pizza 🍕" },
@@ -566,6 +619,7 @@ and quiz for my kids' learning platform. Output must import directly into the pl
 Subject: {{maths | science | data-ai | general-knowledge}}
 Topic: {{e.g. "Halves and quarters"}}
 Learner: {{age 7 (age_band "7-8") | age 9 (age_band "9-10") | both (age_band "7-10")}}
+Curriculum slot: {{semester 1-4, week 1-12, e.g. "semester 1, week 3", or "none"}}
 Extra notes (optional): {{e.g. "she loves animals", "build on last week's lesson on counting by 2s"}}
 
 === TEACHING RULES ===
@@ -607,7 +661,8 @@ It must follow schema_version "1.0" exactly:
     "estimated_minutes": integer,
     "unit": string,
     "learning_objectives": [2-4 strings],
-    "tags": [strings]
+    "tags": [strings],
+    "curriculum": {"course": "<subject>-year-1", "semester": 1-4, "week": 1-12}   (omit if "none")
   },
   "blocks": [ ...block objects... ],
   "quiz": {
@@ -658,6 +713,47 @@ correct; every quiz question is covered by the lesson. Then output the JSON only
 | General Knowledge | The 7 continents | Countries, capitals and flags |
 
 ---
+
+### 5.5 Curriculum outline prompt (run once per subject per semester)
+
+````text
+You are an expert primary-school curriculum designer. Plan ONE semester of ONE subject for my kids'
+learning platform. A semester is 12 teaching weeks, then an exam week. We build one lesson per week.
+
+Subject: {{maths | science | data-ai | general-knowledge}}
+Semester: {{1-4 of 4}}
+Learners: {{age 7 | age 9 | both}}
+Already covered in earlier semesters (if any): {{list, or "nothing yet"}}
+
+Rules:
+- 12 weeks, each with: week number, lesson title, slug, one-sentence summary, 2 learning objectives,
+  difficulty (1-3) and 2-3 skill_tags in "topic.skill" snake_case.
+- Build gradually: concepts in later weeks may rely on earlier ones; weeks 11-12 revise and connect
+  the semester's ideas, ready for the exam.
+- Variety: mix reading, hands-on activities and puzzles; keep each lesson to 8-15 minutes.
+- data-ai: spread Computer Science, Data and AI strands across the 12 weeks.
+- No invented facts; keep everything suitable for the age.
+
+Output ONLY a JSON array of 12 objects:
+[{"week":1,"title":"","slug":"","summary":"","objectives":["",""],"difficulty":1,"skill_tags":["",""]}, ...]
+````
+
+Then generate each week's lesson with the main meta-prompt (5.2), pasting that week's outline entry into "Extra notes" and setting the curriculum slot.
+
+### 5.6 Exam top-up prompt (optional)
+
+````text
+You are writing extra questions for a semester-end exam on my kids' learning platform.
+Subject: {{subject}}   Semester: {{1-4}}   Learners: {{age 7 | age 9 | both}}
+The lessons covered this semester (title, summary, skill_tags):
+{{paste the 12 outline entries or lesson summaries}}
+
+Write 6 questions that each combine ideas from TWO OR MORE different lessons ("apply what you know").
+Use mixed types (multiple_choice, number, true_false, order, match), age-appropriate wording, and the
+same question object format and fields as in the lesson quiz format (ref, type, prompt, options/items,
+answer, hint, explanation, points, skill_tag). Output ONLY a JSON array of question objects in one
+```json code block. Every question must be answerable from the lessons listed.
+````
 
 ## 6. Security and privacy notes
 - Only first names stored; no email addresses for the kids; no third-party tracking or analytics. Students cannot see each other (section 4c).
