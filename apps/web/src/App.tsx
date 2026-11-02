@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from "./auth";
 import { AdminApp } from "./pages/admin/AdminApp";
 import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
+import { QuizPlayer } from "./pages/QuizPlayer";
 import { StudentHome } from "./pages/StudentHome";
 
 function StudentApp() {
@@ -12,6 +13,8 @@ function StudentApp() {
   return (
     <Routes>
       <Route path="/lesson/:id" element={<LessonPlayer mode="student" />} />
+      <Route path="/lesson/:id/quiz" element={<QuizPlayer kind="lesson" />} />
+      <Route path="/exam/:id" element={<QuizPlayer kind="exam" />} />
       <Route path="*" element={<StudentHome />} />
     </Routes>
   );
