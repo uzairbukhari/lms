@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import "./themes.css";
+
+/* Map theme variables to Tailwind utilities: bg-bg, bg-surface, text-text, text-muted, bg-accent, ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--surface-border);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--accent-contrast);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --radius-card: var(--radius);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+/* A themed card: surface colour, border, corner radius and shadow all come from the active theme. */
+@layer components {
+  .card {
+    background: var(--surface);
+    color: var(--text);
+    border: var(--border-width) solid var(--surface-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}
+
+@layer components {
+  .btn {
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: calc(var(--radius) * 0.7);
+    border: var(--border-width) solid var(--surface-border);
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    border-color: var(--accent);
+  }
+  .input {
+    min-height: 48px;
+    width: 100%;
+    padding: 0 14px;
+    border-radius: calc(var(--radius) * 0.5);
+    border: var(--border-width) solid var(--surface-border);
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+  }
+  .btn:focus-visible,
+  .input:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* Respect "reduce motion" settings: no animated transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

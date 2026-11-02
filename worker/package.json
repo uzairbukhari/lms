@@ -1,0 +1,20 @@
+{
+  "name": "@lms/worker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev -c wrangler.local.jsonc",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "@lms/schema": "^0.0.0",
+    "hono": "^4.13.16"
+  },
+  "devDependencies": {
+    "miniflare": "^4.20260730.0"
+  }
+}
