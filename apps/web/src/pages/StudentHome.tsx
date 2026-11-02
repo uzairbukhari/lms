@@ -159,9 +159,11 @@ export function StudentHome() {
   const [home, setHome] = useState<Home | null>(null);
   const [exams, setExams] = useState<Exam[]>([]);
   const [failed, setFailed] = useState(false);
+  const [points, setPoints] = useState<{ total: number; waiting: number } | null>(null);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
+    api<{ points: { total: number; waiting: number } }>("/api/map").then((m) => setPoints(m.points)).catch(() => undefined);
     api<{ exams: Exam[] }>("/api/exams").then((r) => setExams(r.exams)).catch(() => undefined);
   }, []);
 
@@ -200,6 +202,11 @@ export function StudentHome() {
               {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
             </span>
           )}
+          <Link to="/map" className="btn btn-primary map-button relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
+            <span aria-hidden="true" className="text-2xl">🗺️</span> Map
+            {points && <span className="rounded-full bg-surface px-2.5 py-0.5 text-base font-extrabold text-text">🪙 {points.total}</span>}
+            {points && points.waiting > 0 && <span aria-hidden="true" className="chest-wiggle absolute -right-3 -top-4 text-3xl">🎁</span>}
+          </Link>
           <button type="button" className="btn" onClick={() => void logout()}>Log out</button>
         </div>
       </header>

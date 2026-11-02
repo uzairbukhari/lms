@@ -55,7 +55,10 @@ function play(notes: Note[]): void {
   }
 }
 
-export type Sfx = "next" | "back" | "tap" | "correct" | "wrong" | "done" | "start";
+export type Sfx =
+  | "next" | "back" | "tap" | "correct" | "wrong" | "done" | "start"
+  // Semester map and mini games
+  | "pop" | "coin" | "gold" | "bump" | "step" | "whoosh" | "fanfare" | "tick" | "go" | "flip" | "unlock" | "locked" | "chest";
 
 const SOUNDS: Record<Sfx, Note[]> = {
   next: [{ f: 523, at: 0, len: 0.1 }, { f: 784, at: 0.08, len: 0.14 }],
@@ -65,7 +68,65 @@ const SOUNDS: Record<Sfx, Note[]> = {
   wrong: [{ f: 294, at: 0, len: 0.16, type: "triangle" }, { f: 247, at: 0.15, len: 0.24, type: "triangle" }],
   done: [{ f: 523, at: 0, len: 0.14 }, { f: 659, at: 0.14, len: 0.14 }, { f: 784, at: 0.28, len: 0.14 }, { f: 1047, at: 0.42, len: 0.4 }, { f: 1319, at: 0.6, len: 0.5 }],
   start: [{ f: 392, at: 0, len: 0.12 }, { f: 523, at: 0.12, len: 0.12 }, { f: 659, at: 0.24, len: 0.12 }, { f: 784, at: 0.36, len: 0.3 }],
+  pop: [{ f: 1200, at: 0, len: 0.05, type: "square", vol: 0.08 }, { f: 1800, at: 0.03, len: 0.08, vol: 0.12 }],
+  coin: [{ f: 988, at: 0, len: 0.08, type: "square", vol: 0.07 }, { f: 1319, at: 0.07, len: 0.18, type: "square", vol: 0.07 }],
+  gold: [{ f: 1047, at: 0, len: 0.08, type: "square", vol: 0.07 }, { f: 1319, at: 0.07, len: 0.08, type: "square", vol: 0.07 }, { f: 1568, at: 0.14, len: 0.08, type: "square", vol: 0.07 }, { f: 2093, at: 0.21, len: 0.25, type: "square", vol: 0.07 }],
+  bump: [{ f: 140, at: 0, len: 0.18, type: "sawtooth", vol: 0.12 }, { f: 100, at: 0.08, len: 0.2, type: "triangle", vol: 0.15 }],
+  step: [{ f: 520, at: 0, len: 0.05, type: "triangle", vol: 0.1 }],
+  whoosh: [{ f: 300, at: 0, len: 0.12, type: "sine", vol: 0.08 }, { f: 600, at: 0.05, len: 0.12, vol: 0.06 }, { f: 900, at: 0.1, len: 0.12, vol: 0.04 }],
+  fanfare: [
+    { f: 523, at: 0, len: 0.12, type: "square", vol: 0.07 }, { f: 523, at: 0.13, len: 0.08, type: "square", vol: 0.07 }, { f: 523, at: 0.22, len: 0.08, type: "square", vol: 0.07 },
+    { f: 698, at: 0.32, len: 0.35, type: "square", vol: 0.07 }, { f: 880, at: 0.7, len: 0.14, type: "square", vol: 0.07 }, { f: 1047, at: 0.86, len: 0.6, type: "square", vol: 0.07 },
+    { f: 262, at: 0.32, len: 1.1, type: "triangle", vol: 0.12 },
+  ],
+  tick: [{ f: 660, at: 0, len: 0.12, type: "triangle" }],
+  go: [{ f: 880, at: 0, len: 0.1, type: "square", vol: 0.08 }, { f: 1320, at: 0.08, len: 0.35, type: "square", vol: 0.08 }],
+  flip: [{ f: 700, at: 0, len: 0.05, type: "triangle", vol: 0.1 }, { f: 1000, at: 0.04, len: 0.05, type: "triangle", vol: 0.1 }],
+  unlock: [{ f: 784, at: 0, len: 0.1 }, { f: 988, at: 0.1, len: 0.1 }, { f: 1175, at: 0.2, len: 0.1 }, { f: 1568, at: 0.3, len: 0.4 }],
+  locked: [{ f: 220, at: 0, len: 0.08, type: "square", vol: 0.06 }, { f: 220, at: 0.12, len: 0.08, type: "square", vol: 0.06 }],
+  chest: [
+    { f: 392, at: 0, len: 0.1, type: "triangle" }, { f: 523, at: 0.1, len: 0.1, type: "triangle" }, { f: 659, at: 0.2, len: 0.1, type: "triangle" },
+    { f: 1047, at: 0.3, len: 0.1, type: "square", vol: 0.06 }, { f: 1319, at: 0.38, len: 0.1, type: "square", vol: 0.06 }, { f: 1568, at: 0.46, len: 0.1, type: "square", vol: 0.06 }, { f: 2093, at: 0.54, len: 0.4, type: "square", vol: 0.06 },
+  ],
 };
+
+// --- Game music --------------------------------------------------------------------------------------
+// A soft, cheerful loop (pentatonic melody over a bass note) for the mini games. Quiet so effects stay clear.
+
+let musicTimer: ReturnType<typeof setInterval> | null = null;
+const TUNES: Record<string, { bass: number[]; tune: number[] }> = {
+  space: { bass: [131, 131, 165, 147], tune: [523, 659, 784, 659, 880, 784, 659, 587, 523, 587, 659, 784, 659, 587, 523, 392] },
+  candy: { bass: [175, 175, 220, 196], tune: [698, 880, 1047, 880, 784, 698, 784, 880, 1047, 1175, 1047, 880, 784, 880, 698, 523] },
+  sunny: { bass: [196, 196, 247, 220], tune: [784, 659, 784, 988, 880, 784, 659, 587, 659, 784, 880, 784, 659, 587, 523, 587] },
+  forest: { bass: [147, 147, 196, 175], tune: [587, 698, 880, 698, 784, 698, 587, 523, 587, 698, 784, 880, 784, 698, 587, 440] },
+};
+
+/** Start the game music loop (does nothing if sound is off). */
+export function startMusic(theme = "space", tempo = 1): void {
+  stopMusic();
+  if (!getSoundOn()) return;
+  const t = TUNES[theme] ?? TUNES.space!;
+  let i = 0;
+  const beat = 220 / tempo;
+  musicTimer = setInterval(() => {
+    if (!getSoundOn()) return;
+    try {
+      const notes: Note[] = [];
+      if (i % 2 === 0) notes.push({ f: t.tune[(i / 2) % t.tune.length]!, at: 0, len: 0.22, type: "triangle", vol: 0.045 });
+      if (i % 8 === 0) notes.push({ f: t.bass[(i / 8) % t.bass.length]!, at: 0, len: 0.8, type: "sine", vol: 0.07 });
+      if (i % 4 === 2) notes.push({ f: 2400, at: 0, len: 0.03, type: "square", vol: 0.012 });
+      play(notes);
+    } catch {
+      // no audio: stay quiet
+    }
+    i++;
+  }, beat);
+}
+
+export function stopMusic(): void {
+  if (musicTimer) clearInterval(musicTimer);
+  musicTimer = null;
+}
 
 export function sfx(name: Sfx): void {
   if (!getSoundOn()) return;

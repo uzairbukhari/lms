@@ -14,3 +14,4 @@ export * from "./grading";
 export { blockNarration, buildSlides, plain, splitSentences, type Slide, type SlideKind } from "./slides";
 export * from "./glossary";
 export * from "./visuals";
+export * from "./games";
