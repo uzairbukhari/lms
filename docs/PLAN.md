@@ -2,7 +2,7 @@
 
 A lightweight, private learning platform for two learners (ages 7 and 9) covering **Maths, Science, Data & AI, and General Knowledge**. Lessons and quizzes are generated with Claude in a fixed JSON format, uploaded by the parent (admin), and every quiz attempt is recorded so learning curves can be reviewed over time.
 
-Status: **planning**. Nothing is built yet. Implementation will follow this document phase by phase.
+Status: **Option A (Cloudflare-native custom build) chosen on 2026-11-02.** Implementation follows this document phase by phase.
 
 ---
 
@@ -59,7 +59,7 @@ Honest trade-offs, given your goals:
 - Grading through automations is clunky, answers are visible to a determined child, and plan limits (users, records, automations) apply.
 - Monthly cost (~$20–60) for something Cloudflare runs for nearly nothing.
 
-It's the fastest way to see something working in a weekend. **Recommendation: go with Option A.** Claude can generate most of the code, you already pay for Cloudflare, and the lesson format in section 5 only works fully with Option A.
+It's the fastest way to see something working in a weekend. **Decision: Option A** (confirmed 2026-11-02). Claude can generate most of the code, you already pay for Cloudflare, and the lesson format in section 5 only works fully with Option A.
 
 ---
 
