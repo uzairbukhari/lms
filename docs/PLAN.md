@@ -1,6 +1,6 @@
 # Kids' LMS: Architecture and Build Plan
 
-A lightweight, private learning platform for two learners (ages 7 and 9) covering **Maths, Science, Data & AI, and General Knowledge**. Lessons and quizzes are generated with Claude in a fixed JSON format, uploaded by the parent (admin), and every quiz attempt is recorded so learning curves can be reviewed over time.
+A lightweight, private learning platform for two learners (ages 7 and 9) covering **Maths, Science, Computer Science / Data & AI, and General Knowledge**. Lessons and quizzes are generated with Claude in a fixed JSON format, uploaded by the parent (admin), and every quiz attempt is recorded so learning curves can be reviewed over time.
 
 Status: **Option A (Cloudflare-native custom build) chosen on 2026-11-02.** Implementation follows this document phase by phase.
 
@@ -103,7 +103,7 @@ CREATE TABLE users (
 
 -- Catalogue ------------------------------------------------------------
 CREATE TABLE subjects (
-  id          TEXT PRIMARY KEY,                -- 'maths','science','data-ai','general-knowledge'
+  id          TEXT PRIMARY KEY,                -- 'maths','science','data-ai','general-knowledge'  (data-ai is shown to kids as "Computer Science, Data & AI")
   name        TEXT NOT NULL,
   icon        TEXT,                            -- emoji
   color       TEXT,
@@ -454,8 +454,11 @@ Extra notes (optional): {{e.g. "she loves animals", "build on last week's lesson
   lesson → real-world connection → summary.
 - 8–15 blocks; 8–15 minutes. One idea per block. Use emojis for visuals; no external image URLs.
 - Be accurate. For science and general knowledge, only use well-established facts suitable for kids.
-- For data-ai: use concrete, kid-relatable examples (sorting toys, pictograms, "how does a robot
-  learn the difference between cats and dogs") and be honest about what AI can't do.
+- For data-ai (Computer Science, Data & AI): cover three strands and say which one this lesson is in
+  `unit`: (1) Computer Science: step-by-step instructions (algorithms), loops, if/then, patterns,
+  debugging, binary, how computers work, staying safe online (mostly unplugged, no coding needed);
+  (2) Data: sorting, pictograms, charts, averages; (3) AI: concrete, kid-relatable examples ("how does
+  a robot learn the difference between cats and dogs") and honesty about what AI can't do.
 - Warm, encouraging tone. No scary content. UK/US neutral spelling where possible.
 
 === QUIZ RULES ===
@@ -530,7 +533,7 @@ correct; every quiz question is covered by the lesson. Then output the JSON only
 |---|---|---|
 | Maths | Halves and quarters | Equivalent fractions |
 | Science | What do plants need? | The water cycle |
-| Data & AI | Sorting and grouping things | How computers learn from examples |
+| Computer Science, Data & AI | Giving a robot step-by-step instructions | Loops and if/then, or how computers learn from examples |
 | General Knowledge | The 7 continents | Countries, capitals and flags |
 
 ---
