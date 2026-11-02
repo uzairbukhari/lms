@@ -5,7 +5,9 @@ import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { Classes } from "./Classes";
 import { Curriculum } from "./Curriculum";
 import { LessonPlayer } from "../LessonPlayer";
+import { Exams } from "./Exams";
 import { Lessons } from "./Lessons";
+import { Reports } from "./Reports";
 import { Students } from "./Students";
 
 type Gate = "checking" | "ok" | { error: string };
@@ -42,6 +44,8 @@ export function AdminApp() {
           <NavLink to="/admin/classes" className={link}>Classes</NavLink>
           <NavLink to="/admin/lessons" className={link}>Lessons</NavLink>
           <NavLink to="/admin/plan" className={link}>Year plan</NavLink>
+          <NavLink to="/admin/exams" className={link}>Exams</NavLink>
+          <NavLink to="/admin/reports" className={link}>Reports</NavLink>
         </nav>
       </header>
       <Routes>
@@ -50,6 +54,8 @@ export function AdminApp() {
         <Route path="lessons" element={<Lessons />} />
         <Route path="lessons/:id/preview" element={<LessonPlayer mode="preview" />} />
         <Route path="plan" element={<Curriculum />} />
+        <Route path="exams" element={<Exams />} />
+        <Route path="reports" element={<Reports />} />
         <Route path="*" element={<Students />} />
       </Routes>
       <footer className="mt-auto pt-6">
