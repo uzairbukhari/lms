@@ -20,7 +20,7 @@ A small Tauri 2 shell (`apps/desktop`) that opens the live site (https://lms.sip
 ## Releasing
 
 1. Raise `version` in `apps/desktop/src-tauri/tauri.conf.json` and `Cargo.toml` (same number).
-2. Push a tag: `git tag desktop-v1.0.1 && git push origin desktop-v1.0.1`.
+2. Push a tag: `git tag desktop-v1.0.2 && git push origin desktop-v1.0.1`.
 3. The "Desktop release" workflow builds on `windows-latest`, uploads the installer to R2 (`desktop/releases/<version>/`), updates `desktop/latest.json`, and **deletes all but the newest 3 releases** (`scripts/publish-desktop-release.mjs`).
 
 Only shell releases use R2 (about 5 to 10 MB each). Website deploys never upload anything there.
