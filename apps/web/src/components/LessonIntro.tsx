@@ -60,7 +60,7 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
 
   return (
     <div className={`mx-auto grid w-full max-w-7xl items-center gap-x-12 gap-y-6 pb-2 pt-4 text-center md:grid-cols-2 ${launching ? "pointer-events-none" : ""}`}>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex min-w-0 flex-col items-center gap-6">
       {first && (
         <p className="pop-in font-display text-[clamp(1.6rem,3.2vw,2.6rem)] font-extrabold" style={{ color: "var(--accent)" }}>
           Hi {first}! <span className="intro-wave" aria-hidden="true">👋</span> Ready for an adventure?
@@ -86,12 +86,12 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
       </p>
 
       <div className="flex flex-col gap-3">
-        <h1 className="pop-in font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold leading-tight [text-wrap:balance]" style={{ animationDelay: "0.2s" }}>{lesson.title.split(" ").map((w, i) => <span key={i} className="whitespace-nowrap">{i > 0 && " "}{w}</span>)}</h1>
+        <h1 className="pop-in font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold leading-tight [text-wrap:balance]" style={{ animationDelay: "0.2s" }}>{lesson.title.split(" ").map((w, i) => <span key={i}>{i > 0 && " "}<span className="whitespace-nowrap">{w}</span></span>)}</h1>
         <p className="pop-in mx-auto max-w-2xl text-[clamp(1.35rem,2.6vw,2.1rem)] leading-snug text-muted" style={{ animationDelay: "0.3s" }}>{lesson.summary}</p>
       </div>
 
       </div>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex min-w-0 flex-col items-center gap-6">
       {lesson.objectives.length > 0 && (
         <section className="card w-full p-6 text-left" aria-labelledby="intro-goals">
           <h2 id="intro-goals" className="mb-3 flex items-center gap-2 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-extrabold uppercase tracking-wide text-muted">
