@@ -328,7 +328,7 @@ function FitToScreen({ children }: { children: ReactNode }) {
     <div ref={box} className={`flex h-full w-full flex-col ${fit.scale <= MIN_SCALE ? "overflow-y-auto" : "justify-center overflow-hidden"}`}>
       <div className="relative w-full shrink-0" style={{ height: fit.height || undefined }}>
         <div ref={inner} className="absolute left-0 top-0" style={{ width: `${100 / fit.scale}%`, transform: `scale(${fit.scale})`, transformOrigin: "top left" }}>
-          <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 py-2">{children}</div>
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 py-2">{children}</div>
         </div>
       </div>
     </div>
@@ -342,8 +342,8 @@ type ViewProps = {
   assetUrl: (n: string) => string; resumeAt: number; onGo: (n: number) => void; onLeave: () => void;
 };
 
-const titleCls = "font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight";
-const bodyCls = "text-[clamp(1.35rem,2.8vw,2.1rem)] leading-snug";
+const titleCls = "font-display text-[clamp(2.2rem,5.2vw,4.25rem)] font-extrabold leading-tight";
+const bodyCls = "text-[clamp(1.5rem,3.1vw,2.6rem)] leading-snug";
 
 function SlideView(p: ViewProps) {
   const { slide } = p;
@@ -364,7 +364,7 @@ function SlideView(p: ViewProps) {
       const b = slide.blocks[0] as Extract<Block, { type: "video" }>;
       return (
         <>
-          <p className="text-xl font-bold text-muted">🎬 Video time</p>
+          <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🎬 Video time</p>
           <h2 className={titleCls}>{b.title}</h2>
           <VideoClip key={b.youtube} title={b.title} id={b.youtube} start={b.start} end={b.end} caption={b.caption} />
         </>
@@ -374,7 +374,7 @@ function SlideView(p: ViewProps) {
       const b = slide.blocks[0] as Extract<Block, { type: "explainer" }>;
       return (
         <>
-          <p className="text-xl font-bold text-muted">🎬 Watch and learn</p>
+          <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🎬 Watch and learn</p>
           <h2 className={titleCls}>{b.title}</h2>
           <Explainer scenes={b.scenes} />
         </>
@@ -384,7 +384,7 @@ function SlideView(p: ViewProps) {
       const b = slide.blocks[0] as Extract<Block, { type: "brain_game" }>;
       return (
         <>
-          <p className="text-xl font-bold text-muted">🧠 Brain game</p>
+          <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🧠 Brain game</p>
           <h2 className={titleCls}>{b.title}</h2>
           {b.goal && <p className={`${bodyCls} card px-5 py-3`}>{b.goal}</p>}
           <BrainGame key={slide.title} game={b.game} emojis={b.emojis} />
@@ -395,7 +395,7 @@ function SlideView(p: ViewProps) {
       const b = slide.blocks[0] as Extract<Block, { type: "manipulative" }>;
       return (
         <>
-          <p className="text-xl font-bold text-muted">🧩 Play with it</p>
+          <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🧩 Play with it</p>
           <h2 className={titleCls}>{b.title}</h2>
           {b.goal && <p className={`${bodyCls} card px-5 py-3`}>{b.goal}</p>}
           <Manipulative emoji={b.emoji} count={b.count} zones={b.zones} />
@@ -519,7 +519,7 @@ function CheckSlide({ slide }: { slide: Slide }) {
   };
   return (
     <>
-      <p className="text-xl font-bold text-muted">✋ Check yourself{slide.eyebrow ? ` · ${slide.eyebrow}` : ""}</p>
+      <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">✋ Check yourself{slide.eyebrow ? ` · ${slide.eyebrow}` : ""}</p>
       <div className={`card flex flex-col gap-4 p-5 sm:p-8 ${state === "wrong" ? "shake" : ""} ${bodyCls}`}>
         <QuestionView q={q} value={value} onChange={(v) => { setValue(v); setState("idle"); }} />
         <div className="flex flex-wrap items-center gap-3">
@@ -541,7 +541,7 @@ function RevealSlide({ slide }: { slide: Slide }) {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <p className="text-xl font-bold text-muted">🤔 Think about it</p>
+      <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🤔 Think about it</p>
       <h2 className={titleCls}>{b.prompt}</h2>
       {open ? (
         <div className={`pop-in card p-5 ${bodyCls}`}><Markdown text={b.answer_markdown} /></div>
@@ -556,7 +556,7 @@ function ActivitySlide({ slide }: { slide: Slide }) {
   const b = slide.blocks[0] as Extract<Block, { type: "activity" }>;
   return (
     <>
-      <p className="text-xl font-bold text-muted">🛠️ Try it!</p>
+      <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🛠️ Try it!</p>
       <h2 className={titleCls}>{b.title}</h2>
       {b.materials && b.materials.length > 0 && (
         <p className={`pop-in card px-5 py-3 ${bodyCls}`}><strong>You need:</strong> {b.materials.join(", ")}</p>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { api } from "../../api";
+import { LessonOutline } from "../LessonOutline";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, LinkButton, PageHeader, Skeleton, useFeedback, useLoad } from "../ui";
 
 type Clip = { youtube: string; title: string; channel: string; seconds: number; madeForKids: boolean; needsTrim: boolean };
@@ -53,6 +54,8 @@ export function LessonVideos() {
           Video search is not switched on yet. In Cloudflare open Workers, lms, Settings, Variables and Secrets, add a secret named <b>YOUTUBE_API_KEY</b> with your YouTube Data API key, then refresh this page.
         </div>
       )}
+
+      {id && <Card title="What this lesson teaches"><LessonOutline lessonId={id} /></Card>}
 
       <Card title="In this lesson">
         {(approved.data?.videos ?? []).length === 0 ? <EmptyState title="No video yet">Search below and add one.</EmptyState> : (

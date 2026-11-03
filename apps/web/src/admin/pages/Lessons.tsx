@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import { SUBJECTS } from "@lms/schema";
 import { api } from "../../api";
+import { LessonOutline } from "../LessonOutline";
 import {
-  Badge, Button, Card, compare, EmptyState, ErrorNote, LinkButton, PageHeader, RowMenu, SearchBox, Skeleton, SortTh, StatusBadge,
+  Badge, Button, Card, compare, Drawer, EmptyState, ErrorNote, LinkButton, PageHeader, RowMenu, SearchBox, Skeleton, SortTh, StatusBadge,
   SUBJECT_NAMES, ago, useFeedback, useLoad, useSort,
 } from "../ui";
 
@@ -21,6 +22,7 @@ export function Lessons() {
   const [cls, setCls] = useState("");
   const [semester, setSemester] = useState("");
   const [week, setWeek] = useState("");
+  const [outline, setOutline] = useState<LessonRow | null>(null);
   const sort = useSort<"title" | "subject" | "updated">("subject");
 
   const rows = useMemo(() => {
@@ -86,19 +88,21 @@ export function Lessons() {
                 <td className="actions"><div className="a-row" style={{ flexWrap: "nowrap", justifyContent: "flex-end" }}>
                   <LinkButton to={`/admin/lessons/${l.id}/preview`} size="sm" newWindow>Preview</LinkButton>
                   <LinkButton to={`/admin/lessons/${l.id}/edit`} size="sm">Edit</LinkButton>
+                  <Button size="sm" onClick={() => setOutline(l)}>Outline</Button>
                   <LinkButton to={`/admin/lessons/${l.id}/videos`} size="sm">Videos</LinkButton>
                   {l.status !== "published" && <Button size="sm" variant="primary" onClick={() => void setLessonStatus(l, "published")}>Publish</Button>}
-                  <RowMenu label={`Actions for ${l.title}`} items={[
+                  {!l.slots.some((s) => s.week) && <RowMenu label={`Actions for ${l.title}`} items={[
                     ...(l.status === "published" ? [{ label: "Unpublish", onClick: () => void setLessonStatus(l, "draft") }] : []),
                     ...(l.status !== "archived" ? [{ label: "Archive", onClick: () => void setLessonStatus(l, "archived") }] : [{ label: "Restore as draft", onClick: () => void setLessonStatus(l, "draft") }]),
                     { label: "Copy JSON", onClick: () => void copySource(l) },
-                  ]} />
+                  ]} />}
                 </div></td>
               </tr>
             ))}</tbody>
           </table></div>
         )}
       </Card>
+      {outline && <Drawer title={`What “${outline.title}” teaches`} onClose={() => setOutline(null)} footer={<Button onClick={() => setOutline(null)}>Close</Button>}><LessonOutline lessonId={outline.id} /></Drawer>}
     </>
   );
 }

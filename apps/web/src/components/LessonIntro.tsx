@@ -59,9 +59,10 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
   }
 
   return (
-    <div className={`mx-auto flex w-full max-w-3xl flex-col items-center gap-6 pb-2 pt-6 text-center ${launching ? "pointer-events-none" : ""}`}>
+    <div className={`mx-auto grid w-full max-w-7xl items-center gap-x-12 gap-y-6 pb-2 pt-4 text-center md:grid-cols-2 ${launching ? "pointer-events-none" : ""}`}>
+      <div className="flex flex-col items-center gap-6">
       {first && (
-        <p className="pop-in font-display text-[clamp(1.4rem,3vw,2rem)] font-extrabold" style={{ color: "var(--accent)" }}>
+        <p className="pop-in font-display text-[clamp(1.6rem,3.2vw,2.6rem)] font-extrabold" style={{ color: "var(--accent)" }}>
           Hi {first}! <span className="intro-wave" aria-hidden="true">👋</span> Ready for an adventure?
         </p>
       )}
@@ -72,26 +73,28 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
         ))}
         <button type="button" aria-label={`${look.label} badge. Tap me!`} onClick={tapBadge}
           className={`${launching ? "intro-launch" : "intro-bob"} relative block rounded-full`} style={{ cursor: "pointer" }}>
-          <span key={jump} className={`intro-glow flex h-[clamp(130px,22vw,176px)] w-[clamp(130px,22vw,176px)] items-center justify-center rounded-full ${jump ? "intro-jump" : ""}`}
+          <span key={jump} className={`intro-glow flex h-[clamp(140px,20vw,220px)] w-[clamp(140px,20vw,220px)] items-center justify-center rounded-full ${jump ? "intro-jump" : ""}`}
             style={{ background: tint, color: "var(--on-tint)", border: "6px solid var(--accent)", boxShadow: "var(--shadow)" }}>
-            <SubjectIcon subject={lesson.subject} size={88} />
+            <SubjectIcon subject={lesson.subject} size={112} />
           </span>
         </button>
         {cheer && <span className="intro-cheer card pointer-events-none absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap px-4 py-1 font-display text-xl font-extrabold" role="status">{cheer}</span>}
       </div>
 
-      <p className="pop-in rounded-full px-5 py-1.5 text-lg font-bold" style={{ background: tint, color: "var(--on-tint)", animationDelay: "0.1s" }}>
+      <p className="pop-in rounded-full px-6 py-2 text-[clamp(1.2rem,2vw,1.6rem)] font-bold" style={{ background: tint, color: "var(--on-tint)", animationDelay: "0.1s" }}>
         {look.label}{when ? ` · ${when}` : ""}
       </p>
 
       <div className="flex flex-col gap-3">
-        <h1 className="pop-in font-display text-[clamp(2.2rem,5.5vw,3.75rem)] font-extrabold leading-tight [text-wrap:balance]" style={{ animationDelay: "0.2s" }}>{lesson.title.split(" ").map((w, i) => <span key={i} className="whitespace-nowrap">{i > 0 && " "}{w}</span>)}</h1>
-        <p className="pop-in mx-auto max-w-2xl text-[clamp(1.2rem,2.4vw,1.7rem)] leading-snug text-muted" style={{ animationDelay: "0.3s" }}>{lesson.summary}</p>
+        <h1 className="pop-in font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold leading-tight [text-wrap:balance]" style={{ animationDelay: "0.2s" }}>{lesson.title.split(" ").map((w, i) => <span key={i} className="whitespace-nowrap">{i > 0 && " "}{w}</span>)}</h1>
+        <p className="pop-in mx-auto max-w-2xl text-[clamp(1.35rem,2.6vw,2.1rem)] leading-snug text-muted" style={{ animationDelay: "0.3s" }}>{lesson.summary}</p>
       </div>
 
+      </div>
+      <div className="flex flex-col items-center gap-6">
       {lesson.objectives.length > 0 && (
-        <section className="card w-full p-5 text-left" aria-labelledby="intro-goals">
-          <h2 id="intro-goals" className="mb-3 flex items-center gap-2 font-display text-xl font-extrabold uppercase tracking-wide text-muted">
+        <section className="card w-full p-6 text-left" aria-labelledby="intro-goals">
+          <h2 id="intro-goals" className="mb-3 flex items-center gap-2 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-extrabold uppercase tracking-wide text-muted">
             <span style={{ color: "var(--accent)" }} aria-hidden="true"><Star size={20} /></span> In this lesson you will
           </h2>
           <ol className="flex flex-col gap-3">
@@ -99,8 +102,8 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
               <li key={o} className="pop-in" style={{ animationDelay: `${0.45 + i * 0.15}s` }}>
                 <button type="button" onClick={() => { sfx("start"); setWobble(i); later(() => setWobble(null), 520); }}
                   className={`flex w-full items-center gap-4 rounded-2xl text-left ${wobble === i ? "intro-wobble" : ""}`} style={{ background: "transparent", color: "inherit", cursor: "pointer" }}>
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full font-display text-xl font-extrabold" style={{ background: tint, color: "var(--on-tint)" }} aria-hidden="true">{i + 1}</span>
-                  <span className="text-[clamp(1.15rem,2.2vw,1.5rem)] leading-snug">{o.replace(/^Show\s+/i, "")}</span>
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full font-display text-2xl font-extrabold" style={{ background: tint, color: "var(--on-tint)" }} aria-hidden="true">{i + 1}</span>
+                  <span className="text-[clamp(1.3rem,2.4vw,1.9rem)] leading-snug">{o.replace(/^Show\s+/i, "")}</span>
                 </button>
               </li>
             ))}
@@ -108,19 +111,20 @@ export function LessonIntro({ lesson, questionCount, resumeAt, onGo }: { lesson:
         </section>
       )}
 
-      <ul className="pop-in flex flex-wrap justify-center gap-3 text-lg font-bold" style={{ animationDelay: "0.9s" }} aria-label="About this lesson">
+      <ul className="pop-in flex flex-wrap justify-center gap-3 text-[clamp(1.1rem,1.9vw,1.5rem)] font-bold" style={{ animationDelay: "0.9s" }} aria-label="About this lesson">
         <li className="card flex items-center gap-2 px-4 py-2"><Clock /> About {lesson.minutes} minutes</li>
         {questionCount > 0 && <li className="card flex items-center gap-2 px-4 py-2"><Quiz /> {questionCount} quiz question{questionCount === 1 ? "" : "s"} at the end</li>}
       </ul>
 
       <div className="pop-in flex flex-wrap justify-center gap-3" style={{ animationDelay: "1s" }}>
-        <button type="button" className="btn btn-primary intro-glow !min-h-[72px] !px-10 text-2xl" onClick={() => start(1)}>
+        <button type="button" className="btn btn-primary intro-glow !min-h-[84px] !px-12 text-3xl" onClick={() => start(1)}>
           <span className="inline-flex items-center gap-3">Let's go! <Arrow /></span>
         </button>
-        {resumeAt > 0 && <button type="button" className="btn !min-h-[72px] !px-6 text-xl" onClick={() => start(resumeAt)}>Carry on where I was</button>}
+        {resumeAt > 0 && <button type="button" className="btn !min-h-[84px] !px-8 text-2xl" onClick={() => start(resumeAt)}>Carry on where I was</button>}
       </div>
 
-      <p className="text-lg text-muted">Tip: press and hold any word to find out what it means.</p>
+      <p className="text-[clamp(1.05rem,1.8vw,1.35rem)] text-muted">Tip: press and hold any word to find out what it means.</p>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { lessonOutline } from "../lib/outline";
 import { z } from "zod";
 import { parseLessonFile, SUBJECTS } from "@lms/schema";
 import type { AppEnv } from "../env";
@@ -88,6 +89,13 @@ adminContentRoutes.get("/lessons/:id", async (c) => {
   if (!row) return fail(c, 404, "not_found");
   // The admin sees the whole file, answers included, so previews and re-editing with Claude work.
   return c.json({ lesson: { id: row.id, slug: row.slug, status: row.status, version: row.version, file: JSON.parse(row.source_json) } });
+});
+
+/** What the lesson teaches, stop by stop, plus a transcript: helps the parent choose a video and see what is covered. */
+adminContentRoutes.get("/lessons/:id/outline", async (c) => {
+  const row = await c.env.DB.prepare("SELECT title, source_json FROM lessons WHERE id = ?").bind(c.req.param("id")).first<{ title: string; source_json: string }>();
+  if (!row) return fail(c, 404, "not_found");
+  return c.json({ title: row.title, ...lessonOutline(JSON.parse(row.source_json)) });
 });
 
 /** The lesson exactly as a child's player receives it, so the parent can preview any lesson, published or not. */

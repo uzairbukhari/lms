@@ -96,7 +96,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
       >
         <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
         <h3 className="font-display text-[22px] font-bold leading-tight">{c.title}</h3>
-        <p className="text-base leading-snug" style={{ color: soft }}>{c.summary}</p>
+        <p className="kh-summary text-base leading-snug" style={{ color: soft }}>{c.summary}</p>
         {c.progress && !done && (
           <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Lesson progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
             <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
@@ -191,8 +191,8 @@ export function StudentHome() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
-      <header className="flex flex-wrap items-center justify-between gap-4">
+    <main className="kh-main mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
+      <header className="kh-header flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <Avatar name={user.displayName} avatar={user.avatar} size={72} />
           <div>
@@ -234,7 +234,7 @@ export function StudentHome() {
         </Link>
       )}
 
-      <nav aria-label="More to do" className="flex flex-wrap gap-3">
+      <nav aria-label="More to do" className="kh-nav flex flex-wrap gap-3">
         {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
         {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
         {cards && cards.words > 0 && <Link to="/words" className="btn !min-h-14"><span aria-hidden="true">📖</span> My word book ({cards.words})</Link>}

@@ -220,3 +220,13 @@ body {
 .tile3d-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .tile3d-back { transform: rotateY(180deg); }
 .game-arena { cursor: pointer; }
+
+/* Kids' dashboard on a tablet (wide but not tall): tighten the page so the week's quest fits without scrolling. */
+@media (min-width: 768px) and (max-height: 960px) {
+  .kh-main { gap: 0.9rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .kh-header h1 { font-size: 1.9rem; }
+  .kh-header img, .kh-header svg[role="img"] { max-height: 56px; }
+  .kh-nav .btn { min-height: 44px !important; font-size: 1rem; padding: 0 14px; }
+  .kh-summary { display: none; }
+  .kh-main section > h2 { font-size: 1.5rem; }
+}
