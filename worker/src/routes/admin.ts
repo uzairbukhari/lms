@@ -16,6 +16,7 @@ import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
 import { serveAsset } from "../lib/assets";
 import { requireAdmin } from "../middleware/auth";
+import { adminCardRoutes } from "./admin-cards";
 import { adminClassRoutes } from "./admin-classes";
 import { adminContentRoutes } from "./admin-content";
 import { adminExamRoutes } from "./admin-exams";
@@ -42,6 +43,7 @@ adminRoutes.route("/", adminOverviewRoutes);
 adminRoutes.route("/", adminAiLogRoutes);
 adminRoutes.route("/", adminInsightRoutes);
 adminRoutes.route("/", adminWeekRoutes);
+adminRoutes.route("/", adminCardRoutes);
 adminRoutes.route("/", adminAiUsageRoutes);
 adminRoutes.route("/", adminVideoRoutes);
 
@@ -230,6 +232,11 @@ adminRoutes.delete("/students/:id", async (c) => {
     db.prepare("DELETE FROM ai_events WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM login_events WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM game_plays WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM card_reviews WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM word_book WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM card_days WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM stuck_flags WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM deck_assignments WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM sticker_awards WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM shop_purchases WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM shop_equipped WHERE user_id = ?").bind(id),

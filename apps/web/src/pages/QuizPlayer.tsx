@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
+import { StuckButton } from "../components/StuckButton";
 import { QuestionView, type ViewQuestion } from "../components/QuestionView";
 import { questionToSpeech } from "../lib/quizSpeech";
 import { speak, stopSpeech } from "../lib/sound";
@@ -113,6 +114,7 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
         <div className="flex flex-col gap-2">
           {!hints[q.id] && <button type="button" className="btn self-start" onClick={() => void getHint()}>💡 Give me a hint</button>}
           {hints[q.id] && <p role="note" className="text-lg">💡 {hints[q.id]}</p>}
+          {kind === "lesson" && id && <StuckButton lessonId={id} questionId={q.id} />}
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { api } from "../api";
 import { useAuth } from "../auth";
 import { Avatar } from "../components/Avatar";
+import type { CardSummary } from "../lib/cards";
 import type { Rewards, TeaserState } from "../lib/rewards";
 import { Loader } from "../components/Loader";
 
@@ -163,6 +164,7 @@ export function StudentHome() {
   const [points, setPoints] = useState<{ total: number; waiting: number } | null>(null);
   const [rewards, setRewards] = useState<Rewards | null>(null);
   const [teaser, setTeaser] = useState<TeaserState | null>(null);
+  const [cards, setCards] = useState<CardSummary | null>(null);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
@@ -170,6 +172,7 @@ export function StudentHome() {
     api<{ exams: Exam[] }>("/api/exams").then((r) => setExams(r.exams)).catch(() => undefined);
     api<Rewards>("/api/rewards").then(setRewards).catch(() => undefined);
     api<TeaserState>("/api/teaser").then(setTeaser).catch(() => undefined);
+    api<CardSummary>("/api/cards/summary").then(setCards).catch(() => undefined);
   }, []);
 
   if (!user) return null;
@@ -232,6 +235,10 @@ export function StudentHome() {
       )}
 
       <nav aria-label="More to do" className="flex flex-wrap gap-3">
+        {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
+        {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
+        {cards && cards.words > 0 && <Link to="/words" className="btn !min-h-14"><span aria-hidden="true">📖</span> My word book ({cards.words})</Link>}
+        {home?.now && (home.now.exam || home.now.week >= 12) && <Link to="/revision" className="btn !min-h-14"><span aria-hidden="true">🎓</span> Exam revision</Link>}
         <Link to="/teaser" className={"btn !min-h-14 " + (teaser && !teaser.done ? "btn-primary" : "")}><span aria-hidden="true">🧩</span> Brain teaser{teaser?.done ? " ✓" : ""}</Link>
         <Link to="/growth" className="btn !min-h-14"><span aria-hidden="true">🌱</span> My growth</Link>
         <Link to="/rewards" className="btn !min-h-14"><span aria-hidden="true">🎒</span> Stickers and shop{rewards ? ` · ⭐ ${rewards.points.balance}` : ""}</Link>

@@ -8,6 +8,8 @@ import { FeedbackProvider } from "./ui";
 import { AiLog } from "./pages/AiLog";
 import { ClassDetail } from "./pages/ClassDetail";
 import { Classes } from "./pages/Classes";
+import { DeckPrint, Decks } from "./pages/Decks";
+import { Stuck } from "./pages/Stuck";
 import { Dashboard } from "./pages/Dashboard";
 import { Exams } from "./pages/Exams";
 import { LessonEdit } from "./pages/LessonEdit";
@@ -67,6 +69,9 @@ export function AdminApp() {
                 <Route path="exams" element={<Exams />} />
                 <Route path="reports" element={<Reports />} />
                 <Route path="insights" element={<Insights />} />
+                <Route path="stuck" element={<Stuck />} />
+                <Route path="decks" element={<Decks />} />
+                <Route path="decks/:id/print" element={<DeckPrint />} />
                 <Route path="ai-log" element={<AiLog />} />
                 <Route path="settings" element={<Settings email={gate.email} />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />

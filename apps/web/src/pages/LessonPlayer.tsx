@@ -1,6 +1,7 @@
 import { buildGlossary, findInGlossary, gradeQuestion, isLookupWord, normaliseWord, type CheckQuestion, type Response } from "@lms/schema";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
 import { Link, useParams } from "react-router";
+import { StuckButton } from "../components/StuckButton";
 import { api, ApiError } from "../api";
 import { LessonIntro } from "../components/LessonIntro";
 import { Loader } from "../components/Loader";
@@ -185,6 +186,11 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
   const closeBubble = useCallback(() => { lookup.current++; setBubble(null); }, []);
   useEffect(closeBubble, [index, closeBubble]);
 
+  /** Adds a pressed word to the child's Word Book (children only, and not when just looking back). */
+  const keepWord = useCallback((word: string) => {
+    if (mode === "student") void api("/api/words", { method: "POST", body: { lessonId, word } }).catch(() => undefined);
+  }, [lessonId, mode]);
+
   const explain = useCallback((pressed: PressedWord) => {
     const id = ++lookup.current;
     const set = (state: BubbleState) => { if (lookup.current === id) setBubble({ pressed, state }); };
@@ -195,6 +201,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
     if (mine) {
       set({ status: "ready", meaning: mine.meaning, example: mine.example, source: "lesson" });
       say(mine.meaning);
+      keepWord(word);
     } else if (!isLookupWord(word)) {
       set({ status: "ready", meaning: "That one is too tricky for me to explain. Try another word!", source: "static" });
     } else if (mode === "preview") {
@@ -202,13 +209,13 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
       set({ status: "ready", meaning: "Preview: this word has no meaning saved in the lesson, so children will get a short helper explanation instead. No AI is used in previews.", source: "preview" });
     } else {
       const known = defined.current.get(word);
-      if (known) { set({ status: "ready", meaning: known.meaning, source: known.source }); say(known.meaning); return; }
+      if (known) { set({ status: "ready", meaning: known.meaning, source: known.source }); say(known.meaning); keepWord(word); return; }
       set({ status: "loading" });
       api<{ meaning: string; source: "ai" | "static" }>("/api/ai/define", { method: "POST", body: { lessonId, word } })
-        .then((r) => { defined.current.set(word, { meaning: r.meaning, source: r.source }); set({ status: "ready", meaning: r.meaning, source: r.source }); say(r.meaning); })
+        .then((r) => { defined.current.set(word, { meaning: r.meaning, source: r.source }); set({ status: "ready", meaning: r.meaning, source: r.source }); say(r.meaning); if (r.source === "ai") keepWord(word); })
         .catch(() => set({ status: "ready", meaning: "I couldn't find out just now. Try again in a moment!", source: "static" }));
     }
-  }, [glossary, lessonId, mode, soundOn, unlocked]);
+  }, [glossary, keepWord, lessonId, mode, soundOn, unlocked]);
 
   const cancelHold = () => { if (holding.current) { window.clearTimeout(holding.current.timer); holding.current = null; } };
   const onHoldStart = (e: PointerEvent<HTMLElement>) => {
@@ -273,6 +280,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
               <button type="button" className="btn !min-h-14 !px-4" onClick={() => { interacted.current = true; sfx("tap"); listen(); }} aria-label="Read this slide again">🔁<span className="hidden sm:inline"> Again</span></button>
             </>
           )}
+          {mode === "student" && <StuckButton lessonId={lessonId} slide={index} compact />}
           <button type="button" className="btn !min-h-14 !px-4" onClick={toggleSound} aria-pressed={!soundOn} aria-label={soundOn ? "Turn sound off" : "Turn sound on"}>{soundOn ? "🔔" : "🔕"}</button>
         </div>
         <button type="button" className="btn btn-primary !min-h-16 !px-6 text-xl" onClick={() => go(index + 1)} disabled={index === last || (paced && index >= furthest && !ready)} aria-label={ready ? "Next slide" : "Next slide, available after listening"}>{ready ? <><span className="hidden sm:inline">Next </span>→</> : "⏳"}</button>

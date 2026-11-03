@@ -8,7 +8,7 @@ import { addDays, currentSlot, type TermRow } from "../lib/terms";
 /** Read-only numbers for the admin Dashboard and the Students table. Mounted under /api/admin. */
 export const adminOverviewRoutes = new Hono<AppEnv>();
 
-type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive" | "ai_spend" | "sign_in_failures" | "week_due"; message: string; href: string };
+type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive" | "ai_spend" | "sign_in_failures" | "week_due" | "stuck"; message: string; href: string };
 
 adminOverviewRoutes.get("/overview", async (c) => {
   const db = c.env.DB;
@@ -81,6 +81,8 @@ adminOverviewRoutes.get("/overview", async (c) => {
       if (st.total > 0 && st.done < st.total) attention.push({ kind: "week_due", message: `${st.name} has ${st.total - st.done} of ${st.total} lessons left to finish ${due.daysLeft === 0 ? "today" : "by tomorrow"}.`, href: "/admin" });
     }
   }
+  const stuck = (await db.prepare("SELECT COUNT(*) AS n FROM stuck_flags WHERE status = 'open'").first<{ n: number }>())?.n ?? 0;
+  if (stuck > 0) attention.push({ kind: "stuck", message: `${stuck} spot${stuck === 1 ? "" : "s"} the children flagged as confusing ("I'm stuck").`, href: "/admin/stuck" });
   // Repeated wrong passwords on one child's login (someone guessing, or a child who forgot).
   const failures = await db
     .prepare("SELECT e.user_id AS id, u.display_name AS name, COUNT(*) AS n FROM login_events e JOIN users u ON u.id = e.user_id WHERE e.ok = 0 AND e.created_at >= datetime('now', '-1 day') GROUP BY e.user_id HAVING n >= 5")
