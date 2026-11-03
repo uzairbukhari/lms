@@ -167,6 +167,9 @@ Extra notes (optional): {{e.g. "she loves animals", "builds on last week's count
 - Every stop (heading section) has at least one visual block. Every bold word is in the glossary block.
 - Include at least one explainer (for the hardest process), one manipulative or activity where it fits, one brain_game,
   a check after each new idea, and a summary. Use videos only from my approved list (100 seconds or less).
+- Animate as in part 12: a backdrop on every heading, image blocks as actors cued to their sentence (`at`), drawn props
+  instead of emoji for number lines, fractions, clocks, thermometers, balances, plants and the body, and explainers that
+  use enter, exit, path, effect and camera where they make the idea clearer.
 - Reading level, structure, subject notes, quiz rules and safety rules as in the guidelines.
 
 === OUTPUT FORMAT (STRICT) ===
@@ -185,6 +188,8 @@ a picture, or too long", then "output the corrected JSON only". Then:
 
 - [ ] Every stop has a picture, chart, animation, video or movable thing, and every new term is shown (rules 1 and 2).
 - [ ] Every bold word is in the `glossary`.
+- [ ] Animation (part 12): every heading has a `backdrop`; pictures enter on the sentence that names them; at most two
+      things move at once; nothing important is shown only by movement.
 - [ ] At least one `explainer` for the hardest process, one `manipulative` or `activity` where it fits, and one `brain_game`.
 - [ ] Any `video` is 100 seconds or shorter, approved by a grown-up, with the right `start` and `end`.
 - [ ] Numbers in a `chart` match the text and any `check` or quiz question about it.
@@ -204,3 +209,38 @@ a picture, or too long", then "output the corrected JSON only". Then:
 Three question types (`fill_blank`, `hotspot`, `slider`) were built on 2 Nov, and the quiz screen was reworked: real drag and drop with arrow fallback for ordering, drag or tap-to-pair for matching.
 
 Still open: which channels or creators Uzair trusts for videos (he will send links), and whether the guidelines are now fully done.
+
+## 12. Animation (decided 3 Nov 2026)
+
+Lessons play like a short animated show the child steers. The player does most of this by itself; the fields below let a
+lesson choreograph it. Full field list in `docs/LESSON_CAPABILITIES.md`. Plan: the "Animated lessons plan" doc (option B).
+
+**What the player does on every lesson (no fields needed):** a guide character per theme (Bleep the robot, Jelly the gummy
+drop, Sunny the sunflower, Hoot the owl) that talks while the voice reads, points at each new stop, cheers right answers
+and thinks on wrong ones; narration read sentence by sentence, with the sentence card being read lit up and its **bold**
+word underlined; each emoji in an `image` entering on its own with the sentences; scenery picked from the words when a
+lesson names none; a short trip along a path between stops; explainers that play by themselves with the voice (pause and
+step still work); confetti and a star into the progress trail for a right check; Calm mode (fades only) and reduced motion.
+
+**Rules for writing lessons:**
+
+1. **Every heading names a `backdrop`**: `plain`, `meadow`, `forest`, `pond`, `sea`, `desert`, `mountain`, `sky`, `space`,
+   `kitchen`, `classroom`, `home`, `town`, `farm`, `map`, `lab`. It applies to the whole stop; an `image` or `explainer`
+   can override it.
+2. **One actor per idea, entering with its sentence.** Write `image` blocks with `actors` rather than one emoji string:
+   each actor has an `emoji` or a `prop`, an optional `label`, and `at` = the sentence of the slide's text that brings it in
+   (0 is the first). Order the text so the thing is named in the sentence it enters on.
+3. **Drawn props over emoji** whenever a lesson names a number line, ten frame, tens and ones, fraction, clock,
+   thermometer, balance, plant part, body part, globe, day and night, a robot grid, sorting boxes or a Venn diagram.
+   In an explainer, give the prop the same `id` in every scene and change its values: the frog hops, the hands turn,
+   the mercury rises.
+4. **Explainers choreograph one main movement per step**, 3 to 6 steps: `enter` for how a new thing arrives (pop, fade,
+   drop, grow, slide_left, slide_right, walk_left, walk_right), `exit` for how it leaves (fade, shrink, fly_up, drop),
+   `path` for how it travels (straight, arc, hop), `effect` for what it is doing (rain, steam, sparkle, wind, glow,
+   hearts, bubbles, zzz, arrow_right, arrow_down, count), and a scene `camera` (`zoom` 1 to 3 on `x`, `y`) to look closely
+   at the part that matters, usually on the last step.
+5. **Calm by design.** At most two things moving at once while words are spoken; effects only where they show the idea
+   (steam for evaporating, rain for the water cycle, glow for heat or light). Captions and labels carry the meaning, so a
+   child with motion switched off loses nothing.
+6. **Show cause and effect in order**: if the sun heats the water, the sun glows first, then the water steams, then the
+   cloud appears.

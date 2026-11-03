@@ -191,10 +191,68 @@ export type QuizQuestion = z.infer<typeof quizQuestionSchema>;
 export type CheckQuestion = z.infer<typeof checkQuestionSchema>;
 export type QuestionType = QuizQuestion["type"];
 
+// --- Animation (see docs/LESSON_GUIDELINES.md, part "Animation") ---------------------------------------
+
+/** Drawn scenery behind pictures and explainers. */
+export const BACKDROPS = ["plain", "meadow", "forest", "pond", "sea", "desert", "mountain", "sky", "space", "kitchen", "classroom", "home", "town", "farm", "map", "lab"] as const;
+export type Backdrop = (typeof BACKDROPS)[number];
+/** Drawn pictures with moving parts, used instead of emoji where a real diagram teaches better. */
+export const PROPS = ["number_line", "ten_frame", "base_ten", "fraction_pizza", "fraction_bar", "clock", "thermometer", "balance", "plant", "body", "globe", "sun_earth", "robot_grid", "sorting_boxes", "venn"] as const;
+export type PropKind = (typeof PROPS)[number];
+export const ENTERS = ["pop", "fade", "drop", "grow", "slide_left", "slide_right", "walk_left", "walk_right"] as const;
+export const EXITS = ["fade", "shrink", "fly_up", "drop"] as const;
+export const EFFECTS = ["none", "rain", "steam", "sparkle", "wind", "glow", "hearts", "bubbles", "zzz", "arrow_right", "arrow_down", "count"] as const;
+
+export const propSchema = z.object({
+  kind: z.enum(PROPS),
+  /** number_line: where the frog sits. ten_frame: counters. thermometer: degrees. sun_earth: hour of the day (0 to 24). */
+  value: z.number().min(-1000).max(1000).optional(),
+  from: z.number().min(-1000).max(1000).optional(),
+  to: z.number().min(-1000).max(1000).optional(),
+  /** fraction_pizza, fraction_bar. */
+  parts: z.number().int().min(1).max(12).optional(),
+  shaded: z.number().int().min(0).max(12).optional(),
+  /** clock. */
+  hour: z.number().int().min(0).max(23).optional(),
+  minute: z.number().int().min(0).max(59).optional(),
+  /** balance: weight on each pan. base_ten: tens and ones. */
+  left: z.number().min(0).max(100).optional(),
+  right: z.number().min(0).max(100).optional(),
+  tens: z.number().int().min(0).max(9).optional(),
+  ones: z.number().int().min(0).max(9).optional(),
+  /** robot_grid: the robot's square (col, row from 0) and the way it faces. */
+  col: z.number().int().min(0).max(5).optional(),
+  row: z.number().int().min(0).max(5).optional(),
+  facing: z.enum(["up", "down", "left", "right"]).optional(),
+  /** plant: roots, stem, leaf, flower. body: brain, heart, lungs, stomach, bones, muscles. globe: a continent. */
+  highlight: line(20).optional(),
+  /** sorting_boxes and venn: box names (venn uses the first two). */
+  labels: z.array(line(24)).max(3).optional(),
+});
+export type PropSpec = z.infer<typeof propSchema>;
+
+const cue = z.number().int().min(0).max(20);
+
+/** One thing on an image stage: an emoji or a drawn prop that enters when the narration reaches sentence `at`. */
+const actorSchema = z
+  .object({
+    emoji: z.string().trim().min(1).max(16).optional(),
+    prop: propSchema.optional(),
+    label: line(30).optional(),
+    /** Which sentence of the slide's text brings it in (0 = the first sentence). */
+    at: cue.optional(),
+    enter: z.enum(ENTERS).optional(),
+    effect: z.enum(EFFECTS).optional(),
+    x: z.number().min(0).max(100).optional(),
+    y: z.number().min(0).max(100).optional(),
+    size: z.number().int().min(1).max(3).optional(),
+  })
+  .refine((a) => a.emoji || a.prop, { message: 'An actor needs an "emoji" or a "prop"' });
+
 // --- Lesson blocks --------------------------------------------------------------------------------
 
 export const blockSchema = z.discriminatedUnion("type", [
-  z.object({ type: z.literal("heading"), text: line(120) }),
+  z.object({ type: z.literal("heading"), text: line(120), backdrop: z.enum(BACKDROPS).optional() }),
   z.object({ type: z.literal("text"), markdown: longText(2000) }),
   z
     .object({
@@ -203,8 +261,12 @@ export const blockSchema = z.discriminatedUnion("type", [
       asset: z.string().max(200).optional(),
       alt: line(200).optional(),
       caption: line(200).optional(),
+      /** Scenery behind the picture (default: the stop's backdrop, or one picked from the words). */
+      backdrop: z.enum(BACKDROPS).optional(),
+      /** The picture as separate things that enter with the narration. Without it, each emoji in `emoji` becomes one. */
+      actors: z.array(actorSchema).min(1).max(8).optional(),
     })
-    .refine((b) => b.emoji || b.asset, { message: 'An image block needs an "emoji" or an uploaded "asset" name' }),
+    .refine((b) => b.emoji || b.asset || b.actors?.length, { message: 'An image block needs an "emoji", "actors" or an uploaded "asset" name' }),
   z.object({ type: z.literal("callout"), style: z.enum(["tip", "fun_fact", "warning"]), markdown: longText(800) }),
   // A picture drawn from a few numbers: pictogram, bar chart, tally chart, table, number line or fraction bar.
   z
@@ -273,21 +335,35 @@ export const blockSchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("explainer"),
     title: line(100),
+    /** Scenery behind the stage (default: picked from the words). */
+    backdrop: z.enum(BACKDROPS).optional(),
+    /** Plays by itself in time with the voice (default true). The child can still pause and step. */
+    autoplay: z.boolean().optional(),
     scenes: z
       .array(
         z.object({
           caption: line(200),
+          /** Zoom the stage onto a spot: zoom 1 to 3, x and y in percent of the stage. */
+          camera: z.object({ zoom: z.number().min(1).max(3), x: z.number().min(0).max(100), y: z.number().min(0).max(100) }).optional(),
           items: z
             .array(
-              z.object({
-                id: shortId.optional(),
-                emoji: z.string().trim().min(1).max(16),
-                label: line(30).optional(),
-                x: z.number().min(0).max(100),
-                y: z.number().min(0).max(100),
-                size: z.number().int().min(1).max(3).default(2),
-                anim: z.enum(["none", "bounce", "float", "spin", "pulse", "grow"]).default("none"),
-              }),
+              z
+                .object({
+                  id: shortId.optional(),
+                  emoji: z.string().trim().min(1).max(16).optional(),
+                  prop: propSchema.optional(),
+                  label: line(30).optional(),
+                  x: z.number().min(0).max(100),
+                  y: z.number().min(0).max(100),
+                  size: z.number().int().min(1).max(3).default(2),
+                  anim: z.enum(["none", "bounce", "float", "spin", "pulse", "grow"]).default("none"),
+                  /** How a thing arrives the first time it shows, how it leaves, and how it travels between steps. */
+                  enter: z.enum(ENTERS).optional(),
+                  exit: z.enum(EXITS).optional(),
+                  path: z.enum(["straight", "arc", "hop"]).optional(),
+                  effect: z.enum(EFFECTS).optional(),
+                })
+                .refine((it) => it.emoji || it.prop, { message: 'An explainer item needs an "emoji" or a "prop"' }),
             )
             .min(1)
             .max(14),

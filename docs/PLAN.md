@@ -642,9 +642,9 @@ source of truth, kept up to date). `docs/LESSON_CAPABILITIES.md` explains each b
 
 ````text
 Block objects (use only these):
-  {"type":"heading","text":string}
+  {"type":"heading","text":string,"backdrop"?:"plain|meadow|forest|pond|sea|desert|mountain|sky|space|kitchen|classroom|home|town|farm|map|lab"}
   {"type":"text","markdown":string}
-  {"type":"image","emoji":string,"caption":string}
+  {"type":"image","emoji"?:string,"caption":string,"backdrop"?,"actors"?:[{"emoji"?|"prop"?,"label"?,"at"?:sentence 0-20,"enter"?,"effect"?,"x"?,"y"?,"size"?}]}   // actors enter with their sentence; props listed in docs/LESSON_CAPABILITIES.md
   {"type":"callout","style":"tip"|"fun_fact"|"warning","markdown":string}
   {"type":"reveal","prompt":string,"answer_markdown":string}
   {"type":"check","question":<question object without ref/points/skill_tag>}
@@ -653,7 +653,7 @@ Block objects (use only these):
   {"type":"manipulative","title":string,"goal":string,"emoji":string,"count":1-20,"zones":[string, 1-4 labels]}   // drag things between a pile and labelled places; never graded
   {"type":"chart","kind":"pictogram|bar_chart|tally|table|number_line|fraction","title":string,"caption"?,"rows":[{"label","value","emoji"?}],"each"?,"from"?,"to"?,"step"?,"marks"?,"parts"?,"shaded"?}
   {"type":"video","title":string,"youtube":"11-char id","start":seconds,"end":seconds,"caption"?}   // end - start must be 100 or less
-  {"type":"explainer","title":string,"scenes":[{"caption":string,"items":[{"id"?,"emoji","label"?,"x":0-100,"y":0-100,"size":1-3,"anim":"none|bounce|float|spin|pulse|grow"}]}]}   // animated steps, 2-8 scenes
+  {"type":"explainer","title":string,"backdrop"?,"autoplay"?:true,"scenes":[{"caption":string,"camera"?:{"zoom":1-3,"x","y"},"items":[{"id"?,"emoji"|"prop","label"?,"x":0-100,"y":0-100,"size":1-3,"anim":"none|bounce|float|spin|pulse|grow","enter"?,"exit"?,"path"?:"straight|arc|hop","effect"?}]}]}   // animated steps, 2-8 scenes, plays with the voice
   {"type":"brain_game","game":"memory_match|remember_order","title":string,"goal"?:string,"emojis":[3-8]}
   {"type":"glossary","terms":[{"term":string,"meaning":string}]}   // one per lesson, covering the **bold** words; kid-friendly, 1-2 short sentences
   {"type":"activity","title":string,"materials":[strings],"instructions":[strings]}

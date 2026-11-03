@@ -13,9 +13,16 @@ import { Explainer } from "../components/Explainer";
 import { Manipulative } from "../components/Manipulative";
 import { QuestionView } from "../components/QuestionView";
 import { WordBubble, type BubbleState } from "../components/WordBubble";
-import { buildSlides, plain, splitSentences, type Block, type Slide } from "../lib/slides";
+import { blockNarration, buildSlides, plain, splitSentences, type Block, type Slide } from "../lib/slides";
+import { Stage, splitEmoji } from "../anim/Stage";
+import { pickBackdrop } from "../anim/Backdrop";
+import { applyCalm, flyStar, getCalm, setCalm, setGuideMood, useCue } from "../anim/cues";
+import { Guide } from "../anim/Guide";
+import { Journey } from "../anim/Journey";
+import { Trail } from "../anim/Trail";
+import { useTheme } from "../theme";
 import { isControl, wordAtPoint, type PressedWord } from "../lib/wordHelp";
-import { getSoundOn, hasTapped, isSpeaking, preloadNarration, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
+import { getSoundOn, hasTapped, isSpeaking, preloadNarration, sentences, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
 
 export type LessonPayload = {
   lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[]; semester: number | null; week: number | null; phase: string };
@@ -76,6 +83,14 @@ function closePreviewWindow(e: { preventDefault: () => void }, back: string) {
   window.setTimeout(() => window.location.assign(back), 150);
 }
 
+/** The guide shows on the welcome, the first slide of each stop, checks, "think about it", the summary and the end. */
+function guideHere(slides: Slide[], i: number): boolean {
+  const s = slides[i];
+  if (!s || s.kind === "title") return false;
+  if (["check", "reveal", "summary", "finish"].includes(s.kind)) return true;
+  return s.kind === "content" && (i === 1 || s.stop !== slides[i - 1]?.stop);
+}
+
 function Frame({ children }: { children: ReactNode }) {
   return <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-start gap-6 px-4 py-8">{children}</main>;
 }
@@ -89,6 +104,18 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
   const slides = useMemo(() => buildSlides(lesson, data.blocks), [lesson, data.blocks]);
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState<"next" | "back">("next");
+  const [theme] = useTheme();
+  const [calm, setCalmOn] = useState(getCalm);
+  useEffect(() => { applyCalm(calm); }, [calm]);
+  /** Each stop's heading, in order (stop 1 first). */
+  const stopTitles = useMemo(() => {
+    const t: string[] = [];
+    for (const s of slides) if (s.stop && t[s.stop - 1] === undefined) t[s.stop - 1] = s.kind === "content" ? s.title : (s.eyebrow ?? "");
+    return Array.from(t, (x) => x ?? "");
+  }, [slides]);
+  const stops = stopTitles.length;
+  const [journey, setJourney] = useState<{ from: number; to: number } | null>(null);
+  const endJourney = useCallback(() => { setJourney(null); setGuideMood("point"); }, []);
   const [soundOn, setSound] = useState(getSoundOn);
   const [speaking, setSpeaking] = useState(false);
   // Opening the lesson from the home page was itself a tap, so narration can start straight away.
@@ -117,10 +144,14 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
     setFurthest((f) => Math.max(f, next));
     setDir(next > index ? "next" : "back");
     sfx(next === last ? "done" : next > index ? "next" : "back");
+    // Arriving at a new stop: a short trip along the path while its heading is read (skipped in Calm mode).
+    const toStop = slides[next]?.stop ?? 0; const fromStop = slides[index]?.stop ?? 0;
+    if (next > index && slides[next]?.kind === "content" && toStop > fromStop && fromStop >= 1 && stops > 1 && !calm) setJourney({ from: fromStop, to: toStop });
+    else setJourney(null);
     setIndex(next);
     setSpeaking(false);
     save(next, next === last);
-  }, [index, last, save, paced, furthest, ready]);
+  }, [index, last, save, paced, furthest, ready, slides, stops, calm]);
 
   useEffect(() => {
     if (!paced || index < furthest) { setReady(true); return; }
@@ -247,9 +278,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
       <header className="flex items-center gap-3 px-3 pb-2 pt-3 sm:px-6">
         <Link className="btn !min-h-12 !px-4" to={back} onClick={(e) => { stopSpeech(); save(index, index === last); closePreviewWindow(e, back); }} aria-label="Leave the lesson">✕<span className="hidden sm:inline"> Exit</span></Link>
         <div className="flex-1" role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={index + 1} aria-label="Lesson progress">
-          <div className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
-            <div className="h-full rounded-full bg-accent transition-all duration-500" style={{ width: `${((index + 1) / slides.length) * 100}%` }} />
-          </div>
+          <Trail slides={slides} index={index} theme={theme} />
         </div>
         <p className="min-w-14 text-right text-lg font-bold text-muted">{index + 1}/{slides.length}</p>
       </header>
@@ -258,14 +287,16 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
         <p className="mx-3 card px-4 py-2 text-center font-bold sm:mx-6" role="note">{data.preview ? "👀 Preview. Nothing here is saved." : "📖 Looking back: your progress stays as it was."}</p>
       )}
 
-      <section key={index} className={`no-select min-h-0 flex-1 px-4 py-3 sm:px-10 ${dir === "next" ? "slide-in-next" : "slide-in-back"}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
+      <section key={index} className={`no-select relative min-h-0 flex-1 px-4 py-3 sm:px-10 ${guideHere(slides, index) ? "with-guide" : ""} ${dir === "next" ? "slide-in-next" : "slide-in-back"}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
         onPointerDown={onHoldStart} onPointerMove={onHoldMove} onPointerUp={cancelHold} onPointerCancel={cancelHold} onPointerLeave={cancelHold}
         onContextMenu={(e) => e.preventDefault()}
         onClickCapture={(e) => { if (swallowClick.current) { swallowClick.current = false; e.preventDefault(); e.stopPropagation(); } }} aria-live="polite">
         <FitToScreen>
           <SlideView slide={slide} lesson={lesson} quiz={data.quiz} mode={mode} lessonId={lessonId} assetUrl={assetUrl} resumeAt={resumeAt} onGo={go} onLeave={() => { stopSpeech(); save(index, true); }} />
         </FitToScreen>
+        {journey && <Journey theme={theme} from={journey.from} to={journey.to} titles={stopTitles} onDone={endJourney} />}
       </section>
+      <Guide theme={theme} visible={!journey && guideHere(slides, index)} />
 
       {bubble && <WordBubble pressed={bubble.pressed} state={bubble.state} canSpeak={speechSupported()} onSpeak={() => speak(`${bubble.pressed.word}. ${bubble.state.status === "ready" ? bubble.state.meaning : ""}`)} onClose={closeBubble} />}
 
@@ -282,6 +313,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
           )}
           {mode === "student" && <StuckButton lessonId={lessonId} slide={index} compact />}
           <button type="button" className="btn !min-h-14 !px-4" onClick={toggleSound} aria-pressed={!soundOn} aria-label={soundOn ? "Turn sound off" : "Turn sound on"}>{soundOn ? "🔔" : "🔕"}</button>
+          <button type="button" className="btn !min-h-14 !px-4" onClick={() => { sfx("tap"); setCalm(!calm); setCalmOn(!calm); }} aria-pressed={calm} aria-label={calm ? "Calm mode is on: turn bouncy animation back on" : "Calm mode: gentler animation"} title="Calm mode">{calm ? "🍃" : "✨"}</button>
         </div>
         <button type="button" className="btn btn-primary !min-h-16 !px-6 text-xl" onClick={() => go(index + 1)} disabled={index === last || (paced && index >= furthest && !ready)} aria-label={ready ? "Next slide" : "Next slide, available after listening"}>{ready ? <><span className="hidden sm:inline">Next </span>→</> : "⏳"}</button>
       </footer>
@@ -351,7 +383,7 @@ function SlideView(p: ViewProps) {
     case "title":
       return <LessonIntro lesson={p.lesson} questionCount={p.quiz.questionCount} resumeAt={p.resumeAt} onGo={p.onGo} />;
     case "content":
-      return <ContentSlide slide={slide} assetUrl={p.assetUrl} />;
+      return <ContentSlide slide={slide} assetUrl={p.assetUrl} subject={p.lesson.subject} />;
     case "check":
       return <CheckSlide slide={slide} />;
     case "reveal":
@@ -376,7 +408,7 @@ function SlideView(p: ViewProps) {
         <>
           <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🎬 Watch and learn</p>
           <h2 className={titleCls}>{b.title}</h2>
-          <Explainer scenes={b.scenes} />
+          <Explainer scenes={b.scenes} title={b.title} backdrop={b.backdrop} autoplay={b.autoplay ?? true} subject={p.lesson.subject} narration={slide.narration} />
         </>
       );
     }
@@ -440,32 +472,59 @@ function Callout({ b }: { b: Extract<Block, { type: "callout" }> }) {
 }
 
 /** Heading plus short points. Tap a point to hear it. */
-function ContentSlide({ slide, assetUrl }: { slide: Slide; assetUrl: (n: string) => string }) {
+function ContentSlide({ slide, assetUrl, subject }: { slide: Slide; assetUrl: (n: string) => string; subject: string }) {
+  // Follow the voice: work out which spoken sentence starts each sentence card, so the card being read lights up and
+  // the pictures enter with it. The slide reads its title first, then its blocks in order.
+  const plan = useMemo(() => {
+    const starts: number[] = [];
+    let at = slide.title ? sentences(plain(slide.title)).length : 0;
+    for (const b of slide.blocks) {
+      if (b.type === "text") for (const s of splitSentences(b.markdown)) { starts.push(at); at += sentences(plain(s)).length; }
+      else at += sentences(blockNarration(b)).length;
+    }
+    return starts;
+  }, [slide]);
+  const cue = useCue(slide.narration);
+  const live = !Number.isFinite(cue) ? Infinity : plan.reduce((k, start, i) => (cue >= start ? i : k), -1);
+  const cards = plan.length;
+  const words = useMemo(() => [slide.title, ...slide.blocks.map((b) => (b.type === "text" ? b.markdown : b.type === "image" ? `${b.emoji ?? ""} ${b.caption ?? ""}` : ""))].join(" "), [slide]);
   let n = 0;
   return (
     <>
-      {slide.title && <h2 className={titleCls}>{slide.title}</h2>}
+      {slide.title && <h2 className={`${titleCls} title-pop`}>{slide.title}</h2>}
       {[...slide.blocks.filter((b) => b.type === "image"), ...slide.blocks.filter((b) => b.type !== "image")].map((b, bi) => {
         switch (b.type) {
           case "text":
             return (
               <ul key={bi} className="flex flex-col gap-3">
-                {splitSentences(b.markdown).map((s) => (
-                  <li key={s}>
-                    <button type="button" data-words className={`pop-in card w-full px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + n++ * 0.15}s` }} onClick={() => { sfx("tap"); speak(plain(s)); }}>
-                      <Markdown text={s} />
-                    </button>
-                  </li>
-                ))}
+                {splitSentences(b.markdown).map((s) => {
+                  const k = n++;
+                  const state = k === live ? "card-live" : k > live ? "card-wait" : "card-done";
+                  return (
+                    <li key={s}>
+                      <button type="button" data-words className={`pop-in card sentence-card ${state} w-full px-5 py-3 text-left ${bodyCls}`} style={{ animationDelay: `${0.1 + k * 0.15}s` }} onClick={() => { sfx("tap"); speak(plain(s)); }}>
+                        <Markdown text={s} />
+                      </button>
+                    </li>
+                  );
+                })}
               </ul>
             );
-          case "image":
-            return (
+          case "image": {
+            if (b.asset) return (
               <figure key={bi} className="flex flex-col items-center gap-2">
-                {b.asset ? <img src={assetUrl(b.asset)} alt={b.alt ?? ""} className="max-h-72 rounded-xl" /> : <span className="float text-[clamp(5rem,13vw,8rem)]" role="img" aria-label={b.alt ?? b.caption ?? "picture"}>{b.emoji}</span>}
+                <img src={assetUrl(b.asset)} alt={b.alt ?? ""} className="pop-in max-h-72 rounded-xl" />
                 {b.caption && <figcaption className="text-xl text-muted">{b.caption}</figcaption>}
               </figure>
             );
+            const actors = b.actors ?? splitEmoji(b.emoji ?? "").map((emoji) => ({ emoji }));
+            return (
+              <figure key={bi} className="flex flex-col items-center gap-2">
+                <Stage actors={actors} backdrop={b.backdrop ?? slide.backdrop ?? pickBackdrop(words, subject)} cue={cards === 0 ? (cue >= 0 ? Infinity : -1) : live} cards={cards} alt={b.alt ?? b.caption} />
+                {b.caption && <figcaption className="text-xl text-muted">{b.caption}</figcaption>}
+              </figure>
+            );
+          }
           case "callout":
             return <Callout key={bi} b={b} />;
           case "chart":
@@ -507,29 +566,55 @@ function StepList({ items }: { items: string[] }) {
 }
 
 /** "Check your understanding": instant feedback, never scored or recorded. Retry as often as you like. */
+const CHEERS = ["Brilliant!", "Well done!", "You got it!", "Super!", "Fantastic!", "Yes!"];
+
+/** A quick burst of confetti from the middle of the card. */
+function Burst() {
+  const bits = useMemo(() => Array.from({ length: 18 }, (_, i) => ({ a: (i / 18) * 360 + Math.random() * 12, d: 70 + Math.random() * 90, c: ["#ffd166", "#ff6b9a", "#7ee8d4", "#93d8fb", "#c4b5fd", "#ffa94d"][i % 6] })), []);
+  return (
+    <span className="burst" aria-hidden="true">
+      {bits.map((b, i) => <i key={i} style={{ background: b.c, ["--a" as string]: `${b.a}deg`, ["--d" as string]: `${b.d}px` }} />)}
+    </span>
+  );
+}
+
 function CheckSlide({ slide }: { slide: Slide }) {
   const q = (slide.blocks[0] as Extract<Block, { type: "check" }>).question as CheckQuestion;
   const [value, setValue] = useState<Response>(undefined);
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
   const [showHint, setShowHint] = useState(false);
+  const checkBtn = useRef<HTMLButtonElement>(null);
+  const [party, setParty] = useState(0);
   const submit = () => {
     const ok = gradeQuestion(q, value).correct;
     setState(ok ? "correct" : "wrong");
     sfx(ok ? "correct" : "wrong");
+    // A right answer gets a cheer, confetti and a star for the trail; a wrong one a thinking guide and the hint.
+    setGuideMood(ok ? "cheer" : "think");
+    if (ok) {
+      const r = checkBtn.current?.getBoundingClientRect();
+      if (r) flyStar(r.left + r.width / 2, r.top + r.height / 2);
+      setParty((n) => n + 1);
+      speak(`${CHEERS[Math.floor(Math.random() * CHEERS.length)]} ${plain(q.explanation ?? "")}`);
+    } else {
+      if (q.hint) setShowHint(true);
+      speak(`Not quite. Let's look again. ${q.hint ? plain(q.hint) : ""}`);
+    }
   };
   return (
     <>
       <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">✋ Check yourself{slide.eyebrow ? ` · ${slide.eyebrow}` : ""}</p>
-      <div className={`card flex flex-col gap-4 p-5 sm:p-8 ${state === "wrong" ? "shake" : ""} ${bodyCls}`}>
+      <div className={`card relative flex flex-col gap-4 p-5 sm:p-8 ${state === "wrong" ? "shake" : ""} ${state === "correct" ? "card-win" : ""} ${bodyCls}`}>
         <QuestionView q={q} value={value} onChange={(v) => { setValue(v); setState("idle"); }} />
         <div className="flex flex-wrap items-center gap-3">
-          <button type="button" className="btn btn-primary !min-h-16 !px-8 text-xl" onClick={submit}>Check ✔</button>
+          <button ref={checkBtn} type="button" className="btn btn-primary !min-h-16 !px-8 text-xl" onClick={submit}>Check ✔</button>
           {q.hint && state !== "correct" && <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => { sfx("tap"); setShowHint(true); }}>💡 Hint</button>}
         </div>
-        {showHint && q.hint && <p role="note" className="text-xl">💡 {q.hint}</p>}
+        {showHint && q.hint && <p role="note" className={`text-xl ${state === "wrong" ? "hint-glow" : ""}`}>💡 {q.hint}</p>}
+        {party > 0 && <Burst key={party} />}
         <p role="status" aria-live="polite" className="text-2xl font-bold">
           {state === "correct" && <span className="pop-in inline-block">🎉 Yes! {q.explanation}</span>}
-          {state === "wrong" && <>🤔 Not quite. Have another go!</>}
+          {state === "wrong" && <>🤔 Not quite. Let's look again!</>}
         </p>
       </div>
     </>

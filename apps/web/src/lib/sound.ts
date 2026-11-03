@@ -58,7 +58,7 @@ function play(notes: Note[]): void {
 export type Sfx =
   | "next" | "back" | "tap" | "correct" | "wrong" | "done" | "start"
   // Semester map and mini games
-  | "pop" | "coin" | "gold" | "bump" | "step" | "whoosh" | "fanfare" | "tick" | "go" | "flip" | "unlock" | "locked" | "chest";
+  | "pop" | "sparkle" | "coin" | "gold" | "bump" | "step" | "whoosh" | "fanfare" | "tick" | "go" | "flip" | "unlock" | "locked" | "chest";
 
 const SOUNDS: Record<Sfx, Note[]> = {
   next: [{ f: 523, at: 0, len: 0.1 }, { f: 784, at: 0.08, len: 0.14 }],
@@ -79,6 +79,7 @@ const SOUNDS: Record<Sfx, Note[]> = {
     { f: 698, at: 0.32, len: 0.35, type: "square", vol: 0.07 }, { f: 880, at: 0.7, len: 0.14, type: "square", vol: 0.07 }, { f: 1047, at: 0.86, len: 0.6, type: "square", vol: 0.07 },
     { f: 262, at: 0.32, len: 1.1, type: "triangle", vol: 0.12 },
   ],
+  sparkle: [{ f: 1568, at: 0, len: 0.06, vol: 0.06 }, { f: 2093, at: 0.05, len: 0.06, vol: 0.05 }, { f: 2637, at: 0.1, len: 0.12, vol: 0.04 }],
   tick: [{ f: 660, at: 0, len: 0.12, type: "triangle" }],
   go: [{ f: 880, at: 0, len: 0.1, type: "square", vol: 0.08 }, { f: 1320, at: 0.08, len: 0.35, type: "square", vol: 0.08 }],
   flip: [{ f: 700, at: 0, len: 0.05, type: "triangle", vol: 0.1 }, { f: 1000, at: 0.04, len: 0.05, type: "triangle", vol: 0.1 }],
@@ -144,6 +145,26 @@ export function sfx(name: Sfx): void {
 
 let token = 0;
 let waiting = false;
+
+// --- Narration cues: lets the animation follow the voice ------------------------------------------------
+// Every spoken sentence is announced as it starts, so pictures can enter the moment the voice names them.
+export type NarrationEvent = { kind: "sentence"; text: string; index: number; total: number } | { kind: "start"; text: string } | { kind: "end"; text: string; finished: boolean };
+const listeners = new Set<(e: NarrationEvent) => void>();
+/** Listen to narration as it plays. Returns the function that stops listening. */
+export function onNarration(fn: (e: NarrationEvent) => void): () => void {
+  listeners.add(fn);
+  return () => { listeners.delete(fn); };
+}
+function emit(e: NarrationEvent): void {
+  for (const fn of [...listeners]) {
+    try { fn(e); } catch { /* a listener failing must never stop the voice */ }
+  }
+}
+let speakingText: string | null = null;
+/** The text being read aloud right now, if any. */
+export function speakingNow(): string | null {
+  return speakingText;
+}
 let current: AudioBufferSourceNode | null = null;
 let voiceUrl = "/api/ai/voice";
 let serverVoiceOff = false;
@@ -164,7 +185,8 @@ export function speechSupported(): boolean {
   return narrationOn && typeof window !== "undefined" && "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
 }
 
-function sentences(text: string): string[] {
+/** How narration splits text into sentences (one voice clip each). Animation cues count sentences the same way. */
+export function sentences(text: string): string[] {
   return text.match(/[^.!?]+[.!?]*/g)?.map((s) => s.trim()).filter(Boolean) ?? [];
 }
 
@@ -224,7 +246,7 @@ function pickVoice(): SpeechSynthesisVoice | undefined {
 }
 
 /** Read sentences with the device's own voice. Resolves when the last one ends. */
-function deviceSpeak(parts: string[], mine: number): Promise<void> {
+function deviceSpeak(parts: string[], mine: number, offset = 0, total = parts.length, text = ""): Promise<void> {
   return new Promise((resolve) => {
     if (!speechSupported() || parts.length === 0 || token !== mine) return resolve();
     const voice = pickVoice();
@@ -235,6 +257,7 @@ function deviceSpeak(parts: string[], mine: number): Promise<void> {
       u.pitch = 1.05;
       u.lang = "en-GB";
       if (voice) u.voice = voice;
+      u.onstart = () => { if (token === mine) emit({ kind: "sentence", text, index: offset + i, total }); };
       if (i === parts.length - 1) u.onend = u.onerror = () => resolve();
       window.speechSynthesis.speak(u);
     });
@@ -251,6 +274,8 @@ export function speak(text: string, onState?: (speaking: boolean) => void, opts:
   if (parts.length === 0) return;
   onState?.(true);
   waiting = true;
+  speakingText = text;
+  emit({ kind: "start", text });
   for (const p of parts) void clip(p);
   void (async () => {
     // Chrome often drops speech queued straight after cancel(), so give the cancel a moment to settle first.
@@ -260,14 +285,15 @@ export function speak(text: string, onState?: (speaking: boolean) => void, opts:
       if (token !== mine) return;
       waiting = false;
       if (!buffer) {
-        await deviceSpeak(parts.slice(i), mine);
+        await deviceSpeak(parts.slice(i), mine, i, parts.length, text);
         break;
       }
+      emit({ kind: "sentence", text, index: i, total: parts.length });
       await playClip(buffer, mine);
       if (token !== mine) return;
     }
     waiting = false;
-    if (token === mine) onState?.(false);
+    if (token === mine) { speakingText = null; emit({ kind: "end", text, finished: true }); onState?.(false); }
   })();
 }
 
@@ -306,6 +332,7 @@ export function isSpeaking(): boolean {
 
 export function stopSpeech(): void {
   token++;
+  if (speakingText !== null) { const text = speakingText; speakingText = null; emit({ kind: "end", text, finished: false }); }
   waiting = false;
   if (current) {
     current.onended = null;

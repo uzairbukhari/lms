@@ -1,0 +1,212 @@
+/* Lesson animation: the guide, stages and scenery, props, the trail, stop journeys and rewards.
+   Only transform and opacity are animated (cheap on tablets). "Reduce motion" (index.css) and Calm mode (below) both apply. */
+
+/* --- The guide ------------------------------------------------------------------------------------ */
+.guide { position: fixed; left: max(8px, 1.2vw); bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: clamp(74px, 9vw, 118px); z-index: 30; pointer-events: none; transition: transform 0.5s cubic-bezier(.34,1.56,.64,1), opacity 0.4s; }
+/* The guide stands beside the slide, never on top of it; phones are too narrow, so it stays hidden there. */
+@media (min-width: 640px) { .with-guide { padding-left: clamp(96px, 11vw, 150px) !important; } }
+@media (max-width: 639px) { .guide:not(.journey-walker .guide) { display: none; } }
+.guide svg { width: 100%; height: auto; overflow: visible; display: block; }
+.guide--out { transform: translateX(-140%) rotate(-12deg); opacity: 0; }
+.guide--in { transform: none; opacity: 1; }
+.journey-walker .guide { position: static; width: clamp(56px, 7vw, 86px); }
+.guide .g-body { transform-box: view-box; transform-origin: 60px 130px; animation: g-bob 2.8s ease-in-out infinite; }
+.guide .g-eyes { transform-box: fill-box; transform-origin: center; animation: g-blink 4.6s infinite; }
+.guide .g-mouth { transform-box: fill-box; transform-origin: center top; }
+.guide .g-arm-l { transform-box: fill-box; transform-origin: 90% 10%; }
+.guide .g-arm-r { transform-box: fill-box; transform-origin: 10% 10%; }
+.guide .g-bulb { animation: g-bulb 1.6s ease-in-out infinite; }
+.guide .g-petals { transform-box: view-box; transform-origin: 60px 52px; animation: g-petals 9s linear infinite; }
+.guide--talk .g-mouth, .guide--speaking .g-mouth { animation: g-talk 0.28s ease-in-out infinite alternate; }
+.guide--point .g-arm-r { animation: g-point 1.6s ease-out both; }
+.guide--point .g-body { animation: g-lean 1.6s ease-out both; }
+.guide--wave .g-arm-r { animation: g-wave 1.2s ease-in-out 2; }
+.guide--cheer .g-body { animation: g-jump 0.6s cubic-bezier(.3,1.6,.6,1) 3; }
+.guide--cheer .g-arm-l { animation: g-arms-up-l 0.6s ease-in-out 3; }
+.guide--cheer .g-arm-r { animation: g-arms-up-r 0.6s ease-in-out 3; }
+.guide--think .g-body { animation: g-tilt 2.6s ease-in-out both; }
+.guide--think .g-arm-r { animation: g-chin 2.6s ease-in-out both; }
+.guide-bubble { position: absolute; right: -14%; top: -18%; display: grid; place-items: center; width: 42%; aspect-ratio: 1; border-radius: 999px; background: var(--surface); color: var(--text); border: 3px solid var(--surface-border); font-weight: 900; font-size: clamp(1rem, 2vw, 1.6rem); animation: pop-in 0.4s ease-out both; }
+.guide-bubble--star { color: #f5b800; }
+@keyframes g-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes g-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+@keyframes g-bulb { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+@keyframes g-petals { to { transform: rotate(360deg); } }
+@keyframes g-talk { from { transform: scaleY(1); } to { transform: scaleY(2.1); } }
+@keyframes g-point { 0% { transform: none; } 30%, 80% { transform: rotate(-70deg); } 100% { transform: none; } }
+@keyframes g-lean { 0% { transform: none; } 30%, 80% { transform: rotate(5deg); } 100% { transform: none; } }
+@keyframes g-wave { 0%, 100% { transform: rotate(0); } 25%, 75% { transform: rotate(-110deg); } 50% { transform: rotate(-80deg); } }
+@keyframes g-jump { 0%, 100% { transform: translateY(0) scale(1); } 20% { transform: translateY(2px) scale(1.06, 0.92); } 55% { transform: translateY(-18px) scale(0.96, 1.06); } }
+@keyframes g-arms-up-l { 0%, 100% { transform: none; } 50% { transform: rotate(80deg); } }
+@keyframes g-arms-up-r { 0%, 100% { transform: none; } 50% { transform: rotate(-80deg); } }
+@keyframes g-tilt { 0%, 100% { transform: none; } 20%, 80% { transform: rotate(-7deg); } }
+@keyframes g-chin { 0%, 100% { transform: none; } 20%, 80% { transform: rotate(-120deg) translateY(-6px); } }
+
+/* --- Scenery ---------------------------------------------------------------------------------------- */
+.stage { padding: 0 !important; isolation: isolate; }
+.backdrop { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.backdrop-tint { fill: var(--accent); opacity: 0.06; mix-blend-mode: multiply; }
+[data-theme="space"] .backdrop:not(.backdrop--space) { filter: saturate(0.92) brightness(0.9); }
+.bd-drift { animation: bd-drift 26s ease-in-out infinite alternate; }
+.bd-drift-fast { animation: bd-drift 14s ease-in-out infinite alternate; }
+.bd-glow { animation: bd-glow 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.bd-shimmer { animation: bd-shimmer 5s ease-in-out infinite; }
+.bd-wave { animation: bd-wave 6s ease-in-out infinite alternate; }
+.bd-twinkle circle { animation: bd-twinkle 3s ease-in-out infinite; }
+.bd-twinkle circle:nth-child(3n) { animation-delay: 1s; }
+.bd-twinkle circle:nth-child(3n + 1) { animation-delay: 2s; }
+.bd-bubble { animation: bd-bubble 2.4s ease-in infinite; }
+@keyframes bd-drift { from { transform: translateX(-14px); } to { transform: translateX(18px); } }
+@keyframes bd-glow { 0%, 100% { transform: scale(1); opacity: 0.95; } 50% { transform: scale(1.08); opacity: 1; } }
+@keyframes bd-shimmer { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+@keyframes bd-wave { from { transform: translateX(-20px); } to { transform: translateX(0); } }
+@keyframes bd-twinkle { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes bd-bubble { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-30px); opacity: 0; } }
+
+/* --- Actors on a stage -------------------------------------------------------------------------- */
+.actor { z-index: 2; }
+.actor--wait { opacity: 0; transform: translateY(20%) scale(0.6); }
+.actor--in { opacity: 1; }
+.actor-emoji { display: inline-block; filter: drop-shadow(0 6px 4px rgb(0 0 0 / 0.18)); }
+.actor-idle { display: inline-flex; flex-direction: column; align-items: center; animation: actor-idle 3.4s ease-in-out infinite; }
+@keyframes actor-idle { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-5%) rotate(1.5deg); } }
+.actor-label { margin-top: 0.2em; white-space: nowrap; border-radius: 999px; background: color-mix(in srgb, var(--surface) 92%, transparent); color: var(--text); padding: 0 0.6em; font-weight: 800; font-size: clamp(1.05rem, 2.6cqw, 1.8rem); box-shadow: 0 2px 0 rgb(0 0 0 / 0.12); }
+.enter-pop { animation: enter-pop 0.65s cubic-bezier(.34,1.56,.64,1) both; }
+.enter-fade { animation: enter-fade 0.7s ease-out both; }
+.enter-drop { animation: enter-drop 0.75s cubic-bezier(.3,1.5,.6,1) both; }
+.enter-grow { animation: enter-grow 1s ease-out both; }
+.enter-slide_left { animation: enter-slide-l 0.8s cubic-bezier(.3,1.3,.6,1) both; }
+.enter-slide_right { animation: enter-slide-r 0.8s cubic-bezier(.3,1.3,.6,1) both; }
+.enter-walk_left { animation: enter-walk-l 1.3s ease-out both; }
+.enter-walk_right { animation: enter-walk-r 1.3s ease-out both; }
+@keyframes enter-pop { 0% { opacity: 0; transform: scale(0.2); } 70% { opacity: 1; transform: scale(1.12); } 100% { transform: none; } }
+@keyframes enter-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes enter-drop { 0% { opacity: 0; transform: translateY(-120%); } 60% { opacity: 1; transform: translateY(6%) scale(1.06, 0.92); } 100% { transform: none; } }
+@keyframes enter-grow { 0% { opacity: 0; transform: scale(0.05) translateY(40%); } 100% { opacity: 1; transform: none; } }
+@keyframes enter-slide-l { 0% { opacity: 0; transform: translateX(-160%); } 100% { opacity: 1; transform: none; } }
+@keyframes enter-slide-r { 0% { opacity: 0; transform: translateX(160%); } 100% { opacity: 1; transform: none; } }
+@keyframes enter-walk-l { 0% { opacity: 0; transform: translateX(-260%); } 10% { opacity: 1; } 22% { transform: translateX(-210%) translateY(-7%); } 36% { transform: translateX(-160%); } 50% { transform: translateX(-110%) translateY(-7%); } 64% { transform: translateX(-65%); } 80% { transform: translateX(-25%) translateY(-5%); } 100% { opacity: 1; transform: none; } }
+@keyframes enter-walk-r { 0% { opacity: 0; transform: translateX(260%); } 10% { opacity: 1; } 22% { transform: translateX(210%) translateY(-7%); } 36% { transform: translateX(160%); } 50% { transform: translateX(110%) translateY(-7%); } 64% { transform: translateX(65%); } 80% { transform: translateX(25%) translateY(-5%); } 100% { opacity: 1; transform: none; } }
+
+/* --- Explainer moves -------------------------------------------------------------------------------- */
+.camera { transition: transform 1.2s cubic-bezier(.45,0,.25,1); }
+.explainer-thing { display: inline-flex; flex-direction: column; align-items: center; transition: opacity 0.6s ease, transform 0.7s ease; }
+.exit-fade { opacity: 0; }
+.exit-shrink { opacity: 0; transform: scale(0.05); }
+.exit-fly_up { opacity: 0; transform: translateY(-180%) rotate(-8deg); }
+.exit-drop { opacity: 0; transform: translateY(160%); }
+.path-arc { animation: path-arc 0.9s ease-in-out; }
+.path-hop { animation: path-hop 0.9s ease-in-out; }
+@keyframes path-arc { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-38%); } }
+@keyframes path-hop { 0%, 50%, 100% { transform: translateY(0); } 25%, 75% { transform: translateY(-26%); } }
+
+/* --- Effects --------------------------------------------------------------------------------------- */
+.fx { position: absolute; inset: -20% -20%; pointer-events: none; z-index: -1; }
+.fx i { position: absolute; font-style: normal; }
+.fx--rain i { top: 0; left: calc(15% + var(--i) * 17%); width: 4px; height: 14%; border-radius: 4px; background: #4d96ff; animation: fx-rain 0.9s linear infinite; animation-delay: calc(var(--i) * 0.17s); z-index: 3; }
+.fx--steam i, .fx--bubbles i { bottom: 40%; left: calc(25% + var(--i) * 12%); width: 14%; aspect-ratio: 1; border-radius: 999px; background: rgb(255 255 255 / 0.75); animation: fx-rise 2.2s ease-out infinite; animation-delay: calc(var(--i) * 0.4s); }
+.fx--bubbles i { background: transparent; border: 3px solid rgb(120 200 255 / 0.9); width: 9%; }
+.fx--sparkle i, .fx--hearts i, .fx--zzz i { left: calc(10% + var(--i) * 19%); top: calc(10% + (var(--i) * 37%) - (var(--i) * var(--i) * 6%)); color: #ffc83d; font-size: clamp(0.9rem, 3cqw, 1.8rem); animation: fx-twinkle 1.4s ease-in-out infinite; animation-delay: calc(var(--i) * 0.28s); }
+.fx--hearts i { color: #ff5c8d; animation-name: fx-rise; animation-duration: 2.4s; top: auto; bottom: 30%; }
+.fx--zzz i { color: var(--text); font-weight: 900; animation-name: fx-rise; animation-duration: 2.6s; top: auto; bottom: 50%; left: calc(60% + var(--i) * 6%); }
+.fx--wind i { left: -10%; top: calc(20% + var(--i) * 13%); width: 40%; height: 3px; border-radius: 3px; background: rgb(255 255 255 / 0.9); box-shadow: 0 0 0 1px rgb(0 0 0 / 0.08); animation: fx-wind 1.6s linear infinite; animation-delay: calc(var(--i) * 0.3s); }
+.fx--glow i { inset: 15%; border-radius: 999px; background: radial-gradient(circle, rgb(255 230 120 / 0.9), transparent 70%); animation: bd-glow 1.6s ease-in-out infinite; }
+.fx--arrow_right i, .fx--arrow_down i { color: var(--accent); font-size: clamp(1.4rem, 5cqw, 3rem); font-weight: 900; z-index: 3; }
+.fx--arrow_right i { right: -18%; top: 38%; animation: fx-nudge-x 0.9s ease-in-out infinite; }
+.fx--arrow_down i { left: 42%; top: -22%; animation: fx-nudge-y 0.9s ease-in-out infinite; }
+@keyframes fx-rain { from { transform: translateY(0); opacity: 1; } to { transform: translateY(520%); opacity: 0; } }
+@keyframes fx-rise { 0% { transform: translateY(0) scale(0.5); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-260%) scale(1.3); opacity: 0; } }
+@keyframes fx-twinkle { 0%, 100% { transform: scale(0.4) rotate(0); opacity: 0.2; } 50% { transform: scale(1.2) rotate(30deg); opacity: 1; } }
+@keyframes fx-wind { from { transform: translateX(0); opacity: 0; } 30% { opacity: 1; } to { transform: translateX(320%); opacity: 0; } }
+@keyframes fx-nudge-x { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(30%); } }
+@keyframes fx-nudge-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(30%); } }
+
+/* --- Props ----------------------------------------------------------------------------------------- */
+.prop { display: block; }
+.prop svg { width: 100%; height: auto; display: block; overflow: visible; filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.15)); }
+.prop-move, .prop-turn, .prop-slice, .prop-grow-y { transition: transform 0.9s cubic-bezier(.45,0,.25,1); }
+.prop-turn { transform-box: view-box; }
+.prop-pop { transition: transform 0.45s cubic-bezier(.34,1.56,.64,1); }
+.prop-fill { transition: fill 0.5s ease; }
+.prop-hop { animation: path-arc 0.8s ease-in-out; transform-box: fill-box; }
+.prop-hot-text { fill: var(--accent); font-size: 17px; }
+.prop-highlight { animation: prop-highlight 1.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.prop-beat { animation: prop-beat 0.9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.prop-spin-x { animation: prop-spin-x 12s linear infinite; }
+@keyframes prop-highlight { 0%, 100% { filter: drop-shadow(0 0 0 #ffd166); } 50% { filter: drop-shadow(0 0 6px #ffc83d) brightness(1.15); } }
+@keyframes prop-beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } 45% { transform: scale(1.18); } }
+@keyframes prop-spin-x { from { transform: translateX(0); } to { transform: translateX(-200px); } }
+
+/* --- Sentence cards follow the voice ----------------------------------------------------------- */
+.sentence-card { transition: opacity 0.4s ease, transform 0.4s cubic-bezier(.34,1.56,.64,1), box-shadow 0.4s; }
+.card-wait { opacity: 0.38; }
+.card-live { transform: scale(1.015); box-shadow: 0 0 0 4px var(--accent), var(--shadow); }
+.sentence-card strong { background-image: linear-gradient(var(--accent), var(--accent)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 0.18em; transition: background-size 0.7s ease 0.25s; }
+.card-live strong, .card-done strong { background-size: 100% 0.18em; }
+.title-pop { animation: title-pop 0.6s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes title-pop { 0% { opacity: 0; transform: translateY(-14px) scale(0.94); letter-spacing: 0.06em; } 100% { opacity: 1; transform: none; letter-spacing: normal; } }
+
+/* --- Journey between stops ----------------------------------------------------------------------- */
+.journey { position: absolute; inset: 0; z-index: 25; display: grid; place-items: center; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(6px); animation: journey 2.3s ease both; cursor: pointer; }
+.journey-card { width: min(900px, 92%); display: flex; flex-direction: column; gap: 1.5rem; }
+.journey-title { text-align: center; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 4.4vw, 3.4rem); color: var(--text); animation: pop-in 0.6s ease-out 0.15s both; }
+.journey-stop { display: inline-block; border-radius: 999px; padding: 0.05em 0.6em; background: var(--accent); color: var(--accent-contrast, #fff); margin-right: 0.3em; }
+.journey-road { position: relative; height: clamp(110px, 18vw, 170px); }
+.journey-road > svg { position: absolute; inset: auto 0 18% 0; width: 100%; height: 40%; overflow: visible; }
+.journey-path { fill: none; stroke: var(--trail, var(--accent)); stroke-width: 2.4; stroke-dasharray: 3 2.4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.journey-flag { position: absolute; bottom: 30%; transform: translateX(-50%); font-size: clamp(1.6rem, 3.4vw, 2.6rem); color: var(--text-muted); display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.journey-flag b { font-size: 0.5em; }
+.journey-flag--done { color: var(--accent); }
+.journey-flag--next { animation: pulse-once 0.6s ease 1.2s both; }
+.journey-walker { position: absolute; bottom: 26%; transform: translateX(-50%); transition: left 1.1s cubic-bezier(.45,0,.25,1); }
+.journey-walker--go .guide .g-body { animation: g-jump 0.55s ease-in-out 2; }
+@keyframes journey { 0% { opacity: 0; } 10%, 85% { opacity: 1; } 100% { opacity: 0; } }
+
+/* --- Trail (progress) and stars ----------------------------------------------------------------- */
+.trail-flag, .trail-goal, .trail-token { position: absolute; top: 50%; transform: translate(-50%, -50%); line-height: 1; }
+.trail-flag { font-size: 1.1rem; color: var(--text-muted); transform: translate(-50%, -95%); }
+.trail-flag--done { color: var(--accent); }
+.trail-goal { font-size: 1.2rem; transform: translate(-80%, -60%); }
+.trail-token { font-size: 1.6rem; transition: left 0.7s cubic-bezier(.34,1.3,.64,1); filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.25)); z-index: 2; }
+.trail-token--bump { animation: trail-bump 0.5s ease; }
+@keyframes trail-bump { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 40% { transform: translate(-50%, -60%) scale(1.5); } }
+.fly-star { position: fixed; z-index: 60; font-size: 2.6rem; transform: translate(-50%, -50%); animation: fly-star 0.9s cubic-bezier(.5,0,.4,1) forwards; pointer-events: none; }
+@keyframes fly-star { 0% { transform: translate(-50%, -50%) scale(0.6); } 25% { transform: translate(-50%, -110%) scale(1.5) rotate(40deg); } 100% { transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.5) rotate(360deg); opacity: 0.9; } }
+
+/* --- Check moments --------------------------------------------------------------------------------- */
+.burst { position: absolute; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; z-index: 5; }
+.burst i { position: absolute; width: 12px; height: 8px; border-radius: 2px; animation: burst 1s cubic-bezier(.2,.8,.3,1) forwards; }
+@keyframes burst { 0% { transform: rotate(var(--a)) translateX(0) scale(1); opacity: 1; } 100% { transform: rotate(var(--a)) translateX(var(--d)) translateY(30px) rotate(200deg) scale(0.6); opacity: 0; } }
+.card-win { animation: card-win 0.6s cubic-bezier(.34,1.56,.64,1); box-shadow: 0 0 0 4px #4caf50, var(--shadow); }
+@keyframes card-win { 0% { transform: scale(1); } 40% { transform: scale(1.03); } 100% { transform: scale(1); } }
+.hint-glow { border-radius: 12px; animation: hint-glow 1.6s ease-in-out 2; }
+@keyframes hint-glow { 0%, 100% { background: transparent; } 50% { background: color-mix(in srgb, var(--accent) 22%, transparent); } }
+
+/* --- Slide changes per theme ------------------------------------------------------------------- */
+[data-theme="space"] .slide-in-next { animation: warp-next 0.5s cubic-bezier(.2,.8,.3,1) both; }
+[data-theme="space"] .slide-in-back { animation: warp-back 0.5s cubic-bezier(.2,.8,.3,1) both; }
+[data-theme="candy"] .slide-in-next { animation: jelly-next 0.6s cubic-bezier(.34,1.56,.64,1) both; }
+[data-theme="candy"] .slide-in-back { animation: jelly-back 0.6s cubic-bezier(.34,1.56,.64,1) both; }
+[data-theme="sunny"] .slide-in-next { animation: page-next 0.55s ease-out both; transform-origin: left center; }
+[data-theme="sunny"] .slide-in-back { animation: page-back 0.55s ease-out both; transform-origin: right center; }
+[data-theme="forest"] .slide-in-next { animation: leaf-next 0.65s ease-out both; }
+[data-theme="forest"] .slide-in-back { animation: leaf-back 0.65s ease-out both; }
+@keyframes warp-next { from { opacity: 0; transform: scale(0.82); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes warp-back { from { opacity: 0; transform: scale(1.15); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes jelly-next { 0% { opacity: 0; transform: translateX(60px) scale(0.9, 1.08); } 60% { opacity: 1; transform: translateX(-6px) scale(1.04, 0.96); } 100% { transform: none; } }
+@keyframes jelly-back { 0% { opacity: 0; transform: translateX(-60px) scale(0.9, 1.08); } 60% { opacity: 1; transform: translateX(6px) scale(1.04, 0.96); } 100% { transform: none; } }
+@keyframes page-next { from { opacity: 0; transform: perspective(1400px) rotateY(-24deg) translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes page-back { from { opacity: 0; transform: perspective(1400px) rotateY(24deg) translateX(-40px); } to { opacity: 1; transform: none; } }
+@keyframes leaf-next { from { opacity: 0.2; clip-path: circle(0% at 0% 100%); } to { opacity: 1; clip-path: circle(150% at 0% 100%); } }
+@keyframes leaf-back { from { opacity: 0.2; clip-path: circle(0% at 100% 100%); } to { opacity: 1; clip-path: circle(150% at 100% 100%); } }
+
+/* --- Calm mode: gentle fades only ---------------------------------------------------------------- */
+[data-calm] .actor-idle, [data-calm] .bd-drift, [data-calm] .bd-drift-fast, [data-calm] .bd-wave, [data-calm] .bd-glow, [data-calm] .bd-twinkle circle,
+[data-calm] .guide .g-body, [data-calm] .guide .g-petals, [data-calm] .anim-bounce, [data-calm] .anim-float, [data-calm] .anim-spin, [data-calm] .anim-pulse,
+[data-calm] .float, [data-calm] .fx i, [data-calm] .prop-spin-x, [data-calm] .prop-beat, [data-calm] .path-arc, [data-calm] .path-hop, [data-calm] .prop-hop { animation: none !important; }
+[data-calm] .actor[class*="enter-"], [data-calm] [class^="enter-"], [data-calm] .slide-in-next, [data-calm] .slide-in-back, [data-calm] .title-pop { animation: enter-fade 0.4s ease-out both !important; }
+[data-calm] .card-live { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .actor--wait { opacity: 1; transform: none; }
+  .card-wait { opacity: 1; }
+}
