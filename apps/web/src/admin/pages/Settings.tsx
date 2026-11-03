@@ -28,6 +28,30 @@ function AiAlert() {
   );
 }
 
+function AiCap() {
+  const cur = useLoad<{ neurons: number; defaultNeurons: number; freeNeuronsPerDay: number; todayNeurons: number; paused: boolean }>("/api/admin/settings/ai-cap");
+  const { toast } = useFeedback();
+  const [value, setValue] = useState<string | null>(null);
+  const shown = value ?? String(cur.data?.neurons ?? "");
+  async function save() {
+    try {
+      await api("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: Math.max(0, Math.round(Number(shown) || 0)) } });
+      toast("Saved.");
+      setValue(null);
+      await cur.reload();
+    } catch (e) { toast(e instanceof Error ? e.message : "Could not save.", true); }
+  }
+  const d = cur.data;
+  return (
+    <Card title="Daily AI limit" actions={<Button variant="primary" onClick={() => void save()} disabled={value === null}>Save</Button>}>
+      <ErrorNote error={cur.error} />
+      <Field label="Stop all AI for the day once it reaches (neurons)" help={d ? `Cloudflare gives ${d.freeNeuronsPerDay.toLocaleString("en")} neurons free every day and resets at 00:00 UTC. The default, ${d.defaultNeurons.toLocaleString("en")}, leaves a small safety margin so you are never billed. Used so far today: ${d.todayNeurons.toLocaleString("en")}${d.paused ? " (AI is paused until the reset)" : ""}. Lesson narration then uses the device voice and hints use the stored text; saved answers keep working. Set 0 to switch AI off.` : undefined}>
+        <input className="a-input" type="number" min={0} step={500} inputMode="numeric" value={shown} onChange={(e) => setValue(e.target.value)} />
+      </Field>
+    </Card>
+  );
+}
+
 function Security() {
   const s = useLoad<{ turnstile: boolean }>("/api/admin/settings/security");
   return (
@@ -57,6 +81,7 @@ export function Settings({ email }: { email: string }) {
     <>
       <PageHeader title="Settings" description="Backups, early-opened weeks and your account." />
       <Card title="Account"><p>Signed in as <strong>{email}</strong> through Cloudflare Access.</p></Card>
+      <AiCap />
       <AiAlert />
       <Security />
       <Card flush title="Backups" actions={<Button variant="primary" disabled={busy} onClick={() => void backup()}>Back up now</Button>}>

@@ -3,7 +3,8 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { parseBody } from "./http";
 import { sha, takeDailyAllowance } from "./ai";
-import { recordUsage } from "./usage";
+import { canSpend } from "./budget";
+import { neuronsFor, recordUsage } from "./usage";
 import { todayIn } from "./visibility";
 
 // Lesson narration in a natural voice (Deepgram Aura-2 on Workers AI). Each sentence is generated once and kept in R2,
@@ -31,6 +32,8 @@ export async function narrate(c: Context<AppEnv>): Promise<Response> {
 
   if (!c.env.AI) return c.json({ error: "voice_unavailable" }, 503);
   const user = c.var.user as AppEnv["Variables"]["user"] | undefined;
+  // The day's AI ceiling: no new audio is generated once it is reached (stored audio above is still served).
+  if (!(await canSpend(c.env.DB, neuronsFor(TTS_MODEL, { characters: text.length })))) return c.json({ error: "voice_unavailable", reason: "daily_limit" }, 503);
   if (user && !(await takeDailyAllowance(c.env.SESSIONS, `tts:${user.id}`, todayIn(c.env.TIMEZONE), DAILY_CAP))) {
     return c.json({ error: "voice_unavailable" }, 503);
   }

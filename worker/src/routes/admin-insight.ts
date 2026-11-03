@@ -3,7 +3,8 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { lessonInsights } from "../lib/insights";
-import { aiAlertThreshold, AI_ALERT_KEY, setSetting } from "../lib/settings";
+import { aiBudget, DEFAULT_AI_CAP_NEURONS } from "../lib/budget";
+import { aiAlertThreshold, AI_ALERT_KEY, AI_CAP_KEY, setSetting } from "../lib/settings";
 import { turnstileEnabled } from "../lib/turnstile";
 import { FREE_NEURONS_PER_DAY } from "../lib/usage";
 
@@ -56,3 +57,15 @@ adminInsightRoutes.get("/students/:id/logins", async (c) => {
 
 /** Whether the Turnstile check on the student login is set up (keys are Worker variables, see docs/DEPLOY.md). */
 adminInsightRoutes.get("/settings/security", (c) => c.json({ turnstile: turnstileEnabled(c.env) }));
+
+/** The hard daily AI limit: once today's metered neurons reach it, no Workers AI call is made until 00:00 UTC. */
+adminInsightRoutes.get("/settings/ai-cap", async (c) => {
+  const b = await aiBudget(c.env.DB);
+  return c.json({ neurons: b.ceiling, defaultNeurons: DEFAULT_AI_CAP_NEURONS, freeNeuronsPerDay: FREE_NEURONS_PER_DAY, todayNeurons: Math.round(b.used), paused: b.paused });
+});
+
+adminInsightRoutes.put("/settings/ai-cap", async (c) => {
+  const { neurons } = await parseBody(c, z.object({ neurons: z.number().int().min(0).max(1_000_000) }));
+  await setSetting(c.env.DB, AI_CAP_KEY, String(neurons));
+  return c.json({ neurons });
+});
