@@ -7,11 +7,13 @@ import { canSpend } from "./budget";
 import { neuronsFor, recordUsage } from "./usage";
 import { todayIn } from "./visibility";
 
-// Lesson narration in a natural voice (Deepgram Aura-2 on Workers AI). Each sentence is generated once and kept in R2,
+// Lesson narration in a natural voice (Deepgram Aura-1 on Workers AI, half the price of Aura-2; to go back, set TTS_MODEL to "@cf/deepgram/aura-2-en"). Each sentence is generated once and kept in R2,
 // so a lesson costs nothing after the first child has heard it. The app falls back to the device's own voice whenever
 // this answers anything other than audio.
 
-export const TTS_MODEL = "@cf/deepgram/aura-2-en";
+export const TTS_MODEL = "@cf/deepgram/aura-1";
+/** Stored audio is kept per model, so changing the model never mixes voices: audio made with another model stays in R2 untouched. */
+const MODEL_DIR = TTS_MODEL.split("/").pop();
 /** A warm, friendly voice for young children. Other good ones: "thalia", "aurora", "iris", "helena". */
 export const TTS_VOICE = "luna";
 /** New sentences a child can have voiced per day. Cached sentences are free and do not count. */
@@ -24,7 +26,7 @@ export async function narrate(c: Context<AppEnv>): Promise<Response> {
   // The parent's test student never uses the voice service, not even stored audio (the app stays silent for it).
   if ((c.var.user as AppEnv["Variables"]["user"] | undefined)?.isTest) return c.json({ error: "voice_unavailable" }, 503);
   const { text } = await parseBody(c, bodySchema);
-  const key = `tts/v1/${TTS_VOICE}/${await sha(text)}.mp3`;
+  const key = `tts/v1/${MODEL_DIR}/${TTS_VOICE}/${await sha(text)}.mp3`;
   const headers = { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=604800" };
 
   const cached = await c.env.ASSETS_BUCKET.get(key);

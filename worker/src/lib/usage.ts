@@ -11,7 +11,7 @@ const TOKEN_RATES: Record<string, { inPerM: number; outPerM: number }> = {
 };
 export const TOKEN_MODEL_DEFAULT = "@cf/meta/llama-3.1-8b-instruct";
 const DEFAULT_TOKEN_RATE = TOKEN_RATES[TOKEN_MODEL_DEFAULT] as { inPerM: number; outPerM: number };
-const SPEECH_NEURONS_PER_1K_CHARS: Record<string, number> = { "@cf/deepgram/aura-2-en": 2_727 };
+const SPEECH_NEURONS_PER_1K_CHARS: Record<string, number> = { "@cf/deepgram/aura-2-en": 2_727, "@cf/deepgram/aura-1": 1_364 };
 
 export type UsageKind = "hint" | "explain" | "narration" | "define";
 
