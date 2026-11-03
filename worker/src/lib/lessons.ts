@@ -51,7 +51,7 @@ export async function importLesson(db: D1Database, incoming: LessonFile, opts: {
 
   // Videos the parent already approved for this lesson come back automatically when the lesson is re-imported.
   const approved = existing
-    ? (await db.prepare("SELECT youtube, title, start_sec, end_sec, caption FROM approved_videos WHERE lesson_id = ? ORDER BY created_at").bind(existing.id).all<ApprovedVideo>()).results
+    ? (await db.prepare("SELECT youtube, title, start_sec, end_sec, caption, after_key FROM approved_videos WHERE lesson_id = ? ORDER BY created_at").bind(existing.id).all<ApprovedVideo>()).results
     : [];
   const file: LessonFile = approved.length ? { ...incoming, blocks: withVideos(incoming.blocks as never, approved) as LessonFile["blocks"] } : incoming;
   const { lesson, blocks, quiz } = file;
