@@ -6,11 +6,11 @@ const NAV: { label: string; items: { to: string; label: string; icon: string; en
   { label: "Overview", items: [{ to: "/admin", label: "Dashboard", icon: "dashboard", end: true }] },
   { label: "People", items: [{ to: "/admin/students", label: "Students", icon: "students" }, { to: "/admin/classes", label: "Classes", icon: "classes" }] },
   { label: "Content", items: [{ to: "/admin/lessons", label: "Lessons", icon: "lessons" }, { to: "/admin/media", label: "Media library", icon: "media" }, { to: "/admin/plan", label: "Year plan", icon: "plan" }] },
-  { label: "Assessment", items: [{ to: "/admin/exams", label: "Exams", icon: "exams" }, { to: "/admin/reports", label: "Reports", icon: "reports" }] },
-  { label: "System", items: [{ to: "/admin/settings", label: "Settings", icon: "settings" }] },
+  { label: "Assessment", items: [{ to: "/admin/exams", label: "Exams", icon: "exams" }, { to: "/admin/reports", label: "Reports", icon: "reports" }, { to: "/admin/insights", label: "Question insights", icon: "exams" }] },
+  { label: "System", items: [{ to: "/admin/ai-log", label: "AI replies", icon: "lessons" }, { to: "/admin/settings", label: "Settings", icon: "settings" }] },
 ];
 
-const SECTION_LABELS: Record<string, string> = { students: "Students", classes: "Classes", lessons: "Lessons", media: "Media library", plan: "Year plan", exams: "Exams", reports: "Reports", settings: "Settings" };
+const SECTION_LABELS: Record<string, string> = { students: "Students", classes: "Classes", lessons: "Lessons", media: "Media library", plan: "Year plan", exams: "Exams", reports: "Reports", insights: "Question insights", "ai-log": "AI replies", settings: "Settings" };
 
 const CrumbCtx = createContext<(label: string | null) => void>(() => {});
 /** A detail page calls this with its own name (for example a student's name) so the breadcrumb reads well. */

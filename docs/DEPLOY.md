@@ -51,6 +51,15 @@ A cron job copies the whole database to the private `lms-assets` bucket under `b
 keeps the newest 8. You can also run one from the parent area's API (`POST /api/admin/backups`). Backups contain
 children's names and password hashes: keep that bucket private.
 
+Backups include the AI reply log (`ai_events`) but not the sign-in history, which is kept only for the parent to review.
+
+### Optional: Turnstile on the sign-in page
+
+After three wrong passwords the sign-in page can ask for a Cloudflare Turnstile check. Create a widget in the Cloudflare
+dashboard (Turnstile, hostname = your site), then set the variable `TURNSTILE_SITE_KEY` and the Worker secret
+`TURNSTILE_SECRET` (`wrangler secret put TURNSTILE_SECRET`). Without both, the check never appears; wrong passwords are
+still limited (10 per 15 minutes) and every sign-in is listed on the child's Sign-ins tab. Settings shows whether it is on.
+
 ## 5. Looking after other families' children
 
 If friends use the site, you are holding their children's learning records.

@@ -33,3 +33,24 @@ describe("migration 0006 on a database that already has attempts", () => {
     await expect(run("INSERT INTO questions (id, quiz_id, ref, position, type, prompt, answer_json) VALUES ('q4', 'z1', 'q4', 4, 'nonsense', 'p', '{}')")).rejects.toThrow();
   });
 });
+
+describe("migration 0009 on a database that already has AI replies", () => {
+  let db: D1Database;
+  let dispose: () => Promise<void>;
+  beforeAll(async () => {
+    ({ db, dispose } = await createTestDb({ only: (f) => f < "0009" }));
+  });
+  afterAll(async () => dispose());
+
+  it("keeps every reply and then accepts word help and the bad-reply flag", async () => {
+    const run = (sql: string, ...b: unknown[]) => db.prepare(sql).bind(...b).run();
+    await run("INSERT INTO users (id, role, display_name, username) VALUES ('u1', 'student', 'Ava', 'ava')");
+    await run("INSERT INTO ai_events (id, user_id, kind, model, response, from_cache) VALUES ('e1', 'u1', 'hint', 'm', 'Think again', 1)");
+    await applyMigration(db, "0009_admin_insight.sql");
+    const row = await db.prepare("SELECT response, from_cache AS fromCache, flagged, cache_key AS cacheKey FROM ai_events WHERE id = 'e1'").first();
+    expect(row).toEqual({ response: "Think again", fromCache: 1, flagged: 0, cacheKey: null });
+    await run("INSERT INTO ai_events (id, user_id, kind, model, response, detail) VALUES ('e2', 'u1', 'define', 'm', 'A big cat', '\"lion\"')");
+    await expect(run("INSERT INTO ai_events (id, user_id, kind, model, response) VALUES ('e3', 'u1', 'nonsense', 'm', 'x')")).rejects.toThrow();
+    expect((await db.prepare("PRAGMA foreign_key_check").all()).results).toEqual([]);
+  });
+});

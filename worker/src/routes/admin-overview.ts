@@ -1,11 +1,13 @@
 import { Hono } from "hono";
 import type { AppEnv } from "../env";
+import { aiAlertThreshold } from "../lib/settings";
+import { FREE_NEURONS_PER_DAY } from "../lib/usage";
 import { addDays, currentSlot, type TermRow } from "../lib/terms";
 
 /** Read-only numbers for the admin Dashboard and the Students table. Mounted under /api/admin. */
 export const adminOverviewRoutes = new Hono<AppEnv>();
 
-type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive"; message: string; href: string };
+type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive" | "ai_spend" | "sign_in_failures"; message: string; href: string };
 
 adminOverviewRoutes.get("/overview", async (c) => {
   const db = c.env.DB;
@@ -64,6 +66,18 @@ adminOverviewRoutes.get("/overview", async (c) => {
     const last = activity.get(s.id)?.lastActive;
     if (last && last.slice(0, 10) < weekAgo) attention.push({ kind: "inactive", message: `${s.name} has not taken a quiz since ${last.slice(0, 10)}.`, href: `/admin/students/${s.id}` });
   }
+
+  // AI spend alert (A13): today's Workers AI use against the limit set in Settings.
+  const threshold = await aiAlertThreshold(db);
+  const usedToday = (await db.prepare("SELECT COALESCE(SUM(neurons), 0) AS n FROM ai_usage WHERE date(created_at) = ?").bind(today).first<{ n: number }>())?.n ?? 0;
+  if (threshold > 0 && usedToday >= threshold) {
+    attention.push({ kind: "ai_spend", message: `AI use today is ${Math.round(usedToday).toLocaleString("en")} of your ${threshold.toLocaleString("en")} alert limit${usedToday >= FREE_NEURONS_PER_DAY ? ", and past the free daily allowance (it now costs money)" : ""}.`, href: "/admin/settings" });
+  }
+  // Repeated wrong passwords on one child's login (someone guessing, or a child who forgot).
+  const failures = await db
+    .prepare("SELECT e.user_id AS id, u.display_name AS name, COUNT(*) AS n FROM login_events e JOIN users u ON u.id = e.user_id WHERE e.ok = 0 AND e.created_at >= datetime('now', '-1 day') GROUP BY e.user_id HAVING n >= 5")
+    .all<{ id: string; name: string; n: number }>();
+  for (const f of failures.results) attention.push({ kind: "sign_in_failures", message: `${f.n} wrong passwords for ${f.name}'s login in the last day.`, href: `/admin/students/${f.id}` });
 
   return c.json({
     totals: {

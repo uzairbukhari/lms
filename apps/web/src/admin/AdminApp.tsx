@@ -5,10 +5,12 @@ import { LessonPlayer } from "../pages/LessonPlayer";
 import "./admin.css";
 import { Shell } from "./Shell";
 import { FeedbackProvider } from "./ui";
+import { AiLog } from "./pages/AiLog";
 import { ClassDetail } from "./pages/ClassDetail";
 import { Classes } from "./pages/Classes";
 import { Dashboard } from "./pages/Dashboard";
 import { Exams } from "./pages/Exams";
+import { Insights } from "./pages/Insights";
 import { LessonImport } from "./pages/LessonImport";
 import { LessonVideos } from "./pages/LessonVideos";
 import { Lessons } from "./pages/Lessons";
@@ -58,6 +60,8 @@ export function AdminApp() {
                 <Route path="plan/:courseId" element={<PlanDetail />} />
                 <Route path="exams" element={<Exams />} />
                 <Route path="reports" element={<Reports />} />
+                <Route path="insights" element={<Insights />} />
+                <Route path="ai-log" element={<AiLog />} />
                 <Route path="settings" element={<Settings email={gate.email} />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />
               </Routes>
