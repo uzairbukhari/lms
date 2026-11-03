@@ -63,7 +63,13 @@ desktopRoutes.get("/desktop/status/:current", async (c) => {
 
 // Installer and signature files, served from R2.
 desktopRoutes.get("/desktop/releases/*", async (c) => {
-  const key = c.req.path.replace(/^\/api\//, "");
+  let key: string;
+  try {
+    // Installer names contain spaces, so the URL arrives percent-encoded.
+    key = decodeURIComponent(c.req.path.replace(/^\/api\//, ""));
+  } catch {
+    return fail(c, 400, "invalid_input");
+  }
   if (key.includes("..")) return fail(c, 400, "invalid_input");
   const obj = await c.env.ASSETS_BUCKET.get(key);
   if (!obj) return fail(c, 404, "not_found");

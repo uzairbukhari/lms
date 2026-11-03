@@ -4,7 +4,8 @@
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { basename, join, resolve } from "node:path";
+import { createRequire } from "node:module";
+import { basename, dirname, join, resolve } from "node:path";
 
 const BUCKET = process.env.R2_BUCKET ?? "lms-assets";
 const SITE = process.env.LMS_SITE ?? "https://lms.sipwise.trade";
@@ -14,7 +15,10 @@ const TARGET = "windows-x86_64";
 const [version, installer, sigFile, notes = ""] = process.argv.slice(2);
 if (!version || !installer || !sigFile) throw new Error("usage: publish-desktop-release.mjs <version> <installer> <sig> [notes]");
 
-const wrangler = (...args) => execFileSync("npx", ["wrangler", ...args], { cwd: "worker", stdio: ["ignore", "pipe", "inherit"], encoding: "utf8" });
+// Run wrangler through node itself: spawning "npx" fails on Windows runners (npx is a .cmd file).
+const wranglerPkg = createRequire(resolve("worker/package.json")).resolve("wrangler/package.json");
+const wranglerBin = join(dirname(wranglerPkg), "bin", "wrangler.js");
+const wrangler = (...args) => execFileSync(process.execPath, [wranglerBin, ...args], { cwd: "worker", stdio: ["ignore", "pipe", "inherit"], encoding: "utf8" });
 const put = (key, file, type) => wrangler("r2", "object", "put", `${BUCKET}/${key}`, "--file", resolve(file), "--content-type", type, "--remote");
 const dir = mkdtempSync(join(tmpdir(), "desktop-"));
 
