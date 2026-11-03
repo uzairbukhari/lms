@@ -22,6 +22,8 @@ export type Bindings = {
   YOUTUBE_API_KEY?: string;
   /** IANA timezone that decides when a school week starts, e.g. "Asia/Karachi". Defaults to UTC. */
   TIMEZONE?: string;
+  /** Parent PIN that closes the Windows app's focus mode (Worker secret). */
+  DESKTOP_EXIT_PIN?: string;
 };
 
 export type AdminContext = { userId: string; email: string };

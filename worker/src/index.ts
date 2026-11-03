@@ -8,6 +8,7 @@ import { serveAsset } from "./lib/assets";
 import { requireStudent } from "./middleware/auth";
 import { aiRoutes } from "./routes/ai";
 import { authRoutes } from "./routes/auth";
+import { desktopRoutes } from "./routes/desktop";
 import { mapRoutes } from "./routes/map";
 import { quizRoutes } from "./routes/quiz";
 import { studentRoutes } from "./routes/student";
@@ -22,6 +23,7 @@ app.get("/api/health", (c) => {
 });
 
 app.route("/api", authRoutes);
+app.route("/api", desktopRoutes);
 app.get("/api/assets/:filename", requireStudent, (c) => serveAsset(c, c.req.param("filename")));
 app.route("/api/admin", adminRoutes);
 app.route("/api", studentRoutes);
