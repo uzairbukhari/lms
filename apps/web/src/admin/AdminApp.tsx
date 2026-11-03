@@ -10,6 +10,9 @@ import { ClassDetail } from "./pages/ClassDetail";
 import { Classes } from "./pages/Classes";
 import { Dashboard } from "./pages/Dashboard";
 import { Exams } from "./pages/Exams";
+import { LessonEdit } from "./pages/LessonEdit";
+import { PromptBuilder } from "./pages/Prompt";
+import { ReportCard } from "./pages/ReportCard";
 import { Insights } from "./pages/Insights";
 import { LessonImport } from "./pages/LessonImport";
 import { LessonVideos } from "./pages/LessonVideos";
@@ -54,6 +57,9 @@ export function AdminApp() {
                 <Route path="classes/:id" element={<ClassDetail />} />
                 <Route path="lessons" element={<Lessons />} />
                 <Route path="lessons/import" element={<LessonImport />} />
+                <Route path="lessons/:id/edit" element={<LessonEdit />} />
+                <Route path="prompt" element={<PromptBuilder />} />
+                <Route path="students/:id/report-card" element={<ReportCard />} />
                 <Route path="lessons/:id/videos" element={<LessonVideos />} />
                 <Route path="media" element={<Media />} />
                 <Route path="plan" element={<PlanList />} />

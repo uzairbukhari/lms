@@ -49,6 +49,8 @@ export function StudentDetail() {
         </div>
         <div className="a-actions">
           <label className="a-check"><input type="checkbox" checked={practice} onChange={(e) => setPractice(e.target.checked)} /> Include practice in numbers</label>
+          <Link className="a-btn" to={`/admin/students/${id}/report-card`}>Report card</Link>
+          <Link className="a-btn" to={`/admin/prompt?student=${id}`}>Next lesson prompt</Link>
           <Button onClick={() => void newPassword()}>New password</Button>
           <a className="a-btn" href={`/api/admin/reports/students/${id}/export.csv`}><span style={{ display: "inline-flex" }}>Export CSV</span></a>
         </div>

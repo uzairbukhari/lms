@@ -242,8 +242,9 @@ function deviceSpeak(parts: string[], mine: number): Promise<void> {
 }
 
 /** Speak text sentence by sentence. Replaces anything already being said. */
-export function speak(text: string, onState?: (speaking: boolean) => void): void {
-  if (!narrationOn || !getSoundOn()) return;
+export function speak(text: string, onState?: (speaking: boolean) => void, opts: { force?: boolean } = {}): void {
+  // `force` is for a speaker button the child pressed herself: it reads aloud even when slide sound is switched off.
+  if (!narrationOn || (!getSoundOn() && !opts.force)) return;
   stopSpeech();
   const mine = ++token;
   const parts = sentences(text);

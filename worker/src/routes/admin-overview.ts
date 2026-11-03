@@ -2,12 +2,13 @@ import { Hono } from "hono";
 import type { AppEnv } from "../env";
 import { aiAlertThreshold } from "../lib/settings";
 import { FREE_NEURONS_PER_DAY } from "../lib/usage";
+import { weekStatus } from "../lib/week";
 import { addDays, currentSlot, type TermRow } from "../lib/terms";
 
 /** Read-only numbers for the admin Dashboard and the Students table. Mounted under /api/admin. */
 export const adminOverviewRoutes = new Hono<AppEnv>();
 
-type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive" | "ai_spend" | "sign_in_failures"; message: string; href: string };
+type Attention = { kind: "no_calendar" | "no_courses" | "draft_soon" | "inactive" | "ai_spend" | "sign_in_failures" | "week_due"; message: string; href: string };
 
 adminOverviewRoutes.get("/overview", async (c) => {
   const db = c.env.DB;
@@ -72,6 +73,13 @@ adminOverviewRoutes.get("/overview", async (c) => {
   const usedToday = (await db.prepare("SELECT COALESCE(SUM(neurons), 0) AS n FROM ai_usage WHERE date(created_at) = ?").bind(today).first<{ n: number }>())?.n ?? 0;
   if (threshold > 0 && usedToday >= threshold) {
     attention.push({ kind: "ai_spend", message: `AI use today is ${Math.round(usedToday).toLocaleString("en")} of your ${threshold.toLocaleString("en")} alert limit${usedToday >= FREE_NEURONS_PER_DAY ? ", and past the free daily allowance (it now costs money)" : ""}.`, href: "/admin/settings" });
+  }
+  // From Saturday, anything not finished is due tomorrow (lessons are due Sunday).
+  const due = await weekStatus(db, c.env.TIMEZONE);
+  if (due.dueSoon) {
+    for (const st of due.students) {
+      if (st.total > 0 && st.done < st.total) attention.push({ kind: "week_due", message: `${st.name} has ${st.total - st.done} of ${st.total} lessons left to finish ${due.daysLeft === 0 ? "today" : "by tomorrow"}.`, href: "/admin" });
+    }
   }
   // Repeated wrong passwords on one child's login (someone guessing, or a child who forgot).
   const failures = await db

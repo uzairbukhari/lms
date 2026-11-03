@@ -25,6 +25,7 @@ import { adminInsightRoutes } from "./admin-insight";
 import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 import { adminVideoRoutes } from "./admin-videos";
+import { adminWeekRoutes } from "./admin-week";
 
 export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
@@ -40,6 +41,7 @@ adminRoutes.route("/", adminReportRoutes);
 adminRoutes.route("/", adminOverviewRoutes);
 adminRoutes.route("/", adminAiLogRoutes);
 adminRoutes.route("/", adminInsightRoutes);
+adminRoutes.route("/", adminWeekRoutes);
 adminRoutes.route("/", adminAiUsageRoutes);
 adminRoutes.route("/", adminVideoRoutes);
 
