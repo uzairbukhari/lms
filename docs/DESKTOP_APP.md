@@ -13,7 +13,7 @@ A small Tauri 2 shell (`apps/desktop`) that opens the live site (https://lms.sip
 
 1. Generate the update signing key (keep the private key safe, it cannot be recovered):
    `npx @tauri-apps/cli@2 signer generate -w tauri.key`
-2. Paste the **public** key into `plugins.updater.pubkey` in `apps/desktop/src-tauri/tauri.conf.json`.
+2. (Done: the public key is in the config.) Paste the **public** key into `plugins.updater.pubkey` in `apps/desktop/src-tauri/tauri.conf.json`.
 3. In the GitHub `prod` environment add secrets `TAURI_SIGNING_PRIVATE_KEY` (contents of `tauri.key`) and `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`. `CLOUDFLARE_API_TOKEN` must be allowed to edit R2 (it already deploys the Worker).
 4. Set the parent PIN used to leave focus mode: `cd worker && npx wrangler secret put DESKTOP_EXIT_PIN`. Change it any time the same way, no new installer needed.
 
