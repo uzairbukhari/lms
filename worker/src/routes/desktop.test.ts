@@ -52,6 +52,10 @@ describe("desktop updater", () => {
     expect(res.status).toBe(200);
     expect(await res.text()).toBe("bin");
     expect((await get("/api/desktop/releases/9.9.9/none.exe")).status).toBe(404);
+    await env.ASSETS_BUCKET.put("desktop/releases/1.2.0/Learning Adventures_1.2.0_x64-setup.exe", "bin2");
+    const spaced = await get(`/api/desktop/releases/1.2.0/${encodeURIComponent("Learning Adventures_1.2.0_x64-setup.exe")}`);
+    expect(spaced.status).toBe(200);
+    expect(await spaced.text()).toBe("bin2");
   });
 });
 
