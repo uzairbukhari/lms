@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><title>Parent PIN</title>
+<style>
+  body{margin:0;padding:1.5rem;font-family:"Segoe UI",system-ui,sans-serif;background:#0f1535;color:#fff;text-align:center}
+  input{font:inherit;font-size:1.6rem;width:8rem;text-align:center;letter-spacing:.4rem;padding:.4rem;border-radius:.5rem;border:2px solid #7c8cff}
+  button{font:inherit;font-weight:700;margin:.8rem .3rem 0;padding:.5rem 1.2rem;border:0;border-radius:999px;cursor:pointer}
+  #ok{background:#ffd23f;color:#1b1b3a} #no{background:#2c3770;color:#fff}
+  #msg{min-height:1.4rem;margin-top:.6rem;color:#ffb3b3}
+</style></head>
+<body>
+  <h2>Grown-ups only</h2>
+  <p>Enter the parent PIN to close the app.</p>
+  <input id="pin" type="password" inputmode="numeric" maxlength="12" autofocus>
+  <div><button id="ok">Close app</button><button id="no">Stay</button></div>
+  <div id="msg" aria-live="polite"></div>
+<script>
+  const { invoke } = window.__TAURI__.core;
+  const pin = document.getElementById("pin"), msg = document.getElementById("msg");
+  async function submit() {
+    const ok = await invoke("submit_pin", { pin: pin.value });
+    if (!ok) { msg.textContent = "That PIN is not right."; pin.value = ""; pin.focus(); }
+  }
+  document.getElementById("ok").addEventListener("click", submit);
+  document.getElementById("no").addEventListener("click", () => invoke("cancel_pin"));
+  pin.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
+</script></body></html>

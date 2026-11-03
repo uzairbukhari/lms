@@ -1,0 +1,8 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "local-ui",
+  "description": "Only the bundled offline and PIN pages may call the app's commands. The live site gets no access.",
+  "windows": ["main", "pin"],
+  "local": true,
+  "permissions": ["core:default"]
+}

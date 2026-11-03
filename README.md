@@ -38,3 +38,7 @@ See [`docs/DEPLOY.md`](docs/DEPLOY.md) for the full checklist (secrets, Cloudfla
 ```bash
 npm run deploy
 ```
+
+## Windows app
+
+A Tauri shell that opens the live site and updates itself over the air lives in `apps/desktop`. See [docs/DESKTOP_APP.md](docs/DESKTOP_APP.md).

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learning Adventures</title>
+<style>
+  html,body{height:100%;margin:0}
+  body{display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,#243070,#0f1535 70%);color:#fff;font-family:"Segoe UI",system-ui,sans-serif;text-align:center}
+  main{max-width:30rem;padding:2rem}
+  .rocket{font-size:5rem;animation:float 3s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-12px)}}
+  h1{font-size:2rem;margin:.5rem 0}
+  p{font-size:1.2rem;line-height:1.5;opacity:.9}
+  button{margin-top:1rem;font:inherit;font-size:1.3rem;font-weight:700;padding:.8rem 2rem;border:0;border-radius:999px;background:#ffd23f;color:#1b1b3a;cursor:pointer}
+  #msg{min-height:1.6rem;margin-top:1rem}
+</style></head>
+<body><main>
+  <div class="rocket" aria-hidden="true">🚀</div>
+  <h1>Oh no, no internet yet!</h1>
+  <p>Please ask a grown-up to check the Wi-Fi, then tap the button.</p>
+  <button id="retry">Try again</button>
+  <p id="msg" aria-live="polite"></p>
+</main>
+<script>
+  const msg = document.getElementById("msg");
+  async function retry() {
+    msg.textContent = "Looking for the internet…";
+    const ok = await window.__TAURI__.core.invoke("retry");
+    if (!ok) msg.textContent = "Still can't find it. Let's try again in a moment.";
+  }
+  document.getElementById("retry").addEventListener("click", retry);
+  setInterval(retry, 20000);
+</script></body></html>
