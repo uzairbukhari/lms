@@ -40,13 +40,13 @@ export function WordBubble({ pressed, state, canSpeak, onSpeak, onClose }: {
   return (
     <>
       {/* Tapping anywhere else closes the bubble, and does nothing else underneath it. */}
-      <div className="fixed inset-0 z-40" onPointerDown={(e) => { e.preventDefault(); onClose(); }} aria-hidden="true" />
-      <div className="pointer-events-none fixed z-40 rounded-md bg-accent/30 ring-2 ring-accent" style={{ left: r.left - 3, top: r.top - 1, width: r.width + 6, height: r.height + 2 }} aria-hidden="true" />
+      <div className="no-select fixed inset-0 z-40" onPointerDown={(e) => { e.preventDefault(); onClose(); }} onContextMenu={(e) => e.preventDefault()} aria-hidden="true" />
+      <div className="no-select pointer-events-none fixed z-40 rounded-md bg-accent/30 ring-2 ring-accent" style={{ left: r.left - 3, top: r.top - 1, width: r.width + 6, height: r.height + 2 }} aria-hidden="true" />
       <div
         ref={box}
         role="dialog"
         aria-label={`What does ${pressed.word} mean?`}
-        className="pop-in card fixed z-50 flex flex-col gap-2 p-4 text-left shadow-xl"
+        className="no-select pop-in card fixed z-50 flex flex-col gap-2 p-4 text-left shadow-xl"
         style={{ width: Math.min(WIDTH, window.innerWidth - MARGIN * 2), left: pos?.left ?? 0, top: pos?.top ?? 0, visibility: pos ? "visible" : "hidden" }}
         onContextMenu={(e) => e.preventDefault()}
       >

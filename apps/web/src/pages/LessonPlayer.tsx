@@ -197,6 +197,13 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
     return () => window.removeEventListener("keydown", onKey);
   }, [go, index]);
 
+  // A long press must only open the word help, never the browser's own menu (also when the finger lands on the overlay that appears under it).
+  useEffect(() => {
+    const block = (e: Event) => e.preventDefault();
+    window.addEventListener("contextmenu", block);
+    return () => window.removeEventListener("contextmenu", block);
+  }, []);
+
   const onTouchStart = (e: TouchEvent) => { const t = e.touches[0]; if (t) touch.current = { x: t.clientX, y: t.clientY }; };
   const onTouchEnd = (e: TouchEvent) => {
     const s = touch.current; const t = e.changedTouches[0];
