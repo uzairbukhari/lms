@@ -164,3 +164,23 @@ export async function pointTotals(db: D1Database, userId: string, today: string)
   const vis = await visibleLessonsFor(db, userId, today);
   return allTotals(db, userId, vis, await assignedSlots(db, userId));
 }
+
+/**
+ * Every released week of the child in time order, across all semesters, for the week streak and stickers.
+ * A week counts as done when every lesson of it is finished (an empty rest-stop week counts too).
+ */
+export async function weekTimeline(db: D1Database, userId: string, today: string) {
+  const vis = await visibleLessonsFor(db, userId, today);
+  const slots = await assignedSlots(db, userId);
+  const weeks: { semester: number; week: number; done: boolean; current: boolean; lessons: number }[] = [];
+  const reachedBySemester = new Map<number, number>();
+  for (const semester of semestersFor(vis)) {
+    const cps = await checkpointsFor(db, userId, vis, slots, semester);
+    reachedBySemester.set(semester, cps.filter((c) => c.state === "reached").length);
+    for (const cp of cps) {
+      if (cp.state === "locked") continue;
+      weeks.push({ semester, week: cp.week, done: cp.state === "reached", current: cp.isCurrentWeek, lessons: cp.lessons.total });
+    }
+  }
+  return { weeks, reachedBySemester };
+}

@@ -10,6 +10,7 @@ import { aiRoutes } from "./routes/ai";
 import { authRoutes } from "./routes/auth";
 import { mapRoutes } from "./routes/map";
 import { quizRoutes } from "./routes/quiz";
+import { rewardRoutes } from "./routes/rewards";
 import { studentRoutes } from "./routes/student";
 
 export type { Bindings } from "./env";
@@ -28,6 +29,7 @@ app.route("/api", studentRoutes);
 app.route("/api", quizRoutes);
 app.route("/api", mapRoutes);
 app.route("/api", aiRoutes);
+app.route("/api", rewardRoutes);
 
 // Unknown API routes return JSON, never the SPA shell.
 app.all("/api/*", (c) => c.json({ error: "not_found" }, 404));

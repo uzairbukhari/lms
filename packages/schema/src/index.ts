@@ -15,3 +15,4 @@ export { blockNarration, buildSlides, plain, splitSentences, type Slide, type Sl
 export * from "./glossary";
 export * from "./visuals";
 export * from "./games";
+export * from "./rewards";

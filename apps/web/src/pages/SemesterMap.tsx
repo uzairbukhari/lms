@@ -4,6 +4,7 @@ import { GAME_INFO } from "@lms/schema";
 import { api } from "../api";
 import { useAuth } from "../auth";
 import { Avatar } from "../components/Avatar";
+import { wornEmoji, type Rewards } from "../lib/rewards";
 import { Loader } from "../components/Loader";
 import { Confetti } from "../games/common";
 import { lastSeenStop, rememberStop, type Checkpoint, type MapData } from "../games/mapApi";
@@ -55,9 +56,11 @@ export function SemesterMap() {
   const [sheet, setSheet] = useState<Checkpoint | "finish" | "start" | null>(null);
   const [wobble, setWobble] = useState<number | null>(null);
   const [sound, setSound] = useState(getSoundOn);
+  const [worn, setWorn] = useState<Rewards | null>(null);
   const charRef = useRef<HTMLDivElement>(null);
   const semester = Number(params.get("semester")) || undefined;
 
+  useEffect(() => { api<Rewards>("/api/rewards").then(setWorn).catch(() => undefined); }, []);
   useEffect(() => {
     setMap(null);
     api<MapData>(`/api/map${semester ? `?semester=${semester}` : ""}`).then(setMap).catch(() => setFailed(true));
@@ -220,6 +223,13 @@ export function SemesterMap() {
                   <div className="rounded-full p-1" style={{ background: "var(--accent)", boxShadow: "0 6px 0 rgba(0,0,0,0.25)" }}>
                     <Avatar name={user.displayName} avatar={user.avatar} size={54} />
                   </div>
+                  {wornEmoji(worn, "hat") && <span aria-hidden="true" className="absolute -top-6 left-1/2 -translate-x-1/2 text-4xl">{wornEmoji(worn, "hat")}</span>}
+                  {wornEmoji(worn, "pet") && <span aria-hidden="true" className="absolute -bottom-2 -right-8 text-4xl">{wornEmoji(worn, "pet")}</span>}
+                  {wornEmoji(worn, "trail") && (
+                    <span aria-hidden="true" className="absolute -left-16 top-1/2 flex -translate-y-1/2 gap-1 text-2xl">
+                      <span style={{ opacity: 0.35 }}>{wornEmoji(worn, "trail")}</span><span style={{ opacity: 0.6 }}>{wornEmoji(worn, "trail")}</span><span>{wornEmoji(worn, "trail")}</span>
+                    </span>
+                  )}
                   <span aria-hidden="true" className="absolute -bottom-3 -left-7 text-4xl">{skin.ride}</span>
                 </div>
               </div>

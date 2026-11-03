@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { api } from "../api";
 import { useAuth } from "../auth";
 import { Avatar } from "../components/Avatar";
+import type { Rewards, TeaserState } from "../lib/rewards";
 import { Loader } from "../components/Loader";
 
 type Card = {
@@ -160,11 +161,15 @@ export function StudentHome() {
   const [exams, setExams] = useState<Exam[]>([]);
   const [failed, setFailed] = useState(false);
   const [points, setPoints] = useState<{ total: number; waiting: number } | null>(null);
+  const [rewards, setRewards] = useState<Rewards | null>(null);
+  const [teaser, setTeaser] = useState<TeaserState | null>(null);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
     api<{ points: { total: number; waiting: number } }>("/api/map").then((m) => setPoints(m.points)).catch(() => undefined);
     api<{ exams: Exam[] }>("/api/exams").then((r) => setExams(r.exams)).catch(() => undefined);
+    api<Rewards>("/api/rewards").then(setRewards).catch(() => undefined);
+    api<TeaserState>("/api/teaser").then(setTeaser).catch(() => undefined);
   }, []);
 
   if (!user) return null;
@@ -202,6 +207,11 @@ export function StudentHome() {
               {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
             </span>
           )}
+          {rewards && rewards.streak.current > 0 && (
+            <Link to="/rewards" className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 text-xl font-extrabold" aria-label={`${rewards.streak.current} week streak`}>
+              <span aria-hidden="true">🔥</span> {rewards.streak.current}
+            </Link>
+          )}
           <Link to="/map" className="btn btn-primary map-button relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
             <span aria-hidden="true" className="text-2xl">🗺️</span> Map
             {points && <span className="rounded-full bg-surface px-2.5 py-0.5 text-base font-extrabold text-text">🪙 {points.total}</span>}
@@ -213,6 +223,19 @@ export function StudentHome() {
 
       {failed && <p role="alert" className="text-xl">We couldn't load your lessons. Please refresh the page.</p>}
       {!home && !failed && <Loader label="Loading your lessons…" />}
+
+      {rewards && rewards.stickers.some((x) => x.isNew) && (
+        <Link to="/rewards" className="pop-in card flex items-center gap-4 p-4 text-lg font-bold" role="status">
+          <span aria-hidden="true" className="text-4xl">{rewards.stickers.find((x) => x.isNew)?.emoji}</span>
+          You earned a new sticker! Tap to see it.
+        </Link>
+      )}
+
+      <nav aria-label="More to do" className="flex flex-wrap gap-3">
+        <Link to="/teaser" className={"btn !min-h-14 " + (teaser && !teaser.done ? "btn-primary" : "")}><span aria-hidden="true">🧩</span> Brain teaser{teaser?.done ? " ✓" : ""}</Link>
+        <Link to="/growth" className="btn !min-h-14"><span aria-hidden="true">🌱</span> My growth</Link>
+        <Link to="/rewards" className="btn !min-h-14"><span aria-hidden="true">🎒</span> Stickers and shop{rewards ? ` · ⭐ ${rewards.points.balance}` : ""}</Link>
+      </nav>
 
       {exams.length > 0 && (
         <section aria-labelledby="exams" className="flex flex-col gap-3">
