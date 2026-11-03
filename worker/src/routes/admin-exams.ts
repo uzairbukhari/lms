@@ -114,3 +114,24 @@ adminExamRoutes.patch("/exams/:id", async (c) => {
     .run();
   return c.json({ ok: true });
 });
+
+/**
+ * Delete an exam. One nobody has sat is removed outright; one with attempts is retired (hidden from children, rebuildable)
+ * so the scores already recorded keep their questions.
+ */
+adminExamRoutes.delete("/exams/:id", async (c) => {
+  const id = c.req.param("id");
+  const db = c.env.DB;
+  const exam = await db.prepare("SELECT id FROM quizzes WHERE id = ? AND kind = 'exam'").bind(id).first();
+  if (!exam) return fail(c, 404, "not_found");
+  const used = await db.prepare("SELECT COUNT(*) AS n FROM quiz_attempts WHERE quiz_id = ?").bind(id).first<{ n: number }>();
+  if ((used?.n ?? 0) > 0) {
+    await db.prepare("UPDATE quizzes SET is_current = 0 WHERE id = ?").bind(id).run();
+    return c.json({ ok: true, retired: true });
+  }
+  await db.batch([
+    db.prepare("DELETE FROM questions WHERE quiz_id = ?").bind(id),
+    db.prepare("DELETE FROM quizzes WHERE id = ?").bind(id),
+  ]);
+  return c.json({ ok: true, retired: false });
+});
