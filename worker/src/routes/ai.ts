@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { AI_MODEL, DEFAULT_DAILY_CAP, definePrompt, explainPrompt, hintPrompt, leaksAnswer, runModel, sha, takeDailyAllowance } from "../lib/ai";
+import { canSpend, TEXT_CALL_ESTIMATE } from "../lib/budget";
 import { fail, parseBody } from "../lib/http";
 import type { AttemptRow, QuestionRow } from "../lib/quiz";
 import { narrate } from "../lib/tts";
@@ -55,7 +56,7 @@ aiRoutes.post("/ai/hint", async (c) => {
     return c.json({ hint: cached, source: "ai" });
   }
   const cap = DEFAULT_DAILY_CAP;
-  if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), cap))) {
+  if (!c.env.AI || !(await canSpend(c.env.DB, TEXT_CALL_ESTIMATE)) || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), cap))) {
     return c.json({ hint: fallback, source: "static" });
   }
   const text = await runModel(c.env.AI, hintPrompt(question), { db: c.env.DB, userId: user.id, kind: "hint" });
@@ -87,7 +88,7 @@ aiRoutes.post("/ai/explain", async (c) => {
     await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, cached, true, { cacheKey: key });
     return c.json({ explanation: cached, source: "ai" });
   }
-  if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), DEFAULT_DAILY_CAP))) {
+  if (!c.env.AI || !(await canSpend(c.env.DB, TEXT_CALL_ESTIMATE)) || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), DEFAULT_DAILY_CAP))) {
     return c.json({ explanation: fallback, source: "static" });
   }
   const text = await runModel(c.env.AI, explainPrompt(question, answer.response_json), { db: c.env.DB, userId: user.id, kind: "explain" });
@@ -129,7 +130,7 @@ aiRoutes.post("/ai/define", async (c) => {
     await log(c.env.DB, user.id, null, "define", AI_MODEL, cached, true, { cacheKey: key, detail });
     return c.json({ word, meaning: cached, source: "ai" });
   }
-  if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, `define:${user.id}`, todayIn(c.env.TIMEZONE), DEFINE_DAILY_CAP))) {
+  if (!c.env.AI || !(await canSpend(c.env.DB, TEXT_CALL_ESTIMATE)) || !(await takeDailyAllowance(c.env.SESSIONS, `define:${user.id}`, todayIn(c.env.TIMEZONE), DEFINE_DAILY_CAP))) {
     return c.json({ word, meaning: NO_IDEA, source: "static" });
   }
   const text = await runModel(c.env.AI, definePrompt(word, sentence, row.subject), { db: c.env.DB, userId: user.id, kind: "define" });

@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import type { AppEnv } from "../env";
+import { aiBudget } from "../lib/budget";
 import { FREE_NEURONS_PER_DAY, NEURON_USD } from "../lib/usage";
 
 /** Workers AI usage for the admin Dashboard: tokens, requests, neurons and an estimated cost. Mounted under /api/admin. */
@@ -54,6 +55,8 @@ adminAiUsageRoutes.get("/ai-usage", async (c) => {
     days,
     freeNeuronsPerDay: FREE_NEURONS_PER_DAY,
     todayNeurons: today?.neurons ?? 0,
+    // The hard daily ceiling: counts every user (as Cloudflare's meter does), so it can differ slightly from todayNeurons.
+    budget: await aiBudget(c.env.DB, now).then((b) => ({ ...b, used: Math.round(b.used) })),
     totals: {
       requests: sum((d) => d.requests),
       inputTokens: perDay.results.reduce((a, r) => a + (r.inputTokens ?? 0), 0),

@@ -113,6 +113,20 @@ describe("AI hints and explanations", () => {
     expect(calls).toBe(before);
   });
 
+  it("stops all AI once the day's neurons reach the admin's limit, but still serves cached replies", async () => {
+    await env.SESSIONS.delete(`ai:day:${userId}:${new Intl.DateTimeFormat("en-CA", { timeZone: "UTC" }).format(new Date())}`);
+    await call("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: 1 } });
+    expect((await json(await call("/api/admin/settings/ai-cap"))).paused).toBe(true);
+    const before = calls;
+    await env.SESSIONS.delete(`ai:hint:v1:${state.numberQ}`);
+    expect((await json(await call("/api/ai/hint", { body: { attemptId: state.attempt, questionId: state.numberQ }, cookie }))).source).toBe("static");
+    expect(calls).toBe(before);
+    expect((await json(await call("/api/admin/ai-usage?days=7"))).budget).toMatchObject({ ceiling: 1, paused: true });
+    await call("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: 9500 } });
+    expect((await json(await call("/api/admin/settings/ai-cap"))).paused).toBe(false);
+    expect((await call("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: -1 } })).status).toBe(400);
+  });
+
   it("explains a wrong answer only after the quiz is handed in", async () => {
     expect((await call("/api/ai/explain", { body: { attemptId: state.attempt, questionId: state.numberQ }, cookie })).status).toBe(404);
     await call(`/api/quiz/attempts/${state.attempt}/submit`, { body: { answers: { [state.numberQ as string]: 9 } }, cookie });
@@ -143,6 +157,19 @@ describe("narration voice", () => {
     expect((await first.arrayBuffer()).byteLength).toBe(500);
     expect((await call("/api/ai/voice", { body: { text: "Let's count to ten!" }, cookie })).status).toBe(200);
     expect(calls).toBe(1);
+    env.AI = before;
+  });
+
+  it("makes no new audio once the daily limit is reached", async () => {
+    const before = saved();
+    let n = 0;
+    env.AI = { run: async () => { n++; return new Response(new Uint8Array(500)); } } as unknown as Ai;
+    await call("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: 0 } });
+    const res = await call("/api/ai/voice", { body: { text: "Another new sentence here." }, cookie });
+    expect(res.status).toBe(503);
+    expect(n).toBe(0);
+    expect((await call("/api/ai/voice", { body: { text: "Let's count to ten!" }, cookie })).status).toBe(200); // stored audio still plays
+    await call("/api/admin/settings/ai-cap", { method: "PUT", body: { neurons: 9500 } });
     env.AI = before;
   });
 

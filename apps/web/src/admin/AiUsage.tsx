@@ -5,6 +5,7 @@ export type AiUsageData = {
   days: number;
   freeNeuronsPerDay: number;
   todayNeurons: number;
+  budget: { used: number; ceiling: number; remaining: number; paused: boolean; resetsAt: string };
   totals: { requests: number; inputTokens: number; outputTokens: number; tokens: number; characters: number; neurons: number; grossUsd: number; billableUsd: number };
   daily: { date: string; requests: number; tokens: number; characters: number; neurons: number; billableUsd: number }[];
   byKind: { kind: string; requests: number; tokens: number; characters: number; neurons: number }[];
@@ -57,10 +58,12 @@ export function AiUsage() {
   const [range, setRange] = useState<"7" | "30" | "90">("30");
   const { data, error, loading } = useLoad<AiUsageData>(`/api/admin/ai-usage?days=${range}`);
   const [measure, setMeasure] = useState<"tokens" | "neurons" | "requests">("tokens");
-  const used = data?.todayNeurons ?? 0;
   const free = data?.freeNeuronsPerDay ?? 10_000;
+  const paused = data?.budget.paused ?? false;
+  const ceiling = data?.budget.ceiling ?? free;
+  const used = data?.budget.used ?? data?.todayNeurons ?? 0;
   const share = Math.min(100, (used / free) * 100);
-  const tone = used > free ? "red" : share >= 80 ? "amber" : "green";
+  const tone = paused || used > free ? "red" : share >= 80 ? "amber" : "green";
 
   return (
     <Card
@@ -74,12 +77,14 @@ export function AiUsage() {
           <div>
             <div className="a-row" style={{ justifyContent: "space-between" }}>
               <strong>Today's free allowance</strong>
-              <Badge tone={tone}>{num.format(used)} of {num.format(free)} neurons ({Math.round(share)}%)</Badge>
+              <Badge tone={tone}>{paused ? "AI paused · " : ""}{num.format(used)} of {num.format(free)} neurons ({Math.round(share)}%)</Badge>
             </div>
             <div className="a-progress" role="progressbar" aria-label="Neurons used today" aria-valuemin={0} aria-valuemax={free} aria-valuenow={Math.min(used, free)} style={{ marginTop: 8 }}>
               <div style={{ width: `${share}%`, background: `var(--a-${tone === "green" ? "accent" : tone === "amber" ? "amber" : "red-solid"})` }} />
             </div>
-            <p className="a-faint" style={{ margin: "6px 0 0" }}>Cloudflare includes 10,000 neurons a day for free (resets at 00:00 UTC). Only usage above that is billed.</p>
+            <p className="a-faint" style={{ margin: "6px 0 0" }}>Cloudflare includes 10,000 neurons a day for free (resets at 00:00 UTC). {paused
+              ? `AI is paused for today: the daily limit of ${num.format(ceiling)} neurons (a small margin under the free 10,000) has been reached. Narration uses the device voice and hints use the stored text until it resets at 00:00 UTC.`
+              : `AI switches off automatically at ${num.format(ceiling)} neurons (a small margin under the free 10,000), so you are never billed. ${num.format(data.budget.remaining)} left today.`}</p>
           </div>
 
           <div className="a-grid cols-4">

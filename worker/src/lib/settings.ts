@@ -21,3 +21,13 @@ export async function aiAlertThreshold(db: D1Database): Promise<number> {
   const n = raw === null ? NaN : Number(raw);
   return Number.isFinite(n) && n >= 0 ? n : DEFAULT_AI_ALERT_NEURONS;
 }
+
+export const AI_CAP_KEY = "ai_daily_cap_neurons";
+/** Hard daily AI limit unless the admin picks another number: the free 10,000 less a safety margin. 0 switches AI off. */
+export const DEFAULT_AI_CAP_NEURONS = 9500;
+
+export async function aiDailyCap(db: D1Database): Promise<number> {
+  const raw = await getSetting(db, AI_CAP_KEY);
+  const n = raw === null ? NaN : Number(raw);
+  return Number.isFinite(n) && n >= 0 ? n : DEFAULT_AI_CAP_NEURONS;
+}
