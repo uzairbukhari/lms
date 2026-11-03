@@ -16,13 +16,17 @@ import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
 import { serveAsset } from "../lib/assets";
 import { requireAdmin } from "../middleware/auth";
+import { adminCardRoutes } from "./admin-cards";
 import { adminClassRoutes } from "./admin-classes";
 import { adminContentRoutes } from "./admin-content";
 import { adminExamRoutes } from "./admin-exams";
+import { adminAiLogRoutes } from "./admin-ai-log";
 import { adminAiUsageRoutes } from "./admin-ai-usage";
+import { adminInsightRoutes } from "./admin-insight";
 import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 import { adminVideoRoutes } from "./admin-videos";
+import { adminWeekRoutes } from "./admin-week";
 
 export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
@@ -36,6 +40,10 @@ adminRoutes.route("/", adminClassRoutes);
 adminRoutes.route("/", adminExamRoutes);
 adminRoutes.route("/", adminReportRoutes);
 adminRoutes.route("/", adminOverviewRoutes);
+adminRoutes.route("/", adminAiLogRoutes);
+adminRoutes.route("/", adminInsightRoutes);
+adminRoutes.route("/", adminWeekRoutes);
+adminRoutes.route("/", adminCardRoutes);
 adminRoutes.route("/", adminAiUsageRoutes);
 adminRoutes.route("/", adminVideoRoutes);
 
@@ -222,6 +230,17 @@ adminRoutes.delete("/students/:id", async (c) => {
     db.prepare("DELETE FROM quiz_attempts WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM lesson_progress WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM ai_events WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM login_events WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM game_plays WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM card_reviews WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM word_book WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM card_days WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM stuck_flags WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM deck_assignments WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM sticker_awards WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM shop_purchases WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM shop_equipped WHERE user_id = ?").bind(id),
+    db.prepare("DELETE FROM teaser_plays WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM lesson_unlocks WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM course_assignments WHERE user_id = ?").bind(id),
     db.prepare("DELETE FROM class_members WHERE user_id = ?").bind(id),

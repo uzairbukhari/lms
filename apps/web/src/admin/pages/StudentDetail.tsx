@@ -7,13 +7,15 @@ import { AttemptDrawer, Curve, day, subjectName, type Report } from "../reportPa
 import { useCrumb } from "../Shell";
 import { Avatar, Badge, Button, Card, EmptyState, ErrorNote, PageHeader, pct, Skeleton, StatTile, Tabs, ago, useFeedback, useLoad } from "../ui";
 
-type Tab = "overview" | "lessons" | "card" | "skills";
+type Tab = "overview" | "lessons" | "card" | "skills" | "signins";
+type Logins = { logins: { id: string; ok: boolean; country: string | null; device: string | null; createdAt: string }[]; failed24h: number };
 
 export function StudentDetail() {
   const { id = "" } = useParams();
   const [practice, setPractice] = useState(false);
   const report = useLoad<Report>(`/api/admin/reports/students/${id}${practice ? "?includePractice=1" : ""}`);
   const students = useLoad<{ students: StudentSummary[] }>("/api/admin/students");
+  const logins = useLoad<Logins>(`/api/admin/students/${id}/logins`);
   const { toast } = useFeedback();
   const [tab, setTab] = useState<Tab>("overview");
   const [attempt, setAttempt] = useState("");
@@ -47,6 +49,8 @@ export function StudentDetail() {
         </div>
         <div className="a-actions">
           <label className="a-check"><input type="checkbox" checked={practice} onChange={(e) => setPractice(e.target.checked)} /> Include practice in numbers</label>
+          <Link className="a-btn" to={`/admin/students/${id}/report-card`}>Report card</Link>
+          <Link className="a-btn" to={`/admin/prompt?student=${id}`}>Next lesson prompt</Link>
           <Button onClick={() => void newPassword()}>New password</Button>
           <a className="a-btn" href={`/api/admin/reports/students/${id}/export.csv`}><span style={{ display: "inline-flex" }}>Export CSV</span></a>
         </div>
@@ -59,7 +63,7 @@ export function StudentDetail() {
         <StatTile label="Last active" value={ago(t.lastActive)} />
       </div>
 
-      <Tabs<Tab> value={tab} onChange={setTab} tabs={[{ id: "overview", label: "Overview" }, { id: "lessons", label: "Lessons and attempts" }, { id: "card", label: "Report card" }, { id: "skills", label: "Skills to practise" }]} />
+      <Tabs<Tab> value={tab} onChange={setTab} tabs={[{ id: "overview", label: "Overview" }, { id: "lessons", label: "Lessons and attempts" }, { id: "card", label: "Report card" }, { id: "skills", label: "Skills to practise" }, { id: "signins", label: "Sign-ins" }]} />
 
       {tab === "overview" && (
         <Card title="Learning curve" actions={<span className="a-faint">Solid = graded{practice ? ", hollow = practice" : ""}</span>}><Curve points={r.curve} /></Card>
@@ -103,6 +107,19 @@ export function StudentDetail() {
             <ul className="a-list">{r.weakestSkills.map((s) => (
               <li key={s.skill}><span><code>{s.skill}</code></span><span className="a-row"><span className="a-muted">{s.correct}/{s.total} right</span><Badge tone={s.percent >= 70 ? "green" : s.percent >= 40 ? "amber" : "red"}>{pct(s.percent)}</Badge></span></li>
             ))}</ul>
+          )}
+        </Card>
+      )}
+
+      {tab === "signins" && (
+        <Card flush title="Recent sign-ins" actions={logins.data && logins.data.failed24h > 0 ? <Badge tone="amber">{logins.data.failed24h} wrong in the last day</Badge> : undefined}>
+          {!logins.data ? <Skeleton rows={3} /> : logins.data.logins.length === 0 ? <EmptyState title="No sign-ins recorded yet">Each time a password is typed on the sign-in page it is listed here, without the password.</EmptyState> : (
+            <div className="a-table-wrap"><table className="a-table">
+              <thead><tr><th>When</th><th>Result</th><th>Device</th><th>Country</th></tr></thead>
+              <tbody>{logins.data.logins.map((l) => (
+                <tr key={l.id}><td>{day(l.createdAt)} <span className="a-faint">{l.createdAt.slice(11, 16)} UTC</span></td><td><Badge tone={l.ok ? "green" : "red"}>{l.ok ? "Signed in" : "Wrong password"}</Badge></td><td>{l.device ?? "–"}</td><td>{l.country ?? "–"}</td></tr>
+              ))}</tbody>
+            </table></div>
           )}
         </Card>
       )}

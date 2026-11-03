@@ -8,8 +8,10 @@ import { serveAsset } from "./lib/assets";
 import { requireStudent } from "./middleware/auth";
 import { aiRoutes } from "./routes/ai";
 import { authRoutes } from "./routes/auth";
+import { cardRoutes } from "./routes/cards";
 import { mapRoutes } from "./routes/map";
 import { quizRoutes } from "./routes/quiz";
+import { rewardRoutes } from "./routes/rewards";
 import { studentRoutes } from "./routes/student";
 
 export type { Bindings } from "./env";
@@ -28,6 +30,8 @@ app.route("/api", studentRoutes);
 app.route("/api", quizRoutes);
 app.route("/api", mapRoutes);
 app.route("/api", aiRoutes);
+app.route("/api", rewardRoutes);
+app.route("/api", cardRoutes);
 
 // Unknown API routes return JSON, never the SPA shell.
 app.all("/api/*", (c) => c.json({ error: "not_found" }, 404));

@@ -27,7 +27,7 @@ function rememberUser(u: SessionUser) {
 type AuthState = {
   /** undefined while loading, null when signed out. */
   user: SessionUser | null | undefined;
-  login: (username: string, password: string) => Promise<void>;
+  login: (username: string, password: string, turnstileToken?: string) => Promise<void>;
   logout: () => Promise<void>;
   /** Switch theme now; also saved to the child's profile when signed in. */
   chooseTheme: (theme: ThemeId) => void;
@@ -54,8 +54,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .catch(() => setUser(null));
   }, []);
 
-  const login = useCallback(async (username: string, password: string) => {
-    const { user: u } = await api<{ user: SessionUser }>("/api/login", { body: { username, password } });
+  const login = useCallback(async (username: string, password: string, turnstileToken?: string) => {
+    const { user: u } = await api<{ user: SessionUser }>("/api/login", { body: { username, password, ...(turnstileToken ? { turnstileToken } : {}) } });
     rememberUser(u);
     const picked = pickedBeforeLogin.current;
     pickedBeforeLogin.current = null;
