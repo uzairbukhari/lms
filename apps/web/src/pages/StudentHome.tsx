@@ -84,7 +84,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
       </div>
 
       <div
-        className="relative flex flex-1 flex-col gap-2.5 p-5"
+        className="relative flex min-h-0 flex-1 flex-col gap-2.5 p-5"
         style={{
           paddingTop: done ? 32 : undefined,
           background: done ? "var(--done-bg)" : "var(--surface)",
