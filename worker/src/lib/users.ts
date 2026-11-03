@@ -14,6 +14,8 @@ export type UserRow = {
   theme: string;
   is_active: number;
   must_change_password: number;
+  is_test: number;
+  preview_date: string | null;
   created_at: string;
 };
 

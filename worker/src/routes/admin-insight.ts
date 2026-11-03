@@ -24,7 +24,7 @@ adminInsightRoutes.get("/insights", async (c) => {
   const { results } = await c.env.DB
     .prepare(
       `SELECT l.id, l.title, l.subject_id AS subject,
-              (SELECT COUNT(DISTINCT a.user_id) FROM quiz_attempts a WHERE a.lesson_id = l.id AND a.status = 'submitted' AND a.mode = 'graded') AS children
+              (SELECT COUNT(DISTINCT a.user_id) FROM quiz_attempts a WHERE a.lesson_id = l.id AND a.status = 'submitted' AND a.mode = 'graded' AND a.user_id NOT IN (SELECT id FROM users WHERE is_test = 1)) AS children
          FROM lessons l WHERE EXISTS (SELECT 1 FROM quizzes z WHERE z.lesson_id = l.id AND z.is_current = 1) ORDER BY l.subject_id, l.sort_order, l.title`,
     )
     .all();
@@ -34,7 +34,7 @@ adminInsightRoutes.get("/insights", async (c) => {
 adminInsightRoutes.get("/settings/ai-alert", async (c) => {
   const neurons = await aiAlertThreshold(c.env.DB);
   const today = new Date().toISOString().slice(0, 10);
-  const used = await c.env.DB.prepare("SELECT COALESCE(SUM(neurons), 0) AS n FROM ai_usage WHERE date(created_at) = ?").bind(today).first<{ n: number }>();
+  const used = await c.env.DB.prepare("SELECT COALESCE(SUM(neurons), 0) AS n FROM ai_usage WHERE date(created_at) = ? AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_test = 1))").bind(today).first<{ n: number }>();
   return c.json({ neurons, freeNeuronsPerDay: FREE_NEURONS_PER_DAY, todayNeurons: Math.round(used?.n ?? 0) });
 });
 

@@ -28,7 +28,7 @@ adminWeekRoutes.get("/prompt", async (c) => {
     .bind(courseId, semester * 100 + week)
     .all<{ semester: number; week: number; title: string; summary: string }>();
 
-  const weakWhere = studentId ? "a.user_id = ?" : classId ? "a.user_id IN (SELECT user_id FROM class_members WHERE class_id = ?)" : "";
+  const weakWhere = studentId ? "a.user_id = ?" : classId ? "a.user_id IN (SELECT m.user_id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0)" : "";
   const weak = weakWhere
     ? await db
         .prepare(

@@ -18,7 +18,7 @@ export async function weekStatus(db: D1Database, timeZone: string | undefined): 
   const today = todayIn(timeZone);
   const daysLeft = daysUntilSunday(today);
   const kids = await db
-    .prepare("SELECT id, display_name AS name FROM users WHERE role = 'student' AND is_active = 1 ORDER BY display_name")
+    .prepare("SELECT id, display_name AS name FROM users WHERE role = 'student' AND is_test = 0 AND is_active = 1 ORDER BY display_name")
     .all<{ id: string; name: string }>();
   const students: WeekStudent[] = [];
   for (const k of kids.results) {

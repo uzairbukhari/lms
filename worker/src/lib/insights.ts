@@ -45,7 +45,7 @@ export async function lessonInsights(db: D1Database, lessonId: string, includePr
     .prepare(
       `SELECT q.ref, aa.question_id AS questionId, aa.response_json AS response, aa.is_correct AS correct, aa.used_hint AS hint, aa.time_ms AS ms, a.user_id AS userId, a.attempt_number AS n
          FROM attempt_answers aa JOIN quiz_attempts a ON a.id = aa.attempt_id JOIN questions q ON q.id = aa.question_id
-        WHERE a.lesson_id = ? AND a.status = 'submitted' ${modeSql}`,
+        WHERE a.lesson_id = ? AND a.status = 'submitted' AND a.user_id NOT IN (SELECT id FROM users WHERE is_test = 1) ${modeSql}`,
     )
     .bind(lessonId)
     .all<{ ref: string; questionId: string; response: string; correct: number; hint: number; ms: number | null; userId: string; n: number }>();

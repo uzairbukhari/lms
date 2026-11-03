@@ -24,7 +24,7 @@ export function Students() {
 
   const stats = useMemo(() => new Map((overview.data?.students ?? []).map((s) => [s.id, s])), [overview.data]);
   const rows = useMemo(() => {
-    const list = (students.data?.students ?? []).filter((s) =>
+    const list = (students.data?.students ?? []).filter((s) => !s.isTest).filter((s) =>
       (!q || `${s.displayName} ${s.username}`.toLowerCase().includes(q.toLowerCase())) &&
       (!classFilter || s.classes.some((c) => c.id === classFilter)));
     const val = (s: StudentSummary) => (sort.key === "name" ? s.displayName : sort.key === "last" ? stats.get(s.id)?.lastActive : stats.get(s.id)?.averagePercent);
@@ -48,11 +48,13 @@ export function Students() {
     }
   };
 
-  const all = students.data?.students ?? [];
+  const all = (students.data?.students ?? []).filter((s) => !s.isTest);
+  const testStudent = (students.data?.students ?? []).find((s) => s.isTest);
   return (
     <>
       <PageHeader title="Students" description="Logins, classes and progress for every child." actions={<Button variant="primary" icon="plus" onClick={() => setAdding(true)}>Add students</Button>} />
       <ErrorNote error={students.error} />
+      {students.data && <TestStudentPanel student={testStudent} classes={classes.data?.classes ?? []} onChange={() => void students.reload()} onCreds={(c) => setCreds([c])} />}
       <Card flush>
         <div className="a-toolbar">
           <SearchBox value={q} onChange={setQ} placeholder="Search by name or username" />
@@ -157,5 +159,75 @@ function AddStudents({ classes, onClose, onDone }: { classes: ClassRow[]; onClos
         )}
       </form>
     </Drawer>
+  );
+}
+
+const WEEKS = Array.from({ length: 12 }, (_, i) => i + 1);
+
+/** The parent's test student: log in as it to preview any class and any school week. It never shows up in reports or statistics. */
+function TestStudentPanel({ student, classes, onChange, onCreds }: { student: StudentSummary | undefined; classes: ClassRow[]; onChange: () => void; onCreds: (c: StudentCredentials) => void }) {
+  const { toast } = useFeedback();
+  const [busy, setBusy] = useState(false);
+  const [semester, setSemester] = useState(1);
+  const [week, setWeek] = useState(1);
+  const run = async (fn: () => Promise<void>) => {
+    setBusy(true);
+    try { await fn(); onChange(); } catch (e) { toast(e instanceof Error ? e.message : "Something went wrong", true); } finally { setBusy(false); }
+  };
+  const create = () => run(async () => {
+    const r = await api<{ credentials: StudentCredentials }>("/api/admin/students/test", { method: "POST", body: {} });
+    onCreds(r.credentials);
+  });
+  if (!student) {
+    return (
+      <Card title="Test student" actions={<Button icon="plus" onClick={() => void create()} disabled={busy}>Create test student</Button>}>
+        <p className="a-muted">A practice login for you. Put it in any class and pick any school week to preview exactly what a child would see. Nothing it does is counted in reports, scores or AI usage.</p>
+      </Card>
+    );
+  }
+  const classId = student.classes[0]?.id ?? "";
+  const setClass = (id: string) => run(async () => { await api(`/api/admin/students/${student.id}/classes`, { method: "PUT", body: { classIds: id ? [id] : [] } }); });
+  const apply = () => run(async () => {
+    await api(`/api/admin/students/${student.id}/preview`, { method: "PUT", body: { semester, week } });
+    toast(week === 13 ? `Test student is now in semester ${semester}, exam week.` : `Test student is now in semester ${semester}, week ${week}.`);
+  });
+  const clear = () => run(async () => { await api(`/api/admin/students/${student.id}/preview`, { method: "PUT", body: { clear: true } }); toast("Test student is back in the real current week."); });
+  const resetPassword = () => run(async () => {
+    const r = await api<{ credentials: StudentCredentials }>(`/api/admin/students/${student.id}/reset-password`, { method: "POST" });
+    onCreds(r.credentials);
+  });
+  const p = student.preview;
+  return (
+    <Card title={<>Test student <Badge tone="slate">Not counted in reports</Badge></>} actions={<>
+      <Button onClick={() => void resetPassword()} disabled={busy}>New password</Button>
+      <a className="a-btn" href="/" target="_blank" rel="noreferrer">Open student site</a>
+    </>}>
+      <div className="a-test-controls">
+        <label className="a-field-inline">Class
+          <select className="a-select" aria-label="Test student class" value={classId} disabled={busy} onChange={(e) => void setClass(e.target.value)}>
+            <option value="">No class</option>
+            {classes.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+          </select>
+        </label>
+        <label className="a-field-inline">Semester
+          <select className="a-select" aria-label="Semester" value={semester} onChange={(e) => setSemester(Number(e.target.value))}>
+            {[1, 2, 3, 4].map((n) => <option key={n} value={n}>Semester {n}</option>)}
+          </select>
+        </label>
+        <label className="a-field-inline">Week
+          <select className="a-select" aria-label="Week" value={week} onChange={(e) => setWeek(Number(e.target.value))}>
+            {WEEKS.map((n) => <option key={n} value={n}>Week {n}</option>)}
+            <option value={13}>Exam week</option>
+          </select>
+        </label>
+        <Button variant="primary" onClick={() => void apply()} disabled={busy || !classId}>Set week</Button>
+        {p && <Button onClick={() => void clear()} disabled={busy}>Use real week</Button>}
+      </div>
+      <p className="a-muted" style={{ marginTop: 10 }}>
+        Username <code>{student.username}</code> ·{" "}
+        {p ? <>pretending to be in <strong>semester {p.semester}, {p.exam ? "exam week" : `week ${p.week}`}</strong></> : "following the real school calendar"}
+        {!classId && " · pick a class first"}
+      </p>
+    </Card>
   );
 }

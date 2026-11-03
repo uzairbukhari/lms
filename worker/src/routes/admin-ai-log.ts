@@ -18,7 +18,7 @@ adminAiLogRoutes.get("/ai-log", async (c) => {
   const flaggedOnly = c.req.query("flagged") === "1";
   const before = c.req.query("before");
   const limit = Math.min(100, Math.max(5, Number(c.req.query("limit")) || 40));
-  const where: string[] = [];
+  const where: string[] = ["(e.user_id IS NULL OR e.user_id NOT IN (SELECT id FROM users WHERE is_test = 1))"];
   const binds: (string | number)[] = [];
   if (child) { where.push("e.user_id = ?"); binds.push(child); }
   if (kind && ["hint", "explain", "define"].includes(kind)) { where.push("e.kind = ?"); binds.push(kind); }
@@ -36,8 +36,8 @@ adminAiLogRoutes.get("/ai-log", async (c) => {
     .all<Row>();
   const more = results.length > limit;
   const events = results.slice(0, limit).map((r) => ({ ...r, fromCache: r.fromCache === 1, flagged: r.flagged === 1 }));
-  const children = await c.env.DB.prepare("SELECT id, display_name AS name FROM users WHERE role = 'student' ORDER BY display_name").all<{ id: string; name: string }>();
-  const flaggedCount = (await c.env.DB.prepare("SELECT COUNT(*) AS n FROM ai_events WHERE flagged = 1").first<{ n: number }>())?.n ?? 0;
+  const children = await c.env.DB.prepare("SELECT id, display_name AS name FROM users WHERE role = 'student' AND is_test = 0 ORDER BY display_name").all<{ id: string; name: string }>();
+  const flaggedCount = (await c.env.DB.prepare("SELECT COUNT(*) AS n FROM ai_events WHERE flagged = 1 AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_test = 1))").first<{ n: number }>())?.n ?? 0;
   return c.json({ events, next: more ? events[events.length - 1]?.createdAt ?? null : null, children: children.results, flaggedCount });
 });
 
