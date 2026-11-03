@@ -19,7 +19,7 @@ type Exam = { id: string; title: string; questionCount: number; maxAttempts: num
 export const SUBJECT_LOOK: Record<string, { emoji: string; label: string }> = {
   maths: { emoji: "🔢", label: "Maths" },
   science: { emoji: "🔬", label: "Science" },
-  "data-ai": { emoji: "🤖", label: "Computer Science, Data & AI" },
+  "data-ai": { emoji: "🤖", label: "CS, Data & AI" },
   gk: { emoji: "🌍", label: "General Knowledge" },
   "general-knowledge": { emoji: "🌍", label: "General Knowledge" },
   english: { emoji: "📖", label: "English" },
@@ -57,6 +57,11 @@ function Tick({ size }: { size: number }) {
 export function shortTitle(title: string): string {
   const t = title.replace(/^(maths|mathematics|science|english|general knowledge|computers?|computing|computer science)(,?\s*(and|&)?\s*data(\s*(and|&)\s*ai)?)?\s+/i, "").trim();
   return t ? t.charAt(0).toUpperCase() + t.slice(1) : title;
+}
+
+/** Long titles get smaller type so a card never grows past the screen. */
+function titleTier(t: string): "m" | "l" | "xl" {
+  return t.length > 42 ? "xl" : t.length > 28 ? "l" : "m";
 }
 
 /** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
@@ -101,7 +106,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
         }}
       >
         <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
-        <h3 className="font-display text-[26px] font-bold leading-tight">{shortTitle(c.title)}</h3>
+        <h3 data-len={titleTier(shortTitle(c.title))} className="font-display text-[26px] font-bold leading-tight data-[len=l]:text-[22px] data-[len=xl]:text-[19px]">{shortTitle(c.title)}</h3>
         {c.progress && !done && (
           <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Lesson progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
             <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
