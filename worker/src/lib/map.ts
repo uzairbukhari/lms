@@ -77,6 +77,9 @@ async function allTotals(db: D1Database, userId: string, vis: Visibility, slots:
       else if (cp.state === "reached") waiting += cp.quizPoints;
     }
   }
+  // A few extra points for finishing the day's flashcards and the Boost round.
+  const cards = await db.prepare("SELECT COALESCE(SUM(points), 0) AS n FROM card_days WHERE user_id = ?").bind(userId).first<{ n: number }>();
+  total += cards?.n ?? 0;
   return { total, waiting };
 }
 
@@ -163,4 +166,24 @@ export async function checkpointReached(db: D1Database, userId: string, today: s
 export async function pointTotals(db: D1Database, userId: string, today: string) {
   const vis = await visibleLessonsFor(db, userId, today);
   return allTotals(db, userId, vis, await assignedSlots(db, userId));
+}
+
+/**
+ * Every released week of the child in time order, across all semesters, for the week streak and stickers.
+ * A week counts as done when every lesson of it is finished (an empty rest-stop week counts too).
+ */
+export async function weekTimeline(db: D1Database, userId: string, today: string) {
+  const vis = await visibleLessonsFor(db, userId, today);
+  const slots = await assignedSlots(db, userId);
+  const weeks: { semester: number; week: number; done: boolean; current: boolean; lessons: number }[] = [];
+  const reachedBySemester = new Map<number, number>();
+  for (const semester of semestersFor(vis)) {
+    const cps = await checkpointsFor(db, userId, vis, slots, semester);
+    reachedBySemester.set(semester, cps.filter((c) => c.state === "reached").length);
+    for (const cp of cps) {
+      if (cp.state === "locked") continue;
+      weeks.push({ semester, week: cp.week, done: cp.state === "reached", current: cp.isCurrentWeek, lessons: cp.lessons.total });
+    }
+  }
+  return { weeks, reachedBySemester };
 }

@@ -5,10 +5,17 @@ import { LessonPlayer } from "../pages/LessonPlayer";
 import "./admin.css";
 import { Shell } from "./Shell";
 import { FeedbackProvider } from "./ui";
+import { AiLog } from "./pages/AiLog";
 import { ClassDetail } from "./pages/ClassDetail";
 import { Classes } from "./pages/Classes";
+import { DeckPrint, Decks } from "./pages/Decks";
+import { Stuck } from "./pages/Stuck";
 import { Dashboard } from "./pages/Dashboard";
 import { Exams } from "./pages/Exams";
+import { LessonEdit } from "./pages/LessonEdit";
+import { PromptBuilder } from "./pages/Prompt";
+import { ReportCard } from "./pages/ReportCard";
+import { Insights } from "./pages/Insights";
 import { LessonImport } from "./pages/LessonImport";
 import { LessonVideos } from "./pages/LessonVideos";
 import { Lessons } from "./pages/Lessons";
@@ -52,12 +59,20 @@ export function AdminApp() {
                 <Route path="classes/:id" element={<ClassDetail />} />
                 <Route path="lessons" element={<Lessons />} />
                 <Route path="lessons/import" element={<LessonImport />} />
+                <Route path="lessons/:id/edit" element={<LessonEdit />} />
+                <Route path="prompt" element={<PromptBuilder />} />
+                <Route path="students/:id/report-card" element={<ReportCard />} />
                 <Route path="lessons/:id/videos" element={<LessonVideos />} />
                 <Route path="media" element={<Media />} />
                 <Route path="plan" element={<PlanList />} />
                 <Route path="plan/:courseId" element={<PlanDetail />} />
                 <Route path="exams" element={<Exams />} />
                 <Route path="reports" element={<Reports />} />
+                <Route path="insights" element={<Insights />} />
+                <Route path="stuck" element={<Stuck />} />
+                <Route path="decks" element={<Decks />} />
+                <Route path="decks/:id/print" element={<DeckPrint />} />
+                <Route path="ai-log" element={<AiLog />} />
                 <Route path="settings" element={<Settings email={gate.email} />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />
               </Routes>

@@ -1,7 +1,9 @@
 import { useState, type FormEvent } from "react";
+import { ApiError } from "../api";
 import { useAuth, getRecentUsers } from "../auth";
 import { Avatar } from "../components/Avatar";
 import { ThemeSwitcher } from "../components/ThemeSwitcher";
+import { Turnstile } from "../components/Turnstile";
 
 export function Login() {
   const { login } = useAuth();
@@ -10,16 +12,22 @@ export function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  /** Set when the server asks for a Turnstile check (after a few wrong passwords). */
+  const [siteKey, setSiteKey] = useState("");
+  const [token, setToken] = useState("");
+  const [resets, setResets] = useState(0);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
     setBusy(true);
     setError("");
     try {
-      await login(username, password);
+      await login(username, password, token || undefined);
     } catch (err) {
+      if (err instanceof ApiError && err.code === "challenge_required" && typeof err.body.siteKey === "string") setSiteKey(err.body.siteKey);
       setError(err instanceof Error ? err.message : "Please try again.");
       setPassword("");
+      if (siteKey) setResets((n) => n + 1);
     } finally {
       setBusy(false);
     }
@@ -79,12 +87,13 @@ export function Login() {
             required
           />
         </label>
+        {siteKey && <Turnstile siteKey={siteKey} onToken={setToken} resetKey={resets} />}
         {error && (
           <p role="alert" className="text-lg font-bold">
             {error}
           </p>
         )}
-        <button type="submit" className="btn btn-primary" disabled={busy}>
+        <button type="submit" className="btn btn-primary" disabled={busy || (Boolean(siteKey) && !token)}>
           {busy ? "Checking…" : "Let's go!"}
         </button>
       </form>

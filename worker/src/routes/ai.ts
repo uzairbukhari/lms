@@ -26,12 +26,16 @@ async function load(c: { env: AppEnv["Bindings"] }, userId: string, attemptId: s
   return question ? { attempt, question } : null;
 }
 
-async function log(db: D1Database, userId: string, questionId: string, kind: "hint" | "explain", model: string, response: string, fromCache: boolean) {
+async function log(db: D1Database, userId: string, questionId: string | null, kind: "hint" | "explain" | "define", model: string, response: string, fromCache: boolean, extra: { cacheKey?: string; detail?: string } = {}) {
   await db
-    .prepare("INSERT INTO ai_events (id, user_id, question_id, kind, model, response, from_cache) VALUES (?, ?, ?, ?, ?, ?, ?)")
-    .bind(crypto.randomUUID(), userId, questionId, kind, model, response, fromCache ? 1 : 0)
+    .prepare("INSERT INTO ai_events (id, user_id, question_id, kind, model, response, from_cache, cache_key, detail) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
+    .bind(crypto.randomUUID(), userId, questionId, kind, model, response, fromCache ? 1 : 0, extra.cacheKey ?? null, extra.detail ?? null)
     .run();
 }
+
+/** A reply the parent marked as bad: it is never served again, the stored text is used instead (see admin-ai-log.ts). */
+export const blockedKey = (cacheKey: string) => `ai:blocked:${cacheKey}`;
+const isBlocked = async (kv: KVNamespace, cacheKey: string) => (await kv.get(blockedKey(cacheKey))) !== null;
 
 /** A hint while a quiz is in progress. The answer is never given away: the reply is checked in code, and replaced if it leaks. */
 aiRoutes.post("/ai/hint", async (c) => {
@@ -43,9 +47,10 @@ aiRoutes.post("/ai/hint", async (c) => {
   const fallback = question.hint ?? GENERIC_HINT;
 
   const cacheKey = `ai:hint:v1:${question.id}`;
+  if (await isBlocked(c.env.SESSIONS, cacheKey)) return c.json({ hint: fallback, source: "static" });
   const cached = await c.env.SESSIONS.get(cacheKey);
   if (cached) {
-    await log(c.env.DB, user.id, question.id, "hint", AI_MODEL, cached, true);
+    await log(c.env.DB, user.id, question.id, "hint", AI_MODEL, cached, true, { cacheKey });
     return c.json({ hint: cached, source: "ai" });
   }
   const cap = DEFAULT_DAILY_CAP;
@@ -58,7 +63,7 @@ aiRoutes.post("/ai/hint", async (c) => {
     return c.json({ hint: fallback, source: "static" });
   }
   await c.env.SESSIONS.put(cacheKey, text, { expirationTtl: 7 * 24 * 3600 });
-  await log(c.env.DB, user.id, question.id, "hint", AI_MODEL, text, false);
+  await log(c.env.DB, user.id, question.id, "hint", AI_MODEL, text, false, { cacheKey });
   return c.json({ hint: text, source: "ai" });
 });
 
@@ -74,9 +79,10 @@ aiRoutes.post("/ai/explain", async (c) => {
   if (!answer || answer.is_correct === 1) return c.json({ explanation: fallback, source: "static" });
 
   const key = `ai:explain:v1:${question.id}:${await sha(answer.response_json)}`;
+  if (await isBlocked(c.env.SESSIONS, key)) return c.json({ explanation: fallback, source: "static" });
   const cached = await c.env.SESSIONS.get(key);
   if (cached) {
-    await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, cached, true);
+    await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, cached, true, { cacheKey: key });
     return c.json({ explanation: cached, source: "ai" });
   }
   if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, user.id, todayIn(c.env.TIMEZONE), DEFAULT_DAILY_CAP))) {
@@ -85,7 +91,7 @@ aiRoutes.post("/ai/explain", async (c) => {
   const text = await runModel(c.env.AI, explainPrompt(question, answer.response_json), { db: c.env.DB, userId: user.id, kind: "explain" });
   if (!text) return c.json({ explanation: fallback, source: "static" });
   await c.env.SESSIONS.put(key, text, { expirationTtl: 7 * 24 * 3600 });
-  await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, text, false);
+  await log(c.env.DB, user.id, question.id, "explain", AI_MODEL, text, false, { cacheKey: key });
   return c.json({ explanation: text, source: "ai" });
 });
 
@@ -113,13 +119,19 @@ aiRoutes.post("/ai/define", async (c) => {
   if (!sentence) return fail(c, 404, "not_found");
 
   const key = `ai:define:v1:${lessonId}:${wordVariants(word)[0]}`;
+  const detail = `"${word}"`;
+  if (await isBlocked(c.env.SESSIONS, key)) return c.json({ word, meaning: NO_IDEA, source: "static" });
   const cached = await c.env.SESSIONS.get(key);
-  if (cached) return c.json({ word, meaning: cached, source: "ai" });
+  if (cached) {
+    await log(c.env.DB, user.id, null, "define", AI_MODEL, cached, true, { cacheKey: key, detail });
+    return c.json({ word, meaning: cached, source: "ai" });
+  }
   if (!c.env.AI || !(await takeDailyAllowance(c.env.SESSIONS, `define:${user.id}`, todayIn(c.env.TIMEZONE), DEFINE_DAILY_CAP))) {
     return c.json({ word, meaning: NO_IDEA, source: "static" });
   }
   const text = await runModel(c.env.AI, definePrompt(word, sentence, row.subject), { db: c.env.DB, userId: user.id, kind: "define" });
   if (!text) return c.json({ word, meaning: NO_IDEA, source: "static" });
   await c.env.SESSIONS.put(key, text, { expirationTtl: 30 * 24 * 3600 });
+  await log(c.env.DB, user.id, null, "define", AI_MODEL, text, false, { cacheKey: key, detail });
   return c.json({ word, meaning: text, source: "ai" });
 });

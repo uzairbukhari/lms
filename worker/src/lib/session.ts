@@ -66,6 +66,16 @@ export async function isRateLimited(kv: KVNamespace, keys: string[]): Promise<bo
   return false;
 }
 
+/** Wrong passwords so far in the current window (the highest of the per-username and per-IP counters). */
+export async function failureCount(kv: KVNamespace, keys: string[]): Promise<number> {
+  let max = 0;
+  for (const k of keys) max = Math.max(max, Number((await kv.get(k)) ?? 0));
+  return max;
+}
+
+/** After this many wrong passwords a Turnstile check is required (when configured). */
+export const CHALLENGE_AFTER = 3;
+
 export async function recordFailure(kv: KVNamespace, keys: string[]): Promise<void> {
   for (const k of keys) {
     const count = Number((await kv.get(k)) ?? 0);

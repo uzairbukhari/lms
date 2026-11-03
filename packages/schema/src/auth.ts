@@ -29,6 +29,8 @@ export const passwordSchema = z.string().min(6, "Use at least 6 characters").max
 export const loginSchema = z.object({
   username: z.string().trim().toLowerCase().min(1).max(40),
   password: z.string().min(1).max(100),
+  /** Cloudflare Turnstile token, asked for after a few wrong passwords when Turnstile is set up. */
+  turnstileToken: z.string().max(4096).optional(),
 });
 export type LoginInput = z.infer<typeof loginSchema>;
 

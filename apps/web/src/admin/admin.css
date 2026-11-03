@@ -238,3 +238,13 @@
 .a-chart text { fill: var(--a-faint); font-size: 11px; }
 .a-table td.a-cell-title { white-space: nowrap; }
 @media (max-width: 640px) { .a-topbar .a-faint { display: none; } }
+
+/* Printing a report card: hide the console chrome and use the whole page. */
+@media print {
+  .a-sidebar, .a-topbar, .no-print, .a-scrim { display: none !important; }
+  .a-shell { display: block; }
+  .a-content { padding: 0 !important; max-width: none !important; }
+  .a-report-card .a-card { box-shadow: none; border: 0; }
+  .a-report-card textarea { border: 0; padding: 0; resize: none; }
+  .a-report-card textarea:placeholder-shown { display: none; }
+}

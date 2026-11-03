@@ -20,6 +20,9 @@ export type Bindings = {
   ADMIN_EMAIL?: string;
   /** YouTube Data API v3 key (Worker secret), used only by the admin "Suggested videos" screen. */
   YOUTUBE_API_KEY?: string;
+  /** Cloudflare Turnstile keys. When both are set, the login page shows a check after a few wrong passwords. */
+  TURNSTILE_SITE_KEY?: string;
+  TURNSTILE_SECRET?: string;
   /** IANA timezone that decides when a school week starts, e.g. "Asia/Karachi". Defaults to UTC. */
   TIMEZONE?: string;
   /** Parent PIN that closes the Windows app's focus mode (Worker secret). */

@@ -1,9 +1,42 @@
 import { useState } from "react";
 import { api } from "../../api";
-import { Button, Card, EmptyState, ErrorNote, PageHeader, Skeleton, ago, useFeedback, useLoad } from "../ui";
+import { Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, ago, useFeedback, useLoad } from "../ui";
 
 type Backup = { key: string; sizeBytes?: number; uploaded?: string };
 type Unlock = { id: string; courseTitle: string; semester: number; week: number; classId: string | null; userId: string | null; expiresAt: string | null };
+
+function AiAlert() {
+  const cur = useLoad<{ neurons: number; freeNeuronsPerDay: number; todayNeurons: number }>("/api/admin/settings/ai-alert");
+  const { toast } = useFeedback();
+  const [value, setValue] = useState<string | null>(null);
+  const shown = value ?? String(cur.data?.neurons ?? "");
+  async function save() {
+    try {
+      await api("/api/admin/settings/ai-alert", { method: "PUT", body: { neurons: Math.max(0, Math.round(Number(shown) || 0)) } });
+      toast("Saved.");
+      setValue(null);
+      await cur.reload();
+    } catch (e) { toast(e instanceof Error ? e.message : "Could not save.", true); }
+  }
+  return (
+    <Card title="AI spend alert" actions={<Button variant="primary" onClick={() => void save()} disabled={value === null}>Save</Button>}>
+      <ErrorNote error={cur.error} />
+      <Field label="Warn me when AI use in one day passes (neurons)" help={cur.data ? `Cloudflare gives ${cur.data.freeNeuronsPerDay.toLocaleString("en")} free every day. Used so far today: ${cur.data.todayNeurons.toLocaleString("en")}. Set 0 to turn the warning off. The warning shows under "Needs attention" on the Dashboard.` : undefined}>
+        <input className="a-input" type="number" min={0} step={500} inputMode="numeric" value={shown} onChange={(e) => setValue(e.target.value)} />
+      </Field>
+    </Card>
+  );
+}
+
+function Security() {
+  const s = useLoad<{ turnstile: boolean }>("/api/admin/settings/security");
+  return (
+    <Card title="Login protection">
+      <p>A Cloudflare Turnstile check appears on the sign-in page after three wrong passwords. It is currently <strong>{s.data?.turnstile ? "on" : "off"}</strong>.</p>
+      {s.data && !s.data.turnstile && <p className="a-muted" style={{ marginTop: 6 }}>To turn it on, create a Turnstile widget in the Cloudflare dashboard and add its site key as the variable <code>TURNSTILE_SITE_KEY</code> and its secret as the Worker secret <code>TURNSTILE_SECRET</code>. Wrong passwords are already limited and recorded without it; see each child's Sign-ins tab.</p>}
+    </Card>
+  );
+}
 
 export function Settings({ email }: { email: string }) {
   const backups = useLoad<{ backups: Backup[] }>("/api/admin/backups");
@@ -24,6 +57,8 @@ export function Settings({ email }: { email: string }) {
     <>
       <PageHeader title="Settings" description="Backups, early-opened weeks and your account." />
       <Card title="Account"><p>Signed in as <strong>{email}</strong> through Cloudflare Access.</p></Card>
+      <AiAlert />
+      <Security />
       <Card flush title="Backups" actions={<Button variant="primary" disabled={busy} onClick={() => void backup()}>Back up now</Button>}>
         <ErrorNote error={backups.error} />
         {backups.loading && !backups.data ? <Skeleton rows={2} /> : list.length === 0 ? <EmptyState title="No backups yet">The database is also backed up automatically on a schedule. Back up now to make one immediately.</EmptyState> : (

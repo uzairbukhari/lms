@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { AiUsage } from "../AiUsage";
-import { Badge, Card, EmptyState, ErrorNote, Icon, LinkButton, PageHeader, Skeleton, StatTile, ago, pct, useLoad } from "../ui";
+import { Badge, Card, EmptyState, ErrorNote, Icon, LinkButton, PageHeader, Skeleton, StatTile, SUBJECT_NAMES, ago, pct, useLoad } from "../ui";
 
 export type Overview = {
   totals: { activeStudents: number; publishedLessons: number; draftLessons: number; averagePercent30d: number | null; attemptsThisWeek: number };
@@ -9,6 +9,37 @@ export type Overview = {
   attention: { kind: string; message: string; href: string }[];
   students: { id: string; lastActive: string | null; gradedAttempts: number; averagePercent: number | null }[];
 };
+
+type Week = { daysLeft: number; dueSoon: boolean; students: { id: string; name: string; classes: string[]; done: number; total: number; lessons: { lessonId: string; title: string; subject: string; status: "not_started" | "in_progress" | "done"; bestPercent: number | null }[] }[] };
+const STATUS: Record<string, { label: string; tone: "green" | "amber" | "slate" }> = { done: { label: "Done", tone: "green" }, in_progress: { label: "Started", tone: "amber" }, not_started: { label: "Not started", tone: "slate" } };
+
+/** This week's lessons per child. From Saturday, unfinished ones turn amber because lessons are due on Sunday. */
+function ThisWeek() {
+  const { data } = useLoad<Week>("/api/admin/week");
+  if (!data || data.students.every((s) => s.total === 0)) return null;
+  return (
+    <Card title="This week" flush actions={<span className="a-faint">{data.daysLeft === 0 ? "Due today" : data.daysLeft === 1 ? "Due tomorrow" : `Due Sunday, ${data.daysLeft} days left`}</span>}>
+      <ul className="a-list">
+        {data.students.filter((s) => s.total > 0).map((s) => (
+          <li key={s.id} style={{ display: "block" }}>
+            <div className="a-row" style={{ justifyContent: "space-between", marginBottom: 6 }}>
+              <Link to={`/admin/students/${s.id}`} className="a-cell-title">{s.name}</Link>
+              <Badge tone={s.done === s.total ? "green" : data.dueSoon ? "amber" : "slate"}>{s.done} of {s.total} done</Badge>
+            </div>
+            <div className="a-row" style={{ gap: 6 }}>
+              {s.lessons.map((l) => (
+                <span key={l.lessonId} title={l.title} className="a-row" style={{ gap: 4 }}>
+                  <span className="a-muted">{SUBJECT_NAMES[l.subject] ?? l.subject}</span>
+                  <Badge tone={l.status !== "done" && data.dueSoon ? "amber" : STATUS[l.status]!.tone}>{STATUS[l.status]!.label}{l.bestPercent !== null ? ` · ${Math.round(l.bestPercent)}%` : ""}</Badge>
+                </span>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
 
 export function Dashboard() {
   const { data, error, loading } = useLoad<Overview>("/api/admin/overview");
@@ -38,6 +69,8 @@ export function Dashboard() {
               </ul>
             </Card>
           )}
+
+          <ThisWeek />
 
           <div className="a-grid split">
             <Card title="Recent quizzes" flush actions={<Link to="/admin/reports">All reports</Link>}>

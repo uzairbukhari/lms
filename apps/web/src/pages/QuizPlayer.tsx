@@ -3,7 +3,10 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
+import { StuckButton } from "../components/StuckButton";
 import { QuestionView, type ViewQuestion } from "../components/QuestionView";
+import { questionToSpeech } from "../lib/quizSpeech";
+import { speak, stopSpeech } from "../lib/sound";
 
 type Question = ViewQuestion & { id: string; hasHint: boolean };
 type Started = { attemptId: string; attemptNumber: number; mode: "graded" | "practice"; resumed: boolean; passPercent: number; questions: Question[] };
@@ -106,10 +109,12 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
       </header>
 
       <section className="card flex flex-col gap-4 p-6">
+        <ListenButton text={questionToSpeech(q as ViewQuestion)} />
         <QuestionView q={q} value={answers[q.id]} onChange={(v) => setAnswers((a) => ({ ...a, [q.id]: v }))} />
         <div className="flex flex-col gap-2">
           {!hints[q.id] && <button type="button" className="btn self-start" onClick={() => void getHint()}>💡 Give me a hint</button>}
           {hints[q.id] && <p role="note" className="text-lg">💡 {hints[q.id]}</p>}
+          {kind === "lesson" && id && <StuckButton lessonId={id} questionId={q.id} />}
         </div>
       </section>
 
@@ -124,6 +129,18 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
       {last && answered < quiz.questions.length && <p role="status" className="text-muted">You have {quiz.questions.length - answered} question(s) with no answer yet. You can go back, or hand in anyway.</p>}
       <p><Link className="text-muted underline" to={back} onClick={(e) => { if (!confirm("Leave the quiz? You can come back and carry on.")) e.preventDefault(); }}>Leave for now</Link></p>
     </Shell>
+  );
+}
+
+/** A speaker button that reads the question aloud only when pressed (never on its own). Pressing again stops it. */
+function ListenButton({ text }: { text: string }) {
+  const [on, setOn] = useState(false);
+  // A new question, or leaving the quiz, stops the voice.
+  useEffect(() => () => { stopSpeech(); setOn(false); }, [text]);
+  return (
+    <button type="button" className="btn self-start" aria-pressed={on} aria-label={on ? "Stop reading the question" : "Read the question aloud"} onClick={() => { if (on) { stopSpeech(); setOn(false); } else speak(text, setOn, { force: true }); }}>
+      {on ? "⏸ Stop" : "🔊 Listen"}
+    </button>
   );
 }
 
