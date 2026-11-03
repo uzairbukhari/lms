@@ -2,7 +2,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest
 import { app } from "../index";
 import type { Bindings } from "../env";
 import { parseDuration } from "../lib/youtube";
-import { withVideos, withoutVideo } from "../lib/videos";
+import { blockKey, videoSlots, withVideos, withoutVideo } from "../lib/videos";
 import { createTestEnv } from "../../test/db";
 import { lessonFixture } from "../../test/fixtures";
 
@@ -46,6 +46,16 @@ describe("helpers", () => {
     expect(withVideos(out, [v])).toBe(out);
     expect(withoutVideo(out, "abcdefghijk")).toEqual(blocks);
   });
+  it("puts a video after the chosen block, keeps several in order, and falls back when the block is gone", () => {
+    const a = { type: "heading", text: "A" }, b = { type: "text", markdown: "B" }, c = { type: "text", markdown: "C" };
+    const blocks = [a, b, c, { type: "summary", points: ["x"] }];
+    const v1 = { youtube: "aaaaaaaaaaa", title: "One", start_sec: 0, end_sec: 50, caption: null, after_key: blockKey(b) };
+    const v2 = { ...v1, youtube: "bbbbbbbbbbb", title: "Two" };
+    const out = withVideos(blocks, [v1, v2]);
+    expect(out.map((x) => x.youtube ?? x.type)).toEqual(["heading", "text", "aaaaaaaaaaa", "bbbbbbbbbbb", "text", "summary"]);
+    expect(withVideos(blocks, [{ ...v1, after_key: "text:gone" }]).map((x) => x.type)).toEqual(["heading", "text", "text", "video", "summary"]);
+    expect(videoSlots(out).map((s) => s.key)).toEqual([blockKey(a), blockKey(b), blockKey(c)]);
+  });
 });
 
 describe("suggested videos", () => {
@@ -78,10 +88,19 @@ describe("suggested videos", () => {
     expect(vid).toMatchObject({ youtube: "shortvid_01", start: 0, end: 80, title: "Food chains" });
     expect(preview.blocks.at(-1).type).toBe("summary");
 
+    // Place it after a chosen block; the choice survives a re-import.
+    const listed = await json(await call(`/api/admin/lessons/${lessonId}/videos`));
+    const slot = listed.slots[0];
+    expect((await call(`/api/admin/lessons/${lessonId}/videos/shortvid_01/place`, { after: "text:nope" }, "PUT")).status).toBe(422);
+    expect((await call(`/api/admin/lessons/${lessonId}/videos/shortvid_01/place`, { after: slot.key }, "PUT")).status).toBe(200);
+    const moved = await json(await call(`/api/admin/lessons/${lessonId}/preview`));
+    expect(moved.blocks.findIndex((b: any) => b.type === "video")).toBe(listed.slots.length ? 1 : -1);
+
     // Re-importing the lesson from Claude keeps the approved video.
     await call("/api/admin/lessons/import", { publish: true, file: lessonFixture({ slug: "maths-video-test" }) });
     const again = await json(await call(`/api/admin/lessons/${lessonId}/preview`));
     expect(again.blocks.filter((b: any) => b.type === "video")).toHaveLength(1);
+    expect(again.blocks.findIndex((b: any) => b.type === "video")).toBe(1);
 
     expect((await json(await call(`/api/admin/lessons/${lessonId}/videos`))).videos).toHaveLength(1);
     expect((await call(`/api/admin/lessons/${lessonId}/videos/shortvid_01`, undefined, "DELETE")).status).toBe(200);

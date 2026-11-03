@@ -5,7 +5,8 @@ import { LessonOutline } from "../LessonOutline";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, LinkButton, PageHeader, Skeleton, useFeedback, useLoad } from "../ui";
 
 type Clip = { youtube: string; title: string; channel: string; seconds: number; madeForKids: boolean; needsTrim: boolean };
-type Approved = { id: string; youtube: string; title: string; channel: string | null; start_sec: number; end_sec: number; caption: string | null };
+type Approved = { id: string; youtube: string; title: string; channel: string | null; start_sec: number; end_sec: number; caption: string | null; after_key: string | null };
+type Slot = { key: string; label: string };
 
 const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 
@@ -13,7 +14,7 @@ const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, 
 export function LessonVideos() {
   const { id } = useParams();
   const status = useLoad<{ configured: boolean }>("/api/admin/videos/status");
-  const approved = useLoad<{ title: string; videos: Approved[] }>(`/api/admin/lessons/${id}/videos`);
+  const approved = useLoad<{ title: string; videos: Approved[]; slots: Slot[] }>(`/api/admin/lessons/${id}/videos`);
   const { toast } = useFeedback();
   const [query, setQuery] = useState("");
   const [clips, setClips] = useState<Clip[] | null>(null);
@@ -38,6 +39,10 @@ export function LessonVideos() {
       await approved.reload();
     } catch (e) { toast(e instanceof Error ? e.message : "Could not add it.", true); }
   }
+  async function place(v: Approved, after: string) {
+    try { await api(`/api/admin/lessons/${id}/videos/${v.youtube}/place`, { method: "PUT", body: { after: after || null } }); toast("Moved. Open the lesson preview to see it."); await approved.reload(); }
+    catch (e) { toast(e instanceof Error ? e.message : "Could not move it.", true); }
+  }
   async function remove(v: Approved) {
     try { await api(`/api/admin/lessons/${id}/videos/${v.youtube}`, { method: "DELETE" }); toast("Removed from the lesson."); await approved.reload(); }
     catch (e) { toast(e instanceof Error ? e.message : "Could not remove it.", true); }
@@ -60,9 +65,20 @@ export function LessonVideos() {
       <Card title="In this lesson">
         {(approved.data?.videos ?? []).length === 0 ? <EmptyState title="No video yet">Search below and add one.</EmptyState> : (
           <ul className="a-list">{approved.data?.videos.map((v) => (
-            <li key={v.id} className="a-row" style={{ justifyContent: "space-between" }}>
-              <span><b>{v.title}</b> <span className="a-faint">· {v.channel ?? "YouTube"} · {mmss(v.start_sec)} to {mmss(v.end_sec)} ({v.end_sec - v.start_sec}s)</span></span>
-              <Button size="sm" onClick={() => void remove(v)}>Remove</Button>
+            <li key={v.id} style={{ padding: "10px 0", borderTop: "1px solid var(--line, #e5e7eb)" }}>
+              <div className="a-row" style={{ justifyContent: "space-between" }}>
+                <span><b>{v.title}</b> <span className="a-faint">· {v.channel ?? "YouTube"} · {mmss(v.start_sec)} to {mmss(v.end_sec)} ({v.end_sec - v.start_sec}s)</span></span>
+                <span className="a-row">
+                  {id && <LinkButton size="sm" to={`/admin/lessons/${id}/preview`} newWindow>Preview lesson</LinkButton>}
+                  <Button size="sm" onClick={() => void remove(v)}>Remove</Button>
+                </span>
+              </div>
+              <Field label="Show this video after" help="Pick the part of the lesson where this topic is taught. The video gets its own slide right after it.">
+                <select className="a-input" value={v.after_key ?? ""} onChange={(e) => void place(v, e.target.value)}>
+                  <option value="">Near the end (before the summary)</option>
+                  {(approved.data?.slots ?? []).map((sl) => <option key={sl.key} value={sl.key}>{sl.label}</option>)}
+                </select>
+              </Field>
             </li>
           ))}</ul>
         )}

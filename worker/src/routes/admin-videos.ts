@@ -3,7 +3,7 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { searchClips, videoDetails } from "../lib/youtube";
-import { withoutVideo, withVideos, type ApprovedVideo } from "../lib/videos";
+import { blockKey, videoSlots, withoutVideo, withVideos, type ApprovedVideo } from "../lib/videos";
 
 // Admin only (mounted under requireAdmin): find clips for a lesson, approve one with a click, remove it again.
 export const adminVideoRoutes = new Hono<AppEnv>();
@@ -22,15 +22,20 @@ adminVideoRoutes.post("/videos/search", async (c) => {
   }
 });
 
-type Row = ApprovedVideo & { id: string; channel: string | null };
+type Row = ApprovedVideo & { id: string; channel: string | null; after_key: string | null };
 
 const listFor = (db: D1Database, lessonId: string) =>
-  db.prepare("SELECT id, youtube, title, channel, start_sec, end_sec, caption FROM approved_videos WHERE lesson_id = ? ORDER BY created_at").bind(lessonId).all<Row>();
+  db.prepare("SELECT id, youtube, title, channel, start_sec, end_sec, caption, after_key FROM approved_videos WHERE lesson_id = ? ORDER BY created_at").bind(lessonId).all<Row>();
 
 adminVideoRoutes.get("/lessons/:id/videos", async (c) => {
-  const lesson = await c.env.DB.prepare("SELECT title FROM lessons WHERE id = ?").bind(c.req.param("id")).first<{ title: string }>();
+  const lesson = await c.env.DB.prepare("SELECT title, content_json FROM lessons WHERE id = ?").bind(c.req.param("id")).first<{ title: string; content_json: string }>();
   if (!lesson) return fail(c, 404, "not_found");
-  return c.json({ title: lesson.title, videos: (await listFor(c.env.DB, c.req.param("id"))).results });
+  const videos = (await listFor(c.env.DB, c.req.param("id"))).results;
+  // Every place a video could go; a video whose chosen place no longer exists shows as "default".
+  const blocks: any[] = JSON.parse(lesson.content_json);
+  const slots = videoSlots(blocks);
+  const placed = videos.map((v) => ({ ...v, after_key: slots.some((x) => x.key === v.after_key) ? v.after_key : null }));
+  return c.json({ title: lesson.title, videos: placed, slots });
 });
 
 /** Rewrite the lesson's blocks (what children see) and the stored source file, without making a new version or touching the quiz. */
@@ -53,6 +58,7 @@ adminVideoRoutes.post("/lessons/:id/videos", async (c) => {
     start: z.number().int().min(0).max(36000).default(0),
     end: z.number().int().min(1).max(36000).optional(),
     caption: z.string().trim().max(200).optional(),
+    after: z.string().max(80).nullable().optional(),
   }));
   // Never trust the browser: ask YouTube again that the video exists, can be embedded, and how long it is.
   let info;
@@ -61,13 +67,30 @@ adminVideoRoutes.post("/lessons/:id/videos", async (c) => {
   const end = Math.min(body.end ?? Math.min(info.seconds, body.start + 100), info.seconds);
   if (end <= body.start) return fail(c, 422, "bad_range", "The end must be after the start.");
   if (end - body.start > 100) return fail(c, 422, "too_long", "A clip can be at most 100 seconds. Choose a shorter part.");
-  const v: ApprovedVideo = { youtube: info.youtube, title: info.title, start_sec: body.start, end_sec: end, caption: body.caption ?? null };
+  const v: ApprovedVideo = { youtube: info.youtube, title: info.title, start_sec: body.start, end_sec: end, caption: body.caption ?? null, after_key: body.after ?? null };
   const exists = await c.env.DB.prepare("SELECT id FROM lessons WHERE id = ?").bind(lessonId).first();
   if (!exists) return fail(c, 404, "not_found");
-  await c.env.DB.prepare("INSERT INTO approved_videos (id, lesson_id, youtube, title, channel, start_sec, end_sec, caption) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (lesson_id, youtube) DO UPDATE SET start_sec = excluded.start_sec, end_sec = excluded.end_sec, caption = excluded.caption")
-    .bind(crypto.randomUUID(), lessonId, v.youtube, v.title, info.channel, v.start_sec, v.end_sec, v.caption).run();
+  await c.env.DB.prepare("INSERT INTO approved_videos (id, lesson_id, youtube, title, channel, start_sec, end_sec, caption, after_key) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (lesson_id, youtube) DO UPDATE SET start_sec = excluded.start_sec, end_sec = excluded.end_sec, caption = excluded.caption, after_key = excluded.after_key")
+    .bind(crypto.randomUUID(), lessonId, v.youtube, v.title, info.channel, v.start_sec, v.end_sec, v.caption, v.after_key).run();
   await patchBlocks(c.env.DB, lessonId, (b) => withVideos(withoutVideo(b, v.youtube), [v]));
   return c.json({ ok: true, video: { ...v, channel: info.channel } }, 201);
+});
+
+/** Move an approved video to sit after a chosen block (or back to the default place before the summary with `after: null`). */
+adminVideoRoutes.put("/lessons/:id/videos/:youtube/place", async (c) => {
+  const lessonId = c.req.param("id");
+  const youtube = c.req.param("youtube");
+  const { after } = await parseBody(c, z.object({ after: z.string().max(80).nullable() }));
+  const v = await c.env.DB.prepare("SELECT youtube, title, start_sec, end_sec, caption FROM approved_videos WHERE lesson_id = ? AND youtube = ?").bind(lessonId, youtube).first<ApprovedVideo>();
+  if (!v) return fail(c, 404, "not_found");
+  if (after) {
+    const row = await c.env.DB.prepare("SELECT content_json FROM lessons WHERE id = ?").bind(lessonId).first<{ content_json: string }>();
+    const ok = row && JSON.parse(row.content_json).some((b: any) => b.type !== "video" && blockKey(b) === after);
+    if (!ok) return fail(c, 422, "bad_place", "That part of the lesson no longer exists. Reload the page.");
+  }
+  await c.env.DB.prepare("UPDATE approved_videos SET after_key = ? WHERE lesson_id = ? AND youtube = ?").bind(after, lessonId, youtube).run();
+  await patchBlocks(c.env.DB, lessonId, (b) => withVideos(withoutVideo(b, youtube), [{ ...v, after_key: after }]));
+  return c.json({ ok: true });
 });
 
 adminVideoRoutes.delete("/lessons/:id/videos/:youtube", async (c) => {
