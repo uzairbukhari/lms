@@ -4,7 +4,9 @@ import { AdminApp } from "./admin/AdminApp";
 import { Loader } from "./components/Loader";
 import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
+import { GamePlay } from "./pages/GamePlay";
 import { QuizPlayer } from "./pages/QuizPlayer";
+import { SemesterMap } from "./pages/SemesterMap";
 import { StudentHome } from "./pages/StudentHome";
 
 function StudentApp() {
@@ -16,6 +18,8 @@ function StudentApp() {
       <Route path="/lesson/:id" element={<LessonPlayer mode="student" />} />
       <Route path="/lesson/:id/quiz" element={<QuizPlayer kind="lesson" />} />
       <Route path="/exam/:id" element={<QuizPlayer kind="exam" />} />
+      <Route path="/map" element={<SemesterMap />} />
+      <Route path="/map/play/:semester/:week" element={<GamePlay />} />
       <Route path="*" element={<StudentHome />} />
     </Routes>
   );
