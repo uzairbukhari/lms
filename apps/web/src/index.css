@@ -224,7 +224,7 @@ body {
 
 /* Kids' dashboard on a tablet: exactly one screen tall. The header keeps its room; the week's quest cards take whatever is left
    and give up their summary text first, so nothing scrolls and nothing is left empty. */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .kh-main { gap: 1.25rem; padding-top: 1.5rem; padding-bottom: 1.5rem; height: 100dvh; min-height: 0; overflow: hidden; }
   .kh-header { row-gap: 1rem; }
   .kh-nav { gap: 0.75rem; }
@@ -234,7 +234,7 @@ body {
   .kh-week .kh-grid h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
   .kh-week .kh-grid .kh-summary { font-size: 1.05rem; flex: 0 1 auto; min-height: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 }
-@media (min-width: 768px) and (max-height: 820px) {
+@media (min-width: 1024px) and (max-height: 820px) {
   .kh-main { gap: 0.9rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
   .kh-summary { display: none !important; }
 }
