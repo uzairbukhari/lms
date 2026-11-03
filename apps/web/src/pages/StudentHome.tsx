@@ -263,7 +263,7 @@ export function StudentHome() {
       )}
 
       {home && (
-        <section aria-labelledby="week" className="flex flex-col gap-4">
+        <section aria-labelledby="week" className="kh-week flex flex-col gap-4">
           {weekCards.length === 0 ? (
             <>
               <h2 id="week" className="font-display text-3xl font-extrabold">This week</h2>
@@ -282,7 +282,7 @@ export function StudentHome() {
                   ))}
                 </div>
               </div>
-              <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
+              <div className="kh-grid relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
                 <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / weekCards.length}%`, right: `${50 / weekCards.length}%` }} />
                 {weekCards.map((c) => <div key={c.id} className="relative flex"><QuestStop c={c} here={c.id === hereId} /></div>)}
               </div>
