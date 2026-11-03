@@ -53,6 +53,12 @@ function Tick({ size }: { size: number }) {
   );
 }
 
+/** The subject is already shown above the title, so drop it from the front of the title ("Maths Check-In: Where Am I?" becomes "Check-In: Where Am I?"). */
+export function shortTitle(title: string): string {
+  const t = title.replace(/^(maths|mathematics|science|english|general knowledge|computers?|computing|computer science)(,?\s*(and|&)?\s*data(\s*(and|&)\s*ai)?)?\s+/i, "").trim();
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : title;
+}
+
 /** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
 function QuestStop({ c, here }: { c: Card; here: boolean }) {
   const s = look(c.subject);
@@ -62,7 +68,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
   const ink = done ? "var(--done-text)" : "var(--text)";
   const soft = done ? "var(--done-text)" : "var(--text-muted)";
   return (
-    <article aria-label={`${s.label}: ${c.title}${done ? " (done)" : ""}`} className="flex w-full flex-col gap-4">
+    <article aria-label={`${s.label}: ${c.title}${done ? " (done)" : ""}`} className="flex w-full flex-col gap-6">
       <div className="flex h-[132px] flex-col items-center gap-2">
         <div
           className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full"
@@ -84,7 +90,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
       </div>
 
       <div
-        className="relative flex flex-1 flex-col gap-2.5 p-5"
+        className="relative flex min-h-0 flex-1 flex-col gap-2.5 p-5"
         style={{
           paddingTop: done ? 32 : undefined,
           background: done ? "var(--done-bg)" : "var(--surface)",
@@ -95,8 +101,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
         }}
       >
         <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
-        <h3 className="font-display text-[22px] font-bold leading-tight">{c.title}</h3>
-        <p className="kh-summary text-base leading-snug" style={{ color: soft }}>{c.summary}</p>
+        <h3 className="font-display text-[26px] font-bold leading-tight">{shortTitle(c.title)}</h3>
         {c.progress && !done && (
           <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Lesson progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
             <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
@@ -282,7 +287,7 @@ export function StudentHome() {
                   ))}
                 </div>
               </div>
-              <div className="kh-grid relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
+              <div className="kh-grid relative mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
                 <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / weekCards.length}%`, right: `${50 / weekCards.length}%` }} />
                 {weekCards.map((c) => <div key={c.id} className="relative flex"><QuestStop c={c} here={c.id === hereId} /></div>)}
               </div>
