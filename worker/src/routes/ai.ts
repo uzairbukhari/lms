@@ -46,6 +46,7 @@ aiRoutes.post("/ai/hint", async (c) => {
   const { question } = found;
   const fallback = question.hint ?? GENERIC_HINT;
 
+  if (user.isTest) return c.json({ hint: fallback, source: "static" });
   const cacheKey = `ai:hint:v1:${question.id}`;
   if (await isBlocked(c.env.SESSIONS, cacheKey)) return c.json({ hint: fallback, source: "static" });
   const cached = await c.env.SESSIONS.get(cacheKey);
@@ -78,6 +79,7 @@ aiRoutes.post("/ai/explain", async (c) => {
   const answer = await c.env.DB.prepare("SELECT response_json, is_correct FROM attempt_answers WHERE attempt_id = ? AND question_id = ?").bind(attemptId, questionId).first<{ response_json: string; is_correct: number }>();
   if (!answer || answer.is_correct === 1) return c.json({ explanation: fallback, source: "static" });
 
+  if (user.isTest) return c.json({ explanation: fallback, source: "static" });
   const key = `ai:explain:v1:${question.id}:${await sha(answer.response_json)}`;
   if (await isBlocked(c.env.SESSIONS, key)) return c.json({ explanation: fallback, source: "static" });
   const cached = await c.env.SESSIONS.get(key);
@@ -118,6 +120,7 @@ aiRoutes.post("/ai/define", async (c) => {
   const sentence = sentenceWith(JSON.parse(row.content_json) as Block[], word);
   if (!sentence) return fail(c, 404, "not_found");
 
+  if (user.isTest) return c.json({ word, meaning: NO_IDEA, source: "static" });
   const key = `ai:define:v1:${lessonId}:${wordVariants(word)[0]}`;
   const detail = `"${word}"`;
   if (await isBlocked(c.env.SESSIONS, key)) return c.json({ word, meaning: NO_IDEA, source: "static" });

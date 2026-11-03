@@ -200,6 +200,9 @@ export function StudentHome() {
     groups.set(key, [...(groups.get(key) ?? []), c]);
   }
 
+  // While the lessons load, show only a centred loader (no half-empty header or buttons).
+  if (!home && !failed) return <Loader label="Loading your lessons…" fullScreen />;
+
   return (
     <main className="kh-main mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
       <header className="kh-header flex flex-wrap items-center justify-between gap-4">
@@ -235,7 +238,6 @@ export function StudentHome() {
       </header>
 
       {failed && <p role="alert" className="text-xl">We couldn't load your lessons. Please refresh the page.</p>}
-      {!home && !failed && <Loader label="Loading your lessons…" />}
 
       {rewards && rewards.stickers.some((x) => x.isNew) && (
         <Link to="/rewards" className="pop-in card flex items-center gap-4 p-4 text-lg font-bold" role="status">

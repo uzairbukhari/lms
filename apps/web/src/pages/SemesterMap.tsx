@@ -125,6 +125,8 @@ export function SemesterMap() {
   );
 
   if (!user) return null;
+  // While the map loads, show only a centred loader.
+  if (!map && !failed) return <Loader label="Unrolling your map…" fullScreen />;
   const toggleSound = () => {
     const on = !sound;
     setSoundOn(on);
@@ -178,7 +180,6 @@ export function SemesterMap() {
       </header>
 
       {failed && <p role="alert" className="p-6 text-xl">We couldn't load your map. Please refresh the page.</p>}
-      {!map && !failed && <Loader label="Unrolling your map…" />}
 
       {map && (
         <div className="relative flex-1 px-2 pb-10 pt-4">

@@ -30,6 +30,7 @@ export function toSessionUser(row: UserRow): SessionUser {
     avatar: (row.avatar as AvatarId | null) ?? null,
     theme: isThemeId(row.theme) ? row.theme : DEFAULT_THEME,
     mustChangePassword: row.must_change_password === 1,
+    ...(row.is_test === 1 ? { isTest: true } : {}),
   };
 }
 

@@ -16,6 +16,8 @@ export interface SessionUser {
   avatar: AvatarId | null;
   theme: (typeof THEMES)[number];
   mustChangePassword: boolean;
+  /** The parent's test student: every AI feature (voice, hints, word help) is switched off for it. */
+  isTest?: boolean;
 }
 
 export const usernameSchema = z

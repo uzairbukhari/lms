@@ -20,6 +20,8 @@ const bodySchema = z.object({ text: z.string().trim().min(1).max(600) });
 
 /** POST { text } and get back MP3 audio, or 503 when the voice is not available (the app then uses the device voice). */
 export async function narrate(c: Context<AppEnv>): Promise<Response> {
+  // The parent's test student never uses the voice service, not even stored audio (the app stays silent for it).
+  if ((c.var.user as AppEnv["Variables"]["user"] | undefined)?.isTest) return c.json({ error: "voice_unavailable" }, 503);
   const { text } = await parseBody(c, bodySchema);
   const key = `tts/v1/${TTS_VOICE}/${await sha(text)}.mp3`;
   const headers = { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=604800" };

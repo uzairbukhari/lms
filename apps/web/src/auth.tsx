@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { SessionUser, ThemeId } from "@lms/schema";
 import { api } from "./api";
+import { setVoiceBlocked } from "./lib/sound";
 import { applyTheme, getStoredTheme } from "./theme";
 
 type RecentUser = { username: string; displayName: string; avatar: SessionUser["avatar"] };
@@ -41,6 +42,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<ThemeId>(getStoredTheme);
   /** A look picked on the login screen, before signing in. It wins over the one saved on the profile and is then saved there. */
   const pickedBeforeLogin = useRef<ThemeId | null>(null);
+
+  useEffect(() => { setVoiceBlocked(user?.isTest === true); }, [user]);
 
   useEffect(() => {
     api<{ user: SessionUser | null }>("/api/me")
