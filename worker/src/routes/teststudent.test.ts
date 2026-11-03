@@ -99,4 +99,14 @@ describe("test student", () => {
     const log = await json<any>(await call("/api/admin/ai-log"));
     expect(log.children.some((k: any) => k.id === testId)).toBe(false);
   });
+
+  it("has every AI feature switched off", async () => {
+    expect((await json<any>(await call("/api/me", { cookie }))).user.isTest).toBe(true);
+    // Voice is refused even for text that is already stored.
+    await env.ASSETS_BUCKET.put("tts/v1/x", "x");
+    expect((await call("/api/ai/voice", { body: { text: "Hello there" }, cookie })).status).toBe(503);
+    const started = await json<{ attemptId: string; questions: { id: string }[] }>(await call(`/api/lessons/${lessonIds[0]}/quiz/start`, { method: "POST", body: {}, cookie }));
+    const hint = await json<{ source: string }>(await call("/api/ai/hint", { body: { attemptId: started.attemptId, questionId: started.questions[0]?.id }, cookie }));
+    expect(hint.source).toBe("static");
+  });
 });

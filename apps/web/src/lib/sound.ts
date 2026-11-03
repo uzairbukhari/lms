@@ -171,9 +171,17 @@ let serverVoiceOff = false;
 let narrationOn = true;
 const clips = new Map<string, Promise<AudioBuffer | null>>();
 
+/** The parent's test student hears nothing from the voice service or the device voice. */
+let voiceBlocked = false;
+export function setVoiceBlocked(blocked: boolean): void {
+  if (blocked === voiceBlocked) return;
+  voiceBlocked = blocked;
+  narrationOn = !blocked;
+}
+
 /** Narration is off in the admin preview: nothing is fetched from the voice service and nothing is read aloud. */
 export function setNarrationEnabled(on: boolean): void {
-  narrationOn = on;
+  narrationOn = on && !voiceBlocked;
   if (!on) stopSpeech();
 }
 
