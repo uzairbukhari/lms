@@ -8,9 +8,9 @@ up and update the lesson format (`packages/schema/src/lesson.ts`), the player an
 
 | Block | Use it for | Notes |
 | --- | --- | --- |
-| `heading` | Start a new idea (a new slide group) | Short, in kid words |
+| `heading` | Start a new idea (a new slide group) | Short, in kid words. Add `backdrop` (scenery for the whole stop, see below) |
 | `text` | Short sentences, one idea each | Each sentence becomes a tappable card. **Bold** key words |
-| `image` | A big emoji or an uploaded picture | Add `alt` and `caption` |
+| `image` | A picture on a stage of scenery: emoji or drawn props that enter with the narration | Add `alt` and `caption`. Prefer `actors` (up to 8): each `{emoji | prop, label?, at?, enter?, effect?, x?, y?, size?}`; `at` = which sentence of the slide's text brings it in (0 first). A plain `emoji` string still works: each emoji becomes one actor. Optional `backdrop`. An uploaded `asset` shows as a plain picture |
 | `callout` | `tip`, `fun_fact`, `warning` | One or two sentences |
 | `vocab` | A new word with a meaning and an example | Read aloud when tapped |
 | `glossary` | Meanings for the **bold** key words | Not a slide. Children press and hold any word to see it; words missing here get a cached AI explanation, so cover the bold words to keep AI use at zero |
@@ -21,10 +21,40 @@ up and update the lesson format (`packages/schema/src/lesson.ts`), the player an
 | `manipulative` | **Move-the-items play area**: a pile of emoji things (1 to 20) and 1 to 4 labelled places to drag them into, with a live sum | For counting, adding, splitting, sharing, grouping. Replaces needing real coins, buttons or pasta. Fields: `title`, `goal`, `emoji`, `count`, `zones` (labels). Never graded or saved |
 | `chart` | **Drawn picture from a few numbers**: `pictogram`, `bar_chart`, `tally`, `table`, `number_line`, `fraction`. Use it whenever a lesson names one of these | Needs `title`. Pictogram, bar chart, tally, table: `rows` of `label`, `value` (0 to 100), optional `emoji`; pictogram also `each` (how many one picture stands for). Number line: `from`, `to`, optional `step`, `marks` (values to highlight). Fraction: `parts` (2 to 12), `shaded`. Optional `caption`. Sits with the text before it; one chart per slide |
 | `video` | **A short clip (100 seconds or shorter)** from YouTube, cut with `start` and `end`, for the hardest idea | `title`, `youtube` (11 character id), `start`, `end`, optional `caption`. Shows a play button; nothing loads until pressed; privacy-friendly player, related videos kept to the same channel. A grown-up must approve each clip. See `docs/LESSON_GUIDELINES.md` |
-| `explainer` | **Animated, step-by-step picture** (water cycle, a plant growing, a loop drawing a square). Each scene puts emoji on a stage; things that share an `id` glide to their new spot between steps; each step has a caption that is read aloud | 2 to 8 scenes, up to 14 things each. `x`, `y` are 0 to 100 (percent of the stage). `size` 1 to 3. `anim`: `none`, `bounce`, `float`, `spin`, `pulse`, `grow`. Give the same `id` to a thing that moves or stays across scenes; things missing from a scene fade out. Add a short `label` when naming a part helps |
+| `explainer` | **Animated, step-by-step picture** (water cycle, a plant growing, a loop drawing a square). Plays by itself with the voice on drawn scenery; things that share an `id` glide (or hop) to their new spot between steps; each step's caption is read aloud | 2 to 8 scenes, up to 14 things each. Each thing has an `emoji` or a `prop`; `x`, `y` are 0 to 100 (percent of the stage); `size` 1 to 3; `anim`: `none`, `bounce`, `float`, `spin`, `pulse`, `grow`; `enter`, `exit`, `path`, `effect` (below). Same `id` = same thing across scenes; things missing from a scene leave by their `exit` (default fade). A scene can set `camera: {zoom, x, y}`. Block options: `backdrop`, `autoplay` (default true). Add a short `label` when naming a part helps |
 | `brain_game` | **Mind-sharpening exercise**: `memory_match` (find the pairs) or `remember_order` (watch the order, then copy it; gets longer each win) | `title`, optional `goal`, 3 to 8 `emojis`. Never graded or saved. Use one near the end of a lesson as a brain break |
 | `summary` | "Remember" points | Last block before the quiz |
 | `html_embed` | A special sandboxed simulation | Use only when nothing above fits |
+
+### Animation values (see part 12 of the guidelines)
+
+- `backdrop`: `plain`, `meadow`, `forest`, `pond`, `sea`, `desert`, `mountain`, `sky`, `space`, `kitchen`, `classroom`, `home`, `town`, `farm`, `map`, `lab`. Without one the player picks scenery from the words, then from the subject.
+- `enter`: `pop`, `fade`, `drop`, `grow`, `slide_left`, `slide_right`, `walk_left`, `walk_right`. `exit`: `fade`, `shrink`, `fly_up`, `drop`. `path`: `straight`, `arc`, `hop`.
+- `effect`: `none`, `rain`, `steam`, `sparkle`, `wind`, `glow`, `hearts`, `bubbles`, `zzz`, `arrow_right`, `arrow_down`, `count` (a number `label` counts up from 0).
+- `prop` (drawn pictures with moving parts; change the values between explainer scenes and they animate):
+
+| `kind` | Fields |
+| --- | --- |
+| `number_line` | `from`, `to` (default 0 to 10), `value` (where the frog sits) |
+| `ten_frame` | `value` (0 to 10 counters) |
+| `base_ten` | `tens`, `ones` (0 to 9 each) |
+| `fraction_pizza`, `fraction_bar` | `parts`, `shaded` |
+| `clock` | `hour`, `minute` |
+| `thermometer` | `value`, optional `from`, `to` (default -10 to 50) |
+| `balance` | `left`, `right` (weights; the beam tips to the heavier side) |
+| `plant` | `highlight`: `roots`, `stem`, `leaf`, `flower` |
+| `body` | `highlight`: `brain`, `heart`, `lungs`, `stomach`, `bones`, `muscles` |
+| `globe` | none (spins) |
+| `sun_earth` | `value` = hour of the day (0 to 24): the Earth turns, the night side moves |
+| `robot_grid` | `col`, `row` (0 to 4), `facing`: `up`, `down`, `left`, `right` (5 x 5 grid, star in the corner) |
+| `sorting_boxes` | `labels` (2 or 3 box names) |
+| `venn` | `labels` (two circle names) |
+
+```json
+{ "type": "image", "caption": "The frog hops from 2 to 5.", "actors": [
+  { "prop": { "kind": "number_line", "from": 0, "to": 10, "value": 5 }, "at": 0, "size": 3 },
+  { "emoji": "🐸", "label": "2 + 3 = 5", "at": 2, "enter": "drop", "effect": "sparkle", "x": 82, "y": 22, "size": 1 } ] }
+```
 
 Question types for `check` and the quiz (all nine): multiple choice (radio), multi select (checkboxes), true/false, number and short text (typed), order (drag to reorder), match (drag or tap to pair), `fill_blank` (dropdown gaps in a sentence), `hotspot` (tap the right picture), `slider` (estimate on a scale).
 
@@ -64,7 +94,7 @@ Importing a lesson file in the parent area saves it as a new version.
 
 ## Wanted next (backlog)
 
-- Number line the child can hop along (the drawn `chart` number line is built; hopping is not).
+- Number line the child can hop along by tapping (the animated `number_line` prop is built; tapping to hop is not).
 - Ten frame and base-ten blocks (place value).
 - Pizza slicing and tapping to shade fractions (drawn fraction bars are built).
 - Balance scale (equals, comparing weights).
@@ -72,8 +102,8 @@ Importing a lesson file in the parent area saves it as a new version.
 - Sorting into groups with labelled boxes, including Venn diagrams (science, data).
 - Order-the-steps and build-a-sentence drag tasks.
 - More brain games: spot the difference, odd one out, number puzzles, speed counting.
-- Drawn (SVG) diagrams and animated number lines for maths and science, beyond emoji.
+- More drawn props: maps of the UK and Pakistan, a magnet, the water cycle as one prop, coins.
 - Label the diagram (drag labels onto a picture).
 - Bar chart builder from tapped data (data and AI); drawn bar charts are built.
-- Simple "program the robot" grid for loops and sequences (computer science).
+- Simple "program the robot" grid the child drives with arrow cards (the animated `robot_grid` prop is built; driving it is not).
 - A check on a `manipulative` ("make 7 on the left"), once we want it scored.

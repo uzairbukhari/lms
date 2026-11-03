@@ -1,12 +1,18 @@
-import type { CheckQuestion } from "./lesson";
+import type { Backdrop, CheckQuestion, PropSpec } from "./lesson";
+
+type Enter = "pop" | "fade" | "drop" | "grow" | "slide_left" | "slide_right" | "walk_left" | "walk_right";
+type Effect = "none" | "rain" | "steam" | "sparkle" | "wind" | "glow" | "hearts" | "bubbles" | "zzz" | "arrow_right" | "arrow_down" | "count";
+export type Actor = { emoji?: string; prop?: PropSpec; label?: string; at?: number; enter?: Enter; effect?: Effect; x?: number; y?: number; size?: number };
+export type ExplainerItem = { id?: string; emoji?: string; prop?: PropSpec; label?: string; x: number; y: number; size: number; anim: "none" | "bounce" | "float" | "spin" | "pulse" | "grow"; enter?: Enter; exit?: "fade" | "shrink" | "fly_up" | "drop"; path?: "straight" | "arc" | "hop"; effect?: Effect };
+export type ExplainerScene = { caption: string; camera?: { zoom: number; x: number; y: number }; items: ExplainerItem[] };
 
 // Turns a lesson's blocks into a deck of slides (one idea per slide) and works out what to read aloud for each.
 // Pure functions, no browser APIs, so they are easy to test.
 
 export type Block =
-  | { type: "heading"; text: string }
+  | { type: "heading"; text: string; backdrop?: Backdrop }
   | { type: "text"; markdown: string }
-  | { type: "image"; emoji?: string; asset?: string; alt?: string; caption?: string }
+  | { type: "image"; emoji?: string; asset?: string; alt?: string; caption?: string; backdrop?: Backdrop; actors?: Actor[] }
   | { type: "callout"; style: "tip" | "fun_fact" | "warning"; markdown: string }
   | { type: "reveal"; prompt: string; answer_markdown: string }
   | { type: "check"; question: CheckQuestion }
@@ -16,7 +22,7 @@ export type Block =
   | { type: "manipulative"; title: string; goal?: string; emoji: string; count: number; zones: string[] }
   | { type: "chart"; kind: "pictogram" | "bar_chart" | "tally" | "table" | "number_line" | "fraction"; title: string; caption?: string; rows?: { label: string; value: number; emoji?: string }[]; each?: number; from?: number; to?: number; step?: number; marks?: number[]; parts?: number; shaded?: number }
   | { type: "video"; title: string; youtube: string; start: number; end: number; caption?: string }
-  | { type: "explainer"; title: string; scenes: { caption: string; items: { id?: string; emoji: string; label?: string; x: number; y: number; size: number; anim: "none" | "bounce" | "float" | "spin" | "pulse" | "grow" }[] }[] }
+  | { type: "explainer"; title: string; backdrop?: Backdrop; autoplay?: boolean; scenes: ExplainerScene[] }
   | { type: "brain_game"; game: "memory_match" | "remember_order"; title: string; goal?: string; emojis: string[] }
   | { type: "glossary"; terms: { term: string; meaning: string }[] }
   | { type: "summary"; points: string[] }
@@ -34,6 +40,10 @@ export type Slide = {
   blocks: Block[];
   /** Plain text read aloud for this slide. */
   narration: string;
+  /** Which stop (heading) of the lesson the slide belongs to: 0 before the first heading, then 1, 2... */
+  stop?: number;
+  /** The stop's scenery, when its heading names one. */
+  backdrop?: Backdrop;
 };
 
 const EMOJI = /[\p{Extended_Pictographic}‍️]/gu;
@@ -142,6 +152,8 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
   });
 
   let heading = "";
+  let stop = 0;
+  let backdrop: Backdrop | undefined;
   let pending: Block[] = [];
   let afterSummary = false;
   const finishNotes: Block[] = [];
@@ -151,7 +163,7 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
     if (afterSummary) {
       finishNotes.push(...pending);
     } else {
-      slides.push({ kind: "content", title: heading, blocks: pending, narration: sayAll(heading, pending) });
+      slides.push({ kind: "content", title: heading, blocks: pending, narration: sayAll(heading, pending), stop, backdrop });
     }
     pending = [];
   };
@@ -161,13 +173,15 @@ export function buildSlides(meta: LessonMeta, blocks: Block[]): Slide[] {
     if (b.type === "heading") {
       flush();
       heading = b.text;
+      stop++;
+      backdrop = b.backdrop;
       continue;
     }
     if (INTERACTIVE.has(b.type)) {
       flush();
       const kind: SlideKind = b.type === "check" ? "check" : b.type === "reveal" ? "reveal" : b.type === "activity" ? "activity" : b.type === "summary" ? "summary" : b.type === "manipulative" ? "play" : b.type === "explainer" ? "explain" : b.type === "brain_game" ? "brain" : b.type === "video" ? "video" : "embed";
       const title = b.type === "manipulative" || b.type === "explainer" || b.type === "brain_game" || b.type === "video" ? b.title : b.type === "activity" ? `Try it: ${b.title}` : b.type === "html_embed" ? b.title : b.type === "check" ? "Check yourself" : b.type === "reveal" ? "Think about it" : "Remember";
-      slides.push({ kind, title, eyebrow: heading || undefined, blocks: [b], narration: blockNarration(b) });
+      slides.push({ kind, title, eyebrow: heading || undefined, blocks: [b], narration: blockNarration(b), stop, backdrop });
       if (b.type === "summary") afterSummary = true;
       continue;
     }
