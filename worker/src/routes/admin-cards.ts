@@ -11,6 +11,7 @@ adminCardRoutes.get("/stuck", async (c) => {
     .prepare(
       `SELECT f.id, f.status, f.slide, f.created_at AS createdAt, u.id AS childId, u.display_name AS childName, l.id AS lessonId, l.title AS lesson, l.subject_id AS subject, q.prompt AS question
          FROM stuck_flags f JOIN users u ON u.id = f.user_id JOIN lessons l ON l.id = f.lesson_id LEFT JOIN questions q ON q.id = f.question_id
+       WHERE u.is_test = 0
         ORDER BY (f.status = 'open') DESC, f.created_at DESC LIMIT 200`,
     )
     .all();

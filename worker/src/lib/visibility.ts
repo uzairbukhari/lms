@@ -9,6 +9,15 @@ export function todayIn(timeZone = "UTC", now: Date = new Date()): string {
   }
 }
 
+/**
+ * The date a child's school week is worked out from. The parent's test student can pretend "today" is any school week
+ * (users.preview_date); real children never have one, so for them this is just the real date.
+ */
+export async function effectiveToday(db: D1Database, userId: string, realToday: string): Promise<string> {
+  const preview = await db.prepare("SELECT preview_date AS d FROM users WHERE id = ? AND is_test = 1").bind(userId).first<{ d: string | null }>();
+  return preview?.d ?? realToday;
+}
+
 export type Phase = "current" | "early" | "past" | "open";
 
 export type VisibleLesson = {
@@ -33,13 +42,15 @@ const marks = (n: number) => Array.from({ length: n }, () => "?").join(",");
  * - a class set to "all_published" opens every published lesson of its assigned courses.
  * This is the single place that decides visibility; the API refuses anything not returned here.
  */
-export async function visibleLessonsFor(db: D1Database, userId: string, today: string): Promise<Visibility> {
-  const classes = (
-    await db
+export async function visibleLessonsFor(db: D1Database, userId: string, realToday: string): Promise<Visibility> {
+  const [today, classRows] = await Promise.all([
+    effectiveToday(db, userId, realToday),
+    db
       .prepare("SELECT c.id, c.visibility_mode AS mode FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1")
       .bind(userId)
-      .all<{ id: string; mode: string }>()
-  ).results;
+      .all<{ id: string; mode: string }>(),
+  ]);
+  const classes = classRows.results;
   const classIds = classes.map((c) => c.id);
 
   const assigned = (

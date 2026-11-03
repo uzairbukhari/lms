@@ -80,4 +80,8 @@ export interface StudentSummary {
   isActive: boolean;
   createdAt: string;
   classes: { id: string; name: string }[];
+  /** The parent's preview account: left out of every report and statistic. */
+  isTest: boolean;
+  /** For the test student only: the school week it is pretending to be in (null = the real current week). */
+  preview: { semester: number; week: number; exam: boolean; date: string } | null;
 }

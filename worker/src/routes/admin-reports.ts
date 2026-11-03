@@ -138,7 +138,7 @@ adminReportRoutes.get("/reports/classes/:id", async (c) => {
   const cls = await c.env.DB.prepare("SELECT id, name FROM classes WHERE id = ?").bind(id).first<{ id: string; name: string }>();
   if (!cls) return fail(c, 404, "not_found");
   const includePractice = c.req.query("includePractice") === "1";
-  const { results: members } = await c.env.DB.prepare("SELECT u.id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? ORDER BY u.display_name COLLATE NOCASE").bind(id).all<{ id: string }>();
+  const { results: members } = await c.env.DB.prepare("SELECT u.id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0 ORDER BY u.display_name COLLATE NOCASE").bind(id).all<{ id: string }>();
   const students = [];
   for (const m of members) {
     const r = await studentReport(c.env.DB, m.id, includePractice);
@@ -148,7 +148,7 @@ adminReportRoutes.get("/reports/classes/:id", async (c) => {
     .prepare(
       `SELECT q.id, q.prompt, l.title AS lesson, SUM(aa.is_correct) AS correct, COUNT(*) AS total
          FROM attempt_answers aa JOIN quiz_attempts a ON a.id = aa.attempt_id JOIN questions q ON q.id = aa.question_id JOIN quizzes z ON z.id = q.quiz_id LEFT JOIN lessons l ON l.id = z.lesson_id
-        WHERE a.user_id IN (SELECT user_id FROM class_members WHERE class_id = ?) AND a.status = 'submitted' AND a.mode = 'graded' AND z.kind = 'lesson'
+        WHERE a.user_id IN (SELECT m.user_id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0) AND a.status = 'submitted' AND a.mode = 'graded' AND z.kind = 'lesson'
         GROUP BY q.id HAVING COUNT(*) >= 2 ORDER BY (1.0 * SUM(aa.is_correct) / COUNT(*)) ASC LIMIT 5`,
     )
     .bind(id)

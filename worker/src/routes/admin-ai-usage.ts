@@ -19,14 +19,14 @@ adminAiUsageRoutes.get("/ai-usage", async (c) => {
     c.env.DB
       .prepare(
         `SELECT date(created_at) AS day, COUNT(*) AS requests, SUM(input_tokens) AS inputTokens, SUM(output_tokens) AS outputTokens, SUM(characters) AS characters, SUM(neurons) AS neurons
-           FROM ai_usage WHERE date(created_at) >= ? GROUP BY day`,
+           FROM ai_usage WHERE date(created_at) >= ? AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_test = 1)) GROUP BY day`,
       )
       .bind(since)
       .all<DayRow>(),
     c.env.DB
       .prepare(
         `SELECT kind, COUNT(*) AS requests, SUM(input_tokens + output_tokens) AS tokens, SUM(characters) AS characters, SUM(neurons) AS neurons
-           FROM ai_usage WHERE date(created_at) >= ? GROUP BY kind ORDER BY neurons DESC`,
+           FROM ai_usage WHERE date(created_at) >= ? AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_test = 1)) GROUP BY kind ORDER BY neurons DESC`,
       )
       .bind(since)
       .all<{ kind: string; requests: number; tokens: number; characters: number; neurons: number }>(),

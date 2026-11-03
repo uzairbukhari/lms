@@ -248,3 +248,8 @@
   .a-report-card textarea { border: 0; padding: 0; resize: none; }
   .a-report-card textarea:placeholder-shown { display: none; }
 }
+
+/* Test student panel on the Students page */
+.a-test-controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.a-field-inline { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 500; color: var(--a-muted, inherit); }
+.a-field-inline .a-select { min-width: 150px; }

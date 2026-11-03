@@ -1,4 +1,5 @@
 import { positionInTerm, type TermRow } from "./terms";
+import { effectiveToday } from "./visibility";
 
 const marks = (n: number) => Array.from({ length: n }, () => "?").join(",");
 
@@ -25,7 +26,8 @@ export async function examsForCourses(db: D1Database, courseIds: string[]): Prom
 }
 
 /** Which semesters' exams a child can sit today: during that semester's exam week, after it, or when the parent opens it early. */
-export async function openExamSemesters(db: D1Database, userId: string, today: string): Promise<Set<string>> {
+export async function openExamSemesters(db: D1Database, userId: string, realToday: string): Promise<Set<string>> {
+  const today = await effectiveToday(db, userId, realToday);
   const classes = (await db.prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1").bind(userId).all<{ id: string }>()).results.map((c) => c.id);
   const open = new Set<string>(); // "courseId:semester"
   if (classes.length) {
