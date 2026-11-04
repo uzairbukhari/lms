@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { getSoundOn, probeAutoplay } from "../lib/sound";
+import { playSplashSounds } from "./splashSound";
 import { KidPuppet, preloadKids, runSteps, type Kid, type PoseStep } from "./Kids";
 import { isCalm } from "./cues";
 
@@ -153,11 +155,32 @@ function Backdrop(): ReactNode {
   );
 }
 
+/** Before the scene when the browser would keep it silent: one tap starts the show, with sound. */
+function SoundGate({ onPlay, onSkip }: { onPlay: () => void; onSkip: () => void }) {
+  return (
+    <>
+      <Title delay={0.2} />
+      <SplashKid kid="long" x="30%" delay={0.1} tagAt={0.6} poses={[[0.5, "wave"]]} />
+      <SplashKid kid="boy" x="50%" delay={0.2} tagAt={0.7} poses={[[0.7, "wave"]]} />
+      <SplashKid kid="curly" x="70%" delay={0.3} tagAt={0.8} poses={[[0.9, "wave"]]} />
+      <button type="button" className="sp-play font-display" onClick={onPlay}>
+        <span aria-hidden="true">▶</span> Tap to play
+      </button>
+      <button type="button" className="sp-skipbtn" onClick={(e) => { e.stopPropagation(); onSkip(); }}>
+        Skip
+      </button>
+    </>
+  );
+}
+
 export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashScene }) {
   const calm = useRef(isCalm()).current;
-  const pick = useRef(scene ?? nextScene()).current;
+  // Chosen once for this opening. (Choosing during render re-ran every render and scrambled the "last scene" memory.)
+  const [pick] = useState<SplashScene>(() => scene ?? nextScene());
   const [leaving, setLeaving] = useState(false);
   const [ready, setReady] = useState(false);
+  /** checking: asking the browser about sound; gate: waiting for a tap so it can play sound; playing: the show. */
+  const [mode, setMode] = useState<"checking" | "gate" | "playing">("checking");
   const done = useRef(false);
 
   function finish(fast: boolean) {
@@ -170,14 +193,25 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
   // Wait for the pose images (a second or less, then cached) so the scene never starts with missing children.
   useEffect(() => { void preloadKids().then(() => setReady(true)); }, []);
 
+  // Silent splash for Calm mode or when sound is off. Otherwise, if the browser would block sound, ask for a tap first.
   useEffect(() => {
-    if (!ready) return;
+    if (calm || !getSoundOn()) { setMode("playing"); return; }
+    let live = true;
+    void probeAutoplay().then((ok) => { if (live) setMode(ok ? "playing" : "gate"); });
+    return () => { live = false; };
+  }, [calm]);
+
+  const playing = ready && mode === "playing";
+
+  useEffect(() => {
+    if (!playing) return;
     const t = window.setTimeout(() => finish(false), calm ? SPLASH_CALM_MS : SPLASH_MS);
+    const stopSounds = calm ? () => undefined : playSplashSounds(pick);
     const key = (e: KeyboardEvent) => { if (e.key === "Escape" || e.key === "Enter" || e.key === " ") finish(true); };
     window.addEventListener("keydown", key);
-    return () => { window.clearTimeout(t); window.removeEventListener("keydown", key); };
+    return () => { window.clearTimeout(t); stopSounds(); window.removeEventListener("keydown", key); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready]);
+  }, [playing]);
 
   return (
     <div
@@ -185,11 +219,14 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
       role="dialog"
       aria-label="Welcome to Learning Adventures"
       data-scene={calm ? "calm" : pick}
-      onPointerDown={() => finish(true)}
+      data-mode={mode}
+      onPointerDown={() => { if (playing) finish(true); }}
     >
       <div className="sp-stage">
         <Backdrop />
-        {!ready ? null : calm ? (
+        {!ready || mode === "checking" ? null : mode === "gate" ? (
+          <SoundGate onPlay={() => setMode("playing")} onSkip={() => finish(true)} />
+        ) : calm ? (
           <>
             <SplashKid kid="long" x="30%" delay={0} tagAt={0.3} />
             <SplashKid kid="boy" x="50%" delay={0} tagAt={0.3} />
@@ -197,7 +234,7 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
             <Title delay={0.2} />
           </>
         ) : pick === "plane" ? <PlaneScene /> : pick === "blocks" ? <BlocksScene /> : <BookScene />}
-        {ready && <p className="sp-skip">Tap to skip</p>}
+        {playing && <p className="sp-skip">Tap to skip</p>}
       </div>
     </div>
   );

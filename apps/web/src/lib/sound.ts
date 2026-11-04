@@ -55,6 +55,71 @@ function play(notes: Note[]): void {
   }
 }
 
+/** Play a few notes with the sound-effect voice (does nothing when sound is off or the browser blocks audio). */
+export function playNotes(notes: Note[]): void {
+  if (!getSoundOn()) return;
+  try {
+    play(notes);
+  } catch {
+    // no audio available: carry on silently
+  }
+}
+
+let noiseBuffer: AudioBuffer | null = null;
+
+/** A short filtered-noise sweep: whooshes, page flutters and footsteps. `from` and `to` are the filter pitch in Hz. */
+export function playNoise(n: { at?: number; len: number; from: number; to: number; vol?: number; q?: number }): void {
+  if (!getSoundOn()) return;
+  try {
+    const c = audio();
+    if (!c) return;
+    if (!noiseBuffer) {
+      noiseBuffer = c.createBuffer(1, c.sampleRate, c.sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+    }
+    const t0 = c.currentTime + (n.at ?? 0);
+    const src = c.createBufferSource();
+    src.buffer = noiseBuffer;
+    src.loop = true;
+    const filter = c.createBiquadFilter();
+    filter.type = "bandpass";
+    filter.Q.value = n.q ?? 1.2;
+    filter.frequency.setValueAtTime(n.from, t0);
+    filter.frequency.exponentialRampToValueAtTime(n.to, t0 + n.len);
+    const gain = c.createGain();
+    const v = n.vol ?? 0.1;
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(v, t0 + Math.min(0.08, n.len / 3));
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + n.len);
+    src.connect(filter).connect(gain).connect(c.destination);
+    src.start(t0);
+    src.stop(t0 + n.len + 0.05);
+  } catch {
+    // no audio available: carry on silently
+  }
+}
+
+/** True when the audio context is running right now, i.e. the browser lets this page make sound. */
+export function audioRunning(): boolean {
+  return ctx !== null && ctx.state === "running";
+}
+
+/**
+ * Does the browser already allow sound without a tap? (Chrome allows it for sites a child uses a lot, the Windows app
+ * may too.) Resolves false when the context stays suspended, so the splash can ask for a tap first.
+ */
+export function probeAutoplay(): Promise<boolean> {
+  return new Promise((resolve) => {
+    try {
+      if (!audio()) return resolve(false);
+    } catch {
+      return resolve(false);
+    }
+    window.setTimeout(() => resolve(audioRunning()), 120);
+  });
+}
+
 export type Sfx =
   | "next" | "back" | "tap" | "correct" | "wrong" | "done" | "start"
   // Semester map and mini games
