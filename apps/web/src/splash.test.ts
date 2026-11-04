@@ -30,3 +30,25 @@ describe("splash scene choice", () => {
     expect(SCENES).toContain(nextScene());
   });
 });
+
+import { SPLASH_MS } from "./anim/Splash";
+import { soundTimeline } from "./anim/splashSound";
+
+describe("splash sounds", () => {
+  it("every scene has sounds that finish before the splash ends and end with a fanfare", () => {
+    for (const scene of SCENES) {
+      const events = soundTimeline(scene);
+      expect(events.length).toBeGreaterThan(8);
+      for (const e of events) {
+        expect(e.at).toBeGreaterThan(0);
+        expect(e.at).toBeLessThan(SPLASH_MS / 1000 - 0.8); // room for the sound to ring out
+      }
+      expect(events.some((e) => e.fx === "fanfare")).toBe(true);
+    }
+  });
+
+  it("plays one xylophone note per letter block, rising", () => {
+    const notes = soundTimeline("blocks").filter((e) => ["do", "re", "mi", "fa", "sol"].includes(e.fx));
+    expect(notes.map((e) => e.fx)).toEqual(["do", "re", "mi", "fa", "sol"]);
+  });
+});
