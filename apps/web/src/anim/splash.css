@@ -96,3 +96,16 @@
 @keyframes sp-title { 0% { opacity: 0; transform: translateX(-50%) scale(0.4); } 100% { opacity: 1; transform: translateX(-50%) scale(1); } }
 @keyframes sp-hint { from { opacity: 0; } to { opacity: 0.85; } }
 @keyframes sp-burst { 0% { opacity: 1; transform: rotate(var(--a)) translateY(0) scale(0.4); } 100% { opacity: 0; transform: rotate(var(--a)) translateY(calc(var(--r) * -1)) scale(1.1); } }
+
+/* Filmed scenes: the clip fills the screen (cropped, never stretched); the title sits in the clear sky. */
+.sp-video, .sp-vposter { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #bfe6ff; }
+.sp-video ~ .sp-title, .sp-vposter ~ .sp-title { top: 7%; }
+.sp-play-video { top: 42%; }
+/* Portrait phones: show the whole 16:9 picture (all three children) over a blurred copy instead of cropping two of them away. */
+.sp-vbg { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.25); filter: blur(2.4cqmin) saturate(1.1); }
+@media (max-aspect-ratio: 1 / 1) {
+  .sp-vbg { display: block; }
+  .sp-video { object-fit: contain; background: transparent; }
+  .sp-video ~ .sp-title { top: 12%; }
+  .sp-vposter { object-fit: contain; background: transparent; }
+}
