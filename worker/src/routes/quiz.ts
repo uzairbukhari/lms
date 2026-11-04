@@ -3,7 +3,7 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { assignedCourseIds, examsForCourses, openExamSemesters } from "../lib/exams";
 import { fail, parseBody } from "../lib/http";
-import { attemptQuestions, attemptReview, startAttempt, submitAttempt, type AttemptRow, type QuizRow } from "../lib/quiz";
+import { attemptDraft, attemptQuestions, attemptReview, saveDraft, startAttempt, submitAttempt, type AttemptRow, type QuizRow } from "../lib/quiz";
 import { todayIn, visibleLessonsFor } from "../lib/visibility";
 import { requireStudent } from "../middleware/auth";
 
@@ -14,7 +14,7 @@ for (const path of ["/lessons/:id/quiz/*", "/lessons/:id/attempts", "/quiz/*", "
 const QUIZ_COLUMNS = "id, kind, pass_percent, shuffle_questions, shuffle_options, max_attempts";
 
 function startedBody(attempt: AttemptRow, quiz: QuizRow, questions: unknown[], resumed: boolean) {
-  return { attemptId: attempt.id, attemptNumber: attempt.attempt_number, mode: attempt.mode, resumed, passPercent: quiz.pass_percent, questions };
+  return { attemptId: attempt.id, attemptNumber: attempt.attempt_number, mode: attempt.mode, resumed, passPercent: quiz.pass_percent, questions, draft: attemptDraft(attempt) };
 }
 
 /**
@@ -67,6 +67,23 @@ quizRoutes.post("/quiz/attempts/:id/submit", async (c) => {
   const body = await parseBody(c, submitSchema);
   const result = await submitAttempt(c.env.DB, own.attempt, own.quiz, body.answers as never, { hintsUsed: body.hintsUsed, durationSec: body.durationSec });
   return c.json({ attemptId: own.attempt.id, mode: own.attempt.mode, attemptNumber: own.attempt.attempt_number, ...result });
+});
+
+const progressSchema = z.object({
+  answers: z.record(z.string(), z.unknown()),
+  hintsUsed: z.array(z.string()).max(60).default([]),
+  index: z.number().int().min(0).max(200).default(0),
+});
+
+/** Autosave: the answers so far, so a dropped connection or a failed hand-in never loses them. */
+quizRoutes.put("/quiz/attempts/:id/progress", async (c) => {
+  const own = await ownAttempt(c, c.req.param("id"));
+  if (!own) return fail(c, 404, "not_found");
+  if (own.attempt.status !== "in_progress") return fail(c, 409, "already_submitted", "This quiz was already handed in.");
+  const body = await parseBody(c, progressSchema);
+  if (JSON.stringify(body.answers).length > 60_000) return fail(c, 422, "too_large");
+  await saveDraft(c.env.DB, own.attempt.id, body);
+  return c.json({ saved: true });
 });
 
 /** An attempt in progress (to resume) or the recorded result of a finished one. */
