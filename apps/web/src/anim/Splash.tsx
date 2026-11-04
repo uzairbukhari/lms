@@ -25,16 +25,16 @@ export function nextScene(rand: () => number = Math.random): SplashScene {
 const NAMES: Record<Kid, string> = { long: "Fatima", curly: "Zainab", boy: "Ibrahim" };
 const HEIGHTS: Record<Kid, string> = { long: "58cqmin", curly: "54cqmin", boy: "48cqmin" };
 
-type KidProps = { kid: Kid; x: string; bottom?: string; delay?: number; move?: string; inner?: string; tagAt?: number; z?: number; poses?: PoseStep[] };
+type KidProps = { kid: Kid; x: string; bottom?: string; delay?: number; move?: string; inner?: string; tagAt?: number; z?: number; poses?: PoseStep[]; tag?: boolean };
 
-function SplashKid({ kid, x, bottom = "9%", delay = 0, move = "", inner = "", tagAt = 3.3, z = 3, poses }: KidProps) {
+function SplashKid({ kid, x, bottom = "9%", delay = 0, move = "", inner = "", tagAt = 3.3, z = 3, poses, tag = true }: KidProps) {
   const style = { left: x, bottom, height: HEIGHTS[kid], zIndex: z, "--d": `${delay}s` } as CSSProperties;
   return (
     <div className="sp-kid" style={style}>
       <div className={`sp-move ${move}`}>
         <div className={`sp-in ${inner}`}>
           <KidPuppet kid={kid} steps={poses} />
-          <span className="sp-tag" style={{ animationDelay: `${tagAt}s` }}>{NAMES[kid]}</span>
+          {tag && <span className="sp-tag" style={{ animationDelay: `${tagAt}s` }}>{NAMES[kid]}</span>}
         </div>
       </div>
     </div>
@@ -68,13 +68,7 @@ function Sparkles({ at, count = 14 }: { at: number; count?: number }) {
 }
 
 function Plane() {
-  return (
-    <svg viewBox="0 0 80 50" className="sp-plane" aria-hidden="true">
-      <path d="M4 22 L76 4 L50 46 L40 30 Z" fill="#ffffff" stroke="#6b7aa3" strokeWidth="2.2" strokeLinejoin="round" />
-      <path d="M4 22 L40 30 L76 4" fill="#e3e9f7" stroke="#6b7aa3" strokeWidth="2.2" strokeLinejoin="round" />
-      <path d="M40 30 L36 44 L50 46 Z" fill="#c9d3ea" stroke="#6b7aa3" strokeWidth="2.2" strokeLinejoin="round" />
-    </svg>
-  );
+  return <img src="/splash/plane.webp" className="sp-plane" alt="" draggable={false} />;
 }
 
 function PlaneScene() {
@@ -90,22 +84,21 @@ function PlaneScene() {
   );
 }
 
-const LETTERS = [
-  { ch: "L", c: "#ff7aa8" },
-  { ch: "E", c: "#ffb347" },
-  { ch: "A", c: "#58c4dd" },
-  { ch: "R", c: "#7bd88f" },
-  { ch: "N", c: "#b79cff" },
-];
+const LETTERS = ["l", "e", "a", "r", "n"];
 
 function BlocksScene() {
   return (
     <>
       <div className="sp-blocks">
-        {LETTERS.map((b, i) => (
-          <b key={b.ch} className={i === LETTERS.length - 1 ? "sp-block last" : "sp-block"} style={{ background: b.c, animationDelay: `${0.5 + i * 0.32}s` }}>
-            {b.ch}
-          </b>
+        {LETTERS.map((ch, i) => (
+          <img
+            key={ch}
+            src={`/splash/block-${ch}.webp`}
+            alt=""
+            draggable={false}
+            className={i === LETTERS.length - 1 ? "sp-block last" : "sp-block"}
+            style={{ animationDelay: `${0.5 + i * 0.32}s` }}
+          />
         ))}
       </div>
       <SplashKid kid="long" x="20%" delay={0.1} inner="jump-late" poses={[[2.0, "catch"], [3.2, "cheer"]]} />
@@ -120,13 +113,12 @@ function BlocksScene() {
 function BookScene() {
   return (
     <>
-      <SplashKid kid="long" x="30%" bottom="15%" delay={1.3} inner="pop-up" z={2} poses={[[1.5, "wave"], [3.2, "cheer"]]} />
-      <SplashKid kid="boy" x="50%" bottom="15%" delay={1.8} inner="pop-up" z={2} poses={[[2.0, "wave"], [3.2, "cheer"]]} />
-      <SplashKid kid="curly" x="70%" bottom="15%" delay={2.3} inner="pop-up" z={2} poses={[[2.5, "wave"], [3.2, "cheer"]]} />
-      <div className="sp-book" aria-hidden="true">
-        <div className="sp-book-back" />
-        <div className="sp-page sp-page-l" /><div className="sp-page sp-page-r" />
-        <div className="sp-cover" />
+      <SplashKid kid="long" x="30%" tag={false} bottom="15%" delay={1.3} inner="pop-up" z={2} poses={[[1.5, "wave"], [3.2, "cheer"]]} />
+      <SplashKid kid="boy" x="50%" tag={false} bottom="15%" delay={1.8} inner="pop-up" z={2} poses={[[2.0, "wave"], [3.2, "cheer"]]} />
+      <SplashKid kid="curly" x="70%" tag={false} bottom="15%" delay={2.3} inner="pop-up" z={2} poses={[[2.5, "wave"], [3.2, "cheer"]]} />
+      <img className="sp-book" src="/splash/book.webp" alt="" draggable={false} />
+      <div className="sp-booktags" aria-hidden="true">
+        <span style={{ left: "30%" }}>{NAMES.long}</span><span style={{ left: "50%" }}>{NAMES.boy}</span><span style={{ left: "70%" }}>{NAMES.curly}</span>
       </div>
       <Sparkles at={1.2} />
       <Sparkles at={2.9} count={10} />
@@ -135,13 +127,28 @@ function BookScene() {
   );
 }
 
+const CLOUDS = [
+  { n: 2, top: "7%", left: "6%", w: "26cqmin", dur: "26s", delay: "-4s" },
+  { n: 4, top: "20%", left: "40%", w: "18cqmin", dur: "20s", delay: "-9s" },
+  { n: 5, top: "11%", left: "62%", w: "20cqmin", dur: "32s", delay: "-15s" },
+  { n: 3, top: "30%", left: "78%", w: "16cqmin", dur: "24s", delay: "-2s" },
+];
+
 function Backdrop(): ReactNode {
   return (
     <div className="sp-bg" aria-hidden="true">
-      <div className="sp-sun" />
-      <div className="sp-cloud c1" /><div className="sp-cloud c2" /><div className="sp-cloud c3" />
-      <div className="sp-hill h1" /><div className="sp-hill h2" />
-      <div className="sp-ground" />
+      <img className="sp-bgimg" src="/splash/background.webp" alt="" draggable={false} />
+      <img className="sp-sun" src="/splash/sun.webp" alt="" draggable={false} />
+      {CLOUDS.map((c) => (
+        <img
+          key={c.n}
+          className="sp-cloud"
+          src={`/splash/cloud-${c.n}.webp`}
+          alt=""
+          draggable={false}
+          style={{ top: c.top, left: c.left, width: c.w, animationDuration: c.dur, animationDelay: c.delay }}
+        />
+      ))}
     </div>
   );
 }
