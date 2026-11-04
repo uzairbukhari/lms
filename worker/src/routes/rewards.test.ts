@@ -95,7 +95,7 @@ describe("rewards: streak, stickers, shop, growth and teaser", () => {
     expect((await call("/api/shop/equip", { body: { slot: "pet", itemId: "hat-cap" }, cookie })).status).toBe(404);
     r = await json(await call("/api/shop/equip", { body: { slot: "hat", itemId: null }, cookie }));
     expect(r.equipped.hat).toBeUndefined();
-  });
+  }, 30_000); // about a dozen sequential database calls: the default 5 seconds is too tight on a busy CI runner
 
   it("shows the plant growing and first try next to best try", async () => {
     const g = await json(await call("/api/growth", { cookie }));
