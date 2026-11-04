@@ -9,7 +9,8 @@ import { questionToSpeech } from "../lib/quizSpeech";
 import { speak, stopSpeech } from "../lib/sound";
 
 type Question = ViewQuestion & { id: string; hasHint: boolean };
-type Started = { attemptId: string; attemptNumber: number; mode: "graded" | "practice"; resumed: boolean; passPercent: number; questions: Question[] };
+type Started = { attemptId: string; attemptNumber: number; mode: "graded" | "practice"; resumed: boolean; passPercent: number; questions: Question[]; draft?: Draft | null };
+type Draft = { answers: Record<string, Response>; hintsUsed: string[]; index: number };
 type ReviewItem = { questionId: string; correct: boolean; points: number; maxPoints: number; response: unknown; answer: unknown; explanation: string | null };
 type Result = { attemptId: string; mode: "graded" | "practice"; attemptNumber: number; score: number; maxScore: number; percent: number; passed: boolean; review: ReviewItem[] };
 
@@ -42,6 +43,14 @@ function words(q: Question, v: unknown): string {
   }
 }
 
+const localKey = (attemptId: string) => `lms:quiz-draft:${attemptId}`;
+const readLocal = (attemptId: string): Draft | null => {
+  try { return JSON.parse(localStorage.getItem(localKey(attemptId)) ?? "null") as Draft | null; } catch { return null; }
+};
+const writeLocal = (attemptId: string, d: Draft | null) => {
+  try { if (d) localStorage.setItem(localKey(attemptId), JSON.stringify(d)); else localStorage.removeItem(localKey(attemptId)); } catch { /* storage may be blocked */ }
+};
+
 export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
   const { id } = useParams();
   const [quiz, setQuiz] = useState<Started | null>(null);
@@ -51,19 +60,52 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
   const [hints, setHints] = useState<Record<string, string>>({});
   const [result, setResult] = useState<Result | null>(null);
   const [busy, setBusy] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [saved, setSaved] = useState<"saved" | "offline" | null>(null);
   const began = useRef(Date.now());
+  const restored = useRef(false);
 
   const start = useCallback(async () => {
-    setError(null); setResult(null); setAnswers({}); setHints({}); setIndex(0); setQuiz(null);
+    setError(null); setResult(null); setAnswers({}); setHints({}); setIndex(0); setQuiz(null); setSubmitError(false); setSaved(null);
+    restored.current = false;
     try {
       const path = kind === "lesson" ? `/api/lessons/${id}/quiz/start` : `/api/exams/${id}/start`;
-      setQuiz(await api<Started>(path, { method: "POST", body: {} }));
+      const started = await api<Started>(path, { method: "POST", body: {} });
+      // Pick up where the child left off: answers saved on this device and on the server.
+      const local = readLocal(started.attemptId);
+      const server = started.draft ?? null;
+      const answers = { ...(server?.answers ?? {}), ...(local?.answers ?? {}) };
+      const ids = new Set(started.questions.map((x) => x.id));
+      setAnswers(Object.fromEntries(Object.entries(answers).filter(([k]) => ids.has(k))));
+      setHints(Object.fromEntries([...(server?.hintsUsed ?? []), ...(local?.hintsUsed ?? [])].map((k) => [k, "💡 Hint used."])));
+      setIndex(Math.min(local?.index ?? server?.index ?? 0, started.questions.length - 1));
+      setQuiz(started);
+      restored.current = true;
       began.current = Date.now();
     } catch (e) {
       setError(e instanceof ApiError ? { code: e.code, message: e.status === 404 ? "That quiz isn't open yet." : e.message } : { code: "error", message: "We couldn't open the quiz." });
     }
   }, [id, kind]);
   useEffect(() => { void start(); }, [start]);
+
+  // Save every change: instantly on this device, and (a moment later) on the server.
+  useEffect(() => {
+    if (!quiz || result || !restored.current) return;
+    const draft: Draft = { answers, hintsUsed: Object.keys(hints), index };
+    writeLocal(quiz.attemptId, draft);
+    const t = setTimeout(() => {
+      api(`/api/quiz/attempts/${quiz.attemptId}/progress`, { method: "PUT", body: draft }).then(() => setSaved("saved")).catch(() => setSaved("offline"));
+    }, 700);
+    return () => clearTimeout(t);
+  }, [answers, hints, index, quiz, result]);
+
+  const submitRef = useRef<() => Promise<void>>(async () => {});
+  // When the internet comes back, hand the quiz in again if the last try failed.
+  useEffect(() => {
+    const retry = () => { if (submitError) void submitRef.current(); };
+    window.addEventListener("online", retry);
+    return () => window.removeEventListener("online", retry);
+  }, [submitError]);
 
   const back = kind === "lesson" ? `/lesson/${id}` : "/";
 
@@ -86,15 +128,28 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
   };
 
   const submit = async () => {
-    setBusy(true);
+    setBusy(true); setSubmitError(false);
     try {
-      setResult(await api<Result>(`/api/quiz/attempts/${quiz.attemptId}/submit`, {
+      const r = await api<Result>(`/api/quiz/attempts/${quiz.attemptId}/submit`, {
         body: { answers, hintsUsed: Object.keys(hints), durationSec: Math.round((Date.now() - began.current) / 1000) },
-      }));
-    } catch {
-      setError({ code: "submit", message: "We couldn't hand in your quiz. Check your internet and try again." });
+      });
+      writeLocal(quiz.attemptId, null);
+      setResult(r);
+    } catch (e) {
+      if (e instanceof ApiError && e.code === "already_submitted") {
+        // An earlier hand-in got through but its reply was lost: show the recorded result.
+        try {
+          const r = await api<Result>(`/api/quiz/attempts/${quiz.attemptId}`);
+          writeLocal(quiz.attemptId, null);
+          setResult(r);
+          return;
+        } catch { /* fall through to the retry message */ }
+      }
+      // Keep every answer on screen (and saved); the child can try again, and it retries when the internet returns.
+      setSubmitError(true);
     } finally { setBusy(false); }
   };
+  submitRef.current = submit;
 
   return (
     <Shell>
@@ -126,6 +181,10 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
           <button type="button" className="btn btn-primary" onClick={() => setIndex(index + 1)}>Next →</button>
         )}
       </div>
+      {submitError && (
+        <p role="alert" className="card p-4 text-lg">📶 We couldn't hand in your quiz, but <strong>all your answers are saved</strong>. Check your internet, then press “Hand in” again. It will also try by itself when the internet comes back.</p>
+      )}
+      {saved === "offline" && !submitError && <p role="status" className="text-muted">No internet right now. Your answers are kept on this device, so keep going.</p>}
       {last && answered < quiz.questions.length && <p role="status" className="text-muted">You have {quiz.questions.length - answered} question(s) with no answer yet. You can go back, or hand in anyway.</p>}
       <p><Link className="text-muted underline" to={back} onClick={(e) => { if (!confirm("Leave the quiz? You can come back and carry on.")) e.preventDefault(); }}>Leave for now</Link></p>
     </Shell>
@@ -165,7 +224,7 @@ function Results({ result, quiz, again, kind }: { result: Result; quiz: Started;
         <p className="text-6xl" aria-label={`${stars} out of 3 stars`}>{"⭐".repeat(stars) || "🌱"}</p>
         <h1 id="score" className="font-display text-4xl font-extrabold">{result.score} out of {result.maxScore} ({Math.round(result.percent)}%)</h1>
         <p className="text-xl">{result.passed ? "Brilliant work! You passed! 🎉" : "Good try! Have a look at what to learn next, then have another go. 💪"}</p>
-        {result.mode === "practice" && <p className="text-muted">This was practice, so it is saved separately from this week's quiz.</p>}
+        {result.mode === "practice" && <p className="text-muted">This was practice, so it is saved separately. Your first try is the one that counts for your score.</p>}
       </section>
 
       <h2 className="font-display text-2xl font-bold">Let's look at each question</h2>

@@ -12,7 +12,7 @@ export type QuestionRow = {
 export type QuizRow = { id: string; kind: string; pass_percent: number; shuffle_questions: number; shuffle_options: number; max_attempts: number | null };
 export type AttemptRow = {
   id: string; user_id: string; quiz_id: string; lesson_id: string | null; scope_key: string; attempt_number: number;
-  mode: "graded" | "practice"; status: "in_progress" | "submitted" | "abandoned"; question_order: string | null;
+  mode: "graded" | "practice"; status: "in_progress" | "submitted" | "abandoned"; question_order: string | null; draft_json: string | null;
   started_at: string; submitted_at: string | null; score: number | null; max_score: number | null; percent: number | null; passed: number | null;
 };
 
@@ -97,16 +97,32 @@ export async function startAttempt(
 
   const questions = await loadQuestions(db, p.quiz.id);
   if (questions.length === 0) return { ok: false, reason: "no_questions" };
+  // Only the first try at a lesson quiz is graded; any retake (even in the same week) is practice and kept separately.
+  const mode = p.quiz.kind === "lesson" && (stats?.submitted ?? 0) > 0 ? "practice" : p.mode;
   const order = (p.quiz.shuffle_questions ? shuffled(questions, Math.random) : questions).map((q) => q.id);
 
   const id = crypto.randomUUID();
   const number = (stats?.last ?? 0) + 1;
   await db
     .prepare("INSERT INTO quiz_attempts (id, user_id, quiz_id, lesson_id, scope_key, attempt_number, mode, question_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
-    .bind(id, p.userId, p.quiz.id, p.lessonId, p.scopeKey, number, p.mode, JSON.stringify(order))
+    .bind(id, p.userId, p.quiz.id, p.lessonId, p.scopeKey, number, mode, JSON.stringify(order))
     .run();
   const attempt = await db.prepare("SELECT * FROM quiz_attempts WHERE id = ?").bind(id).first<AttemptRow>();
   return { ok: true, attempt: attempt as AttemptRow, resumed: false };
+}
+
+export type Draft = { answers: Record<string, unknown>; hintsUsed: string[]; index: number };
+
+/** The answers saved so far for an attempt in progress (null if nothing saved yet). */
+export function attemptDraft(attempt: AttemptRow): Draft | null {
+  if (!attempt.draft_json) return null;
+  try { return JSON.parse(attempt.draft_json) as Draft; } catch { return null; }
+}
+
+/** Save progress for an attempt that is still in progress. Returns false if it was already handed in. */
+export async function saveDraft(db: D1Database, attemptId: string, draft: Draft): Promise<boolean> {
+  const r = await db.prepare("UPDATE quiz_attempts SET draft_json = ?, draft_at = datetime('now') WHERE id = ? AND status = 'in_progress'").bind(JSON.stringify(draft), attemptId).run();
+  return (r.meta.changes ?? 0) > 0;
 }
 
 export async function attemptQuestions(db: D1Database, attempt: AttemptRow, quiz: QuizRow) {

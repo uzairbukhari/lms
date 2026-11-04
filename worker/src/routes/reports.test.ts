@@ -52,17 +52,18 @@ beforeAll(async () => {
   cookie = ((await call("/api/login", { body: { username: creds.username, password: creds.password } })).headers.get("set-cookie") ?? "").split(";")[0] ?? "";
 
   ids.firstAttempt = await takeQuiz(ids.w2 as string, false); // graded, 0%
-  await takeQuiz(ids.w2 as string, true); // graded, 100%
+  await takeQuiz(ids.w2 as string, true); // same week retake: practice, 100%
   await takeQuiz(ids.w1 as string, true); // an older week: practice, 100%
 });
 
 describe("student report", () => {
   it("counts graded attempts by default and keeps practice separate", async () => {
     const r = await json(await call(`/api/admin/reports/students/${studentId}`));
-    expect(r.totals).toMatchObject({ gradedAttempts: 2, practiceAttempts: 1, averagePercent: 50, hintsUsed: 3 });
-    expect(r.curve).toHaveLength(2);
+    // Only the first try (0%) is graded; the 100% retake in the same week is practice and must not replace it.
+    expect(r.totals).toMatchObject({ gradedAttempts: 1, practiceAttempts: 2, averagePercent: 0, hintsUsed: 3 });
+    expect(r.curve).toHaveLength(1);
     const w2 = r.lessons.find((l: { lessonId: string }) => l.lessonId === ids.w2);
-    expect(w2).toMatchObject({ bestGraded: 100, bestPractice: null, attemptCount: 2 });
+    expect(w2).toMatchObject({ bestGraded: 0, bestPractice: 100, attemptCount: 2 });
     const w1 = r.lessons.find((l: { lessonId: string }) => l.lessonId === ids.w1);
     expect(w1).toMatchObject({ bestGraded: null, bestPractice: 100 });
   });
@@ -75,8 +76,8 @@ describe("student report", () => {
 
   it("lists the weakest skills and builds a semester report card", async () => {
     const r = await json(await call(`/api/admin/reports/students/${studentId}`));
-    expect(r.weakestSkills[0]).toMatchObject({ percent: 50 });
-    expect(r.reportCard).toEqual([{ subject: "maths", semester: 1, lessons: 1, lessonAverage: 100, examBest: null }]);
+    expect(r.weakestSkills[0]).toMatchObject({ percent: 0 });
+    expect(r.reportCard).toEqual([{ subject: "maths", semester: 1, lessons: 1, lessonAverage: 0, examBest: null }]);
   });
 
   it("returns 404 for an unknown student", async () => {
@@ -97,7 +98,7 @@ describe("drill-down, class view and export", () => {
   it("summarises a class and finds the hardest questions", async () => {
     const r = await json(await call(`/api/admin/reports/classes/${classId}`));
     expect(r.students).toHaveLength(1);
-    expect(r.students[0]).toMatchObject({ displayName: "Ava", gradedAttempts: 2 });
+    expect(r.students[0]).toMatchObject({ displayName: "Ava", gradedAttempts: 1 });
     expect(r.hardestQuestions[0]).toHaveProperty("prompt");
   });
 
@@ -127,6 +128,6 @@ describe("admin overview", () => {
     expect(year3.hasCalendar).toBe(true);
     expect(year3.courses).toHaveLength(1);
     const ava = res.students.find((s: { id: string }) => s.id === studentId);
-    expect(ava.gradedAttempts).toBe(2);
+    expect(ava.gradedAttempts).toBe(1);
   });
 });

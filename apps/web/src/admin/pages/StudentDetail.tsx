@@ -73,7 +73,7 @@ export function StudentDetail() {
         <Card flush>
           {r.lessons.length === 0 ? <EmptyState title="No quizzes yet" /> : (
             <div className="a-table-wrap"><table className="a-table">
-              <thead><tr><th>Lesson</th><th>Subject</th><th>Sem.</th><th className="num">Best graded</th><th className="num">Best practice</th><th>Attempts</th></tr></thead>
+              <thead><tr><th>Lesson</th><th>Subject</th><th>Sem.</th><th className="num">First try (graded)</th><th className="num">Best retake (practice)</th><th>Attempts</th></tr></thead>
               <tbody>{r.lessons.map((l) => (
                 <tr key={l.lessonId}>
                   <td className="a-cell-title">{l.title}</td><td>{subjectName(l.subject)}</td><td>{l.semester ?? "–"}</td>

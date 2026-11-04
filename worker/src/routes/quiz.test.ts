@@ -96,8 +96,22 @@ describe("lesson quiz", () => {
       const res = await json(await call(`/api/quiz/attempts/${start.attemptId}/submit`, { body: { answers: answers(start.questions, true) }, cookie: ava.cookie }));
       expect(res).toMatchObject({ percent: 100, passed: true });
     }
+    const modes = await env.DB.prepare("SELECT attempt_number AS n, mode FROM quiz_attempts WHERE user_id = ? AND scope_key = ? ORDER BY attempt_number").bind(ava.id, `lesson:${ids.w2}`).all();
+    expect(modes.results.map((r) => r.mode)).toEqual(["graded", "practice", "practice"]); // only the first try is graded
     const history = await json<{ attempts: { attemptNumber: number; percent: number }[] }>(await call(`/api/lessons/${ids.w2}/attempts`, { cookie: ava.cookie }));
     expect(history.attempts.map((a) => a.attemptNumber)).toEqual([3, 2, 1]);
+  });
+
+  it("autosaves answers and hands them back when the quiz is resumed", async () => {
+    const start = await json(await call(`/api/lessons/${ids.w2}/quiz/start`, { method: "POST", body: {}, cookie: ava.cookie }));
+    expect(start.draft).toBeNull();
+    const draft = { answers: answers(start.questions, true), hintsUsed: [start.questions[0].id], index: 1 };
+    expect((await call(`/api/quiz/attempts/${start.attemptId}/progress`, { method: "PUT", body: draft, cookie: ava.cookie })).status).toBe(200);
+    const resumed = await json(await call(`/api/lessons/${ids.w2}/quiz/start`, { method: "POST", body: {}, cookie: ava.cookie }));
+    expect(resumed).toMatchObject({ attemptId: start.attemptId, resumed: true, draft });
+    expect((await call(`/api/quiz/attempts/${start.attemptId}/progress`, { method: "PUT", body: draft, cookie: (await loginAs("Other")).cookie })).status).toBe(404);
+    await call(`/api/quiz/attempts/${start.attemptId}/submit`, { body: draft, cookie: ava.cookie });
+    expect((await call(`/api/quiz/attempts/${start.attemptId}/progress`, { method: "PUT", body: draft, cookie: ava.cookie })).status).toBe(409);
   });
 
   it("records attempts at an older lesson as practice", async () => {
