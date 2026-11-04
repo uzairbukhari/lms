@@ -1,0 +1,120 @@
+/* Splash screen: Fatima, Zainab and Ibrahim in a short scene before the login screen. transform and opacity only. */
+
+.splash { position: fixed; inset: 0; z-index: 9999; background: #bfe6ff; overflow: hidden; touch-action: manipulation; cursor: pointer; animation: sp-fade-in 0.25s ease-out both; }
+.splash-out { animation: sp-fade-out 0.5s ease-in both; }
+.sp-stage { position: absolute; inset: 0; container-type: size; font-family: inherit; }
+
+/* --- Scenery (neutral on purpose: not tied to any theme) ------------------------------------------ */
+.sp-bg { position: absolute; inset: 0; background: linear-gradient(#8fd3ff 0%, #c9ecff 55%, #fff3cf 100%); }
+.sp-sun { position: absolute; right: 9%; top: 8%; width: 16cqmin; height: 16cqmin; border-radius: 50%; background: #ffd95a; box-shadow: 0 0 0 3cqmin rgba(255, 217, 90, 0.3), 0 0 0 7cqmin rgba(255, 217, 90, 0.15); animation: sp-glow 2.4s ease-in-out infinite alternate; }
+.sp-cloud { position: absolute; height: 7cqmin; border-radius: 99px; background: #fff; opacity: 0.92; animation: sp-drift 14s linear infinite alternate; }
+.sp-cloud::before, .sp-cloud::after { content: ""; position: absolute; background: #fff; border-radius: 50%; }
+.sp-cloud::before { width: 55%; height: 150%; left: 14%; bottom: 30%; }
+.sp-cloud::after { width: 40%; height: 120%; right: 12%; bottom: 25%; }
+.sp-cloud.c1 { width: 22cqmin; top: 16%; left: 8%; }
+.sp-cloud.c2 { width: 16cqmin; top: 30%; right: 22%; animation-duration: 18s; }
+.sp-cloud.c3 { width: 12cqmin; top: 8%; left: 44%; animation-duration: 11s; }
+.sp-hill { position: absolute; bottom: 8%; border-radius: 50% 50% 0 0; }
+.sp-hill.h1 { left: -12%; width: 70%; height: 34%; background: #8fd98f; }
+.sp-hill.h2 { right: -16%; width: 74%; height: 28%; background: #6cc47a; }
+.sp-ground { position: absolute; left: 0; right: 0; bottom: 0; height: 14%; background: linear-gradient(#5db36d, #4a9c5c); }
+
+/* --- Puppets ------------------------------------------------------------------------------------- */
+.sp-kid { position: absolute; aspect-ratio: 100 / 170; transform: translateX(-50%); }
+.sp-move { position: absolute; inset: 0; }
+.sp-in { position: absolute; inset: 0; transform-origin: 50% 100%; animation: sp-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-bob 1.5s ease-in-out calc(var(--d, 0s) + 0.6s) infinite alternate; }
+.sp-in .kid { width: 100%; height: 100%; overflow: visible; }
+.sp-in .k-eyes { transform-box: view-box; transform-origin: 50px 53px; animation: sp-blink 3.4s ease-in-out infinite; }
+.sp-tag { position: absolute; left: 50%; bottom: -6cqmin; transform: translateX(-50%) scale(0); white-space: nowrap; padding: 0.4cqmin 2.4cqmin; border-radius: 99px; background: #fff; color: #2a3a6a; font-weight: 800; font-size: 3.4cqmin; box-shadow: 0 0.6cqmin 0 rgba(0, 0, 0, 0.12); animation: sp-tag-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+/* arms: hanging down by default; positive rotation lifts the left arm, negative the right */
+.cheer .k-arm-l, .catch .k-arm-l, .catch-small .k-arm-l, .cheer-late .k-arm-l { animation: sp-arm-l 0.5s ease-in-out infinite alternate; }
+.cheer .k-arm-r, .catch .k-arm-r, .catch-small .k-arm-r, .cheer-late .k-arm-r { animation: sp-arm-r 0.5s ease-in-out infinite alternate; }
+.cheer-late .k-arm-l { animation-delay: 1.4s; } .cheer-late .k-arm-r { animation-delay: 1.4s; }
+.cheer-late .k-arm-l, .cheer-late .k-arm-r { animation-fill-mode: backwards; }
+.throw .k-arm-r { animation: sp-throw 1.4s ease-out 0.5s both; }
+.throw .k-arm-l { animation: sp-arm-l 0.5s ease-in-out 3.2s infinite alternate both; }
+.throw { animation: sp-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-jump 0.5s ease-in-out 3.3s infinite alternate; }
+.sp-hop { animation: sp-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-run-hop 0.28s ease-in-out 0.9s 9 alternate, sp-jump 0.5s ease-in-out 3.4s infinite alternate; }
+.sp-chase { animation: sp-chase 2.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.9s both; }
+.cheer-late { animation: sp-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-jump 0.5s ease-in-out 3.2s infinite alternate; }
+
+/* --- Scene: paper plane --------------------------------------------------------------------------- */
+.sp-plane-wrap { position: absolute; left: 27%; top: 38%; width: 12cqmin; z-index: 5; animation: sp-plane 2.4s linear 0.9s both; }
+.sp-plane { width: 100%; display: block; filter: drop-shadow(0 1cqmin 0 rgba(0, 0, 0, 0.12)); }
+.sp-title.card { padding: 2.4cqmin 6cqmin; border-radius: 4cqmin; background: #fff; box-shadow: 0 1.2cqmin 0 rgba(107, 122, 163, 0.35); animation-name: sp-unfold; }
+
+/* --- Scene: letter blocks ------------------------------------------------------------------------- */
+.sp-blocks { position: absolute; left: 50%; top: 26%; transform: translateX(-50%); display: flex; gap: 1.4cqmin; z-index: 4; }
+.sp-block { display: grid; place-items: center; width: 12cqmin; height: 12cqmin; border-radius: 2cqmin; color: #fff; font: 800 8cqmin/1 var(--font-display, inherit); text-shadow: 0 0.5cqmin 0 rgba(0, 0, 0, 0.2); box-shadow: inset 0 -1.2cqmin 0 rgba(0, 0, 0, 0.16); transform-origin: 50% 100%; animation: sp-drop 0.8s cubic-bezier(0.34, 1.3, 0.64, 1) both; }
+.sp-block.last { animation: sp-drop 0.8s cubic-bezier(0.34, 1.3, 0.64, 1) 2.1s both, sp-wobble 0.9s ease-in-out 2.9s 1 both; }
+.catch .k-arm-l, .catch .k-arm-r, .catch-small .k-arm-l, .catch-small .k-arm-r { animation: sp-arm-hold 0.9s ease-out 1.9s both; }
+.catch, .catch-small { animation: sp-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-jump 0.45s ease-in-out 3.2s infinite alternate; }
+.catch .k-arm-l, .catch-small .k-arm-l { animation: sp-arm-hold-l 0.7s ease-out 1.9s both, sp-arm-l 0.4s ease-in-out 3.2s infinite alternate; }
+.catch .k-arm-r, .catch-small .k-arm-r { animation: sp-arm-hold-r 0.7s ease-out 1.9s both, sp-arm-r 0.4s ease-in-out 3.2s infinite alternate; }
+
+/* --- Scene: pop-up book --------------------------------------------------------------------------- */
+.sp-book { position: absolute; left: 50%; bottom: 8%; width: 74cqmin; height: 22cqmin; transform: translateX(-50%); perspective: 120cqmin; z-index: 4; animation: sp-book-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both; }
+.sp-book-back { position: absolute; inset: 0; border-radius: 2cqmin; background: #7a4a2a; box-shadow: 0 1.4cqmin 0 rgba(0, 0, 0, 0.18); }
+.sp-page { position: absolute; top: 1.2cqmin; bottom: 1.2cqmin; width: 34.5cqmin; background: #fffaf0; background-image: repeating-linear-gradient(transparent 0 2.6cqmin, rgba(140, 100, 60, 0.18) 2.6cqmin 2.9cqmin); }
+.sp-page-l { left: 1.4cqmin; border-radius: 1.4cqmin 0 0 1.4cqmin; box-shadow: inset -2cqmin 0 2cqmin -1cqmin rgba(0, 0, 0, 0.12); }
+.sp-page-r { right: 1.4cqmin; border-radius: 0 1.4cqmin 1.4cqmin 0; box-shadow: inset 2cqmin 0 2cqmin -1cqmin rgba(0, 0, 0, 0.12); }
+.sp-cover { position: absolute; left: 0; right: 0; top: 0; bottom: 0; border-radius: 2cqmin; background: #c0562b; transform-origin: 0 50%; z-index: 3; box-shadow: inset 0 0 0 1cqmin rgba(255, 255, 255, 0.18); animation: sp-cover 0.9s cubic-bezier(0.5, 0, 0.3, 1) 0.6s both; }
+.pop-up { animation: sp-rise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) both, sp-bob 1.5s ease-in-out calc(var(--d, 0s) + 0.7s) infinite alternate; }
+.pop-up .k-arm-r { animation: sp-wave 0.45s ease-in-out calc(var(--d, 0s) + 0.5s) 6 alternate both; }
+
+/* --- Title, sparkles, hint ------------------------------------------------------------------------ */
+.sp-title { position: absolute; left: 50%; top: 9%; transform: translateX(-50%); z-index: 6; margin: 0; text-align: center; color: #2a3a6a; font-weight: 800; font-size: 7.4cqmin; line-height: 1.05; white-space: nowrap; text-shadow: 0 0.6cqmin 0 rgba(255, 255, 255, 0.8); animation: sp-title 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.sp-title span { display: block; color: #e0507f; font-size: 1.12em; }
+.sp-title.card span { display: inline; }
+.sp-skip { position: absolute; left: 0; right: 0; top: 2.4%; margin: 0; text-align: center; color: #fff; font-weight: 700; font-size: 2.6cqmin; text-shadow: 0 0.3cqmin 0 rgba(0, 0, 0, 0.25); z-index: 7; animation: sp-hint 0.6s ease-out 0.8s both; }
+.sp-sparkles { position: absolute; left: 50%; top: 40%; z-index: 7; pointer-events: none; }
+.sp-sparkles i { position: absolute; width: 2.2cqmin; height: 2.2cqmin; margin: -1.1cqmin; border-radius: 50%; opacity: 0; animation: sp-burst 0.9s ease-out both; }
+
+/* --- Calm mode and reduced motion: a still scene that just fades in ---------------------------------- */
+.splash-calm .sp-in, .splash-calm .sp-title, .splash-calm .sp-tag, .splash-calm .sp-skip { animation: sp-fade-in 0.6s ease-out both !important; transform-origin: 50% 100%; }
+.splash-calm .sp-title { transform: translateX(-50%); }
+.splash-calm .sp-tag { transform: translateX(-50%) scale(1); }
+.splash-calm .sp-cloud, .splash-calm .sp-sun, .splash-calm .k-eyes { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .splash .sp-cloud, .splash .sp-sun, .splash .k-eyes { animation: none !important; }
+}
+
+/* --- Keyframes ------------------------------------------------------------------------------------ */
+@keyframes sp-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sp-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes sp-drift { from { transform: translateX(-3cqw); } to { transform: translateX(4cqw); } }
+@keyframes sp-glow { from { transform: scale(1); } to { transform: scale(1.06); } }
+@keyframes sp-pop { 0% { opacity: 0; transform: scale(0.2) translateY(20%); } 100% { opacity: 1; transform: none; } }
+@keyframes sp-bob { from { transform: translateY(0); } to { transform: translateY(-2.5%); } }
+@keyframes sp-jump { from { transform: translateY(0); } to { transform: translateY(-9%); } }
+@keyframes sp-run-hop { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-7%) rotate(3deg); } }
+@keyframes sp-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+@keyframes sp-tag-in { from { transform: translateX(-50%) scale(0); } to { transform: translateX(-50%) scale(1); } }
+@keyframes sp-arm-l { from { transform: rotate(10deg); } to { transform: rotate(160deg); } }
+@keyframes sp-arm-r { from { transform: rotate(-10deg); } to { transform: rotate(-160deg); } }
+@keyframes sp-arm-hold-l { from { transform: rotate(0); } to { transform: rotate(150deg); } }
+@keyframes sp-arm-hold-r { from { transform: rotate(0); } to { transform: rotate(-150deg); } }
+@keyframes sp-throw { 0% { transform: rotate(0); } 25% { transform: rotate(-170deg); } 50% { transform: rotate(-170deg); } 70% { transform: rotate(-70deg); } 100% { transform: rotate(-95deg); } }
+@keyframes sp-wave { from { transform: rotate(-110deg); } to { transform: rotate(-160deg); } }
+@keyframes sp-chase { from { transform: translateX(0); } to { transform: translateX(46cqw); } }
+@keyframes sp-plane {
+  0% { opacity: 0; transform: translate(0, 0) rotate(-10deg) scale(0.5); }
+  6% { opacity: 1; }
+  25% { transform: translate(14cqw, -10cqh) rotate(-25deg) scale(1); }
+  40% { transform: translate(26cqw, -15cqh) rotate(-8deg); }
+  52% { transform: translate(32cqw, -22cqh) rotate(-120deg); }
+  64% { transform: translate(35cqw, -16cqh) rotate(-250deg); }
+  76% { transform: translate(38cqw, -13cqh) rotate(-350deg); }
+  92% { opacity: 1; transform: translate(46cqw, -9cqh) rotate(-340deg) scale(1.1); }
+  100% { opacity: 0; transform: translate(50cqw, -8cqh) rotate(-335deg) scale(1.3); }
+}
+@keyframes sp-unfold { 0% { opacity: 0; transform: translate(-6cqw, 24cqh) rotate(-28deg) scale(0.1); } 70% { opacity: 1; transform: translate(-50%, -2%) rotate(3deg) scale(1.08); } 100% { opacity: 1; transform: translateX(-50%); } }
+@keyframes sp-drop { 0% { opacity: 1; transform: translateY(-60cqh) rotate(-12deg); } 100% { opacity: 1; transform: none; } }
+@keyframes sp-wobble { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-14deg); } 45% { transform: rotate(11deg); } 70% { transform: rotate(-6deg); } }
+@keyframes sp-book-in { from { opacity: 0; transform: translateX(-50%) translateY(40%) scale(0.6); } to { opacity: 1; transform: translateX(-50%); } }
+@keyframes sp-cover { from { opacity: 1; transform: rotateY(0); } 70% { opacity: 1; } to { opacity: 0; transform: rotateY(-172deg); } }
+@keyframes sp-rise { 0% { opacity: 0; transform: translateY(70%) scale(0.5); } 100% { opacity: 1; transform: none; } }
+@keyframes sp-title { 0% { opacity: 0; transform: translateX(-50%) scale(0.4); } 100% { opacity: 1; transform: translateX(-50%) scale(1); } }
+@keyframes sp-hint { from { opacity: 0; } to { opacity: 0.85; } }
+@keyframes sp-burst { 0% { opacity: 1; transform: rotate(var(--a)) translateY(0) scale(0.4); } 100% { opacity: 0; transform: rotate(var(--a)) translateY(calc(var(--r) * -1)) scale(1.1); } }
