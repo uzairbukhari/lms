@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
-import { KidPuppet, type Kid } from "./Kids";
+import { KidPuppet, preloadKids, runSteps, type Kid, type PoseStep } from "./Kids";
 import { isCalm } from "./cues";
 
 // The splash screen shown each time a student opens the app, before the login screen. Fatima, Zainab and Ibrahim
@@ -23,17 +23,17 @@ export function nextScene(rand: () => number = Math.random): SplashScene {
 }
 
 const NAMES: Record<Kid, string> = { long: "Fatima", curly: "Zainab", boy: "Ibrahim" };
-const HEIGHTS: Record<Kid, string> = { long: "50cqmin", curly: "42cqmin", boy: "33cqmin" };
+const HEIGHTS: Record<Kid, string> = { long: "58cqmin", curly: "54cqmin", boy: "48cqmin" };
 
-type KidProps = { kid: Kid; x: string; bottom?: string; delay?: number; move?: string; inner?: string; tagAt?: number; z?: number };
+type KidProps = { kid: Kid; x: string; bottom?: string; delay?: number; move?: string; inner?: string; tagAt?: number; z?: number; poses?: PoseStep[] };
 
-function SplashKid({ kid, x, bottom = "11%", delay = 0, move = "", inner = "", tagAt = 3.3, z = 3 }: KidProps) {
+function SplashKid({ kid, x, bottom = "9%", delay = 0, move = "", inner = "", tagAt = 3.3, z = 3, poses }: KidProps) {
   const style = { left: x, bottom, height: HEIGHTS[kid], zIndex: z, "--d": `${delay}s` } as CSSProperties;
   return (
     <div className="sp-kid" style={style}>
       <div className={`sp-move ${move}`}>
         <div className={`sp-in ${inner}`}>
-          <KidPuppet kid={kid} />
+          <KidPuppet kid={kid} steps={poses} />
           <span className="sp-tag" style={{ animationDelay: `${tagAt}s` }}>{NAMES[kid]}</span>
         </div>
       </div>
@@ -82,9 +82,9 @@ function PlaneScene() {
     <>
       <div className="sp-plane-wrap"><Plane /></div>
       <Title className="card" delay={3.0} />
-      <SplashKid kid="long" x="20%" delay={0.1} inner="throw" />
-      <SplashKid kid="boy" x="6%" delay={0.3} move="sp-chase" inner="sp-hop" />
-      <SplashKid kid="curly" x="82%" delay={0.2} inner="cheer-late" />
+      <SplashKid kid="long" x="20%" delay={0.1} inner="jump-late" poses={[[0.7, "wave"], [2.0, "stand"], [3.2, "cheer"]]} />
+      <SplashKid kid="boy" x="6%" delay={0.3} move="sp-chase" inner="sp-hop" poses={[...runSteps(0.9, 3.2), [3.3, "cheer"]]} />
+      <SplashKid kid="curly" x="82%" delay={0.2} inner="jump-late" poses={[[1.1, "catch"], [2.6, "stand"], [3.1, "cheer"]]} />
       <Sparkles at={3.0} />
     </>
   );
@@ -108,9 +108,9 @@ function BlocksScene() {
           </b>
         ))}
       </div>
-      <SplashKid kid="long" x="20%" delay={0.1} inner="catch" />
-      <SplashKid kid="boy" x="50%" delay={0.25} inner="catch-small" />
-      <SplashKid kid="curly" x="80%" delay={0.2} inner="catch" />
+      <SplashKid kid="long" x="20%" delay={0.1} inner="jump-late" poses={[[2.0, "catch"], [3.2, "cheer"]]} />
+      <SplashKid kid="boy" x="50%" delay={0.25} inner="jump-late" poses={[[2.0, "catch"], [3.2, "cheer"]]} />
+      <SplashKid kid="curly" x="80%" delay={0.2} inner="jump-late" poses={[[2.0, "catch"], [3.2, "cheer"]]} />
       <Title delay={3.5} />
       <Sparkles at={3.3} />
     </>
@@ -120,9 +120,9 @@ function BlocksScene() {
 function BookScene() {
   return (
     <>
-      <SplashKid kid="long" x="30%" bottom="20%" delay={1.3} inner="pop-up" z={2} />
-      <SplashKid kid="boy" x="50%" bottom="20%" delay={1.8} inner="pop-up" z={2} />
-      <SplashKid kid="curly" x="70%" bottom="20%" delay={2.3} inner="pop-up" z={2} />
+      <SplashKid kid="long" x="30%" bottom="15%" delay={1.3} inner="pop-up" z={2} poses={[[1.5, "wave"], [3.2, "cheer"]]} />
+      <SplashKid kid="boy" x="50%" bottom="15%" delay={1.8} inner="pop-up" z={2} poses={[[2.0, "wave"], [3.2, "cheer"]]} />
+      <SplashKid kid="curly" x="70%" bottom="15%" delay={2.3} inner="pop-up" z={2} poses={[[2.5, "wave"], [3.2, "cheer"]]} />
       <div className="sp-book" aria-hidden="true">
         <div className="sp-book-back" />
         <div className="sp-page sp-page-l" /><div className="sp-page sp-page-r" />
@@ -150,6 +150,7 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
   const calm = useRef(isCalm()).current;
   const pick = useRef(scene ?? nextScene()).current;
   const [leaving, setLeaving] = useState(false);
+  const [ready, setReady] = useState(false);
   const done = useRef(false);
 
   function finish(fast: boolean) {
@@ -159,13 +160,17 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
     window.setTimeout(onDone, fast ? 260 : 520);
   }
 
+  // Wait for the pose images (a second or less, then cached) so the scene never starts with missing children.
+  useEffect(() => { void preloadKids().then(() => setReady(true)); }, []);
+
   useEffect(() => {
+    if (!ready) return;
     const t = window.setTimeout(() => finish(false), calm ? SPLASH_CALM_MS : SPLASH_MS);
     const key = (e: KeyboardEvent) => { if (e.key === "Escape" || e.key === "Enter" || e.key === " ") finish(true); };
     window.addEventListener("keydown", key);
     return () => { window.clearTimeout(t); window.removeEventListener("keydown", key); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [ready]);
 
   return (
     <div
@@ -177,7 +182,7 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
     >
       <div className="sp-stage">
         <Backdrop />
-        {calm ? (
+        {!ready ? null : calm ? (
           <>
             <SplashKid kid="long" x="30%" delay={0} tagAt={0.3} />
             <SplashKid kid="boy" x="50%" delay={0} tagAt={0.3} />
@@ -185,7 +190,7 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
             <Title delay={0.2} />
           </>
         ) : pick === "plane" ? <PlaneScene /> : pick === "blocks" ? <BlocksScene /> : <BookScene />}
-        <p className="sp-skip">Tap to skip</p>
+        {ready && <p className="sp-skip">Tap to skip</p>}
       </div>
     </div>
   );
