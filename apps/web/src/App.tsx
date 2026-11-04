@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { AuthProvider, useAuth } from "./auth";
 import { AdminApp } from "./admin/AdminApp";
 import { Loader } from "./components/Loader";
-import { Splash, SCENES, type SplashScene } from "./anim/Splash";
+import { Splash, SCENES, DRAWN_SCENES, type SplashScene } from "./anim/Splash";
 import { useState } from "react";
 import { LessonPlayer } from "./pages/LessonPlayer";
 import { Login } from "./pages/Login";
@@ -20,10 +20,10 @@ import { StudentHome } from "./pages/StudentHome";
 /** The splash plays once each time the app opens (a fresh page load), before the login screen. */
 let splashShown = false;
 
-/** `?splash=plane|blocks|book` previews one scene. */
+/** `?splash=v-plane|v-book-a|v-book-b|v-group` previews a clip; `plane|blocks|book` the drawn scenes. */
 function sceneFromUrl(): SplashScene | undefined {
   const q = new URLSearchParams(window.location.search).get("splash");
-  return SCENES.find((s) => s === q);
+  return [...SCENES, ...DRAWN_SCENES].find((s) => s === q);
 }
 
 function StudentApp() {

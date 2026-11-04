@@ -8,9 +8,17 @@ import { isCalm } from "./cues";
 // star in a short scene (about five seconds). A different scene plays on every open: paper plane, letter blocks, pop-up
 // book. Tap anywhere to skip. Calm mode and reduced motion get a still, gentle fade instead.
 
-export type SplashScene = "plane" | "blocks" | "book";
-export const SCENES: SplashScene[] = ["plane", "blocks", "book"];
+export type DrawnScene = "plane" | "blocks" | "book";
+/** The filmed scenes (clips in public/splash/video). These are the ones that rotate on every open. */
+export type VideoScene = "v-plane" | "v-book-a" | "v-book-b" | "v-group";
+export type SplashScene = DrawnScene | VideoScene;
+export const SCENES: SplashScene[] = ["v-plane", "v-book-a", "v-book-b", "v-group"];
+/** The drawn scenes: still used for previews (?splash=plane), Calm mode's cousin and as the fallback if a clip cannot play. */
+export const DRAWN_SCENES: DrawnScene[] = ["plane", "blocks", "book"];
+export const isVideoScene = (s: SplashScene): s is VideoScene => s.startsWith("v-");
 export const SPLASH_MS = 5600;
+const VIDEO_MAX_MS = 10_000;
+const VIDEO_START_MS = 6_000;
 export const SPLASH_CALM_MS = 2400;
 const LAST = "lms-splash-last";
 
@@ -22,6 +30,11 @@ export function nextScene(rand: () => number = Math.random): SplashScene {
   const i = options[Math.floor(rand() * options.length)] ?? 0;
   try { localStorage.setItem(LAST, String(i)); } catch { /* ignore */ }
   return SCENES[i] as SplashScene;
+}
+
+/** Used when a clip cannot play: any drawn scene, not remembered as the "last" scene. */
+function drawnFallback(rand: () => number = Math.random): DrawnScene {
+  return DRAWN_SCENES[Math.floor(rand() * DRAWN_SCENES.length)] as DrawnScene;
 }
 
 const NAMES: Record<Kid, string> = { long: "Fatima", curly: "Zainab", boy: "Ibrahim" };
@@ -173,10 +186,70 @@ function SoundGate({ onPlay, onSkip }: { onPlay: () => void; onSkip: () => void 
   );
 }
 
+function videoUrl(scene: VideoScene, ext: "mp4" | "jpg"): string {
+  return `/splash/video/${scene.slice(2)}.${ext}`;
+}
+
+/** Before a clip when the browser would keep it silent: the first frame with a big Tap to play button. */
+function VideoGate({ scene, onPlay, onSkip }: { scene: VideoScene; onPlay: () => void; onSkip: () => void }) {
+  return (
+    <>
+      <img className="sp-vposter" src={videoUrl(scene, "jpg")} alt="" draggable={false} />
+      <Title delay={0.2} />
+      <button type="button" className="sp-play sp-play-video font-display" onClick={onPlay}>
+        <span aria-hidden="true">▶</span> Tap to play
+      </button>
+      <button type="button" className="sp-skipbtn" onClick={(e) => { e.stopPropagation(); onSkip(); }}>
+        Skip
+      </button>
+    </>
+  );
+}
+
+/** The filmed scene. Plays with its own sound unless sound is off; if it cannot start, `onFail` swaps in a drawn scene. */
+function VideoStage({ scene, sound, onEnd, onFail }: { scene: VideoScene; sound: boolean; onEnd: () => void; onFail: () => void }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = !sound;
+    let started = false;
+    const t = window.setTimeout(() => { if (!started) onFail(); }, VIDEO_START_MS);
+    const onPlaying = () => { started = true; window.clearTimeout(t); };
+    v.addEventListener("playing", onPlaying);
+    v.play().catch(() => {
+      // Sound refused: try silent before giving up.
+      v.muted = true;
+      v.play().catch(() => onFail());
+    });
+    return () => { window.clearTimeout(t); v.removeEventListener("playing", onPlaying); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <>
+      <img className="sp-vbg" src={videoUrl(scene, "jpg")} alt="" draggable={false} />
+      <video
+        ref={ref}
+        className="sp-video"
+        src={videoUrl(scene, "mp4")}
+        poster={videoUrl(scene, "jpg")}
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        onEnded={onEnd}
+        onError={onFail}
+      />
+      <Title delay={0.6} />
+    </>
+  );
+}
+
 export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashScene }) {
   const calm = useRef(isCalm()).current;
   // Chosen once for this opening. (Choosing during render re-ran every render and scrambled the "last scene" memory.)
-  const [pick] = useState<SplashScene>(() => scene ?? nextScene());
+  const [pick, setPick] = useState<SplashScene>(() => scene ?? nextScene());
+  const video = !calm && isVideoScene(pick);
+  const soundOn = useRef(getSoundOn()).current;
   const [leaving, setLeaving] = useState(false);
   const [ready, setReady] = useState(false);
   /** checking: asking the browser about sound; gate: waiting for a tap so it can play sound; playing: the show. */
@@ -201,17 +274,18 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
     return () => { live = false; };
   }, [calm]);
 
-  const playing = ready && mode === "playing";
+  const playing = (ready || video) && mode === "playing";
 
   useEffect(() => {
     if (!playing) return;
-    const t = window.setTimeout(() => finish(false), calm ? SPLASH_CALM_MS : SPLASH_MS);
-    const stopSounds = calm ? () => undefined : playSplashSounds(pick);
+    // A clip ends the splash itself (onEnded); this is only a safety net. Drawn scenes are timed.
+    const t = window.setTimeout(() => finish(false), calm ? SPLASH_CALM_MS : video ? VIDEO_MAX_MS : SPLASH_MS);
+    const stopSounds = calm || video ? () => undefined : playSplashSounds(pick as DrawnScene);
     const key = (e: KeyboardEvent) => { if (e.key === "Escape" || e.key === "Enter" || e.key === " ") finish(true); };
     window.addEventListener("keydown", key);
     return () => { window.clearTimeout(t); stopSounds(); window.removeEventListener("keydown", key); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playing]);
+  }, [playing, pick]);
 
   return (
     <div
@@ -223,8 +297,12 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
       onPointerDown={() => { if (playing) finish(true); }}
     >
       <div className="sp-stage">
-        <Backdrop />
-        {!ready || mode === "checking" ? null : mode === "gate" ? (
+        {!video && <Backdrop />}
+        {video && mode === "gate" ? (
+          <VideoGate scene={pick as VideoScene} onPlay={() => setMode("playing")} onSkip={() => finish(true)} />
+        ) : video && mode === "playing" ? (
+          <VideoStage scene={pick as VideoScene} sound={soundOn} onEnd={() => finish(false)} onFail={() => setPick(drawnFallback())} />
+        ) : !ready || mode === "checking" || video ? null : mode === "gate" ? (
           <SoundGate onPlay={() => setMode("playing")} onSkip={() => finish(true)} />
         ) : calm ? (
           <>
@@ -233,7 +311,7 @@ export function Splash({ onDone, scene }: { onDone: () => void; scene?: SplashSc
             <SplashKid kid="curly" x="70%" delay={0} tagAt={0.3} />
             <Title delay={0.2} />
           </>
-        ) : pick === "plane" ? <PlaneScene /> : pick === "blocks" ? <BlocksScene /> : <BookScene />}
+        ) : pick === "blocks" ? <BlocksScene /> : pick === "book" ? <BookScene /> : <PlaneScene />}
         {playing && <p className="sp-skip">Tap to skip</p>}
       </div>
     </div>
