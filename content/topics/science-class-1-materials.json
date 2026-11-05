@@ -1,0 +1,2539 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-materials",
+  "subject": "science",
+  "title": "Materials",
+  "summary": "Naming materials, describing their properties, changing their shape, choosing the right one for a job, melting, freezing and rocks.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Materials",
+  "learning_objectives": [
+   "Name common materials and the things made from them",
+   "Describe materials using words like hard, soft and transparent",
+   "Say how some materials change shape",
+   "Choose the best material for a job"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y1 materials",
+    "text": "Distinguish between an object and the material from which it is made; describe the simple physical properties of materials"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y2 materials",
+    "text": "Identify and compare the suitability of everyday materials; find out how shapes can be changed by squashing, bending, twisting and stretching"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Cm.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Cp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Cp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Cp.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Cc.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Pf.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2ESp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2ESp.02"
+   }
+  ],
+  "success_criteria": [
+   "I can name materials and what is made from them",
+   "I can describe how a material feels or looks",
+   "I can say how to squash, bend, twist or stretch it",
+   "I can pick the right material for a job"
+  ],
+  "real_life": "Choosing a raincoat, a cup or a pan, and noticing what things around the house are made of.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do plants need to grow?",
+    "hint": "Think of the cress.",
+    "explanation": "Plants need light and water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only toys"
+     },
+     {
+      "id": "b",
+      "text": "Light and water"
+     },
+     {
+      "id": "c",
+      "text": "Only sweets"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant drinks water from the soil?",
+    "hint": "They grow underground.",
+    "explanation": "Roots drink water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Flower"
+     },
+     {
+      "id": "b",
+      "text": "Leaves"
+     },
+     {
+      "id": "c",
+      "text": "Roots"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A dog is a mammal.",
+    "hint": "Does it have fur?",
+    "explanation": "A dog has fur and feeds its puppies milk.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: why do we use different materials?\n\nWe will test them and choose.",
+   "say": "Welcome back, young scientist! Today's big question is: why do we use different materials for different things? By the end, you will name materials, describe how they feel, squash and stretch them, and pick the best material for a job. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🪵🥄🧴🪟",
+   "alt": "Wood, metal, plastic and glass.",
+   "caption": "Wood, metal, plastic and glass."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "materials",
+     "meaning": "What things are made from, like wood or metal."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "names",
+   "kind": "learn",
+   "title": "Materials and their properties",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is it made of?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **material** is what something is made from.\n\nWood, metal, plastic, glass and **fabric** are all materials.",
+     "say": "Everything around us is made of something. A spoon might be made of metal. A cup might be made of glass or plastic. A chair might be made of wood. The stuff something is made from is called a material. Look at five materials and the things we make with them."
+    },
+    {
+     "type": "explainer",
+     "title": "Five materials",
+     "scenes": [
+      {
+       "caption": "Wood: a table and a pencil.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🪑",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "✏️",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Wood comes from trees. We make tables, pencils and doors from wood."
+      },
+      {
+       "caption": "Metal: a spoon and a key.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥄",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔑",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Metal is hard and shiny. Spoons, keys and cooking pots are made of metal."
+      },
+      {
+       "caption": "Plastic: a bottle and a toy.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧴",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧸",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Plastic can be made into any shape. Toys and bottles are often plastic."
+      },
+      {
+       "caption": "Glass: a window and a glass.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🪟",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🥛",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Glass is see-through and breaks easily. Windows and glasses are made of glass."
+      },
+      {
+       "caption": "Fabric: a shirt and socks.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👕",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧦",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Fabric is soft and bendy. Clothes and curtains are made of fabric."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which material is a spoon usually made of?",
+      "hint": "It is hard and shiny.",
+      "explanation": "Spoons are usually made of metal.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Glass"
+       },
+       {
+        "id": "b",
+        "text": "Metal"
+       },
+       {
+        "id": "c",
+        "text": "Fabric"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Describing materials"
+    },
+    {
+     "type": "text",
+     "markdown": "A **property** tells us what a material is like: hard, soft, rough, smooth.\n\n**Transparent** means you can see through it. **Opaque** means you cannot.",
+     "say": "We can describe a material by its properties. A property tells us what a material is like. Is it hard or soft? Is it rough or smooth? Is it see-through, which we call transparent? Or can you not see through it, which is called opaque? Let's look at a window and a wall."
+    },
+    {
+     "type": "image",
+     "emoji": "🪟 🧱",
+     "alt": "A glass window is transparent. A brick wall is opaque.",
+     "caption": "A glass window is transparent. A brick wall is opaque."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Glass is see-through. Which word describes it?",
+      "hint": "You can look through it.",
+      "explanation": "A see-through material is transparent.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Opaque"
+       },
+       {
+        "id": "b",
+        "text": "Rough"
+       },
+       {
+        "id": "c",
+        "text": "Transparent"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A material is what something is made from",
+      "A property tells us what a material is like",
+      "Transparent means see-through; opaque means not see-through"
+     ],
+     "say": "Remember. A material is what something is made from. Properties tell us what it is like."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "material",
+       "meaning": "What something is made from, like wood or metal."
+      },
+      {
+       "term": "fabric",
+       "meaning": "A soft, bendy material, like cloth."
+      },
+      {
+       "term": "property",
+       "meaning": "What a material is like, such as hard, soft or smooth."
+      },
+      {
+       "term": "transparent",
+       "meaning": "Able to be seen through, like glass."
+      },
+      {
+       "term": "opaque",
+       "meaning": "Not able to be seen through, like wood."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which of these is made of wood?",
+     "hint": "Wood comes from trees.",
+     "explanation": "Doors are often made of wood.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A key"
+      },
+      {
+       "id": "b",
+       "text": "A door"
+      },
+      {
+       "id": "c",
+       "text": "A window"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each object to its material.",
+     "hint": "Think about what each is made of.",
+     "explanation": "Windows are glass, spoons are metal and jumpers are fabric.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Window"
+      },
+      {
+       "id": "l2",
+       "text": "Spoon"
+      },
+      {
+       "id": "l3",
+       "text": "Jumper"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Metal"
+      },
+      {
+       "id": "r1",
+       "text": "Glass"
+      },
+      {
+       "id": "r3",
+       "text": "Fabric"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "An opaque material lets you see through it.",
+     "hint": "Opaque is the opposite of transparent.",
+     "explanation": "You cannot see through an opaque material.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word describes how a pebble feels?",
+     "hint": "Press on a pebble.",
+     "explanation": "A pebble is hard.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Soft"
+      },
+      {
+       "id": "b",
+       "text": "Hard"
+      },
+      {
+       "id": "c",
+       "text": "Bendy"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "forces",
+   "kind": "try",
+   "title": "Squash, bend, twist and stretch",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Changing the shape of things"
+    },
+    {
+     "type": "text",
+     "markdown": "We can **squash**, **bend**, **twist** and **stretch** some materials.",
+     "say": "Some materials change shape when we push or pull them. We can squash a sponge. We can bend a plastic ruler. We can twist a cloth. And we can stretch a rubber band. When we let go, some materials spring back, and some stay changed. Watch what happens."
+    },
+    {
+     "type": "explainer",
+     "title": "Changing shape",
+     "scenes": [
+      {
+       "caption": "Squash: a sponge.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧽",
+         "x": 40,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "✋",
+         "x": 40,
+         "y": 25,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A sponge is squashed flat by a hand. When we let go, it springs back."
+      },
+      {
+       "caption": "Stretch: a rubber band.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "➰",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "A rubber band is pulled and gets longer. That is stretching."
+      },
+      {
+       "caption": "Twist: a cloth.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🌀",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "A cloth is twisted round and round. That is twisting."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we do to a rubber band to make it longer?",
+      "hint": "Pull both ends.",
+      "explanation": "Pulling a rubber band makes it stretch.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Squash it"
+       },
+       {
+        "id": "b",
+        "text": "Twist it"
+       },
+       {
+        "id": "c",
+        "text": "Stretch it"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Testing materials"
+    },
+    {
+     "type": "manipulative",
+     "title": "Squash test",
+     "goal": "Put things you can squash in Squashy. Put things you cannot in Hard.",
+     "emoji": "🧽",
+     "count": 8,
+     "zones": [
+      "Squashy",
+      "Hard"
+     ],
+     "say": "Let's test some materials. We will squash each one and see if it changes. Put the materials that can be squashed in one box and the materials that cannot in the other. Then try it at home."
+    },
+    {
+     "type": "activity",
+     "title": "A squash and stretch test",
+     "materials": [
+      "A sponge",
+      "A rubber band",
+      "A wooden spoon",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Squash each object gently. Does it change shape?",
+      "Stretch the rubber band. What happens when you let go?",
+      "Write down which objects were squashy, stretchy or hard."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things that you can squash.",
+      "hint": "Which ones are soft?",
+      "explanation": "Sponges and play dough can be squashed.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Play dough"
+       },
+       {
+        "id": "b",
+        "text": "Stone"
+       },
+       {
+        "id": "c",
+        "text": "Metal spoon"
+       },
+       {
+        "id": "d",
+        "text": "Sponge"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "We can squash, bend, twist and stretch some materials",
+      "Some materials spring back and some do not"
+     ],
+     "say": "Remember. Some materials squash, bend, twist and stretch. Others stay hard."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "squash",
+       "meaning": "To press something so it gets flatter."
+      },
+      {
+       "term": "bend",
+       "meaning": "To make something curve without breaking."
+      },
+      {
+       "term": "twist",
+       "meaning": "To turn something round and round."
+      },
+      {
+       "term": "stretch",
+       "meaning": "To pull something so it gets longer."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "match",
+     "prompt": "Match each action to the object.",
+     "hint": "Think about how each one changes.",
+     "explanation": "A rubber band stretches, a sponge squashes and a cloth twists.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Stretch"
+      },
+      {
+       "id": "l2",
+       "text": "Squash"
+      },
+      {
+       "id": "l3",
+       "text": "Twist"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Sponge"
+      },
+      {
+       "id": "r1",
+       "text": "Rubber band"
+      },
+      {
+       "id": "r3",
+       "text": "Cloth"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A stone is easy to squash.",
+     "hint": "Is a stone hard or soft?",
+     "explanation": "A stone is hard, so it does not squash.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a squashed sponge do when you let go?",
+     "hint": "Try it with a sponge.",
+     "explanation": "A sponge springs back to its shape.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Turns to glass"
+      },
+      {
+       "id": "b",
+       "text": "Melts"
+      },
+      {
+       "id": "c",
+       "text": "Springs back"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jobs",
+   "kind": "play",
+   "title": "The right material for the job",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Choosing materials"
+    },
+    {
+     "type": "text",
+     "markdown": "We pick a material for its **properties**. A raincoat must keep out water.\n\nA good material is **waterproof**, strong or soft depending on the job.",
+     "say": "We choose a material because of its properties. Windows are glass because we want to see through them. Raincoats are plastic because water cannot get through. Saucepans are metal because metal does not burn easily. A pillow is soft fabric because we want it comfy. Let's pick the right material for four jobs."
+    },
+    {
+     "type": "explainer",
+     "title": "Right material, right job",
+     "scenes": [
+      {
+       "caption": "Umbrella: waterproof.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☂️",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "An umbrella must keep us dry. So it is made of waterproof plastic or fabric."
+      },
+      {
+       "caption": "Saucepan: metal.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍳",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A saucepan is made of metal, because metal can be heated without burning."
+      },
+      {
+       "caption": "Pillow: soft.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🛏️",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A pillow is soft, so it is filled with soft fabric."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why is a raincoat made of plastic?",
+      "hint": "What do we want to keep out?",
+      "explanation": "Plastic is waterproof, so it keeps us dry.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It is see-through"
+       },
+       {
+        "id": "b",
+        "text": "Water cannot get through it"
+       },
+       {
+        "id": "c",
+        "text": "It is hard to bend"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Material pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🪵",
+      "🥄",
+      "🧴",
+      "🪟"
+     ],
+     "say": "Warm up your memory first. Watch the objects light up, then copy the order. Then pick the best material for a rain hat."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which material is best for a window?",
+      "hint": "We need to see through it.",
+      "explanation": "Glass is transparent, so we can see through it.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Brick"
+       },
+       {
+        "id": "b",
+        "text": "Glass"
+       },
+       {
+        "id": "c",
+        "text": "Wood"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "We choose a material for its properties",
+      "A raincoat needs to be waterproof; a window needs to be see-through"
+     ],
+     "say": "Remember. We choose materials for their properties."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "properties",
+       "meaning": "What a material is like."
+      },
+      {
+       "term": "waterproof",
+       "meaning": "Does not let water through."
+      },
+      {
+       "term": "strong",
+       "meaning": "Not easy to break."
+      },
+      {
+       "term": "comfy",
+       "meaning": "Soft and nice to rest on."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which material is best for a saucepan?",
+     "hint": "It must not burn.",
+     "explanation": "Metal can be heated without burning.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fabric"
+      },
+      {
+       "id": "b",
+       "text": "Metal"
+      },
+      {
+       "id": "c",
+       "text": "Paper"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A waterproof coat keeps you dry.",
+     "hint": "Waterproof means water cannot get through.",
+     "explanation": "A waterproof coat keeps rain out.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each job to the best material.",
+     "hint": "Think about each job.",
+     "explanation": "Each material has the right property for its job.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Window"
+      },
+      {
+       "id": "l2",
+       "text": "Rain boots"
+      },
+      {
+       "id": "l3",
+       "text": "Pillow"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Rubber"
+      },
+      {
+       "id": "r1",
+       "text": "Glass"
+      },
+      {
+       "id": "r3",
+       "text": "Soft fabric"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "changes",
+   "kind": "use",
+   "title": "Melting, freezing and rocks",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Solid and liquid"
+    },
+    {
+     "type": "text",
+     "markdown": "Ice **melts** when it gets warm. Water **freezes** when it gets very cold.",
+     "say": "Some materials can change. When ice gets warm, it melts into water. When water gets very cold, it freezes into ice. Chocolate melts too, if it gets hot. Watch an ice cube on a warm day."
+    },
+    {
+     "type": "explainer",
+     "title": "Ice melts",
+     "scenes": [
+      {
+       "caption": "An ice cube is solid.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "🧊",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is an ice cube. It is cold and hard."
+      },
+      {
+       "caption": "The ice melts.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "💧",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It sits in the warm sun. It starts to melt into water."
+      },
+      {
+       "caption": "The water freezes.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "🧊",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "f",
+         "emoji": "❄️",
+         "x": 20,
+         "y": 25,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "Now put the water in the freezer. It freezes back into ice!"
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens to ice when it gets warm?",
+      "hint": "Think of an ice lolly in the sun.",
+      "explanation": "Warmth makes ice melt into water.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It freezes"
+       },
+       {
+        "id": "b",
+        "text": "It turns to wood"
+       },
+       {
+        "id": "c",
+        "text": "It melts"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Rocks, quarries and mines"
+    },
+    {
+     "type": "text",
+     "markdown": "**Rocks** are hard natural materials from the ground.\n\nA **quarry** is a place where stone is dug out.",
+     "say": "Rocks are natural materials from the ground. People dig them from places called quarries and mines. Stone from quarries is used for building and roads. Marble from the mountains of Pakistan and Italy is used for beautiful buildings, and the Badshahi Mosque uses red sandstone. Look at some rocks."
+    },
+    {
+     "type": "image",
+     "emoji": "🪨 ⛰️ 🕌",
+     "alt": "Rock, a mountain and a mosque built with stone.",
+     "caption": "Rock, a mountain and a mosque built with stone."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Stone from a quarry can be used to build things.",
+      "hint": "Think of walls and roads.",
+      "explanation": "Quarry stone is used for building walls, roads and mosques.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Heat melts ice; cold freezes water",
+      "Rocks are natural materials from the ground",
+      "Quarries are where stone is dug out"
+     ],
+     "say": "Remember. Ice melts and water freezes. Rocks are natural materials that people dig from quarries."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "melts",
+       "meaning": "Changes from solid to liquid when heated."
+      },
+      {
+       "term": "freezes",
+       "meaning": "Changes from liquid to solid when cooled."
+      },
+      {
+       "term": "rocks",
+       "meaning": "Hard natural materials from the ground."
+      },
+      {
+       "term": "quarry",
+       "meaning": "A place where stone is dug out of the ground."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does water turn into when it freezes?",
+     "hint": "Think of the freezer.",
+     "explanation": "Water freezes into ice.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Ice"
+      },
+      {
+       "id": "c",
+       "text": "Steam"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Rocks come from the ground.",
+     "hint": "Where do people dig for stone?",
+     "explanation": "Rocks are natural materials from the ground.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order.",
+     "hint": "Start with the cold ice.",
+     "explanation": "The ice cube melts and becomes water.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Melting"
+      },
+      {
+       "id": "i3",
+       "text": "Water"
+      },
+      {
+       "id": "i1",
+       "text": "Ice cube"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which of these is made of glass?",
+    "hint": "It is see-through.",
+    "explanation": "A drinking glass is made of glass.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A spoon"
+     },
+     {
+      "id": "b",
+      "text": "A drinking glass"
+     },
+     {
+      "id": "c",
+      "text": "A pencil"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.names",
+    "sub_lesson": "names",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A spoon is usually made of metal.",
+    "hint": "Is a spoon hard and shiny?",
+    "explanation": "Spoons are usually made of metal.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "materials.facts",
+    "sub_lesson": "names",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Which material is each object made of? Match them.",
+    "hint": "Think about what each is made of.",
+    "explanation": "A bottle is plastic, a shirt is fabric and a door is wood.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Bottle"
+     },
+     {
+      "id": "l2",
+      "text": "Shirt"
+     },
+     {
+      "id": "l3",
+      "text": "Door"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Fabric"
+     },
+     {
+      "id": "r3",
+      "text": "Wood"
+     },
+     {
+      "id": "r1",
+      "text": "Plastic"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials.match",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Pick two materials that are opaque.",
+    "hint": "Which ones can you NOT see through?",
+    "explanation": "Wood and brick are opaque.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Brick"
+     },
+     {
+      "id": "b",
+      "text": "Glass"
+     },
+     {
+      "id": "c",
+      "text": "Clear plastic"
+     },
+     {
+      "id": "d",
+      "text": "Wood"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials.properties",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is made of wood.",
+    "hint": "It comes from trees.",
+    "explanation": "A chair is often made of wood.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🥄",
+       "label": "Spoon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧸",
+       "label": "Toy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "materials.label",
+    "sub_lesson": "names",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What word means that you can see through a material?",
+    "hint": "Glass is this.",
+    "explanation": "Transparent means see-through.",
+    "answer": {
+     "accepted": [
+      "transparent"
+     ]
+    },
+    "skill_tag": "materials.words",
+    "sub_lesson": "names",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Which job is rubber best for?",
+    "hint": "It is waterproof and bendy.",
+    "explanation": "Rubber is waterproof and flexible.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Making a spoon"
+     },
+     {
+      "id": "b",
+      "text": "Making boots that keep your feet dry"
+     },
+     {
+      "id": "c",
+      "text": "Making a window"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.jobs",
+    "sub_lesson": "jobs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence about a pan.",
+    "hint": "A pan must not burn.",
+    "explanation": "Metal is strong and can be heated safely.",
+    "points": 2,
+    "text": "A pan is made of {b1} because it is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "fabric"
+       },
+       {
+        "id": "b",
+        "text": "metal"
+       },
+       {
+        "id": "c",
+        "text": "paper"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "see-through"
+       },
+       {
+        "id": "b",
+        "text": "strong"
+       },
+       {
+        "id": "c",
+        "text": "soft"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "materials.fill",
+    "sub_lesson": "jobs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "Squash, bend, twist, stretch. How many ways are there to change the shape of a material?",
+    "hint": "Count each action.",
+    "explanation": "There are four ways.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.count",
+    "sub_lesson": "forces",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "At about what temperature does water freeze? Slide to show it.",
+    "hint": "Between plus and minus.",
+    "explanation": "Water freezes at 0 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 30,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 0,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.temp",
+    "sub_lesson": "changes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put the stages in order for a melting ice cube.",
+    "hint": "Start with the cold ice.",
+    "explanation": "The ice cube melts and becomes a puddle.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Puddle of water"
+     },
+     {
+      "id": "i1",
+      "text": "Ice cube"
+     },
+     {
+      "id": "i2",
+      "text": "Melting"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials.melt",
+    "sub_lesson": "changes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Tia says a rubber band is a hard material. Why is she wrong?",
+    "hint": "Can you stretch it?",
+    "explanation": "A rubber band changes shape when pulled, so it is not hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is made of glass"
+     },
+     {
+      "id": "b",
+      "text": "It can be stretched and bent"
+     },
+     {
+      "id": "c",
+      "text": "It is opaque"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.shape",
+    "sub_lesson": "forces",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why are cooking pots not made of paper?",
+    "hint": "Think about heat.",
+    "explanation": "Paper burns, but metal can be heated safely.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Paper is too heavy"
+     },
+     {
+      "id": "b",
+      "text": "Paper is too shiny"
+     },
+     {
+      "id": "c",
+      "text": "Paper would burn"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.reason",
+    "sub_lesson": "jobs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Zara leaves an ice cream in the sun. What will happen?",
+    "hint": "Warm things melt ice.",
+    "explanation": "Heat from the sun melts ice cream.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It will turn into glass"
+     },
+     {
+      "id": "b",
+      "text": "It will melt"
+     },
+     {
+      "id": "c",
+      "text": "It will freeze harder"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.predict",
+    "sub_lesson": "changes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Omar says a quarry is a place to grow plants. Why is he wrong?",
+    "hint": "Think of rocks.",
+    "explanation": "A quarry is where stone is dug from the ground.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A quarry is a kind of animal"
+     },
+     {
+      "id": "b",
+      "text": "A quarry is a kind of fabric"
+     },
+     {
+      "id": "c",
+      "text": "A quarry is a place where stone is dug out"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.rocks",
+    "sub_lesson": "changes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these things is made of glass?",
+    "hint": "It is see-through.",
+    "explanation": "Windows are made of glass.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A pencil"
+     },
+     {
+      "id": "b",
+      "text": "A spoon"
+     },
+     {
+      "id": "c",
+      "text": "A window"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.names",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which object is usually made of wood?",
+    "hint": "It comes from trees.",
+    "explanation": "Tables are often made of wood.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A key"
+     },
+     {
+      "id": "b",
+      "text": "A table"
+     },
+     {
+      "id": "c",
+      "text": "A window"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.names",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A key is usually made of metal.",
+    "hint": "Is a key hard and shiny?",
+    "explanation": "Keys are made of metal.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "materials.facts",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A jumper is made of glass.",
+    "hint": "Is a jumper soft?",
+    "explanation": "A jumper is made of soft fabric.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "materials.facts",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Pair each object with its material.",
+    "hint": "Think about what each is made of.",
+    "explanation": "Pencils are wood, bottles plastic and curtains fabric.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pencil"
+     },
+     {
+      "id": "l2",
+      "text": "Bottle"
+     },
+     {
+      "id": "l3",
+      "text": "Curtain"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Plastic"
+     },
+     {
+      "id": "r1",
+      "text": "Wood"
+     },
+     {
+      "id": "r3",
+      "text": "Fabric"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials.match",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each thing to what it is made of.",
+    "hint": "Think about what each is made of.",
+    "explanation": "A key is metal, a window is glass and a table is wood.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Key"
+     },
+     {
+      "id": "l2",
+      "text": "Window"
+     },
+     {
+      "id": "l3",
+      "text": "Table"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Wood"
+     },
+     {
+      "id": "r1",
+      "text": "Metal"
+     },
+     {
+      "id": "r2",
+      "text": "Glass"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials.match",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two materials that are transparent.",
+    "hint": "Which ones can you see through?",
+    "explanation": "Glass and clear plastic are see-through.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wood"
+     },
+     {
+      "id": "b",
+      "text": "Metal"
+     },
+     {
+      "id": "c",
+      "text": "Clear plastic"
+     },
+     {
+      "id": "d",
+      "text": "Glass"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "materials.properties",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two materials that can be stretched.",
+    "hint": "Which ones can you pull longer?",
+    "explanation": "Rubber bands and elastic stretch.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Elastic"
+     },
+     {
+      "id": "b",
+      "text": "Stone"
+     },
+     {
+      "id": "c",
+      "text": "Brick"
+     },
+     {
+      "id": "d",
+      "text": "Rubber band"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials.properties",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is made of metal.",
+    "hint": "Which is hard and shiny?",
+    "explanation": "A spoon is made of metal.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🥄",
+       "label": "Spoon",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧸",
+       "label": "Toy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧦",
+       "label": "Sock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "materials.label",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is made of fabric.",
+    "hint": "Which is soft?",
+    "explanation": "A shirt is made of fabric.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🥄",
+       "label": "Spoon",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "👕",
+       "label": "Shirt",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "materials.label",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What word describes a material you can see through?",
+    "hint": "Glass is this.",
+    "explanation": "A see-through material is transparent.",
+    "answer": {
+     "accepted": [
+      "transparent"
+     ]
+    },
+    "skill_tag": "materials.words",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What word means that water cannot get through a material?",
+    "hint": "Raincoats are this.",
+    "explanation": "Waterproof means water cannot get through.",
+    "answer": {
+     "accepted": [
+      "waterproof",
+      "water proof"
+     ]
+    },
+    "skill_tag": "materials.words",
+    "sub_lesson": "names",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Which job is metal best for?",
+    "hint": "It must not burn.",
+    "explanation": "Metal can be heated safely.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Making a window"
+     },
+     {
+      "id": "b",
+      "text": "Making a saucepan"
+     },
+     {
+      "id": "c",
+      "text": "Making a pillow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.jobs",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Which job is fabric best for?",
+    "hint": "It is soft and bendy.",
+    "explanation": "Fabric is soft and bendy, so it suits curtains.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Making a window"
+     },
+     {
+      "id": "b",
+      "text": "Making a soft curtain"
+     },
+     {
+      "id": "c",
+      "text": "Making a saucepan"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.jobs",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about materials.",
+    "hint": "You can see through a window.",
+    "explanation": "Glass is transparent.",
+    "points": 2,
+    "text": "A window is made of {b1} because it is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wood"
+       },
+       {
+        "id": "b",
+        "text": "glass"
+       },
+       {
+        "id": "c",
+        "text": "metal"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rough"
+       },
+       {
+        "id": "b",
+        "text": "transparent"
+       },
+       {
+        "id": "c",
+        "text": "opaque"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "materials.fill",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about raincoats.",
+    "hint": "It keeps us dry.",
+    "explanation": "Plastic is waterproof.",
+    "points": 2,
+    "text": "A raincoat is made of {b1} because it is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "paper"
+       },
+       {
+        "id": "b",
+        "text": "plastic"
+       },
+       {
+        "id": "c",
+        "text": "sponge"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "see-through"
+       },
+       {
+        "id": "b",
+        "text": "heavy"
+       },
+       {
+        "id": "c",
+        "text": "waterproof"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "materials.fill",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "Wood, metal, plastic, glass and fabric: how many materials are in this list?",
+    "hint": "Count each one.",
+    "explanation": "There are five materials.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.count",
+    "sub_lesson": "forces",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "Squash, bend, twist and stretch: how many actions are there?",
+    "hint": "Count each one.",
+    "explanation": "There are four actions.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.count",
+    "sub_lesson": "forces",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show the temperature at which water freezes, in degrees.",
+    "hint": "It is the number between plus and minus.",
+    "explanation": "Water freezes at 0 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 30,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 0,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.temp",
+    "sub_lesson": "changes",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Ice starts to melt when it warms up to this temperature. Slide to show it.",
+    "hint": "The same number as the freezing point.",
+    "explanation": "Ice melts at 0 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 30,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 0,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.temp",
+    "sub_lesson": "changes",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put the changes of water in order, starting cold.",
+    "hint": "Start with the coldest.",
+    "explanation": "Ice melts into water, which becomes steam when it is heated.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Water"
+     },
+     {
+      "id": "i3",
+      "text": "Steam"
+     },
+     {
+      "id": "i1",
+      "text": "Ice"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials.melt",
+    "sub_lesson": "changes",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put these in order as the chocolate gets hot.",
+    "hint": "Start with cold chocolate.",
+    "explanation": "Heat makes chocolate softer and then liquid.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Melted chocolate"
+     },
+     {
+      "id": "i1",
+      "text": "Solid chocolate"
+     },
+     {
+      "id": "i2",
+      "text": "Soft chocolate"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials.melt",
+    "sub_lesson": "changes",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a rubber band is a hard material. Why is he wrong?",
+    "hint": "Can you stretch it?",
+    "explanation": "A rubber band changes shape when pulled, so it is not hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is opaque"
+     },
+     {
+      "id": "b",
+      "text": "It can be stretched and bent"
+     },
+     {
+      "id": "c",
+      "text": "It is made of glass"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.shape",
+    "sub_lesson": "forces",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Sara says a sponge cannot change shape. Why is she wrong?",
+    "hint": "Try squashing it.",
+    "explanation": "A sponge squashes and springs back.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is made of metal"
+     },
+     {
+      "id": "b",
+      "text": "It is made of glass"
+     },
+     {
+      "id": "c",
+      "text": "It can be squashed and springs back"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.shape",
+    "sub_lesson": "forces",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why are saucepans not made of paper?",
+    "hint": "Think about heat.",
+    "explanation": "Paper burns, but metal can be heated safely.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Paper is too shiny"
+     },
+     {
+      "id": "b",
+      "text": "Paper would burn"
+     },
+     {
+      "id": "c",
+      "text": "Paper is too heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.reason",
+    "sub_lesson": "jobs",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why are windows not made of wood?",
+    "hint": "What do windows need to be?",
+    "explanation": "Wood is opaque. Windows need to be see-through.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wood is too shiny"
+     },
+     {
+      "id": "b",
+      "text": "Wood is too cold"
+     },
+     {
+      "id": "c",
+      "text": "You cannot see through wood"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.reason",
+    "sub_lesson": "jobs",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Noor leaves an ice lolly in the sun. What will happen?",
+    "hint": "Warm things melt ice.",
+    "explanation": "Heat from the sun melts ice.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It will turn into glass"
+     },
+     {
+      "id": "b",
+      "text": "It will melt"
+     },
+     {
+      "id": "c",
+      "text": "It will freeze harder"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.predict",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Hamza puts a cup of water in the freezer. What will happen?",
+    "hint": "The freezer is very cold.",
+    "explanation": "Very cold makes water freeze.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It will melt"
+     },
+     {
+      "id": "b",
+      "text": "It will freeze"
+     },
+     {
+      "id": "c",
+      "text": "It will turn into a rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.predict",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a quarry is where fish live. What is a quarry?",
+    "hint": "Think of rocks.",
+    "explanation": "A quarry is where stone is dug from the ground.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of plant"
+     },
+     {
+      "id": "b",
+      "text": "A place where stone is dug out"
+     },
+     {
+      "id": "c",
+      "text": "A kind of animal"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.rocks",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Hana says rocks are made in a factory. Is she right?",
+    "hint": "Are rocks natural or made?",
+    "explanation": "Rocks are natural materials from the ground.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rocks are made of fabric"
+     },
+     {
+      "id": "b",
+      "text": "No, rocks are natural and come from the ground"
+     },
+     {
+      "id": "c",
+      "text": "Yes, rocks are made of plastic"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.rocks",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
