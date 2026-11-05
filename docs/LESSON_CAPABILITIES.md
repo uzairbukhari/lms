@@ -107,3 +107,17 @@ Importing a lesson file in the parent area saves it as a new version.
 - Bar chart builder from tapped data (data and AI); drawn bar charts are built.
 - Simple "program the robot" grid the child drives with arrow cards (the animated `robot_grid` prop is built; driving it is not).
 - A check on a `manipulative` ("make 7 on the left"), once we want it scored.
+
+### Needed for curriculum v3 (5 Nov 2026, see `docs/CURRICULUM_V2.md` and guidelines parts 4, 13 to 15)
+
+- **Topic lesson format**: `objectives`, `success_criteria`, `standards` (`{framework, code, text}`), `warm_up`,
+  `enquiry`, `real_life`, and `sub_lessons` (`id`, `kind` learn/try/play/use, `challenge`, blocks, mini quiz); main quiz
+  questions gain `depth` and `sub_lesson`. Needs a new `schema_version` and an importer that still reads 1.0 lessons.
+- **"I can" self-check** after the main quiz (one face per success criterion), stored per attempt.
+- **Remember warm-up** player step (3 questions, from the lesson or picked from the child's weak skills).
+- **`project` block** for `use` sub-lessons: driving question, milestone task, photo or voice upload to R2.
+- **Photo assets** from Unsplash stored in R2 with a credit caption (the `image` block's uploaded `asset` already works;
+  add a required `credit` field).
+- **Block-coding puzzle** for Data & AI Class 4 (drive the `robot_grid` with arrow and repeat cards), since NC KS2 expects
+  real programs.
+- **Line graph** chart kind and **chance** (coin and spinner) manipulative, used by Data detectives in both classes.
