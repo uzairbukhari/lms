@@ -1,0 +1,2617 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-4-spelling-detective",
+  "subject": "english",
+  "title": "Spelling Detective",
+  "summary": "Homophones, silent letters, plurals, prefixes, suffixes, word roots and synonyms.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Spelling detective",
+  "learning_objectives": [
+   "Choose the right homophone",
+   "Spot silent letters",
+   "Spell plurals and use prefixes and suffixes",
+   "Use word roots and synonyms to understand and choose words"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "english-class-4-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y3/Y4 spelling",
+    "text": "Spell homophones, words with silent letters, plurals, and words with prefixes and suffixes"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ww.08"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Rv.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Rv.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wv.02"
+   }
+  ],
+  "success_criteria": [
+   "I can pick between there, their and they're",
+   "I can spell plurals like babies and watches",
+   "I can explain what a prefix or suffix does",
+   "I can choose a stronger synonym"
+  ],
+  "real_life": "Proofreading your own writing and picking the best word for a story.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which sentence is a question?",
+    "hint": "Which one asks something?",
+    "explanation": "Where is my bag? asks something.",
+    "options": [
+     {
+      "id": "a",
+      "text": "My bag is red."
+     },
+     {
+      "id": "b",
+      "text": "What a big bag!"
+     },
+     {
+      "id": "c",
+      "text": "Where is my bag?"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A noun is a naming word.",
+    "hint": "Think of cat, school, Lahore.",
+    "explanation": "A noun names a person, place or thing.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which pronoun replaces the girls?",
+    "hint": "More than one person.",
+    "explanation": "The girls is more than one, so they.",
+    "options": [
+     {
+      "id": "a",
+      "text": "it"
+     },
+     {
+      "id": "b",
+      "text": "they"
+     },
+     {
+      "id": "c",
+      "text": "she"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, spelling detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we crack the code of tricky spellings?\n\nWe will hunt for clues in words.",
+   "say": "Welcome back, spelling detective! Today's big question: how can we crack the code of tricky spellings? English words come with clues: roots, prefixes, suffixes, and patterns. Good detectives spot the clues and solve the case. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🕵️",
+   "alt": "Spelling detectives follow the clues in words.",
+   "caption": "Spelling detectives follow the clues in words."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "spelling",
+     "meaning": "The right order of letters in a word."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "tricky",
+   "kind": "learn",
+   "title": "Homophones and silent letters",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Homophones"
+    },
+    {
+     "type": "text",
+     "markdown": "**Homophones** sound the same but are spelled differently.\n\nthere = a place, their = belonging, they're = they are.",
+     "say": "Spelling detectives need sharp eyes and ears. Some words sound identical but are spelled differently. There, their and they're. There points to a place: over there. Their shows belonging: their coats. They're is they are squashed together: they're late. Same sound, three jobs. We call these homophones. Let's see each one at work."
+    },
+    {
+     "type": "explainer",
+     "title": "There, their, they're",
+     "scenes": [
+      {
+       "caption": "over there",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "⚽",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "there"
+        },
+        {
+         "id": "a",
+         "emoji": "👉",
+         "x": 35,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "over"
+        }
+       ],
+       "say": "There is a place. The ball is over there."
+      },
+      {
+       "caption": "their coats",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧥",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "their coats"
+        }
+       ],
+       "say": "Their shows that something belongs to them. Their coats are on the hook."
+      },
+      {
+       "caption": "they're = they are",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🏃",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "they're"
+        }
+       ],
+       "say": "They're is they are squashed together. They're running late. The apostrophe shows the missing letter."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Pick the right word: ___ going to the museum.",
+      "hint": "Can you say they are?",
+      "explanation": "They are going to the museum, so they're.",
+      "skill_tag": "homophone.their",
+      "options": [
+       {
+        "id": "a",
+        "text": "There"
+       },
+       {
+        "id": "b",
+        "text": "They're"
+       },
+       {
+        "id": "c",
+        "text": "Their"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Pick the right word: The children lost ___ books.",
+      "hint": "Whose books?",
+      "explanation": "Their shows the books belong to the children.",
+      "skill_tag": "homophone.their",
+      "options": [
+       {
+        "id": "a",
+        "text": "they're"
+       },
+       {
+        "id": "b",
+        "text": "their"
+       },
+       {
+        "id": "c",
+        "text": "there"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Silent letters"
+    },
+    {
+     "type": "text",
+     "markdown": "A **silent letter** is written but not said: knight, write, lamb.",
+     "say": "Some words hide a letter you cannot hear. Knight starts with a silent k. Write starts with a silent w. Lamb ends with a silent b. These letters were once pronounced long ago, and the spelling stayed even after the sound disappeared. Spot them and you can spell tricky words."
+    },
+    {
+     "type": "explainer",
+     "title": "Hidden letters",
+     "scenes": [
+      {
+       "caption": "knight: silent k",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🛡️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "knight"
+        }
+       ],
+       "say": "Knight. We say night, but we write a k at the start. The k is silent."
+      },
+      {
+       "caption": "write: silent w",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "✍️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "write"
+        }
+       ],
+       "say": "Write. We say rite, but there is a w at the start. The w is silent."
+      },
+      {
+       "caption": "lamb: silent b",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🐑",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "lamb"
+        }
+       ],
+       "say": "Lamb. The b at the end is silent."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which letter is silent in knee?",
+      "hint": "Say the word out loud.",
+      "explanation": "We say nee, so the k is silent.",
+      "skill_tag": "silent.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "e"
+       },
+       {
+        "id": "b",
+        "text": "k"
+       },
+       {
+        "id": "c",
+        "text": "n"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Homophones sound the same but have different spellings and meanings",
+      "A silent letter is written but not said"
+     ],
+     "say": "Let us remember. Homophones sound the same but are spelled differently. Silent letters are written but not said."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "homophones",
+       "meaning": "Words that sound the same but are spelled differently and mean different things."
+      },
+      {
+       "term": "silent letter",
+       "meaning": "A letter we write but do not say, like the k in knight."
+      },
+      {
+       "term": "apostrophe",
+       "meaning": "A mark that shows a missing letter or belonging."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Pick the right word: Put the book over ___.",
+     "hint": "Is it a place?",
+     "explanation": "There is a place.",
+     "skill_tag": "homophone.their",
+     "options": [
+      {
+       "id": "a",
+       "text": "they're"
+      },
+      {
+       "id": "b",
+       "text": "there"
+      },
+      {
+       "id": "c",
+       "text": "their"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which letter is silent in wrist?",
+     "hint": "Say the word out loud.",
+     "explanation": "We say rist, so the w is silent.",
+     "skill_tag": "silent.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "r"
+      },
+      {
+       "id": "b",
+       "text": "w"
+      },
+      {
+       "id": "c",
+       "text": "t"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "They're means they are.",
+     "hint": "Think of the apostrophe.",
+     "explanation": "They're is they are squashed together.",
+     "skill_tag": "homophone.their",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plurals",
+   "kind": "try",
+   "title": "Plurals and prefixes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plural patterns"
+    },
+    {
+     "type": "text",
+     "markdown": "A **plural** means more than one. Most add s, some add es.\n\nA consonant then y: change y to i and add es. baby → babies.",
+     "say": "Plurals follow patterns. Most words add s. Words ending in s, x, sh or ch add es. And when a word ends in a consonant followed by y, we swap the y for i and add es. Baby becomes babies. Story becomes stories. Let's see it happen."
+    },
+    {
+     "type": "explainer",
+     "title": "Baby to babies",
+     "scenes": [
+      {
+       "caption": "one baby",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "👶",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "baby"
+        }
+       ],
+       "say": "One baby."
+      },
+      {
+       "caption": "babies",
+       "items": [
+        {
+         "id": "b1",
+         "emoji": "👶",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "b2",
+         "emoji": "👶",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "b3",
+         "emoji": "👶",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "l",
+         "emoji": "✏️",
+         "x": 50,
+         "y": 18,
+         "size": 1,
+         "anim": "none",
+         "label": "babies"
+        }
+       ],
+       "say": "To make a plural, the y changes to i, and we add es. Babies."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "short_text",
+      "prompt": "Write the plural of city.",
+      "hint": "Change y to i and add es.",
+      "explanation": "City becomes cities.",
+      "skill_tag": "plural.y",
+      "answer": {
+       "accepted": [
+        "cities"
+       ]
+      }
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the plural of watch?",
+      "hint": "Ends in ch.",
+      "explanation": "Words ending in ch add es.",
+      "skill_tag": "plural.es",
+      "options": [
+       {
+        "id": "a",
+        "text": "watchies"
+       },
+       {
+        "id": "b",
+        "text": "watches"
+       },
+       {
+        "id": "c",
+        "text": "watchs"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Prefixes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **prefix** goes at the front of a word and changes its meaning.\n\ndis- = not, re- = again, mis- = wrongly, sub- = under.",
+     "say": "A prefix is added to the front of a word and changes its meaning. Dis means not or the opposite: disagree. Re means again: replay. Mis means wrongly: misspell. Sub means under: submarine, a boat that goes under the sea. Now try building some words."
+    },
+    {
+     "type": "explainer",
+     "title": "Prefixes at work",
+     "scenes": [
+      {
+       "caption": "re + play = replay",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "▶️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "replay"
+        }
+       ],
+       "say": "Play. Add re at the front. Replay means play again."
+      },
+      {
+       "caption": "sub + marine = submarine",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🚢",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "submarine"
+        }
+       ],
+       "say": "Marine means to do with the sea. Add sub for under. Submarine goes under the sea."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Prefix hunt",
+     "materials": [
+      "Paper and a pencil",
+      "A book"
+     ],
+     "instructions": [
+      "Find five words with dis, re, mis or sub at the front.",
+      "Write each word and underline the prefix.",
+      "Cover the prefix. What is the root word left?",
+      "Explain to a grown-up how the prefix changes the meaning."
+     ],
+     "say": "Time for a word hunt. Look around for words with a prefix. Write them and say what each prefix does."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does the prefix re mean?",
+      "hint": "Think of replay.",
+      "explanation": "Re means again.",
+      "skill_tag": "prefix.meaning",
+      "options": [
+       {
+        "id": "a",
+        "text": "under"
+       },
+       {
+        "id": "b",
+        "text": "again"
+       },
+       {
+        "id": "c",
+        "text": "not"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Consonant then y: change y to i and add es",
+      "A prefix at the front changes the meaning"
+     ],
+     "say": "Let us remember. Plurals follow patterns. Prefixes change the meaning of a word."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plural",
+       "meaning": "More than one of something."
+      },
+      {
+       "term": "prefix",
+       "meaning": "A group of letters added to the front of a word."
+      },
+      {
+       "term": "root word",
+       "meaning": "The main part of a word that is left when you take off a prefix or suffix."
+      },
+      {
+       "term": "consonant",
+       "meaning": "Any letter that is not a, e, i, o or u."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "short_text",
+     "prompt": "Write the plural of story.",
+     "hint": "Change y to i and add es.",
+     "explanation": "Story becomes stories.",
+     "skill_tag": "plural.y",
+     "answer": {
+      "accepted": [
+       "stories"
+      ]
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does the prefix dis mean?",
+     "hint": "Think of disagree.",
+     "explanation": "Dis means not or the opposite.",
+     "skill_tag": "prefix.meaning",
+     "options": [
+      {
+       "id": "a",
+       "text": "under"
+      },
+      {
+       "id": "b",
+       "text": "not or the opposite"
+      },
+      {
+       "id": "c",
+       "text": "again"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word means to spell wrongly?",
+     "hint": "Which prefix means wrongly?",
+     "explanation": "Mis means wrongly.",
+     "skill_tag": "prefix.meaning",
+     "options": [
+      {
+       "id": "a",
+       "text": "respell"
+      },
+      {
+       "id": "b",
+       "text": "subspell"
+      },
+      {
+       "id": "c",
+       "text": "misspell"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suffixes",
+   "kind": "play",
+   "title": "Suffixes and word roots",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Suffixes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **suffix** goes at the end of a word: slow + ly = slowly, kind + ness = kindness.",
+     "say": "A suffix goes at the end of a word. Ly turns a describing word into an adverb: slow becomes slowly. Ness turns a describing word into a noun: kind becomes kindness. Tion makes a noun from a verb: act becomes action. Watch the word grow."
+    },
+    {
+     "type": "explainer",
+     "title": "Growing words",
+     "scenes": [
+      {
+       "caption": "slow",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🐌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "slow"
+        }
+       ],
+       "say": "Slow. The snail is slow."
+      },
+      {
+       "caption": "slowly",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🐌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "slowly"
+        }
+       ],
+       "say": "Add ly. Slowly. Now it tells us how the snail moves. The snail moves slowly."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Add ness to sad. What is the new word?",
+      "hint": "Ness makes a noun.",
+      "explanation": "Sad + ness = sadness.",
+      "skill_tag": "suffix.ness",
+      "options": [
+       {
+        "id": "a",
+        "text": "unsad"
+       },
+       {
+        "id": "b",
+        "text": "sadness"
+       },
+       {
+        "id": "c",
+        "text": "sadly"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Word roots and a brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "A **root** is the core of a word that gives its meaning: act in action, actor and active.",
+     "say": "Many words share a root. The root act means do. Action, actor and active are all about doing. Spotting the root helps us spell and understand new words. First a memory game, then be a root detective."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Root detective",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🎭",
+      "⚡",
+      "🏃",
+      "🔎",
+      "📖",
+      "✍️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word shares a root with action?",
+      "hint": "Both are about doing.",
+      "explanation": "Action and actor share the root act.",
+      "skill_tag": "root.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "answer"
+       },
+       {
+        "id": "b",
+        "text": "actor"
+       },
+       {
+        "id": "c",
+        "text": "after"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A suffix goes at the end of a word",
+      "Words with the same root share a meaning"
+     ],
+     "say": "Let us remember. A suffix goes at the end. Words that share a root share a meaning."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "suffix",
+       "meaning": "A group of letters added to the end of a word."
+      },
+      {
+       "term": "root",
+       "meaning": "The core of a word that gives its meaning."
+      },
+      {
+       "term": "adverb",
+       "meaning": "A word that tells us how, when or where something happens."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Add ly to quick. What is the new word?",
+     "hint": "Ly tells how.",
+     "explanation": "Quick + ly = quickly.",
+     "skill_tag": "suffix.ly",
+     "options": [
+      {
+       "id": "a",
+       "text": "unquick"
+      },
+      {
+       "id": "b",
+       "text": "quickly"
+      },
+      {
+       "id": "c",
+       "text": "quickness"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word shares a root with player?",
+     "hint": "Both come from play.",
+     "explanation": "Player and replay share the root play.",
+     "skill_tag": "root.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "plain"
+      },
+      {
+       "id": "b",
+       "text": "place"
+      },
+      {
+       "id": "c",
+       "text": "replay"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A suffix goes at the front of a word.",
+     "hint": "Suf is near the end.",
+     "explanation": "A suffix goes at the end of a word.",
+     "skill_tag": "suffix.def",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "synonyms",
+   "kind": "use",
+   "title": "Synonyms and shades of meaning",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Synonyms"
+    },
+    {
+     "type": "text",
+     "markdown": "A **synonym** is a word with a similar meaning. Words have different shades of meaning.",
+     "say": "A synonym is a word with a similar meaning. Big, large and huge are synonyms. But they are not exactly the same. Each one has its own shade of meaning, like different shades of one colour. Big is plain. Huge is bigger. Enormous is bigger still. Watch the elephant grow."
+    },
+    {
+     "type": "explainer",
+     "title": "Big, huge, enormous",
+     "scenes": [
+      {
+       "caption": "big",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🐘",
+         "x": 50,
+         "y": 50,
+         "size": 1,
+         "anim": "none",
+         "label": "big"
+        }
+       ],
+       "say": "A big elephant. Big is a plain word."
+      },
+      {
+       "caption": "huge",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🐘",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "grow",
+         "label": "huge"
+        }
+       ],
+       "say": "Huge is stronger. The elephant is bigger now."
+      },
+      {
+       "caption": "enormous",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🐘",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "enormous"
+        }
+       ],
+       "say": "Enormous is the strongest word of all. The elephant fills the page."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word is a synonym for glad?",
+      "hint": "Which word means happy?",
+      "explanation": "Glad and joyful both mean happy.",
+      "skill_tag": "synonym.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "gloomy"
+       },
+       {
+        "id": "b",
+        "text": "angry"
+       },
+       {
+        "id": "c",
+        "text": "joyful"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Choosing the best word"
+    },
+    {
+     "type": "text",
+     "markdown": "Choose the word that gives the clearest picture.",
+     "say": "Great writers choose their words carefully. Instead of said, they might write whispered, shouted or muttered. Each one paints a different picture. Try upgrading some plain words in your own writing."
+    },
+    {
+     "type": "image",
+     "emoji": "🎨",
+     "alt": "Choosing a stronger word paints a clearer picture.",
+     "caption": "Choosing a stronger word paints a clearer picture.",
+     "say": "A writer's word choices change the whole picture."
+    },
+    {
+     "type": "activity",
+     "title": "Word upgrade",
+     "materials": [
+      "Paper and a pencil"
+     ],
+     "instructions": [
+      "Write: The dog was big and it ran.",
+      "Swap big for a stronger word, like enormous.",
+      "Swap ran for a stronger word, like sprinted.",
+      "Read both sentences to a grown-up. Which is better?"
+     ],
+     "say": "Have a go at a real writing job. Take a plain sentence and make it come alive by swapping the dull words for stronger ones."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word is the strongest?",
+      "hint": "Which shows the most anger?",
+      "explanation": "Furious shows more anger than cross or annoyed.",
+      "skill_tag": "synonym.shade",
+      "options": [
+       {
+        "id": "a",
+        "text": "cross"
+       },
+       {
+        "id": "b",
+        "text": "annoyed"
+       },
+       {
+        "id": "c",
+        "text": "furious"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Synonyms have similar meanings",
+      "Choose the word that paints the clearest picture"
+     ],
+     "say": "Let us remember. Synonyms are words with similar meanings. Strong words paint a clearer picture."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "synonym",
+       "meaning": "A word that means almost the same as another word."
+      },
+      {
+       "term": "shade of meaning",
+       "meaning": "A small difference in meaning between similar words."
+      },
+      {
+       "term": "strong",
+       "meaning": "A word that gives a clearer or bigger picture."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word is a synonym for small?",
+     "hint": "Which means little?",
+     "explanation": "Small and tiny both mean little.",
+     "skill_tag": "synonym.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "huge"
+      },
+      {
+       "id": "b",
+       "text": "tall"
+      },
+      {
+       "id": "c",
+       "text": "tiny"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Whispered and shouted have the same shade of meaning.",
+     "hint": "One is quiet, one is loud.",
+     "explanation": "Whispered is quiet and shouted is loud.",
+     "skill_tag": "synonym.shade",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word is the strongest?",
+     "hint": "Which shows the most tiredness?",
+     "explanation": "Exhausted means very, very tired.",
+     "skill_tag": "synonym.shade",
+     "options": [
+      {
+       "id": "a",
+       "text": "tired"
+      },
+      {
+       "id": "b",
+       "text": "sleepy"
+      },
+      {
+       "id": "c",
+       "text": "exhausted"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Pick the right word: ___ going to the park.",
+    "hint": "Can you say they are?",
+    "explanation": "They are going, so they're.",
+    "skill_tag": "homophone.their",
+    "options": [
+     {
+      "id": "a",
+      "text": "Their"
+     },
+     {
+      "id": "b",
+      "text": "There"
+     },
+     {
+      "id": "c",
+      "text": "They're"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Why does knife start with a silent k?",
+    "hint": "Think about how English words changed over time.",
+    "explanation": "Many silent letters were once pronounced long ago.",
+    "skill_tag": "silent.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a spelling mistake"
+     },
+     {
+      "id": "b",
+      "text": "The k was once pronounced in an older word"
+     },
+     {
+      "id": "c",
+      "text": "The k helps it rhyme"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Find the silent letters.",
+    "hint": "Say each word out loud.",
+    "explanation": "Knot has a silent k and wrap has a silent w.",
+    "skill_tag": "silent.find",
+    "points": 2,
+    "text": "The silent letter in knot is {b1}. The silent letter in wrap is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "n"
+       },
+       {
+        "id": "b",
+        "text": "k"
+       },
+       {
+        "id": "c",
+        "text": "t"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "r"
+       },
+       {
+        "id": "b",
+        "text": "p"
+       },
+       {
+        "id": "c",
+        "text": "w"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "tricky",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which words have a silent letter? Pick two.",
+    "hint": "Say each word out loud.",
+    "explanation": "Knee has a silent k and write has a silent w.",
+    "skill_tag": "silent.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "write"
+     },
+     {
+      "id": "b",
+      "text": "table"
+     },
+     {
+      "id": "c",
+      "text": "happy"
+     },
+     {
+      "id": "d",
+      "text": "knee"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "short_text",
+    "prompt": "Write the plural of baby.",
+    "hint": "Change y to i and add es.",
+    "explanation": "Baby becomes babies.",
+    "skill_tag": "plural.y",
+    "answer": {
+     "accepted": [
+      "babies"
+     ]
+    },
+    "sub_lesson": "plurals",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the letters in order to spell the plural.",
+    "hint": "It is the plural of leaf.",
+    "explanation": "Leaf becomes leaves.",
+    "skill_tag": "plural.f",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "e"
+     },
+     {
+      "id": "i3",
+      "text": "a"
+     },
+     {
+      "id": "i5",
+      "text": "e"
+     },
+     {
+      "id": "i6",
+      "text": "s"
+     },
+     {
+      "id": "i4",
+      "text": "v"
+     },
+     {
+      "id": "i1",
+      "text": "l"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why does baby become babies, not babys?",
+    "hint": "Look at the letter before the y.",
+    "explanation": "After a consonant, y changes to i before es.",
+    "skill_tag": "plural.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Es is always added to every word"
+     },
+     {
+      "id": "b",
+      "text": "Baby is a long word"
+     },
+     {
+      "id": "c",
+      "text": "A consonant before the y means y changes to i and we add es"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each prefix to its meaning.",
+    "hint": "Think of disagree, replay and submarine.",
+    "explanation": "Dis means not, re means again, sub means under.",
+    "skill_tag": "prefix.meaning",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "dis-"
+     },
+     {
+      "id": "l2",
+      "text": "re-"
+     },
+     {
+      "id": "l3",
+      "text": "sub-"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "again"
+     },
+     {
+      "id": "r3",
+      "text": "under"
+     },
+     {
+      "id": "r1",
+      "text": "not or the opposite"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "plurals",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap the word with the suffix -ness.",
+    "hint": "Look for ness at the end.",
+    "explanation": "Happiness ends in -ness.",
+    "skill_tag": "suffix.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "😊",
+       "label": "happiness",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏃",
+       "label": "running",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "apple",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many letters are in the root word of unhappy.",
+    "hint": "Take off the un at the front.",
+    "explanation": "The root is happy, which has 5 letters.",
+    "skill_tag": "root.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "suffixes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why does knowing the root act help with action, actor and active?",
+    "hint": "What do the three words have in common?",
+    "explanation": "Words with the same root share a related meaning.",
+    "skill_tag": "root.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are all spelled the same"
+     },
+     {
+      "id": "b",
+      "text": "They are all nouns"
+     },
+     {
+      "id": "c",
+      "text": "They all share the root and a related meaning"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Which word is a synonym for big?",
+    "hint": "Which word means large?",
+    "explanation": "Big and huge both mean large.",
+    "skill_tag": "synonym.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "tiny"
+     },
+     {
+      "id": "b",
+      "text": "narrow"
+     },
+     {
+      "id": "c",
+      "text": "huge"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "A synonym is a word with a similar meaning.",
+    "hint": "Syn means same.",
+    "explanation": "Synonyms have similar meanings.",
+    "skill_tag": "synonym.def",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Order these words from weakest to strongest.",
+    "hint": "Which is the least hot?",
+    "explanation": "Warm is mild, hot is stronger, boiling is strongest.",
+    "skill_tag": "synonym.shade",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "boiling"
+     },
+     {
+      "id": "i1",
+      "text": "warm"
+     },
+     {
+      "id": "i2",
+      "text": "hot"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why is enormous a better word than big for an elephant?",
+    "hint": "Think about the picture the word makes.",
+    "explanation": "A strong word gives the reader a clearer picture.",
+    "skill_tag": "synonym.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a shorter word"
+     },
+     {
+      "id": "b",
+      "text": "It means something different"
+     },
+     {
+      "id": "c",
+      "text": "It paints a stronger picture of the size"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Pick the right word: ___ coats are on the hook.",
+    "hint": "Whose coats?",
+    "explanation": "Their shows the coats belong to them.",
+    "skill_tag": "homophone.their",
+    "options": [
+     {
+      "id": "a",
+      "text": "They're"
+     },
+     {
+      "id": "b",
+      "text": "Their"
+     },
+     {
+      "id": "c",
+      "text": "There"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Choose the right word: Put the box over ___.",
+    "hint": "Is it a place?",
+    "explanation": "There is a place.",
+    "skill_tag": "homophone.their",
+    "options": [
+     {
+      "id": "a",
+      "text": "they're"
+     },
+     {
+      "id": "b",
+      "text": "there"
+     },
+     {
+      "id": "c",
+      "text": "their"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Why is there a silent w in the word write?",
+    "hint": "Think about how English words changed over time.",
+    "explanation": "Many silent letters were once pronounced long ago.",
+    "skill_tag": "silent.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The w makes it longer"
+     },
+     {
+      "id": "b",
+      "text": "The w was once pronounced in an older word"
+     },
+     {
+      "id": "c",
+      "text": "It is a spelling mistake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Why is there a silent b in the word lamb?",
+    "hint": "Think about how English words changed over time.",
+    "explanation": "Many silent letters were once pronounced long ago.",
+    "skill_tag": "silent.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The b helps it rhyme"
+     },
+     {
+      "id": "b",
+      "text": "The b was once pronounced in an older word"
+     },
+     {
+      "id": "c",
+      "text": "It is a spelling mistake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "fill_blank",
+    "prompt": "Spot the silent letters.",
+    "hint": "Say each word out loud.",
+    "explanation": "Gnat has a silent g and comb has a silent b.",
+    "skill_tag": "silent.find",
+    "points": 2,
+    "text": "The silent letter in gnat is {b1}. The silent letter in comb is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "n"
+       },
+       {
+        "id": "b",
+        "text": "t"
+       },
+       {
+        "id": "c",
+        "text": "g"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "m"
+       },
+       {
+        "id": "b",
+        "text": "b"
+       },
+       {
+        "id": "c",
+        "text": "c"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tricky",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "fill_blank",
+    "prompt": "Choose the silent letters.",
+    "hint": "Say each word out loud.",
+    "explanation": "Knit has a silent k and wrong has a silent w.",
+    "skill_tag": "silent.find",
+    "points": 2,
+    "text": "The silent letter in knit is {b1}. The silent letter in wrong is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "n"
+       },
+       {
+        "id": "b",
+        "text": "t"
+       },
+       {
+        "id": "c",
+        "text": "k"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "g"
+       },
+       {
+        "id": "b",
+        "text": "w"
+       },
+       {
+        "id": "c",
+        "text": "r"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tricky",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick the two words with a silent letter.",
+    "hint": "Say each word out loud.",
+    "explanation": "Gnome has a silent g and lamb has a silent b.",
+    "skill_tag": "silent.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "lamb"
+     },
+     {
+      "id": "b",
+      "text": "window"
+     },
+     {
+      "id": "c",
+      "text": "crisp"
+     },
+     {
+      "id": "d",
+      "text": "gnome"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Choose two words that contain a silent letter.",
+    "hint": "Say each word out loud.",
+    "explanation": "Knock has a silent k and wrap has a silent w.",
+    "skill_tag": "silent.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "wrap"
+     },
+     {
+      "id": "b",
+      "text": "plant"
+     },
+     {
+      "id": "c",
+      "text": "market"
+     },
+     {
+      "id": "d",
+      "text": "knock"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tricky",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "short_text",
+    "prompt": "Write the plural of fly.",
+    "hint": "Change y to i and add es.",
+    "explanation": "Fly becomes flies.",
+    "skill_tag": "plural.y",
+    "answer": {
+     "accepted": [
+      "flies"
+     ]
+    },
+    "sub_lesson": "plurals",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "short_text",
+    "prompt": "Write the plural of puppy.",
+    "hint": "Change y to i and add es.",
+    "explanation": "Puppy becomes puppies.",
+    "skill_tag": "plural.y",
+    "answer": {
+     "accepted": [
+      "puppies"
+     ]
+    },
+    "sub_lesson": "plurals",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange the letters to spell the plural.",
+    "hint": "It is the plural of wolf.",
+    "explanation": "Wolf becomes wolves.",
+    "skill_tag": "plural.f",
+    "points": 2,
+    "items": [
+     {
+      "id": "i6",
+      "text": "s"
+     },
+     {
+      "id": "i4",
+      "text": "v"
+     },
+     {
+      "id": "i3",
+      "text": "l"
+     },
+     {
+      "id": "i1",
+      "text": "w"
+     },
+     {
+      "id": "i2",
+      "text": "o"
+     },
+     {
+      "id": "i5",
+      "text": "e"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Sort the letters to spell the plural.",
+    "hint": "It is the plural of knife.",
+    "explanation": "Knife becomes knives.",
+    "skill_tag": "plural.f",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "n"
+     },
+     {
+      "id": "i5",
+      "text": "e"
+     },
+     {
+      "id": "i4",
+      "text": "v"
+     },
+     {
+      "id": "i6",
+      "text": "s"
+     },
+     {
+      "id": "i3",
+      "text": "i"
+     },
+     {
+      "id": "i1",
+      "text": "k"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why is the plural of city cities, not citys?",
+    "hint": "Look at the letter before the y.",
+    "explanation": "After a consonant, y changes to i before es.",
+    "skill_tag": "plural.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Es is always added to every word"
+     },
+     {
+      "id": "b",
+      "text": "A consonant before the y means y changes to i and we add es"
+     },
+     {
+      "id": "c",
+      "text": "City is a short word"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why is the plural of box boxes?",
+    "hint": "Look at the end of the word.",
+    "explanation": "Words ending in x add es.",
+    "skill_tag": "plural.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The x changes to i"
+     },
+     {
+      "id": "b",
+      "text": "Box is a short word"
+     },
+     {
+      "id": "c",
+      "text": "Words ending in x need es so we can say the plural"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plurals",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Which meaning goes with each prefix?",
+    "hint": "Think of misspell, replay and unkind.",
+    "explanation": "Mis means wrongly, re means again, un means not.",
+    "skill_tag": "prefix.meaning",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "mis-"
+     },
+     {
+      "id": "l2",
+      "text": "re-"
+     },
+     {
+      "id": "l3",
+      "text": "un-"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "again"
+     },
+     {
+      "id": "r3",
+      "text": "not"
+     },
+     {
+      "id": "r1",
+      "text": "wrongly"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "plurals",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Pair each prefix with its meaning.",
+    "hint": "Think of dislike, superman and redo.",
+    "explanation": "Dis means not, super means above, re means again.",
+    "skill_tag": "prefix.meaning",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "dis-"
+     },
+     {
+      "id": "l2",
+      "text": "super-"
+     },
+     {
+      "id": "l3",
+      "text": "re-"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "above or beyond"
+     },
+     {
+      "id": "r1",
+      "text": "not"
+     },
+     {
+      "id": "r3",
+      "text": "again"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "plurals",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap the word with the suffix -ly.",
+    "hint": "Look for ly at the end.",
+    "explanation": "Slowly ends in -ly.",
+    "skill_tag": "suffix.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐌",
+       "label": "slowly",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐌",
+       "label": "slow",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "😴",
+       "label": "sleep",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap the word with the prefix re-.",
+    "hint": "Look for re at the front.",
+    "explanation": "Replay begins with re-.",
+    "skill_tag": "prefix.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "▶️",
+       "label": "replay",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⏯️",
+       "label": "play",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🗓️",
+       "label": "plan",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many letters are in the root word of unkind.",
+    "hint": "Take off the un at the front.",
+    "explanation": "The root is kind, which has 4 letters.",
+    "skill_tag": "root.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "suffixes",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many letters are in the root word of disagree.",
+    "hint": "Take off the dis at the front.",
+    "explanation": "The root is agree, which has 5 letters.",
+    "skill_tag": "root.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "suffixes",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why does knowing the root play help with replay and player?",
+    "hint": "What do the words have in common?",
+    "explanation": "Words with the same root share a related meaning.",
+    "skill_tag": "root.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are all adverbs"
+     },
+     {
+      "id": "b",
+      "text": "They all share the root and a related meaning"
+     },
+     {
+      "id": "c",
+      "text": "They are all spelled the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why does knowing the root help help with helpful and helpless?",
+    "hint": "What do the words have in common?",
+    "explanation": "Words with the same root share a related meaning.",
+    "skill_tag": "root.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are all spelled the same"
+     },
+     {
+      "id": "b",
+      "text": "They are all verbs"
+     },
+     {
+      "id": "c",
+      "text": "They all share the root and a related meaning"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "suffixes",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Which word is a synonym for happy?",
+    "hint": "Which word means pleased?",
+    "explanation": "Happy and glad both mean pleased.",
+    "skill_tag": "synonym.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "sad"
+     },
+     {
+      "id": "b",
+      "text": "slow"
+     },
+     {
+      "id": "c",
+      "text": "glad"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Which word is a synonym for cold?",
+    "hint": "Which word means not warm?",
+    "explanation": "Cold and chilly both mean not warm.",
+    "skill_tag": "synonym.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "boiling"
+     },
+     {
+      "id": "b",
+      "text": "sunny"
+     },
+     {
+      "id": "c",
+      "text": "chilly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "Huge and tiny are synonyms.",
+    "hint": "Do they mean the same?",
+    "explanation": "Huge and tiny are opposites.",
+    "skill_tag": "synonym.def",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "Glad and joyful are synonyms.",
+    "hint": "Do they mean the same?",
+    "explanation": "Both mean happy.",
+    "skill_tag": "synonym.def",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Arrange these words from weakest to strongest.",
+    "hint": "Which is the gentlest?",
+    "explanation": "A breeze is gentle, wind is stronger, a gale is strongest.",
+    "skill_tag": "synonym.shade",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "wind"
+     },
+     {
+      "id": "i3",
+      "text": "gale"
+     },
+     {
+      "id": "i1",
+      "text": "breeze"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "order",
+    "prompt": "Sort these words from weakest to strongest.",
+    "hint": "Which is the least tired?",
+    "explanation": "Sleepy is mild, tired is stronger, exhausted is strongest.",
+    "skill_tag": "synonym.shade",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "exhausted"
+     },
+     {
+      "id": "i1",
+      "text": "sleepy"
+     },
+     {
+      "id": "i2",
+      "text": "tired"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why is sprinted a better word than ran in a race story?",
+    "hint": "Think about the picture the word makes.",
+    "explanation": "A strong word gives the reader a clearer picture.",
+    "skill_tag": "synonym.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It means something different"
+     },
+     {
+      "id": "b",
+      "text": "It paints a stronger picture of the speed"
+     },
+     {
+      "id": "c",
+      "text": "It is a shorter word"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why is delicious a better word than nice for a mango?",
+    "hint": "Think about the picture the word makes.",
+    "explanation": "A strong word gives the reader a clearer picture.",
+    "skill_tag": "synonym.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a shorter word"
+     },
+     {
+      "id": "b",
+      "text": "It paints a stronger picture of the taste"
+     },
+     {
+      "id": "c",
+      "text": "It means something different"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "synonyms",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
