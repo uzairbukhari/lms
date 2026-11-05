@@ -58,18 +58,26 @@ function TenFrame({ p }: { p: PropSpec }) {
 
 function BaseTen({ p }: { p: PropSpec }) {
   const tens = p.tens ?? 0; const ones = p.ones ?? 0;
+  const total = tens * 10 + ones;
+  const words = [tens > 0 ? `${tens} ${tens === 1 ? "ten" : "tens"}` : "", ones > 0 ? `${ones} ${ones === 1 ? "one" : "ones"}` : ""].filter(Boolean).join(" and ");
   return (
-    <svg viewBox="0 0 260 130">
+    <svg viewBox="0 0 300 206">
+      <rect x="2" y="2" width="296" height="202" rx="16" fill="#fffaf0" stroke="#d9c8a3" strokeWidth="3" />
+      <rect x="10" y="10" width="170" height="32" rx="10" fill="#dbe9ff" /><rect x="190" y="10" width="100" height="32" rx="10" fill="#fff0c2" />
+      <text x="95" y="33" textAnchor="middle" fontSize="20" fontWeight="800" fill="#1f5fbf">Tens</text>
+      <text x="240" y="33" textAnchor="middle" fontSize="20" fontWeight="800" fill="#a87800">Ones</text>
+      <line x1="185" y1="50" x2="185" y2="160" stroke="#d9c8a3" strokeWidth="2" strokeDasharray="5 5" />
       {Array.from({ length: 9 }, (_, i) => (
-        <g key={i} className="prop-pop" style={{ transform: `scale(${i < tens ? 1 : 0})`, transformOrigin: `${14 + i * 18}px 120px`, transitionDelay: `${i * 0.07}s` }}>
-          {Array.from({ length: 10 }, (_, j) => <rect key={j} x={6 + i * 18} y={10 + j * 11} width="14" height="11" fill="#4d96ff" stroke="#1f5fbf" strokeWidth="1.5" />)}
+        <g key={i} className="prop-pop" style={{ transform: `scale(${i < tens ? 1 : 0})`, transformOrigin: `${19 + i * 18}px 105px`, transitionDelay: `${i * 0.07}s` }}>
+          <rect x={12 + i * 18} y="50" width="15" height="110" rx="4" fill="#4d96ff" stroke="#1f5fbf" strokeWidth="2" />
+          {Array.from({ length: 9 }, (_, j) => <line key={j} x1={12 + i * 18} x2={27 + i * 18} y1={61 + j * 11} y2={61 + j * 11} stroke="#bcd7ff" strokeWidth="1.5" />)}
         </g>
       ))}
-      {Array.from({ length: 9 }, (_, i) => (
-        <rect key={i} x={182 + (i % 3) * 22} y={54 + Math.floor(i / 3) * 22} width="18" height="18" rx="2" fill="#ffc83d" stroke="#c99500" strokeWidth="1.5" className="prop-pop" style={{ transform: `scale(${i < ones ? 1 : 0})`, transformOrigin: `${191 + (i % 3) * 22}px ${63 + Math.floor(i / 3) * 22}px`, transitionDelay: `${0.3 + i * 0.07}s` }} />
-      ))}
-      <text x="80" y="128" textAnchor="middle" fontSize="12" fontWeight="700" fill={INK}>tens</text>
-      <text x="215" y="128" textAnchor="middle" fontSize="12" fontWeight="700" fill={INK}>ones</text>
+      {Array.from({ length: 9 }, (_, i) => {
+        const cx = 203 + (i % 3) * 30; const cy = 56 + Math.floor(i / 3) * 34;
+        return <rect key={i} x={cx} y={cy} width="24" height="24" rx="5" fill="#ffc83d" stroke="#c99500" strokeWidth="2" className="prop-pop" style={{ transform: `scale(${i < ones ? 1 : 0})`, transformOrigin: `${cx + 12}px ${cy + 12}px`, transitionDelay: `${0.25 + i * 0.07}s` }} />;
+      })}
+      {total > 0 && <text x="150" y="192" textAnchor="middle" fontSize="19" fontWeight="800" fill={INK}>{words} = <tspan fill="#d6336c" fontSize="24">{total}</tspan></text>}
     </svg>
   );
 }
@@ -278,7 +286,7 @@ const DRAW: Record<PropSpec["kind"], (x: { p: PropSpec }) => React.JSX.Element> 
 /** Widths (in % of the stage) for sizes 1 to 3. Wide props get more room. */
 const WIDE = new Set(["number_line", "ten_frame", "base_ten", "fraction_bar", "sun_earth", "sorting_boxes", "venn", "balance"]);
 export function propWidth(kind: PropSpec["kind"], size: number): number {
-  const base = WIDE.has(kind) ? [0, 34, 52, 72] : [0, 18, 28, 40];
+  const base = kind === "base_ten" ? [0, 40, 46, 80] : WIDE.has(kind) ? [0, 34, 52, 72] : [0, 18, 28, 40];
   return base[size] ?? base[2]!;
 }
 

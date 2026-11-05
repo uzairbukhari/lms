@@ -22,7 +22,7 @@ import { Journey } from "../anim/Journey";
 import { Trail } from "../anim/Trail";
 import { useTheme } from "../theme";
 import { isControl, wordAtPoint, type PressedWord } from "../lib/wordHelp";
-import { getSoundOn, hasTapped, isSpeaking, preloadNarration, sentences, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
+import { SPEEDS, getNarrationRate, getSoundOn, hasTapped, setNarrationRate, isSpeaking, preloadNarration, sentences, setNarrationEnabled, setSoundOn, sfx, speak, speechSupported, stopSpeech } from "../lib/sound";
 
 export type LessonPayload = {
   lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[]; semester: number | null; week: number | null; phase: string };
@@ -153,6 +153,9 @@ function Deck({ data, mode, lessonId, back, assetUrl, save, partOf }: {
   const [journey, setJourney] = useState<{ from: number; to: number } | null>(null);
   const endJourney = useCallback(() => { setJourney(null); setGuideMood("point"); }, []);
   const [soundOn, setSound] = useState(getSoundOn);
+  const [rate, setRate] = useState(getNarrationRate);
+  const speedLabel = SPEEDS.find((s) => s.rate === rate)?.label ?? "Normal";
+  const cycleSpeed = () => { const next = SPEEDS[(SPEEDS.findIndex((s) => s.rate === rate) + 1) % SPEEDS.length]!; setNarrationRate(next.rate); setRate(next.rate); sfx("tap"); };
   const [speaking, setSpeaking] = useState(false);
   // Opening the lesson from the home page was itself a tap, so narration can start straight away.
   const interacted = useRef(hasTapped());
@@ -352,6 +355,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save, partOf }: {
                 {speaking ? "⏸" : "🔊"}<span className="hidden sm:inline"> {speaking ? "Stop" : "Listen"}</span>
               </button>
               <button type="button" className="btn !min-h-14 !px-4" onClick={() => { interacted.current = true; sfx("tap"); listen(); }} aria-label="Read this slide again">🔁<span className="hidden sm:inline"> Again</span></button>
+              <button type="button" className="btn !min-h-14 !px-4" onClick={cycleSpeed} aria-label={`Voice speed: ${speedLabel}. Tap to change`}>{speedLabel === "Slow" ? "🐢" : speedLabel === "Fast" ? "🐇" : "🚶"}<span> {speedLabel}</span></button>
             </>
           )}
           {mode === "student" && <StuckButton lessonId={lessonId} slide={index} compact />}
