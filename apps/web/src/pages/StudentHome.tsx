@@ -64,6 +64,9 @@ function titleTier(t: string): "m" | "l" | "xl" {
   return t.length > 42 ? "xl" : t.length > 28 ? "l" : "m";
 }
 
+const weekKey = (semester: number, week: number) => `${semester}-${week}`;
+const weekNum = (k: string) => { const [s = 0, w = 0] = k.split("-").map(Number); return s * 100 + w; };
+
 /** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
 function QuestStop({ c, here }: { c: Card; here: boolean }) {
   const s = look(c.subject);
@@ -175,6 +178,7 @@ export function StudentHome() {
   const [rewards, setRewards] = useState<Rewards | null>(null);
   const [teaser, setTeaser] = useState<TeaserState | null>(null);
   const [cards, setCards] = useState<CardSummary | null>(null);
+  const [picked, setPicked] = useState<string | null>(null);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
@@ -190,15 +194,24 @@ export function StudentHome() {
   const lessonsDone = allMine.filter((c) => c.progress?.status === "completed").length;
   const quizzesPassed = allMine.filter((c) => (c.quiz?.bestPercent ?? 0) >= 70).length;
 
-  const weekCards = home ? [...home.thisWeek, ...home.early] : [];
+  // Every week the child may open (this week, weeks opened early, and past weeks), one trail per week.
+  const SUBJECT_ORDER = ["maths", "english", "science", "general-knowledge", "gk", "data-ai"];
+  const byWeek = new Map<string, Card[]>();
+  for (const c of [...(home?.thisWeek ?? []), ...(home?.early ?? []), ...(home?.lookBack ?? [])]) {
+    if (c.semester === null || c.week === null) continue;
+    const k = weekKey(c.semester, c.week);
+    byWeek.set(k, [...(byWeek.get(k) ?? []), c]);
+  }
+  const weekList = [...byWeek.keys()].sort((a, b) => weekNum(a) - weekNum(b));
+  const currentKey = home?.now && !home.now.exam ? weekKey(home.now.semester, home.now.week) : null;
+  const defaultKey = currentKey && byWeek.has(currentKey) ? currentKey : (weekList[weekList.length - 1] ?? null);
+  const shownKey = picked && byWeek.has(picked) ? picked : defaultKey;
+  const shownIdx = shownKey ? weekList.indexOf(shownKey) : -1;
+  const weekCards = (shownKey ? byWeek.get(shownKey) ?? [] : []).sort((a, b) => SUBJECT_ORDER.indexOf(a.subject) - SUBJECT_ORDER.indexOf(b.subject));
   const weekDone = weekCards.filter((c) => c.progress?.status === "completed").length;
   const hereId = weekCards.find((c) => c.progress?.status !== "completed")?.id;
-
-  const groups = new Map<string, Card[]>();
-  for (const c of home?.lookBack ?? []) {
-    const key = `Semester ${c.semester}, week ${c.week}`;
-    groups.set(key, [...(groups.get(key) ?? []), c]);
-  }
+  const shownWeek = shownKey ? Number(shownKey.split("-")[1]) : null;
+  const weekTag = (k: string) => (k === currentKey ? "This week" : weekNum(k) > (currentKey ? weekNum(currentKey) : Infinity) ? "Early" : "Done");
 
   // While the lessons load, show only a centred loader (no half-empty header or buttons).
   if (!home && !failed) return <Loader label="Loading your lessons…" fullScreen />;
@@ -276,17 +289,35 @@ export function StudentHome() {
 
       {home && (
         <section aria-labelledby="week" className="kh-week flex flex-col gap-4">
+          {weekList.length > 1 && (
+            <nav aria-label="Choose a week" className="flex flex-wrap items-center gap-2">
+              <button type="button" className="btn !min-h-12 !px-4" disabled={shownIdx <= 0} aria-label="Previous week" onClick={() => setPicked(weekList[shownIdx - 1] ?? null)}>◀</button>
+              {weekList.map((k) => {
+                const [s, w] = k.split("-");
+                const on = k === shownKey;
+                return (
+                  <button key={k} type="button" aria-current={on ? "true" : undefined} onClick={() => setPicked(k)} className={"btn !min-h-12 !px-4 " + (on ? "btn-primary" : "")}>
+                    {new Set(weekList.map((x) => x.split("-")[0])).size > 1 ? `S${s} · ` : ""}Week {w}
+                    <span className="ml-2 text-sm font-bold opacity-80">{weekTag(k)}</span>
+                  </button>
+                );
+              })}
+              <button type="button" className="btn !min-h-12 !px-4" disabled={shownIdx >= weekList.length - 1} aria-label="Next week" onClick={() => setPicked(weekList[shownIdx + 1] ?? null)}>▶</button>
+            </nav>
+          )}
           {weekCards.length === 0 ? (
             <>
               <h2 id="week" className="font-display text-3xl font-extrabold">This week</h2>
-              <p className="card p-5 text-lg">Nothing new this week. You can look back at old lessons below, or have a rest! 😴</p>
+              <p className="card p-5 text-lg">Nothing new this week. Have a rest! 😴</p>
             </>
           ) : (
             <>
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <h2 id="week" className="font-display text-3xl font-extrabold">Week {home.now?.week ?? ""} quest</h2>
-                  <p className="text-lg text-muted">Visit every stop on the trail. {weekDone} of {weekCards.length} done{weekDone === weekCards.length ? ", brilliant!" : "!"}</p>
+                  <h2 id="week" className="font-display text-3xl font-extrabold">Week {shownWeek} quest</h2>
+                  <p className="text-lg text-muted">
+                    {shownKey === currentKey ? "Visit every stop on the trail." : weekTag(shownKey!) === "Early" ? "Opened early for you." : "An earlier week: read the lessons again or practise the quizzes."} {weekDone} of {weekCards.length} done{weekDone === weekCards.length ? ", brilliant!" : "!"}
+                  </p>
                 </div>
                 <div role="img" aria-label={`${weekDone} of ${weekCards.length} lessons done`} className="flex gap-2">
                   {weekCards.map((c, i) => (
@@ -307,19 +338,6 @@ export function StudentHome() {
         <section aria-labelledby="library" className="flex flex-col gap-3">
           <h2 id="library" className="font-display text-2xl font-bold">📚 Lesson library</h2>
           <div className="grid gap-4 sm:grid-cols-2">{home.open.map((c) => <LessonCard key={c.id} c={c} past />)}</div>
-        </section>
-      )}
-
-      {home && home.lookBack.length > 0 && (
-        <section aria-labelledby="look-back" className="flex flex-col gap-3">
-          <h2 id="look-back" className="font-display text-2xl font-bold">🔭 Look back</h2>
-          <p className="text-muted">Read old lessons again or practise their quizzes any time.</p>
-          {[...groups].map(([name, cards]) => (
-            <details key={name} className="card p-4">
-              <summary className="cursor-pointer text-xl font-bold">{name} · {cards.length} {cards.length === 1 ? "lesson" : "lessons"}</summary>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">{cards.map((c) => <LessonCard key={c.id} c={c} past />)}</div>
-            </details>
-          ))}
         </section>
       )}
     </main>
