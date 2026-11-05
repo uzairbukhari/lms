@@ -1,0 +1,3102 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-4-grammar-toolkit",
+  "subject": "english",
+  "title": "Grammar Toolkit",
+  "summary": "Similes, expanded noun phrases, speech marks, pronouns, fronted adverbials, apostrophes, connectives, tenses and agreement.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Grammar toolkit",
+  "learning_objectives": [
+   "Use similes and expanded noun phrases to paint pictures with words",
+   "Punctuate speech correctly",
+   "Use pronouns and fronted adverbials",
+   "Use apostrophes for belonging and missing letters",
+   "Choose connectives and the right tense",
+   "Make verbs agree with their subject"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "english-class-4-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 grammar",
+    "text": "Use fronted adverbials, expanded noun phrases, apostrophes and speech punctuation"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Rv.07"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wv.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Rg.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Rg.07"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wg.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wg.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wg.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wg.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Wg.07"
+   }
+  ],
+  "success_criteria": [
+   "I can write a simile and an expanded noun phrase",
+   "I can punctuate speech with speech marks",
+   "I can use apostrophes correctly",
+   "I can make my verbs agree with the subject"
+  ],
+  "real_life": "Writing stories, messages and school reports that readers enjoy.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which mark ends a question?",
+    "hint": "It looks like a hook with a dot.",
+    "explanation": "A question ends with a question mark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "."
+     },
+     {
+      "id": "b",
+      "text": "!"
+     },
+     {
+      "id": "c",
+      "text": "?"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A noun is a naming word.",
+    "hint": "Think of cat, school, Lahore.",
+    "explanation": "A noun names a person, place or thing.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word is a verb?",
+    "hint": "A verb is a doing word.",
+    "explanation": "Run is something you do.",
+    "options": [
+     {
+      "id": "a",
+      "text": "red"
+     },
+     {
+      "id": "b",
+      "text": "run"
+     },
+     {
+      "id": "c",
+      "text": "table"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, word detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do great writers make sentences clear, smooth and exciting?\n\nWe will build a toolkit of grammar tools.",
+   "say": "Welcome back, word detective! Today we have a big question. How do great writers make sentences that sound clear, smooth and exciting? The answer is a toolkit. Similes, speech marks, pronouns, apostrophes, connectives, and more. By the end, you will have every tool in your pocket. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🧰",
+   "alt": "A grammar toolkit helps us write well.",
+   "caption": "A grammar toolkit helps us write well."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "grammar",
+     "meaning": "The rules for how words fit together in sentences."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "similes",
+   "kind": "learn",
+   "title": "Similes and noun phrases",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Similes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **simile** compares two things using like or as.\n\nThe moon was like a silver coin.\n\nThe cheetah was as quick as lightning.",
+     "say": "Good writers paint pictures with words. One powerful tool is the simile. A simile compares two different things using the word like or as. The moon was like a silver coin. The cheetah was as quick as lightning. The moon is not really a coin, and the cheetah is not lightning. But the comparison helps you picture it clearly. Watch the moon turn into a coin."
+    },
+    {
+     "type": "explainer",
+     "title": "The moon and the coin",
+     "scenes": [
+      {
+       "caption": "The moon.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌕",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "the moon"
+        }
+       ],
+       "say": "Here is the moon, glowing in the night sky."
+      },
+      {
+       "caption": "The moon was like a silver coin.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌕",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "the moon"
+        },
+        {
+         "id": "l",
+         "emoji": "🟰",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "like"
+        },
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "a silver coin"
+        }
+       ],
+       "say": "A writer wants us to see its shape and shine. So they compare it to something familiar, a silver coin."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sentence has a simile?",
+      "hint": "Look for like or as.",
+      "explanation": "It compares snow to a blanket using the word like.",
+      "skill_tag": "simile.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "The snow fell all night."
+       },
+       {
+        "id": "b",
+        "text": "The snow was like a soft blanket."
+       },
+       {
+        "id": "c",
+        "text": "The snow was deep."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A simile compares two things using the words like or as.",
+      "hint": "Think of the two joining words.",
+      "explanation": "Similes always use like or as.",
+      "skill_tag": "simile.def",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Expanded noun phrases"
+    },
+    {
+     "type": "text",
+     "markdown": "An **expanded noun phrase** adds describing words to a noun.\n\nlighthouse → the tall, silver lighthouse",
+     "say": "A noun is a naming word, like lighthouse. But a plain noun can be a little dull. We can build it up with describing words. The tall, silver lighthouse. This is called an expanded noun phrase. It gives the reader more to see. Watch the lighthouse grow, one detail at a time."
+    },
+    {
+     "type": "explainer",
+     "title": "Growing a noun phrase",
+     "scenes": [
+      {
+       "caption": "lighthouse",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🗼",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "lighthouse"
+        }
+       ],
+       "say": "Just a lighthouse. We can picture it, but not very well."
+      },
+      {
+       "caption": "the tall lighthouse",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🗼",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "the tall lighthouse"
+        }
+       ],
+       "say": "Add the tall. Now it towers over us."
+      },
+      {
+       "caption": "the tall, silver lighthouse",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🗼",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "the tall, silver lighthouse"
+        }
+       ],
+       "say": "Add silver, and a comma between the describing words. The tall, silver lighthouse. Now we see its height and its shine."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is an expanded noun phrase?",
+      "hint": "Look for a noun with describing words added.",
+      "explanation": "The shy, brown rabbit adds two describing words to the noun rabbit.",
+      "skill_tag": "nounphrase.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "ran quickly"
+       },
+       {
+        "id": "b",
+        "text": "the shy, brown rabbit"
+       },
+       {
+        "id": "c",
+        "text": "the rabbit"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which noun is being described in: a crumbly chocolate biscuit?",
+      "hint": "The describing words come before it.",
+      "explanation": "Crumbly and chocolate describe the noun biscuit.",
+      "skill_tag": "nounphrase.noun",
+      "options": [
+       {
+        "id": "a",
+        "text": "crumbly"
+       },
+       {
+        "id": "b",
+        "text": "biscuit"
+       },
+       {
+        "id": "c",
+        "text": "chocolate"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A simile compares two things using like or as",
+      "An expanded noun phrase adds describing words to a noun"
+     ],
+     "say": "Let us remember. A simile compares using like or as. An expanded noun phrase adds describing words to a noun."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "simile",
+       "meaning": "A comparison between two things using the words like or as."
+      },
+      {
+       "term": "expanded noun phrase",
+       "meaning": "A noun with describing words added, like the tall, silver lighthouse."
+      },
+      {
+       "term": "noun",
+       "meaning": "A naming word for a person, place or thing."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which sentence has a simile?",
+     "hint": "Look for as ... as or like.",
+     "explanation": "As loud as thunder compares his voice with thunder.",
+     "skill_tag": "simile.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "He shouted all day."
+      },
+      {
+       "id": "b",
+       "text": "His voice was as loud as thunder."
+      },
+      {
+       "id": "c",
+       "text": "His voice was very loud."
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Our dog is like a furry rocket is a simile.",
+     "hint": "Does it use like or as?",
+     "explanation": "It compares a dog to a rocket using like.",
+     "skill_tag": "simile.find",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is an expanded noun phrase?",
+     "hint": "A noun with describing words.",
+     "explanation": "A rusty old bicycle adds rusty and old to the noun bicycle.",
+     "skill_tag": "nounphrase.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "pedalled slowly"
+      },
+      {
+       "id": "b",
+       "text": "a rusty old bicycle"
+      },
+      {
+       "id": "c",
+       "text": "the bicycle"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "speech",
+   "kind": "try",
+   "title": "Speech marks and apostrophes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Showing who is speaking"
+    },
+    {
+     "type": "text",
+     "markdown": "**Speech marks** go around the exact words someone says.\n\n\"Come here,\" said Mum.\n\nThe comma goes inside the speech marks.",
+     "say": "When someone speaks in a story, we show their exact words with speech marks. Speech marks look like tiny quotation marks, and they wrap around only the words that are said. Here is Mum calling. Come here, said Mum. The words Come here go inside the speech marks. Notice the comma. It sits inside, just before the closing speech marks."
+    },
+    {
+     "type": "explainer",
+     "title": "Mum calls",
+     "scenes": [
+      {
+       "caption": "Mum says: come here.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "👩",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "Mum"
+        },
+        {
+         "id": "s",
+         "emoji": "💬",
+         "x": 62,
+         "y": 30,
+         "size": 3,
+         "anim": "grow",
+         "label": "Come here"
+        }
+       ],
+       "say": "Mum is calling from the kitchen. These are her exact words: come here."
+      },
+      {
+       "caption": "\"Come here,\" said Mum.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "👩",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "said Mum"
+        },
+        {
+         "id": "s",
+         "emoji": "💬",
+         "x": 62,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse",
+         "label": "\"Come here,\""
+        }
+       ],
+       "say": "To write it, we wrap the spoken words in speech marks, add a comma inside, and then say who spoke. Come here, said Mum."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is punctuated correctly?",
+      "hint": "Speech marks go around the spoken words, with the comma inside.",
+      "explanation": "The spoken words are inside speech marks and the comma sits just before the closing marks.",
+      "skill_tag": "speech.punct",
+      "options": [
+       {
+        "id": "a",
+        "text": "I am hungry, said Sam."
+       },
+       {
+        "id": "b",
+        "text": "\"I am hungry,\" said Sam."
+       },
+       {
+        "id": "c",
+        "text": "\"I am hungry\" said Sam."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write your own"
+    },
+    {
+     "type": "activity",
+     "title": "Catch some speech",
+     "materials": [
+      "Paper and a pencil"
+     ],
+     "instructions": [
+      "Listen to a short chat at home or imagine one between two friends.",
+      "Write what one person says inside speech marks, with a comma inside.",
+      "Add who said it, for example said Hamza.",
+      "Start a new line when a different person speaks."
+     ],
+     "say": "It is your turn to write. Listen to a conversation at home, then write down two lines of what people say. Give each speaker a new line. Use speech marks, a comma, and the word said."
+    },
+    {
+     "type": "image",
+     "emoji": "🗣️",
+     "alt": "Each speaker's words go inside speech marks, and a new speaker starts a new line.",
+     "caption": "Each speaker's words go inside speech marks, and a new speaker starts a new line.",
+     "say": "Here are two friends chatting, with their words in speech bubbles."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which words go inside the speech marks in: Dad said, \"Dinner is ready.\"?",
+      "hint": "Only the spoken words.",
+      "explanation": "Speech marks go around the exact words that are spoken.",
+      "skill_tag": "speech.inside",
+      "options": [
+       {
+        "id": "a",
+        "text": "Dad said"
+       },
+       {
+        "id": "b",
+        "text": "Dinner is ready."
+       },
+       {
+        "id": "c",
+        "text": "Dad said, Dinner"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Showing belonging"
+    },
+    {
+     "type": "text",
+     "markdown": "An **apostrophe** can show that something belongs to someone.\n\nHassan's bike. Mina's coat.",
+     "say": "The apostrophe is a tiny mark with a big job. It can show that something belongs to someone. Hassan owns a bike. We write Hassan's bike. The apostrophe and the s show belonging. Watch the bike become Hassan's."
+    },
+    {
+     "type": "explainer",
+     "title": "Hassan's bike",
+     "scenes": [
+      {
+       "caption": "The bike belongs to Hassan.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🧒",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "Hassan"
+        },
+        {
+         "id": "b",
+         "emoji": "🚲",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "bike"
+        }
+       ],
+       "say": "Here is a bike. Whose is it? It belongs to Hassan."
+      },
+      {
+       "caption": "Hassan's bike",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🧒",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "Hassan's"
+        },
+        {
+         "id": "b",
+         "emoji": "🚲",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "bike"
+        }
+       ],
+       "say": "To show belonging, we add an apostrophe and an s to the owner's name. Hassan's bike."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which shows the coat belongs to Mina?",
+      "hint": "Add an apostrophe and s to the owner.",
+      "explanation": "Mina's coat shows the coat belongs to Mina.",
+      "skill_tag": "apostrophe.possession",
+      "options": [
+       {
+        "id": "a",
+        "text": "Minas coat"
+       },
+       {
+        "id": "b",
+        "text": "Minas' coat"
+       },
+       {
+        "id": "c",
+        "text": "Mina's coat"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 4: Missing letters"
+    },
+    {
+     "type": "text",
+     "markdown": "An apostrophe also shows where letters are missing.\n\ndo not → don't, they did not → they didn't",
+     "say": "The apostrophe has a second job. It shows where letters are missing when we squash two words together. Do not becomes don't. The apostrophe sits where the letter o was. Can not becomes can't. We call these short forms contractions. Let's squash two words into one."
+    },
+    {
+     "type": "explainer",
+     "title": "Squashing words together",
+     "scenes": [
+      {
+       "caption": "do not",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔵",
+         "x": 35,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "do"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "not"
+        }
+       ],
+       "say": "Two words: do not."
+      },
+      {
+       "caption": "don't",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔵",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "don't"
+        },
+        {
+         "id": "t",
+         "emoji": "✂️",
+         "x": 70,
+         "y": 25,
+         "size": 2,
+         "anim": "none",
+         "label": "o is missing"
+        }
+       ],
+       "say": "Squash them together. The o in not disappears, and the apostrophe marks the gap. Don't."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the short form of did not?",
+      "hint": "The apostrophe goes where the letter is missing.",
+      "explanation": "Didn't has the apostrophe where the o is missing.",
+      "skill_tag": "apostrophe.contraction",
+      "options": [
+       {
+        "id": "a",
+        "text": "didnt"
+       },
+       {
+        "id": "b",
+        "text": "didn't"
+       },
+       {
+        "id": "c",
+        "text": "did'nt"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Speech marks wrap around the exact spoken words",
+      "The comma goes inside the speech marks",
+      "An apostrophe shows belonging or missing letters"
+     ],
+     "say": "Let us remember. Speech marks wrap around the exact words spoken. The comma goes inside. A new speaker starts a new line."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "speech marks",
+       "meaning": "Marks that go around the exact words someone says."
+      },
+      {
+       "term": "spoken words",
+       "meaning": "The exact words a person says."
+      },
+      {
+       "term": "comma",
+       "meaning": "A mark that shows a small pause."
+      },
+      {
+       "term": "apostrophe",
+       "meaning": "A mark that shows belonging or missing letters."
+      },
+      {
+       "term": "contraction",
+       "meaning": "Two words squashed into one, like don't."
+      },
+      {
+       "term": "belonging",
+       "meaning": "When something is owned by someone."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is punctuated correctly?",
+     "hint": "Spoken words inside speech marks, comma inside.",
+     "explanation": "The spoken words and the comma sit inside the speech marks.",
+     "skill_tag": "speech.punct",
+     "options": [
+      {
+       "id": "a",
+       "text": "Let's go, said Aisha."
+      },
+      {
+       "id": "b",
+       "text": "\"Let's go,\" said Aisha."
+      },
+      {
+       "id": "c",
+       "text": "\"Let's go\" said Aisha."
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A new speaker starts a new line.",
+     "hint": "Think about how a conversation looks on a page.",
+     "explanation": "A new speaker starts a new line so the reader can follow.",
+     "skill_tag": "speech.newline",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which shows the book belongs to Sara?",
+     "hint": "Apostrophe and s.",
+     "explanation": "Sara's book shows belonging.",
+     "skill_tag": "apostrophe.possession",
+     "options": [
+      {
+       "id": "a",
+       "text": "Saras book"
+      },
+      {
+       "id": "b",
+       "text": "Saras' book"
+      },
+      {
+       "id": "c",
+       "text": "Sara's book"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which words go inside the speech marks in: Ali asked, \"Can I help?\"",
+     "hint": "Only the spoken words.",
+     "explanation": "Speech marks go around the exact words spoken.",
+     "skill_tag": "speech.inside",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ali asked, Can"
+      },
+      {
+       "id": "b",
+       "text": "Can I help?"
+      },
+      {
+       "id": "c",
+       "text": "Ali asked"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pronouns",
+   "kind": "play",
+   "title": "Pronouns and fronted adverbials",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pronouns"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pronoun** takes the place of a noun: she, he, it, they, we.\n\nFatima picked up the book. She opened it.",
+     "say": "Imagine writing Fatima picked up Fatima's book and Fatima opened Fatima's book. That sounds very odd, doesn't it? Pronouns save us from repeating nouns. Fatima becomes she. The book becomes it. The children become they. Pronouns are small words, but they make our writing smooth."
+    },
+    {
+     "type": "explainer",
+     "title": "Swapping nouns for pronouns",
+     "scenes": [
+      {
+       "caption": "Fatima picked up the book. Fatima opened the book.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "👧",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "Fatima"
+        },
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "the book"
+        }
+       ],
+       "say": "Fatima picked up the book. Then Fatima opened the book. Fatima and the book are repeated."
+      },
+      {
+       "caption": "Fatima picked up the book. She opened it.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "👧",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "she"
+        },
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "it"
+        },
+        {
+         "id": "s",
+         "emoji": "✨",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "float",
+         "label": "smoother"
+        }
+       ],
+       "say": "Let's swap. Fatima becomes she. The book becomes it. Fatima picked up the book. She opened it. Much smoother!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which pronoun replaces the boys?",
+      "hint": "More than one person.",
+      "explanation": "The boys is more than one person, so we use they.",
+      "skill_tag": "pronoun.swap",
+      "options": [
+       {
+        "id": "a",
+        "text": "she"
+       },
+       {
+        "id": "b",
+        "text": "they"
+       },
+       {
+        "id": "c",
+        "text": "it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fronted adverbials"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fronted adverbial** starts a sentence and tells us when, where or how.\n\nAfter lunch, we went to the park.\n\nA comma follows a fronted adverbial.",
+     "say": "A fronted adverbial is a phrase at the start of a sentence. It tells us when, where or how something happens. Before bedtime, Zainab read a story. Under the old bridge, a troll lived. After the rain, the sun came out. And look: a comma always follows a fronted adverbial."
+    },
+    {
+     "type": "explainer",
+     "title": "After lunch, we went to the park",
+     "scenes": [
+      {
+       "caption": "After lunch...",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🍽️",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "lunch"
+        }
+       ],
+       "say": "First, lunch. Everyone eats."
+      },
+      {
+       "caption": "After lunch, we went to the park.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🍽️",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "After lunch,"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 50,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "then"
+        },
+        {
+         "id": "p",
+         "emoji": "🌳",
+         "x": 75,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "we went to the park"
+        }
+       ],
+       "say": "Then we go to the park. After lunch, we went to the park. The words After lunch come first, so it is a fronted adverbial. Notice the comma after it."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the fronted adverbial in: Before bedtime, Zainab read a story.?",
+      "hint": "Which phrase comes first and tells us when?",
+      "explanation": "Before bedtime starts the sentence and tells us when.",
+      "skill_tag": "adverbial.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "read a story"
+       },
+       {
+        "id": "b",
+        "text": "Before bedtime"
+       },
+       {
+        "id": "c",
+        "text": "Zainab"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Pronoun pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "👧",
+      "👦",
+      "📖",
+      "🐶",
+      "🌳",
+      "⭐"
+     ],
+     "say": "Time for a memory game. Match up the pairs, and think about how pronouns replace nouns."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which pronoun replaces Fatima's brother?",
+      "hint": "One boy.",
+      "explanation": "One boy is he.",
+      "skill_tag": "pronoun.swap",
+      "options": [
+       {
+        "id": "a",
+        "text": "she"
+       },
+       {
+        "id": "b",
+        "text": "they"
+       },
+       {
+        "id": "c",
+        "text": "he"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A pronoun takes the place of a noun",
+      "A fronted adverbial starts a sentence and is followed by a comma"
+     ],
+     "say": "Let us remember. A pronoun takes the place of a noun. A fronted adverbial starts a sentence, and a comma follows it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pronoun",
+       "meaning": "A word that takes the place of a noun, like she, it or they."
+      },
+      {
+       "term": "fronted adverbial",
+       "meaning": "A phrase at the start of a sentence that tells us when, where or how."
+      },
+      {
+       "term": "adverbial",
+       "meaning": "A word or phrase that tells us more about a verb."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which pronoun replaces the girls?",
+     "hint": "More than one person.",
+     "explanation": "The girls is more than one person, so we use they.",
+     "skill_tag": "pronoun.swap",
+     "options": [
+      {
+       "id": "a",
+       "text": "it"
+      },
+      {
+       "id": "b",
+       "text": "they"
+      },
+      {
+       "id": "c",
+       "text": "she"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is the fronted adverbial in: Under the bridge, a troll lived.?",
+     "hint": "It comes first and tells us where.",
+     "explanation": "Under the bridge starts the sentence and tells us where.",
+     "skill_tag": "adverbial.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "a troll"
+      },
+      {
+       "id": "b",
+       "text": "Under the bridge"
+      },
+      {
+       "id": "c",
+       "text": "lived"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A comma follows a fronted adverbial.",
+     "hint": "Think about After lunch, we ...",
+     "explanation": "A comma always follows a fronted adverbial.",
+     "skill_tag": "adverbial.comma",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tenses_agreement",
+   "kind": "use",
+   "title": "Connectives, tenses and agreement",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Connectives"
+    },
+    {
+     "type": "text",
+     "markdown": "A **connective** joins ideas: because, but, so, however, meanwhile.\n\nIt was raining, so we stayed in.",
+     "say": "Connectives are joining words that link ideas. Although, however, because, so, meanwhile. They show how ideas are connected. I wanted to go outside, but it was raining. I stayed in because it was raining. Connectives help the reader follow your thinking."
+    },
+    {
+     "type": "explainer",
+     "title": "Linking ideas",
+     "scenes": [
+      {
+       "caption": "It was raining.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "grow",
+         "label": "It was raining"
+        }
+       ],
+       "say": "Rain falls. We could not play outside."
+      },
+      {
+       "caption": "It was raining, so we stayed in.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 25,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "It was raining,"
+        },
+        {
+         "id": "c",
+         "emoji": "➡️",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "so"
+        },
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "we stayed in"
+        }
+       ],
+       "say": "The connective so links the cause and the result. It was raining, so we stayed in."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Pick the best connective: I was tired ___ I went to bed early.",
+      "hint": "Tired is the cause. Going to bed is the result.",
+      "explanation": "So links a cause to its result.",
+      "skill_tag": "connective.pick",
+      "options": [
+       {
+        "id": "a",
+        "text": "although"
+       },
+       {
+        "id": "b",
+        "text": "meanwhile"
+       },
+       {
+        "id": "c",
+        "text": "so"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Past and present"
+    },
+    {
+     "type": "text",
+     "markdown": "**Tense** shows when something happens: past, present or future.\n\nMany past tense verbs add -ed. **Irregular** verbs change: run → ran.",
+     "say": "Verbs change to show time. Present tense: she runs. Past tense: she ran. Many past tense verbs end in ed, like jumped. But some are irregular and change completely. Run becomes ran. Swim becomes swam. Write becomes wrote. We have to learn these."
+    },
+    {
+     "type": "explainer",
+     "title": "Run and ran",
+     "scenes": [
+      {
+       "caption": "She runs.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🏃",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "she runs"
+        },
+        {
+         "id": "t",
+         "emoji": "🕐",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "none",
+         "label": "now"
+        }
+       ],
+       "say": "Right now, she runs. This is present tense."
+      },
+      {
+       "caption": "Yesterday she ran.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🏃",
+         "x": 60,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "she ran"
+        },
+        {
+         "id": "t",
+         "emoji": "🕐",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "none",
+         "label": "yesterday"
+        }
+       ],
+       "say": "Yesterday, she ran. The whole word changes. It is an irregular verb."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the past tense of swim?",
+      "hint": "It is an irregular verb.",
+      "explanation": "Swim changes to swam in the past tense.",
+      "skill_tag": "tense.irregular",
+      "options": [
+       {
+        "id": "a",
+        "text": "swimmed"
+       },
+       {
+        "id": "b",
+        "text": "swam"
+       },
+       {
+        "id": "c",
+        "text": "swum"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Subject and verb agree"
+    },
+    {
+     "type": "text",
+     "markdown": "The verb must **agree** with the subject.\n\nThe dog is barking. The dogs are barking.",
+     "say": "The verb has to agree with who or what is doing it. One dog barks. Two dogs bark. The dog is barking. The dogs are barking. If the subject is one, use is. If it is more than one, use are. The dogs is barking sounds wrong, and now you know why."
+    },
+    {
+     "type": "explainer",
+     "title": "One dog, two dogs",
+     "scenes": [
+      {
+       "caption": "The dog is barking.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🐕",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "The dog is barking"
+        }
+       ],
+       "say": "One dog. The dog is barking."
+      },
+      {
+       "caption": "The dogs are barking.",
+       "items": [
+        {
+         "id": "d1",
+         "emoji": "🐕",
+         "x": 35,
+         "y": 55,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "d2",
+         "emoji": "🐕",
+         "x": 65,
+         "y": 55,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "l",
+         "emoji": "🗣️",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "none",
+         "label": "are barking"
+        }
+       ],
+       "say": "Now two dogs. The dogs are barking. Plural subject, so are."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sentence is correct?",
+      "hint": "Does the verb match one or many?",
+      "explanation": "Birds is plural, so we use are.",
+      "skill_tag": "agreement.pick",
+      "options": [
+       {
+        "id": "a",
+        "text": "The bird are singing."
+       },
+       {
+        "id": "b",
+        "text": "The birds are singing."
+       },
+       {
+        "id": "c",
+        "text": "The birds is singing."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Connectives link ideas",
+      "Irregular verbs change completely: run → ran",
+      "The verb agrees with the subject: is or are"
+     ],
+     "say": "Let us remember. Connectives link ideas. Tense shows when. The verb must agree with the subject."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "connective",
+       "meaning": "A word that links ideas, like because, so or however."
+      },
+      {
+       "term": "tense",
+       "meaning": "The form of a verb that shows when something happens."
+      },
+      {
+       "term": "irregular",
+       "meaning": "A verb that does not just add -ed in the past, like run to ran."
+      },
+      {
+       "term": "agree",
+       "meaning": "When the verb matches the subject, like the dogs are."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Pick the best connective: It was cold ___ I wore a jumper.",
+     "hint": "Cold is the cause.",
+     "explanation": "So links the cause to the result.",
+     "skill_tag": "connective.pick",
+     "options": [
+      {
+       "id": "a",
+       "text": "although"
+      },
+      {
+       "id": "b",
+       "text": "so"
+      },
+      {
+       "id": "c",
+       "text": "meanwhile"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is the past tense of write?",
+     "hint": "It is an irregular verb.",
+     "explanation": "Write changes to wrote in the past.",
+     "skill_tag": "tense.irregular",
+     "options": [
+      {
+       "id": "a",
+       "text": "writed"
+      },
+      {
+       "id": "b",
+       "text": "wrote"
+      },
+      {
+       "id": "c",
+       "text": "written"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which sentence is correct?",
+     "hint": "Children is plural.",
+     "explanation": "Children is more than one, so we use are.",
+     "skill_tag": "agreement.pick",
+     "options": [
+      {
+       "id": "a",
+       "text": "The child are playing."
+      },
+      {
+       "id": "b",
+       "text": "The children are playing."
+      },
+      {
+       "id": "c",
+       "text": "The children is playing."
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Pick the sentence that contains a simile.",
+    "hint": "Look for like or as.",
+    "explanation": "It compares the moon to a coin using like.",
+    "skill_tag": "simile.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "The moon is far away."
+     },
+     {
+      "id": "b",
+      "text": "The moon was like a silver coin."
+     },
+     {
+      "id": "c",
+      "text": "The moon was bright."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A simile compares two things without using the words like or as.",
+    "hint": "What two words do similes use?",
+    "explanation": "Similes use like or as.",
+    "skill_tag": "simile.def",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Complete: the tall, silver tower.",
+    "hint": "Which words describe? Which is the naming word?",
+    "explanation": "Tall and silver describe the noun tower.",
+    "skill_tag": "nounphrase.parts",
+    "points": 2,
+    "text": "Tall and silver are {b1}. Tower is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "verbs"
+       },
+       {
+        "id": "b",
+        "text": "describing words"
+       },
+       {
+        "id": "c",
+        "text": "pronouns"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "verb"
+       },
+       {
+        "id": "b",
+        "text": "noun"
+       },
+       {
+        "id": "c",
+        "text": "adverb"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "similes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which are expanded noun phrases? Pick two.",
+    "hint": "A noun with describing words added.",
+    "explanation": "The grumpy old dragon and a bright red balloon are nouns with describing words.",
+    "skill_tag": "nounphrase.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "a bright red balloon"
+     },
+     {
+      "id": "b",
+      "text": "ran quickly home"
+     },
+     {
+      "id": "c",
+      "text": "she laughed loudly"
+     },
+     {
+      "id": "d",
+      "text": "the grumpy old dragon"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "similes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Which sentence has its speech punctuated correctly?",
+    "hint": "Speech marks around spoken words, comma inside.",
+    "explanation": "The spoken words and comma are inside the speech marks.",
+    "skill_tag": "speech.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "\"Come here\" said Mum."
+     },
+     {
+      "id": "b",
+      "text": "\"Come here,\" said Mum."
+     },
+     {
+      "id": "c",
+      "text": "Come here, said Mum."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the words in order to make a sentence with speech.",
+    "hint": "Start with the spoken words.",
+    "explanation": "\"I love this book,\" said Amna.",
+    "skill_tag": "speech.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "love"
+     },
+     {
+      "id": "i6",
+      "text": "Amna."
+     },
+     {
+      "id": "i3",
+      "text": "this"
+     },
+     {
+      "id": "i1",
+      "text": "\"I"
+     },
+     {
+      "id": "i4",
+      "text": "book,\""
+     },
+     {
+      "id": "i5",
+      "text": "said"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why does the comma go inside the speech marks in \"Come here,\" said Mum?",
+    "hint": "What does the comma do for the spoken words?",
+    "explanation": "The comma sits inside the speech marks to mark the end of the spoken words.",
+    "skill_tag": "speech.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It shows who is speaking"
+     },
+     {
+      "id": "b",
+      "text": "It marks the end of the spoken words"
+     },
+     {
+      "id": "c",
+      "text": "It shows a question"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each noun to its pronoun.",
+    "hint": "One girl, more than one, one thing.",
+    "explanation": "Fatima is she, the boys are they, the book is it.",
+    "skill_tag": "pronoun.swap",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Fatima"
+     },
+     {
+      "id": "l2",
+      "text": "the boys"
+     },
+     {
+      "id": "l3",
+      "text": "the book"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "it"
+     },
+     {
+      "id": "r1",
+      "text": "she"
+     },
+     {
+      "id": "r2",
+      "text": "they"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pronouns",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap what happened first: Before bedtime, Zainab read a story.",
+    "hint": "Before bedtime means earlier than bedtime.",
+    "explanation": "Before bedtime, so she read first and then went to bed.",
+    "skill_tag": "adverbial.meaning",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📖",
+       "label": "Reading",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛏️",
+       "label": "Bedtime",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "Snack",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many pronouns there are: She gave him her book.",
+    "hint": "Find words that take the place of nouns.",
+    "explanation": "She, him and her are all pronouns.",
+    "skill_tag": "pronoun.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "pronouns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why do writers use pronouns like she and it?",
+    "hint": "Think about Fatima picked up Fatima's book.",
+    "explanation": "Pronouns stop us repeating the same noun again and again.",
+    "skill_tag": "pronoun.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make sentences longer"
+     },
+     {
+      "id": "b",
+      "text": "To avoid repeating the same noun"
+     },
+     {
+      "id": "c",
+      "text": "To show a question"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Why does Hassan's bike need an apostrophe?",
+    "hint": "Who owns the bike?",
+    "explanation": "The apostrophe and s show belonging.",
+    "skill_tag": "apostrophe.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the word plural"
+     },
+     {
+      "id": "b",
+      "text": "It shows the bike belongs to Hassan"
+     },
+     {
+      "id": "c",
+      "text": "It shows letters are missing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "fill_blank",
+    "prompt": "Choose the correct words.",
+    "hint": "One shows missing letters, one shows belonging.",
+    "explanation": "Didn't has a missing o. Girl's shows the bag belongs to the girl.",
+    "skill_tag": "apostrophe.mix",
+    "points": 2,
+    "text": "They {b1} come today. The {b2} bag is blue.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "didnt"
+       },
+       {
+        "id": "b",
+        "text": "didn't"
+       },
+       {
+        "id": "c",
+        "text": "did'nt"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "girls"
+       },
+       {
+        "id": "b",
+        "text": "girls'"
+       },
+       {
+        "id": "c",
+        "text": "girl's"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "speech",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "short_text",
+    "prompt": "Write the past tense of run.",
+    "hint": "It is an irregular verb.",
+    "explanation": "Run changes to ran in the past.",
+    "skill_tag": "tense.irregular",
+    "answer": {
+     "accepted": [
+      "ran"
+     ]
+    },
+    "sub_lesson": "tenses_agreement",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why is The dogs are barking correct and The dogs is barking wrong?",
+    "hint": "Is it one dog or more?",
+    "explanation": "Plural subjects need are.",
+    "skill_tag": "agreement.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dogs is singular, so it needs is"
+     },
+     {
+      "id": "b",
+      "text": "Dogs is plural, so it needs are"
+     },
+     {
+      "id": "c",
+      "text": "Barking is a noun"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tenses_agreement",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Spot the simile: which sentence has one?",
+    "hint": "Look for as ... as or like.",
+    "explanation": "It compares the wind to a wolf using as ... as.",
+    "skill_tag": "simile.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "The wind was very cold."
+     },
+     {
+      "id": "b",
+      "text": "The wind howled as loudly as a wolf."
+     },
+     {
+      "id": "c",
+      "text": "The wind howled all night."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which of these sentences is a simile?",
+    "hint": "Look for like or as.",
+    "explanation": "It compares grass with a carpet using like.",
+    "skill_tag": "simile.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "The grass grew quickly."
+     },
+     {
+      "id": "b",
+      "text": "The grass felt like a green carpet."
+     },
+     {
+      "id": "c",
+      "text": "The grass was long."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "In as quick as a cheetah, the word as shows it is a simile.",
+    "hint": "Similes use like or as.",
+    "explanation": "As ... as is one way to make a simile.",
+    "skill_tag": "simile.def",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A simile always uses the word because.",
+    "hint": "Which two words?",
+    "explanation": "A simile uses like or as, not because.",
+    "skill_tag": "simile.def",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "similes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "fill_blank",
+    "prompt": "Complete: the shy, brown rabbit.",
+    "hint": "Which words describe? Which is the naming word?",
+    "explanation": "Shy and brown describe the noun rabbit.",
+    "skill_tag": "nounphrase.parts",
+    "points": 2,
+    "text": "Shy and brown are {b1}. Rabbit is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "verbs"
+       },
+       {
+        "id": "b",
+        "text": "pronouns"
+       },
+       {
+        "id": "c",
+        "text": "describing words"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "verb"
+       },
+       {
+        "id": "b",
+        "text": "noun"
+       },
+       {
+        "id": "c",
+        "text": "adverb"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "similes",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "fill_blank",
+    "prompt": "Complete: a crumbly chocolate biscuit.",
+    "hint": "Which words describe? Which is the naming word?",
+    "explanation": "Crumbly and chocolate describe the noun biscuit.",
+    "skill_tag": "nounphrase.parts",
+    "points": 2,
+    "text": "Crumbly and chocolate are {b1}. Biscuit is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "verbs"
+       },
+       {
+        "id": "b",
+        "text": "describing words"
+       },
+       {
+        "id": "c",
+        "text": "pronouns"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "verb"
+       },
+       {
+        "id": "b",
+        "text": "noun"
+       },
+       {
+        "id": "c",
+        "text": "adverb"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "similes",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick the two expanded noun phrases.",
+    "hint": "A noun with describing words added.",
+    "explanation": "The tiny, blue boat and a warm, fluffy blanket are nouns with describing words.",
+    "skill_tag": "nounphrase.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "a warm, fluffy blanket"
+     },
+     {
+      "id": "b",
+      "text": "jumped over it"
+     },
+     {
+      "id": "c",
+      "text": "he spoke softly"
+     },
+     {
+      "id": "d",
+      "text": "the tiny, blue boat"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "similes",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Choose two expanded noun phrases.",
+    "hint": "A noun with describing words added.",
+    "explanation": "A sparkling mountain stream and the ancient stone bridge are nouns with describing words.",
+    "skill_tag": "nounphrase.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "the ancient stone bridge"
+     },
+     {
+      "id": "b",
+      "text": "was running fast"
+     },
+     {
+      "id": "c",
+      "text": "they sang happily"
+     },
+     {
+      "id": "d",
+      "text": "a sparkling mountain stream"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "similes",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "Pick the sentence with correct speech punctuation.",
+    "hint": "Speech marks around spoken words, comma inside.",
+    "explanation": "The spoken words and comma are inside the speech marks.",
+    "skill_tag": "speech.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "\"I am hungry\" said Hamza."
+     },
+     {
+      "id": "b",
+      "text": "\"I am hungry,\" said Hamza."
+     },
+     {
+      "id": "c",
+      "text": "I am hungry, said Hamza."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multiple_choice",
+    "prompt": "Which version shows speech correctly?",
+    "hint": "Speech marks around spoken words, comma inside.",
+    "explanation": "The spoken words and comma are inside the speech marks.",
+    "skill_tag": "speech.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "\"Wait for me\" called Ayesha."
+     },
+     {
+      "id": "b",
+      "text": "\"Wait for me,\" called Ayesha."
+     },
+     {
+      "id": "c",
+      "text": "Wait for me, called Ayesha."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange the words into a sentence with speech.",
+    "hint": "Start with the spoken words.",
+    "explanation": "\"Let's play outside,\" said Bilal.",
+    "skill_tag": "speech.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "play"
+     },
+     {
+      "id": "i3",
+      "text": "outside,\""
+     },
+     {
+      "id": "i4",
+      "text": "said"
+     },
+     {
+      "id": "i5",
+      "text": "Bilal."
+     },
+     {
+      "id": "i1",
+      "text": "\"Let's"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Sort the words to make a sentence with speech.",
+    "hint": "Start with the spoken words.",
+    "explanation": "\"Please pass the salt,\" said Dad.",
+    "skill_tag": "speech.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "pass"
+     },
+     {
+      "id": "i4",
+      "text": "salt,\""
+     },
+     {
+      "id": "i3",
+      "text": "the"
+     },
+     {
+      "id": "i6",
+      "text": "Dad."
+     },
+     {
+      "id": "i1",
+      "text": "\"Please"
+     },
+     {
+      "id": "i5",
+      "text": "said"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why do speech marks go around \"Look out!\" in \"Look out!\" shouted Dad?",
+    "hint": "What is inside the marks?",
+    "explanation": "Speech marks wrap around the exact words spoken.",
+    "skill_tag": "speech.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They show a question"
+     },
+     {
+      "id": "b",
+      "text": "They show the exact words spoken"
+     },
+     {
+      "id": "c",
+      "text": "They show who is speaking"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why does a new speaker start a new line?",
+    "hint": "Think about reading a conversation.",
+    "explanation": "A new line shows a new speaker and helps the reader follow.",
+    "skill_tag": "speech.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It uses more paper"
+     },
+     {
+      "id": "b",
+      "text": "It helps the reader follow who is talking"
+     },
+     {
+      "id": "c",
+      "text": "It makes the words longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Which pronoun goes with each noun?",
+    "hint": "One boy, more than one, one thing.",
+    "explanation": "Hamza is he, the girls are they, the bike is it.",
+    "skill_tag": "pronoun.swap",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Hamza"
+     },
+     {
+      "id": "l2",
+      "text": "the girls"
+     },
+     {
+      "id": "l3",
+      "text": "the bike"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "they"
+     },
+     {
+      "id": "r1",
+      "text": "he"
+     },
+     {
+      "id": "r3",
+      "text": "it"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pronouns",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Pair each noun with its pronoun.",
+    "hint": "One girl, more than one, one thing.",
+    "explanation": "Zainab is she, the cats are they, the ball is it.",
+    "skill_tag": "pronoun.swap",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Zainab"
+     },
+     {
+      "id": "l2",
+      "text": "the cats"
+     },
+     {
+      "id": "l3",
+      "text": "the ball"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "they"
+     },
+     {
+      "id": "r3",
+      "text": "it"
+     },
+     {
+      "id": "r1",
+      "text": "she"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pronouns",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap what happened first: After lunch, we went to the park.",
+    "hint": "After lunch means lunch came first.",
+    "explanation": "After lunch, so lunch happened first.",
+    "skill_tag": "adverbial.meaning",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍽️",
+       "label": "Lunch",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌳",
+       "label": "The park",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏫",
+       "label": "School",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap what happened last: Before the match, the team practised.",
+    "hint": "Before the match means practice came earlier.",
+    "explanation": "Practice came before the match, so the match came last.",
+    "skill_tag": "adverbial.meaning",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⚽",
+       "label": "The match",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏃",
+       "label": "Practice",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏆",
+       "label": "Trophy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many pronouns there are: They showed us the way.",
+    "hint": "Find words that take the place of nouns.",
+    "explanation": "They and us are pronouns.",
+    "skill_tag": "pronoun.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "pronouns",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many pronouns there are: I gave it to her.",
+    "hint": "Find words that take the place of nouns.",
+    "explanation": "I, it and her are pronouns.",
+    "skill_tag": "pronoun.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "pronouns",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why does a comma follow After lunch in After lunch, we went home?",
+    "hint": "What comes after the comma?",
+    "explanation": "A comma follows a fronted adverbial.",
+    "skill_tag": "adverbial.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It shows a question"
+     },
+     {
+      "id": "b",
+      "text": "It marks the end of the fronted adverbial"
+     },
+     {
+      "id": "c",
+      "text": "It shows speech"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why is Under the bridge, a troll lived a good opening?",
+    "hint": "What does Under the bridge tell us?",
+    "explanation": "A fronted adverbial like this tells us where.",
+    "skill_tag": "adverbial.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It shows a question"
+     },
+     {
+      "id": "b",
+      "text": "It tells the reader where it happens"
+     },
+     {
+      "id": "c",
+      "text": "It tells the reader what a troll eats"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pronouns",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Why does don't need an apostrophe?",
+    "hint": "Which letter is missing?",
+    "explanation": "The apostrophe sits where the o is missing.",
+    "skill_tag": "apostrophe.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It shows belonging"
+     },
+     {
+      "id": "b",
+      "text": "It shows a letter is missing"
+     },
+     {
+      "id": "c",
+      "text": "It makes the word plural"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Why does Mina's coat need an apostrophe?",
+    "hint": "Who owns the coat?",
+    "explanation": "The apostrophe and s show belonging.",
+    "skill_tag": "apostrophe.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the word plural"
+     },
+     {
+      "id": "b",
+      "text": "It shows the coat belongs to Mina"
+     },
+     {
+      "id": "c",
+      "text": "It shows a letter is missing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "speech",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "fill_blank",
+    "prompt": "Pick the right words.",
+    "hint": "One shows missing letters, one shows belonging.",
+    "explanation": "Don't has a missing o. Boy's shows the hat belongs to the boy.",
+    "skill_tag": "apostrophe.mix",
+    "points": 2,
+    "text": "We {b1} like peas. The {b2} hat is red.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "do'nt"
+       },
+       {
+        "id": "b",
+        "text": "don't"
+       },
+       {
+        "id": "c",
+        "text": "dont"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "boys'"
+       },
+       {
+        "id": "b",
+        "text": "boy's"
+       },
+       {
+        "id": "c",
+        "text": "boys"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "One shows missing letters, one shows belonging.",
+    "explanation": "Can't has missing letters. Dog's shows the paw belongs to the dog.",
+    "skill_tag": "apostrophe.mix",
+    "points": 2,
+    "text": "She {b1} swim. The {b2} paw is sore.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cant"
+       },
+       {
+        "id": "b",
+        "text": "can't"
+       },
+       {
+        "id": "c",
+        "text": "ca'nt"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "dogs"
+       },
+       {
+        "id": "b",
+        "text": "dogs'"
+       },
+       {
+        "id": "c",
+        "text": "dog's"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "speech",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "short_text",
+    "prompt": "Write the past tense of swim.",
+    "hint": "It is an irregular verb.",
+    "explanation": "Swim changes to swam in the past.",
+    "skill_tag": "tense.irregular",
+    "answer": {
+     "accepted": [
+      "swam"
+     ]
+    },
+    "sub_lesson": "tenses_agreement",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "short_text",
+    "prompt": "Write the past tense of write.",
+    "hint": "It is an irregular verb.",
+    "explanation": "Write changes to wrote in the past.",
+    "skill_tag": "tense.irregular",
+    "answer": {
+     "accepted": [
+      "wrote"
+     ]
+    },
+    "sub_lesson": "tenses_agreement",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why is The bird is singing correct and The bird are singing wrong?",
+    "hint": "Is it one bird or more?",
+    "explanation": "Singular subjects need is.",
+    "skill_tag": "agreement.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Singing is a noun"
+     },
+     {
+      "id": "b",
+      "text": "Bird is singular, so it needs is"
+     },
+     {
+      "id": "c",
+      "text": "Bird is plural, so it needs are"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tenses_agreement",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why is The children are playing correct and The children is playing wrong?",
+    "hint": "Is it one child or more?",
+    "explanation": "Children is more than one, so it needs are.",
+    "skill_tag": "agreement.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Children is singular, so it needs is"
+     },
+     {
+      "id": "b",
+      "text": "Playing is a noun"
+     },
+     {
+      "id": "c",
+      "text": "Children is plural, so it needs are"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tenses_agreement",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
