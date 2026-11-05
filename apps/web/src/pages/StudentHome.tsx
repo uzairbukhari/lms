@@ -179,6 +179,7 @@ export function StudentHome() {
   const [teaser, setTeaser] = useState<TeaserState | null>(null);
   const [cards, setCards] = useState<CardSummary | null>(null);
   const [picked, setPicked] = useState<string | null>(null);
+  const [calOpen, setCalOpen] = useState(false);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
@@ -236,6 +237,11 @@ export function StudentHome() {
               {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
             </span>
           )}
+          {weekList.length > 1 && (
+            <button type="button" className="btn !min-h-14 !px-4" aria-label="Open the week calendar" aria-haspopup="dialog" onClick={() => setCalOpen(true)}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3" /><path d="M3.5 10h17M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17.2h.01M12 17.2h.01" /></svg>
+            </button>
+          )}
           {rewards && rewards.streak.current > 0 && (
             <Link to="/rewards" className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 text-xl font-extrabold" aria-label={`${rewards.streak.current} week streak`}>
               <span aria-hidden="true">🔥</span> {rewards.streak.current}
@@ -289,22 +295,6 @@ export function StudentHome() {
 
       {home && (
         <section aria-labelledby="week" className="kh-week flex flex-col gap-4">
-          {weekList.length > 1 && (
-            <nav aria-label="Choose a week" className="flex flex-wrap items-center gap-2">
-              <button type="button" className="btn !min-h-12 !px-4" disabled={shownIdx <= 0} aria-label="Previous week" onClick={() => setPicked(weekList[shownIdx - 1] ?? null)}>◀</button>
-              {weekList.map((k) => {
-                const [s, w] = k.split("-");
-                const on = k === shownKey;
-                return (
-                  <button key={k} type="button" aria-current={on ? "true" : undefined} onClick={() => setPicked(k)} className={"btn !min-h-12 !px-4 " + (on ? "btn-primary" : "")}>
-                    {new Set(weekList.map((x) => x.split("-")[0])).size > 1 ? `S${s} · ` : ""}Week {w}
-                    <span className="ml-2 text-sm font-bold opacity-80">{weekTag(k)}</span>
-                  </button>
-                );
-              })}
-              <button type="button" className="btn !min-h-12 !px-4" disabled={shownIdx >= weekList.length - 1} aria-label="Next week" onClick={() => setPicked(weekList[shownIdx + 1] ?? null)}>▶</button>
-            </nav>
-          )}
           {weekCards.length === 0 ? (
             <>
               <h2 id="week" className="font-display text-3xl font-extrabold">This week</h2>
@@ -339,6 +329,30 @@ export function StudentHome() {
           <h2 id="library" className="font-display text-2xl font-bold">📚 Lesson library</h2>
           <div className="grid gap-4 sm:grid-cols-2">{home.open.map((c) => <LessonCard key={c.id} c={c} past />)}</div>
         </section>
+      )}
+      {calOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,.55)" }} onClick={() => setCalOpen(false)} onKeyDown={(e) => e.key === "Escape" && setCalOpen(false)}>
+          <div role="dialog" aria-modal="true" aria-label="Choose a week" className="card flex max-h-[90vh] w-full max-w-2xl flex-col gap-4 overflow-auto p-6" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between gap-3">
+              <h2 className="font-display text-3xl font-extrabold">My weeks</h2>
+              <button type="button" autoFocus className="btn !min-h-12" onClick={() => setCalOpen(false)}>Close</button>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {weekList.map((k) => {
+                const [s, w] = k.split("-");
+                const cs = byWeek.get(k) ?? [];
+                const d = cs.filter((c) => c.progress?.status === "completed").length;
+                const on = k === shownKey;
+                return (
+                  <button key={k} type="button" aria-current={on ? "true" : undefined} onClick={() => { setPicked(k); setCalOpen(false); }} className={"btn flex-col !items-start !gap-1 !py-3 text-left " + (on ? "btn-primary" : "")}>
+                    <span className="font-display text-2xl font-extrabold">{new Set(weekList.map((x) => x.split("-")[0])).size > 1 ? `S${s} · ` : ""}Week {w}</span>
+                    <span className="text-sm font-bold opacity-80">{weekTag(k)} · {d} of {cs.length} done</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       )}
     </main>
   );
