@@ -1,0 +1,2524 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-our-bodies",
+  "subject": "science",
+  "title": "Our Bodies",
+  "summary": "The skeleton and muscles, digestion, teeth, the heart and blood, germs and medicines.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Our bodies",
+  "learning_objectives": [
+   "Describe what the skeleton and muscles do",
+   "Describe the digestive system",
+   "Name types of teeth and how to care for them",
+   "Explain the heart, blood and how germs spread"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 animals incl. humans",
+    "text": "Describe the simple functions of the basic parts of the digestive system; identify the different types of teeth and their simple functions"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y3 animals incl. humans",
+    "text": "Identify that humans have skeletons and muscles for support, protection and movement"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y6 circulation",
+    "text": "Identify and name the main parts of the human circulatory system"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bs.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bs.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bs.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bs.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bp.04"
+   }
+  ],
+  "success_criteria": [
+   "I can say what the skeleton and muscles do",
+   "I can describe the journey of food",
+   "I can name three types of teeth",
+   "I can explain how to stay healthy"
+  ],
+  "real_life": "Looking after your teeth, staying clean and understanding why exercise makes your heart beat faster.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which group of animals has a backbone?",
+    "hint": "Think about the spine.",
+    "explanation": "Vertebrates have a backbone.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Insects"
+     },
+     {
+      "id": "b",
+      "text": "Vertebrates"
+     },
+     {
+      "id": "c",
+      "text": "Invertebrates"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What do plants make using light?",
+    "hint": "Photosynthesis.",
+    "explanation": "Plants make food by photosynthesis.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bones"
+     },
+     {
+      "id": "b",
+      "text": "Food"
+     },
+     {
+      "id": "c",
+      "text": "Teeth"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A habitat is where a living thing lives.",
+    "hint": "A home.",
+    "explanation": "A habitat is where something lives.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how does your body work?\n\nWe will look inside the body.",
+   "say": "Welcome back, young scientist! Today's big question is: how does your body work? By the end, you will explain how bones and muscles move you, how food is digested, why we look after our teeth, and how the heart and germs affect your health. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🦴💪🦷❤️",
+   "alt": "Bones, muscles, teeth and a heart.",
+   "caption": "Bones, muscles, teeth and a heart."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "body",
+     "meaning": "All the parts that make up a person."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "skeleton",
+   "kind": "learn",
+   "title": "Skeleton and muscles",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Your skeleton"
+    },
+    {
+     "type": "text",
+     "markdown": "The **skeleton** supports, protects and helps us move.\n\nThe skull protects the brain. The ribs protect the heart and lungs.",
+     "say": "Under your skin is a framework of bones called your skeleton. An adult has 206 bones. The skeleton does three jobs. It supports your body so you can stand up. It protects soft organs. Your skull protects your brain, and your ribs protect your heart and lungs. And it helps you move, together with your muscles. Look at the bones inside the body."
+    },
+    {
+     "type": "explainer",
+     "title": "The skeleton",
+     "scenes": [
+      {
+       "caption": "Bones support the body.",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "body",
+          "highlight": "bones"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a body. Its bones form the skeleton. The bones hold the body up."
+      },
+      {
+       "caption": "Bones protect soft organs.",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "body",
+          "highlight": "bones"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The skull is a hard box that protects the soft brain. The ribs make a cage around the heart and lungs."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which bones protect your heart and lungs?",
+      "hint": "They form a cage.",
+      "explanation": "The ribs make a cage around the heart and lungs.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The skull"
+       },
+       {
+        "id": "b",
+        "text": "The ribs"
+       },
+       {
+        "id": "c",
+        "text": "The toes"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Muscles move your bones"
+    },
+    {
+     "type": "text",
+     "markdown": "**Muscles** pull on bones to make them move. They work in pairs.\n\nA **joint**, like the elbow, is where two bones meet and can bend.",
+     "say": "Bones cannot move on their own. Muscles move them. A muscle can only pull, never push, so muscles work in pairs. To bend your arm, the biceps muscle on top gets shorter and pulls. To straighten it, the triceps underneath pulls the other way. Tendons join muscles to bones, and joints, like your elbow, let the bones bend."
+    },
+    {
+     "type": "explainer",
+     "title": "Muscles in pairs",
+     "scenes": [
+      {
+       "caption": "Biceps pulls: the arm bends.",
+       "items": [
+        {
+         "id": "m",
+         "prop": {
+          "kind": "body",
+          "highlight": "muscles"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "To bend the arm, the biceps on top pulls and gets shorter. The triceps relaxes."
+      },
+      {
+       "caption": "Triceps pulls: the arm straightens.",
+       "items": [
+        {
+         "id": "m",
+         "prop": {
+          "kind": "body",
+          "highlight": "muscles"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "To straighten the arm, the triceps pulls and the biceps relaxes. A muscle can only pull, so it needs a partner."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What can a muscle do?",
+      "hint": "That is why they work in pairs.",
+      "explanation": "Muscles can only pull, so they work in pairs to move bones in two directions.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Push and pull"
+       },
+       {
+        "id": "b",
+        "text": "Only pull"
+       },
+       {
+        "id": "c",
+        "text": "Only push"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The skeleton supports, protects and helps us move",
+      "Muscles pull on bones and work in pairs",
+      "Joints are where bones meet"
+     ],
+     "say": "Remember. The skeleton supports, protects and helps movement. Muscles pull bones, in pairs."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "skeleton",
+       "meaning": "All the bones in the body."
+      },
+      {
+       "term": "muscles",
+       "meaning": "Parts of the body that pull to make bones move."
+      },
+      {
+       "term": "joint",
+       "meaning": "A place where two bones meet, such as the elbow."
+      },
+      {
+       "term": "tendon",
+       "meaning": "A strong cord that joins a muscle to a bone."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many bones does an adult have?",
+     "hint": "A little more than 200.",
+     "explanation": "An adult has 206 bones.",
+     "answer": {
+      "value": 206,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What protects your brain?",
+     "hint": "It is a hard box.",
+     "explanation": "The skull protects the brain.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The spine"
+      },
+      {
+       "id": "b",
+       "text": "The skull"
+      },
+      {
+       "id": "c",
+       "text": "The ribs"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Muscles can push bones.",
+     "hint": "Muscles only pull.",
+     "explanation": "A muscle can only pull.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each body part to its job.",
+     "hint": "Think about each job.",
+     "explanation": "The skeleton supports, muscles pull and ribs protect.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Skeleton"
+      },
+      {
+       "id": "l2",
+       "text": "Muscles"
+      },
+      {
+       "id": "l3",
+       "text": "Ribs"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Pull the bones"
+      },
+      {
+       "id": "r3",
+       "text": "Protect the heart"
+      },
+      {
+       "id": "r1",
+       "text": "Supports the body"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "digestion",
+   "kind": "try",
+   "title": "The digestive system",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A journey through the body"
+    },
+    {
+     "type": "text",
+     "markdown": "**Digestion** breaks food into tiny pieces your body can use.\n\nFood travels through the mouth, oesophagus, stomach and intestines.",
+     "say": "Digestion is how your body breaks food down so it can use it. It starts in your mouth. Your teeth chew the food, and saliva makes it soft. You swallow, and the food moves down the oesophagus to the stomach. There, strong acid and churning muscles turn it into a thick liquid. Then it moves into the small intestine. Watch a meal make its journey."
+    },
+    {
+     "type": "explainer",
+     "title": "Digestion",
+     "scenes": [
+      {
+       "caption": "Mouth: chewing.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "m",
+         "emoji": "👄",
+         "x": 50,
+         "y": 45,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In the mouth, teeth chew the food and saliva starts to break it down."
+      },
+      {
+       "caption": "Stomach: churning.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 45,
+         "size": 2,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "prop": {
+          "kind": "body",
+          "highlight": "stomach"
+         },
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The stomach churns the food with acid. It becomes a thick liquid."
+      },
+      {
+       "caption": "Intestines: nutrients absorbed.",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "body",
+          "highlight": "stomach"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "In the small intestine, nutrients pass into the blood. The large intestine takes out water, and the waste leaves the body."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the food's journey in order.",
+      "hint": "Start with chewing.",
+      "explanation": "Food goes from the mouth down the oesophagus to the stomach and then the small intestine.",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Stomach"
+       },
+       {
+        "id": "i4",
+        "text": "Small intestine"
+       },
+       {
+        "id": "i2",
+        "text": "Oesophagus"
+       },
+       {
+        "id": "i1",
+        "text": "Mouth"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Model it"
+    },
+    {
+     "type": "manipulative",
+     "title": "Digestion jobs",
+     "goal": "Put each job in the right place: Breaks food down or Takes in nutrients.",
+     "emoji": "🍌",
+     "count": 8,
+     "zones": [
+      "Breaks food down",
+      "Takes in nutrients"
+     ],
+     "say": "You can show digestion with a model. Put a banana and a little water in a strong bag. Squash it with your hands. That is the stomach churning. Squeeze the mush into a tight sock or tights, and see the liquid come out. That is what the small intestine does with nutrients. Then try matching the parts to jobs."
+    },
+    {
+     "type": "activity",
+     "title": "Model digestion",
+     "materials": [
+      "A banana",
+      "A clear plastic bag",
+      "Water",
+      "Tights or an old sock",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Put the banana and a little water in the bag and squash it. This is the stomach.",
+      "Pour the mush into the tights. Squeeze the liquid out into a bowl. This is the small intestine.",
+      "Draw what you saw and label the stomach and small intestine."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where do nutrients pass into the blood?",
+      "hint": "It comes after the stomach.",
+      "explanation": "Nutrients are absorbed in the small intestine.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Mouth"
+       },
+       {
+        "id": "b",
+        "text": "Small intestine"
+       },
+       {
+        "id": "c",
+        "text": "Oesophagus"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Digestion breaks food down so the body can use it",
+      "Nutrients pass into the blood in the small intestine"
+     ],
+     "say": "Remember. Digestion breaks food down. Nutrients pass into the blood in the small intestine."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "digestion",
+       "meaning": "Breaking food into tiny pieces the body can use."
+      },
+      {
+       "term": "saliva",
+       "meaning": "The watery liquid in your mouth that starts to break food down."
+      },
+      {
+       "term": "oesophagus",
+       "meaning": "The tube that carries food from the mouth to the stomach."
+      },
+      {
+       "term": "nutrients",
+       "meaning": "The useful parts of food that the body needs."
+      },
+      {
+       "term": "intestine",
+       "meaning": "A long tube where nutrients are taken in."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Digestion starts in the mouth.",
+     "hint": "Think about chewing.",
+     "explanation": "Chewing and saliva start digestion.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does the stomach do to food?",
+     "hint": "It mixes it.",
+     "explanation": "The stomach churns the food with acid.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stores it for a year"
+      },
+      {
+       "id": "b",
+       "text": "Makes it hard"
+      },
+      {
+       "id": "c",
+       "text": "Churns it with acid"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order.",
+     "hint": "Start in the mouth.",
+     "explanation": "Digestion goes from chewing to swallowing, churning and absorbing.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "Churning"
+      },
+      {
+       "id": "i4",
+       "text": "Absorbing nutrients"
+      },
+      {
+       "id": "i2",
+       "text": "Swallowing"
+      },
+      {
+       "id": "i1",
+       "text": "Chewing"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "teeth",
+   "kind": "play",
+   "title": "Teeth and caring for them",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Three kinds of teeth"
+    },
+    {
+     "type": "text",
+     "markdown": "**Incisors** cut, **canines** tear and **molars** grind.\n\nAdults have 32 teeth.",
+     "say": "You have different teeth for different jobs. Incisors at the front are sharp and cut food, like biting an apple. Canines are pointed and tear food. Molars at the back are flat and grind food. Children have twenty milk teeth, and adults have thirty-two. Look at the three kinds."
+    },
+    {
+     "type": "image",
+     "emoji": "🦷✂️ 🦷🔺 🦷⚙️",
+     "alt": "Incisors cut, canines tear and molars grind.",
+     "caption": "Incisors cut, canines tear and molars grind.",
+     "say": "Here they are: the cutting teeth, the pointed teeth and the grinding teeth."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which teeth grind food?",
+      "hint": "They are flat and at the back.",
+      "explanation": "Molars are flat and grind food.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Incisors"
+       },
+       {
+        "id": "b",
+        "text": "Canines"
+       },
+       {
+        "id": "c",
+        "text": "Molars"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Tooth care"
+    },
+    {
+     "type": "text",
+     "markdown": "Brush twice a day with **fluoride** toothpaste, eat less sugar and visit the dentist.",
+     "say": "Sugar is bad for teeth. Bacteria in your mouth feed on sugar and make acid, which wears away the tooth. This is tooth decay. To protect your teeth, brush twice a day with fluoride toothpaste, limit sugary snacks, and visit the dentist. Many Muslims also use a miswak. The Prophet, peace be upon him, encouraged keeping the teeth clean. "
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Healthy teeth pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🦷",
+      "🪥",
+      "🍎",
+      "🍬"
+     ],
+     "say": "Warm up your memory with a game, then test your knowledge."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two ways to protect your teeth.",
+      "hint": "Think about sugar and brushing.",
+      "explanation": "Brushing and cutting down on sugar prevent tooth decay.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Brush once a week"
+       },
+       {
+        "id": "b",
+        "text": "Drink fizzy drinks all day"
+       },
+       {
+        "id": "c",
+        "text": "Eat fewer sugary snacks"
+       },
+       {
+        "id": "d",
+        "text": "Brush twice a day"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Incisors cut, canines tear, molars grind",
+      "Sugar and bacteria make acid that causes tooth decay",
+      "Brush twice a day"
+     ],
+     "say": "Remember. Teeth have different jobs. Sugar causes decay, so brush twice a day."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "incisors",
+       "meaning": "Sharp front teeth that cut food."
+      },
+      {
+       "term": "canines",
+       "meaning": "Pointed teeth that tear food."
+      },
+      {
+       "term": "molars",
+       "meaning": "Flat back teeth that grind food."
+      },
+      {
+       "term": "bacteria",
+       "meaning": "Tiny living things, some of which make us ill."
+      },
+      {
+       "term": "decay",
+       "meaning": "When acid wears away a tooth, making holes."
+      },
+      {
+       "term": "fluoride",
+       "meaning": "A mineral in toothpaste that makes teeth stronger."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "match",
+     "prompt": "Match each tooth to its job.",
+     "hint": "Think about shape.",
+     "explanation": "Incisors cut, canines tear and molars grind.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Incisor"
+      },
+      {
+       "id": "l2",
+       "text": "Canine"
+      },
+      {
+       "id": "l3",
+       "text": "Molar"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Grinds"
+      },
+      {
+       "id": "r1",
+       "text": "Cuts"
+      },
+      {
+       "id": "r2",
+       "text": "Tears"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Bacteria turn sugar into acid that damages teeth.",
+     "hint": "Think about decay.",
+     "explanation": "Bacteria make acid from sugar, and it causes decay.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many teeth does an adult usually have?",
+     "hint": "More than 30.",
+     "explanation": "An adult has 32 teeth.",
+     "answer": {
+      "value": 32,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "heart",
+   "kind": "use",
+   "title": "Heart, blood and germs",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The heart and blood"
+    },
+    {
+     "type": "text",
+     "markdown": "The **heart** pumps **blood** around the body.\n\nYour **pulse** is how many times your heart beats.",
+     "say": "Your heart is a muscle that pumps blood all around your body. Blood carries oxygen from the lungs, and nutrients from food, to every part. It also carries waste away. You can feel your heartbeat as a pulse in your wrist. When you exercise, your muscles need more oxygen, so your heart beats faster. Let's look at the heart."
+    },
+    {
+     "type": "explainer",
+     "title": "The heart",
+     "scenes": [
+      {
+       "caption": "The heart pumps blood.",
+       "items": [
+        {
+         "id": "h",
+         "prop": {
+          "kind": "body",
+          "highlight": "heart"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The heart pumps blood out to the whole body, in a loop."
+      },
+      {
+       "caption": "Blood carries oxygen.",
+       "items": [
+        {
+         "id": "h",
+         "prop": {
+          "kind": "body",
+          "highlight": "lungs"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The blood carries oxygen from the lungs to the muscles."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does your heart do?",
+      "hint": "It is a muscle.",
+      "explanation": "The heart pumps blood around the body.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Digests food"
+       },
+       {
+        "id": "b",
+        "text": "Grows your hair"
+       },
+       {
+        "id": "c",
+        "text": "Pumps blood around the body"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "chart",
+     "kind": "bar_chart",
+     "title": "Heartbeats in one minute",
+     "rows": [
+      {
+       "label": "Resting",
+       "value": 70
+      },
+      {
+       "label": "After running",
+       "value": 100
+      }
+     ],
+     "caption": "Your heart beats faster after you run.",
+     "say": "Here are heart rates before and after exercise. When we run, the heart beats faster."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why does your heart beat faster when you run?",
+      "hint": "Think about the blood.",
+      "explanation": "Muscles need more oxygen, so the heart pumps faster.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Your bones are growing"
+       },
+       {
+        "id": "b",
+        "text": "Your muscles need more oxygen"
+       },
+       {
+        "id": "c",
+        "text": "You are bored"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Germs and medicines"
+    },
+    {
+     "type": "image",
+     "emoji": "🧼 🤧 💉",
+     "alt": "Soap, covering a sneeze and a vaccine help stop germs.",
+     "caption": "Soap, covering a sneeze and a vaccine help stop germs.",
+     "say": "Germs are tiny living things, like bacteria and viruses, that can make us ill. They spread through coughs, sneezes and dirty hands. We stop them by washing hands with soap, covering coughs, and keeping clean. A hadith teaches that cleanliness is half of faith. Vaccines train the body to fight germs. Antibiotics are medicines that kill bacteria. They do not work on viruses. Only take medicine that a grown-up gives you."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Antibiotics kill bacteria.",
+      "hint": "They do not work on viruses.",
+      "explanation": "Antibiotics are medicines that kill bacteria.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The heart pumps blood carrying oxygen",
+      "Germs spread, so wash hands and cover coughs",
+      "Only take medicine from a grown-up"
+     ],
+     "say": "Remember. The heart pumps blood with oxygen. Germs can make us ill, so keep clean. Only take medicine from a grown-up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "heart",
+       "meaning": "The muscle that pumps blood around the body."
+      },
+      {
+       "term": "blood",
+       "meaning": "The red liquid that carries oxygen and nutrients."
+      },
+      {
+       "term": "pulse",
+       "meaning": "The beat of your heart, felt in your wrist."
+      },
+      {
+       "term": "germs",
+       "meaning": "Tiny living things that can cause illness."
+      },
+      {
+       "term": "vaccine",
+       "meaning": "A medicine that helps the body fight a germ."
+      },
+      {
+       "term": "antibiotics",
+       "meaning": "Medicines that kill bacteria."
+      },
+      {
+       "term": "viruses",
+       "meaning": "Tiny germs that are not killed by antibiotics."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What carries oxygen around the body?",
+     "hint": "Pumped by the heart.",
+     "explanation": "Blood carries oxygen.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Teeth"
+      },
+      {
+       "id": "b",
+       "text": "Blood"
+      },
+      {
+       "id": "c",
+       "text": "Bones"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Washing your hands helps stop germs spreading.",
+     "hint": "Think about soap.",
+     "explanation": "Soap and water remove germs.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should give you medicine?",
+     "hint": "Medicines can be harmful.",
+     "explanation": "Only take medicine from a grown-up who knows what it is.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A friend"
+      },
+      {
+       "id": "b",
+       "text": "A trusted grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Nobody, take it yourself"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two ways to stop germs spreading.",
+     "hint": "Think about hygiene.",
+     "explanation": "Hand washing and covering coughs stop germs spreading.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Share cups"
+      },
+      {
+       "id": "b",
+       "text": "Rub your eyes"
+      },
+      {
+       "id": "c",
+       "text": "Cover coughs"
+      },
+      {
+       "id": "d",
+       "text": "Wash hands"
+      }
+     ],
+     "answer": [
+      "d",
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which part of the body protects the brain?",
+    "hint": "A hard box.",
+    "explanation": "The skull protects the brain.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The ribs"
+     },
+     {
+      "id": "b",
+      "text": "The skull"
+     },
+     {
+      "id": "c",
+      "text": "The elbow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.protect",
+    "sub_lesson": "skeleton",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "Muscles can only pull on bones.",
+    "hint": "That is why they work in pairs.",
+    "explanation": "Muscles can only pull.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "bodies.muscles",
+    "sub_lesson": "skeleton",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put the journey of food in order.",
+    "hint": "Follow the food.",
+    "explanation": "Food goes down the oesophagus into the stomach and then the small intestine.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Oesophagus"
+     },
+     {
+      "id": "i3",
+      "text": "Stomach"
+     },
+     {
+      "id": "i4",
+      "text": "Small intestine"
+     },
+     {
+      "id": "i1",
+      "text": "Mouth"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "bodies.journey",
+    "sub_lesson": "digestion",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Which job does each organ do? Match them.",
+    "hint": "Think about each organ.",
+    "explanation": "The heart pumps, the lungs take in oxygen and the brain controls.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Heart"
+     },
+     {
+      "id": "l2",
+      "text": "Lungs"
+     },
+     {
+      "id": "l3",
+      "text": "Brain"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Controls the body"
+     },
+     {
+      "id": "r1",
+      "text": "Pumps blood"
+     },
+     {
+      "id": "r2",
+      "text": "Take in oxygen"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "bodies.organs",
+    "sub_lesson": "heart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the organ that sends blood around the body.",
+    "hint": "It beats.",
+    "explanation": "The heart pumps blood.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❤️",
+       "label": "Heart",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦷",
+       "label": "Tooth",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🦴",
+       "label": "Bone",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "bodies.label",
+    "sub_lesson": "heart",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What is the word for the beat of your heart that you can feel in your wrist?",
+    "hint": "It starts with p.",
+    "explanation": "Your pulse is your heartbeat.",
+    "answer": {
+     "accepted": [
+      "pulse"
+     ]
+    },
+    "skill_tag": "bodies.words",
+    "sub_lesson": "heart",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two kinds of teeth are used for biting and tearing food?",
+    "hint": "Think of sharp and pointed teeth.",
+    "explanation": "Incisors cut and canines tear. Molars grind.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Canines"
+     },
+     {
+      "id": "b",
+      "text": "Fillings"
+     },
+     {
+      "id": "c",
+      "text": "Molars"
+     },
+     {
+      "id": "d",
+      "text": "Incisors"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "bodies.teeth_types",
+    "sub_lesson": "teeth",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about the heart.",
+    "hint": "It beats.",
+    "explanation": "The heart is a muscle that pumps blood.",
+    "points": 2,
+    "text": "The heart is a {b1} that pumps {b2} around the body.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "nerve"
+       },
+       {
+        "id": "b",
+        "text": "muscle"
+       },
+       {
+        "id": "c",
+        "text": "bone"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "water"
+       },
+       {
+        "id": "b",
+        "text": "air"
+       },
+       {
+        "id": "c",
+        "text": "blood"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "bodies.fill",
+    "sub_lesson": "heart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A child has 20 milk teeth and loses 8. How many milk teeth are left?",
+    "hint": "20 minus 8.",
+    "explanation": "20 - 8 = 12.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "bodies.teeth_maths",
+    "sub_lesson": "teeth",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "About how many times does a resting adult heart beat in a minute?",
+    "hint": "Between 60 and 100.",
+    "explanation": "A resting heart beats about 60 to 100 times a minute.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 200,
+     "unit": "beats"
+    },
+    "answer": {
+     "value": 70,
+     "tolerance": 15
+    },
+    "skill_tag": "bodies.pulse",
+    "sub_lesson": "heart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Arrange the steps of tooth decay, from first to last.",
+    "hint": "Start with the sugar.",
+    "explanation": "Sugar feeds bacteria, which make acid that wears the tooth.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Bacteria make acid"
+     },
+     {
+      "id": "i1",
+      "text": "Sugary food"
+     },
+     {
+      "id": "i3",
+      "text": "Tooth is worn away"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "bodies.decay",
+    "sub_lesson": "teeth",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Zainab says muscles can push bones. Why is she wrong?",
+    "hint": "Think about biceps and triceps.",
+    "explanation": "A muscle can only pull. Pairs pull in opposite directions.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Muscles are made of bone"
+     },
+     {
+      "id": "b",
+      "text": "Muscles can only pull, so they work in pairs"
+     },
+     {
+      "id": "c",
+      "text": "Muscles are too big"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_muscles",
+    "sub_lesson": "skeleton",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why is it a good idea to brush after eating sweets?",
+    "hint": "Think about acid.",
+    "explanation": "Brushing removes sugar and plaque, so there is less acid.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make sugar grow"
+     },
+     {
+      "id": "b",
+      "text": "To make teeth softer"
+     },
+     {
+      "id": "c",
+      "text": "To remove sugar that bacteria turn into acid"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "bodies.reason_teeth",
+    "sub_lesson": "teeth",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hamza says germs are not real because he cannot see them. Why is he wrong?",
+    "hint": "How big are germs?",
+    "explanation": "Germs are tiny, so we cannot see them, but they still spread.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Germs are not real"
+     },
+     {
+      "id": "b",
+      "text": "Germs are too small to see, but can still spread"
+     },
+     {
+      "id": "c",
+      "text": "Germs are big"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_germs",
+    "sub_lesson": "heart",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why does your heart rate go up during a race?",
+    "hint": "Think about the blood.",
+    "explanation": "Muscles need more oxygen, so the heart pumps faster.",
+    "options": [
+     {
+      "id": "a",
+      "text": "You are hungry"
+     },
+     {
+      "id": "b",
+      "text": "Your muscles need more oxygen"
+     },
+     {
+      "id": "c",
+      "text": "You are growing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_exercise",
+    "sub_lesson": "heart",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which part of the skeleton protects the brain?",
+    "hint": "It is a hard box.",
+    "explanation": "The skull protects the brain.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The knee"
+     },
+     {
+      "id": "b",
+      "text": "The skull"
+     },
+     {
+      "id": "c",
+      "text": "The ribs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.protect",
+    "sub_lesson": "skeleton",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which part of the skeleton protects the lungs?",
+    "hint": "They form a cage.",
+    "explanation": "The ribs protect the heart and lungs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The fingers"
+     },
+     {
+      "id": "b",
+      "text": "The ribs"
+     },
+     {
+      "id": "c",
+      "text": "The skull"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.protect",
+    "sub_lesson": "skeleton",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A muscle can only pull.",
+    "hint": "That is why they work in pairs.",
+    "explanation": "Muscles can only pull.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "bodies.muscles",
+    "sub_lesson": "skeleton",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "Bones can move without muscles.",
+    "hint": "What pulls the bones?",
+    "explanation": "Muscles pull the bones to make them move.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "bodies.muscles",
+    "sub_lesson": "skeleton",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Arrange the food's journey from first to last.",
+    "hint": "Follow the food.",
+    "explanation": "Food goes mouth, stomach, small intestine, large intestine.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Stomach"
+     },
+     {
+      "id": "i4",
+      "text": "Large intestine"
+     },
+     {
+      "id": "i3",
+      "text": "Small intestine"
+     },
+     {
+      "id": "i1",
+      "text": "Mouth"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "bodies.journey",
+    "sub_lesson": "digestion",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Order these parts of digestion.",
+    "hint": "Follow the food.",
+    "explanation": "Food goes down the oesophagus into the stomach and then the small intestine.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Stomach"
+     },
+     {
+      "id": "i1",
+      "text": "Oesophagus"
+     },
+     {
+      "id": "i3",
+      "text": "Small intestine"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "bodies.journey",
+    "sub_lesson": "digestion",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each part with its job.",
+    "hint": "Think about digestion.",
+    "explanation": "Each part has a job in digestion.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Stomach"
+     },
+     {
+      "id": "l2",
+      "text": "Small intestine"
+     },
+     {
+      "id": "l3",
+      "text": "Mouth"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Absorbs nutrients"
+     },
+     {
+      "id": "r3",
+      "text": "Chews food"
+     },
+     {
+      "id": "r1",
+      "text": "Churns food"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "bodies.organs",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "match",
+    "prompt": "Link each organ to its job.",
+    "hint": "Think about each organ.",
+    "explanation": "Each organ has its own job.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Heart"
+     },
+     {
+      "id": "l2",
+      "text": "Lungs"
+     },
+     {
+      "id": "l3",
+      "text": "Stomach"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Take in oxygen"
+     },
+     {
+      "id": "r3",
+      "text": "Digests food"
+     },
+     {
+      "id": "r1",
+      "text": "Pumps blood"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "bodies.organs",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the organ that pumps blood.",
+    "hint": "It beats.",
+    "explanation": "The heart pumps blood.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❤️",
+       "label": "Heart",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧠",
+       "label": "Brain",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫁",
+       "label": "Lungs",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "bodies.label",
+    "sub_lesson": "heart",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the organ you use to breathe.",
+    "hint": "It takes in air.",
+    "explanation": "Lungs take in oxygen.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❤️",
+       "label": "Heart",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧠",
+       "label": "Brain",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫁",
+       "label": "Lungs",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "bodies.label",
+    "sub_lesson": "heart",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What is the word for the beat of your heart that you feel in your wrist?",
+    "hint": "It starts with p.",
+    "explanation": "Your pulse is your heartbeat.",
+    "answer": {
+     "accepted": [
+      "pulse"
+     ]
+    },
+    "skill_tag": "bodies.words",
+    "sub_lesson": "heart",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the name of the tube from your mouth to your stomach?",
+    "hint": "It starts with oes.",
+    "explanation": "The oesophagus carries food to the stomach.",
+    "answer": {
+     "accepted": [
+      "oesophagus",
+      "esophagus",
+      "food pipe",
+      "gullet"
+     ]
+    },
+    "skill_tag": "bodies.words",
+    "sub_lesson": "heart",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Pick the two things that cause tooth decay.",
+    "hint": "Think about acid.",
+    "explanation": "Bacteria feed on sugar and make the acid that causes decay.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bacteria"
+     },
+     {
+      "id": "b",
+      "text": "Fluoride"
+     },
+     {
+      "id": "c",
+      "text": "Brushing"
+     },
+     {
+      "id": "d",
+      "text": "Sugar"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "bodies.teeth_types",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multi_select",
+    "prompt": "Pick two things that help to prevent tooth decay.",
+    "hint": "Think about good habits.",
+    "explanation": "Fluoride toothpaste and brushing protect the teeth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Skipping the dentist"
+     },
+     {
+      "id": "b",
+      "text": "Sugary drinks"
+     },
+     {
+      "id": "c",
+      "text": "Brushing twice a day"
+     },
+     {
+      "id": "d",
+      "text": "Fluoride toothpaste"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "bodies.teeth_types",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about the heart.",
+    "hint": "It beats.",
+    "explanation": "The heart is a muscle that pumps blood.",
+    "points": 2,
+    "text": "The heart is a {b1} that pumps {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bone"
+       },
+       {
+        "id": "b",
+        "text": "muscle"
+       },
+       {
+        "id": "c",
+        "text": "nerve"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "air"
+       },
+       {
+        "id": "b",
+        "text": "blood"
+       },
+       {
+        "id": "c",
+        "text": "water"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "bodies.fill",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about bones.",
+    "hint": "Think about the skeleton.",
+    "explanation": "The skull protects the brain and the ribs protect the heart.",
+    "points": 2,
+    "text": "The {b1} protects the brain and the {b2} protect the heart.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "toes"
+       },
+       {
+        "id": "b",
+        "text": "skull"
+       },
+       {
+        "id": "c",
+        "text": "knee"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ears"
+       },
+       {
+        "id": "b",
+        "text": "ribs"
+       },
+       {
+        "id": "c",
+        "text": "fingers"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "bodies.fill",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A child has 20 milk teeth. 6 fall out. How many are left?",
+    "hint": "20 minus 6.",
+    "explanation": "20 - 6 = 14.",
+    "answer": {
+     "value": 14,
+     "tolerance": 0
+    },
+    "skill_tag": "bodies.teeth_maths",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "An adult has 32 teeth. 4 are wisdom teeth. How many are not wisdom teeth?",
+    "hint": "32 minus 4.",
+    "explanation": "32 - 4 = 28.",
+    "answer": {
+     "value": 28,
+     "tolerance": 0
+    },
+    "skill_tag": "bodies.teeth_maths",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "About how many times does the heart beat each minute when resting? Slide to show it.",
+    "hint": "Between 60 and 100.",
+    "explanation": "A resting heart beats about 60 to 100 times a minute.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 200,
+     "unit": "beats"
+    },
+    "answer": {
+     "value": 70,
+     "tolerance": 15
+    },
+    "skill_tag": "bodies.pulse",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "About how many bones does an adult have?",
+    "hint": "Just over 200.",
+    "explanation": "An adult has 206 bones.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 400,
+     "unit": "bones"
+    },
+    "answer": {
+     "value": 206,
+     "tolerance": 15
+    },
+    "skill_tag": "bodies.pulse",
+    "sub_lesson": "heart",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put the steps of tooth decay in order.",
+    "hint": "Start with the sugar.",
+    "explanation": "Sugar feeds bacteria, which make acid that wears the tooth.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Bacteria make acid"
+     },
+     {
+      "id": "i3",
+      "text": "Tooth wears away"
+     },
+     {
+      "id": "i1",
+      "text": "Sugary food"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "bodies.decay",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Order the steps of good tooth care.",
+    "hint": "Think about each habit.",
+    "explanation": "Each habit helps protect the teeth.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Brush twice a day"
+     },
+     {
+      "id": "i1",
+      "text": "Eat less sugar"
+     },
+     {
+      "id": "i3",
+      "text": "Visit the dentist"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "bodies.decay",
+    "sub_lesson": "teeth",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a muscle can push a bone. Why is he wrong?",
+    "hint": "Think about biceps and triceps.",
+    "explanation": "A muscle can only pull. Pairs pull in opposite directions.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Muscles are made of bone"
+     },
+     {
+      "id": "b",
+      "text": "Muscles can only pull, so they work in pairs"
+     },
+     {
+      "id": "c",
+      "text": "Muscles are too big"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_muscles",
+    "sub_lesson": "skeleton",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Sara says bones move on their own. Why is she wrong?",
+    "hint": "What pulls bones?",
+    "explanation": "Bones need muscles to move them.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bones are soft"
+     },
+     {
+      "id": "b",
+      "text": "Muscles pull the bones to make them move"
+     },
+     {
+      "id": "c",
+      "text": "Bones are alive and walk"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_muscles",
+    "sub_lesson": "skeleton",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why do we brush our teeth after sweet snacks?",
+    "hint": "Think about acid.",
+    "explanation": "Brushing removes sugar and plaque, so there is less acid.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make sugar grow"
+     },
+     {
+      "id": "b",
+      "text": "To remove sugar that bacteria turn into acid"
+     },
+     {
+      "id": "c",
+      "text": "To make teeth softer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_teeth",
+    "sub_lesson": "teeth",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why should we visit the dentist?",
+    "hint": "Dentists look after teeth.",
+    "explanation": "Dentists spot problems early.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To get more sugar"
+     },
+     {
+      "id": "b",
+      "text": "To make teeth fall out"
+     },
+     {
+      "id": "c",
+      "text": "To check for decay and keep teeth healthy"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "bodies.reason_teeth",
+    "sub_lesson": "teeth",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Noor says germs only make us ill if we see them. Why is she wrong?",
+    "hint": "How big are germs?",
+    "explanation": "Germs are tiny, so we cannot see them, but they still spread.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Germs are big"
+     },
+     {
+      "id": "b",
+      "text": "Germs are too small to see, but can still spread"
+     },
+     {
+      "id": "c",
+      "text": "Germs are not real"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_germs",
+    "sub_lesson": "heart",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Omar says antibiotics cure colds. Why is he wrong?",
+    "hint": "What causes colds?",
+    "explanation": "Antibiotics do not work on viruses.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Colds are not real"
+     },
+     {
+      "id": "b",
+      "text": "Colds are caused by viruses, and antibiotics only kill bacteria"
+     },
+     {
+      "id": "c",
+      "text": "Antibiotics are sweets"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_germs",
+    "sub_lesson": "heart",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "What carries oxygen to your muscles?",
+    "hint": "The heart pumps it.",
+    "explanation": "Blood carries oxygen.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Bones"
+     },
+     {
+      "id": "b",
+      "text": "Blood"
+     },
+     {
+      "id": "c",
+      "text": "Saliva"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_exercise",
+    "sub_lesson": "heart",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why does your heart beat faster during exercise?",
+    "hint": "Think about muscles.",
+    "explanation": "More oxygen is needed, so the heart pumps faster.",
+    "options": [
+     {
+      "id": "a",
+      "text": "You are hungry"
+     },
+     {
+      "id": "b",
+      "text": "Muscles need more oxygen"
+     },
+     {
+      "id": "c",
+      "text": "Your teeth are growing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "bodies.reason_exercise",
+    "sub_lesson": "heart",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

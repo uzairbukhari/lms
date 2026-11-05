@@ -1,0 +1,2759 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-materials",
+  "subject": "science",
+  "title": "Materials: States of Matter",
+  "summary": "Solids, liquids and gases, melting and boiling, evaporation and condensation, the water cycle, dissolving and separating.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Materials",
+  "learning_objectives": [
+   "Describe solids, liquids and gases using particles",
+   "Explain melting, freezing, boiling, evaporation and condensation",
+   "Describe the water cycle",
+   "Dissolve and separate mixtures in a fair test"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 states of matter",
+    "text": "Compare and group materials as solids, liquids or gases; observe that some materials change state when heated or cooled; identify the part played by evaporation and condensation in the water cycle"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y5 properties and changes",
+    "text": "Know that some materials dissolve in liquid to form a solution; use filtering and evaporating to separate mixtures"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "S-04-B-02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cm.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cm.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cm.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cc.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cc.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Cc.03"
+   }
+  ],
+  "success_criteria": [
+   "I can describe the three states using particles",
+   "I can name each change of state",
+   "I can explain the water cycle",
+   "I can plan a fair test and separate a mixture"
+  ],
+  "real_life": "Making tea, drying washing, a misty bathroom mirror and salt from the sea.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which part of the digestive system absorbs nutrients?",
+    "hint": "It comes after the stomach.",
+    "explanation": "Nutrients are absorbed in the small intestine.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mouth"
+     },
+     {
+      "id": "b",
+      "text": "Oesophagus"
+     },
+     {
+      "id": "c",
+      "text": "Small intestine"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a producer do in a food chain?",
+    "hint": "Think of plants.",
+    "explanation": "Producers, like plants, make their own food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hunts prey"
+     },
+     {
+      "id": "b",
+      "text": "Eats other animals"
+     },
+     {
+      "id": "c",
+      "text": "Makes its own food"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Muscles work in pairs.",
+    "hint": "Biceps and triceps.",
+    "explanation": "Muscles pull in pairs.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: what happens when materials are heated or cooled?\n\nWe will see the tiny particles that make up everything.",
+   "say": "Welcome back, young scientist! Today's big question is: what are things made of, and what happens when we heat them? By the end, you will describe solids, liquids and gases using particles, follow the water cycle, and plan a fair test. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🧊💧☁️",
+   "alt": "Ice, water and steam are the same stuff in three states.",
+   "caption": "Ice, water and steam are the same stuff in three states."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "materials",
+     "meaning": "The stuff things are made from."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "states",
+   "kind": "learn",
+   "title": "Solids, liquids and gases",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Three states of matter"
+    },
+    {
+     "type": "text",
+     "markdown": "A **solid** keeps its shape. A **liquid** flows. A **gas** spreads out.\n\nThey are made of tiny **particles**, arranged in different ways.",
+     "say": "All materials are made of tiny pieces called particles. How the particles are arranged decides whether a material is a solid, a liquid or a gas. In a solid, the particles are packed tightly in fixed places, so a solid keeps its shape. In a liquid, the particles are close but can slide past each other, so a liquid flows and takes the shape of its container. In a gas, the particles are far apart and move everywhere, so a gas spreads out to fill any space. Watch the particles."
+    },
+    {
+     "type": "explainer",
+     "title": "Particles in three states",
+     "scenes": [
+      {
+       "caption": "Solid: packed tightly.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧊",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔹",
+         "x": 30,
+         "y": 70,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "c",
+         "emoji": "🔹",
+         "x": 40,
+         "y": 70,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "d",
+         "emoji": "🔹",
+         "x": 50,
+         "y": 70,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "e",
+         "emoji": "🔹",
+         "x": 60,
+         "y": 70,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "f",
+         "emoji": "🔹",
+         "x": 70,
+         "y": 70,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In a solid, such as ice, the particles are packed tightly in a neat pattern. They can only wobble in place."
+      },
+      {
+       "caption": "Liquid: sliding past each other.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "💧",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🔹",
+         "x": 35,
+         "y": 72,
+         "size": 1,
+         "anim": "float"
+        },
+        {
+         "id": "c",
+         "emoji": "🔹",
+         "x": 50,
+         "y": 75,
+         "size": 1,
+         "anim": "float"
+        },
+        {
+         "id": "d",
+         "emoji": "🔹",
+         "x": 65,
+         "y": 70,
+         "size": 1,
+         "anim": "float"
+        }
+       ],
+       "say": "In a liquid, such as water, the particles are close together but can slide around, so water pours."
+      },
+      {
+       "caption": "Gas: far apart and moving fast.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☁️",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "b",
+         "emoji": "🔹",
+         "x": 20,
+         "y": 60,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "c",
+         "emoji": "🔹",
+         "x": 80,
+         "y": 25,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "d",
+         "emoji": "🔹",
+         "x": 70,
+         "y": 75,
+         "size": 1,
+         "anim": "bounce"
+        }
+       ],
+       "say": "In a gas, such as steam, the particles are far apart and fly in all directions. A gas fills the whole space."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which state of matter keeps its own shape?",
+      "hint": "The particles are packed tightly.",
+      "explanation": "A solid keeps its shape because its particles are fixed in place.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Gas"
+       },
+       {
+        "id": "b",
+        "text": "Solid"
+       },
+       {
+        "id": "c",
+        "text": "Liquid"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sorting materials"
+    },
+    {
+     "type": "image",
+     "emoji": "🪑 🥛 🎈",
+     "alt": "A desk is a solid, milk is a liquid and the air in a balloon is a gas.",
+     "caption": "A desk is a solid, milk is a liquid and the air in a balloon is a gas.",
+     "say": "Now think about everyday materials. A wooden desk is a solid. Milk is a liquid. The air inside a balloon is a gas. Some materials are tricky, like sand. It pours like a liquid, but each grain is a tiny solid. Let's sort."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is a gas?",
+      "hint": "It fills the whole balloon.",
+      "explanation": "Air is a gas. It spreads out to fill the balloon.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Milk"
+       },
+       {
+        "id": "b",
+        "text": "The air in a balloon"
+       },
+       {
+        "id": "c",
+        "text": "A desk"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Solid: particles packed tightly; keeps its shape",
+      "Liquid: particles slide past each other; flows",
+      "Gas: particles far apart; spreads out"
+     ],
+     "say": "Remember. Solids, liquids and gases differ in how their particles are arranged."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "particles",
+       "meaning": "The tiny pieces that all materials are made of."
+      },
+      {
+       "term": "solid",
+       "meaning": "A material that keeps its own shape."
+      },
+      {
+       "term": "liquid",
+       "meaning": "A material that flows and takes the shape of its container."
+      },
+      {
+       "term": "gas",
+       "meaning": "A material that spreads out to fill any space."
+      },
+      {
+       "term": "container",
+       "meaning": "Something that holds a material, like a jar."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "match",
+     "prompt": "Match each material to its state.",
+     "hint": "Think about how it behaves.",
+     "explanation": "Ice is a solid, milk is a liquid and steam is a gas.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Ice"
+      },
+      {
+       "id": "l2",
+       "text": "Milk"
+      },
+      {
+       "id": "l3",
+       "text": "Steam"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Gas"
+      },
+      {
+       "id": "r1",
+       "text": "Solid"
+      },
+      {
+       "id": "r2",
+       "text": "Liquid"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A gas can be poured and keeps its volume.",
+     "hint": "Gases spread out.",
+     "explanation": "A gas spreads out to fill any container.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "In which state are the particles furthest apart?",
+     "hint": "It spreads out.",
+     "explanation": "Gas particles are far apart.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Solid"
+      },
+      {
+       "id": "b",
+       "text": "Liquid"
+      },
+      {
+       "id": "c",
+       "text": "Gas"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two features of a solid.",
+     "hint": "Think about ice.",
+     "explanation": "A solid keeps its shape and has tightly packed particles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Particles packed tightly"
+      },
+      {
+       "id": "b",
+       "text": "Flows easily"
+      },
+      {
+       "id": "c",
+       "text": "Spreads out to fill a room"
+      },
+      {
+       "id": "d",
+       "text": "Keeps its shape"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heating",
+   "kind": "try",
+   "title": "Melting, boiling and freezing",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Changes of state"
+    },
+    {
+     "type": "text",
+     "markdown": "**Melting** is solid to liquid. **Freezing** is liquid to solid.\n\n**Boiling** is liquid to gas. **Condensing** is gas to liquid.",
+     "say": "When we heat or cool a material, it can change state. Heating ice makes it melt into water. Heating water makes it boil into steam. Cooling steam makes it condense back into water, and cooling water makes it freeze into ice. Each change happens at a particular temperature. Water melts at zero degrees Celsius and boils at one hundred. Watch what happens as we heat ice."
+    },
+    {
+     "type": "explainer",
+     "title": "Heating ice",
+     "scenes": [
+      {
+       "caption": "Ice at -5 °C.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": -5,
+          "from": -10,
+          "to": 110
+         },
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "i",
+         "emoji": "🧊",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Ice is a solid at minus five degrees. The particles are packed tightly."
+      },
+      {
+       "caption": "Melting point: 0 °C.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 0,
+          "from": -10,
+          "to": 110
+         },
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "i",
+         "emoji": "💧",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "At zero degrees, the ice melts into water."
+      },
+      {
+       "caption": "Boiling point: 100 °C.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 100,
+          "from": -10,
+          "to": 110
+         },
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "i",
+         "emoji": "♨️",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "At one hundred degrees, the water boils and becomes steam, a gas."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "At what temperature does water boil?",
+      "hint": "It is the top of our thermometer.",
+      "explanation": "Water boils at 100 degrees Celsius.",
+      "options": [
+       {
+        "id": "a",
+        "text": "0 °C"
+       },
+       {
+        "id": "b",
+        "text": "50 °C"
+       },
+       {
+        "id": "c",
+        "text": "100 °C"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: A fair test"
+    },
+    {
+     "type": "manipulative",
+     "title": "Plan a fair test",
+     "goal": "Sort the factors. What do we change? What do we keep the same?",
+     "emoji": "🧊",
+     "count": 6,
+     "zones": [
+      "Change",
+      "Keep the same"
+     ],
+     "say": "Scientists use fair tests to find answers. In a fair test we change only one thing, the independent variable. We measure what happens, the dependent variable. And we keep everything else the same. Let's test which ice cube melts fastest. We change only where the ice sits: in the sun or in the shade."
+    },
+    {
+     "type": "activity",
+     "title": "Which melts fastest?",
+     "materials": [
+      "Two ice cubes the same size",
+      "Two saucers",
+      "A timer",
+      "A sunny spot and a shady spot",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Put one ice cube in the sun and one in the shade. Use the same size of ice and the same saucers.",
+      "Start the timer. Look every five minutes.",
+      "Write down how long each takes to melt. Which melted faster? Why do you think so?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In our ice test we change where the ice sits. What should stay the same?",
+      "hint": "Only one thing should change.",
+      "explanation": "To keep a test fair, everything but the one changed variable must stay the same.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The time it melts"
+       },
+       {
+        "id": "b",
+        "text": "The size of the ice cube"
+       },
+       {
+        "id": "c",
+        "text": "The place"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Melting, freezing, boiling and condensing are changes of state",
+      "Water melts at 0 °C and boils at 100 °C",
+      "In a fair test, change one thing and keep the rest the same"
+     ],
+     "say": "Remember. Heating and cooling change states. A fair test changes one thing."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "melting",
+       "meaning": "Changing from solid to liquid."
+      },
+      {
+       "term": "freezing",
+       "meaning": "Changing from liquid to solid."
+      },
+      {
+       "term": "boiling",
+       "meaning": "Changing from liquid to gas, with bubbles."
+      },
+      {
+       "term": "condensing",
+       "meaning": "Changing from gas to liquid."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing is changed."
+      },
+      {
+       "term": "variable",
+       "meaning": "Something that can change in a test."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "order",
+     "prompt": "Put these in order as ice is heated.",
+     "hint": "Heat it up step by step.",
+     "explanation": "Ice melts into water and boils into steam.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Water"
+      },
+      {
+       "id": "i1",
+       "text": "Ice"
+      },
+      {
+       "id": "i3",
+       "text": "Steam"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each change to its meaning.",
+     "hint": "Think about the states.",
+     "explanation": "Each change moves between two states.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Melting"
+      },
+      {
+       "id": "l2",
+       "text": "Boiling"
+      },
+      {
+       "id": "l3",
+       "text": "Freezing"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Liquid to gas"
+      },
+      {
+       "id": "r3",
+       "text": "Liquid to solid"
+      },
+      {
+       "id": "r1",
+       "text": "Solid to liquid"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Water freezes at 0 °C.",
+     "hint": "Same as the melting point.",
+     "explanation": "Water freezes and ice melts at 0 °C.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cycle",
+   "kind": "play",
+   "title": "Evaporation and the water cycle",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Water goes up and comes down"
+    },
+    {
+     "type": "text",
+     "markdown": "**Evaporation** is when liquid slowly becomes a gas. **Condensation** is when a gas cools into liquid.\n\nTogether they make the **water cycle**.",
+     "say": "Water does not only change state when it boils. Puddles dry up on a warm day, even though they never boil. This is evaporation. Water on the surface slowly turns into an invisible gas called water vapour, and rises. High up, it is cold. The vapour condenses into tiny droplets that form clouds. When the droplets get heavy, they fall as rain. The rain flows back to rivers and seas. This loop is the water cycle."
+    },
+    {
+     "type": "explainer",
+     "title": "The water cycle",
+     "scenes": [
+      {
+       "caption": "Evaporation.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 15,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "🌊",
+         "x": 25,
+         "y": 78,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "v",
+         "emoji": "💨",
+         "x": 25,
+         "y": 50,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "The Sun warms the sea. Water evaporates and rises as invisible water vapour."
+      },
+      {
+       "caption": "Condensation: clouds form.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🌊",
+         "x": 25,
+         "y": 78,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "☁️",
+         "x": 50,
+         "y": 22,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "High up, it is cold. The vapour condenses into droplets that form clouds."
+      },
+      {
+       "caption": "Precipitation: rain falls.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🌊",
+         "x": 25,
+         "y": 78,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "☁️",
+         "x": 50,
+         "y": 22,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "m",
+         "emoji": "⛰️",
+         "x": 75,
+         "y": 72,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The droplets grow heavy and fall as rain. The rain runs down mountains into rivers and back to the sea."
+      }
+     ],
+     "backdrop": "sea"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the water cycle in order.",
+      "hint": "Water rises first.",
+      "explanation": "Water evaporates, condenses into clouds and then falls as rain.",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Rain"
+       },
+       {
+        "id": "i1",
+        "text": "Evaporation"
+       },
+       {
+        "id": "i2",
+        "text": "Condensation"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Water cycle pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "☀️",
+      "☁️",
+      "🌧️",
+      "🌊"
+     ],
+     "say": "Warm up your memory first, then work out what makes puddles dry up faster."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "On which day will a wet towel dry fastest?",
+      "hint": "Heat and wind help water evaporate.",
+      "explanation": "Warmth and moving air make evaporation faster.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A cold, still day"
+       },
+       {
+        "id": "b",
+        "text": "A hot, windy day"
+       },
+       {
+        "id": "c",
+        "text": "A cool, damp day"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Evaporation: liquid slowly becomes a gas",
+      "Condensation: gas cools into liquid",
+      "These make the water cycle"
+     ],
+     "say": "Remember. Evaporation lifts water into the air. Condensation turns it back into droplets."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "evaporation",
+       "meaning": "When a liquid slowly turns into a gas."
+      },
+      {
+       "term": "condensation",
+       "meaning": "When a gas cools and becomes a liquid."
+      },
+      {
+       "term": "water cycle",
+       "meaning": "The way water moves between the sea, the air and the land."
+      },
+      {
+       "term": "water vapour",
+       "meaning": "Water as an invisible gas in the air."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Puddles can dry up without boiling.",
+     "hint": "That is evaporation.",
+     "explanation": "Evaporation happens below boiling point.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What forms clouds?",
+     "hint": "Gas cooling into droplets.",
+     "explanation": "Water vapour condenses into tiny droplets in the cold air.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wind alone"
+      },
+      {
+       "id": "b",
+       "text": "Condensing water vapour"
+      },
+      {
+       "id": "c",
+       "text": "Boiling rock"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each word to its meaning.",
+     "hint": "Think about the cycle.",
+     "explanation": "Each word describes a step in the water cycle.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Evaporation"
+      },
+      {
+       "id": "l2",
+       "text": "Condensation"
+      },
+      {
+       "id": "l3",
+       "text": "Rain"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Gas becomes liquid"
+      },
+      {
+       "id": "r3",
+       "text": "Water falling from clouds"
+      },
+      {
+       "id": "r1",
+       "text": "Liquid becomes gas"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dissolving",
+   "kind": "use",
+   "title": "Dissolving and separating",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Dissolving"
+    },
+    {
+     "type": "text",
+     "markdown": "A **soluble** solid dissolves in a liquid to make a **solution**.\n\nAn **insoluble** solid does not dissolve.",
+     "say": "When you stir sugar into tea, it seems to disappear. This is called dissolving. The sugar breaks into tiny particles that mix evenly with the water. Sugar is soluble, which means it can dissolve. The mixture is a solution. Sand does not dissolve, so it is insoluble. Heat helps many solids dissolve faster. Watch sugar dissolve."
+    },
+    {
+     "type": "explainer",
+     "title": "Sugar dissolves",
+     "scenes": [
+      {
+       "caption": "Sugar in water.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🥛",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🍬",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A spoon of sugar goes into a glass of water. We can see the grains."
+      },
+      {
+       "caption": "Stirring.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🥛",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "sp",
+         "emoji": "🥄",
+         "x": 70,
+         "y": 40,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "We stir. The grains get smaller and smaller until we cannot see them."
+      },
+      {
+       "caption": "A sugar solution.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🥛",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "😋",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The sugar has dissolved. It is still there, as tiny particles spread through the water. The water tastes sweet."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is soluble in water?",
+      "hint": "It disappears when you stir.",
+      "explanation": "Sugar dissolves in water. Sand and pebbles do not.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Pebbles"
+       },
+       {
+        "id": "b",
+        "text": "Sugar"
+       },
+       {
+        "id": "c",
+        "text": "Sand"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Separating mixtures"
+    },
+    {
+     "type": "text",
+     "markdown": "**Filtering** separates a solid that has not dissolved from a liquid.\n\n**Evaporating** gets a dissolved solid back from a solution.",
+     "say": "We can get a mixture apart again. To separate sand from water, we filter. Pour the mixture through filter paper. The water passes through but the sand is left behind. To get dissolved salt back from salt water, we leave it in the sun and let the water evaporate. The salt is left behind. This is how salt is collected from the sea in some countries, including Pakistan's Sindh coast."
+    },
+    {
+     "type": "activity",
+     "title": "Sort it out",
+     "materials": [
+      "Sand",
+      "Salt",
+      "Water",
+      "Two glasses",
+      "Coffee filter paper",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Stir sand into one glass and salt into the other.",
+      "Which dissolved and which did not? Filter both mixtures through filter paper into clean glasses.",
+      "Leave the filtered liquids in the sun for a day. What is left behind?"
+     ]
+    },
+    {
+     "type": "image",
+     "emoji": "🧂 🏖️ 🧪",
+     "alt": "Salt, sand and a filter test.",
+     "caption": "Salt, sand and a filter test."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How can you separate sand from water?",
+      "hint": "The sand is too big to go through the paper.",
+      "explanation": "Filter paper lets water through but holds back the sand.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Stir it"
+       },
+       {
+        "id": "b",
+        "text": "Freeze it"
+       },
+       {
+        "id": "c",
+        "text": "Filter it"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Soluble solids dissolve; insoluble solids do not",
+      "Filtering removes solids that have not dissolved",
+      "Evaporating gets dissolved solids back"
+     ],
+     "say": "Remember. Soluble things dissolve to make a solution. Filtering and evaporating separate mixtures."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "soluble",
+       "meaning": "Able to dissolve in a liquid."
+      },
+      {
+       "term": "insoluble",
+       "meaning": "Not able to dissolve."
+      },
+      {
+       "term": "solution",
+       "meaning": "A liquid with a solid dissolved in it."
+      },
+      {
+       "term": "filtering",
+       "meaning": "Passing a mixture through paper to catch the solid."
+      },
+      {
+       "term": "evaporating",
+       "meaning": "Letting the liquid turn to gas so the solid is left."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "match",
+     "prompt": "Match each to its word.",
+     "hint": "Think about the names.",
+     "explanation": "Soluble things dissolve; insoluble ones do not; a solution is the mixture.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Dissolves in water"
+      },
+      {
+       "id": "l2",
+       "text": "Does not dissolve"
+      },
+      {
+       "id": "l3",
+       "text": "Sugar and water"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Insoluble"
+      },
+      {
+       "id": "r1",
+       "text": "Soluble"
+      },
+      {
+       "id": "r3",
+       "text": "Solution"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is best for getting salt out of salt water?",
+     "hint": "The salt is dissolved.",
+     "explanation": "Filtering cannot remove dissolved salt, but evaporating can.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Filtering"
+      },
+      {
+       "id": "b",
+       "text": "Freezing"
+      },
+      {
+       "id": "c",
+       "text": "Evaporating the water"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A filter can separate dissolved sugar from water.",
+     "hint": "Dissolved particles are tiny.",
+     "explanation": "Dissolved particles pass through filter paper.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two things that are insoluble in water.",
+     "hint": "They do not disappear.",
+     "explanation": "Sand and stones do not dissolve.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stones"
+      },
+      {
+       "id": "b",
+       "text": "Salt"
+      },
+      {
+       "id": "c",
+       "text": "Sugar"
+      },
+      {
+       "id": "d",
+       "text": "Sand"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which state of matter fills any container it is in?",
+    "hint": "Particles far apart.",
+    "explanation": "A gas spreads out to fill any container.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Solid"
+     },
+     {
+      "id": "b",
+      "text": "Liquid"
+     },
+     {
+      "id": "c",
+      "text": "Gas"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.states",
+    "sub_lesson": "states",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "The particles in a solid are far apart.",
+    "hint": "Solids are packed tightly.",
+    "explanation": "Solid particles are packed tightly together.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "materials4.facts",
+    "sub_lesson": "states",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put these in order as a block of ice is heated.",
+    "hint": "Heat it up step by step.",
+    "explanation": "Ice melts into water and boils into steam.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Steam"
+     },
+     {
+      "id": "i1",
+      "text": "Ice"
+     },
+     {
+      "id": "i2",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials4.order",
+    "sub_lesson": "heating",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which two of these dissolve in water?",
+    "hint": "They disappear when stirred.",
+    "explanation": "Sugar and salt are soluble.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Salt"
+     },
+     {
+      "id": "b",
+      "text": "Pebbles"
+     },
+     {
+      "id": "c",
+      "text": "Sand"
+     },
+     {
+      "id": "d",
+      "text": "Sugar"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials4.soluble",
+    "sub_lesson": "dissolving",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the solid.",
+    "hint": "It keeps its shape.",
+    "explanation": "Ice is a solid.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎈",
+       "label": "Air in a balloon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥛",
+       "label": "Milk",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "materials4.label",
+    "sub_lesson": "states",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What is the word for water turning into vapour without boiling, as a puddle dries?",
+    "hint": "It starts with e.",
+    "explanation": "Evaporation is a liquid slowly becoming a gas.",
+    "answer": {
+     "accepted": [
+      "evaporation",
+      "evaporating",
+      "evaporate"
+     ]
+    },
+    "skill_tag": "materials4.words",
+    "sub_lesson": "cycle",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each change of state to what happens.",
+    "hint": "Think about the states.",
+    "explanation": "Each change moves between two states.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Melting"
+     },
+     {
+      "id": "l2",
+      "text": "Condensation"
+     },
+     {
+      "id": "l3",
+      "text": "Boiling"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Liquid to gas"
+     },
+     {
+      "id": "r1",
+      "text": "Solid to liquid"
+     },
+     {
+      "id": "r2",
+      "text": "Gas to liquid"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials4.condense",
+    "sub_lesson": "cycle",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Fill in the two temperatures.",
+    "hint": "The two key temperatures.",
+    "explanation": "Ice melts at 0 and water boils at 100 degrees Celsius.",
+    "points": 2,
+    "text": "Ice melts at {b1} °C. Water boils at {b2} °C.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "200"
+       },
+       {
+        "id": "c",
+        "text": "100"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "materials4.fill",
+    "sub_lesson": "heating",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A glass has 250 ml of water. 70 ml evaporates. How many millilitres are left?",
+    "hint": "250 minus 70.",
+    "explanation": "250 - 70 = 180.",
+    "answer": {
+     "value": 180,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.maths",
+    "sub_lesson": "cycle",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show the temperature at which water freezes, in degrees Celsius.",
+    "hint": "Same as the melting point.",
+    "explanation": "Water freezes at 0 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": -20,
+     "max": 50,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 0,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.temp",
+    "sub_lesson": "heating",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Arrange these steps for getting salt from salt water.",
+    "hint": "Follow the process.",
+    "explanation": "The water evaporates and the salt is left behind.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Leave it in the sun"
+     },
+     {
+      "id": "i4",
+      "text": "Salt crystals are left"
+     },
+     {
+      "id": "i3",
+      "text": "The water evaporates"
+     },
+     {
+      "id": "i1",
+      "text": "Pour salt water into a dish"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "materials4.separate",
+    "sub_lesson": "dissolving",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Hamza says that when sugar dissolves, it disappears completely. Why is he wrong?",
+    "hint": "What does the water taste like?",
+    "explanation": "The sugar is still in the water, as tiny particles.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It melts away"
+     },
+     {
+      "id": "b",
+      "text": "It is still there as tiny particles in the water"
+     },
+     {
+      "id": "c",
+      "text": "It turns into water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_dissolve",
+    "sub_lesson": "dissolving",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does washing dry faster on a warm, windy day?",
+    "hint": "Think about evaporation.",
+    "explanation": "Heat and moving air make water evaporate faster.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Warmth freezes the water"
+     },
+     {
+      "id": "b",
+      "text": "Warmth and wind speed up evaporation"
+     },
+     {
+      "id": "c",
+      "text": "Wind adds water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_evaporation",
+    "sub_lesson": "cycle",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Noor wants a fair test of which ice cube melts fastest on a warm day. Which plan is best?",
+    "hint": "Change only one thing.",
+    "explanation": "Only the place should change in a fair test.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use a big cube in the sun and a small one in the shade"
+     },
+     {
+      "id": "b",
+      "text": "Use ice cubes of the same size and change only the place"
+     },
+     {
+      "id": "c",
+      "text": "Use a different time for each"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_fair",
+    "sub_lesson": "heating",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Ali tries to get sugar out of sugar water by filtering. Why will it not work?",
+    "hint": "Dissolved particles are tiny.",
+    "explanation": "Dissolved particles pass through filter paper. Evaporating works instead.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sugar is too big"
+     },
+     {
+      "id": "b",
+      "text": "Filter paper is too thick"
+     },
+     {
+      "id": "c",
+      "text": "The dissolved sugar is made of tiny particles that pass through the paper"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.method",
+    "sub_lesson": "dissolving",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which state of matter spreads out to fill any container?",
+    "hint": "Particles far apart.",
+    "explanation": "A gas fills any space.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Liquid"
+     },
+     {
+      "id": "b",
+      "text": "Gas"
+     },
+     {
+      "id": "c",
+      "text": "Solid"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.states",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which state of matter flows but keeps the same volume?",
+    "hint": "Particles slide past each other.",
+    "explanation": "A liquid flows and takes the shape of its container.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Solid"
+     },
+     {
+      "id": "b",
+      "text": "Gas"
+     },
+     {
+      "id": "c",
+      "text": "Liquid"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.states",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A liquid has a fixed shape.",
+    "hint": "Water takes the shape of the glass.",
+    "explanation": "A liquid takes the shape of its container.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "materials4.facts",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "Gas particles are close together.",
+    "hint": "Gases spread out.",
+    "explanation": "Gas particles are far apart.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "materials4.facts",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Put these changes in order as ice is warmed up.",
+    "hint": "Heat it up step by step.",
+    "explanation": "Ice melts and then boils.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Steam"
+     },
+     {
+      "id": "i1",
+      "text": "Ice"
+     },
+     {
+      "id": "i2",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials4.order",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Order the water cycle, starting from the sea.",
+    "hint": "Water rises first.",
+    "explanation": "Water evaporates, forms clouds and then falls as rain.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Cloud formation"
+     },
+     {
+      "id": "i1",
+      "text": "Evaporation"
+     },
+     {
+      "id": "i3",
+      "text": "Rain"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "materials4.order",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two things that are soluble in water.",
+    "hint": "They disappear when stirred.",
+    "explanation": "Sugar and salt dissolve in water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Salt"
+     },
+     {
+      "id": "b",
+      "text": "Sand"
+     },
+     {
+      "id": "c",
+      "text": "Wood"
+     },
+     {
+      "id": "d",
+      "text": "Sugar"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials4.soluble",
+    "sub_lesson": "dissolving",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two ways to make a solid dissolve faster.",
+    "hint": "Think about how you make tea.",
+    "explanation": "Stirring and heat speed up dissolving.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use colder water"
+     },
+     {
+      "id": "b",
+      "text": "Do not stir"
+     },
+     {
+      "id": "c",
+      "text": "Use warmer water"
+     },
+     {
+      "id": "d",
+      "text": "Stir it"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "materials4.soluble",
+    "sub_lesson": "dissolving",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the gas.",
+    "hint": "It spreads to fill the space.",
+    "explanation": "Air is a gas.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎈",
+       "label": "Air in a balloon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥛",
+       "label": "Milk",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "materials4.label",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the liquid.",
+    "hint": "It flows.",
+    "explanation": "Milk is a liquid.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎈",
+       "label": "Air in a balloon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥛",
+       "label": "Milk",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "materials4.label",
+    "sub_lesson": "states",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What is the word for a liquid slowly turning into a gas?",
+    "hint": "It starts with e.",
+    "explanation": "Evaporation is a liquid slowly becoming a gas.",
+    "answer": {
+     "accepted": [
+      "evaporation",
+      "evaporating",
+      "evaporate"
+     ]
+    },
+    "skill_tag": "materials4.words",
+    "sub_lesson": "cycle",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the word for a solid that dissolves in a liquid?",
+    "hint": "It starts with s.",
+    "explanation": "A soluble solid can dissolve.",
+    "answer": {
+     "accepted": [
+      "soluble"
+     ]
+    },
+    "skill_tag": "materials4.words",
+    "sub_lesson": "cycle",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Which change of state fits each description? Match them.",
+    "hint": "Think about the states.",
+    "explanation": "Each change moves between two states.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Freezing"
+     },
+     {
+      "id": "l2",
+      "text": "Evaporation"
+     },
+     {
+      "id": "l3",
+      "text": "Condensation"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Liquid slowly to gas"
+     },
+     {
+      "id": "r1",
+      "text": "Liquid to solid"
+     },
+     {
+      "id": "r3",
+      "text": "Gas to liquid"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials4.condense",
+    "sub_lesson": "cycle",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Link each water cycle word to what happens.",
+    "hint": "Follow the cycle.",
+    "explanation": "Each word describes a step of the water cycle.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Evaporation"
+     },
+     {
+      "id": "l2",
+      "text": "Condensation"
+     },
+     {
+      "id": "l3",
+      "text": "Rain"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Droplets fall"
+     },
+     {
+      "id": "r1",
+      "text": "Water rises as vapour"
+     },
+     {
+      "id": "r2",
+      "text": "Vapour forms cloud droplets"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials4.condense",
+    "sub_lesson": "cycle",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about water.",
+    "hint": "The two key temperatures.",
+    "explanation": "Water freezes at 0 and boils at 100 degrees Celsius.",
+    "points": 2,
+    "text": "Water freezes at {b1} °C and boils at {b2} °C.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "100"
+       },
+       {
+        "id": "c",
+        "text": "200"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "materials4.fill",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about dissolving.",
+    "hint": "Think about stirring sugar in tea.",
+    "explanation": "Sugar is soluble and makes a solution.",
+    "points": 2,
+    "text": "Sugar is {b1} in water. When it dissolves it makes a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "insoluble"
+       },
+       {
+        "id": "b",
+        "text": "solid"
+       },
+       {
+        "id": "c",
+        "text": "soluble"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "gas"
+       },
+       {
+        "id": "b",
+        "text": "solution"
+       },
+       {
+        "id": "c",
+        "text": "rock"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "materials4.fill",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A glass has 200 ml of water. 50 ml evaporates. How many millilitres are left?",
+    "hint": "200 minus 50.",
+    "explanation": "200 - 50 = 150.",
+    "answer": {
+     "value": 150,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.maths",
+    "sub_lesson": "cycle",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "A bowl has 300 ml of salty water. 120 ml evaporates. How many millilitres are left?",
+    "hint": "300 minus 120.",
+    "explanation": "300 - 120 = 180.",
+    "answer": {
+     "value": 180,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.maths",
+    "sub_lesson": "cycle",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show the temperature at which water boils, in degrees Celsius.",
+    "hint": "Top of the thermometer.",
+    "explanation": "Water boils at 100 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 150,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 100,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.temp",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show the melting point of ice, in degrees Celsius.",
+    "hint": "Same as the freezing point.",
+    "explanation": "Ice melts at 0 degrees Celsius.",
+    "range": {
+     "step": 1,
+     "min": -20,
+     "max": 50,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 0,
+     "tolerance": 0
+    },
+    "skill_tag": "materials4.temp",
+    "sub_lesson": "heating",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these steps in order to get salt from salt water.",
+    "hint": "Follow the process.",
+    "explanation": "The water evaporates and leaves the salt behind.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Leave it in the sun"
+     },
+     {
+      "id": "i3",
+      "text": "Water evaporates"
+     },
+     {
+      "id": "i4",
+      "text": "Salt is left behind"
+     },
+     {
+      "id": "i1",
+      "text": "Pour salt water in a dish"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "materials4.separate",
+    "sub_lesson": "dissolving",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put these steps of filtering in order.",
+    "hint": "Follow the process.",
+    "explanation": "The water passes through and the sand is caught.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Pour in the mixture"
+     },
+     {
+      "id": "i4",
+      "text": "Sand is left behind"
+     },
+     {
+      "id": "i3",
+      "text": "Water passes through"
+     },
+     {
+      "id": "i1",
+      "text": "Fold the filter paper"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "materials4.separate",
+    "sub_lesson": "dissolving",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says that when sugar dissolves it disappears completely. Why is he wrong?",
+    "hint": "What does the water taste like?",
+    "explanation": "The sugar is still in the water, as tiny particles.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It turns into water"
+     },
+     {
+      "id": "b",
+      "text": "It melts away"
+     },
+     {
+      "id": "c",
+      "text": "It is still there as tiny particles in the water"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.reason_dissolve",
+    "sub_lesson": "dissolving",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Sara says a gas has no mass because we cannot see it. Why is she wrong?",
+    "hint": "Particles have mass.",
+    "explanation": "Gases are made of particles. They have mass.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Gas does not exist"
+     },
+     {
+      "id": "b",
+      "text": "Gases are made of particles with mass"
+     },
+     {
+      "id": "c",
+      "text": "Gases are empty"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_dissolve",
+    "sub_lesson": "dissolving",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why does a puddle dry up faster on a warm, windy day?",
+    "hint": "Think about evaporation.",
+    "explanation": "Heat and moving air make water evaporate faster.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wind adds water"
+     },
+     {
+      "id": "b",
+      "text": "Warmth freezes it"
+     },
+     {
+      "id": "c",
+      "text": "Warmth and wind speed up evaporation"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.reason_evaporation",
+    "sub_lesson": "cycle",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why do mirrors in a bathroom mist up after a hot shower?",
+    "hint": "Gas cooling into liquid.",
+    "explanation": "Water vapour cools on the glass and condenses into droplets.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The glass melts"
+     },
+     {
+      "id": "b",
+      "text": "The shower makes a new gas"
+     },
+     {
+      "id": "c",
+      "text": "Warm water vapour condenses on the cool glass"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials4.reason_evaporation",
+    "sub_lesson": "cycle",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Tom wants a fair test of which sugar dissolves fastest. Which is the best plan?",
+    "hint": "Change one thing.",
+    "explanation": "A fair test changes one variable and keeps the others the same.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use a different glass each time and different water"
+     },
+     {
+      "id": "b",
+      "text": "Change only the water temperature and keep everything else the same"
+     },
+     {
+      "id": "c",
+      "text": "Change the sugar and the water together"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_fair",
+    "sub_lesson": "heating",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Mia wants a fair test of which ice cube melts fastest in the sun or shade. Which is best?",
+    "hint": "Change one thing.",
+    "explanation": "Only the place should change.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use big ice in the sun and small ice in the shade"
+     },
+     {
+      "id": "b",
+      "text": "Use ice cubes of the same size and change only the place"
+     },
+     {
+      "id": "c",
+      "text": "Use a different time for each"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.reason_fair",
+    "sub_lesson": "heating",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Sara tries to get salt out of salty water by filtering. Why will it not work?",
+    "hint": "Dissolved particles are tiny.",
+    "explanation": "Dissolved particles pass through filter paper. Evaporating works instead.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Salt is too big"
+     },
+     {
+      "id": "b",
+      "text": "The dissolved salt is made of tiny particles that pass through the paper"
+     },
+     {
+      "id": "c",
+      "text": "Filter paper is too thick"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.method",
+    "sub_lesson": "dissolving",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Omar stirs sand into water and says it has dissolved because the water looks cloudy. Why is he wrong?",
+    "hint": "Does sand disappear?",
+    "explanation": "Sand is insoluble. It settles back and can be filtered out.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand always dissolves"
+     },
+     {
+      "id": "b",
+      "text": "The sand will settle again because it is insoluble"
+     },
+     {
+      "id": "c",
+      "text": "Cloudy water means a solution"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials4.method",
+    "sub_lesson": "dissolving",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
