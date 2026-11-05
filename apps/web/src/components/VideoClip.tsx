@@ -11,7 +11,7 @@ export function VideoClip({ title, id, start, end, caption }: { title: string; i
   const seconds = end - start;
   return (
     <div className="flex flex-col gap-3" onTouchStart={(e) => e.stopPropagation()} onTouchEnd={(e) => e.stopPropagation()}>
-      <div className="card relative aspect-video w-full overflow-hidden">
+      <div className="video-frame card relative aspect-video overflow-hidden">
         {playing ? (
           <iframe title={title} src={src} className="absolute inset-0 size-full" allow="encrypted-media; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-presentation" />
         ) : (
