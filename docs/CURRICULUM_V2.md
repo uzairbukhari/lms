@@ -28,6 +28,14 @@ projects". How each lesson is written is in `docs/LESSON_GUIDELINES.md` (v3). No
   when all of that semester's topic lessons are passed, or on a date the parent sets.
 - **Graded or practice:** attempts until the topic lesson is passed are graded (best counts); later ones are practice.
 
+### Screen design (chosen 5 Nov 2026)
+
+Mix of the design canvas options (https://claude.ai/artifact/M4vf1btLJz2VeN59eKcjMr): the **subject path is a star map**
+(topic lessons as planets on a dotted path: done ones with stars, the current one glowing, later ones locked), and
+**inside a topic lesson a card grid** (goal chips, then one card per sub-lesson with its kind, mini quiz score and status,
+and a locked big-quiz card). Shared screens: big quiz passed (score, stars, next topic opened, "I can" faces) and Practise
+again (weak sub-lessons with fresh questions, then retake). Each of the four themes gets its own path scenery.
+
 ### What happens to existing content
 
 - Week 1 check-ins become each subject's **Starting point** (topic 0).

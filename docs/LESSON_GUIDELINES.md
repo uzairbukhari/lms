@@ -245,8 +245,8 @@ Still open: which channels or creators Uzair trusts for videos (he will send lin
 **5 Nov 2026 decisions:** international standards option C (England NC anchor, Cambridge Primary and Pakistan National
 Curriculum 2022-23 mapped too, CSTA and AI4K12 for Data & AI, IB PYP themes for GK); weekly lessons dropped for locked topic
 lessons with sub-lessons and mini quizzes, a main quiz and a 70% unlock; one project per child per semester; use the Oak,
-Coteach and Unsplash connectors and Workers AI to build lessons. **(open)** Which screen design (star map, quest cards,
-level list or a mix).
+Coteach and Unsplash connectors and Workers AI to build lessons. Screen design: star map path plus card grid inside each topic
+(chosen 5 Nov).
 
 ## 12. Animation (decided 3 Nov 2026)
 
