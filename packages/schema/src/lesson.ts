@@ -204,7 +204,7 @@ export type QuestionType = QuizQuestion["type"];
 export const BACKDROPS = ["plain", "meadow", "forest", "pond", "sea", "desert", "mountain", "sky", "space", "kitchen", "classroom", "home", "town", "farm", "map", "lab"] as const;
 export type Backdrop = (typeof BACKDROPS)[number];
 /** Drawn pictures with moving parts, used instead of emoji where a real diagram teaches better. */
-export const PROPS = ["number_line", "ten_frame", "base_ten", "fraction_pizza", "fraction_bar", "clock", "thermometer", "balance", "plant", "body", "globe", "sun_earth", "robot_grid", "sorting_boxes", "venn"] as const;
+export const PROPS = ["number_line", "ten_frame", "base_ten", "fraction_pizza", "fraction_bar", "clock", "thermometer", "balance", "plant", "body", "globe", "sun_earth", "robot_grid", "sorting_boxes", "venn", "coin"] as const;
 export type PropKind = (typeof PROPS)[number];
 export const ENTERS = ["pop", "fade", "drop", "grow", "slide_left", "slide_right", "walk_left", "walk_right"] as const;
 export const EXITS = ["fade", "shrink", "fly_up", "drop"] as const;
@@ -231,7 +231,7 @@ export const propSchema = z.object({
   col: z.number().int().min(0).max(5).optional(),
   row: z.number().int().min(0).max(5).optional(),
   facing: z.enum(["up", "down", "left", "right"]).optional(),
-  /** plant: roots, stem, leaf, flower. body: brain, heart, lungs, stomach, bones, muscles. globe: a continent. */
+  /** plant: roots, stem, leaf, flower. body: brain, heart, lungs, stomach, bones, muscles. globe: a continent. coin: the text on its face, like "10p", "£1" or "Rs 5". */
   highlight: line(20).optional(),
   /** sorting_boxes and venn: box names (venn uses the first two). */
   labels: z.array(line(24)).max(3).optional(),

@@ -1,0 +1,2627 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-multiply-share",
+  "subject": "maths",
+  "title": "Multiplying and Sharing",
+  "summary": "Equal groups, arrays, the 2, 5 and 10 times tables, sharing and grouping, and odd and even.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Multiply and share",
+  "learning_objectives": [
+   "Make and count equal groups",
+   "Use arrays",
+   "Count in 2s, 5s and 10s",
+   "Share and group equally",
+   "Tell odd from even"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 mult/div",
+    "text": "Recall and use multiplication and division facts for the 2, 5 and 10 multiplication tables"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-A-14"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-A-17"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-A-19"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nc.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.05"
+   }
+  ],
+  "success_criteria": [
+   "I can say how many in equal groups",
+   "I can count in 2s, 5s and 10s",
+   "I can share things equally",
+   "I can tell if a number is odd or even"
+  ],
+  "real_life": "Sharing sweets fairly, packs of pencils and pairs of shoes.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 5 + 5?",
+    "hint": "Double 5.",
+    "explanation": "5 + 5 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 10 + 10 + 10?",
+    "hint": "3 tens.",
+    "explanation": "10 + 10 + 10 = 30.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "12 is bigger than 21.",
+    "hint": "Compare the tens.",
+    "explanation": "21 has 2 tens, so it is bigger.",
+    "answer": [
+     false
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we multiply, share equally and sort odd and even numbers.",
+   "say": "Welcome back, number explorer! Today we learn two big ideas. Multiplying, a speedy way to add equal groups. And dividing, which is sharing things fairly. You will also find out how to tell odd numbers from even numbers just by looking."
+  },
+  {
+   "type": "image",
+   "emoji": "✖️",
+   "alt": "Multiplying and sharing.",
+   "caption": "Multiplying and sharing."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "multiplying and sharing",
+     "meaning": "Adding equal groups and splitting things fairly."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "groups",
+   "kind": "learn",
+   "title": "Equal groups and arrays",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Equal groups"
+    },
+    {
+     "type": "text",
+     "markdown": "**Multiplying** is adding **equal groups**.\n\n3 groups of 2 is 2 + 2 + 2 = 6. We write 3 x 2 = 6.",
+     "say": "Multiplying is a quick way to add the same number again and again. Look at three plates, with two cakes on each. Two and two and two is six. We can write that as three groups of two. That is three times two, and the answer is six. Equal groups means every group has the same number."
+    },
+    {
+     "type": "explainer",
+     "title": "3 groups of 2",
+     "scenes": [
+      {
+       "caption": "1 group of 2.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🧁",
+         "x": 18,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🧁",
+         "x": 26,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is the first plate with two cakes."
+      },
+      {
+       "caption": "2 groups of 2 is 4.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🧁",
+         "x": 18,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🧁",
+         "x": 26,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🧁",
+         "x": 46,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🧁",
+         "x": 54,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A second plate, with two more cakes. Two and two make four."
+      },
+      {
+       "caption": "3 groups of 2 is 6. 3 x 2 = 6.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🧁",
+         "x": 18,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🧁",
+         "x": 26,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🧁",
+         "x": 46,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🧁",
+         "x": 54,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c1",
+         "emoji": "🧁",
+         "x": 74,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c2",
+         "emoji": "🧁",
+         "x": 82,
+         "y": 36,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 x 2 = 6"
+        }
+       ],
+       "say": "And a third plate. Two, four, six. Three groups of two make six. Three times two is six!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 4 groups of 2?",
+      "hint": "2 + 2 + 2 + 2.",
+      "explanation": "4 groups of 2 is 8.",
+      "skill_tag": "multiply.groups",
+      "answer": {
+       "value": 8,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Arrays"
+    },
+    {
+     "type": "text",
+     "markdown": "An **array** is a grid of equal rows and columns.\n\n2 rows of 5 is 10. 2 x 5 = 5 x 2 = 10.",
+     "say": "An array is a neat grid of rows and columns. Here are two rows of five stars. Each row has five. Two rows of five make ten. We can also read it the other way, five columns of two. Two times five and five times two are both ten. You can multiply in any order and the answer stays the same."
+    },
+    {
+     "type": "explainer",
+     "title": "2 rows of 5",
+     "scenes": [
+      {
+       "caption": "1 row of 5.",
+       "items": [
+        {
+         "id": "s00",
+         "emoji": "⭐",
+         "x": 24,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s01",
+         "emoji": "⭐",
+         "x": 37,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s02",
+         "emoji": "⭐",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s03",
+         "emoji": "⭐",
+         "x": 63,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s04",
+         "emoji": "⭐",
+         "x": 76,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is one row of five stars."
+      },
+      {
+       "caption": "2 rows of 5 is 10.",
+       "items": [
+        {
+         "id": "s00",
+         "emoji": "⭐",
+         "x": 24,
+         "y": 28,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s01",
+         "emoji": "⭐",
+         "x": 37,
+         "y": 28,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s02",
+         "emoji": "⭐",
+         "x": 50,
+         "y": 28,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s03",
+         "emoji": "⭐",
+         "x": 63,
+         "y": 28,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s04",
+         "emoji": "⭐",
+         "x": 76,
+         "y": 28,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s10",
+         "emoji": "⭐",
+         "x": 24,
+         "y": 52,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s11",
+         "emoji": "⭐",
+         "x": 37,
+         "y": 52,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s12",
+         "emoji": "⭐",
+         "x": 50,
+         "y": 52,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s13",
+         "emoji": "⭐",
+         "x": 63,
+         "y": 52,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s14",
+         "emoji": "⭐",
+         "x": 76,
+         "y": 52,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "2 x 5 = 10"
+        }
+       ],
+       "say": "Add a second row of five. Two rows of five make ten stars."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A grid has 3 rows of 4. How many in all?",
+      "hint": "4 + 4 + 4.",
+      "explanation": "3 rows of 4 is 12.",
+      "skill_tag": "multiply.arrays",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Multiplying is adding equal groups",
+      "An array shows groups in rows and columns",
+      "The order does not change the answer"
+     ],
+     "say": "Remember. Multiplying is adding equal groups. An array shows the groups in rows and columns. The order does not change the answer."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "multiply",
+       "meaning": "Add the same number many times."
+      },
+      {
+       "term": "equal groups",
+       "meaning": "Groups that all have the same number."
+      },
+      {
+       "term": "array",
+       "meaning": "A grid of rows and columns."
+      },
+      {
+       "term": "row",
+       "meaning": "A line going across."
+      },
+      {
+       "term": "column",
+       "meaning": "A line going down."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 2 + 2 + 2 + 2 + 2?",
+     "hint": "5 groups of 2.",
+     "explanation": "5 groups of 2 is 10.",
+     "answer": {
+      "value": 10,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 3 groups of 5?",
+     "hint": "5 + 5 + 5.",
+     "explanation": "3 groups of 5 is 15.",
+     "answer": {
+      "value": 15,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "2 x 5 and 5 x 2 have the same answer.",
+     "hint": "Think of rows and columns.",
+     "explanation": "Both are 10.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "An array has 2 rows of 3. How many in all?",
+     "hint": "3 + 3.",
+     "explanation": "2 rows of 3 is 6.",
+     "options": [
+      {
+       "id": "a",
+       "text": "5"
+      },
+      {
+       "id": "b",
+       "text": "8"
+      },
+      {
+       "id": "c",
+       "text": "6"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tables",
+   "kind": "try",
+   "title": "The 2, 5 and 10 times tables",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Counting in twos, fives and tens"
+    },
+    {
+     "type": "text",
+     "markdown": "Count in **twos**: 2, 4, 6, 8, 10. Count in **fives**: 5, 10, 15, 20. Count in **tens**: 10, 20, 30, 40.\n\n5s end in 5 or 0. 10s end in 0.",
+     "say": "A times table is counting in equal jumps. The two times table is two, four, six, eight, ten. The five times table is five, ten, fifteen, twenty. The ten times table is ten, twenty, thirty, forty. Look at the last digit. In the five times table it is always five or zero. In the ten times table it is always zero. Spotting patterns makes tables easy."
+    },
+    {
+     "type": "chart",
+     "kind": "number_line",
+     "title": "Counting in fives",
+     "from": 0,
+     "to": 50,
+     "step": 5,
+     "marks": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50
+     ],
+     "caption": "Jumps of 5: 5, 10, 15, 20 and on to 50."
+    },
+    {
+     "type": "explainer",
+     "title": "Count in 5s on the number line",
+     "scenes": [
+      {
+       "caption": "Start at 0.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 0,
+          "to": 50,
+          "value": 0
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Start at zero."
+      },
+      {
+       "caption": "0, 5, 10, 15, 20.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 0,
+          "to": 50,
+          "value": 20
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Five. Ten. Fifteen. Twenty. Every hop is five."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Count in fives: 5, 10, 15, ... What comes next?",
+      "hint": "Add 5.",
+      "explanation": "15 + 5 = 20.",
+      "skill_tag": "multiply.tables",
+      "answer": {
+       "value": 20,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Make the groups"
+    },
+    {
+     "type": "text",
+     "markdown": "Make groups of 2, 5 or 10 and count how many groups you get.",
+     "say": "Now make the groups yourself. Take twenty apples. Put them in groups of five, or groups of two. How many groups can you make? Try with real things at home too, like pasta or beads."
+    },
+    {
+     "type": "manipulative",
+     "title": "Make groups of 5",
+     "goal": "You have 20 apples. Put them into groups of 5. How many groups did you make?",
+     "emoji": "🍎",
+     "count": 20,
+     "zones": [
+      "Group 1",
+      "Group 2"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Groups at home",
+     "materials": [
+      "20 small things (beads, buttons or pasta)",
+      "Cups or bowls"
+     ],
+     "instructions": [
+      "Put the things into groups of 2. How many groups?",
+      "Now make groups of 5. How many groups?",
+      "Now make groups of 10. How many groups?",
+      "What did you notice?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How many fives make 30?",
+      "hint": "Count in fives to 30.",
+      "explanation": "5, 10, 15, 20, 25, 30. That is 6 jumps.",
+      "skill_tag": "multiply.tables",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Tables are counting in equal jumps",
+      "Look for the pattern in the last digit"
+     ],
+     "say": "Remember. Tables are counting in equal jumps. Twos go up by two, fives by five and tens by ten. Look for the pattern."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "times table",
+       "meaning": "A list of equal jumps, like 2, 4, 6, 8."
+      },
+      {
+       "term": "fives",
+       "meaning": "Counting by 5."
+      },
+      {
+       "term": "tens",
+       "meaning": "Counting by 10."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats in a regular way."
+      },
+      {
+       "term": "jump",
+       "meaning": "One step along a number line."
+      },
+      {
+       "term": "twos",
+       "meaning": "Counting by 2."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Count in twos: 2, 4, 6, ... What comes next?",
+     "hint": "Add 2.",
+     "explanation": "6 + 2 = 8.",
+     "answer": {
+      "value": 8,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 3 x 10?",
+     "hint": "3 tens.",
+     "explanation": "3 x 10 = 30.",
+     "answer": {
+      "value": 30,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Numbers in the 5 times table end in...",
+     "hint": "5, 10, 15, 20.",
+     "explanation": "5s always end in 5 or 0.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 or 8"
+      },
+      {
+       "id": "b",
+       "text": "5 or 0"
+      },
+      {
+       "id": "c",
+       "text": "1 or 6"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "6 is in the 5 times table.",
+     "hint": "Count in fives.",
+     "explanation": "5, 10, 15. 6 is not there.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sharing",
+   "kind": "play",
+   "title": "Sharing and grouping",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sharing equally"
+    },
+    {
+     "type": "text",
+     "markdown": "**Sharing** means making equal groups.\n\n12 shared between 3 is 4 each. 12 ÷ 3 = 4.",
+     "say": "Dividing is the opposite of multiplying. It means sharing into equal groups. We have twelve strawberries and three children. We share them fairly, one at a time. One each, one each, one each. Four times. Each child gets four strawberries. Twelve shared between three is four. We write twelve divided by three equals four."
+    },
+    {
+     "type": "explainer",
+     "title": "12 shared between 3",
+     "scenes": [
+      {
+       "caption": "12 strawberries, 3 children.",
+       "items": [
+        {
+         "id": "k1",
+         "emoji": "🧒",
+         "x": 22,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "k2",
+         "emoji": "🧒",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "k3",
+         "emoji": "🧒",
+         "x": 78,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🍓",
+         "x": 50,
+         "y": 72,
+         "size": 3,
+         "anim": "bounce",
+         "label": "12 strawberries"
+        }
+       ],
+       "say": "Here are three children and twelve strawberries ready to share."
+      },
+      {
+       "caption": "Each child gets 4. 12 ÷ 3 = 4.",
+       "items": [
+        {
+         "id": "k1",
+         "emoji": "🧒",
+         "x": 22,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "k2",
+         "emoji": "🧒",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "k3",
+         "emoji": "🧒",
+         "x": 78,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🍓",
+         "x": 22,
+         "y": 70,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4 each"
+        },
+        {
+         "id": "b",
+         "emoji": "🍓",
+         "x": 50,
+         "y": 70,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4 each"
+        },
+        {
+         "id": "c",
+         "emoji": "🍓",
+         "x": 78,
+         "y": 70,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4 each"
+        }
+       ],
+       "say": "Share them out equally, one each at a time. Now each child has four strawberries."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Share match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "🍓",
+      "🍎",
+      "🍌",
+      "🍇",
+      "🍊",
+      "🥝"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Share 10 sweets equally between 2 children. How many each?",
+      "hint": "5 + 5 = 10.",
+      "explanation": "10 ÷ 2 = 5.",
+      "skill_tag": "multiply.sharing",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Grouping"
+    },
+    {
+     "type": "text",
+     "markdown": "**Grouping** means putting things into groups of a set size.\n\n12 sweets in bags of 3 makes 4 bags.",
+     "say": "There is another way to divide. Grouping. We have twelve sweets. We put them into bags of three. How many bags? Make a bag of three, and another, and another. Four bags. Twelve divided into groups of three is four groups. The answer is the same, but now we count the groups."
+    },
+    {
+     "type": "image",
+     "emoji": "🛍️",
+     "alt": "12 sweets in bags of 3 makes 4 bags.",
+     "caption": "12 sweets in bags of 3 makes 4 bags."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "20 pencils go into packs of 5. How many packs?",
+      "hint": "Count in fives to 20.",
+      "explanation": "5, 10, 15, 20. That is 4 packs.",
+      "skill_tag": "multiply.grouping",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Dividing is sharing equally or making groups",
+      "It is the opposite of multiplying"
+     ],
+     "say": "Remember. Dividing is sharing equally or making groups. It is the opposite of multiplying."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "divide",
+       "meaning": "Share equally or make equal groups."
+      },
+      {
+       "term": "sharing",
+       "meaning": "Giving out equally so everyone gets the same."
+      },
+      {
+       "term": "share",
+       "meaning": "To give out equally."
+      },
+      {
+       "term": "fair",
+       "meaning": "The same for everyone."
+      },
+      {
+       "term": "group",
+       "meaning": "A set of things together."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Share 6 cakes between 2 children. How many each?",
+     "hint": "3 + 3 = 6.",
+     "explanation": "6 ÷ 2 = 3.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "12 eggs go into boxes of 2. How many boxes?",
+     "hint": "Count in twos to 12.",
+     "explanation": "12 ÷ 2 = 6.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Sharing 8 between 4 gives 3 each.",
+     "hint": "4 x 3 = 12.",
+     "explanation": "8 ÷ 4 = 2 each.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Dividing is the opposite of...",
+     "hint": "Think of the times tables.",
+     "explanation": "Division undoes multiplication.",
+     "options": [
+      {
+       "id": "a",
+       "text": "counting"
+      },
+      {
+       "id": "b",
+       "text": "multiplying"
+      },
+      {
+       "id": "c",
+       "text": "adding"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "odd_even",
+   "kind": "use",
+   "title": "Odd and even",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pairs and leftovers"
+    },
+    {
+     "type": "text",
+     "markdown": "**Even** numbers split into pairs. **Odd** numbers have one left over.\n\nEven numbers end in 0, 2, 4, 6 or 8.",
+     "say": "Here is a number secret. Some numbers can be split into pairs with nothing left. Those are even numbers. Six shoes make three pairs. Even! Some numbers always have one left over. Those are odd numbers. Seven shoes make three pairs and one lonely shoe. Odd! Look at the last digit. Even numbers end in zero, two, four, six or eight."
+    },
+    {
+     "type": "explainer",
+     "title": "Even and odd",
+     "scenes": [
+      {
+       "caption": "6 is even.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👟",
+         "x": 14,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "👟",
+         "x": 24,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "👟",
+         "x": 40,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "👟",
+         "x": 50,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "👟",
+         "x": 66,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "👟",
+         "x": 76,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Six shoes make three pairs. Nothing is left over, so six is even."
+      },
+      {
+       "caption": "7 is odd.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👟",
+         "x": 12,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "👟",
+         "x": 22,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "👟",
+         "x": 36,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "👟",
+         "x": 46,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "👟",
+         "x": 60,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "👟",
+         "x": 70,
+         "y": 44,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "👟",
+         "x": 88,
+         "y": 44,
+         "size": 2,
+         "anim": "bounce",
+         "label": "odd one"
+        }
+       ],
+       "say": "Seven shoes make three pairs and one left over. The lonely shoe means seven is odd."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which number is even?",
+      "hint": "Does it end in 0, 2, 4, 6 or 8?",
+      "explanation": "14 ends in 4, so it is even.",
+      "skill_tag": "multiply.odd_even",
+      "options": [
+       {
+        "id": "a",
+        "text": "15"
+       },
+       {
+        "id": "b",
+        "text": "14"
+       },
+       {
+        "id": "c",
+        "text": "13"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Odd or even detectives"
+    },
+    {
+     "type": "text",
+     "markdown": "Look at the last digit to check if a big number is odd or even.\n\n32 is even. 19 is odd.",
+     "say": "Time to be a detective. Is nineteen odd or even? It ends in nine, so it is odd. What about thirty-two? It ends in two, so it is even. You can check any number, even a big one, just by looking at the last digit. Let's try some more."
+    },
+    {
+     "type": "image",
+     "emoji": "🔎",
+     "alt": "Look at the last digit to tell odd from even.",
+     "caption": "Look at the last digit to tell odd from even."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Is 100 odd or even? Have a think first.",
+     "answer_markdown": "Even. It ends in 0, so it splits into pairs with none left over."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which number is odd?",
+      "hint": "Look at the last digit.",
+      "explanation": "27 ends in 7, so it is odd.",
+      "skill_tag": "multiply.odd_even",
+      "options": [
+       {
+        "id": "a",
+        "text": "26"
+       },
+       {
+        "id": "b",
+        "text": "27"
+       },
+       {
+        "id": "c",
+        "text": "30"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Even numbers make pairs with none left over",
+      "Odd numbers have one left over",
+      "Look at the last digit"
+     ],
+     "say": "Remember. Even numbers make pairs with none left. Odd numbers have one left over. Look at the last digit."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "even",
+       "meaning": "A number that splits into pairs with none left over."
+      },
+      {
+       "term": "odd",
+       "meaning": "A number that has one left over when split into pairs."
+      },
+      {
+       "term": "pair",
+       "meaning": "Two things together."
+      },
+      {
+       "term": "digit",
+       "meaning": "One of the number symbols 0 to 9."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is even?",
+     "hint": "Can you make pairs?",
+     "explanation": "8 makes 4 pairs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "9"
+      },
+      {
+       "id": "b",
+       "text": "8"
+      },
+      {
+       "id": "c",
+       "text": "7"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is odd?",
+     "hint": "Look at the last digit.",
+     "explanation": "15 ends in 5, so it is odd.",
+     "options": [
+      {
+       "id": "a",
+       "text": "12"
+      },
+      {
+       "id": "b",
+       "text": "15"
+      },
+      {
+       "id": "c",
+       "text": "20"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Every number ending in 0 is even.",
+     "hint": "10, 20, 30.",
+     "explanation": "Numbers ending in 0 split into pairs.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is the next even number after 12?",
+     "hint": "Add 2.",
+     "explanation": "12 + 2 = 14.",
+     "answer": {
+      "value": 14,
+      "tolerance": 0
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What is 4 groups of 5?",
+    "hint": "5 + 5 + 5 + 5.",
+    "explanation": "4 groups of 5 is 20.",
+    "skill_tag": "multiply.groups",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "groups",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "3 x 2 means 3 groups of 2.",
+    "hint": "Read it as groups.",
+    "explanation": "3 x 2 is 3 groups of 2.",
+    "skill_tag": "multiply.groups",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "groups",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "Count in tens: 10, 20, 30, ... What comes next?",
+    "hint": "Add 10.",
+    "explanation": "30 + 10 = 40.",
+    "skill_tag": "multiply.tables",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the pattern.",
+    "hint": "Count in fives.",
+    "explanation": "5, 10, 15, 20, 25.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "text": "5, 10, {b1}, 20, {b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "14"
+       },
+       {
+        "id": "b",
+        "text": "15"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "22"
+       },
+       {
+        "id": "b",
+        "text": "25"
+       },
+       {
+        "id": "c",
+        "text": "30"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which numbers are in the 5 times table? Pick two.",
+    "hint": "They end in 5 or 0.",
+    "explanation": "15 and 40 are both in the 5 times table.",
+    "skill_tag": "multiply.tables",
+    "options": [
+     {
+      "id": "a",
+      "text": "40"
+     },
+     {
+      "id": "b",
+      "text": "26"
+     },
+     {
+      "id": "c",
+      "text": "12"
+     },
+     {
+      "id": "d",
+      "text": "15"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these in order, smallest first.",
+    "hint": "Work out each answer.",
+    "explanation": "10, 15, 20 and 30 are in order.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "3 x 5"
+     },
+     {
+      "id": "i4",
+      "text": "6 x 5"
+     },
+     {
+      "id": "i3",
+      "text": "4 x 5"
+     },
+     {
+      "id": "i1",
+      "text": "2 x 5"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each sum to its answer.",
+    "hint": "Think of equal groups.",
+    "explanation": "2 x 5 = 10, 3 x 10 = 30, 4 x 2 = 8.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "2 x 5"
+     },
+     {
+      "id": "l2",
+      "text": "3 x 10"
+     },
+     {
+      "id": "l3",
+      "text": "4 x 2"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "8"
+     },
+     {
+      "id": "r1",
+      "text": "10"
+     },
+     {
+      "id": "r2",
+      "text": "30"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the tray that shows 3 rows of 4.",
+    "hint": "Read each label.",
+    "explanation": "Tray A has 3 rows of 4.",
+    "skill_tag": "multiply.arrays",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍪",
+       "label": "Tray A: 3 rows of 4",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍪",
+       "label": "Tray B: 4 rows of 2",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍪",
+       "label": "Tray C: 2 rows of 5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "groups",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 6 x 5 on the number line.",
+    "hint": "Count in fives six times.",
+    "explanation": "6 x 5 = 30.",
+    "skill_tag": "multiply.tables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 50
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "number",
+    "prompt": "Share 15 stickers equally between 3 children. How many does each child get?",
+    "hint": "3 groups of what make 15?",
+    "explanation": "15 ÷ 3 = 5.",
+    "skill_tag": "multiply.sharing",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "sharing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which number out of these is odd?",
+    "hint": "Look at the last digit.",
+    "explanation": "35 ends in 5, so it is odd.",
+    "skill_tag": "multiply.odd_even",
+    "options": [
+     {
+      "id": "a",
+      "text": "34"
+     },
+     {
+      "id": "b",
+      "text": "35"
+     },
+     {
+      "id": "c",
+      "text": "30"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Why is 12 an even number?",
+    "hint": "Think of 12 shoes.",
+    "explanation": "12 shoes make 6 pairs with none left over.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is bigger than 10"
+     },
+     {
+      "id": "b",
+      "text": "It can be split into pairs with none left over"
+     },
+     {
+      "id": "c",
+      "text": "It ends in 1"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Amir says 3 x 5 = 8. Is he right?",
+    "hint": "x means groups, not plus.",
+    "explanation": "3 groups of 5 is 15, not 8.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 + 5 = 8"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 12"
+     },
+     {
+      "id": "c",
+      "text": "No. 3 x 5 means 5 + 5 + 5, which is 15"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "groups",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Sara has 9 sweets and shares them between 2 friends. Why can she not share them equally?",
+    "hint": "Is 9 odd or even?",
+    "explanation": "9 is odd. It cannot be split into two equal groups.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "9 is too small"
+     },
+     {
+      "id": "b",
+      "text": "9 is odd, so there is one left over"
+     },
+     {
+      "id": "c",
+      "text": "9 is even"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A box holds 5 pencils. How many pencils are in 6 boxes?",
+    "hint": "Count in fives six times.",
+    "explanation": "6 x 5 = 30 pencils.",
+    "skill_tag": "multiply.word_problem",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "What is 3 groups of 4?",
+    "hint": "4 + 4 + 4.",
+    "explanation": "3 groups of 4 is 12.",
+    "skill_tag": "multiply.groups",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "groups",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "number",
+    "prompt": "What is 5 groups of 2?",
+    "hint": "2 + 2 + 2 + 2 + 2.",
+    "explanation": "5 groups of 2 is 10.",
+    "skill_tag": "multiply.groups",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "groups",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "4 x 5 means 4 groups of 5.",
+    "hint": "Read it as groups.",
+    "explanation": "4 x 5 is 4 groups of 5.",
+    "skill_tag": "multiply.groups",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "groups",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "2 x 3 means 2 groups of 5.",
+    "hint": "Read it as groups.",
+    "explanation": "2 x 3 is 2 groups of 3.",
+    "skill_tag": "multiply.groups",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "groups",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "number",
+    "prompt": "Count in fives: 25, 30, 35, ... What comes next?",
+    "hint": "Add 5.",
+    "explanation": "35 + 5 = 40.",
+    "skill_tag": "multiply.tables",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "number",
+    "prompt": "Count in twos: 10, 12, 14, ... What comes next?",
+    "hint": "Add 2.",
+    "explanation": "14 + 2 = 16.",
+    "skill_tag": "multiply.tables",
+    "answer": {
+     "value": 16,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the pattern.",
+    "hint": "Count in twos.",
+    "explanation": "2, 4, 6, 8, 10.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "text": "2, 4, {b1}, 8, {b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "12"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "9"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Fill in the pattern.",
+    "hint": "Count in tens.",
+    "explanation": "10, 20, 30, 40, 50.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "text": "10, 20, {b1}, 40, {b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "25"
+       },
+       {
+        "id": "b",
+        "text": "30"
+       },
+       {
+        "id": "c",
+        "text": "35"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "60"
+       },
+       {
+        "id": "b",
+        "text": "50"
+       },
+       {
+        "id": "c",
+        "text": "45"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which numbers are in the 2 times table? Pick two.",
+    "hint": "They end in 0, 2, 4, 6 or 8.",
+    "explanation": "12 and 18 are even, so they are in the 2 times table.",
+    "skill_tag": "multiply.tables",
+    "options": [
+     {
+      "id": "a",
+      "text": "13"
+     },
+     {
+      "id": "b",
+      "text": "19"
+     },
+     {
+      "id": "c",
+      "text": "18"
+     },
+     {
+      "id": "d",
+      "text": "12"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which numbers are in the 10 times table? Pick two.",
+    "hint": "They end in 0.",
+    "explanation": "30 and 70 both end in 0.",
+    "skill_tag": "multiply.tables",
+    "options": [
+     {
+      "id": "a",
+      "text": "70"
+     },
+     {
+      "id": "b",
+      "text": "75"
+     },
+     {
+      "id": "c",
+      "text": "35"
+     },
+     {
+      "id": "d",
+      "text": "30"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these answers, smallest first.",
+    "hint": "Work out each answer.",
+    "explanation": "4, 8, 12 and 18 are in order.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "6 x 2"
+     },
+     {
+      "id": "i4",
+      "text": "9 x 2"
+     },
+     {
+      "id": "i2",
+      "text": "4 x 2"
+     },
+     {
+      "id": "i1",
+      "text": "2 x 2"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Arrange these, smallest first.",
+    "hint": "Work out each answer.",
+    "explanation": "10, 30, 50 and 80 are in order.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "3 x 10"
+     },
+     {
+      "id": "i4",
+      "text": "8 x 10"
+     },
+     {
+      "id": "i3",
+      "text": "5 x 10"
+     },
+     {
+      "id": "i1",
+      "text": "1 x 10"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Join each sum to its answer.",
+    "hint": "Think of equal groups.",
+    "explanation": "3 x 5 = 15, 5 x 10 = 50, 6 x 2 = 12.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3 x 5"
+     },
+     {
+      "id": "l2",
+      "text": "5 x 10"
+     },
+     {
+      "id": "l3",
+      "text": "6 x 2"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "50"
+     },
+     {
+      "id": "r3",
+      "text": "12"
+     },
+     {
+      "id": "r1",
+      "text": "15"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Pair each sum with its answer.",
+    "hint": "Think of equal groups.",
+    "explanation": "4 x 5 = 20, 5 x 2 = 10, 7 x 10 = 70.",
+    "skill_tag": "multiply.tables",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "4 x 5"
+     },
+     {
+      "id": "l2",
+      "text": "5 x 2"
+     },
+     {
+      "id": "l3",
+      "text": "7 x 10"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "10"
+     },
+     {
+      "id": "r1",
+      "text": "20"
+     },
+     {
+      "id": "r3",
+      "text": "70"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the tray that shows 2 rows of 5.",
+    "hint": "Read each label.",
+    "explanation": "Tray B has 2 rows of 5.",
+    "skill_tag": "multiply.arrays",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍪",
+       "label": "Tray A: 3 rows of 4",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍪",
+       "label": "Tray B: 2 rows of 5",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍪",
+       "label": "Tray C: 5 rows of 3",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "groups",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "hotspot",
+    "prompt": "Tap the tray that shows 4 rows of 2.",
+    "hint": "Read each label.",
+    "explanation": "Tray C has 4 rows of 2.",
+    "skill_tag": "multiply.arrays",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍪",
+       "label": "Tray A: 2 rows of 4",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍪",
+       "label": "Tray B: 3 rows of 3",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍪",
+       "label": "Tray C: 4 rows of 2",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "groups",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 7 x 5 on the number line.",
+    "hint": "Count in fives seven times.",
+    "explanation": "7 x 5 = 35.",
+    "skill_tag": "multiply.tables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 50
+    },
+    "answer": {
+     "value": 35,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 4 x 10 on the number line.",
+    "hint": "Count in tens four times.",
+    "explanation": "4 x 10 = 40.",
+    "skill_tag": "multiply.tables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 50
+    },
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "number",
+    "prompt": "Share 12 sweets equally between 4 children. How many does each child get?",
+    "hint": "4 groups of what make 12?",
+    "explanation": "12 ÷ 4 = 3.",
+    "skill_tag": "multiply.sharing",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "sharing",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "number",
+    "prompt": "Share 20 marbles equally between 2 friends. How many does each friend get?",
+    "hint": "2 groups of what make 20?",
+    "explanation": "20 ÷ 2 = 10.",
+    "skill_tag": "multiply.sharing",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "sharing",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which of these numbers is odd?",
+    "hint": "Look at the last digit.",
+    "explanation": "47 ends in 7, so it is odd.",
+    "skill_tag": "multiply.odd_even",
+    "options": [
+     {
+      "id": "a",
+      "text": "48"
+     },
+     {
+      "id": "b",
+      "text": "47"
+     },
+     {
+      "id": "c",
+      "text": "40"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Pick the odd number.",
+    "hint": "Look at the last digit.",
+    "explanation": "61 ends in 1, so it is odd.",
+    "skill_tag": "multiply.odd_even",
+    "options": [
+     {
+      "id": "a",
+      "text": "60"
+     },
+     {
+      "id": "b",
+      "text": "62"
+     },
+     {
+      "id": "c",
+      "text": "61"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Why is 9 an odd number?",
+    "hint": "Think of 9 shoes.",
+    "explanation": "9 shoes make 4 pairs and one is left over.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is smaller than 10"
+     },
+     {
+      "id": "b",
+      "text": "It ends in 0"
+     },
+     {
+      "id": "c",
+      "text": "When you make pairs, one is left over"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Why is 20 an even number?",
+    "hint": "Think of 20 shoes.",
+    "explanation": "20 shoes make 10 pairs with none left over.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It ends in 2"
+     },
+     {
+      "id": "b",
+      "text": "It can be split into pairs with none left over"
+     },
+     {
+      "id": "c",
+      "text": "It is bigger than 10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Hana says 4 x 2 = 6. Is she right?",
+    "hint": "x means groups, not plus.",
+    "explanation": "4 groups of 2 is 8, not 6.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 + 2 = 6"
+     },
+     {
+      "id": "b",
+      "text": "No. 4 x 2 means 2 + 2 + 2 + 2, which is 8"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "groups",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Zain says 2 x 10 = 12. Is he right?",
+    "hint": "x means groups, not plus.",
+    "explanation": "2 groups of 10 is 20, not 12.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 2 + 10 = 12"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 30"
+     },
+     {
+      "id": "c",
+      "text": "No. 2 x 10 means 10 + 10, which is 20"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "groups",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Omar has 11 stickers and shares them between 2 friends. Why can he not share them equally?",
+    "hint": "Is 11 odd or even?",
+    "explanation": "11 is odd. It cannot be split into two equal groups.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "11 is even"
+     },
+     {
+      "id": "b",
+      "text": "11 is odd, so there is one left over"
+     },
+     {
+      "id": "c",
+      "text": "11 is too small"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Mia has 15 beads and shares them between 2 friends. Why can she not share them equally?",
+    "hint": "Is 15 odd or even?",
+    "explanation": "15 is odd. It cannot be split into two equal groups.",
+    "skill_tag": "multiply.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 is even"
+     },
+     {
+      "id": "b",
+      "text": "15 is odd, so there is one left over"
+     },
+     {
+      "id": "c",
+      "text": "15 is too small"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "odd_even",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "A bag holds 10 marbles. How many marbles are in 4 bags?",
+    "hint": "Count in tens four times.",
+    "explanation": "4 x 10 = 40 marbles.",
+    "skill_tag": "multiply.word_problem",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "A plate holds 2 cakes. How many cakes are on 7 plates?",
+    "hint": "Count in twos seven times.",
+    "explanation": "7 x 2 = 14 cakes.",
+    "skill_tag": "multiply.word_problem",
+    "answer": {
+     "value": 14,
+     "tolerance": 0
+    },
+    "sub_lesson": "tables",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

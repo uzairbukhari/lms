@@ -1,0 +1,2435 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-1-reading-to-find-out",
+  "subject": "english",
+  "title": "Reading to Find Out",
+  "summary": "Contents pages, headings and indexes, labelled diagrams and tables, finding facts and making a fact file.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Reading to find out",
+  "learning_objectives": [
+   "Use contents pages, headings and an index",
+   "Read labelled diagrams and tables",
+   "Tell facts from made-up ideas",
+   "Make a simple fact file"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "english-class-1-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 reading",
+    "text": "Read and discuss non-fiction, using contents pages, headings and diagrams to retrieve information"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.09"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.14"
+   }
+  ],
+  "success_criteria": [
+   "I can use a contents page to find a chapter",
+   "I can read a labelled diagram and a table",
+   "I can tell a fact from something made up",
+   "I can make a fact file"
+  ],
+  "real_life": "Looking up facts about animals and planets in books and finding answers on a poster.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word rhymes with moon?",
+    "hint": "Listen to the ending.",
+    "explanation": "Moon and spoon both end in oon.",
+    "options": [
+     {
+      "id": "a",
+      "text": "moth"
+     },
+     {
+      "id": "b",
+      "text": "map"
+     },
+     {
+      "id": "c",
+      "text": "spoon"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A story has a beginning, a middle and an end.",
+    "hint": "Think of the three parts.",
+    "explanation": "Stories have three parts.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a question end with?",
+    "hint": "It looks like a hook with a dot.",
+    "explanation": "Questions end with a question mark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "a comma"
+     },
+     {
+      "id": "b",
+      "text": "a question mark"
+     },
+     {
+      "id": "c",
+      "text": "a full stop"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, fact finder!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we find true facts quickly in a book?\n\nWe will use contents, headings, diagrams and tables.",
+   "say": "Welcome back, fact finder! Today's big question: how can we find out true facts quickly from a book? Non-fiction books have secret helpers, like contents pages, headings and tables. We will learn how to use them all. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔎",
+   "alt": "Fact finders use clues in books.",
+   "caption": "Fact finders use clues in books."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "fact",
+     "meaning": "Something that is true."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "contents",
+   "kind": "learn",
+   "title": "Contents, headings and index",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Finding your way in a book"
+    },
+    {
+     "type": "text",
+     "markdown": "A **contents page** lists the chapters and page numbers.\n\nA **heading** tells us what a section is about.\n\nAn **index** at the back lists words in ABC order with page numbers.",
+     "say": "Some books tell stories. Others, called non-fiction books, tell us true facts. They have special parts to help us find things quickly. The contents page, near the front, lists the chapters and their page numbers. Headings tell us what each section is about. And the index, at the very back, lists words in alphabetical order with page numbers. Let's open a book about animals."
+    },
+    {
+     "type": "explainer",
+     "title": "Parts of a book",
+     "scenes": [
+      {
+       "caption": "Contents: Frogs 4, Birds 8.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📑",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "contents"
+        }
+       ],
+       "say": "The contents page is near the front. It lists the chapters, like Frogs on page four and Birds on page eight."
+      },
+      {
+       "caption": "Heading: Frogs.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐸",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "heading"
+        }
+       ],
+       "say": "Each chapter has a heading. The heading Frogs tells us this part is all about frogs."
+      },
+      {
+       "caption": "Index: ABC order.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "🔤",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "index"
+        }
+       ],
+       "say": "At the back is the index. Words go in ABC order, and each has a page number. We can find frog fast."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where do you look to find which page a chapter starts on?",
+      "hint": "It is near the front and lists chapters.",
+      "explanation": "The contents page lists chapters and page numbers.",
+      "skill_tag": "nonfiction.contents",
+      "options": [
+       {
+        "id": "a",
+        "text": "the cover"
+       },
+       {
+        "id": "b",
+        "text": "the last sentence"
+       },
+       {
+        "id": "c",
+        "text": "the contents page"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which part of a book is in alphabetical order at the back?",
+      "hint": "It lists words and page numbers.",
+      "explanation": "The index lists words in ABC order.",
+      "skill_tag": "nonfiction.index",
+      "options": [
+       {
+        "id": "a",
+        "text": "the contents page"
+       },
+       {
+        "id": "b",
+        "text": "the title"
+       },
+       {
+        "id": "c",
+        "text": "the index"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The contents page lists chapters and page numbers",
+      "A heading says what a section is about",
+      "The index is in ABC order at the back"
+     ],
+     "say": "Let us remember. The contents page lists chapters. A heading says what a section is about. The index is in ABC order at the back."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "non-fiction",
+       "meaning": "A book that tells true facts."
+      },
+      {
+       "term": "contents page",
+       "meaning": "A list of the chapters and their page numbers."
+      },
+      {
+       "term": "heading",
+       "meaning": "A title that tells us what a section is about."
+      },
+      {
+       "term": "index",
+       "meaning": "A list of words in ABC order, with page numbers, at the back of a book."
+      },
+      {
+       "term": "chapter",
+       "meaning": "One section of a book."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a heading tell us?",
+     "hint": "It is a title for a section.",
+     "explanation": "A heading tells us what a section is about.",
+     "skill_tag": "nonfiction.heading",
+     "options": [
+      {
+       "id": "a",
+       "text": "who wrote it"
+      },
+      {
+       "id": "b",
+       "text": "what a section is about"
+      },
+      {
+       "id": "c",
+       "text": "how many pages there are"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where is the contents page?",
+     "hint": "Think about where we start.",
+     "explanation": "The contents page is near the front.",
+     "skill_tag": "nonfiction.contents",
+     "options": [
+      {
+       "id": "a",
+       "text": "at the very back"
+      },
+      {
+       "id": "b",
+       "text": "near the front"
+      },
+      {
+       "id": "c",
+       "text": "on the last page"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A non-fiction book tells true facts.",
+     "hint": "Is it a story or facts?",
+     "explanation": "Non-fiction books give true information.",
+     "skill_tag": "nonfiction.def",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "diagrams",
+   "kind": "try",
+   "title": "Diagrams and tables",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Labelled diagrams"
+    },
+    {
+     "type": "text",
+     "markdown": "A **diagram** is a picture that explains something.\n\nA **label** names a part of the diagram.",
+     "say": "A diagram is a picture that explains something. It has labels, which are words with lines pointing to the parts. Look at a diagram of a flower. The label petal points to the coloured bit, and the label stem points to the long green part. Labels tell us the name of each part."
+    },
+    {
+     "type": "explainer",
+     "title": "A labelled flower",
+     "scenes": [
+      {
+       "caption": "A flower.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "grow",
+         "label": "flower"
+        }
+       ],
+       "say": "Here is a flower. A plain picture, but no names."
+      },
+      {
+       "caption": "Labels name the parts.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "petals"
+        },
+        {
+         "id": "s",
+         "emoji": "🌿",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "stem"
+        }
+       ],
+       "say": "Now we add labels. The petals are on top, and the stem holds the flower up. Labels name each part."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a label do?",
+      "hint": "Think about the words with the lines.",
+      "explanation": "A label names a part.",
+      "skill_tag": "diagram.label",
+      "options": [
+       {
+        "id": "a",
+        "text": "colours it in"
+       },
+       {
+        "id": "b",
+        "text": "names a part of the picture"
+       },
+       {
+        "id": "c",
+        "text": "makes it bigger"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Tables"
+    },
+    {
+     "type": "text",
+     "markdown": "A **table** puts facts in rows and columns.",
+     "say": "A table puts facts in rows and columns so they are easy to find. Here is a table about pets. Read across the row to find an animal, and read along to see how many legs it has. Cat, four legs. Bird, two legs. Spider, eight legs."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Legs",
+     "rows": [
+      {
+       "label": "Cat",
+       "value": 4,
+       "emoji": "🐈"
+      },
+      {
+       "label": "Bird",
+       "value": 2,
+       "emoji": "🐦"
+      },
+      {
+       "label": "Spider",
+       "value": 8,
+       "emoji": "🕷️"
+      }
+     ],
+     "caption": "Cat has 4 legs, bird has 2 legs, spider has 8 legs."
+    },
+    {
+     "type": "activity",
+     "title": "My own table",
+     "materials": [
+      "Paper and a pencil",
+      "A ruler"
+     ],
+     "instructions": [
+      "Draw a table with two columns.",
+      "Write three animals in the first column.",
+      "Write how many legs each has in the second column.",
+      "Ask a grown-up a question that your table can answer."
+     ],
+     "say": "Time to make your own. Collect facts about three pets or toys, and put them in a table with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Look at the legs table. Which animal has the most legs?",
+      "hint": "Find the biggest number.",
+      "explanation": "Spider has 8 legs, the most.",
+      "skill_tag": "table.read",
+      "options": [
+       {
+        "id": "a",
+        "text": "cat"
+       },
+       {
+        "id": "b",
+        "text": "bird"
+       },
+       {
+        "id": "c",
+        "text": "spider"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Labels name the parts of a diagram",
+      "A table puts facts in rows and columns"
+     ],
+     "say": "Let us remember. A diagram has labels that name its parts. A table puts facts in rows and columns."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "diagram",
+       "meaning": "A picture that explains something."
+      },
+      {
+       "term": "label",
+       "meaning": "A word that names a part of a picture."
+      },
+      {
+       "term": "table",
+       "meaning": "Facts organised in rows and columns."
+      },
+      {
+       "term": "column",
+       "meaning": "A line of facts going down."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a diagram?",
+     "hint": "It helps us understand.",
+     "explanation": "A diagram is a picture that explains something.",
+     "skill_tag": "diagram.def",
+     "options": [
+      {
+       "id": "a",
+       "text": "a kind of book"
+      },
+      {
+       "id": "b",
+       "text": "a picture that explains something"
+      },
+      {
+       "id": "c",
+       "text": "a very long story"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Look at the legs table. Which animal has two legs?",
+     "hint": "Find the 2.",
+     "explanation": "Bird has 2 legs.",
+     "skill_tag": "table.read",
+     "options": [
+      {
+       "id": "a",
+       "text": "cat"
+      },
+      {
+       "id": "b",
+       "text": "spider"
+      },
+      {
+       "id": "c",
+       "text": "bird"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A table puts facts in rows and columns.",
+     "hint": "Think of lines across and down.",
+     "explanation": "Tables organise facts in rows and columns.",
+     "skill_tag": "table.def",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "facts",
+   "kind": "play",
+   "title": "Fact hunt",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: True or made up?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fact** is something that is true.\n\n**Fiction** is a made-up story.",
+     "say": "A fact is something that is true. Spiders have eight legs. A made-up idea is something that is not true, like cats can fly. Non-fiction books are full of facts. Fiction books are full of stories. When we read to find out, we look for the facts."
+    },
+    {
+     "type": "explainer",
+     "title": "Fact or made-up?",
+     "scenes": [
+      {
+       "caption": "Fact: a spider has 8 legs.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🕷️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "fact"
+        }
+       ],
+       "say": "A spider has eight legs. Is it true? Yes, we can check it in a book. That is a fact."
+      },
+      {
+       "caption": "Made up: a flying cat.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "float",
+         "label": "made up"
+        }
+       ],
+       "say": "A cat can fly. Is it true? No! That is made up, like in a story."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is a fact?",
+      "hint": "Which is really true?",
+      "explanation": "Fish do live in water.",
+      "skill_tag": "fact.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "Fish can sing songs."
+       },
+       {
+        "id": "b",
+        "text": "Fish live in water."
+       },
+       {
+        "id": "c",
+        "text": "Fish drive cars."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Fact hunt",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "📖",
+      "🔎",
+      "🐸",
+      "🌱",
+      "☀️",
+      "🌧️"
+     ],
+     "say": "Time to hunt for facts. First a memory game, then a quick sorting job. Think about where you would look to find out a fact."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where could you find out how many legs a spider has?",
+      "hint": "Which has true facts?",
+      "explanation": "Non-fiction books give true facts.",
+      "skill_tag": "fact.source",
+      "options": [
+       {
+        "id": "a",
+        "text": "in a made-up story"
+       },
+       {
+        "id": "b",
+        "text": "in a song"
+       },
+       {
+        "id": "c",
+        "text": "in a non-fiction book"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A fact is something true",
+      "Non-fiction books are full of facts"
+     ],
+     "say": "Let us remember. A fact is true. Non-fiction books give facts."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fact",
+       "meaning": "Something that is true."
+      },
+      {
+       "term": "fiction",
+       "meaning": "A story that is made up."
+      },
+      {
+       "term": "true",
+       "meaning": "Real and correct."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a fact?",
+     "hint": "Which is really true?",
+     "explanation": "Bees make honey.",
+     "skill_tag": "fact.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bees drive buses."
+      },
+      {
+       "id": "b",
+       "text": "Bees make honey."
+      },
+      {
+       "id": "c",
+       "text": "Bees live on the Moon."
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Fiction is full of true facts.",
+     "hint": "Fiction is a story.",
+     "explanation": "Fiction is made up.",
+     "skill_tag": "fact.def",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a good place to look for facts?",
+     "hint": "Which gives true information?",
+     "explanation": "Non-fiction books are for facts.",
+     "skill_tag": "fact.source",
+     "options": [
+      {
+       "id": "a",
+       "text": "a fairy tale"
+      },
+      {
+       "id": "b",
+       "text": "a cartoon"
+      },
+      {
+       "id": "c",
+       "text": "a non-fiction book"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "filecard",
+   "kind": "use",
+   "title": "Make a fact file",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What goes in a fact file"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fact file** has a heading, some facts and a labelled picture.",
+     "say": "A fact file is a short page of true facts about one topic. It has a heading, a few facts, and a labelled picture. Let's plan a fact file about cats. The heading is All About Cats. A fact: cats have whiskers. A picture of a cat with the label whiskers."
+    },
+    {
+     "type": "explainer",
+     "title": "A fact file about cats",
+     "scenes": [
+      {
+       "caption": "Heading: All About Cats.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "grow",
+         "label": "All About Cats"
+        }
+       ],
+       "say": "First the heading. All about cats."
+      },
+      {
+       "caption": "A fact and a label.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "😺",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "whiskers"
+        },
+        {
+         "id": "f",
+         "emoji": "📝",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "fact"
+        }
+       ],
+       "say": "Then a fact and a labelled picture. Cats have whiskers. The label points to them."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What goes at the top of a fact file?",
+      "hint": "It says what the page is about.",
+      "explanation": "A heading tells us the topic.",
+      "skill_tag": "factfile.parts",
+      "options": [
+       {
+        "id": "a",
+        "text": "a poem"
+       },
+       {
+        "id": "b",
+        "text": "a heading"
+       },
+       {
+        "id": "c",
+        "text": "a story"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Make yours"
+    },
+    {
+     "type": "activity",
+     "title": "My fact file",
+     "materials": [
+      "Paper and a pencil",
+      "A non-fiction book"
+     ],
+     "instructions": [
+      "Choose an animal and write a heading.",
+      "Find three facts in a book and write them.",
+      "Draw a picture and add labels.",
+      "Read your fact file to a grown-up."
+     ],
+     "say": "Now make a fact file about an animal you love. Find facts in a book, and write them clearly."
+    },
+    {
+     "type": "image",
+     "emoji": "📋",
+     "alt": "A fact file has a heading, facts and a labelled picture.",
+     "caption": "A fact file has a heading, facts and a labelled picture.",
+     "say": "A fact file in the making."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where do we get the facts for a fact file?",
+      "hint": "Where are true facts?",
+      "explanation": "Facts must be true, so we check a non-fiction book.",
+      "skill_tag": "factfile.source",
+      "options": [
+       {
+        "id": "a",
+        "text": "from our imagination"
+       },
+       {
+        "id": "b",
+        "text": "from a non-fiction book"
+       },
+       {
+        "id": "c",
+        "text": "from a joke"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A fact file has a heading, facts and a labelled picture",
+      "Facts come from non-fiction books"
+     ],
+     "say": "Let us remember. A fact file has a heading, facts and a labelled picture."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fact file",
+       "meaning": "A short page of true facts about one topic."
+      },
+      {
+       "term": "topic",
+       "meaning": "What a piece of writing is about."
+      },
+      {
+       "term": "picture",
+       "meaning": "A drawing or photo."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a good heading for a fact file about frogs?",
+     "hint": "It names the topic.",
+     "explanation": "The heading says the page is about frogs.",
+     "skill_tag": "factfile.parts",
+     "options": [
+      {
+       "id": "a",
+       "text": "Once Upon a Time"
+      },
+      {
+       "id": "b",
+       "text": "All About Frogs"
+      },
+      {
+       "id": "c",
+       "text": "My Funny Day"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A fact file can have a labelled picture.",
+     "hint": "Think of diagrams.",
+     "explanation": "A labelled picture helps explain the facts.",
+     "skill_tag": "factfile.parts",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which belongs in a fact file?",
+     "hint": "A fact file is for facts.",
+     "explanation": "A fact file has true facts.",
+     "skill_tag": "factfile.source",
+     "options": [
+      {
+       "id": "a",
+       "text": "a made-up story"
+      },
+      {
+       "id": "b",
+       "text": "a true fact"
+      },
+      {
+       "id": "c",
+       "text": "a silly joke"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which part of a book tells you the page where a chapter starts?",
+    "hint": "It is near the front and lists chapters.",
+    "explanation": "The contents page lists chapters and page numbers.",
+    "skill_tag": "nonfiction.contents",
+    "options": [
+     {
+      "id": "a",
+      "text": "the cover"
+     },
+     {
+      "id": "b",
+      "text": "the contents page"
+     },
+     {
+      "id": "c",
+      "text": "the last sentence"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "contents",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Why is a contents page helpful?",
+    "hint": "Think about finding a chapter.",
+    "explanation": "It lists chapters and page numbers.",
+    "skill_tag": "nonfiction.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the book longer"
+     },
+     {
+      "id": "b",
+      "text": "It shows what is in the book and which page to find it on"
+     },
+     {
+      "id": "c",
+      "text": "It has the pictures"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "contents",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put these in the order you meet them in a non-fiction book.",
+    "hint": "Start at the front.",
+    "explanation": "Cover, contents, chapters, then the index at the back.",
+    "skill_tag": "nonfiction.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Chapters"
+     },
+     {
+      "id": "i4",
+      "text": "Index"
+     },
+     {
+      "id": "i2",
+      "text": "Contents page"
+     },
+     {
+      "id": "i1",
+      "text": "Cover"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "contents",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "One is at the front, one is at the back.",
+    "explanation": "The contents page is at the front; the index is at the back.",
+    "skill_tag": "nonfiction.parts",
+    "points": 2,
+    "text": "The {b1} page lists the chapters. The {b2} is in ABC order at the back.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cover"
+       },
+       {
+        "id": "b",
+        "text": "contents"
+       },
+       {
+        "id": "c",
+        "text": "index"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "contents"
+       },
+       {
+        "id": "b",
+        "text": "title"
+       },
+       {
+        "id": "c",
+        "text": "index"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "contents",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "A table shows: Cat 4 legs, Bird 2 legs, Spider 8 legs. Which animal has the most legs?",
+    "hint": "Find the biggest number.",
+    "explanation": "Spider has 8 legs.",
+    "skill_tag": "table.read",
+    "options": [
+     {
+      "id": "a",
+      "text": "cat"
+     },
+     {
+      "id": "b",
+      "text": "spider"
+     },
+     {
+      "id": "c",
+      "text": "bird"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "hotspot",
+    "prompt": "Tap the thing that helps you read a diagram.",
+    "hint": "It names the parts.",
+    "explanation": "Labels name the parts of a diagram.",
+    "skill_tag": "diagram.label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏷️",
+       "label": "label",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎨",
+       "label": "colour",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📏",
+       "label": "border",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why do diagrams have labels?",
+    "hint": "What do the words do?",
+    "explanation": "Labels name the parts.",
+    "skill_tag": "diagram.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are just decoration"
+     },
+     {
+      "id": "b",
+      "text": "They name the parts so we know what each part is"
+     },
+     {
+      "id": "c",
+      "text": "They make the picture bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each book to non-fiction or fiction.",
+    "hint": "True facts or a made-up story?",
+    "explanation": "Facts are non-fiction; stories are fiction.",
+    "skill_tag": "fact.sort",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "A book about how frogs grow"
+     },
+     {
+      "id": "l2",
+      "text": "A story about a talking frog"
+     },
+     {
+      "id": "l3",
+      "text": "A fact file about the Moon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "fiction"
+     },
+     {
+      "id": "r1",
+      "text": "non-fiction"
+     },
+     {
+      "id": "r3",
+      "text": "non-fiction"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "facts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multi_select",
+    "prompt": "Which are true facts? Pick two.",
+    "hint": "Which are really true?",
+    "explanation": "A spider has 8 legs and fish live in water.",
+    "skill_tag": "fact.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fish live in water"
+     },
+     {
+      "id": "b",
+      "text": "The Sun is cold"
+     },
+     {
+      "id": "c",
+      "text": "Cats can fly"
+     },
+     {
+      "id": "d",
+      "text": "A spider has eight legs"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "facts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many are facts: Cats purr. Cats have whiskers. Cats are the cutest.",
+    "hint": "Which can be checked?",
+    "explanation": "Cats purr and have whiskers are facts; the cutest is an opinion.",
+    "skill_tag": "fact.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "facts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why can we trust a non-fiction book more than a made-up story for facts?",
+    "hint": "What is non-fiction for?",
+    "explanation": "Non-fiction books are written to tell true facts.",
+    "skill_tag": "fact.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is shorter"
+     },
+     {
+      "id": "b",
+      "text": "It is written to give true information"
+     },
+     {
+      "id": "c",
+      "text": "It has more pictures"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "facts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "short_text",
+    "prompt": "What do we call a short page of true facts about one topic? Two words, starting with f.",
+    "hint": "It is what we make in this lesson.",
+    "explanation": "It is called a fact file.",
+    "skill_tag": "factfile.name",
+    "answer": {
+     "accepted": [
+      "fact file",
+      "factfile"
+     ]
+    },
+    "sub_lesson": "filecard",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the steps in order for making a fact file.",
+    "hint": "What comes first?",
+    "explanation": "Choose, find, write, then add a picture.",
+    "skill_tag": "factfile.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find facts in a book"
+     },
+     {
+      "id": "i3",
+      "text": "Write a heading and the facts"
+     },
+     {
+      "id": "i4",
+      "text": "Add a labelled picture"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a topic"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "A fact file can include a labelled picture.",
+    "hint": "Think of diagrams.",
+    "explanation": "A labelled picture helps explain facts.",
+    "skill_tag": "factfile.parts",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "filecard",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why do we check facts in a book before adding them to a fact file?",
+    "hint": "What must facts be?",
+    "explanation": "Facts must be true, so we check a book.",
+    "skill_tag": "factfile.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So it is longer"
+     },
+     {
+      "id": "b",
+      "text": "So it has more colours"
+     },
+     {
+      "id": "c",
+      "text": "So our fact file is true"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Where would you look to find a word quickly at the back of a book?",
+    "hint": "It is in ABC order.",
+    "explanation": "The index lists words in ABC order.",
+    "skill_tag": "nonfiction.contents",
+    "options": [
+     {
+      "id": "a",
+      "text": "the cover"
+     },
+     {
+      "id": "b",
+      "text": "the title"
+     },
+     {
+      "id": "c",
+      "text": "the index"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "contents",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What tells you what a section is about?",
+    "hint": "It is a title for the section.",
+    "explanation": "A heading tells us what a section is about.",
+    "skill_tag": "nonfiction.contents",
+    "options": [
+     {
+      "id": "a",
+      "text": "the page number"
+     },
+     {
+      "id": "b",
+      "text": "the heading"
+     },
+     {
+      "id": "c",
+      "text": "the cover"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "contents",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Why do non-fiction books have headings?",
+    "hint": "What does a heading say?",
+    "explanation": "Headings tell us what each section is about.",
+    "skill_tag": "nonfiction.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They make the pages heavier"
+     },
+     {
+      "id": "b",
+      "text": "They hide the facts"
+     },
+     {
+      "id": "c",
+      "text": "They tell us what each part is about"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "contents",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Why is an index in alphabetical order?",
+    "hint": "How do we find a word?",
+    "explanation": "ABC order helps us find words fast.",
+    "skill_tag": "nonfiction.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the book is longer"
+     },
+     {
+      "id": "b",
+      "text": "So the pictures fit"
+     },
+     {
+      "id": "c",
+      "text": "So we can find a word quickly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "contents",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Order the parts of a non-fiction book from the front to the back.",
+    "hint": "Start at the front.",
+    "explanation": "Title and contents come first, glossary last.",
+    "skill_tag": "nonfiction.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Facts and headings"
+     },
+     {
+      "id": "i4",
+      "text": "Glossary"
+     },
+     {
+      "id": "i2",
+      "text": "Contents"
+     },
+     {
+      "id": "i1",
+      "text": "Title"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "contents",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Arrange these book parts from the front to the back.",
+    "hint": "Start at the front.",
+    "explanation": "Cover, contents, headings, then the index.",
+    "skill_tag": "nonfiction.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Contents"
+     },
+     {
+      "id": "i3",
+      "text": "Headings"
+     },
+     {
+      "id": "i4",
+      "text": "Index"
+     },
+     {
+      "id": "i1",
+      "text": "Front cover"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "contents",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "One names a section, one lists words.",
+    "explanation": "A heading names a section and the index lists words.",
+    "skill_tag": "nonfiction.parts",
+    "points": 2,
+    "text": "A {b1} tells us what a section is about. The {b2} lists words and page numbers.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "page"
+       },
+       {
+        "id": "b",
+        "text": "heading"
+       },
+       {
+        "id": "c",
+        "text": "cover"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "picture"
+       },
+       {
+        "id": "b",
+        "text": "index"
+       },
+       {
+        "id": "c",
+        "text": "title"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "contents",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Choose the right words.",
+    "hint": "True facts and the front.",
+    "explanation": "Non-fiction books tell facts and the contents page is at the front.",
+    "skill_tag": "nonfiction.parts",
+    "points": 2,
+    "text": "A book of true facts is {b1}. The page near the front that lists chapters is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "poetry"
+       },
+       {
+        "id": "b",
+        "text": "non-fiction"
+       },
+       {
+        "id": "c",
+        "text": "fiction"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "index"
+       },
+       {
+        "id": "b",
+        "text": "contents"
+       },
+       {
+        "id": "c",
+        "text": "cover"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "contents",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "A table shows: Apple 5, Banana 3, Mango 7. Which fruit was eaten the most?",
+    "hint": "Find the biggest number.",
+    "explanation": "Mango has 7.",
+    "skill_tag": "table.read",
+    "options": [
+     {
+      "id": "a",
+      "text": "apple"
+     },
+     {
+      "id": "b",
+      "text": "banana"
+     },
+     {
+      "id": "c",
+      "text": "mango"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multiple_choice",
+    "prompt": "A table shows rain: Monday 2 cm, Tuesday 5 cm, Wednesday 3 cm. Which day had the most rain?",
+    "hint": "Find the biggest number.",
+    "explanation": "Tuesday has 5 cm.",
+    "skill_tag": "table.read",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wednesday"
+     },
+     {
+      "id": "b",
+      "text": "Tuesday"
+     },
+     {
+      "id": "c",
+      "text": "Monday"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that shows facts in rows and columns.",
+    "hint": "Facts in rows and columns.",
+    "explanation": "A table has rows and columns.",
+    "skill_tag": "diagram.label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📊",
+       "label": "table",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🖼️",
+       "label": "frame",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "✏️",
+       "label": "pencil",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "hotspot",
+    "prompt": "Tap the part of a book that says what a section is about.",
+    "hint": "It is a title.",
+    "explanation": "A heading names the section.",
+    "skill_tag": "diagram.label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔠",
+       "label": "heading",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "page number",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📎",
+       "label": "paper clip",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why do we use a table to show facts?",
+    "hint": "Think about finding a fact fast.",
+    "explanation": "A table organises facts.",
+    "skill_tag": "diagram.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the facts longer"
+     },
+     {
+      "id": "b",
+      "text": "It hides the numbers"
+     },
+     {
+      "id": "c",
+      "text": "It puts facts in rows and columns so they are easy to find"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why does a diagram use arrows?",
+    "hint": "What do arrows point to?",
+    "explanation": "Arrows link labels to parts.",
+    "skill_tag": "diagram.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To show a story"
+     },
+     {
+      "id": "b",
+      "text": "To point to the part being named"
+     },
+     {
+      "id": "c",
+      "text": "To make it look busy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diagrams",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Sort each book into non-fiction or fiction.",
+    "hint": "True facts or a made-up story?",
+    "explanation": "Facts are non-fiction; stories are fiction.",
+    "skill_tag": "fact.sort",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "A book that tells how plants grow"
+     },
+     {
+      "id": "l2",
+      "text": "A story about a dragon who bakes"
+     },
+     {
+      "id": "l3",
+      "text": "A map of Pakistan"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "fiction"
+     },
+     {
+      "id": "r1",
+      "text": "non-fiction"
+     },
+     {
+      "id": "r3",
+      "text": "non-fiction"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "facts",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Which kind of book is each one?",
+    "hint": "True facts or a made-up story?",
+    "explanation": "Facts are non-fiction; stories are fiction.",
+    "skill_tag": "fact.sort",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "A guide to garden birds"
+     },
+     {
+      "id": "l2",
+      "text": "A tale about a magic teapot"
+     },
+     {
+      "id": "l3",
+      "text": "A poster about the planets"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "non-fiction"
+     },
+     {
+      "id": "r1",
+      "text": "non-fiction"
+     },
+     {
+      "id": "r2",
+      "text": "fiction"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "facts",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multi_select",
+    "prompt": "Pick the two facts.",
+    "hint": "Which are really true?",
+    "explanation": "Birds have feathers and a week has seven days.",
+    "skill_tag": "fact.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "A week has seven days"
+     },
+     {
+      "id": "b",
+      "text": "Dogs have wings"
+     },
+     {
+      "id": "c",
+      "text": "Snow is hot"
+     },
+     {
+      "id": "d",
+      "text": "Birds have feathers"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "facts",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multi_select",
+    "prompt": "Choose two true facts.",
+    "hint": "Which are really true?",
+    "explanation": "Bees make honey and plants need water.",
+    "skill_tag": "fact.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plants need water"
+     },
+     {
+      "id": "b",
+      "text": "Fish climb trees"
+     },
+     {
+      "id": "c",
+      "text": "Stars are made of cheese"
+     },
+     {
+      "id": "d",
+      "text": "Bees make honey"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "facts",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many are facts: Frogs jump. Frogs are scary. Frogs lay eggs.",
+    "hint": "Which can be checked?",
+    "explanation": "Jumping and laying eggs are facts; scary is an opinion.",
+    "skill_tag": "fact.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "facts",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many are facts: Bees buzz. Bees make honey. Bees have wings. Bees are scary.",
+    "hint": "Which can be checked?",
+    "explanation": "Three of them are facts; scary is an opinion.",
+    "skill_tag": "fact.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "facts",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why do we say a flying cat is made up?",
+    "hint": "Is it really true?",
+    "explanation": "It is not true, so it is made up.",
+    "skill_tag": "fact.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cats are too small"
+     },
+     {
+      "id": "b",
+      "text": "Cats cannot really fly"
+     },
+     {
+      "id": "c",
+      "text": "Cats do not like the sky"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "facts",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why do we look in a book to check a fact?",
+    "hint": "Where are true facts?",
+    "explanation": "Non-fiction books are written to give facts.",
+    "skill_tag": "fact.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "A book is heavier"
+     },
+     {
+      "id": "b",
+      "text": "A book has more words"
+     },
+     {
+      "id": "c",
+      "text": "A non-fiction book gives true information"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "facts",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "short_text",
+    "prompt": "What is the list of words and their meanings at the back of a book called? One word, starting with g.",
+    "hint": "It explains the hard words.",
+    "explanation": "It is called a glossary.",
+    "skill_tag": "factfile.name",
+    "answer": {
+     "accepted": [
+      "glossary"
+     ]
+    },
+    "sub_lesson": "filecard",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "short_text",
+    "prompt": "What is the page near the front that lists the chapters called? One word, starting with c.",
+    "hint": "It lists what is in the book.",
+    "explanation": "It is called the contents page.",
+    "skill_tag": "factfile.name",
+    "answer": {
+     "accepted": [
+      "contents"
+     ]
+    },
+    "sub_lesson": "filecard",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Arrange the steps for using a contents page.",
+    "hint": "What comes first?",
+    "explanation": "Open, find, turn, read.",
+    "skill_tag": "factfile.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find the chapter's page number"
+     },
+     {
+      "id": "i3",
+      "text": "Turn to that page"
+     },
+     {
+      "id": "i4",
+      "text": "Read the heading"
+     },
+     {
+      "id": "i1",
+      "text": "Open the contents page"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "order",
+    "prompt": "Sort the steps for finding a word in the index.",
+    "hint": "What comes first?",
+    "explanation": "First letter, open index, find, turn.",
+    "skill_tag": "factfile.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Open the index"
+     },
+     {
+      "id": "i3",
+      "text": "Find the word"
+     },
+     {
+      "id": "i4",
+      "text": "Turn to the page"
+     },
+     {
+      "id": "i1",
+      "text": "Think of the first letter"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "A fact file should have made-up facts.",
+    "hint": "A fact file is for facts.",
+    "explanation": "Facts must be true.",
+    "skill_tag": "factfile.parts",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "filecard",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "true_false",
+    "prompt": "A heading tells us what a section is about.",
+    "hint": "It is a title.",
+    "explanation": "A heading names the section.",
+    "skill_tag": "factfile.parts",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "filecard",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why does a fact file have a heading?",
+    "hint": "What does a heading say?",
+    "explanation": "A heading says what the topic is.",
+    "skill_tag": "factfile.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It hides the facts"
+     },
+     {
+      "id": "b",
+      "text": "It tells the reader what the page is about"
+     },
+     {
+      "id": "c",
+      "text": "It makes the page heavier"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why do we add labels to the picture in a fact file?",
+    "hint": "What do labels do?",
+    "explanation": "Labels name the parts of the picture.",
+    "skill_tag": "factfile.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the title"
+     },
+     {
+      "id": "b",
+      "text": "They name the parts so readers understand"
+     },
+     {
+      "id": "c",
+      "text": "They make it look busy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "filecard",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

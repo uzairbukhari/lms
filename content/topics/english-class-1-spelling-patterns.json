@@ -1,0 +1,2585 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-1-spelling-patterns",
+  "subject": "english",
+  "title": "Spelling Patterns",
+  "summary": "Vowel teams, split vowels, prefixes and suffixes, homophones, short forms and alphabetical order.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Spelling patterns",
+  "learning_objectives": [
+   "Spell words with vowel teams and split vowels",
+   "Add un- and -ful to words",
+   "Tell homophones apart",
+   "Put words in alphabetical order and use a dictionary"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "english-class-1-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 spelling",
+    "text": "Spell words with vowel digraphs, add suffixes and prefixes, and spell common homophones and contractions"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Rw.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Rw.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Rw.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ww.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ww.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ww.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ww.07"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Rv.03"
+   }
+  ],
+  "success_criteria": [
+   "I can spell words with ai, ee, oa and a silent e",
+   "I can add un or ful to a word",
+   "I can choose between tail and tale",
+   "I can put words in ABC order"
+  ],
+  "real_life": "Writing a card to a friend and looking up words in a dictionary.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which mark ends a question?",
+    "hint": "It looks like a hook with a dot.",
+    "explanation": "A question ends with a question mark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "."
+     },
+     {
+      "id": "b",
+      "text": "!"
+     },
+     {
+      "id": "c",
+      "text": "?"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "The plural of cat is cats.",
+    "hint": "Most words add s.",
+    "explanation": "Cat adds s to make cats.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word is a describing word?",
+    "hint": "It tells us what a thing is like.",
+    "explanation": "Big describes a thing.",
+    "options": [
+     {
+      "id": "a",
+      "text": "run"
+     },
+     {
+      "id": "b",
+      "text": "big"
+     },
+     {
+      "id": "c",
+      "text": "dog"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, spelling star!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can patterns help us spell lots of new words?\n\nWe will spot patterns, build words and find words in order.",
+   "say": "Welcome back, spelling star! Today's big question: how can spelling patterns help us spell lots of new words? Words follow patterns, just like songs have tunes. Once you spot the pattern, you can spell hundreds of words. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔤",
+   "alt": "Spelling patterns help us spell new words.",
+   "caption": "Spelling patterns help us spell new words."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "pattern",
+     "meaning": "Something that repeats in the same way."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "vowels",
+   "kind": "learn",
+   "title": "Vowel teams and split vowels",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Vowel teams"
+    },
+    {
+     "type": "text",
+     "markdown": "A **vowel team** is two letters that work together to make one sound.\n\nai in rain, ee in tree, oa in boat.",
+     "say": "Some sounds are spelled with two letters that work together as a team. In rain, the letters a and i make one long sound, ay. In tree, e and e make the sound ee. In boat, o and a make the sound oh. We call these vowel teams. Watch them work."
+    },
+    {
+     "type": "explainer",
+     "title": "Three vowel teams",
+     "scenes": [
+      {
+       "caption": "ai in rain",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "rain"
+        }
+       ],
+       "say": "Rain. The letters a and i work together to say ay."
+      },
+      {
+       "caption": "ee in tree",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "tree"
+        }
+       ],
+       "say": "Tree. The two e letters make the sound ee."
+      },
+      {
+       "caption": "oa in boat",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "⛵",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "boat"
+        }
+       ],
+       "say": "Boat. The o and a make the sound oh."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word has the vowel team ee?",
+      "hint": "Look for two e letters.",
+      "explanation": "Feet has ee together.",
+      "skill_tag": "vowelteam.ee",
+      "options": [
+       {
+        "id": "a",
+        "text": "fat"
+       },
+       {
+        "id": "b",
+        "text": "feet"
+       },
+       {
+        "id": "c",
+        "text": "fit"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word has the vowel team oa?",
+      "hint": "Look for o and a side by side.",
+      "explanation": "Coat has oa together.",
+      "skill_tag": "vowelteam.oa",
+      "options": [
+       {
+        "id": "a",
+        "text": "cut"
+       },
+       {
+        "id": "b",
+        "text": "coat"
+       },
+       {
+        "id": "c",
+        "text": "cat"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Split vowels"
+    },
+    {
+     "type": "text",
+     "markdown": "A **split vowel** has a silent e that makes the first vowel say its name: a-e in cake, i-e in kite, o-e in home.",
+     "say": "Here is a magic trick. Look at the word cap. Now add an e at the end. Cape! The e is silent, but it changes the a so it says its own name. The vowel and the e are split apart, with a letter in the middle. We write this a-e. Kite is i-e. Home is o-e."
+    },
+    {
+     "type": "explainer",
+     "title": "The magic e",
+     "scenes": [
+      {
+       "caption": "cap",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧢",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "cap"
+        }
+       ],
+       "say": "Cap. A short a. Like a hat."
+      },
+      {
+       "caption": "cape",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🦸",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "cape"
+        },
+        {
+         "id": "e",
+         "emoji": "✨",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "float",
+         "label": "magic e"
+        }
+       ],
+       "say": "Add a magic e at the end. Now it is cape. The a says its name!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word has a split vowel?",
+      "hint": "Look for a silent e at the end.",
+      "explanation": "Kite has i-e with a silent e.",
+      "skill_tag": "splitvowel.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "kit"
+       },
+       {
+        "id": "b",
+        "text": "kite"
+       },
+       {
+        "id": "c",
+        "text": "kick"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A vowel team is two letters that make one sound",
+      "A silent e at the end makes the vowel say its name"
+     ],
+     "say": "Let us remember. Vowel teams are two letters, one sound. A split vowel uses a silent e."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "vowel team",
+       "meaning": "Two letters working together to make one sound, like ai or oa."
+      },
+      {
+       "term": "split vowel",
+       "meaning": "A vowel, a letter, then a silent e, like a-e in cake."
+      },
+      {
+       "term": "vowel",
+       "meaning": "The letters a, e, i, o and u."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word has the vowel team ai?",
+     "hint": "Look for a and i together.",
+     "explanation": "Train has ai.",
+     "skill_tag": "vowelteam.ai",
+     "options": [
+      {
+       "id": "a",
+       "text": "tram"
+      },
+      {
+       "id": "b",
+       "text": "train"
+      },
+      {
+       "id": "c",
+       "text": "trip"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word has a split vowel?",
+     "hint": "Look for a silent e.",
+     "explanation": "Bone has o-e.",
+     "skill_tag": "splitvowel.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "bon"
+      },
+      {
+       "id": "b",
+       "text": "bone"
+      },
+      {
+       "id": "c",
+       "text": "born"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Boat has a split vowel.",
+     "hint": "Is the e at the end?",
+     "explanation": "Boat has the vowel team oa, not a split vowel.",
+     "skill_tag": "splitvowel.find",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "affixes",
+   "kind": "try",
+   "title": "Prefixes and suffixes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Changing words"
+    },
+    {
+     "type": "text",
+     "markdown": "A **prefix** goes at the front: un + happy = unhappy.\n\nA **suffix** goes at the back: help + ful = helpful.",
+     "say": "We can change a word by adding a bit to the front or the back. A bit at the front is a prefix. Un means not. Happy becomes unhappy, not happy. A bit at the back is a suffix. Ful means full of. Help becomes helpful, full of help. Let's see them change the words."
+    },
+    {
+     "type": "explainer",
+     "title": "Adding bits to words",
+     "scenes": [
+      {
+       "caption": "happy",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "😀",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "happy"
+        }
+       ],
+       "say": "Happy. A smiling face."
+      },
+      {
+       "caption": "unhappy",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "😢",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "unhappy"
+        }
+       ],
+       "say": "Add un at the front. Now it is unhappy, which means not happy."
+      },
+      {
+       "caption": "helpful",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🤝",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "helpful"
+        }
+       ],
+       "say": "Now help. Add ful at the back. Helpful means full of help."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Add un to kind. What is the new word?",
+      "hint": "Put un at the front.",
+      "explanation": "Un goes at the front: unkind.",
+      "skill_tag": "prefix.un",
+      "options": [
+       {
+        "id": "a",
+        "text": "kindun"
+       },
+       {
+        "id": "b",
+        "text": "unkind"
+       },
+       {
+        "id": "c",
+        "text": "unkindful"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Add ful to care. What is the new word?",
+      "hint": "Put ful at the back.",
+      "explanation": "Ful goes at the back: careful.",
+      "skill_tag": "suffix.ful",
+      "options": [
+       {
+        "id": "a",
+        "text": "uncare"
+       },
+       {
+        "id": "b",
+        "text": "careful"
+       },
+       {
+        "id": "c",
+        "text": "fulcare"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Build words"
+    },
+    {
+     "type": "activity",
+     "title": "Word builder",
+     "materials": [
+      "Paper cut into small cards",
+      "A pencil"
+     ],
+     "instructions": [
+      "Write these on cards: happy, kind, help, care, tidy.",
+      "Make new words with un at the front: unhappy, unkind, untidy.",
+      "Make new words with ful at the back: helpful, careful.",
+      "Read each new word to a grown-up and say what it means."
+     ],
+     "say": "Now be a word builder. Take some word cards and add un to the front, or ful to the back. Say each new word out loud, and tell a grown-up what it means."
+    },
+    {
+     "type": "image",
+     "emoji": "🔧",
+     "alt": "Prefixes go at the front, suffixes go at the back.",
+     "caption": "Prefixes go at the front, suffixes go at the back.",
+     "say": "Here are the word builders, ready to work."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A prefix goes at the front: un + happy",
+      "A suffix goes at the back: help + ful"
+     ],
+     "say": "Let us remember. A prefix goes at the front. A suffix goes at the back."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "prefix",
+       "meaning": "A bit added to the front of a word, like un."
+      },
+      {
+       "term": "suffix",
+       "meaning": "A bit added to the back of a word, like ful."
+      },
+      {
+       "term": "opposite",
+       "meaning": "A word that means something completely different, like happy and sad."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Add un to tidy. What is the new word?",
+     "hint": "Put un at the front.",
+     "explanation": "Untidy means not tidy.",
+     "skill_tag": "prefix.un",
+     "options": [
+      {
+       "id": "a",
+       "text": "tidyun"
+      },
+      {
+       "id": "b",
+       "text": "untidyful"
+      },
+      {
+       "id": "c",
+       "text": "untidy"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Add ful to joy. What is the new word?",
+     "hint": "Put ful at the back.",
+     "explanation": "Joyful means full of joy.",
+     "skill_tag": "suffix.ful",
+     "options": [
+      {
+       "id": "a",
+       "text": "unjoy"
+      },
+      {
+       "id": "b",
+       "text": "joyful"
+      },
+      {
+       "id": "c",
+       "text": "fuljoy"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A prefix goes at the back of a word.",
+     "hint": "Pre means before.",
+     "explanation": "A prefix goes at the front.",
+     "skill_tag": "prefix.def",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "homophones",
+   "kind": "play",
+   "title": "Homophones and short forms",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Same sound, different word"
+    },
+    {
+     "type": "text",
+     "markdown": "**Homophones** sound the same but are spelled differently and mean different things.\n\ntail and tale, sun and son, pair and pear.",
+     "say": "Listen. Tail. Tale. They sound exactly the same! But tail is the wiggly end of a dog, and tale is a story. Words that sound the same but are spelled differently are called homophones. Sun and son. Pair and pear. We have to look at the meaning to choose the right one."
+    },
+    {
+     "type": "explainer",
+     "title": "Tail or tale?",
+     "scenes": [
+      {
+       "caption": "tail: the end of an animal",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🐕",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "tail"
+        }
+       ],
+       "say": "This is a tail, on a dog."
+      },
+      {
+       "caption": "tale: a story",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "tale"
+        }
+       ],
+       "say": "And this is a tale, a story in a book. They sound the same, but the spellings are different."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word means a fruit?",
+      "hint": "Think of a juicy fruit.",
+      "explanation": "A pear is a fruit. A pair is two things.",
+      "skill_tag": "homophone.pick",
+      "options": [
+       {
+        "id": "a",
+        "text": "pare"
+       },
+       {
+        "id": "b",
+        "text": "pear"
+       },
+       {
+        "id": "c",
+        "text": "pair"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game and short forms"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Sound-alike pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🐕",
+      "📖",
+      "☀️",
+      "👦",
+      "🍐",
+      "👫"
+     ],
+     "say": "Time for a memory game. Find the matching pairs. Then learn one more trick: squashing two words together, like do not into don't. The apostrophe shows where a letter has gone missing."
+    },
+    {
+     "type": "image",
+     "emoji": "✂️",
+     "alt": "do not becomes don't. The apostrophe shows a missing letter.",
+     "caption": "do not becomes don't. The apostrophe shows a missing letter.",
+     "say": "Don't is do not squashed together. The apostrophe sits where the o went missing."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does don't mean?",
+      "hint": "Which letter is missing?",
+      "explanation": "Don't is do not squashed together.",
+      "skill_tag": "apostrophe.short",
+      "options": [
+       {
+        "id": "a",
+        "text": "did not"
+       },
+       {
+        "id": "b",
+        "text": "does not"
+       },
+       {
+        "id": "c",
+        "text": "do not"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Homophones sound the same but are spelled differently",
+      "An apostrophe shows where a letter is missing"
+     ],
+     "say": "Let us remember. Homophones sound the same but are spelled differently. An apostrophe shows a missing letter."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "homophones",
+       "meaning": "Words that sound the same but are spelled differently and mean different things."
+      },
+      {
+       "term": "apostrophe",
+       "meaning": "A little mark that shows a missing letter, like in don't."
+      },
+      {
+       "term": "pair",
+       "meaning": "Two things that go together."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word means a boy child?",
+     "hint": "Think of a family.",
+     "explanation": "Son is a boy child. Sun is the star in the sky.",
+     "skill_tag": "homophone.pick",
+     "options": [
+      {
+       "id": "a",
+       "text": "sin"
+      },
+      {
+       "id": "b",
+       "text": "son"
+      },
+      {
+       "id": "c",
+       "text": "sun"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does can't mean?",
+     "hint": "Some letters are missing.",
+     "explanation": "Can't is can not squashed together.",
+     "skill_tag": "apostrophe.short",
+     "options": [
+      {
+       "id": "a",
+       "text": "can now"
+      },
+      {
+       "id": "b",
+       "text": "can not"
+      },
+      {
+       "id": "c",
+       "text": "could not"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Tail and tale sound the same.",
+     "hint": "Say them out loud.",
+     "explanation": "They are homophones: same sound, different spelling.",
+     "skill_tag": "homophone.def",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alphabet",
+   "kind": "use",
+   "title": "Alphabetical order and dictionaries",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The alphabet"
+    },
+    {
+     "type": "text",
+     "markdown": "**Alphabetical order** means ABC order. Ant comes before bus because a comes before b.",
+     "say": "The alphabet has twenty-six letters, in a special order. A, b, c, d, and on to z. Putting words in this order is called alphabetical order. We look at the first letter. Ant comes before bus, because a comes before b."
+    },
+    {
+     "type": "explainer",
+     "title": "ABC order",
+     "scenes": [
+      {
+       "caption": "ant",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐜",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "ant"
+        }
+       ],
+       "say": "First, ant. It starts with a."
+      },
+      {
+       "caption": "ant, bus",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐜",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "ant"
+        },
+        {
+         "id": "b",
+         "emoji": "🚌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "bus"
+        }
+       ],
+       "say": "Then bus. It starts with b, the next letter."
+      },
+      {
+       "caption": "ant, bus, cat",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐜",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "ant"
+        },
+        {
+         "id": "b",
+         "emoji": "🚌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "bus"
+        },
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "cat"
+        }
+       ],
+       "say": "Then cat, starting with c. Ant, bus, cat is in alphabetical order."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word comes first in ABC order?",
+      "hint": "Which letter comes earliest?",
+      "explanation": "D comes before f and h.",
+      "skill_tag": "alphabet.first",
+      "options": [
+       {
+        "id": "a",
+        "text": "hen"
+       },
+       {
+        "id": "b",
+        "text": "dog"
+       },
+       {
+        "id": "c",
+        "text": "fox"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using a dictionary"
+    },
+    {
+     "type": "text",
+     "markdown": "A **dictionary** lists words in alphabetical order with their meanings.",
+     "say": "A dictionary is a book full of words in alphabetical order, with their meanings. To find a word, look at its first letter, then flick to that part of the book. Try finding the word moon. It is under m."
+    },
+    {
+     "type": "image",
+     "emoji": "📚",
+     "alt": "A dictionary lists words in alphabetical order.",
+     "caption": "A dictionary lists words in alphabetical order.",
+     "say": "A dictionary with words ready to find."
+    },
+    {
+     "type": "activity",
+     "title": "Dictionary detective",
+     "materials": [
+      "A dictionary or a word list",
+      "Paper and a pencil"
+     ],
+     "instructions": [
+      "Choose three words.",
+      "Put them in alphabetical order.",
+      "Find each one in the dictionary.",
+      "Read the meaning to a grown-up."
+     ],
+     "say": "Try it for real. Ask a grown-up for a dictionary or use a picture book with a word list. Pick three words and look them up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where would you find the word sun in a dictionary?",
+      "hint": "Look at the first letter.",
+      "explanation": "Sun starts with s, so it is under s.",
+      "skill_tag": "alphabet.dictionary",
+      "options": [
+       {
+        "id": "a",
+        "text": "under t"
+       },
+       {
+        "id": "b",
+        "text": "under s"
+       },
+       {
+        "id": "c",
+        "text": "under m"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Alphabetical order is ABC order",
+      "A dictionary lists words in alphabetical order"
+     ],
+     "say": "Let us remember. Alphabetical order is ABC order. A dictionary uses it to help us find words."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "alphabet",
+       "meaning": "All the letters in order, from a to z."
+      },
+      {
+       "term": "dictionary",
+       "meaning": "A book that lists words in ABC order and tells us what they mean."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word comes last in ABC order?",
+     "hint": "Which letter comes latest?",
+     "explanation": "P comes after c and g.",
+     "skill_tag": "alphabet.first",
+     "options": [
+      {
+       "id": "a",
+       "text": "cow"
+      },
+      {
+       "id": "b",
+       "text": "goat"
+      },
+      {
+       "id": "c",
+       "text": "pig"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "In the alphabet, c comes before b.",
+     "hint": "Say a, b, c.",
+     "explanation": "B comes before c.",
+     "skill_tag": "alphabet.order",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where would you find the word frog in a dictionary?",
+     "hint": "Look at the first letter.",
+     "explanation": "Frog starts with f.",
+     "skill_tag": "alphabet.dictionary",
+     "options": [
+      {
+       "id": "a",
+       "text": "under g"
+      },
+      {
+       "id": "b",
+       "text": "under f"
+      },
+      {
+       "id": "c",
+       "text": "under r"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which word has the ai vowel team?",
+    "hint": "Look for a and i together.",
+    "explanation": "Rain has ai.",
+    "skill_tag": "vowelteam.ai",
+    "options": [
+     {
+      "id": "a",
+      "text": "ran"
+     },
+     {
+      "id": "b",
+      "text": "run"
+     },
+     {
+      "id": "c",
+      "text": "rain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Why does the word cake say a, not the sound in cap?",
+    "hint": "Look at the end of the word.",
+    "explanation": "The silent e makes the a say its name.",
+    "skill_tag": "splitvowel.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The k is very long"
+     },
+     {
+      "id": "b",
+      "text": "The c is a capital"
+     },
+     {
+      "id": "c",
+      "text": "The silent e at the end changes the vowel sound"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Rain has a and i. Cake has a and e.",
+    "explanation": "Rain has ai. Cake has a-e.",
+    "skill_tag": "vowelteam.fill",
+    "points": 2,
+    "text": "Rain has the vowel team {b1}. Cake has the split vowel {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ee"
+       },
+       {
+        "id": "b",
+        "text": "ai"
+       },
+       {
+        "id": "c",
+        "text": "oa"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "o-e"
+       },
+       {
+        "id": "b",
+        "text": "a-e"
+       },
+       {
+        "id": "c",
+        "text": "i-e"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "vowels",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which words have a split vowel? Pick two.",
+    "hint": "Look for a silent e at the end.",
+    "explanation": "Cake has a-e and home has o-e.",
+    "skill_tag": "splitvowel.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "home"
+     },
+     {
+      "id": "b",
+      "text": "rain"
+     },
+     {
+      "id": "c",
+      "text": "boat"
+     },
+     {
+      "id": "d",
+      "text": "cake"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "short_text",
+    "prompt": "Add un to lock. Write the new word.",
+    "hint": "Put un at the front.",
+    "explanation": "Un + lock = unlock.",
+    "skill_tag": "prefix.un",
+    "answer": {
+     "accepted": [
+      "unlock"
+     ]
+    },
+    "sub_lesson": "affixes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the letters in order to spell the word.",
+    "hint": "It is help and then ful.",
+    "explanation": "Help + ful = helpful.",
+    "skill_tag": "suffix.ful",
+    "points": 2,
+    "items": [
+     {
+      "id": "i7",
+      "text": "l"
+     },
+     {
+      "id": "i1",
+      "text": "h"
+     },
+     {
+      "id": "i6",
+      "text": "u"
+     },
+     {
+      "id": "i2",
+      "text": "e"
+     },
+     {
+      "id": "i4",
+      "text": "p"
+     },
+     {
+      "id": "i5",
+      "text": "f"
+     },
+     {
+      "id": "i3",
+      "text": "l"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6",
+     "i7"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why does unhappy mean the opposite of happy?",
+    "hint": "Look at the bit at the front.",
+    "explanation": "Un at the front means not.",
+    "skill_tag": "affix.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a longer word"
+     },
+     {
+      "id": "b",
+      "text": "The prefix un means not"
+     },
+     {
+      "id": "c",
+      "text": "The suffix ful means full of"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think about the picture each word makes.",
+    "explanation": "Tail is on an animal, a tale is a story, and the sun shines.",
+    "skill_tag": "homophone.pick",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "tail"
+     },
+     {
+      "id": "l2",
+      "text": "tale"
+     },
+     {
+      "id": "l3",
+      "text": "sun"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "a story"
+     },
+     {
+      "id": "r3",
+      "text": "the star in our sky"
+     },
+     {
+      "id": "r1",
+      "text": "the end of an animal"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homophones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap the picture of a tale.",
+    "hint": "A tale is a story.",
+    "explanation": "A tale is a story, so the book is right.",
+    "skill_tag": "homophone.pick",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📖",
+       "label": "tale",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐕",
+       "label": "tail",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "☀️",
+       "label": "sun",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many vowel letters (a, e, i, o, u) are in the word boat.",
+    "hint": "Look for a, e, i, o and u.",
+    "explanation": "Boat has o and a.",
+    "skill_tag": "vowel.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "homophones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why do tail and tale need different spellings?",
+    "hint": "What do the two words mean?",
+    "explanation": "They are homophones: the same sound but different meanings.",
+    "skill_tag": "homophone.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "One of them is a mistake"
+     },
+     {
+      "id": "b",
+      "text": "They mean the same thing"
+     },
+     {
+      "id": "c",
+      "text": "They sound the same but mean different things"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "In the alphabet, b comes before a.",
+    "hint": "Say a, b, c.",
+    "explanation": "A comes before b.",
+    "skill_tag": "alphabet.order",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put these words in alphabetical order.",
+    "hint": "Look at the first letters.",
+    "explanation": "A, b, c, d is the order.",
+    "skill_tag": "alphabet.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "cat"
+     },
+     {
+      "id": "i4",
+      "text": "dog"
+     },
+     {
+      "id": "i2",
+      "text": "bus"
+     },
+     {
+      "id": "i1",
+      "text": "ant"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Which word comes first in a dictionary?",
+    "hint": "Which first letter is earliest?",
+    "explanation": "A comes before m and z.",
+    "skill_tag": "alphabet.first",
+    "options": [
+     {
+      "id": "a",
+      "text": "zebra"
+     },
+     {
+      "id": "b",
+      "text": "apple"
+     },
+     {
+      "id": "c",
+      "text": "mango"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why do dictionary words go in alphabetical order?",
+    "hint": "Think about finding a word.",
+    "explanation": "ABC order helps us find a word fast.",
+    "skill_tag": "alphabet.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the long words come first"
+     },
+     {
+      "id": "b",
+      "text": "So we can find a word quickly"
+     },
+     {
+      "id": "c",
+      "text": "So the pictures fit"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Pick the word with the oa vowel team.",
+    "hint": "Look for o and a together.",
+    "explanation": "Boat has oa.",
+    "skill_tag": "vowelteam.oa",
+    "options": [
+     {
+      "id": "a",
+      "text": "bat"
+     },
+     {
+      "id": "b",
+      "text": "bet"
+     },
+     {
+      "id": "c",
+      "text": "boat"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Spot the word with the ee vowel team.",
+    "hint": "Look for two e letters.",
+    "explanation": "Seed has ee.",
+    "skill_tag": "vowelteam.ee",
+    "options": [
+     {
+      "id": "a",
+      "text": "said"
+     },
+     {
+      "id": "b",
+      "text": "seed"
+     },
+     {
+      "id": "c",
+      "text": "sad"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Why does the word kite say i, not the sound in kit?",
+    "hint": "Look at the end of the word.",
+    "explanation": "The silent e makes the i say its name.",
+    "skill_tag": "splitvowel.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The k is silent"
+     },
+     {
+      "id": "b",
+      "text": "The silent e at the end changes the vowel sound"
+     },
+     {
+      "id": "c",
+      "text": "The t is loud"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Why does the word home say o, not the sound in hot?",
+    "hint": "Look at the end of the word.",
+    "explanation": "The silent e makes the o say its name.",
+    "skill_tag": "splitvowel.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The m is long"
+     },
+     {
+      "id": "b",
+      "text": "The silent e at the end changes the vowel sound"
+     },
+     {
+      "id": "c",
+      "text": "The h is silent"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "Boat has o and a. Kite has i and e.",
+    "explanation": "Boat has oa. Kite has i-e.",
+    "skill_tag": "vowelteam.fill",
+    "points": 2,
+    "text": "Boat has the vowel team {b1}. Kite has the split vowel {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ai"
+       },
+       {
+        "id": "b",
+        "text": "oa"
+       },
+       {
+        "id": "c",
+        "text": "ee"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "a-e"
+       },
+       {
+        "id": "b",
+        "text": "o-e"
+       },
+       {
+        "id": "c",
+        "text": "i-e"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "vowels",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Tree has two e letters. Home has o and e.",
+    "explanation": "Tree has ee. Home has o-e.",
+    "skill_tag": "vowelteam.fill",
+    "points": 2,
+    "text": "Tree has the vowel team {b1}. Home has the split vowel {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "oa"
+       },
+       {
+        "id": "b",
+        "text": "ee"
+       },
+       {
+        "id": "c",
+        "text": "ai"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "i-e"
+       },
+       {
+        "id": "b",
+        "text": "o-e"
+       },
+       {
+        "id": "c",
+        "text": "a-e"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "vowels",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick the two split vowel words.",
+    "hint": "Look for a silent e at the end.",
+    "explanation": "Kite has i-e and bone has o-e.",
+    "skill_tag": "splitvowel.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "bone"
+     },
+     {
+      "id": "b",
+      "text": "tree"
+     },
+     {
+      "id": "c",
+      "text": "feet"
+     },
+     {
+      "id": "d",
+      "text": "kite"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Choose two words with a split vowel.",
+    "hint": "Look for a silent e at the end.",
+    "explanation": "Game has a-e and hope has o-e.",
+    "skill_tag": "splitvowel.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "hope"
+     },
+     {
+      "id": "b",
+      "text": "coat"
+     },
+     {
+      "id": "c",
+      "text": "seed"
+     },
+     {
+      "id": "d",
+      "text": "game"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "vowels",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "short_text",
+    "prompt": "Add un to the word fair. Write the new word.",
+    "hint": "Put un at the front.",
+    "explanation": "Un + fair = unfair.",
+    "skill_tag": "prefix.un",
+    "answer": {
+     "accepted": [
+      "unfair"
+     ]
+    },
+    "sub_lesson": "affixes",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "short_text",
+    "prompt": "Put un in front of safe. Write the new word.",
+    "hint": "Put un at the front.",
+    "explanation": "Un + safe = unsafe.",
+    "skill_tag": "prefix.un",
+    "answer": {
+     "accepted": [
+      "unsafe"
+     ]
+    },
+    "sub_lesson": "affixes",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange the letters to spell the word.",
+    "hint": "It is care and then ful.",
+    "explanation": "Care + ful = careful.",
+    "skill_tag": "suffix.ful",
+    "points": 2,
+    "items": [
+     {
+      "id": "i7",
+      "text": "l"
+     },
+     {
+      "id": "i6",
+      "text": "u"
+     },
+     {
+      "id": "i4",
+      "text": "e"
+     },
+     {
+      "id": "i1",
+      "text": "c"
+     },
+     {
+      "id": "i2",
+      "text": "a"
+     },
+     {
+      "id": "i3",
+      "text": "r"
+     },
+     {
+      "id": "i5",
+      "text": "f"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6",
+     "i7"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Sort the letters to spell the word.",
+    "hint": "It is joy and then ful.",
+    "explanation": "Joy + ful = joyful.",
+    "skill_tag": "suffix.ful",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "o"
+     },
+     {
+      "id": "i3",
+      "text": "y"
+     },
+     {
+      "id": "i4",
+      "text": "f"
+     },
+     {
+      "id": "i5",
+      "text": "u"
+     },
+     {
+      "id": "i6",
+      "text": "l"
+     },
+     {
+      "id": "i1",
+      "text": "j"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5",
+     "i6"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why does unfair mean not fair?",
+    "hint": "Look at the bit at the front.",
+    "explanation": "Un at the front means not.",
+    "skill_tag": "affix.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a longer word"
+     },
+     {
+      "id": "b",
+      "text": "The prefix un means not"
+     },
+     {
+      "id": "c",
+      "text": "The suffix ful means full of"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why does careful mean full of care?",
+    "hint": "Look at the bit at the back.",
+    "explanation": "Ful at the back means full of.",
+    "skill_tag": "affix.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a longer word"
+     },
+     {
+      "id": "b",
+      "text": "The suffix ful means full of"
+     },
+     {
+      "id": "c",
+      "text": "The prefix un means not"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "affixes",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Which meaning goes with each word?",
+    "hint": "Think about the picture each word makes.",
+    "explanation": "A pair is two, a pear is a fruit, and a son is a boy child.",
+    "skill_tag": "homophone.pick",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "pair"
+     },
+     {
+      "id": "l2",
+      "text": "pear"
+     },
+     {
+      "id": "l3",
+      "text": "son"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "a fruit"
+     },
+     {
+      "id": "r1",
+      "text": "two of something"
+     },
+     {
+      "id": "r3",
+      "text": "a boy child"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homophones",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about the picture each word makes.",
+    "explanation": "The sea is water, see means look, and a tale is a story.",
+    "skill_tag": "homophone.pick",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "sea"
+     },
+     {
+      "id": "l2",
+      "text": "see"
+     },
+     {
+      "id": "l3",
+      "text": "tale"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "a story"
+     },
+     {
+      "id": "r1",
+      "text": "salty water"
+     },
+     {
+      "id": "r2",
+      "text": "to look"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homophones",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap the picture of a pear.",
+    "hint": "A pear is a fruit.",
+    "explanation": "A pear is a fruit.",
+    "skill_tag": "homophone.pick",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍐",
+       "label": "pear",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "👫",
+       "label": "pair",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌊",
+       "label": "sea",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap the picture of the sun.",
+    "hint": "The sun shines in the sky.",
+    "explanation": "The sun is the star in our sky.",
+    "skill_tag": "homophone.pick",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☀️",
+       "label": "sun",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "👦",
+       "label": "son",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭐",
+       "label": "star",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many vowel letters (a, e, i, o, u) are in the word sun.",
+    "hint": "Look for a, e, i, o and u.",
+    "explanation": "Sun has only u.",
+    "skill_tag": "vowel.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "homophones",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many vowel letters (a, e, i, o, u) are in the word banana.",
+    "hint": "Look for a, e, i, o and u.",
+    "explanation": "Banana has three a letters.",
+    "skill_tag": "vowel.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "homophones",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why do we check the spelling of sun and son?",
+    "hint": "What do the two words mean?",
+    "explanation": "They are homophones with different meanings.",
+    "skill_tag": "homophone.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same word"
+     },
+     {
+      "id": "b",
+      "text": "They sound the same but mean different things"
+     },
+     {
+      "id": "c",
+      "text": "One has more letters"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why must we choose carefully between pair and pear?",
+    "hint": "What do the two words mean?",
+    "explanation": "They are homophones with different meanings.",
+    "skill_tag": "homophone.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They mean the same thing"
+     },
+     {
+      "id": "b",
+      "text": "They sound the same but mean different things"
+     },
+     {
+      "id": "c",
+      "text": "Pear is a longer word"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "homophones",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "In the alphabet, d comes after c.",
+    "hint": "Say a, b, c, d.",
+    "explanation": "D comes right after c.",
+    "skill_tag": "alphabet.order",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "true_false",
+    "prompt": "In the alphabet, m comes before l.",
+    "hint": "Say k, l, m.",
+    "explanation": "L comes before m.",
+    "skill_tag": "alphabet.order",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Sort these words into ABC order.",
+    "hint": "Look at the first letters.",
+    "explanation": "F, g, h, j is the order.",
+    "skill_tag": "alphabet.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "hen"
+     },
+     {
+      "id": "i4",
+      "text": "jug"
+     },
+     {
+      "id": "i2",
+      "text": "goat"
+     },
+     {
+      "id": "i1",
+      "text": "fish"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "order",
+    "prompt": "Arrange these words in ABC order.",
+    "hint": "Look at the first letters.",
+    "explanation": "K, l, m, n is the order.",
+    "skill_tag": "alphabet.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "lamp"
+     },
+     {
+      "id": "i4",
+      "text": "nest"
+     },
+     {
+      "id": "i3",
+      "text": "moon"
+     },
+     {
+      "id": "i1",
+      "text": "kite"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Which word would you find first in a dictionary?",
+    "hint": "Which first letter is earliest?",
+    "explanation": "B comes before t and w.",
+    "skill_tag": "alphabet.first",
+    "options": [
+     {
+      "id": "a",
+      "text": "wolf"
+     },
+     {
+      "id": "b",
+      "text": "ball"
+     },
+     {
+      "id": "c",
+      "text": "tree"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Which word is earliest in a dictionary?",
+    "hint": "Which first letter is earliest?",
+    "explanation": "C comes before d and f.",
+    "skill_tag": "alphabet.first",
+    "options": [
+     {
+      "id": "a",
+      "text": "fox"
+     },
+     {
+      "id": "b",
+      "text": "cat"
+     },
+     {
+      "id": "c",
+      "text": "dog"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why do we look at the first letter first in a dictionary?",
+    "hint": "How is the dictionary sorted?",
+    "explanation": "Words are sorted by first letter, then the next.",
+    "skill_tag": "alphabet.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Words are sorted by length"
+     },
+     {
+      "id": "b",
+      "text": "Words are sorted by colour"
+     },
+     {
+      "id": "c",
+      "text": "Words are sorted by their first letter"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why does bat come before bus in a dictionary?",
+    "hint": "Both start with b. Look at the second letter.",
+    "explanation": "The second letters decide: a comes before u.",
+    "skill_tag": "alphabet.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "bat is shorter"
+     },
+     {
+      "id": "b",
+      "text": "a comes before u in the alphabet"
+     },
+     {
+      "id": "c",
+      "text": "bus is a vehicle"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "alphabet",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

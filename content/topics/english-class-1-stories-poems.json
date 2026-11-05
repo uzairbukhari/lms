@@ -1,0 +1,2613 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-1-stories-poems",
+  "subject": "english",
+  "title": "Stories and Poems",
+  "summary": "A folk tale, beginning, middle and end, predicting the ending, rhymes and rhythm, and writing four lines.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Stories and poems",
+  "learning_objectives": [
+   "Retell a story in order: beginning, middle and end",
+   "Predict what happens next using clues",
+   "Spot rhymes and rhythm in a poem",
+   "Plan and write four lines"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "english-class-1-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 reading",
+    "text": "Discuss the sequence of events, make predictions, and recite poems with rhyme and rhythm"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Rs.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.07"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.08"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.11"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.12"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ri.16"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ra.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ws.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wc.01"
+   }
+  ],
+  "success_criteria": [
+   "I can tell the beginning, middle and end of a story",
+   "I can use clues to predict what happens next",
+   "I can find words that rhyme",
+   "I can plan a short poem"
+  ],
+  "real_life": "Telling bedtime stories and making up rhymes for a baby brother or sister.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word rhymes with hat?",
+    "hint": "Listen to the ending.",
+    "explanation": "Hat and mat both end in at.",
+    "options": [
+     {
+      "id": "a",
+      "text": "sun"
+     },
+     {
+      "id": "b",
+      "text": "mat"
+     },
+     {
+      "id": "c",
+      "text": "hen"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A sentence starts with a capital letter.",
+    "hint": "Look at the first letter.",
+    "explanation": "Every sentence starts with a capital letter.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word is a describing word?",
+    "hint": "It tells us what a thing is like.",
+    "explanation": "Big describes a thing.",
+    "options": [
+     {
+      "id": "a",
+      "text": "run"
+     },
+     {
+      "id": "b",
+      "text": "big"
+     },
+     {
+      "id": "c",
+      "text": "dog"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, story explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do stories and poems work?\n\nWe will read, predict, rhyme and write.",
+   "say": "Welcome back, story explorer! Today's big question: how do stories and poems work, and how can we make our own? We will hear an old tale, guess what happens next, play with rhymes, and write four lines. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "📚",
+   "alt": "Stories and poems are full of surprises.",
+   "caption": "Stories and poems are full of surprises."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "story",
+     "meaning": "A tale about characters and what happens to them."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "story",
+   "kind": "learn",
+   "title": "A folk tale: beginning, middle and end",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The three parts of a story"
+    },
+    {
+     "type": "text",
+     "markdown": "Every story has a **beginning**, a **middle** and an **end**.\n\nBeginning: meet the characters. Middle: the problem. End: it is solved.",
+     "say": "Every story has three parts. The beginning is where we meet the characters and the place. The middle is where the problem happens and the characters try to fix it. The end is where the problem is solved. Think of a sandwich: bread, filling, bread. Let's hear an old tale, The Thirsty Crow, and spot the three parts."
+    },
+    {
+     "type": "explainer",
+     "title": "The Thirsty Crow",
+     "scenes": [
+      {
+       "caption": "Beginning: a thirsty crow finds a jug.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐦‍⬛",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "thirsty crow"
+        },
+        {
+         "id": "j",
+         "emoji": "🏺",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "jug"
+        }
+       ],
+       "say": "The beginning. A hot day. A crow is very thirsty. He finds a jug with only a little water at the bottom."
+      },
+      {
+       "caption": "Middle: he drops in pebbles.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐦‍⬛",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "bounce",
+         "label": "crow"
+        },
+        {
+         "id": "j",
+         "emoji": "🏺",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "jug"
+        },
+        {
+         "id": "p",
+         "emoji": "🪨",
+         "x": 70,
+         "y": 20,
+         "size": 1,
+         "anim": "bounce",
+         "label": "pebbles"
+        }
+       ],
+       "say": "The middle. The crow cannot reach the water. He has a clever idea. He drops pebbles into the jug, one by one."
+      },
+      {
+       "caption": "End: the crow drinks.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐦‍⬛",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "happy crow"
+        },
+        {
+         "id": "j",
+         "emoji": "🏺",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "full jug"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 70,
+         "y": 25,
+         "size": 2,
+         "anim": "float",
+         "label": "water"
+        }
+       ],
+       "say": "The end. The water rises to the top. The crow drinks and is happy. His clever idea solved the problem."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In The Thirsty Crow, what is the problem in the middle?",
+      "hint": "What stops the crow drinking?",
+      "explanation": "The water is too low for the crow to reach.",
+      "skill_tag": "story.middle",
+      "options": [
+       {
+        "id": "a",
+        "text": "The crow is too heavy"
+       },
+       {
+        "id": "b",
+        "text": "The jug is broken"
+       },
+       {
+        "id": "c",
+        "text": "The crow cannot reach the water"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens at the end of The Thirsty Crow?",
+      "hint": "Is the problem solved?",
+      "explanation": "The pebbles raise the water and the crow drinks.",
+      "skill_tag": "story.end",
+      "options": [
+       {
+        "id": "a",
+        "text": "The crow flies away thirsty"
+       },
+       {
+        "id": "b",
+        "text": "The crow drinks the water"
+       },
+       {
+        "id": "c",
+        "text": "The crow breaks the jug"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A story has a beginning, a middle and an end",
+      "The problem is in the middle and it is solved at the end"
+     ],
+     "say": "Let us remember. A story has a beginning, a middle and an end. The problem is in the middle, and it is solved at the end."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "beginning",
+       "meaning": "The start of a story, where we meet the characters and the place."
+      },
+      {
+       "term": "middle",
+       "meaning": "The part of a story where the problem happens."
+      },
+      {
+       "term": "end",
+       "meaning": "The last part of a story, where the problem is solved."
+      },
+      {
+       "term": "folk tale",
+       "meaning": "An old story passed down from long ago."
+      },
+      {
+       "term": "character",
+       "meaning": "A person or animal in a story."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "In The Thirsty Crow, who is the main character?",
+     "hint": "Who is the story about?",
+     "explanation": "The crow is the main character.",
+     "skill_tag": "story.character",
+     "options": [
+      {
+       "id": "a",
+       "text": "the jug"
+      },
+      {
+       "id": "b",
+       "text": "the pebbles"
+      },
+      {
+       "id": "c",
+       "text": "the crow"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part of a story is where we meet the characters?",
+     "hint": "Think of the start.",
+     "explanation": "We meet the characters at the beginning.",
+     "skill_tag": "story.beginning",
+     "options": [
+      {
+       "id": "a",
+       "text": "the end"
+      },
+      {
+       "id": "b",
+       "text": "the beginning"
+      },
+      {
+       "id": "c",
+       "text": "the middle"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The crow solves his problem by dropping pebbles into the jug.",
+     "hint": "How did the water rise?",
+     "explanation": "The pebbles pushed the water up.",
+     "skill_tag": "story.middle",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "kind": "try",
+   "title": "Predicting the ending",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Clues and predictions"
+    },
+    {
+     "type": "text",
+     "markdown": "A **prediction** is a clever guess about what will happen next.\n\nClues: dark grey clouds. Prediction: it will rain.",
+     "say": "Good readers are clue detectives. A prediction is a clever guess about what will happen next. We use clues from the story and what we already know. If the sky turns dark and grey, what do you think will happen? Rain! The grey clouds were the clue."
+    },
+    {
+     "type": "explainer",
+     "title": "Dark clouds",
+     "scenes": [
+      {
+       "caption": "A sunny sky.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "grow",
+         "label": "sunny"
+        }
+       ],
+       "say": "Here is a sunny sky. Everything is bright."
+      },
+      {
+       "caption": "Dark clouds are a clue.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "☁️",
+         "x": 50,
+         "y": 35,
+         "size": 3,
+         "anim": "grow",
+         "label": "dark clouds"
+        }
+       ],
+       "say": "Now the clouds are dark and grey. That is a clue. What will happen next?"
+      },
+      {
+       "caption": "It rains.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "bounce",
+         "label": "rain"
+        }
+       ],
+       "say": "Rain! We used the clue to make a prediction, and it came true."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Ali put on his swimming shorts and ran to the pool. What will probably happen next?",
+      "hint": "What are swimming shorts for?",
+      "explanation": "Swimming shorts are a clue that he is going swimming.",
+      "skill_tag": "predict.clue",
+      "options": [
+       {
+        "id": "a",
+        "text": "He will go to sleep"
+       },
+       {
+        "id": "b",
+        "text": "He will eat lunch"
+       },
+       {
+        "id": "c",
+        "text": "He will go swimming"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Make your own prediction"
+    },
+    {
+     "type": "activity",
+     "title": "Predict the ending",
+     "materials": [
+      "A picture book",
+      "A grown-up to read with you"
+     ],
+     "instructions": [
+      "Read the book until the last few pages.",
+      "Stop and look at the clues in the pictures and words.",
+      "Say what you think will happen at the end.",
+      "Read on. Was your prediction right?"
+     ],
+     "say": "Now it is your turn to predict. Ask a grown-up to read you a picture book, but stop before the end. Use the clues to guess how it will finish, then read on and check."
+    },
+    {
+     "type": "image",
+     "emoji": "🔍",
+     "alt": "Clues in a story help us predict what happens next.",
+     "caption": "Clues in a story help us predict what happens next.",
+     "say": "Here are the clue detectives, magnifying glass at the ready."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Can a prediction be wrong?",
+     "answer_markdown": "Yes! A prediction is a clever guess, so sometimes the story surprises us. That is part of the fun.",
+     "say": "Here is a puzzle to think about. Can a prediction be wrong? Have a think, then tap to see."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The cake is in the oven and it smells sweet. What will probably happen next?",
+      "hint": "Think about what happens when something bakes.",
+      "explanation": "A sweet smell tells us the cake is baking and will be ready.",
+      "skill_tag": "predict.clue",
+      "options": [
+       {
+        "id": "a",
+        "text": "The cake will turn blue"
+       },
+       {
+        "id": "b",
+        "text": "The cake will be ready soon"
+       },
+       {
+        "id": "c",
+        "text": "The cake will fly away"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Clues help us make a prediction",
+      "A prediction is a clever guess, so it can be wrong"
+     ],
+     "say": "Let us remember. Clues help us predict. A prediction is a clever guess and it can be wrong."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "prediction",
+       "meaning": "A clever guess about what will happen next."
+      },
+      {
+       "term": "clue",
+       "meaning": "A small piece of information that helps us work something out."
+      },
+      {
+       "term": "guess",
+       "meaning": "What you think, without knowing for sure."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "It is cold and snowing. Zara puts on her hat and gloves. What will probably happen next?",
+     "hint": "What are hats and gloves for?",
+     "explanation": "Hat and gloves are clues she will go out in the snow.",
+     "skill_tag": "predict.clue",
+     "options": [
+      {
+       "id": "a",
+       "text": "She will go to the beach"
+      },
+      {
+       "id": "b",
+       "text": "She will go outside"
+      },
+      {
+       "id": "c",
+       "text": "She will plant a tree"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A prediction is always right.",
+     "hint": "It is a guess.",
+     "explanation": "A prediction is a guess, so it can be wrong.",
+     "skill_tag": "predict.def",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a clue that a storm is coming?",
+     "hint": "What do we see before rain?",
+     "explanation": "Dark clouds are a clue.",
+     "skill_tag": "predict.clue",
+     "options": [
+      {
+       "id": "a",
+       "text": "a calm lake"
+      },
+      {
+       "id": "b",
+       "text": "dark clouds"
+      },
+      {
+       "id": "c",
+       "text": "a blue sky"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rhyme",
+   "kind": "play",
+   "title": "Rhymes and rhythm",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Rhyme"
+    },
+    {
+     "type": "text",
+     "markdown": "Words **rhyme** when they end with the same sound: cat, hat, mat.",
+     "say": "Poems love rhyme. Words rhyme when they end with the same sound. Cat and hat. Moon and spoon. Look at the ends of the words, not the beginnings. Listen: cat, hat, mat, sat. They all end with at. Let's watch rhyming words come together."
+    },
+    {
+     "type": "explainer",
+     "title": "Cat and hat",
+     "scenes": [
+      {
+       "caption": "cat",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "cat"
+        }
+       ],
+       "say": "Here is a cat."
+      },
+      {
+       "caption": "cat and hat rhyme",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "cat"
+        },
+        {
+         "id": "h",
+         "emoji": "🎩",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "hat"
+        },
+        {
+         "id": "e",
+         "emoji": "✨",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "float",
+         "label": "rhyme"
+        }
+       ],
+       "say": "And here is a hat. Cat and hat end with the same sound, at. They rhyme!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word rhymes with moon?",
+      "hint": "Listen to the ending.",
+      "explanation": "Moon and spoon both end in oon.",
+      "skill_tag": "rhyme.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "moth"
+       },
+       {
+        "id": "b",
+        "text": "map"
+       },
+       {
+        "id": "c",
+        "text": "spoon"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Rhythm and a brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "**Rhythm** is the beat of a poem. Clap along to feel it.",
+     "say": "A poem also has rhythm, which is its beat. Clap along as you say it: Twinkle, twinkle, little star. Each clap is one beat. Then play the memory game and listen out for the beat."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Rhyme pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🐈",
+      "🎩",
+      "🌙",
+      "🥄",
+      "🐝",
+      "🌳"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is rhythm in a poem?",
+      "hint": "Think about clapping along.",
+      "explanation": "Rhythm is the beat of a poem.",
+      "skill_tag": "rhyme.rhythm",
+      "options": [
+       {
+        "id": "a",
+        "text": "the title"
+       },
+       {
+        "id": "b",
+        "text": "the beat you can clap"
+       },
+       {
+        "id": "c",
+        "text": "a picture"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Rhyming words end with the same sound",
+      "Rhythm is the beat of a poem"
+     ],
+     "say": "Let us remember. Rhyming words end with the same sound. Rhythm is the beat."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "rhyme",
+       "meaning": "Words that end with the same sound, like cat and hat."
+      },
+      {
+       "term": "rhythm",
+       "meaning": "The beat of a poem or song."
+      },
+      {
+       "term": "poem",
+       "meaning": "A short piece of writing, often with rhyme and rhythm."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word rhymes with day?",
+     "hint": "Listen to the ending.",
+     "explanation": "Day and play both end in ay.",
+     "skill_tag": "rhyme.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "dot"
+      },
+      {
+       "id": "b",
+       "text": "dig"
+      },
+      {
+       "id": "c",
+       "text": "play"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Cat and dog rhyme.",
+     "hint": "Do they end the same?",
+     "explanation": "Cat ends in at and dog ends in og.",
+     "skill_tag": "rhyme.find",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we clap along to in a poem?",
+     "hint": "It is the beat.",
+     "explanation": "We clap along to the rhythm.",
+     "skill_tag": "rhyme.rhythm",
+     "options": [
+      {
+       "id": "a",
+       "text": "the title"
+      },
+      {
+       "id": "b",
+       "text": "the author"
+      },
+      {
+       "id": "c",
+       "text": "the rhythm"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "poem",
+   "kind": "use",
+   "title": "Write four lines",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plan a poem"
+    },
+    {
+     "type": "text",
+     "markdown": "To write a poem: choose a topic, find rhyming words, write four lines, read it aloud.",
+     "say": "You can write a poem too! Here is a plan. First, choose a topic, like a cat. Then think of rhyming words, like cat and hat. Then write four short lines. Finally, read it aloud to hear the rhythm. Watch the steps."
+    },
+    {
+     "type": "explainer",
+     "title": "Making a poem",
+     "scenes": [
+      {
+       "caption": "Choose a topic.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "cat"
+        }
+       ],
+       "say": "Step one. Choose a topic. We choose a cat."
+      },
+      {
+       "caption": "Find rhyming words.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "cat"
+        },
+        {
+         "id": "h",
+         "emoji": "🎩",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "hat"
+        },
+        {
+         "id": "m",
+         "emoji": "🧶",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "mat"
+        }
+       ],
+       "say": "Step two. Think of rhyming words. Cat, hat, mat."
+      },
+      {
+       "caption": "Write four lines.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "four lines"
+        }
+       ],
+       "say": "Step three. Write the lines. Little cat on the mat, wearing a tiny hat."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we do first when we plan a poem?",
+      "hint": "What do we need before we can write?",
+      "explanation": "First we choose what the poem is about.",
+      "skill_tag": "poem.plan",
+      "options": [
+       {
+        "id": "a",
+        "text": "draw a border"
+       },
+       {
+        "id": "b",
+        "text": "choose a topic"
+       },
+       {
+        "id": "c",
+        "text": "read it aloud"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write and share"
+    },
+    {
+     "type": "activity",
+     "title": "My four-line poem",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up to listen"
+     ],
+     "instructions": [
+      "Choose a topic you love.",
+      "Think of two pairs of rhyming words.",
+      "Write four short lines that end with your rhymes.",
+      "Read it aloud, clapping the beat."
+     ],
+     "say": "Time to write your own. Pick a topic you love, find two rhyming pairs, and write four lines. Read it to someone at home."
+    },
+    {
+     "type": "image",
+     "emoji": "✍️",
+     "alt": "A poem with four lines and two rhymes.",
+     "caption": "A poem with four lines and two rhymes.",
+     "say": "A poet at work."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why do we read our poem aloud?",
+      "hint": "What can we hear?",
+      "explanation": "Reading aloud helps us hear the beat and rhymes.",
+      "skill_tag": "poem.aloud",
+      "options": [
+       {
+        "id": "a",
+        "text": "to hide mistakes"
+       },
+       {
+        "id": "b",
+        "text": "to hear the rhythm and rhymes"
+       },
+       {
+        "id": "c",
+        "text": "to make it longer"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plan: topic, rhyming words, four lines",
+      "Read it aloud to hear the rhythm"
+     ],
+     "say": "Let us remember. Plan a poem: topic, rhymes, four lines, read aloud."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "topic",
+       "meaning": "What a piece of writing is about."
+      },
+      {
+       "term": "line",
+       "meaning": "One row of words in a poem."
+      },
+      {
+       "term": "aloud",
+       "meaning": "Out loud, so people can hear."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many lines are in our poem?",
+     "hint": "Look at the plan.",
+     "explanation": "We write four short lines.",
+     "skill_tag": "poem.plan",
+     "options": [
+      {
+       "id": "a",
+       "text": "two"
+      },
+      {
+       "id": "b",
+       "text": "four"
+      },
+      {
+       "id": "c",
+       "text": "ten"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We read a poem aloud to hear the rhythm.",
+     "hint": "What can we hear?",
+     "explanation": "Reading aloud shows the rhythm.",
+     "skill_tag": "poem.aloud",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a good topic for a poem?",
+     "hint": "Pick something you love.",
+     "explanation": "A cat is a fun topic for a poem.",
+     "skill_tag": "poem.topic",
+     "options": [
+      {
+       "id": "a",
+       "text": "a full stop"
+      },
+      {
+       "id": "b",
+       "text": "my cat"
+      },
+      {
+       "id": "c",
+       "text": "the page number"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Why does a story need a beginning, a middle and an end?",
+    "hint": "Think about how a story flows.",
+    "explanation": "The three parts make a story easy to follow.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So it has more pictures"
+     },
+     {
+      "id": "b",
+      "text": "So it makes sense from start to finish"
+     },
+     {
+      "id": "c",
+      "text": "So it is very long"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "In The Thirsty Crow, the crow drops pebbles into the jug.",
+    "hint": "How did he reach the water?",
+    "explanation": "The pebbles raise the water.",
+    "skill_tag": "story.middle",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put the story in order.",
+    "hint": "Start with the problem.",
+    "explanation": "First the crow finds the jug, then he fixes the problem.",
+    "skill_tag": "story.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The crow drops in pebbles"
+     },
+     {
+      "id": "i3",
+      "text": "The water rises"
+     },
+     {
+      "id": "i4",
+      "text": "The crow drinks"
+     },
+     {
+      "id": "i1",
+      "text": "The crow finds a jug with a little water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each part of the story to what happens.",
+    "hint": "Think about when each thing happens.",
+    "explanation": "We meet characters first, solve the problem in the middle, finish at the end.",
+    "skill_tag": "story.parts",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Beginning"
+     },
+     {
+      "id": "l2",
+      "text": "Middle"
+     },
+     {
+      "id": "l3",
+      "text": "End"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "The crow tries pebbles"
+     },
+     {
+      "id": "r1",
+      "text": "We meet the crow and the jug"
+     },
+     {
+      "id": "r3",
+      "text": "The crow drinks and is happy"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows what happens next: Ali dropped his ice cream on the floor.",
+    "hint": "How would you feel?",
+    "explanation": "Dropping an ice cream would make most people sad.",
+    "skill_tag": "predict.clue",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "😢",
+       "label": "sad",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "😴",
+       "label": "sleepy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🤩",
+       "label": "excited",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "The sky is dark and the clouds are grey. What will probably happen next?",
+    "hint": "What do grey clouds bring?",
+    "explanation": "Dark grey clouds are a clue that rain is coming.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "It will be very hot"
+     },
+     {
+      "id": "b",
+      "text": "It will snow in summer"
+     },
+     {
+      "id": "c",
+      "text": "It will rain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "How can clues in a story help us predict the ending?",
+    "hint": "What do clues give us?",
+    "explanation": "Clues show what is likely to happen next.",
+    "skill_tag": "predict.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They tell us the page number"
+     },
+     {
+      "id": "b",
+      "text": "They tell us what is likely to happen"
+     },
+     {
+      "id": "c",
+      "text": "They make the story longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the rhymes.",
+    "hint": "Listen to the endings.",
+    "explanation": "Cat and hat both end in at. Moon and spoon both end in oon.",
+    "skill_tag": "rhyme.find",
+    "points": 2,
+    "text": "Cat rhymes with {b1}. Moon rhymes with {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "dog"
+       },
+       {
+        "id": "b",
+        "text": "hat"
+       },
+       {
+        "id": "c",
+        "text": "hen"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "star"
+       },
+       {
+        "id": "b",
+        "text": "spoon"
+       },
+       {
+        "id": "c",
+        "text": "sun"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multi_select",
+    "prompt": "Which words rhyme with ball? Pick two.",
+    "hint": "Listen to the endings.",
+    "explanation": "Wall and tall end in all, like ball.",
+    "skill_tag": "rhyme.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "bell"
+     },
+     {
+      "id": "b",
+      "text": "bill"
+     },
+     {
+      "id": "c",
+      "text": "tall"
+     },
+     {
+      "id": "d",
+      "text": "wall"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many words rhyme with cat: The cat sat on a mat in a hat.",
+    "hint": "Find words that end in at.",
+    "explanation": "Sat, mat and hat all rhyme with cat.",
+    "skill_tag": "rhyme.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why do poems often use rhyme?",
+    "hint": "What do rhymes sound like?",
+    "explanation": "Matching sounds are fun and easy to remember.",
+    "skill_tag": "rhyme.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Poems must be short"
+     },
+     {
+      "id": "b",
+      "text": "Matching sounds are fun to hear and easy to remember"
+     },
+     {
+      "id": "c",
+      "text": "Rhymes make words longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "short_text",
+    "prompt": "Write one word that rhymes with day.",
+    "hint": "Try ay words.",
+    "explanation": "Play, say and way all rhyme with day.",
+    "skill_tag": "poem.rhyme",
+    "answer": {
+     "accepted": [
+      "play",
+      "say",
+      "way",
+      "stay",
+      "may",
+      "pay",
+      "today",
+      "lay",
+      "hay",
+      "bay",
+      "tray",
+      "clay"
+     ]
+    },
+    "sub_lesson": "poem",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the steps in order for writing a poem.",
+    "hint": "What comes first?",
+    "explanation": "Plan first, then write, then read aloud.",
+    "skill_tag": "poem.plan",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Think of rhyming words"
+     },
+     {
+      "id": "i4",
+      "text": "Read it aloud"
+     },
+     {
+      "id": "i3",
+      "text": "Write four lines"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a topic"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "hotspot",
+    "prompt": "Tap the picture that rhymes with sun.",
+    "hint": "Listen to the ending.",
+    "explanation": "Sun and bun both end in un.",
+    "skill_tag": "poem.rhyme",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐝",
+       "label": "bee",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍞",
+       "label": "bun",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌙",
+       "label": "moon",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why do poets read poems aloud when checking them?",
+    "hint": "What can we hear?",
+    "explanation": "Reading aloud helps us hear the beat and rhymes.",
+    "skill_tag": "poem.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To hide mistakes"
+     },
+     {
+      "id": "b",
+      "text": "To hear whether the rhythm and rhymes sound right"
+     },
+     {
+      "id": "c",
+      "text": "To make them longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poem",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Why does a story have a problem in the middle?",
+    "hint": "What do characters have to do?",
+    "explanation": "The problem gives the story something to happen.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is the title"
+     },
+     {
+      "id": "b",
+      "text": "It gives the characters something to solve"
+     },
+     {
+      "id": "c",
+      "text": "It makes the pictures bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Why does a story usually end with the problem solved?",
+    "hint": "How do we feel at the end?",
+    "explanation": "A solved problem makes the story feel complete.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the pictures match"
+     },
+     {
+      "id": "b",
+      "text": "So the reader feels the story is finished"
+     },
+     {
+      "id": "c",
+      "text": "So it uses more words"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "In The Thirsty Crow, the crow breaks the jug.",
+    "hint": "Did the jug break?",
+    "explanation": "The crow does not break the jug; he drops in pebbles.",
+    "skill_tag": "story.middle",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "At the start of The Thirsty Crow, the crow is thirsty.",
+    "hint": "How does the crow feel at the start?",
+    "explanation": "He is very thirsty on a hot day.",
+    "skill_tag": "story.beginning",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Put the tale in order.",
+    "hint": "Think about who is fast at the start.",
+    "explanation": "The hare naps, so the tortoise passes him.",
+    "skill_tag": "story.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The hare has a nap"
+     },
+     {
+      "id": "i3",
+      "text": "The tortoise keeps going"
+     },
+     {
+      "id": "i4",
+      "text": "The tortoise wins"
+     },
+     {
+      "id": "i1",
+      "text": "The hare races ahead"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Order the events of this tale.",
+    "hint": "Which comes first?",
+    "explanation": "The mouse is spared and later returns the favour.",
+    "skill_tag": "story.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "The lion is caught in a net"
+     },
+     {
+      "id": "i4",
+      "text": "The mouse chews the net"
+     },
+     {
+      "id": "i2",
+      "text": "The lion lets the mouse go"
+     },
+     {
+      "id": "i1",
+      "text": "A mouse wakes a lion"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Which part of the story is each event?",
+    "hint": "Think about when each thing happens.",
+    "explanation": "The race starts, the hare naps, the tortoise wins.",
+    "skill_tag": "story.parts",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Beginning"
+     },
+     {
+      "id": "l2",
+      "text": "Middle"
+     },
+     {
+      "id": "l3",
+      "text": "End"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "The hare falls asleep"
+     },
+     {
+      "id": "r1",
+      "text": "A hare and a tortoise start a race"
+     },
+     {
+      "id": "r3",
+      "text": "The tortoise crosses the line"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "match",
+    "prompt": "Match the story parts.",
+    "hint": "Think about when each thing happens.",
+    "explanation": "Characters first, the problem in the middle, solution at the end.",
+    "skill_tag": "story.parts",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Beginning"
+     },
+     {
+      "id": "l2",
+      "text": "Middle"
+     },
+     {
+      "id": "l3",
+      "text": "End"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "The mouse sets him free"
+     },
+     {
+      "id": "r1",
+      "text": "A lion is asleep"
+     },
+     {
+      "id": "r2",
+      "text": "The lion is in a net"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows what happens next: Zara won the race.",
+    "hint": "How would you feel?",
+    "explanation": "Winning a race makes us happy.",
+    "skill_tag": "predict.clue",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "😄",
+       "label": "happy",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "😢",
+       "label": "sad",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "😠",
+       "label": "angry",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows what happens next: Hamza lost his favourite toy.",
+    "hint": "How would you feel?",
+    "explanation": "Losing a favourite toy is upsetting.",
+    "skill_tag": "predict.clue",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "😢",
+       "label": "upset",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "😄",
+       "label": "joyful",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "😴",
+       "label": "sleepy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Sam put on his coat and boots and took an umbrella. What will probably happen next?",
+    "hint": "What is an umbrella for?",
+    "explanation": "The umbrella and boots are clues that it is wet.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "He will go swimming"
+     },
+     {
+      "id": "b",
+      "text": "He will go to bed"
+     },
+     {
+      "id": "c",
+      "text": "He will go out in the rain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "multiple_choice",
+    "prompt": "Mum is tying the football boots and picking up a ball. What will probably happen next?",
+    "hint": "What are football boots for?",
+    "explanation": "The boots and ball are clues they will play football.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "They will go to sleep"
+     },
+     {
+      "id": "b",
+      "text": "They will play football"
+     },
+     {
+      "id": "c",
+      "text": "They will bake a cake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why is it good to check our prediction as we read?",
+    "hint": "What do we learn?",
+    "explanation": "Checking shows whether our clues were right.",
+    "skill_tag": "predict.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "We can change the ending"
+     },
+     {
+      "id": "b",
+      "text": "We can see if our clues were right"
+     },
+     {
+      "id": "c",
+      "text": "We can skip pages"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why can a prediction turn out to be wrong?",
+    "hint": "Is a prediction certain?",
+    "explanation": "A prediction is a guess, so a story can surprise us.",
+    "skill_tag": "predict.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The pictures are different"
+     },
+     {
+      "id": "b",
+      "text": "It is a guess, and stories can surprise us"
+     },
+     {
+      "id": "c",
+      "text": "Clues are never helpful"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the rhymes.",
+    "hint": "Listen to the endings.",
+    "explanation": "Dog and log end in og. Star and car end in ar.",
+    "skill_tag": "rhyme.find",
+    "points": 2,
+    "text": "Dog rhymes with {b1}. Star rhymes with {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "dig"
+       },
+       {
+        "id": "b",
+        "text": "cat"
+       },
+       {
+        "id": "c",
+        "text": "log"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sun"
+       },
+       {
+        "id": "b",
+        "text": "car"
+       },
+       {
+        "id": "c",
+        "text": "moon"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Fill in the rhymes.",
+    "hint": "Listen to the endings.",
+    "explanation": "Bee and tree end in ee. Boat and coat end in oat.",
+    "skill_tag": "rhyme.find",
+    "points": 2,
+    "text": "Bee rhymes with {b1}. Boat rhymes with {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bed"
+       },
+       {
+        "id": "b",
+        "text": "tree"
+       },
+       {
+        "id": "c",
+        "text": "cup"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "kite"
+       },
+       {
+        "id": "b",
+        "text": "coat"
+       },
+       {
+        "id": "c",
+        "text": "cat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multi_select",
+    "prompt": "Pick the two words that rhyme with rain.",
+    "hint": "Listen to the endings.",
+    "explanation": "Train and plane end in ain, like rain.",
+    "skill_tag": "rhyme.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "plane"
+     },
+     {
+      "id": "b",
+      "text": "run"
+     },
+     {
+      "id": "c",
+      "text": "ran"
+     },
+     {
+      "id": "d",
+      "text": "train"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multi_select",
+    "prompt": "Choose two words that rhyme with night.",
+    "hint": "Listen to the endings.",
+    "explanation": "Light and kite end in ite, like night.",
+    "skill_tag": "rhyme.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "kite"
+     },
+     {
+      "id": "b",
+      "text": "nut"
+     },
+     {
+      "id": "c",
+      "text": "net"
+     },
+     {
+      "id": "d",
+      "text": "light"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many words rhyme with bug: The bug gave a hug to a slug and a mug.",
+    "hint": "Find words that end in ug.",
+    "explanation": "Hug, slug and mug rhyme with bug.",
+    "skill_tag": "rhyme.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many words rhyme with bee: The bee sat in a tree by the sea.",
+    "hint": "Find words that end in ee.",
+    "explanation": "Tree and sea rhyme with bee.",
+    "skill_tag": "rhyme.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why do we clap along to the beat of a poem?",
+    "hint": "What is the beat called?",
+    "explanation": "Clapping helps us feel the rhythm.",
+    "skill_tag": "rhyme.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make the poem longer"
+     },
+     {
+      "id": "b",
+      "text": "To feel the rhythm"
+     },
+     {
+      "id": "c",
+      "text": "To change the words"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why do moon and spoon make a good rhyme?",
+    "hint": "Listen to the endings.",
+    "explanation": "Moon and spoon both end in oon.",
+    "skill_tag": "rhyme.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are both round"
+     },
+     {
+      "id": "b",
+      "text": "They end with the same sound"
+     },
+     {
+      "id": "c",
+      "text": "They start with the same letter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "short_text",
+    "prompt": "Write one word that rhymes with sun.",
+    "hint": "Try un words.",
+    "explanation": "Fun, run and bun rhyme with sun.",
+    "skill_tag": "poem.rhyme",
+    "answer": {
+     "accepted": [
+      "fun",
+      "run",
+      "bun",
+      "gun",
+      "nun",
+      "done",
+      "won",
+      "ton"
+     ]
+    },
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "short_text",
+    "prompt": "Write one word that rhymes with tree.",
+    "hint": "Try ee words.",
+    "explanation": "Bee, sea and three rhyme with tree.",
+    "skill_tag": "poem.rhyme",
+    "answer": {
+     "accepted": [
+      "bee",
+      "sea",
+      "see",
+      "free",
+      "three",
+      "key",
+      "me",
+      "we",
+      "he",
+      "she",
+      "knee",
+      "flea"
+     ]
+    },
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put the steps in order for writing a story.",
+    "hint": "What comes first?",
+    "explanation": "Plan first, then write, then check.",
+    "skill_tag": "poem.plan",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Write the story"
+     },
+     {
+      "id": "i4",
+      "text": "Check and read it aloud"
+     },
+     {
+      "id": "i2",
+      "text": "Plan the beginning, middle and end"
+     },
+     {
+      "id": "i1",
+      "text": "Think of characters"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "order",
+    "prompt": "Arrange the steps for improving your writing.",
+    "hint": "What comes first?",
+    "explanation": "Draft, read, fix, share.",
+    "skill_tag": "poem.plan",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Fix any mistakes"
+     },
+     {
+      "id": "i4",
+      "text": "Share it with a friend"
+     },
+     {
+      "id": "i2",
+      "text": "Read it aloud"
+     },
+     {
+      "id": "i1",
+      "text": "Write a first draft"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "hotspot",
+    "prompt": "Tap the picture that rhymes with log.",
+    "hint": "Listen to the ending.",
+    "explanation": "Log and dog both end in og.",
+    "skill_tag": "poem.rhyme",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐕",
+       "label": "dog",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌲",
+       "label": "tree",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "apple",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "hotspot",
+    "prompt": "Tap the picture that rhymes with star.",
+    "hint": "Listen to the ending.",
+    "explanation": "Star and car both end in ar.",
+    "skill_tag": "poem.rhyme",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🚗",
+       "label": "car",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌙",
+       "label": "moon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐱",
+       "label": "cat",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why do we plan a story before writing it?",
+    "hint": "What does planning give us?",
+    "explanation": "A plan helps the story make sense.",
+    "skill_tag": "poem.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the pictures are bigger"
+     },
+     {
+      "id": "b",
+      "text": "So it has a clear beginning, middle and end"
+     },
+     {
+      "id": "c",
+      "text": "So it uses more paper"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poem",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why do we think of rhyming words before writing a poem?",
+    "hint": "What do rhymes need?",
+    "explanation": "Rhymes need words that end with matching sounds.",
+    "skill_tag": "poem.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the poem is longer"
+     },
+     {
+      "id": "b",
+      "text": "So the title is bigger"
+     },
+     {
+      "id": "c",
+      "text": "So the lines can end with matching sounds"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "poem",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

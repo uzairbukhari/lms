@@ -1,0 +1,2470 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-seasons-weather",
+  "subject": "science",
+  "title": "Seasons and Weather",
+  "summary": "The four seasons, seasons in Pakistan, kinds of weather, measuring temperature and dressing for the weather.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Seasons and weather",
+  "learning_objectives": [
+   "Name the four seasons in order",
+   "Describe weather in the UK and Pakistan",
+   "Read a thermometer and a weather chart",
+   "Dress and stay safe for the weather"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y1 seasonal changes",
+    "text": "Observe changes across the four seasons; observe and describe weather associated with the seasons and how day length varies"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSc.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSc.06"
+   }
+  ],
+  "success_criteria": [
+   "I can put the seasons in order",
+   "I can name kinds of weather",
+   "I can say what a thermometer measures",
+   "I can read a simple weather chart"
+  ],
+  "real_life": "Choosing clothes each morning and noticing how the weather changes through the year.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which material is a window made of?",
+    "hint": "You can see through it.",
+    "explanation": "Windows are made of glass.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wood"
+     },
+     {
+      "id": "b",
+      "text": "Fabric"
+     },
+     {
+      "id": "c",
+      "text": "Glass"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a plant need to grow?",
+    "hint": "Think of the cress.",
+    "explanation": "Plants need water and light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Toys"
+     },
+     {
+      "id": "b",
+      "text": "Water and light"
+     },
+     {
+      "id": "c",
+      "text": "Sweets"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Ice melts when it gets warm.",
+    "hint": "Think of an ice lolly.",
+    "explanation": "Warmth melts ice.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how does the weather change through the year?\n\nWe will look for patterns.",
+   "say": "Welcome back, young scientist! Today's big question is: how does the weather change through the year? By the end, you will put the seasons in order, read a thermometer, and look for patterns in a weather chart. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "☀️🌧️❄️🍂",
+   "alt": "Sun, rain, snow and autumn leaves.",
+   "caption": "Sun, rain, snow and autumn leaves."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "weather",
+     "meaning": "What it is like outside today."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "seasons",
+   "kind": "learn",
+   "title": "The four seasons",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Four seasons in the UK"
+    },
+    {
+     "type": "text",
+     "markdown": "The UK has four **seasons**: spring, summer, autumn and winter.\n\nThey come round in the same order every year.",
+     "say": "A year is split into seasons. In the UK there are four. Spring is when new leaves and flowers grow, and baby animals are born. Summer is warm and sunny, with long days. Autumn is when leaves turn red and brown and fall. Winter is cold, with short days and sometimes snow. Then spring comes again. It is a circle that goes round and round."
+    },
+    {
+     "type": "explainer",
+     "title": "Four seasons of a tree",
+     "scenes": [
+      {
+       "caption": "Spring: new leaves.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 25,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "In spring, the tree grows fresh green leaves and flowers."
+      },
+      {
+       "caption": "Summer: warm and sunny.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 20,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In summer, the tree is full of leaves. The days are long and warm."
+      },
+      {
+       "caption": "Autumn: falling leaves.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🍂",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🍁",
+         "x": 30,
+         "y": 75,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "In autumn, the leaves turn orange and fall down."
+      },
+      {
+       "caption": "Winter: cold and bare.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌲",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "❄️",
+         "x": 25,
+         "y": 30,
+         "size": 2,
+         "anim": "float"
+        },
+        {
+         "id": "w2",
+         "emoji": "❄️",
+         "x": 75,
+         "y": 25,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "In winter, the branches are bare. It is cold and it may snow."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the seasons in order, starting with spring.",
+      "hint": "Spring, then the sunny one.",
+      "explanation": "The order is spring, summer, autumn and winter.",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Autumn"
+       },
+       {
+        "id": "i4",
+        "text": "Winter"
+       },
+       {
+        "id": "i2",
+        "text": "Summer"
+       },
+       {
+        "id": "i1",
+        "text": "Spring"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Seasons in Pakistan"
+    },
+    {
+     "type": "text",
+     "markdown": "Pakistan has hot summers, a rainy **monsoon**, mild autumns and cool winters.\n\nDifferent places have different weather in the same season.",
+     "say": "In Pakistan the seasons look different. Summer is very hot, and in many places the monsoon brings heavy rain in July and August. Autumn is mild. Winter is cool and sometimes it snows in the north, on the mountains. Then spring brings blossom, like almond flowers. So the same year has different weather in different countries."
+    },
+    {
+     "type": "image",
+     "emoji": "🌧️ 🏔️ 🌸",
+     "alt": "Monsoon rain, snowy mountains and spring blossom.",
+     "caption": "Monsoon rain, snowy mountains and spring blossom."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "When does the monsoon bring heavy rain to Pakistan?",
+      "hint": "It comes with the heat.",
+      "explanation": "The monsoon rains come in summer.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Winter"
+       },
+       {
+        "id": "b",
+        "text": "Spring"
+       },
+       {
+        "id": "c",
+        "text": "Summer"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The four seasons are spring, summer, autumn and winter",
+      "They come in the same order every year",
+      "Weather can be different in different countries"
+     ],
+     "say": "Let us remember. A year has four seasons. They come in the same order. Places have different weather."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "seasons",
+       "meaning": "The four parts of the year: spring, summer, autumn and winter."
+      },
+      {
+       "term": "monsoon",
+       "meaning": "The heavy summer rains in South Asia."
+      },
+      {
+       "term": "blossom",
+       "meaning": "The flowers on a tree in spring."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which season comes after summer?",
+     "hint": "Leaves fall.",
+     "explanation": "Autumn comes after summer.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Winter"
+      },
+      {
+       "id": "b",
+       "text": "Spring"
+      },
+      {
+       "id": "c",
+       "text": "Autumn"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each season to what you see.",
+     "hint": "Think about the tree.",
+     "explanation": "Spring has flowers, autumn falling leaves and winter bare trees.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Spring"
+      },
+      {
+       "id": "l2",
+       "text": "Autumn"
+      },
+      {
+       "id": "l3",
+       "text": "Winter"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Bare trees"
+      },
+      {
+       "id": "r1",
+       "text": "New flowers"
+      },
+      {
+       "id": "r2",
+       "text": "Falling leaves"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Winter is the hottest season in the UK.",
+     "hint": "Is it cold or hot?",
+     "explanation": "Winter is the coldest season.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many seasons are there in a year?",
+     "hint": "Spring, summer, autumn, winter.",
+     "explanation": "There are four seasons.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "kind": "try",
+   "title": "Measuring the weather",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Kinds of weather"
+    },
+    {
+     "type": "text",
+     "markdown": "**Weather** is what it is like outside: sunny, rainy, windy or cloudy.\n\nIt can change every day.",
+     "say": "The weather is what it is like outside today. It can be sunny, rainy, windy, cloudy, snowy or foggy. It changes from day to day. Look at four kinds of weather."
+    },
+    {
+     "type": "explainer",
+     "title": "Kinds of weather",
+     "scenes": [
+      {
+       "caption": "Sunny.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 35,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A sunny day. The sun is bright and the sky is blue."
+      },
+      {
+       "caption": "Rainy.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☁️",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A rainy day. Clouds are grey and raindrops fall."
+      },
+      {
+       "caption": "Windy.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "💨",
+         "x": 40,
+         "y": 35,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "k",
+         "emoji": "🪁",
+         "x": 70,
+         "y": 35,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A windy day. The wind blows and makes things move."
+      },
+      {
+       "caption": "Snowy.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☃️",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "❄️",
+         "x": 25,
+         "y": 25,
+         "size": 2,
+         "anim": "float"
+        },
+        {
+         "id": "s2",
+         "emoji": "❄️",
+         "x": 75,
+         "y": 25,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "A snowy day. Cold white snow falls from the sky."
+      }
+     ],
+     "backdrop": "sky"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which kind of weather has raindrops falling?",
+      "hint": "Look at the clouds.",
+      "explanation": "Rainy weather has raindrops.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sunny"
+       },
+       {
+        "id": "b",
+        "text": "Windy"
+       },
+       {
+        "id": "c",
+        "text": "Rainy"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How hot is it?"
+    },
+    {
+     "type": "explainer",
+     "title": "A thermometer",
+     "scenes": [
+      {
+       "caption": "Cold: 5 degrees.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 5,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On a cold winter day, the thermometer shows a low number."
+      },
+      {
+       "caption": "Warm: 20 degrees.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 20,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On a warm spring day, the number goes up."
+      },
+      {
+       "caption": "Hot: 40 degrees.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 40,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On a very hot summer day in Lahore, it is even higher."
+      }
+     ],
+     "backdrop": "home",
+     "say": "A thermometer measures how hot or cold it is. The number on it is called the temperature. We measure it in degrees. The red line goes up when it is warm and goes down when it is cold. Look at what happens on a hot day."
+    },
+    {
+     "type": "text",
+     "markdown": "A **thermometer** measures the **temperature**.\n\nA high number means it is hot. A low number means it is cold.",
+     "say": "Words in bold: a thermometer measures temperature."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a thermometer measure?",
+      "hint": "It shows the temperature.",
+      "explanation": "A thermometer measures temperature.",
+      "options": [
+       {
+        "id": "a",
+        "text": "How windy it is"
+       },
+       {
+        "id": "b",
+        "text": "How wet it is"
+       },
+       {
+        "id": "c",
+        "text": "How hot or cold it is"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Weather diary",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Look out of the window every day for a week.",
+      "Draw the weather and write the day.",
+      "At the end, count how many days were sunny, rainy and cloudy."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Weather is sunny, rainy, windy, cloudy or snowy",
+      "A thermometer measures temperature"
+     ],
+     "say": "Remember. Weather changes. A thermometer measures how hot or cold it is."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "weather",
+       "meaning": "What it is like outside today."
+      },
+      {
+       "term": "thermometer",
+       "meaning": "A tool for measuring how hot or cold it is."
+      },
+      {
+       "term": "temperature",
+       "meaning": "How hot or cold something is."
+      },
+      {
+       "term": "degrees",
+       "meaning": "The units we use to measure temperature."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which weather is shown by a umbrella?",
+     "hint": "An umbrella keeps us dry.",
+     "explanation": "We use an umbrella when it rains.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sun"
+      },
+      {
+       "id": "b",
+       "text": "Snow"
+      },
+      {
+       "id": "c",
+       "text": "Rain"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A high temperature means it is hot.",
+     "hint": "40 degrees is hot.",
+     "explanation": "A high number means hot.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match the weather to what we wear.",
+     "hint": "What keeps you comfortable?",
+     "explanation": "We dress to suit the weather.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Rainy"
+      },
+      {
+       "id": "l2",
+       "text": "Sunny"
+      },
+      {
+       "id": "l3",
+       "text": "Snowy"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Warm coat"
+      },
+      {
+       "id": "r1",
+       "text": "Raincoat"
+      },
+      {
+       "id": "r2",
+       "text": "Sun hat"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "diary",
+   "kind": "play",
+   "title": "Weather detectives",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Reading a weather chart"
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Weather this week",
+     "rows": [
+      {
+       "label": "Sunny",
+       "value": 4,
+       "emoji": "☀️"
+      },
+      {
+       "label": "Cloudy",
+       "value": 2,
+       "emoji": "☁️"
+      },
+      {
+       "label": "Rainy",
+       "value": 1,
+       "emoji": "🌧️"
+      }
+     ],
+     "caption": "Four sunny days, two cloudy days and one rainy day.",
+     "say": "A weather chart is a good way to see patterns. This chart shows the weather in one week. Look for the weather that happened most often. That is the pattern in the week."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which weather happened most in this week?",
+      "hint": "Find the biggest number.",
+      "explanation": "Sunny had the biggest number, 4 days.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Cloudy"
+       },
+       {
+        "id": "b",
+        "text": "Sunny"
+       },
+       {
+        "id": "c",
+        "text": "Rainy"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "image",
+     "emoji": "📅",
+     "alt": "A week has seven days.",
+     "caption": "A week has seven days.",
+     "say": "A week has seven days. We can add the days up: four sunny, two cloudy and one rainy."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Weather lights",
+     "goal": "Watch the order, then copy it.",
+     "emojis": [
+      "☀️",
+      "🌧️",
+      "💨",
+      "❄️"
+     ],
+     "say": "Warm up your memory with a weather game. Watch the weather lights, then copy them in the same order."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many days are in the weather chart altogether (4 + 2 + 1)?",
+      "hint": "Add them up.",
+      "explanation": "4 + 2 + 1 = 7, a whole week.",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "reveal",
+     "prompt": "Which season do you think is the rainiest where you live?",
+     "answer_markdown": "It depends on where you live! In Pakistan, the monsoon in summer. In the UK, autumn and winter are often wet.",
+     "say": "A good detective looks for patterns. If it rains most days in winter, we can guess winter is wet. Think about your own town."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A weather chart shows which weather happened most",
+      "Patterns help us guess what will happen"
+     ],
+     "say": "Remember. A chart shows patterns in the weather."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pattern",
+       "meaning": "Something that happens again and again in the same way."
+      },
+      {
+       "term": "chart",
+       "meaning": "A picture that shows numbers."
+      },
+      {
+       "term": "detective",
+       "meaning": "Someone who finds things out by looking for clues."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "In our chart, which weather had only 1 day?",
+     "hint": "Find the smallest number.",
+     "explanation": "Rainy happened on 1 day.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sunny"
+      },
+      {
+       "id": "b",
+       "text": "Cloudy"
+      },
+      {
+       "id": "c",
+       "text": "Rainy"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many sunny days were in the chart?",
+     "hint": "Look at the sunny row.",
+     "explanation": "There were 4 sunny days.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A pattern is something that happens again and again.",
+     "hint": "Think about the seasons.",
+     "explanation": "A pattern repeats.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prepare",
+   "kind": "use",
+   "title": "Dressing for the weather",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What shall I wear?"
+    },
+    {
+     "type": "text",
+     "markdown": "We choose clothes to suit the **weather**.\n\nWarm clothes for cold days, light clothes for hot days.",
+     "say": "We choose clothes to suit the season and the weather. In winter we wear a coat, a scarf and gloves. In hot summer we wear light clothes and a sun hat. On rainy days we need a raincoat and boots. In Ramadan or at Eid, we wear special clothes too, but we still dress for the weather. Look at three outfits."
+    },
+    {
+     "type": "image",
+     "emoji": "🧥 🧣 🧤",
+     "alt": "Winter clothes: a coat, a scarf and gloves.",
+     "caption": "Winter clothes: a coat, a scarf and gloves.",
+     "say": "Winter clothes: a coat, a scarf and gloves."
+    },
+    {
+     "type": "image",
+     "emoji": "👒 🩳 🕶️",
+     "alt": "Summer clothes: a sun hat, shorts and sunglasses.",
+     "caption": "Summer clothes: a sun hat, shorts and sunglasses.",
+     "say": "Summer clothes: a sun hat, shorts and sunglasses."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What should you wear on a very hot day?",
+      "hint": "Keep cool.",
+      "explanation": "Light clothes and a hat keep us cool.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A big coat"
+       },
+       {
+        "id": "b",
+        "text": "Light clothes and a sun hat"
+       },
+       {
+        "id": "c",
+        "text": "A scarf and gloves"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Stay safe in the sun"
+    },
+    {
+     "type": "activity",
+     "title": "Sun safety plan",
+     "materials": [
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Draw yourself with a sun hat on.",
+      "Write three things that keep you safe in the sun.",
+      "Tell a grown-up your plan."
+     ],
+     "say": "The sun is strong in summer. Too much sun can burn our skin. So we wear a hat, drink water, and stay in the shade at midday. Never look straight at the sun, because it can hurt your eyes."
+    },
+    {
+     "type": "image",
+     "emoji": "🧢 💧 ⛱️",
+     "alt": "A sun hat, water and a shady umbrella keep us safe.",
+     "caption": "A sun hat, water and a shady umbrella keep us safe."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is safe to look straight at the sun.",
+      "hint": "The sun is very bright.",
+      "explanation": "Looking at the sun can hurt your eyes.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Dress to suit the weather",
+      "In the sun: wear a hat, drink water and find shade"
+     ],
+     "say": "Remember. We dress for the weather and stay safe in the sun."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "weather",
+       "meaning": "What it is like outside today."
+      },
+      {
+       "term": "shade",
+       "meaning": "A cool place out of the sun."
+      },
+      {
+       "term": "safe",
+       "meaning": "Not in danger."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is best for a rainy day?",
+     "hint": "It keeps you dry.",
+     "explanation": "A raincoat keeps rain off.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sandals"
+      },
+      {
+       "id": "b",
+       "text": "A raincoat"
+      },
+      {
+       "id": "c",
+       "text": "Sunglasses"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two ways to stay safe in the sun.",
+     "hint": "Think about heat.",
+     "explanation": "A hat and water keep us safe in the sun.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stare at the sun"
+      },
+      {
+       "id": "b",
+       "text": "Wear a thick coat"
+      },
+      {
+       "id": "c",
+       "text": "Drink water"
+      },
+      {
+       "id": "d",
+       "text": "Wear a hat"
+      }
+     ],
+     "answer": [
+      "d",
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "In winter we wear warm clothes.",
+     "hint": "It is cold.",
+     "explanation": "Warm clothes keep us warm.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which season comes straight after summer?",
+    "hint": "Leaves turn orange.",
+    "explanation": "Autumn comes after summer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Spring"
+     },
+     {
+      "id": "b",
+      "text": "Winter"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.order",
+    "sub_lesson": "seasons",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "Winter is the coldest season in the UK.",
+    "hint": "Think of snow.",
+    "explanation": "Winter is the coldest season.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "weather.facts",
+    "sub_lesson": "seasons",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Match each season to what happens in it.",
+    "hint": "Think about each season.",
+    "explanation": "Autumn has falling leaves, spring has new life, summer is long and sunny.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Autumn"
+     },
+     {
+      "id": "l2",
+      "text": "Spring"
+     },
+     {
+      "id": "l3",
+      "text": "Summer"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Baby animals are born"
+     },
+     {
+      "id": "r1",
+      "text": "Leaves fall"
+     },
+     {
+      "id": "r3",
+      "text": "Long, sunny days"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "weather.seasons",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Pick two things that are kinds of weather.",
+    "hint": "What is it like outside?",
+    "explanation": "Sunny and snowy are kinds of weather.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Snowy"
+     },
+     {
+      "id": "b",
+      "text": "Quiet"
+     },
+     {
+      "id": "c",
+      "text": "Round"
+     },
+     {
+      "id": "d",
+      "text": "Sunny"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "weather.kinds",
+    "sub_lesson": "weather",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the tool that measures how hot it is.",
+    "hint": "It shows temperature.",
+    "explanation": "A thermometer measures temperature.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌡️",
+       "label": "Thermometer",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📏",
+       "label": "Ruler",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⚖️",
+       "label": "Scales",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "weather.tools",
+    "sub_lesson": "weather",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What is the word for the heavy summer rains in Pakistan?",
+    "hint": "It starts with m.",
+    "explanation": "The monsoon brings heavy rain.",
+    "answer": {
+     "accepted": [
+      "monsoon",
+      "the monsoon"
+     ]
+    },
+    "skill_tag": "weather.words",
+    "sub_lesson": "seasons",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A chart shows 5 sunny days, 1 rainy day and 1 windy day. Which weather happened most?",
+    "hint": "Find the biggest number.",
+    "explanation": "Sunny had 5 days, the most.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rainy"
+     },
+     {
+      "id": "b",
+      "text": "Windy"
+     },
+     {
+      "id": "c",
+      "text": "Sunny"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.chart",
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence.",
+    "hint": "Think about the red line.",
+    "explanation": "A thermometer measures temperature. A high number means hot.",
+    "points": 2,
+    "text": "A thermometer measures {b1}. A high number means it is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "time"
+       },
+       {
+        "id": "b",
+        "text": "speed"
+       },
+       {
+        "id": "c",
+        "text": "temperature"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "cold"
+       },
+       {
+        "id": "b",
+        "text": "hot"
+       },
+       {
+        "id": "c",
+        "text": "dark"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "weather.fill",
+    "sub_lesson": "weather",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A weather chart shows 4 sunny days, 2 cloudy days and 1 rainy day. How many days is that altogether?",
+    "hint": "Add them.",
+    "explanation": "4 + 2 + 1 = 7.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "weather.add",
+    "sub_lesson": "diary",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how hot a very warm summer day might be.",
+    "hint": "Quite hot.",
+    "explanation": "A hot summer day can be 30 to 40 degrees.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 50,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 35,
+     "tolerance": 5
+    },
+    "skill_tag": "weather.temp",
+    "sub_lesson": "weather",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with autumn.",
+    "hint": "Autumn, then the coldest.",
+    "explanation": "After autumn come winter, spring and summer.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Winter"
+     },
+     {
+      "id": "i3",
+      "text": "Spring"
+     },
+     {
+      "id": "i4",
+      "text": "Summer"
+     },
+     {
+      "id": "i1",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "weather.cycle",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Tia says the seasons come in a different order each year. Why is she wrong?",
+    "hint": "Spring, summer, autumn, winter.",
+    "explanation": "The seasons repeat in the same order every year.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They change order each month"
+     },
+     {
+      "id": "b",
+      "text": "There are no seasons"
+     },
+     {
+      "id": "c",
+      "text": "They always come in the same order"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.reason",
+    "sub_lesson": "seasons",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why do we wear a sun hat in hot weather?",
+    "hint": "Think about sunburn.",
+    "explanation": "A hat gives shade and helps protect from sunburn.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the sun colder"
+     },
+     {
+      "id": "b",
+      "text": "It makes us taller"
+     },
+     {
+      "id": "c",
+      "text": "It protects us from the sun"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.dress",
+    "sub_lesson": "prepare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Omar says all places have the same weather at the same time. Why is he wrong?",
+    "hint": "Think of Pakistan and the UK.",
+    "explanation": "Weather is different in different places.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is always sunny everywhere"
+     },
+     {
+      "id": "b",
+      "text": "Weather never changes"
+     },
+     {
+      "id": "c",
+      "text": "Different places can have different weather"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.places",
+    "sub_lesson": "seasons",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Layla wants to stare at the sun to watch it. Why is that a bad idea?",
+    "hint": "The sun is very bright.",
+    "explanation": "Looking at the sun can hurt your eyes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It will make her cold"
+     },
+     {
+      "id": "b",
+      "text": "It can hurt her eyes"
+     },
+     {
+      "id": "c",
+      "text": "It will make her taller"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.safety",
+    "sub_lesson": "prepare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which season comes straight after winter?",
+    "hint": "Flowers start to grow.",
+    "explanation": "Spring comes after winter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Summer"
+     },
+     {
+      "id": "b",
+      "text": "Spring"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.order",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which season comes straight before winter?",
+    "hint": "Leaves are falling.",
+    "explanation": "Autumn comes before winter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Summer"
+     },
+     {
+      "id": "b",
+      "text": "Autumn"
+     },
+     {
+      "id": "c",
+      "text": "Spring"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.order",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "Autumn is when leaves fall from some trees.",
+    "hint": "Think of orange leaves.",
+    "explanation": "In autumn many trees lose their leaves.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "weather.facts",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "It never rains in Pakistan.",
+    "hint": "What is the monsoon?",
+    "explanation": "The monsoon brings heavy rain.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "weather.facts",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Pair each season with what happens.",
+    "hint": "Think about each season.",
+    "explanation": "Summer is warm, winter is cold and spring has new flowers.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Summer"
+     },
+     {
+      "id": "l2",
+      "text": "Winter"
+     },
+     {
+      "id": "l3",
+      "text": "Spring"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "New flowers"
+     },
+     {
+      "id": "r1",
+      "text": "Long, warm days"
+     },
+     {
+      "id": "r2",
+      "text": "Short, cold days"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "weather.seasons",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each weather to its picture word.",
+    "hint": "Think about each weather.",
+    "explanation": "Rain has drops, sun is bright and snow has flakes.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Rainy"
+     },
+     {
+      "id": "l2",
+      "text": "Sunny"
+     },
+     {
+      "id": "l3",
+      "text": "Snowy"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Bright sun"
+     },
+     {
+      "id": "r3",
+      "text": "Snowflakes"
+     },
+     {
+      "id": "r1",
+      "text": "Raindrops"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "weather.seasons",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two kinds of weather.",
+    "hint": "What is it like outside?",
+    "explanation": "Windy and rainy are kinds of weather.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Square"
+     },
+     {
+      "id": "b",
+      "text": "Loud"
+     },
+     {
+      "id": "c",
+      "text": "Rainy"
+     },
+     {
+      "id": "d",
+      "text": "Windy"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "weather.kinds",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two seasons.",
+    "hint": "Parts of the year.",
+    "explanation": "Spring and winter are seasons.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Monday"
+     },
+     {
+      "id": "b",
+      "text": "Morning"
+     },
+     {
+      "id": "c",
+      "text": "Winter"
+     },
+     {
+      "id": "d",
+      "text": "Spring"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "weather.kinds",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the tool that measures temperature.",
+    "hint": "It shows hot and cold.",
+    "explanation": "A thermometer measures temperature.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌡️",
+       "label": "Thermometer",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔭",
+       "label": "Telescope",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⏰",
+       "label": "Clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "weather.tools",
+    "sub_lesson": "weather",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the thing we use when it rains.",
+    "hint": "It keeps rain off.",
+    "explanation": "An umbrella keeps us dry in the rain.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☂️",
+       "label": "Umbrella",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕶️",
+       "label": "Sunglasses",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧣",
+       "label": "Scarf",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "weather.tools",
+    "sub_lesson": "weather",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What do we call the heavy summer rains in South Asia?",
+    "hint": "It starts with m.",
+    "explanation": "The monsoon brings heavy rain.",
+    "answer": {
+     "accepted": [
+      "monsoon",
+      "the monsoon"
+     ]
+    },
+    "skill_tag": "weather.words",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the word for how hot or cold it is?",
+    "hint": "A thermometer measures it.",
+    "explanation": "Temperature tells us how hot or cold it is.",
+    "answer": {
+     "accepted": [
+      "temperature"
+     ]
+    },
+    "skill_tag": "weather.words",
+    "sub_lesson": "seasons",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A weather chart shows 3 sunny days, 1 rainy day and 2 windy days. Which weather happened most?",
+    "hint": "Find the biggest number.",
+    "explanation": "Sunny had 3 days, the most.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rainy"
+     },
+     {
+      "id": "b",
+      "text": "Sunny"
+     },
+     {
+      "id": "c",
+      "text": "Windy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.chart",
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "A chart shows 2 sunny days, 4 rainy days and 1 windy day. Which weather happened most?",
+    "hint": "Find the biggest number.",
+    "explanation": "Rainy had 4 days, the most.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Windy"
+     },
+     {
+      "id": "b",
+      "text": "Rainy"
+     },
+     {
+      "id": "c",
+      "text": "Sunny"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.chart",
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "It shows hot and cold.",
+    "explanation": "A thermometer measures temperature.",
+    "points": 2,
+    "text": "A {b1} measures the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "clock"
+       },
+       {
+        "id": "b",
+        "text": "thermometer"
+       },
+       {
+        "id": "c",
+        "text": "ruler"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "length"
+       },
+       {
+        "id": "b",
+        "text": "temperature"
+       },
+       {
+        "id": "c",
+        "text": "time"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "weather.fill",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about the year.",
+    "hint": "Spring, summer, autumn, winter.",
+    "explanation": "There are four seasons, starting with spring.",
+    "points": 2,
+    "text": "A year has {b1} seasons. They begin with {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "two"
+       },
+       {
+        "id": "b",
+        "text": "four"
+       },
+       {
+        "id": "c",
+        "text": "ten"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Monday"
+       },
+       {
+        "id": "b",
+        "text": "spring"
+       },
+       {
+        "id": "c",
+        "text": "morning"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "weather.fill",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A week has sunny, cloudy and rainy days: 3 + 2 + 2. How many days is that?",
+    "hint": "Add them.",
+    "explanation": "3 + 2 + 2 = 7 days.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "weather.add",
+    "sub_lesson": "diary",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "A weather chart shows 5 sunny days and 2 rainy days. How many days is that altogether?",
+    "hint": "Add them.",
+    "explanation": "5 + 2 = 7.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "weather.add",
+    "sub_lesson": "diary",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show a hot summer day in Lahore, in degrees.",
+    "hint": "Very hot.",
+    "explanation": "A hot summer day in Lahore can be around 40 degrees.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 50,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 40,
+     "tolerance": 3
+    },
+    "skill_tag": "weather.temp",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show a cold winter day in the UK, in degrees.",
+    "hint": "Very cold, near freezing.",
+    "explanation": "A cold UK winter day is often around 0 to 5 degrees.",
+    "range": {
+     "step": 1,
+     "min": -10,
+     "max": 50,
+     "unit": "°C"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 3
+    },
+    "skill_tag": "weather.temp",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with summer.",
+    "hint": "Summer, then the leaf-falling one.",
+    "explanation": "After summer comes autumn, winter and spring.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Winter"
+     },
+     {
+      "id": "i4",
+      "text": "Spring"
+     },
+     {
+      "id": "i2",
+      "text": "Autumn"
+     },
+     {
+      "id": "i1",
+      "text": "Summer"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "weather.cycle",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with winter.",
+    "hint": "Winter, then flowers.",
+    "explanation": "After winter comes spring, summer and autumn.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Summer"
+     },
+     {
+      "id": "i4",
+      "text": "Autumn"
+     },
+     {
+      "id": "i2",
+      "text": "Spring"
+     },
+     {
+      "id": "i1",
+      "text": "Winter"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "weather.cycle",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says seasons are different every year, in a new order. Why is he wrong?",
+    "hint": "Spring, summer, autumn, winter.",
+    "explanation": "The seasons repeat in the same order every year.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They change order each month"
+     },
+     {
+      "id": "b",
+      "text": "There are no seasons"
+     },
+     {
+      "id": "c",
+      "text": "They always come in the same order"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.reason",
+    "sub_lesson": "seasons",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Sara says winter comes before autumn. Why is she wrong?",
+    "hint": "Leaves fall first.",
+    "explanation": "The order is autumn, then winter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Winter is a month"
+     },
+     {
+      "id": "b",
+      "text": "Autumn comes first, then winter"
+     },
+     {
+      "id": "c",
+      "text": "Winter never comes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.reason",
+    "sub_lesson": "seasons",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why is it a good idea to wear a hat in hot sun?",
+    "hint": "Think about sunburn.",
+    "explanation": "A hat gives shade and helps protect from sunburn.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the sun colder"
+     },
+     {
+      "id": "b",
+      "text": "It makes you taller"
+     },
+     {
+      "id": "c",
+      "text": "It protects your head from the sun"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "weather.dress",
+    "sub_lesson": "prepare",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why do we wear a coat in winter?",
+    "hint": "It is cold.",
+    "explanation": "Coats keep us warm.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To keep cool"
+     },
+     {
+      "id": "b",
+      "text": "To keep warm"
+     },
+     {
+      "id": "c",
+      "text": "To see better"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.dress",
+    "sub_lesson": "prepare",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana says all places have the same weather at the same time. Why is she wrong?",
+    "hint": "Think of Pakistan and the UK.",
+    "explanation": "Weather is different in different places.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Weather never changes"
+     },
+     {
+      "id": "b",
+      "text": "Different places can have different weather"
+     },
+     {
+      "id": "c",
+      "text": "It is always sunny everywhere"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.places",
+    "sub_lesson": "seasons",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Nina says it snows everywhere in winter. Why is she wrong?",
+    "hint": "Think of warm places.",
+    "explanation": "Only cold places get snow.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Winter has no weather"
+     },
+     {
+      "id": "b",
+      "text": "Many places, like Karachi, never get snow"
+     },
+     {
+      "id": "c",
+      "text": "Snow is hot"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.places",
+    "sub_lesson": "seasons",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Sam wants to play outside at midday with no hat or water. Why is that a bad idea?",
+    "hint": "Think about strong sun.",
+    "explanation": "Strong sun can burn skin and make us too hot.",
+    "options": [
+     {
+      "id": "a",
+      "text": "He will turn into a plant"
+     },
+     {
+      "id": "b",
+      "text": "He could get too hot and sunburnt"
+     },
+     {
+      "id": "c",
+      "text": "He will get too cold"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.safety",
+    "sub_lesson": "prepare",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Nina wants to wear a big coat on a very hot day. Why is that a bad idea?",
+    "hint": "Which clothes suit hot weather?",
+    "explanation": "Light clothes keep us cool on hot days.",
+    "options": [
+     {
+      "id": "a",
+      "text": "She would get too cold"
+     },
+     {
+      "id": "b",
+      "text": "She would get too hot"
+     },
+     {
+      "id": "c",
+      "text": "The coat would melt"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.safety",
+    "sub_lesson": "prepare",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2496 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-electricity",
+  "subject": "science",
+  "title": "Electricity",
+  "summary": "Build complete circuits, test conductors and insulators fairly, and stay safe around electricity.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Electricity",
+  "learning_objectives": [
+   "Describe a complete circuit and its parts",
+   "Explain how a switch works",
+   "Sort conductors and insulators using a fair test",
+   "Describe how to stay safe with electricity"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 electricity",
+    "text": "Identify common appliances that run on electricity; construct a series circuit; recognise a switch, conductors and insulators"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pe.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pe.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pe.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pe.04"
+   }
+  ],
+  "success_criteria": [
+   "I can say why a bulb will or will not light",
+   "I can say what a switch does",
+   "I can sort conductors and insulators",
+   "I can explain how to stay safe with electricity"
+  ],
+  "real_life": "Switching on a light, plugging in a charger safely and saving electricity at home.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the name for how high or low a sound is?",
+    "hint": "It is not about loudness.",
+    "explanation": "Pitch is how high or low a sound is.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Volume"
+     },
+     {
+      "id": "b",
+      "text": "Pitch"
+     },
+     {
+      "id": "c",
+      "text": "Echo"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Sound can travel through a vacuum.",
+    "hint": "No particles.",
+    "explanation": "Sound needs particles to travel.",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a form of energy?",
+    "hint": "Think about what energy can do.",
+    "explanation": "Light is a form of energy.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rock"
+     },
+     {
+      "id": "b",
+      "text": "Plastic"
+     },
+     {
+      "id": "c",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how does electricity flow?\n\nWe will also learn to stay safe.",
+   "say": "Welcome back, young scientist! Today's big question is: how does electricity flow, and how do we use it safely? By the end, you will build a circuit in your mind, sort conductors and insulators, and explain how to stay safe. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔋💡🔘",
+   "alt": "Electricity is all around us.",
+   "caption": "Electricity is all around us."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "electricity",
+     "meaning": "A form of energy that flows around a circuit."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "circuit",
+   "kind": "learn",
+   "title": "Circuits and what they need",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A complete circuit"
+    },
+    {
+     "type": "text",
+     "markdown": "A **circuit** is a loop that electricity flows around.\n\nIt must be **complete**, with no gaps, for the bulb to light.",
+     "say": "Electricity is a form of energy that flows around a loop. A loop of wire joined to a power source is called a circuit. The power source can be a cell, which is what we often call a battery. A bulb, a buzzer or a motor in the loop is a component that uses the energy. For the bulb to light, the circuit must be complete, with no gaps. If there is a gap anywhere, the electricity cannot flow and the bulb stays off."
+    },
+    {
+     "type": "explainer",
+     "title": "A simple circuit",
+     "scenes": [
+      {
+       "caption": "A complete circuit works.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 75,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "➰",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "This circuit has a cell, wires and a bulb joined in a complete loop. The bulb lights up."
+      },
+      {
+       "caption": "A gap stops the flow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🌑",
+         "x": 75,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "❌",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Here a wire has come loose, so there is a gap. The electricity cannot flow, and the bulb stays off."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A bulb in a circuit will not light. What could be wrong?",
+      "hint": "Think about the loop.",
+      "explanation": "Electricity can only flow if the circuit is complete, with no gaps.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The wires are too clean"
+       },
+       {
+        "id": "b",
+        "text": "The cell is too warm"
+       },
+       {
+        "id": "c",
+        "text": "There is a gap in the circuit"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Switches"
+    },
+    {
+     "type": "text",
+     "markdown": "A **switch** opens or closes a circuit.\n\nClosed switch: the bulb is on. Open switch: the bulb is off.",
+     "say": "A switch is a way to open or close a circuit. When the switch is closed, the gap is joined up, so electricity flows and the bulb lights. When the switch is open, there is a gap, so the bulb goes off. Every light switch at home works this way. It lets us control a circuit without pulling wires apart."
+    },
+    {
+     "type": "explainer",
+     "title": "A switch at work",
+     "scenes": [
+      {
+       "caption": "Closed switch: lamp on.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🔘",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 75,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The switch is closed. The circuit is complete, so the lamp is on."
+      },
+      {
+       "caption": "Open switch: lamp off.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⭕",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🌑",
+         "x": 75,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The switch is open. There is a gap, so the lamp is off."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "When a switch is open, the bulb is on.",
+      "hint": "Open means a gap.",
+      "explanation": "An open switch makes a gap, so the bulb is off.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A circuit is a complete loop",
+      "A gap in the circuit stops the flow",
+      "A switch opens or closes a circuit"
+     ],
+     "say": "Remember. A complete circuit with a power source lets electricity flow. A switch opens or closes it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "circuit",
+       "meaning": "A complete loop that electricity can flow around."
+      },
+      {
+       "term": "complete",
+       "meaning": "Joined up with no gaps."
+      },
+      {
+       "term": "switch",
+       "meaning": "A part that opens or closes a circuit."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a cell provide in a circuit?",
+     "hint": "It is the power source.",
+     "explanation": "A cell is the power source that supplies electrical energy.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shadows"
+      },
+      {
+       "id": "b",
+       "text": "Sound only"
+      },
+      {
+       "id": "c",
+       "text": "Energy"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A circuit with a gap will still light a bulb.",
+     "hint": "Electricity needs a loop.",
+     "explanation": "A gap stops the electricity flowing.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each part to its job.",
+     "hint": "Think about what each does.",
+     "explanation": "The cell gives energy, the bulb gives light and the switch controls the circuit.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Cell"
+      },
+      {
+       "id": "l2",
+       "text": "Bulb"
+      },
+      {
+       "id": "l3",
+       "text": "Switch"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Gives light"
+      },
+      {
+       "id": "r1",
+       "text": "Supplies energy"
+      },
+      {
+       "id": "r3",
+       "text": "Opens or closes the circuit"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order for turning a lamp on.",
+     "hint": "Start with the switch.",
+     "explanation": "Closing the switch completes the circuit, so the bulb lights.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "The circuit is complete"
+      },
+      {
+       "id": "i3",
+       "text": "The bulb lights"
+      },
+      {
+       "id": "i1",
+       "text": "Close the switch"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conduct",
+   "kind": "try",
+   "title": "Conductors and insulators",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Which materials let electricity through?"
+    },
+    {
+     "type": "text",
+     "markdown": "An electrical **conductor** lets electricity flow through it. Metals are conductors.\n\nAn electrical **insulator** does not. Plastic, rubber, wood and glass are insulators.",
+     "say": "Some materials let electricity flow through them easily. These are called electrical conductors. Metals such as copper, iron and aluminium are good conductors. That is why wires have a metal centre. Other materials do not let electricity flow. These are called electrical insulators. Plastic, rubber, wood and glass are insulators. That is why wires are covered in plastic, and why a plug has a plastic case. Look at which materials are which."
+    },
+    {
+     "type": "explainer",
+     "title": "Conductors and insulators",
+     "scenes": [
+      {
+       "caption": "Copper conducts.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🔩",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 80,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A copper wire completes the circuit and the bulb lights. Copper is a conductor."
+      },
+      {
+       "caption": "Wood does not conduct.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🥄",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🌑",
+         "x": 80,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A wooden spoon is put in the gap instead. The bulb stays off, because wood is an insulator."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is an electrical conductor?",
+      "hint": "Think about metals.",
+      "explanation": "Metals such as copper are good conductors.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A rubber band"
+       },
+       {
+        "id": "b",
+        "text": "A wooden spoon"
+       },
+       {
+        "id": "c",
+        "text": "A copper wire"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Test materials fairly"
+    },
+    {
+     "type": "manipulative",
+     "title": "Conductor or insulator?",
+     "goal": "Put conductors in one group and insulators in the other.",
+     "emoji": "🔌",
+     "count": 8,
+     "zones": [
+      "Conductor",
+      "Insulator"
+     ],
+     "say": "Now you can test materials yourself. This is a comparative test, which means we compare different things. To make the test fair, we change only the material. Everything else stays the same: the same cell, the same bulb and the same wires. If the bulb lights, the material in the gap is a conductor. Use a battery-powered kit, never the mains."
+    },
+    {
+     "type": "activity",
+     "title": "Conductor test",
+     "materials": [
+      "A cell, a bulb and wires, or a circuit kit",
+      "Objects such as a paperclip, a coin, a pencil, a rubber, a key and a plastic spoon",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Build a circuit with a gap. Check that the bulb lights when you close the gap with a wire.",
+      "Place each object in the gap, one at a time. Write down whether the bulb lights.",
+      "Sort the objects into conductors and insulators. What do the conductors have in common?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Which two of these are electrical insulators?",
+      "hint": "They cover wires.",
+      "explanation": "Plastic and rubber do not let electricity flow, so they are insulators.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Rubber"
+       },
+       {
+        "id": "b",
+        "text": "Copper"
+       },
+       {
+        "id": "c",
+        "text": "Iron"
+       },
+       {
+        "id": "d",
+        "text": "Plastic"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Conductors let electricity flow",
+      "Insulators do not let electricity flow",
+      "A fair test changes only the material"
+     ],
+     "say": "Remember. Metals conduct electricity. Plastic, rubber, wood and glass are insulators."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "conductor",
+       "meaning": "A material that lets electricity flow through it easily."
+      },
+      {
+       "term": "insulator",
+       "meaning": "A material that does not let electricity flow through it."
+      },
+      {
+       "term": "metals",
+       "meaning": "Shiny, hard materials such as copper and iron."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing is changed."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why are wires covered in plastic?",
+     "hint": "It stops electricity escaping.",
+     "explanation": "Plastic is an insulator, so it stops electricity reaching people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plastic is heavier"
+      },
+      {
+       "id": "b",
+       "text": "Plastic is an insulator, so it keeps us safe"
+      },
+      {
+       "id": "c",
+       "text": "Plastic is a conductor"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Metals are good electrical conductors.",
+     "hint": "Think about copper wire.",
+     "explanation": "Metals let electricity flow through them easily.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each material to its type.",
+     "hint": "Metals are conductors.",
+     "explanation": "Copper and iron are conductors. Rubber is an insulator.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Copper"
+      },
+      {
+       "id": "l2",
+       "text": "Rubber"
+      },
+      {
+       "id": "l3",
+       "text": "Iron"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Insulator"
+      },
+      {
+       "id": "r3",
+       "text": "Conductor"
+      },
+      {
+       "id": "r1",
+       "text": "Conductor"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "build",
+   "kind": "play",
+   "title": "Build and fix circuits",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Add more to the circuit"
+    },
+    {
+     "type": "text",
+     "markdown": "More cells make a bulb **brighter**.\n\nMore bulbs on one cell make each bulb **dimmer**.",
+     "say": "What happens if you add more bulbs or more cells? More bulbs sharing one cell each shine more dimly. More cells make the bulb shine more brightly, because there is more energy. A buzzer in the loop makes a sound instead of light, and a motor makes something spin. Different components turn electrical energy into different things."
+    },
+    {
+     "type": "explainer",
+     "title": "Changing a circuit",
+     "scenes": [
+      {
+       "caption": "One cell, one bulb.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 75,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "One cell and one bulb. The bulb shines at normal brightness."
+      },
+      {
+       "caption": "More cells: brighter.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🔋",
+         "x": 45,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🌟",
+         "x": 78,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Two cells and one bulb. The bulb is brighter, because there is more energy."
+      },
+      {
+       "caption": "More bulbs: dimmer.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔋",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 55,
+         "y": 45,
+         "size": 2,
+         "anim": "float"
+        },
+        {
+         "id": "e",
+         "emoji": "💡",
+         "x": 80,
+         "y": 45,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "One cell and two bulbs. Each bulb is dimmer, because they share the energy."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens to a bulb if you add a second cell?",
+      "hint": "More energy.",
+      "explanation": "More cells give more energy, so the bulb is brighter.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It goes out"
+       },
+       {
+        "id": "b",
+        "text": "It shines more dimly"
+       },
+       {
+        "id": "c",
+        "text": "It shines more brightly"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Circuit parts",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🔋",
+      "💡",
+      "🔘",
+      "🔔"
+     ],
+     "say": "Time for a game, then see if you can fix a broken circuit."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "A bulb will not light. Put the fixes in a sensible order.",
+      "hint": "Start with the easiest check.",
+      "explanation": "Checking the switch, then the wires, then the cell is a sensible way to find the fault.",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Check the wires are joined"
+       },
+       {
+        "id": "i3",
+        "text": "Check the cell has energy"
+       },
+       {
+        "id": "i1",
+        "text": "Check that the switch is closed"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "More cells make a bulb brighter",
+      "More bulbs on one cell make each dimmer",
+      "Check switch, wires and cell to fix a faulty circuit"
+     ],
+     "say": "Remember. More cells make a bulb brighter, and more bulbs make each one dimmer."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "components",
+       "meaning": "The parts in a circuit, such as bulbs and buzzers."
+      },
+      {
+       "term": "brighter",
+       "meaning": "Giving out more light."
+      },
+      {
+       "term": "dimmer",
+       "meaning": "Giving out less light."
+      },
+      {
+       "term": "faulty",
+       "meaning": "Not working properly."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Adding a second cell makes a bulb dimmer.",
+     "hint": "More energy.",
+     "explanation": "More cells make a bulb brighter.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A buzzer in a circuit makes...",
+     "hint": "Think of a doorbell.",
+     "explanation": "A buzzer turns electrical energy into sound.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Light"
+      },
+      {
+       "id": "b",
+       "text": "Sound"
+      },
+      {
+       "id": "c",
+       "text": "Cold"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two components that could be in a circuit.",
+     "hint": "They use electricity.",
+     "explanation": "Bulbs and buzzers are components that use electrical energy.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A buzzer"
+      },
+      {
+       "id": "b",
+       "text": "A pencil"
+      },
+      {
+       "id": "c",
+       "text": "A stone"
+      },
+      {
+       "id": "d",
+       "text": "A bulb"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safety",
+   "kind": "use",
+   "title": "Staying safe with electricity",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Mains electricity"
+    },
+    {
+     "type": "text",
+     "markdown": "**Mains** electricity is strong and can be dangerous.\n\nWater conducts electricity, so keep electrical things away from it.",
+     "say": "The electricity in our homes comes from the mains. It is much stronger than the electricity in a small cell, and it can hurt or even kill. Never play with plugs, sockets or wires, and never poke anything into a socket. Water is a good conductor, so never touch electrical things with wet hands. Never fly a kite near pylons or overhead power lines. If someone is in danger, do not touch them. Switch off the power if it is safe, or call a grown-up for help."
+    },
+    {
+     "type": "image",
+     "emoji": "🔌 💧 ⚡",
+     "alt": "Plugs, sockets and wet hands are dangerous together.",
+     "caption": "Plugs, sockets and wet hands are dangerous together.",
+     "say": "Sockets, plugs and wet hands do not mix with electricity."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why should you never touch a plug with wet hands?",
+      "hint": "Think about conductors.",
+      "explanation": "Water is a good conductor, so electricity could flow through you.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Plugs are heavy"
+       },
+       {
+        "id": "b",
+        "text": "Water conducts electricity"
+       },
+       {
+        "id": "c",
+        "text": "Water is an insulator"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using electricity wisely"
+    },
+    {
+     "type": "activity",
+     "title": "My energy saving plan",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Walk around your home. List five things that use electricity.",
+      "For each one, write how we could save electricity.",
+      "Choose one change to try for a week and tell your family."
+     ],
+     "say": "Electricity costs money and often comes from burning fuels, which can harm the environment. So we should use it wisely. We should switch off lights and fans when we leave a room, and unplug chargers we are not using. We can also use energy saving LED bulbs. In Pakistan, where power cuts can happen, saving electricity helps the whole family. Make a plan for your home."
+    },
+    {
+     "type": "image",
+     "emoji": "💡 🌀 🔌",
+     "alt": "Switching things off saves electricity.",
+     "caption": "Switching things off saves electricity.",
+     "say": "Switching off lights and fans when no one is using them saves energy."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is a good idea to leave lights on in empty rooms.",
+      "hint": "Think about wasting energy.",
+      "explanation": "Switching off lights in empty rooms saves electricity.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Mains electricity can be dangerous",
+      "Water conducts electricity, so keep away from it",
+      "Switch things off to save electricity"
+     ],
+     "say": "Remember. Mains electricity is dangerous, so stay safe, and save electricity."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "mains",
+       "meaning": "The strong electricity supply that comes into our homes."
+      },
+      {
+       "term": "socket",
+       "meaning": "The place on a wall where you plug something in."
+      },
+      {
+       "term": "pylons",
+       "meaning": "Tall towers that carry power lines."
+      },
+      {
+       "term": "wisely",
+       "meaning": "In a sensible way that does not waste."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do if you see a fallen power line?",
+     "hint": "Keep safe.",
+     "explanation": "Never go near a fallen power line. Tell an adult straight away.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pick it up"
+      },
+      {
+       "id": "b",
+       "text": "Stay far away and tell a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Touch it with a stick"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two ways to save electricity.",
+     "hint": "Think about waste.",
+     "explanation": "Switching off and unplugging saves electricity.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unplug unused chargers"
+      },
+      {
+       "id": "b",
+       "text": "Leave fans on all night"
+      },
+      {
+       "id": "c",
+       "text": "Keep every light on"
+      },
+      {
+       "id": "d",
+       "text": "Switch off lights you do not need"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "It is safe to put a metal object into a socket.",
+     "hint": "Metal conducts.",
+     "explanation": "Putting anything into a socket is very dangerous.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "A bulb is off because a switch is open. Why?",
+    "hint": "Think about a gap.",
+    "explanation": "An open switch breaks the circuit, so electricity cannot flow.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The wire is made of plastic"
+     },
+     {
+      "id": "b",
+      "text": "The open switch makes a gap in the circuit"
+     },
+     {
+      "id": "c",
+      "text": "The bulb is too bright"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.switch",
+    "sub_lesson": "circuit",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A bulb will light if the circuit has a gap.",
+    "hint": "Electricity needs a loop.",
+    "explanation": "A gap stops the electricity flowing, so the bulb stays off.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "elec.complete",
+    "sub_lesson": "circuit",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Match each part of a circuit to its picture.",
+    "hint": "Match the part to its picture.",
+    "explanation": "The battery is the cell, the lamp is the bulb and the bell is the buzzer.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cell"
+     },
+     {
+      "id": "l2",
+      "text": "Bulb"
+     },
+     {
+      "id": "l3",
+      "text": "Buzzer"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "💡"
+     },
+     {
+      "id": "r1",
+      "text": "🔋"
+     },
+     {
+      "id": "r3",
+      "text": "🔔"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "elec.parts",
+    "sub_lesson": "circuit",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which two of these are electrical conductors?",
+    "hint": "Metals.",
+    "explanation": "Copper and iron are metals, so they are conductors.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plastic"
+     },
+     {
+      "id": "b",
+      "text": "Wood"
+     },
+     {
+      "id": "c",
+      "text": "Iron"
+     },
+     {
+      "id": "d",
+      "text": "Copper"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "elec.conductors",
+    "sub_lesson": "conduct",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the object that is an electrical insulator.",
+    "hint": "Not a metal.",
+    "explanation": "Wood is an insulator.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔩",
+       "label": "Iron nail",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🥄",
+       "label": "Wooden spoon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪙",
+       "label": "Coin",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "elec.sort",
+    "sub_lesson": "conduct",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "Write the word for a material that lets electricity flow through it.",
+    "hint": "It starts with c.",
+    "explanation": "A conductor lets electricity flow through it.",
+    "answer": {
+     "accepted": [
+      "conductor"
+     ]
+    },
+    "skill_tag": "elec.words",
+    "sub_lesson": "conduct",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Aisha tests a paperclip, a rubber and a coin in a circuit. Which makes the bulb light?",
+    "hint": "Metals conduct.",
+    "explanation": "The paperclip and the coin are metals, so they conduct.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The rubber"
+     },
+     {
+      "id": "b",
+      "text": "None of them"
+     },
+     {
+      "id": "c",
+      "text": "The paperclip and the coin"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.test",
+    "sub_lesson": "conduct",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about circuits.",
+    "hint": "Two key ideas.",
+    "explanation": "A circuit must be complete, and a switch opens or closes it.",
+    "points": 2,
+    "text": "A circuit must be {b1}. A {b2} opens or closes it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "broken"
+       },
+       {
+        "id": "b",
+        "text": "wet"
+       },
+       {
+        "id": "c",
+        "text": "complete"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wall"
+       },
+       {
+        "id": "b",
+        "text": "switch"
+       },
+       {
+        "id": "c",
+        "text": "pencil"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "elec.fill",
+    "sub_lesson": "circuit",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A torch uses 3 cells. How many cells do 5 torches use?",
+    "hint": "3 times 5.",
+    "explanation": "3 x 5 = 15 cells.",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.maths",
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "A bulb is brightest with the most cells. If you add one cell to two cells, how many cells are there?",
+    "hint": "Two plus one.",
+    "explanation": "2 + 1 = 3 cells.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "cells"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.cells",
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put these in order to light a bulb.",
+    "hint": "Build, then switch on.",
+    "explanation": "Build the loop, add the switch, close it and the bulb lights.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Close the switch"
+     },
+     {
+      "id": "i4",
+      "text": "The bulb lights"
+     },
+     {
+      "id": "i2",
+      "text": "Add a switch to the loop"
+     },
+     {
+      "id": "i1",
+      "text": "Join the cell to the bulb with wire"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "elec.order",
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Zain says a plastic spoon will complete a circuit. Why is he wrong?",
+    "hint": "Think about insulators.",
+    "explanation": "Plastic is an insulator, so the circuit stays incomplete.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plastic is too cold"
+     },
+     {
+      "id": "b",
+      "text": "Plastic is an insulator and will not let electricity flow"
+     },
+     {
+      "id": "c",
+      "text": "Plastic is a metal"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_plastic",
+    "sub_lesson": "conduct",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why are electrical wires made of metal inside but covered in plastic?",
+    "hint": "One conducts, one insulates.",
+    "explanation": "The metal centre conducts electricity. The plastic is an insulator that protects us.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Metal is an insulator"
+     },
+     {
+      "id": "b",
+      "text": "Plastic is a conductor"
+     },
+     {
+      "id": "c",
+      "text": "Metal conducts the electricity and plastic keeps us safe"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.reason_wires",
+    "sub_lesson": "conduct",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hira adds three bulbs to one cell. What happens to the brightness of each bulb?",
+    "hint": "They share the energy.",
+    "explanation": "More bulbs on one cell share the energy, so each is dimmer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are all the same"
+     },
+     {
+      "id": "b",
+      "text": "Each bulb is dimmer"
+     },
+     {
+      "id": "c",
+      "text": "Each bulb is brighter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_bulbs",
+    "sub_lesson": "build",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why is it dangerous to touch a switch with wet hands?",
+    "hint": "Water is a conductor.",
+    "explanation": "Water conducts electricity, so it can carry a shock to you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wet hands make the bulb brighter"
+     },
+     {
+      "id": "b",
+      "text": "Water conducts electricity and could carry it to you"
+     },
+     {
+      "id": "c",
+      "text": "Water insulates the switch"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_wet",
+    "sub_lesson": "safety",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A lamp is plugged in but is off. The switch is open. Why is it off?",
+    "hint": "Think about a gap.",
+    "explanation": "An open switch breaks the circuit, so electricity cannot flow.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The bulb is too bright"
+     },
+     {
+      "id": "b",
+      "text": "The wire is made of plastic"
+     },
+     {
+      "id": "c",
+      "text": "The open switch makes a gap in the circuit"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.switch",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which part of a circuit supplies the energy?",
+    "hint": "It is the power source.",
+    "explanation": "The cell supplies electrical energy to the circuit.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The switch"
+     },
+     {
+      "id": "b",
+      "text": "The cell"
+     },
+     {
+      "id": "c",
+      "text": "The wire"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.switch",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A bulb will light if the circuit has a gap in it.",
+    "hint": "Electricity needs a loop.",
+    "explanation": "A gap stops electricity flowing, so the bulb stays off.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "elec.complete",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A circuit must be a complete loop for a bulb to light.",
+    "hint": "No gaps.",
+    "explanation": "Electricity flows only around a complete circuit.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "elec.complete",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Link each part of a circuit to its symbol picture.",
+    "hint": "Match the part with its picture.",
+    "explanation": "The battery is the cell, the lamp is the bulb and the bell is the buzzer.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cell"
+     },
+     {
+      "id": "l2",
+      "text": "Bulb"
+     },
+     {
+      "id": "l3",
+      "text": "Buzzer"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "🔔"
+     },
+     {
+      "id": "r1",
+      "text": "🔋"
+     },
+     {
+      "id": "r2",
+      "text": "💡"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "elec.parts",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each material to its type.",
+    "hint": "Metals conduct.",
+    "explanation": "Aluminium is a conductor. Glass and wood are insulators.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Aluminium"
+     },
+     {
+      "id": "l2",
+      "text": "Glass"
+     },
+     {
+      "id": "l3",
+      "text": "Wood"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Insulator"
+     },
+     {
+      "id": "r1",
+      "text": "Conductor"
+     },
+     {
+      "id": "r3",
+      "text": "Insulator"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "elec.parts",
+    "sub_lesson": "circuit",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two materials that are conductors.",
+    "hint": "Metals.",
+    "explanation": "Copper and iron are metals, so they are conductors.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Iron"
+     },
+     {
+      "id": "b",
+      "text": "Wood"
+     },
+     {
+      "id": "c",
+      "text": "Plastic"
+     },
+     {
+      "id": "d",
+      "text": "Copper"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "elec.conductors",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two safe things to do with electricity.",
+    "hint": "Keep safe.",
+    "explanation": "Dry hands and telling an adult keep you safe.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tell an adult about a damaged wire"
+     },
+     {
+      "id": "b",
+      "text": "Fly a kite near pylons"
+     },
+     {
+      "id": "c",
+      "text": "Poke a key into a socket"
+     },
+     {
+      "id": "d",
+      "text": "Dry your hands first"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "elec.conductors",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that would NOT let electricity flow.",
+    "hint": "Not a metal.",
+    "explanation": "Wood is an insulator.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔩",
+       "label": "Iron nail",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🥄",
+       "label": "Wooden spoon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪙",
+       "label": "Coin",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "elec.sort",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the object that is an electrical conductor.",
+    "hint": "Shiny metal.",
+    "explanation": "A metal key is a conductor.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧴",
+       "label": "Plastic bottle",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔑",
+       "label": "Metal key",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪵",
+       "label": "Wood block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "elec.sort",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What is the word for a material that lets electricity flow through it?",
+    "hint": "It starts with c.",
+    "explanation": "A conductor lets electricity flow through it.",
+    "answer": {
+     "accepted": [
+      "conductor"
+     ]
+    },
+    "skill_tag": "elec.words",
+    "sub_lesson": "conduct",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the word for a material that does not let electricity flow through it?",
+    "hint": "It starts with i.",
+    "explanation": "An insulator does not let electricity flow.",
+    "answer": {
+     "accepted": [
+      "insulator"
+     ]
+    },
+    "skill_tag": "elec.words",
+    "sub_lesson": "conduct",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Ali tests a paperclip, a rubber and a coin in a circuit. Which will make the bulb light?",
+    "hint": "Metals conduct.",
+    "explanation": "The paperclip and the coin are metals, so they conduct.",
+    "options": [
+     {
+      "id": "a",
+      "text": "None of them"
+     },
+     {
+      "id": "b",
+      "text": "The paperclip and the coin"
+     },
+     {
+      "id": "c",
+      "text": "The rubber"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.test",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Ali wants the test to be fair. What should he keep the same?",
+    "hint": "Only change one thing.",
+    "explanation": "In a fair test, only the material changes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The material in the gap"
+     },
+     {
+      "id": "b",
+      "text": "The cell, the bulb and the wires"
+     },
+     {
+      "id": "c",
+      "text": "The shape of the room"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.test",
+    "sub_lesson": "conduct",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about circuits.",
+    "hint": "Two key ideas.",
+    "explanation": "A circuit must be complete, and a switch opens or closes it.",
+    "points": 2,
+    "text": "A circuit must be {b1}. A {b2} opens or closes it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "broken"
+       },
+       {
+        "id": "b",
+        "text": "wet"
+       },
+       {
+        "id": "c",
+        "text": "complete"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wall"
+       },
+       {
+        "id": "b",
+        "text": "switch"
+       },
+       {
+        "id": "c",
+        "text": "pencil"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "elec.fill",
+    "sub_lesson": "circuit",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about conductors.",
+    "hint": "Metals let electricity through.",
+    "explanation": "Metals are conductors, and plastic is an insulator.",
+    "points": 2,
+    "text": "Metals are good {b1}. Plastic is an {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "insulators"
+       },
+       {
+        "id": "b",
+        "text": "conductors"
+       },
+       {
+        "id": "c",
+        "text": "shadows"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "energy"
+       },
+       {
+        "id": "b",
+        "text": "insulator"
+       },
+       {
+        "id": "c",
+        "text": "conductor"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "elec.fill",
+    "sub_lesson": "circuit",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A torch uses 3 cells. How many cells do 4 torches use?",
+    "hint": "3 times 4.",
+    "explanation": "3 x 4 = 12 cells.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.maths",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "A circuit kit has 5 bulbs in each box. How many bulbs are in 6 boxes?",
+    "hint": "5 times 6.",
+    "explanation": "5 x 6 = 30 bulbs.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.maths",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "How many cells make a bulb brightest? Slide to show it: one, two or three cells.",
+    "hint": "More cells, more energy.",
+    "explanation": "Three cells give the most energy, so the bulb is brightest.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "cells"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.cells",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "A torch has 2 cells. Slide to show how many cells it has.",
+    "hint": "Count them.",
+    "explanation": "The torch has 2 cells.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "cells"
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "skill_tag": "elec.cells",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these in order to build a circuit.",
+    "hint": "Build, then switch on.",
+    "explanation": "Build the loop, add the switch, close it and the bulb lights.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add a switch to the loop"
+     },
+     {
+      "id": "i4",
+      "text": "The bulb lights"
+     },
+     {
+      "id": "i3",
+      "text": "Close the switch"
+     },
+     {
+      "id": "i1",
+      "text": "Join the cell to the bulb with wire"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "elec.order",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put these in order for testing a material.",
+    "hint": "Set up, test, observe, record.",
+    "explanation": "A test is set up first, then run, then observed and recorded.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Put the material in the gap"
+     },
+     {
+      "id": "i4",
+      "text": "Record the result"
+     },
+     {
+      "id": "i3",
+      "text": "Watch the bulb"
+     },
+     {
+      "id": "i1",
+      "text": "Make a circuit with a gap"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "elec.order",
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Sara says a plastic spoon will complete a circuit. Why is she wrong?",
+    "hint": "Think about insulators.",
+    "explanation": "Plastic is an insulator, so the circuit stays incomplete.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plastic is too cold"
+     },
+     {
+      "id": "b",
+      "text": "Plastic is an insulator and will not let electricity flow"
+     },
+     {
+      "id": "c",
+      "text": "Plastic is a metal"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_plastic",
+    "sub_lesson": "conduct",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Omar says all metals are insulators. Why is he wrong?",
+    "hint": "Think about copper wire.",
+    "explanation": "Metals are good conductors of electricity.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Metals are made of plastic"
+     },
+     {
+      "id": "b",
+      "text": "Metals have no particles"
+     },
+     {
+      "id": "c",
+      "text": "Metals are conductors and let electricity flow"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.reason_plastic",
+    "sub_lesson": "conduct",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "What is the job of the metal inside a wire, and of the plastic around it?",
+    "hint": "One conducts, one insulates.",
+    "explanation": "The metal centre conducts electricity. The plastic is an insulator that protects us.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Metal is an insulator"
+     },
+     {
+      "id": "b",
+      "text": "Plastic is a conductor"
+     },
+     {
+      "id": "c",
+      "text": "Metal carries the electricity and plastic keeps us safe"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.reason_wires",
+    "sub_lesson": "conduct",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why do electricians wear rubber gloves and boots?",
+    "hint": "Insulators stop the flow.",
+    "explanation": "Rubber is an insulator, so electricity does not flow through the person.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rubber is brighter"
+     },
+     {
+      "id": "b",
+      "text": "Rubber is an insulator and protects them"
+     },
+     {
+      "id": "c",
+      "text": "Rubber conducts electricity"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_wires",
+    "sub_lesson": "conduct",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana adds three bulbs to one cell. What happens to the brightness of each bulb?",
+    "hint": "They share the energy.",
+    "explanation": "More bulbs on one cell share the energy, so each is dimmer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are all the same"
+     },
+     {
+      "id": "b",
+      "text": "Each bulb is dimmer"
+     },
+     {
+      "id": "c",
+      "text": "Each bulb is brighter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_bulbs",
+    "sub_lesson": "build",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Yusuf adds a second cell to a circuit. What should happen to a bulb?",
+    "hint": "More energy.",
+    "explanation": "More cells give more energy, so the bulb is brighter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It should be dimmer"
+     },
+     {
+      "id": "b",
+      "text": "It should shine more brightly"
+     },
+     {
+      "id": "c",
+      "text": "It should go out"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_bulbs",
+    "sub_lesson": "build",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "What is the danger of switching on a lamp with dripping wet hands?",
+    "hint": "Water is a conductor.",
+    "explanation": "Water conducts electricity, so it can carry a shock to you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Water insulates the switch"
+     },
+     {
+      "id": "b",
+      "text": "Wet hands make the bulb brighter"
+     },
+     {
+      "id": "c",
+      "text": "Water conducts electricity and could carry it to you"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "elec.reason_wet",
+    "sub_lesson": "safety",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why should you never fly a kite near pylons?",
+    "hint": "Think about the string.",
+    "explanation": "A damp string can conduct electricity from the power lines to you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pylons are too small"
+     },
+     {
+      "id": "b",
+      "text": "The string could conduct electricity to you"
+     },
+     {
+      "id": "c",
+      "text": "Pylons make kites heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "elec.reason_wet",
+    "sub_lesson": "safety",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2520 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-measure-time",
+  "subject": "maths",
+  "title": "Measuring and Time",
+  "summary": "Length, mass, capacity, temperature, telling the time and reading a calendar.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: Measure and time",
+  "learning_objectives": [
+   "Choose the right tool to measure",
+   "Read o'clock, half past and quarter times",
+   "Use a calendar"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 measurement",
+    "text": "Choose and use appropriate standard units to estimate and measure length, mass, temperature and capacity; tell and write the time to five minutes"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gg.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gg.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gt.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gt.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say which tool measures length, mass, capacity and temperature",
+   "I can read o'clock, half past, quarter past and quarter to",
+   "I can use a calendar to count days"
+  ],
+  "real_life": "Telling the time for school, cooking with a jug and checking the weather.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 3 x 5?",
+    "hint": "Count in fives.",
+    "explanation": "3 x 5 = 15.",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is half of 60?",
+    "hint": "Share 60 between 2.",
+    "explanation": "Half of 60 is 30.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A quarter is one of four equal parts.",
+    "hint": "Quarter means four.",
+    "explanation": "A quarter is 1 of 4 equal parts.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we learn how to measure and how to tell the time.",
+   "say": "Welcome back, number explorer! Today we measure and tell the time. How long is your pencil? How heavy is your bag? And what is the time right now? By the end you will know which tool to pick, read a clock, and use a calendar."
+  },
+  {
+   "type": "image",
+   "emoji": "⏰",
+   "alt": "Measuring and telling the time.",
+   "caption": "Measuring and telling the time."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "measure",
+     "meaning": "To find out how big, heavy, long or hot something is."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "measure",
+   "kind": "learn",
+   "title": "Length, mass, capacity and temperature",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Measuring things"
+    },
+    {
+     "type": "text",
+     "markdown": "**Length** is how long. **Mass** is how heavy. **Capacity** is how much a container holds.\n\nWe use a ruler, scales and a measuring jug.",
+     "say": "We measure things to say how big, how heavy or how much. Length tells us how long or tall something is, and we use a ruler. Mass tells us how heavy something is, and we use scales. Capacity tells us how much a container holds, and we use a measuring jug. Each one has its own tool."
+    },
+    {
+     "type": "image",
+     "emoji": "📏",
+     "alt": "A ruler measures length. Scales measure mass. A jug measures capacity.",
+     "caption": "A ruler measures length. Scales measure mass. A jug measures capacity."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which tool measures how heavy something is?",
+      "hint": "Heavy is about mass.",
+      "explanation": "Scales measure mass.",
+      "skill_tag": "measure.tools",
+      "options": [
+       {
+        "id": "a",
+        "text": "A measuring jug"
+       },
+       {
+        "id": "b",
+        "text": "Scales"
+       },
+       {
+        "id": "c",
+        "text": "A ruler"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "markdown": "Length: centimetres. Mass: grams and kilograms. Capacity: millilitres and litres.",
+     "say": "In school we often use centimetres for length. A pencil is about fifteen centimetres long. We use grams and kilograms for mass. A big bag of rice is one kilogram. And millilitres and litres for capacity. A bottle of water holds about one litre."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A pencil is about 15...",
+      "hint": "Which unit is for length?",
+      "explanation": "Length is measured in centimetres.",
+      "skill_tag": "measure.units",
+      "options": [
+       {
+        "id": "a",
+        "text": "litres"
+       },
+       {
+        "id": "b",
+        "text": "centimetres"
+       },
+       {
+        "id": "c",
+        "text": "kilograms"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How hot or cold?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Temperature** is how hot or cold. We measure it in degrees Celsius with a thermometer.\n\nThe higher the red line, the hotter it is.",
+     "say": "Temperature tells us how hot or cold something is. We use a thermometer. Look at the red line. When it is cold, the line is low. When it is hot, the line rises. A cold winter day in England can be near zero degrees. A summer day in Pakistan can be forty degrees or more. Temperature is measured in degrees Celsius."
+    },
+    {
+     "type": "explainer",
+     "title": "A thermometer",
+     "scenes": [
+      {
+       "caption": "5 degrees: cold.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 5,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 46,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "A cold winter morning. The thermometer shows five degrees."
+      },
+      {
+       "caption": "20 degrees: warm.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 20,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 46,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A warm spring day. Twenty degrees."
+      },
+      {
+       "caption": "40 degrees: very hot.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 40,
+          "from": -10,
+          "to": 50
+         },
+         "x": 50,
+         "y": 46,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A hot summer day. Forty degrees. The red line has gone way up!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which temperature is the hottest?",
+      "hint": "Higher means hotter.",
+      "explanation": "40 is the highest, so it is the hottest.",
+      "skill_tag": "measure.temperature",
+      "options": [
+       {
+        "id": "a",
+        "text": "5 degrees"
+       },
+       {
+        "id": "b",
+        "text": "20 degrees"
+       },
+       {
+        "id": "c",
+        "text": "40 degrees"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Length, mass, capacity and temperature",
+      "Ruler, scales, jug and thermometer"
+     ],
+     "say": "Remember. Length is how long, mass is how heavy, capacity is how much it holds, and temperature is how hot or cold. Each one has its own tool."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "length",
+       "meaning": "How long or tall something is."
+      },
+      {
+       "term": "mass",
+       "meaning": "How heavy something is."
+      },
+      {
+       "term": "capacity",
+       "meaning": "How much a container holds."
+      },
+      {
+       "term": "temperature",
+       "meaning": "How hot or cold something is."
+      },
+      {
+       "term": "thermometer",
+       "meaning": "A tool that measures temperature."
+      },
+      {
+       "term": "centimetres",
+       "meaning": "Small units for length."
+      },
+      {
+       "term": "kilograms",
+       "meaning": "Units for heavy things."
+      },
+      {
+       "term": "litres",
+       "meaning": "Units for how much a container holds."
+      },
+      {
+       "term": "ruler",
+       "meaning": "A tool for measuring length."
+      },
+      {
+       "term": "scales",
+       "meaning": "A tool for measuring mass."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool measures length?",
+     "hint": "Length is how long.",
+     "explanation": "A ruler measures length.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Scales"
+      },
+      {
+       "id": "b",
+       "text": "A ruler"
+      },
+      {
+       "id": "c",
+       "text": "A jug"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A bottle holds about one...",
+     "hint": "Capacity is in litres.",
+     "explanation": "A bottle holds about 1 litre.",
+     "options": [
+      {
+       "id": "a",
+       "text": "centimetre"
+      },
+      {
+       "id": "b",
+       "text": "litre"
+      },
+      {
+       "id": "c",
+       "text": "kilogram"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A thermometer measures how heavy something is.",
+     "hint": "What does temperature mean?",
+     "explanation": "A thermometer measures how hot or cold.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is the coldest?",
+     "hint": "Lower means colder.",
+     "explanation": "0 is the lowest.",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 degrees"
+      },
+      {
+       "id": "b",
+       "text": "35 degrees"
+      },
+      {
+       "id": "c",
+       "text": "0 degrees"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oclock",
+   "kind": "try",
+   "title": "O'clock and half past",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: O'clock"
+    },
+    {
+     "type": "text",
+     "markdown": "The short hand shows the **hour**. When the long hand points to 12, it is **o'clock**.\n\nLong hand on 12, short hand on 3: three o'clock.",
+     "say": "A clock has two hands. The short hand is the hour hand. The long hand is the minute hand. When the long hand points straight up to the twelve, it is an o'clock time. The short hand tells us which hour. Here the short hand points to three. So it is three o'clock."
+    },
+    {
+     "type": "explainer",
+     "title": "Three o'clock",
+     "scenes": [
+      {
+       "caption": "Long hand on 12: o'clock.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The long hand points straight up at twelve. That means o'clock."
+      },
+      {
+       "caption": "It is 3 o'clock.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 o'clock"
+        }
+       ],
+       "say": "The short hand points to three. So the time is three o'clock."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The long hand is on 12 and the short hand is on 7. What time is it?",
+      "hint": "The short hand tells the hour.",
+      "explanation": "Long hand on 12 and short hand on 7 is 7 o'clock.",
+      "skill_tag": "time.oclock",
+      "options": [
+       {
+        "id": "a",
+        "text": "7:30"
+       },
+       {
+        "id": "b",
+        "text": "7 o'clock"
+       },
+       {
+        "id": "c",
+        "text": "12 o'clock"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Half past"
+    },
+    {
+     "type": "text",
+     "markdown": "**Half past**: the long hand points to 6, and the short hand is half way between two numbers.\n\nHalf past 3 is 3:30.",
+     "say": "Half past means the long hand has gone half way round the clock. It points straight down to the six. The short hand is half way between two hours. Here it is half way between three and four. So it is half past three."
+    },
+    {
+     "type": "explainer",
+     "title": "Half past three",
+     "scenes": [
+      {
+       "caption": "Long hand on 6: half past.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 30
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The long hand points straight down to six. That is half way round."
+      },
+      {
+       "caption": "It is half past 3.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 30
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "half past 3"
+        }
+       ],
+       "say": "The short hand sits between three and four. It is half past three."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Make a paper clock",
+     "materials": [
+      "A paper plate or card",
+      "Two strips of card",
+      "A split pin",
+      "A pen"
+     ],
+     "instructions": [
+      "Write the numbers 1 to 12 round the plate.",
+      "Fix two hands in the middle with the split pin. Make the short one the hour hand.",
+      "Show 4 o'clock, then 9 o'clock.",
+      "Now show half past 2 and half past 8."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The long hand is on 6 and the short hand is between 5 and 6. What time is it?",
+      "hint": "Long hand on 6 means half past.",
+      "explanation": "Half past 5 is 5:30.",
+      "skill_tag": "time.half_past",
+      "options": [
+       {
+        "id": "a",
+        "text": "5 o'clock"
+       },
+       {
+        "id": "b",
+        "text": "Half past 6"
+       },
+       {
+        "id": "c",
+        "text": "Half past 5"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The short hand tells the hour",
+      "Long hand on 12 is o'clock",
+      "Long hand on 6 is half past"
+     ],
+     "say": "Remember. The short hand tells the hour. The long hand on twelve is o'clock. The long hand on six is half past."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "clock",
+       "meaning": "A tool that tells the time."
+      },
+      {
+       "term": "hour hand",
+       "meaning": "The short hand on a clock."
+      },
+      {
+       "term": "minute hand",
+       "meaning": "The long hand on a clock."
+      },
+      {
+       "term": "o'clock",
+       "meaning": "When the long hand points to 12."
+      },
+      {
+       "term": "half past",
+       "meaning": "When the long hand points to 6."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Long hand on 12, short hand on 9. What time?",
+     "hint": "Short hand tells the hour.",
+     "explanation": "It is 9 o'clock.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Half past 9"
+      },
+      {
+       "id": "b",
+       "text": "9 o'clock"
+      },
+      {
+       "id": "c",
+       "text": "12 o'clock"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Long hand on 6, short hand just past 2. What time?",
+     "hint": "6 means half past.",
+     "explanation": "It is half past 2.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Half past 3"
+      },
+      {
+       "id": "b",
+       "text": "Half past 2"
+      },
+      {
+       "id": "c",
+       "text": "2 o'clock"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The long hand is the hour hand.",
+     "hint": "Which hand is short?",
+     "explanation": "The short hand is the hour hand.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many minutes in half an hour?",
+     "hint": "An hour is 60 minutes.",
+     "explanation": "Half of 60 is 30.",
+     "answer": {
+      "value": 30,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "quarter",
+   "kind": "play",
+   "title": "Quarter past, quarter to and five minutes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Quarter past and quarter to"
+    },
+    {
+     "type": "text",
+     "markdown": "**Quarter past**: long hand on 3. **Quarter to**: long hand on 9.\n\nQuarter past 3 is 3:15. Quarter to 4 is 3:45.",
+     "say": "A quarter is one of four equal parts. A clock can be split into four quarters. Quarter past means the long hand has moved a quarter of the way round. It points to the three. Quarter to means it still has a quarter of the way to go. It points to the nine. Quarter past three is three fifteen. Quarter to four is three forty-five."
+    },
+    {
+     "type": "explainer",
+     "title": "Quarter past and quarter to",
+     "scenes": [
+      {
+       "caption": "Quarter past 3.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 15
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The long hand points to three. A quarter of the way round. It is quarter past three."
+      },
+      {
+       "caption": "Quarter to 4.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 45
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now the long hand points to nine. Three quarters of the way round. The time is quarter to four."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Clock match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "⏰",
+      "🕒",
+      "🕠",
+      "🕘",
+      "🕐",
+      "🕧"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The long hand is on 3. It is...",
+      "hint": "A quarter of the way round.",
+      "explanation": "The long hand on 3 means quarter past.",
+      "skill_tag": "time.quarter",
+      "options": [
+       {
+        "id": "a",
+        "text": "quarter to"
+       },
+       {
+        "id": "b",
+        "text": "half past"
+       },
+       {
+        "id": "c",
+        "text": "quarter past"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Five-minute times"
+    },
+    {
+     "type": "text",
+     "markdown": "Count in **fives** round the clock: the 1 is 5 minutes, the 2 is 10 minutes, the 3 is 15 minutes.\n\nLong hand on 2 is ten past.",
+     "say": "The minute hand jumps in fives. When it points to one, that is five minutes past. Two is ten minutes past. Count in fives around the clock. Five, ten, fifteen, twenty, twenty-five, thirty. Thirty minutes is half an hour. Here the minute hand is on two. That is ten past three."
+    },
+    {
+     "type": "explainer",
+     "title": "Ten past three",
+     "scenes": [
+      {
+       "caption": "5 minutes past 3.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 5
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The long hand moves from twelve to one. That is five minutes. Five past three."
+      },
+      {
+       "caption": "10 minutes past 3.",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 10
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It moves on to two. That is ten minutes. Ten past three."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The long hand is on 2. How many minutes past is it?",
+      "hint": "Count in fives.",
+      "explanation": "The 2 means 10 minutes past.",
+      "skill_tag": "time.five_minute",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "15"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Quarter past: long hand on 3",
+      "Quarter to: long hand on 9",
+      "Each number is 5 minutes"
+     ],
+     "say": "Remember. Quarter past has the long hand on three. Quarter to has it on nine. Each number on the clock is five minutes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "quarter past",
+       "meaning": "15 minutes after the hour."
+      },
+      {
+       "term": "quarter to",
+       "meaning": "15 minutes before the next hour."
+      },
+      {
+       "term": "minutes",
+       "meaning": "Small parts of an hour. There are 60 in an hour."
+      },
+      {
+       "term": "fives",
+       "meaning": "Counting by 5."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Long hand on 9. It is...",
+     "hint": "Three quarters of the way round.",
+     "explanation": "Long hand on 9 means quarter to.",
+     "options": [
+      {
+       "id": "a",
+       "text": "half past"
+      },
+      {
+       "id": "b",
+       "text": "quarter to"
+      },
+      {
+       "id": "c",
+       "text": "quarter past"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "The long hand is on 4. How many minutes past?",
+     "hint": "Count in fives.",
+     "explanation": "4 x 5 = 20.",
+     "answer": {
+      "value": 20,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How many minutes in a quarter of an hour?",
+     "hint": "A quarter of 60.",
+     "explanation": "60 divided by 4 is 15.",
+     "options": [
+      {
+       "id": "a",
+       "text": "10"
+      },
+      {
+       "id": "b",
+       "text": "15"
+      },
+      {
+       "id": "c",
+       "text": "30"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The long hand on 1 means 5 minutes.",
+     "hint": "Count in fives.",
+     "explanation": "Each number is 5 minutes.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calendar",
+   "kind": "use",
+   "title": "Days, weeks and the calendar",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Days of the week and months"
+    },
+    {
+     "type": "text",
+     "markdown": "There are seven days in a **week** and twelve months in a **year**.\n\nMuslims also use the Islamic calendar, which includes Ramadan.",
+     "say": "A calendar helps us keep track of time. There are seven days in a week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. There are twelve months in a year. January, February, March and on to December. Some months have thirty days, some thirty-one, and February has only twenty-eight. Muslims also follow the Islamic months, like Ramadan, which move around the year."
+    },
+    {
+     "type": "image",
+     "emoji": "📅",
+     "alt": "A calendar shows days, weeks and months.",
+     "caption": "A calendar shows days, weeks and months."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many days are in one week?",
+      "hint": "Monday to Sunday.",
+      "explanation": "There are 7 days in a week.",
+      "skill_tag": "calendar.week",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using a calendar"
+    },
+    {
+     "type": "text",
+     "markdown": "Count days on the calendar to find out how long until an event.\n\nWednesday to Saturday is 3 days.",
+     "say": "Let us use a calendar. Find today's date. What day of the week is it? How many days until the weekend? Count the days on the calendar. If today is Wednesday, Thursday is one, Friday is two, Saturday is three. Three days until Saturday. Calendars help us plan for birthdays, trips and Eid."
+    },
+    {
+     "type": "image",
+     "emoji": "🗓️",
+     "alt": "Counting days on a calendar.",
+     "caption": "Counting days on a calendar.",
+     "say": "Count the days on the calendar, like Wednesday to Saturday."
+    },
+    {
+     "type": "activity",
+     "title": "Make a family calendar",
+     "materials": [
+      "A piece of paper or a printed calendar",
+      "Coloured pens"
+     ],
+     "instructions": [
+      "Write the 7 days of the week across the top.",
+      "Find today and circle it.",
+      "Write down one family birthday or event.",
+      "Count how many days until it."
+     ],
+     "say": "Now make a calendar for your family. Write the seven days across the top, find today, and count the days to a birthday."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Today is Monday. What day is it in 3 days?",
+      "hint": "Count on: Tuesday, Wednesday, Thursday.",
+      "explanation": "Monday plus 3 days is Thursday.",
+      "skill_tag": "calendar.days",
+      "options": [
+       {
+        "id": "a",
+        "text": "Wednesday"
+       },
+       {
+        "id": "b",
+        "text": "Thursday"
+       },
+       {
+        "id": "c",
+        "text": "Friday"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "7 days in a week",
+      "12 months in a year",
+      "Use a calendar to count days"
+     ],
+     "say": "Remember. There are seven days in a week and twelve months in a year. Use a calendar to count days and plan."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "calendar",
+       "meaning": "A chart that shows the days, weeks and months of the year."
+      },
+      {
+       "term": "week",
+       "meaning": "Seven days."
+      },
+      {
+       "term": "year",
+       "meaning": "Twelve months."
+      },
+      {
+       "term": "month",
+       "meaning": "A part of a year, about four weeks."
+      },
+      {
+       "term": "date",
+       "meaning": "The day, month and year."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many months are in a year?",
+     "hint": "January to December.",
+     "explanation": "There are 12 months in a year.",
+     "answer": {
+      "value": 12,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which day comes after Friday?",
+     "hint": "Think of the weekend.",
+     "explanation": "Saturday comes after Friday.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Thursday"
+      },
+      {
+       "id": "b",
+       "text": "Sunday"
+      },
+      {
+       "id": "c",
+       "text": "Saturday"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Today is Tuesday. What day is tomorrow?",
+     "hint": "Tomorrow is the next day.",
+     "explanation": "Wednesday comes after Tuesday.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Monday"
+      },
+      {
+       "id": "b",
+       "text": "Thursday"
+      },
+      {
+       "id": "c",
+       "text": "Wednesday"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "There are 10 days in a week.",
+     "hint": "Monday to Sunday.",
+     "explanation": "There are 7 days in a week.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which tool would you use to measure how long a book is?",
+    "hint": "Length is how long.",
+    "explanation": "A ruler measures length.",
+    "skill_tag": "measure.tools",
+    "options": [
+     {
+      "id": "a",
+      "text": "A thermometer"
+     },
+     {
+      "id": "b",
+      "text": "A ruler"
+     },
+     {
+      "id": "c",
+      "text": "Scales"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which unit is best for the length of a pencil?",
+    "hint": "Length units.",
+    "explanation": "Length is measured in centimetres.",
+    "skill_tag": "measure.units",
+    "options": [
+     {
+      "id": "a",
+      "text": "Kilograms"
+     },
+     {
+      "id": "b",
+      "text": "Centimetres"
+     },
+     {
+      "id": "c",
+      "text": "Litres"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A hot day has a high temperature.",
+    "hint": "The red line goes up.",
+    "explanation": "Hotter means a higher number.",
+    "skill_tag": "measure.temperature",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Which hand tells the hour?",
+    "explanation": "The hour hand is short and the minute hand is long.",
+    "skill_tag": "time.hands",
+    "points": 2,
+    "text": "The {b1} hand is short. The {b2} hand is long.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "minute"
+       },
+       {
+        "id": "b",
+        "text": "hour"
+       },
+       {
+        "id": "c",
+        "text": "second"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "day"
+       },
+       {
+        "id": "b",
+        "text": "minute"
+       },
+       {
+        "id": "c",
+        "text": "hour"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "oclock",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which times have the long hand on 6? Pick two.",
+    "hint": "Half past means long hand on 6.",
+    "explanation": "Both half past times have the long hand on 6.",
+    "skill_tag": "time.half_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "Half past 10"
+     },
+     {
+      "id": "b",
+      "text": "4 o'clock"
+     },
+     {
+      "id": "c",
+      "text": "Quarter past 10"
+     },
+     {
+      "id": "d",
+      "text": "Half past 4"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these times in order through the day, earliest first.",
+    "hint": "Think of the clock going round.",
+    "explanation": "6:00, 6:30, 6:45 and 7:00 are in order.",
+    "skill_tag": "time.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Half past 6"
+     },
+     {
+      "id": "i4",
+      "text": "7 o'clock"
+     },
+     {
+      "id": "i3",
+      "text": "Quarter to 7"
+     },
+     {
+      "id": "i1",
+      "text": "6 o'clock"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each time to the number the long hand points to.",
+    "hint": "Think of the clock face.",
+    "explanation": "O'clock is 12, quarter past is 3, half past is 6.",
+    "skill_tag": "time.quarter",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "O'clock"
+     },
+     {
+      "id": "l2",
+      "text": "Quarter past"
+     },
+     {
+      "id": "l3",
+      "text": "Half past"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "6"
+     },
+     {
+      "id": "r1",
+      "text": "12"
+     },
+     {
+      "id": "r2",
+      "text": "3"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows half past 3.",
+    "hint": "Half past means long hand on 6.",
+    "explanation": "Clock A shows half past 3.",
+    "skill_tag": "time.half_past",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕞",
+       "label": "Clock A: half past 3",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕒",
+       "label": "Clock B: 3 o'clock",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕔",
+       "label": "Clock C: 5 o'clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show how many minutes are in half an hour.",
+    "hint": "Half of 60.",
+    "explanation": "Half an hour is 30 minutes.",
+    "skill_tag": "time.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "number",
+    "prompt": "The long hand is on 5. How many minutes past the hour is it?",
+    "hint": "Count in fives.",
+    "explanation": "5 x 5 = 25 minutes.",
+    "skill_tag": "time.five_minute",
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "It is Friday. What day will it be in 2 days?",
+    "hint": "Count on: Saturday, Sunday.",
+    "explanation": "Friday plus 2 days is Sunday.",
+    "skill_tag": "calendar.days",
+    "options": [
+     {
+      "id": "a",
+      "text": "Monday"
+     },
+     {
+      "id": "b",
+      "text": "Sunday"
+     },
+     {
+      "id": "c",
+      "text": "Saturday"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Hana says half past 3 is when the long hand is on 3. Is she right?",
+    "hint": "Half way round the clock.",
+    "explanation": "Half past means half way round, so the long hand is on 6.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, half past is the 3"
+     },
+     {
+      "id": "b",
+      "text": "No, it is on 12"
+     },
+     {
+      "id": "c",
+      "text": "No. At half past the long hand is on 6"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does the thermometer's red line rise on a hot day?",
+    "hint": "Think about hot and cold.",
+    "explanation": "The hotter it is, the higher the red line goes.",
+    "skill_tag": "measure.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because it is heavier"
+     },
+     {
+      "id": "b",
+      "text": "Because it is longer"
+     },
+     {
+      "id": "c",
+      "text": "A higher temperature makes the red line go higher"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 15 minutes after 3 is quarter to 4. Is she right?",
+    "hint": "A quarter of the way round from 12.",
+    "explanation": "15 minutes after 3 is quarter past 3.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is half past 3"
+     },
+     {
+      "id": "b",
+      "text": "No. 15 minutes after 3 is quarter past 3"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is quarter to 4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "It is Monday. Mira's birthday is on Friday. How many days until her birthday?",
+    "hint": "Count on from Monday: Tuesday is 1.",
+    "explanation": "Tuesday, Wednesday, Thursday, Friday. That is 4 days.",
+    "skill_tag": "calendar.reason",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "calendar",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which tool would you use to find out how heavy an apple is?",
+    "hint": "Heavy is about mass.",
+    "explanation": "Scales measure mass.",
+    "skill_tag": "measure.tools",
+    "options": [
+     {
+      "id": "a",
+      "text": "A ruler"
+     },
+     {
+      "id": "b",
+      "text": "A thermometer"
+     },
+     {
+      "id": "c",
+      "text": "Scales"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which tool would you use to find out how hot soup is?",
+    "hint": "Hot or cold is temperature.",
+    "explanation": "A thermometer measures temperature.",
+    "skill_tag": "measure.tools",
+    "options": [
+     {
+      "id": "a",
+      "text": "A ruler"
+     },
+     {
+      "id": "b",
+      "text": "Scales"
+     },
+     {
+      "id": "c",
+      "text": "A thermometer"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which unit is best for how much water is in a bucket?",
+    "hint": "Capacity units.",
+    "explanation": "Capacity is measured in litres.",
+    "skill_tag": "measure.units",
+    "options": [
+     {
+      "id": "a",
+      "text": "Kilograms"
+     },
+     {
+      "id": "b",
+      "text": "Litres"
+     },
+     {
+      "id": "c",
+      "text": "Centimetres"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Which unit is best for the mass of a bag of rice?",
+    "hint": "Mass units.",
+    "explanation": "Mass is measured in kilograms.",
+    "skill_tag": "measure.units",
+    "options": [
+     {
+      "id": "a",
+      "text": "Centimetres"
+     },
+     {
+      "id": "b",
+      "text": "Kilograms"
+     },
+     {
+      "id": "c",
+      "text": "Litres"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A cold day has a high temperature.",
+    "hint": "The red line goes down.",
+    "explanation": "Colder means a lower number.",
+    "skill_tag": "measure.temperature",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "30 degrees is hotter than 10 degrees.",
+    "hint": "Higher is hotter.",
+    "explanation": "30 is more than 10.",
+    "skill_tag": "measure.temperature",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete these.",
+    "hint": "Which hand is short?",
+    "explanation": "The short hand shows the hour. The long hand shows the minutes.",
+    "skill_tag": "time.hands",
+    "points": 2,
+    "text": "The {b1} hand shows the hour. The {b2} hand shows the minutes.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "long"
+       },
+       {
+        "id": "b",
+        "text": "red"
+       },
+       {
+        "id": "c",
+        "text": "short"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "thin"
+       },
+       {
+        "id": "b",
+        "text": "long"
+       },
+       {
+        "id": "c",
+        "text": "short"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "oclock",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Top of the clock and bottom of the clock.",
+    "explanation": "O'clock is 12. Half past is 6.",
+    "skill_tag": "time.hands",
+    "points": 2,
+    "text": "At o'clock the long hand points to {b1}. At half past it points to {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "9"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "oclock",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which times have the long hand on 12? Pick two.",
+    "hint": "O'clock means long hand on 12.",
+    "explanation": "Both o'clock times have the long hand on 12.",
+    "skill_tag": "time.oclock",
+    "options": [
+     {
+      "id": "a",
+      "text": "Half past 3"
+     },
+     {
+      "id": "b",
+      "text": "Quarter to 8"
+     },
+     {
+      "id": "c",
+      "text": "8 o'clock"
+     },
+     {
+      "id": "d",
+      "text": "3 o'clock"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which times have the long hand on 3? Pick two.",
+    "hint": "Quarter past means long hand on 3.",
+    "explanation": "Both quarter past times have the long hand on 3.",
+    "skill_tag": "time.quarter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Quarter past 9"
+     },
+     {
+      "id": "b",
+      "text": "Quarter to 2"
+     },
+     {
+      "id": "c",
+      "text": "Half past 9"
+     },
+     {
+      "id": "d",
+      "text": "Quarter past 2"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these times, earliest first.",
+    "hint": "Think of the clock going round.",
+    "explanation": "3:00, 3:15, 3:30 and 3:45 are in order.",
+    "skill_tag": "time.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Half past 3"
+     },
+     {
+      "id": "i4",
+      "text": "Quarter to 4"
+     },
+     {
+      "id": "i2",
+      "text": "Quarter past 3"
+     },
+     {
+      "id": "i1",
+      "text": "3 o'clock"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Arrange these times, earliest first.",
+    "hint": "Think of the clock going round.",
+    "explanation": "9:00, 9:15, 9:45 and 10:00 are in order.",
+    "skill_tag": "time.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Quarter past 9"
+     },
+     {
+      "id": "i4",
+      "text": "10 o'clock"
+     },
+     {
+      "id": "i3",
+      "text": "Quarter to 10"
+     },
+     {
+      "id": "i1",
+      "text": "9 o'clock"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Join each time to the number the long hand points to.",
+    "hint": "Think of the clock face.",
+    "explanation": "Quarter to is 9, half past is 6, o'clock is 12.",
+    "skill_tag": "time.quarter",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Quarter to"
+     },
+     {
+      "id": "l2",
+      "text": "Half past"
+     },
+     {
+      "id": "l3",
+      "text": "O'clock"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "12"
+     },
+     {
+      "id": "r1",
+      "text": "9"
+     },
+     {
+      "id": "r2",
+      "text": "6"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Pair each time with where the long hand points.",
+    "hint": "Think of the clock face.",
+    "explanation": "Quarter past is 3, quarter to is 9, half past is 6.",
+    "skill_tag": "time.quarter",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Quarter past"
+     },
+     {
+      "id": "l2",
+      "text": "Quarter to"
+     },
+     {
+      "id": "l3",
+      "text": "Half past"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "9"
+     },
+     {
+      "id": "r3",
+      "text": "6"
+     },
+     {
+      "id": "r1",
+      "text": "3"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows 8 o'clock.",
+    "hint": "O'clock means long hand on 12.",
+    "explanation": "Clock A shows 8 o'clock.",
+    "skill_tag": "time.oclock",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕗",
+       "label": "Clock A: 8 o'clock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕣",
+       "label": "Clock B: half past 8",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕘",
+       "label": "Clock C: 9 o'clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows 1 o'clock.",
+    "hint": "O'clock means long hand on 12.",
+    "explanation": "Clock A shows 1 o'clock.",
+    "skill_tag": "time.oclock",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕐",
+       "label": "Clock A: 1 o'clock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕜",
+       "label": "Clock B: half past 1",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕑",
+       "label": "Clock C: 2 o'clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show how many minutes are in a quarter of an hour.",
+    "hint": "A quarter of 60.",
+    "explanation": "A quarter of an hour is 15 minutes.",
+    "skill_tag": "time.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show how many minutes are in a whole hour.",
+    "hint": "The full clock face.",
+    "explanation": "An hour is 60 minutes.",
+    "skill_tag": "time.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "number",
+    "prompt": "The long hand is on 7. How many minutes past the hour is it?",
+    "hint": "Count in fives.",
+    "explanation": "7 x 5 = 35 minutes.",
+    "skill_tag": "time.five_minute",
+    "answer": {
+     "value": 35,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "number",
+    "prompt": "The long hand is on 2. How many minutes past the hour is it?",
+    "hint": "Count in fives.",
+    "explanation": "2 x 5 = 10 minutes.",
+    "skill_tag": "time.five_minute",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "It is Tuesday. What day will it be in 3 days?",
+    "hint": "Count on: Wednesday, Thursday, Friday.",
+    "explanation": "Tuesday plus 3 days is Friday.",
+    "skill_tag": "calendar.days",
+    "options": [
+     {
+      "id": "a",
+      "text": "Saturday"
+     },
+     {
+      "id": "b",
+      "text": "Friday"
+     },
+     {
+      "id": "c",
+      "text": "Thursday"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "It is Sunday. What day will it be in 4 days?",
+    "hint": "Count on: Monday, Tuesday, Wednesday, Thursday.",
+    "explanation": "Sunday plus 4 days is Thursday.",
+    "skill_tag": "calendar.days",
+    "options": [
+     {
+      "id": "a",
+      "text": "Friday"
+     },
+     {
+      "id": "b",
+      "text": "Thursday"
+     },
+     {
+      "id": "c",
+      "text": "Wednesday"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Omar says o'clock is when the long hand is on 6. Is he right?",
+    "hint": "At the very top of the clock.",
+    "explanation": "At o'clock the long hand points to 12.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, o'clock is the 6"
+     },
+     {
+      "id": "b",
+      "text": "No. At o'clock the long hand is on 12"
+     },
+     {
+      "id": "c",
+      "text": "No, it is on 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Mina says quarter past is when the long hand is on 9. Is she right?",
+    "hint": "A quarter of the way round.",
+    "explanation": "Quarter past means a quarter of the way round, so the long hand is on 3.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, quarter past is the 9"
+     },
+     {
+      "id": "b",
+      "text": "No, it is on 12"
+     },
+     {
+      "id": "c",
+      "text": "No. At quarter past the long hand is on 3"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why is a 30 degree day hotter than a 10 degree day?",
+    "hint": "Higher means hotter.",
+    "explanation": "A bigger temperature number means hotter.",
+    "skill_tag": "measure.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "30 is a smaller number"
+     },
+     {
+      "id": "b",
+      "text": "Because 10 is bigger"
+     },
+     {
+      "id": "c",
+      "text": "30 is a higher number, so it is warmer"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why do we use a thermometer, not a ruler, to check if a drink is hot?",
+    "hint": "What does each tool measure?",
+    "explanation": "A thermometer measures temperature and a ruler measures length.",
+    "skill_tag": "measure.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "A ruler is heavier"
+     },
+     {
+      "id": "b",
+      "text": "A thermometer is longer"
+     },
+     {
+      "id": "c",
+      "text": "A thermometer measures temperature, a ruler measures length"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Zain says 45 minutes after 6 is quarter past 7. Is he right?",
+    "hint": "Three quarters of the way round.",
+    "explanation": "45 minutes after 6 is quarter to 7.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is quarter past 7"
+     },
+     {
+      "id": "b",
+      "text": "No, it is half past 6"
+     },
+     {
+      "id": "c",
+      "text": "No. 45 minutes after 6 is quarter to 7"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Layla says 30 minutes after 2 is quarter past 2. Is she right?",
+    "hint": "Half way round.",
+    "explanation": "30 minutes after 2 is half past 2.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is quarter past 2"
+     },
+     {
+      "id": "b",
+      "text": "No. 30 minutes after 2 is half past 2"
+     },
+     {
+      "id": "c",
+      "text": "No, it is quarter to 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "It is Tuesday. Omar's trip is on Saturday. How many days until the trip?",
+    "hint": "Count on from Tuesday: Wednesday is 1.",
+    "explanation": "Wednesday, Thursday, Friday, Saturday. That is 4 days.",
+    "skill_tag": "calendar.reason",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "calendar",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "It is Wednesday. Sara has swimming on Sunday. How many days until swimming?",
+    "hint": "Count on from Wednesday: Thursday is 1.",
+    "explanation": "Thursday, Friday, Saturday, Sunday. That is 4 days.",
+    "skill_tag": "calendar.reason",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "calendar",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
