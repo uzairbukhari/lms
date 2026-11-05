@@ -1133,52 +1133,61 @@
     },
     {
      "type": "explainer",
-     "title": "Percentages of a hundred square",
+     "title": "Percentages as bars",
      "scenes": [
       {
        "caption": "50% = 1/2",
        "items": [
         {
          "id": "h",
-         "emoji": "🟦",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 5
+         },
          "x": 50,
          "y": 50,
          "size": 3,
-         "anim": "pulse",
-         "label": "50 out of 100"
+         "anim": "none"
         }
        ],
-       "say": "Here is a hundred square. Fifty squares are shaded: fifty percent. That is one half."
+       "say": "Look at this bar, cut into ten equal parts. Five parts are shaded. That is fifty out of a hundred, fifty percent. It is one half."
       },
       {
        "caption": "25% = 1/4",
        "items": [
         {
          "id": "h",
-         "emoji": "🟦",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 4,
+          "shaded": 1
+         },
          "x": 50,
          "y": 50,
-         "size": 2,
-         "anim": "pulse",
-         "label": "25 out of 100"
+         "size": 3,
+         "anim": "none"
         }
        ],
-       "say": "Twenty-five squares shaded is twenty-five percent. That is one quarter."
+       "say": "Now a bar in four parts with one shaded. That is twenty-five out of a hundred, twenty-five percent. One quarter."
       },
       {
        "caption": "10% = 1/10",
        "items": [
         {
          "id": "h",
-         "emoji": "🟦",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 1
+         },
          "x": 50,
          "y": 50,
-         "size": 1,
-         "anim": "pulse",
-         "label": "10 out of 100"
+         "size": 3,
+         "anim": "none"
         }
        ],
-       "say": "Ten squares shaded is ten percent. That is one tenth."
+       "say": "And one part out of ten shaded is ten percent. One tenth."
       }
      ],
      "backdrop": "plain"

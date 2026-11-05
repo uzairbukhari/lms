@@ -439,17 +439,15 @@
          "x": 50,
          "y": 50,
          "size": 3,
-         "anim": "none",
-         "label": "butterfly"
+         "anim": "none"
         },
         {
          "id": "l",
-         "emoji": "➖",
+         "emoji": "│",
          "x": 50,
          "y": 50,
          "size": 3,
-         "anim": "pulse",
-         "label": "mirror line"
+         "anim": "pulse"
         }
        ],
        "say": "Draw a line down the middle. This is the line of symmetry."
@@ -649,36 +647,126 @@
        "caption": "(0, 0)",
        "items": [
         {
-         "id": "g",
-         "prop": {
-          "kind": "robot_grid",
-          "col": 0,
-          "row": 0,
-          "facing": "right"
-         },
+         "id": "o",
+         "emoji": "🏁",
+         "x": 12,
+         "y": 80,
+         "size": 2,
+         "anim": "pulse",
+         "label": "(0, 0)"
+        },
+        {
+         "id": "x1",
+         "emoji": "🔹",
+         "x": 35,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "x2",
+         "emoji": "🔹",
          "x": 50,
-         "y": 50,
-         "size": 3,
-         "anim": "none"
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "x3",
+         "emoji": "🔹",
+         "x": 65,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "3"
+        },
+        {
+         "id": "y1",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 62,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "y2",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 44,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
         }
        ],
-       "say": "Start at zero, zero in the bottom left corner."
+       "say": "Start at zero, zero in the bottom left corner. The numbers along the bottom count across. The numbers up the side count up."
       },
       {
        "caption": "3 across",
        "items": [
         {
-         "id": "g",
-         "prop": {
-          "kind": "robot_grid",
-          "col": 3,
-          "row": 0,
-          "facing": "right"
-         },
+         "id": "o",
+         "emoji": "🏁",
+         "x": 12,
+         "y": 80,
+         "size": 2,
+         "anim": "none",
+         "label": "(0, 0)"
+        },
+        {
+         "id": "x1",
+         "emoji": "🔹",
+         "x": 35,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "x2",
+         "emoji": "🔹",
          "x": 50,
-         "y": 50,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "x3",
+         "emoji": "🔹",
+         "x": 65,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "3"
+        },
+        {
+         "id": "y1",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 62,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "y2",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 44,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "p",
+         "emoji": "📍",
+         "x": 65,
+         "y": 76,
          "size": 3,
-         "anim": "none"
+         "anim": "pulse"
         }
        ],
        "say": "Move three squares across."
@@ -687,17 +775,67 @@
        "caption": "then 2 up: (3, 2)",
        "items": [
         {
-         "id": "g",
-         "prop": {
-          "kind": "robot_grid",
-          "col": 3,
-          "row": 2,
-          "facing": "right"
-         },
+         "id": "o",
+         "emoji": "🏁",
+         "x": 12,
+         "y": 80,
+         "size": 2,
+         "anim": "none",
+         "label": "(0, 0)"
+        },
+        {
+         "id": "x1",
+         "emoji": "🔹",
+         "x": 35,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "x2",
+         "emoji": "🔹",
          "x": 50,
-         "y": 50,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "x3",
+         "emoji": "🔹",
+         "x": 65,
+         "y": 84,
+         "size": 1,
+         "anim": "none",
+         "label": "3"
+        },
+        {
+         "id": "y1",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 62,
+         "size": 1,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "y2",
+         "emoji": "🔹",
+         "x": 12,
+         "y": 44,
+         "size": 1,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "p",
+         "emoji": "📍",
+         "x": 65,
+         "y": 44,
          "size": 3,
-         "anim": "none"
+         "anim": "pulse",
+         "label": "(3, 2)"
         }
        ],
        "say": "Then two squares up. We are at three, two."
@@ -759,7 +897,7 @@
         },
         {
          "id": "m",
-         "emoji": "➖",
+         "emoji": "🪞",
          "x": 50,
          "y": 50,
          "size": 3,
@@ -783,7 +921,7 @@
         },
         {
          "id": "m",
-         "emoji": "➖",
+         "emoji": "🪞",
          "x": 50,
          "y": 50,
          "size": 3,

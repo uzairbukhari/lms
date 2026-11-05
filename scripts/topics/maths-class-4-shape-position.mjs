@@ -4,6 +4,7 @@ import { topicLesson } from "../topic-kit.mjs";
 // Class 4 (Fatima) Maths topic 5: Shape and position. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const clock = (id, hour, minute, x = 50, y = 50, size = 3) => [id, { kind: "clock", hour, minute }, x, y, size];
+const AX = [["x1", "🔹", 35, 84, 1, "none", "1"], ["x2", "🔹", 50, 84, 1, "none", "2"], ["x3", "🔹", 65, 84, 1, "none", "3"], ["y1", "🔹", 12, 62, 1, "none", "1"], ["y2", "🔹", 12, 44, 1, "none", "2"]];
 const grid = (id, col, row, facing = "right", x = 50, y = 50, size = 3) => [id, { kind: "robot_grid", col, row, facing }, x, y, size];
 
 const angles = {
@@ -39,7 +40,7 @@ const symmetry = {
     SAY("A shape is symmetrical if you can fold it in half and both sides match exactly. The fold line is called the line of symmetry, or mirror line. Look at the butterfly. Fold it down the middle, and the two wings match. A square has four lines of symmetry. A rectangle that is not a square has two.", T("A shape is **symmetrical** if one half matches the other. The fold is the **line of symmetry**.", "A square has 4 lines of symmetry. A rectangle has 2.")),
     EXPP("Folding a butterfly",
       SS("Here is a butterfly with its wings open.", S("A butterfly", ["b", "🦋", 50, 50, 3, "none", "butterfly"])),
-      SS("Draw a line down the middle. This is the line of symmetry.", S("The line of symmetry", ["b", "🦋", 50, 50, 3, "none", "butterfly"], ["l", "➖", 50, 50, 3, "pulse", "mirror line"])),
+      SS("Draw a line down the middle. This is the line of symmetry.", S("The line of symmetry", ["b", "🦋", 50, 50, 3, "none"], ["l", "│", 50, 50, 3, "pulse"])),
       SS("Fold along the line and the left wing sits exactly on the right wing. They match, so the butterfly is symmetrical.", S("Both halves match", ["b", "🦋", 38, 50, 3, "none", "left"], ["m", "🦋", 62, 50, 3, "pulse", "right"]))),
     CHK(num("How many lines of symmetry does the letter H have?", 2, { hint: "Fold across and down.", why: "The letter H has 2 lines of symmetry.", tag: "shape.symmetry" })),
     SAY("Now try it with shapes. Here are twenty tiles. Make a symmetrical pattern, with the left matching the right.", MAN("Mirror pattern", "Place the tiles in the boxes so the left side is a mirror of the right side.", "🔷", 20, ["Left side", "Right side"])),
@@ -64,15 +65,15 @@ const coords = {
     H("Stop 1: Reading coordinates"),
     SAY("Coordinates tell us exactly where a point is on a grid. Two numbers in brackets. The first number says how far across, the second says how far up. Think of it as along the corridor, then up the stairs. The point three, two is three across and two up. Always across first, then up.", T("**Coordinates** give a position: (3, 2) means 3 across and 2 up.", "Across first, then up.")),
     EXPP("Finding (3, 2)",
-      SS("Start at zero, zero in the bottom left corner.", S("(0, 0)", grid("g", 0, 0))),
-      SS("Move three squares across.", S("3 across", grid("g", 3, 0))),
-      SS("Then two squares up. We are at three, two.", S("then 2 up: (3, 2)", grid("g", 3, 2)))),
+      SS("Start at zero, zero in the bottom left corner. The numbers along the bottom count across. The numbers up the side count up.", S("(0, 0)", ["o", "🏁", 12, 80, 2, "pulse", "(0, 0)"], ...AX)),
+      SS("Move three squares across.", S("3 across", ["o", "🏁", 12, 80, 2, "none", "(0, 0)"], ...AX, ["p", "📍", 65, 76, 3, "pulse"])),
+      SS("Then two squares up. We are at three, two.", S("then 2 up: (3, 2)", ["o", "🏁", 12, 80, 2, "none", "(0, 0)"], ...AX, ["p", "📍", 65, 44, 3, "pulse", "(3, 2)"]))),
     CHK(mc("Which point is 4 across and 1 up?", "(4, 1)", ["(1, 4)", "(4, 4)"], { hint: "Across first, then up.", why: "(4, 1) means 4 across and 1 up.", tag: "shape.coordinates" })),
     H("Stop 2: Mirror images"),
     SAY("When we reflect a shape in a mirror line, every point is the same distance from the mirror, but on the other side. If the mirror is a vertical line, a point two squares to the left of the line ends up two squares to the right. The shape is the same size, just flipped.", T("A **reflection** is a mirror image. Each point is the same distance from the mirror line, on the other side.")),
     EXPP("Reflecting a point",
-      SS("A star is two squares to the left of the mirror line.", S("2 left of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "➖", 50, 50, 3, "none", "mirror"])),
-      SS("Its reflection is two squares to the right. Same distance, other side.", S("2 right of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "➖", 50, 50, 3, "none", "mirror"], ["r", "⭐", 70, 50, 3, "pulse", "reflection"]))),
+      SS("A star is two squares to the left of the mirror line.", S("2 left of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "🪞", 50, 50, 3, "none", "mirror"])),
+      SS("Its reflection is two squares to the right. Same distance, other side.", S("2 right of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "🪞", 50, 50, 3, "none", "mirror"], ["r", "⭐", 70, 50, 3, "pulse", "reflection"]))),
     CHK(mc("A point is 3 squares left of the mirror. Where is its reflection?", "3 squares right of the mirror", ["3 squares left of the mirror", "6 squares right of the mirror"], { hint: "Same distance, other side.", why: "A reflection is the same distance on the opposite side.", tag: "shape.reflection" })),
     H("Stop 3: Brain break"),
     SAY("Brain break. Find the pairs.", BRAIN("memory_match", "Shape pairs", "Find the matching shapes.", ["🔺", "🟦", "⭐", "🔷", "🟡", "🟩"])),
