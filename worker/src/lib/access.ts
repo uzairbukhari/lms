@@ -2,7 +2,8 @@
 // Access signs a short-lived RS256 token for every request that passed your login policy.
 
 export type AccessConfig = { teamDomain: string; aud: string };
-export type AccessIdentity = { email: string };
+/** A person has an email; a service token (automation) has a common_name, which is its Client ID. */
+export type AccessIdentity = { email?: string; commonName?: string };
 
 type Jwk = JsonWebKey & { kid?: string };
 type KeyFetcher = (teamDomain: string) => Promise<Jwk[]>;
@@ -68,7 +69,7 @@ export async function verifyAccessJwt(
     );
     if (!valid) return null;
 
-    const payload = parseJson<{ aud?: string | string[]; iss?: string; exp?: number; nbf?: number; email?: string }>(
+    const payload = parseJson<{ aud?: string | string[]; iss?: string; exp?: number; nbf?: number; email?: string; common_name?: string }>(
       b64urlToBytes(p),
     );
     const seconds = Math.floor(now / 1000);
@@ -77,8 +78,9 @@ export async function verifyAccessJwt(
     if (payload.iss !== `https://${config.teamDomain}`) return null;
     const audiences = Array.isArray(payload.aud) ? payload.aud : [payload.aud];
     if (!audiences.includes(config.aud)) return null;
-    if (!payload.email) return null;
-    return { email: payload.email.toLowerCase() };
+    if (payload.email) return { email: payload.email.toLowerCase() };
+    if (payload.common_name) return { commonName: payload.common_name };
+    return null;
   } catch {
     return null;
   }

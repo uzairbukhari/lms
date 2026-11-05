@@ -33,6 +33,11 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
       aud: env.ACCESS_AUD,
     });
     email = identity?.email;
+    // A service token (used by Claude to import lessons) acts as the admin, but only on the content routes listed below.
+    if (!email && identity?.commonName && env.ACCESS_SERVICE_TOKEN_ID && identity.commonName === env.ACCESS_SERVICE_TOKEN_ID) {
+      if (!automationMayCall(c.req.method, c.req.path)) return fail(c, 403, "service_token_scope", "This token can only create and read lessons and upload images.");
+      email = adminEmail;
+    }
   } else {
     return fail(c, 403, "admin_not_configured", "Set ACCESS_TEAM_DOMAIN and ACCESS_AUD for the Worker.");
   }
@@ -44,6 +49,14 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
   c.set("admin", { userId, email });
   await next();
 };
+
+/** What a service token may do: check, import and read lessons and courses, and upload images. Nothing about children, classes, results or settings. */
+export function automationMayCall(method: string, path: string): boolean {
+  const m = method.toUpperCase();
+  if (m === "POST") return /^\/api\/admin\/(lessons\/(validate|import)|assets)$/.test(path);
+  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets)$/.test(path);
+  return false;
+}
 
 /** Finds or creates the admin's user row. The first admin also gets a default "Family" class. */
 async function ensureAdminUser(db: D1Database, email: string): Promise<string> {
