@@ -10,7 +10,7 @@ import { requireStudent } from "../middleware/auth";
 /** What a signed-in child can see and do. Every lesson request goes through visibleLessonsFor. */
 export const studentRoutes = new Hono<AppEnv>();
 // Scoped paths (not "*") so unknown /api routes still fall through to the JSON 404.
-for (const path of ["/home", "/paths", "/lessons/:id", "/lessons/:id/progress"]) studentRoutes.use(path, requireStudent);
+for (const path of ["/home", "/paths", "/lessons/:id", "/lessons/:id/progress", "/lessons/:id/parts/:subId", "/lessons/:id/ratings"]) studentRoutes.use(path, requireStudent);
 
 type LessonRow = {
   id: string; slug: string; title: string; subject: string; summary: string; minutes: number;
@@ -95,7 +95,7 @@ studentRoutes.get("/lessons/:id", async (c) => {
     .bind(id)
     .first<LessonRow>();
   if (!row) return fail(c, 404, "not_found");
-  const file = JSON.parse(row.source_json) as { lesson: { learning_objectives: string[] }; quiz: { questions: unknown[]; pass_percent?: number } };
+  const file = JSON.parse(row.source_json) as TopicFile;
   const progress = await c.env.DB
     .prepare("SELECT status, last_block AS lastBlock FROM lesson_progress WHERE user_id = ? AND lesson_id = ?")
     .bind(user.id, id)
@@ -109,7 +109,107 @@ studentRoutes.get("/lessons/:id", async (c) => {
     quiz: { questionCount: file.quiz.questions.length, passPercent: file.quiz.pass_percent ?? 70 },
     progress,
     readOnly: v.phase === "past",
+    topic: file.sub_lessons ? await topicFor(c.env.DB, user.id, id, file) : undefined,
   });
+});
+
+type TopicFile = {
+  lesson: { learning_objectives: string[]; success_criteria?: string[]; standards?: unknown[]; real_life?: string; warm_up?: unknown[] };
+  sub_lessons?: { id: string; kind: string; title: string; blocks: unknown[]; mini_quiz: unknown[] }[];
+  quiz: { questions: unknown[]; pass_percent?: number };
+};
+
+/** The topic screen: each sub-lesson with the child's progress, "I can" ratings, and what to practise again after a short big quiz. */
+async function topicFor(db: D1Database, userId: string, lessonId: string, file: TopicFile) {
+  const subs = file.sub_lessons ?? [];
+  const [progress, ratings, last] = await Promise.all([
+    db.prepare("SELECT sub_id AS subId, viewed, mini_best AS miniBest FROM sub_lesson_progress WHERE user_id = ? AND lesson_id = ?").bind(userId, lessonId).all<{ subId: string; viewed: number; miniBest: number | null }>(),
+    db.prepare("SELECT criterion_index AS i, rating FROM self_ratings WHERE user_id = ? AND lesson_id = ?").bind(userId, lessonId).all<{ i: number; rating: number }>(),
+    db
+      .prepare("SELECT id, percent, passed FROM quiz_attempts WHERE user_id = ? AND lesson_id = ? AND status = 'submitted' ORDER BY submitted_at DESC, attempt_number DESC LIMIT 1")
+      .bind(userId, lessonId)
+      .first<{ id: string; percent: number; passed: number }>(),
+  ]);
+  // Practise again: sub-lessons with wrong answers in the latest big quiz, when it was not passed.
+  let practise: { subId: string; title: string; wrong: number; total: number }[] = [];
+  if (last && last.passed !== 1) {
+    const rows = (
+      await db
+        .prepare(`SELECT q.sub_lesson AS subId, COUNT(*) AS total, SUM(1 - aa.is_correct) AS wrong
+                    FROM attempt_answers aa JOIN questions q ON q.id = aa.question_id
+                   WHERE aa.attempt_id = ? AND q.sub_lesson IS NOT NULL GROUP BY q.sub_lesson`)
+        .bind(last.id)
+        .all<{ subId: string; total: number; wrong: number }>()
+    ).results;
+    practise = rows
+      .filter((r) => r.wrong > 0)
+      .map((r) => ({ subId: r.subId, title: subs.find((x) => x.id === r.subId)?.title ?? r.subId, wrong: r.wrong, total: r.total }))
+      .sort((a, b) => b.wrong - a.wrong);
+  }
+  return {
+    successCriteria: file.lesson.success_criteria ?? [],
+    realLife: file.lesson.real_life ?? null,
+    warmUp: file.lesson.warm_up ?? [],
+    ratings: ratings.results.map((r) => ({ index: r.i, rating: r.rating })),
+    lastQuiz: last ? { percent: last.percent, passed: last.passed === 1 } : null,
+    practise,
+    subLessons: subs.map((sub) => {
+      const p = progress.results.find((x) => x.subId === sub.id);
+      return { id: sub.id, kind: sub.kind, title: sub.title, viewed: p?.viewed === 1, miniBest: p?.miniBest ?? null, miniCount: sub.mini_quiz.length, weak: practise.some((x) => x.subId === sub.id) };
+    }),
+  };
+}
+
+/** One sub-lesson: its slides and mini quiz. Mini quizzes are marked on screen like in-lesson checks. */
+studentRoutes.get("/lessons/:id/parts/:subId", async (c) => {
+  const user = c.get("user");
+  const id = c.req.param("id");
+  const vis = await visibleLessonsFor(c.env.DB, user.id, todayIn(c.env.TIMEZONE));
+  const v = vis.lessons.find((l) => l.lessonId === id);
+  if (!v) return fail(c, 404, "not_found");
+  const row = await c.env.DB.prepare("SELECT title, subject_id AS subject, source_json FROM lessons WHERE id = ?").bind(id).first<{ title: string; subject: string; source_json: string }>();
+  const sub = row && (JSON.parse(row.source_json) as TopicFile).sub_lessons?.find((x) => x.id === c.req.param("subId"));
+  if (!row || !sub) return fail(c, 404, "not_found");
+  return c.json({ topicTitle: row.title, subject: row.subject, sub: { id: sub.id, kind: sub.kind, title: sub.title }, blocks: sub.blocks, miniQuiz: sub.mini_quiz, readOnly: v.phase === "past" });
+});
+
+/** Save a sub-lesson as viewed and/or its mini quiz score (the best is kept). Not saved when looking back. */
+studentRoutes.put("/lessons/:id/parts/:subId", async (c) => {
+  const user = c.get("user");
+  const id = c.req.param("id");
+  const subId = c.req.param("subId");
+  const vis = await visibleLessonsFor(c.env.DB, user.id, todayIn(c.env.TIMEZONE));
+  const v = vis.lessons.find((l) => l.lessonId === id);
+  if (!v) return fail(c, 404, "not_found");
+  const body = await parseBody(c, z.object({ viewed: z.boolean().optional(), miniPercent: z.number().int().min(0).max(100).optional() }));
+  if (v.phase === "past") return c.json({ ok: true, unchanged: true });
+  await c.env.DB
+    .prepare(
+      `INSERT INTO sub_lesson_progress (user_id, lesson_id, sub_id, viewed, mini_best, mini_attempts) VALUES (?, ?, ?, ?, ?, ?)
+       ON CONFLICT (user_id, lesson_id, sub_id) DO UPDATE SET viewed = MAX(viewed, excluded.viewed),
+         mini_best = CASE WHEN excluded.mini_best IS NULL THEN mini_best WHEN mini_best IS NULL THEN excluded.mini_best ELSE MAX(mini_best, excluded.mini_best) END,
+         mini_attempts = mini_attempts + excluded.mini_attempts, updated_at = datetime('now')`,
+    )
+    .bind(user.id, id, subId, body.viewed || body.miniPercent !== undefined ? 1 : 0, body.miniPercent ?? null, body.miniPercent !== undefined ? 1 : 0)
+    .run();
+  return c.json({ ok: true });
+});
+
+/** The child's own "I can" ratings (1 not yet, 2 nearly, 3 got it). The parent sees these beside the quiz result. */
+studentRoutes.put("/lessons/:id/ratings", async (c) => {
+  const user = c.get("user");
+  const id = c.req.param("id");
+  const vis = await visibleLessonsFor(c.env.DB, user.id, todayIn(c.env.TIMEZONE));
+  if (!vis.lessons.some((l) => l.lessonId === id)) return fail(c, 404, "not_found");
+  const body = await parseBody(c, z.object({ ratings: z.array(z.object({ index: z.number().int().min(0).max(7), rating: z.number().int().min(1).max(3) })).min(1).max(8) }));
+  await c.env.DB.batch(
+    body.ratings.map((r) =>
+      c.env.DB
+        .prepare("INSERT INTO self_ratings (user_id, lesson_id, criterion_index, rating) VALUES (?, ?, ?, ?) ON CONFLICT (user_id, lesson_id, criterion_index) DO UPDATE SET rating = excluded.rating, updated_at = datetime('now')")
+        .bind(user.id, id, r.index, r.rating),
+    ),
+  );
+  return c.json({ ok: true });
 });
 
 /**
