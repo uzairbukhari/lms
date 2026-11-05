@@ -6,6 +6,7 @@ import { Avatar } from "../components/Avatar";
 import type { CardSummary } from "../lib/cards";
 import type { Rewards, TeaserState } from "../lib/rewards";
 import { Loader } from "../components/Loader";
+import type { SubjectPath } from "../lib/topic";
 
 type Card = {
   id: string; title: string; subject: string; summary: string; minutes: number; semester: number | null; week: number | null; phase: string;
@@ -180,6 +181,7 @@ export function StudentHome() {
   const [cards, setCards] = useState<CardSummary | null>(null);
   const [picked, setPicked] = useState<string | null>(null);
   const [calOpen, setCalOpen] = useState(false);
+  const [paths, setPaths] = useState<SubjectPath[]>([]);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
@@ -188,6 +190,7 @@ export function StudentHome() {
     api<Rewards>("/api/rewards").then(setRewards).catch(() => undefined);
     api<TeaserState>("/api/teaser").then(setTeaser).catch(() => undefined);
     api<CardSummary>("/api/cards/summary").then(setCards).catch(() => undefined);
+    api<{ paths: SubjectPath[] }>("/api/paths").then((r) => setPaths(r.paths)).catch(() => undefined);
   }, []);
 
   if (!user) return null;
@@ -293,7 +296,30 @@ export function StudentHome() {
         </section>
       )}
 
-      {home && (
+      {paths.length > 0 && (
+        <section aria-labelledby="subjects" className="flex flex-col gap-4">
+          <h2 id="subjects" className="font-display text-3xl font-extrabold">My subjects</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {paths.map((p) => {
+              const l = look(p.subject);
+              const done = p.topics.filter((t) => t.status === "done").length;
+              const cur = p.topics.find((t) => t.status === "current" || t.status === "early");
+              return (
+                <Link key={`${p.courseId}:${p.subject}`} to={`/path/${p.courseId}/${p.subject}`} className="card flex items-center gap-4 p-5" aria-label={`${l.label}: ${done} of ${p.topics.length} topics done`}>
+                  <span className="flex h-20 w-20 flex-none items-center justify-center rounded-full" style={{ background: TINT[p.subject] ?? "var(--tint-english)", color: "var(--on-tint)", border: "var(--border-width) solid var(--surface-border)" }}><SubjectIcon subject={p.subject} size={40} /></span>
+                  <span className="flex flex-col gap-1">
+                    <span className="font-display text-2xl font-bold">{l.label}</span>
+                    <span className="text-muted">{done} of {p.topics.length} topics done</span>
+                    {cur && <span className="text-sm font-extrabold">Next: {shortTitle(cur.title)}</span>}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {home && !(paths.length > 0 && weekCards.length === 0) && (
         <section aria-labelledby="week" className="kh-week flex flex-col gap-4">
           {weekCards.length === 0 ? (
             <>
