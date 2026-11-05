@@ -82,6 +82,22 @@ function BaseTen({ p }: { p: PropSpec }) {
   );
 }
 
+function Coin({ p }: { p: PropSpec }) {
+  const face = p.highlight ?? "1p";
+  const pound = face.startsWith("£");
+  const copper = /^[12]p$/.test(face);
+  const [rim, fill, edge] = copper ? ["#b4683a", "#d98a56", "#8a4a22"] : pound ? ["#d9a920", "#e9ecef", "#9a7a10"] : ["#a7adb5", "#dfe3e8", "#6f7680"];
+  const size = face.length > 3 ? 30 : face.length > 2 ? 40 : 52;
+  return (
+    <svg viewBox="0 0 120 120">
+      <circle cx="60" cy="62" r="54" fill={edge} opacity="0.35" />
+      <circle cx="60" cy="58" r="54" fill={rim} stroke={edge} strokeWidth="3" />
+      <circle cx="60" cy="58" r="42" fill={fill} stroke={edge} strokeWidth="2" />
+      <text x="60" y="58" textAnchor="middle" dominantBaseline="central" fontSize={size} fontWeight="800" fill="#3a3f47">{face}</text>
+    </svg>
+  );
+}
+
 function Pizza({ p }: { p: PropSpec }) {
   const parts = Math.max(1, p.parts ?? 4); const shaded = Math.min(parts, p.shaded ?? 1);
   const r = 70; const c = 80;
@@ -280,7 +296,7 @@ function Venn({ p }: { p: PropSpec }) {
 const DRAW: Record<PropSpec["kind"], (x: { p: PropSpec }) => React.JSX.Element> = {
   number_line: NumberLine, ten_frame: TenFrame, base_ten: BaseTen, fraction_pizza: Pizza, fraction_bar: FractionBar, clock: Clock,
   thermometer: Thermometer, balance: Balance, plant: Plant, body: Body, globe: Globe, sun_earth: SunEarth, robot_grid: RobotGrid,
-  sorting_boxes: SortingBoxes, venn: Venn,
+  sorting_boxes: SortingBoxes, venn: Venn, coin: Coin,
 };
 
 /** Widths (in % of the stage) for sizes 1 to 3. Wide props get more room. */
@@ -305,6 +321,7 @@ export function propReadout(p: PropSpec): string {
     case "clock": return `A clock showing ${(p.hour ?? 3) % 12 || 12}:${String(p.minute ?? 0).padStart(2, "0")}.`;
     case "thermometer": return `A thermometer showing ${p.value ?? 20} degrees.`;
     case "balance": return `A balance with ${p.left ?? 1} on the left and ${p.right ?? 1} on the right.`;
+    case "coin": return `A coin: ${p.highlight ?? "1p"}.`;
     case "plant": return `A plant${p.highlight ? `, showing the ${p.highlight}` : ""}.`;
     case "body": return `A body${p.highlight ? `, showing the ${p.highlight}` : ""}.`;
     case "globe": return "A spinning globe.";

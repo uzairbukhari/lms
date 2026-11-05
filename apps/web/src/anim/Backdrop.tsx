@@ -67,7 +67,8 @@ function Scene({ name }: { name: BackdropName }) {
     case "lab":
       return (<><rect width={W} height={H} fill="#eef3ff" /><g stroke="#c8d4f0" strokeWidth="2">{Array.from({ length: 10 }, (_, i) => <path key={i} d={`M${i * 50} 0 V200`} />)}{Array.from({ length: 4 }, (_, i) => <path key={i} d={`M0 ${i * 50} H500`} />)}</g><rect y="200" width={W} height="24" fill="#8fa3d6" /><rect y="224" width={W} height="76" fill="#b9c7ea" /><g transform="translate(60 150)"><path d="M10 0 V20 L-6 50 H40 L24 20 V0Z" fill="#c4f1e4" stroke="#6aa" strokeWidth="2" /><circle className="bd-bubble" cx="18" cy="40" r="3" fill="#6aa" /></g><g transform="translate(420 130)"><rect width="50" height="70" rx="6" fill="#fff" stroke="#8fa3d6" strokeWidth="3" /><rect x="8" y="10" width="34" height="22" rx="3" fill="#93d8fb" /></g></>);
     default:
-      return <rect width={W} height={H} fill="var(--surface)" />;
+      // Light paper in every theme, so drawn props (which use dark ink) always read clearly.
+      return (<><rect width={W} height={H} fill="#fbf7ee" /><g stroke="#efe6d2" strokeWidth="2">{Array.from({ length: 10 }, (_, i) => <path key={i} d={`M${i * 50} 0 V300`} />)}{Array.from({ length: 6 }, (_, i) => <path key={i} d={`M0 ${i * 50} H500`} />)}</g></>);
   }
 }
 

@@ -1,0 +1,2450 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-shape",
+  "subject": "maths",
+  "title": "Shape and Position",
+  "summary": "Flat and solid shapes, symmetry, Islamic patterns, and turns and directions.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Shape and position",
+  "learning_objectives": [
+   "Name and describe flat and solid shapes",
+   "Spot symmetry and patterns",
+   "Use turns and directions"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 geometry",
+    "text": "Identify and describe the properties of 2-D and 3-D shapes; order and arrange mathematical objects in patterns; use mathematical vocabulary to describe position, direction and movement"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gg.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gg.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gg.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Gp.01"
+   }
+  ],
+  "success_criteria": [
+   "I can name flat shapes by their sides",
+   "I can name solid shapes",
+   "I can spot a line of symmetry",
+   "I can use quarter and half turns"
+  ],
+  "real_life": "Spotting shapes at home, patterns in mosques and giving directions.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "How many sides does a triangle have?",
+    "hint": "Tri means three.",
+    "explanation": "A triangle has 3 sides.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 4 + 4?",
+    "hint": "Double 4.",
+    "explanation": "4 + 4 = 8.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A circle has corners.",
+    "hint": "It is round.",
+    "explanation": "A circle has no corners.",
+    "answer": [
+     false
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we explore shapes, symmetry and directions.",
+   "say": "Welcome back, number explorer! Today we look at shapes. Flat shapes like triangles and squares, and solid shapes like cubes and spheres. We will spot shapes that match on both sides, look at the patterns in mosques, and help a robot find its way."
+  },
+  {
+   "type": "image",
+   "emoji": "🔷",
+   "alt": "Shapes are all around us.",
+   "caption": "Shapes are all around us."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "shape",
+     "meaning": "The outline or form of something."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "flat",
+   "kind": "learn",
+   "title": "Flat shapes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sides and corners"
+    },
+    {
+     "type": "text",
+     "markdown": "Flat shapes have **sides** and **corners**.\n\nA triangle has 3 sides. A square and a rectangle have 4 sides.",
+     "say": "Flat shapes are called two D shapes. Every flat shape has sides and corners. A side is a straight edge. A corner is where two sides meet. A triangle has three sides and three corners. A square has four sides and four corners, and all its sides are the same length. A rectangle has four sides and four corners too, but the long sides are longer than the short sides."
+    },
+    {
+     "type": "explainer",
+     "title": "Count the sides",
+     "scenes": [
+      {
+       "caption": "Triangle: 3 sides, 3 corners.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "triangle"
+        }
+       ],
+       "say": "A triangle. Count the sides: one, two, three. Three corners as well."
+      },
+      {
+       "caption": "Square: 4 equal sides, 4 corners.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "square"
+        }
+       ],
+       "say": "A square. Four sides, all the same length. And four corners."
+      },
+      {
+       "caption": "Circle: 0 sides, 0 corners.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔵",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "circle"
+        }
+       ],
+       "say": "A circle. It has no straight sides and no corners at all. It is round all the way."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many sides does a triangle have?",
+      "hint": "Tri means three.",
+      "explanation": "A triangle has 3 sides.",
+      "skill_tag": "shape.sides",
+      "answer": {
+       "value": 3,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Which shape is which?"
+    },
+    {
+     "type": "text",
+     "markdown": "3 sides: triangle. 4 sides: square or rectangle. 5 sides: **pentagon**. 6 sides: **hexagon**.",
+     "say": "Let us sort shapes by their sides. Shapes with three sides are triangles. Shapes with four sides are squares and rectangles. A shape with five sides is a pentagon, and with six sides a hexagon. Look around you. A door is a rectangle. A clock is a circle. A road sign can be a triangle."
+    },
+    {
+     "type": "image",
+     "emoji": "🔷",
+     "alt": "Shapes are named by the number of their sides.",
+     "caption": "Shapes are named by the number of their sides."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A shape has 4 equal sides. What is it?",
+      "hint": "Four equal sides and corners.",
+      "explanation": "A square has 4 equal sides.",
+      "skill_tag": "shape.names",
+      "options": [
+       {
+        "id": "a",
+        "text": "A triangle"
+       },
+       {
+        "id": "b",
+        "text": "A circle"
+       },
+       {
+        "id": "c",
+        "text": "A square"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Flat shapes have sides and corners",
+      "A circle has no sides or corners",
+      "Count the sides to name a shape"
+     ],
+     "say": "Remember. Flat shapes have sides and corners. A circle has none. Count the sides to name the shape."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "side",
+       "meaning": "A straight edge of a shape."
+      },
+      {
+       "term": "corner",
+       "meaning": "Where two sides meet."
+      },
+      {
+       "term": "triangle",
+       "meaning": "A shape with 3 sides."
+      },
+      {
+       "term": "square",
+       "meaning": "A shape with 4 equal sides."
+      },
+      {
+       "term": "rectangle",
+       "meaning": "A shape with 4 sides and 4 corners."
+      },
+      {
+       "term": "circle",
+       "meaning": "A round shape."
+      },
+      {
+       "term": "pentagon",
+       "meaning": "A shape with 5 sides."
+      },
+      {
+       "term": "hexagon",
+       "meaning": "A shape with 6 sides."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many corners does a square have?",
+     "hint": "Count where sides meet.",
+     "explanation": "A square has 4 corners.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which shape has no corners?",
+     "hint": "It is round.",
+     "explanation": "A circle has no corners.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Square"
+      },
+      {
+       "id": "b",
+       "text": "Triangle"
+      },
+      {
+       "id": "c",
+       "text": "Circle"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A rectangle has 5 sides.",
+     "hint": "Count the sides of a door.",
+     "explanation": "A rectangle has 4 sides.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many sides does a hexagon have?",
+     "hint": "Hex means six.",
+     "explanation": "A hexagon has 6 sides.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "solid",
+   "kind": "try",
+   "title": "Solid shapes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Three D shapes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **cube** has 6 flat faces. A **sphere** is round. A **cylinder** has 2 circles. A **cone** has a point.\n\nSolid shapes have faces, edges and corners.",
+     "say": "Solid shapes are called three D shapes. You can pick them up and hold them. A cube is like a dice. It has six flat faces, and all of them are squares. A sphere is like a ball. It is round all over. A cylinder is like a tin of beans. It has two flat circles and one curved side. A cone is like an ice cream cone. It has one flat circle and a point."
+    },
+    {
+     "type": "explainer",
+     "title": "Four solid shapes",
+     "scenes": [
+      {
+       "caption": "Cube.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎲",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "cube"
+        }
+       ],
+       "say": "A cube, like a dice. Six square faces."
+      },
+      {
+       "caption": "Sphere.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "⚽",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "sphere"
+        }
+       ],
+       "say": "A sphere, like a ball. It rolls because it is round all over."
+      },
+      {
+       "caption": "Cylinder and cone.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥫",
+         "x": 28,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "cylinder"
+        },
+        {
+         "id": "b",
+         "emoji": "🍦",
+         "x": 72,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "cone"
+        }
+       ],
+       "say": "A cylinder like a tin. A cone like an ice cream cone."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which solid shape is like a ball?",
+      "hint": "It rolls in every direction.",
+      "explanation": "A ball is a sphere.",
+      "skill_tag": "shape.solid",
+      "options": [
+       {
+        "id": "a",
+        "text": "Cube"
+       },
+       {
+        "id": "b",
+        "text": "Cone"
+       },
+       {
+        "id": "c",
+        "text": "Sphere"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Shape hunt"
+    },
+    {
+     "type": "text",
+     "markdown": "Go on a shape hunt at home and find a cube, sphere, cylinder and cone.",
+     "say": "Time for a shape hunt at home. Find a cube, a sphere, a cylinder and a cone. Look in the kitchen, your toy box and your school bag. A tin is a cylinder. A tissue box is a cuboid. Draw or tick each one you find."
+    },
+    {
+     "type": "image",
+     "emoji": "🔎",
+     "alt": "A shape hunt at home.",
+     "caption": "A shape hunt at home.",
+     "say": "Look for solid shapes at home: a ball, a tin, a box and a cone."
+    },
+    {
+     "type": "activity",
+     "title": "Shape hunt",
+     "materials": [
+      "Paper and a pencil",
+      "A parent to help"
+     ],
+     "instructions": [
+      "Find something shaped like a ball. What is it?",
+      "Find something shaped like a tin. What is it?",
+      "Find something shaped like a box.",
+      "Which shape did you find most of?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A tin of beans is a...",
+      "hint": "It has two flat circles.",
+      "explanation": "A tin is a cylinder.",
+      "skill_tag": "shape.solid",
+      "options": [
+       {
+        "id": "a",
+        "text": "sphere"
+       },
+       {
+        "id": "b",
+        "text": "cylinder"
+       },
+       {
+        "id": "c",
+        "text": "cube"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Solid shapes are 3D",
+      "Cube, sphere, cylinder and cone"
+     ],
+     "say": "Remember. Solid shapes are three D. A cube has square faces. A sphere is round. A cylinder has two circles. A cone has a point."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "cube",
+       "meaning": "A solid shape with 6 square faces."
+      },
+      {
+       "term": "sphere",
+       "meaning": "A solid ball shape."
+      },
+      {
+       "term": "cylinder",
+       "meaning": "A solid shape like a tin."
+      },
+      {
+       "term": "cone",
+       "meaning": "A solid shape with a point."
+      },
+      {
+       "term": "face",
+       "meaning": "A flat surface of a solid shape."
+      },
+      {
+       "term": "cuboid",
+       "meaning": "A solid shape like a box."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many faces does a cube have?",
+     "hint": "Think of a dice.",
+     "explanation": "A cube has 6 faces.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "An ice cream cone is a...",
+     "hint": "It has a point.",
+     "explanation": "It is a cone.",
+     "options": [
+      {
+       "id": "a",
+       "text": "cylinder"
+      },
+      {
+       "id": "b",
+       "text": "cone"
+      },
+      {
+       "id": "c",
+       "text": "cube"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A sphere has flat faces.",
+     "hint": "A ball is round.",
+     "explanation": "A sphere has no flat faces.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which shape could roll like a ball?",
+     "hint": "Round all over.",
+     "explanation": "A sphere rolls.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cube"
+      },
+      {
+       "id": "b",
+       "text": "Cuboid"
+      },
+      {
+       "id": "c",
+       "text": "Sphere"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "symmetry",
+   "kind": "play",
+   "title": "Symmetry and patterns",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Mirror lines"
+    },
+    {
+     "type": "text",
+     "markdown": "**Symmetry** means one half is the mirror image of the other half.\n\nThe fold is the **line of symmetry**.",
+     "say": "Some shapes look the same on both sides. That is called symmetry. Imagine folding a butterfly down the middle. The left wing matches the right wing exactly. The fold line is the line of symmetry, or mirror line. A butterfly, a heart and a square all have symmetry. A shape is symmetrical if one half is the mirror image of the other."
+    },
+    {
+     "type": "explainer",
+     "title": "A symmetrical butterfly",
+     "scenes": [
+      {
+       "caption": "Look at the left wing.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🦋",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a butterfly. Look at its left wing."
+      },
+      {
+       "caption": "Left matches right. The line is the mirror line.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🦋",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "l",
+         "emoji": "➖",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "none",
+         "label": "mirror line"
+        }
+       ],
+       "say": "The right wing is the mirror image. The line down the middle is the line of symmetry."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Symmetry match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "🦋",
+      "🐞",
+      "❤️",
+      "⭐",
+      "🌸",
+      "🍀"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A butterfly's wings are the same on both sides. This is called...",
+      "hint": "Mirror image.",
+      "explanation": "When both sides match it is symmetry.",
+      "skill_tag": "shape.symmetry",
+      "options": [
+       {
+        "id": "a",
+        "text": "a corner"
+       },
+       {
+        "id": "b",
+        "text": "a face"
+       },
+       {
+        "id": "c",
+        "text": "symmetry"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Islamic patterns"
+    },
+    {
+     "type": "text",
+     "markdown": "Islamic tile patterns use shapes that repeat, and many are symmetrical.\n\nLook for squares, triangles and stars.",
+     "say": "Many mosques have beautiful tile patterns. They use shapes that fit together with no gaps, like squares, triangles and stars. The patterns repeat again and again. Many of them are symmetrical too. Look at a pattern and ask: what shapes can I see? What repeats? Where is the mirror line?"
+    },
+    {
+     "type": "image",
+     "emoji": "🕌",
+     "alt": "Islamic tile patterns repeat shapes and are often symmetrical.",
+     "caption": "Islamic tile patterns repeat shapes and are often symmetrical."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Which shape has the most lines of symmetry: a circle, a square or a triangle? Have a think first.",
+     "answer_markdown": "A circle has endless lines of symmetry. A square has 4. An equilateral triangle has 3."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A pattern that repeats again and again is called...",
+      "hint": "It goes on and on.",
+      "explanation": "A repeating pattern repeats the same shapes.",
+      "skill_tag": "shape.patterns",
+      "options": [
+       {
+        "id": "a",
+        "text": "a corner"
+       },
+       {
+        "id": "b",
+        "text": "a repeating pattern"
+       },
+       {
+        "id": "c",
+        "text": "a mirror line"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Symmetry means both halves match",
+      "The fold is the mirror line",
+      "Patterns repeat shapes"
+     ],
+     "say": "Remember. Symmetry means both halves match. The fold is the mirror line. Patterns repeat shapes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "symmetry",
+       "meaning": "When one half is the mirror image of the other."
+      },
+      {
+       "term": "line of symmetry",
+       "meaning": "The line you could fold along so both halves match."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Shapes or colours that repeat."
+      },
+      {
+       "term": "mosque",
+       "meaning": "A place where Muslims pray."
+      },
+      {
+       "term": "tile",
+       "meaning": "A flat piece used to cover a floor or wall."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A heart has a line of symmetry.",
+     "hint": "Fold it down the middle.",
+     "explanation": "Both halves of a heart match.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many lines of symmetry does a square have?",
+     "hint": "Across, down and two corners.",
+     "explanation": "A square has 4 lines of symmetry.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A mirror line is also called a...",
+     "hint": "The fold.",
+     "explanation": "A mirror line is a line of symmetry.",
+     "options": [
+      {
+       "id": "a",
+       "text": "face"
+      },
+      {
+       "id": "b",
+       "text": "line of symmetry"
+      },
+      {
+       "id": "c",
+       "text": "corner"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A pattern repeats the same shapes.",
+     "hint": "Repeats again and again.",
+     "explanation": "A pattern repeats.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "turns",
+   "kind": "use",
+   "title": "Turns and directions",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Left, right and turns"
+    },
+    {
+     "type": "text",
+     "markdown": "A **quarter turn** is a turn to the left or right. A **half turn** faces the other way.\n\nA whole turn takes you back to the start.",
+     "say": "We use turns to give directions. A quarter turn is a turn to the left or the right. A half turn takes us all the way around to face the other way. A whole turn takes us right back to where we started. Look at the robot. It faces right. If it makes a quarter turn to the right, it will face down."
+    },
+    {
+     "type": "explainer",
+     "title": "The robot turns",
+     "scenes": [
+      {
+       "caption": "The robot faces right.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot faces right, on its grid."
+      },
+      {
+       "caption": "A quarter turn right: facing down.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A quarter turn to the right. Now it faces down."
+      },
+      {
+       "caption": "Two quarter turns make a half turn.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "left"
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Another quarter turn. Now it faces left. Two quarter turns make a half turn."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How many quarter turns make a whole turn?",
+      "hint": "Think of four quarters.",
+      "explanation": "4 quarter turns make a whole turn.",
+      "skill_tag": "shape.turns",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Giving directions"
+    },
+    {
+     "type": "text",
+     "markdown": "Give directions with moves and turns. Coders do this too.\n\nForward 2, turn right, forward 1.",
+     "say": "Now be the robot's boss. Tell it to move forward two squares, then turn right, then forward one square. Where does it end up? Walk the steps yourself in the room. Giving clear directions is also what coders do when they write programs."
+    },
+    {
+     "type": "explainer",
+     "title": "Move the robot",
+     "scenes": [
+      {
+       "caption": "Forward 2.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 2,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot starts here, facing right. Forward two squares."
+      },
+      {
+       "caption": "Turn right, forward 1.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 2,
+          "row": 1,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Turn right, now facing down. Forward one square. It ends up here."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "reveal",
+     "prompt": "The robot faces right and makes a half turn. Which way does it face now? Have a think first.",
+     "answer_markdown": "Left. A half turn faces the opposite way."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "You face forward and make a half turn. Which way are you facing now?",
+      "hint": "Half way round.",
+      "explanation": "A half turn faces the opposite way.",
+      "skill_tag": "shape.turns",
+      "options": [
+       {
+        "id": "a",
+        "text": "Forwards"
+       },
+       {
+        "id": "b",
+        "text": "Backwards"
+       },
+       {
+        "id": "c",
+        "text": "Sideways"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A quarter turn is left or right",
+      "A half turn faces the other way",
+      "Give directions with moves and turns"
+     ],
+     "say": "Remember. A quarter turn is left or right. A half turn faces the other way. Give directions with moves and turns."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "quarter turn",
+       "meaning": "A turn to the left or right."
+      },
+      {
+       "term": "half turn",
+       "meaning": "A turn to face the opposite way."
+      },
+      {
+       "term": "direction",
+       "meaning": "The way something is facing or moving."
+      },
+      {
+       "term": "forward",
+       "meaning": "Straight ahead."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many half turns make a whole turn?",
+     "hint": "Half plus half.",
+     "explanation": "2 half turns make a whole turn.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A quarter turn to the right from facing up faces...",
+     "hint": "Turn like a clock hand.",
+     "explanation": "Up turned right is right.",
+     "options": [
+      {
+       "id": "a",
+       "text": "down"
+      },
+      {
+       "id": "b",
+       "text": "right"
+      },
+      {
+       "id": "c",
+       "text": "left"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A whole turn leaves you facing the same way.",
+     "hint": "All the way round.",
+     "explanation": "A whole turn takes you back to the start.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which turn faces the opposite way?",
+     "hint": "Half way round.",
+     "explanation": "A half turn faces the opposite way.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Whole turn"
+      },
+      {
+       "id": "b",
+       "text": "Half turn"
+      },
+      {
+       "id": "c",
+       "text": "Quarter turn"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "How many sides does a square have?",
+    "hint": "Count the edges.",
+    "explanation": "A square has 4 sides.",
+    "skill_tag": "shape.sides",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "flat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A circle has 3 corners.",
+    "hint": "A circle is round.",
+    "explanation": "A circle has no corners.",
+    "skill_tag": "shape.sides",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "flat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Which solid shape is like a dice?",
+    "hint": "Six square faces.",
+    "explanation": "A dice is a cube.",
+    "skill_tag": "shape.solid",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sphere"
+     },
+     {
+      "id": "b",
+      "text": "Cube"
+     },
+     {
+      "id": "c",
+      "text": "Cone"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "solid",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Think of a dice.",
+    "explanation": "A cube has 6 faces and a triangle has 3 sides.",
+    "skill_tag": "shape.properties",
+    "points": 2,
+    "text": "A cube has {b1} faces. A triangle has {b2} sides.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "8"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which shapes have 4 sides? Pick two.",
+    "hint": "Count the sides.",
+    "explanation": "A square and a rectangle both have 4 sides.",
+    "skill_tag": "shape.sides",
+    "options": [
+     {
+      "id": "a",
+      "text": "Triangle"
+     },
+     {
+      "id": "b",
+      "text": "Circle"
+     },
+     {
+      "id": "c",
+      "text": "Rectangle"
+     },
+     {
+      "id": "d",
+      "text": "Square"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these shapes in order of the number of sides, fewest first.",
+    "hint": "Count the sides of each.",
+    "explanation": "3, 4, 5 and 6 sides in order.",
+    "skill_tag": "shape.sides",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Pentagon"
+     },
+     {
+      "id": "i4",
+      "text": "Hexagon"
+     },
+     {
+      "id": "i2",
+      "text": "Square"
+     },
+     {
+      "id": "i1",
+      "text": "Triangle"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each solid shape to a real thing.",
+    "hint": "Think of the shape.",
+    "explanation": "A dice is a cube, a football is a sphere, a tin is a cylinder.",
+    "skill_tag": "shape.solid",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cube"
+     },
+     {
+      "id": "l2",
+      "text": "Sphere"
+     },
+     {
+      "id": "l3",
+      "text": "Cylinder"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Football"
+     },
+     {
+      "id": "r3",
+      "text": "Tin of beans"
+     },
+     {
+      "id": "r1",
+      "text": "Dice"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the shape that has symmetry.",
+    "hint": "Both halves match.",
+    "explanation": "A butterfly's wings match.",
+    "skill_tag": "shape.symmetry",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🦋",
+       "label": "A butterfly",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧩",
+       "label": "A jigsaw piece",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "A rough rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show how many lines of symmetry a square has.",
+    "hint": "Across, down and two corner to corner.",
+    "explanation": "A square has 4 lines of symmetry.",
+    "skill_tag": "shape.symmetry",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "A robot faces up and makes a quarter turn to the right. Which way does it face?",
+    "hint": "Turn like a clock hand.",
+    "explanation": "Up turned right is right.",
+    "skill_tag": "shape.turns",
+    "options": [
+     {
+      "id": "a",
+      "text": "Left"
+     },
+     {
+      "id": "b",
+      "text": "Right"
+     },
+     {
+      "id": "c",
+      "text": "Down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "turns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "number",
+    "prompt": "How many quarter turns make a half turn?",
+    "hint": "Quarter plus quarter.",
+    "explanation": "2 quarter turns make a half turn.",
+    "skill_tag": "shape.turns",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "turns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Hana says a circle has 4 corners because it is round. Is she right?",
+    "hint": "Corners are where two sides meet.",
+    "explanation": "A circle has no sides, so no corners.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a circle has 4 corners"
+     },
+     {
+      "id": "b",
+      "text": "No. A circle has no corners, because it has no straight sides"
+     },
+     {
+      "id": "c",
+      "text": "No, a circle has 2 corners"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "flat",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does a sphere roll but a cube does not roll easily?",
+    "hint": "Think of a ball and a dice.",
+    "explanation": "A sphere is round, so it rolls. A cube has flat faces.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "A sphere is heavier"
+     },
+     {
+      "id": "b",
+      "text": "A cube is smaller"
+     },
+     {
+      "id": "c",
+      "text": "A sphere is round all over, but a cube has flat faces and corners"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "solid",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Sara folds a heart down the middle and both halves match. What does this show?",
+    "hint": "Both halves are mirror images.",
+    "explanation": "When both halves match, the fold is a line of symmetry.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The heart has corners"
+     },
+     {
+      "id": "b",
+      "text": "The fold is a line of symmetry"
+     },
+     {
+      "id": "c",
+      "text": "The heart is a cube"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "A robot faces left and makes a half turn. Aisha says it now faces left again. Is she right?",
+    "hint": "Half way round.",
+    "explanation": "A half turn faces the opposite way, so left becomes right.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it faces up"
+     },
+     {
+      "id": "b",
+      "text": "No. A half turn faces the opposite way, so it now faces right"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it faces left again"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "turns",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "How many corners does a rectangle have?",
+    "hint": "Count where sides meet.",
+    "explanation": "A rectangle has 4 corners.",
+    "skill_tag": "shape.sides",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "flat",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "number",
+    "prompt": "How many sides does a pentagon have?",
+    "hint": "Penta means five.",
+    "explanation": "A pentagon has 5 sides.",
+    "skill_tag": "shape.sides",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "flat",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A triangle has 3 corners.",
+    "hint": "Count where sides meet.",
+    "explanation": "A triangle has 3 corners.",
+    "skill_tag": "shape.sides",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "flat",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A hexagon has 4 sides.",
+    "hint": "Hex means six.",
+    "explanation": "A hexagon has 6 sides.",
+    "skill_tag": "shape.sides",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "flat",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Which solid shape is like a football?",
+    "hint": "Round all over.",
+    "explanation": "A football is a sphere.",
+    "skill_tag": "shape.solid",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cylinder"
+     },
+     {
+      "id": "b",
+      "text": "Sphere"
+     },
+     {
+      "id": "c",
+      "text": "Cube"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "solid",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "multiple_choice",
+    "prompt": "Which solid shape is like a party hat?",
+    "hint": "It has a point.",
+    "explanation": "A party hat is a cone.",
+    "skill_tag": "shape.solid",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sphere"
+     },
+     {
+      "id": "b",
+      "text": "Cone"
+     },
+     {
+      "id": "c",
+      "text": "Cube"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "solid",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "A circle is round.",
+    "explanation": "A square has 4 sides and a circle has 0 corners.",
+    "skill_tag": "shape.properties",
+    "points": 2,
+    "text": "A square has {b1} sides. A circle has {b2} corners.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "0"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Hex means six.",
+    "explanation": "A hexagon has 6 sides and a rectangle has 4 corners.",
+    "skill_tag": "shape.properties",
+    "points": 2,
+    "text": "A hexagon has {b1} sides. A rectangle has {b2} corners.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which shapes have no straight sides? Pick two.",
+    "hint": "Round shapes.",
+    "explanation": "A circle and an oval have no straight sides.",
+    "skill_tag": "shape.sides",
+    "options": [
+     {
+      "id": "a",
+      "text": "Square"
+     },
+     {
+      "id": "b",
+      "text": "Triangle"
+     },
+     {
+      "id": "c",
+      "text": "Oval"
+     },
+     {
+      "id": "d",
+      "text": "Circle"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which shapes have corners? Pick two.",
+    "hint": "Where two sides meet.",
+    "explanation": "A triangle and a square both have corners.",
+    "skill_tag": "shape.sides",
+    "options": [
+     {
+      "id": "a",
+      "text": "Circle"
+     },
+     {
+      "id": "b",
+      "text": "Oval"
+     },
+     {
+      "id": "c",
+      "text": "Square"
+     },
+     {
+      "id": "d",
+      "text": "Triangle"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these shapes by number of sides, fewest first.",
+    "hint": "Count the sides of each.",
+    "explanation": "0, 3, 4 and 6 sides in order.",
+    "skill_tag": "shape.sides",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Triangle"
+     },
+     {
+      "id": "i4",
+      "text": "Hexagon"
+     },
+     {
+      "id": "i3",
+      "text": "Rectangle"
+     },
+     {
+      "id": "i1",
+      "text": "Circle"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Arrange these shapes, fewest sides first.",
+    "hint": "Count the sides of each.",
+    "explanation": "3, 4, 5 and 6 sides in order.",
+    "skill_tag": "shape.sides",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Rectangle"
+     },
+     {
+      "id": "i3",
+      "text": "Pentagon"
+     },
+     {
+      "id": "i4",
+      "text": "Hexagon"
+     },
+     {
+      "id": "i1",
+      "text": "Triangle"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "flat",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Join each solid shape to a real thing.",
+    "hint": "Think of the shape.",
+    "explanation": "An ice cream cone is a cone, a marble is a sphere, a block is a cube.",
+    "skill_tag": "shape.solid",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cone"
+     },
+     {
+      "id": "l2",
+      "text": "Sphere"
+     },
+     {
+      "id": "l3",
+      "text": "Cube"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Building block"
+     },
+     {
+      "id": "r1",
+      "text": "Ice cream cone"
+     },
+     {
+      "id": "r2",
+      "text": "Marble"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Pair each solid shape with a real thing.",
+    "hint": "Think of the shape.",
+    "explanation": "A can is a cylinder, a party hat is a cone, a cereal box is a cuboid.",
+    "skill_tag": "shape.solid",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cylinder"
+     },
+     {
+      "id": "l2",
+      "text": "Cone"
+     },
+     {
+      "id": "l3",
+      "text": "Cuboid"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Party hat"
+     },
+     {
+      "id": "r3",
+      "text": "Cereal box"
+     },
+     {
+      "id": "r1",
+      "text": "Drinks can"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "solid",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is symmetrical.",
+    "hint": "Both halves match.",
+    "explanation": "A heart's two halves match.",
+    "skill_tag": "shape.symmetry",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "A rough rock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "❤️",
+       "label": "A heart",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧩",
+       "label": "A jigsaw piece",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "hotspot",
+    "prompt": "Tap the shape that has a mirror line.",
+    "hint": "Both halves match.",
+    "explanation": "A star has mirror lines.",
+    "skill_tag": "shape.symmetry",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⭐",
+       "label": "A star",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪨",
+       "label": "A rough rock",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧩",
+       "label": "A jigsaw piece",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show how many sides a hexagon has.",
+    "hint": "Hex means six.",
+    "explanation": "A hexagon has 6 sides.",
+    "skill_tag": "shape.sides",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show how many faces a cube has.",
+    "hint": "Think of a dice.",
+    "explanation": "A cube has 6 faces.",
+    "skill_tag": "shape.solid",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "A robot faces right and makes a quarter turn to the right. Which way does it face?",
+    "hint": "Turn like a clock hand.",
+    "explanation": "Right turned right is down.",
+    "skill_tag": "shape.turns",
+    "options": [
+     {
+      "id": "a",
+      "text": "Left"
+     },
+     {
+      "id": "b",
+      "text": "Down"
+     },
+     {
+      "id": "c",
+      "text": "Up"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "turns",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "multiple_choice",
+    "prompt": "A robot faces down and makes a half turn. Which way does it face?",
+    "hint": "Half way round.",
+    "explanation": "A half turn faces the opposite way.",
+    "skill_tag": "shape.turns",
+    "options": [
+     {
+      "id": "a",
+      "text": "Right"
+     },
+     {
+      "id": "b",
+      "text": "Up"
+     },
+     {
+      "id": "c",
+      "text": "Left"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "turns",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "number",
+    "prompt": "A robot turns a quarter turn four times. How many whole turns is that?",
+    "hint": "Four quarters make a whole.",
+    "explanation": "4 quarter turns make 1 whole turn.",
+    "skill_tag": "shape.turns",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "turns",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "number",
+    "prompt": "You do two half turns in a row. How many whole turns is that?",
+    "hint": "Half and half.",
+    "explanation": "2 half turns make 1 whole turn.",
+    "skill_tag": "shape.turns",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "turns",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a triangle has 4 sides. Is he right?",
+    "hint": "Count the sides.",
+    "explanation": "A triangle has 3 sides.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, a triangle has 5 sides"
+     },
+     {
+      "id": "b",
+      "text": "No. A triangle has 3 sides"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a triangle has 4 sides"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "flat",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Mina says a cube has 4 faces. Is she right?",
+    "hint": "Think of a dice.",
+    "explanation": "A cube has 6 faces.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a cube has 4 faces"
+     },
+     {
+      "id": "b",
+      "text": "No, a cube has 8 faces"
+     },
+     {
+      "id": "c",
+      "text": "No. A cube has 6 faces, like a dice"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "flat",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why does a tin of beans roll on its side but not stand easily on a point?",
+    "hint": "Think of a tin rolling.",
+    "explanation": "A cylinder has a curved side, so it rolls on its side.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is heavy"
+     },
+     {
+      "id": "b",
+      "text": "A cylinder has a curved side that rolls"
+     },
+     {
+      "id": "c",
+      "text": "It is a cube"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "solid",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why can you stack cubes but not spheres?",
+    "hint": "Think about flat faces.",
+    "explanation": "Flat faces stack. Round shapes roll.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Spheres are heavier"
+     },
+     {
+      "id": "b",
+      "text": "Cubes are bigger"
+     },
+     {
+      "id": "c",
+      "text": "Cubes have flat faces, but spheres are round and roll away"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "solid",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Zain folds a butterfly's picture and both wings match. What does this show?",
+    "hint": "Both halves are mirror images.",
+    "explanation": "When both halves match, the fold is a line of symmetry.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The butterfly has corners"
+     },
+     {
+      "id": "b",
+      "text": "The butterfly is a cone"
+     },
+     {
+      "id": "c",
+      "text": "The fold is a line of symmetry"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Layla folds a leaf and one half is much bigger. What does this show?",
+    "hint": "Do both halves match?",
+    "explanation": "If the halves do not match, it is not symmetrical.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The leaf has corners"
+     },
+     {
+      "id": "b",
+      "text": "The leaf is not symmetrical"
+     },
+     {
+      "id": "c",
+      "text": "The leaf is a cube"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "A robot faces up and makes a half turn. Ravi says it now faces up. Is he right?",
+    "hint": "Half way round.",
+    "explanation": "A half turn faces the opposite way, so up becomes down.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it faces right"
+     },
+     {
+      "id": "b",
+      "text": "No. A half turn faces the opposite way, so it now faces down"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it faces up again"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "turns",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "A robot faces right and makes a whole turn. Sana says it faces left. Is she right?",
+    "hint": "All the way round.",
+    "explanation": "A whole turn brings it back to the start.",
+    "skill_tag": "shape.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it faces left"
+     },
+     {
+      "id": "b",
+      "text": "No, it faces down"
+     },
+     {
+      "id": "c",
+      "text": "No. A whole turn brings it back to face right"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "turns",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
