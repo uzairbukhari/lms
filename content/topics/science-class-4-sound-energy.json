@@ -1,0 +1,2517 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-sound-energy",
+  "subject": "science",
+  "title": "Sound and Energy",
+  "summary": "How sounds are made, how they travel, pitch and volume, and how energy is transferred but never used up.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Sound and energy",
+  "learning_objectives": [
+   "Explain that sound is made by vibrations",
+   "Explain how sound travels and why not through a vacuum",
+   "Describe pitch and volume",
+   "Describe energy transfers"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 sound",
+    "text": "Identify how sounds are made and travel to the ear; find patterns in pitch and volume; sounds get fainter with distance"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.04"
+   }
+  ],
+  "success_criteria": [
+   "I can explain how a sound is made",
+   "I can say how sound travels",
+   "I can explain pitch and volume",
+   "I can give an example of an energy transfer"
+  ],
+  "real_life": "Playing a guitar, keeping headphones at a safe volume and choosing a quiet place to study.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the state of matter that spreads out to fill its container?",
+    "hint": "Particles far apart.",
+    "explanation": "Gases spread out to fill any container.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Solid"
+     },
+     {
+      "id": "b",
+      "text": "Gas"
+     },
+     {
+      "id": "c",
+      "text": "Liquid"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Water boils at 100 degrees Celsius.",
+    "hint": "Top of the thermometer.",
+    "explanation": "Water boils at 100 °C.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What pumps blood around the body?",
+    "hint": "It is a muscle.",
+    "explanation": "The heart pumps blood.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The skull"
+     },
+     {
+      "id": "b",
+      "text": "The heart"
+     },
+     {
+      "id": "c",
+      "text": "The stomach"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: what is sound?\n\nWe will also follow energy as it moves.",
+   "say": "Welcome back, young scientist! Today's big question is: what is sound, and where does energy go? By the end, you will explain how sounds are made and travel, change the pitch and volume of a sound, and follow energy as it changes form. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🎸🔊🔔",
+   "alt": "Sounds are all around us.",
+   "caption": "Sounds are all around us."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "sound",
+     "meaning": "What we hear when something vibrates."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "vibrate",
+   "kind": "learn",
+   "title": "How sound is made and travels",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sound is a vibration"
+    },
+    {
+     "type": "text",
+     "markdown": "Sound is made when something **vibrates**.\n\nWhen the vibration stops, the sound stops.",
+     "say": "Every sound is made by something vibrating, which means moving quickly backwards and forwards. When you pluck a guitar string, you can see it blur as it vibrates. Your own voice comes from vocal cords in your throat vibrating. Put your fingers on your throat and hum. You can feel it! If the vibrating stops, the sound stops too."
+    },
+    {
+     "type": "explainer",
+     "title": "A vibrating string",
+     "scenes": [
+      {
+       "caption": "The string vibrates.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🎸",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "v",
+         "emoji": "〰️",
+         "x": 80,
+         "y": 40,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "A guitar string is plucked. It moves quickly backwards and forwards. That is a vibration."
+      },
+      {
+       "caption": "The vibration makes sound.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🎸",
+         "x": 35,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "🔊",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The vibrating string pushes on the air around it, and we hear a sound."
+      },
+      {
+       "caption": "No vibration, no sound.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🎸",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "🔇",
+         "x": 80,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Soon the string stops vibrating, and the sound stops too."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What makes a sound?",
+      "hint": "Think about the guitar string.",
+      "explanation": "All sounds are made by vibrations.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Something still"
+       },
+       {
+        "id": "b",
+        "text": "Something vibrating"
+       },
+       {
+        "id": "c",
+        "text": "Something cold"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How sound travels"
+    },
+    {
+     "type": "text",
+     "markdown": "Sound travels as **sound waves** through a **medium** such as air, water or a solid.\n\nSound cannot travel through a **vacuum**.",
+     "say": "The vibrations from a sound travel outwards as sound waves. The waves pass through a material. Sound can travel through gases like air, through liquids like water, and through solids like wood or metal. In fact sound travels faster in solids and liquids than in air, because the particles are closer together. But sound cannot travel through a vacuum, which is empty space with no particles at all. In space, no one can hear you."
+    },
+    {
+     "type": "explainer",
+     "title": "Sound needs a medium",
+     "scenes": [
+      {
+       "caption": "Sound travels through air.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🔔",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "〰️",
+         "x": 45,
+         "y": 55,
+         "size": 2,
+         "anim": "float"
+        },
+        {
+         "id": "e",
+         "emoji": "👂",
+         "x": 80,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On Earth, a bell rings. The vibrations pass through the particles of the air to your ear."
+      },
+      {
+       "caption": "In a vacuum, there is no sound.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🔔",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "x",
+         "emoji": "❌",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "👨‍🚀",
+         "x": 80,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "In space there is a vacuum. There are no particles to carry the vibrations, so no sound reaches the listener."
+      }
+     ],
+     "backdrop": "space"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Can sound travel through a vacuum?",
+      "hint": "A vacuum has no particles.",
+      "explanation": "Sound needs particles to carry the vibrations, so it cannot travel through a vacuum.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Yes, but slowly"
+       },
+       {
+        "id": "b",
+        "text": "No"
+       },
+       {
+        "id": "c",
+        "text": "Yes, very fast"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Sound is made by vibrations",
+      "Sound travels as waves through solids, liquids and gases",
+      "Sound cannot travel through a vacuum"
+     ],
+     "say": "Remember. Sound is a vibration that travels as a wave through a medium."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "vibrates",
+       "meaning": "Moves quickly backwards and forwards."
+      },
+      {
+       "term": "sound waves",
+       "meaning": "The way sound vibrations travel outwards."
+      },
+      {
+       "term": "medium",
+       "meaning": "The material that sound travels through, such as air."
+      },
+      {
+       "term": "vacuum",
+       "meaning": "A space with no particles at all."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Sound is made by vibrations.",
+     "hint": "Think about the guitar.",
+     "explanation": "All sounds come from something vibrating.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which material can sound travel through?",
+     "hint": "It needs particles.",
+     "explanation": "Sound can travel through water, but not through a vacuum.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A vacuum"
+      },
+      {
+       "id": "b",
+       "text": "Water"
+      },
+      {
+       "id": "c",
+       "text": "Empty space"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each state to how sound travels.",
+     "hint": "Think about how close the particles are.",
+     "explanation": "Sound travels fastest where particles are closest.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Solid"
+      },
+      {
+       "id": "l2",
+       "text": "Liquid"
+      },
+      {
+       "id": "l3",
+       "text": "Gas"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Quite fast"
+      },
+      {
+       "id": "r1",
+       "text": "Fastest"
+      },
+      {
+       "id": "r3",
+       "text": "Slowest"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order.",
+     "hint": "Start with the vibration.",
+     "explanation": "A vibration makes waves that reach the ear.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Waves travel through air"
+      },
+      {
+       "id": "i3",
+       "text": "Ear hears the sound"
+      },
+      {
+       "id": "i1",
+       "text": "Something vibrates"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pitch",
+   "kind": "try",
+   "title": "Pitch and volume",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: High and low sounds"
+    },
+    {
+     "type": "text",
+     "markdown": "**Pitch** is how high or low a sound is.\n\nFast vibrations make a high pitch; slow vibrations make a low pitch.",
+     "say": "Pitch means how high or low a sound is. A mouse squeaks with a high pitch. A lion roars with a low pitch. Fast vibrations make a high pitch, and slow vibrations make a low pitch. A short, thin, tight string vibrates fast, so it sounds high. A long, thick, loose string vibrates slowly, so it sounds low. Look at the strings."
+    },
+    {
+     "type": "explainer",
+     "title": "Pitch of strings",
+     "scenes": [
+      {
+       "caption": "Short and thin: high pitch.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎻",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "🐭",
+         "x": 75,
+         "y": 55,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "This short, thin string vibrates fast. It makes a high-pitched sound."
+      },
+      {
+       "caption": "Long and thick: low pitch.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎸",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🦁",
+         "x": 75,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "This long, thick string vibrates slowly. It makes a low-pitched sound."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A short, thin string vibrates fast. What sound does it make?",
+      "hint": "Think of the mouse.",
+      "explanation": "Fast vibrations make a high pitch.",
+      "options": [
+       {
+        "id": "a",
+        "text": "No sound"
+       },
+       {
+        "id": "b",
+        "text": "A high-pitched sound"
+       },
+       {
+        "id": "c",
+        "text": "A low-pitched sound"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Loud and quiet"
+    },
+    {
+     "type": "manipulative",
+     "title": "Loud or quiet?",
+     "goal": "Put loud sounds in Loud and quiet sounds in Quiet.",
+     "emoji": "🔊",
+     "count": 8,
+     "zones": [
+      "Loud",
+      "Quiet"
+     ],
+     "say": "Volume means how loud or quiet a sound is. A big vibration makes a loud sound. A small vibration makes a quiet sound. As sound spreads out, it gets quieter, so the further you are from the sound, the quieter it seems. We measure loudness in decibels. A whisper is about thirty decibels. A very loud sound can hurt your ears, so we protect our hearing. Sort the sounds, then try making your own instrument."
+    },
+    {
+     "type": "activity",
+     "title": "Rubber band guitar",
+     "materials": [
+      "An empty tissue box or tub",
+      "Three rubber bands of different thickness",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Stretch the rubber bands across the open box.",
+      "Pluck each one. Which sounds highest and which sounds lowest? Which is thickest?",
+      "Tighten one band and pluck it again. What happens to the pitch? Write down your pattern."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A drum is hit very hard. What happens to the volume?",
+      "hint": "A big vibration.",
+      "explanation": "A harder hit makes a bigger vibration and a louder sound.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It stays the same"
+       },
+       {
+        "id": "b",
+        "text": "It gets louder"
+       },
+       {
+        "id": "c",
+        "text": "It gets quieter"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pitch is how high or low a sound is",
+      "Volume is how loud a sound is",
+      "Sound gets quieter as you move away"
+     ],
+     "say": "Remember. Fast vibrations make high pitch. Big vibrations make loud sounds."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "volume",
+       "meaning": "How loud or quiet a sound is."
+      },
+      {
+       "term": "decibels",
+       "meaning": "The units for measuring how loud a sound is."
+      },
+      {
+       "term": "pitch",
+       "meaning": "How high or low a sound is."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which has a low pitch?",
+     "hint": "Big animals make low sounds.",
+     "explanation": "A lion's roar is low in pitch.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A mouse squeak"
+      },
+      {
+       "id": "b",
+       "text": "A lion's roar"
+      },
+      {
+       "id": "c",
+       "text": "A whistle"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A louder sound has a bigger vibration.",
+     "hint": "Think about hitting a drum harder.",
+     "explanation": "Bigger vibrations make louder sounds.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each to its pitch.",
+     "hint": "Think about fast and slow vibrations.",
+     "explanation": "Short, thin, tight strings vibrate faster and sound higher.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Short thin string"
+      },
+      {
+       "id": "l2",
+       "text": "Long thick string"
+      },
+      {
+       "id": "l3",
+       "text": "Tight string"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Low"
+      },
+      {
+       "id": "r3",
+       "text": "Higher than loose"
+      },
+      {
+       "id": "r1",
+       "text": "High"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "energy",
+   "kind": "play",
+   "title": "Energy transfers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Energy moves"
+    },
+    {
+     "type": "text",
+     "markdown": "**Energy** makes things happen. It can be **transferred**, which means moved or changed from one form to another.\n\nEnergy is never used up. It just changes form.",
+     "say": "Energy is what makes things happen. It makes things move, light up, make sound or get hot. Energy comes in different forms. Light energy, sound energy, heat energy, movement energy and electrical energy. The big idea is that energy can move from one place to another, or change from one form to another. It is never made from nothing and never used up. This is called a transfer. A radio changes electrical energy into sound energy, and some heat. A toaster changes electrical energy into heat."
+    },
+    {
+     "type": "explainer",
+     "title": "Energy transfers",
+     "scenes": [
+      {
+       "caption": "Lamp: electrical to light and heat.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔌",
+         "x": 15,
+         "y": 60,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "c",
+         "emoji": "🌡️",
+         "x": 85,
+         "y": 55,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "A lamp changes electrical energy into light and some heat."
+      },
+      {
+       "caption": "Radio: electrical to sound.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔌",
+         "x": 15,
+         "y": 60,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "📻",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "c",
+         "emoji": "🔊",
+         "x": 85,
+         "y": 55,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "A radio changes electrical energy into sound energy, and a little heat."
+      },
+      {
+       "caption": "Clapping: movement to sound.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👏",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "c",
+         "emoji": "🔊",
+         "x": 80,
+         "y": 55,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "When you clap, movement energy changes into sound energy."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A radio mainly changes electrical energy into which form?",
+      "hint": "What does a radio do?",
+      "explanation": "A radio changes electrical energy into sound energy.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Light"
+       },
+       {
+        "id": "b",
+        "text": "Sound"
+       },
+       {
+        "id": "c",
+        "text": "Movement"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Energy pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "💡",
+      "📻",
+      "🍞",
+      "🚲"
+     ],
+     "say": "Warm up your memory with a game, then see if you can match each device to the energy change it makes."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each device to its main energy change.",
+      "hint": "What does each one do?",
+      "explanation": "Each device transfers electrical energy into a useful form.",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Toaster"
+       },
+       {
+        "id": "l2",
+        "text": "Lamp"
+       },
+       {
+        "id": "l3",
+        "text": "Radio"
+       }
+      ],
+      "right": [
+       {
+        "id": "r3",
+        "text": "Electrical to sound"
+       },
+       {
+        "id": "r1",
+        "text": "Electrical to heat"
+       },
+       {
+        "id": "r2",
+        "text": "Electrical to light"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Energy makes things happen",
+      "Energy changes from one form to another",
+      "Energy is never used up"
+     ],
+     "say": "Remember. Energy is transferred between forms. It is never used up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "energy",
+       "meaning": "What makes things happen, like movement, light, heat and sound."
+      },
+      {
+       "term": "transferred",
+       "meaning": "Moved or changed from one form to another."
+      },
+      {
+       "term": "electrical",
+       "meaning": "To do with electricity."
+      },
+      {
+       "term": "forms",
+       "meaning": "The different kinds of energy."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Energy is used up completely when a lamp is switched on.",
+     "hint": "Energy is never used up.",
+     "explanation": "Energy changes form, but it is not destroyed.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A toaster mainly changes electrical energy into...",
+     "hint": "It cooks bread.",
+     "explanation": "A toaster changes electrical energy into heat.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sound"
+      },
+      {
+       "id": "b",
+       "text": "Heat"
+      },
+      {
+       "id": "c",
+       "text": "Light"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two forms of energy.",
+     "hint": "Think about what energy can do.",
+     "explanation": "Light and sound are forms of energy.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rock"
+      },
+      {
+       "id": "b",
+       "text": "Plastic"
+      },
+      {
+       "id": "c",
+       "text": "Sound"
+      },
+      {
+       "id": "d",
+       "text": "Light"
+      }
+     ],
+     "answer": [
+      "d",
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quiet",
+   "kind": "use",
+   "title": "Quiet places and loud sounds",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Soundproofing"
+    },
+    {
+     "type": "text",
+     "markdown": "A **sound insulator** blocks sound. Soft, thick materials are best.\n\nHard, smooth surfaces bounce sound back as an **echo**.",
+     "say": "Sometimes we want to stop sound spreading. Materials that block sound are called sound insulators. Thick, soft materials such as carpet, foam and curtains absorb sound vibrations. Hard, smooth surfaces bounce sound back, which causes echoes. That is why a room with lots of soft furniture sounds quiet, and an empty room echoes. Recording studios use thick foam on their walls. Look at which materials block sound."
+    },
+    {
+     "type": "image",
+     "emoji": "🧱 🛋️ 🧽 🏔️",
+     "alt": "Foam and soft furnishings absorb sound. Mountains and hard walls can make echoes.",
+     "caption": "Foam and soft furnishings absorb sound. Mountains and hard walls can make echoes.",
+     "say": "Soft things like foam and sofas absorb sound. Hard walls and mountains bounce it back."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which material would block sound best?",
+      "hint": "Soft and thick.",
+      "explanation": "Thick soft materials absorb sound vibrations.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Glass"
+       },
+       {
+        "id": "b",
+        "text": "Thick foam"
+       },
+       {
+        "id": "c",
+        "text": "Bare brick"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Protect your hearing"
+    },
+    {
+     "type": "activity",
+     "title": "A sound survey",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Walk around your home or school. List five sounds.",
+      "Rate each one: quiet, medium or loud.",
+      "Which ones could harm your ears? What could you do to protect them?"
+     ],
+     "say": "Very loud noises can damage our hearing for good. Headphones turned up loud, fireworks and heavy machinery can all hurt the tiny parts inside the ear. We should keep the volume down, move away from loud sounds, and wear ear protection if we need to. We should also respect others, and keep our noise low, especially near people who are praying, sleeping or studying."
+    },
+    {
+     "type": "image",
+     "emoji": "🎧 🎆 🛠️",
+     "alt": "Loud headphones, fireworks and machines can harm hearing.",
+     "caption": "Loud headphones, fireworks and machines can harm hearing.",
+     "say": "Loud headphones, fireworks and machines are all examples of sounds that can harm."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Very loud noises can damage your hearing.",
+      "hint": "Think about fireworks.",
+      "explanation": "Loud noises can damage the tiny parts of the ear.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Soft, thick materials are the best sound insulators",
+      "Loud noises can damage hearing",
+      "Keep the volume down and be considerate"
+     ],
+     "say": "Remember. Soft materials block sound. Loud noises can harm hearing, so protect your ears."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "insulator",
+       "meaning": "A material that stops something, like sound or heat, from passing through."
+      },
+      {
+       "term": "echo",
+       "meaning": "Sound that bounces back off a hard surface."
+      },
+      {
+       "term": "hearing",
+       "meaning": "Your ability to hear."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What causes an echo?",
+     "hint": "Think about a mountain.",
+     "explanation": "An echo is sound reflected from a hard surface.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sound travelling in a vacuum"
+      },
+      {
+       "id": "b",
+       "text": "Sound bouncing off a hard surface"
+      },
+      {
+       "id": "c",
+       "text": "Soft carpet"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two ways to protect your hearing.",
+     "hint": "Think about safety.",
+     "explanation": "Lower volume and distance protect your ears.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Move away from very loud sounds"
+      },
+      {
+       "id": "b",
+       "text": "Turn music to maximum"
+      },
+      {
+       "id": "c",
+       "text": "Stand next to speakers"
+      },
+      {
+       "id": "d",
+       "text": "Keep headphones at a low volume"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Soft materials absorb sound.",
+     "hint": "Think about a carpet.",
+     "explanation": "Soft materials absorb sound vibrations.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What must happen for a drum skin to make a sound?",
+    "hint": "Sounds come from vibrations.",
+    "explanation": "A drum skin must vibrate to make sound.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It must be still"
+     },
+     {
+      "id": "b",
+      "text": "It must vibrate"
+     },
+     {
+      "id": "c",
+      "text": "It must be cold"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.made",
+    "sub_lesson": "vibrate",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "Sound can travel through empty space.",
+    "hint": "No particles.",
+    "explanation": "Sound cannot travel through a vacuum.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "sound.vacuum",
+    "sub_lesson": "vibrate",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Which is fastest and which is slowest? Match each material to how sound moves through it.",
+    "hint": "Think about particles.",
+    "explanation": "Sound travels faster through materials with particles closer together.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Steel"
+     },
+     {
+      "id": "l2",
+      "text": "Water"
+     },
+     {
+      "id": "l3",
+      "text": "Air"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Slower"
+     },
+     {
+      "id": "r1",
+      "text": "Very fast"
+     },
+     {
+      "id": "r2",
+      "text": "Fast"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "sound.speed",
+    "sub_lesson": "vibrate",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which two of these make a high-pitched sound?",
+    "hint": "Fast vibrations.",
+    "explanation": "Short, thin strings and whistles have a high pitch.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A whistle"
+     },
+     {
+      "id": "b",
+      "text": "A big drum"
+     },
+     {
+      "id": "c",
+      "text": "A lion's roar"
+     },
+     {
+      "id": "d",
+      "text": "A short thin string"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "sound.pitch_pick",
+    "sub_lesson": "pitch",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the animal that makes a high-pitched sound.",
+    "hint": "Small animals squeak.",
+    "explanation": "A mouse makes a high-pitched squeak.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐭",
+       "label": "Mouse",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦁",
+       "label": "Lion",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐘",
+       "label": "Elephant",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "sound.label",
+    "sub_lesson": "pitch",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "Write the word for how high or low a sound is.",
+    "hint": "It starts with p.",
+    "explanation": "Pitch is how high or low a sound is.",
+    "answer": {
+     "accepted": [
+      "pitch"
+     ]
+    },
+    "skill_tag": "sound.words",
+    "sub_lesson": "pitch",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Nadia plucks a thick, loose string, then a thin, tight string. Which has the higher pitch?",
+    "hint": "Fast vibrations.",
+    "explanation": "Thin, tight strings vibrate faster, so they sound higher.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The thick, loose string"
+     },
+     {
+      "id": "b",
+      "text": "The thin, tight string"
+     },
+     {
+      "id": "c",
+      "text": "They are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.pattern",
+    "sub_lesson": "pitch",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about energy.",
+    "hint": "The big idea about energy.",
+    "explanation": "Energy is never used up. It is transferred.",
+    "points": 2,
+    "text": "Energy is never {b1} up. It is {b2} between forms.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bought"
+       },
+       {
+        "id": "b",
+        "text": "used"
+       },
+       {
+        "id": "c",
+        "text": "made"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stopped"
+       },
+       {
+        "id": "b",
+        "text": "transferred"
+       },
+       {
+        "id": "c",
+        "text": "hidden"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "sound.fill",
+    "sub_lesson": "energy",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A sound travels 340 metres in one second. How far does it travel in 4 seconds?",
+    "hint": "340 times 4.",
+    "explanation": "340 x 4 = 1360 metres.",
+    "answer": {
+     "value": 1360,
+     "tolerance": 0
+    },
+    "skill_tag": "sound.maths",
+    "sub_lesson": "vibrate",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "About how loud is normal talking, in decibels?",
+    "hint": "Between a whisper and a shout.",
+    "explanation": "Normal talking is about 60 decibels.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 140,
+     "unit": "dB"
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 10
+    },
+    "skill_tag": "sound.decibels",
+    "sub_lesson": "quiet",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put these in order for how you hear a guitar.",
+    "hint": "Start with the pluck.",
+    "explanation": "The pluck makes the string vibrate, which sends waves to the ear.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Sound waves travel through air"
+     },
+     {
+      "id": "i4",
+      "text": "Ear hears the sound"
+     },
+     {
+      "id": "i2",
+      "text": "String vibrates"
+     },
+     {
+      "id": "i1",
+      "text": "String is plucked"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "sound.order",
+    "sub_lesson": "vibrate",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Fatima says an astronaut can hear a spaceship explosion outside. Why is she wrong?",
+    "hint": "Think about a medium.",
+    "explanation": "Sound needs particles to travel, and space is a vacuum.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Space is too hot"
+     },
+     {
+      "id": "b",
+      "text": "Sound is too heavy"
+     },
+     {
+      "id": "c",
+      "text": "Space is a vacuum with no particles to carry sound"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.reason_space",
+    "sub_lesson": "vibrate",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why do recording studios use foam on the walls?",
+    "hint": "Soft materials absorb sound.",
+    "explanation": "Foam absorbs sound vibrations and stops echoes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Foam makes sound travel faster"
+     },
+     {
+      "id": "b",
+      "text": "Foam absorbs sound so there is no echo"
+     },
+     {
+      "id": "c",
+      "text": "Foam makes sound louder"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.reason_foam",
+    "sub_lesson": "quiet",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Zara's string sounds low. How could she make the pitch higher?",
+    "hint": "Fast vibrations.",
+    "explanation": "Shorter, thinner, tighter strings vibrate faster and sound higher.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Make it longer and thicker"
+     },
+     {
+      "id": "b",
+      "text": "Tighten the string or use a shorter, thinner one"
+     },
+     {
+      "id": "c",
+      "text": "Pluck it more slowly"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.reason_pitch",
+    "sub_lesson": "pitch",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Ravi says light carries sound from a bell to our ears. Why is he wrong?",
+    "hint": "It needs a medium.",
+    "explanation": "Sound travels as vibrations through the particles of the air.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sound is carried by a vacuum"
+     },
+     {
+      "id": "b",
+      "text": "Sound is carried by vibrating particles, such as in the air"
+     },
+     {
+      "id": "c",
+      "text": "Sound is carried by shadows"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.medium",
+    "sub_lesson": "vibrate",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What must happen for a guitar string to make a sound?",
+    "hint": "Sounds come from vibrations.",
+    "explanation": "A string must vibrate to make sound.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It must be cold"
+     },
+     {
+      "id": "b",
+      "text": "It must be still"
+     },
+     {
+      "id": "c",
+      "text": "It must vibrate"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.made",
+    "sub_lesson": "vibrate",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What happens to your throat when you hum?",
+    "hint": "Feel your throat.",
+    "explanation": "Vocal cords vibrate to make your voice.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Your throat freezes"
+     },
+     {
+      "id": "b",
+      "text": "Your vocal cords vibrate"
+     },
+     {
+      "id": "c",
+      "text": "Nothing moves"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.made",
+    "sub_lesson": "vibrate",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "Sound can travel through a vacuum.",
+    "hint": "A vacuum has no particles.",
+    "explanation": "Sound cannot travel through a vacuum.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "sound.vacuum",
+    "sub_lesson": "vibrate",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "Sound travels faster through solids than through air.",
+    "hint": "Particles are closer in solids.",
+    "explanation": "Sound travels faster in solids.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "sound.vacuum",
+    "sub_lesson": "vibrate",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Pair each material with how sound travels through it.",
+    "hint": "Think about particles.",
+    "explanation": "Sound travels faster through materials with particles closer together.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Steel"
+     },
+     {
+      "id": "l2",
+      "text": "Water"
+     },
+     {
+      "id": "l3",
+      "text": "Air"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Fast"
+     },
+     {
+      "id": "r1",
+      "text": "Very fast"
+     },
+     {
+      "id": "r3",
+      "text": "Slower"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "sound.speed",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each to its pitch.",
+    "hint": "Think about the sounds.",
+    "explanation": "A mouse and a whistle are high; a lion's roar is low.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Mouse squeak"
+     },
+     {
+      "id": "l2",
+      "text": "Lion roar"
+     },
+     {
+      "id": "l3",
+      "text": "Whistle"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Low"
+     },
+     {
+      "id": "r1",
+      "text": "High"
+     },
+     {
+      "id": "r3",
+      "text": "High"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "sound.speed",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two things that make a high-pitched sound.",
+    "hint": "Fast vibrations.",
+    "explanation": "Short, thin strings and whistles have a high pitch.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A big drum"
+     },
+     {
+      "id": "b",
+      "text": "A lion's roar"
+     },
+     {
+      "id": "c",
+      "text": "A whistle"
+     },
+     {
+      "id": "d",
+      "text": "A short thin string"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "sound.pitch_pick",
+    "sub_lesson": "pitch",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Which two of these are forms of energy?",
+    "hint": "What energy can do.",
+    "explanation": "Light and heat are forms of energy.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Heat"
+     },
+     {
+      "id": "b",
+      "text": "Stone"
+     },
+     {
+      "id": "c",
+      "text": "Metal"
+     },
+     {
+      "id": "d",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "sound.pitch_pick",
+    "sub_lesson": "pitch",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that makes a low-pitched sound.",
+    "hint": "A big animal.",
+    "explanation": "A lion's roar is low-pitched.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐭",
+       "label": "Mouse",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦁",
+       "label": "Lion",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐦",
+       "label": "Small bird",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "sound.label",
+    "sub_lesson": "pitch",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the thing that changes electrical energy into light.",
+    "hint": "It lights up.",
+    "explanation": "A lamp changes electrical energy into light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💡",
+       "label": "Lamp",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍞",
+       "label": "Bread",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🚲",
+       "label": "Bike",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "sound.label",
+    "sub_lesson": "pitch",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What is the word for how high or low a sound is?",
+    "hint": "It starts with p.",
+    "explanation": "Pitch is how high or low a sound is.",
+    "answer": {
+     "accepted": [
+      "pitch"
+     ]
+    },
+    "skill_tag": "sound.words",
+    "sub_lesson": "pitch",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the word for how loud a sound is?",
+    "hint": "It starts with v.",
+    "explanation": "Volume is how loud a sound is.",
+    "answer": {
+     "accepted": [
+      "volume",
+      "loudness"
+     ]
+    },
+    "skill_tag": "sound.words",
+    "sub_lesson": "pitch",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Maya plucks a loose, thick string and then a tight, thin string. Which has the higher pitch?",
+    "hint": "Fast vibrations.",
+    "explanation": "Tight, thin strings vibrate faster, so they sound higher.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The loose, thick string"
+     },
+     {
+      "id": "b",
+      "text": "The tight, thin string"
+     },
+     {
+      "id": "c",
+      "text": "They are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.pattern",
+    "sub_lesson": "pitch",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Zayn moves further from a bell. What happens to the volume?",
+    "hint": "Sound spreads out.",
+    "explanation": "Sound spreads out and gets quieter with distance.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It gets louder"
+     },
+     {
+      "id": "b",
+      "text": "It gets quieter"
+     },
+     {
+      "id": "c",
+      "text": "It stays the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.pattern",
+    "sub_lesson": "pitch",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about sound.",
+    "hint": "Two key ideas.",
+    "explanation": "Sound is made by vibrations and cannot travel through a vacuum.",
+    "points": 2,
+    "text": "Sound is made by {b1}. It cannot travel through a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "shadows"
+       },
+       {
+        "id": "b",
+        "text": "vibrations"
+       },
+       {
+        "id": "c",
+        "text": "colours"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "liquid"
+       },
+       {
+        "id": "b",
+        "text": "vacuum"
+       },
+       {
+        "id": "c",
+        "text": "solid"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "sound.fill",
+    "sub_lesson": "energy",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about energy.",
+    "hint": "The big idea about energy.",
+    "explanation": "Energy is never used up. It is transferred.",
+    "points": 2,
+    "text": "Energy is never {b1}. It is {b2} from one form to another.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "made"
+       },
+       {
+        "id": "b",
+        "text": "used up"
+       },
+       {
+        "id": "c",
+        "text": "bought"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hidden"
+       },
+       {
+        "id": "b",
+        "text": "transferred"
+       },
+       {
+        "id": "c",
+        "text": "stopped"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "sound.fill",
+    "sub_lesson": "energy",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A sound travels 340 metres each second. How far does it travel in 3 seconds?",
+    "hint": "340 times 3.",
+    "explanation": "340 x 3 = 1020 metres.",
+    "answer": {
+     "value": 1020,
+     "tolerance": 0
+    },
+    "skill_tag": "sound.maths",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "A sound travels 340 metres in one second. How far does it go in 2 seconds?",
+    "hint": "340 times 2.",
+    "explanation": "340 x 2 = 680 metres.",
+    "answer": {
+     "value": 680,
+     "tolerance": 0
+    },
+    "skill_tag": "sound.maths",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "About how many decibels is a whisper? Slide to show it.",
+    "hint": "Very quiet.",
+    "explanation": "A whisper is about 30 decibels.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 140,
+     "unit": "dB"
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 10
+    },
+    "skill_tag": "sound.decibels",
+    "sub_lesson": "quiet",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "About how many decibels is a loud rock concert? Slide to show it.",
+    "hint": "Loud enough to hurt ears.",
+    "explanation": "A rock concert can reach 110 decibels or more.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 140,
+     "unit": "dB"
+    },
+    "answer": {
+     "value": 110,
+     "tolerance": 10
+    },
+    "skill_tag": "sound.decibels",
+    "sub_lesson": "quiet",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these in order for how you hear a drum.",
+    "hint": "Start with the hit.",
+    "explanation": "The hit makes the skin vibrate, which sends waves to the ear.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Drum skin vibrates"
+     },
+     {
+      "id": "i4",
+      "text": "Ear hears the sound"
+     },
+     {
+      "id": "i3",
+      "text": "Sound waves travel through air"
+     },
+     {
+      "id": "i1",
+      "text": "Drum is hit"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "sound.order",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Order the energy changes in a radio.",
+    "hint": "Follow the energy.",
+    "explanation": "Electrical energy goes in and sound comes out.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The radio changes it"
+     },
+     {
+      "id": "i1",
+      "text": "Electrical energy goes in"
+     },
+     {
+      "id": "i3",
+      "text": "Sound energy comes out"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "sound.order",
+    "sub_lesson": "vibrate",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Amir says sound travels through space as fast as light. Why is he wrong?",
+    "hint": "Think about a medium.",
+    "explanation": "Sound needs particles to travel, and space is a vacuum.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Space is too hot"
+     },
+     {
+      "id": "b",
+      "text": "Space is a vacuum with no particles to carry sound"
+     },
+     {
+      "id": "c",
+      "text": "Sound is too heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.reason_space",
+    "sub_lesson": "vibrate",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Layla says energy is used up when a toy stops. Why is she wrong?",
+    "hint": "Energy is transferred.",
+    "explanation": "Energy is never used up. It is transferred to other forms.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Energy never moves"
+     },
+     {
+      "id": "b",
+      "text": "The energy has changed form, such as to heat and sound"
+     },
+     {
+      "id": "c",
+      "text": "The toy ate the energy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.reason_space",
+    "sub_lesson": "vibrate",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why are recording studios lined with foam?",
+    "hint": "Soft materials absorb sound.",
+    "explanation": "Foam absorbs sound vibrations and stops echoes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Foam makes sound louder"
+     },
+     {
+      "id": "b",
+      "text": "Foam makes sound travel faster"
+     },
+     {
+      "id": "c",
+      "text": "Foam absorbs sound so it does not echo"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.reason_foam",
+    "sub_lesson": "quiet",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why does an empty room echo?",
+    "hint": "Think about hard surfaces.",
+    "explanation": "Hard surfaces reflect sound, making an echo.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Soft carpet absorbs sound"
+     },
+     {
+      "id": "b",
+      "text": "There is no air"
+     },
+     {
+      "id": "c",
+      "text": "Hard walls bounce sound back"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.reason_foam",
+    "sub_lesson": "quiet",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Sana's string sounds low. How could she make the pitch higher?",
+    "hint": "Fast vibrations.",
+    "explanation": "Shorter, thinner, tighter strings vibrate faster and sound higher.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pluck it more slowly"
+     },
+     {
+      "id": "b",
+      "text": "Tighten the string or use a shorter, thinner one"
+     },
+     {
+      "id": "c",
+      "text": "Make it longer and thicker"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.reason_pitch",
+    "sub_lesson": "pitch",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Ben wants his drum to be quieter. What should he do?",
+    "hint": "Smaller vibrations.",
+    "explanation": "A gentler hit makes a smaller vibration and a quieter sound.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hit it harder"
+     },
+     {
+      "id": "b",
+      "text": "Turn the drum up"
+     },
+     {
+      "id": "c",
+      "text": "Hit it more gently"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.reason_pitch",
+    "sub_lesson": "pitch",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Mia says sound needs nothing to travel through. Why is she wrong?",
+    "hint": "Think about a medium.",
+    "explanation": "Sound travels as vibrations through particles of a medium.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sound travels best in a vacuum"
+     },
+     {
+      "id": "b",
+      "text": "Sound is a vibration that must pass through particles"
+     },
+     {
+      "id": "c",
+      "text": "Sound is made of light"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "sound.medium",
+    "sub_lesson": "vibrate",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Joe says energy is a kind of material, like wood. Why is he wrong?",
+    "hint": "Think about what energy does.",
+    "explanation": "Energy is not a material. It makes things move, light up and make sound.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Energy is heavy"
+     },
+     {
+      "id": "b",
+      "text": "Energy is a solid"
+     },
+     {
+      "id": "c",
+      "text": "Energy is not a material; it is what makes things happen"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "sound.medium",
+    "sub_lesson": "vibrate",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
