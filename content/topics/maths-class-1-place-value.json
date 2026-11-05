@@ -1849,6 +1849,864 @@
     },
     "sub_lesson": "compare",
     "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "In the number 83, how many tens are there?",
+    "hint": "The left digit is the tens.",
+    "explanation": "83 is 8 tens and 3 ones.",
+    "skill_tag": "placevalue.tens",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "8"
+     },
+     {
+      "id": "c",
+      "text": "83"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "In the number 29, how many tens are there?",
+    "hint": "The left digit is the tens.",
+    "explanation": "29 is 2 tens and 9 ones.",
+    "skill_tag": "placevalue.tens",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "29"
+     },
+     {
+      "id": "c",
+      "text": "2"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "How many ones are in 94?",
+    "hint": "The right digit is the ones.",
+    "explanation": "94 is 9 tens and 4 ones.",
+    "skill_tag": "placevalue.ones",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "How many ones are in 57?",
+    "hint": "The right digit is the ones.",
+    "explanation": "57 is 5 tens and 7 ones.",
+    "skill_tag": "placevalue.ones",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "In 62 the 6 means 6 ones.",
+    "hint": "Which side are the tens on?",
+    "explanation": "The 6 is on the left, so it means 6 tens.",
+    "skill_tag": "placevalue.digits",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "In 38 the 3 means 3 tens.",
+    "hint": "The left digit is the tens.",
+    "explanation": "The 3 is on the left, so it means 3 tens.",
+    "skill_tag": "placevalue.digits",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence about 74.",
+    "hint": "74: the 7 is the tens.",
+    "explanation": "74 is 7 tens and 4 ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "text": "{b1} tens and {b2} ones make 74.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "74"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "11"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence about 36.",
+    "hint": "36: the 3 is the tens.",
+    "explanation": "36 is 3 tens and 6 ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "text": "{b1} tens and {b2} ones make 36.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "6"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "9"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "36"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are ways to split 58 into tens and ones? Pick two.",
+    "hint": "58 has 5 tens and 8 ones.",
+    "explanation": "58 is 50 + 8, or 5 tens and 8 ones.",
+    "skill_tag": "placevalue.partition",
+    "options": [
+     {
+      "id": "a",
+      "text": "8 tens and 5 ones"
+     },
+     {
+      "id": "b",
+      "text": "5 + 8"
+     },
+     {
+      "id": "c",
+      "text": "5 tens and 8 ones"
+     },
+     {
+      "id": "d",
+      "text": "50 + 8"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are ways to split 41 into tens and ones? Pick two.",
+    "hint": "41 has 4 tens and 1 one.",
+    "explanation": "41 is 40 + 1, or 4 tens and 1 one.",
+    "skill_tag": "placevalue.partition",
+    "options": [
+     {
+      "id": "a",
+      "text": "1 ten and 4 ones"
+     },
+     {
+      "id": "b",
+      "text": "4 + 1"
+     },
+     {
+      "id": "c",
+      "text": "4 tens and 1 one"
+     },
+     {
+      "id": "d",
+      "text": "40 + 1"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "What number is 6 tens and 2 ones?",
+    "hint": "Say 60 and 2.",
+    "explanation": "60 + 2 = 62.",
+    "skill_tag": "placevalue.partition",
+    "answer": {
+     "value": 62,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "number",
+    "prompt": "What number is 9 tens and 5 ones?",
+    "hint": "Say 90 and 5.",
+    "explanation": "90 + 5 = 95.",
+    "skill_tag": "placevalue.partition",
+    "answer": {
+     "value": 95,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Arrange these numbers, smallest first.",
+    "hint": "Look at the tens first.",
+    "explanation": "Smaller tens come first.",
+    "skill_tag": "compare.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "43"
+     },
+     {
+      "id": "i1",
+      "text": "27"
+     },
+     {
+      "id": "i4",
+      "text": "98"
+     },
+     {
+      "id": "i3",
+      "text": "72"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "order",
+    "prompt": "Sort these numbers from the smallest.",
+    "hint": "Look at the tens first.",
+    "explanation": "Smaller tens come first.",
+    "skill_tag": "compare.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "61"
+     },
+     {
+      "id": "i4",
+      "text": "86"
+     },
+     {
+      "id": "i2",
+      "text": "38"
+     },
+     {
+      "id": "i1",
+      "text": "15"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 30 + 6 and 60 + 3 both make 36. Who is right?",
+    "hint": "60 + 3 has 6 tens.",
+    "explanation": "60 + 3 makes 63. Only 30 + 6 makes 36.",
+    "skill_tag": "placevalue.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Both make 36"
+     },
+     {
+      "id": "b",
+      "text": "Only 30 + 6 makes 36"
+     },
+     {
+      "id": "c",
+      "text": "Only 60 + 3 makes 36"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "partition",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Nora says 20 + 7 and 70 + 2 both make 27. Who is right?",
+    "hint": "70 + 2 has 7 tens.",
+    "explanation": "70 + 2 makes 72. Only 20 + 7 makes 27.",
+    "skill_tag": "placevalue.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Both make 27"
+     },
+     {
+      "id": "b",
+      "text": "Only 70 + 2 makes 27"
+     },
+     {
+      "id": "c",
+      "text": "Only 20 + 7 makes 27"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "partition",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show 35 on the number line.",
+    "hint": "Between 30 and 40.",
+    "explanation": "35 sits halfway between 30 and 40.",
+    "skill_tag": "numberline.place",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 35,
+     "tolerance": 0
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show 85 on the number line.",
+    "hint": "Between 80 and 90.",
+    "explanation": "85 sits halfway between 80 and 90.",
+    "skill_tag": "numberline.place",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 85,
+     "tolerance": 0
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the bag that holds 41 sweets.",
+    "hint": "41 is 4 tens and 1 one.",
+    "explanation": "Bag C has 4 tens and 1 one, which is 41.",
+    "skill_tag": "placevalue.partition",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 1 ten and 4 ones",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 4 tens and 11 ones",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 4 tens and 1 one",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the box that holds 52 crayons.",
+    "hint": "52 is 5 tens and 2 ones.",
+    "explanation": "Box B has 5 tens and 2 ones, which is 52.",
+    "skill_tag": "placevalue.partition",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📦",
+       "label": "Box A: 2 tens and 5 ones",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📦",
+       "label": "Box B: 5 tens and 2 ones",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📦",
+       "label": "Box C: 5 tens and 12 ones",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "match",
+    "prompt": "Match each number to how it is built.",
+    "hint": "The left digit is the tens.",
+    "explanation": "Tens first, then ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "53"
+     },
+     {
+      "id": "l2",
+      "text": "26"
+     },
+     {
+      "id": "l3",
+      "text": "90"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "9 tens 0 ones"
+     },
+     {
+      "id": "r1",
+      "text": "5 tens 3 ones"
+     },
+     {
+      "id": "r2",
+      "text": "2 tens 6 ones"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "match",
+    "prompt": "Match each number to its parts.",
+    "hint": "The left digit is the tens.",
+    "explanation": "Tens first, then ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "47"
+     },
+     {
+      "id": "l2",
+      "text": "81"
+     },
+     {
+      "id": "l3",
+      "text": "30"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "8 tens 1 one"
+     },
+     {
+      "id": "r1",
+      "text": "4 tens 7 ones"
+     },
+     {
+      "id": "r3",
+      "text": "3 tens 0 ones"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Tia says 82 is nearer to 80 than to 90. Is Tia right?",
+    "hint": "Count the steps from 82 to 80.",
+    "explanation": "82 is 2 steps from 80 but 8 steps from 90.",
+    "skill_tag": "numberline.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is nearer to 90"
+     },
+     {
+      "id": "b",
+      "text": "No, it is exactly halfway"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 82 is only 2 from 80"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Omar says 38 is nearer to 40 than to 30. Is Omar right?",
+    "hint": "Count the steps from 38 to 40.",
+    "explanation": "38 is 2 steps from 40 but 8 steps from 30.",
+    "skill_tag": "numberline.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is nearer to 30"
+     },
+     {
+      "id": "b",
+      "text": "Yes, 38 is only 2 from 40"
+     },
+     {
+      "id": "c",
+      "text": "No, it is exactly halfway"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Which sign goes in 71 __ 17?",
+    "hint": "Which has more tens?",
+    "explanation": "71 has 7 tens and 17 has 1 ten, so 71 > 17.",
+    "skill_tag": "compare.signs",
+    "options": [
+     {
+      "id": "a",
+      "text": "<"
+     },
+     {
+      "id": "b",
+      "text": ">"
+     },
+     {
+      "id": "c",
+      "text": "="
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Which sign goes in 29 __ 92?",
+    "hint": "Which has more tens?",
+    "explanation": "92 has 9 tens and 29 has 2 tens, so 29 < 92.",
+    "skill_tag": "compare.signs",
+    "options": [
+     {
+      "id": "a",
+      "text": "="
+     },
+     {
+      "id": "b",
+      "text": "<"
+     },
+     {
+      "id": "c",
+      "text": ">"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Why is 85 bigger than 58, when both use an 8 and a 5?",
+    "hint": "Compare the tens first.",
+    "explanation": "The tens decide: 8 tens is more than 5 tens.",
+    "skill_tag": "compare.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same size"
+     },
+     {
+      "id": "b",
+      "text": "85 has 8 tens but 58 has only 5 tens"
+     },
+     {
+      "id": "c",
+      "text": "85 has more ones"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Why is 63 bigger than 36, when both use a 6 and a 3?",
+    "hint": "Compare the tens first.",
+    "explanation": "The tens decide: 6 tens is more than 3 tens.",
+    "skill_tag": "compare.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "63 has more ones"
+     },
+     {
+      "id": "b",
+      "text": "63 has 6 tens but 36 has only 3 tens"
+     },
+     {
+      "id": "c",
+      "text": "They are the same size"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "Lena has 2 packs of 10 stickers and 9 loose ones. She needs 30. How many more does she need?",
+    "hint": "She has 29. Count on to 30.",
+    "explanation": "29 and 1 more make 30.",
+    "skill_tag": "compare.real_life",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "Hamza has 4 bags of 10 marbles and 6 loose ones. He needs 50. How many more does he need?",
+    "hint": "He has 46. Count on to 50.",
+    "explanation": "46 and 4 more make 50.",
+    "skill_tag": "compare.real_life",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q15"
    }
   ]
  }

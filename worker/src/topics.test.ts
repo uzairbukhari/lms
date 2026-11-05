@@ -16,8 +16,15 @@ describe("content/topics", () => {
       const file = result.lesson;
       expect(file.schema_version).toBe("3.0");
       expect(file.sub_lessons?.map((s) => s.kind).sort()).toEqual(["learn", "play", "try", "use"]);
-      expect(file.quiz.questions).toHaveLength(15);
-      expect(file.quiz.questions.filter((q) => q.depth === "reason").length).toBeGreaterThanOrEqual(4);
+      const mains = file.quiz.questions.filter((q) => !q.variant_of);
+      expect(mains).toHaveLength(15);
+      expect(mains.filter((q) => q.depth === "reason").length).toBeGreaterThanOrEqual(4);
+      // every main question has at least two retake variants of the same type
+      for (const m of mains) {
+        const vs = file.quiz.questions.filter((q) => q.variant_of === m.ref);
+        expect(vs.length, m.ref).toBeGreaterThanOrEqual(2);
+        for (const v of vs) expect(v.type).toBe(m.type);
+      }
       expect(file.lesson.curriculum?.topic).toBeGreaterThan(0);
       expect(file.lesson.standards?.length).toBeGreaterThan(0);
     });

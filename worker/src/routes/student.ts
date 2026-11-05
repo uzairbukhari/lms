@@ -106,7 +106,7 @@ studentRoutes.get("/lessons/:id", async (c) => {
       unit: row.unit, objectives: file.lesson.learning_objectives, semester: v.semester, week: v.week, phase: v.phase,
     },
     blocks: JSON.parse(row.content_json),
-    quiz: { questionCount: file.quiz.questions.length, passPercent: file.quiz.pass_percent ?? 70 },
+    quiz: { questionCount: (file.quiz.questions as { variant_of?: string }[]).filter((q) => !q.variant_of).length, passPercent: file.quiz.pass_percent ?? 70 },
     progress,
     readOnly: v.phase === "past",
     topic: file.sub_lessons ? await topicFor(c.env.DB, user.id, id, file) : undefined,

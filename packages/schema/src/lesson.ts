@@ -26,6 +26,8 @@ const questionExtras = (inQuiz: boolean) => ({
   /** Quiz only: how hard the thinking is, and which sub-lesson to practise again if the child gets it wrong. */
   depth: z.enum(["recall", "apply", "reason"]).optional(),
   sub_lesson: z.string().regex(/^[a-z0-9_]{1,24}$/, "Use the sub-lesson id (lower case letters, numbers, _)").optional(),
+  /** Quiz only: this question is a retake variant of the question with this ref. Retakes swap in variants so answers cannot be memorised. */
+  variant_of: shortId.optional(),
 });
 
 const commonFields = {
@@ -448,12 +450,20 @@ export const quizSchema = z
     shuffle_questions: z.boolean().default(true),
     shuffle_options: z.boolean().default(true),
     max_attempts: z.number().int().min(1).max(50).nullable().optional(),
-    questions: z.array(quizQuestionSchema).min(1).max(40),
+    questions: z.array(quizQuestionSchema).min(1).max(80),
   })
   .superRefine((quiz, ctx) => {
     const refs = quiz.questions.map((q) => q.ref as string);
     const d = dup(refs);
     if (d) ctx.addIssue({ code: "custom", path: ["questions"], message: `Question ref "${d}" is used twice` });
+    const primaries = new Set(quiz.questions.filter((q) => !q.variant_of).map((q) => q.ref as string));
+    quiz.questions.forEach((q, i) => {
+      if (q.variant_of && !primaries.has(q.variant_of)) ctx.addIssue({ code: "custom", path: ["questions", i, "variant_of"], message: `"${q.variant_of}" is not a main question (a variant must point at a question that is not itself a variant)` });
+      if (q.variant_of) {
+        const main = quiz.questions.find((x) => x.ref === q.variant_of);
+        if (main && main.type !== q.type) ctx.addIssue({ code: "custom", path: ["questions", i, "type"], message: `A variant must be the same question type as ${q.variant_of} (${main.type})` });
+      }
+    });
   });
 
 export const lessonFileSchema = z
@@ -474,8 +484,9 @@ export const lessonFileSchema = z
         if (q.sub_lesson && !ids.has(q.sub_lesson)) ctx.addIssue({ code: "custom", path: ["quiz", "questions", i, "sub_lesson"], message: `No sub-lesson with id "${q.sub_lesson}"` });
       });
       if (f.schema_version === SCHEMA_VERSION_V3) {
-        const reason = f.quiz.questions.filter((q) => q.depth === "reason").length;
-        if (f.quiz.questions.length >= 15 && reason < 4) ctx.addIssue({ code: "custom", path: ["quiz", "questions"], message: `Topic quizzes need at least 4 questions with depth "reason" (found ${reason})` });
+        const mains = f.quiz.questions.filter((q) => !q.variant_of);
+        const reason = mains.filter((q) => q.depth === "reason").length;
+        if (mains.length >= 15 && reason < 4) ctx.addIssue({ code: "custom", path: ["quiz", "questions"], message: `Topic quizzes need at least 4 questions with depth "reason" (found ${reason})` });
       }
     }
   });

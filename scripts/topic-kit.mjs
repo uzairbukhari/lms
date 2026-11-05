@@ -21,7 +21,11 @@ export function topicLesson(spec) {
     sub_lessons: subs.map((s) => ({ id: s.id, kind: s.kind, title: s.title, blocks: s.blocks, mini_quiz: s.mini })),
     quiz: {
       pass_percent: 70, shuffle_questions: true, shuffle_options: true, max_attempts: null,
-      questions: quiz.map((x, i) => ({ ref: `q${i + 1}`, ...x.q, sub_lesson: x.sub, depth: x.depth })),
+      // Main questions first, then each one's retake variants (same type, same skill, different numbers or words).
+      questions: [
+        ...quiz.map((x, i) => ({ ref: `q${i + 1}`, ...x.q, sub_lesson: x.sub, depth: x.depth })),
+        ...quiz.flatMap((x, i) => (x.alts ?? []).map((a, k) => ({ ref: `q${i + 1}${"abc"[k]}`, ...a, sub_lesson: x.sub, depth: x.depth, variant_of: `q${i + 1}` }))),
+      ],
     },
   };
   audit(file);
@@ -61,18 +65,26 @@ export function audit(file) {
   if (!file.lesson.success_criteria?.length) fail("no success criteria");
   if (!file.lesson.real_life) fail("no real-life link");
   if (!file.lesson.warm_up || file.lesson.warm_up.length !== 3) fail("warm-up needs 3 questions");
-  const qs = file.quiz.questions;
+  const all = file.quiz.questions;
+  const qs = all.filter((q) => !q.variant_of);
+  for (const m of qs) {
+    const vs = all.filter((q) => q.variant_of === m.ref);
+    if (vs.length < 2) fail(`${m.ref} has ${vs.length} retake variants (needs at least 2)`);
+    for (const v of vs) if (v.type !== m.type) fail(`${v.ref} is ${v.type} but ${m.ref} is ${m.type}`);
+  }
   if (qs.length !== 15) fail(`quiz has ${qs.length} questions (needs 15)`);
   const qt = new Set(qs.map((q) => (q.type === "number" ? "short_text" : q.type)));
   for (const t of ["multiple_choice", "multi_select", "true_false", "short_text", "fill_blank", "match", "order", "hotspot", "slider"]) if (!qt.has(t)) fail(`quiz has no ${t} question`);
   if (qs.filter((q) => q.depth === "reason").length < 4) fail("quiz needs at least 4 reason questions");
   for (const sub of file.sub_lessons) if (!qs.some((q) => q.sub_lesson === sub.id)) fail(`no quiz question for sub-lesson ${sub.id}`);
-  for (const q of qs) {
+  for (const q of all) {
     if (!q.hint) fail(`${q.ref} has no hint`);
     if (!q.explanation) fail(`${q.ref} has no explanation`);
     if (!q.skill_tag) fail(`${q.ref} has no skill_tag`);
   }
   const seenPrompts = new Set(file.sub_lessons.flatMap((s) => [...s.blocks.filter((b) => b.type === "check").map((b) => b.question.prompt), ...s.mini_quiz.map((q) => q.prompt)]).map((p) => p.toLowerCase()));
-  for (const q of qs) if (seenPrompts.has(q.prompt.toLowerCase())) fail(`${q.ref} repeats a check or mini quiz question word for word`);
+  const used = new Set();
+  for (const q of all) { if (used.has(q.prompt.toLowerCase())) fail(`${q.ref} repeats another quiz question word for word`); used.add(q.prompt.toLowerCase()); }
+  for (const q of all) if (seenPrompts.has(q.prompt.toLowerCase())) fail(`${q.ref} repeats a check or mini quiz question word for word`);
   if (errs.length) throw new Error(`Topic ${slug} breaks the guidelines:\n - ${errs.join("\n - ")}`);
 }

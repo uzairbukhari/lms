@@ -129,3 +129,36 @@ describe("the pilot topic lesson", () => {
     expect(part.miniQuiz.length).toBeGreaterThanOrEqual(3);
   });
 });
+
+describe("retakes get fresh questions", () => {
+  it("rejects a variant of a missing or mismatched question", () => {
+    const f = topicFile("maths-v", 1);
+    f.quiz.questions.push({ ...mc("q1 again"), ref: "q1v", variant_of: "nope" } as never);
+    expect(parseLessonFile(f).ok).toBe(false);
+    f.quiz.questions[2] = { type: "true_false", prompt: "x", answer: [true], ref: "q1v", variant_of: "q1" } as never;
+    expect(parseLessonFile(f).ok).toBe(false);
+  });
+
+  it("swaps in a different variant on each retake, and cycles back", async () => {
+    const f = topicFile("maths-variants", 1) as any;
+    f.lesson.curriculum.course = "maths-variants-course";
+    f.quiz.questions.push({ ...mc("q1 variant A"), ref: "q1a", variant_of: "q1" }, { ...mc("q1 variant B"), ref: "q1b", variant_of: "q1" });
+    const classId = (await json<{ class: { id: string } }>(await call("/api/admin/classes", { body: { name: "Variant club" } }))).class.id;
+    const r = await json<{ lesson: { lessonId: string; courseId: string } }>(await call("/api/admin/lessons/import", { body: { publish: true, file: f } }));
+    await call("/api/admin/assignments", { body: { courseId: r.lesson.courseId, classId } });
+    await call(`/api/admin/classes/${classId}`, { method: "PATCH", body: { unlockMode: "path" } });
+    const creds = (await json<{ credentials: { username: string; password: string } }>(await call("/api/admin/students", { body: { displayName: "Vee", classIds: [classId] } }))).credentials;
+    const cookie = ((await call("/api/login", { body: { username: creds.username, password: creds.password } })).headers.get("set-cookie") ?? "").split(";")[0] ?? "";
+    expect((await json(await call(`/api/lessons/${r.lesson.lessonId}`, { cookie }))).quiz.questionCount).toBe(2);
+    const prompts: string[] = [];
+    for (let n = 0; n < 4; n++) {
+      const start = await json(await call(`/api/lessons/${r.lesson.lessonId}/quiz/start`, { method: "POST", body: {}, cookie }));
+      expect(start.questions).toHaveLength(2);
+      prompts.push((start.questions as { prompt: string }[]).map((q) => q.prompt).find((p) => p.startsWith("q1")) ?? "");
+      const answers: Record<string, unknown> = {};
+      for (const q of start.questions as { id: string }[]) answers[q.id] = ["b"]; // fail so it stays graded
+      await call(`/api/quiz/attempts/${start.attemptId}/submit`, { body: { answers }, cookie });
+    }
+    expect(prompts).toEqual(["q1", "q1 variant A", "q1 variant B", "q1"]);
+  });
+});

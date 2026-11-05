@@ -26,7 +26,7 @@ adminContentRoutes.post("/lessons/validate", async (c) => {
       title: l.lesson.title,
       subject: l.lesson.subject,
       blocks: l.blocks.length,
-      questions: l.quiz.questions.length,
+      questions: l.quiz.questions.filter((q) => !q.variant_of).length,
       curriculum: l.lesson.curriculum ?? null,
     },
     missingAssets: await missingAssets(c.env.DB, l),
@@ -56,7 +56,7 @@ adminContentRoutes.get("/lessons", async (c) => {
   }
   const sql = `SELECT l.id, l.slug, l.title, l.subject_id AS subject, l.status, l.current_version AS version, l.unit,
                       l.age_band AS ageBand, l.difficulty, l.estimated_minutes AS minutes, l.updated_at AS updatedAt,
-                      (SELECT COUNT(*) FROM questions q JOIN quizzes z ON z.id = q.quiz_id WHERE z.lesson_id = l.id AND z.is_current = 1) AS questionCount
+                      (SELECT COUNT(*) FROM questions q JOIN quizzes z ON z.id = q.quiz_id WHERE z.lesson_id = l.id AND z.is_current = 1 AND q.variant_of IS NULL) AS questionCount
                  FROM lessons l ${where.length ? "WHERE " + where.join(" AND ") : ""} ORDER BY l.subject_id, l.sort_order, l.title`;
   const { results } = await c.env.DB.prepare(sql).bind(...binds).all<{ id: string }>();
   const slots = await c.env.DB
@@ -109,7 +109,7 @@ adminContentRoutes.get("/lessons/:id/preview", async (c) => {
   return c.json({
     lesson: { id: row.id, slug: row.slug, title: row.title, subject: row.subject, summary: row.summary, minutes: row.minutes, unit: row.unit, objectives: file.lesson.learning_objectives, semester: null, week: null, phase: "current" },
     blocks: JSON.parse(row.content_json),
-    quiz: { questionCount: file.quiz.questions.length, passPercent: file.quiz.pass_percent ?? 70 },
+    quiz: { questionCount: (file.quiz.questions as { variant_of?: string }[]).filter((q) => !q.variant_of).length, passPercent: file.quiz.pass_percent ?? 70 },
     progress: null,
     readOnly: true, // previews never record progress
     preview: true,
