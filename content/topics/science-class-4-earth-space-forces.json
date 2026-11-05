@@ -1,0 +1,2466 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-earth-space-forces",
+  "subject": "science",
+  "title": "Earth, Space and Forces",
+  "summary": "Earth, Sun and Moon, the layers of the Earth, earthquakes and volcanoes, and the forces of gravity, friction and air resistance.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 6: Earth, space and forces",
+  "learning_objectives": [
+   "Describe the movement of Earth and the Moon",
+   "Describe the layers of the Earth",
+   "Describe gravity, friction and air resistance",
+   "Plan a fair test of parachutes"
+  ],
+  "tags": [
+   "topic",
+   "topic-6"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 6
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y5 Earth and space; forces",
+    "text": "Describe the movement of Earth and the Moon; explain day and night; identify gravity, air resistance, water resistance and friction"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "S-04-C"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESs.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESs.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESs.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESs.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4ESp.03"
+   }
+  ],
+  "success_criteria": [
+   "I can explain day and night",
+   "I can name the layers of the Earth",
+   "I can name three forces and what they do",
+   "I can say how to stay safe in an earthquake"
+  ],
+  "real_life": "Seeing the new moon for the start of a month, braking on a bike and knowing what to do in an earthquake.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a switch do in a circuit?",
+    "hint": "Open or closed.",
+    "explanation": "A switch opens or closes the circuit.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Makes it longer"
+     },
+     {
+      "id": "b",
+      "text": "Opens or closes it"
+     },
+     {
+      "id": "c",
+      "text": "Makes it colder"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Plastic is an electrical conductor.",
+    "hint": "It covers wires.",
+    "explanation": "Plastic is an insulator.",
+    "answer": [
+     false
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is energy never?",
+    "hint": "It just changes form.",
+    "explanation": "Energy is never used up. It is transferred.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Transferred"
+     },
+     {
+      "id": "b",
+      "text": "Useful"
+     },
+     {
+      "id": "c",
+      "text": "Used up"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do Earth and forces work?\n\nWe will also plan a fair test.",
+   "say": "Welcome back, young scientist! Today's big question is: how do Earth, the Moon and forces work? By the end, you will explain day and night, describe the layers of the Earth, and name the forces that act on you every day. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🌍🌙⬇️",
+   "alt": "Earth, the Moon and gravity.",
+   "caption": "Earth, the Moon and gravity."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "space",
+     "meaning": "The huge empty region beyond Earth's air."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "space",
+   "kind": "learn",
+   "title": "Earth, Sun and Moon",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Day and night, and the seasons"
+    },
+    {
+     "type": "text",
+     "markdown": "The **Sun** is a star. Earth **orbits** it once a year.\n\nEarth **rotates** once in 24 hours, which gives us day and night.",
+     "say": "The Sun is a star. It is the centre of our solar system, and Earth is one of the planets that travel around it. Earth spins like a top. It takes twenty-four hours to spin once, and this spin is what gives us day and night. The side of Earth facing the Sun has daytime. The side facing away has night. Earth also travels around the Sun once every year, and its tilt gives us the seasons."
+    },
+    {
+     "type": "explainer",
+     "title": "Earth and the Sun",
+     "scenes": [
+      {
+       "caption": "Facing the Sun: day.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "e",
+         "emoji": "🌍",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "Earth spins. The side facing the Sun has day, and Pakistan sees the Sun rise in the morning."
+      },
+      {
+       "caption": "Facing away: night.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "e",
+         "emoji": "🌏",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "n",
+         "emoji": "🌙",
+         "x": 85,
+         "y": 30,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "As Earth keeps turning, our side faces away from the Sun, and it becomes night."
+      }
+     ],
+     "backdrop": "space"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What causes day and night?",
+      "hint": "Earth turns once in 24 hours.",
+      "explanation": "Earth rotates, so different places face the Sun at different times.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The Sun moving round Earth"
+       },
+       {
+        "id": "b",
+        "text": "The Moon covering the Sun"
+       },
+       {
+        "id": "c",
+        "text": "Earth spinning on its axis"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The Moon"
+    },
+    {
+     "type": "text",
+     "markdown": "The Moon is a **satellite** that orbits Earth.\n\nThe Moon reflects sunlight. Its **phases** change over about a month.",
+     "say": "The Moon is a natural satellite, which means it orbits a planet. It orbits Earth about once a month. The Moon does not make its own light. We see it because it reflects light from the Sun. As the Moon travels around Earth, we see different amounts of its lit half. These are called the phases of the Moon, such as the new moon, the crescent, the half moon and the full moon. Muslims use the sighting of the new crescent moon to mark the start of each month in the Islamic calendar."
+    },
+    {
+     "type": "explainer",
+     "title": "Moon phases",
+     "scenes": [
+      {
+       "caption": "Crescent moon.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "A thin crescent moon. Only a small part of the lit half faces us."
+      },
+      {
+       "caption": "Full moon.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌕",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A full moon. The whole lit half faces us, so it looks like a bright circle."
+      }
+     ],
+     "backdrop": "sky"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The Moon makes its own light.",
+      "hint": "It reflects light.",
+      "explanation": "The Moon reflects light from the Sun.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Earth rotates once in 24 hours",
+      "Earth orbits the Sun once a year",
+      "The Moon orbits Earth and reflects sunlight"
+     ],
+     "say": "Remember. Earth spins to give day and night and orbits the Sun. The Moon orbits Earth."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "Sun",
+       "meaning": "The star at the centre of our solar system."
+      },
+      {
+       "term": "orbits",
+       "meaning": "Travels in a curved path around something."
+      },
+      {
+       "term": "rotates",
+       "meaning": "Spins around."
+      },
+      {
+       "term": "satellite",
+       "meaning": "An object that orbits a planet."
+      },
+      {
+       "term": "phases",
+       "meaning": "The different shapes of the Moon that we see."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How long does Earth take to spin once?",
+     "hint": "One day.",
+     "explanation": "Earth rotates once every 24 hours.",
+     "options": [
+      {
+       "id": "a",
+       "text": "One year"
+      },
+      {
+       "id": "b",
+       "text": "24 hours"
+      },
+      {
+       "id": "c",
+       "text": "One month"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Earth orbits the Sun once a year.",
+     "hint": "Think about a year.",
+     "explanation": "One orbit of the Sun takes one year.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each to what it does.",
+     "hint": "Who goes around whom?",
+     "explanation": "Earth orbits the Sun, the Moon orbits Earth and the Sun is a star.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Earth"
+      },
+      {
+       "id": "l2",
+       "text": "Moon"
+      },
+      {
+       "id": "l3",
+       "text": "Sun"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Is a star"
+      },
+      {
+       "id": "r1",
+       "text": "Orbits the Sun"
+      },
+      {
+       "id": "r2",
+       "text": "Orbits Earth"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order from biggest to smallest.",
+     "hint": "The Sun is huge.",
+     "explanation": "The Sun is much bigger than Earth, and Earth is bigger than the Moon.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Earth"
+      },
+      {
+       "id": "i3",
+       "text": "Moon"
+      },
+      {
+       "id": "i1",
+       "text": "Sun"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "forces",
+   "kind": "try",
+   "title": "Forces: gravity, friction and air resistance",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pushes, pulls and gravity"
+    },
+    {
+     "type": "text",
+     "markdown": "A **force** is a push or a pull.\n\n**Gravity** pulls objects towards the centre of Earth.",
+     "say": "A force is a push or a pull. Forces can make things start moving, stop, speed up, slow down or change direction. Gravity is a force that pulls objects towards the centre of the Earth. It is why things fall down when you drop them, and why we stay on the ground. We measure forces in newtons, using a forcemeter. A heavier object has more weight, because gravity pulls it harder."
+    },
+    {
+     "type": "explainer",
+     "title": "Gravity at work",
+     "scenes": [
+      {
+       "caption": "Gravity pulls things down.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🍎",
+         "x": 55,
+         "y": 35,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "g",
+         "emoji": "⬇️",
+         "x": 80,
+         "y": 55,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "An apple falls from a tree. Gravity pulls it down towards the ground."
+      },
+      {
+       "caption": "Heavier means a bigger pull.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏋️",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "⬇️",
+         "x": 75,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A heavier object is pulled harder. We measure the pull in newtons."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which force pulls things towards the Earth?",
+      "hint": "Why do things fall?",
+      "explanation": "Gravity pulls objects towards the centre of the Earth.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Friction"
+       },
+       {
+        "id": "b",
+        "text": "Gravity"
+       },
+       {
+        "id": "c",
+        "text": "Magnetism"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Friction and air resistance"
+    },
+    {
+     "type": "manipulative",
+     "title": "Rough or smooth?",
+     "goal": "Put surfaces with lots of friction in High and surfaces with little friction in Low.",
+     "emoji": "🛷",
+     "count": 8,
+     "zones": [
+      "High friction",
+      "Low friction"
+     ],
+     "say": "Friction is a force between two surfaces that rub together. It slows things down. A rough surface such as carpet has lots of friction, and a smooth surface such as ice has very little. Air resistance and water resistance are forces that push against things moving through air or water. A parachute has a large surface, so it catches lots of air and falls slowly. A fair test of parachutes changes only the size of the canopy, and keeps the weight and drop height the same."
+    },
+    {
+     "type": "activity",
+     "title": "Parachute test",
+     "materials": [
+      "A small toy or a coin",
+      "Thread and a plastic bag or cloth",
+      "A stopwatch",
+      "A grown-up to help you drop safely"
+     ],
+     "instructions": [
+      "Make two parachutes of different sizes, but the same weight attached.",
+      "Drop each one from the same height. Time how long each takes to land.",
+      "Which fell more slowly? Write your pattern. What did you keep the same?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which surface has the least friction?",
+      "hint": "Think about sliding.",
+      "explanation": "Ice is smooth, so it has very little friction.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Carpet"
+       },
+       {
+        "id": "b",
+        "text": "Sandpaper"
+       },
+       {
+        "id": "c",
+        "text": "Ice"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Forces are pushes or pulls",
+      "Gravity pulls things towards Earth",
+      "Friction and air resistance slow things down"
+     ],
+     "say": "Remember. Gravity pulls things down, friction slows things down and air resistance slows things moving through air."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "force",
+       "meaning": "A push or a pull."
+      },
+      {
+       "term": "gravity",
+       "meaning": "A force that pulls objects towards the centre of the Earth."
+      },
+      {
+       "term": "friction",
+       "meaning": "A force that slows things down when surfaces rub together."
+      },
+      {
+       "term": "air resistance",
+       "meaning": "A force that pushes against things moving through the air."
+      },
+      {
+       "term": "newtons",
+       "meaning": "The units for measuring force."
+      },
+      {
+       "term": "canopy",
+       "meaning": "The large part of a parachute that catches the air."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A heavier object feels a bigger pull from gravity.",
+     "hint": "Weight.",
+     "explanation": "Gravity pulls a heavier object harder.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A big parachute falls...",
+     "hint": "It catches more air.",
+     "explanation": "A large canopy has more air resistance, so it falls more slowly.",
+     "options": [
+      {
+       "id": "a",
+       "text": "More quickly"
+      },
+      {
+       "id": "b",
+       "text": "At exactly the same speed as no parachute"
+      },
+      {
+       "id": "c",
+       "text": "More slowly"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each force to its job.",
+     "hint": "Think about what each does.",
+     "explanation": "Each force has a different effect on movement.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Gravity"
+      },
+      {
+       "id": "l2",
+       "text": "Friction"
+      },
+      {
+       "id": "l3",
+       "text": "Air resistance"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Slows falling"
+      },
+      {
+       "id": "r1",
+       "text": "Pulls towards Earth"
+      },
+      {
+       "id": "r2",
+       "text": "Slows sliding"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "earth",
+   "kind": "play",
+   "title": "Inside the Earth",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Layers of the Earth"
+    },
+    {
+     "type": "text",
+     "markdown": "Earth has layers: the **crust**, the **mantle** and the **core**.\n\nThe crust is broken into slow moving **tectonic plates**.",
+     "say": "Earth is made of layers, like a peach. On the outside is the crust, a thin layer of rock where we live. Under the crust is the mantle, which is a thick layer of hot rock. At the centre is the core, which is extremely hot and made mostly of iron. The crust is broken into huge pieces called tectonic plates. These plates move very slowly, only a few centimetres a year. Look at the layers."
+    },
+    {
+     "type": "explainer",
+     "title": "Layers of Earth",
+     "scenes": [
+      {
+       "caption": "The crust.",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🌍",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The crust is the thin outer layer, where we live."
+      },
+      {
+       "caption": "The mantle and core.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🟠",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "c",
+         "emoji": "🔴",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Under the crust is a thick layer of hot rock called the mantle. In the centre is the very hot core."
+      }
+     ],
+     "backdrop": "space"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the thin, outer layer of the Earth?",
+      "hint": "It is where we live.",
+      "explanation": "The crust is the thin outer layer of rock.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The mantle"
+       },
+       {
+        "id": "b",
+        "text": "The crust"
+       },
+       {
+        "id": "c",
+        "text": "The core"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Volcanoes and earthquakes"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Earth words",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🌋",
+      "🌍",
+      "🪨",
+      "🌡️"
+     ],
+     "say": "Where plates push against each other, rub past each other or pull apart, we find volcanoes and earthquakes. A volcano erupts when hot melted rock, called magma, rises up and bursts out. Once it is above ground, we call it lava. An earthquake is a shaking of the ground when plates suddenly move. Pakistan sits near the edge of two plates, so it can have earthquakes. Scientists measure them to help keep people safe. Try a memory game, then see if you can match the words."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each word to what it means.",
+      "hint": "Under or above the ground?",
+      "explanation": "Magma is underground, lava is above ground and an earthquake shakes the ground.",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Magma"
+       },
+       {
+        "id": "l2",
+        "text": "Lava"
+       },
+       {
+        "id": "l3",
+        "text": "Earthquake"
+       }
+      ],
+      "right": [
+       {
+        "id": "r3",
+        "text": "Shaking of the ground"
+       },
+       {
+        "id": "r1",
+        "text": "Melted rock under the ground"
+       },
+       {
+        "id": "r2",
+        "text": "Melted rock above ground"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Earth has a crust, a mantle and a core",
+      "The crust is made of slow moving plates",
+      "Plates cause earthquakes and volcanoes"
+     ],
+     "say": "Remember. Earth has layers. Moving plates cause volcanoes and earthquakes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "crust",
+       "meaning": "The thin outer layer of rock on Earth."
+      },
+      {
+       "term": "mantle",
+       "meaning": "The thick layer of hot rock under the crust."
+      },
+      {
+       "term": "core",
+       "meaning": "The very hot centre of the Earth."
+      },
+      {
+       "term": "tectonic plates",
+       "meaning": "Huge pieces of the Earth's crust."
+      },
+      {
+       "term": "magma",
+       "meaning": "Melted rock under the ground."
+      },
+      {
+       "term": "lava",
+       "meaning": "Melted rock above the ground."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "The core is the coolest layer of the Earth.",
+     "hint": "It is at the centre.",
+     "explanation": "The core is the hottest layer.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is melted rock above the ground called?",
+     "hint": "It comes out of a volcano.",
+     "explanation": "Lava is melted rock that has reached the surface.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Magma"
+      },
+      {
+       "id": "b",
+       "text": "Crust"
+      },
+      {
+       "id": "c",
+       "text": "Lava"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these layers in order from the outside to the centre.",
+     "hint": "Start where we live.",
+     "explanation": "From the outside, the layers are the crust, then the mantle, then the core.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Mantle"
+      },
+      {
+       "id": "i1",
+       "text": "Crust"
+      },
+      {
+       "id": "i3",
+       "text": "Core"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safe",
+   "kind": "use",
+   "title": "Forces and safety in real life",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Using forces to stay safe"
+    },
+    {
+     "type": "text",
+     "markdown": "Forces help us stay safe: **seat belts**, **brakes** and **helmets**.\n\nFriction helps brakes and tyres to grip.",
+     "say": "We use what we know about forces every day. Seat belts hold us in our seats when a car stops suddenly. Brakes use friction to slow down a bike or a car, and tyres with a good grip give more friction on the road. Bike helmets protect our heads if we fall. Crumple zones in cars soak up a crash. A skydiver uses a parachute to increase air resistance. All of them help to keep people safe."
+    },
+    {
+     "type": "image",
+     "emoji": "🚗 🚲 ⛑️",
+     "alt": "Seat belts, brakes and helmets keep us safe.",
+     "caption": "Seat belts, brakes and helmets keep us safe.",
+     "say": "Seat belts, brakes and helmets all use what we know about forces."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do brakes use to slow a bike down?",
+      "hint": "Rubbing surfaces.",
+      "explanation": "Brakes rub against the wheel, and friction slows it.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Light"
+       },
+       {
+        "id": "b",
+        "text": "Friction"
+       },
+       {
+        "id": "c",
+        "text": "Gravity"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Earthquake safety"
+    },
+    {
+     "type": "activity",
+     "title": "My family safety plan",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Draw a plan of your home. Mark strong tables and the exits.",
+      "Choose a meeting place outside, away from buildings.",
+      "Practise Drop, Cover and Hold with your family."
+     ],
+     "say": "Earthquakes can be frightening, but knowing what to do keeps us safe. If the ground shakes, drop to the ground, take cover under a strong table, and hold on. Stay away from windows and heavy furniture. When the shaking stops, walk outside carefully to an open space, away from buildings. We remember the people who were hurt in earthquakes, and we pray for them and help in any way we can. Make a family plan."
+    },
+    {
+     "type": "image",
+     "emoji": "🪑 🏃 🏠",
+     "alt": "Take cover under a strong table, then go to an open space.",
+     "caption": "Take cover under a strong table, then go to an open space.",
+     "say": "Under a strong table, away from windows, is a safe place to take cover."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "In an earthquake, you should hide next to a large window.",
+      "hint": "Glass can break.",
+      "explanation": "You should stay away from windows and take cover under a strong table.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Seat belts, brakes and helmets keep us safe",
+      "Friction helps brakes and tyres grip",
+      "In an earthquake, drop, cover and hold"
+     ],
+     "say": "Remember. We use forces and our science knowledge to stay safe."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "seat belts",
+       "meaning": "Straps that hold us in our seats in a car."
+      },
+      {
+       "term": "brakes",
+       "meaning": "Parts that slow down or stop a vehicle."
+      },
+      {
+       "term": "helmets",
+       "meaning": "Hard hats that protect the head."
+      },
+      {
+       "term": "cover",
+       "meaning": "To shelter under something strong."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do bikes have tyres with a rough grip?",
+     "hint": "Grip.",
+     "explanation": "A rough grip increases friction, so the bike does not slip.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To reduce friction"
+      },
+      {
+       "id": "b",
+       "text": "To make them lighter"
+      },
+      {
+       "id": "c",
+       "text": "To increase friction on the road"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two things to do in an earthquake.",
+     "hint": "Think about safety.",
+     "explanation": "Taking cover and avoiding windows keeps you safe.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stay away from windows"
+      },
+      {
+       "id": "b",
+       "text": "Stand next to a heavy cupboard"
+      },
+      {
+       "id": "c",
+       "text": "Run towards the glass"
+      },
+      {
+       "id": "d",
+       "text": "Take cover under a strong table"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A seat belt helps keep you safe when a car stops suddenly.",
+     "hint": "Think about forces.",
+     "explanation": "A seat belt holds you in place when the car stops suddenly.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What happens during one full rotation of Earth?",
+    "hint": "24 hours.",
+    "explanation": "One rotation of Earth takes 24 hours, giving a day and night.",
+    "options": [
+     {
+      "id": "a",
+      "text": "One month passes"
+     },
+     {
+      "id": "b",
+      "text": "One day and one night pass"
+     },
+     {
+      "id": "c",
+      "text": "One year passes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.rotate",
+    "sub_lesson": "space",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "The Moon gives out its own light.",
+    "hint": "Reflected light.",
+    "explanation": "The Moon only reflects sunlight.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "earth.moon",
+    "sub_lesson": "space",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Match each space object to what it is.",
+    "hint": "What is each?",
+    "explanation": "The Sun is a star, Earth is a planet and the Moon is a satellite.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sun"
+     },
+     {
+      "id": "l2",
+      "text": "Earth"
+     },
+     {
+      "id": "l3",
+      "text": "Moon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Satellite"
+     },
+     {
+      "id": "r1",
+      "text": "Star"
+     },
+     {
+      "id": "r2",
+      "text": "Planet"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "earth.objects",
+    "sub_lesson": "space",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Which two of these does gravity do?",
+    "hint": "Pulling down.",
+    "explanation": "Gravity pulls us and objects towards Earth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Makes things float upwards"
+     },
+     {
+      "id": "b",
+      "text": "Makes things disappear"
+     },
+     {
+      "id": "c",
+      "text": "Keeps us on the ground"
+     },
+     {
+      "id": "d",
+      "text": "Pulls things towards Earth"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "earth.gravity",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the surface with the least friction.",
+    "hint": "It is smooth.",
+    "explanation": "Ice is smooth, so it has very little friction.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧶",
+       "label": "Carpet",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Rough rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "earth.friction",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "Write the word for a push or a pull.",
+    "hint": "It starts with f.",
+    "explanation": "A force is a push or a pull.",
+    "answer": {
+     "accepted": [
+      "force"
+     ]
+    },
+    "skill_tag": "earth.words",
+    "sub_lesson": "forces",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Amna drops two parachutes with the same weight. One has a big canopy and one has a small canopy. Which falls more slowly?",
+    "hint": "More air resistance.",
+    "explanation": "A bigger canopy has more air resistance, so it falls more slowly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The small canopy"
+     },
+     {
+      "id": "b",
+      "text": "They fall at the same rate"
+     },
+     {
+      "id": "c",
+      "text": "The big canopy"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.parachute",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about Earth.",
+    "hint": "Spin and travel.",
+    "explanation": "Earth rotates once a day and orbits the Sun once a year.",
+    "points": 2,
+    "text": "Earth {b1} once every 24 hours. It {b2} the Sun once a year.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "orbits"
+       },
+       {
+        "id": "b",
+        "text": "rotates"
+       },
+       {
+        "id": "c",
+        "text": "freezes"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rotates"
+       },
+       {
+        "id": "b",
+        "text": "melts"
+       },
+       {
+        "id": "c",
+        "text": "orbits"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "earth.fill",
+    "sub_lesson": "space",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "The Moon orbits Earth about once every 28 days. How many days is that in 3 orbits?",
+    "hint": "28 times 3.",
+    "explanation": "28 x 3 = 84 days.",
+    "answer": {
+     "value": 84,
+     "tolerance": 0
+    },
+    "skill_tag": "earth.maths",
+    "sub_lesson": "space",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "About how many hours does Earth take to spin once? Slide to show it.",
+    "hint": "One day.",
+    "explanation": "Earth spins once in 24 hours.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 48,
+     "unit": "hours"
+    },
+    "answer": {
+     "value": 24,
+     "tolerance": 2
+    },
+    "skill_tag": "earth.slider",
+    "sub_lesson": "space",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put these in order for an earthquake.",
+    "hint": "Drop, cover, hold.",
+    "explanation": "Drop, take cover, hold on and then go to an open space.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Take cover under a strong table"
+     },
+     {
+      "id": "i3",
+      "text": "Hold on until the shaking stops"
+     },
+     {
+      "id": "i4",
+      "text": "Walk to an open space"
+     },
+     {
+      "id": "i1",
+      "text": "Drop to the ground"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "earth.order",
+    "sub_lesson": "safe",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the Sun goes around Earth to make day and night. What is the real reason?",
+    "hint": "Earth turns.",
+    "explanation": "Earth rotates once in 24 hours, giving day and night.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon blocks the Sun"
+     },
+     {
+      "id": "b",
+      "text": "Earth spins on its axis"
+     },
+     {
+      "id": "c",
+      "text": "The Sun switches off"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_day",
+    "sub_lesson": "space",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does a skydiver open a parachute?",
+    "hint": "A big canopy.",
+    "explanation": "A parachute increases air resistance, which slows the fall.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To increase gravity"
+     },
+     {
+      "id": "b",
+      "text": "To fall faster"
+     },
+     {
+      "id": "c",
+      "text": "To increase air resistance and fall more slowly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_chute",
+    "sub_lesson": "forces",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Why can Pakistan have earthquakes?",
+    "hint": "Moving plates.",
+    "explanation": "Plates push against each other near Pakistan, causing earthquakes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is too hot"
+     },
+     {
+      "id": "b",
+      "text": "It has too many dunes of sand"
+     },
+     {
+      "id": "c",
+      "text": "It sits near the edges of tectonic plates"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_quake",
+    "sub_lesson": "earth",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Sami says the Moon is a star because it shines. Why is he wrong?",
+    "hint": "Reflected light.",
+    "explanation": "The Moon does not make light. It reflects sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon is made of light"
+     },
+     {
+      "id": "b",
+      "text": "The Moon only reflects light from the Sun"
+     },
+     {
+      "id": "c",
+      "text": "The Moon is too small to shine"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_moon",
+    "sub_lesson": "space",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these happens when Earth rotates once?",
+    "hint": "24 hours.",
+    "explanation": "One rotation of Earth takes 24 hours, giving a day and night.",
+    "options": [
+     {
+      "id": "a",
+      "text": "One month passes"
+     },
+     {
+      "id": "b",
+      "text": "One day and one night pass"
+     },
+     {
+      "id": "c",
+      "text": "One year passes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.rotate",
+    "sub_lesson": "space",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What does Earth orbit?",
+    "hint": "A star.",
+    "explanation": "Earth orbits the Sun.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon"
+     },
+     {
+      "id": "b",
+      "text": "The Sun"
+     },
+     {
+      "id": "c",
+      "text": "Mars"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.rotate",
+    "sub_lesson": "space",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "The Moon is a source of its own light.",
+    "hint": "Reflected light.",
+    "explanation": "The Moon only reflects sunlight.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "earth.moon",
+    "sub_lesson": "space",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "The Sun is a star.",
+    "hint": "It gives out light.",
+    "explanation": "The Sun is a star.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "earth.moon",
+    "sub_lesson": "space",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Link each space object to its type.",
+    "hint": "What is each?",
+    "explanation": "The Sun is a star, Earth is a planet and the Moon is a satellite.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sun"
+     },
+     {
+      "id": "l2",
+      "text": "Earth"
+     },
+     {
+      "id": "l3",
+      "text": "Moon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Satellite"
+     },
+     {
+      "id": "r1",
+      "text": "Star"
+     },
+     {
+      "id": "r2",
+      "text": "Planet"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "earth.objects",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each layer to its description.",
+    "hint": "Outside to centre.",
+    "explanation": "Each layer of Earth has a different description.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Crust"
+     },
+     {
+      "id": "l2",
+      "text": "Mantle"
+     },
+     {
+      "id": "l3",
+      "text": "Core"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Very hot centre"
+     },
+     {
+      "id": "r1",
+      "text": "Thin outer rock"
+     },
+     {
+      "id": "r2",
+      "text": "Thick hot rock"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "earth.objects",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two things gravity does.",
+    "hint": "Pulling down.",
+    "explanation": "Gravity pulls us and objects towards Earth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Keeps us on the ground"
+     },
+     {
+      "id": "b",
+      "text": "Makes things float upwards"
+     },
+     {
+      "id": "c",
+      "text": "Makes things disappear"
+     },
+     {
+      "id": "d",
+      "text": "Pulls things towards Earth"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "earth.gravity",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two things that have lots of friction.",
+    "hint": "Rough surfaces.",
+    "explanation": "Carpet and sandpaper are rough, so they have lots of friction.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sandpaper"
+     },
+     {
+      "id": "b",
+      "text": "Ice"
+     },
+     {
+      "id": "c",
+      "text": "A wet tile"
+     },
+     {
+      "id": "d",
+      "text": "Carpet"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "earth.gravity",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the surface that is best for sliding on.",
+    "hint": "It is smooth.",
+    "explanation": "Ice is smooth, so it has very little friction.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧶",
+       "label": "Carpet",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Rough rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "earth.friction",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the layer at the very centre of the Earth.",
+    "hint": "It is in the middle.",
+    "explanation": "The core is at the centre of the Earth.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Crust",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟠",
+       "label": "Mantle",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔴",
+       "label": "Core",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "earth.friction",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What is the name for a push or a pull?",
+    "hint": "It starts with f.",
+    "explanation": "A force is a push or a pull.",
+    "answer": {
+     "accepted": [
+      "force"
+     ]
+    },
+    "skill_tag": "earth.words",
+    "sub_lesson": "forces",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the name of the force that pulls things down to Earth?",
+    "hint": "It starts with g.",
+    "explanation": "Gravity pulls objects towards the Earth.",
+    "answer": {
+     "accepted": [
+      "gravity"
+     ]
+    },
+    "skill_tag": "earth.words",
+    "sub_lesson": "forces",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Layla drops two parachutes with the same weight. One has a big canopy, one a small canopy. Which falls more slowly?",
+    "hint": "More air resistance.",
+    "explanation": "A bigger canopy has more air resistance, so it falls more slowly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The small canopy"
+     },
+     {
+      "id": "b",
+      "text": "They fall at the same rate"
+     },
+     {
+      "id": "c",
+      "text": "The big canopy"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.parachute",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Bilal wants a fair parachute test. What should he change?",
+    "hint": "Only change one thing.",
+    "explanation": "A fair test changes just one thing and keeps the rest the same.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The weight and the height too"
+     },
+     {
+      "id": "b",
+      "text": "Only the size of the canopy"
+     },
+     {
+      "id": "c",
+      "text": "The room and the time of day"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.parachute",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about Earth.",
+    "hint": "Spin and travel.",
+    "explanation": "Earth rotates once a day and orbits the Sun once a year.",
+    "points": 2,
+    "text": "Earth {b1} once every 24 hours. It {b2} the Sun once a year.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "freezes"
+       },
+       {
+        "id": "b",
+        "text": "rotates"
+       },
+       {
+        "id": "c",
+        "text": "orbits"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rotates"
+       },
+       {
+        "id": "b",
+        "text": "melts"
+       },
+       {
+        "id": "c",
+        "text": "orbits"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "earth.fill",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about forces.",
+    "hint": "Two actions.",
+    "explanation": "A force is a push or a pull.",
+    "points": 2,
+    "text": "A force is a {b1} or a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "shadow"
+       },
+       {
+        "id": "b",
+        "text": "sound"
+       },
+       {
+        "id": "c",
+        "text": "push"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "colour"
+       },
+       {
+        "id": "b",
+        "text": "pull"
+       },
+       {
+        "id": "c",
+        "text": "star"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "earth.fill",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "The Moon orbits Earth about once every 28 days. How many days is that in 2 orbits?",
+    "hint": "28 times 2.",
+    "explanation": "28 x 2 = 56 days.",
+    "answer": {
+     "value": 56,
+     "tolerance": 0
+    },
+    "skill_tag": "earth.maths",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "A year has 12 months. How many months are there in 3 years?",
+    "hint": "12 times 3.",
+    "explanation": "12 x 3 = 36 months.",
+    "answer": {
+     "value": 36,
+     "tolerance": 0
+    },
+    "skill_tag": "earth.maths",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "About how many hours does Earth take to rotate once? Slide to show it.",
+    "hint": "One day.",
+    "explanation": "Earth rotates once in 24 hours.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 48,
+     "unit": "hours"
+    },
+    "answer": {
+     "value": 24,
+     "tolerance": 2
+    },
+    "skill_tag": "earth.slider",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "About how many months does the Moon take to orbit Earth? Slide to show it.",
+    "hint": "A month.",
+    "explanation": "The Moon orbits Earth about once a month.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6,
+     "unit": "months"
+    },
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "skill_tag": "earth.slider",
+    "sub_lesson": "space",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these in order for daytime turning into night.",
+    "hint": "Follow the spin.",
+    "explanation": "As Earth spins, our side turns away from the Sun and night begins.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Earth keeps spinning"
+     },
+     {
+      "id": "i3",
+      "text": "Our side turns away from the Sun"
+     },
+     {
+      "id": "i4",
+      "text": "Night begins"
+     },
+     {
+      "id": "i1",
+      "text": "The Sun is overhead"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "earth.order",
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put these steps in order for an earthquake.",
+    "hint": "Drop, cover, hold.",
+    "explanation": "Drop, take cover, hold on and then go to an open space.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Hold on until the shaking stops"
+     },
+     {
+      "id": "i4",
+      "text": "Walk to an open space"
+     },
+     {
+      "id": "i2",
+      "text": "Take cover under a strong table"
+     },
+     {
+      "id": "i1",
+      "text": "Drop to the ground"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "earth.order",
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the Sun goes around the Earth to make day and night. What is the real reason?",
+    "hint": "Earth turns.",
+    "explanation": "Earth rotates once in 24 hours, giving day and night.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon blocks the Sun"
+     },
+     {
+      "id": "b",
+      "text": "Earth spins on its axis"
+     },
+     {
+      "id": "c",
+      "text": "The Sun switches off"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_day",
+    "sub_lesson": "space",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Noor says we have seasons because Earth is closer to the Sun in summer. What is the real reason?",
+    "hint": "Think about the tilt.",
+    "explanation": "Earth's tilt gives us seasons.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon is closer"
+     },
+     {
+      "id": "b",
+      "text": "The Sun gets bigger"
+     },
+     {
+      "id": "c",
+      "text": "Earth is tilted as it orbits the Sun"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_day",
+    "sub_lesson": "space",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "What is the job of a parachute for a person jumping from a plane?",
+    "hint": "A big canopy.",
+    "explanation": "A parachute increases air resistance, which slows the fall.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To increase gravity"
+     },
+     {
+      "id": "b",
+      "text": "To fall faster"
+     },
+     {
+      "id": "c",
+      "text": "To increase air resistance and fall more slowly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_chute",
+    "sub_lesson": "forces",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why do tyres have patterns cut into them?",
+    "hint": "Grip.",
+    "explanation": "The patterns grip the road, giving more friction.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make them heavier"
+     },
+     {
+      "id": "b",
+      "text": "To reduce friction"
+     },
+     {
+      "id": "c",
+      "text": "To grip the road with more friction"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_chute",
+    "sub_lesson": "forces",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "What is the reason that earthquakes happen in northern Pakistan?",
+    "hint": "Moving plates.",
+    "explanation": "Plates push against each other near Pakistan, causing earthquakes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is too hot"
+     },
+     {
+      "id": "b",
+      "text": "It sits near the edges of tectonic plates"
+     },
+     {
+      "id": "c",
+      "text": "It has too many dunes of sand"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_quake",
+    "sub_lesson": "earth",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Why is it better to shelter under a strong table in an earthquake?",
+    "hint": "Falling things.",
+    "explanation": "A strong table protects you from things that fall.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tables make you taller"
+     },
+     {
+      "id": "b",
+      "text": "It protects you from falling objects"
+     },
+     {
+      "id": "c",
+      "text": "Tables stop the shaking"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_quake",
+    "sub_lesson": "earth",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Sami says the Moon is a star because we can see it shine. Why is he wrong?",
+    "hint": "Reflected light.",
+    "explanation": "The Moon does not make light. It reflects sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon is made of light"
+     },
+     {
+      "id": "b",
+      "text": "The Moon only reflects light from the Sun"
+     },
+     {
+      "id": "c",
+      "text": "The Moon is too small to shine"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "earth.reason_moon",
+    "sub_lesson": "space",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Dina says gravity only works on Earth. Why is she wrong?",
+    "hint": "The Moon orbits Earth.",
+    "explanation": "Gravity pulls the Moon too, keeping it in orbit.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Gravity is a kind of light"
+     },
+     {
+      "id": "b",
+      "text": "Gravity only works at night"
+     },
+     {
+      "id": "c",
+      "text": "Gravity pulls on everything with mass, including the Moon"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "earth.reason_moon",
+    "sub_lesson": "space",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
