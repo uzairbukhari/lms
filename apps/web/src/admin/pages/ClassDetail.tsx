@@ -5,7 +5,7 @@ import { useCrumb } from "../Shell";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, Tabs, ago, useFeedback, useLoad } from "../ui";
 
 type Detail = {
-  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published" };
+  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path" };
   members: { id: string; displayName: string; username: string }[];
   terms: { number: number; name: string; startDate: string; endDate: string; teachingWeeks: number; examWeek: number }[];
   assignments: { id: string; courseId: string; courseTitle: string }[];
@@ -103,7 +103,15 @@ export function ClassDetail() {
               </select>
             </Field>
           </Card>
-          <OpenEarly classId={id} courses={d.assignments} unlocks={classUnlocks} onChange={act} />
+          <Card title="How lessons open">
+            <Field label="Unlock mode" help="Topic path: each topic opens only when the child passes the big quiz of the one before (70%). Weeks are ignored for this class's courses.">
+              <select className="a-select" style={{ maxWidth: 380 }} value={d.class.unlockMode ?? "weekly"} onChange={(e) => void act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body: { unlockMode: e.target.value } }), "Saved.")}>
+                <option value="weekly">By week (the school calendar)</option>
+                <option value="path">Topic path (open when the last topic is passed)</option>
+              </select>
+            </Field>
+          </Card>
+          {d.class.unlockMode === "path" ? <OpenTopic classId={id} /> : <OpenEarly classId={id} courses={d.assignments} unlocks={classUnlocks} onChange={act} />}
         </>
       )}
 
@@ -151,6 +159,36 @@ function Calendar({ detail, onSave }: { detail: Detail; onSave: (path: string, b
         </form>
       </Card>
     </>
+  );
+}
+
+type PathUnlock = { id: string; lessonId: string; lessonTitle: string; classId: string | null };
+
+/** Parent override on a topic path: open one topic for the whole class now, even if the one before is not passed. */
+function OpenTopic({ classId }: { classId: string }) {
+  const lessons = useLoad<{ lessons: { id: string; title: string; status: string }[] }>("/api/admin/lessons?status=published");
+  const unlocks = useLoad<{ unlocks: PathUnlock[] }>("/api/admin/path-unlocks");
+  const { toast } = useFeedback();
+  const [lessonId, setLessonId] = useState("");
+  const mine = (unlocks.data?.unlocks ?? []).filter((u) => u.classId === classId);
+  async function run(fn: () => Promise<unknown>, msg: string) {
+    try { await fn(); await unlocks.reload(); toast(msg); } catch (e) { toast(e instanceof Error ? e.message : "Something went wrong", true); }
+  }
+  return (
+    <Card title="Open a topic early" flush>
+      <div className="a-card-body">
+        <p className="a-muted">Let this class open a topic now without passing the one before. The topics after it stay locked.</p>
+        <form className="a-row" style={{ alignItems: "flex-end" }} onSubmit={(e) => { e.preventDefault(); void run(() => api("/api/admin/path-unlocks", { body: { lessonId, classId } }), "Topic opened."); }}>
+          <Field label="Topic"><select className="a-select" value={lessonId} onChange={(e) => setLessonId(e.target.value)} required><option value="">Choose…</option>{(lessons.data?.lessons ?? []).map((l) => <option key={l.id} value={l.id}>{l.title}</option>)}</select></Field>
+          <Button variant="primary" type="submit" disabled={!lessonId}>Open topic</Button>
+        </form>
+      </div>
+      {mine.length > 0 && (
+        <ul className="a-list" style={{ borderTop: "1px solid var(--a-border)" }}>{mine.map((u) => (
+          <li key={u.id}><span>{u.lessonTitle}</span><Button size="sm" onClick={() => void run(() => api(`/api/admin/path-unlocks/${u.id}`, { method: "DELETE" }), "Closed again.")}>Close</Button></li>
+        ))}</ul>
+      )}
+    </Card>
   );
 }
 

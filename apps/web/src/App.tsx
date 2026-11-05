@@ -1,3 +1,5 @@
+import { SubjectPathPage } from "./pages/SubjectPath";
+import { TopicPage } from "./pages/TopicPage";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { AuthProvider, useAuth } from "./auth";
 import { AdminApp } from "./admin/AdminApp";
@@ -43,6 +45,9 @@ function StudentRoutes() {
   return (
     <Routes>
       <Route path="/lesson/:id" element={<LessonPlayer mode="student" />} />
+      <Route path="/path/:courseId/:subject" element={<SubjectPathPage />} />
+      <Route path="/topic/:id" element={<TopicPage />} />
+      <Route path="/topic/:id/part/:subId" element={<LessonPlayer mode="part" />} />
       <Route path="/lesson/:id/quiz" element={<QuizPlayer kind="lesson" />} />
       <Route path="/exam/:id" element={<QuizPlayer kind="exam" />} />
       <Route path="/map" element={<SemesterMap />} />

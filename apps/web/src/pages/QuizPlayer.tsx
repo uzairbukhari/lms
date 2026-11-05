@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
+import { TopicFollowUp } from "../components/TopicFollowUp";
 import { StuckButton } from "../components/StuckButton";
 import { QuestionView, type ViewQuestion } from "../components/QuestionView";
 import { questionToSpeech } from "../lib/quizSpeech";
@@ -112,7 +113,7 @@ export function QuizPlayer({ kind }: { kind: "lesson" | "exam" }) {
   if (error) return <Shell><p role="alert" className="text-xl">{error.message}</p><Link className="btn" to="/">Back home</Link></Shell>;
   if (!quiz) return <Loader label="Getting your questions ready…" fullScreen />;
 
-  if (result) return <Results result={result} quiz={quiz} again={() => void start()} kind={kind} />;
+  if (result) return <Results result={result} quiz={quiz} again={() => void start()} kind={kind} lessonId={id ?? ""} />;
 
   const q = quiz.questions[index] as Question;
   const last = index === quiz.questions.length - 1;
@@ -207,7 +208,7 @@ function Shell({ children }: { children: ReactNode }) {
   return <main className="mx-auto flex min-h-screen max-w-3xl flex-col gap-6 px-4 py-6 sm:px-8">{children}</main>;
 }
 
-function Results({ result, quiz, again, kind }: { result: Result; quiz: Started; again: () => void; kind: "lesson" | "exam" }) {
+function Results({ result, quiz, again, kind, lessonId }: { result: Result; quiz: Started; again: () => void; kind: "lesson" | "exam"; lessonId: string }) {
   const [why, setWhy] = useState<Record<string, string>>({});
   const stars = result.percent >= 90 ? 3 : result.percent >= quiz.passPercent ? 2 : result.percent > 0 ? 1 : 0;
   const explain = async (questionId: string) => {
@@ -226,6 +227,8 @@ function Results({ result, quiz, again, kind }: { result: Result; quiz: Started;
         <p className="text-xl">{result.passed ? "Brilliant work! You passed! 🎉" : "Good try! Have a look at what to learn next, then have another go. 💪"}</p>
         {result.mode === "practice" && <p className="text-muted">This was practice, so it is saved separately. Your first try is the one that counts for your score.</p>}
       </section>
+
+      {kind === "lesson" && result.mode === "graded" && <TopicFollowUp lessonId={lessonId} passed={result.passed} percent={result.percent} passPercent={quiz.passPercent} />}
 
       <h2 className="font-display text-2xl font-bold">Let's look at each question</h2>
       <ol className="flex flex-col gap-3">

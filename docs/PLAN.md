@@ -517,6 +517,10 @@ You (the admin) act as the teacher. Daughters' friends are simply more students,
 
 ## 4d. School year: semesters, weeks and exams
 
+> **5 Nov 2026: weeks are being replaced.** Curriculum v3 (`docs/CURRICULUM_V2.md`) moves to locked topic lessons with
+> sub-lessons and a 70% unlock, with no weekly visibility or due dates. Semesters and semester exams stay. The text below
+> describes the current (weekly) build until the v3 change ships.
+
 **Calendar.** A school year has **4 semesters of about 3 months**. Each semester is **12 teaching weeks plus an exam week** (13 weeks). Each class has its own dates in `terms`, so you can start a friend's class later than the Family class, shift dates for holidays or pause a term.
 
 **Where lessons sit.** A lesson belongs to a **course** (for example "Maths Year 1"), and `course_lessons` gives it a **semester (1 to 4) and a week (1 to 12)**. Courses are per subject, so each subject has its own 48-ish-lesson year plan. You can place a lesson by dragging it in the curriculum planner, or let the lesson JSON suggest a slot (section 5). One lesson per subject per week is the default pace (about 48 lessons per subject, about 190 across four subjects); a lighter pace of 2 to 3 lessons a week across all subjects works too.

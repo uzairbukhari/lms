@@ -6,7 +6,7 @@ import { gradeQuestion, type Response } from "@lms/schema";
 export type QuestionRow = {
   id: string; ref: string; position: number; type: string; prompt: string; media_json: string | null;
   options_json: string | null; answer_json: string; hint: string | null; explanation: string | null;
-  points: number; skill_tag: string | null;
+  points: number; skill_tag: string | null; variant_of?: string | null;
 };
 
 export type QuizRow = { id: string; kind: string; pass_percent: number; shuffle_questions: number; shuffle_options: number; max_attempts: number | null };
@@ -71,6 +71,19 @@ export async function loadQuestions(db: D1Database, quizId: string, ids?: string
   return ids.map((id) => byId.get(id)).filter((q): q is QuestionRow => q !== undefined);
 }
 
+/**
+ * Which questions one attempt uses. The first attempt asks the main questions. Where a question has variants (same skill,
+ * different numbers or words), each retake swaps in the next variant in turn, so a child who retakes after a low score
+ * meets new questions of the same pattern and cannot pass by remembering answers.
+ */
+export function pickForAttempt(bank: QuestionRow[], attemptNumber: number): QuestionRow[] {
+  const mains = bank.filter((q) => !q.variant_of);
+  return mains.map((m) => {
+    const options = [m, ...bank.filter((q) => q.variant_of === m.ref)];
+    return options[(attemptNumber - 1) % options.length] as QuestionRow;
+  });
+}
+
 export type StartResult =
   | { ok: true; attempt: AttemptRow; resumed: boolean }
   | { ok: false; reason: "no_attempts_left" | "no_questions" };
@@ -81,7 +94,7 @@ export type StartResult =
  */
 export async function startAttempt(
   db: D1Database,
-  p: { userId: string; quiz: QuizRow; lessonId: string | null; scopeKey: string; mode: "graded" | "practice" },
+  p: { userId: string; quiz: QuizRow; lessonId: string | null; scopeKey: string; mode: "graded" | "practice"; gradedUntilPassed?: boolean },
 ): Promise<StartResult> {
   const open = await db
     .prepare("SELECT * FROM quiz_attempts WHERE user_id = ? AND scope_key = ? AND status = 'in_progress' AND quiz_id = ? ORDER BY attempt_number DESC LIMIT 1")
@@ -95,14 +108,16 @@ export async function startAttempt(
     .first<{ last: number; submitted: number | null }>();
   if (p.quiz.max_attempts !== null && (stats?.submitted ?? 0) >= p.quiz.max_attempts) return { ok: false, reason: "no_attempts_left" };
 
-  const questions = await loadQuestions(db, p.quiz.id);
+  const bank = await loadQuestions(db, p.quiz.id);
+  const number = (stats?.last ?? 0) + 1;
+  const questions = pickForAttempt(bank, number);
   if (questions.length === 0) return { ok: false, reason: "no_questions" };
-  // Only the first try at a lesson quiz is graded; any retake (even in the same week) is practice and kept separately.
-  const mode = p.quiz.kind === "lesson" && (stats?.submitted ?? 0) > 0 ? "practice" : p.mode;
+  // Weekly lessons: only the first try is graded; any retake (even in the same week) is practice and kept separately.
+  // Mastery path lessons: every try is graded (best counts) until the lesson is passed, and then it becomes "past" so practice.
+  const mode = p.quiz.kind === "lesson" && !p.gradedUntilPassed && (stats?.submitted ?? 0) > 0 ? "practice" : p.mode;
   const order = (p.quiz.shuffle_questions ? shuffled(questions, Math.random) : questions).map((q) => q.id);
 
   const id = crypto.randomUUID();
-  const number = (stats?.last ?? 0) + 1;
   await db
     .prepare("INSERT INTO quiz_attempts (id, user_id, quiz_id, lesson_id, scope_key, attempt_number, mode, question_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
     .bind(id, p.userId, p.quiz.id, p.lessonId, p.scopeKey, number, mode, JSON.stringify(order))

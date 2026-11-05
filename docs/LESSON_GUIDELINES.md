@@ -4,8 +4,10 @@ The single source of truth for making lessons. Give this file and `docs/LESSON_C
 whenever it generates or reviews a lesson. Part 9 is the ready-to-paste generation prompt. The file format is in
 `docs/PLAN.md` sections 5.1 and 5.2.
 
-**Status: draft v2, being finished with Uzair. No lessons are rebuilt until he says these guidelines are done.**
-Decisions were confirmed by Uzair on 2 Nov 2026 (part 11). Items marked **(open)** are still to be decided.
+**Status: draft v3 (5 Nov 2026), waiting for Uzair's review. No lessons are rebuilt until he says these guidelines are done.**
+v3 replaces weekly lessons with **topic lessons made of sub-lessons** (part 4), ties every lesson to named standards
+(part 13), adds projects (part 14) and the connector pipeline (part 15). The Semester 1 topic list is
+`docs/CURRICULUM_V2.md`. Decisions are in part 11. Items marked **(open)** are still to be decided.
 
 ## 1. Who the lessons are for
 
@@ -52,18 +54,31 @@ Decisions were confirmed by Uzair on 2 Nov 2026 (part 11). Items marked **(open)
 If a picture the lesson needs cannot be made with these blocks, say so in the lesson notes and add the idea to the backlog in
 `docs/LESSON_CAPABILITIES.md` so we build it. Do not leave a gap.
 
-## 4. Shape and size of a lesson
+## 4. Shape and size of a topic lesson (v3, decided 5 Nov 2026)
 
-About 45 minutes of lesson plus a quiz of about 15 minutes (decided). Weekly lessons are due on Sunday; week 1 is a
-diagnostic "check-in" in each subject.
+There are no weeks or due dates. Each subject is an ordered path of **topic lessons**; the next one unlocks when the child
+scores 70% or more on the current one's main quiz (`docs/CURRICULUM_V2.md` part 1). The old Week 1 check-ins are each
+subject's **Starting point**.
 
-1. **Welcome / hook**: a question or short story, with a big picture. Say it is a game, not a test.
-2. **3 to 5 stops**, each: a `heading` ("Stop 2: ..."), 2 to 4 short sentences with the key word in **bold**, **its visual**,
-   then a `check`.
-3. **Something hands-on** at least once (`manipulative` or `activity`).
-4. **One brain game** (`brain_game`), usually just before the summary.
-5. **Summary** ("Remember" points), a note that the quiz comes next, and a `glossary` block covering the bold words.
-6. A `reveal` ("Think about it") now and then to make the child predict before seeing the answer.
+A topic lesson has:
+
+1. **Opener**: a hook (question or short story with a big picture), the driving question, "Today I will..." goals
+   (`objectives`), and a **Remember** warm-up of 3 questions from earlier topics (`warm_up`). Say it is a game, not a test.
+2. **3 to 6 sub-lessons** (`sub_lessons`), 10 to 15 minutes each, each building the same topic a different way. Every
+   sub-lesson has a `kind`:
+   - `learn`: one idea, shown and explained (explainer, pictures, narration); 2 to 4 stops;
+   - `try`: hands-on (`manipulative`, real-life `activity` or experiment);
+   - `play`: a `brain_game` or challenge that uses the idea;
+   - `use`: a real-world problem, or a project milestone (part 14).
+   A topic lesson has at least one `learn`, one `try` and one `play`. Add a **challenge** sub-lesson (`challenge: true`,
+   optional for the child) for stretch.
+3. Each sub-lesson ends with a short **summary** card and a **mini quiz** of 3 to 5 questions (part 7).
+4. **Main quiz** of 15 questions once every sub-lesson is done (part 7), then the **"I can..." self-check**: the child rates
+   each `success_criteria` line (not yet, nearly, got it).
+5. A `glossary` covering every bold word in the topic lesson.
+
+Inside a sub-lesson, stops work as before: a `heading`, 2 to 4 short sentences with the key word in **bold**, **its
+visual**, then a `check`. A `reveal` ("Think about it") now and then makes the child predict before seeing the answer.
 
 Slides read out loud, so write what sounds natural. Slides are scaled to fit the screen: never rely on small print.
 
@@ -92,7 +107,13 @@ Slides read out loud, so write what sounds natural. Slides are scaled to fit the
 
 ## 7. Quizzes
 
-- **15 questions** for the ~15 minute quiz (decided), for both age bands. Every question can be answered from the lesson.
+- **Mini quiz** (end of each sub-lesson, v3): 3 to 5 questions on that sub-lesson only, any of the nine types, easy to
+  medium, with hint and explanation. It feeds the strength meter; it never locks anything.
+- **Main quiz** (end of the topic lesson): the rules below. Each question also has `depth` (`recall`, `apply` or
+  `reason`; at least 4 of the 15 are `reason`: explain why, spot the mistake, odd one out and why) and `sub_lesson` (the id
+  of the sub-lesson it practises, so "Practise again" can send the child back to the right place).
+- Wrong options and "why wrong" explanations come from known misconceptions (Oak's misconception lists, part 15).
+- **15 questions** for the ~15 minute main quiz (decided), for both age bands. Every question can be answered from the lesson.
 - Every 15-question quiz uses **all nine** question types below at least once (decided: "use all of these quiz control types"); the other six questions repeat the types that suit the topic best.  Order roughly easy to harder. Pass mark 70% unless told otherwise.
 - Never reuse the exact wording of the lesson's `check` questions.
 - Multiple choice: 3 to 4 options, one clearly right, plausible wrong answers based on common misconceptions, no "all of the above".
@@ -127,7 +148,8 @@ Use each type for what it does best: hotspot for "point to the part" (diagrams, 
 ## 8. Safety, tone and accessibility
 
 - Warm and encouraging; mistakes are part of learning ("Not quite. Have another go!"). Never scary, shaming or competitive.
-- No personal information, no links, no external images, no adverts. First names only.
+- No personal information, no links, no hotlinked images, no adverts. First names only. Real photos are allowed only as
+  vetted assets stored in R2 (from Unsplash, with a "Photo by ... on Unsplash" caption, part 15).
 - Be honest about AI: it can be wrong; it learns from examples; it does not "think" like a person.
 - Examples and stories should preferably be Islamic and Muslim where they fit naturally (decided): names such as Fatima, Zainab, Ali, Omar, Aisha; foods like dates and samosas; Eid, Ramadan, mosques, Hajj, Islamic history and scientists (for example Al-Khwarizmi, Ibn al-Haytham, Fatima al-Fihri). Keep them accurate and respectful, never forced into a topic where they do not belong, and never quote religious text from memory: check facts with Uzair first. Stay neutral and kind about other beliefs; avoid politics and contested history.
 - Do not put essential words inside pictures: the picture needs a caption or label that can be read aloud.
@@ -158,11 +180,18 @@ Follow docs/LESSON_GUIDELINES.md (pasted below or attached) exactly.
 Subject: {{maths | science | data-ai | general-knowledge | english}}
 Topic: {{e.g. "Halves and quarters"}}
 Learner: {{age 7 (age_band "7-8") | age 9 (age_band "9-10") | both (age_band "7-10")}}
-Curriculum slot: {{semester 1-4, week 1-12, or "none"}}
+Topic lesson: {{course, semester, topic number and title from docs/CURRICULUM_V2.md}}
+Sub-lessons: {{the sub-lesson list from docs/CURRICULUM_V2.md}}
+Standards: {{NC / PK / CAM / CSTA / AI4K12 codes from docs/CURRICULUM_V2.md}}
+Oak notes: {{key learning points, key words, prior knowledge and misconceptions pulled with the Oak connector}}
+Assets ready: {{Coteach diagrams, Unsplash photos or Workers AI pictures already uploaded, with their asset ids, or "none"}}
 Videos I have approved for this lesson (youtube id, start, end): {{list, or "none"}}
 Extra notes (optional): {{e.g. "she loves animals", "builds on last week's counting by 2s"}}
 
 === MUST DO ===
+- Build ONE topic lesson as in part 4: opener (objectives, success_criteria, warm_up), 3 to 6 sub_lessons each with a kind
+  and a 3 to 5 question mini quiz, then a 15-question main quiz with depth and sub_lesson on every question.
+- Fill `standards` from the line above; science names its `enquiry` type; include one real-life link line.
 - Show every new word or idea with a picture, chart, animation, movable things or video before or as it is named.
 - Every stop (heading section) has at least one visual block. Every bold word is in the glossary block.
 - Include at least one explainer (for the hardest process), one manipulative or activity where it fits, one brain_game,
@@ -196,6 +225,9 @@ a picture, or too long", then "output the corrected JSON only". Then:
 - [ ] The quiz follows part 7; hints do not give answers away; every question can be answered from the lesson.
 - [ ] Validates in the importer (it lists any problems); previewed once in the admin preview (no AI is used there).
 - [ ] Slug and quiz refs unchanged when updating an existing lesson.
+- [ ] v3: objectives, success_criteria, warm_up and standards filled; 3 to 6 sub-lessons with at least one learn, try and
+      play; every sub-lesson has a 3 to 5 question mini quiz; main quiz questions all have depth (4+ reason) and sub_lesson.
+- [ ] Science names its enquiry type; any photo is an R2 asset with its caption; project milestones sit in a `use` sub-lesson.
 
 ## 11. Decisions with Uzair (2 Nov 2026)
 
@@ -209,6 +241,12 @@ a picture, or too long", then "output the corrected JSON only". Then:
 Three question types (`fill_blank`, `hotspot`, `slider`) were built on 2 Nov, and the quiz screen was reworked: real drag and drop with arrow fallback for ordering, drag or tap-to-pair for matching.
 
 Still open: which channels or creators Uzair trusts for videos (he will send links), and whether the guidelines are now fully done.
+
+**5 Nov 2026 decisions:** international standards option C (England NC anchor, Cambridge Primary and Pakistan National
+Curriculum 2022-23 mapped too, CSTA and AI4K12 for Data & AI, IB PYP themes for GK); weekly lessons dropped for locked topic
+lessons with sub-lessons and mini quizzes, a main quiz and a 70% unlock; one project per child per semester; use the Oak,
+Coteach and Unsplash connectors and Workers AI to build lessons. Screen design: star map path plus card grid inside each topic
+(chosen 5 Nov).
 
 ## 12. Animation (decided 3 Nov 2026)
 
@@ -244,3 +282,44 @@ step still work); confetti and a star into the progress trail for a right check;
    child with motion switched off loses nothing.
 6. **Show cause and effect in order**: if the sun heats the water, the sun glows first, then the water steams, then the
    cloud appears.
+
+## 13. Standards, goals and self-check (v3, decided 5 Nov 2026)
+
+- Every topic lesson has `standards`: a list of `{framework, code, text}` with framework `NC`, `PK`, `CAM`, `CSTA` or
+  `AI4K12`. Copy codes from `docs/CURRICULUM_V2.md`; never invent a code. If a code is not known yet, give the statement
+  in words with `code: null`.
+- `objectives`: 1 to 3 "Today I will..." lines, in the child's words.
+- `success_criteria`: 2 to 4 "I can..." lines; each one is checked by at least two main quiz questions.
+- `warm_up`: 3 Remember questions on earlier topics (the app may swap in its own picks from the child's weak skills).
+- Science lessons name one `enquiry` type: `observing_over_time`, `pattern_seeking`, `identifying_classifying`,
+  `comparative_fair_test` or `research`. The `try` sub-lesson practises it.
+- Tag activities that practise Cambridge Thinking and Working (TWM, TWS) or Science in Context (SIC) with those codes.
+- One `real_life` line: where this shows up at home, at the masjid, at the market or in the news.
+
+## 14. Projects (v3, decided 5 Nov 2026)
+
+- One project per child per semester, listed in `docs/CURRICULUM_V2.md` part 5, with a driving question.
+- Each milestone is a `use` sub-lesson inside the topic lesson named, with a `project` block: the driving question, this
+  milestone's task, what to make or record, and whether to upload a photo or a voice recording.
+- The product is made off screen (a model, a chart, a poster) and shown to the family at the end of the semester.
+- The parent scores it in admin on a 3-level rubric (beginning, getting there, secure) for understanding, using evidence,
+  the product, and presenting. Workers AI may suggest a score; the parent decides.
+
+## 15. Tools that build each topic lesson (v3, decided 5 Nov 2026)
+
+Use them in this order for every topic lesson:
+
+1. **Oak National Academy connector**: search the matching England units; take the lesson order, key learning points,
+   key words, stated prior knowledge and misconceptions. Misconceptions become wrong options and "why wrong" text. Adapt,
+   never copy; never use Oak's name or branding in the lesson; put "Contains public sector information licensed under the
+   Open Government Licence v3.0." in the lesson's admin notes.
+2. **Standards**: NC from Oak, PK from the ncc.gov.pk progression grids, CAM from the frameworks (codes already in
+   `docs/CURRICULUM_V2.md`).
+3. **Coteach connector**: a few maths diagrams the drawn props cannot show (bar models, place value charts, fraction
+   diagrams, angles). Uzair downloads the PNG and uploads it as a lesson asset in admin.
+4. **Unsplash connector**: real photos for science and GK (animals, places, landmarks), content filter high, downloaded
+   and stored in R2 with the photographer credit as the caption. Never people's faces as the subject.
+5. **Workers AI**: narration (Aura) as now; custom pictures with a FLUX model generated in admin at authoring time and
+   approved before use. Pictures follow part 8 (warm, never scary, no words inside the picture).
+6. **Claude** writes the topic lesson file with the part 9 prompt, then the part 10 review.
+

@@ -30,7 +30,7 @@ quizRoutes.post("/lessons/:id/quiz/start", async (c) => {
   const quiz = await c.env.DB.prepare(`SELECT ${QUIZ_COLUMNS} FROM quizzes WHERE lesson_id = ? AND is_current = 1`).bind(lessonId).first<QuizRow>();
   if (!quiz) return fail(c, 404, "not_found");
   const mode = v.phase === "current" || v.phase === "early" ? "graded" : "practice";
-  const started = await startAttempt(c.env.DB, { userId: user.id, quiz, lessonId, scopeKey: `lesson:${lessonId}`, mode });
+  const started = await startAttempt(c.env.DB, { userId: user.id, quiz, lessonId, scopeKey: `lesson:${lessonId}`, mode, gradedUntilPassed: v.path === true });
   if (!started.ok) return fail(c, 403, started.reason, started.reason === "no_attempts_left" ? "You have used all your tries." : "This quiz has no questions yet.");
   return c.json(startedBody(started.attempt, quiz, await attemptQuestions(c.env.DB, started.attempt, quiz), started.resumed));
 });

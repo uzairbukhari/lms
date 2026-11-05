@@ -13,7 +13,7 @@ adminClassRoutes.get("/classes/:id", async (c) => {
   const id = c.req.param("id");
   const db = c.env.DB;
   const cls = await db
-    .prepare("SELECT id, name, description, is_active AS isActive, visibility_mode AS visibilityMode FROM classes WHERE id = ?")
+    .prepare("SELECT id, name, description, is_active AS isActive, visibility_mode AS visibilityMode, unlock_mode AS unlockMode FROM classes WHERE id = ?")
     .bind(id)
     .first();
   if (!cls) return fail(c, 404, "not_found");
@@ -27,7 +27,7 @@ adminClassRoutes.get("/classes/:id", async (c) => {
 
 adminClassRoutes.patch("/classes/:id", async (c) => {
   const id = c.req.param("id");
-  const row = await c.env.DB.prepare("SELECT name, description, is_active, visibility_mode FROM classes WHERE id = ?").bind(id).first<{ name: string; description: string | null; is_active: number; visibility_mode: string }>();
+  const row = await c.env.DB.prepare("SELECT name, description, is_active, visibility_mode, unlock_mode FROM classes WHERE id = ?").bind(id).first<{ name: string; description: string | null; is_active: number; visibility_mode: string; unlock_mode: string }>();
   if (!row) return fail(c, 404, "not_found");
   const body = await parseBody(
     c,
@@ -36,15 +36,18 @@ adminClassRoutes.patch("/classes/:id", async (c) => {
       description: z.string().trim().max(200).nullable().optional(),
       isActive: z.boolean().optional(),
       visibilityMode: z.enum(["released", "all_published"]).optional(),
+      /** "weekly" opens lessons by school week; "path" opens the next topic when the last quiz is passed. */
+      unlockMode: z.enum(["weekly", "path"]).optional(),
     }),
   );
   await c.env.DB
-    .prepare("UPDATE classes SET name = ?, description = ?, is_active = ?, visibility_mode = ? WHERE id = ?")
+    .prepare("UPDATE classes SET name = ?, description = ?, is_active = ?, visibility_mode = ?, unlock_mode = ? WHERE id = ?")
     .bind(
       body.name ?? row.name,
       body.description === undefined ? row.description : body.description,
       body.isActive === undefined ? row.is_active : body.isActive ? 1 : 0,
       body.visibilityMode ?? row.visibility_mode,
+      body.unlockMode ?? row.unlock_mode,
       id,
     )
     .run();
@@ -199,5 +202,36 @@ adminClassRoutes.post("/unlocks", async (c) => {
 
 adminClassRoutes.delete("/unlocks/:id", async (c) => {
   await c.env.DB.prepare("DELETE FROM lesson_unlocks WHERE id = ?").bind(c.req.param("id")).run();
+  return c.json({ ok: true });
+});
+
+// --- Opening a topic early on a mastery path ----------------------------------------------------------
+
+const pathUnlockInput = z.object({ lessonId: z.string(), classId: z.string().optional(), userId: z.string().optional() }).refine((v) => (v.classId ? 1 : 0) + (v.userId ? 1 : 0) === 1, "Give a class or a student, not both");
+
+adminClassRoutes.get("/path-unlocks", async (c) => {
+  const { results } = await c.env.DB
+    .prepare(
+      `SELECT p.id, p.lesson_id AS lessonId, l.title AS lessonTitle, p.class_id AS classId, cl.name AS className, p.user_id AS userId, u.display_name AS studentName
+         FROM path_unlocks p JOIN lessons l ON l.id = p.lesson_id LEFT JOIN classes cl ON cl.id = p.class_id LEFT JOIN users u ON u.id = p.user_id
+        ORDER BY l.title`,
+    )
+    .all();
+  return c.json({ unlocks: results });
+});
+
+adminClassRoutes.post("/path-unlocks", async (c) => {
+  const body = await parseBody(c, pathUnlockInput);
+  const db = c.env.DB;
+  if (!(await db.prepare("SELECT 1 FROM lessons WHERE id = ?").bind(body.lessonId).first())) return fail(c, 404, "not_found");
+  if (body.classId && !(await db.prepare("SELECT 1 FROM classes WHERE id = ?").bind(body.classId).first())) return fail(c, 404, "not_found");
+  if (body.userId && !(await db.prepare("SELECT 1 FROM users WHERE id = ? AND role = 'student'").bind(body.userId).first())) return fail(c, 404, "not_found");
+  const id = crypto.randomUUID();
+  await db.prepare("INSERT INTO path_unlocks (id, lesson_id, class_id, user_id) VALUES (?, ?, ?, ?)").bind(id, body.lessonId, body.classId ?? null, body.userId ?? null).run();
+  return c.json({ id }, 201);
+});
+
+adminClassRoutes.delete("/path-unlocks/:id", async (c) => {
+  await c.env.DB.prepare("DELETE FROM path_unlocks WHERE id = ?").bind(c.req.param("id")).run();
   return c.json({ ok: true });
 });

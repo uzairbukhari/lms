@@ -1,5 +1,5 @@
 import { buildGlossary, findInGlossary, gradeQuestion, isLookupWord, normaliseWord, type CheckQuestion, type Response } from "@lms/schema";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
+import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type TouchEvent } from "react";
 import { Link, useParams } from "react-router";
 import { StuckButton } from "../components/StuckButton";
 import { api, ApiError } from "../api";
@@ -39,16 +39,37 @@ const CALLOUT = {
   warning: { icon: "⚠️", label: "Careful" },
 } as const;
 
-export function LessonPlayer({ mode }: { mode: "student" | "preview" }) {
-  const { id } = useParams();
+/** In a topic sub-lesson the mini quiz is a run of check slides; this collects each first-try result. */
+type PartCtx = { record: (key: string, ok: boolean) => void };
+const PartContext = createContext<PartCtx | null>(null);
+type PartPayload = { topicTitle: string; subject: string; sub: { id: string; kind: string; title: string }; blocks: Block[]; miniQuiz: CheckQuestion[]; readOnly: boolean };
+const KIND_LABEL: Record<string, string> = { learn: "Learn", try: "Try it", play: "Play", use: "Use it" };
+
+export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" }) {
+  const { id, subId } = useParams();
+  const results = useRef(new Map<string, boolean>());
+  const part = useMemo<PartCtx>(() => ({ record: (k, ok) => { if (!results.current.has(k)) results.current.set(k, ok); } }), []);
   const [data, setData] = useState<LessonPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const started = useRef(Date.now());
 
-  const back = mode === "preview" ? "/admin/lessons" : "/";
+  const back = mode === "preview" ? "/admin/lessons" : mode === "part" ? `/topic/${id}` : "/";
   const assetUrl = (name: string) => (mode === "preview" ? `/api/admin/assets/file/${encodeURIComponent(name)}` : `/api/assets/${encodeURIComponent(name)}`);
 
   useEffect(() => {
+    if (mode === "part") {
+      setNarrationEnabled(true);
+      api<PartPayload>(`/api/lessons/${id}/parts/${subId}`)
+        .then((p) => setData({
+          lesson: { id: id ?? "", title: p.sub.title, subject: p.subject, summary: `${KIND_LABEL[p.sub.kind] ?? "Part"} · ${p.topicTitle}`, minutes: 8, objectives: [], semester: null, week: null, phase: "current" },
+          blocks: [...p.blocks, { type: "heading", text: "Mini quiz" } as Block, ...p.miniQuiz.map((question) => ({ type: "check", question }) as Block)],
+          quiz: { questionCount: p.miniQuiz.length, passPercent: 70 },
+          progress: null,
+          readOnly: p.readOnly,
+        }))
+        .catch((e: unknown) => setError(e instanceof ApiError && e.status === 404 ? "That part isn't available yet." : "We couldn't load this part. Please try again."));
+      return () => { stopSpeech(); };
+    }
     const path = mode === "preview" ? `/api/admin/lessons/${id}/preview` : `/api/lessons/${id}`;
     // The parent's preview never uses the voice service (it costs AI usage); the children's lessons always do.
     setNarrationEnabled(mode !== "preview");
@@ -56,22 +77,31 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" }) {
       .then(setData)
       .catch((e: unknown) => setError(e instanceof ApiError && e.status === 404 ? "That lesson isn't available yet." : "We couldn't load this lesson. Please try again."));
     return () => { stopSpeech(); setNarrationEnabled(true); };
-  }, [id, mode]);
+  }, [id, mode, subId]);
 
   /** Progress is only saved for real lessons that are open for doing; previews and look-back never change anything. */
-  const canSave = mode === "student" && data !== null && !data.readOnly;
+  const canSave = (mode === "student" || mode === "part") && data !== null && !data.readOnly;
   const save = useCallback(
     (slide: number, completed = false) => {
       if (!canSave) return;
+      if (mode === "part") {
+        // A sub-lesson is saved once, at the end: viewed, plus the mini quiz score (first try on each question).
+        if (!completed) return;
+        const total = data?.quiz.questionCount ?? 0;
+        const right = [...results.current.values()].filter(Boolean).length;
+        void api(`/api/lessons/${id}/parts/${subId}`, { method: "PUT", body: total > 0 && results.current.size > 0 ? { viewed: true, miniPercent: Math.round((right / total) * 100) } : { viewed: true } }).catch(() => undefined);
+        return;
+      }
       const addSeconds = Math.min(1800, Math.round((Date.now() - started.current) / 1000));
       started.current = Date.now();
       void api(`/api/lessons/${id}/progress`, { method: "PUT", body: { lastBlock: Math.min(slide, 200), completed, addSeconds } }).catch(() => undefined);
     },
-    [canSave, id],
+    [canSave, id, mode, subId, data],
   );
 
   if (error) return <Frame><p role="alert" className="text-2xl">{error}</p><Link className="btn" to={back}>← Back</Link></Frame>;
   if (!data) return <Loader label="Opening your lesson…" fullScreen />;
+  if (mode === "part") return <PartContext.Provider value={part}><Deck data={data} mode="student" lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} partOf={{ topicId: id ?? "", results: results.current }} /></PartContext.Provider>;
   return <Deck data={data} mode={mode} lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} />;
 }
 
@@ -97,8 +127,10 @@ function Frame({ children }: { children: ReactNode }) {
 
 // --- The slide deck --------------------------------------------------------------------------------
 
-function Deck({ data, mode, lessonId, back, assetUrl, save }: {
+function Deck({ data, mode, lessonId, back, assetUrl, save, partOf }: {
   data: LessonPayload; mode: "student" | "preview"; lessonId: string; back: string; assetUrl: (n: string) => string; save: (slide: number, completed?: boolean) => void;
+  /** Set when playing one sub-lesson of a topic: the end screen returns to the topic and shows the mini quiz score. */
+  partOf?: { topicId: string; results: Map<string, boolean> };
 }) {
   const { lesson } = data;
   const slides = useMemo(() => buildSlides(lesson, data.blocks), [lesson, data.blocks]);
@@ -299,7 +331,7 @@ function Deck({ data, mode, lessonId, back, assetUrl, save }: {
         onContextMenu={(e) => e.preventDefault()}
         onClickCapture={(e) => { if (swallowClick.current) { swallowClick.current = false; e.preventDefault(); e.stopPropagation(); } }} aria-live="polite">
         <FitToScreen>
-          <SlideView slide={slide} lesson={lesson} quiz={data.quiz} mode={mode} lessonId={lessonId} assetUrl={assetUrl} resumeAt={resumeAt} onGo={go} onLeave={() => { stopSpeech(); save(index, true); }} />
+          <SlideView slide={slide} lesson={lesson} quiz={data.quiz} partOf={partOf} mode={mode} lessonId={lessonId} assetUrl={assetUrl} resumeAt={resumeAt} onGo={go} onLeave={() => { stopSpeech(); save(index, true); }} />
         </FitToScreen>
         {journey && <Journey theme={theme} from={journey.from} to={journey.to} titles={stopTitles} onDone={endJourney} />}
       </section>
@@ -379,6 +411,7 @@ function FitToScreen({ children }: { children: ReactNode }) {
 type ViewProps = {
   slide: Slide; lesson: LessonPayload["lesson"]; quiz: LessonPayload["quiz"]; mode: "student" | "preview"; lessonId: string;
   assetUrl: (n: string) => string; resumeAt: number; onGo: (n: number) => void; onLeave: () => void;
+  partOf?: { topicId: string; results: Map<string, boolean> };
 };
 
 const titleCls = "font-display text-[clamp(2.2rem,5.2vw,4.25rem)] font-extrabold leading-tight";
@@ -451,7 +484,15 @@ function SlideView(p: ViewProps) {
         <>
           <div className="pop-in text-center text-[clamp(4rem,10vw,6rem)]" aria-hidden="true">🎉</div>
           <h2 className={`${titleCls} text-center`}>{slide.title}</h2>
-          {p.mode === "preview" ? (
+          {p.partOf ? (
+            <>
+              <p className={`${bodyCls} text-center`}>Mini quiz: {[...p.partOf.results.values()].filter(Boolean).length} of {p.quiz.questionCount} right first time.</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link className="btn btn-primary !min-h-16 !px-8 text-2xl" to={`/topic/${p.partOf.topicId}`} onClick={p.onLeave}>Back to the topic</Link>
+                <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => p.onGo(0)}>Read again 🔁</button>
+              </div>
+            </>
+          ) : p.mode === "preview" ? (
             <p className={`${bodyCls} text-center`}>The quiz has {p.quiz.questionCount} questions. Pass mark is {p.quiz.passPercent}%.</p>
           ) : (
             <>
@@ -586,6 +627,7 @@ function Burst() {
 }
 
 function CheckSlide({ slide }: { slide: Slide }) {
+  const partCtx = useContext(PartContext);
   const q = (slide.blocks[0] as Extract<Block, { type: "check" }>).question as CheckQuestion;
   const [value, setValue] = useState<Response>(undefined);
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
@@ -594,6 +636,7 @@ function CheckSlide({ slide }: { slide: Slide }) {
   const [party, setParty] = useState(0);
   const submit = () => {
     const ok = gradeQuestion(q, value).correct;
+    partCtx?.record(q.prompt, ok);
     setState(ok ? "correct" : "wrong");
     sfx(ok ? "correct" : "wrong");
     // A right answer gets a cheer, confetti and a star for the trail; a wrong one a thinking guide and the hint.

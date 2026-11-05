@@ -101,19 +101,21 @@ export async function importLesson(db: D1Database, incoming: LessonFile, opts: {
   );
 
   quiz.questions.forEach((q, i) => {
+    // A variant inherits the sub-lesson and depth of the question it stands in for.
+    const main = q.variant_of ? quiz.questions.find((x) => x.ref === q.variant_of) : undefined;
     statements.push(
       db
         .prepare(
           `INSERT INTO questions (id, quiz_id, ref, position, type, prompt, media_json, options_json, answer_json,
-                                  hint, explanation, points, skill_tag)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                                  hint, explanation, points, skill_tag, sub_lesson, depth, variant_of)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         )
         .bind(
           crypto.randomUUID(), quizId, q.ref, i + 1, q.type, q.prompt,
           q.emoji ? JSON.stringify({ emoji: q.emoji }) : null,
           JSON.stringify(publicOptions(q)),
           JSON.stringify(q.answer),
-          q.hint ?? null, q.explanation ?? null, q.points, q.skill_tag ?? null,
+          q.hint ?? null, q.explanation ?? null, q.points, q.skill_tag ?? null, (q.sub_lesson ?? main?.sub_lesson) ?? null, (q.depth ?? main?.depth) ?? null, q.variant_of ?? null,
         ),
     );
   });
@@ -136,7 +138,7 @@ export async function importLesson(db: D1Database, incoming: LessonFile, opts: {
           `INSERT INTO course_lessons (course_id, lesson_id, position, semester, week) VALUES (?, ?, ?, ?, ?)
            ON CONFLICT (course_id, lesson_id) DO UPDATE SET semester = excluded.semester, week = excluded.week, position = excluded.position`,
         )
-        .bind(courseId, lessonId, c.semester * 100 + c.week, c.semester, c.week),
+        .bind(courseId, lessonId, c.semester * 100 + (c.week ?? c.topic ?? 0), c.semester, c.week ?? null),
     );
   }
 

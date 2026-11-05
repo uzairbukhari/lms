@@ -5,6 +5,8 @@ import { SUBJECTS } from "./constants";
 // Claude generates this JSON; the admin importer validates it with `lessonFileSchema` before anything is saved.
 
 export const SCHEMA_VERSION = "1.0" as const;
+/** Topic lessons (sub-lessons, standards, mini quizzes). Version 1.0 files still import unchanged. */
+export const SCHEMA_VERSION_V3 = "3.0" as const;
 
 const shortId = z.string().regex(/^[A-Za-z0-9_-]{1,24}$/, "Use letters, numbers, - or _ (max 24 characters)");
 const line = (max: number) => z.string().trim().min(1, "Cannot be empty").max(max, `Keep this under ${max} characters`);
@@ -21,6 +23,11 @@ const questionExtras = (inQuiz: boolean) => ({
     .regex(/^[a-z0-9_]+(\.[a-z0-9_]+)*$/, 'Use lower case words like "fractions.compare"')
     .max(60)
     .optional(),
+  /** Quiz only: how hard the thinking is, and which sub-lesson to practise again if the child gets it wrong. */
+  depth: z.enum(["recall", "apply", "reason"]).optional(),
+  sub_lesson: z.string().regex(/^[a-z0-9_]{1,24}$/, "Use the sub-lesson id (lower case letters, numbers, _)").optional(),
+  /** Quiz only: this question is a retake variant of the question with this ref. Retakes swap in variants so answers cannot be memorised. */
+  variant_of: shortId.optional(),
 });
 
 const commonFields = {
@@ -388,11 +395,32 @@ export type BlockType = Block["type"];
 
 // --- The whole file -------------------------------------------------------------------------------
 
-const curriculumSchema = z.object({
-  course: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "Use a slug like maths-year-1").max(80),
-  semester: z.number().int().min(1).max(4),
-  week: z.number().int().min(1).max(12),
+const curriculumSchema = z
+  .object({
+    course: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "Use a slug like maths-year-1").max(80),
+    semester: z.number().int().min(1).max(4),
+    /** Weekly courses use a week; topic (mastery path) courses use the topic's place in the subject. */
+    week: z.number().int().min(1).max(12).optional(),
+    topic: z.number().int().min(1).max(60).optional(),
+  })
+  .refine((c) => (c.week === undefined) !== (c.topic === undefined), { message: 'Give either "week" or "topic", not both', path: ["topic"] });
+
+const standardSchema = z.object({
+  framework: z.enum(["nc_england", "cambridge", "pk_ncc", "csta", "ai4k12", "pyp"]),
+  code: line(30),
+  text: line(200).optional(),
 });
+
+const SUB_KINDS = ["learn", "try", "play", "use"] as const;
+export const subLessonSchema = z.object({
+  id: z.string().regex(/^[a-z0-9_]{1,24}$/, "Use lower case letters, numbers and _ (max 24)"),
+  kind: z.enum(SUB_KINDS),
+  title: line(80),
+  blocks: z.array(blockSchema).min(1).max(30),
+  /** 3 to 5 quick questions, marked on the child's screen (practice, not the big quiz). */
+  mini_quiz: z.array(checkQuestionSchema).min(3).max(5),
+});
+export type SubLesson = z.infer<typeof subLessonSchema>;
 
 export const lessonMetaSchema = z.object({
   slug: z
@@ -409,6 +437,11 @@ export const lessonMetaSchema = z.object({
   learning_objectives: z.array(line(200)).min(1).max(6),
   tags: z.array(line(40)).max(12).optional(),
   curriculum: curriculumSchema.optional(),
+  standards: z.array(standardSchema).max(12).optional(),
+  success_criteria: z.array(line(160)).max(8).optional(),
+  real_life: line(300).optional(),
+  /** A 3-minute "remember" warm-up on earlier learning (up to 3 questions). */
+  warm_up: z.array(checkQuestionSchema).max(3).optional(),
 });
 
 export const quizSchema = z
@@ -417,20 +450,46 @@ export const quizSchema = z
     shuffle_questions: z.boolean().default(true),
     shuffle_options: z.boolean().default(true),
     max_attempts: z.number().int().min(1).max(50).nullable().optional(),
-    questions: z.array(quizQuestionSchema).min(1).max(40),
+    questions: z.array(quizQuestionSchema).min(1).max(80),
   })
   .superRefine((quiz, ctx) => {
     const refs = quiz.questions.map((q) => q.ref as string);
     const d = dup(refs);
     if (d) ctx.addIssue({ code: "custom", path: ["questions"], message: `Question ref "${d}" is used twice` });
+    const primaries = new Set(quiz.questions.filter((q) => !q.variant_of).map((q) => q.ref as string));
+    quiz.questions.forEach((q, i) => {
+      if (q.variant_of && !primaries.has(q.variant_of)) ctx.addIssue({ code: "custom", path: ["questions", i, "variant_of"], message: `"${q.variant_of}" is not a main question (a variant must point at a question that is not itself a variant)` });
+      if (q.variant_of) {
+        const main = quiz.questions.find((x) => x.ref === q.variant_of);
+        if (main && main.type !== q.type) ctx.addIssue({ code: "custom", path: ["questions", i, "type"], message: `A variant must be the same question type as ${q.variant_of} (${main.type})` });
+      }
+    });
   });
 
-export const lessonFileSchema = z.object({
-  schema_version: z.literal(SCHEMA_VERSION, { error: `schema_version must be "${SCHEMA_VERSION}"` }),
-  lesson: lessonMetaSchema,
-  blocks: z.array(blockSchema).min(1).max(60),
-  quiz: quizSchema,
-});
+export const lessonFileSchema = z
+  .object({
+    schema_version: z.enum([SCHEMA_VERSION, SCHEMA_VERSION_V3], { error: `schema_version must be "${SCHEMA_VERSION}" or "${SCHEMA_VERSION_V3}"` }),
+    lesson: lessonMetaSchema,
+    blocks: z.array(blockSchema).max(60),
+    sub_lessons: z.array(subLessonSchema).min(1).max(8).optional(),
+    quiz: quizSchema,
+  })
+  .superRefine((f, ctx) => {
+    if (!f.sub_lessons && f.blocks.length === 0) ctx.addIssue({ code: "custom", path: ["blocks"], message: "A lesson needs at least one block (or sub_lessons)" });
+    if (f.sub_lessons) {
+      const d = dup(f.sub_lessons.map((x) => x.id));
+      if (d) ctx.addIssue({ code: "custom", path: ["sub_lessons"], message: `Sub-lesson id "${d}" is used twice` });
+      const ids = new Set(f.sub_lessons.map((x) => x.id));
+      f.quiz.questions.forEach((q, i) => {
+        if (q.sub_lesson && !ids.has(q.sub_lesson)) ctx.addIssue({ code: "custom", path: ["quiz", "questions", i, "sub_lesson"], message: `No sub-lesson with id "${q.sub_lesson}"` });
+      });
+      if (f.schema_version === SCHEMA_VERSION_V3) {
+        const mains = f.quiz.questions.filter((q) => !q.variant_of);
+        const reason = mains.filter((q) => q.depth === "reason").length;
+        if (mains.length >= 15 && reason < 4) ctx.addIssue({ code: "custom", path: ["quiz", "questions"], message: `Topic quizzes need at least 4 questions with depth "reason" (found ${reason})` });
+      }
+    }
+  });
 
 export type LessonFile = z.infer<typeof lessonFileSchema>;
 export type LessonMeta = z.infer<typeof lessonMetaSchema>;
