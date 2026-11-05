@@ -39,9 +39,9 @@ export function Rewards() {
           {fresh.length > 0 && (
             <>
               <Confetti />
-              <section role="status" className="pop-in card flex flex-col gap-2 p-5">
+              <section role="status" className="pop-in card flex flex-col items-center gap-2 p-6 text-center">
                 <h2 className="font-display text-2xl font-extrabold">🎉 New {fresh.length === 1 ? "sticker" : "stickers"}!</h2>
-                <p className="text-xl">{fresh.map((s) => `${s.emoji} ${s.name}`).join("  ·  ")}</p>
+                <p className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xl">{fresh.map((s) => <span key={s.id} className="inline-flex items-center gap-2"><span aria-hidden="true" className="text-5xl">{s.emoji}</span><span className="font-bold">{s.name}</span></span>)}</p>
               </section>
             </>
           )}
