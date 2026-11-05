@@ -1,0 +1,2459 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-1-writing-to-help",
+  "subject": "english",
+  "title": "Writing to Help Others",
+  "summary": "Instructions and bossy verbs, planning and writing a short story, checking writing and reading it aloud.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Writing to help others",
+  "learning_objectives": [
+   "Write instructions with bossy verbs",
+   "Plan and write a short story",
+   "Check writing for capital letters and full stops",
+   "Read writing aloud"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "english-class-1-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 writing",
+    "text": "Plan, write, evaluate and proofread; read aloud writing with appropriate intonation"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wg.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ws.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wc.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wc.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wc.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Wp.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2SLp.01"
+   }
+  ],
+  "success_criteria": [
+   "I can write steps that start with a bossy verb",
+   "I can plan a story with a beginning, middle and end",
+   "I can check my writing for mistakes",
+   "I can read my writing aloud"
+  ],
+  "real_life": "Writing a recipe for a friend and a story to read to a younger cousin.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which sentence ends with a question mark?",
+    "hint": "Which asks something?",
+    "explanation": "Questions end with a question mark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "My bag is red."
+     },
+     {
+      "id": "b",
+      "text": "Where is my bag?"
+     },
+     {
+      "id": "c",
+      "text": "What a big bag!"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A fact file has a heading.",
+    "hint": "Think about the top of the page.",
+    "explanation": "A fact file starts with a heading.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word is a describing word?",
+    "hint": "It tells us what a thing is like.",
+    "explanation": "Big describes a thing.",
+    "options": [
+     {
+      "id": "a",
+      "text": "run"
+     },
+     {
+      "id": "b",
+      "text": "big"
+     },
+     {
+      "id": "c",
+      "text": "dog"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young writer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can our writing help other people?\n\nWe will write instructions and stories, then check and share them.",
+   "say": "Welcome back, young writer! Today's big question: how can our writing help other people? Instructions help someone make a sandwich. Stories make someone smile. We will plan, write, check and share. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "✏️",
+   "alt": "Writers plan, write, check and share.",
+   "caption": "Writers plan, write, check and share."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "writer",
+     "meaning": "Someone who writes."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "instructions",
+   "kind": "learn",
+   "title": "Instructions and bossy verbs",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What are instructions?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Instructions** tell us how to do something, step by step.\n\nA bossy verb, or **command**, tells you what to do: spread, add, cut.",
+     "say": "Instructions tell someone how to do something, step by step, like a recipe for making a sandwich. They are full of bossy verbs, also called commands. A bossy verb tells you what to do, and it comes first in the step. Spread the butter. Add the cheese. Cut it in half. Each step is one short job, and the steps go in order."
+    },
+    {
+     "type": "explainer",
+     "title": "Make a sandwich",
+     "scenes": [
+      {
+       "caption": "1. Spread the butter.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍞",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "spread"
+        },
+        {
+         "id": "k",
+         "emoji": "🧈",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "butter"
+        }
+       ],
+       "say": "Step one. Spread the butter on the bread. Spread is a bossy verb."
+      },
+      {
+       "caption": "2. Add the cheese.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍞",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "bread"
+        },
+        {
+         "id": "c",
+         "emoji": "🧀",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "add"
+        }
+       ],
+       "say": "Step two. Add the cheese. Add is a bossy verb."
+      },
+      {
+       "caption": "3. Cut it in half.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🥪",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "cut"
+        }
+       ],
+       "say": "Step three. Cut it in half. Cut is a bossy verb. Now the sandwich is ready!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sentence is an instruction?",
+      "hint": "Which one tells you what to do?",
+      "explanation": "It starts with a bossy verb, pour.",
+      "skill_tag": "instructions.find",
+      "options": [
+       {
+        "id": "a",
+        "text": "The milk is cold."
+       },
+       {
+        "id": "b",
+        "text": "Pour the milk into the bowl."
+       },
+       {
+        "id": "c",
+        "text": "Where is the milk?"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word is a bossy verb?",
+      "hint": "Which is a doing word that gives an order?",
+      "explanation": "Stir tells you what to do.",
+      "skill_tag": "instructions.verb",
+      "options": [
+       {
+        "id": "a",
+        "text": "soup"
+       },
+       {
+        "id": "b",
+        "text": "hot"
+       },
+       {
+        "id": "c",
+        "text": "stir"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Instructions tell us how to do something in order",
+      "Each step starts with a bossy verb"
+     ],
+     "say": "Let us remember. Instructions go in order. Each step starts with a bossy verb."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "instructions",
+       "meaning": "Steps that tell us how to do something."
+      },
+      {
+       "term": "command",
+       "meaning": "A bossy verb that tells you what to do."
+      },
+      {
+       "term": "step",
+       "meaning": "One small job in a list of instructions."
+      },
+      {
+       "term": "recipe",
+       "meaning": "Instructions for cooking something."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a bossy verb?",
+     "hint": "A doing word that gives an order.",
+     "explanation": "Mix tells you what to do.",
+     "skill_tag": "instructions.verb",
+     "options": [
+      {
+       "id": "a",
+       "text": "bowl"
+      },
+      {
+       "id": "b",
+       "text": "mix"
+      },
+      {
+       "id": "c",
+       "text": "yellow"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Instructions can be in any order.",
+     "hint": "Think about making a sandwich.",
+     "explanation": "Steps must be in order.",
+     "skill_tag": "instructions.order",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is an instruction?",
+     "hint": "Which tells you what to do?",
+     "explanation": "Wash starts the step with a bossy verb.",
+     "skill_tag": "instructions.find",
+     "options": [
+      {
+       "id": "a",
+       "text": "Do you have hands?"
+      },
+      {
+       "id": "b",
+       "text": "Wash your hands."
+      },
+      {
+       "id": "c",
+       "text": "My hands are clean."
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "kind": "try",
+   "title": "Plan and write a short story",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plan first"
+    },
+    {
+     "type": "text",
+     "markdown": "A **plan** has a beginning, a middle and an end.",
+     "say": "Good writers plan before they write. A story plan has three boxes. In the beginning, we meet the characters and the place. In the middle, a problem happens. At the end, the problem is solved. A plan helps our story make sense, and it stops us getting stuck."
+    },
+    {
+     "type": "explainer",
+     "title": "A story plan",
+     "scenes": [
+      {
+       "caption": "Beginning: Mina finds a kitten.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "👧",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "Mina"
+        },
+        {
+         "id": "k",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "kitten"
+        }
+       ],
+       "say": "Box one, the beginning. A girl called Mina finds a lost kitten."
+      },
+      {
+       "caption": "Middle: the kitten is lost.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "lost"
+        }
+       ],
+       "say": "Box two, the middle. The kitten is lost and cries. Mina has to help."
+      },
+      {
+       "caption": "End: the kitten is home.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "home"
+        }
+       ],
+       "say": "Box three, the end. Mina finds the kitten's home. Everyone is happy."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which comes first when writing a story?",
+      "hint": "What do we do before writing?",
+      "explanation": "We plan first.",
+      "skill_tag": "story.plan",
+      "options": [
+       {
+        "id": "a",
+        "text": "read it aloud"
+       },
+       {
+        "id": "b",
+        "text": "plan the beginning, middle and end"
+       },
+       {
+        "id": "c",
+        "text": "add a title page"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write it"
+    },
+    {
+     "type": "activity",
+     "title": "Write a short story",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Fold a paper into three boxes: beginning, middle, end.",
+      "Draw or write your plan in each box.",
+      "Write one or two sentences from each box.",
+      "Read your story to a grown-up."
+     ],
+     "say": "Now use your plan to write. Write one or two sentences for each box. Say each sentence in your head first. Use capital letters and full stops."
+    },
+    {
+     "type": "image",
+     "emoji": "📝",
+     "alt": "A plan has a beginning, a middle and an end.",
+     "caption": "A plan has a beginning, a middle and an end.",
+     "say": "A story plan in three boxes."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where does the problem happen in a story?",
+      "hint": "Which box has the problem?",
+      "explanation": "The problem happens in the middle.",
+      "skill_tag": "story.plan",
+      "options": [
+       {
+        "id": "a",
+        "text": "at the start"
+       },
+       {
+        "id": "b",
+        "text": "in the middle"
+       },
+       {
+        "id": "c",
+        "text": "after the end"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plan first: beginning, middle and end",
+      "Write using capital letters and full stops"
+     ],
+     "say": "Let us remember. Plan first, then write. Use capital letters and full stops."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plan",
+       "meaning": "A list of ideas to follow before we start writing."
+      },
+      {
+       "term": "character",
+       "meaning": "A person or animal in a story."
+      },
+      {
+       "term": "problem",
+       "meaning": "Something that goes wrong in a story."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Where do we meet the characters in a story?",
+     "hint": "Think about the start.",
+     "explanation": "We meet characters at the beginning.",
+     "skill_tag": "story.plan",
+     "options": [
+      {
+       "id": "a",
+       "text": "in the middle"
+      },
+      {
+       "id": "b",
+       "text": "at the end"
+      },
+      {
+       "id": "c",
+       "text": "at the beginning"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We plan a story before we write it.",
+     "hint": "Planning comes first.",
+     "explanation": "A plan helps our story make sense.",
+     "skill_tag": "story.plan",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "When is the problem solved?",
+     "hint": "Think about the last box.",
+     "explanation": "The problem is solved at the end.",
+     "skill_tag": "story.plan",
+     "options": [
+      {
+       "id": "a",
+       "text": "at the beginning"
+      },
+      {
+       "id": "b",
+       "text": "before the story"
+      },
+      {
+       "id": "c",
+       "text": "at the end"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "kind": "play",
+   "title": "Check and improve",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Be a proofreader"
+    },
+    {
+     "type": "text",
+     "markdown": "**Proofreading** means checking your writing for mistakes.\n\nCapital letter at the start. Full stop at the end.",
+     "say": "After we write, we check. Good writers are proofreaders. They look for mistakes and fix them. Does each sentence start with a capital letter? Does it end with a full stop, or a question mark? Look at this sentence: the cat sat on the mat. It has no capital letter and no full stop. Let's fix it."
+    },
+    {
+     "type": "explainer",
+     "title": "Fix the sentence",
+     "scenes": [
+      {
+       "caption": "the cat sat on the mat",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "the cat sat on the mat"
+        }
+       ],
+       "say": "Here is a sentence with no capital and no full stop: the cat sat on the mat."
+      },
+      {
+       "caption": "The cat sat on the mat.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "The cat sat on the mat."
+        }
+       ],
+       "say": "Add a capital T at the start and a full stop at the end. The cat sat on the mat. Much better!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sentence is written correctly?",
+      "hint": "Look for a capital and a full stop.",
+      "explanation": "It has a capital letter and a full stop.",
+      "skill_tag": "check.punct",
+      "options": [
+       {
+        "id": "a",
+        "text": "the dog barked"
+       },
+       {
+        "id": "b",
+        "text": "the dog barked."
+       },
+       {
+        "id": "c",
+        "text": "The dog barked."
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Proofreader pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "✏️",
+      "🔍",
+      "🔠",
+      "🔴",
+      "❓",
+      "❗"
+     ],
+     "say": "Warm up with a memory game, then try to spot more mistakes. Your sharp eyes are the best tool."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which mark ends a question?",
+      "hint": "It looks like a hook with a dot.",
+      "explanation": "Questions end with a question mark.",
+      "skill_tag": "check.punct",
+      "options": [
+       {
+        "id": "a",
+        "text": "."
+       },
+       {
+        "id": "b",
+        "text": "!"
+       },
+       {
+        "id": "c",
+        "text": "?"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A proofreader checks for mistakes",
+      "Check capital letters, full stops and question marks"
+     ],
+     "say": "Let us remember. A proofreader checks writing for mistakes. Capital letters, full stops and question marks."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "proofreading",
+       "meaning": "Checking writing for mistakes."
+      },
+      {
+       "term": "mistake",
+       "meaning": "Something that is not right."
+      },
+      {
+       "term": "capital letter",
+       "meaning": "A big letter at the start of a sentence or name."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a sentence start with?",
+     "hint": "Look at the first letter.",
+     "explanation": "Every sentence starts with a capital letter.",
+     "skill_tag": "check.punct",
+     "options": [
+      {
+       "id": "a",
+       "text": "a comma"
+      },
+      {
+       "id": "b",
+       "text": "a capital letter"
+      },
+      {
+       "id": "c",
+       "text": "a full stop"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A statement ends with a full stop.",
+     "hint": "Think about the little dot.",
+     "explanation": "A statement ends with a full stop.",
+     "skill_tag": "check.punct",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is proofreading?",
+     "hint": "Think about checking.",
+     "explanation": "Proofreading means looking for mistakes.",
+     "skill_tag": "check.def",
+     "options": [
+      {
+       "id": "a",
+       "text": "drawing a picture"
+      },
+      {
+       "id": "b",
+       "text": "reading a book"
+      },
+      {
+       "id": "c",
+       "text": "checking writing for mistakes"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aloud",
+   "kind": "use",
+   "title": "Read it aloud",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Reading aloud"
+    },
+    {
+     "type": "text",
+     "markdown": "To **read aloud** means to read out loud so people can hear.\n\nPause at each full stop.",
+     "say": "The last step is to read our writing aloud. When we say it out loud, we can hear if something does not sound right. We can hear a missing word, or a sentence that runs on. Read slowly, with a clear voice, and pause at each full stop. Listen to the sentences, like music."
+    },
+    {
+     "type": "explainer",
+     "title": "Reading aloud",
+     "scenes": [
+      {
+       "caption": "A clear voice.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "👧",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "grow",
+         "label": "reading aloud"
+        },
+        {
+         "id": "s",
+         "emoji": "📖",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "grow",
+         "label": "story"
+        }
+       ],
+       "say": "A girl reads her story aloud. She reads slowly and clearly."
+      },
+      {
+       "caption": "Pause at a full stop.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "👧",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "pause"
+        },
+        {
+         "id": "p",
+         "emoji": "⏸️",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse",
+         "label": "full stop"
+        }
+       ],
+       "say": "She stops at the full stop. A little pause, then on to the next sentence."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why do we read our writing aloud?",
+      "hint": "What can we hear?",
+      "explanation": "We can hear if something is wrong.",
+      "skill_tag": "aloud.why",
+      "options": [
+       {
+        "id": "a",
+        "text": "to hide mistakes"
+       },
+       {
+        "id": "b",
+        "text": "to hear if it sounds right"
+       },
+       {
+        "id": "c",
+        "text": "to make it longer"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Share your writing"
+    },
+    {
+     "type": "activity",
+     "title": "Read to someone",
+     "materials": [
+      "Your writing",
+      "A listener at home"
+     ],
+     "instructions": [
+      "Choose a story or instructions you wrote.",
+      "Read it slowly and clearly.",
+      "Pause at each full stop.",
+      "Ask your listener what they liked."
+     ],
+     "say": "Be proud of what you wrote. Read your story or instructions to someone at home. Ask what they liked and one thing to make it even better."
+    },
+    {
+     "type": "image",
+     "emoji": "🗣️",
+     "alt": "Reading aloud helps us improve our writing.",
+     "caption": "Reading aloud helps us improve our writing.",
+     "say": "A reader and a listener."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What should you do at a full stop?",
+      "hint": "Take a breath.",
+      "explanation": "A full stop means a little pause.",
+      "skill_tag": "aloud.why",
+      "options": [
+       {
+        "id": "a",
+        "text": "shout"
+       },
+       {
+        "id": "b",
+        "text": "pause"
+       },
+       {
+        "id": "c",
+        "text": "skip it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read your writing aloud to hear if it sounds right",
+      "Pause at each full stop"
+     ],
+     "say": "Let us remember. Read aloud to hear mistakes. Pause at full stops."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "aloud",
+       "meaning": "Out loud, so people can hear."
+      },
+      {
+       "term": "pause",
+       "meaning": "A short stop."
+      },
+      {
+       "term": "listener",
+       "meaning": "A person who listens."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do we read aloud?",
+     "hint": "What can we hear?",
+     "explanation": "We hear what does not sound right.",
+     "skill_tag": "aloud.why",
+     "options": [
+      {
+       "id": "a",
+       "text": "to make it shorter"
+      },
+      {
+       "id": "b",
+       "text": "to hear mistakes"
+      },
+      {
+       "id": "c",
+       "text": "to make it quieter"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should pause at a full stop.",
+     "hint": "Think about breathing.",
+     "explanation": "A full stop means a short pause.",
+     "skill_tag": "aloud.why",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How should we read aloud?",
+     "hint": "So everyone can understand.",
+     "explanation": "A slow, clear voice helps listeners.",
+     "skill_tag": "aloud.why",
+     "options": [
+      {
+       "id": "a",
+       "text": "very fast"
+      },
+      {
+       "id": "b",
+       "text": "slowly and clearly"
+      },
+      {
+       "id": "c",
+       "text": "in a whisper"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Find the instruction: which sentence is one?",
+    "hint": "Which tells you what to do?",
+    "explanation": "It starts with a bossy verb, mix.",
+    "skill_tag": "instructions.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "Is there any milk?"
+     },
+     {
+      "id": "b",
+      "text": "Mix the flour and the milk."
+     },
+     {
+      "id": "c",
+      "text": "The flour is white."
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Why do instructions start each step with a bossy verb?",
+    "hint": "What does a bossy verb do?",
+    "explanation": "A bossy verb tells you what to do.",
+    "skill_tag": "instructions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes them rhyme"
+     },
+     {
+      "id": "b",
+      "text": "It tells the reader exactly what to do"
+     },
+     {
+      "id": "c",
+      "text": "It makes the steps longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put the steps in order.",
+    "hint": "What comes first?",
+    "explanation": "Wash first, then mix, pour and cook.",
+    "skill_tag": "instructions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Pour it into a pan"
+     },
+     {
+      "id": "i4",
+      "text": "Cook until golden"
+     },
+     {
+      "id": "i2",
+      "text": "Mix the flour and milk"
+     },
+     {
+      "id": "i1",
+      "text": "Wash your hands"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Think about commands and small jobs.",
+    "explanation": "Bossy verbs give commands, and each job is a step.",
+    "skill_tag": "instructions.parts",
+    "points": 2,
+    "text": "Instructions use {b1} verbs like mix and pour. Each job is a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sleepy"
+       },
+       {
+        "id": "b",
+        "text": "bossy"
+       },
+       {
+        "id": "c",
+        "text": "silent"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rhyme"
+       },
+       {
+        "id": "b",
+        "text": "step"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "instructions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "What is the first job when writing a story?",
+    "hint": "What do we do before writing?",
+    "explanation": "We plan first.",
+    "skill_tag": "story.plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Read it aloud"
+     },
+     {
+      "id": "b",
+      "text": "Plan the beginning, middle and end"
+     },
+     {
+      "id": "c",
+      "text": "Add a title page"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "hotspot",
+    "prompt": "Tap the part of the story where the problem happens.",
+    "hint": "Which box has the problem?",
+    "explanation": "The problem happens in the middle.",
+    "skill_tag": "story.parts",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌅",
+       "label": "beginning",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⚡",
+       "label": "middle",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏁",
+       "label": "end",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why do we plan a story before writing it?",
+    "hint": "What does a plan give us?",
+    "explanation": "A plan makes a story easy to follow.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So it has more pictures"
+     },
+     {
+      "id": "b",
+      "text": "So it has a clear beginning, middle and end"
+     },
+     {
+      "id": "c",
+      "text": "So it takes longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each problem with its fix.",
+    "hint": "What does each problem need?",
+    "explanation": "Each fix matches its problem.",
+    "skill_tag": "check.punct",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "No capital letter at the start"
+     },
+     {
+      "id": "l2",
+      "text": "No full stop at the end"
+     },
+     {
+      "id": "l3",
+      "text": "A question without its mark"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a full stop"
+     },
+     {
+      "id": "r1",
+      "text": "Add a capital letter"
+     },
+     {
+      "id": "r3",
+      "text": "Add a question mark"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "check",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multi_select",
+    "prompt": "Which sentences are written correctly? Pick two.",
+    "hint": "Look for capitals and marks.",
+    "explanation": "The correct ones have capitals and ending marks.",
+    "skill_tag": "check.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "Where is my hat?"
+     },
+     {
+      "id": "b",
+      "text": "the dog barked"
+     },
+     {
+      "id": "c",
+      "text": "where is my hat"
+     },
+     {
+      "id": "d",
+      "text": "The dog barked."
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many mistakes: the cat sat on the mat",
+    "hint": "Check the start and the end.",
+    "explanation": "It needs a capital letter and a full stop.",
+    "skill_tag": "check.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why do we check our writing after we have written it?",
+    "hint": "What do proofreaders do?",
+    "explanation": "Checking finds mistakes to fix.",
+    "skill_tag": "check.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make it quieter"
+     },
+     {
+      "id": "b",
+      "text": "To find and fix mistakes"
+     },
+     {
+      "id": "c",
+      "text": "To make it longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "check",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "short_text",
+    "prompt": "When we read our finished writing out loud, we read it ___. (one word)",
+    "hint": "Out loud, so people can hear.",
+    "explanation": "We read it aloud.",
+    "skill_tag": "aloud.word",
+    "answer": {
+     "accepted": [
+      "aloud"
+     ]
+    },
+    "sub_lesson": "aloud",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the writing steps in order.",
+    "hint": "What comes first?",
+    "explanation": "Plan, write, check, then read aloud.",
+    "skill_tag": "aloud.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write"
+     },
+     {
+      "id": "i3",
+      "text": "Check"
+     },
+     {
+      "id": "i4",
+      "text": "Read aloud"
+     },
+     {
+      "id": "i1",
+      "text": "Plan"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "We should pause at each full stop when we read aloud.",
+    "hint": "Think about breathing.",
+    "explanation": "A full stop means a short pause.",
+    "skill_tag": "aloud.punct",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "aloud",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why do we read aloud before sharing our writing?",
+    "hint": "What can we hear?",
+    "explanation": "Reading aloud shows what to fix.",
+    "skill_tag": "aloud.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make it shorter"
+     },
+     {
+      "id": "b",
+      "text": "To hide mistakes"
+     },
+     {
+      "id": "c",
+      "text": "To hear anything that does not sound right"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Pick the sentence that is an instruction.",
+    "hint": "Which tells you what to do?",
+    "explanation": "It starts with a bossy verb, cut.",
+    "skill_tag": "instructions.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "The paper is white."
+     },
+     {
+      "id": "b",
+      "text": "Where is the paper?"
+     },
+     {
+      "id": "c",
+      "text": "Cut the paper in half."
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Spot the instruction.",
+    "hint": "Which tells you what to do?",
+    "explanation": "It starts with a bossy verb, press.",
+    "skill_tag": "instructions.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "The button is red."
+     },
+     {
+      "id": "b",
+      "text": "Press the button."
+     },
+     {
+      "id": "c",
+      "text": "Is it a button?"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Why must instructions go in order?",
+    "hint": "Think about making a sandwich.",
+    "explanation": "The wrong order would spoil it.",
+    "skill_tag": "instructions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the page tidy"
+     },
+     {
+      "id": "b",
+      "text": "Doing them in the wrong order would not work"
+     },
+     {
+      "id": "c",
+      "text": "The steps are numbers"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Why are instructions written in short steps?",
+    "hint": "How do we follow instructions?",
+    "explanation": "Short steps are easier to follow.",
+    "skill_tag": "instructions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So they rhyme"
+     },
+     {
+      "id": "b",
+      "text": "Each step is one small job that is easy to follow"
+     },
+     {
+      "id": "c",
+      "text": "So the page looks long"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Put the steps for brushing teeth in order.",
+    "hint": "What comes first?",
+    "explanation": "Toothpaste first, then brush, spit and rinse.",
+    "skill_tag": "instructions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Brush your teeth"
+     },
+     {
+      "id": "i4",
+      "text": "Rinse your mouth"
+     },
+     {
+      "id": "i3",
+      "text": "Spit out the foam"
+     },
+     {
+      "id": "i1",
+      "text": "Put toothpaste on the brush"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Order the steps for making a sandwich.",
+    "hint": "What comes first?",
+    "explanation": "Bread first, then butter, cheese and join.",
+    "skill_tag": "instructions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Spread the butter"
+     },
+     {
+      "id": "i4",
+      "text": "Put the slices together"
+     },
+     {
+      "id": "i3",
+      "text": "Add the cheese"
+     },
+     {
+      "id": "i1",
+      "text": "Get two slices of bread"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "instructions",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "Think about commands.",
+    "explanation": "Bossy verbs give orders and steps go in order.",
+    "skill_tag": "instructions.parts",
+    "points": 2,
+    "text": "A {b1} verb tells you what to do. Instructions go in {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sleepy"
+       },
+       {
+        "id": "b",
+        "text": "bossy"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "circles"
+       },
+       {
+        "id": "b",
+        "text": "rhymes"
+       },
+       {
+        "id": "c",
+        "text": "order"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "instructions",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Think about cooking.",
+    "explanation": "A recipe is instructions and begins with bossy verbs.",
+    "skill_tag": "instructions.parts",
+    "points": 2,
+    "text": "A {b1} for cooking is a set of instructions. Each one starts with a {b2} verb.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "song"
+       },
+       {
+        "id": "b",
+        "text": "recipe"
+       },
+       {
+        "id": "c",
+        "text": "poem"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "silent"
+       },
+       {
+        "id": "b",
+        "text": "bossy"
+       },
+       {
+        "id": "c",
+        "text": "sleepy"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "instructions",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "What should writers do before they start a story?",
+    "hint": "What helps a story make sense?",
+    "explanation": "A plan comes first.",
+    "skill_tag": "story.plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hand it in"
+     },
+     {
+      "id": "b",
+      "text": "Make a plan with three boxes"
+     },
+     {
+      "id": "c",
+      "text": "Rub it out"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multiple_choice",
+    "prompt": "What helps a writer not get stuck?",
+    "hint": "What do writers use?",
+    "explanation": "A plan keeps the story clear.",
+    "skill_tag": "story.plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "A long title"
+     },
+     {
+      "id": "b",
+      "text": "A big picture"
+     },
+     {
+      "id": "c",
+      "text": "A plan with a beginning, middle and end"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "hotspot",
+    "prompt": "Tap the part of the story where we meet the characters.",
+    "hint": "Which box starts the story?",
+    "explanation": "We meet characters at the beginning.",
+    "skill_tag": "story.parts",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌅",
+       "label": "beginning",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⚡",
+       "label": "middle",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏁",
+       "label": "end",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "hotspot",
+    "prompt": "Tap the part of the story where the problem is solved.",
+    "hint": "Which box finishes the story?",
+    "explanation": "The problem is solved at the end.",
+    "skill_tag": "story.parts",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌅",
+       "label": "beginning",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⚡",
+       "label": "middle",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏁",
+       "label": "end",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why does a story need a problem?",
+    "hint": "What do characters do?",
+    "explanation": "The problem gives the story something to happen.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is the title"
+     },
+     {
+      "id": "b",
+      "text": "It gives the characters something to solve"
+     },
+     {
+      "id": "c",
+      "text": "It fills the page"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Why do we say each part of a story in our head first?",
+    "hint": "Think about making a sentence.",
+    "explanation": "Saying it first makes writing it easier.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes the pencil lighter"
+     },
+     {
+      "id": "b",
+      "text": "It helps us write a clear sentence"
+     },
+     {
+      "id": "c",
+      "text": "It hides mistakes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Pair each mistake with how to fix it.",
+    "hint": "What does each mistake need?",
+    "explanation": "Each fix matches its mistake.",
+    "skill_tag": "check.punct",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "A name starting with a small letter"
+     },
+     {
+      "id": "l2",
+      "text": "A sentence that never stops"
+     },
+     {
+      "id": "l3",
+      "text": "Where is my bag without a mark"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a full stop"
+     },
+     {
+      "id": "r1",
+      "text": "Change it to a capital letter"
+     },
+     {
+      "id": "r3",
+      "text": "Add a question mark"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "check",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Which fix goes with each mistake?",
+    "hint": "Look at what is missing.",
+    "explanation": "Each fix matches what is missing.",
+    "skill_tag": "check.punct",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "the dog ran"
+     },
+     {
+      "id": "l2",
+      "text": "The dog ran"
+     },
+     {
+      "id": "l3",
+      "text": "Can I play"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a full stop"
+     },
+     {
+      "id": "r1",
+      "text": "Add a capital letter"
+     },
+     {
+      "id": "r3",
+      "text": "Add a question mark"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "check",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multi_select",
+    "prompt": "Pick the two correct sentences.",
+    "hint": "Look for capitals and marks.",
+    "explanation": "The correct ones have capitals and ending marks.",
+    "skill_tag": "check.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "we went to the park"
+     },
+     {
+      "id": "b",
+      "text": "can I help"
+     },
+     {
+      "id": "c",
+      "text": "Can I help?"
+     },
+     {
+      "id": "d",
+      "text": "We went to the park."
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multi_select",
+    "prompt": "Choose two correct sentences.",
+    "hint": "Look for capitals and marks.",
+    "explanation": "The correct ones have capitals and ending marks.",
+    "skill_tag": "check.punct",
+    "options": [
+     {
+      "id": "a",
+      "text": "What a big wave!"
+     },
+     {
+      "id": "b",
+      "text": "zainab likes mangoes"
+     },
+     {
+      "id": "c",
+      "text": "what a big wave"
+     },
+     {
+      "id": "d",
+      "text": "Zainab likes mangoes."
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many mistakes: Mum made rice",
+    "hint": "Check the start and the end.",
+    "explanation": "It only needs a full stop.",
+    "skill_tag": "check.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many mistakes: ali and sara went to lahore",
+    "hint": "Names need capitals, and the end needs a mark.",
+    "explanation": "Ali, Sara and Lahore need capitals, and it needs a full stop.",
+    "skill_tag": "check.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why do we look for capital letters when we check?",
+    "hint": "What should start with a capital?",
+    "explanation": "Sentences and names start with capitals.",
+    "skill_tag": "check.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They look pretty"
+     },
+     {
+      "id": "b",
+      "text": "Every sentence and name should start with one"
+     },
+     {
+      "id": "c",
+      "text": "They make the writing longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "check",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why do we look for full stops when we check?",
+    "hint": "What ends a statement?",
+    "explanation": "Statements end with a full stop.",
+    "skill_tag": "check.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They look like dots"
+     },
+     {
+      "id": "b",
+      "text": "They make words longer"
+     },
+     {
+      "id": "c",
+      "text": "Each statement should end with one"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "check",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "short_text",
+    "prompt": "Which mark ends a question? Write its name (two words).",
+    "hint": "It looks like a hook with a dot.",
+    "explanation": "It is the question mark.",
+    "skill_tag": "aloud.word",
+    "answer": {
+     "accepted": [
+      "question mark"
+     ]
+    },
+    "sub_lesson": "aloud",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "short_text",
+    "prompt": "What kind of letter starts every sentence? Write two words.",
+    "hint": "It is a big letter.",
+    "explanation": "Every sentence starts with a capital letter.",
+    "skill_tag": "aloud.word",
+    "answer": {
+     "accepted": [
+      "capital letter",
+      "a capital letter"
+     ]
+    },
+    "sub_lesson": "aloud",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Arrange the steps for sharing writing.",
+    "hint": "What comes first?",
+    "explanation": "Finish, read, fix, share.",
+    "skill_tag": "aloud.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Read it through"
+     },
+     {
+      "id": "i3",
+      "text": "Fix mistakes"
+     },
+     {
+      "id": "i4",
+      "text": "Share with a friend"
+     },
+     {
+      "id": "i1",
+      "text": "Finish writing"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "order",
+    "prompt": "Sort the steps for making a poem.",
+    "hint": "What comes first?",
+    "explanation": "Topic, rhymes, lines, read aloud.",
+    "skill_tag": "aloud.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Write the lines"
+     },
+     {
+      "id": "i4",
+      "text": "Read it aloud"
+     },
+     {
+      "id": "i2",
+      "text": "Think of rhymes"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a topic"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "We should read as fast as possible when we read aloud.",
+    "hint": "Can listeners understand a rush?",
+    "explanation": "A slow, clear voice is best.",
+    "skill_tag": "aloud.punct",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "aloud",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "true_false",
+    "prompt": "Reading aloud helps us hear mistakes.",
+    "hint": "What can we hear?",
+    "explanation": "We hear what does not sound right.",
+    "skill_tag": "aloud.punct",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "aloud",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why do we read slowly and clearly?",
+    "hint": "Who are we reading to?",
+    "explanation": "Listeners need to understand.",
+    "skill_tag": "aloud.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the page is longer"
+     },
+     {
+      "id": "b",
+      "text": "So listeners can understand every word"
+     },
+     {
+      "id": "c",
+      "text": "So we can hide mistakes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why do we pause at a full stop?",
+    "hint": "What does a full stop mean?",
+    "explanation": "A pause shows the sentence has ended.",
+    "skill_tag": "aloud.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes words longer"
+     },
+     {
+      "id": "b",
+      "text": "It hides a mistake"
+     },
+     {
+      "id": "c",
+      "text": "It shows where a sentence ends"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "aloud",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
