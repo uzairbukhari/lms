@@ -1,0 +1,2302 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-add-subtract",
+  "subject": "maths",
+  "title": "Adding and Taking Away to 100",
+  "summary": "Count on and back, cross a ten, add tens, find missing numbers and solve word problems.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Add and subtract",
+  "learning_objectives": [
+   "Add and take away by counting on and back",
+   "Add and take away across a ten",
+   "Add and take away tens",
+   "Solve word problems and find missing numbers"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 add/sub",
+    "text": "Add and subtract numbers using concrete objects, number lines and mental methods"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.04"
+   }
+  ],
+  "success_criteria": [
+   "I can add and take away numbers within 100",
+   "I can make a ten to cross a ten",
+   "I can solve a story problem and check my answer"
+  ],
+  "real_life": "Counting sweets, pocket money and how many pages are left in a book.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do 6 and 4 make together?",
+    "hint": "Count on from 6.",
+    "explanation": "6 and 4 make 10.",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "10"
+     },
+     {
+      "id": "c",
+      "text": "11"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "How many tens are in 70?",
+    "hint": "The 7 is the tens.",
+    "explanation": "70 is 7 tens.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "34 is bigger than 43.",
+    "hint": "Compare the tens first.",
+    "explanation": "43 has 4 tens, so it is bigger.",
+    "answer": [
+     false
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we add and take away numbers to 100, with tricks that make it quick.",
+   "say": "Welcome back, number explorer! Today we get faster at adding and taking away. By the end you will count on and back, cross a ten with a clever trick, add tens in a snap, and solve word problems like a detective."
+  },
+  {
+   "type": "image",
+   "emoji": "➕",
+   "alt": "Adding and taking away to 100.",
+   "caption": "Adding and taking away to 100."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "adding and taking away",
+     "meaning": "Putting numbers together and taking numbers off."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "count_on",
+   "kind": "learn",
+   "title": "Count on and count back",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Count on to add"
+    },
+    {
+     "type": "text",
+     "markdown": "To **add** a small number, start at the bigger number and **count on**.\n\n34 + 3: start at 34, then say 35, 36, 37.",
+     "say": "Here is a speedy way to add. Say we want thirty-four plus three. Do we have to count from one? No way! We start at thirty-four, and then we count on three more. Thirty-five, thirty-six, thirty-seven. The answer is thirty-seven. Watch the frog hop along the number line."
+    },
+    {
+     "type": "explainer",
+     "title": "34 + 3 on the number line",
+     "scenes": [
+      {
+       "caption": "Start at 34.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 30,
+          "to": 40,
+          "value": 34
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a number line from thirty to forty. The frog sits on thirty-four. That is where we start."
+      },
+      {
+       "caption": "34 + 3: hop three times.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 30,
+          "to": 40,
+          "value": 37
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop one. Thirty-five. Hop two. Thirty-six. Hop three. Thirty-seven. Three hops, because we are adding three."
+      },
+      {
+       "caption": "34 + 3 = 37.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 30,
+          "to": 40,
+          "value": 37
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "34 + 3 = 37"
+        }
+       ],
+       "say": "The frog landed on thirty-seven. So thirty-four plus three equals thirty-seven."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 52 + 4?",
+      "hint": "Start at 52 and count on 4.",
+      "explanation": "53, 54, 55, 56. So 52 + 4 = 56.",
+      "skill_tag": "addsub.count_on",
+      "answer": {
+       "value": 56,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Count back to take away"
+    },
+    {
+     "type": "text",
+     "markdown": "To **take away** a small number, start at the bigger number and **count back**.\n\n41 - 3: start at 41, then say 40, 39, 38.",
+     "say": "Taking away goes the other way. To take away, we count back. Let's try forty-one take away three. Start at forty-one. Count back: forty, thirty-nine, thirty-eight. The answer is thirty-eight. The frog hops backwards, to the left."
+    },
+    {
+     "type": "explainer",
+     "title": "41 - 3 on the number line",
+     "scenes": [
+      {
+       "caption": "Start at 41.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 35,
+          "to": 45,
+          "value": 41
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog starts on forty-one, at the right."
+      },
+      {
+       "caption": "41 - 3: hop back three times.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 35,
+          "to": 45,
+          "value": 38
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "41 - 3 = 38"
+        }
+       ],
+       "say": "Now hop back. Forty. Thirty-nine. Thirty-eight. Three hops to the left, because we are taking away three."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sum does this say? Start at 60, then count back 2.",
+      "hint": "Counting back means take away.",
+      "explanation": "Counting back 2 from 60 is 60 - 2 = 58.",
+      "skill_tag": "addsub.count_back",
+      "options": [
+       {
+        "id": "a",
+        "text": "62 - 60"
+       },
+       {
+        "id": "b",
+        "text": "60 - 2"
+       },
+       {
+        "id": "c",
+        "text": "60 + 2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "To add, count on",
+      "To take away, count back",
+      "Start at the bigger number"
+     ],
+     "say": "Let us remember. To add, count on. To take away, count back. Always start at the bigger number."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "add",
+       "meaning": "Put numbers together to make a bigger number."
+      },
+      {
+       "term": "count on",
+       "meaning": "Start at a number and say the next numbers."
+      },
+      {
+       "term": "take away",
+       "meaning": "Make a number smaller by taking some off."
+      },
+      {
+       "term": "count back",
+       "meaning": "Start at a number and say the numbers before it."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 27 + 3?",
+     "hint": "Count on 3 from 27.",
+     "explanation": "28, 29, 30.",
+     "answer": {
+      "value": 30,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 45 - 2?",
+     "hint": "Count back 2 from 45.",
+     "explanation": "44, 43.",
+     "answer": {
+      "value": 43,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "To add, you count back.",
+     "hint": "Which way does the frog hop?",
+     "explanation": "To add you count on. To take away you count back.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 68 + 2?",
+     "hint": "Count on 2 from 68.",
+     "explanation": "69, 70.",
+     "options": [
+      {
+       "id": "a",
+       "text": "66"
+      },
+      {
+       "id": "b",
+       "text": "71"
+      },
+      {
+       "id": "c",
+       "text": "70"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "kind": "try",
+   "title": "Crossing a ten",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Make a ten first"
+    },
+    {
+     "type": "text",
+     "markdown": "To add across a ten, make a **ten** first.\n\n8 + 5: 8 + 2 = 10, then 10 + 3 = 13.",
+     "say": "Sometimes our jump goes over a ten. Take eight plus five. We could count on five, but let's be clever. Eight needs two more to make ten. So take two from the five. Eight and two make ten. We still have three left. Ten and three make thirteen! Making a ten first is a super trick."
+    },
+    {
+     "type": "explainer",
+     "title": "8 + 5 by making ten",
+     "scenes": [
+      {
+       "caption": "8 needs 2 more to make 10.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 8
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here are eight dots in a ten frame. The frame has two empty spaces. We need two more to make ten."
+      },
+      {
+       "caption": "The frame is full: 10.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 10
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "We take two from the five and fill the frame. Now the frame is full. That is ten!"
+      },
+      {
+       "caption": "8 + 5 = 10 + 3 = 13.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 10
+         },
+         "x": 28,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 3
+         },
+         "x": 72,
+         "y": 44,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "10 + 3 = 13"
+        }
+       ],
+       "say": "Five take away two leaves three more. Ten and three make thirteen. So eight plus five is thirteen."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "manipulative",
+     "title": "Fill the ten frame",
+     "goal": "You have 15 apples. Move 10 apples into the Ten box to make a full ten, then see how many are left over.",
+     "emoji": "🍎",
+     "count": 15,
+     "zones": [
+      "Ones",
+      "Ten box"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 9 + 4?",
+      "hint": "9 needs 1 more to make 10. Then 3 are left.",
+      "explanation": "9 + 1 = 10, and 10 + 3 = 13.",
+      "skill_tag": "addsub.bridge",
+      "answer": {
+       "value": 13,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Take away across a ten"
+    },
+    {
+     "type": "text",
+     "markdown": "To take away across a ten, go back to **ten** first.\n\n13 - 4: 13 - 3 = 10, then 10 - 1 = 9.",
+     "say": "We can cross a ten when we take away too. Thirteen take away four. First take away three to get to ten. Then take away one more. Ten take away one is nine. So thirteen take away four is nine. Try it at home with buttons."
+    },
+    {
+     "type": "image",
+     "emoji": "🔘",
+     "alt": "13 take away 3 is 10. Then take away 1 more to make 9.",
+     "caption": "13 take away 3 is 10. Then take away 1 more to make 9.",
+     "say": "Thirteen buttons, take away three to reach ten, then one more."
+    },
+    {
+     "type": "activity",
+     "title": "Buttons and a ten box",
+     "materials": [
+      "15 buttons or coins",
+      "A cup or box"
+     ],
+     "instructions": [
+      "Put 13 buttons in a row.",
+      "Take away 3 buttons. How many are left? That is 10.",
+      "Now take away 1 more. How many are left?",
+      "So what is 13 - 4?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 12 - 5?",
+      "hint": "Take away 2 to get to 10, then 3 more.",
+      "explanation": "12 - 2 = 10, and 10 - 3 = 7.",
+      "skill_tag": "addsub.bridge_back",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Make a ten first when you cross a ten",
+      "It works for adding and for taking away"
+     ],
+     "say": "Remember. Make a ten first when you cross a ten. It works for adding and for taking away."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "ten",
+       "meaning": "A group of 10 things."
+      },
+      {
+       "term": "ten frame",
+       "meaning": "A box with 10 spaces for counters."
+      },
+      {
+       "term": "cross",
+       "meaning": "To go past a number, like going past 10."
+      },
+      {
+       "term": "leftover",
+       "meaning": "What is left when you have used some."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 7 + 6?",
+     "hint": "7 + 3 = 10, then 3 more.",
+     "explanation": "7 + 3 = 10, and 10 + 3 = 13.",
+     "answer": {
+      "value": 13,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 15 - 6?",
+     "hint": "15 - 5 = 10, then 1 more.",
+     "explanation": "15 - 5 = 10, and 10 - 1 = 9.",
+     "answer": {
+      "value": 9,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "8 + 5 is 15.",
+     "hint": "8 + 2 = 10, then 3 more.",
+     "explanation": "8 + 5 = 13, not 15.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How many more does 6 need to make 10?",
+     "hint": "Think of a ten frame with 6 counters.",
+     "explanation": "6 + 4 = 10.",
+     "options": [
+      {
+       "id": "a",
+       "text": "3"
+      },
+      {
+       "id": "b",
+       "text": "4"
+      },
+      {
+       "id": "c",
+       "text": "5"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tens_add",
+   "kind": "play",
+   "title": "Tens and missing numbers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Add and take away tens"
+    },
+    {
+     "type": "text",
+     "markdown": "To add or take away **tens**, change the tens digit. The ones stay the same.\n\n34 + 20 = 54. 54 - 20 = 34.",
+     "say": "Adding tens is easy once you know tens and ones. Here is thirty-four. Three tens and four ones. Now add two tens. The tens change. Three tens and two tens make five tens. But the ones stay the same! Fifty-four. Taking away tens works the same way."
+    },
+    {
+     "type": "explainer",
+     "title": "34 + 20",
+     "scenes": [
+      {
+       "caption": "34 is 3 tens and 4 ones.",
+       "items": [
+        {
+         "id": "pv",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 3,
+          "ones": 4
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is thirty-four. Three tens and four ones."
+      },
+      {
+       "caption": "34 + 20 = 54.",
+       "items": [
+        {
+         "id": "pv",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 5,
+          "ones": 4
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now we add two more tens. Look at the board. Five tens now! The four ones did not change. Thirty-four plus twenty is fifty-four."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 46 + 30?",
+      "hint": "4 tens and 3 tens make 7 tens. The ones stay 6.",
+      "explanation": "46 + 30 = 76.",
+      "skill_tag": "addsub.tens",
+      "answer": {
+       "value": 76,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Missing numbers"
+    },
+    {
+     "type": "text",
+     "markdown": "A missing number puzzle: 7 + ? = 10. The answer is 3.\n\nAdding and taking away are **partners**: 7 + 3 = 10 and 10 - 7 = 3.",
+     "say": "Time for a number puzzle. What goes in the box? Seven plus something makes ten. Add the missing number: seven plus three is ten. We can also take away to find a missing number. Ten take away seven leaves three. Adding and taking away are partners. Warm up your brain first with a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Number match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "🍎",
+      "🍌",
+      "🍇",
+      "🍓",
+      "🍊",
+      "🥝"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is the missing number? 6 + ? = 10",
+      "hint": "How many more does 6 need to make 10?",
+      "explanation": "6 + 4 = 10.",
+      "skill_tag": "addsub.missing",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Add tens by changing the tens digit",
+      "Use a number you know to find a missing number",
+      "Adding and taking away are partners"
+     ],
+     "say": "Remember. Add tens by changing the tens digit. Use a number you know to find a missing number. Adding and taking away are partners."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tens",
+       "meaning": "Groups of ten. In 34 there are 3 tens."
+      },
+      {
+       "term": "partners",
+       "meaning": "Two things that belong together, like adding and taking away."
+      },
+      {
+       "term": "missing",
+       "meaning": "Not there yet. The number you have to find."
+      },
+      {
+       "term": "puzzle",
+       "meaning": "A problem that makes you think."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 52 + 20?",
+     "hint": "5 tens and 2 tens make 7 tens.",
+     "explanation": "52 + 20 = 72.",
+     "answer": {
+      "value": 72,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 85 - 30?",
+     "hint": "8 tens take away 3 tens leaves 5 tens.",
+     "explanation": "85 - 30 = 55.",
+     "answer": {
+      "value": 55,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "8 + ? = 10. What is the missing number?",
+     "hint": "How many more does 8 need to make 10?",
+     "explanation": "8 + 2 = 10.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "In 34 + 20 the ones change.",
+     "hint": "Look at the digit on the right.",
+     "explanation": "You only add tens, so the ones stay the same.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "problems",
+   "kind": "use",
+   "title": "Solve word problems",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Read, think, solve"
+    },
+    {
+     "type": "text",
+     "markdown": "Solve a story problem in steps: **read**, find the clue, work it out, then check.\n\nClue words: altogether and more mean add. Left and fewer mean take away.",
+     "say": "Word problems are stories with a number puzzle hiding inside. Here is a way to solve them. First, read the story. Second, spot the clue words. If it says more or altogether, we add. If it says left or fewer, we take away. Third, work it out. Fourth, check that the answer makes sense."
+    },
+    {
+     "type": "image",
+     "emoji": "🔍",
+     "alt": "Read, find the clue, work it out, check.",
+     "caption": "Read, find the clue, work it out, check.",
+     "say": "Read the story, find the clue, work it out, and check."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which clue word tells us to take away?",
+      "hint": "If some go away, what is it?",
+      "explanation": "The word left tells us to take away.",
+      "skill_tag": "addsub.clue_words",
+      "options": [
+       {
+        "id": "a",
+        "text": "altogether"
+       },
+       {
+        "id": "b",
+        "text": "more"
+       },
+       {
+        "id": "c",
+        "text": "left"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Stories with money and sweets"
+    },
+    {
+     "type": "text",
+     "markdown": "Maryam has 25 sweets. Her aunt gives her 30 more. How many altogether?\n\n25 + 30 = 55 sweets.",
+     "say": "Here is one for you. Maryam has twenty-five sweets. Her aunt gives her thirty more. How many sweets does Maryam have altogether? The clue word is altogether, so we add. Twenty-five plus thirty. Two tens and three tens make five tens. Ones stay five. Fifty-five sweets. Does that make sense? Yes, it is more than we started with."
+    },
+    {
+     "type": "explainer",
+     "title": "Maryam's sweets",
+     "scenes": [
+      {
+       "caption": "Maryam starts with 25 sweets.",
+       "items": [
+        {
+         "id": "pv",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 2,
+          "ones": 5
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Maryam has twenty-five sweets. Two tens and five ones."
+      },
+      {
+       "caption": "25 + 30 = 55. That is 55 sweets altogether.",
+       "items": [
+        {
+         "id": "pv",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 5,
+          "ones": 5
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Her aunt gives her thirty more. That is three more tens. Now there are five tens and five ones. Fifty-five sweets!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "reveal",
+     "prompt": "A bag of 60 stickers has 20 taken out. How many are left? Have a think first.",
+     "answer_markdown": "40 stickers are left. 60 - 20 = 40, because 6 tens take away 2 tens leaves 4 tens."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Ahmed has 48 marbles. He loses 5. How many marbles does he have left?",
+      "hint": "Left means take away. Count back 5 from 48.",
+      "explanation": "48 - 5 = 43 marbles.",
+      "skill_tag": "addsub.word_problem",
+      "answer": {
+       "value": 43,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read the story and find the clue words",
+      "Altogether means add. Left means take away",
+      "Check that your answer makes sense"
+     ],
+     "say": "Remember. Read the story, find the clue words, then work it out. Always check that the answer makes sense."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "read",
+       "meaning": "Look at the words and understand them."
+      },
+      {
+       "term": "altogether",
+       "meaning": "All the things put together."
+      },
+      {
+       "term": "left",
+       "meaning": "What remains after some are taken away."
+      },
+      {
+       "term": "clue",
+       "meaning": "A word that helps you find the answer."
+      },
+      {
+       "term": "check",
+       "meaning": "Look again to see if your answer makes sense."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "There are 30 children in a hall. 20 more come in. How many are there altogether?",
+     "hint": "Altogether means add.",
+     "explanation": "30 + 20 = 50 children.",
+     "answer": {
+      "value": 50,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "A shelf has 70 books. 30 are taken away. How many are left?",
+     "hint": "Left means take away.",
+     "explanation": "70 - 30 = 40 books.",
+     "answer": {
+      "value": 40,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A jar has 15 coins. Dad adds 4 more. Which sum is right?",
+     "hint": "Adding more means plus.",
+     "explanation": "More coins means add: 15 + 4 = 19.",
+     "options": [
+      {
+       "id": "a",
+       "text": "15 - 4"
+      },
+      {
+       "id": "b",
+       "text": "4 - 15"
+      },
+      {
+       "id": "c",
+       "text": "15 + 4"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The answer to a take-away problem is bigger than the start.",
+     "hint": "If you take some away, is there more or less?",
+     "explanation": "Taking away makes the number smaller.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What is 63 + 5?",
+    "hint": "Count on 5 from 63.",
+    "explanation": "64, 65, 66, 67, 68.",
+    "skill_tag": "addsub.count_on",
+    "answer": {
+     "value": 68,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "What is 57 - 4?",
+    "hint": "Count back 4 from 57.",
+    "explanation": "56, 55, 54, 53.",
+    "skill_tag": "addsub.count_back",
+    "answer": {
+     "value": 53,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "To work out 40 - 3 you count on.",
+    "hint": "Taking away goes which way?",
+    "explanation": "To take away, count back.",
+    "skill_tag": "addsub.count_back",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "count_on",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the steps for 8 + 5.",
+    "hint": "How many does 8 need to make 10?",
+    "explanation": "8 + 2 = 10, then 10 + 3 = 13.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "text": "8 + {b1} = 10, then 10 + {b2} = 13.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bridge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which sums make 13? Pick two.",
+    "hint": "Make a ten first.",
+    "explanation": "8 + 5 = 13 and 9 + 4 = 13.",
+    "skill_tag": "addsub.bridge",
+    "options": [
+     {
+      "id": "a",
+      "text": "9 + 4"
+     },
+     {
+      "id": "b",
+      "text": "7 + 5"
+     },
+     {
+      "id": "c",
+      "text": "8 + 4"
+     },
+     {
+      "id": "d",
+      "text": "8 + 5"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these answers in order, smallest first.",
+    "hint": "Work out each sum first.",
+    "explanation": "11, 13, 14 and 17 are in order.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "9 + 4"
+     },
+     {
+      "id": "i4",
+      "text": "9 + 8"
+     },
+     {
+      "id": "i3",
+      "text": "8 + 6"
+     },
+     {
+      "id": "i1",
+      "text": "8 + 3"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "number",
+    "prompt": "What is 53 + 20?",
+    "hint": "5 tens and 2 tens make 7 tens.",
+    "explanation": "53 + 20 = 73. The ones stay 3.",
+    "skill_tag": "addsub.tens",
+    "answer": {
+     "value": 73,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each sum to its answer.",
+    "hint": "Work with the tens.",
+    "explanation": "30 + 20 = 50, 70 - 30 = 40, 46 + 30 = 76.",
+    "skill_tag": "addsub.tens",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "30 + 20"
+     },
+     {
+      "id": "l2",
+      "text": "70 - 30"
+     },
+     {
+      "id": "l3",
+      "text": "46 + 30"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "76"
+     },
+     {
+      "id": "r1",
+      "text": "50"
+     },
+     {
+      "id": "r2",
+      "text": "40"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 9 + 4.",
+    "hint": "9 + 1 = 10, then 3 more.",
+    "explanation": "9 + 4 = 13.",
+    "skill_tag": "addsub.bridge",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 12",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 13",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 14",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 20 + 25 on the number line.",
+    "hint": "2 tens and 2 tens make 4 tens. Then 5 ones.",
+    "explanation": "20 + 25 = 45.",
+    "skill_tag": "addsub.number_line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 45,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "What is the missing number? 7 + ? = 15",
+    "hint": "Count on from 7 to 15, or use 15 - 7.",
+    "explanation": "7 + 8 = 15. You can check with 15 - 7 = 8.",
+    "skill_tag": "addsub.missing",
+    "options": [
+     {
+      "id": "a",
+      "text": "7"
+     },
+     {
+      "id": "b",
+      "text": "9"
+     },
+     {
+      "id": "c",
+      "text": "8"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Kiran says 8 + 5 = 12. Is Kiran right?",
+    "hint": "Make a ten first to check.",
+    "explanation": "8 + 2 = 10, then 10 + 3 = 13, so 8 + 5 is 13.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 8 + 5 = 12"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 14"
+     },
+     {
+      "id": "c",
+      "text": "No. 8 + 2 = 10 and 3 more makes 13"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does 34 + 20 not change the 4 in 34?",
+    "hint": "What does the 20 add to?",
+    "explanation": "20 is 2 tens, so only the tens digit changes.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 4 is bigger than 20"
+     },
+     {
+      "id": "b",
+      "text": "You always add the ones"
+     },
+     {
+      "id": "c",
+      "text": "We only add tens, so the ones stay the same"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "Maryam has 36 stickers. She gets 20 more. How many does she have altogether?",
+    "hint": "Altogether means add.",
+    "explanation": "36 + 20 = 56 stickers.",
+    "skill_tag": "addsub.word_problem",
+    "answer": {
+     "value": 56,
+     "tolerance": 0
+    },
+    "sub_lesson": "problems",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "A baker has 50 buns and sells 20. Which clue word tells you what to do?",
+    "hint": "If some go away, do we add or take away?",
+    "explanation": "Sells means some go away, so we take away: 50 - 20 = 30.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "baker, so add"
+     },
+     {
+      "id": "b",
+      "text": "buns, so add"
+     },
+     {
+      "id": "c",
+      "text": "sells, so take away"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "problems",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "What is 34 + 4?",
+    "hint": "Count on 4 from 34.",
+    "explanation": "35, 36, 37, 38.",
+    "skill_tag": "addsub.count_on",
+    "answer": {
+     "value": 38,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "number",
+    "prompt": "What is 76 + 3?",
+    "hint": "Count on 3 from 76.",
+    "explanation": "77, 78, 79.",
+    "skill_tag": "addsub.count_on",
+    "answer": {
+     "value": 79,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "What is 82 - 3?",
+    "hint": "Count back 3 from 82.",
+    "explanation": "81, 80, 79.",
+    "skill_tag": "addsub.count_back",
+    "answer": {
+     "value": 79,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "What is 49 - 5?",
+    "hint": "Count back 5 from 49.",
+    "explanation": "48, 47, 46, 45, 44.",
+    "skill_tag": "addsub.count_back",
+    "answer": {
+     "value": 44,
+     "tolerance": 0
+    },
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "To work out 25 + 4 you count on.",
+    "hint": "Adding goes which way?",
+    "explanation": "To add, count on.",
+    "skill_tag": "addsub.count_on",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "To work out 70 + 2 you count back.",
+    "hint": "Adding goes which way?",
+    "explanation": "To add, count on.",
+    "skill_tag": "addsub.count_on",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "count_on",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the steps for 7 + 6.",
+    "hint": "How many does 7 need to make 10?",
+    "explanation": "7 + 3 = 10, then 10 + 3 = 13.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "text": "7 + {b1} = 10, then 10 + {b2} = 13.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "6"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish the steps for 9 + 4.",
+    "hint": "How many does 9 need to make 10?",
+    "explanation": "9 + 1 = 10, then 10 + 3 = 13.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "text": "9 + {b1} = 10, then 10 + {b2} = 13.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "1"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which sums make 12? Pick two.",
+    "hint": "Make a ten first.",
+    "explanation": "8 + 4 = 12 and 9 + 3 = 12.",
+    "skill_tag": "addsub.bridge",
+    "options": [
+     {
+      "id": "a",
+      "text": "9 + 3"
+     },
+     {
+      "id": "b",
+      "text": "7 + 6"
+     },
+     {
+      "id": "c",
+      "text": "8 + 5"
+     },
+     {
+      "id": "d",
+      "text": "8 + 4"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which sums make 14? Pick two.",
+    "hint": "Make a ten first.",
+    "explanation": "9 + 5 = 14 and 8 + 6 = 14.",
+    "skill_tag": "addsub.bridge",
+    "options": [
+     {
+      "id": "a",
+      "text": "8 + 6"
+     },
+     {
+      "id": "b",
+      "text": "9 + 6"
+     },
+     {
+      "id": "c",
+      "text": "7 + 6"
+     },
+     {
+      "id": "d",
+      "text": "9 + 5"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these sums by their answers, smallest first.",
+    "hint": "Work out each sum first.",
+    "explanation": "11, 13, 14 and 16 are in order.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "8 + 5"
+     },
+     {
+      "id": "i3",
+      "text": "9 + 5"
+     },
+     {
+      "id": "i4",
+      "text": "9 + 7"
+     },
+     {
+      "id": "i1",
+      "text": "7 + 4"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Arrange these by answer, smallest first.",
+    "hint": "Work out each sum first.",
+    "explanation": "11, 13, 15 and 17 are in order.",
+    "skill_tag": "addsub.bridge",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "8 + 7"
+     },
+     {
+      "id": "i4",
+      "text": "9 + 8"
+     },
+     {
+      "id": "i2",
+      "text": "7 + 6"
+     },
+     {
+      "id": "i1",
+      "text": "6 + 5"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "number",
+    "prompt": "What is 41 + 30?",
+    "hint": "4 tens and 3 tens make 7 tens.",
+    "explanation": "41 + 30 = 71.",
+    "skill_tag": "addsub.tens",
+    "answer": {
+     "value": 71,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "number",
+    "prompt": "What is 28 + 40?",
+    "hint": "2 tens and 4 tens make 6 tens.",
+    "explanation": "28 + 40 = 68.",
+    "skill_tag": "addsub.tens",
+    "answer": {
+     "value": 68,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each sum to the answer that goes with it.",
+    "hint": "Work with the tens.",
+    "explanation": "40 + 30 = 70, 90 - 40 = 50, 52 + 20 = 72.",
+    "skill_tag": "addsub.tens",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "40 + 30"
+     },
+     {
+      "id": "l2",
+      "text": "90 - 40"
+     },
+     {
+      "id": "l3",
+      "text": "52 + 20"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "50"
+     },
+     {
+      "id": "r1",
+      "text": "70"
+     },
+     {
+      "id": "r3",
+      "text": "72"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Pair up each sum with its answer.",
+    "hint": "Work with the tens.",
+    "explanation": "20 + 60 = 80, 80 - 50 = 30, 35 + 40 = 75.",
+    "skill_tag": "addsub.tens",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "20 + 60"
+     },
+     {
+      "id": "l2",
+      "text": "80 - 50"
+     },
+     {
+      "id": "l3",
+      "text": "35 + 40"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "30"
+     },
+     {
+      "id": "r3",
+      "text": "75"
+     },
+     {
+      "id": "r1",
+      "text": "80"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 8 + 6.",
+    "hint": "8 + 2 = 10, then 4 more.",
+    "explanation": "8 + 6 = 14.",
+    "skill_tag": "addsub.bridge",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 13",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 14",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 15",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 7 + 5.",
+    "hint": "7 + 3 = 10, then 2 more.",
+    "explanation": "7 + 5 = 12.",
+    "skill_tag": "addsub.bridge",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 11",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 12",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 13",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 30 + 35 on the number line.",
+    "hint": "3 tens and 3 tens make 6 tens. Then 5 ones.",
+    "explanation": "30 + 35 = 65.",
+    "skill_tag": "addsub.number_line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 65,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show the answer to 50 + 17 on the number line.",
+    "hint": "5 tens and 1 ten make 6 tens. Then 7 ones.",
+    "explanation": "50 + 17 = 67.",
+    "skill_tag": "addsub.number_line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 67,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "What is the missing number? 6 + ? = 14",
+    "hint": "Count on from 6 to 14, or use 14 - 6.",
+    "explanation": "6 + 8 = 14. You can check with 14 - 6 = 8.",
+    "skill_tag": "addsub.missing",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "8"
+     },
+     {
+      "id": "c",
+      "text": "7"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "What is the missing number? 9 + ? = 17",
+    "hint": "Count on from 9 to 17, or use 17 - 9.",
+    "explanation": "9 + 8 = 17. You can check with 17 - 9 = 8.",
+    "skill_tag": "addsub.missing",
+    "options": [
+     {
+      "id": "a",
+      "text": "7"
+     },
+     {
+      "id": "b",
+      "text": "9"
+     },
+     {
+      "id": "c",
+      "text": "8"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Sara says 9 + 6 = 14. Is Sara right?",
+    "hint": "Make a ten first to check.",
+    "explanation": "9 + 1 = 10, then 10 + 5 = 15, so 9 + 6 is 15.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 9 + 6 = 14"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 16"
+     },
+     {
+      "id": "c",
+      "text": "No. 9 + 1 = 10 and 5 more makes 15"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Zayd says 7 + 5 = 11. Is Zayd right?",
+    "hint": "Make a ten first to check.",
+    "explanation": "7 + 3 = 10, then 10 + 2 = 12, so 7 + 5 is 12.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 7 + 5 = 11"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 13"
+     },
+     {
+      "id": "c",
+      "text": "No. 7 + 3 = 10 and 2 more makes 12"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bridge",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why does 56 + 30 not change the 6 in 56?",
+    "hint": "What does the 30 add to?",
+    "explanation": "30 is 3 tens, so only the tens digit changes.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "You always add the ones"
+     },
+     {
+      "id": "b",
+      "text": "We only add tens, so the ones stay the same"
+     },
+     {
+      "id": "c",
+      "text": "The 6 is bigger than 30"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why does 78 - 40 not change the 8 in 78?",
+    "hint": "What does the 40 take away from?",
+    "explanation": "40 is 4 tens, so only the tens digit changes.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 8 is bigger than 40"
+     },
+     {
+      "id": "b",
+      "text": "You always take away the ones"
+     },
+     {
+      "id": "c",
+      "text": "We only take away tens, so the ones stay the same"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_add",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "Hamza has 44 marbles. He wins 30 more. How many does he have altogether?",
+    "hint": "Altogether means add.",
+    "explanation": "44 + 30 = 74 marbles.",
+    "skill_tag": "addsub.word_problem",
+    "answer": {
+     "value": 74,
+     "tolerance": 0
+    },
+    "sub_lesson": "problems",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "number",
+    "prompt": "Aisha has 27 beads. She finds 40 more. How many does she have altogether?",
+    "hint": "Altogether means add.",
+    "explanation": "27 + 40 = 67 beads.",
+    "skill_tag": "addsub.word_problem",
+    "answer": {
+     "value": 67,
+     "tolerance": 0
+    },
+    "sub_lesson": "problems",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "A shop has 80 pens and sells 30. Which clue word tells you what to do?",
+    "hint": "If some go away, do we add or take away?",
+    "explanation": "Sells means some go away, so we take away: 80 - 30 = 50.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "pens, so add"
+     },
+     {
+      "id": "b",
+      "text": "sells, so take away"
+     },
+     {
+      "id": "c",
+      "text": "shop, so add"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "problems",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "A farmer has 60 eggs and sells 40. Which clue word tells you what to do?",
+    "hint": "If some go away, do we add or take away?",
+    "explanation": "Sells means some go away, so we take away: 60 - 40 = 20.",
+    "skill_tag": "addsub.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "farmer, so add"
+     },
+     {
+      "id": "b",
+      "text": "eggs, so add"
+     },
+     {
+      "id": "c",
+      "text": "sells, so take away"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "problems",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
