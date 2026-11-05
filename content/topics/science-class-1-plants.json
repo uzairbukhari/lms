@@ -1,0 +1,2496 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-plants",
+  "subject": "science",
+  "title": "Plants",
+  "summary": "Parts of a plant, how seeds grow, a fair cress test, and what plants need.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Plants",
+  "learning_objectives": [
+   "Name the main parts of a plant and say what each does",
+   "Say how a seed grows",
+   "Say what plants need to grow",
+   "Explain a fair test with cress"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y1 plants",
+    "text": "Identify and name the basic structure of common flowering plants, including trees"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y2 plants",
+    "text": "Observe and describe how seeds and bulbs grow into mature plants; find out what plants need to grow and stay healthy"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSm.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSm.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2TWSm.03"
+   }
+  ],
+  "success_criteria": [
+   "I can name the parts of a plant",
+   "I can say what a plant needs",
+   "I can say how seeds grow",
+   "I can say what makes a test fair"
+  ],
+  "real_life": "Growing cress on a windowsill, or helping to water plants at home.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do animals need to stay alive?",
+    "hint": "Four things.",
+    "explanation": "Animals need food, water, air and shelter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only toys"
+     },
+     {
+      "id": "b",
+      "text": "Food, water, air and shelter"
+     },
+     {
+      "id": "c",
+      "text": "Only a bed"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Where would you find a camel?",
+    "hint": "Camels like hot, dry places.",
+    "explanation": "Camels live in deserts.",
+    "options": [
+     {
+      "id": "a",
+      "text": "In the sea"
+     },
+     {
+      "id": "b",
+      "text": "In a desert"
+     },
+     {
+      "id": "c",
+      "text": "In a pond"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A stone is a living thing.",
+    "hint": "Does a stone grow?",
+    "explanation": "A stone was never alive.",
+    "answer": [
+     false
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: what do plants need to grow?\n\nWe will grow cress and be plant detectives.",
+   "say": "Welcome back, young scientist! Today's big question is: what do plants need to grow? By the end, you will name the parts of a plant, watch a seed grow, and plan a fair test with cress. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🌱🌸🌳",
+   "alt": "Plants come in all shapes and sizes.",
+   "caption": "Plants come in all shapes and sizes."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "plants",
+     "meaning": "Living things that grow in soil and make their own food."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "parts",
+   "kind": "learn",
+   "title": "Parts of a plant",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Roots, stem, leaves and flower"
+    },
+    {
+     "type": "text",
+     "markdown": "A plant has **roots**, a **stem**, **leaves** and a **flower**.\n\nEach part has a job.",
+     "say": "A plant has four main parts, and each has a job. The roots grow down in the soil. They hold the plant still and drink up water. The stem holds the plant up and carries water to every part. The leaves catch sunlight to make food. And the flower makes seeds. Let's look at each part."
+    },
+    {
+     "type": "explainer",
+     "title": "Parts of a plant",
+     "scenes": [
+      {
+       "caption": "Roots drink water.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "plant",
+          "highlight": "roots"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The roots are under the soil. They drink water and hold the plant steady."
+      },
+      {
+       "caption": "The stem holds the plant up.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "plant",
+          "highlight": "stem"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The stem holds the plant up. Water travels up inside it, like a straw."
+      },
+      {
+       "caption": "Leaves catch light.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "plant",
+          "highlight": "leaf"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The leaves are green. They catch sunlight, and the plant uses it to make food."
+      },
+      {
+       "caption": "The flower makes seeds.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "plant",
+          "highlight": "flower"
+         },
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The flower makes seeds, so that new plants can grow."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which part of a plant drinks water from the soil?",
+      "hint": "It grows down in the soil.",
+      "explanation": "Roots take in water from the soil.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Leaves"
+       },
+       {
+        "id": "b",
+        "text": "Flower"
+       },
+       {
+        "id": "c",
+        "text": "Roots"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Trees and flowers"
+    },
+    {
+     "type": "image",
+     "emoji": "🌳 🌼 🌴",
+     "alt": "A tree, a daisy and a date palm.",
+     "caption": "A tree, a daisy and a date palm.",
+     "say": "Trees have all the same parts, only bigger. The trunk is the tree's stem, and it is very thick and strong. Plants come in many shapes: tall trees, little daisies and juicy fruit trees, like the mango and the date palm."
+    },
+    {
+     "type": "text",
+     "markdown": "A tree's **trunk** is its big, strong stem.",
+     "say": "Trees are plants too. Their trunk is just a thick, woody stem."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A tree is a plant.",
+      "hint": "It has roots, a stem and leaves.",
+      "explanation": "Trees are plants with a very thick stem called a trunk.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Roots take in water and hold the plant",
+      "The stem holds the plant up",
+      "Leaves catch sunlight to make food",
+      "The flower makes seeds"
+     ],
+     "say": "Remember. Roots drink and hold, the stem holds up, leaves catch light and the flower makes seeds."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "roots",
+       "meaning": "The part of a plant under the soil. It drinks water."
+      },
+      {
+       "term": "stem",
+       "meaning": "The part that holds a plant up."
+      },
+      {
+       "term": "leaves",
+       "meaning": "The green parts that catch sunlight."
+      },
+      {
+       "term": "flower",
+       "meaning": "The part that makes seeds."
+      },
+      {
+       "term": "trunk",
+       "meaning": "The thick, woody stem of a tree."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "match",
+     "prompt": "Match each plant part to its job.",
+     "hint": "Think about where each part is.",
+     "explanation": "Roots drink, the stem holds up and leaves catch light.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Roots"
+      },
+      {
+       "id": "l2",
+       "text": "Stem"
+      },
+      {
+       "id": "l3",
+       "text": "Leaves"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Holds the plant up"
+      },
+      {
+       "id": "r3",
+       "text": "Catch sunlight"
+      },
+      {
+       "id": "r1",
+       "text": "Drink water"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does the flower make?",
+     "hint": "New plants start from them.",
+     "explanation": "A flower makes seeds.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Water"
+      },
+      {
+       "id": "b",
+       "text": "Seeds"
+      },
+      {
+       "id": "c",
+       "text": "Soil"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "hotspot",
+     "prompt": "Tap the roots.",
+     "hint": "They are under the ground.",
+     "explanation": "Roots grow down in the soil.",
+     "scene": {
+      "items": [
+       {
+        "id": "h1",
+        "emoji": "🌸",
+        "label": "Flower",
+        "x": 50,
+        "y": 20,
+        "size": 3
+       },
+       {
+        "id": "h2",
+        "emoji": "🍃",
+        "label": "Leaves",
+        "x": 50,
+        "y": 45,
+        "size": 3
+       },
+       {
+        "id": "h3",
+        "emoji": "🌱",
+        "label": "Roots",
+        "x": 50,
+        "y": 75,
+        "size": 3
+       }
+      ],
+      "show_labels": true
+     },
+     "answer": [
+      "h3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cress",
+   "kind": "try",
+   "title": "Grow cress",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Seeds and bulbs"
+    },
+    {
+     "type": "text",
+     "markdown": "A **seed** has a baby plant inside.\n\nA **bulb** stores food to grow a new plant.\n\nWhen a seed starts to grow, it **germinates**.",
+     "say": "Many plants start as a seed. A seed is like a tiny package with a baby plant inside. Some plants start from a bulb instead, like a tulip or an onion. A bulb is a lump with food stored inside it. Both need water and warmth to start to grow. When a seed begins to grow, we say it germinates. Let's watch it."
+    },
+    {
+     "type": "explainer",
+     "title": "A seed grows",
+     "scenes": [
+      {
+       "caption": "A seed.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌰",
+         "x": 50,
+         "y": 75,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A tiny seed sits in the soil."
+      },
+      {
+       "caption": "The seed germinates.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 72,
+         "size": 2,
+         "anim": "grow"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 25,
+         "y": 40,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Water and warmth wake it up. A root grows down."
+      },
+      {
+       "caption": "A shoot grows up.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "l",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A shoot pushes up towards the light."
+      },
+      {
+       "caption": "A new plant.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🪴",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "Soon there are leaves, and a new plant has grown!"
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a seed need to start growing?",
+      "hint": "Think about what you give a plant.",
+      "explanation": "Seeds need water and warmth to germinate.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sweets and toys"
+       },
+       {
+        "id": "b",
+        "text": "Water and warmth"
+       },
+       {
+        "id": "c",
+        "text": "Only a cold cupboard"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Our cress experiment"
+    },
+    {
+     "type": "manipulative",
+     "title": "Plan the cress test",
+     "goal": "Put each cup in the right place: Light and water, or No water.",
+     "emoji": "🥛",
+     "count": 6,
+     "zones": [
+      "Light and water",
+      "Missing something"
+     ],
+     "say": "Let's test what a plant needs. We plant cress seeds in three cups. Cup A has light and water. Cup B has water but is in the dark. Cup C has light but no water. Only one thing is different each time. That is called a fair test. Before you look at the cups, make a prediction. Which cup will grow best?"
+    },
+    {
+     "type": "activity",
+     "title": "Grow your own cress",
+     "materials": [
+      "Cress seeds",
+      "Cotton wool or kitchen paper",
+      "Three cups or small trays",
+      "Water",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Wet the cotton wool in all three cups and sprinkle some seeds on each.",
+      "Cup A: put it on a sunny windowsill and keep it damp.",
+      "Cup B: put it in a dark cupboard. Cup C: put it on the windowsill but give it no water.",
+      "Look every day for a week and draw what you see."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a fair test?",
+      "hint": "Think about the three cups.",
+      "explanation": "In a fair test we change only one thing, so we know what made the difference.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Everything is changed"
+       },
+       {
+        "id": "b",
+        "text": "No seeds are used"
+       },
+       {
+        "id": "c",
+        "text": "Only one thing is changed"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Seeds and bulbs grow into new plants",
+      "Seeds need water and warmth to germinate",
+      "A fair test changes only one thing"
+     ],
+     "say": "Remember. A seed holds a baby plant. It needs water and warmth to germinate. In a fair test, only one thing is changed."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "seed",
+       "meaning": "A small package with a baby plant inside."
+      },
+      {
+       "term": "bulb",
+       "meaning": "A lump that stores food and grows into a plant, like an onion."
+      },
+      {
+       "term": "germinates",
+       "meaning": "Starts to grow from a seed."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing is changed."
+      },
+      {
+       "term": "prediction",
+       "meaning": "A guess about what will happen, made before we look."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "order",
+     "prompt": "Put the stages in order.",
+     "hint": "It starts with a seed.",
+     "explanation": "A seed germinates, grows a shoot and becomes a plant.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Shoot"
+      },
+      {
+       "id": "i3",
+       "text": "New plant"
+      },
+      {
+       "id": "i1",
+       "text": "Seed"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A seed has a baby plant inside it.",
+     "hint": "Seeds grow into plants.",
+     "explanation": "A seed contains a tiny baby plant.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "In our cress test, which cup has no water?",
+     "hint": "Read the plan again.",
+     "explanation": "Cup C had light but no water.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cup B"
+      },
+      {
+       "id": "b",
+       "text": "Cup C"
+      },
+      {
+       "id": "c",
+       "text": "Cup A"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two things seeds need to grow.",
+     "hint": "Think about the cress.",
+     "explanation": "Seeds need water and warmth.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Warmth"
+      },
+      {
+       "id": "b",
+       "text": "A toy"
+      },
+      {
+       "id": "c",
+       "text": "Loud music"
+      },
+      {
+       "id": "d",
+       "text": "Water"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "needs",
+   "kind": "play",
+   "title": "What plants need",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Light, water and air"
+    },
+    {
+     "type": "text",
+     "markdown": "Plants need **light**, water, air and space to grow.\n\nA plant without light turns pale and droops.",
+     "say": "Growing plants need water from the soil, light from the sun and air around their leaves. They also need room to grow. A plant makes its own food using light. That is why plants on a dark shelf turn pale and droop. Watch what happens to three plants."
+    },
+    {
+     "type": "explainer",
+     "title": "Three cress cups",
+     "scenes": [
+      {
+       "caption": "Cup A: light and water. Tall and green!",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🪴",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "l",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 20,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Cup A had light and water. After a week, the cress is tall and green."
+      },
+      {
+       "caption": "Cup B: dark. Pale and weak.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🌾",
+         "x": 50,
+         "y": 66,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Cup B was in the dark. The cress is pale and yellow and floppy."
+      },
+      {
+       "caption": "Cup C: no water. Dry and brown.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🍂",
+         "x": 50,
+         "y": 68,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "☀️",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Cup C had light but no water. The cress is dry and brown."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which cup grew best?",
+      "hint": "Plants need both.",
+      "explanation": "Cress needs light and water to grow well.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The one in the dark"
+       },
+       {
+        "id": "b",
+        "text": "The one with no water"
+       },
+       {
+        "id": "c",
+        "text": "The one with light and water"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Plant pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🌱",
+      "🌸",
+      "🌳",
+      "🌴"
+     ],
+     "say": "Warm up your memory with a plant game. Find the matching pairs."
+    },
+    {
+     "type": "reveal",
+     "prompt": "What does a droopy plant need?",
+     "answer_markdown": "Water, and a spot in the light!",
+     "say": "A plant is thirsty. Is it a good idea to put it in a dark cupboard? No. What would you do? Tap to find out."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things a plant needs.",
+      "hint": "Think about the cress cups.",
+      "explanation": "Plants need light and water.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Chocolate"
+       },
+       {
+        "id": "b",
+        "text": "A blanket"
+       },
+       {
+        "id": "c",
+        "text": "Water"
+       },
+       {
+        "id": "d",
+        "text": "Light"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plants need light, water, air and space",
+      "Without them, plants become weak"
+     ],
+     "say": "Remember. Plants need light, water, air and space."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "light",
+       "meaning": "What comes from the sun and helps plants make food."
+      },
+      {
+       "term": "droop",
+       "meaning": "To bend over because it is weak."
+      },
+      {
+       "term": "space",
+       "meaning": "Room to grow."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What happens to a plant with no water?",
+     "hint": "Think of Cup C.",
+     "explanation": "Without water a plant dries out and dies.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It grows taller"
+      },
+      {
+       "id": "b",
+       "text": "It gets stronger"
+      },
+      {
+       "id": "c",
+       "text": "It dries out"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Plants need sunlight to make food.",
+     "hint": "Leaves catch light.",
+     "explanation": "Plants use light to make food.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "fill_blank",
+     "prompt": "Finish the sentence.",
+     "hint": "Think about a garden.",
+     "explanation": "Plants need light and water to grow.",
+     "points": 2,
+     "text": "Plants need light and {b1} to {b2}.",
+     "blanks": [
+      {
+       "id": "b1",
+       "options": [
+        {
+         "id": "a",
+         "text": "toys"
+        },
+        {
+         "id": "b",
+         "text": "sand"
+        },
+        {
+         "id": "c",
+         "text": "water"
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "options": [
+        {
+         "id": "a",
+         "text": "swim"
+        },
+        {
+         "id": "b",
+         "text": "grow"
+        },
+        {
+         "id": "c",
+         "text": "sing"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "b1": "c",
+      "b2": "b"
+     }
+    }
+   ]
+  },
+  {
+   "id": "plants_use",
+   "kind": "use",
+   "title": "Plants around us",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Why plants matter"
+    },
+    {
+     "type": "text",
+     "markdown": "We **eat** plants, build with them and need them for clean air.\n\nPlanting a tree is a kind thing to do.",
+     "say": "Plants are everywhere and they help us in so many ways. We eat their fruits, seeds and roots. Wood from trees gives us furniture and paper. Plants make the air we breathe, and give animals food and shelter. Muslims are taught to care for nature and to plant trees, because planting a tree is a good deed. Look at plants in our lives."
+    },
+    {
+     "type": "image",
+     "emoji": "🍎 🥕 🌾 🪵",
+     "alt": "Fruit, vegetables, grain and wood all come from plants.",
+     "caption": "Fruit, vegetables, grain and wood all come from plants.",
+     "say": "Look at these. An apple, a carrot, wheat grains and wood. They all come from plants."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these comes from a plant?",
+      "hint": "Bread is made from wheat.",
+      "explanation": "Bread is made from wheat, a plant.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Plastic"
+       },
+       {
+        "id": "b",
+        "text": "Bread"
+       },
+       {
+        "id": "c",
+        "text": "Glass"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Plant detective"
+    },
+    {
+     "type": "activity",
+     "title": "Plant detective",
+     "materials": [
+      "Paper and pencil",
+      "A plant in a pot, garden or park",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Find a plant and look closely.",
+      "Draw it and label the stem, leaves and flower if it has one.",
+      "Give it water if the soil is dry."
+     ],
+     "say": "Be a plant detective at home or in the park. Find a plant and look for its parts. Which is the roots? Which is the leaf? Does it have a flower or fruit? Draw what you see."
+    },
+    {
+     "type": "image",
+     "emoji": "🌴 🌷",
+     "alt": "A date palm and a tulip: different plants, same parts.",
+     "caption": "A date palm and a tulip: different plants, same parts.",
+     "say": "Plants that grow near you in Pakistan or the UK might look different. A date palm grows in hot places, and a daffodil in cooler places. They are all plants with the same parts."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Plants help to give us food.",
+      "hint": "Think about fruit and vegetables.",
+      "explanation": "Many foods, like fruit, rice and vegetables, come from plants.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plants give us food, wood and clean air",
+      "We should look after plants"
+     ],
+     "say": "Remember. Plants give us food, wood and clean air. We look after them."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "eat",
+       "meaning": "To take in food."
+      },
+      {
+       "term": "wood",
+       "meaning": "The hard material from a tree trunk."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which of these foods comes from a plant?",
+     "hint": "It grows in a field.",
+     "explanation": "Rice is a grain that grows on a plant.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Milk"
+      },
+      {
+       "id": "b",
+       "text": "Egg"
+      },
+      {
+       "id": "c",
+       "text": "Rice"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should look after plants.",
+     "hint": "What do they give us?",
+     "explanation": "Plants give us food and clean air, so we care for them.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two things made from trees.",
+     "hint": "Trees give us wood.",
+     "explanation": "Paper and wooden furniture come from trees.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plastic bag"
+      },
+      {
+       "id": "b",
+       "text": "Glass cup"
+      },
+      {
+       "id": "c",
+       "text": "Wooden table"
+      },
+      {
+       "id": "d",
+       "text": "Paper"
+      }
+     ],
+     "answer": [
+      "d",
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which plant part sucks up water from the ground?",
+    "hint": "It is under the ground.",
+    "explanation": "Roots take in water from the soil.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Leaves"
+     },
+     {
+      "id": "b",
+      "text": "Roots"
+     },
+     {
+      "id": "c",
+      "text": "Flower"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.parts",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "The leaves of a plant grow under the soil.",
+    "hint": "Where do roots grow?",
+    "explanation": "Leaves are above the soil. Roots are under it.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "plants.facts",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Which job does each plant part do? Match them.",
+    "hint": "Think about each job.",
+    "explanation": "The stem holds up, roots drink and the flower makes seeds.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Stem"
+     },
+     {
+      "id": "l2",
+      "text": "Roots"
+     },
+     {
+      "id": "l3",
+      "text": "Flower"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Drink water"
+     },
+     {
+      "id": "r1",
+      "text": "Holds the plant up"
+     },
+     {
+      "id": "r3",
+      "text": "Makes seeds"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.jobs",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Pick two things that a seed needs to germinate.",
+    "hint": "Think about the cress.",
+    "explanation": "Seeds need water and warmth to germinate.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Warmth"
+     },
+     {
+      "id": "b",
+      "text": "A toy"
+     },
+     {
+      "id": "c",
+      "text": "Loud music"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.seeds",
+    "sub_lesson": "cress",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the part of the plant that grows under the ground.",
+    "hint": "They are under the ground.",
+    "explanation": "Roots grow down in the soil.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌸",
+       "label": "Flower",
+       "x": 50,
+       "y": 20,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍃",
+       "label": "Leaves",
+       "x": 50,
+       "y": 45,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌱",
+       "label": "Roots",
+       "x": 50,
+       "y": 75,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "plants.label",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What is the part of a plant that holds it up?",
+    "hint": "It starts with an s.",
+    "explanation": "The stem holds the plant up.",
+    "answer": {
+     "accepted": [
+      "stem",
+      "the stem"
+     ]
+    },
+    "skill_tag": "plants.words",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Hana puts a cress cup in a dark cupboard. Why does the cress look pale?",
+    "hint": "What is missing?",
+    "explanation": "Plants need light to make food, so they look pale and weak in the dark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It has too much water"
+     },
+     {
+      "id": "b",
+      "text": "It has no light"
+     },
+     {
+      "id": "c",
+      "text": "It is happy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.dark",
+    "sub_lesson": "needs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about cress.",
+    "hint": "Think about how seeds start to grow.",
+    "explanation": "A seed germinates when it gets water and warmth.",
+    "points": 2,
+    "text": "A seed {b1} when it gets {b2} and warmth.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sings"
+       },
+       {
+        "id": "b",
+        "text": "germinates"
+       },
+       {
+        "id": "c",
+        "text": "flies"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ice"
+       },
+       {
+        "id": "b",
+        "text": "water"
+       },
+       {
+        "id": "c",
+        "text": "salt"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "plants.fill",
+    "sub_lesson": "cress",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A plant has roots, a stem, leaves and a flower. How many parts is that?",
+    "hint": "Count each one.",
+    "explanation": "There are four main parts.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.count",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "About how many days should we watch our cress grow?",
+    "hint": "About one week.",
+    "explanation": "We watched for about a week.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 14,
+     "unit": "days"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 1
+    },
+    "skill_tag": "plants.time",
+    "sub_lesson": "needs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put these in order for how a plant grows.",
+    "hint": "It starts with a seed.",
+    "explanation": "A seed grows a shoot and becomes a new plant.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Shoot"
+     },
+     {
+      "id": "i3",
+      "text": "New plant"
+     },
+     {
+      "id": "i1",
+      "text": "Seed"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "plants.order",
+    "sub_lesson": "cress",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Which cress test is fair, to see if light matters?",
+    "hint": "Change only one thing.",
+    "explanation": "A fair test changes just one thing, so we know what made the difference.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Different cups, water and light for each"
+     },
+     {
+      "id": "b",
+      "text": "Same seeds and water, one cup in the light and one in the dark"
+     },
+     {
+      "id": "c",
+      "text": "Different seeds in every cup"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.fair",
+    "sub_lesson": "cress",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Tia says leaves are just for decoration. Why is she wrong?",
+    "hint": "What do leaves catch?",
+    "explanation": "Leaves catch light so the plant can make food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Leaves drink water"
+     },
+     {
+      "id": "b",
+      "text": "Leaves catch sunlight to make food"
+     },
+     {
+      "id": "c",
+      "text": "Leaves hold the plant up"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.reason",
+    "sub_lesson": "parts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Omar's cress had no light and looked pale. What would you advise?",
+    "hint": "What does it need?",
+    "explanation": "Plants need light and water to grow well.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Put it in a darker cupboard"
+     },
+     {
+      "id": "b",
+      "text": "Put it in a sunny place and give it water"
+     },
+     {
+      "id": "c",
+      "text": "Give it only sweets"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.advice",
+    "sub_lesson": "needs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Which food on this list is made from a plant?",
+    "hint": "It is made from wheat.",
+    "explanation": "Bread is made from wheat, a plant.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Milk"
+     },
+     {
+      "id": "b",
+      "text": "Egg"
+     },
+     {
+      "id": "c",
+      "text": "Bread"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.use",
+    "sub_lesson": "plants_use",
+    "depth": "recall"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant holds it up?",
+    "hint": "It is like a pole.",
+    "explanation": "The stem holds the plant up.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Seed"
+     },
+     {
+      "id": "b",
+      "text": "Stem"
+     },
+     {
+      "id": "c",
+      "text": "Roots"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.parts",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant catches sunlight?",
+    "hint": "They are green.",
+    "explanation": "Leaves catch sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Stem"
+     },
+     {
+      "id": "b",
+      "text": "Leaves"
+     },
+     {
+      "id": "c",
+      "text": "Roots"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.parts",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "The roots of a plant are above the ground.",
+    "hint": "Where are roots?",
+    "explanation": "Roots grow down in the soil.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "plants.facts",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A plant's flower makes seeds.",
+    "hint": "New plants start from seeds.",
+    "explanation": "Flowers make seeds so new plants can grow.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "plants.facts",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Pair each part with its job.",
+    "hint": "Think about each job.",
+    "explanation": "Roots drink, leaves catch light and the flower makes seeds.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Roots"
+     },
+     {
+      "id": "l2",
+      "text": "Leaves"
+     },
+     {
+      "id": "l3",
+      "text": "Flower"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Catch light"
+     },
+     {
+      "id": "r3",
+      "text": "Makes seeds"
+     },
+     {
+      "id": "r1",
+      "text": "Drink water"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.jobs",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each plant part to what it does.",
+    "hint": "Think about each job.",
+    "explanation": "The stem holds up, roots hold in the soil and leaves make food.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Stem"
+     },
+     {
+      "id": "l2",
+      "text": "Roots"
+     },
+     {
+      "id": "l3",
+      "text": "Leaves"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Hold it in the soil"
+     },
+     {
+      "id": "r1",
+      "text": "Holds the plant up"
+     },
+     {
+      "id": "r3",
+      "text": "Make food from light"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.jobs",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Which two things does a seed need to germinate?",
+    "hint": "Think about the cress.",
+    "explanation": "Seeds need water and warmth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Warmth"
+     },
+     {
+      "id": "b",
+      "text": "Paper"
+     },
+     {
+      "id": "c",
+      "text": "Music"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.seeds",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Which two do plants need to grow well?",
+    "hint": "Think about the cress cups.",
+    "explanation": "Plants need light and water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Toys"
+     },
+     {
+      "id": "b",
+      "text": "Sweets"
+     },
+     {
+      "id": "c",
+      "text": "Water"
+     },
+     {
+      "id": "d",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "plants.seeds",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the leaf.",
+    "hint": "It is green and catches light.",
+    "explanation": "Leaves catch sunlight.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌸",
+       "label": "Flower",
+       "x": 50,
+       "y": 20,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍃",
+       "label": "Leaf",
+       "x": 50,
+       "y": 45,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌱",
+       "label": "Roots",
+       "x": 50,
+       "y": 75,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "plants.label",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the flower.",
+    "hint": "It makes seeds.",
+    "explanation": "The flower makes seeds.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌸",
+       "label": "Flower",
+       "x": 50,
+       "y": 20,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍃",
+       "label": "Leaf",
+       "x": 50,
+       "y": 45,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌱",
+       "label": "Roots",
+       "x": 50,
+       "y": 75,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "plants.label",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What do we call the underground part of a plant that drinks water?",
+    "hint": "It starts with an r.",
+    "explanation": "Roots drink water from the soil.",
+    "answer": {
+     "accepted": [
+      "roots",
+      "root"
+     ]
+    },
+    "skill_tag": "plants.words",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What is the thick stem of a tree called?",
+    "hint": "It starts with a t.",
+    "explanation": "A tree's thick stem is its trunk.",
+    "answer": {
+     "accepted": [
+      "trunk",
+      "the trunk"
+     ]
+    },
+    "skill_tag": "plants.words",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Ali puts a cress cup in a dark cupboard. Why does the cress look pale?",
+    "hint": "What is missing?",
+    "explanation": "Plants need light to make food, so they look pale and weak in the dark.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It has too much water"
+     },
+     {
+      "id": "b",
+      "text": "It is happy"
+     },
+     {
+      "id": "c",
+      "text": "It has no light"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.dark",
+    "sub_lesson": "needs",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "Sara forgets to water her pot plant for a month. Why is it brown?",
+    "hint": "What is missing?",
+    "explanation": "Plants need water. Without it they dry out.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It has too much light"
+     },
+     {
+      "id": "b",
+      "text": "It has no water"
+     },
+     {
+      "id": "c",
+      "text": "It is sleepy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.dark",
+    "sub_lesson": "needs",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about seeds.",
+    "hint": "Think about how seeds start to grow.",
+    "explanation": "A seed germinates when it gets water and warmth.",
+    "points": 2,
+    "text": "A seed {b1} when it gets water and {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "flies"
+       },
+       {
+        "id": "b",
+        "text": "germinates"
+       },
+       {
+        "id": "c",
+        "text": "sings"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ice"
+       },
+       {
+        "id": "b",
+        "text": "salt"
+       },
+       {
+        "id": "c",
+        "text": "warmth"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about plants.",
+    "hint": "Think about plant parts.",
+    "explanation": "Leaves catch sunlight and roots drink water.",
+    "points": 2,
+    "text": "{b1} catch sunlight and {b2} drink water.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Seeds"
+       },
+       {
+        "id": "b",
+        "text": "Leaves"
+       },
+       {
+        "id": "c",
+        "text": "Stones"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "flowers"
+       },
+       {
+        "id": "b",
+        "text": "roots"
+       },
+       {
+        "id": "c",
+        "text": "petals"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "plants.fill",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A plant has roots, a stem, leaves and a flower. How many main parts is that?",
+    "hint": "Count them.",
+    "explanation": "There are four main parts.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.count",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "How many cups were in our cress test?",
+    "hint": "A, B and C.",
+    "explanation": "There were three cups.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.count",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "About how many days did we watch the cress grow?",
+    "hint": "About one week.",
+    "explanation": "We watched for about a week.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 14,
+     "unit": "days"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 1
+    },
+    "skill_tag": "plants.time",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "A plant has 4 main parts. If a tulip has 1 flower, how many parts is that altogether?",
+    "hint": "The flower is one of the four.",
+    "explanation": "The flower is one of the four main parts.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8,
+     "unit": "parts"
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.time",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these in order for growing a plant.",
+    "hint": "It starts with a seed.",
+    "explanation": "A seed grows a shoot and then leaves.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Shoot"
+     },
+     {
+      "id": "i1",
+      "text": "Seed"
+     },
+     {
+      "id": "i3",
+      "text": "Leaves"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "plants.order",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Order these, starting from the seed.",
+    "hint": "It starts with a seed.",
+    "explanation": "A seed makes a root, then the plant grows a flower.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Flower"
+     },
+     {
+      "id": "i1",
+      "text": "Seed"
+     },
+     {
+      "id": "i2",
+      "text": "Root"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "plants.order",
+    "sub_lesson": "cress",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Which test is fair?",
+    "hint": "Change only one thing.",
+    "explanation": "A fair test changes just one thing, so we know what made the difference.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Different seeds in every cup"
+     },
+     {
+      "id": "b",
+      "text": "Same cress seeds, but one cup has light and one is in the dark"
+     },
+     {
+      "id": "c",
+      "text": "Different cups, water and light for each"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.fair",
+    "sub_lesson": "cress",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Which test is fair for finding out if cress needs water?",
+    "hint": "Change only one thing.",
+    "explanation": "Only the water should be different.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Different light and water in each"
+     },
+     {
+      "id": "b",
+      "text": "Same seeds and light, one cup has water and one has none"
+     },
+     {
+      "id": "c",
+      "text": "Different seeds, one with water and one without"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.fair",
+    "sub_lesson": "cress",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Noor says leaves are only for decoration. Why is she wrong?",
+    "hint": "What do leaves catch?",
+    "explanation": "Leaves catch light so the plant can make food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Leaves hold the plant up"
+     },
+     {
+      "id": "b",
+      "text": "Leaves catch sunlight to make food"
+     },
+     {
+      "id": "c",
+      "text": "Leaves drink water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.reason",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a plant does not need a stem. Why is he wrong?",
+    "hint": "What does the stem do?",
+    "explanation": "The stem holds the plant up and carries water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The stem makes seeds"
+     },
+     {
+      "id": "b",
+      "text": "The stem drinks water from the air"
+     },
+     {
+      "id": "c",
+      "text": "The stem holds the plant up and carries water"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.reason",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Sam's cress had no light and looked pale. What would you advise?",
+    "hint": "What does it need?",
+    "explanation": "Plants need light and water to grow well.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Give it only sweets"
+     },
+     {
+      "id": "b",
+      "text": "Put it in a sunny place and give it water"
+     },
+     {
+      "id": "c",
+      "text": "Put it in a darker cupboard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.advice",
+    "sub_lesson": "needs",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Layla's plant is droopy and the soil is dry. What should she do?",
+    "hint": "What is missing?",
+    "explanation": "A droopy plant with dry soil needs water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Take off all its leaves"
+     },
+     {
+      "id": "b",
+      "text": "Give it water"
+     },
+     {
+      "id": "c",
+      "text": "Put it in the dark"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.advice",
+    "sub_lesson": "needs",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is the fruit of a tree?",
+    "hint": "It grows on a tree.",
+    "explanation": "A mango is the fruit of a tree.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A sausage"
+     },
+     {
+      "id": "b",
+      "text": "A mango"
+     },
+     {
+      "id": "c",
+      "text": "Cheese"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.use",
+    "sub_lesson": "plants_use",
+    "depth": "recall",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Which of these things is made from a plant?",
+    "hint": "Wood comes from trees.",
+    "explanation": "A wooden spoon is made from wood, which comes from trees.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plastic toy"
+     },
+     {
+      "id": "b",
+      "text": "A wooden spoon"
+     },
+     {
+      "id": "c",
+      "text": "A glass cup"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.use",
+    "sub_lesson": "plants_use",
+    "depth": "recall",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
