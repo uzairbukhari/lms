@@ -346,31 +346,31 @@ function Deck({ data, mode, lessonId, back, assetUrl, save, partOf }: {
 
       {bubble && <WordBubble pressed={bubble.pressed} state={bubble.state} canSpeak={speechSupported()} onSpeak={() => speak(`${bubble.pressed.word}. ${bubble.state.status === "ready" ? bubble.state.meaning : ""}`)} onClose={closeBubble} />}
 
-      <footer className="flex items-center gap-2 border-t-2 border-line bg-surface px-3 py-3 sm:gap-4 sm:px-6">
-        <button type="button" className="btn !min-h-16 !px-5 text-xl" onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous slide">← <span className="hidden sm:inline">Back</span></button>
-        <div className="flex flex-1 items-center justify-center gap-2">
+      <footer className="flex items-center gap-2 overflow-hidden border-t-2 border-line bg-surface px-3 py-3 sm:gap-4 sm:px-6">
+        <button type="button" className="btn !min-h-16 shrink-0 !px-5 text-xl" onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous slide">← <span className="hidden sm:inline">Back</span></button>
+        <div className="flex min-w-0 flex-1 flex-wrap items-center justify-center gap-2 [&>.btn]:shrink-0">
           {speechSupported() && (
             <>
               <button type="button" className="btn !min-h-14 !px-4" onClick={() => { interacted.current = true; if (speaking) stop(); else { sfx("tap"); listen(); } }} aria-label={speaking ? "Stop reading" : "Read this slide aloud"}>
-                {speaking ? "⏸" : "🔊"}<span className="hidden sm:inline"> {speaking ? "Stop" : "Listen"}</span>
+                {speaking ? "⏸" : "🔊"}<span className="hidden min-[1100px]:inline"> {speaking ? "Stop" : "Listen"}</span>
               </button>
-              <button type="button" className="btn !min-h-14 !px-4" onClick={() => { interacted.current = true; sfx("tap"); listen(); }} aria-label="Read this slide again">🔁<span className="hidden sm:inline"> Again</span></button>
-              <button type="button" className="btn !min-h-14 !px-4" onClick={cycleSpeed} aria-label={`Voice speed: ${speedLabel}. Tap to change`}>{speedLabel === "Slow" ? "🐢" : speedLabel === "Fast" ? "🐇" : "🚶"}<span> {speedLabel}</span></button>
+              <button type="button" className="btn !min-h-14 !px-4" onClick={() => { interacted.current = true; sfx("tap"); listen(); }} aria-label="Read this slide again">🔁<span className="hidden min-[1100px]:inline"> Again</span></button>
+              <button type="button" className="btn !min-h-14 !px-4" onClick={cycleSpeed} aria-label={`Voice speed: ${speedLabel}. Tap to change`}>{speedLabel === "Slow" ? "🐢" : speedLabel === "Fast" ? "🐇" : "🚶"}<span className="hidden min-[1100px]:inline"> {speedLabel}</span></button>
             </>
           )}
           {mode === "student" && <StuckButton lessonId={lessonId} slide={index} compact />}
           <button type="button" className="btn !min-h-14 !px-4" onClick={toggleSound} aria-pressed={!soundOn} aria-label={soundOn ? "Turn sound off" : "Turn sound on"}>{soundOn ? "🔔" : "🔕"}</button>
           <button type="button" className="btn !min-h-14 !px-4" onClick={() => { sfx("tap"); setCalm(!calm); setCalmOn(!calm); }} aria-pressed={calm} aria-label={calm ? "Calm mode is on: turn bouncy animation back on" : "Calm mode: gentler animation"} title="Calm mode">{calm ? "🍃" : "✨"}</button>
         </div>
-        <button type="button" className="btn btn-primary !min-h-16 !px-6 text-xl" onClick={() => go(index + 1)} disabled={index === last || (paced && index >= furthest && !ready)} aria-label={ready ? "Next slide" : "Next slide, available after listening"}>{ready ? <><span className="hidden sm:inline">Next </span>→</> : "⏳"}</button>
+        <button type="button" className="btn btn-primary !min-h-16 shrink-0 !px-6 text-xl" onClick={() => go(index + 1)} disabled={index === last || (paced && index >= furthest && !ready)} aria-label={ready ? "Next slide" : "Next slide, available after listening"}>{ready ? <><span className="hidden sm:inline">Next </span>→</> : "⏳"}</button>
       </footer>
     </main>
   );
 }
 
 /** Shrinks a slide that is too tall so everything shows at once with no scrolling. Text re-wraps at the wider width as it
- * shrinks, so the scale is settled over a few passes. Below MIN_SCALE text gets too small to read, so it scrolls instead. */
-const MIN_SCALE = 0.5;
+ * shrinks, so the scale is settled over a few passes. Slides never scroll: the layouts reflow first, and this is the last resort. */
+const MIN_SCALE = 0.4;
 
 function FitToScreen({ children }: { children: ReactNode }) {
   const box = useRef<HTMLDivElement>(null);
@@ -392,6 +392,11 @@ function FitToScreen({ children }: { children: ReactNode }) {
         scale = next;
       }
       content.style.width = `${100 / scale}%`;
+      // Text re-wrapping can leave the settled scale a little too big: step down until it really fits.
+      for (let i = 0; i < 40 && scale > MIN_SCALE && content.offsetHeight * scale > avail + 0.5; i++) {
+        scale = Math.max(MIN_SCALE, scale * 0.97);
+        content.style.width = `${100 / scale}%`;
+      }
       const height = content.offsetHeight * scale;
       setFit((f) => (Math.abs(f.scale - scale) < 0.005 && Math.abs(f.height - height) < 1 ? f : { scale, height }));
     };
@@ -404,7 +409,7 @@ function FitToScreen({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <div ref={box} className={`flex h-full w-full flex-col ${fit.scale <= MIN_SCALE ? "overflow-y-auto" : "justify-center overflow-hidden"}`}>
+    <div ref={box} className="flex h-full w-full flex-col justify-center overflow-hidden">
       <div className="relative w-full shrink-0" style={{ height: fit.height || undefined }}>
         <div ref={inner} className="absolute left-0 top-0" style={{ width: `${100 / fit.scale}%`, transform: `scale(${fit.scale})`, transformOrigin: "top left" }}>
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 py-2">{children}</div>
@@ -422,8 +427,9 @@ type ViewProps = {
   partOf?: { topicId: string; results: Map<string, boolean> };
 };
 
-const titleCls = "font-display text-[clamp(2.2rem,5.2vw,4.25rem)] font-extrabold leading-tight";
-const bodyCls = "text-[clamp(1.5rem,3.1vw,2.6rem)] leading-snug";
+// Type follows the shorter of width and height, so a short tablet screen gets smaller type instead of a taller slide.
+const titleCls = "font-display text-[clamp(1.9rem,min(5.2vw,6.4vh),4.25rem)] font-extrabold leading-tight";
+const bodyCls = "text-[clamp(1.3rem,min(3.1vw,3.7vh),2.6rem)] leading-snug";
 
 function SlideView(p: ViewProps) {
   const { slide } = p;
@@ -545,10 +551,14 @@ function ContentSlide({ slide, assetUrl, subject }: { slide: Slide; assetUrl: (n
   const cards = plan.length;
   const words = useMemo(() => [slide.title, ...slide.blocks.map((b) => (b.type === "text" ? b.markdown : b.type === "image" ? `${b.emoji ?? ""} ${b.caption ?? ""}` : ""))].join(" "), [slide]);
   let n = 0;
+  const ordered = [...slide.blocks.filter((b) => b.type === "image"), ...slide.blocks.filter((b) => b.type !== "image")];
+  const isMedia = (i: number) => ordered[i]?.type === "image" || ordered[i]?.type === "chart";
+  const hasMedia = ordered.some((_, i) => isMedia(i));
   return (
     <>
       {slide.title && <h2 className={`${titleCls} title-pop`}>{slide.title}</h2>}
-      {[...slide.blocks.filter((b) => b.type === "image"), ...slide.blocks.filter((b) => b.type !== "image")].map((b, bi) => {
+      {(() => {
+      const nodes = [...slide.blocks.filter((b) => b.type === "image"), ...slide.blocks.filter((b) => b.type !== "image")].map((b, bi) => {
         switch (b.type) {
           case "text":
             return (
@@ -598,7 +608,12 @@ function ContentSlide({ slide, assetUrl, subject }: { slide: Slide; assetUrl: (n
           default:
             return null;
         }
-      })}
+      });
+      const media = nodes.filter((_, i) => isMedia(i));
+      const rest = nodes.filter((_, i) => !isMedia(i));
+      // On a wide screen the pictures sit beside the words, so a slide is never taller than the screen.
+      return hasMedia && rest.some(Boolean) ? <div className="slide-split"><div className="slide-media">{media}</div><div className="slide-rest">{rest}</div></div> : <>{nodes}</>;
+      })()}
     </>
   );
 }

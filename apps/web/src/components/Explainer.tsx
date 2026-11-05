@@ -107,7 +107,7 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
 
   const cam = scene.camera;
   return (
-    <div className="flex flex-col gap-4">
+    <div className="explainer flex flex-col gap-4">
       <div className="stage card relative aspect-[5/3] w-full overflow-hidden [container-type:inline-size]" role="img" aria-label={plain(scene.caption)}>
         <div className="camera absolute inset-0" style={{ transform: cam ? `scale(${cam.zoom})` : "none", transformOrigin: cam ? `${cam.x}% ${cam.y}%` : "50% 50%" }}>
           <Backdrop name={scenery} />
@@ -145,7 +145,8 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
           })}
         </div>
       </div>
-      <div role="status" aria-live="polite" key={step} className="pop-in card px-5 py-3 text-[clamp(1.35rem,2.8vw,2.1rem)] leading-snug"><Markdown text={scene.caption} /></div>
+      <div className="explainer-side flex flex-col gap-4">
+      <div role="status" aria-live="polite" key={step} className="pop-in card px-5 py-3 text-[clamp(1.2rem,min(2.8vw,3.3vh),2.1rem)] leading-snug"><Markdown text={scene.caption} /></div>
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" className="btn !min-h-14 !px-5 text-xl" onClick={() => manual(step - 1)} disabled={step === 0} aria-label="Previous step">←</button>
         <div className="flex gap-2" aria-hidden="true">{scenes.map((_, i) => <span key={i} className={`size-4 rounded-full border-2 border-line transition-colors ${i === step ? "bg-accent" : i < step ? "bg-accent/40" : ""}`} />)}</div>
@@ -155,6 +156,7 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
         {step < last
           ? <button type="button" className="btn btn-primary !min-h-14 !px-6 text-xl" onClick={() => manual(step + 1)}>Next step →</button>
           : <button type="button" className="btn !min-h-14 !px-6 text-xl" onClick={() => { show(0); setPlaying(autoplay); }}>↺ Watch again</button>}
+      </div>
       </div>
     </div>
   );
