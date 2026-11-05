@@ -79,7 +79,7 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
     const next = Math.max(0, Math.min(last, n));
     setStep(next);
     sfx("whoosh");
-    if (say) speak(plain(scenes[next]?.caption ?? ""));
+    if (say) speak(plain(scenes[next]?.say ?? scenes[next]?.caption ?? ""));
   };
   const manual = (n: number) => { setPlaying(false); show(n); };
 
@@ -88,7 +88,7 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
   useEffect(() => {
     if (!playing) return;
     if (step >= last) { setPlaying(false); return; }
-    const text = step === 0 && fresh.current && narration ? narration : plain(scene.caption);
+    const text = step === 0 && fresh.current && narration ? narration : plain(scene.say ?? scene.caption);
     waitFor.current = text;
     let done = false;
     let timer = 0;
@@ -100,7 +100,7 @@ export function Explainer({ scenes, title = "", backdrop, autoplay = true, subje
       if (e.kind === "end") { if (e.finished) advance(); else setPlaying(false); }
     });
     // No voice started for this step: use a reading time instead.
-    if (!heard) timer = window.setTimeout(() => { if (!heard) { done = true; show(step + 1); } }, (step === 0 ? 1.2 : 0) * 1000 + dwell(scene.caption) * 1000);
+    if (!heard) timer = window.setTimeout(() => { if (!heard) { done = true; show(step + 1); } }, (step === 0 ? 1.2 : 0) * 1000 + dwell(scene.say ?? scene.caption) * 1000);
     return () => { off(); window.clearTimeout(timer); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing, step]);

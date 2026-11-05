@@ -4,7 +4,7 @@ type Enter = "pop" | "fade" | "drop" | "grow" | "slide_left" | "slide_right" | "
 type Effect = "none" | "rain" | "steam" | "sparkle" | "wind" | "glow" | "hearts" | "bubbles" | "zzz" | "arrow_right" | "arrow_down" | "count";
 export type Actor = { emoji?: string; prop?: PropSpec; label?: string; at?: number; enter?: Enter; effect?: Effect; x?: number; y?: number; size?: number };
 export type ExplainerItem = { id?: string; emoji?: string; prop?: PropSpec; label?: string; x: number; y: number; size: number; anim: "none" | "bounce" | "float" | "spin" | "pulse" | "grow"; enter?: Enter; exit?: "fade" | "shrink" | "fly_up" | "drop"; path?: "straight" | "arc" | "hop"; effect?: Effect };
-export type ExplainerScene = { caption: string; camera?: { zoom: number; x: number; y: number }; items: ExplainerItem[] };
+export type ExplainerScene = { caption: string; say?: string; camera?: { zoom: number; x: number; y: number }; items: ExplainerItem[] };
 
 // Turns a lesson's blocks into a deck of slides (one idea per slide) and works out what to read aloud for each.
 // Pure functions, no browser APIs, so they are easy to test.
@@ -95,6 +95,9 @@ export function chartReadout(b: Extract<Block, { type: "chart" }>): string {
 
 /** What to read aloud for one block. */
 export function blockNarration(b: Block): string {
+  // A written teaching script replaces reading the words on screen.
+  const said = (b as { say?: string }).say;
+  if (said && b.type !== "heading" && b.type !== "glossary") return plain(said);
   switch (b.type) {
     case "heading":
       return plain(b.text);
@@ -128,7 +131,7 @@ export function blockNarration(b: Block): string {
     case "video":
       return `Video time! ${plain(b.title)}. Press play to watch. It lasts about ${b.end - b.start} seconds.`;
     case "explainer":
-      return `Watch! ${plain(b.title)}. ${plain(b.scenes[0]?.caption ?? "")}`;
+      return `Watch! ${plain(b.title)}. ${plain(b.scenes[0]?.say ?? b.scenes[0]?.caption ?? "")}`;
     case "brain_game":
       return `Brain game! ${plain(b.title)}. ${b.goal ? plain(b.goal) : b.game === "memory_match" ? "Find the matching pairs." : "Watch the order, then copy it."}`;
     case "glossary":

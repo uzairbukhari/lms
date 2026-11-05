@@ -26,6 +26,11 @@ describe("content/topics", () => {
         for (const v of vs) expect(v.type).toBe(m.type);
       }
       expect(file.lesson.curriculum?.topic).toBeGreaterThan(0);
+      // every part has a written teaching script (say) on most of its teaching blocks, not just the on-screen words
+      for (const sub of file.sub_lessons ?? []) {
+        const said = sub.blocks.filter((b) => (b as { say?: string }).say).length + sub.blocks.flatMap((b) => (b.type === "explainer" ? b.scenes : [])).filter((sc) => sc.say).length;
+        expect(said, sub.id).toBeGreaterThanOrEqual(5);
+      }
       expect(file.lesson.standards?.length).toBeGreaterThan(0);
     });
   }

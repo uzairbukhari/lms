@@ -17,6 +17,10 @@ export const MAN = (title, goal, emoji, count, zones) => ({ type: "manipulative"
 export const BRAIN = (game, title, goal, emojis) => ({ type: "brain_game", game, title, goal, emojis });
 export const SUM = (...points) => ({ type: "summary", points });
 export const VIDEO = (title, youtube, start, end, caption) => ({ type: "video", title, youtube, start, end, ...(caption ? { caption } : {}) });
+/** A teaching script: what the voice says INSTEAD of reading the words on screen. */
+export const SAY = (say, block) => ({ ...block, say });
+/** The same for one explainer scene. */
+export const SS = (say, scene) => ({ ...scene, say });
 export const CHK = (question) => ({ type: "check", question });
 
 // Charts. rows are [label, value, emoji?]
