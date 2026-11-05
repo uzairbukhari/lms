@@ -81,7 +81,7 @@ export type StartResult =
  */
 export async function startAttempt(
   db: D1Database,
-  p: { userId: string; quiz: QuizRow; lessonId: string | null; scopeKey: string; mode: "graded" | "practice" },
+  p: { userId: string; quiz: QuizRow; lessonId: string | null; scopeKey: string; mode: "graded" | "practice"; gradedUntilPassed?: boolean },
 ): Promise<StartResult> {
   const open = await db
     .prepare("SELECT * FROM quiz_attempts WHERE user_id = ? AND scope_key = ? AND status = 'in_progress' AND quiz_id = ? ORDER BY attempt_number DESC LIMIT 1")
@@ -97,8 +97,9 @@ export async function startAttempt(
 
   const questions = await loadQuestions(db, p.quiz.id);
   if (questions.length === 0) return { ok: false, reason: "no_questions" };
-  // Only the first try at a lesson quiz is graded; any retake (even in the same week) is practice and kept separately.
-  const mode = p.quiz.kind === "lesson" && (stats?.submitted ?? 0) > 0 ? "practice" : p.mode;
+  // Weekly lessons: only the first try is graded; any retake (even in the same week) is practice and kept separately.
+  // Mastery path lessons: every try is graded (best counts) until the lesson is passed, and then it becomes "past" so practice.
+  const mode = p.quiz.kind === "lesson" && !p.gradedUntilPassed && (stats?.submitted ?? 0) > 0 ? "practice" : p.mode;
   const order = (p.quiz.shuffle_questions ? shuffled(questions, Math.random) : questions).map((q) => q.id);
 
   const id = crypto.randomUUID();

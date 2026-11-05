@@ -2,6 +2,7 @@ import { buildSlides } from "@lms/schema";
 import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
+import { pathsFor } from "../lib/path";
 import { fail, parseBody } from "../lib/http";
 import { todayIn, visibleLessonsFor, type Phase, type VisibleLesson } from "../lib/visibility";
 import { requireStudent } from "../middleware/auth";
@@ -9,7 +10,7 @@ import { requireStudent } from "../middleware/auth";
 /** What a signed-in child can see and do. Every lesson request goes through visibleLessonsFor. */
 export const studentRoutes = new Hono<AppEnv>();
 // Scoped paths (not "*") so unknown /api routes still fall through to the JSON 404.
-for (const path of ["/home", "/lessons/:id", "/lessons/:id/progress"]) studentRoutes.use(path, requireStudent);
+for (const path of ["/home", "/paths", "/lessons/:id", "/lessons/:id/progress"]) studentRoutes.use(path, requireStudent);
 
 type LessonRow = {
   id: string; slug: string; title: string; subject: string; summary: string; minutes: number;
@@ -78,6 +79,9 @@ studentRoutes.get("/home", async (c) => {
     lookBack: cards.filter((x) => x.phase === "past").sort(sortOrder),
   });
 });
+
+/** The subject paths for classes on a mastery path: each topic is done, current, opened early or locked. */
+studentRoutes.get("/paths", async (c) => c.json({ paths: await pathsFor(c.env.DB, c.get("user").id) }));
 
 /** Everything the player needs for one lesson, if this child is allowed to open it. Quiz answers are never included. */
 studentRoutes.get("/lessons/:id", async (c) => {
