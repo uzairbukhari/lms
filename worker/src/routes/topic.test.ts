@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { parseLessonFile } from "@lms/schema";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { app } from "../index";
@@ -107,5 +109,23 @@ describe("a child working through a topic", () => {
     expect(d.topic.lastQuiz.passed).toBe(false);
     expect(d.topic.practise.map((p: any) => p.subId).sort()).toEqual(["one", "two"]);
     expect(d.topic.subLessons.every((s: any) => s.weak)).toBe(true);
+  });
+});
+
+describe("the pilot topic lesson", () => {
+  it("imports, and a path class sees it with four sub-lessons", async () => {
+    const file = JSON.parse(readFileSync(join(process.cwd(), "../content/topics/maths-class-1-place-value.json"), "utf8"));
+    const classId = (await json<{ class: { id: string } }>(await call("/api/admin/classes", { body: { name: "Pilot class" } }))).class.id;
+    const r = await json<{ lesson: { lessonId: string; courseId: string } }>(await call("/api/admin/lessons/import", { body: { publish: true, file } }));
+    await call("/api/admin/assignments", { body: { courseId: r.lesson.courseId, classId } });
+    await call(`/api/admin/classes/${classId}`, { method: "PATCH", body: { unlockMode: "path" } });
+    const creds = (await json<{ credentials: { username: string; password: string } }>(await call("/api/admin/students", { body: { displayName: "Pia", classIds: [classId] } }))).credentials;
+    const cookie = ((await call("/api/login", { body: { username: creds.username, password: creds.password } })).headers.get("set-cookie") ?? "").split(";")[0] ?? "";
+    const d = await json(await call(`/api/lessons/${r.lesson.lessonId}`, { cookie }));
+    expect(d.topic.subLessons.map((s: any) => s.kind)).toEqual(["learn", "try", "play", "use"]);
+    expect(d.topic.warmUp).toHaveLength(3);
+    expect(d.quiz.questionCount).toBe(15);
+    const part = await json(await call(`/api/lessons/${r.lesson.lessonId}/parts/compare`, { cookie }));
+    expect(part.miniQuiz.length).toBeGreaterThanOrEqual(3);
   });
 });

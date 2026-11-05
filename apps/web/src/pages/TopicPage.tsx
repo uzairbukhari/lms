@@ -1,9 +1,34 @@
+import { gradeQuestion, type CheckQuestion, type Response } from "@lms/schema";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
+import { QuestionView } from "../components/QuestionView";
 import { KIND, type TopicLesson } from "../lib/topic";
 import { SUBJECT_LOOK } from "./StudentHome";
+
+/** A 3-question "Remember" warm-up on earlier learning. Marked on screen; never saved. */
+function Remember({ questions }: { questions: CheckQuestion[] }) {
+  const [open, setOpen] = useState(false);
+  const [i, setI] = useState(0);
+  const [value, setValue] = useState<Response>(undefined);
+  const [result, setResult] = useState<boolean | null>(null);
+  if (questions.length === 0) return null;
+  const q = questions[i];
+  if (!open) return <button type="button" className="card flex items-center gap-3 p-4 text-left text-lg font-bold" onClick={() => setOpen(true)}><span aria-hidden="true" className="text-3xl">🧠</span> Remember: {questions.length} quick questions from before. Tap to warm up!</button>;
+  if (!q) return <p role="status" className="card p-4 text-lg font-bold">🧠 Warm-up done. Your brain is ready!</p>;
+  return (
+    <section className="card flex flex-col gap-3 p-5" aria-label="Remember warm-up">
+      <p className="text-sm font-extrabold uppercase tracking-wide text-muted">🧠 Remember · {i + 1} of {questions.length}</p>
+      <QuestionView q={q} value={value} onChange={(v) => { setValue(v); setResult(null); }} />
+      <div className="flex flex-wrap items-center gap-3">
+        <button type="button" className="btn btn-primary !min-h-12" onClick={() => setResult(gradeQuestion(q, value).correct)}>Check ✔</button>
+        {result !== null && <button type="button" className="btn !min-h-12" onClick={() => { setI(i + 1); setValue(undefined); setResult(null); }}>{i + 1 < questions.length ? "Next" : "Finish"}</button>}
+        <p role="status" aria-live="polite" className="text-lg font-bold">{result === true ? `🎉 Yes! ${q.explanation ?? ""}` : result === false ? `🤔 Not quite. ${q.explanation ?? ""}` : ""}</p>
+      </div>
+    </section>
+  );
+}
 
 /** One topic: a card for each sub-lesson (learn, try, play, use) and the big quiz at the end. */
 export function TopicPage() {
@@ -44,6 +69,8 @@ export function TopicPage() {
           {topic.realLife && <div><h2 className="font-display text-xl font-bold">Where you will use it</h2><p className="mt-1 text-lg">{topic.realLife}</p></div>}
         </section>
       )}
+
+      <Remember questions={topic.warmUp as CheckQuestion[]} />
 
       {topic.practise.length > 0 && (
         <p role="status" className="card p-4 text-lg font-bold" style={{ borderColor: "var(--accent)" }}>

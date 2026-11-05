@@ -1,0 +1,1855 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-place-value",
+  "subject": "maths",
+  "title": "Place Value to 100",
+  "summary": "Tens and ones, partitioning, the number line to 100, and comparing numbers.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Place value",
+  "learning_objectives": [
+   "Know what the digits in a two-digit number mean",
+   "Partition numbers into tens and ones",
+   "Place numbers on a number line to 100",
+   "Compare and order numbers with < and >"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 place value",
+    "text": "Recognise the place value of each digit in a two-digit number"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-A-03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nc.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nc.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nc.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nc.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Np.01"
+   }
+  ],
+  "success_criteria": [
+   "I can say the tens and ones in a number to 100",
+   "I can show a number on a number line",
+   "I can compare two numbers using < and >"
+  ],
+  "real_life": "Counting pocket money, packs of pencils and pages in a book.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do 7 and 3 make together?",
+    "hint": "Count on from 7.",
+    "explanation": "7 and 3 are a pair that makes 10.",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "11"
+     },
+     {
+      "id": "c",
+      "text": "10"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is double 4?",
+    "hint": "4 + 4.",
+    "explanation": "Double 4 is 8.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "10 is bigger than 9.",
+    "hint": "Count: 9 then 10.",
+    "explanation": "10 comes after 9, so it is bigger.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we read big numbers like 47 and 83 quickly?\n\nWe will use tens and ones to find out."
+  },
+  {
+   "type": "image",
+   "emoji": "🔢",
+   "alt": "Tens and ones make every number to 100.",
+   "caption": "Tens and ones make every number to 100."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "tens and ones",
+     "meaning": "The two parts of a number up to 100."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "tens_ones",
+   "kind": "learn",
+   "title": "Tens and ones",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Two-digit numbers"
+    },
+    {
+     "type": "text",
+     "markdown": "Every two-digit number is made of **tens** and **ones**.\n\nIn 34 the 3 means 3 tens. The 4 means 4 **ones**."
+    },
+    {
+     "type": "explainer",
+     "title": "34 is 3 tens and 4 ones",
+     "scenes": [
+      {
+       "caption": "Here are 3 tens. Each blue stick is a ten.",
+       "items": [
+        {
+         "id": "t1",
+         "emoji": "🟦",
+         "x": 15,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t2",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t3",
+         "emoji": "🟦",
+         "x": 45,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        }
+       ]
+      },
+      {
+       "caption": "And here are 4 ones. Each dot is one.",
+       "items": [
+        {
+         "id": "t1",
+         "emoji": "🟦",
+         "x": 15,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t2",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t3",
+         "emoji": "🟦",
+         "x": 45,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "o1",
+         "emoji": "🔵",
+         "x": 62,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o2",
+         "emoji": "🔵",
+         "x": 72,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o3",
+         "emoji": "🔵",
+         "x": 82,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o4",
+         "emoji": "🔵",
+         "x": 92,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        }
+       ]
+      },
+      {
+       "caption": "3 tens and 4 ones make 34.",
+       "items": [
+        {
+         "id": "t1",
+         "emoji": "🟦",
+         "x": 15,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t2",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t3",
+         "emoji": "🟦",
+         "x": 45,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "o1",
+         "emoji": "🔵",
+         "x": 62,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o2",
+         "emoji": "🔵",
+         "x": 72,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o3",
+         "emoji": "🔵",
+         "x": 82,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o4",
+         "emoji": "🔵",
+         "x": 92,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 12,
+         "size": 2,
+         "anim": "pulse",
+         "label": "34"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In the number 52, how many tens are there?",
+      "hint": "The first digit is the tens.",
+      "explanation": "52 is 5 tens and 2 ones.",
+      "skill_tag": "placevalue.tens",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "52"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Which digit is which?"
+    },
+    {
+     "type": "text",
+     "markdown": "The digit on the left shows the tens. The digit on the right shows the ones.\n\nThe same digits in a different order make a different number!"
+    },
+    {
+     "type": "image",
+     "emoji": "🔄",
+     "alt": "47 and 74 use the same digits but are different numbers.",
+     "caption": "47 and 74 use the same digits but are different numbers."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "In 47 the 4 means 4 ones.",
+      "hint": "Which side are the tens on?",
+      "explanation": "The 4 is on the left, so it means 4 tens.",
+      "skill_tag": "placevalue.digits",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A two-digit number is tens and ones",
+      "The left digit is the tens, the right digit is the ones"
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tens",
+       "meaning": "Groups of ten. In 34 there are 3 tens."
+      },
+      {
+       "term": "ones",
+       "meaning": "Single things. In 34 there are 4 ones."
+      },
+      {
+       "term": "digit",
+       "meaning": "One of the number symbols 0 to 9."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many tens are in 63?",
+     "hint": "Look at the left digit.",
+     "explanation": "63 is 6 tens and 3 ones.",
+     "options": [
+      {
+       "id": "a",
+       "text": "9"
+      },
+      {
+       "id": "b",
+       "text": "6"
+      },
+      {
+       "id": "c",
+       "text": "3"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many ones are in 85?",
+     "hint": "Look at the right digit.",
+     "explanation": "85 is 8 tens and 5 ones.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "fill_blank",
+     "prompt": "Fill in the gaps.",
+     "hint": "26: the 2 is the tens.",
+     "explanation": "26 is 2 tens and 6 ones.",
+     "points": 2,
+     "text": "{b1} tens and {b2} ones make 26.",
+     "blanks": [
+      {
+       "id": "b1",
+       "options": [
+        {
+         "id": "a",
+         "text": "26"
+        },
+        {
+         "id": "b",
+         "text": "2"
+        },
+        {
+         "id": "c",
+         "text": "6"
+        }
+       ]
+      },
+      {
+       "id": "b2",
+       "options": [
+        {
+         "id": "a",
+         "text": "8"
+        },
+        {
+         "id": "b",
+         "text": "6"
+        },
+        {
+         "id": "c",
+         "text": "2"
+        }
+       ]
+      }
+     ],
+     "answer": {
+      "b1": "b",
+      "b2": "b"
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "In 90 there are 9 tens and 0 ones.",
+     "hint": "0 ones means no single ones.",
+     "explanation": "90 is exactly 9 tens.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "partition",
+   "kind": "try",
+   "title": "Partition and count in tens",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Count in tens"
+    },
+    {
+     "type": "text",
+     "markdown": "Counting in **tens** is quick: 10, 20, 30, 40, 50 and on to 100.\n\nEach jump is one more ten."
+    },
+    {
+     "type": "chart",
+     "kind": "number_line",
+     "title": "Count in tens",
+     "from": 0,
+     "to": 100,
+     "step": 10,
+     "marks": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100
+     ],
+     "caption": "Every jump of ten along the number line: 10, 20, 30 and on to 100."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Count in tens: 30, 40, 50, ... What comes next?",
+      "hint": "Add one more ten.",
+      "explanation": "50 and 10 more is 60.",
+      "skill_tag": "placevalue.count_tens",
+      "options": [
+       {
+        "id": "a",
+        "text": "55"
+       },
+       {
+        "id": "b",
+        "text": "51"
+       },
+       {
+        "id": "c",
+        "text": "60"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Make a number"
+    },
+    {
+     "type": "text",
+     "markdown": "To **partition** a number means to split it into tens and ones. 36 is 30 and 6."
+    },
+    {
+     "type": "manipulative",
+     "title": "Make 36",
+     "goal": "Put 3 tens and 6 ones in the right boxes. Use the stars: each star is one. Move 10 stars to make a ten!",
+     "emoji": "⭐",
+     "count": 20,
+     "zones": [
+      "Ones",
+      "Tens"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Tens and ones at home",
+     "materials": [
+      "20 small things (buttons, pasta or coins)",
+      "A cup"
+     ],
+     "instructions": [
+      "Make groups of 10 from your small things.",
+      "Make the number 24: 2 groups of ten and 4 on their own.",
+      "Make 31. How many groups of ten? How many ones?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What number is 4 tens and 9 ones?",
+      "hint": "Say 40 and 9.",
+      "explanation": "40 + 9 = 49.",
+      "skill_tag": "placevalue.partition",
+      "answer": {
+       "value": 49,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "reveal",
+     "prompt": "Can 45 be made another way, like 3 tens and 15 ones?",
+     "answer_markdown": "Yes! 3 tens is 30, and 15 more makes 45. But 4 tens and 5 ones is the easiest way."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Partition means splitting into tens and ones",
+      "36 = 30 + 6"
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tens",
+       "meaning": "Groups of ten."
+      },
+      {
+       "term": "partition",
+       "meaning": "To split a number into tens and ones."
+      },
+      {
+       "term": "number",
+       "meaning": "A word or symbol that tells us how many."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 20 + 7?",
+     "hint": "2 tens and 7 ones.",
+     "explanation": "20 + 7 = 27.",
+     "options": [
+      {
+       "id": "a",
+       "text": "207"
+      },
+      {
+       "id": "b",
+       "text": "72"
+      },
+      {
+       "id": "c",
+       "text": "27"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What number is 5 tens and 3 ones?",
+     "hint": "50 and 3.",
+     "explanation": "50 + 3 = 53.",
+     "answer": {
+      "value": 53,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "order",
+     "prompt": "Put these counting-in-tens numbers in order.",
+     "hint": "Start with the smallest.",
+     "explanation": "Each jump adds 10.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "20"
+      },
+      {
+       "id": "i4",
+       "text": "40"
+      },
+      {
+       "id": "i3",
+       "text": "30"
+      },
+      {
+       "id": "i1",
+       "text": "10"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each number to its tens and ones.",
+     "hint": "The left digit is the tens.",
+     "explanation": "Tens first, then ones.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "45"
+      },
+      {
+       "id": "l2",
+       "text": "70"
+      },
+      {
+       "id": "l3",
+       "text": "18"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "7 tens 0 ones"
+      },
+      {
+       "id": "r1",
+       "text": "4 tens 5 ones"
+      },
+      {
+       "id": "r3",
+       "text": "1 ten 8 ones"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "numberline",
+   "kind": "play",
+   "title": "Number line detective",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The number line to 100"
+    },
+    {
+     "type": "text",
+     "markdown": "A **number line** shows numbers in order. Numbers get bigger as you go right."
+    },
+    {
+     "type": "chart",
+     "kind": "number_line",
+     "title": "0 to 100 in tens",
+     "from": 0,
+     "to": 100,
+     "step": 25,
+     "marks": [
+      0,
+      25,
+      50,
+      75,
+      100
+     ],
+     "caption": "The marks show 0, 25, 50, 75 and 100."
+    },
+    {
+     "type": "explainer",
+     "title": "Find 65",
+     "scenes": [
+      {
+       "caption": "65 is between 60 and 70.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📍",
+         "x": 60,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "60"
+        },
+        {
+         "id": "b",
+         "emoji": "📍",
+         "x": 80,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "70"
+        }
+       ]
+      },
+      {
+       "caption": "It is halfway, so it sits in the middle.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📍",
+         "x": 60,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "60"
+        },
+        {
+         "id": "b",
+         "emoji": "📍",
+         "x": 80,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "70"
+        },
+        {
+         "id": "c",
+         "emoji": "⭐",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "bounce",
+         "label": "65"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "65 is between which two tens?",
+      "hint": "6 tens is 60.",
+      "explanation": "65 is 6 tens and 5 ones, so it is past 60 and before 70.",
+      "skill_tag": "numberline.between",
+      "options": [
+       {
+        "id": "a",
+        "text": "50 and 60"
+       },
+       {
+        "id": "b",
+        "text": "60 and 70"
+       },
+       {
+        "id": "c",
+        "text": "70 and 80"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then solve the detective puzzle: a number is hiding between 40 and 50."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Number lights",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🔴",
+      "🔵",
+      "🟡",
+      "🟢"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A number is halfway between 40 and 50. What is it?",
+      "hint": "Halfway between 0 and 10 is 5.",
+      "explanation": "45 is exactly halfway between 40 and 50.",
+      "skill_tag": "numberline.halfway",
+      "options": [
+       {
+        "id": "a",
+        "text": "46"
+       },
+       {
+        "id": "b",
+        "text": "45"
+       },
+       {
+        "id": "c",
+        "text": "44"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Numbers go in order on a number line",
+      "Round numbers like 60 and 70 help us find the ones in between"
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "number line",
+       "meaning": "A line that shows numbers in order, with small numbers on the left."
+      },
+      {
+       "term": "halfway",
+       "meaning": "In the middle between two things."
+      },
+      {
+       "term": "detective",
+       "meaning": "Someone who works out a puzzle by looking at clues."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is halfway between 20 and 30?",
+     "hint": "Halfway between 0 and 10 is 5.",
+     "explanation": "25 is halfway between 20 and 30.",
+     "options": [
+      {
+       "id": "a",
+       "text": "22"
+      },
+      {
+       "id": "b",
+       "text": "25"
+      },
+      {
+       "id": "c",
+       "text": "28"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "slider",
+     "prompt": "Slide to show 40 on the number line.",
+     "hint": "4 tens.",
+     "explanation": "40 is 4 tens.",
+     "range": {
+      "step": 1,
+      "min": 0,
+      "max": 100
+     },
+     "answer": {
+      "value": 40,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "52 is between 40 and 50.",
+     "hint": "Is 52 bigger than 50?",
+     "explanation": "52 is after 50, so it is between 50 and 60.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "kind": "use",
+   "title": "Compare and order",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Which is bigger?"
+    },
+    {
+     "type": "text",
+     "markdown": "To compare two numbers, look at the **tens** first. The one with more tens is bigger.\n\nIf the tens match, look at the ones."
+    },
+    {
+     "type": "explainer",
+     "title": "72 or 27?",
+     "scenes": [
+      {
+       "caption": "72 has 7 tens.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 8,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 17,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 26,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 35,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a5",
+         "emoji": "🟦",
+         "x": 44,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a6",
+         "emoji": "🟦",
+         "x": 53,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a7",
+         "emoji": "🟦",
+         "x": 62,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        }
+       ]
+      },
+      {
+       "caption": "27 has only 2 tens.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 8,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 17,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 26,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 35,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a5",
+         "emoji": "🟦",
+         "x": 44,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a6",
+         "emoji": "🟦",
+         "x": 53,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a7",
+         "emoji": "🟦",
+         "x": 62,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🟩",
+         "x": 8,
+         "y": 68,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🟩",
+         "x": 20,
+         "y": 68,
+         "size": 1,
+         "anim": "none"
+        }
+       ]
+      },
+      {
+       "caption": "So 72 is bigger than 27.",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 8,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 17,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 26,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 35,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a5",
+         "emoji": "🟦",
+         "x": 44,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a6",
+         "emoji": "🟦",
+         "x": 53,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "a7",
+         "emoji": "🟦",
+         "x": 62,
+         "y": 28,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🟩",
+         "x": 8,
+         "y": 68,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🟩",
+         "x": 20,
+         "y": 68,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 84,
+         "y": 48,
+         "size": 2,
+         "anim": "bounce",
+         "label": "72 > 27"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "markdown": "The signs: **greater than** is >, **less than** is <, and = means the same. The mouth eats the bigger number!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sign goes in 56 __ 65?",
+      "hint": "Which has more tens?",
+      "explanation": "65 has 6 tens and 56 has 5 tens, so 56 < 65.",
+      "skill_tag": "compare.signs",
+      "options": [
+       {
+        "id": "a",
+        "text": ">"
+       },
+       {
+        "id": "b",
+        "text": "="
+       },
+       {
+        "id": "c",
+        "text": "<"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Shop shelf"
+    },
+    {
+     "type": "text",
+     "markdown": "A shop puts 10 pencils in each pack. Ali has 3 packs and 8 loose pencils.\n\nHe needs 40. We use tens and ones to see how many more!"
+    },
+    {
+     "type": "image",
+     "emoji": "✏️",
+     "alt": "3 packs of ten and 8 loose pencils make 38.",
+     "caption": "3 packs of ten and 8 loose pencils make 38."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Zara has 27 stickers. She needs 30. How many more stickers does she need?",
+      "hint": "Count on from 27 to 30.",
+      "explanation": "27 and 3 more make 30.",
+      "skill_tag": "compare.real_life",
+      "answer": {
+       "value": 3,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: First, second, third"
+    },
+    {
+     "type": "text",
+     "markdown": "**Ordinal** numbers tell us the place: first, second, third, fourth.\n\nWhen we **round** to the nearest ten, we pick the closest ten. 46 rounds to 50."
+    },
+    {
+     "type": "image",
+     "emoji": "🥇🥈🥉",
+     "alt": "First, second and third place.",
+     "caption": "First, second and third place."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "46 rounded to the nearest ten is...",
+      "hint": "Is 46 closer to 40 or 50?",
+      "explanation": "46 is only 4 from 50 but 6 from 40.",
+      "skill_tag": "compare.round",
+      "options": [
+       {
+        "id": "a",
+        "text": "40"
+       },
+       {
+        "id": "b",
+        "text": "50"
+       },
+       {
+        "id": "c",
+        "text": "60"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "More tens means a bigger number",
+      "Use < and > to compare",
+      "Round to the nearest ten"
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "greater than",
+       "meaning": "Bigger than. The sign is >."
+      },
+      {
+       "term": "less than",
+       "meaning": "Smaller than. The sign is <."
+      },
+      {
+       "term": "ordinal",
+       "meaning": "A number that tells the place, like first or second."
+      },
+      {
+       "term": "round",
+       "meaning": "To change a number to the nearest ten."
+      },
+      {
+       "term": "tens",
+       "meaning": "Groups of ten."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is bigger?",
+     "hint": "Compare the tens.",
+     "explanation": "83 has 8 tens; 38 has 3 tens.",
+     "options": [
+      {
+       "id": "a",
+       "text": "38"
+      },
+      {
+       "id": "b",
+       "text": "83"
+      },
+      {
+       "id": "c",
+       "text": "They are the same"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What sign goes in 41 __ 14?",
+     "hint": "4 tens or 1 ten?",
+     "explanation": "41 has more tens, so 41 > 14.",
+     "options": [
+      {
+       "id": "a",
+       "text": "<"
+      },
+      {
+       "id": "b",
+       "text": ">"
+      },
+      {
+       "id": "c",
+       "text": "="
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "Round 73 to the nearest ten.",
+     "hint": "Is 73 closer to 70 or 80?",
+     "explanation": "73 is closer to 70.",
+     "answer": {
+      "value": 70,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order from smallest to biggest.",
+     "hint": "Look at the tens.",
+     "explanation": "Smaller tens come first.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "34"
+      },
+      {
+       "id": "i3",
+       "text": "58"
+      },
+      {
+       "id": "i4",
+       "text": "91"
+      },
+      {
+       "id": "i1",
+       "text": "19"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "In the number 47, how many tens are there?",
+    "hint": "The left digit is the tens.",
+    "explanation": "47 is 4 tens and 7 ones.",
+    "skill_tag": "placevalue.tens",
+    "options": [
+     {
+      "id": "a",
+      "text": "47"
+     },
+     {
+      "id": "b",
+      "text": "4"
+     },
+     {
+      "id": "c",
+      "text": "7"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "How many ones are in 63?",
+    "hint": "The right digit is the ones.",
+    "explanation": "63 is 6 tens and 3 ones.",
+    "skill_tag": "placevalue.ones",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "In 85 the 8 means 8 ones.",
+    "hint": "Which side are the tens on?",
+    "explanation": "The 8 is on the left, so it means 8 tens.",
+    "skill_tag": "placevalue.digits",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about 52.",
+    "hint": "52: the 5 is the tens.",
+    "explanation": "52 is 5 tens and 2 ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "text": "{b1} tens and {b2} ones make 52.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "52"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are ways to split 36 into tens and ones? Pick two.",
+    "hint": "36 has 3 tens and 6 ones.",
+    "explanation": "36 is 30 + 6, or 3 tens and 6 ones.",
+    "skill_tag": "placevalue.partition",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 tens and 6 ones"
+     },
+     {
+      "id": "b",
+      "text": "6 tens and 3 ones"
+     },
+     {
+      "id": "c",
+      "text": "3 + 6"
+     },
+     {
+      "id": "d",
+      "text": "30 + 6"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "What number is 7 tens and 1 one?",
+    "hint": "Say 70 and 1.",
+    "explanation": "70 + 1 = 71.",
+    "skill_tag": "placevalue.partition",
+    "answer": {
+     "value": 71,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Order these numbers, smallest first.",
+    "hint": "Look at the tens first.",
+    "explanation": "Smaller tens come first.",
+    "skill_tag": "compare.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "58"
+     },
+     {
+      "id": "i4",
+      "text": "94"
+     },
+     {
+      "id": "i3",
+      "text": "85"
+     },
+     {
+      "id": "i1",
+      "text": "49"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Mia says 40 + 5 and 50 + 4 both make 45. Who is right?",
+    "hint": "50 + 4 has 5 tens.",
+    "explanation": "50 + 4 makes 54. Only 40 + 5 makes 45.",
+    "skill_tag": "placevalue.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only 50 + 4 makes 45"
+     },
+     {
+      "id": "b",
+      "text": "Only 40 + 5 makes 45"
+     },
+     {
+      "id": "c",
+      "text": "Both make 45"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "partition",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show 65 on the number line.",
+    "hint": "Between 60 and 70.",
+    "explanation": "65 sits halfway between 60 and 70.",
+    "skill_tag": "numberline.place",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 65,
+     "tolerance": 0
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the bag that holds 23 sweets.",
+    "hint": "23 is 2 tens and 3 ones.",
+    "explanation": "Bag B has 2 tens and 3 ones, which is 23.",
+    "skill_tag": "placevalue.partition",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 3 tens and 2 ones",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 2 tens and 3 ones",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 2 tens and 13 ones",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "match",
+    "prompt": "Match each number to what it is made of.",
+    "hint": "The left digit is the tens.",
+    "explanation": "Tens first, then ones.",
+    "skill_tag": "placevalue.partition",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "34"
+     },
+     {
+      "id": "l2",
+      "text": "62"
+     },
+     {
+      "id": "l3",
+      "text": "80"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "6 tens 2 ones"
+     },
+     {
+      "id": "r1",
+      "text": "3 tens 4 ones"
+     },
+     {
+      "id": "r3",
+      "text": "8 tens 0 ones"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Sam says 61 is nearer to 60 than to 70. Is Sam right?",
+    "hint": "Count the steps from 61 to 60.",
+    "explanation": "61 is 1 step from 60 but 9 steps from 70.",
+    "skill_tag": "numberline.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is nearer to 70"
+     },
+     {
+      "id": "b",
+      "text": "No, it is exactly halfway"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 61 is only 1 from 60"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Which sign goes in 38 __ 83?",
+    "hint": "Which has more tens?",
+    "explanation": "83 has 8 tens and 38 has 3 tens, so 38 < 83.",
+    "skill_tag": "compare.signs",
+    "options": [
+     {
+      "id": "a",
+      "text": ">"
+     },
+     {
+      "id": "b",
+      "text": "<"
+     },
+     {
+      "id": "c",
+      "text": "="
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Why is 72 bigger than 27, when both use a 7 and a 2?",
+    "hint": "Compare the tens first.",
+    "explanation": "The tens decide: 7 tens is more than 2 tens.",
+    "skill_tag": "compare.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "72 has more ones"
+     },
+     {
+      "id": "b",
+      "text": "72 has 7 tens but 27 has only 2 tens"
+     },
+     {
+      "id": "c",
+      "text": "They are the same size"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "Ali has 3 packs of 10 pencils and 8 loose ones. He needs 40. How many more does he need?",
+    "hint": "He has 38. Count on to 40.",
+    "explanation": "38 and 2 more make 40.",
+    "skill_tag": "compare.real_life",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "compare",
+    "depth": "reason"
+   }
+  ]
+ }
+}
