@@ -8,7 +8,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const out = join(root, "content/topics");
 mkdirSync(out, { recursive: true });
 let count = 0;
-for (const m of ["maths-class-1"]) {
+for (const m of ["maths-class-1", "english-class-1", "english-class-4"]) {
   const { topics } = await import(`./topics/${m}.mjs`);
   for (const file of topics) { writeFileSync(join(out, `${file.lesson.slug}.json`), JSON.stringify(file, null, 1) + "\n"); count++; }
 }
