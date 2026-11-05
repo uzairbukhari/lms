@@ -1,0 +1,2325 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-fractions",
+  "subject": "maths",
+  "title": "Fractions",
+  "summary": "Equal parts, halves, quarters and thirds, and finding fractions of amounts.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 6: Fractions",
+  "learning_objectives": [
+   "Know that fractions are equal parts of a whole",
+   "Name halves, quarters and thirds",
+   "Find a half and a quarter of an amount"
+  ],
+  "tags": [
+   "topic",
+   "topic-6"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 6
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 fractions",
+    "text": "Recognise, find, name and write fractions 1/3, 1/4, 2/4 and 3/4 of a length, shape, set of objects or quantity"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-A-21"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nf.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Nf.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say if parts are equal",
+   "I can name a half, a quarter and a third",
+   "I can find half of a small number"
+  ],
+  "real_life": "Sharing a pizza, cutting a cake and reading a clock.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 4 + 4?",
+    "hint": "Double 4.",
+    "explanation": "4 + 4 = 8.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 10 - 5?",
+    "hint": "Half of 10.",
+    "explanation": "10 - 5 = 5.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "Even numbers can be split into pairs.",
+    "hint": "Think of shoes.",
+    "explanation": "Even numbers make pairs with none left over.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we learn about fractions: halves, quarters and thirds.",
+   "say": "Welcome back, number explorer! Today we cut things into equal parts. You will meet halves, quarters and thirds. These are fractions, and we use them whenever we share a pizza, a cake or a bar of chocolate fairly."
+  },
+  {
+   "type": "image",
+   "emoji": "🍕",
+   "alt": "Fractions are equal parts of a whole.",
+   "caption": "Fractions are equal parts of a whole."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "fractions",
+     "meaning": "Equal parts of a whole."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "equal",
+   "kind": "learn",
+   "title": "Equal parts and halves",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Equal parts"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fraction** is part of a **whole**. The parts must be **equal**.\n\nEqual parts are exactly the same size.",
+     "say": "A fraction is part of a whole. A whole is the complete thing, like a whole pizza. Fractions only work when the pieces are equal. Equal means exactly the same size. Look at these two cuts of pizza. In the first, the pieces are all the same size. In the second, one piece is huge and one is tiny. Only the first one is fair, so only the first one shows fractions."
+    },
+    {
+     "type": "image",
+     "emoji": "🍕",
+     "alt": "A pizza cut into equal parts shares fairly.",
+     "caption": "A pizza cut into equal parts shares fairly."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which pizza is shared fairly?",
+      "hint": "What does equal mean?",
+      "explanation": "Equal parts are all the same size.",
+      "skill_tag": "fractions.equal",
+      "options": [
+       {
+        "id": "a",
+        "text": "One piece is much bigger"
+       },
+       {
+        "id": "b",
+        "text": "One piece is tiny"
+       },
+       {
+        "id": "c",
+        "text": "All the pieces are the same size"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Halves"
+    },
+    {
+     "type": "text",
+     "markdown": "Two equal parts make **halves**. Each part is 1/2 of the whole.\n\nTwo halves make one whole.",
+     "say": "When we cut something into two equal parts, each part is a half. Two halves make one whole. We write a half like this: one over two. Look at the pizza. Two equal parts, and one is coloured. One of two equal parts is one half."
+    },
+    {
+     "type": "explainer",
+     "title": "Halves of a pizza",
+     "scenes": [
+      {
+       "caption": "A whole pizza.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 1,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a whole pizza. We want to share it between two friends."
+      },
+      {
+       "caption": "1 of 2 equal parts is 1/2.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 2,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1/2"
+        }
+       ],
+       "say": "Cut it into two equal parts. One part is coloured. One of two equal parts is one half."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A cake is cut into 2 equal parts. How many parts make a whole cake?",
+      "hint": "Two halves make one whole.",
+      "explanation": "2 halves make 1 whole.",
+      "skill_tag": "fractions.halves",
+      "answer": {
+       "value": 2,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A fraction is a part of a whole",
+      "The parts must be equal",
+      "Two equal parts are halves"
+     ],
+     "say": "Remember. A fraction is part of a whole. The parts must be equal. Two equal parts are halves."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fraction",
+       "meaning": "A part of a whole."
+      },
+      {
+       "term": "whole",
+       "meaning": "The complete thing."
+      },
+      {
+       "term": "equal",
+       "meaning": "Exactly the same size."
+      },
+      {
+       "term": "half",
+       "meaning": "One of two equal parts."
+      },
+      {
+       "term": "halves",
+       "meaning": "More than one half."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many equal parts does a half come from?",
+     "hint": "Half means two parts.",
+     "explanation": "A half is one of 2 equal parts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "1"
+      },
+      {
+       "id": "b",
+       "text": "2"
+      },
+      {
+       "id": "c",
+       "text": "4"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Fractions need equal parts.",
+     "hint": "Think of sharing fairly.",
+     "explanation": "The parts must all be the same size.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many halves make a whole?",
+     "hint": "Two equal parts.",
+     "explanation": "2 halves make 1 whole.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "One big piece and one tiny piece are two halves.",
+     "hint": "Are the pieces equal?",
+     "explanation": "Halves must be equal.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quarters",
+   "kind": "try",
+   "title": "Quarters and thirds",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Quarters"
+    },
+    {
+     "type": "text",
+     "markdown": "Four equal parts make **quarters**. Each part is 1/4 of the whole.\n\n2 quarters make a half. 4 quarters make a whole.",
+     "say": "Now cut each half in half again. That makes four equal parts. Each one is a quarter. We write a quarter as one over four. Look at the pizza. Four equal parts, and one coloured. Two quarters make a half. Four quarters make a whole. Fold a piece of paper in half and in half again, and you can see quarters yourself!"
+    },
+    {
+     "type": "explainer",
+     "title": "Quarters of a pizza",
+     "scenes": [
+      {
+       "caption": "1 of 4 equal parts is 1/4.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 4,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is one quarter. One of four equal parts."
+      },
+      {
+       "caption": "2 quarters make a half.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 4,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Two quarters. That is the same as one half."
+      },
+      {
+       "caption": "4 quarters make a whole.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 4,
+          "shaded": 4
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4/4 = 1 whole"
+        }
+       ],
+       "say": "All four quarters make the whole pizza."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Fold a paper quarter",
+     "materials": [
+      "A square of paper",
+      "Colouring pencils"
+     ],
+     "instructions": [
+      "Fold the paper in half. Open it. How many parts? Colour one half.",
+      "Fold the paper in half again, and again the other way.",
+      "Open it up. How many equal parts? Those are quarters.",
+      "Colour one quarter. Colour two quarters. What fraction is that?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How many quarters make a whole?",
+      "hint": "Four equal parts.",
+      "explanation": "4 quarters make 1 whole.",
+      "skill_tag": "fractions.quarters",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Thirds"
+    },
+    {
+     "type": "text",
+     "markdown": "Three equal parts make **thirds**. Each part is 1/3.\n\n3 thirds make a whole.",
+     "say": "Cut a whole into three equal parts. Each part is a third. We write a third as one over three. A bar can show it too. Three equal parts, one coloured. One third. Three thirds make a whole."
+    },
+    {
+     "type": "chart",
+     "kind": "fraction",
+     "title": "One third",
+     "parts": 3,
+     "shaded": 1,
+     "caption": "The bar has 3 equal parts and 1 is coloured."
+    },
+    {
+     "type": "manipulative",
+     "title": "Share into thirds",
+     "goal": "You have 12 counters. Share them equally into 3 groups. How many in each group?",
+     "emoji": "🔴",
+     "count": 12,
+     "zones": [
+      "Group 1",
+      "Group 2"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A bar is split into 3 equal parts. One is coloured. What fraction is coloured?",
+      "hint": "How many equal parts in all?",
+      "explanation": "1 of 3 equal parts is one third.",
+      "skill_tag": "fractions.thirds",
+      "options": [
+       {
+        "id": "a",
+        "text": "1/2"
+       },
+       {
+        "id": "b",
+        "text": "1/3"
+       },
+       {
+        "id": "c",
+        "text": "1/4"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Four equal parts are quarters",
+      "Three equal parts are thirds",
+      "The more parts, the smaller each part"
+     ],
+     "say": "Remember. Four equal parts are quarters. Three equal parts are thirds. The more parts, the smaller each part is."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "quarter",
+       "meaning": "One of four equal parts."
+      },
+      {
+       "term": "third",
+       "meaning": "One of three equal parts."
+      },
+      {
+       "term": "thirds",
+       "meaning": "Three equal parts of a whole."
+      },
+      {
+       "term": "quarters",
+       "meaning": "Four equal parts of a whole."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "2 quarters make...",
+     "hint": "2 out of 4 equal parts.",
+     "explanation": "2 quarters = 1 half.",
+     "options": [
+      {
+       "id": "a",
+       "text": "a whole"
+      },
+      {
+       "id": "b",
+       "text": "a half"
+      },
+      {
+       "id": "c",
+       "text": "a third"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many quarters make one whole?",
+     "hint": "Four equal parts.",
+     "explanation": "4 quarters = 1 whole.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A third is bigger than a half.",
+     "hint": "More parts means smaller parts.",
+     "explanation": "A half is bigger than a third.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many thirds make a whole?",
+     "hint": "Three equal parts.",
+     "explanation": "3 thirds = 1 whole.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "amounts",
+   "kind": "play",
+   "title": "Fractions of amounts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Half of a number"
+    },
+    {
+     "type": "text",
+     "markdown": "To find **half** of a number, share it into 2 equal groups.\n\nHalf of 8 is 4.",
+     "say": "We can find a half of a group of things too. To find half, share into two equal groups. Half of eight sweets. Share eight between two. Four and four. Half of eight is four. Finding half is the same as dividing by two."
+    },
+    {
+     "type": "explainer",
+     "title": "Half of 8",
+     "scenes": [
+      {
+       "caption": "8 sweets.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🍬",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "8 sweets"
+        }
+       ],
+       "say": "Here are eight sweets, in a pile."
+      },
+      {
+       "caption": "Half of 8 is 4.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍬",
+         "x": 28,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "4"
+        },
+        {
+         "id": "b",
+         "emoji": "🍬",
+         "x": 72,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "4"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1/2 of 8 = 4"
+        }
+       ],
+       "say": "Share them into two equal groups. Four in each group. Half of eight is four."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Half match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "🍕",
+      "🍰",
+      "🍪",
+      "🍩",
+      "🥧",
+      "🍫"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is half of 10?",
+      "hint": "Share 10 into 2 equal groups.",
+      "explanation": "Half of 10 is 5.",
+      "skill_tag": "fractions.half_of",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: A quarter of a number"
+    },
+    {
+     "type": "text",
+     "markdown": "To find a **quarter**, share into 4 equal groups.\n\nA quarter of 12 is 3. Or halve it twice: 12 → 6 → 3.",
+     "say": "A quarter means one of four equal groups. To find a quarter, share into four equal groups. A quarter of twelve. Share twelve between four. Three in each group. A quarter of twelve is three. Halve it twice is a good trick: half of twelve is six, and half of six is three."
+    },
+    {
+     "type": "image",
+     "emoji": "🍪",
+     "alt": "A quarter of 12 biscuits is 3.",
+     "caption": "A quarter of 12 biscuits is 3."
+    },
+    {
+     "type": "reveal",
+     "prompt": "What is a quarter of 20? Have a think first.",
+     "answer_markdown": "5. Share 20 between 4 gives 5 each. Or half of 20 is 10, and half of 10 is 5."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a quarter of 8?",
+      "hint": "Halve 8, then halve again.",
+      "explanation": "Half of 8 is 4. Half of 4 is 2.",
+      "skill_tag": "fractions.quarter_of",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Half means share into 2 equal groups",
+      "A quarter means share into 4 equal groups",
+      "Halve twice to find a quarter"
+     ],
+     "say": "Remember. Half means share into two. A quarter means share into four. Halving twice gives a quarter."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "half",
+       "meaning": "One of two equal parts."
+      },
+      {
+       "term": "quarter",
+       "meaning": "One of four equal parts."
+      },
+      {
+       "term": "halve",
+       "meaning": "To cut or share into two equal parts."
+      },
+      {
+       "term": "share",
+       "meaning": "To give out equally."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is half of 6?",
+     "hint": "Share 6 between 2.",
+     "explanation": "Half of 6 is 3.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is half of 20?",
+     "hint": "Share 20 between 2.",
+     "explanation": "Half of 20 is 10.",
+     "answer": {
+      "value": 10,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is a quarter of 12?",
+     "hint": "Halve 12, then halve again.",
+     "explanation": "12, 6, 3.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Half of 8 is 3.",
+     "hint": "4 + 4 = 8.",
+     "explanation": "Half of 8 is 4.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use",
+   "kind": "use",
+   "title": "Fractions in real life",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sharing fairly"
+    },
+    {
+     "type": "text",
+     "markdown": "Fractions help us share. 4 quarters share between 2 people gives 2 quarters each, which is 1/2.\n\nMore people means each share is smaller.",
+     "say": "Fractions help us share fairly. Ayesha and her brother share a pizza cut in four equal parts. They each eat two parts. Two quarters is one half. So each of them eats half the pizza. If four friends share it, each gets one quarter. The more people, the smaller each share."
+    },
+    {
+     "type": "explainer",
+     "title": "Sharing a pizza",
+     "scenes": [
+      {
+       "caption": "4 quarters shared by 2 people.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 4,
+          "shaded": 4
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A pizza is cut into four equal parts. Ayesha and her brother share it."
+      },
+      {
+       "caption": "Each person gets 2 quarters = 1/2.",
+       "items": [
+        {
+         "id": "p",
+         "prop": {
+          "kind": "fraction_pizza",
+          "parts": 4,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1/2 each"
+        }
+       ],
+       "say": "Each person has two quarters. Two quarters is one half. Each person gets half the pizza."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A pizza is cut into 4 equal parts. Mum eats 1 part. What fraction did she eat?",
+      "hint": "1 part out of 4.",
+      "explanation": "1 of 4 equal parts is 1/4.",
+      "skill_tag": "fractions.real_life",
+      "options": [
+       {
+        "id": "a",
+        "text": "1/3"
+       },
+       {
+        "id": "b",
+        "text": "1/4"
+       },
+       {
+        "id": "c",
+        "text": "1/2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Spot the fraction"
+    },
+    {
+     "type": "text",
+     "markdown": "Look around and spot halves, quarters and thirds in everyday things.",
+     "say": "Look around your home and find fractions. A clock face shows quarters. A chocolate bar has equal pieces. A sandwich cut in half. A packet of biscuits shared between four. What fractions can you spot today? Draw them in your book."
+    },
+    {
+     "type": "image",
+     "emoji": "🔎",
+     "alt": "Look for halves and quarters at home.",
+     "caption": "Look for halves and quarters at home."
+    },
+    {
+     "type": "reveal",
+     "prompt": "A cake is cut into 8 equal parts. You eat 4. What fraction did you eat? Have a think first.",
+     "answer_markdown": "One half. 4 of 8 equal parts is the same as 1 of 2."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is bigger, a half or a quarter of the same cake?",
+      "hint": "Which piece is bigger when there are fewer parts?",
+      "explanation": "Fewer, bigger parts: a half is bigger than a quarter.",
+      "skill_tag": "fractions.compare",
+      "options": [
+       {
+        "id": "a",
+        "text": "They are the same"
+       },
+       {
+        "id": "b",
+        "text": "A half"
+       },
+       {
+        "id": "c",
+        "text": "A quarter"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Fractions share things fairly",
+      "A half is bigger than a quarter",
+      "Look for fractions around you"
+     ],
+     "say": "Remember. Fractions share things fairly. A half is bigger than a quarter. Look for fractions around you."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fraction",
+       "meaning": "A part of a whole."
+      },
+      {
+       "term": "fair",
+       "meaning": "The same for everyone."
+      },
+      {
+       "term": "slice",
+       "meaning": "A piece cut from something bigger."
+      },
+      {
+       "term": "share",
+       "meaning": "To give out equally."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "A pizza is cut into 2 equal parts. You eat 1. What fraction?",
+     "hint": "1 of 2 equal parts.",
+     "explanation": "That is one half.",
+     "options": [
+      {
+       "id": "a",
+       "text": "1/4"
+      },
+      {
+       "id": "b",
+       "text": "1/2"
+      },
+      {
+       "id": "c",
+       "text": "1/3"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A quarter is smaller than a half.",
+     "hint": "More parts, smaller parts.",
+     "explanation": "A quarter is smaller than a half.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A pizza has 4 equal slices. You eat 3. How many quarters did you eat?",
+     "hint": "Each slice is a quarter.",
+     "explanation": "3 slices = 3 quarters.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which fraction is the biggest?",
+     "hint": "Fewer parts means bigger parts.",
+     "explanation": "1/2 is bigger than 1/3 and 1/4.",
+     "options": [
+      {
+       "id": "a",
+       "text": "1/3"
+      },
+      {
+       "id": "b",
+       "text": "1/2"
+      },
+      {
+       "id": "c",
+       "text": "1/4"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which shape is split into equal parts?",
+    "hint": "Equal means the same size.",
+    "explanation": "Fractions need equal parts.",
+    "skill_tag": "fractions.equal",
+    "options": [
+     {
+      "id": "a",
+      "text": "A circle with one big and one tiny part"
+     },
+     {
+      "id": "b",
+      "text": "A circle cut into 2 same-size parts"
+     },
+     {
+      "id": "c",
+      "text": "A square with parts of different sizes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equal",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "A pizza is cut into halves. How many halves make the whole pizza?",
+    "hint": "Two equal parts.",
+    "explanation": "2 halves make 1 whole.",
+    "skill_tag": "fractions.halves",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "equal",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A quarter is one of four equal parts.",
+    "hint": "Quarter means four.",
+    "explanation": "A quarter is 1 of 4 equal parts.",
+    "skill_tag": "fractions.quarters",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "quarters",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence.",
+    "hint": "Quarters means four. Thirds means three.",
+    "explanation": "4 quarters and 3 thirds each make 1 whole.",
+    "skill_tag": "fractions.parts",
+    "points": 2,
+    "text": "{b1} quarters make 1 whole, and {b2} thirds make 1 whole.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are the same as one half? Pick two.",
+    "hint": "Think of the whole.",
+    "explanation": "2 quarters and 1 of 2 equal parts are both one half.",
+    "skill_tag": "fractions.halves",
+    "options": [
+     {
+      "id": "a",
+      "text": "1 of 3 equal parts"
+     },
+     {
+      "id": "b",
+      "text": "1 of 4 equal parts"
+     },
+     {
+      "id": "c",
+      "text": "1 of 2 equal parts"
+     },
+     {
+      "id": "d",
+      "text": "2 quarters"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these in order, biggest part first.",
+    "hint": "More parts means smaller parts.",
+    "explanation": "A half is biggest, then a third, then a quarter, then an eighth.",
+    "skill_tag": "fractions.compare",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Quarter"
+     },
+     {
+      "id": "i4",
+      "text": "Eighth"
+     },
+     {
+      "id": "i2",
+      "text": "Third"
+     },
+     {
+      "id": "i1",
+      "text": "Half"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each fraction to what it means.",
+    "hint": "The bottom number is how many parts.",
+    "explanation": "The bottom number says how many equal parts.",
+    "skill_tag": "fractions.notation",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/2"
+     },
+     {
+      "id": "l2",
+      "text": "1/3"
+     },
+     {
+      "id": "l3",
+      "text": "1/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "1 of 3 equal parts"
+     },
+     {
+      "id": "r1",
+      "text": "1 of 2 equal parts"
+     },
+     {
+      "id": "r3",
+      "text": "1 of 4 equal parts"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the pizza with a quarter coloured.",
+    "hint": "A quarter is 1 of 4.",
+    "explanation": "Pizza B has 1 of 4 parts coloured.",
+    "skill_tag": "fractions.quarters",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍕",
+       "label": "Pizza A: 1 of 2 parts",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍕",
+       "label": "Pizza B: 1 of 4 parts",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍕",
+       "label": "Pizza C: 1 of 3 parts",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show half of 16.",
+    "hint": "Share 16 between 2.",
+    "explanation": "Half of 16 is 8.",
+    "skill_tag": "fractions.half_of",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "number",
+    "prompt": "What is a quarter of 16?",
+    "hint": "Halve 16, then halve again.",
+    "explanation": "16, 8, 4.",
+    "skill_tag": "fractions.quarter_of",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "number",
+    "prompt": "Share 12 sweets equally between 3 children. What is one third of 12?",
+    "hint": "Share 12 into 3 equal groups.",
+    "explanation": "One third of 12 is 4.",
+    "skill_tag": "fractions.thirds",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Sam says a quarter of a pizza is bigger than a half of the same pizza. Is he right?",
+    "hint": "Think about the size of each part.",
+    "explanation": "More parts means smaller parts, so a half is bigger than a quarter.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 is bigger than 2"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they are the same size"
+     },
+     {
+      "id": "c",
+      "text": "No. A half is bigger because there are fewer, bigger parts"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why must the parts be equal to make halves?",
+    "hint": "Think about sharing a pizza fairly.",
+    "explanation": "Halves must be equal parts, or the sharing is not fair.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because halves are always red"
+     },
+     {
+      "id": "b",
+      "text": "Because halves have to be small"
+     },
+     {
+      "id": "c",
+      "text": "If the parts are not the same size, nobody gets a fair half"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "equal",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Aisha cuts a cake into 4 equal parts and eats 2. Her brother cuts a cake of the same size into 2 equal parts and eats 1. Who ate more cake?",
+    "hint": "2 quarters is the same as 1 half.",
+    "explanation": "2 quarters equal 1 half, so they ate the same.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Aisha ate more"
+     },
+     {
+      "id": "b",
+      "text": "They ate the same amount"
+     },
+     {
+      "id": "c",
+      "text": "Her brother ate more"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Layla says half of 10 is 4 because 4 + 4 = 8, and 8 is nearly 10. Is she right?",
+    "hint": "Half means two equal groups that make the whole.",
+    "explanation": "Two equal groups of 5 make 10, so half of 10 is 5.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, half of 10 is 4"
+     },
+     {
+      "id": "b",
+      "text": "No, half of 10 is 6"
+     },
+     {
+      "id": "c",
+      "text": "No. Half of 10 is 5, because 5 + 5 = 10"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "amounts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which pizza is cut fairly?",
+    "hint": "Equal means the same size.",
+    "explanation": "Fractions need equal parts.",
+    "skill_tag": "fractions.equal",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 big slices and 1 tiny slice"
+     },
+     {
+      "id": "b",
+      "text": "4 slices that are all the same size"
+     },
+     {
+      "id": "c",
+      "text": "2 slices of different sizes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equal",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which sandwich is cut into halves?",
+    "hint": "A half is one of 2 equal parts.",
+    "explanation": "Halves are 2 equal parts.",
+    "skill_tag": "fractions.equal",
+    "options": [
+     {
+      "id": "a",
+      "text": "2 parts, one much bigger"
+     },
+     {
+      "id": "b",
+      "text": "2 parts that are exactly the same size"
+     },
+     {
+      "id": "c",
+      "text": "3 equal parts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equal",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "A chocolate bar is cut in halves. How many pieces is that?",
+    "hint": "Two equal parts.",
+    "explanation": "Halves means 2 pieces.",
+    "skill_tag": "fractions.halves",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "equal",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "How many halves are in one whole apple?",
+    "hint": "Two equal parts.",
+    "explanation": "2 halves make 1 whole.",
+    "skill_tag": "fractions.halves",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "equal",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A quarter is one of two equal parts.",
+    "hint": "Quarter means four.",
+    "explanation": "A quarter is 1 of 4 equal parts.",
+    "skill_tag": "fractions.quarters",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "quarters",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "Four quarters make a whole.",
+    "hint": "Count the parts.",
+    "explanation": "4 quarters make 1 whole.",
+    "skill_tag": "fractions.quarters",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "quarters",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence.",
+    "hint": "Halves means two. Quarters means four.",
+    "explanation": "1 whole is 2 halves or 4 quarters.",
+    "skill_tag": "fractions.parts",
+    "points": 2,
+    "text": "1 whole is {b1} halves or {b2} quarters.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Thirds means three. Halves means two.",
+    "explanation": "A whole has 3 thirds and 2 halves.",
+    "skill_tag": "fractions.parts",
+    "points": 2,
+    "text": "A whole has {b1} thirds and {b2} halves.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are the same as one whole? Pick two.",
+    "hint": "Add up the parts.",
+    "explanation": "4 quarters and 2 halves both make a whole.",
+    "skill_tag": "fractions.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 quarters"
+     },
+     {
+      "id": "b",
+      "text": "1 half"
+     },
+     {
+      "id": "c",
+      "text": "2 halves"
+     },
+     {
+      "id": "d",
+      "text": "4 quarters"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are quarters? Pick two.",
+    "hint": "A quarter is one of four equal parts.",
+    "explanation": "1 of 4 and 2 of 8 are both a quarter.",
+    "skill_tag": "fractions.quarters",
+    "options": [
+     {
+      "id": "a",
+      "text": "2 of 8 equal parts"
+     },
+     {
+      "id": "b",
+      "text": "1 of 2 equal parts"
+     },
+     {
+      "id": "c",
+      "text": "1 of 3 equal parts"
+     },
+     {
+      "id": "d",
+      "text": "1 of 4 equal parts"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these, biggest part first.",
+    "hint": "More parts means smaller parts.",
+    "explanation": "A whole is biggest, then a half, a third, and a quarter.",
+    "skill_tag": "fractions.compare",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Third"
+     },
+     {
+      "id": "i4",
+      "text": "Quarter"
+     },
+     {
+      "id": "i2",
+      "text": "Half"
+     },
+     {
+      "id": "i1",
+      "text": "Whole"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Arrange these, biggest part first.",
+    "hint": "More parts means smaller parts.",
+    "explanation": "A half is biggest, then a quarter, a fifth, and a tenth.",
+    "skill_tag": "fractions.compare",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Quarter"
+     },
+     {
+      "id": "i4",
+      "text": "Tenth"
+     },
+     {
+      "id": "i3",
+      "text": "Fifth"
+     },
+     {
+      "id": "i1",
+      "text": "Half"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Join each fraction to its meaning.",
+    "hint": "The bottom number is how many parts.",
+    "explanation": "1/2 is a half, 1/3 a third and 1/4 a quarter.",
+    "skill_tag": "fractions.notation",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/2"
+     },
+     {
+      "id": "l2",
+      "text": "1/3"
+     },
+     {
+      "id": "l3",
+      "text": "1/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "a quarter"
+     },
+     {
+      "id": "r1",
+      "text": "a half"
+     },
+     {
+      "id": "r2",
+      "text": "a third"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Pair each fraction with its meaning.",
+    "hint": "Count the parts.",
+    "explanation": "2/2 is a whole, 4/4 is a whole too, 2/4 is a half.",
+    "skill_tag": "fractions.notation",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "2/2"
+     },
+     {
+      "id": "l2",
+      "text": "4/4"
+     },
+     {
+      "id": "l3",
+      "text": "2/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "a half"
+     },
+     {
+      "id": "r1",
+      "text": "a whole"
+     },
+     {
+      "id": "r2",
+      "text": "a whole too"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the pizza with a half coloured.",
+    "hint": "A half is 1 of 2.",
+    "explanation": "Pizza C has 1 of 2 parts coloured.",
+    "skill_tag": "fractions.halves",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍕",
+       "label": "Pizza A: 1 of 4 parts",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍕",
+       "label": "Pizza B: 1 of 3 parts",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍕",
+       "label": "Pizza C: 1 of 2 parts",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "hotspot",
+    "prompt": "Tap the pizza with a third coloured.",
+    "hint": "A third is 1 of 3.",
+    "explanation": "Pizza A has 1 of 3 parts coloured.",
+    "skill_tag": "fractions.thirds",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍕",
+       "label": "Pizza A: 1 of 3 parts",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍕",
+       "label": "Pizza B: 1 of 2 parts",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍕",
+       "label": "Pizza C: 1 of 4 parts",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "quarters",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show half of 12.",
+    "hint": "Share 12 between 2.",
+    "explanation": "Half of 12 is 6.",
+    "skill_tag": "fractions.half_of",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show half of 18.",
+    "hint": "Share 18 between 2.",
+    "explanation": "Half of 18 is 9.",
+    "skill_tag": "fractions.half_of",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "number",
+    "prompt": "What is a quarter of 20?",
+    "hint": "Halve 20, then halve again.",
+    "explanation": "20, 10, 5.",
+    "skill_tag": "fractions.quarter_of",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "number",
+    "prompt": "Find a quarter of 12 stickers.",
+    "hint": "Halve 12, then halve again.",
+    "explanation": "12, 6, 3.",
+    "skill_tag": "fractions.quarter_of",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "number",
+    "prompt": "Share 9 apples equally between 3 children. What is one third of 9?",
+    "hint": "Share 9 into 3 equal groups.",
+    "explanation": "One third of 9 is 3.",
+    "skill_tag": "fractions.thirds",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "number",
+    "prompt": "Share 15 stickers equally between 3 friends. What is one third of 15?",
+    "hint": "Share 15 into 3 equal groups.",
+    "explanation": "One third of 15 is 5.",
+    "skill_tag": "fractions.thirds",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Nora says a third of a cake is bigger than a half of the same cake. Is she right?",
+    "hint": "Think about the size of each part.",
+    "explanation": "More parts means smaller parts, so a half is bigger than a third.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 is bigger than 2"
+     },
+     {
+      "id": "b",
+      "text": "No. A half is bigger because there are fewer, bigger parts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they are the same size"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Ali says a quarter of a sandwich is bigger than a third of the same sandwich. Is he right?",
+    "hint": "Think about the size of each part.",
+    "explanation": "More parts means smaller parts, so a third is bigger than a quarter.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same size"
+     },
+     {
+      "id": "b",
+      "text": "No. A third is bigger because there are fewer, bigger parts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 4 is bigger than 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why must the parts be equal to make quarters?",
+    "hint": "Think about sharing a cake fairly.",
+    "explanation": "Quarters must be equal parts.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because quarters are always round"
+     },
+     {
+      "id": "b",
+      "text": "Because quarters have to be big"
+     },
+     {
+      "id": "c",
+      "text": "If the parts are not the same size, they are not fair quarters"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "equal",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why must the parts be equal to make thirds?",
+    "hint": "Think about sharing a chocolate bar fairly.",
+    "explanation": "Thirds must be equal parts.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because thirds are always red"
+     },
+     {
+      "id": "b",
+      "text": "If the parts are not the same size, they are not fair thirds"
+     },
+     {
+      "id": "c",
+      "text": "Because thirds are always small"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equal",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana cuts a pizza into 4 equal parts and eats 2. Her sister cuts a pizza of the same size into 2 equal parts and eats 1. Who ate more pizza?",
+    "hint": "2 quarters is the same as 1 half.",
+    "explanation": "2 quarters equal 1 half, so they ate the same.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hana ate more"
+     },
+     {
+      "id": "b",
+      "text": "Her sister ate more"
+     },
+     {
+      "id": "c",
+      "text": "They ate the same amount"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Zain cuts a loaf into 4 equal slices and eats 2. His mum cuts a loaf of the same size into 2 equal slices and eats 1. Who ate more bread?",
+    "hint": "2 quarters is the same as 1 half.",
+    "explanation": "2 quarters equal 1 half, so they ate the same.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "His mum ate more"
+     },
+     {
+      "id": "b",
+      "text": "They ate the same amount"
+     },
+     {
+      "id": "c",
+      "text": "Zain ate more"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Omar says half of 12 is 5 because 5 + 5 = 10. Is he right?",
+    "hint": "Half means two equal groups that make the whole.",
+    "explanation": "Two equal groups of 6 make 12, so half of 12 is 6.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, half of 12 is 5"
+     },
+     {
+      "id": "b",
+      "text": "No, half of 12 is 7"
+     },
+     {
+      "id": "c",
+      "text": "No. Half of 12 is 6, because 6 + 6 = 12"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "amounts",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Mina says half of 14 is 6 because 6 + 6 = 12. Is she right?",
+    "hint": "Half means two equal groups that make the whole.",
+    "explanation": "Two equal groups of 7 make 14, so half of 14 is 7.",
+    "skill_tag": "fractions.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, half of 14 is 6"
+     },
+     {
+      "id": "b",
+      "text": "No, half of 14 is 8"
+     },
+     {
+      "id": "c",
+      "text": "No. Half of 14 is 7, because 7 + 7 = 14"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "amounts",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

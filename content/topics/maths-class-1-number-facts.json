@@ -1,0 +1,2252 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-number-facts",
+  "subject": "maths",
+  "title": "Number Facts",
+  "summary": "Number bonds to 10 and 20, doubles and near doubles, and fact families.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Number facts",
+  "learning_objectives": [
+   "Know the number bonds to 10 and 20",
+   "Use doubles and near doubles",
+   "Use fact families to add and take away"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 add/sub facts",
+    "text": "Recall and use addition and subtraction facts to 20 fluently"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.03"
+   }
+  ],
+  "success_criteria": [
+   "I can say pairs that make 10 and 20",
+   "I can double a number and use near doubles",
+   "I can write four facts from three numbers"
+  ],
+  "real_life": "Sharing sweets, counting change and quick sums in your head.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do 5 and 5 make?",
+    "hint": "Count on from 5.",
+    "explanation": "5 + 5 = 10.",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "10"
+     },
+     {
+      "id": "c",
+      "text": "11"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 3 + 2?",
+    "hint": "Count on 2 from 3.",
+    "explanation": "3 + 2 = 5.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "10 is bigger than 8.",
+    "hint": "Count: 8, 9, 10.",
+    "explanation": "10 comes after 8.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today we learn number facts to keep in our heads: bonds, doubles and fact families.",
+   "say": "Welcome back, number explorer! Today we collect some super facts to keep in your head. Number bonds, doubles and fact families. When you know these by heart, adding and taking away gets faster and faster."
+  },
+  {
+   "type": "image",
+   "emoji": "🧠",
+   "alt": "Number facts to know by heart.",
+   "caption": "Number facts to know by heart."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "number facts",
+     "meaning": "Sums you know without counting."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "bonds",
+   "kind": "learn",
+   "title": "Number bonds to 10",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pairs that make ten"
+    },
+    {
+     "type": "text",
+     "markdown": "A **number bond** is a pair of numbers that make a total.\n\n7 and 3 is a bond to 10, because 7 + 3 = 10.",
+     "say": "Some numbers are best friends. They always go together to make ten. Look at the ten frame. Seven counters, and three empty spaces. Seven and three make ten. We call a pair like this a number bond. Seven and three is a bond to ten."
+    },
+    {
+     "type": "explainer",
+     "title": "7 and 3 make 10",
+     "scenes": [
+      {
+       "caption": "7 counters in the ten frame.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 7
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a ten frame with seven red counters. Count them: seven."
+      },
+      {
+       "caption": "3 empty spaces are left.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 7
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 more?"
+        }
+       ],
+       "say": "There are three empty spaces. How many more do we need to fill the frame? Three more."
+      },
+      {
+       "caption": "7 + 3 = 10.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 10
+         },
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "7 + 3 = 10"
+        }
+       ],
+       "say": "Fill them in. The frame is full: ten! So seven and three is a number bond to ten."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What goes with 6 to make 10?",
+      "hint": "How many empty spaces in a ten frame with 6 counters?",
+      "explanation": "6 + 4 = 10.",
+      "skill_tag": "facts.bonds10",
+      "answer": {
+       "value": 4,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The bond works both ways"
+    },
+    {
+     "type": "text",
+     "markdown": "Bonds work both ways: 7 + 3 = 10 and 3 + 7 = 10.\n\nTake away uses the bond too: 10 - 7 = 3.",
+     "say": "Here is a secret. Bonds work both ways. Seven plus three is ten. And three plus seven is ten too. The numbers swap places but the total stays the same. And if we know seven plus three is ten, we know ten take away seven is three. One fact gives us a whole family of facts."
+    },
+    {
+     "type": "image",
+     "emoji": "🔟",
+     "alt": "Pairs like 1 and 9, 2 and 8, 3 and 7, 4 and 6 and 5 and 5 all make 10.",
+     "caption": "Pairs like 1 and 9, 2 and 8, 3 and 7, 4 and 6 and 5 and 5 all make 10."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which pair does NOT make 10?",
+      "hint": "Add each pair.",
+      "explanation": "4 + 7 = 11. The others make 10.",
+      "skill_tag": "facts.bonds10",
+      "options": [
+       {
+        "id": "a",
+        "text": "6 and 4"
+       },
+       {
+        "id": "b",
+        "text": "4 and 7"
+       },
+       {
+        "id": "c",
+        "text": "9 and 1"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A number bond is a pair that makes a total",
+      "Pairs to 10: 1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5",
+      "Bonds work both ways"
+     ],
+     "say": "Let us remember. A number bond is a pair that makes a total. The pairs to ten are one and nine, two and eight, three and seven, four and six, and five and five."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "number bond",
+       "meaning": "Two numbers that make a total, like 7 and 3 make 10."
+      },
+      {
+       "term": "total",
+       "meaning": "How many there are altogether."
+      },
+      {
+       "term": "pair",
+       "meaning": "Two things that go together."
+      },
+      {
+       "term": "ten frame",
+       "meaning": "A box with 10 spaces for counters."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What goes with 8 to make 10?",
+     "hint": "8 + ? = 10.",
+     "explanation": "8 + 2 = 10.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What goes with 5 to make 10?",
+     "hint": "Half of 10.",
+     "explanation": "5 + 5 = 10.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "3 and 6 make 10.",
+     "hint": "3 + 6 = ?",
+     "explanation": "3 + 6 = 9. 3 and 7 make 10.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "10 - 4 = ?",
+     "hint": "Use the bond 4 + 6 = 10.",
+     "explanation": "4 + 6 = 10, so 10 - 4 = 6.",
+     "options": [
+      {
+       "id": "a",
+       "text": "5"
+      },
+      {
+       "id": "b",
+       "text": "7"
+      },
+      {
+       "id": "c",
+       "text": "6"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bonds20",
+   "kind": "try",
+   "title": "Bonds to 20",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Doubling the bonds"
+    },
+    {
+     "type": "text",
+     "markdown": "If you know 7 + 3 = 10, you know 17 + 3 = 20.\n\nBonds to **twenty** use the same ones digits.",
+     "say": "Once you know your bonds to ten, bonds to twenty are easy. Look at the digits. Seven and three make ten. So seventeen and three make twenty! Only the tens change. Try it with the stars. Move the stars to find pairs that make twenty."
+    },
+    {
+     "type": "manipulative",
+     "title": "Make twenty",
+     "goal": "You have 20 stars. Split them into two groups. How many in each group? Try 12 and 8, or 15 and 5.",
+     "emoji": "⭐",
+     "count": 20,
+     "zones": [
+      "Group A",
+      "Group B"
+     ],
+     "say": "Here are twenty stars. Split them into two groups. Try twelve and eight, or fifteen and five. Do both groups always make twenty?"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What goes with 14 to make 20?",
+      "hint": "4 + 6 = 10, so 14 + 6 = 20.",
+      "explanation": "14 + 6 = 20.",
+      "skill_tag": "facts.bonds20",
+      "answer": {
+       "value": 6,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Find the pairs at home"
+    },
+    {
+     "type": "text",
+     "markdown": "Find 20 small things and split them into two groups in different ways.",
+     "say": "Time to be a number detective at home. Find twenty small things, like buttons, spoons or pasta. Split them into two groups in different ways. How many different pairs can you find? Write them down."
+    },
+    {
+     "type": "image",
+     "emoji": "🔍",
+     "alt": "Splitting 20 buttons into two groups in different ways.",
+     "caption": "Splitting 20 buttons into two groups in different ways."
+    },
+    {
+     "type": "activity",
+     "title": "Twenty buttons",
+     "materials": [
+      "20 buttons, coins or pasta shapes",
+      "Paper and a pencil"
+     ],
+     "instructions": [
+      "Count out exactly 20 things.",
+      "Split them into two groups. Count each group.",
+      "Write the pair, like 12 + 8.",
+      "Split them a different way. How many pairs can you find?"
+     ],
+     "say": "Now try it at home. Count out twenty buttons, split them into two groups, and write the pair. How many different pairs can you find?"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which pair makes 20?",
+      "hint": "3 + 7 = 10, so 13 + 7 = 20.",
+      "explanation": "13 + 7 = 20.",
+      "skill_tag": "facts.bonds20",
+      "options": [
+       {
+        "id": "a",
+        "text": "13 and 6"
+       },
+       {
+        "id": "b",
+        "text": "12 and 9"
+       },
+       {
+        "id": "c",
+        "text": "13 and 7"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Use bonds to 10 to find bonds to 20",
+      "Only the tens digit changes"
+     ],
+     "say": "Remember. Use the bonds to ten to find the bonds to twenty. Only the tens digit changes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "twenty",
+       "meaning": "Two tens. The number 20."
+      },
+      {
+       "term": "groups",
+       "meaning": "Things split into sets."
+      },
+      {
+       "term": "detective",
+       "meaning": "Someone who finds answers by looking carefully."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What goes with 12 to make 20?",
+     "hint": "2 + 8 = 10, so 12 + 8 = 20.",
+     "explanation": "12 + 8 = 20.",
+     "answer": {
+      "value": 8,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What goes with 16 to make 20?",
+     "hint": "6 + 4 = 10.",
+     "explanation": "16 + 4 = 20.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "11 and 9 make 20.",
+     "hint": "1 + 9 = 10.",
+     "explanation": "11 + 9 = 20.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "20 - 5 = ?",
+     "hint": "Use 15 + 5 = 20.",
+     "explanation": "15 + 5 = 20, so 20 - 5 = 15.",
+     "options": [
+      {
+       "id": "a",
+       "text": "16"
+      },
+      {
+       "id": "b",
+       "text": "15"
+      },
+      {
+       "id": "c",
+       "text": "14"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doubles",
+   "kind": "play",
+   "title": "Doubles and near doubles",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Doubles"
+    },
+    {
+     "type": "text",
+     "markdown": "A **double** is a number added to itself.\n\nDouble 4 is 4 + 4 = 8.",
+     "say": "A double is a number added to itself. Double four is four plus four. That is eight. Think of a ladybird. It has the same number of spots on each wing. Four spots here and four spots there. Eight spots in all. Doubles are great to learn by heart, because they help with so many other sums."
+    },
+    {
+     "type": "explainer",
+     "title": "Double 4 on a ladybird",
+     "scenes": [
+      {
+       "caption": "4 spots on one wing.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔴",
+         "x": 22,
+         "y": 44,
+         "size": 3,
+         "anim": "none",
+         "label": "4 spots"
+        }
+       ],
+       "say": "Here is one wing of a ladybird. Four spots."
+      },
+      {
+       "caption": "Double 4 is 4 + 4 = 8.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔴",
+         "x": 22,
+         "y": 44,
+         "size": 3,
+         "anim": "none",
+         "label": "4 spots"
+        },
+        {
+         "id": "b",
+         "emoji": "🔴",
+         "x": 78,
+         "y": 44,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4 spots"
+        },
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4 + 4 = 8"
+        }
+       ],
+       "say": "The other wing is the same. Four more spots. Four and four make eight. Double four is eight!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Double match",
+     "goal": "Find the matching pairs of cards.",
+     "emojis": [
+      "🐞",
+      "🦋",
+      "🐝",
+      "🐛",
+      "🐜",
+      "🦗"
+     ],
+     "say": "Flip the cards and find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is double 6?",
+      "hint": "6 + 6.",
+      "explanation": "Double 6 is 12.",
+      "skill_tag": "facts.doubles",
+      "answer": {
+       "value": 12,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Near doubles"
+    },
+    {
+     "type": "text",
+     "markdown": "A **near double** is a sum close to a double.\n\n6 + 7: double 6 is 12, plus 1 more makes 13.",
+     "say": "Near doubles are sums that are very close to a double. Take six plus seven. That is a double with one extra. Double six is twelve. Add one more. Thirteen. So six plus seven is thirteen. You can also use double seven, which is fourteen, and take one away. Both give you the right answer."
+    },
+    {
+     "type": "image",
+     "emoji": "🐞",
+     "alt": "A near double: 6 + 7 is double 6 and 1 more.",
+     "caption": "A near double: 6 + 7 is double 6 and 1 more."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 5 + 6?",
+      "hint": "Double 5 is 10. Add 1 more.",
+      "explanation": "5 + 5 = 10, and 1 more is 11.",
+      "skill_tag": "facts.near_doubles",
+      "options": [
+       {
+        "id": "a",
+        "text": "12"
+       },
+       {
+        "id": "b",
+        "text": "11"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A double is a number added to itself",
+      "A near double is a double plus or minus 1"
+     ],
+     "say": "Remember. A double is a number added to itself. A near double is a double with one more or one less."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "double",
+       "meaning": "A number added to itself, like 4 + 4."
+      },
+      {
+       "term": "near double",
+       "meaning": "A sum that is close to a double, like 6 + 7."
+      },
+      {
+       "term": "ladybird",
+       "meaning": "A small red beetle with black spots."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is double 5?",
+     "hint": "5 + 5.",
+     "explanation": "Double 5 is 10.",
+     "answer": {
+      "value": 10,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is double 8?",
+     "hint": "8 + 8.",
+     "explanation": "Double 8 is 16.",
+     "answer": {
+      "value": 16,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "7 + 8 is a near double. What is it?",
+     "hint": "Double 7 is 14. Add 1.",
+     "explanation": "7 + 7 = 14, and 1 more is 15.",
+     "options": [
+      {
+       "id": "a",
+       "text": "14"
+      },
+      {
+       "id": "b",
+       "text": "15"
+      },
+      {
+       "id": "c",
+       "text": "16"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Double 9 is 18.",
+     "hint": "9 + 9.",
+     "explanation": "9 + 9 = 18.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "families",
+   "kind": "use",
+   "title": "Fact families",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Four facts from three numbers"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fact family** is a group of facts that use the same three numbers.\n\n2, 3 and 5: 2 + 3 = 5, 3 + 2 = 5, 5 - 2 = 3, 5 - 3 = 2.",
+     "say": "Three numbers can make a whole family of facts. Take two, three and five. Two plus three is five. Three plus two is five. Five take away two is three. Five take away three is two. Four facts from just three numbers. That is a fact family. The biggest number, five, is the total."
+    },
+    {
+     "type": "explainer",
+     "title": "The 2, 3 and 5 family",
+     "scenes": [
+      {
+       "caption": "The family is 2, 3 and 5.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 28,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "a",
+         "emoji": "2️⃣",
+         "x": 30,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "3️⃣",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is the family: two, three and five. Five is the total at the top."
+      },
+      {
+       "caption": "2 + 3 = 5 and 3 + 2 = 5.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 28,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "a",
+         "emoji": "2️⃣",
+         "x": 30,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "3️⃣",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "➕",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "bounce",
+         "label": "2 + 3 = 5"
+        }
+       ],
+       "say": "Add the two small numbers. Two plus three is five. Three plus two is five too."
+      },
+      {
+       "caption": "5 - 2 = 3 and 5 - 3 = 2.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 28,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "a",
+         "emoji": "2️⃣",
+         "x": 30,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "3️⃣",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "➖",
+         "x": 50,
+         "y": 86,
+         "size": 2,
+         "anim": "bounce",
+         "label": "5 - 2 = 3"
+        }
+       ],
+       "say": "Now take away. Five take away two is three. Five take away three is two. Four facts!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "In the family 4, 6 and 10: what is 10 - 4?",
+      "hint": "Use 4 + 6 = 10.",
+      "explanation": "10 - 4 = 6.",
+      "skill_tag": "facts.families",
+      "answer": {
+       "value": 6,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Use the family to solve a problem"
+    },
+    {
+     "type": "text",
+     "markdown": "Aisha has 10 sweets and gives away 4. 10 - 4 = 6 sweets left.\n\nUse the family 4, 6 and 10.",
+     "say": "Fact families help with stories too. Aisha has ten sweets. She gives four to her brother. How many are left? We know four plus six is ten. So ten take away four is six. Six sweets are left. One family, one answer."
+    },
+    {
+     "type": "image",
+     "emoji": "🍬",
+     "alt": "10 sweets, 4 given away, 6 left.",
+     "caption": "10 sweets, 4 given away, 6 left."
+    },
+    {
+     "type": "reveal",
+     "prompt": "The family is 3, 7 and 10. What are all four facts? Have a think first.",
+     "answer_markdown": "3 + 7 = 10, 7 + 3 = 10, 10 - 3 = 7 and 10 - 7 = 3."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which fact is in the family 5, 8 and 13?",
+      "hint": "13 is the total. Take the other number away.",
+      "explanation": "13 - 5 = 8 uses all three numbers.",
+      "skill_tag": "facts.families",
+      "options": [
+       {
+        "id": "a",
+        "text": "8 - 5 = 13"
+       },
+       {
+        "id": "b",
+        "text": "13 - 5 = 8"
+       },
+       {
+        "id": "c",
+        "text": "13 - 5 = 9"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Three numbers make four facts",
+      "The biggest number is the total",
+      "Use a fact you know to find the others"
+     ],
+     "say": "Remember. Three numbers make four facts. The biggest number is the total. Use a fact you know to find the others."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fact family",
+       "meaning": "Facts that use the same three numbers."
+      },
+      {
+       "term": "total",
+       "meaning": "The biggest number in the family, the answer to the add."
+      },
+      {
+       "term": "fact",
+       "meaning": "A sum you know is true."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "In the family 3, 4 and 7: what is 3 + 4?",
+     "hint": "Add the two small numbers.",
+     "explanation": "3 + 4 = 7.",
+     "answer": {
+      "value": 7,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "In the family 3, 4 and 7: what is 7 - 3?",
+     "hint": "Use 3 + 4 = 7.",
+     "explanation": "7 - 3 = 4.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "The family 2, 3 and 5 has four facts.",
+     "hint": "Two adds and two take-aways.",
+     "explanation": "2 + 3, 3 + 2, 5 - 2 and 5 - 3.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is the total in 6, 9 and 15?",
+     "hint": "The biggest number.",
+     "explanation": "6 + 9 = 15, so 15 is the total.",
+     "options": [
+      {
+       "id": "a",
+       "text": "6"
+      },
+      {
+       "id": "b",
+       "text": "9"
+      },
+      {
+       "id": "c",
+       "text": "15"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What goes with 7 to make 10?",
+    "hint": "7 + ? = 10.",
+    "explanation": "7 + 3 = 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "bonds",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "6 and 5 make 10.",
+    "hint": "Add them.",
+    "explanation": "6 + 5 = 11. 6 and 4 make 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "What is 10 - 6?",
+    "hint": "Use the bond 6 + 4 = 10.",
+    "explanation": "6 + 4 = 10, so 10 - 6 = 4.",
+    "skill_tag": "facts.bonds10",
+    "options": [
+     {
+      "id": "a",
+      "text": "5"
+     },
+     {
+      "id": "b",
+      "text": "4"
+     },
+     {
+      "id": "c",
+      "text": "3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the bond to 20.",
+    "hint": "4 + 6 = 10, so 14 + 6 = 20.",
+    "explanation": "14 + 6 = 20.",
+    "skill_tag": "facts.bonds20",
+    "points": 1,
+    "text": "{b1} + 6 = 20",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "13"
+       },
+       {
+        "id": "b",
+        "text": "14"
+       },
+       {
+        "id": "c",
+        "text": "15"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "bonds20",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which pairs make 20? Pick two.",
+    "hint": "Use the bonds to 10.",
+    "explanation": "12 + 8 = 20 and 15 + 5 = 20.",
+    "skill_tag": "facts.bonds20",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 + 5"
+     },
+     {
+      "id": "b",
+      "text": "15 + 4"
+     },
+     {
+      "id": "c",
+      "text": "12 + 7"
+     },
+     {
+      "id": "d",
+      "text": "12 + 8"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "What is double 7?",
+    "hint": "7 + 7.",
+    "explanation": "Double 7 is 14.",
+    "skill_tag": "facts.doubles",
+    "answer": {
+     "value": 14,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put these doubles in order, smallest first.",
+    "hint": "Work out each double.",
+    "explanation": "4, 10, 14 and 18 are in order.",
+    "skill_tag": "facts.doubles",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Double 5"
+     },
+     {
+      "id": "i3",
+      "text": "Double 7"
+     },
+     {
+      "id": "i4",
+      "text": "Double 9"
+     },
+     {
+      "id": "i1",
+      "text": "Double 2"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each sum to its answer.",
+    "hint": "Double 6 is 12.",
+    "explanation": "6 + 6 = 12, 6 + 7 = 13, 7 + 7 = 14.",
+    "skill_tag": "facts.near_doubles",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "6 + 6"
+     },
+     {
+      "id": "l2",
+      "text": "6 + 7"
+     },
+     {
+      "id": "l3",
+      "text": "7 + 7"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "14"
+     },
+     {
+      "id": "r1",
+      "text": "12"
+     },
+     {
+      "id": "r2",
+      "text": "13"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "doubles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 7 + 8.",
+    "hint": "Double 7 is 14. Add 1.",
+    "explanation": "7 + 8 = 15.",
+    "skill_tag": "facts.near_doubles",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 14",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 15",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 16",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show double 8 on the number line.",
+    "hint": "8 + 8.",
+    "explanation": "Double 8 is 16.",
+    "skill_tag": "facts.doubles",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 16,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which fact is in the family 6, 9 and 15?",
+    "hint": "15 is the total.",
+    "explanation": "15 - 6 = 9 uses all three numbers.",
+    "skill_tag": "facts.families",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 - 6 = 8"
+     },
+     {
+      "id": "b",
+      "text": "9 - 6 = 15"
+     },
+     {
+      "id": "c",
+      "text": "15 - 6 = 9"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "families",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Hana says 6 + 7 = 12 because double 6 is 12. Is Hana right?",
+    "hint": "7 is one more than 6.",
+    "explanation": "6 + 7 is one more than double 6, so it is 13.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 6 + 7 = 12"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 14"
+     },
+     {
+      "id": "c",
+      "text": "No. Double 6 is 12, and 7 is one more, so the answer is 13"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why does 17 + 3 = 20 when 7 + 3 = 10?",
+    "hint": "Look at the ones digits.",
+    "explanation": "The ones 7 and 3 make 10, and the tens 1 and the 1 from the ten make 20.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because 17 is bigger than 7"
+     },
+     {
+      "id": "b",
+      "text": "Because 3 is a double"
+     },
+     {
+      "id": "c",
+      "text": "Only the tens change. The ones still make 10"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "Aisha has 10 sweets and gives 3 to her friend. How many sweets does she have left?",
+    "hint": "Use the bond 3 + 7 = 10.",
+    "explanation": "10 - 3 = 7 sweets.",
+    "skill_tag": "facts.families",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "families",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "A friend says 9 + 9 = 17. Which fact helps you check?",
+    "hint": "Think about the double of 9.",
+    "explanation": "Double 9 is 18, so 9 + 9 is not 17.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "9 + 8 = 17, so 9 + 9 = 17"
+     },
+     {
+      "id": "b",
+      "text": "Double 9 is 16"
+     },
+     {
+      "id": "c",
+      "text": "Double 9 is 18, so 9 + 9 = 18"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "What goes with 4 to make 10?",
+    "hint": "4 + ? = 10.",
+    "explanation": "4 + 6 = 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "number",
+    "prompt": "What goes with 9 to make 10?",
+    "hint": "9 + ? = 10.",
+    "explanation": "9 + 1 = 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "8 and 2 make 10.",
+    "hint": "Add them.",
+    "explanation": "8 + 2 = 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "3 and 8 make 10.",
+    "hint": "Add them.",
+    "explanation": "3 + 8 = 11. 3 and 7 make 10.",
+    "skill_tag": "facts.bonds10",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "What is 10 - 3?",
+    "hint": "Use the bond 3 + 7 = 10.",
+    "explanation": "3 + 7 = 10, so 10 - 3 = 7.",
+    "skill_tag": "facts.bonds10",
+    "options": [
+     {
+      "id": "a",
+      "text": "6"
+     },
+     {
+      "id": "b",
+      "text": "7"
+     },
+     {
+      "id": "c",
+      "text": "8"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "multiple_choice",
+    "prompt": "What is 10 - 8?",
+    "hint": "Use the bond 8 + 2 = 10.",
+    "explanation": "8 + 2 = 10, so 10 - 8 = 2.",
+    "skill_tag": "facts.bonds10",
+    "options": [
+     {
+      "id": "a",
+      "text": "1"
+     },
+     {
+      "id": "b",
+      "text": "2"
+     },
+     {
+      "id": "c",
+      "text": "3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bonds",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the bond to 20 here.",
+    "hint": "2 + 8 = 10, so 12 + 8 = 20.",
+    "explanation": "12 + 8 = 20.",
+    "skill_tag": "facts.bonds20",
+    "points": 1,
+    "text": "{b1} + 8 = 20",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "11"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "13"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "bonds20",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this bond to 20.",
+    "hint": "7 + 3 = 10, so 17 + 3 = 20.",
+    "explanation": "17 + 3 = 20.",
+    "skill_tag": "facts.bonds20",
+    "points": 1,
+    "text": "{b1} + 3 = 20",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "16"
+       },
+       {
+        "id": "b",
+        "text": "18"
+       },
+       {
+        "id": "c",
+        "text": "17"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c"
+    },
+    "sub_lesson": "bonds20",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which sums are equal to 20? Pick two.",
+    "hint": "Use the bonds to 10.",
+    "explanation": "13 + 7 = 20 and 11 + 9 = 20.",
+    "skill_tag": "facts.bonds20",
+    "options": [
+     {
+      "id": "a",
+      "text": "11 + 9"
+     },
+     {
+      "id": "b",
+      "text": "11 + 8"
+     },
+     {
+      "id": "c",
+      "text": "13 + 6"
+     },
+     {
+      "id": "d",
+      "text": "13 + 7"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which pairs total 20? Pick two.",
+    "hint": "Use the bonds to 10.",
+    "explanation": "16 + 4 = 20 and 18 + 2 = 20.",
+    "skill_tag": "facts.bonds20",
+    "options": [
+     {
+      "id": "a",
+      "text": "16 + 3"
+     },
+     {
+      "id": "b",
+      "text": "18 + 1"
+     },
+     {
+      "id": "c",
+      "text": "18 + 2"
+     },
+     {
+      "id": "d",
+      "text": "16 + 4"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "What is double 9?",
+    "hint": "9 + 9.",
+    "explanation": "Double 9 is 18.",
+    "skill_tag": "facts.doubles",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "number",
+    "prompt": "What is double 10?",
+    "hint": "10 + 10.",
+    "explanation": "Double 10 is 20.",
+    "skill_tag": "facts.doubles",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Order these doubles from smallest.",
+    "hint": "Work out each double.",
+    "explanation": "6, 12, 16 and 20 are in order.",
+    "skill_tag": "facts.doubles",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Double 6"
+     },
+     {
+      "id": "i4",
+      "text": "Double 10"
+     },
+     {
+      "id": "i3",
+      "text": "Double 8"
+     },
+     {
+      "id": "i1",
+      "text": "Double 3"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "order",
+    "prompt": "Arrange these doubles, smallest first.",
+    "hint": "Work out each double.",
+    "explanation": "2, 8, 12 and 18 are in order.",
+    "skill_tag": "facts.doubles",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Double 4"
+     },
+     {
+      "id": "i3",
+      "text": "Double 6"
+     },
+     {
+      "id": "i4",
+      "text": "Double 9"
+     },
+     {
+      "id": "i1",
+      "text": "Double 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each sum to its answer.",
+    "hint": "Double 5 is 10.",
+    "explanation": "5 + 5 = 10, 5 + 6 = 11, 6 + 6 = 12.",
+    "skill_tag": "facts.near_doubles",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "5 + 5"
+     },
+     {
+      "id": "l2",
+      "text": "5 + 6"
+     },
+     {
+      "id": "l3",
+      "text": "6 + 6"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "11"
+     },
+     {
+      "id": "r3",
+      "text": "12"
+     },
+     {
+      "id": "r1",
+      "text": "10"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "match",
+    "prompt": "Pair up each sum with its answer.",
+    "hint": "Double 8 is 16.",
+    "explanation": "8 + 8 = 16, 8 + 9 = 17, 9 + 9 = 18.",
+    "skill_tag": "facts.near_doubles",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "8 + 8"
+     },
+     {
+      "id": "l2",
+      "text": "8 + 9"
+     },
+     {
+      "id": "l3",
+      "text": "9 + 9"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "17"
+     },
+     {
+      "id": "r3",
+      "text": "18"
+     },
+     {
+      "id": "r1",
+      "text": "16"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 6 + 7.",
+    "hint": "Double 6 is 12. Add 1.",
+    "explanation": "6 + 7 = 13.",
+    "skill_tag": "facts.near_doubles",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 12",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 13",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 14",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap the bag that shows 8 + 9.",
+    "hint": "Double 8 is 16. Add 1.",
+    "explanation": "8 + 9 = 17.",
+    "skill_tag": "facts.near_doubles",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛍️",
+       "label": "Bag A: 16",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛍️",
+       "label": "Bag B: 17",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛍️",
+       "label": "Bag C: 18",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show double 9 on the number line.",
+    "hint": "9 + 9.",
+    "explanation": "Double 9 is 18.",
+    "skill_tag": "facts.doubles",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show double 7 on the number line.",
+    "hint": "7 + 7.",
+    "explanation": "Double 7 is 14.",
+    "skill_tag": "facts.doubles",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 14,
+     "tolerance": 0
+    },
+    "sub_lesson": "doubles",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which fact is in the family 7, 8 and 15?",
+    "hint": "15 is the total.",
+    "explanation": "15 - 7 = 8 uses all three numbers.",
+    "skill_tag": "facts.families",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 - 7 = 9"
+     },
+     {
+      "id": "b",
+      "text": "8 - 7 = 15"
+     },
+     {
+      "id": "c",
+      "text": "15 - 7 = 8"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "families",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which fact is in the family 4, 9 and 13?",
+    "hint": "13 is the total.",
+    "explanation": "13 - 4 = 9 uses all three numbers.",
+    "skill_tag": "facts.families",
+    "options": [
+     {
+      "id": "a",
+      "text": "9 - 4 = 13"
+     },
+     {
+      "id": "b",
+      "text": "13 - 4 = 9"
+     },
+     {
+      "id": "c",
+      "text": "13 - 4 = 8"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "families",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ravi says 8 + 9 = 16 because double 8 is 16. Is Ravi right?",
+    "hint": "9 is one more than 8.",
+    "explanation": "8 + 9 is one more than double 8, so it is 17.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 8 + 9 = 16"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 18"
+     },
+     {
+      "id": "c",
+      "text": "No. Double 8 is 16, and 9 is one more, so the answer is 17"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Mina says 5 + 6 = 10 because double 5 is 10. Is Mina right?",
+    "hint": "6 is one more than 5.",
+    "explanation": "5 + 6 is one more than double 5, so it is 11.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 5 + 6 = 10"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 12"
+     },
+     {
+      "id": "c",
+      "text": "No. Double 5 is 10, and 6 is one more, so the answer is 11"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why does 14 + 6 = 20 when 4 + 6 = 10?",
+    "hint": "Look at the ones digits.",
+    "explanation": "The ones 4 and 6 make 10, so with the extra ten the total is 20.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because 6 is a double"
+     },
+     {
+      "id": "b",
+      "text": "Only the tens change. The ones still make 10"
+     },
+     {
+      "id": "c",
+      "text": "Because 14 is bigger than 4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why does 12 + 8 = 20 when 2 + 8 = 10?",
+    "hint": "Look at the ones digits.",
+    "explanation": "The ones 2 and 8 make 10, so with the extra ten the total is 20.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because 12 is bigger than 2"
+     },
+     {
+      "id": "b",
+      "text": "Because 8 is a double"
+     },
+     {
+      "id": "c",
+      "text": "Only the tens change. The ones still make 10"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bonds20",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "Omar has 10 stickers and gives 6 to his sister. How many stickers does he have left?",
+    "hint": "Use the bond 6 + 4 = 10.",
+    "explanation": "10 - 6 = 4 stickers.",
+    "skill_tag": "facts.families",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "families",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "number",
+    "prompt": "Maya has 10 beads and loses 8 of them. How many beads does she have left?",
+    "hint": "Use the bond 8 + 2 = 10.",
+    "explanation": "10 - 8 = 2 beads.",
+    "skill_tag": "facts.families",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "families",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "A friend says 8 + 8 = 15. Which fact helps you check?",
+    "hint": "Think about the double of 8.",
+    "explanation": "Double 8 is 16, so 8 + 8 is not 15.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Double 8 is 14"
+     },
+     {
+      "id": "b",
+      "text": "Double 8 is 16, so 8 + 8 = 16"
+     },
+     {
+      "id": "c",
+      "text": "8 + 7 = 15, so 8 + 8 = 15"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "A friend says 7 + 7 = 13. Which fact helps you check?",
+    "hint": "Think about the double of 7.",
+    "explanation": "Double 7 is 14, so 7 + 7 is not 13.",
+    "skill_tag": "facts.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Double 7 is 12"
+     },
+     {
+      "id": "b",
+      "text": "Double 7 is 14, so 7 + 7 = 14"
+     },
+     {
+      "id": "c",
+      "text": "7 + 6 = 13, so 7 + 7 = 13"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "doubles",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
