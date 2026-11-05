@@ -661,18 +661,19 @@ function CheckSlide({ slide }: { slide: Slide }) {
   };
   return (
     <>
-      <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">✋ Check yourself{slide.eyebrow ? ` · ${slide.eyebrow}` : ""}</p>
+      <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">✋ Your turn!{slide.eyebrow ? ` · ${slide.eyebrow}` : ""}</p>
       <div className={`card relative flex flex-col gap-4 p-5 sm:p-8 ${state === "wrong" ? "shake" : ""} ${state === "correct" ? "card-win" : ""} ${bodyCls}`}>
+        <button type="button" className="btn !min-h-14 self-start !px-5 text-lg" onClick={() => { sfx("tap"); speak(plain(q.prompt)); }}>🔊 Read it to me</button>
         <QuestionView q={q} value={value} onChange={(v) => { setValue(v); setState("idle"); }} />
         <div className="flex flex-wrap items-center gap-3">
-          <button ref={checkBtn} type="button" className="btn btn-primary !min-h-16 !px-8 text-xl" onClick={submit}>Check ✔</button>
-          {q.hint && state !== "correct" && <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => { sfx("tap"); setShowHint(true); }}>💡 Hint</button>}
+          <button ref={checkBtn} type="button" className={`btn btn-primary !min-h-20 !px-10 !text-2xl ${value !== undefined && state === "idle" ? "ready-wiggle" : ""}`} onClick={submit}>Check my answer ✔</button>
+          {q.hint && state !== "correct" && <button type="button" className="btn !min-h-20 !px-8 !text-2xl" onClick={() => { sfx("tap"); setShowHint(true); }}>💡 Hint</button>}
         </div>
         {showHint && q.hint && <p role="note" className={`text-xl ${state === "wrong" ? "hint-glow" : ""}`}>💡 {q.hint}</p>}
         {party > 0 && <Burst key={party} />}
-        <p role="status" aria-live="polite" className="text-2xl font-bold">
+        <p role="status" aria-live="polite" className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-extrabold">
           {state === "correct" && <span className="pop-in inline-block">🎉 Yes! {q.explanation}</span>}
-          {state === "wrong" && <>🤔 Not quite. Let's look again!</>}
+          {state === "wrong" && <span className="pop-in inline-block">🤔 Nearly! Have another go, you can do it!</span>}
         </p>
       </div>
     </>

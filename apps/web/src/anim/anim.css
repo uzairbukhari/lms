@@ -210,3 +210,20 @@
   .actor--wait { opacity: 1; transform: none; }
   .card-wait { opacity: 1; }
 }
+
+/* Answer tiles: big, colourful, bouncy and easy to tap for young children. */
+.answer-tile { border-color: color-mix(in srgb, var(--tile) 45%, transparent); box-shadow: 0 5px 0 color-mix(in srgb, var(--tile) 35%, transparent); transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s; }
+.answer-tile .tile-badge { background: var(--tile); box-shadow: 0 3px 0 rgb(0 0 0 / 0.2); }
+.answer-tile:hover { transform: translateY(-2px); border-color: var(--tile); }
+.answer-tile:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--tile) 35%, transparent); }
+.answer-tile:has(input:focus-visible) { outline: 4px solid var(--tile); outline-offset: 3px; }
+.answer-on { border-color: var(--tile); background: color-mix(in srgb, var(--tile) 18%, var(--surface, transparent)); animation: tile-pick 0.35s ease-out; }
+@keyframes tile-pick { 0% { transform: scale(1); } 40% { transform: scale(1.05) rotate(-1deg); } 100% { transform: scale(1.02); } }
+.ready-wiggle { animation: ready-wiggle 1.6s ease-in-out infinite; }
+@keyframes ready-wiggle { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.06) rotate(-1.5deg); } 90% { transform: scale(1.06) rotate(1.5deg); } }
+@media (prefers-reduced-motion: reduce) { .answer-on, .ready-wiggle { animation: none; } }
+.answer-tall { flex-direction: column; justify-content: center; text-align: center; min-height: 9.5rem; gap: 0.6rem; }
+.answer-tall .tile-badge { width: 3.25rem; height: 3.25rem; }
+.answer-on { background: var(--tile) !important; color: #fff; }
+.answer-on .tile-badge { background: #fff; color: var(--tile); }
+.answer-on .tile-badge { color: var(--tile) !important; }

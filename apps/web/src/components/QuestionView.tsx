@@ -29,8 +29,12 @@ type Props = {
 
 // Right and wrong are shown with words and icons by the caller, never by colour alone.
 const choice = (on: boolean) =>
-  "flex min-h-14 w-full cursor-pointer items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left text-lg font-semibold transition active:scale-[0.98] " +
-  (on ? "border-accent bg-accent/15 shadow-md" : "border-line bg-surface hover:border-accent/60");
+  "answer-tile flex min-h-20 w-full cursor-pointer items-center gap-4 rounded-3xl border-[3px] px-5 py-4 text-left text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold " +
+  (on ? "answer-on" : "bg-surface");
+
+/** Each answer tile has its own friendly colour (with a letter and a tick as well, so colour is never the only clue). */
+const TILE = ["#3b82f6", "#f59e0b", "#10b981", "#ec4899", "#8b5cf6", "#ef4444"];
+const tileStyle = (i: number) => ({ ["--tile" as string]: TILE[i % TILE.length] });
 
 /** Each matched pair gets its own colour and number, so pairs are never told apart by colour alone. */
 const PAIR_COLOURS = ["#ef4444", "#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ec4899"];
@@ -53,19 +57,21 @@ export function QuestionView({ q, value, onChange, disabled }: Props) {
   const pick = (v: Response) => { sfx("tap"); onChange(v); };
   return (
     <fieldset className="flex flex-col gap-3" disabled={disabled}>
-      <legend className="mb-2 text-xl font-bold">
+      <legend className="mb-3 text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold leading-snug">
         {q.emoji ? <span aria-hidden="true">{q.emoji} </span> : null}
         <Markdown text={q.prompt} />
       </legend>
-      {HELP[q.type] && <p className="-mt-1 text-sm font-semibold text-muted">{HELP[q.type]}</p>}
+      {HELP[q.type] && <p className="-mt-1 text-base font-bold text-muted">{HELP[q.type]}</p>}
 
-      {(q.type === "multiple_choice" || q.type === "multi_select") &&
-        q.options?.map((o, i) => {
+      {(q.type === "multiple_choice" || q.type === "multi_select") && (
+        <div className={`grid gap-4 ${(q.options ?? []).every((o) => o.text.length < 18) ? ((q.options?.length ?? 0) === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2") : ""}`}>
+        {q.options?.map((o, i) => {
           const picked = Array.isArray(value) ? value : [];
           const on = picked.includes(o.id);
           const single = q.type === "multiple_choice";
+          const short = (q.options ?? []).every((x) => x.text.length < 18);
           return (
-            <label key={o.id} className={choice(on)}>
+            <label key={o.id} className={choice(on) + (short ? " answer-tall" : "")} style={tileStyle(i)}>
               <input
                 type={single ? "radio" : "checkbox"}
                 name={name}
@@ -73,18 +79,20 @@ export function QuestionView({ q, value, onChange, disabled }: Props) {
                 checked={on}
                 onChange={() => pick(single ? [o.id] : on ? picked.filter((x) => x !== o.id) : [...picked, o.id])}
               />
-              <span aria-hidden="true" className={`grid size-9 shrink-0 place-items-center border-2 font-bold ${single ? "rounded-full" : "rounded-lg"} ${on ? "border-accent bg-accent text-white" : "border-line"}`}>
+              <span aria-hidden="true" className={`tile-badge grid size-12 shrink-0 place-items-center text-2xl font-extrabold text-white ${single ? "rounded-full" : "rounded-xl"}`}>
                 {on ? "✓" : String.fromCharCode(65 + i)}
               </span>
-              {o.text}
+              <span className="flex-1">{o.text}</span>
             </label>
           );
         })}
+        </div>
+      )}
 
       {q.type === "true_false" && (
         <div className="grid grid-cols-2 gap-3" role="radiogroup" aria-label="True or false">
           {[true, false].map((b) => (
-            <label key={String(b)} className={choice(value === b) + " min-h-20 justify-center text-2xl"}>
+            <label key={String(b)} className={choice(value === b) + " min-h-28 justify-center !text-3xl"} style={tileStyle(b ? 2 : 5)}>
               <input type="radio" name={name} className="sr-only" checked={value === b} onChange={() => pick(b)} />
               {b ? "✅ True" : "❌ False"}
             </label>
