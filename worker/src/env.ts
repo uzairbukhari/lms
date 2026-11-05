@@ -16,6 +16,8 @@ export type Bindings = {
   ACCESS_TEAM_DOMAIN?: string;
   /** The Audience (AUD) tag of the Cloudflare Access application protecting /admin and /api/admin. */
   ACCESS_AUD?: string;
+  /** Client ID of a Cloudflare Access service token that Claude uses to import lessons. Optional. It can only reach the content routes in requireAdmin. */
+  ACCESS_SERVICE_TOKEN_ID?: string;
   /** The one email address allowed to be the admin (the parent). */
   ADMIN_EMAIL?: string;
   /** YouTube Data API v3 key (Worker secret), used only by the admin "Suggested videos" screen. */

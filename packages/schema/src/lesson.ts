@@ -256,14 +256,17 @@ const actorSchema = z
   })
   .refine((a) => a.emoji || a.prop, { message: 'An actor needs an "emoji" or a "prop"' });
 
+/** What the voice says instead of the words on screen: a friendly teaching script (spoken numbers, questions, links to the picture). */
+const say = longText(900).optional();
+
 // --- Lesson blocks --------------------------------------------------------------------------------
 
 export const blockSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("heading"), text: line(120), backdrop: z.enum(BACKDROPS).optional() }),
-  z.object({ type: z.literal("text"), markdown: longText(2000) }),
+  z.object({ type: z.literal("text"), say, markdown: longText(2000) }),
   z
     .object({
-      type: z.literal("image"),
+      type: z.literal("image"), say,
       emoji: z.string().max(16).optional(),
       asset: z.string().max(200).optional(),
       alt: line(200).optional(),
@@ -274,11 +277,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       actors: z.array(actorSchema).min(1).max(8).optional(),
     })
     .refine((b) => b.emoji || b.asset || b.actors?.length, { message: 'An image block needs an "emoji", "actors" or an uploaded "asset" name' }),
-  z.object({ type: z.literal("callout"), style: z.enum(["tip", "fun_fact", "warning"]), markdown: longText(800) }),
+  z.object({ type: z.literal("callout"), say, style: z.enum(["tip", "fun_fact", "warning"]), markdown: longText(800) }),
   // A picture drawn from a few numbers: pictogram, bar chart, tally chart, table, number line or fraction bar.
   z
     .object({
-      type: z.literal("chart"),
+      type: z.literal("chart"), say,
       kind: z.enum(["pictogram", "bar_chart", "tally", "table", "number_line", "fraction"]),
       title: line(100),
       caption: line(200).optional(),
@@ -317,12 +320,12 @@ export const blockSchema = z.discriminatedUnion("type", [
       if (b.end <= b.start) ctx.addIssue({ code: "custom", path: ["end"], message: '"end" must be after "start"' });
       else if (b.end - b.start > 100) ctx.addIssue({ code: "custom", path: ["end"], message: "Clips must be 100 seconds or shorter: pick a shorter start and end" });
     }),
-  z.object({ type: z.literal("reveal"), prompt: line(300), answer_markdown: longText(800) }),
-  z.object({ type: z.literal("check"), question: checkQuestionSchema }),
-  z.object({ type: z.literal("steps"), items: z.array(line(300)).min(1).max(12) }),
+  z.object({ type: z.literal("reveal"), say, prompt: line(300), answer_markdown: longText(800) }),
+  z.object({ type: z.literal("check"), say, question: checkQuestionSchema }),
+  z.object({ type: z.literal("steps"), say, items: z.array(line(300)).min(1).max(12) }),
   z.object({ type: z.literal("vocab"), word: line(40), meaning: line(300), example: line(300).optional() }),
   z.object({
-    type: z.literal("activity"),
+    type: z.literal("activity"), say,
     title: line(100),
     materials: z.array(line(100)).max(12).optional(),
     instructions: z.array(line(300)).min(1).max(12),
@@ -331,7 +334,7 @@ export const blockSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("glossary"), terms: z.array(z.object({ term: line(40), meaning: line(300) })).min(1).max(40) }),
   // Move-the-items play area (counters, coins, sweets...) so a child can try a counting, sharing or grouping idea without real objects.
   z.object({
-    type: z.literal("manipulative"),
+    type: z.literal("manipulative"), say,
     title: line(100),
     goal: line(300).optional(),
     emoji: z.string().trim().min(1).max(16),
@@ -340,7 +343,7 @@ export const blockSchema = z.discriminatedUnion("type", [
   }),
   // An animated, step-by-step picture: each scene places emoji on a stage; things sharing an `id` glide to their new spot between steps.
   z.object({
-    type: z.literal("explainer"),
+    type: z.literal("explainer"), say,
     title: line(100),
     /** Scenery behind the stage (default: picked from the words). */
     backdrop: z.enum(BACKDROPS).optional(),
@@ -350,6 +353,8 @@ export const blockSchema = z.discriminatedUnion("type", [
       .array(
         z.object({
           caption: line(200),
+          /** What the voice says for this step (default: the caption). */
+          say,
           /** Zoom the stage onto a spot: zoom 1 to 3, x and y in percent of the stage. */
           camera: z.object({ zoom: z.number().min(1).max(3), x: z.number().min(0).max(100), y: z.number().min(0).max(100) }).optional(),
           items: z
@@ -381,13 +386,13 @@ export const blockSchema = z.discriminatedUnion("type", [
   }),
   // A short brain exercise. Never graded or saved.
   z.object({
-    type: z.literal("brain_game"),
+    type: z.literal("brain_game"), say,
     game: z.enum(["memory_match", "remember_order"]),
     title: line(100),
     goal: line(200).optional(),
     emojis: z.array(z.string().trim().min(1).max(16)).min(3).max(8),
   }),
-  z.object({ type: z.literal("summary"), points: z.array(line(200)).min(1).max(8) }),
+  z.object({ type: z.literal("summary"), say, points: z.array(line(200)).min(1).max(8) }),
   z.object({ type: z.literal("html_embed"), title: line(100), html: longText(50_000) }),
 ]);
 export type Block = z.infer<typeof blockSchema>;
