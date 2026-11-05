@@ -8,8 +8,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const out = join(root, "content/topics");
 mkdirSync(out, { recursive: true });
 let count = 0;
-// Every file in scripts/topics/ exports `topics`; new topic files are picked up without editing this list.
-for (const m of readdirSync(join(root, "scripts/topics")).filter((f) => f.endsWith(".mjs")).sort()) {
+// Every file in scripts/topics/ (except helper files starting with _) exports `topics`; new topic files are picked up without editing this list.
+for (const m of readdirSync(join(root, "scripts/topics")).filter((f) => f.endsWith(".mjs") && !f.startsWith("_")).sort()) {
   const { topics } = await import(`./topics/${m}`);
   for (const file of topics) { writeFileSync(join(out, `${file.lesson.slug}.json`), JSON.stringify(file, null, 1) + "\n"); count++; }
 }
