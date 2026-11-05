@@ -1,0 +1,2663 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "general-knowledge-class-1-how-people-live",
+  "subject": "general-knowledge",
+  "title": "How People Live",
+  "summary": "Homes around the world, how food gets from the farm to our plate, and how travel and daily life have changed.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: How people live",
+  "learning_objectives": [
+   "Describe different kinds of homes and why they differ",
+   "Follow food from farm to plate",
+   "Compare transport and life long ago with today"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-1-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 history",
+    "text": "Changes within living memory, where appropriate, aspects of change in national life"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "GK-01-E-01"
+   },
+   {
+    "framework": "pyp",
+    "code": "How we organise ourselves"
+   }
+  ],
+  "success_criteria": [
+   "I can name different kinds of homes",
+   "I can tell the journey of a roti from the farm",
+   "I can say how travel and life have changed"
+  ],
+  "real_life": "Seeing a farm or a mill, riding a bus or train, and asking grandparents what life was like when they were small.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which direction does the Sun rise from?",
+    "hint": "Never Eat Soggy Waffles.",
+    "explanation": "The Sun rises in the east.",
+    "options": [
+     {
+      "id": "a",
+      "text": "North"
+     },
+     {
+      "id": "b",
+      "text": "East"
+     },
+     {
+      "id": "c",
+      "text": "West"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the capital city of Pakistan?",
+    "hint": "It is in the north.",
+    "explanation": "Islamabad is the capital.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Karachi"
+     },
+     {
+      "id": "b",
+      "text": "London"
+     },
+     {
+      "id": "c",
+      "text": "Islamabad"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "The Earth spins round once every 24 hours.",
+    "hint": "That is one day.",
+    "explanation": "One spin takes about 24 hours.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, people watcher!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do people live, and how has life changed?\n\nWe will visit homes, farms and the past.",
+   "say": "Welcome, people watcher! Today's big question is: how do people live, and how has life changed? We will look at homes around the world, follow a roti all the way from the farm, and find out how people travelled long ago. This is a game, not a test. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🏘️",
+   "alt": "Homes around the world look different.",
+   "caption": "Homes around the world look different."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "people",
+     "meaning": "All the men, women and children in the world."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "homes",
+   "kind": "learn",
+   "title": "Homes around the world",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Many kinds of homes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **home** is a place where we live and feel safe.\n\nHomes can be houses, **flats**, **tents** or mud-brick homes.",
+     "say": "Where do you live? Your home is the place where you sleep, eat and feel safe. But homes are not all the same! Some families live in houses made of bricks. Some live in flats, high up in a tall building. Some people, who move from place to place, live in tents. And in many villages, families live in homes made of mud bricks. Every one of these is a home."
+    },
+    {
+     "type": "explainer",
+     "title": "Four kinds of homes",
+     "scenes": [
+      {
+       "caption": "A brick house.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "House"
+        }
+       ],
+       "say": "Here is a house made of bricks. Many families in towns and cities live in houses like this."
+      },
+      {
+       "caption": "Flats in a tall building.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "House"
+        },
+        {
+         "id": "f",
+         "emoji": "🏢",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "Flats"
+        }
+       ],
+       "say": "Here are flats. Many families live in one tall building, each family in its own flat."
+      },
+      {
+       "caption": "A tent can be moved.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "House"
+        },
+        {
+         "id": "f",
+         "emoji": "🏢",
+         "x": 38,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "Flats"
+        },
+        {
+         "id": "t",
+         "emoji": "⛺",
+         "x": 66,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "Tent"
+        }
+       ],
+       "say": "Here is a tent. People who move from place to place, with their animals, can pack up their tent and take it with them."
+      },
+      {
+       "caption": "A mud-brick home.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 12,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "House"
+        },
+        {
+         "id": "f",
+         "emoji": "🏢",
+         "x": 33,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "Flats"
+        },
+        {
+         "id": "t",
+         "emoji": "⛺",
+         "x": 57,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "Tent"
+        },
+        {
+         "id": "m",
+         "emoji": "🛖",
+         "x": 82,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "Mud-brick home"
+        }
+       ],
+       "say": "And here is a mud-brick home, in a village. Mud and straw are free and everywhere, and they keep the home cool in summer."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which kind of home can be packed up and carried away?",
+      "hint": "Think of people who move from place to place.",
+      "explanation": "A tent can be packed up and taken with you.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A brick house"
+       },
+       {
+        "id": "b",
+        "text": "A tent"
+       },
+       {
+        "id": "c",
+        "text": "A flat"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Homes and the weather"
+    },
+    {
+     "type": "text",
+     "markdown": "People build homes to suit the **weather** and what is nearby.\n\nA steep roof lets snow slide off. Thick walls keep a home cool.",
+     "say": "Why do homes look different in different places? Because of the weather, and because of what is nearby. In a snowy place, a house often has a steep roof, so the heavy snow slides off. In a very hot place, a home has thick walls and shady spaces to keep the heat out. A home keeps us warm, cool, dry and safe, whatever the weather."
+    },
+    {
+     "type": "explainer",
+     "title": "Homes and weather",
+     "scenes": [
+      {
+       "caption": "Snowy place: a steep roof.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🏠",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Snowy place"
+        },
+        {
+         "id": "s",
+         "emoji": "❄️",
+         "x": 50,
+         "y": 14,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "In a snowy place the roof is steep. Watch the snow slide off and fall to the ground, so the roof does not get too heavy."
+      },
+      {
+       "caption": "Hot place: thick walls keep it cool.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🛖",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Hot place"
+        },
+        {
+         "id": "su",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 14,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In a hot place the walls are thick and the windows are small. This keeps the home cool inside."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Thick walls can help keep a home cool in hot weather.",
+      "hint": "Think about the hot place.",
+      "explanation": "Thick walls keep the heat out.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A home is a place where we live and feel safe",
+      "Homes can be houses, flats, tents or mud-brick homes",
+      "People build homes to suit the weather"
+     ],
+     "say": "Let us remember. Homes can be houses, flats, tents or mud-brick homes. People build homes to suit the weather."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "home",
+       "meaning": "A place where we live and feel safe."
+      },
+      {
+       "term": "flats",
+       "meaning": "Homes in a tall building. Each family has its own flat."
+      },
+      {
+       "term": "tents",
+       "meaning": "Homes made of cloth that can be packed up and moved."
+      },
+      {
+       "term": "weather",
+       "meaning": "Whether it is hot, cold, rainy, snowy or windy outside."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a flat?",
+     "hint": "Many families live in one building.",
+     "explanation": "A flat is one family's home inside a bigger building.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of tent"
+      },
+      {
+       "id": "b",
+       "text": "A home in a tall building"
+      },
+      {
+       "id": "c",
+       "text": "A very tall tree"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "People who move from place to place may live in tents.",
+     "hint": "Tents can be packed up.",
+     "explanation": "A tent is easy to carry.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do snowy places often have steep roofs?",
+     "hint": "Think about heavy snow.",
+     "explanation": "Snow slides off a steep roof.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To catch more snow"
+      },
+      {
+       "id": "b",
+       "text": "To look pretty"
+      },
+      {
+       "id": "c",
+       "text": "So the snow slides off"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A home keeps us...",
+     "hint": "Think about what a home is for.",
+     "explanation": "A home keeps us safe, warm and dry.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hungry"
+      },
+      {
+       "id": "b",
+       "text": "Safe, warm and dry"
+      },
+      {
+       "id": "c",
+       "text": "Wet"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "farm",
+   "kind": "try",
+   "title": "From farm to plate",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: From seed to wheat"
+    },
+    {
+     "type": "text",
+     "markdown": "A **farmer** grows food in a **field**.\n\nWhen the wheat is ready, the farmer cuts it. This is the **harvest**.",
+     "say": "Have you ever wondered where your roti comes from? It starts on a farm! A farmer plants wheat seeds in a field. The sun shines and the rain falls, and the seeds grow into tall golden wheat. When the wheat is ready, the farmer cuts it. That is called the harvest."
+    },
+    {
+     "type": "explainer",
+     "title": "Seed to wheat",
+     "scenes": [
+      {
+       "caption": "A seed is planted.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 70,
+         "size": 2,
+         "anim": "grow",
+         "label": "Seed"
+        },
+        {
+         "id": "f",
+         "emoji": "🧑‍🌾",
+         "x": 20,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "Farmer"
+        }
+       ],
+       "say": "First, the farmer plants a tiny seed in the field."
+      },
+      {
+       "caption": "The seed grows into wheat.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌾",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "grow",
+         "label": "Wheat"
+        },
+        {
+         "id": "f",
+         "emoji": "🧑‍🌾",
+         "x": 20,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "Farmer"
+        },
+        {
+         "id": "su",
+         "emoji": "☀️",
+         "x": 82,
+         "y": 18,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The sun shines, the rain falls, and the seed grows into golden wheat."
+      },
+      {
+       "caption": "Harvest time.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌾",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none",
+         "label": "Wheat"
+        },
+        {
+         "id": "t",
+         "emoji": "🚜",
+         "x": 22,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Tractor"
+        }
+       ],
+       "say": "Then comes the harvest. The farmer cuts the wheat, with a tractor or a sickle."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we call cutting the wheat when it is ready?",
+      "hint": "It happens at the end of the growing time.",
+      "explanation": "Harvest means cutting the crop when it is ready.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The bake"
+       },
+       {
+        "id": "b",
+        "text": "The harvest"
+       },
+       {
+        "id": "c",
+        "text": "The mill"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: From wheat to roti"
+    },
+    {
+     "type": "text",
+     "markdown": "The **mill** grinds wheat into **flour**.\n\nFlour and water make **dough**. Cooked dough becomes a roti.",
+     "say": "Now the wheat goes on a journey. A lorry takes it to a mill. The mill grinds the wheat into a soft powder called flour. Then someone mixes the flour with water to make dough. The dough is rolled flat and cooked on a hot tawa. And now we have a roti, ready to eat!"
+    },
+    {
+     "type": "explainer",
+     "title": "Wheat to roti",
+     "scenes": [
+      {
+       "caption": "Wheat goes to the mill.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🌾",
+         "x": 20,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Wheat"
+        },
+        {
+         "id": "l",
+         "emoji": "🏭",
+         "x": 60,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "Mill"
+        }
+       ],
+       "say": "The wheat goes by lorry to the mill."
+      },
+      {
+       "caption": "The mill makes flour.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🏭",
+         "x": 20,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Mill"
+        },
+        {
+         "id": "fl",
+         "emoji": "🥣",
+         "x": 60,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "Flour"
+        }
+       ],
+       "say": "The mill grinds the wheat into soft white flour."
+      },
+      {
+       "caption": "Flour becomes dough, then roti.",
+       "items": [
+        {
+         "id": "fl",
+         "emoji": "🥣",
+         "x": 18,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Flour"
+        },
+        {
+         "id": "r",
+         "emoji": "🫓",
+         "x": 62,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Roti"
+        }
+       ],
+       "say": "Mix the flour with water to make dough, and cook it on the tawa. It puffs up into a warm roti!"
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "activity",
+     "title": "My food journey",
+     "materials": [
+      "Paper and pencils",
+      "A grown-up helper"
+     ],
+     "instructions": [
+      "Pick a food you ate today: bread, egg, rice or milk.",
+      "Ask a grown-up where it started, before it came to your plate.",
+      "Draw the journey in 3 or 4 pictures, with arrows between them."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a mill make from wheat?",
+      "hint": "We mix it with water to make dough.",
+      "explanation": "The mill grinds wheat into flour.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Milk"
+       },
+       {
+        "id": "b",
+        "text": "Rice"
+       },
+       {
+        "id": "c",
+        "text": "Flour"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A farmer grows wheat in a field",
+      "The mill grinds wheat into flour",
+      "Flour and water make dough, and dough becomes roti"
+     ],
+     "say": "Let us remember. Farmers grow wheat. The mill makes flour. Flour and water make dough, and dough makes roti."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "farmer",
+       "meaning": "A person who grows food or looks after animals on a farm."
+      },
+      {
+       "term": "field",
+       "meaning": "A big open space of land where crops grow."
+      },
+      {
+       "term": "harvest",
+       "meaning": "Cutting the crop when it is ready."
+      },
+      {
+       "term": "mill",
+       "meaning": "A place that grinds wheat into flour."
+      },
+      {
+       "term": "flour",
+       "meaning": "A soft powder made by grinding wheat."
+      },
+      {
+       "term": "dough",
+       "meaning": "Flour mixed with water, ready to cook."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Where does wheat grow?",
+     "hint": "Think of the farmer.",
+     "explanation": "Wheat grows in a farmer's field.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In a lift"
+      },
+      {
+       "id": "b",
+       "text": "In the sea"
+      },
+      {
+       "id": "c",
+       "text": "In a field"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which comes first?",
+     "hint": "It happens before everything else.",
+     "explanation": "A farmer plants the seed first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Making the dough"
+      },
+      {
+       "id": "b",
+       "text": "Planting the seed"
+      },
+      {
+       "id": "c",
+       "text": "Eating the roti"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Flour is made at the mill.",
+     "hint": "The mill grinds wheat.",
+     "explanation": "The mill grinds the wheat into flour.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we mix with flour to make dough?",
+     "hint": "It is a clear liquid we drink.",
+     "explanation": "Flour and water make dough.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Paint"
+      },
+      {
+       "id": "c",
+       "text": "Water"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "transport",
+   "kind": "play",
+   "title": "Transport then and now",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Travelling long ago"
+    },
+    {
+     "type": "text",
+     "markdown": "Long ago, people travelled on foot or rode **camels** and horses.\n\nThen came trains and cars, and now aeroplanes. Ways of travelling are called **transport**.",
+     "say": "How do you get to school? Maybe by car, by bus or on foot. Long ago, there were no cars. People walked, or rode on camels and horses, or sat in carts pulled by animals. Then trains came, with big engines and long carriages. Later came cars, and then aeroplanes that fly across the sky."
+    },
+    {
+     "type": "explainer",
+     "title": "Transport through time",
+     "scenes": [
+      {
+       "caption": "Long ago: camels.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐪",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "Long ago"
+        }
+       ],
+       "say": "Long ago, people travelled by camel. A camel can carry heavy things across the desert."
+      },
+      {
+       "caption": "Then: trains.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐪",
+         "x": 20,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Long ago"
+        },
+        {
+         "id": "b",
+         "emoji": "🚂",
+         "x": 62,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "Then"
+        }
+       ],
+       "say": "Then trains were built. A train can carry lots of people and things very far."
+      },
+      {
+       "caption": "Today: cars and aeroplanes.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐪",
+         "x": 12,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Long ago"
+        },
+        {
+         "id": "b",
+         "emoji": "🚂",
+         "x": 38,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Then"
+        },
+        {
+         "id": "c",
+         "emoji": "🚗",
+         "x": 62,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Now"
+        },
+        {
+         "id": "d",
+         "emoji": "✈️",
+         "x": 86,
+         "y": 55,
+         "size": 2,
+         "anim": "float",
+         "label": "Today"
+        }
+       ],
+       "say": "After that came cars and buses, and today we also fly in aeroplanes, so a very long journey takes only a few hours!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the fastest way to travel a very long way?",
+      "hint": "It flies through the sky.",
+      "explanation": "An aeroplane is the fastest for long journeys.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A camel"
+       },
+       {
+        "id": "b",
+        "text": "An aeroplane"
+       },
+       {
+        "id": "c",
+        "text": "A bicycle"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Camels were used for travel before aeroplanes were invented.",
+      "hint": "Which is older?",
+      "explanation": "People rode camels long before aeroplanes.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Turn over two cards at a time. Can you find all the pairs?",
+     "say": "Time for a brain break! Find the matching pairs of things we use to travel."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Pairs of transport",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🐪",
+      "🚂",
+      "🚗",
+      "✈️",
+      "🚲",
+      "🚌"
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Long ago people travelled on foot or by camel and horse",
+      "Then came trains and cars",
+      "Today we can fly in aeroplanes"
+     ],
+     "say": "Let us remember. Long ago people used camels and carts. Then came trains and cars. Today we can fly."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "camels",
+       "meaning": "Tall animals with humps that can carry people and heavy things across the desert."
+      },
+      {
+       "term": "transport",
+       "meaning": "The ways we travel from place to place."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which animal helped people cross the desert long ago?",
+     "hint": "It has a hump.",
+     "explanation": "Camels carry people and things across deserts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A goldfish"
+      },
+      {
+       "id": "b",
+       "text": "A penguin"
+      },
+      {
+       "id": "c",
+       "text": "A camel"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which came later?",
+     "hint": "Think about what is newest.",
+     "explanation": "Aeroplanes are newer than camels and carts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A horse cart"
+      },
+      {
+       "id": "b",
+       "text": "An aeroplane"
+      },
+      {
+       "id": "c",
+       "text": "A camel"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Trains can carry many people at once.",
+     "hint": "Think of long carriages.",
+     "explanation": "A train has many carriages and carries many people.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call all the ways of travelling?",
+     "hint": "Cars, trains and planes are all examples.",
+     "explanation": "Ways of travelling are called transport.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weather"
+      },
+      {
+       "id": "b",
+       "text": "Transport"
+      },
+      {
+       "id": "c",
+       "text": "Harvest"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "then",
+   "kind": "use",
+   "title": "Then and now",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Ask a grown-up"
+    },
+    {
+     "type": "text",
+     "markdown": "Older people remember life **long ago**. This is **living memory**.\n\nTheir stories show how life has changed.",
+     "say": "Here is a secret way to find out about the past. Ask your grandparents, or an older person in your family! They remember what life was like when they were small. What they remember is called living memory. Their stories show us how life has changed."
+    },
+    {
+     "type": "image",
+     "emoji": "👵👴",
+     "alt": "Grandparents remember what life was like long ago.",
+     "caption": "Grandparents remember what life was like long ago.",
+     "say": "Here are a grandmother and a grandfather. They have so many stories to tell."
+    },
+    {
+     "type": "reveal",
+     "prompt": "What could you ask a grandparent about when they were small?",
+     "answer_markdown": "You could ask: How did you get to school? What games did you play? What food did you eat? Did you have a mobile phone?",
+     "say": "Now it is your turn to think. What would you like to ask your grandparent? Have a think, then tap to see some ideas."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Grandparents can tell us what life was like long ago.",
+      "hint": "They remember when they were young.",
+      "explanation": "Older people remember, and their stories teach us about the past.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: What has changed?"
+    },
+    {
+     "type": "text",
+     "markdown": "Many things have **changed**. A telephone used to have a wire. Today we carry mobile phones.\n\nSome things stay the same: families share meals and children play.",
+     "say": "Lots of things have changed. When your grandparents were small, many families had only one telephone in the house, with a wire. Some had no television. Today we can talk to someone far away on a mobile phone, using a picture on a screen! Some things have not changed at all. Families still share meals, and children still love to play."
+    },
+    {
+     "type": "image",
+     "emoji": "📞📱",
+     "alt": "A telephone with a wire long ago, and a mobile phone today.",
+     "caption": "A telephone with a wire long ago, and a mobile phone today.",
+     "say": "Look at these two telephones. One has a wire, and one fits in your pocket. That is how much things have changed!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is newer?",
+      "hint": "You can carry it in your pocket.",
+      "explanation": "Mobile phones are newer than wired telephones.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A telephone with a wire"
+       },
+       {
+        "id": "b",
+        "text": "A letter by post"
+       },
+       {
+        "id": "c",
+        "text": "A mobile phone"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Older people remember life long ago",
+      "Many things have changed",
+      "Some things stay the same"
+     ],
+     "say": "Let us remember. Older people remember life long ago. Many things have changed, but some stay the same."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "long ago",
+       "meaning": "A time that was many years before now."
+      },
+      {
+       "term": "living memory",
+       "meaning": "What older people can remember from their own lives."
+      },
+      {
+       "term": "changed",
+       "meaning": "Became different from before."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Who can tell us what life was like long ago?",
+     "hint": "They are older than your parents.",
+     "explanation": "Grandparents remember the past.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A mobile phone"
+      },
+      {
+       "id": "b",
+       "text": "Our grandparents"
+      },
+      {
+       "id": "c",
+       "text": "A tent"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Everything has changed since our grandparents were small.",
+     "hint": "Do families still share meals?",
+     "explanation": "Some things, like sharing meals, stay the same.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is living memory?",
+     "hint": "It is about remembering.",
+     "explanation": "Living memory is what people remember from their own lives.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A very old book"
+      },
+      {
+       "id": "b",
+       "text": "A dream"
+      },
+      {
+       "id": "c",
+       "text": "What older people remember"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a good question for a grandparent?",
+     "hint": "Ask about their life.",
+     "explanation": "Ask about their life when they were small.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Which planet is biggest?"
+      },
+      {
+       "id": "b",
+       "text": "What is 2 + 2?"
+      },
+      {
+       "id": "c",
+       "text": "How did you get to school?"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Fatima says every home is a house. Is she right?",
+    "hint": "Think of the four kinds of home.",
+    "explanation": "There are houses, flats, tents and mud-brick homes.",
+    "skill_tag": "homes.kinds",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every home is a house"
+     },
+     {
+      "id": "b",
+      "text": "No, only tents are homes"
+     },
+     {
+      "id": "c",
+      "text": "No, homes can be flats, tents and other places"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q2",
+    "type": "slider",
+    "prompt": "Slide to show how many kinds of home we met in the lesson.",
+    "hint": "House, flat, tent and mud-brick home.",
+    "explanation": "We met four kinds of home.",
+    "skill_tag": "homes.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "homes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "All homes in the world are made from the same thing.",
+    "hint": "Think of a tent and a brick house.",
+    "explanation": "Homes are made from bricks, mud, cloth and more.",
+    "skill_tag": "homes.materials",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "homes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each home to its good point.",
+    "hint": "Think about each home.",
+    "explanation": "Each home has its own good points.",
+    "skill_tag": "homes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tent"
+     },
+     {
+      "id": "l2",
+      "text": "Flat"
+     },
+     {
+      "id": "l3",
+      "text": "Mud-brick home"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Many families in one tall building"
+     },
+     {
+      "id": "r3",
+      "text": "Mud keeps it cool"
+     },
+     {
+      "id": "r1",
+      "text": "Can be moved"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Where does the flour for roti come from?",
+    "hint": "A farmer grows it.",
+    "explanation": "Flour is made from wheat.",
+    "skill_tag": "farm.source",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rice"
+     },
+     {
+      "id": "b",
+      "text": "Eggs"
+     },
+     {
+      "id": "c",
+      "text": "Wheat"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "farm",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence.",
+    "hint": "Think of the journey to the roti.",
+    "explanation": "A farmer grows wheat and the mill makes flour.",
+    "skill_tag": "farm.fill",
+    "points": 2,
+    "text": "A farmer {b1} wheat in the field. The wheat is ground into {b2} at the mill.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "paints"
+       },
+       {
+        "id": "b",
+        "text": "drives"
+       },
+       {
+        "id": "c",
+        "text": "grows"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sugar"
+       },
+       {
+        "id": "b",
+        "text": "flour"
+       },
+       {
+        "id": "c",
+        "text": "milk"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "farm",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put the journey of a roti in order.",
+    "hint": "Start on the farm.",
+    "explanation": "Wheat, flour, dough, roti.",
+    "skill_tag": "farm.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Mill makes flour"
+     },
+     {
+      "id": "i3",
+      "text": "Cook makes dough"
+     },
+     {
+      "id": "i4",
+      "text": "We eat the roti"
+     },
+     {
+      "id": "i1",
+      "text": "Farmer grows wheat"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "farm",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Why is a steep roof a good idea in a snowy place?",
+    "hint": "Think about heavy snow.",
+    "explanation": "Snow slides off a steep roof.",
+    "skill_tag": "homes.weather",
+    "options": [
+     {
+      "id": "a",
+      "text": "To catch more snow"
+     },
+     {
+      "id": "b",
+      "text": "So the snow slides off"
+     },
+     {
+      "id": "c",
+      "text": "To make the house taller"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Why does wheat have to go to the mill before we can make roti?",
+    "hint": "We need flour for dough.",
+    "explanation": "The mill turns wheat into flour.",
+    "skill_tag": "farm.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The mill makes it wet"
+     },
+     {
+      "id": "b",
+      "text": "The mill grinds it into flour"
+     },
+     {
+      "id": "c",
+      "text": "The mill plants it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "farm",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "short_text",
+    "prompt": "Which animal carried people across the desert long ago? Write one word.",
+    "hint": "It has a hump.",
+    "explanation": "Camels carried people across deserts.",
+    "skill_tag": "transport.old",
+    "answer": {
+     "accepted": [
+      "camel",
+      "camels",
+      "a camel"
+     ]
+    },
+    "sub_lesson": "transport",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the transport that is fastest for a very long journey.",
+    "hint": "It flies.",
+    "explanation": "An aeroplane is the fastest for long journeys.",
+    "skill_tag": "transport.fast",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🚲",
+       "label": "Bicycle",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "✈️",
+       "label": "Aeroplane",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐪",
+       "label": "Camel",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multi_select",
+    "prompt": "Which two were ways of travelling long ago? Pick two.",
+    "hint": "Think of animals.",
+    "explanation": "People rode camels and used horse carts.",
+    "skill_tag": "transport.then",
+    "options": [
+     {
+      "id": "a",
+      "text": "In a horse cart"
+     },
+     {
+      "id": "b",
+      "text": "In a jet plane"
+     },
+     {
+      "id": "c",
+      "text": "On an electric scooter"
+     },
+     {
+      "id": "d",
+      "text": "On a camel"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "Older relatives remember what life was like when they were young.",
+    "hint": "They remember.",
+    "explanation": "Older people remember the past.",
+    "skill_tag": "then.memory",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "then",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Ali's grandpa had no mobile phone when he was young. What does this tell us?",
+    "hint": "Compare then and now.",
+    "explanation": "Things have changed since long ago.",
+    "skill_tag": "then.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mobile phones are old"
+     },
+     {
+      "id": "b",
+      "text": "Grandpas do not like phones"
+     },
+     {
+      "id": "c",
+      "text": "Life was different long ago"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "then",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these in order, oldest way to travel first.",
+    "hint": "The newest is last.",
+    "explanation": "Walking, horse cart, train, aeroplane.",
+    "skill_tag": "then.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Horse cart"
+     },
+     {
+      "id": "i4",
+      "text": "Aeroplane"
+     },
+     {
+      "id": "i3",
+      "text": "Train"
+     },
+     {
+      "id": "i1",
+      "text": "Walking"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "then",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Ali says every home is a house. Is he right?",
+    "hint": "Think of the four kinds of home.",
+    "explanation": "There are houses, flats, tents and mud-brick homes.",
+    "skill_tag": "homes.kinds",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all homes are houses"
+     },
+     {
+      "id": "b",
+      "text": "No, homes can be flats, tents and other places"
+     },
+     {
+      "id": "c",
+      "text": "No, only tents are homes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Mina says a flat is not a real home. Is she right?",
+    "hint": "Families live in them.",
+    "explanation": "A flat is a real home.",
+    "skill_tag": "homes.kinds",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, flats are shops"
+     },
+     {
+      "id": "b",
+      "text": "No, a flat is a home in a tall building"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only houses are homes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "slider",
+    "prompt": "Slide to show how many kinds of home we met: house, flat, tent and mud-brick home.",
+    "hint": "Count them one by one.",
+    "explanation": "We met four kinds of home.",
+    "skill_tag": "homes.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "homes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "slider",
+    "prompt": "Slide to show how many things a roti needs from the field to the plate: farmer, mill, dough and cooking.",
+    "hint": "Count each step.",
+    "explanation": "There are four steps.",
+    "skill_tag": "homes.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "homes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "All homes in the world are made from the same materials.",
+    "hint": "Think of tents and brick houses.",
+    "explanation": "Homes are made from bricks, mud, cloth and more.",
+    "skill_tag": "homes.materials",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "homes",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "A tent is made of cloth.",
+    "hint": "It can be packed up.",
+    "explanation": "A tent is made of cloth.",
+    "skill_tag": "homes.materials",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "homes",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Match each kind of home to a good point about it.",
+    "hint": "Think about each home.",
+    "explanation": "Each home has its own good points.",
+    "skill_tag": "homes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tent"
+     },
+     {
+      "id": "l2",
+      "text": "Flat"
+     },
+     {
+      "id": "l3",
+      "text": "Brick house"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Many families in one tall building"
+     },
+     {
+      "id": "r3",
+      "text": "Strong walls of baked clay"
+     },
+     {
+      "id": "r1",
+      "text": "Can be moved"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homes",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "match",
+    "prompt": "Match each place to the home that suits it.",
+    "hint": "Think about the weather.",
+    "explanation": "Homes suit the weather and the way people live.",
+    "skill_tag": "homes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Snowy hills"
+     },
+     {
+      "id": "l2",
+      "text": "Hot desert"
+     },
+     {
+      "id": "l3",
+      "text": "Moving camp"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Thick walls"
+     },
+     {
+      "id": "r1",
+      "text": "Steep roof"
+     },
+     {
+      "id": "r3",
+      "text": "Tent"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "homes",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "Which crop is ground into flour for roti?",
+    "hint": "A farmer grows it.",
+    "explanation": "Flour is made from wheat.",
+    "skill_tag": "farm.source",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mangoes"
+     },
+     {
+      "id": "b",
+      "text": "Wheat"
+     },
+     {
+      "id": "c",
+      "text": "Spinach"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "farm",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multiple_choice",
+    "prompt": "What does the mill grind wheat into?",
+    "hint": "We use it to make dough.",
+    "explanation": "The mill grinds wheat into flour.",
+    "skill_tag": "farm.source",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rice"
+     },
+     {
+      "id": "b",
+      "text": "Sugar"
+     },
+     {
+      "id": "c",
+      "text": "Flour"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "farm",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence.",
+    "hint": "Think of food journeys.",
+    "explanation": "A farmer grows food and we cook it in a kitchen.",
+    "skill_tag": "farm.fill",
+    "points": 2,
+    "text": "A farmer {b1} rice in the field. The rice is cooked in the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "paints"
+       },
+       {
+        "id": "b",
+        "text": "drives"
+       },
+       {
+        "id": "c",
+        "text": "grows"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sea"
+       },
+       {
+        "id": "b",
+        "text": "kitchen"
+       },
+       {
+        "id": "c",
+        "text": "sky"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "farm",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "The harvest is when the crop is ready.",
+    "explanation": "The farmer cuts the wheat and it goes to the mill.",
+    "skill_tag": "farm.fill",
+    "points": 2,
+    "text": "At harvest time the farmer {b1} the wheat. The wheat goes to the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "paints"
+       },
+       {
+        "id": "b",
+        "text": "cuts"
+       },
+       {
+        "id": "c",
+        "text": "sings to"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "moon"
+       },
+       {
+        "id": "b",
+        "text": "mill"
+       },
+       {
+        "id": "c",
+        "text": "school"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "farm",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Order the steps from the field to the roti.",
+    "hint": "Start in the field.",
+    "explanation": "Plant, harvest, mill, cook.",
+    "skill_tag": "farm.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Wheat is harvested"
+     },
+     {
+      "id": "i4",
+      "text": "Roti is cooked"
+     },
+     {
+      "id": "i3",
+      "text": "Mill makes flour"
+     },
+     {
+      "id": "i1",
+      "text": "Wheat is planted"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "farm",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "order",
+    "prompt": "Put the steps of making a roti in order.",
+    "hint": "Start with the dough.",
+    "explanation": "Mix, roll, cook, eat.",
+    "skill_tag": "farm.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Roll the dough flat"
+     },
+     {
+      "id": "i3",
+      "text": "Cook it on the tawa"
+     },
+     {
+      "id": "i4",
+      "text": "Eat it"
+     },
+     {
+      "id": "i1",
+      "text": "Mix flour and water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "farm",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "A family in a snowy place builds a house. What roof helps most?",
+    "hint": "Think about the snow.",
+    "explanation": "A steep roof lets the snow slide off.",
+    "skill_tag": "homes.weather",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flat glass roof"
+     },
+     {
+      "id": "b",
+      "text": "No roof at all"
+     },
+     {
+      "id": "c",
+      "text": "A steep roof"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Why do hot places often have homes with thick walls?",
+    "hint": "Think about a hot day.",
+    "explanation": "Thick walls keep the heat out.",
+    "skill_tag": "homes.weather",
+    "options": [
+     {
+      "id": "a",
+      "text": "To keep the cold in"
+     },
+     {
+      "id": "b",
+      "text": "To catch snow"
+     },
+     {
+      "id": "c",
+      "text": "To keep the heat out"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "homes",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Why does wheat go to the mill?",
+    "hint": "We need flour for dough.",
+    "explanation": "The mill turns wheat into flour.",
+    "skill_tag": "farm.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The mill makes it wet"
+     },
+     {
+      "id": "b",
+      "text": "The mill grinds it into flour"
+     },
+     {
+      "id": "c",
+      "text": "The mill plants it again"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "farm",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multiple_choice",
+    "prompt": "Why do we mix flour with water?",
+    "hint": "Think of roti.",
+    "explanation": "Flour and water make dough.",
+    "skill_tag": "farm.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make rice"
+     },
+     {
+      "id": "b",
+      "text": "To make dough"
+     },
+     {
+      "id": "c",
+      "text": "To make wheat"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "farm",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "short_text",
+    "prompt": "Which animal did people ride across the desert long ago? Write one word.",
+    "hint": "It has a hump.",
+    "explanation": "Camels carried people across deserts.",
+    "skill_tag": "transport.old",
+    "answer": {
+     "accepted": [
+      "camel",
+      "camels",
+      "a camel"
+     ]
+    },
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "short_text",
+    "prompt": "Which animal pulled carts long ago? Write one word.",
+    "hint": "It could also be ridden.",
+    "explanation": "Horses and bullocks pulled carts.",
+    "skill_tag": "transport.old",
+    "answer": {
+     "accepted": [
+      "horse",
+      "horses",
+      "a horse",
+      "bullock",
+      "bullocks",
+      "ox",
+      "oxen"
+     ]
+    },
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "hotspot",
+    "prompt": "Tap the transport that is best for crossing the sea to another country.",
+    "hint": "It flies fast.",
+    "explanation": "An aeroplane is the best for a very long journey.",
+    "skill_tag": "transport.fast",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🚲",
+       "label": "Bicycle",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "✈️",
+       "label": "Aeroplane",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛴",
+       "label": "Scooter",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "hotspot",
+    "prompt": "Tap the transport that carries the most people at once.",
+    "hint": "It has lots of seats.",
+    "explanation": "A bus carries many people.",
+    "skill_tag": "transport.fast",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🚌",
+       "label": "Bus",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🚲",
+       "label": "Bicycle",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛴",
+       "label": "Scooter",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multi_select",
+    "prompt": "Which two are ways people travelled long ago? Pick two.",
+    "hint": "Think about animals.",
+    "explanation": "People rode camels and used horse carts long ago.",
+    "skill_tag": "transport.then",
+    "options": [
+     {
+      "id": "a",
+      "text": "In a horse cart"
+     },
+     {
+      "id": "b",
+      "text": "In a jet plane"
+     },
+     {
+      "id": "c",
+      "text": "On an electric scooter"
+     },
+     {
+      "id": "d",
+      "text": "On a camel"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multi_select",
+    "prompt": "Pick the two that people used long ago for travelling.",
+    "hint": "No machines yet.",
+    "explanation": "People walked and rode horses.",
+    "skill_tag": "transport.then",
+    "options": [
+     {
+      "id": "a",
+      "text": "Taking a rocket"
+     },
+     {
+      "id": "b",
+      "text": "Using a modern bus"
+     },
+     {
+      "id": "c",
+      "text": "Riding a horse"
+     },
+     {
+      "id": "d",
+      "text": "Walking"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "transport",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "Older people can tell us what life was like when they were young.",
+    "hint": "They remember.",
+    "explanation": "Older people remember the past.",
+    "skill_tag": "then.memory",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "then",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "Only books can tell us about long ago.",
+    "hint": "Think about your grandparents.",
+    "explanation": "People can tell us too.",
+    "skill_tag": "then.memory",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "then",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Ayesha's grandmother had no television when she was little. What does this tell us?",
+    "hint": "Compare then and now.",
+    "explanation": "Things have changed since long ago.",
+    "skill_tag": "then.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Television was never invented"
+     },
+     {
+      "id": "b",
+      "text": "Life was different long ago"
+     },
+     {
+      "id": "c",
+      "text": "Grandmothers do not like TV"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "then",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Omar's grandfather read letters, not messages on a phone. What does this tell us?",
+    "hint": "Compare then and now.",
+    "explanation": "The way people talk has changed.",
+    "skill_tag": "then.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Letters are newer than phones"
+     },
+     {
+      "id": "b",
+      "text": "People talked to each other in different ways long ago"
+     },
+     {
+      "id": "c",
+      "text": "Phones never exist"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "then",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Arrange these ways of travelling, oldest first.",
+    "hint": "The newest is last.",
+    "explanation": "The order is walking, horse cart, steam train, jet plane.",
+    "skill_tag": "then.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Steam train"
+     },
+     {
+      "id": "i4",
+      "text": "Jet plane"
+     },
+     {
+      "id": "i2",
+      "text": "Horse cart"
+     },
+     {
+      "id": "i1",
+      "text": "Walking"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "then",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Order these, oldest first.",
+    "hint": "Think about what was invented first.",
+    "explanation": "Each one came later than the one before.",
+    "skill_tag": "then.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Telephone with a wire"
+     },
+     {
+      "id": "i4",
+      "text": "Video call"
+     },
+     {
+      "id": "i3",
+      "text": "Mobile phone"
+     },
+     {
+      "id": "i1",
+      "text": "Letter on paper"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "then",
+    "depth": "apply",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
