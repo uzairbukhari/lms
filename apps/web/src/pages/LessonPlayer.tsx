@@ -48,7 +48,9 @@ const KIND_LABEL: Record<string, string> = { learn: "Learn", try: "Try it", play
 export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" }) {
   const { id, subId } = useParams();
   const results = useRef(new Map<string, boolean>());
-  const part = useMemo<PartCtx>(() => ({ record: (k, ok) => { if (!results.current.has(k)) results.current.set(k, ok); } }), []);
+  /** Only the mini quiz questions count towards the part's score, not the checks inside the slides. */
+  const miniPrompts = useRef(new Set<string>());
+  const part = useMemo<PartCtx>(() => ({ record: (k, ok) => { if (miniPrompts.current.has(k) && !results.current.has(k)) results.current.set(k, ok); } }), []);
   const [data, setData] = useState<LessonPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const started = useRef(Date.now());
@@ -59,7 +61,9 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" })
   useEffect(() => {
     if (mode === "part") {
       setNarrationEnabled(true);
+      results.current.clear();
       api<PartPayload>(`/api/lessons/${id}/parts/${subId}`)
+        .then((p) => { miniPrompts.current = new Set(p.miniQuiz.map((q) => q.prompt)); return p; })
         .then((p) => setData({
           lesson: { id: id ?? "", title: p.sub.title, subject: p.subject, summary: `${KIND_LABEL[p.sub.kind] ?? "Part"} · ${p.topicTitle}`, minutes: 8, objectives: [], semester: null, week: null, phase: "current" },
           blocks: [...p.blocks, { type: "heading", text: "Mini quiz" } as Block, ...p.miniQuiz.map((question) => ({ type: "check", question }) as Block)],
@@ -89,7 +93,7 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" })
         if (!completed) return;
         const total = data?.quiz.questionCount ?? 0;
         const right = [...results.current.values()].filter(Boolean).length;
-        void api(`/api/lessons/${id}/parts/${subId}`, { method: "PUT", body: total > 0 && results.current.size > 0 ? { viewed: true, miniPercent: Math.round((right / total) * 100) } : { viewed: true } }).catch(() => undefined);
+        void api(`/api/lessons/${id}/parts/${subId}`, { method: "PUT", body: total > 0 && results.current.size > 0 ? { viewed: true, miniPercent: Math.min(100, Math.round((right / total) * 100)) } : { viewed: true } }).catch(() => undefined);
         return;
       }
       const addSeconds = Math.min(1800, Math.round((Date.now() - started.current) / 1000));
