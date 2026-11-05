@@ -259,7 +259,7 @@ export function StudentHome() {
       {failed && <p role="alert" className="text-xl">We couldn't load your lessons. Please refresh the page.</p>}
 
       {rewards && rewards.stickers.some((x) => x.isNew) && (
-        <Link to="/rewards" className="pop-in card flex items-center gap-4 p-4 text-lg font-bold" role="status">
+        <Link to="/rewards" className="pop-in card flex items-center justify-center gap-4 p-4 text-center text-lg font-bold" role="status">
           <span aria-hidden="true" className="text-4xl">{rewards.stickers.find((x) => x.isNew)?.emoji}</span>
           You earned a new sticker! Tap to see it.
         </Link>
