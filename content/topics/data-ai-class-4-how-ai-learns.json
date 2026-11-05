@@ -1,0 +1,2427 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-how-ai-learns",
+  "subject": "data-ai",
+  "title": "How AI Learns",
+  "summary": "Training data and labels, patterns and testing, when AI gets it wrong, and checking its answers.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: How AI learns",
+  "learning_objectives": [
+   "Explain how a machine learns from labelled examples",
+   "Say how we test a machine and why AI can be biased",
+   "Check AI answers and use AI honestly"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 3",
+    "text": "Learning: computers can learn from data; machine learning uses training data and finds patterns"
+   },
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 5",
+    "text": "Societal impact: AI can impact the world in positive and negative ways, including bias"
+   }
+  ],
+  "success_criteria": [
+   "I can explain training data and labels",
+   "I can say why AI makes mistakes",
+   "I know how to check an AI answer"
+  ],
+  "real_life": "Photo apps that sort faces, voice helpers and homework helpers all learn from data and can make mistakes.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the middle number in 2, 5, 9?",
+    "hint": "It is in the middle.",
+    "explanation": "5 is in the middle.",
+    "options": [
+     {
+      "id": "a",
+      "text": "2"
+     },
+     {
+      "id": "b",
+      "text": "9"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a variable store?",
+    "hint": "A named box.",
+    "explanation": "A variable stores a value.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A picture only"
+     },
+     {
+      "id": "b",
+      "text": "A value"
+     },
+     {
+      "id": "c",
+      "text": "A sound only"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 7 x 6?",
+    "hint": "6 sevens.",
+    "explanation": "7 x 6 = 42.",
+    "answer": {
+     "value": 42,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, AI investigator!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how does a computer learn?\n\nWe will explore training data, testing and fairness.",
+   "say": "Welcome, AI investigator! Today's big question: how does a computer learn? We will see how machines learn from examples, how to test them, why they sometimes get things wrong, and how we should check their answers. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🤖📚",
+   "alt": "Machines learn from examples, but people must check.",
+   "caption": "Machines learn from examples, but people must check."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "investigator",
+     "meaning": "Someone who looks closely to find out the truth."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "training",
+   "kind": "learn",
+   "title": "Training data and labels",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Machines learn from data"
+    },
+    {
+     "type": "text",
+     "markdown": "**Machine learning** finds patterns in **training data**.\n\nNobody writes every rule. The machine learns from examples.",
+     "say": "A normal program follows rules a programmer wrote. But a machine learning program works differently. Nobody writes every rule. Instead we give it lots of examples, called training data, and it finds the patterns itself. Think of teaching a child to spot a mango. You do not list rules. You show many mangoes, and say: this is a mango."
+    },
+    {
+     "type": "explainer",
+     "title": "Learning from examples",
+     "scenes": [
+      {
+       "caption": "Training data: pictures of fruit.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥭",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🍌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🍎",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "We show the machine pictures of fruit."
+      },
+      {
+       "caption": "Each picture has a label.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥭",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "mango"
+        },
+        {
+         "id": "b",
+         "emoji": "🍌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "banana"
+        },
+        {
+         "id": "c",
+         "emoji": "🍎",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "apple"
+        }
+       ],
+       "say": "Each picture has a label that says what it is: mango, banana, apple. The labels are the right answers."
+      },
+      {
+       "caption": "It learns the patterns.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥭",
+         "x": 20,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "mango"
+        },
+        {
+         "id": "b",
+         "emoji": "🍌",
+         "x": 50,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "banana"
+        },
+        {
+         "id": "c",
+         "emoji": "🍎",
+         "x": 80,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "apple"
+        },
+        {
+         "id": "m",
+         "emoji": "🧠",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "pulse",
+         "label": "model"
+        }
+       ],
+       "say": "After thousands of labelled examples, the machine learns the patterns: the colour, the shape and the size. Now it can name a fruit it has never seen before."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is training data?",
+      "hint": "Think about teaching with examples.",
+      "explanation": "Training data is the set of examples a machine learns from.",
+      "skill_tag": "ai4.training",
+      "options": [
+       {
+        "id": "a",
+        "text": "The screen of a computer"
+       },
+       {
+        "id": "b",
+        "text": "Examples we show a machine so it can learn"
+       },
+       {
+        "id": "c",
+        "text": "The rules a programmer typed in"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Labels"
+    },
+    {
+     "type": "text",
+     "markdown": "A **label** is the right answer for an example. Wrong labels teach wrong things.",
+     "say": "A label is the right answer attached to an example. If the labels are wrong, the machine learns the wrong thing. Imagine a photo of a lemon labelled as an orange. The machine would be confused. Good labels are accurate and consistent. That is why people check labels carefully."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "A tiny labelled data set",
+     "rows": [
+      {
+       "label": "Round, red, shiny",
+       "value": 1,
+       "emoji": "🍎"
+      },
+      {
+       "label": "Long, yellow",
+       "value": 2,
+       "emoji": "🍌"
+      },
+      {
+       "label": "Round, orange",
+       "value": 3,
+       "emoji": "🍊"
+      }
+     ],
+     "caption": "Each row is an example. The label is the fruit."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If a photo of a lemon is labelled as an orange, the machine could learn the wrong thing.",
+      "hint": "Think about wrong labels.",
+      "explanation": "A wrong label teaches a wrong pattern.",
+      "skill_tag": "ai4.labels",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Machine learning learns from training data",
+      "Labels are the right answers",
+      "Wrong labels teach wrong things"
+     ],
+     "say": "Let us remember. Machine learning finds patterns in labelled training data. Good labels matter."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "machine learning",
+       "meaning": "A way for computers to learn patterns from examples."
+      },
+      {
+       "term": "training data",
+       "meaning": "The examples a machine learns from."
+      },
+      {
+       "term": "label",
+       "meaning": "The right answer attached to an example."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats or looks alike."
+      },
+      {
+       "term": "model",
+       "meaning": "What a machine builds after learning from data."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "In machine learning, who writes every rule?",
+     "hint": "Think about examples.",
+     "explanation": "The machine finds patterns itself.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The user"
+      },
+      {
+       "id": "b",
+       "text": "Nobody. The machine finds patterns"
+      },
+      {
+       "id": "c",
+       "text": "The screen"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A label is the right answer attached to an example.",
+     "hint": "Like a name tag.",
+     "explanation": "A label names the example.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a machine learning program learn from?",
+     "hint": "Examples.",
+     "explanation": "It learns from training data.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its battery"
+      },
+      {
+       "id": "b",
+       "text": "Its charger"
+      },
+      {
+       "id": "c",
+       "text": "Training data"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do people check labels?",
+     "hint": "Accuracy matters.",
+     "explanation": "A wrong label teaches the wrong pattern.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Labels look pretty"
+      },
+      {
+       "id": "b",
+       "text": "Wrong labels teach the wrong thing"
+      },
+      {
+       "id": "c",
+       "text": "Labels use more power"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "testing",
+   "kind": "try",
+   "title": "Patterns and testing",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Finding patterns"
+    },
+    {
+     "type": "text",
+     "markdown": "The machine looks for **patterns** that tell groups apart. It does not truly understand.",
+     "say": "When a machine looks at lots of examples, it searches for patterns that tell the groups apart. For cats and dogs, it might spot that cats have pointed ears and whiskers while dogs have longer noses. It does not truly understand animals. It matches patterns in the numbers that make up the pictures. The more varied the examples, the better the patterns."
+    },
+    {
+     "type": "explainer",
+     "title": "Patterns tell cats from dogs",
+     "scenes": [
+      {
+       "caption": "Cats and dogs.",
+       "items": [
+        {
+         "id": "c1",
+         "emoji": "🐱",
+         "x": 20,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c2",
+         "emoji": "🐈",
+         "x": 35,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d1",
+         "emoji": "🐶",
+         "x": 65,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d2",
+         "emoji": "🐕",
+         "x": 80,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here are some cats and dogs. The machine compares them."
+      },
+      {
+       "caption": "Patterns: ears, whiskers, noses.",
+       "items": [
+        {
+         "id": "c1",
+         "emoji": "🐱",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "pointed ears"
+        },
+        {
+         "id": "c2",
+         "emoji": "🐈",
+         "x": 35,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "whiskers"
+        },
+        {
+         "id": "d1",
+         "emoji": "🐶",
+         "x": 65,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "long nose"
+        },
+        {
+         "id": "d2",
+         "emoji": "🐕",
+         "x": 80,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "long nose"
+        }
+       ],
+       "say": "It notices patterns: pointed ears and whiskers on one side, longer noses on the other."
+      },
+      {
+       "caption": "Now it guesses about a new picture.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "❓",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "m",
+         "emoji": "🧠",
+         "x": 50,
+         "y": 75,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Then it uses those patterns to guess about a new picture."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a machine learning program search for in examples?",
+      "hint": "Things that repeat.",
+      "explanation": "It searches for patterns.",
+      "skill_tag": "ai4.patterns",
+      "options": [
+       {
+        "id": "a",
+        "text": "Passwords"
+       },
+       {
+        "id": "b",
+        "text": "Patterns"
+       },
+       {
+        "id": "c",
+        "text": "Jokes"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Testing"
+    },
+    {
+     "type": "text",
+     "markdown": "We **test** with new examples. **Accuracy** is how many it gets right.",
+     "say": "How do we know if the machine really learned? We test it with new examples it has never seen. If we tested with the same pictures it trained on, it could just remember them. Out of twenty new pictures, if it gets eighteen right, that is ninety percent accuracy. If it gets only ten right, it needs more or better training."
+    },
+    {
+     "type": "image",
+     "emoji": "🧪🐱🐶",
+     "alt": "Test a machine with new pictures.",
+     "caption": "Test a machine with new pictures."
+    },
+    {
+     "type": "activity",
+     "title": "Train and test a friend",
+     "materials": [
+      "10 drawn cards: 5 cats and 5 dogs",
+      "A friend"
+     ],
+     "instructions": [
+      "Show your friend 6 cards with labels.",
+      "Hide the labels and show them the 4 other cards.",
+      "How many did they get right? That is their accuracy."
+     ],
+     "say": "Be the trainer. Teach a friend with cards, then test them."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A machine is tested on 20 new pictures and gets 16 right. How many did it get wrong?",
+      "hint": "20 minus 16.",
+      "explanation": "20 - 16 = 4.",
+      "skill_tag": "ai4.testing",
+      "answer": {
+       "value": 4,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Machines look for patterns",
+      "Test with new examples to check accuracy"
+     ],
+     "say": "Let us remember. Machines find patterns in examples. We test with new ones to check accuracy."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats or looks alike."
+      },
+      {
+       "term": "test",
+       "meaning": "To try something with new examples to see if it works."
+      },
+      {
+       "term": "accuracy",
+       "meaning": "How many answers are right."
+      },
+      {
+       "term": "new examples",
+       "meaning": "Examples the machine did not see during training."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do we test a machine with new examples?",
+     "hint": "Not just remembering.",
+     "explanation": "New examples show real learning.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To use up its battery"
+      },
+      {
+       "id": "b",
+       "text": "To make it faster"
+      },
+      {
+       "id": "c",
+       "text": "To see if it really learned"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A machine gets 9 out of 10 right. How many wrong?",
+     "hint": "10 minus 9.",
+     "explanation": "10 - 9 = 1.",
+     "answer": {
+      "value": 1,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "Accuracy tells us how many answers are right.",
+     "hint": "Right answers.",
+     "explanation": "Accuracy is about right answers.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gets_wrong",
+   "kind": "play",
+   "title": "When AI gets it wrong",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Why mistakes happen"
+    },
+    {
+     "type": "text",
+     "markdown": "**Bias** happens when training data is not varied or fair.\n\nMachines can get things wrong if they have not seen enough different examples.",
+     "say": "AI makes mistakes. Often the reason is the training data. If a machine only saw pictures of white cats, it might not recognise a black cat. That is because the examples were not varied enough. This problem is called bias. A fair machine needs training data from many kinds of examples. Also, if the world changes, old training data can go out of date."
+    },
+    {
+     "type": "explainer",
+     "title": "The white cat problem",
+     "scenes": [
+      {
+       "caption": "Only white cats in training.",
+       "items": [
+        {
+         "id": "w1",
+         "emoji": "🐈",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w2",
+         "emoji": "🐈",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w3",
+         "emoji": "🐈",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "⬜",
+         "x": 50,
+         "y": 25,
+         "size": 2,
+         "anim": "none",
+         "label": "only white"
+        }
+       ],
+       "say": "The machine is trained only on white cats."
+      },
+      {
+       "caption": "A black cat. It says: not a cat?",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🐈‍⬛",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Then it sees a black cat. It has never seen one like this, so it may say: not a cat."
+      },
+      {
+       "caption": "The fix: more varied examples.",
+       "items": [
+        {
+         "id": "w1",
+         "emoji": "🐈",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐈‍⬛",
+         "x": 40,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🐱",
+         "x": 60,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🐅",
+         "x": 80,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 20,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The fix is more varied training data: cats of every colour and size."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A machine only trained on white cats misses a black cat. What is the best fix?",
+      "hint": "More variety.",
+      "explanation": "Varied training data helps it learn better.",
+      "skill_tag": "ai4.bias",
+      "options": [
+       {
+        "id": "a",
+        "text": "Switch it off forever"
+       },
+       {
+        "id": "b",
+        "text": "Train it on cats of many colours"
+       },
+       {
+        "id": "c",
+        "text": "Show it only white cats again"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Brains learn from mistakes too. Match the pairs.",
+     "say": "Time for a memory game. Mistakes are fine when we are learning. Find the matching pairs."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Learning pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🐱",
+      "🐶",
+      "🐦",
+      "🐟"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A machine can be wrong if its training data is not varied enough.",
+      "hint": "Think about the white cat.",
+      "explanation": "Narrow data causes mistakes.",
+      "skill_tag": "ai4.bias",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Narrow training data causes mistakes",
+      "Bias is when data is not fair or varied",
+      "More varied data helps"
+     ],
+     "say": "Let us remember. Machines make mistakes when training data is narrow, unfair or out of date."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bias",
+       "meaning": "When data or decisions are not fair or varied enough."
+      },
+      {
+       "term": "varied",
+       "meaning": "Including many different kinds."
+      },
+      {
+       "term": "out of date",
+       "meaning": "No longer true because things have changed."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is bias in AI?",
+     "hint": "Think about the white cats.",
+     "explanation": "Bias comes from unfair or narrow data.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fast computer"
+      },
+      {
+       "id": "b",
+       "text": "A kind of battery"
+      },
+      {
+       "id": "c",
+       "text": "When the training data is not fair or varied"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "AI never makes mistakes.",
+     "hint": "Think of the black cat.",
+     "explanation": "AI can be wrong.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How can we make AI fairer?",
+     "hint": "More variety.",
+     "explanation": "Varied data helps.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Use fewer examples"
+      },
+      {
+       "id": "b",
+       "text": "Use varied training data"
+      },
+      {
+       "id": "c",
+       "text": "Hide the labels"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "checking",
+   "kind": "use",
+   "title": "Checking AI answers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Do not just trust it"
+    },
+    {
+     "type": "text",
+     "markdown": "Always **check** AI answers with a trusted **source**.\n\nNever share private details with an AI tool.",
+     "say": "AI tools can sound very sure, even when they are wrong. A smart user checks. First, ask: does this make sense? Second, look for the same fact in a trusted source such as a school book, an encyclopaedia or a grown-up. If two good sources agree, it is more likely to be right. If they disagree, keep investigating. Never share private details like your full name, address or school with an AI."
+    },
+    {
+     "type": "image",
+     "emoji": "🤖🔍📚",
+     "alt": "Check the answer with a trusted book or a grown-up.",
+     "caption": "Check the answer with a trusted book or a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "An AI gives you a surprising fact. What should you do?",
+      "hint": "Be a detective.",
+      "explanation": "Check with trusted sources.",
+      "skill_tag": "ai4.check",
+      "options": [
+       {
+        "id": "a",
+        "text": "Believe it at once"
+       },
+       {
+        "id": "b",
+        "text": "Check it in a trusted book or with a grown-up"
+       },
+       {
+        "id": "c",
+        "text": "Tell everyone"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using AI fairly and kindly"
+    },
+    {
+     "type": "text",
+     "markdown": "Be **honest** about using AI. Use it to help you think, not to think for you.",
+     "say": "Using AI is also about being honest. If AI helped with your homework, say so. Copying AI answers and calling them your own is not honest. AI is a helper for learning, not a replacement for thinking. Ask it to explain, then try yourself. And remember that people matter more than machines: be kind and fair, and ask a grown-up when unsure."
+    },
+    {
+     "type": "image",
+     "emoji": "🤝🤖",
+     "alt": "Be honest about when AI helps you.",
+     "caption": "Be honest about when AI helps you.",
+     "say": "Being fair and honest with AI means saying when it helped you."
+    },
+    {
+     "type": "activity",
+     "title": "Fact check detective",
+     "materials": [
+      "A grown-up",
+      "A trusted book or website"
+     ],
+     "instructions": [
+      "Ask a grown-up to show you an AI answer to a science question.",
+      "Find the same fact in a trusted source.",
+      "Do they agree? Write one sentence about what you found."
+     ],
+     "say": "Here is a short fair-use activity to try with a grown-up."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Is it okay to copy an AI answer and say you wrote it?",
+     "answer_markdown": "No. That is not honest. You can use AI to help you learn, but the words and thinking should be yours."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If two trusted sources agree with an AI answer, it is more likely to be right.",
+      "hint": "Agreement helps.",
+      "explanation": "Matching sources give more confidence.",
+      "skill_tag": "ai4.check",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Check AI answers with trusted sources",
+      "Be honest about using AI",
+      "Keep private things private"
+     ],
+     "say": "Let us remember. Check AI answers, keep private things private and be honest about using AI."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "check",
+       "meaning": "To make sure something is true."
+      },
+      {
+       "term": "source",
+       "meaning": "A place where information comes from, such as a book."
+      },
+      {
+       "term": "honest",
+       "meaning": "Telling the truth and not pretending."
+      },
+      {
+       "term": "trusted",
+       "meaning": "Known to be reliable."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a trusted source?",
+     "hint": "Reliable.",
+     "explanation": "A textbook is checked by experts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rumour"
+      },
+      {
+       "id": "b",
+       "text": "A school textbook"
+      },
+      {
+       "id": "c",
+       "text": "A random comment"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "AI always sounds unsure when it is wrong.",
+     "hint": "Think about confident mistakes.",
+     "explanation": "AI can sound sure even when wrong.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the honest way to use AI for homework?",
+     "hint": "Be truthful.",
+     "explanation": "Use AI as a helper and be honest.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hide it"
+      },
+      {
+       "id": "b",
+       "text": "Use it to help you learn, and say so"
+      },
+      {
+       "id": "c",
+       "text": "Copy and claim it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which is the set of examples used to teach a machine?",
+    "hint": "Teaching examples.",
+    "explanation": "Training data teaches the machine.",
+    "skill_tag": "ai4.training",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flowchart"
+     },
+     {
+      "id": "b",
+      "text": "Training data"
+     },
+     {
+      "id": "c",
+      "text": "A loop"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "training",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A label tells a machine what an example is.",
+    "hint": "The right answer.",
+    "explanation": "A label is the right answer.",
+    "skill_tag": "ai4.labels",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "training",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "A machine is tested on 30 new pictures and gets 24 right. How many did it get wrong?",
+    "hint": "30 minus 24.",
+    "explanation": "30 - 24 = 6.",
+    "skill_tag": "ai4.testing",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about machine learning.",
+    "hint": "Think back.",
+    "explanation": "A machine finds patterns in training data.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "text": "A machine learns {b1} in {b2} data.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pizzas"
+       },
+       {
+        "id": "b",
+        "text": "patterns"
+       },
+       {
+        "id": "c",
+        "text": "paints"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "trading"
+       },
+       {
+        "id": "b",
+        "text": "training"
+       },
+       {
+        "id": "c",
+        "text": "tiring"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "training",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Pick the two good things for training data.",
+    "hint": "Variety and accuracy.",
+    "explanation": "Good data is varied and correctly labelled.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Correct labels"
+     },
+     {
+      "id": "b",
+      "text": "Only one kind of example"
+     },
+     {
+      "id": "c",
+      "text": "Wrong labels"
+     },
+     {
+      "id": "d",
+      "text": "Many different examples"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each AI word to its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Training data"
+     },
+     {
+      "id": "l2",
+      "text": "Label"
+     },
+     {
+      "id": "l3",
+      "text": "Bias"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Unfair or narrow data"
+     },
+     {
+      "id": "r1",
+      "text": "Examples to learn from"
+     },
+     {
+      "id": "r2",
+      "text": "The right answer"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "gets_wrong",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A machine trained only on daytime photos struggles at night. Why?",
+    "hint": "Think about variety.",
+    "explanation": "Narrow data causes mistakes.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Night is broken"
+     },
+     {
+      "id": "b",
+      "text": "Machines hate the dark"
+     },
+     {
+      "id": "c",
+      "text": "It has not seen enough night examples"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Sana says an AI that sounds confident must be right. Is she right?",
+    "hint": "Think about confident mistakes.",
+    "explanation": "AI can be wrong even when it sounds sure.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only in maths"
+     },
+     {
+      "id": "b",
+      "text": "No, confident answers can still be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "A machine gets 17 of 20 test pictures right. Slide to show the number it got right.",
+    "hint": "Read the question.",
+    "explanation": "It got 17 right.",
+    "skill_tag": "ai4.testing",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 17,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the set of training pictures that is more varied.",
+    "hint": "Variety helps.",
+    "explanation": "Many colours give better learning.",
+    "skill_tag": "ai4.bias",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐈",
+       "label": "Only white cats",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐱",
+       "label": "Cats of many colours",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐈",
+       "label": "Only one cat photo",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which is a trusted source for checking a fact?",
+    "hint": "Reliable.",
+    "explanation": "An encyclopaedia is checked.",
+    "skill_tag": "ai4.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "A guess"
+     },
+     {
+      "id": "b",
+      "text": "An encyclopaedia"
+     },
+     {
+      "id": "c",
+      "text": "A rumour"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "It is safe to tell an AI tool your home address.",
+    "hint": "Is it private?",
+    "explanation": "Keep private things private.",
+    "skill_tag": "ai4.safe",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "Copying an AI answer and saying you wrote it yourself is honest.",
+    "hint": "Be truthful.",
+    "explanation": "That is not honest.",
+    "skill_tag": "ai4.check",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Tariq says AI is a good helper but cannot replace his own thinking. Is he right?",
+    "hint": "Use AI as a helper.",
+    "explanation": "AI helps but does not replace thinking.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Mondays"
+     },
+     {
+      "id": "b",
+      "text": "Yes, we should still think for ourselves"
+     },
+     {
+      "id": "c",
+      "text": "No, AI should think for us"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these steps for checking an AI answer in order.",
+    "hint": "Read first.",
+    "explanation": "Read, find, then compare.",
+    "skill_tag": "ai4.check",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find the same fact in a trusted source"
+     },
+     {
+      "id": "i3",
+      "text": "Decide if they agree"
+     },
+     {
+      "id": "i1",
+      "text": "Read the AI answer"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What name do we give the examples a machine learns from?",
+    "hint": "Teaching examples.",
+    "explanation": "Training data teaches the machine.",
+    "skill_tag": "ai4.training",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flowchart"
+     },
+     {
+      "id": "b",
+      "text": "Training data"
+     },
+     {
+      "id": "c",
+      "text": "A loop"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which set of examples is used to teach a machine?",
+    "hint": "Teaching examples.",
+    "explanation": "Training data teaches the machine.",
+    "skill_tag": "ai4.training",
+    "options": [
+     {
+      "id": "a",
+      "text": "The charger"
+     },
+     {
+      "id": "b",
+      "text": "Training data"
+     },
+     {
+      "id": "c",
+      "text": "The screen"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A label names an example for the machine.",
+    "hint": "The right answer.",
+    "explanation": "A label is the right answer.",
+    "skill_tag": "ai4.labels",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "Labels are never needed in training data.",
+    "hint": "The right answer.",
+    "explanation": "Labelled data helps machines learn.",
+    "skill_tag": "ai4.labels",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "number",
+    "prompt": "A machine is tested on 10 new pictures and gets 8 right. How many wrong?",
+    "hint": "10 minus 8.",
+    "explanation": "10 - 8 = 2.",
+    "skill_tag": "ai4.testing",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "number",
+    "prompt": "A machine is tested on 25 new pictures and gets 20 right. How many wrong?",
+    "hint": "25 minus 20.",
+    "explanation": "25 - 20 = 5.",
+    "skill_tag": "ai4.testing",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about how machines learn.",
+    "hint": "Think back.",
+    "explanation": "A machine finds patterns in training data.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "text": "A machine learns {b1} in {b2} data.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pizzas"
+       },
+       {
+        "id": "b",
+        "text": "patterns"
+       },
+       {
+        "id": "c",
+        "text": "paints"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "trading"
+       },
+       {
+        "id": "b",
+        "text": "training"
+       },
+       {
+        "id": "c",
+        "text": "tiring"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about labels.",
+    "hint": "Think back.",
+    "explanation": "A label is the right answer.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "text": "A {b1} is the right {b2} for an example.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "loop"
+       },
+       {
+        "id": "b",
+        "text": "lid"
+       },
+       {
+        "id": "c",
+        "text": "label"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "angle"
+       },
+       {
+        "id": "b",
+        "text": "animal"
+       },
+       {
+        "id": "c",
+        "text": "answer"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "training",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are good things for training data? Pick two.",
+    "hint": "Variety and accuracy.",
+    "explanation": "Good data is varied and correctly labelled.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Correct labels"
+     },
+     {
+      "id": "b",
+      "text": "Only one kind of example"
+     },
+     {
+      "id": "c",
+      "text": "Wrong labels"
+     },
+     {
+      "id": "d",
+      "text": "Many different examples"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick two ways to make AI fairer.",
+    "hint": "Variety and checking.",
+    "explanation": "Varied data and checking help.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Check for mistakes"
+     },
+     {
+      "id": "b",
+      "text": "Use less data"
+     },
+     {
+      "id": "c",
+      "text": "Hide results"
+     },
+     {
+      "id": "d",
+      "text": "Use varied data"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Pair each AI word with what it means.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Training data"
+     },
+     {
+      "id": "l2",
+      "text": "Label"
+     },
+     {
+      "id": "l3",
+      "text": "Bias"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "The right answer"
+     },
+     {
+      "id": "r1",
+      "text": "Examples to learn from"
+     },
+     {
+      "id": "r3",
+      "text": "Unfair or narrow data"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "gets_wrong",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Pair each AI idea with its job.",
+    "hint": "Think back.",
+    "explanation": "Each idea has its own job.",
+    "skill_tag": "ai4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Testing"
+     },
+     {
+      "id": "l2",
+      "text": "Pattern"
+     },
+     {
+      "id": "l3",
+      "text": "Accuracy"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Helps tell groups apart"
+     },
+     {
+      "id": "r1",
+      "text": "Checks if it learned"
+     },
+     {
+      "id": "r3",
+      "text": "How many are right"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "gets_wrong",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A machine trained only on photos taken in daylight struggles at night. Why?",
+    "hint": "Think about variety.",
+    "explanation": "Narrow data causes mistakes.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Machines hate the dark"
+     },
+     {
+      "id": "b",
+      "text": "It has not seen enough night examples"
+     },
+     {
+      "id": "c",
+      "text": "Night is broken"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "A machine trained only on summer pictures struggles with snow. Why?",
+    "hint": "Think about variety.",
+    "explanation": "Narrow data causes mistakes.",
+    "skill_tag": "ai4.bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Snow is not real"
+     },
+     {
+      "id": "b",
+      "text": "The screen is cold"
+     },
+     {
+      "id": "c",
+      "text": "It has not seen enough snowy examples"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Sana says an AI that sounds sure must be right. Is she right?",
+    "hint": "Think about confident mistakes.",
+    "explanation": "AI can be wrong even when it sounds sure.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only in maths"
+     },
+     {
+      "id": "b",
+      "text": "No, confident answers can still be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Bilal says we never need to check an AI answer. Is he right?",
+    "hint": "Think about being a detective.",
+    "explanation": "Checking is important.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only for games"
+     },
+     {
+      "id": "b",
+      "text": "No, we should check important answers"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never check"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "A machine gets 18 of 20 test pictures right. Slide to show the number it got right.",
+    "hint": "Read the question.",
+    "explanation": "It got 18 right.",
+    "skill_tag": "ai4.testing",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "A machine gets 15 of 20 test pictures right. Slide to show the number it got right.",
+    "hint": "Read the question.",
+    "explanation": "It got 15 right.",
+    "skill_tag": "ai4.testing",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "testing",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the training set with more variety.",
+    "hint": "Variety helps.",
+    "explanation": "Many colours give better learning.",
+    "skill_tag": "ai4.bias",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐈",
+       "label": "Only white cats",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐱",
+       "label": "Cats of many colours",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐈",
+       "label": "Only one cat photo",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the better set of training pictures.",
+    "hint": "Variety helps.",
+    "explanation": "A varied set teaches better.",
+    "skill_tag": "ai4.bias",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍎",
+       "label": "Only one apple",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍎",
+       "label": "Apples of many colours and sizes",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "Only green apples",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "gets_wrong",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which source could you trust to check a fact?",
+    "hint": "Reliable.",
+    "explanation": "An encyclopaedia is checked.",
+    "skill_tag": "ai4.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rumour"
+     },
+     {
+      "id": "b",
+      "text": "A guess"
+     },
+     {
+      "id": "c",
+      "text": "An encyclopaedia"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which is the best way to check a science fact from AI?",
+    "hint": "Reliable.",
+    "explanation": "A school book is a trusted source.",
+    "skill_tag": "ai4.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ask a random post"
+     },
+     {
+      "id": "b",
+      "text": "Just believe it"
+     },
+     {
+      "id": "c",
+      "text": "Look in a school book"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "It is safe to tell an AI your home address.",
+    "hint": "Is it private?",
+    "explanation": "Keep private things private.",
+    "skill_tag": "ai4.safe",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "true_false",
+    "prompt": "We should keep our school name private when using AI.",
+    "hint": "Is it private?",
+    "explanation": "Keep private things private.",
+    "skill_tag": "ai4.safe",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "Saying you wrote something an AI wrote is honest.",
+    "hint": "Be truthful.",
+    "explanation": "That is not honest.",
+    "skill_tag": "ai4.check",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "Telling a teacher that AI helped you is being honest.",
+    "hint": "Be truthful.",
+    "explanation": "Being open is honest.",
+    "skill_tag": "ai4.check",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "checking",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Tariq says AI helps but cannot do his thinking for him. Is he right?",
+    "hint": "Use AI as a helper.",
+    "explanation": "AI helps but does not replace thinking.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Mondays"
+     },
+     {
+      "id": "b",
+      "text": "Yes, we should still think for ourselves"
+     },
+     {
+      "id": "c",
+      "text": "No, AI should think for us"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Mina says if AI wrote her homework she is just as honest. Is she right?",
+    "hint": "Be truthful.",
+    "explanation": "Honesty means being open.",
+    "skill_tag": "ai4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes"
+     },
+     {
+      "id": "b",
+      "text": "No, she should say AI helped"
+     },
+     {
+      "id": "c",
+      "text": "Only for maths"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Arrange these steps for checking an AI answer.",
+    "hint": "Read first.",
+    "explanation": "Read, find, then compare.",
+    "skill_tag": "ai4.check",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Decide if they agree"
+     },
+     {
+      "id": "i1",
+      "text": "Read the AI answer"
+     },
+     {
+      "id": "i2",
+      "text": "Find the same fact in a trusted source"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Put these steps for training a model in order.",
+    "hint": "Collect first.",
+    "explanation": "Collect, label, then test.",
+    "skill_tag": "ai4.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add labels"
+     },
+     {
+      "id": "i3",
+      "text": "Test with new examples"
+     },
+     {
+      "id": "i1",
+      "text": "Collect examples"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "checking",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

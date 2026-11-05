@@ -1,0 +1,2358 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-smart-machines",
+  "subject": "data-ai",
+  "title": "Smart Machines",
+  "summary": "What AI is, how machines see and hear, how we teach a computer with examples, and what AI cannot do.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Smart machines",
+  "learning_objectives": [
+   "Say what AI is and what it is not",
+   "Explain how a machine can see, hear and learn from examples",
+   "Know that AI can make mistakes and cannot feel"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 1",
+    "text": "Perception: computers perceive the world using sensors"
+   },
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 3",
+    "text": "Learning: computers can learn from data"
+   },
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 5",
+    "text": "Societal impact: AI can impact the world in positive and negative ways"
+   }
+  ],
+  "success_criteria": [
+   "I can say what AI is",
+   "I can say how we teach a machine",
+   "I know AI can be wrong"
+  ],
+  "real_life": "Voice helpers, photo apps and games that seem clever on the family phone.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is an input?",
+    "hint": "We type on it.",
+    "explanation": "A keyboard is an input.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A keyboard"
+     },
+     {
+      "id": "c",
+      "text": "A screen"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "We should tell a grown-up if something online worries us.",
+    "hint": "Who can help?",
+    "explanation": "A grown-up can help.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 3 + 4?",
+    "hint": "Count on from 3.",
+    "explanation": "3 and 4 make 7.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, AI explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do smart machines work?\n\nWe will see how machines learn and what they cannot do.",
+   "say": "Welcome, AI explorer! Today's big question: how do smart machines work? We will find out how they see, how they hear, and how they learn. We will also find out what they cannot do. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🤖",
+   "alt": "Smart machines learn from examples.",
+   "caption": "Smart machines learn from examples."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "machine",
+     "meaning": "A thing that does a job, often with a computer."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "what_is_ai",
+   "kind": "learn",
+   "title": "What is AI?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Smart machines"
+    },
+    {
+     "type": "text",
+     "markdown": "**AI** is a computer program that can do things that seem clever.\n\nAI is **made by people**. It is not alive.",
+     "say": "Some machines seem clever. A phone can answer a question. A map app can find the way home. We call this kind of clever computer program artificial intelligence, or AI. Artificial means made by people. Intelligence means being able to learn and work things out. But AI is not alive. It is a computer program that people made."
+    },
+    {
+     "type": "image",
+     "emoji": "🤖🧠",
+     "alt": "AI is a clever computer program made by people.",
+     "caption": "AI is a clever computer program made by people."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Who makes AI?",
+      "hint": "It is a computer program.",
+      "explanation": "People write the programs that make AI.",
+      "skill_tag": "ai.what",
+      "options": [
+       {
+        "id": "a",
+        "text": "Rabbits"
+       },
+       {
+        "id": "b",
+        "text": "People"
+       },
+       {
+        "id": "c",
+        "text": "Clouds"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: AI is all around"
+    },
+    {
+     "type": "text",
+     "markdown": "Some machines use **AI**: voice helpers, smart cameras and game opponents.\n\nA toaster or a spade is not AI.",
+     "say": "AI is in places you might not expect. A voice helper on a phone, a camera that finds faces, and a game that plays against you all use it. But a toaster, a bicycle and a spade are not AI. Let us see the difference."
+    },
+    {
+     "type": "explainer",
+     "title": "AI or not AI?",
+     "scenes": [
+      {
+       "caption": "Voice helper: AI.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📱",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "AI"
+        }
+       ],
+       "say": "A voice helper listens and answers. This uses AI."
+      },
+      {
+       "caption": "Smart camera: AI.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📱",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "none",
+         "label": "AI"
+        },
+        {
+         "id": "b",
+         "emoji": "📷",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "AI"
+        }
+       ],
+       "say": "A smart camera picks out faces in a photo. This uses AI too."
+      },
+      {
+       "caption": "Spade: not AI.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📱",
+         "x": 15,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "AI"
+        },
+        {
+         "id": "b",
+         "emoji": "📷",
+         "x": 38,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "AI"
+        },
+        {
+         "id": "c",
+         "emoji": "⛏️",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Not AI"
+        }
+       ],
+       "say": "A spade just digs. A spade is not AI."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these uses AI?",
+      "hint": "Does it listen and answer?",
+      "explanation": "A voice helper uses AI to understand you.",
+      "skill_tag": "ai.what",
+      "options": [
+       {
+        "id": "a",
+        "text": "A pencil"
+       },
+       {
+        "id": "b",
+        "text": "A voice helper"
+       },
+       {
+        "id": "c",
+        "text": "A spade"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "AI is a clever program made by people",
+      "AI is not alive"
+     ],
+     "say": "Let us remember. AI is a clever computer program made by people. It is not alive."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "AI",
+       "meaning": "A computer program that can do things that seem clever."
+      },
+      {
+       "term": "artificial intelligence",
+       "meaning": "Another name for AI."
+      },
+      {
+       "term": "made by people",
+       "meaning": "Created by humans, not alive."
+      },
+      {
+       "term": "program",
+       "meaning": "Instructions that tell a computer what to do."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "AI is a living creature.",
+     "hint": "It is a program.",
+     "explanation": "AI is a computer program, not alive.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does AI stand for?",
+     "hint": "Two words.",
+     "explanation": "AI stands for artificial intelligence.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Apple ice"
+      },
+      {
+       "id": "b",
+       "text": "All ideas"
+      },
+      {
+       "id": "c",
+       "text": "Artificial intelligence"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which one does NOT use AI?",
+     "hint": "It has no computer.",
+     "explanation": "A spade is just a tool.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A voice helper"
+      },
+      {
+       "id": "b",
+       "text": "A spade"
+      },
+      {
+       "id": "c",
+       "text": "A smart camera"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do some machines seem clever?",
+     "hint": "Who makes programs?",
+     "explanation": "People write the programs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "They eat food"
+      },
+      {
+       "id": "b",
+       "text": "People wrote clever programs for them"
+      },
+      {
+       "id": "c",
+       "text": "They are alive"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "see_hear",
+   "kind": "try",
+   "title": "How machines see and hear",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Machines that see"
+    },
+    {
+     "type": "text",
+     "markdown": "A machine can **see** with a **camera**. It looks for patterns in the dots of a picture.",
+     "say": "A camera is like an eye for a machine. It takes a picture. But a picture is just a lot of tiny dots of colour. The computer has to work out what the dots show. When it sees round dots that look like a face, it can say, that is a face. Machines learn to spot things from lots and lots of pictures. This is called perception."
+    },
+    {
+     "type": "explainer",
+     "title": "A camera spots a cat",
+     "scenes": [
+      {
+       "caption": "The camera takes a picture.",
+       "items": [
+        {
+         "id": "cam",
+         "emoji": "📷",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "cat",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The camera takes a picture of a cat."
+      },
+      {
+       "caption": "It looks for patterns: ears, whiskers, a face.",
+       "items": [
+        {
+         "id": "cam",
+         "emoji": "📷",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "cat",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "q",
+         "emoji": "🔍",
+         "x": 45,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The computer looks for patterns in the dots: pointy ears, whiskers, a round face."
+      },
+      {
+       "caption": "It says: cat! But it can be wrong.",
+       "items": [
+        {
+         "id": "cam",
+         "emoji": "📷",
+         "x": 20,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "cat",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 45,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce",
+         "label": "cat"
+        }
+       ],
+       "say": "It decides: this looks like a cat! But it might sometimes be wrong."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a camera help a machine do?",
+      "hint": "It is like an eye.",
+      "explanation": "A camera lets a machine see.",
+      "skill_tag": "ai.perception",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sleep"
+       },
+       {
+        "id": "b",
+        "text": "Taste"
+       },
+       {
+        "id": "c",
+        "text": "See"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Machines that hear"
+    },
+    {
+     "type": "text",
+     "markdown": "A machine can **hear** with a **microphone**. It listens for patterns in sound.",
+     "say": "A microphone is like an ear for a machine. It records sound waves. A voice helper listens for patterns in your voice and turns it into words. Sometimes it gets the wrong word, especially if there is noise. It learns from lots of voices. Now try it for yourself."
+    },
+    {
+     "type": "image",
+     "emoji": "🎤👂",
+     "alt": "A microphone is like an ear for a machine.",
+     "caption": "A microphone is like an ear for a machine."
+    },
+    {
+     "type": "activity",
+     "title": "What can the machine see?",
+     "materials": [
+      "A tablet with a camera or a toy",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Ask a grown-up to show you a camera app or a talking toy.",
+      "Point the camera at three things. What does it show?",
+      "Does it ever get it wrong? Tell a grown-up."
+     ],
+     "say": "Let us play a little detective game at home."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A voice helper always understands us perfectly.",
+      "hint": "Think about noise.",
+      "explanation": "Sometimes it hears the wrong word.",
+      "skill_tag": "ai.perception",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A camera is an eye for a machine",
+      "A microphone is an ear for a machine",
+      "They can make mistakes"
+     ],
+     "say": "Let us remember. Cameras are eyes for machines and microphones are ears. They look for patterns."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "camera",
+       "meaning": "A machine that takes pictures."
+      },
+      {
+       "term": "microphone",
+       "meaning": "A machine that hears sound."
+      },
+      {
+       "term": "see",
+       "meaning": "To take in a picture and work out what it shows."
+      },
+      {
+       "term": "hear",
+       "meaning": "To take in sound and work out what it says."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats or looks alike."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "A microphone is like an...",
+     "hint": "It hears.",
+     "explanation": "A microphone is an ear for a machine.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Eye"
+      },
+      {
+       "id": "b",
+       "text": "Nose"
+      },
+      {
+       "id": "c",
+       "text": "Ear"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A machine's camera can sometimes be wrong.",
+     "hint": "Nothing is perfect.",
+     "explanation": "Machines can make mistakes.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do machines look for in pictures?",
+     "hint": "Things that repeat.",
+     "explanation": "Machines look for patterns in pictures.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Songs"
+      },
+      {
+       "id": "b",
+       "text": "Patterns"
+      },
+      {
+       "id": "c",
+       "text": "Treats"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "teach",
+   "kind": "play",
+   "title": "Teaching a computer with examples",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Learning from examples"
+    },
+    {
+     "type": "text",
+     "markdown": "To **train** a machine, we show it many **examples** with **labels**.",
+     "say": "How does a machine learn what a cat looks like? We show it lots of examples. Here are cats and here are dogs. We label each one, which means we say what it is. After many examples, the machine starts to spot the difference. The more good examples, the better it learns. This is called training."
+    },
+    {
+     "type": "explainer",
+     "title": "Train the machine",
+     "scenes": [
+      {
+       "caption": "Example 1: cat.",
+       "items": [
+        {
+         "id": "c1",
+         "emoji": "🐱",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "cat"
+        }
+       ],
+       "say": "We show the machine a picture of a cat and say: cat."
+      },
+      {
+       "caption": "Example 2: dog.",
+       "items": [
+        {
+         "id": "c1",
+         "emoji": "🐱",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "cat"
+        },
+        {
+         "id": "d1",
+         "emoji": "🐶",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "dog"
+        }
+       ],
+       "say": "Then a dog, and say: dog."
+      },
+      {
+       "caption": "Many examples, then the machine learns.",
+       "items": [
+        {
+         "id": "c1",
+         "emoji": "🐱",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "cat"
+        },
+        {
+         "id": "d1",
+         "emoji": "🐶",
+         "x": 38,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "dog"
+        },
+        {
+         "id": "c2",
+         "emoji": "🐈",
+         "x": 62,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "cat"
+        },
+        {
+         "id": "d2",
+         "emoji": "🐕",
+         "x": 85,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "dog"
+        },
+        {
+         "id": "b",
+         "emoji": "🧠",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Many more examples. After lots of practice, the machine learns the difference."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we show a machine to teach it?",
+      "hint": "Think about training.",
+      "explanation": "We teach machines with many examples.",
+      "skill_tag": "ai.learning",
+      "options": [
+       {
+        "id": "a",
+        "text": "Nothing"
+       },
+       {
+        "id": "b",
+        "text": "Lots of examples"
+       },
+       {
+        "id": "c",
+        "text": "A blank page"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Train your own brain! Match the pairs.",
+     "say": "Time for a brain game. It is like training your own memory. Match the pairs."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Training pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🐱",
+      "🐶",
+      "🐟",
+      "🐦"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Showing a machine only one example is enough to teach it well.",
+      "hint": "The more the better.",
+      "explanation": "Machines need many examples.",
+      "skill_tag": "ai.learning",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "We train a machine with many examples",
+      "Labels tell the machine what each one is"
+     ],
+     "say": "Let us remember. We teach machines with many labelled examples. The more examples, the better."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "train",
+       "meaning": "To teach a machine with many examples."
+      },
+      {
+       "term": "example",
+       "meaning": "One case that shows what something is."
+      },
+      {
+       "term": "label",
+       "meaning": "A name that tells what something is."
+      },
+      {
+       "term": "learn",
+       "meaning": "To get better at something with practice."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a label?",
+     "hint": "Like a name tag.",
+     "explanation": "A label names what something is.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bug"
+      },
+      {
+       "id": "b",
+       "text": "A name that says what something is"
+      },
+      {
+       "id": "c",
+       "text": "A kind of food"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The more examples a machine sees, the better it can learn.",
+     "hint": "Think about practice.",
+     "explanation": "More good examples help.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "To teach a machine the difference between cats and dogs, we show it...",
+     "hint": "Examples with names.",
+     "explanation": "Many labelled pictures.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing at all"
+      },
+      {
+       "id": "b",
+       "text": "Many labelled pictures"
+      },
+      {
+       "id": "c",
+       "text": "One blurry picture"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cannot_do",
+   "kind": "use",
+   "title": "What AI cannot do",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Clever, but not everything"
+    },
+    {
+     "type": "text",
+     "markdown": "AI cannot **feel** things like happiness or sadness.\n\nAI can make **mistakes**, so we check with a grown-up.",
+     "say": "AI is good at some things. It can sort photos or spot a word. But AI cannot do everything. It does not feel happy or sad. It cannot truly understand a joke like you do. It does not know right from wrong unless people teach it. And it can make mistakes, so a grown-up should check important answers."
+    },
+    {
+     "type": "image",
+     "emoji": "🤖❓",
+     "alt": "AI can be wrong. We always check important things.",
+     "caption": "AI can be wrong. We always check important things."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What can AI NOT do?",
+      "hint": "Think about feelings.",
+      "explanation": "Only living beings feel emotions.",
+      "skill_tag": "ai.limits",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sort photos"
+       },
+       {
+        "id": "b",
+        "text": "Feel happy or sad"
+       },
+       {
+        "id": "c",
+        "text": "Spot a word"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using AI wisely"
+    },
+    {
+     "type": "text",
+     "markdown": "Use AI **wisely**: ask a grown-up first, keep private things private and **check** answers.",
+     "say": "Use AI wisely. Ask a grown-up before using it. Never share private things like your name or address with it. And remember, a person is better than a machine for kindness and for hugs. When an answer matters, check with a grown-up or a book."
+    },
+    {
+     "type": "image",
+     "emoji": "👨‍👩‍👧🤖",
+     "alt": "A grown-up helps us use AI safely.",
+     "caption": "A grown-up helps us use AI safely.",
+     "say": "A grown-up can sit with you and help you use AI safely."
+    },
+    {
+     "type": "activity",
+     "title": "My helper machine",
+     "materials": [
+      "Paper and crayons"
+     ],
+     "instructions": [
+      "Draw a machine that could help your family.",
+      "What can it do? What can it NOT do?",
+      "Show your drawing to a grown-up."
+     ],
+     "say": "Time to tell a story about a helpful machine."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Could an AI ever really be your best friend?",
+     "answer_markdown": "AI can be helpful, but it does not truly care or feel. Real friends and family do."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We should check important AI answers with a grown-up.",
+      "hint": "AI can be wrong.",
+      "explanation": "A grown-up can help check.",
+      "skill_tag": "ai.limits",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "AI cannot feel and can make mistakes",
+      "Use it wisely and check with a grown-up"
+     ],
+     "say": "Let us remember. AI is useful but it makes mistakes, and it cannot feel. Check with a grown-up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "feel",
+       "meaning": "To have emotions like happy or sad."
+      },
+      {
+       "term": "wisely",
+       "meaning": "In a careful and sensible way."
+      },
+      {
+       "term": "check",
+       "meaning": "To make sure something is right."
+      },
+      {
+       "term": "mistake",
+       "meaning": "Something that is wrong."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should you ask before using AI?",
+     "hint": "Someone who looks after you.",
+     "explanation": "Always ask a grown-up first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "No one"
+      },
+      {
+       "id": "b",
+       "text": "A grown-up"
+      },
+      {
+       "id": "c",
+       "text": "A stranger"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "AI always gets the right answer.",
+     "hint": "Think about mistakes.",
+     "explanation": "AI can make mistakes.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is something AI cannot truly do?",
+     "hint": "Think about love.",
+     "explanation": "Only people truly care.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sort pictures"
+      },
+      {
+       "id": "b",
+       "text": "Play a game"
+      },
+      {
+       "id": "c",
+       "text": "Care about you like family"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Who creates the computer programs that make AI work?",
+    "hint": "Not alive.",
+    "explanation": "People write AI programs.",
+    "skill_tag": "ai.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "Frogs"
+     },
+     {
+      "id": "b",
+      "text": "People"
+     },
+     {
+      "id": "c",
+      "text": "Clouds"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A phone voice helper uses AI.",
+    "hint": "It listens and answers.",
+    "explanation": "A voice helper uses AI.",
+    "skill_tag": "ai.what",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about AI.",
+    "hint": "Two big words.",
+    "explanation": "AI is artificial intelligence.",
+    "skill_tag": "ai.vocab",
+    "points": 2,
+    "text": "AI stands for {b1} {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ant"
+       },
+       {
+        "id": "b",
+        "text": "artificial"
+       },
+       {
+        "id": "c",
+        "text": "apple"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "island"
+       },
+       {
+        "id": "b",
+        "text": "intelligence"
+       },
+       {
+        "id": "c",
+        "text": "icing"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "what_is_ai",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "What works like an eye for a machine?",
+    "hint": "It sees.",
+    "explanation": "A camera lets a machine see.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A battery"
+     },
+     {
+      "id": "c",
+      "text": "A camera"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two help a machine sense the world? Pick two.",
+    "hint": "Eyes and ears.",
+    "explanation": "Cameras and microphones sense the world.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "A microphone"
+     },
+     {
+      "id": "b",
+      "text": "A spoon"
+     },
+     {
+      "id": "c",
+      "text": "A pencil"
+     },
+     {
+      "id": "d",
+      "text": "A camera"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each part to its job.",
+    "hint": "Think about eyes and ears.",
+    "explanation": "Each has its own job.",
+    "skill_tag": "ai.perception",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Camera"
+     },
+     {
+      "id": "l2",
+      "text": "Microphone"
+     },
+     {
+      "id": "l3",
+      "text": "Program"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Hears"
+     },
+     {
+      "id": "r1",
+      "text": "Sees"
+     },
+     {
+      "id": "r3",
+      "text": "Gives instructions"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "see_hear",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "true_false",
+    "prompt": "A machine can learn the difference between cats and dogs from examples.",
+    "hint": "Think about training.",
+    "explanation": "Examples teach the machine.",
+    "skill_tag": "ai.learning",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Samira says AI never makes a mistake. Is she right?",
+    "hint": "Nothing is perfect.",
+    "explanation": "AI can make mistakes.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Only on Sundays"
+     },
+     {
+      "id": "c",
+      "text": "No, AI can be wrong"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "A machine is shown 12 pictures of birds. Slide to show how many it was shown.",
+    "hint": "Read the number.",
+    "explanation": "It was shown 12 pictures.",
+    "skill_tag": "ai.learning",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the machine that uses AI.",
+    "hint": "It listens and answers.",
+    "explanation": "A voice helper uses AI.",
+    "skill_tag": "ai.what",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📱",
+       "label": "Voice helper",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⛏️",
+       "label": "Spade",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "number",
+    "prompt": "A machine sees 6 cat pictures and 5 dog pictures. How many pictures is that in all?",
+    "hint": "Add 6 and 5.",
+    "explanation": "6 + 5 = 11.",
+    "skill_tag": "ai.learning",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "What is the wise thing to do before using AI?",
+    "hint": "Someone who looks after you.",
+    "explanation": "Always ask first.",
+    "skill_tag": "ai.safe",
+    "options": [
+     {
+      "id": "a",
+      "text": "Share your address"
+     },
+     {
+      "id": "b",
+      "text": "Tell it a secret"
+     },
+     {
+      "id": "c",
+      "text": "Ask a grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "AI is a living animal.",
+    "hint": "It is a program.",
+    "explanation": "AI is a computer program.",
+    "skill_tag": "ai.what",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Lina says a label tells a machine what an example is. Is she right?",
+    "hint": "Like a name tag.",
+    "explanation": "A label names the example.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is a game"
+     },
+     {
+      "id": "b",
+      "text": "No, it is a snack"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a label names an example"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these in the order a machine learns.",
+    "hint": "What comes first?",
+    "explanation": "See, label, then learn.",
+    "skill_tag": "ai.learning",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Learn the pattern"
+     },
+     {
+      "id": "i1",
+      "text": "See an example"
+     },
+     {
+      "id": "i2",
+      "text": "Get a label"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Who writes the programs that make AI work?",
+    "hint": "Not alive.",
+    "explanation": "People write AI programs.",
+    "skill_tag": "ai.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "Clouds"
+     },
+     {
+      "id": "b",
+      "text": "People"
+     },
+     {
+      "id": "c",
+      "text": "Frogs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Who made the computer programs that power AI?",
+    "hint": "Not alive.",
+    "explanation": "People make AI.",
+    "skill_tag": "ai.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "Birds"
+     },
+     {
+      "id": "b",
+      "text": "People"
+     },
+     {
+      "id": "c",
+      "text": "Rain"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A voice helper on a phone uses AI.",
+    "hint": "It listens and answers.",
+    "explanation": "A voice helper uses AI.",
+    "skill_tag": "ai.what",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A spade uses AI to dig.",
+    "hint": "It is just a tool.",
+    "explanation": "A spade is not AI.",
+    "skill_tag": "ai.what",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about AI.",
+    "hint": "Two big words.",
+    "explanation": "AI is artificial intelligence.",
+    "skill_tag": "ai.vocab",
+    "points": 2,
+    "text": "AI stands for {b1} {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "apple"
+       },
+       {
+        "id": "b",
+        "text": "ant"
+       },
+       {
+        "id": "c",
+        "text": "artificial"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "island"
+       },
+       {
+        "id": "b",
+        "text": "intelligence"
+       },
+       {
+        "id": "c",
+        "text": "icing"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about training.",
+    "hint": "Think about practice.",
+    "explanation": "We train a machine with many examples.",
+    "skill_tag": "ai.vocab",
+    "points": 2,
+    "text": "We {b1} a machine by showing it many {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bake"
+       },
+       {
+        "id": "b",
+        "text": "train"
+       },
+       {
+        "id": "c",
+        "text": "sleep"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ears"
+       },
+       {
+        "id": "b",
+        "text": "eggs"
+       },
+       {
+        "id": "c",
+        "text": "examples"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multiple_choice",
+    "prompt": "What is like an eye for a machine?",
+    "hint": "It sees.",
+    "explanation": "A camera lets a machine see.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A battery"
+     },
+     {
+      "id": "c",
+      "text": "A camera"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multiple_choice",
+    "prompt": "What is like an ear for a machine?",
+    "hint": "It hears.",
+    "explanation": "A microphone is an ear.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "A screen"
+     },
+     {
+      "id": "b",
+      "text": "A wheel"
+     },
+     {
+      "id": "c",
+      "text": "A microphone"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two do machines use to sense the world? Pick two.",
+    "hint": "Eyes and ears.",
+    "explanation": "Cameras and microphones sense the world.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "A microphone"
+     },
+     {
+      "id": "b",
+      "text": "A pencil"
+     },
+     {
+      "id": "c",
+      "text": "A spoon"
+     },
+     {
+      "id": "d",
+      "text": "A camera"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick the two ways a machine learns about the world.",
+    "hint": "Eyes and ears.",
+    "explanation": "Cameras and microphones.",
+    "skill_tag": "ai.perception",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pillows for sleeping"
+     },
+     {
+      "id": "b",
+      "text": "Hats for wearing"
+     },
+     {
+      "id": "c",
+      "text": "Microphones for hearing"
+     },
+     {
+      "id": "d",
+      "text": "Cameras for seeing"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "see_hear",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Match each part to what it does for a machine.",
+    "hint": "Think about eyes and ears.",
+    "explanation": "Each has its own job.",
+    "skill_tag": "ai.perception",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Camera"
+     },
+     {
+      "id": "l2",
+      "text": "Microphone"
+     },
+     {
+      "id": "l3",
+      "text": "Program"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Hears"
+     },
+     {
+      "id": "r1",
+      "text": "Sees"
+     },
+     {
+      "id": "r3",
+      "text": "Gives instructions"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "see_hear",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "ai.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Label"
+     },
+     {
+      "id": "l2",
+      "text": "Example"
+     },
+     {
+      "id": "l3",
+      "text": "Train"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Teach with many examples"
+     },
+     {
+      "id": "r1",
+      "text": "A name for something"
+     },
+     {
+      "id": "r2",
+      "text": "One case that shows"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "see_hear",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "true_false",
+    "prompt": "Showing a machine many pictures of cats helps it spot a cat.",
+    "hint": "Think about training.",
+    "explanation": "Examples teach the machine.",
+    "skill_tag": "ai.learning",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "true_false",
+    "prompt": "A machine learns best from just one blurry picture.",
+    "hint": "More is better.",
+    "explanation": "It needs many clear examples.",
+    "skill_tag": "ai.learning",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Noor says AI never makes a mistake. Is she right?",
+    "hint": "Nothing is perfect.",
+    "explanation": "AI can make mistakes.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "No, AI can be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Only on Sundays"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Yusuf says we do not need to check AI answers. Is he right?",
+    "hint": "Nothing is perfect.",
+    "explanation": "Check important answers.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Fridays"
+     },
+     {
+      "id": "b",
+      "text": "No, we should check important answers"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never check"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "A machine is shown 10 pictures of cats. Slide to show how many it was shown.",
+    "hint": "Read the number.",
+    "explanation": "It was shown 10 pictures.",
+    "skill_tag": "ai.learning",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "A machine is shown 8 pictures of dogs. Slide to show how many it was shown.",
+    "hint": "Read the number.",
+    "explanation": "It was shown 8 pictures.",
+    "skill_tag": "ai.learning",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the one that is a smart machine.",
+    "hint": "It listens and answers.",
+    "explanation": "A voice helper uses AI.",
+    "skill_tag": "ai.what",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📱",
+       "label": "Voice helper",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⛏️",
+       "label": "Spade",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the tool that is NOT AI.",
+    "hint": "It has no program.",
+    "explanation": "A hammer is just a tool.",
+    "skill_tag": "ai.what",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📷",
+       "label": "Smart camera",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔨",
+       "label": "Hammer",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📱",
+       "label": "Voice helper",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "number",
+    "prompt": "A machine sees 7 cat pictures and 4 dog pictures. How many in all?",
+    "hint": "Add 7 and 4.",
+    "explanation": "7 + 4 = 11.",
+    "skill_tag": "ai.learning",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "number",
+    "prompt": "A machine sees 8 bird pictures and 5 fish pictures. How many in all?",
+    "hint": "Add 8 and 5.",
+    "explanation": "8 + 5 = 13.",
+    "skill_tag": "ai.learning",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "What should you do before using AI?",
+    "hint": "Someone who looks after you.",
+    "explanation": "Always ask first.",
+    "skill_tag": "ai.safe",
+    "options": [
+     {
+      "id": "a",
+      "text": "Share your address"
+     },
+     {
+      "id": "b",
+      "text": "Ask a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Tell it a secret"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Which is wise when using AI?",
+    "hint": "Think about what is private.",
+    "explanation": "Keep private things private.",
+    "skill_tag": "ai.safe",
+    "options": [
+     {
+      "id": "a",
+      "text": "Share your password"
+     },
+     {
+      "id": "b",
+      "text": "Share your address"
+     },
+     {
+      "id": "c",
+      "text": "Keep private things private"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "cannot_do",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "AI is something alive that eats and sleeps.",
+    "hint": "It is a program.",
+    "explanation": "AI is a computer program.",
+    "skill_tag": "ai.what",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "AI was made by people.",
+    "hint": "People write programs.",
+    "explanation": "AI is made by people.",
+    "skill_tag": "ai.what",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "what_is_ai",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Lina says a label tells the machine what something is. Is she right?",
+    "hint": "Like a name tag.",
+    "explanation": "A label names the example.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is a snack"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a label names an example"
+     },
+     {
+      "id": "c",
+      "text": "No, it is a game"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Kamil says labels are not needed to train a machine. Is he right?",
+    "hint": "Like a name tag.",
+    "explanation": "Labels name the examples.",
+    "skill_tag": "ai.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never needed"
+     },
+     {
+      "id": "b",
+      "text": "No, labels tell the machine what each one is"
+     },
+     {
+      "id": "c",
+      "text": "Only for dogs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Put the steps of machine learning in order.",
+    "hint": "What comes first?",
+    "explanation": "See, label, then learn.",
+    "skill_tag": "ai.learning",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Get a label"
+     },
+     {
+      "id": "i1",
+      "text": "See an example"
+     },
+     {
+      "id": "i3",
+      "text": "Learn the pattern"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Put these training steps in order.",
+    "hint": "What comes first?",
+    "explanation": "Collect, label, test.",
+    "skill_tag": "ai.learning",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Test the machine"
+     },
+     {
+      "id": "i1",
+      "text": "Collect pictures"
+     },
+     {
+      "id": "i2",
+      "text": "Add labels"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

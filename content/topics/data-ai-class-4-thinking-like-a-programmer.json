@@ -1,0 +1,2606 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-thinking-like-a-programmer",
+  "subject": "data-ai",
+  "title": "Thinking Like a Programmer",
+  "summary": "Decomposition, flowcharts, loops, if and else, variables and debugging.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Thinking like a programmer",
+  "learning_objectives": [
+   "Break a big problem into smaller parts",
+   "Read a flowchart, a loop and an if-else decision",
+   "Say what a variable is and debug a program by tracing"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 programming",
+    "text": "Design, write and debug programs; use sequence, selection and repetition; work with variables"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-AP-10",
+    "text": "Create programs that use repetition to solve problems"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-AP-11",
+    "text": "Decompose problems into smaller, manageable subproblems"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-AP-15",
+    "text": "Test and debug a program or algorithm to ensure it runs as intended"
+   }
+  ],
+  "success_criteria": [
+   "I can break a problem into parts",
+   "I can say what a loop, an if-else and a variable do",
+   "I can trace a program to find a bug"
+  ],
+  "real_life": "Planning a route to school, following a recipe and keeping score in a game all use programmer thinking.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we call a list of clear steps in the right order?",
+    "hint": "Think of a recipe.",
+    "explanation": "A list of steps is an algorithm.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "An algorithm"
+     },
+     {
+      "id": "c",
+      "text": "A bug"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the middle number in 3, 5, 9?",
+    "hint": "It is in the middle.",
+    "explanation": "5 is in the middle.",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "9"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 x 4?",
+    "hint": "Count in fours.",
+    "explanation": "6 x 4 = 24.",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, young programmer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do programmers solve big problems?\n\nWe will learn the tools programmers use every day.",
+   "say": "Welcome, young programmer! Today's big question: how do programmers solve big problems? They break them down, plan with flowcharts, repeat with loops, decide with if and else, remember with variables, and fix bugs. By the end you will think like a programmer. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "💻🧩",
+   "alt": "Programmers solve problems one small step at a time.",
+   "caption": "Programmers solve problems one small step at a time."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "programmer",
+     "meaning": "A person who writes instructions for a computer."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "decompose",
+   "kind": "learn",
+   "title": "Breaking problems down and flowcharts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Decomposition"
+    },
+    {
+     "type": "text",
+     "markdown": "**Decomposition** means breaking a big problem into small parts.\n\nEach part is easier to solve, and together they solve the whole problem.",
+     "say": "Big problems can feel scary. Programmers have a trick: they break a big problem into small parts that are easier to solve. This is called decomposition. Imagine we want to make a birthday card app. That is big! But we can split it: draw the picture, write the message, choose the colours, and share it. Each small part is simple to build."
+    },
+    {
+     "type": "explainer",
+     "title": "Splitting a big problem",
+     "scenes": [
+      {
+       "caption": "The big problem.",
+       "items": [
+        {
+         "id": "big",
+         "emoji": "🎂",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Card app"
+        }
+       ],
+       "say": "Here is the big problem: make a birthday card app."
+      },
+      {
+       "caption": "Four smaller jobs.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎨",
+         "x": 20,
+         "y": 35,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Picture"
+        },
+        {
+         "id": "b",
+         "emoji": "✏️",
+         "x": 40,
+         "y": 35,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Message"
+        },
+        {
+         "id": "c",
+         "emoji": "🌈",
+         "x": 60,
+         "y": 35,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Colours"
+        },
+        {
+         "id": "d",
+         "emoji": "📤",
+         "x": 80,
+         "y": 35,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Share"
+        }
+       ],
+       "say": "We break it into four smaller jobs."
+      },
+      {
+       "caption": "Do each part, then join them up.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎨",
+         "x": 20,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Picture"
+        },
+        {
+         "id": "b",
+         "emoji": "✏️",
+         "x": 40,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Message"
+        },
+        {
+         "id": "c",
+         "emoji": "🌈",
+         "x": 60,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Colours"
+        },
+        {
+         "id": "d",
+         "emoji": "📤",
+         "x": 80,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Share"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 20,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Now each job is small enough to do one at a time. When all four are done, the app is finished."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does decomposition mean?",
+      "hint": "Think of cutting a cake.",
+      "explanation": "Decomposition splits a problem into smaller parts.",
+      "skill_tag": "prog.decompose",
+      "options": [
+       {
+        "id": "a",
+        "text": "Making a program faster"
+       },
+       {
+        "id": "b",
+        "text": "Deleting a program"
+       },
+       {
+        "id": "c",
+        "text": "Breaking a big problem into small parts"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Flowcharts"
+    },
+    {
+     "type": "text",
+     "markdown": "A **flowchart** draws an **algorithm** with boxes and arrows.\n\nA diamond asks a yes or no question.",
+     "say": "A flowchart is a picture of an algorithm. Each box is a step, and arrows show the order. A diamond shape asks a yes or no question. Let us look at a flowchart for crossing the road safely. Start, then stop at the kerb. Then look both ways. Is the road clear? If yes, cross. If no, wait and look again."
+    },
+    {
+     "type": "explainer",
+     "title": "Crossing the road",
+     "scenes": [
+      {
+       "caption": "Start: stop at the kerb.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🛑",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Stop at the kerb"
+        }
+       ],
+       "say": "We start at the kerb and stop."
+      },
+      {
+       "caption": "Look both ways. Is the road clear?",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🛑",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "Stop"
+        },
+        {
+         "id": "b",
+         "emoji": "👀",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Look both ways"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 50,
+         "y": 75,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Clear?"
+        }
+       ],
+       "say": "Then we look both ways. Next comes the question diamond: is the road clear?"
+      },
+      {
+       "caption": "Yes: cross. No: wait and look again.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Clear?"
+        },
+        {
+         "id": "y",
+         "emoji": "🚶",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Yes: cross"
+        },
+        {
+         "id": "n",
+         "emoji": "⏳",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "No: wait"
+        }
+       ],
+       "say": "If yes, we cross. If no, we wait and look again. The arrow loops back to the question."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In a flowchart, what does a diamond ask?",
+      "hint": "There are two ways out.",
+      "explanation": "A diamond is a question with yes and no.",
+      "skill_tag": "prog.flowchart",
+      "options": [
+       {
+        "id": "a",
+        "text": "A colour"
+       },
+       {
+        "id": "b",
+        "text": "A song"
+       },
+       {
+        "id": "c",
+        "text": "A yes or no question"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Decomposition breaks a big problem into parts",
+      "A flowchart shows an algorithm as boxes and arrows"
+     ],
+     "say": "Let us remember. Break big problems into parts. Draw an algorithm as a flowchart."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "decomposition",
+       "meaning": "Breaking a big problem into smaller parts."
+      },
+      {
+       "term": "flowchart",
+       "meaning": "A picture of an algorithm with boxes and arrows."
+      },
+      {
+       "term": "algorithm",
+       "meaning": "A list of clear steps in the right order."
+      },
+      {
+       "term": "problem",
+       "meaning": "Something we need to solve."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do programmers break problems into parts?",
+     "hint": "Think about a big jigsaw.",
+     "explanation": "Small parts are easier to solve.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It uses more paper"
+      },
+      {
+       "id": "b",
+       "text": "It is slower"
+      },
+      {
+       "id": "c",
+       "text": "Small parts are easier to solve"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "An arrow in a flowchart shows which step comes next.",
+     "hint": "Arrows show direction.",
+     "explanation": "Arrows show the order of steps.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put the parts of making a sandwich app in a sensible order.",
+     "hint": "What first?",
+     "explanation": "Bread, filling, then the finished sandwich.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Choose filling"
+      },
+      {
+       "id": "i3",
+       "text": "Show the finished sandwich"
+      },
+      {
+       "id": "i1",
+       "text": "Choose bread"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A flowchart is a picture of an...",
+     "hint": "Steps in order.",
+     "explanation": "A flowchart shows an algorithm.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Animal"
+      },
+      {
+       "id": "b",
+       "text": "Algorithm"
+      },
+      {
+       "id": "c",
+       "text": "Answer"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "loops_if",
+   "kind": "try",
+   "title": "Loops and decisions",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Loops"
+    },
+    {
+     "type": "text",
+     "markdown": "A **loop** repeats steps. Repeat 4 times: forward, turn.\n\nLoops make programs shorter.",
+     "say": "A loop repeats a set of steps. To draw a square we could write: forward, turn, forward, turn, forward, turn, forward, turn. That is eight steps. With a loop we just write: repeat four times, forward then turn. Same square, much shorter. Loops save time and avoid mistakes. Watch the robot drive round a square using a loop."
+    },
+    {
+     "type": "explainer",
+     "title": "A loop draws a square",
+     "scenes": [
+      {
+       "caption": "Loop 1 begins.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot starts here and faces right. Repeat four times: forward, turn."
+      },
+      {
+       "caption": "Pass 1: forward, turn.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 2,
+          "row": 0,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "First pass: it moves forward, then turns right to face down."
+      },
+      {
+       "caption": "Pass 2: forward, turn.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 2,
+          "row": 2,
+          "facing": "left"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Second pass. Forward, and turn to face left."
+      },
+      {
+       "caption": "Passes 3 and 4 finish the square.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Third and fourth passes complete the square, and the robot is back where it started."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A loop says: repeat 5 times: clap. How many claps in all?",
+      "hint": "Count the repeats.",
+      "explanation": "Repeat 5 times means 5 claps.",
+      "skill_tag": "prog.loops",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Program a friend",
+     "materials": [
+      "A friend or grown-up",
+      "Open floor space"
+     ],
+     "instructions": [
+      "Write a short program on paper using a loop, like: repeat 3 times: step forward, clap.",
+      "Read it out. Your friend acts it out exactly.",
+      "Did it work? Swap roles."
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Decisions with if and else"
+    },
+    {
+     "type": "text",
+     "markdown": "**If** a **condition** is true, do one thing. **Else**, do another.\n\nIf the light is green, go. Else, stop.",
+     "say": "Programs make decisions. If a condition is true, they do one thing. Else, they do something different. If the traffic light is green, then go. Else, stop. The condition is the question the computer checks. It is always true or false. Try writing your own: if it is raining, take an umbrella, else wear sunglasses."
+    },
+    {
+     "type": "image",
+     "emoji": "🟢🚦🔴",
+     "alt": "If green, go. Else, stop.",
+     "caption": "If green, go. Else, stop."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "If it is raining, take an umbrella. Else, wear sunglasses. It is sunny. What do you do?",
+      "hint": "Is the condition true?",
+      "explanation": "It is not raining, so we use the else.",
+      "skill_tag": "prog.decisions",
+      "options": [
+       {
+        "id": "a",
+        "text": "Take an umbrella"
+       },
+       {
+        "id": "b",
+        "text": "Wear sunglasses"
+       },
+       {
+        "id": "c",
+        "text": "Do both"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A loop repeats steps",
+      "If and else let a program decide"
+     ],
+     "say": "Let us remember. Loops repeat. If and else make decisions."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "loop",
+       "meaning": "A set of steps that repeats."
+      },
+      {
+       "term": "condition",
+       "meaning": "A question that is true or false."
+      },
+      {
+       "term": "if",
+       "meaning": "Do this when the condition is true."
+      },
+      {
+       "term": "else",
+       "meaning": "Do this when the condition is false."
+      },
+      {
+       "term": "repeat",
+       "meaning": "To do the same steps again."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Repeat 3 times: forward 2 squares. How many squares in all?",
+     "hint": "3 times 2.",
+     "explanation": "3 x 2 = 6.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does else mean in a program?",
+     "hint": "The other choice.",
+     "explanation": "Else is for when the condition is false.",
+     "options": [
+      {
+       "id": "a",
+       "text": "What to do first"
+      },
+      {
+       "id": "b",
+       "text": "What to do if the condition is false"
+      },
+      {
+       "id": "c",
+       "text": "The end of the program"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A condition is always true or false.",
+     "hint": "Yes or no.",
+     "explanation": "A condition has two possible answers.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which program is shorter?",
+     "hint": "Loops save writing.",
+     "explanation": "A loop is shorter.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Forward, turn, forward, turn, forward, turn, forward, turn"
+      },
+      {
+       "id": "b",
+       "text": "They are the same length"
+      },
+      {
+       "id": "c",
+       "text": "Repeat 4 times: forward, turn"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "variables",
+   "kind": "play",
+   "title": "Variables: boxes that remember",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is a variable?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **variable** is a labelled box that stores a **value**.\n\nA game keeps your score in a variable.",
+     "say": "A variable is like a labelled box that holds a value. Games use variables to remember things, like your score. We give the box a name, such as score, and put a number in it. When you catch a star, the program changes the number inside. Watch the score variable change."
+    },
+    {
+     "type": "explainer",
+     "title": "The score variable",
+     "scenes": [
+      {
+       "caption": "score = 0",
+       "items": [
+        {
+         "id": "bx",
+         "emoji": "📦",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none",
+         "label": "score: 0"
+        }
+       ],
+       "say": "The program sets score to zero. The box is labelled score and holds 0."
+      },
+      {
+       "caption": "score = score + 1, so it is 1.",
+       "items": [
+        {
+         "id": "bx",
+         "emoji": "📦",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce",
+         "label": "score: 1"
+        },
+        {
+         "id": "st",
+         "emoji": "⭐",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "You catch a star! The program adds one. Now score holds 1."
+      },
+      {
+       "caption": "Now score is 2.",
+       "items": [
+        {
+         "id": "bx",
+         "emoji": "📦",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce",
+         "label": "score: 2"
+        },
+        {
+         "id": "st",
+         "emoji": "⭐",
+         "x": 80,
+         "y": 25,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "st2",
+         "emoji": "⭐",
+         "x": 65,
+         "y": 25,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Catch another star, and score holds 2. The value changes but the name stays the same."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "score is 4. You catch one more star and the program adds 1. What is score now?",
+      "hint": "Add 1.",
+      "explanation": "4 + 1 = 5.",
+      "skill_tag": "prog.variables",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Watch carefully, then copy the **order**.",
+     "say": "Time for a brain game to stretch your memory. Watch the order of the lights and copy them. Programs remember steps in order too."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Memory lights",
+     "goal": "Watch the order, then copy it.",
+     "emojis": [
+      "🔴",
+      "🟡",
+      "🟢",
+      "🔵",
+      "🟣"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A variable's value can change while the program runs.",
+      "hint": "Think about a score.",
+      "explanation": "That is why it is called a variable.",
+      "skill_tag": "prog.variables",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A variable has a name and a value",
+      "The value can change as the program runs"
+     ],
+     "say": "Let us remember. A variable is a named box that stores a value. The value can change."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "variable",
+       "meaning": "A named box that stores a value."
+      },
+      {
+       "term": "value",
+       "meaning": "The thing stored in a variable, such as a number."
+      },
+      {
+       "term": "score",
+       "meaning": "A number that counts points."
+      },
+      {
+       "term": "order",
+       "meaning": "What comes first, next and last."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a variable?",
+     "hint": "Like a labelled box.",
+     "explanation": "A variable stores a value with a name.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of loop"
+      },
+      {
+       "id": "b",
+       "text": "A broken program"
+      },
+      {
+       "id": "c",
+       "text": "A named box that stores a value"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "lives = 3. You lose one life: lives = lives - 1. What is lives now?",
+     "hint": "Take away 1.",
+     "explanation": "3 - 1 = 2.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "The name of a variable usually changes every time its value changes.",
+     "hint": "Does the box change its label?",
+     "explanation": "The name stays the same.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "debug",
+   "kind": "use",
+   "title": "Debug and design a program",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Finding bugs"
+    },
+    {
+     "type": "text",
+     "markdown": "A **bug** is a mistake in a program. To **debug**, we **trace** it step by step.",
+     "say": "Programs often have bugs. A bug is a mistake, and debugging means finding it and fixing it. A good way to debug is to trace the program. That means following it step by step, like the computer would, and checking what happens at each step. Look at this robot program: forward, forward, forward, turn right, forward, forward. The goal is to reach the star at the bottom right corner."
+    },
+    {
+     "type": "explainer",
+     "title": "Tracing a program",
+     "scenes": [
+      {
+       "caption": "After three forwards.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot starts at the top left and faces right. Three forwards take it along the top row."
+      },
+      {
+       "caption": "After the turn and two forwards.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 2,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Turn right to face down. Then two forwards."
+      },
+      {
+       "caption": "The robot is short of the star. Bugs found!",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 2,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "bug",
+         "emoji": "🐛",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "But the star is at the bottom right corner, which is four across and four down. The robot is not there! The program needs one more forward across and two more down. We found the bugs."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A program should move the robot 4 squares, but it only moves 3. What is the best way to find the bug?",
+      "hint": "Follow it like the computer.",
+      "explanation": "Tracing shows exactly where the mistake is.",
+      "skill_tag": "prog.debug",
+      "options": [
+       {
+        "id": "a",
+        "text": "Delete the whole program"
+       },
+       {
+        "id": "b",
+        "text": "Guess and hope"
+       },
+       {
+        "id": "c",
+        "text": "Trace it step by step"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Design your own"
+    },
+    {
+     "type": "text",
+     "markdown": "Design a program: decompose it, draw a flowchart, use a variable, then test and debug.",
+     "say": "Now design a program of your own. Choose a game idea, like a dice game. Break it into parts, draw a flowchart, decide what variables you need, and use a loop and a decision. Test it with a friend. If it goes wrong, debug it."
+    },
+    {
+     "type": "image",
+     "emoji": "🎲🧩",
+     "alt": "Plan the parts, then test and debug.",
+     "caption": "Plan the parts, then test and debug."
+    },
+    {
+     "type": "activity",
+     "title": "My dice game plan",
+     "materials": [
+      "Paper and pencil",
+      "A dice and a friend"
+     ],
+     "instructions": [
+      "Write your game idea in one sentence.",
+      "Break it into three parts.",
+      "Draw a flowchart with one question diamond.",
+      "Name one variable, such as score.",
+      "Test it with a friend and fix any bug."
+     ]
+    },
+    {
+     "type": "reveal",
+     "prompt": "Why is testing important even if the plan looks perfect?",
+     "answer_markdown": "A plan can hide small mistakes. Testing shows them so we can debug."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Debugging means finding and fixing mistakes in a program.",
+      "hint": "Think about bugs.",
+      "explanation": "Debugging means fixing mistakes.",
+      "skill_tag": "prog.debug",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Trace a program to find bugs",
+      "Design, test and debug"
+     ],
+     "say": "Let us remember. Trace to find bugs. Design, test and debug."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bug",
+       "meaning": "A mistake in a program."
+      },
+      {
+       "term": "debug",
+       "meaning": "To find and fix bugs."
+      },
+      {
+       "term": "trace",
+       "meaning": "To follow a program step by step."
+      },
+      {
+       "term": "test",
+       "meaning": "To try something to see if it works."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does trace mean?",
+     "hint": "Like the computer would.",
+     "explanation": "Tracing follows each step.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Draw a picture"
+      },
+      {
+       "id": "b",
+       "text": "Delete the code"
+      },
+      {
+       "id": "c",
+       "text": "Follow a program step by step"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A bug is a mistake in a program.",
+     "hint": "Not an insect.",
+     "explanation": "A bug is a mistake.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these steps for fixing a program in order.",
+     "hint": "What first?",
+     "explanation": "Notice, trace, fix and test.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Trace to find the bug"
+      },
+      {
+       "id": "i3",
+       "text": "Fix and test again"
+      },
+      {
+       "id": "i1",
+       "text": "Notice the problem"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "A programmer splits a big game into small jobs. What is this called?",
+    "hint": "Breaking apart.",
+    "explanation": "Splitting a problem is decomposition.",
+    "skill_tag": "prog.decompose",
+    "options": [
+     {
+      "id": "a",
+      "text": "Debugging"
+     },
+     {
+      "id": "b",
+      "text": "Decomposition"
+     },
+     {
+      "id": "c",
+      "text": "Looping"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which shape in a flowchart asks a yes or no question?",
+    "hint": "Two ways out.",
+    "explanation": "A diamond holds a question.",
+    "skill_tag": "prog.flowchart",
+    "options": [
+     {
+      "id": "a",
+      "text": "A star"
+     },
+     {
+      "id": "b",
+      "text": "A diamond"
+     },
+     {
+      "id": "c",
+      "text": "A heart"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "Repeat 7 times: hop. How many hops in all?",
+    "hint": "Count the repeats.",
+    "explanation": "7 repeats is 7 hops.",
+    "skill_tag": "prog.loops",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about decisions.",
+    "hint": "Think about if and else.",
+    "explanation": "Else covers the false case.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "text": "If the condition is true we do the first thing, {b1} we do the {b2} thing.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "and"
+       },
+       {
+        "id": "b",
+        "text": "else"
+       },
+       {
+        "id": "c",
+        "text": "but"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "same"
+       },
+       {
+        "id": "b",
+        "text": "first"
+       },
+       {
+        "id": "c",
+        "text": "other"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "loops_if",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Pick the two true statements about loops.",
+    "hint": "Think back.",
+    "explanation": "Loops repeat steps and shorten programs.",
+    "skill_tag": "prog.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "They hide bugs"
+     },
+     {
+      "id": "b",
+      "text": "They need no steps"
+     },
+     {
+      "id": "c",
+      "text": "They make programs shorter"
+     },
+     {
+      "id": "d",
+      "text": "They repeat steps"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Variable"
+     },
+     {
+      "id": "l2",
+      "text": "Bug"
+     },
+     {
+      "id": "l3",
+      "text": "Loop"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A mistake"
+     },
+     {
+      "id": "r3",
+      "text": "Repeats steps"
+     },
+     {
+      "id": "r1",
+      "text": "A named box"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "variables",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "The rule is: if the light is green, go, else stop. The light is red. What happens?",
+    "hint": "Is the condition true?",
+    "explanation": "It is not green, so the else runs.",
+    "skill_tag": "prog.decisions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Go"
+     },
+     {
+      "id": "b",
+      "text": "Stop"
+     },
+     {
+      "id": "c",
+      "text": "Nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Zara says a variable's value can never change. Is she right?",
+    "hint": "Think of a score.",
+    "explanation": "Variables can change.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only at night"
+     },
+     {
+      "id": "b",
+      "text": "No, the value can change"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "variables",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show the value of score after 5 stars, each adding 1 to 0.",
+    "hint": "Add 1 five times.",
+    "explanation": "score is 5.",
+    "skill_tag": "prog.variables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "variables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the labelled box that shows a variable.",
+    "hint": "A name and a value.",
+    "explanation": "score: 3 has a name and a value.",
+    "skill_tag": "prog.variables",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📦",
+       "label": "score: 3",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛑",
+       "label": "Stop sign",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌳",
+       "label": "Tree",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "variables",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which program is shorter for four claps?",
+    "hint": "Loops save writing.",
+    "explanation": "A loop is shorter.",
+    "skill_tag": "prog.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same"
+     },
+     {
+      "id": "b",
+      "text": "Repeat 4 times: clap"
+     },
+     {
+      "id": "c",
+      "text": "Clap, clap, clap, clap"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "The robot stops two squares before the star. What should you do first?",
+    "hint": "Follow each step.",
+    "explanation": "Tracing finds the bug.",
+    "skill_tag": "prog.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Switch it off forever"
+     },
+     {
+      "id": "b",
+      "text": "Paint it blue"
+     },
+     {
+      "id": "c",
+      "text": "Trace the program"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "A flowchart can only be used for computer programs.",
+    "hint": "Any steps in order.",
+    "explanation": "People use flowcharts for all kinds of steps.",
+    "skill_tag": "prog.flowchart",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Ahmed says testing is a waste of time if the plan looks perfect. Is he right?",
+    "hint": "Plans can hide bugs.",
+    "explanation": "Testing shows hidden bugs.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never test"
+     },
+     {
+      "id": "b",
+      "text": "No, testing can reveal hidden bugs"
+     },
+     {
+      "id": "c",
+      "text": "Only for games"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these programming jobs in order.",
+    "hint": "Plan first.",
+    "explanation": "Decompose, write, then test.",
+    "skill_tag": "prog.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write the steps"
+     },
+     {
+      "id": "i1",
+      "text": "Break the problem into parts"
+     },
+     {
+      "id": "i3",
+      "text": "Test and debug"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A programmer splits a big game into small jobs. This is called...",
+    "hint": "Breaking apart.",
+    "explanation": "Splitting a problem is decomposition.",
+    "skill_tag": "prog.decompose",
+    "options": [
+     {
+      "id": "a",
+      "text": "Debugging"
+     },
+     {
+      "id": "b",
+      "text": "Looping"
+     },
+     {
+      "id": "c",
+      "text": "Decomposition"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which word means breaking a problem into smaller parts?",
+    "hint": "Breaking apart.",
+    "explanation": "That is decomposition.",
+    "skill_tag": "prog.decompose",
+    "options": [
+     {
+      "id": "a",
+      "text": "Variable"
+     },
+     {
+      "id": "b",
+      "text": "Condition"
+     },
+     {
+      "id": "c",
+      "text": "Decomposition"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which flowchart shape holds a yes or no question?",
+    "hint": "Two ways out.",
+    "explanation": "A diamond holds a question.",
+    "skill_tag": "prog.flowchart",
+    "options": [
+     {
+      "id": "a",
+      "text": "A circle drawn as a face"
+     },
+     {
+      "id": "b",
+      "text": "A diamond"
+     },
+     {
+      "id": "c",
+      "text": "A heart"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "What shape is used for a question in a flowchart?",
+    "hint": "Two ways out.",
+    "explanation": "A diamond holds a question.",
+    "skill_tag": "prog.flowchart",
+    "options": [
+     {
+      "id": "a",
+      "text": "A star"
+     },
+     {
+      "id": "b",
+      "text": "A diamond"
+     },
+     {
+      "id": "c",
+      "text": "A triangle"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "number",
+    "prompt": "Repeat 6 times: step forward. How many steps?",
+    "hint": "Count the repeats.",
+    "explanation": "6 repeats is 6 steps.",
+    "skill_tag": "prog.loops",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "number",
+    "prompt": "Repeat 8 times: jump. How many jumps?",
+    "hint": "Count the repeats.",
+    "explanation": "8 repeats is 8 jumps.",
+    "skill_tag": "prog.loops",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about decisions.",
+    "hint": "Think about if and else.",
+    "explanation": "Else covers the false case.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "text": "If the condition is true we do the first thing, {b1} we do the {b2} thing.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "and"
+       },
+       {
+        "id": "b",
+        "text": "else"
+       },
+       {
+        "id": "c",
+        "text": "but"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "first"
+       },
+       {
+        "id": "b",
+        "text": "other"
+       },
+       {
+        "id": "c",
+        "text": "same"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "loops_if",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about loops.",
+    "hint": "What does a loop do?",
+    "explanation": "A loop repeats steps.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "text": "A {b1} {b2} steps.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "loop"
+       },
+       {
+        "id": "c",
+        "text": "box"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hides"
+       },
+       {
+        "id": "b",
+        "text": "repeats"
+       },
+       {
+        "id": "c",
+        "text": "deletes"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "loops_if",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two are true about loops? Pick two.",
+    "hint": "Think back.",
+    "explanation": "Loops repeat steps and shorten programs.",
+    "skill_tag": "prog.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "They make programs shorter"
+     },
+     {
+      "id": "b",
+      "text": "They hide bugs"
+     },
+     {
+      "id": "c",
+      "text": "They need no steps"
+     },
+     {
+      "id": "d",
+      "text": "They repeat steps"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick the two true statements about variables.",
+    "hint": "Think back.",
+    "explanation": "Variables have a name and a value.",
+    "skill_tag": "prog.variables",
+    "options": [
+     {
+      "id": "a",
+      "text": "They never change"
+     },
+     {
+      "id": "b",
+      "text": "They are bugs"
+     },
+     {
+      "id": "c",
+      "text": "They store a value"
+     },
+     {
+      "id": "d",
+      "text": "They have a name"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Match each coding word to what it means.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Variable"
+     },
+     {
+      "id": "l2",
+      "text": "Bug"
+     },
+     {
+      "id": "l3",
+      "text": "Loop"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A mistake"
+     },
+     {
+      "id": "r3",
+      "text": "Repeats steps"
+     },
+     {
+      "id": "r1",
+      "text": "A named box"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "variables",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Pair each programming idea with its job.",
+    "hint": "Think back.",
+    "explanation": "Each idea has a job.",
+    "skill_tag": "prog.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Condition"
+     },
+     {
+      "id": "l2",
+      "text": "Flowchart"
+     },
+     {
+      "id": "l3",
+      "text": "Trace"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Picture of steps"
+     },
+     {
+      "id": "r1",
+      "text": "True or false"
+     },
+     {
+      "id": "r3",
+      "text": "Follow step by step"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "variables",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "The traffic light is red. The program says: if green, go, else stop. What happens?",
+    "hint": "Is the condition true?",
+    "explanation": "It is not green, so the else runs.",
+    "skill_tag": "prog.decisions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Go"
+     },
+     {
+      "id": "b",
+      "text": "Nothing"
+     },
+     {
+      "id": "c",
+      "text": "Stop"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "The rule: if the door is open, walk in, else knock. The door is closed. What happens?",
+    "hint": "Is the condition true?",
+    "explanation": "The door is not open, so knock.",
+    "skill_tag": "prog.decisions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Walk in"
+     },
+     {
+      "id": "b",
+      "text": "Run away"
+     },
+     {
+      "id": "c",
+      "text": "Knock"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a variable's value can never change. Is she right?",
+    "hint": "Think of a score.",
+    "explanation": "Variables can change.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only at night"
+     },
+     {
+      "id": "b",
+      "text": "No, the value can change"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "variables",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Faisal says a score variable stays at 0 forever. Is he right?",
+    "hint": "Think of a score.",
+    "explanation": "The value changes.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always 0"
+     },
+     {
+      "id": "b",
+      "text": "Only on weekends"
+     },
+     {
+      "id": "c",
+      "text": "No, it changes as you play"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "variables",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show the value of score after 6 stars, each adding 1 to 0.",
+    "hint": "Add 1 six times.",
+    "explanation": "score is 6.",
+    "skill_tag": "prog.variables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "variables",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show lives after starting with 5 and losing 2.",
+    "hint": "Take away 2.",
+    "explanation": "5 - 2 = 3.",
+    "skill_tag": "prog.variables",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "variables",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the box that shows a variable.",
+    "hint": "A name and a value.",
+    "explanation": "score: 3 has a name and a value.",
+    "skill_tag": "prog.variables",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📦",
+       "label": "score: 3",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛑",
+       "label": "Stop sign",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌳",
+       "label": "Tree",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "variables",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the labelled box that stores a number.",
+    "hint": "A name and a value.",
+    "explanation": "lives: 2 is a variable.",
+    "skill_tag": "prog.variables",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎲",
+       "label": "Dice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📦",
+       "label": "lives: 2",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧸",
+       "label": "Teddy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "variables",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which is the shorter program for four claps?",
+    "hint": "Loops save writing.",
+    "explanation": "A loop is shorter.",
+    "skill_tag": "prog.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "Clap, clap, clap, clap"
+     },
+     {
+      "id": "b",
+      "text": "Repeat 4 times: clap"
+     },
+     {
+      "id": "c",
+      "text": "They are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which is the shorter way to write eight jumps?",
+    "hint": "Loops save writing.",
+    "explanation": "A loop is shorter.",
+    "skill_tag": "prog.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "Jump, jump, jump, jump, jump, jump, jump, jump"
+     },
+     {
+      "id": "b",
+      "text": "Repeat 8 times: jump"
+     },
+     {
+      "id": "c",
+      "text": "They are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "The robot ends two squares before the star. What should you do first to find why?",
+    "hint": "Follow each step.",
+    "explanation": "Tracing finds the bug.",
+    "skill_tag": "prog.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Paint it blue"
+     },
+     {
+      "id": "b",
+      "text": "Trace the program"
+     },
+     {
+      "id": "c",
+      "text": "Switch it off forever"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "A program gives the wrong answer. What is the best first step?",
+    "hint": "Follow each step.",
+    "explanation": "Tracing finds the bug.",
+    "skill_tag": "prog.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Delete it"
+     },
+     {
+      "id": "b",
+      "text": "Trace it step by step"
+     },
+     {
+      "id": "c",
+      "text": "Ignore it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "A flowchart can only be used by computers.",
+    "hint": "We can use it for any steps.",
+    "explanation": "People use flowcharts for all kinds of steps.",
+    "skill_tag": "prog.flowchart",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "We can draw a flowchart for a daily routine, like getting ready for school.",
+    "hint": "Any steps in order.",
+    "explanation": "Flowcharts work for any steps.",
+    "skill_tag": "prog.flowchart",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "decompose",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Ahmed says we never need to test a plan that looks perfect. Is he right?",
+    "hint": "Plans can hide bugs.",
+    "explanation": "Testing shows hidden bugs.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only for games"
+     },
+     {
+      "id": "b",
+      "text": "No, testing can reveal hidden bugs"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never test"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Sara says a program works perfectly the first time. Is that always true?",
+    "hint": "Think about bugs.",
+    "explanation": "Programs often need debugging.",
+    "skill_tag": "prog.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "No, we usually need to test and debug"
+     },
+     {
+      "id": "c",
+      "text": "Only for loops"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Arrange these programming jobs in order.",
+    "hint": "Plan first.",
+    "explanation": "Decompose, write, then test.",
+    "skill_tag": "prog.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write the steps"
+     },
+     {
+      "id": "i3",
+      "text": "Test and debug"
+     },
+     {
+      "id": "i1",
+      "text": "Break the problem into parts"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Order these steps for making a game.",
+    "hint": "Plan first.",
+    "explanation": "Idea, flowchart, then test.",
+    "skill_tag": "prog.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Draw a flowchart"
+     },
+     {
+      "id": "i1",
+      "text": "Have an idea"
+     },
+     {
+      "id": "i3",
+      "text": "Test it with a friend"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

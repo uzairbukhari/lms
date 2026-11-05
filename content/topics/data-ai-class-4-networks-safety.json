@@ -1,0 +1,2430 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-networks-safety",
+  "subject": "data-ai",
+  "title": "Networks and Staying Safe",
+  "summary": "How the internet works, packets, strong passwords, tricky messages and your digital footprint.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Networks and safety",
+  "learning_objectives": [
+   "Explain how a message travels across the internet",
+   "Make and keep a strong password",
+   "Spot tricky messages and think about my digital footprint"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 networks",
+    "text": "Understand computer networks including the internet; use technology safely, respectfully and responsibly"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-NI-04",
+    "text": "Model how information is broken down into smaller pieces, transmitted as packets and reassembled"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-NI-05",
+    "text": "Discuss real-world cybersecurity problems and how personal information can be protected"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a server, router and packet are",
+   "I can explain what makes a strong password",
+   "I know what to do about a tricky message"
+  ],
+  "real_life": "Video calls with relatives, school logins and games all use the internet, passwords and safe habits.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we call a mistake in a program?",
+    "hint": "Not an insect.",
+    "explanation": "A mistake is a bug.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A loop"
+     },
+     {
+      "id": "b",
+      "text": "A bug"
+     },
+     {
+      "id": "c",
+      "text": "A packet"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a label tell a machine?",
+    "hint": "The right answer.",
+    "explanation": "A label is the right answer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "What colour it is"
+     },
+     {
+      "id": "b",
+      "text": "What an example is"
+     },
+     {
+      "id": "c",
+      "text": "How fast it is"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 9 x 7?",
+    "hint": "9 sevens.",
+    "explanation": "9 x 7 = 63.",
+    "answer": {
+     "value": 63,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, network explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how does the internet work, and how do we stay safe on it?\n\nWe will follow a message and learn safe habits.",
+   "say": "Welcome, network explorer! Today's big question: how does the internet work, and how do we stay safe on it? We will follow a message across the network, make a strong password and learn to spot tricky messages. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🌐",
+   "alt": "The internet connects the whole world.",
+   "caption": "The internet connects the whole world."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "explorer",
+     "meaning": "Someone who finds out new things."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "internet",
+   "kind": "learn",
+   "title": "How the internet works",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Computers that connect"
+    },
+    {
+     "type": "text",
+     "markdown": "A **network** connects computers so they can share. The **internet** joins millions of networks.\n\nA **server** stores a website. A **router** points messages the right way.",
+     "say": "A network is a group of computers connected so they can share information. The internet is the biggest network in the world. It joins millions of networks together. When you open a website, your device asks a server. A server is a powerful computer that stores websites and sends them to you. The messages travel along cables, through wireless signals, and through routers that point them the right way."
+    },
+    {
+     "type": "explainer",
+     "title": "Opening a website",
+     "scenes": [
+      {
+       "caption": "Your tablet makes a request.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "You"
+        }
+       ],
+       "say": "You tap a link on your tablet. That is a request for a web page."
+      },
+      {
+       "caption": "The request travels through a router and cables.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "📡",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Router"
+        },
+        {
+         "id": "c",
+         "emoji": "➡️",
+         "x": 60,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "The request goes through your router, and then along cables to the internet."
+      },
+      {
+       "caption": "The server sends the page back.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "📡",
+         "x": 40,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🖥️",
+         "x": 85,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Server"
+        },
+        {
+         "id": "b",
+         "emoji": "⬅️",
+         "x": 62,
+         "y": 55,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A server far away stores the website. It sends the page back to you, and the page appears on your screen."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a server do?",
+      "hint": "Think about a library of websites.",
+      "explanation": "A server stores websites and sends them to us.",
+      "skill_tag": "net.server",
+      "options": [
+       {
+        "id": "a",
+        "text": "Types the words for us"
+       },
+       {
+        "id": "b",
+        "text": "Stores websites and sends them to us"
+       },
+       {
+        "id": "c",
+        "text": "Charges our battery"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Packets"
+    },
+    {
+     "type": "text",
+     "markdown": "Messages are split into **packets**. Each packet has an address and a number.\n\nAt the end they are put back in order.",
+     "say": "Big messages do not travel in one piece. They are split into tiny packets. Each packet has a label saying where it is going and which number it is. Packets can take different routes. At the end, the computer puts them back in order, like a jigsaw. If one packet is lost, only that one needs to be sent again."
+    },
+    {
+     "type": "explainer",
+     "title": "A message in packets",
+     "scenes": [
+      {
+       "caption": "The message.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "✉️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "HELLO FRIEND"
+        }
+       ],
+       "say": "Here is a message: HELLO FRIEND."
+      },
+      {
+       "caption": "Three numbered packets.",
+       "items": [
+        {
+         "id": "p1",
+         "emoji": "📦",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1: HEL"
+        },
+        {
+         "id": "p2",
+         "emoji": "📦",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "2: LO F"
+        },
+        {
+         "id": "p3",
+         "emoji": "📦",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "3: RIEND"
+        }
+       ],
+       "say": "It is split into three packets. Each one has a number."
+      },
+      {
+       "caption": "They are put back in order.",
+       "items": [
+        {
+         "id": "p1",
+         "emoji": "📦",
+         "x": 25,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "p2",
+         "emoji": "📦",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none",
+         "label": "2"
+        },
+        {
+         "id": "p3",
+         "emoji": "📦",
+         "x": 75,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "3"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 15,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "They travel by different routes, then are put back in order at the other end. The message arrives safely."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why is a message split into packets?",
+      "hint": "Think about a jigsaw.",
+      "explanation": "Packets are small and are put back in order.",
+      "skill_tag": "net.packets",
+      "options": [
+       {
+        "id": "a",
+        "text": "To make it slower on purpose"
+       },
+       {
+        "id": "b",
+        "text": "Small packets can travel different routes and be put back together"
+       },
+       {
+        "id": "c",
+        "text": "To hide it from the router"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A network connects computers",
+      "A server stores websites",
+      "Messages are split into numbered packets"
+     ],
+     "say": "Let us remember. A network connects computers. A server stores websites. Messages travel as packets."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "network",
+       "meaning": "A group of connected computers."
+      },
+      {
+       "term": "internet",
+       "meaning": "The biggest network, joining millions of networks."
+      },
+      {
+       "term": "server",
+       "meaning": "A powerful computer that stores websites."
+      },
+      {
+       "term": "router",
+       "meaning": "A device that points messages the right way."
+      },
+      {
+       "term": "packets",
+       "meaning": "Small pieces a message is split into."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the internet?",
+     "hint": "Many connected.",
+     "explanation": "The internet joins millions of networks.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A single computer"
+      },
+      {
+       "id": "b",
+       "text": "A huge network of networks"
+      },
+      {
+       "id": "c",
+       "text": "A game"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A router points messages the right way.",
+     "hint": "Like a signpost.",
+     "explanation": "A router directs messages.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put the steps of loading a website in order.",
+     "hint": "What first?",
+     "explanation": "Tap, request reaches a server, then the page appears.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "The page appears on your screen"
+      },
+      {
+       "id": "i1",
+       "text": "You tap a link"
+      },
+      {
+       "id": "i2",
+       "text": "The request reaches a server"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Each packet has...",
+     "hint": "So it can be reassembled.",
+     "explanation": "Packets carry an address and a number.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A smell"
+      },
+      {
+       "id": "b",
+       "text": "A colour only"
+      },
+      {
+       "id": "c",
+       "text": "An address and a number"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "passwords",
+   "kind": "try",
+   "title": "Strong passwords",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Why passwords matter"
+    },
+    {
+     "type": "text",
+     "markdown": "A **strong password** is long and mixed, and is not easy to guess.\n\nNever share a **password** except with your parent.",
+     "say": "A password is a secret key that protects your accounts. A weak password is easy to guess, like 1234 or your name. A strong password is long, has a mix of letters, numbers and symbols, and is not about you. A great trick is to join three random words, like blue elephant pizza, and add a number and a symbol. It is easy for you to remember but very hard for others to guess."
+    },
+    {
+     "type": "explainer",
+     "title": "Weak and strong",
+     "scenes": [
+      {
+       "caption": "Weak: 1234",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🔓",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1234"
+        }
+       ],
+       "say": "Here is a weak password. It is short and easy to guess."
+      },
+      {
+       "caption": "Strong: BlueElephantPizza7!",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🔓",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "1234"
+        },
+        {
+         "id": "s",
+         "emoji": "🔐",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "BlueElephantPizza7!"
+        }
+       ],
+       "say": "Here is a stronger one. It joins random words and adds a number and a symbol."
+      },
+      {
+       "caption": "Strong passwords take much longer to guess.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🔓",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🔐",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "⏳",
+         "x": 40,
+         "y": 20,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The longer and more mixed the password, the more guesses a computer would need. The strong one would take far longer to crack."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the stronger password?",
+      "hint": "Longer and more mixed.",
+      "explanation": "It is long, mixed and not about you.",
+      "skill_tag": "net.password",
+      "options": [
+       {
+        "id": "a",
+        "text": "Fatima"
+       },
+       {
+        "id": "b",
+        "text": "BlueElephantPizza7!"
+       },
+       {
+        "id": "c",
+        "text": "1234"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Make a strong password recipe",
+     "materials": [
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Choose three random words that are not about you.",
+      "Add a number and a symbol.",
+      "Do NOT use this exact password for real. Only practise the recipe, and keep real passwords secret."
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Keeping passwords safe"
+    },
+    {
+     "type": "text",
+     "markdown": "Use a different password for each account. Keep it **secret**.",
+     "say": "A strong password is only useful if it stays secret. Do not write it where others can see. Do not use the same password everywhere, because if one is stolen, all your accounts are at risk. Ask a parent to help you use a password manager. And never tell your password to a friend or a stranger."
+    },
+    {
+     "type": "image",
+     "emoji": "🔐🤫",
+     "alt": "A strong password stays secret.",
+     "caption": "A strong password stays secret."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is a good idea to use the same password for every account.",
+      "hint": "Think about one stolen key.",
+      "explanation": "If one is stolen, all are at risk.",
+      "skill_tag": "net.password",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Strong passwords are long and mixed",
+      "Keep passwords secret",
+      "Use a different password for each account"
+     ],
+     "say": "Let us remember. Strong passwords are long and mixed. Keep them secret and different for each account."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "strong password",
+       "meaning": "A long, mixed password that is hard to guess."
+      },
+      {
+       "term": "password",
+       "meaning": "A secret code that protects an account."
+      },
+      {
+       "term": "secret",
+       "meaning": "Known only to you and your parent."
+      },
+      {
+       "term": "symbol",
+       "meaning": "A character such as ! or #."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which password is weakest?",
+     "hint": "Easy to guess.",
+     "explanation": "1234 is too easy to guess.",
+     "options": [
+      {
+       "id": "a",
+       "text": "T4ble-Lamp-Cloud!"
+      },
+      {
+       "id": "b",
+       "text": "1234"
+      },
+      {
+       "id": "c",
+       "text": "BlueElephantPizza7!"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A strong password mixes letters, numbers and symbols.",
+     "hint": "Mix it up.",
+     "explanation": "A mix makes it harder to guess.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who can you share your password with?",
+     "hint": "Keep it secret.",
+     "explanation": "Only a parent should know it.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Anyone who asks"
+      },
+      {
+       "id": "b",
+       "text": "Only a parent"
+      },
+      {
+       "id": "c",
+       "text": "A friend"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safe_game",
+   "kind": "play",
+   "title": "Spot the risk",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Tricky messages"
+    },
+    {
+     "type": "text",
+     "markdown": "**Phishing** messages try to trick you into sharing private details.\n\nDo not click, do not reply. Tell a grown-up.",
+     "say": "Some messages online are tricks. A scam message might say you won a prize, or ask you to click a link and type your password. This is called phishing, like fishing for your details. Clues are strange spelling, a rush to act now, and an offer that is too good to be true. The safe move is to not click, not reply, and tell a grown-up."
+    },
+    {
+     "type": "image",
+     "emoji": "🎣✉️",
+     "alt": "A tricky message is like bait on a hook.",
+     "caption": "A tricky message is like bait on a hook."
+    },
+    {
+     "type": "image",
+     "emoji": "🚩✉️",
+     "alt": "Warning signs in a message.",
+     "caption": "Warning signs in a message.",
+     "say": "Spot the warning signs: a prize, a link and a request for your password."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A message says: you won a phone, click here and enter your password. What should you do?",
+      "hint": "Too good to be true.",
+      "explanation": "It is a trick. Do not click and tell a grown-up.",
+      "skill_tag": "net.phishing",
+      "options": [
+       {
+        "id": "a",
+        "text": "Reply with your password"
+       },
+       {
+        "id": "b",
+        "text": "Do not click, and tell a grown-up"
+       },
+       {
+        "id": "c",
+        "text": "Click quickly"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Match the safe pairs.",
+     "say": "A memory challenge now. Find the matching pairs, then come back for the next stop."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Safe pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔐",
+      "🛑",
+      "🙋",
+      "🎣"
+     ],
+     "say": "Find the matching pairs. Take your time."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A message that says to act right now or lose a prize is a warning sign.",
+      "hint": "Pressure is a clue.",
+      "explanation": "Scammers rush you.",
+      "skill_tag": "net.phishing",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Phishing tries to trick you",
+      "Do not click or reply",
+      "Tell a grown-up"
+     ],
+     "say": "Let us remember. Spot tricky messages, do not click, and tell a grown-up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "phishing",
+       "meaning": "A trick message that tries to steal your details."
+      },
+      {
+       "term": "scam",
+       "meaning": "A trick to cheat someone."
+      },
+      {
+       "term": "link",
+       "meaning": "Text you tap to go to another page."
+      },
+      {
+       "term": "clue",
+       "meaning": "A sign that helps you decide."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is phishing?",
+     "hint": "Think of bait.",
+     "explanation": "Phishing tries to trick you.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fast network"
+      },
+      {
+       "id": "b",
+       "text": "A trick to steal your details"
+      },
+      {
+       "id": "c",
+       "text": "A kind of fish"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "It is safe to click links in messages from strangers.",
+     "hint": "Be careful.",
+     "explanation": "Do not click links from strangers.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A warning sign in a message is...",
+     "hint": "Pressure.",
+     "explanation": "Scammers rush people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A friendly hello only"
+      },
+      {
+       "id": "b",
+       "text": "A rush to act now"
+      },
+      {
+       "id": "c",
+       "text": "A big picture only"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "footprint",
+   "kind": "use",
+   "title": "Your digital footprint",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What you leave behind"
+    },
+    {
+     "type": "text",
+     "markdown": "Your **digital footprint** is the trail you leave online.\n\nThink before you **post**: it can stay for a long time.",
+     "say": "Every time you go online you leave a trail, like footprints in the sand. Photos you post, comments you write and sites you visit can stay for a long time. This trail is called your digital footprint. Some of it is positive, like a nice message. Some can be harmful if it shares private things. Before you post, pause and think: would I be happy for my family and teacher to see this?"
+    },
+    {
+     "type": "image",
+     "emoji": "👣💻",
+     "alt": "Everything we post leaves a footprint.",
+     "caption": "Everything we post leaves a footprint."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a digital footprint?",
+      "hint": "Think of footprints.",
+      "explanation": "It is the trail we leave online.",
+      "skill_tag": "net.footprint",
+      "options": [
+       {
+        "id": "a",
+        "text": "The size of your shoe"
+       },
+       {
+        "id": "b",
+        "text": "A broken screen"
+       },
+       {
+        "id": "c",
+        "text": "The trail of things you leave online"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Being kind and responsible online"
+    },
+    {
+     "type": "text",
+     "markdown": "Be **kind** online. Tell a grown-up if something upsets you.",
+     "say": "Be as kind online as you are in person. Do not post unkind comments. Do not share other people's photos without asking. If someone is unkind, or you see something upsetting, tell a grown-up, save the evidence and do not reply with anger. Every one of us can make the internet a kinder place."
+    },
+    {
+     "type": "image",
+     "emoji": "💬🤝",
+     "alt": "Be kind and ask before sharing.",
+     "caption": "Be kind and ask before sharing.",
+     "say": "Kind words and asking before sharing make the internet a nicer place."
+    },
+    {
+     "type": "activity",
+     "title": "Our family online rules",
+     "materials": [
+      "Paper and pencil",
+      "Your family"
+     ],
+     "instructions": [
+      "Talk with your family about how you use the internet.",
+      "Write three rules, such as: ask before sharing a photo.",
+      "Put them somewhere everyone can see."
+     ],
+     "say": "Here is a task to try with your family."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Can you completely delete something you posted?",
+     "answer_markdown": "Not always. Others may have copied or saved it, so think before you post."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is fine to share a friend's photo without asking them.",
+      "hint": "Think about permission.",
+      "explanation": "Always ask first.",
+      "skill_tag": "net.footprint",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Your digital footprint can last",
+      "Think before you post",
+      "Be kind and ask before sharing"
+     ],
+     "say": "Let us remember. Think before you post, be kind, and tell a grown-up about anything upsetting."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "kind",
+       "meaning": "Friendly and caring."
+      },
+      {
+       "term": "digital footprint",
+       "meaning": "The trail we leave online."
+      },
+      {
+       "term": "post",
+       "meaning": "To put something online."
+      },
+      {
+       "term": "responsible",
+       "meaning": "Acting in a careful and sensible way."
+      },
+      {
+       "term": "permission",
+       "meaning": "Saying yes before something happens."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Before posting something, you should...",
+     "hint": "Slow down.",
+     "explanation": "Thinking first keeps us safe.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Post at once"
+      },
+      {
+       "id": "b",
+       "text": "Delete your account"
+      },
+      {
+       "id": "c",
+       "text": "Pause and think"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Our online posts can stay for a long time.",
+     "hint": "Think about copies.",
+     "explanation": "Others can save posts.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "If something online upsets you, you should...",
+     "hint": "Who can help?",
+     "explanation": "A grown-up can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Post it everywhere"
+      },
+      {
+       "id": "b",
+       "text": "Tell a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Keep it secret"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What do we call a powerful computer that stores websites?",
+    "hint": "It serves pages.",
+    "explanation": "A server stores websites.",
+    "skill_tag": "net.server",
+    "options": [
+     {
+      "id": "a",
+      "text": "A router"
+     },
+     {
+      "id": "b",
+      "text": "A server"
+     },
+     {
+      "id": "c",
+      "text": "A tablet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does a router do with messages?",
+    "hint": "Like a signpost.",
+    "explanation": "A router directs traffic.",
+    "skill_tag": "net.router",
+    "options": [
+     {
+      "id": "a",
+      "text": "Stores them"
+     },
+     {
+      "id": "b",
+      "text": "Makes passwords"
+     },
+     {
+      "id": "c",
+      "text": "Points them the right way"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "A message is split into 8 packets and 3 are lost. How many arrived?",
+    "hint": "8 minus 3.",
+    "explanation": "8 - 3 = 5.",
+    "skill_tag": "net.packets",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "internet",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about the internet.",
+    "hint": "Think back.",
+    "explanation": "A network connects computers.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "text": "A {b1} connects computers and the internet joins millions of {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "nest"
+       },
+       {
+        "id": "b",
+        "text": "network"
+       },
+       {
+        "id": "c",
+        "text": "neighbour"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "nests"
+       },
+       {
+        "id": "b",
+        "text": "nets"
+       },
+       {
+        "id": "c",
+        "text": "networks"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Pick the two features of a strong password.",
+    "hint": "Think back.",
+    "explanation": "Strong passwords are long and mixed.",
+    "skill_tag": "net.password",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is your name"
+     },
+     {
+      "id": "b",
+      "text": "It is 1234"
+     },
+     {
+      "id": "c",
+      "text": "It mixes letters, numbers and symbols"
+     },
+     {
+      "id": "d",
+      "text": "It is long"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Server"
+     },
+     {
+      "id": "l2",
+      "text": "Router"
+     },
+     {
+      "id": "l3",
+      "text": "Packet"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Points messages"
+     },
+     {
+      "id": "r3",
+      "text": "A small piece of a message"
+     },
+     {
+      "id": "r1",
+      "text": "Stores websites"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "An email says your account will close unless you send your password. What is this?",
+    "hint": "Pressure and password.",
+    "explanation": "That is phishing.",
+    "skill_tag": "net.phishing",
+    "options": [
+     {
+      "id": "a",
+      "text": "A friendly reminder"
+     },
+     {
+      "id": "b",
+      "text": "A new game"
+     },
+     {
+      "id": "c",
+      "text": "A phishing trick"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Idris says a short password is fine if it is easy to remember. Is he right?",
+    "hint": "Think about guessing.",
+    "explanation": "Short passwords are weak.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "Only for games"
+     },
+     {
+      "id": "c",
+      "text": "No, a short easy password is easy to guess"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "One password has 9 characters and another has 14. Slide to show the difference.",
+    "hint": "14 minus 9.",
+    "explanation": "14 - 9 = 5.",
+    "skill_tag": "net.password",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "passwords",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the strongest password.",
+    "hint": "Long and mixed.",
+    "explanation": "It is long, random and mixed.",
+    "skill_tag": "net.password",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔓",
+       "label": "pass",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔐",
+       "label": "Moon-Tiger-Cloud9!",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔓",
+       "label": "ali2015",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "What trail do we leave when we use the internet?",
+    "hint": "Think of footprints.",
+    "explanation": "That is our digital footprint.",
+    "skill_tag": "net.footprint",
+    "options": [
+     {
+      "id": "a",
+      "text": "A router"
+     },
+     {
+      "id": "b",
+      "text": "A digital footprint"
+     },
+     {
+      "id": "c",
+      "text": "A packet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "It is safe to click a link in a message from a stranger.",
+    "hint": "Be careful.",
+    "explanation": "Do not click links from strangers.",
+    "skill_tag": "net.phishing",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "We should ask before posting a photo of a friend.",
+    "hint": "Permission matters.",
+    "explanation": "Always ask first.",
+    "skill_tag": "net.footprint",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a deleted post is gone forever. Is she right?",
+    "hint": "Think about copies.",
+    "explanation": "Others can copy posts.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Fridays"
+     },
+     {
+      "id": "b",
+      "text": "No, others may have saved it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put the steps of loading a web page in order.",
+    "hint": "Tap first.",
+    "explanation": "Tap, request, then reply.",
+    "skill_tag": "net.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A request reaches a server"
+     },
+     {
+      "id": "i3",
+      "text": "The page is sent back to you"
+     },
+     {
+      "id": "i1",
+      "text": "You tap a link"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "internet",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What do we call a computer that stores websites?",
+    "hint": "It serves pages.",
+    "explanation": "A server stores websites.",
+    "skill_tag": "net.server",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tablet"
+     },
+     {
+      "id": "b",
+      "text": "A server"
+     },
+     {
+      "id": "c",
+      "text": "A router"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which device stores a website and sends it to you?",
+    "hint": "It serves pages.",
+    "explanation": "A server stores websites.",
+    "skill_tag": "net.server",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A server"
+     },
+     {
+      "id": "c",
+      "text": "A mouse"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "What does a router do?",
+    "hint": "Like a signpost.",
+    "explanation": "A router directs traffic.",
+    "skill_tag": "net.router",
+    "options": [
+     {
+      "id": "a",
+      "text": "Stores websites"
+     },
+     {
+      "id": "b",
+      "text": "Points messages the right way"
+     },
+     {
+      "id": "c",
+      "text": "Makes passwords"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Which device sends messages along the right path?",
+    "hint": "Like a signpost.",
+    "explanation": "A router directs traffic.",
+    "skill_tag": "net.router",
+    "options": [
+     {
+      "id": "a",
+      "text": "A keyboard"
+     },
+     {
+      "id": "b",
+      "text": "A router"
+     },
+     {
+      "id": "c",
+      "text": "A server"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "number",
+    "prompt": "A message is split into 6 packets and 2 are lost. How many arrived?",
+    "hint": "6 minus 2.",
+    "explanation": "6 - 2 = 4.",
+    "skill_tag": "net.packets",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "internet",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "number",
+    "prompt": "A message is split into 9 packets and 3 are lost. How many arrived?",
+    "hint": "9 minus 3.",
+    "explanation": "9 - 3 = 6.",
+    "skill_tag": "net.packets",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "internet",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about the internet.",
+    "hint": "Think back.",
+    "explanation": "A network connects computers.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "text": "A {b1} connects computers and the internet joins millions of {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "nest"
+       },
+       {
+        "id": "b",
+        "text": "network"
+       },
+       {
+        "id": "c",
+        "text": "neighbour"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "nests"
+       },
+       {
+        "id": "b",
+        "text": "networks"
+       },
+       {
+        "id": "c",
+        "text": "nets"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about packets.",
+    "hint": "Think back.",
+    "explanation": "Packets are put back in order.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "text": "A message is split into {b1} and put back in {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pockets"
+       },
+       {
+        "id": "b",
+        "text": "packets"
+       },
+       {
+        "id": "c",
+        "text": "puppets"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "oven"
+       },
+       {
+        "id": "b",
+        "text": "order"
+       },
+       {
+        "id": "c",
+        "text": "orbit"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are features of a strong password? Pick two.",
+    "hint": "Think back.",
+    "explanation": "Strong passwords are long and mixed.",
+    "skill_tag": "net.password",
+    "options": [
+     {
+      "id": "a",
+      "text": "It mixes letters, numbers and symbols"
+     },
+     {
+      "id": "b",
+      "text": "It is your name"
+     },
+     {
+      "id": "c",
+      "text": "It is 1234"
+     },
+     {
+      "id": "d",
+      "text": "It is long"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick two good password habits.",
+    "hint": "Think back.",
+    "explanation": "Secret and different.",
+    "skill_tag": "net.password",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use a different one for each account"
+     },
+     {
+      "id": "b",
+      "text": "Use the same everywhere"
+     },
+     {
+      "id": "c",
+      "text": "Share it with friends"
+     },
+     {
+      "id": "d",
+      "text": "Keep it secret"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Pair each network word with what it means.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Server"
+     },
+     {
+      "id": "l2",
+      "text": "Router"
+     },
+     {
+      "id": "l3",
+      "text": "Packet"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Points messages"
+     },
+     {
+      "id": "r1",
+      "text": "Stores websites"
+     },
+     {
+      "id": "r3",
+      "text": "A small piece of a message"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Pair each safety word with its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "net.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Phishing"
+     },
+     {
+      "id": "l2",
+      "text": "Password"
+     },
+     {
+      "id": "l3",
+      "text": "Footprint"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A secret code"
+     },
+     {
+      "id": "r3",
+      "text": "A trail online"
+     },
+     {
+      "id": "r1",
+      "text": "A trick message"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "internet",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "An email says your account will close unless you reply with your password. What is this?",
+    "hint": "Pressure and password.",
+    "explanation": "That is phishing.",
+    "skill_tag": "net.phishing",
+    "options": [
+     {
+      "id": "a",
+      "text": "A friendly reminder"
+     },
+     {
+      "id": "b",
+      "text": "A phishing trick"
+     },
+     {
+      "id": "c",
+      "text": "A new game"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "A text says click now to claim a free tablet. What is this?",
+    "hint": "Too good to be true.",
+    "explanation": "It looks like a scam.",
+    "skill_tag": "net.phishing",
+    "options": [
+     {
+      "id": "a",
+      "text": "A real gift"
+     },
+     {
+      "id": "b",
+      "text": "A possible scam"
+     },
+     {
+      "id": "c",
+      "text": "A school notice"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a short easy password is fine. Is he right?",
+    "hint": "Think about guessing.",
+    "explanation": "Short passwords are weak.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "No, a short easy password is easy to guess"
+     },
+     {
+      "id": "c",
+      "text": "Only for games"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Zara says using one password everywhere is safest. Is she right?",
+    "hint": "One stolen key.",
+    "explanation": "Use different passwords.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "No, if it is stolen all accounts are at risk"
+     },
+     {
+      "id": "c",
+      "text": "Only on school days"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "A password has 8 characters. Slide to show how many characters a 12 character password has more than it.",
+    "hint": "12 minus 8.",
+    "explanation": "12 - 8 = 4.",
+    "skill_tag": "net.password",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "One password has 10 characters and another has 15. Slide to show the difference.",
+    "hint": "15 minus 10.",
+    "explanation": "15 - 10 = 5.",
+    "skill_tag": "net.password",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the password that is hardest to guess.",
+    "hint": "Long and mixed.",
+    "explanation": "It is long, random and mixed.",
+    "skill_tag": "net.password",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔓",
+       "label": "pass",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔐",
+       "label": "Moon-Tiger-Cloud9!",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔓",
+       "label": "ali2015",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the weakest password.",
+    "hint": "Easy to guess.",
+    "explanation": "123456 is the easiest to guess.",
+    "skill_tag": "net.password",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔐",
+       "label": "Green-Rocket-Tea4!",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔓",
+       "label": "123456",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔐",
+       "label": "Cloud-Bat-Pizza8?",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "passwords",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "What do we call the trail we leave when we are online?",
+    "hint": "Think of footprints.",
+    "explanation": "That is our digital footprint.",
+    "skill_tag": "net.footprint",
+    "options": [
+     {
+      "id": "a",
+      "text": "A router"
+     },
+     {
+      "id": "b",
+      "text": "A digital footprint"
+     },
+     {
+      "id": "c",
+      "text": "A packet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which phrase means the things we leave behind online?",
+    "hint": "Think of footprints.",
+    "explanation": "That is the digital footprint.",
+    "skill_tag": "net.footprint",
+    "options": [
+     {
+      "id": "a",
+      "text": "Server"
+     },
+     {
+      "id": "b",
+      "text": "Digital footprint"
+     },
+     {
+      "id": "c",
+      "text": "Strong password"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "It is safe to click a link from a stranger.",
+    "hint": "Be careful.",
+    "explanation": "Do not click links from strangers.",
+    "skill_tag": "net.phishing",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "true_false",
+    "prompt": "You should tell a grown-up about a suspicious message.",
+    "hint": "Who can help?",
+    "explanation": "A grown-up can check it.",
+    "skill_tag": "net.phishing",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "Asking a friend first before posting their photo is the right thing to do.",
+    "hint": "Permission matters.",
+    "explanation": "Always ask first.",
+    "skill_tag": "net.footprint",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "We never need to ask before posting a friend's photo.",
+    "hint": "Permission matters.",
+    "explanation": "Always ask first.",
+    "skill_tag": "net.footprint",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "footprint",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a deleted post can never be seen again. Is she right?",
+    "hint": "Think about copies.",
+    "explanation": "Others can copy posts.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "Only on Fridays"
+     },
+     {
+      "id": "c",
+      "text": "No, others may have saved it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Hamza says posting is fine because nobody will ever see it. Is he right?",
+    "hint": "Think about copies.",
+    "explanation": "Posts can last.",
+    "skill_tag": "net.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never seen"
+     },
+     {
+      "id": "b",
+      "text": "No, posts can be seen and saved"
+     },
+     {
+      "id": "c",
+      "text": "Only by robots"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "footprint",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Arrange the steps of loading a web page.",
+    "hint": "Tap first.",
+    "explanation": "Tap, request, then reply.",
+    "skill_tag": "net.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "The page is sent back to you"
+     },
+     {
+      "id": "i1",
+      "text": "You tap a link"
+     },
+     {
+      "id": "i2",
+      "text": "A request reaches a server"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "internet",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Order these steps for staying safe from a tricky message.",
+    "hint": "Notice first.",
+    "explanation": "Spot, do not click, then tell.",
+    "skill_tag": "net.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Do not click"
+     },
+     {
+      "id": "i1",
+      "text": "Spot the warning signs"
+     },
+     {
+      "id": "i3",
+      "text": "Tell a grown-up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "internet",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

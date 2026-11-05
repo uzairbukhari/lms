@@ -1,0 +1,2499 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-algorithms-robots",
+  "subject": "data-ai",
+  "title": "Algorithms and Robots",
+  "summary": "Giving a robot directions, algorithms, loops, if-then and finding bugs.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Algorithms and robots",
+  "learning_objectives": [
+   "Give a robot clear instructions",
+   "Say what an algorithm, a loop and a bug are",
+   "Fix a mistake in a set of instructions"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 algorithms",
+    "text": "Understand what algorithms are; create and debug simple programs"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-AP-08",
+    "text": "Model daily processes by creating and following algorithms"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-AP-10",
+    "text": "Develop programs with sequences and simple loops"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-AP-14",
+    "text": "Debug errors in an algorithm or program"
+   }
+  ],
+  "success_criteria": [
+   "I can put steps in the right order",
+   "I can say what a loop does",
+   "I can find and fix a bug"
+  ],
+  "real_life": "Cooking rice, making chai and getting ready for school all follow steps in order.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which comes next? Red, blue, red, blue, ...",
+    "hint": "The colours take turns.",
+    "explanation": "The pattern repeats red then blue.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Green"
+     },
+     {
+      "id": "b",
+      "text": "Red"
+     },
+     {
+      "id": "c",
+      "text": "Yellow"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 5 + 3?",
+    "hint": "Count on from 5.",
+    "explanation": "5 and 3 make 8.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A triangle has three sides.",
+    "hint": "Count the sides.",
+    "explanation": "A triangle has three sides.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, robot trainer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do we tell a robot exactly what to do?\n\nWe will use instructions, loops and debugging to find out.",
+   "say": "Welcome, robot trainer! Today's big question: how do we tell a robot exactly what to do? Robots cannot guess. They need clear instructions in the right order. By the end, you will give a robot directions, use a loop, and even fix a bug. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🤖",
+   "alt": "Robots follow clear instructions, one step at a time.",
+   "caption": "Robots follow clear instructions, one step at a time."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "instructions",
+     "meaning": "Clear orders that tell a robot what to do."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "directions",
+   "kind": "learn",
+   "title": "Directions and algorithms",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Giving a robot directions"
+    },
+    {
+     "type": "text",
+     "markdown": "A robot does exactly what we tell it. These are **instructions**.\n\n**Forward** moves one square. **Turn** changes the way it faces.",
+     "say": "Meet our robot. It cannot think for itself. It only does exactly what we tell it, one instruction at a time. The robot wants to reach the star in the corner. We can say forward, to move one square. Or turn, to face a new way. Watch the robot walk along the top row."
+    },
+    {
+     "type": "explainer",
+     "title": "The robot walks to the star",
+     "scenes": [
+      {
+       "caption": "The robot starts in the top corner.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is the robot at the start. The star is far away in the opposite corner. The robot faces right."
+      },
+      {
+       "caption": "Forward, forward.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 2,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Forward, forward. Two squares along."
+      },
+      {
+       "caption": "Forward, forward again.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 4,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Forward, forward again. Now the robot is in the top right corner."
+      },
+      {
+       "caption": "Turn to face down.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 4,
+          "row": 0,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now turn. The robot turns to face down, ready to walk to the star."
+      },
+      {
+       "caption": "Forward four times and we reach the star!",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 4,
+          "row": 4,
+          "facing": "down"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Forward four times, and the robot reaches the star! Well done, robot."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which instruction moves the robot one square?",
+      "hint": "Think about walking.",
+      "explanation": "Forward moves the robot one square along.",
+      "skill_tag": "algo.instructions",
+      "options": [
+       {
+        "id": "a",
+        "text": "Turn"
+       },
+       {
+        "id": "b",
+        "text": "Stop"
+       },
+       {
+        "id": "c",
+        "text": "Forward"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: What is an algorithm?"
+    },
+    {
+     "type": "text",
+     "markdown": "An **algorithm** is a list of clear steps in the right **order**.\n\nMuddle the order and it does not work!",
+     "say": "A list of clear steps, in the right order, is called an algorithm. You use algorithms every day without noticing. Think about making a sandwich. First the bread, then the cheese, then the top slice. If we muddle the order, we get a very silly sandwich!"
+    },
+    {
+     "type": "explainer",
+     "title": "A sandwich algorithm",
+     "scenes": [
+      {
+       "caption": "1. Bread on the plate.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Step one. Put the bread on the plate."
+      },
+      {
+       "caption": "2. Add the cheese.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🧀",
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "Step two. Add the cheese on top of the bread."
+      },
+      {
+       "caption": "3. Top slice on. Yum!",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 68,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🧀",
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🍞",
+         "x": 50,
+         "y": 34,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Step three. Put the top slice on. Now it is a sandwich! The order mattered."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put these steps for washing your hands in order.",
+      "hint": "What do you do first?",
+      "explanation": "We wet our hands, then use soap, then rinse and dry.",
+      "skill_tag": "algo.order",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Use soap"
+       },
+       {
+        "id": "i1",
+        "text": "Turn on the tap"
+       },
+       {
+        "id": "i3",
+        "text": "Rinse and dry"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Instructions tell a robot what to do",
+      "An algorithm is clear steps in the right order"
+     ],
+     "say": "Let us remember. Instructions tell a robot what to do. An algorithm is a list of clear steps in the right order."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "instructions",
+       "meaning": "Clear orders that tell a robot or computer what to do."
+      },
+      {
+       "term": "forward",
+       "meaning": "Move one square the way you are facing."
+      },
+      {
+       "term": "turn",
+       "meaning": "Change the way you are facing."
+      },
+      {
+       "term": "algorithm",
+       "meaning": "A list of clear steps in the right order."
+      },
+      {
+       "term": "order",
+       "meaning": "What comes first, next and last."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call a list of clear steps in the right order?",
+     "hint": "It is a word for a recipe of steps.",
+     "explanation": "A list of clear steps in order is an algorithm.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A picture"
+      },
+      {
+       "id": "b",
+       "text": "An algorithm"
+      },
+      {
+       "id": "c",
+       "text": "A bug"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A robot can think for itself and guess what we mean.",
+     "hint": "Robots only do what we tell them.",
+     "explanation": "A robot does exactly what the instructions say.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these steps for putting on shoes in order.",
+     "hint": "What do you do first?",
+     "explanation": "You pick them up, put them on, then tie them.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Put them on your feet"
+      },
+      {
+       "id": "i3",
+       "text": "Tie the laces"
+      },
+      {
+       "id": "i1",
+       "text": "Pick up your shoes"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A robot faces right. Which instruction makes it face down?",
+     "hint": "Which one changes the way it faces?",
+     "explanation": "Turn changes the way the robot faces.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Forward"
+      },
+      {
+       "id": "b",
+       "text": "Jump"
+      },
+      {
+       "id": "c",
+       "text": "Turn"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "loops_if",
+   "kind": "try",
+   "title": "Loops and if-then",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Doing it again with a loop"
+    },
+    {
+     "type": "text",
+     "markdown": "A **loop** repeats instructions. Instead of hop, hop, hop, say: repeat hop 3 times.",
+     "say": "Sometimes a robot must do the same thing again and again. We could say forward, forward, forward, forward. That is a lot of words! Instead we can say repeat forward four times. A set of instructions that repeats is called a loop. Watch the frog hop three times using one loop."
+    },
+    {
+     "type": "explainer",
+     "title": "A frog loop",
+     "scenes": [
+      {
+       "caption": "Start.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🐸",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog starts on the log."
+      },
+      {
+       "caption": "Hop 1.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🐸",
+         "x": 38,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "c1",
+         "emoji": "1️⃣",
+         "x": 38,
+         "y": 25,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Hop number one. Our loop says: repeat hop, three times."
+      },
+      {
+       "caption": "Hop 2.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🐸",
+         "x": 61,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "c2",
+         "emoji": "2️⃣",
+         "x": 61,
+         "y": 25,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Hop number two. The same instruction again."
+      },
+      {
+       "caption": "Hop 3. The loop is done.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🐸",
+         "x": 84,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "c3",
+         "emoji": "3️⃣",
+         "x": 84,
+         "y": 25,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Hop number three. The loop is finished!"
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A loop says: repeat clap, 4 times. How many claps is that?",
+      "hint": "A loop repeats the instruction.",
+      "explanation": "Repeat 4 times means 4 claps.",
+      "skill_tag": "algo.loops",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Be the robot loop",
+     "materials": [
+      "A grown-up or a friend",
+      "Open floor space"
+     ],
+     "instructions": [
+      "Ask your friend to say: repeat jump, 3 times.",
+      "Do the loop exactly: jump, jump, jump.",
+      "Now swap. Can you make up a loop with clap and stamp?"
+     ]
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: If this, then that"
+    },
+    {
+     "type": "text",
+     "markdown": "**If** something is true, **then** do something.\n\nIf it is raining, then take an umbrella.",
+     "say": "Computers make choices too. They use the words if and then. If it is raining, then take an umbrella. If it is sunny, then wear a hat. The computer checks the question first, and then chooses what to do."
+    },
+    {
+     "type": "image",
+     "emoji": "🌧️☂️",
+     "alt": "A rain cloud and an umbrella.",
+     "caption": "If it is raining, then take an umbrella."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "If the light is red, then the car must...",
+      "hint": "Think about traffic lights.",
+      "explanation": "If the light is red, then the car stops.",
+      "skill_tag": "algo.if_then",
+      "options": [
+       {
+        "id": "a",
+        "text": "Go faster"
+       },
+       {
+        "id": "b",
+        "text": "Honk"
+       },
+       {
+        "id": "c",
+        "text": "Stop"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A loop repeats instructions",
+      "If this, then that helps a computer choose"
+     ],
+     "say": "Let us remember. A loop repeats instructions. If-then lets a computer choose what to do."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "loop",
+       "meaning": "A set of instructions that repeats."
+      },
+      {
+       "term": "repeat",
+       "meaning": "To do the same thing again."
+      },
+      {
+       "term": "if",
+       "meaning": "A word that asks a question before we choose."
+      },
+      {
+       "term": "then",
+       "meaning": "A word that tells what to do next."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a loop do?",
+     "hint": "Think about doing it again.",
+     "explanation": "A loop repeats instructions.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fixes a bug"
+      },
+      {
+       "id": "b",
+       "text": "Turns the screen off"
+      },
+      {
+       "id": "c",
+       "text": "Repeats instructions"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A loop says: repeat hop, 5 times. How many hops?",
+     "hint": "Count the repeats.",
+     "explanation": "Repeat 5 times is 5 hops.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "If it is cold, then wear a coat. It is cold. You should wear a coat.",
+     "hint": "The if part is true.",
+     "explanation": "The if is true, so we do the then.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "If it is night, then switch on...",
+     "hint": "What helps us see at night?",
+     "explanation": "If it is night, then we switch on a light.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The sun"
+      },
+      {
+       "id": "b",
+       "text": "The rain"
+      },
+      {
+       "id": "c",
+       "text": "The light"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bugs",
+   "kind": "play",
+   "title": "Bug hunt",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Finding the bug"
+    },
+    {
+     "type": "text",
+     "markdown": "A **bug** is a mistake in the instructions.\n\n**Debugging** means finding and fixing the bug.",
+     "say": "Sometimes our instructions have a mistake. A mistake in instructions is called a bug. Finding and fixing a bug is called debugging. Look at this robot. We told it forward, forward, forward, forward, then turn. But the star is in the corner, and the robot stopped before it got there. Where is the bug?"
+    },
+    {
+     "type": "explainer",
+     "title": "The robot stops too soon",
+     "scenes": [
+      {
+       "caption": "Three forwards only.",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot follows: forward, forward, forward. That is only three steps."
+      },
+      {
+       "caption": "One forward is missing. That is the bug!",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "bug",
+         "emoji": "🐛",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "It needed four steps to reach the corner, so the star is still far away. The bug is that one forward is missing."
+      },
+      {
+       "caption": "Add one forward. Bug fixed!",
+       "items": [
+        {
+         "id": "r",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 4,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "We add one more forward. Now the robot reaches the corner. We fixed the bug!"
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A robot must go forward 3 steps but only goes 2. What is the bug?",
+      "hint": "Count the steps.",
+      "explanation": "The instructions are missing one forward.",
+      "skill_tag": "algo.debug",
+      "options": [
+       {
+        "id": "a",
+        "text": "The robot is too tall"
+       },
+       {
+        "id": "b",
+        "text": "The floor is blue"
+       },
+       {
+        "id": "c",
+        "text": "A forward is missing"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Watch carefully, then copy the **order** of the lights.",
+     "say": "Time for a brain game. Watch the lights, then copy them in the same order. Remembering the order is just like following an algorithm."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Robot lights",
+     "goal": "Watch the order, then copy it.",
+     "emojis": [
+      "🔴",
+      "🟡",
+      "🟢",
+      "🔵"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Debugging means...",
+      "hint": "A bug is a mistake.",
+      "explanation": "Debugging is finding and fixing mistakes.",
+      "skill_tag": "algo.debug",
+      "options": [
+       {
+        "id": "a",
+        "text": "Making a robot run faster"
+       },
+       {
+        "id": "b",
+        "text": "Switching a computer off"
+       },
+       {
+        "id": "c",
+        "text": "Fixing a mistake in instructions"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A bug is a mistake in instructions",
+      "Debugging means finding and fixing it"
+     ],
+     "say": "Let us remember. A bug is a mistake. Debugging means fixing it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bug",
+       "meaning": "A mistake in instructions."
+      },
+      {
+       "term": "debugging",
+       "meaning": "Finding and fixing a bug."
+      },
+      {
+       "term": "order",
+       "meaning": "What comes first, next and last."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a bug in a computer program?",
+     "hint": "It is not a real insect.",
+     "explanation": "A bug is a mistake in the instructions.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small insect that helps"
+      },
+      {
+       "id": "b",
+       "text": "A mistake"
+      },
+      {
+       "id": "c",
+       "text": "A new button"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Debugging means finding and fixing mistakes.",
+     "hint": "Think about fixing.",
+     "explanation": "Debugging is fixing mistakes.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Sam's instructions: wash hands, use soap, turn on the tap. What is the bug?",
+     "hint": "Which step should be first?",
+     "explanation": "The tap must be turned on before washing.",
+     "options": [
+      {
+       "id": "a",
+       "text": "There are too few words"
+      },
+      {
+       "id": "b",
+       "text": "The steps are in the wrong order"
+      },
+      {
+       "id": "c",
+       "text": "Soap is not allowed"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "around",
+   "kind": "use",
+   "title": "Algorithms around us",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Algorithms at home"
+    },
+    {
+     "type": "text",
+     "markdown": "We follow **algorithms** at home: making chai, cooking rice, getting ready for school.",
+     "say": "Algorithms are not only for robots. People follow them all the time. Getting ready for school has steps. So does making a cup of chai, or cooking rice, or tidying a room. If you do the steps in order, the job works. What other algorithms can you think of at home?"
+    },
+    {
+     "type": "image",
+     "emoji": "🍚🫖🎒",
+     "alt": "Cooking rice, making chai and packing a school bag all have steps in order.",
+     "caption": "Cooking rice, making chai and packing a school bag all have steps in order.",
+     "say": "Here are three algorithms from home: cooking rice, making chai, and packing a school bag."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is an algorithm?",
+      "hint": "Look for steps in order.",
+      "explanation": "Making chai has steps in a fixed order.",
+      "skill_tag": "algo.everyday",
+      "options": [
+       {
+        "id": "a",
+        "text": "A song you like"
+       },
+       {
+        "id": "b",
+        "text": "Steps to make a cup of chai"
+       },
+       {
+        "id": "c",
+        "text": "A big red ball"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write your own"
+    },
+    {
+     "type": "text",
+     "markdown": "Write your own **algorithm**. Then test it on a grown-up. If it goes wrong, **debug** it!",
+     "say": "Now it is your turn to be the programmer. Choose a job, like making a sandwich or tidying the toys. Write the steps in order, or draw them. Then ask a grown-up to follow only your steps, exactly. If they get stuck, you found a bug!"
+    },
+    {
+     "type": "image",
+     "emoji": "✍️📋",
+     "alt": "Write the steps, then test them.",
+     "caption": "Write the steps, then test them.",
+     "say": "Write the steps down or draw them. Then test them."
+    },
+    {
+     "type": "activity",
+     "title": "My own algorithm",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up helper"
+     ],
+     "instructions": [
+      "Choose a job, such as making a sandwich.",
+      "Draw or write each step in order.",
+      "Ask a grown-up to follow your steps exactly.",
+      "Did it work? If not, find the bug and fix it."
+     ],
+     "say": "Now you try. Follow the steps on the card. Take your time."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Could you give a robot the steps for brushing teeth?",
+     "answer_markdown": "Yes! Put paste on the brush, brush the front, brush the back, rinse. A robot would need every tiny step.",
+     "say": "Have a think. Could you give a robot the steps for brushing teeth? Tap to find out."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A good algorithm has clear steps in the right order.",
+      "hint": "Think about our sandwich.",
+      "explanation": "Clear steps in order make an algorithm work.",
+      "skill_tag": "algo.everyday",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Algorithms are all around us",
+      "Write, test and debug your own"
+     ],
+     "say": "Let us remember. Algorithms are all around us. We can write our own, test it, and debug it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "algorithm",
+       "meaning": "A list of clear steps in the right order."
+      },
+      {
+       "term": "debug",
+       "meaning": "To find and fix a bug."
+      },
+      {
+       "term": "programmer",
+       "meaning": "A person who writes instructions for a computer."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which job needs an algorithm?",
+     "hint": "Which has steps?",
+     "explanation": "Cooking has steps in order.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Being asleep"
+      },
+      {
+       "id": "b",
+       "text": "Making a paratha"
+      },
+      {
+       "id": "c",
+       "text": "Looking at the moon"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order for planting a seed.",
+     "hint": "What first?",
+     "explanation": "Dig, plant, then cover and water.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "Cover it and water it"
+      },
+      {
+       "id": "i1",
+       "text": "Dig a small hole"
+      },
+      {
+       "id": "i2",
+       "text": "Put in the seed"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "If an algorithm goes wrong, we should look for the bug.",
+     "hint": "A bug is a mistake.",
+     "explanation": "We debug to fix the problem.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which instruction moves the robot one square along?",
+    "hint": "Think about walking.",
+    "explanation": "Forward moves one square.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn"
+     },
+     {
+      "id": "b",
+      "text": "Loop"
+     },
+     {
+      "id": "c",
+      "text": "Forward"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A robot can guess what we mean if our instruction is unclear.",
+    "hint": "Robots do exactly what we tell them.",
+    "explanation": "A robot only follows the exact instructions.",
+    "skill_tag": "algo.robots",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put these steps for brushing teeth in order.",
+    "hint": "What is first?",
+    "explanation": "Paste, brush, then rinse.",
+    "skill_tag": "algo.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Brush your teeth"
+     },
+     {
+      "id": "i3",
+      "text": "Rinse your mouth"
+     },
+     {
+      "id": "i1",
+      "text": "Put paste on the brush"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about algorithms.",
+    "hint": "Use the lesson words.",
+    "explanation": "An algorithm is clear steps in the right order.",
+    "skill_tag": "algo.vocab",
+    "points": 2,
+    "text": "An {b1} is a list of clear steps in the right {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "apple"
+       },
+       {
+        "id": "b",
+        "text": "algorithm"
+       },
+       {
+        "id": "c",
+        "text": "ant"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shape"
+       },
+       {
+        "id": "b",
+        "text": "order"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "directions",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are instructions a robot could follow? Pick two.",
+    "hint": "Instructions say what to do.",
+    "explanation": "Forward and turn are robot instructions.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn"
+     },
+     {
+      "id": "b",
+      "text": "Sleepy"
+     },
+     {
+      "id": "c",
+      "text": "Rainbow"
+     },
+     {
+      "id": "d",
+      "text": "Forward"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "A loop says: repeat clap, 3 times. How many claps is that?",
+    "hint": "Count the repeats.",
+    "explanation": "Repeat 3 times is 3 claps.",
+    "skill_tag": "algo.loops",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "algo.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Loop"
+     },
+     {
+      "id": "l2",
+      "text": "Bug"
+     },
+     {
+      "id": "l3",
+      "text": "Algorithm"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A mistake"
+     },
+     {
+      "id": "r3",
+      "text": "Steps in order"
+     },
+     {
+      "id": "r1",
+      "text": "Repeats instructions"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bugs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Sana says the steps of an algorithm can go in any order. Is she right?",
+    "hint": "Think about the sandwich.",
+    "explanation": "If the order is wrong, the job may not work.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, any order works"
+     },
+     {
+      "id": "b",
+      "text": "Only when it is sunny"
+     },
+     {
+      "id": "c",
+      "text": "No, the order matters"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "The star is 4 squares away from the robot. Slide to show how many forwards it needs.",
+    "hint": "Count the squares.",
+    "explanation": "It needs 4 forward steps.",
+    "skill_tag": "algo.count_steps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows an if-then.",
+    "hint": "Look for 'if' and 'then'.",
+    "explanation": "If rain, then take an umbrella is an if-then.",
+    "skill_tag": "algo.if_then",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌧️",
+       "label": "If rain, take an umbrella",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍌",
+       "label": "A banana",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌙",
+       "label": "The moon",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "What helps us avoid writing the same step many times?",
+    "hint": "Think about repeating.",
+    "explanation": "A loop repeats steps.",
+    "skill_tag": "algo.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "A crayon"
+     },
+     {
+      "id": "b",
+      "text": "A loop"
+     },
+     {
+      "id": "c",
+      "text": "A bug"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "A robot is told forward, forward, forward, but the star is 4 squares away. What is the bug?",
+    "hint": "Count the squares.",
+    "explanation": "One forward is missing.",
+    "skill_tag": "algo.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "The star is blue"
+     },
+     {
+      "id": "b",
+      "text": "A forward is missing"
+     },
+     {
+      "id": "c",
+      "text": "The robot is happy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "In computing, a bug is a real insect inside the computer.",
+    "hint": "A bug is a mistake.",
+    "explanation": "A bug is a mistake in the instructions.",
+    "skill_tag": "algo.debug",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Aliyah followed steps for toast but forgot to put the bread in. What was the problem?",
+    "hint": "A step was missed.",
+    "explanation": "A missing step is a bug.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing was wrong"
+     },
+     {
+      "id": "b",
+      "text": "A step was missing, so there was a bug"
+     },
+     {
+      "id": "c",
+      "text": "The toaster was too cold"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "around",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these steps for making a cup of chai in order.",
+    "hint": "What is first?",
+    "explanation": "Boil, add, then pour.",
+    "skill_tag": "algo.everyday",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add the tea"
+     },
+     {
+      "id": "i1",
+      "text": "Boil the water"
+     },
+     {
+      "id": "i3",
+      "text": "Pour into a cup"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What do we call one clear order we give to a robot?",
+    "hint": "It tells the robot what to do.",
+    "explanation": "One order is an instruction.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "A star"
+     },
+     {
+      "id": "b",
+      "text": "A loop"
+     },
+     {
+      "id": "c",
+      "text": "An instruction"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "A robot reads: forward. What does it do?",
+    "hint": "Forward is about moving.",
+    "explanation": "Forward moves one square.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Falls asleep"
+     },
+     {
+      "id": "b",
+      "text": "Moves one square"
+     },
+     {
+      "id": "c",
+      "text": "Sings a song"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "Robots always know what you mean even if the instruction is wrong.",
+    "hint": "Robots do exactly what we say.",
+    "explanation": "A robot only does exactly what the instructions say.",
+    "skill_tag": "algo.robots",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "A robot follows exactly the instructions it is given.",
+    "hint": "Think about our robot.",
+    "explanation": "A robot does exactly what we say.",
+    "skill_tag": "algo.robots",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Put these steps for getting dressed in order.",
+    "hint": "What is first?",
+    "explanation": "Take out, put on, then do up the buttons.",
+    "skill_tag": "algo.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Do up the buttons"
+     },
+     {
+      "id": "i1",
+      "text": "Take out your clothes"
+     },
+     {
+      "id": "i2",
+      "text": "Put on your clothes"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Put these steps for drinking water in order.",
+    "hint": "What first?",
+    "explanation": "Pick up, fill, then drink.",
+    "skill_tag": "algo.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Fill the cup"
+     },
+     {
+      "id": "i1",
+      "text": "Pick up an empty cup"
+     },
+     {
+      "id": "i3",
+      "text": "Drink the water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence.",
+    "hint": "Use the words from the lesson.",
+    "explanation": "An algorithm is clear steps in the right order.",
+    "skill_tag": "algo.vocab",
+    "points": 2,
+    "text": "An {b1} is clear steps in the right {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ant"
+       },
+       {
+        "id": "b",
+        "text": "apple"
+       },
+       {
+        "id": "c",
+        "text": "algorithm"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "size"
+       },
+       {
+        "id": "b",
+        "text": "order"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about bugs.",
+    "hint": "It is not a real insect.",
+    "explanation": "A bug is a mistake in instructions.",
+    "skill_tag": "algo.vocab",
+    "points": 1,
+    "text": "A {b1} is a mistake in the instructions.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "loop"
+       },
+       {
+        "id": "b",
+        "text": "bug"
+       },
+       {
+        "id": "c",
+        "text": "star"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "directions",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are instructions for a robot? Pick two.",
+    "hint": "Instructions say what to do.",
+    "explanation": "Forward and turn tell a robot what to do.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn"
+     },
+     {
+      "id": "b",
+      "text": "Purple"
+     },
+     {
+      "id": "c",
+      "text": "Happy"
+     },
+     {
+      "id": "d",
+      "text": "Forward"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are things that could be a loop? Pick two.",
+    "hint": "A loop repeats.",
+    "explanation": "Both repeat an action.",
+    "skill_tag": "algo.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "Repeat hop 5 times"
+     },
+     {
+      "id": "b",
+      "text": "A red star"
+     },
+     {
+      "id": "c",
+      "text": "Blue sky"
+     },
+     {
+      "id": "d",
+      "text": "Repeat clap 3 times"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "A loop says: repeat jump, 4 times. How many jumps?",
+    "hint": "Count the repeats.",
+    "explanation": "Repeat 4 times is 4 jumps.",
+    "skill_tag": "algo.loops",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "number",
+    "prompt": "A loop says: repeat clap, 6 times. How many claps?",
+    "hint": "Count the repeats.",
+    "explanation": "Repeat 6 times is 6 claps.",
+    "skill_tag": "algo.loops",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Match each word to what it means.",
+    "hint": "Think back to the stops.",
+    "explanation": "Loop repeats, bug is a mistake, algorithm is steps in order.",
+    "skill_tag": "algo.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Loop"
+     },
+     {
+      "id": "l2",
+      "text": "Bug"
+     },
+     {
+      "id": "l3",
+      "text": "Algorithm"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Steps in order"
+     },
+     {
+      "id": "r1",
+      "text": "Repeats instructions"
+     },
+     {
+      "id": "r2",
+      "text": "A mistake"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "match",
+    "prompt": "Match each robot word to its job.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "algo.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Forward"
+     },
+     {
+      "id": "l2",
+      "text": "Turn"
+     },
+     {
+      "id": "l3",
+      "text": "Debug"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Change direction"
+     },
+     {
+      "id": "r1",
+      "text": "Move one square"
+     },
+     {
+      "id": "r3",
+      "text": "Fix a mistake"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Mia says an algorithm can have the steps in any order. Is she right?",
+    "hint": "Think about the sandwich.",
+    "explanation": "If the order is wrong, the job may not work.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, any order works"
+     },
+     {
+      "id": "b",
+      "text": "Only for robots"
+     },
+     {
+      "id": "c",
+      "text": "No, the order matters"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Ravi says the top slice of bread can go on first. Is he right?",
+    "hint": "Think about the sandwich.",
+    "explanation": "The order matters, so the bread goes down first.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Fridays"
+     },
+     {
+      "id": "b",
+      "text": "No, the bread goes on the plate first"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it makes no difference"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "A robot starts at the left of the top row and the star is 4 squares away. Slide to show how many forwards it needs.",
+    "hint": "Count the squares.",
+    "explanation": "It needs 4 forward steps.",
+    "skill_tag": "algo.count_steps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "The star is 3 squares away. Slide to show how many forwards the robot needs.",
+    "hint": "Count the squares.",
+    "explanation": "It needs 3 forward steps.",
+    "skill_tag": "algo.count_steps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the picture that says what to do when it rains.",
+    "hint": "Look for 'if' and 'then'.",
+    "explanation": "If rain, then take an umbrella is an if-then.",
+    "skill_tag": "algo.if_then",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☔",
+       "label": "If rain, take an umbrella",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍎",
+       "label": "An apple",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌟",
+       "label": "A star",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the picture that says what to do when it is cold.",
+    "hint": "Look for 'if' and 'then'.",
+    "explanation": "If cold, then wear a coat is an if-then.",
+    "skill_tag": "algo.if_then",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧥",
+       "label": "If cold, wear a coat",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐟",
+       "label": "A fish",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎈",
+       "label": "A balloon",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which instruction would you use to repeat something many times?",
+    "hint": "Think about repeating.",
+    "explanation": "A loop repeats instructions.",
+    "skill_tag": "algo.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "A star"
+     },
+     {
+      "id": "b",
+      "text": "A loop"
+     },
+     {
+      "id": "c",
+      "text": "A bug"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "What helps us avoid writing the same step five times?",
+    "hint": "Think about repeating.",
+    "explanation": "A loop repeats steps.",
+    "skill_tag": "algo.loops",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bug"
+     },
+     {
+      "id": "b",
+      "text": "A loop"
+     },
+     {
+      "id": "c",
+      "text": "A crayon"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A robot is told forward, forward, forward, but the star is 4 squares away. What should we do?",
+    "hint": "Count the squares.",
+    "explanation": "We add one more forward to fix the bug.",
+    "skill_tag": "algo.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn the robot off"
+     },
+     {
+      "id": "b",
+      "text": "Add another forward"
+     },
+     {
+      "id": "c",
+      "text": "Take away the star"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "A robot is told to go forward 5 times but the star is 4 squares away. What is the bug?",
+    "hint": "Count again.",
+    "explanation": "One forward is too many.",
+    "skill_tag": "algo.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "There is one forward missing"
+     },
+     {
+      "id": "b",
+      "text": "There is one forward too many"
+     },
+     {
+      "id": "c",
+      "text": "The star is blue"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "A bug is a real insect inside a computer.",
+    "hint": "In coding, a bug is a mistake.",
+    "explanation": "A bug is a mistake in the instructions.",
+    "skill_tag": "algo.debug",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "A bug in computing is an insect that lives in the wires.",
+    "hint": "Think about what we learned.",
+    "explanation": "A bug is a mistake.",
+    "skill_tag": "algo.debug",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Aisha followed steps for making toast but forgot to put the bread in. What happened?",
+    "hint": "A step was missed.",
+    "explanation": "A missing step is a bug.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The toast was perfect"
+     },
+     {
+      "id": "b",
+      "text": "No toast, so there was a bug in the steps"
+     },
+     {
+      "id": "c",
+      "text": "The toaster flew"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "around",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Zain's steps for tea left out the hot water. What is the problem?",
+    "hint": "A step was missed.",
+    "explanation": "A missing step is a bug.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing is wrong"
+     },
+     {
+      "id": "b",
+      "text": "The cup is too big"
+     },
+     {
+      "id": "c",
+      "text": "A step is missing, so the tea fails"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "around",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Put these steps for planting a flower in order.",
+    "hint": "What first?",
+    "explanation": "Dig, plant, then water.",
+    "skill_tag": "algo.everyday",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Pour on some water"
+     },
+     {
+      "id": "i1",
+      "text": "Dig a hole"
+     },
+     {
+      "id": "i2",
+      "text": "Place the plant in the hole"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Put these steps for making lemonade in order.",
+    "hint": "What first?",
+    "explanation": "Squeeze, add, then stir and pour.",
+    "skill_tag": "algo.everyday",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add water and sugar"
+     },
+     {
+      "id": "i1",
+      "text": "Squeeze the lemons"
+     },
+     {
+      "id": "i3",
+      "text": "Stir and pour"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

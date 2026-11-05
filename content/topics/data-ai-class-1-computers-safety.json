@@ -1,0 +1,2359 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-computers-safety",
+  "subject": "data-ai",
+  "title": "Computers and Staying Safe",
+  "summary": "Inputs and outputs, using devices well, electricity safety, private information and being kind online.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Computers and staying safe",
+  "learning_objectives": [
+   "Say what inputs and outputs are",
+   "Use devices and electricity safely",
+   "Keep private things private and be kind online"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 uses of IT",
+    "text": "Recognise common uses of information technology; use technology safely and respectfully, keeping personal information private"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-CS-01",
+    "text": "Select and operate appropriate software and hardware to perform a variety of tasks"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-NI-04",
+    "text": "Explain why we keep information private, such as passwords"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-IC-16",
+    "text": "Compare how people live and work before and after the adoption of computing technologies"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Pe.01"
+   }
+  ],
+  "success_criteria": [
+   "I can name an input and an output",
+   "I know what to do if something online worries me",
+   "I know how to stay safe with plugs"
+  ],
+  "real_life": "Using the family tablet, charging a phone and chatting with relatives online.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we call a list of clear steps in order?",
+    "hint": "Think about robots.",
+    "explanation": "A list of steps is an algorithm.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A star"
+     },
+     {
+      "id": "b",
+      "text": "An algorithm"
+     },
+     {
+      "id": "c",
+      "text": "A bug"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which graph uses a picture for every vote?",
+    "hint": "Pictures.",
+    "explanation": "A pictogram uses pictures.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A pictogram"
+     },
+     {
+      "id": "c",
+      "text": "A table"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 10 - 4?",
+    "hint": "Count back from 10.",
+    "explanation": "10 take away 4 is 6.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, computer explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do we use computers and stay safe?\n\nWe will learn about inputs, outputs and online safety.",
+   "say": "Welcome, computer explorer! Today's big question: how do we use computers and stay safe? We will find out how computers take in information and give it out, and how to be careful and kind online. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "💻",
+   "alt": "Computers help us, and we help ourselves by staying safe.",
+   "caption": "Computers help us, and we help ourselves by staying safe."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "safe",
+     "meaning": "Not likely to hurt you."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "in_out",
+   "kind": "learn",
+   "title": "Inside a computer: in and out",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How we talk to a computer"
+    },
+    {
+     "type": "text",
+     "markdown": "An **input** is how we tell a computer something.\n\nAn **output** is how the computer tells us something.",
+     "say": "A computer is a machine that follows instructions. But how do we tell it what to do? We use things called inputs. A keyboard is an input. A mouse is an input. A touch screen is an input too. We put information in. The computer thinks, and then it gives us an answer. That answer is called an output."
+    },
+    {
+     "type": "explainer",
+     "title": "In, think, out",
+     "scenes": [
+      {
+       "caption": "Input: a keyboard.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "⌨️",
+         "x": 18,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "First, an input. We press a key on the keyboard."
+      },
+      {
+       "caption": "The computer works it out.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "⌨️",
+         "x": 18,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "💻",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 34,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "The computer receives it and works on it. This is the thinking part."
+      },
+      {
+       "caption": "Output: a screen and a speaker.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "⌨️",
+         "x": 18,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "💻",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 34,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "➡️",
+         "x": 66,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🖥️",
+         "x": 82,
+         "y": 40,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "sp",
+         "emoji": "🔊",
+         "x": 82,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Then comes the output. The screen shows the answer, and the speaker plays a sound."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which one is an input?",
+      "hint": "Do we type on it?",
+      "explanation": "We use a keyboard to put information in.",
+      "skill_tag": "cs.in_out",
+      "options": [
+       {
+        "id": "a",
+        "text": "A screen"
+       },
+       {
+        "id": "b",
+        "text": "A keyboard"
+       },
+       {
+        "id": "c",
+        "text": "A speaker"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Many kinds of computers"
+    },
+    {
+     "type": "text",
+     "markdown": "A **tablet**, a **laptop** and a phone are all computers.\n\nEven a washing machine has a tiny computer inside.",
+     "say": "Computers come in many shapes. A tablet is a computer. A phone is a computer. A laptop is a computer. Even a washing machine and a car have tiny computers inside. They all take inputs, think, and give outputs."
+    },
+    {
+     "type": "image",
+     "emoji": "📱💻🖥️🚗",
+     "alt": "A phone, a laptop, a desktop and a car all use computers.",
+     "caption": "A phone, a laptop, a desktop and a car all use computers."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A screen is an output because it shows us information.",
+      "hint": "Does it show or tell us?",
+      "explanation": "A screen shows us things, so it is an output.",
+      "skill_tag": "cs.in_out",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "An input tells the computer something",
+      "An output tells us something",
+      "Computers come in many shapes"
+     ],
+     "say": "Let us remember. Inputs tell the computer. Outputs tell us. Computers come in many shapes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "input",
+       "meaning": "How we put information into a computer."
+      },
+      {
+       "term": "output",
+       "meaning": "How a computer gives us information."
+      },
+      {
+       "term": "tablet",
+       "meaning": "A flat touch-screen computer."
+      },
+      {
+       "term": "laptop",
+       "meaning": "A small computer you can carry."
+      },
+      {
+       "term": "computer",
+       "meaning": "A machine that follows instructions."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is an output?",
+     "hint": "Does it give us something?",
+     "explanation": "A speaker plays sound to us.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A keyboard"
+      },
+      {
+       "id": "b",
+       "text": "A speaker"
+      },
+      {
+       "id": "c",
+       "text": "A mouse"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A mouse is an input.",
+     "hint": "We click it to tell the computer.",
+     "explanation": "A mouse tells the computer what to do.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A touch screen is...",
+     "hint": "We touch it and it shows pictures.",
+     "explanation": "We touch it (input) and it shows things (output).",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only a speaker"
+      },
+      {
+       "id": "b",
+       "text": "Both an input and an output"
+      },
+      {
+       "id": "c",
+       "text": "Only a battery"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a computer do with the instructions we give it?",
+     "hint": "Think about the robot.",
+     "explanation": "A computer follows instructions.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Eats them"
+      },
+      {
+       "id": "b",
+       "text": "Follows them"
+      },
+      {
+       "id": "c",
+       "text": "Ignores them"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use_well",
+   "kind": "try",
+   "title": "Sort the devices and use them well",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Inputs and outputs sort"
+    },
+    {
+     "type": "text",
+     "markdown": "Sort the machines into **inputs** and **outputs**.",
+     "say": "Let us sort some everyday things. Some of them put information in, which are inputs. Others give information out, which are outputs. A microphone is an input because it hears you. A speaker is an output because it plays sound to you. Time to try it yourself at home."
+    },
+    {
+     "type": "explainer",
+     "title": "Input or output?",
+     "scenes": [
+      {
+       "caption": "Microphone: input.",
+       "items": [
+        {
+         "id": "bx",
+         "prop": {
+          "kind": "sorting_boxes",
+          "labels": [
+           "Input",
+           "Output"
+          ]
+         },
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 28,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A microphone hears your voice. That is an input."
+      },
+      {
+       "caption": "Speaker: output.",
+       "items": [
+        {
+         "id": "bx",
+         "prop": {
+          "kind": "sorting_boxes",
+          "labels": [
+           "Input",
+           "Output"
+          ]
+         },
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 28,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "sp",
+         "emoji": "🔊",
+         "x": 72,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A speaker plays sound to you. That is an output."
+      },
+      {
+       "caption": "Mouse: input. Printer: output.",
+       "items": [
+        {
+         "id": "bx",
+         "prop": {
+          "kind": "sorting_boxes",
+          "labels": [
+           "Input",
+           "Output"
+          ]
+         },
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 22,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "mo",
+         "emoji": "🖱️",
+         "x": 38,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "sp",
+         "emoji": "🔊",
+         "x": 64,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "pr",
+         "emoji": "🖨️",
+         "x": 80,
+         "y": 62,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A mouse is an input and a printer is an output."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Device detectives",
+     "materials": [
+      "A grown-up",
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Look around your home for things with a screen or buttons.",
+      "Write down three inputs and three outputs.",
+      "Show your list to a grown-up."
+     ],
+     "say": "Let us be device detectives at home."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A printer puts words on paper. It is an...",
+      "hint": "Does it give us something?",
+      "explanation": "A printer gives us something, so it is an output.",
+      "skill_tag": "cs.in_out",
+      "options": [
+       {
+        "id": "a",
+        "text": "Insect"
+       },
+       {
+        "id": "b",
+        "text": "Output"
+       },
+       {
+        "id": "c",
+        "text": "Input"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Using devices well and being safe with electricity"
+    },
+    {
+     "type": "text",
+     "markdown": "Use devices well: take **breaks**.\n\nBe safe with **electricity**: never touch sockets and ask a grown-up.",
+     "say": "Devices are fun, but we should use them well. Take breaks, sit up straight and keep the screen at a good distance. Remember to keep your eyes healthy. And electricity is powerful. Never put fingers or things into plug sockets. Never touch plugs with wet hands. Always ask a grown-up to help with plugs and cables."
+    },
+    {
+     "type": "image",
+     "emoji": "🔌⚠️",
+     "alt": "Never poke things in a plug socket. Ask a grown-up.",
+     "caption": "Never poke things in a plug socket. Ask a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is safe to put a finger in a plug socket.",
+      "hint": "Electricity is powerful.",
+      "explanation": "Never touch sockets. Ask a grown-up.",
+      "skill_tag": "cs.electricity",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Inputs go in, outputs come out",
+      "Take breaks from screens",
+      "Never touch plug sockets"
+     ],
+     "say": "Let us remember. Sort inputs and outputs. Take breaks from screens. Keep safe with electricity."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "breaks",
+       "meaning": "Short rests from a screen."
+      },
+      {
+       "term": "electricity",
+       "meaning": "Power that makes machines work. It can hurt if we touch it wrongly."
+      },
+      {
+       "term": "socket",
+       "meaning": "The holes in the wall where plugs go in."
+      },
+      {
+       "term": "inputs",
+       "meaning": "Ways of putting information into a computer."
+      },
+      {
+       "term": "outputs",
+       "meaning": "Ways a computer gives information to us."
+      },
+      {
+       "term": "microphone",
+       "meaning": "A device that hears sound."
+      },
+      {
+       "term": "printer",
+       "meaning": "A machine that puts words on paper."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "A microphone is an...",
+     "hint": "It hears you.",
+     "explanation": "It takes your voice in, so it is an input.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Output"
+      },
+      {
+       "id": "b",
+       "text": "Egg"
+      },
+      {
+       "id": "c",
+       "text": "Input"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should take breaks from screens.",
+     "hint": "Rest your eyes.",
+     "explanation": "Breaks keep our eyes and bodies healthy.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should help you with plugs and cables?",
+     "hint": "Electricity is powerful.",
+     "explanation": "Ask a grown-up to help with plugs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A toy"
+      },
+      {
+       "id": "b",
+       "text": "No one"
+      },
+      {
+       "id": "c",
+       "text": "A grown-up"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safe_game",
+   "kind": "play",
+   "title": "Safe or not safe?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Spot the safe choice"
+    },
+    {
+     "type": "text",
+     "markdown": "Is it **safe** or **not safe**? Ask a grown-up when you are not sure.",
+     "say": "Let us play a game. For each picture, decide if it is a safe choice or not. Think about electricity and screens. Here is the first one: a child asks a grown-up before using a plug. Is that safe? Yes! Asking a grown-up is always a good idea."
+    },
+    {
+     "type": "image",
+     "emoji": "🙋‍♀️🔌",
+     "alt": "Asking a grown-up before using a plug is a safe choice.",
+     "caption": "Asking a grown-up before using a plug is a safe choice."
+    },
+    {
+     "type": "image",
+     "emoji": "✅🔌",
+     "alt": "A safe choice keeps you away from danger.",
+     "caption": "A safe choice keeps you away from danger.",
+     "say": "Look at the three choices and think about which one is safe."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the safe choice?",
+      "hint": "Ask first.",
+      "explanation": "A grown-up knows how to plug in safely.",
+      "skill_tag": "cs.electricity",
+      "options": [
+       {
+        "id": "a",
+        "text": "Pulling the plug by its wire"
+       },
+       {
+        "id": "b",
+        "text": "Asking a grown-up to plug in the charger"
+       },
+       {
+        "id": "c",
+        "text": "Using a plug with wet hands"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game to find the pairs.",
+     "say": "Warm up your brain with a memory game. Match the pairs of safe things."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Safe things",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔌",
+      "🛑",
+      "🙋",
+      "💡"
+     ],
+     "say": "Find the matching pairs. Take your time and keep your eyes sharp."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If you see a wire that looks broken, you should tell a grown-up.",
+      "hint": "A broken wire is not safe.",
+      "explanation": "A grown-up can fix it safely.",
+      "skill_tag": "cs.electricity",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Ask a grown-up when you are not sure",
+      "Keep away from sockets and broken wires"
+     ],
+     "say": "Let us remember. When we are not sure, we stop and ask a grown-up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "safe",
+       "meaning": "Not likely to hurt you."
+      },
+      {
+       "term": "wire",
+       "meaning": "A thin cable that carries electricity."
+      },
+      {
+       "term": "charger",
+       "meaning": "A cable that gives a device more power."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "You see a loose wire. What should you do?",
+     "hint": "Do not touch it.",
+     "explanation": "A grown-up can fix it safely.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Touch it"
+      },
+      {
+       "id": "b",
+       "text": "Pull it"
+      },
+      {
+       "id": "c",
+       "text": "Tell a grown-up"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Wet hands and plugs are a safe mix.",
+     "hint": "Water and electricity do not mix.",
+     "explanation": "Never touch plugs with wet hands.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A phone charger is for...",
+     "hint": "Batteries run out.",
+     "explanation": "A charger gives power back to a device.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Playing football"
+      },
+      {
+       "id": "b",
+       "text": "Giving a device power"
+      },
+      {
+       "id": "c",
+       "text": "Drawing pictures"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "online",
+   "kind": "use",
+   "title": "Private information and being kind online",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Keep private things private"
+    },
+    {
+     "type": "text",
+     "markdown": "**Private** information is just for you and your family. A **password** is a secret key.",
+     "say": "Some information is private. Private means only for you and your family. Your full name, your address, your school, and your passwords are all private. We never share them online. A password is like a secret key. If you share it, someone else might get in. Only share a password with your parent."
+    },
+    {
+     "type": "image",
+     "emoji": "🔑🔒",
+     "alt": "A password is like a secret key. Keep it private.",
+     "caption": "A password is like a secret key. Keep it private."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is private information we should NOT share online?",
+      "hint": "Think about where you live.",
+      "explanation": "Addresses and passwords are private.",
+      "skill_tag": "cs.private",
+      "options": [
+       {
+        "id": "a",
+        "text": "Our favourite colour"
+       },
+       {
+        "id": "b",
+        "text": "Our home address"
+       },
+       {
+        "id": "c",
+        "text": "A funny joke"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Being kind online"
+    },
+    {
+     "type": "text",
+     "markdown": "Be **kind** online. If something worries you, **tell a grown-up**.",
+     "say": "Being kind online is just like being kind in real life. We say please and thank you. We write friendly messages. If someone is unkind, or something online makes you feel worried, you should tell a grown-up straight away. You will not be in trouble."
+    },
+    {
+     "type": "image",
+     "emoji": "💬❤️",
+     "alt": "Kind messages make people smile.",
+     "caption": "Kind messages make people smile.",
+     "say": "Kind messages make people smile, online and in real life."
+    },
+    {
+     "type": "activity",
+     "title": "Kind message card",
+     "materials": [
+      "Paper and crayons"
+     ],
+     "instructions": [
+      "Draw a card with a kind message for a friend.",
+      "Ask a grown-up to help you send it.",
+      "How did your friend feel?"
+     ],
+     "say": "Time to think about a kind message."
+    },
+    {
+     "type": "reveal",
+     "prompt": "What should you do if someone online is unkind to you?",
+     "answer_markdown": "Tell a grown-up straight away. It is not your fault."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If something online makes you worried, you should tell a grown-up.",
+      "hint": "Who can help?",
+      "explanation": "A grown-up can help you stay safe.",
+      "skill_tag": "cs.kind",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Keep passwords and addresses private",
+      "Be kind online",
+      "Tell a grown-up if you are worried"
+     ],
+     "say": "Let us remember. Keep private things private. Be kind online. Tell a grown-up if you are worried."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tell a grown-up",
+       "meaning": "Say what worries you to a parent or teacher so they can help."
+      },
+      {
+       "term": "private",
+       "meaning": "Just for you and your family."
+      },
+      {
+       "term": "password",
+       "meaning": "A secret code that lets only you in."
+      },
+      {
+       "term": "kind",
+       "meaning": "Friendly and caring."
+      },
+      {
+       "term": "online",
+       "meaning": "Using the internet."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Who can you share a password with?",
+     "hint": "Who looks after you?",
+     "explanation": "Only share it with a parent.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A stranger"
+      },
+      {
+       "id": "b",
+       "text": "Everyone online"
+      },
+      {
+       "id": "c",
+       "text": "A parent"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should be kind online, just like in real life.",
+     "hint": "Kindness is always good.",
+     "explanation": "Be kind everywhere.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A stranger online asks where you live. What do you do?",
+     "hint": "Do not share private things.",
+     "explanation": "Never share your address. Tell a grown-up.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tell them"
+      },
+      {
+       "id": "b",
+       "text": "Tell a grown-up and do not answer"
+      },
+      {
+       "id": "c",
+       "text": "Send a photo"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which one of these lets us tell a computer something?",
+    "hint": "We tell the computer with it.",
+    "explanation": "A touch pad is an input.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A touch pad"
+     },
+     {
+      "id": "c",
+      "text": "A printer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which one shows us words and pictures from the computer?",
+    "hint": "It is an output.",
+    "explanation": "A screen is an output.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A microphone"
+     },
+     {
+      "id": "b",
+      "text": "A screen"
+     },
+     {
+      "id": "c",
+      "text": "A mouse"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A speaker is an input because it hears you.",
+    "hint": "Does it hear you or play to you?",
+    "explanation": "A speaker plays sound, so it is an output.",
+    "skill_tag": "cs.in_out",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about input and output.",
+    "hint": "Think back to in and out.",
+    "explanation": "Input in, output out.",
+    "skill_tag": "cs.vocab",
+    "points": 2,
+    "text": "We use an {b1} to put information in, and an {b2} to get it out.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "arm"
+       },
+       {
+        "id": "b",
+        "text": "input"
+       },
+       {
+        "id": "c",
+        "text": "egg"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ocean"
+       },
+       {
+        "id": "b",
+        "text": "orange"
+       },
+       {
+        "id": "c",
+        "text": "output"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "in_out",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are inputs? Pick two.",
+    "hint": "We tell the computer with them.",
+    "explanation": "A keyboard and microphone are inputs.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A microphone"
+     },
+     {
+      "id": "b",
+      "text": "A speaker"
+     },
+     {
+      "id": "c",
+      "text": "A printer"
+     },
+     {
+      "id": "d",
+      "text": "A keyboard"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each device to input or output.",
+    "hint": "Think about which way the information flows.",
+    "explanation": "Keyboard and mouse are inputs. A speaker is an output.",
+    "skill_tag": "cs.in_out",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Keyboard"
+     },
+     {
+      "id": "l2",
+      "text": "Speaker"
+     },
+     {
+      "id": "l3",
+      "text": "Mouse"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Input"
+     },
+     {
+      "id": "r1",
+      "text": "Input"
+     },
+     {
+      "id": "r2",
+      "text": "Output"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "true_false",
+    "prompt": "Pulling a plug out by its wire is the safest way.",
+    "hint": "Be gentle with plugs.",
+    "explanation": "Ask a grown-up and pull the plug itself.",
+    "skill_tag": "cs.electricity",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Sana says the computer decides everything on its own. Is she right?",
+    "hint": "Think back to the robot.",
+    "explanation": "Computers follow instructions.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it decides everything"
+     },
+     {
+      "id": "b",
+      "text": "No, it follows our instructions"
+     },
+     {
+      "id": "c",
+      "text": "Only at night"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show how many inputs are in this list: keyboard, mouse, microphone, camera.",
+    "hint": "Count each one.",
+    "explanation": "All four are inputs.",
+    "skill_tag": "cs.in_out",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the picture of the output.",
+    "hint": "It gives us sound.",
+    "explanation": "A speaker is an output.",
+    "skill_tag": "cs.in_out",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔊",
+       "label": "Speaker",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⌨️",
+       "label": "Keyboard",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🖱️",
+       "label": "Mouse",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which of these is private information?",
+    "hint": "A secret key.",
+    "explanation": "Passwords are private.",
+    "skill_tag": "cs.private",
+    "options": [
+     {
+      "id": "a",
+      "text": "The weather"
+     },
+     {
+      "id": "b",
+      "text": "Our password"
+     },
+     {
+      "id": "c",
+      "text": "Our favourite food"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "You play a game for 25 minutes, then take a break. How many minutes before the break?",
+    "hint": "Look at the number.",
+    "explanation": "25 minutes before the break.",
+    "skill_tag": "cs.devices",
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "It is fine to tell a stranger online where you live.",
+    "hint": "Is an address private?",
+    "explanation": "Never share your address.",
+    "skill_tag": "cs.private",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "online",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hana says if something online worries her she should hide it. Is she right?",
+    "hint": "Who can help?",
+    "explanation": "A grown-up can help her.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, hide it"
+     },
+     {
+      "id": "b",
+      "text": "No, she should tell a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, post about it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these in the right order for sending a kind message.",
+    "hint": "What comes first?",
+    "explanation": "Think, write, then send with a grown-up.",
+    "skill_tag": "cs.kind",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Ask a grown-up to help send it"
+     },
+     {
+      "id": "i1",
+      "text": "Think of something kind"
+     },
+     {
+      "id": "i2",
+      "text": "Write the message"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is an input?",
+    "hint": "Do we click it?",
+    "explanation": "A mouse tells the computer what to do.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A mouse"
+     },
+     {
+      "id": "c",
+      "text": "A printer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which one do we use to put words into a computer?",
+    "hint": "Do we type on it?",
+    "explanation": "A keyboard is an input.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A screen"
+     },
+     {
+      "id": "c",
+      "text": "A keyboard"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which one shows us pictures from the computer?",
+    "hint": "It is an output.",
+    "explanation": "A screen is an output.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mouse"
+     },
+     {
+      "id": "b",
+      "text": "A microphone"
+     },
+     {
+      "id": "c",
+      "text": "A screen"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "Which one plays sounds for us?",
+    "hint": "It is an output.",
+    "explanation": "A speaker plays sound to us.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mouse"
+     },
+     {
+      "id": "b",
+      "text": "A speaker"
+     },
+     {
+      "id": "c",
+      "text": "A keyboard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A microphone is an input because it hears your voice.",
+    "hint": "It takes information in.",
+    "explanation": "A microphone takes your voice in.",
+    "skill_tag": "cs.in_out",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "A printer is an input.",
+    "hint": "Does it give us something?",
+    "explanation": "A printer gives us paper, so it is an output.",
+    "skill_tag": "cs.in_out",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about computers.",
+    "hint": "Think back to in and out.",
+    "explanation": "Input in, output out.",
+    "skill_tag": "cs.vocab",
+    "points": 2,
+    "text": "We tell a computer things with an {b1} and it tells us things with an {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "arm"
+       },
+       {
+        "id": "b",
+        "text": "input"
+       },
+       {
+        "id": "c",
+        "text": "egg"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ocean"
+       },
+       {
+        "id": "b",
+        "text": "output"
+       },
+       {
+        "id": "c",
+        "text": "orange"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about devices.",
+    "hint": "Think about a laptop.",
+    "explanation": "A laptop is a computer you can carry.",
+    "skill_tag": "cs.vocab",
+    "points": 2,
+    "text": "A {b1} is a computer you can carry, and it has a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "spoon"
+       },
+       {
+        "id": "b",
+        "text": "laptop"
+       },
+       {
+        "id": "c",
+        "text": "wheel"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "tail"
+       },
+       {
+        "id": "b",
+        "text": "screen"
+       },
+       {
+        "id": "c",
+        "text": "leaf"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "in_out",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two let us tell a computer something?",
+    "hint": "We tell the computer with them.",
+    "explanation": "A keyboard and mouse are inputs.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mouse"
+     },
+     {
+      "id": "b",
+      "text": "A printer"
+     },
+     {
+      "id": "c",
+      "text": "A speaker"
+     },
+     {
+      "id": "d",
+      "text": "A keyboard"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are outputs? Pick two.",
+    "hint": "They give us something.",
+    "explanation": "A speaker and a screen are outputs.",
+    "skill_tag": "cs.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A screen"
+     },
+     {
+      "id": "b",
+      "text": "A microphone"
+     },
+     {
+      "id": "c",
+      "text": "A mouse"
+     },
+     {
+      "id": "d",
+      "text": "A speaker"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Match each machine to its job.",
+    "hint": "Think about which way the information flows.",
+    "explanation": "Keyboard and mouse put information in. A speaker gives it out.",
+    "skill_tag": "cs.in_out",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Keyboard"
+     },
+     {
+      "id": "l2",
+      "text": "Speaker"
+     },
+     {
+      "id": "l3",
+      "text": "Mouse"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Input"
+     },
+     {
+      "id": "r1",
+      "text": "Input"
+     },
+     {
+      "id": "r2",
+      "text": "Output"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Sort each device by its job.",
+    "hint": "Which way does the information go?",
+    "explanation": "A microphone and touch pad are inputs. A printer is an output.",
+    "skill_tag": "cs.in_out",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Microphone"
+     },
+     {
+      "id": "l2",
+      "text": "Printer"
+     },
+     {
+      "id": "l3",
+      "text": "Touch pad"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Output"
+     },
+     {
+      "id": "r1",
+      "text": "Input"
+     },
+     {
+      "id": "r3",
+      "text": "Input"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "true_false",
+    "prompt": "It is fine to pull a plug out by the wire.",
+    "hint": "Be gentle with plugs.",
+    "explanation": "Ask a grown-up and pull the plug itself.",
+    "skill_tag": "cs.electricity",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "true_false",
+    "prompt": "You should keep your hands dry around plugs.",
+    "hint": "Think about water.",
+    "explanation": "Dry hands keep us safe from electricity.",
+    "skill_tag": "cs.electricity",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "safe_game",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Leyla says the computer decides what to do on its own. Is she right?",
+    "hint": "Think back to the robot.",
+    "explanation": "Computers follow instructions.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only at night"
+     },
+     {
+      "id": "b",
+      "text": "No, it follows our instructions"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it decides everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Ibrahim says a computer cannot do anything without instructions. Is he right?",
+    "hint": "Think back to the robot.",
+    "explanation": "Computers follow instructions.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it knows everything"
+     },
+     {
+      "id": "b",
+      "text": "Only for games"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it needs instructions"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show how many inputs are on this list: keyboard, mouse, microphone.",
+    "hint": "Count each one.",
+    "explanation": "All three are inputs.",
+    "skill_tag": "cs.in_out",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show how many outputs are on this list: screen, speaker, printer.",
+    "hint": "Count each one.",
+    "explanation": "All three are outputs.",
+    "skill_tag": "cs.in_out",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the output.",
+    "hint": "It gives us sound.",
+    "explanation": "A speaker is an output.",
+    "skill_tag": "cs.in_out",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔊",
+       "label": "Speaker",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⌨️",
+       "label": "Keyboard",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🖱️",
+       "label": "Mouse",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the input.",
+    "hint": "It hears us.",
+    "explanation": "A microphone is an input.",
+    "skill_tag": "cs.in_out",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎤",
+       "label": "Microphone",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🖨️",
+       "label": "Printer",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🖥️",
+       "label": "Screen",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "in_out",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is private?",
+    "hint": "A secret key.",
+    "explanation": "Passwords are private.",
+    "skill_tag": "cs.private",
+    "options": [
+     {
+      "id": "a",
+      "text": "Our favourite food"
+     },
+     {
+      "id": "b",
+      "text": "Our password"
+     },
+     {
+      "id": "c",
+      "text": "The weather"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which is private?",
+    "hint": "Where we live.",
+    "explanation": "Addresses are private.",
+    "skill_tag": "cs.private",
+    "options": [
+     {
+      "id": "a",
+      "text": "The colour blue"
+     },
+     {
+      "id": "b",
+      "text": "Our home address"
+     },
+     {
+      "id": "c",
+      "text": "A funny joke"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "number",
+    "prompt": "You use a screen for 20 minutes. Then you take a break. How many minutes before the break?",
+    "hint": "Look at the number.",
+    "explanation": "20 minutes before the break.",
+    "skill_tag": "cs.devices",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "number",
+    "prompt": "You play a game for 15 minutes, then take a break. How many minutes before the break?",
+    "hint": "Look at the number.",
+    "explanation": "15 minutes before the break.",
+    "skill_tag": "cs.devices",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "It is okay to tell a stranger online your home address.",
+    "hint": "Is an address private?",
+    "explanation": "Never share your address.",
+    "skill_tag": "cs.private",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "online",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "We should never share our school name with strangers online.",
+    "hint": "Is it private?",
+    "explanation": "Keep private things private.",
+    "skill_tag": "cs.private",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "online",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says she should hide it if something online worries her. Is that right?",
+    "hint": "Who can help?",
+    "explanation": "A grown-up can help her.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, hide it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, post about it"
+     },
+     {
+      "id": "c",
+      "text": "No, she should tell a grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Zayd says he does not need to tell anyone if someone is unkind online. Is he right?",
+    "hint": "Who can help?",
+    "explanation": "Tell a grown-up.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, say nothing"
+     },
+     {
+      "id": "b",
+      "text": "Yes, be unkind back"
+     },
+     {
+      "id": "c",
+      "text": "No, he should tell a grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Put these kind-message jobs in order.",
+    "hint": "What comes first?",
+    "explanation": "Think, write, then send with a grown-up.",
+    "skill_tag": "cs.kind",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Ask a grown-up to help send it"
+     },
+     {
+      "id": "i1",
+      "text": "Think of something kind"
+     },
+     {
+      "id": "i2",
+      "text": "Write the message"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Put these safe-electricity steps in order.",
+    "hint": "What comes first?",
+    "explanation": "See it, ask, then plug in together.",
+    "skill_tag": "cs.electricity",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask a grown-up"
+     },
+     {
+      "id": "i3",
+      "text": "Plug it in together"
+     },
+     {
+      "id": "i1",
+      "text": "See the charger"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

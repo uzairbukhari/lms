@@ -1,0 +1,2420 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-data-detectives",
+  "subject": "data-ai",
+  "title": "Data Detectives",
+  "summary": "Sorting, tally charts, pictograms, block graphs, a first look at chance, and answering questions with data.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Data detectives",
+  "learning_objectives": [
+   "Sort things and count them with tally marks",
+   "Read pictograms and block graphs",
+   "Use data to answer a question"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 statistics",
+    "text": "Interpret and construct simple pictograms, tally charts, block diagrams and simple tables"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-DA-05",
+    "text": "Store, copy, search, retrieve, modify and delete information using a computing device"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-DA-07",
+    "text": "Identify and describe patterns in data visualisations"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-01-E"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ss.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ss.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ss.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Sp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Sp.02"
+   }
+  ],
+  "success_criteria": [
+   "I can sort things into groups",
+   "I can read a pictogram or block graph",
+   "I can say which has the most and the fewest"
+  ],
+  "real_life": "Counting shoes by the door, votes for a family game and how many of each fruit are in the bowl.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a loop in an algorithm?",
+    "hint": "Think about doing it again.",
+    "explanation": "A loop repeats instructions.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mistake"
+     },
+     {
+      "id": "b",
+      "text": "Instructions that repeat"
+     },
+     {
+      "id": "c",
+      "text": "A star"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "A mistake in instructions is called a...",
+    "hint": "Not a real insect.",
+    "explanation": "A mistake is a bug.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pattern"
+     },
+     {
+      "id": "b",
+      "text": "Bug"
+     },
+     {
+      "id": "c",
+      "text": "Loop"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 + 4?",
+    "hint": "Count on from 6.",
+    "explanation": "6 and 4 make 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, data detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we find answers by counting clues?\n\nWe will sort, tally and make graphs.",
+   "say": "Welcome, data detective! Today's big question: how can we find answers by counting? Detectives collect clues, sort them, count them and draw them. By the end you will make a tally, read a pictogram, and answer questions from a graph. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔍",
+   "alt": "Data detectives collect clues and count them.",
+   "caption": "Data detectives collect clues and count them."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "clues",
+     "meaning": "Pieces of information that help us find out."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "sorting",
+   "kind": "learn",
+   "title": "Sorting and tally marks",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sorting into groups"
+    },
+    {
+     "type": "text",
+     "markdown": "**Data** is information we collect.\n\nTo **sort** is to put things that are alike into the same **group**.",
+     "say": "Detectives look for clues, and clues are called data. Data is information we collect. The first job of a data detective is to sort. We put things that are alike into the same group. Here are a bird, a fish, an eagle and a goldfish. Birds fly. Fish swim. Let us sort them into two boxes."
+    },
+    {
+     "type": "explainer",
+     "title": "Sort the animals",
+     "scenes": [
+      {
+       "caption": "Four animals, all mixed up.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐦",
+         "x": 20,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐟",
+         "x": 40,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🦅",
+         "x": 60,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🐠",
+         "x": 80,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here are four animals in a jumble."
+      },
+      {
+       "caption": "Birds go in the fly group.",
+       "items": [
+        {
+         "id": "bx",
+         "prop": {
+          "kind": "sorting_boxes",
+          "labels": [
+           "Fly",
+           "Swim"
+          ]
+         },
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐦",
+         "x": 28,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "c",
+         "emoji": "🦅",
+         "x": 40,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🐟",
+         "x": 40,
+         "y": 25,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🐠",
+         "x": 62,
+         "y": 25,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Birds can fly. The bird and the eagle go in the fly group."
+      },
+      {
+       "caption": "Fish go in the swim group.",
+       "items": [
+        {
+         "id": "bx",
+         "prop": {
+          "kind": "sorting_boxes",
+          "labels": [
+           "Fly",
+           "Swim"
+          ]
+         },
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐦",
+         "x": 28,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🦅",
+         "x": 40,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐟",
+         "x": 62,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "d",
+         "emoji": "🐠",
+         "x": 74,
+         "y": 70,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Fish live in water. The fish and the goldfish go in the swim group. Now everything is sorted!"
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which animal goes in the swim group?",
+      "hint": "Where does it live?",
+      "explanation": "The fish swims in water.",
+      "skill_tag": "data.sorting",
+      "options": [
+       {
+        "id": "a",
+        "text": "🐦"
+       },
+       {
+        "id": "b",
+        "text": "🦅"
+       },
+       {
+        "id": "c",
+        "text": "🐟"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Counting with tally marks"
+    },
+    {
+     "type": "text",
+     "markdown": "A **tally** uses a stroke for each vote. Four strokes and one across makes a bundle of five.",
+     "say": "After sorting, we count. A tally mark is a little stroke for each thing we count. Every fifth stroke goes across the other four, like a gate. That makes counting in fives easy. Here, the class voted for a favourite pet."
+    },
+    {
+     "type": "chart",
+     "kind": "tally",
+     "title": "Favourite pets",
+     "rows": [
+      {
+       "label": "Cats",
+       "value": 5
+      },
+      {
+       "label": "Dogs",
+       "value": 3
+      },
+      {
+       "label": "Fish",
+       "value": 2
+      }
+     ],
+     "caption": "Each stroke is one vote. Five is a bundle."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Cats got 5 tally marks. Dogs got 3. How many votes did cats get?",
+      "hint": "Count the strokes.",
+      "explanation": "5 strokes means 5 votes.",
+      "skill_tag": "data.tally",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Sorting puts alike things in a group",
+      "A tally mark is one stroke for each vote"
+     ],
+     "say": "Let us remember. We sort things into groups, and we count them with tally marks."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "data",
+       "meaning": "Information we collect."
+      },
+      {
+       "term": "sort",
+       "meaning": "To put things that are alike together."
+      },
+      {
+       "term": "group",
+       "meaning": "Things that belong together."
+      },
+      {
+       "term": "tally",
+       "meaning": "Strokes we make to count, with every fifth stroke across the four."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call information that we collect?",
+     "hint": "Detectives collect it.",
+     "explanation": "Information we collect is data.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bug"
+      },
+      {
+       "id": "b",
+       "text": "A loop"
+      },
+      {
+       "id": "c",
+       "text": "Data"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which one belongs in a group of fruit?",
+     "hint": "You can eat it.",
+     "explanation": "An apple is a fruit.",
+     "options": [
+      {
+       "id": "a",
+       "text": "🐶"
+      },
+      {
+       "id": "b",
+       "text": "🍎"
+      },
+      {
+       "id": "c",
+       "text": "🚗"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "Count the strokes: 4 strokes and one across. How many is that?",
+     "hint": "Four and one more.",
+     "explanation": "Four strokes and the gate make 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A tally mark is one stroke for each thing we count.",
+     "hint": "One stroke each.",
+     "explanation": "Each stroke counts one thing.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pictograms",
+   "kind": "try",
+   "title": "Pictograms and block graphs",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pictures that count"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pictogram** uses pictures to show **data**. Each picture is one vote.",
+     "say": "A pictogram uses pictures to show data. Each picture stands for one vote. The longer the row of pictures, the more votes. Look at our class's favourite fruit. Which row is the longest?"
+    },
+    {
+     "type": "chart",
+     "kind": "pictogram",
+     "title": "Favourite fruit",
+     "rows": [
+      {
+       "label": "Mango",
+       "value": 6,
+       "emoji": "🥭"
+      },
+      {
+       "label": "Apple",
+       "value": 4,
+       "emoji": "🍎"
+      },
+      {
+       "label": "Banana",
+       "value": 3,
+       "emoji": "🍌"
+      },
+      {
+       "label": "Orange",
+       "value": 2,
+       "emoji": "🍊"
+      }
+     ],
+     "each": 1,
+     "caption": "Each picture is one child's vote. Mango has the most.",
+     "say": "Count the pictures in each row. Mango has the longest row."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In the fruit pictogram, which fruit has the most pictures?",
+      "hint": "Find the longest row.",
+      "explanation": "Mango has 6 pictures, the most.",
+      "skill_tag": "data.pictogram",
+      "options": [
+       {
+        "id": "a",
+        "text": "Orange"
+       },
+       {
+        "id": "b",
+        "text": "Banana"
+       },
+       {
+        "id": "c",
+        "text": "Mango"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Block graphs"
+    },
+    {
+     "type": "text",
+     "markdown": "A **block graph** stacks blocks. The tallest stack has the most.",
+     "say": "A block graph uses blocks stacked up to show the same data. A tall stack means lots of votes. A short stack means fewer votes. Now try it yourself with the family shoes survey."
+    },
+    {
+     "type": "chart",
+     "kind": "bar_chart",
+     "title": "Favourite fruit blocks",
+     "rows": [
+      {
+       "label": "Mango",
+       "value": 6,
+       "emoji": "🥭"
+      },
+      {
+       "label": "Apple",
+       "value": 4,
+       "emoji": "🍎"
+      },
+      {
+       "label": "Banana",
+       "value": 3,
+       "emoji": "🍌"
+      },
+      {
+       "label": "Orange",
+       "value": 2,
+       "emoji": "🍊"
+      }
+     ],
+     "caption": "The tallest bar is mango.",
+     "say": "Here are the same votes as blocks. The tallest stack is mango."
+    },
+    {
+     "type": "activity",
+     "title": "Count the shoes",
+     "materials": [
+      "Pencil and paper",
+      "The shoes by your front door"
+     ],
+     "instructions": [
+      "Sort the shoes into groups, such as trainers, sandals and boots.",
+      "Make a tally for each group.",
+      "Which group has the most shoes?"
+     ],
+     "say": "Here is a job for a real detective. Count the shoes by the front door at home."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A block graph shows mango 6 and apple 4. How many more votes does mango have?",
+      "hint": "Take 4 away from 6.",
+      "explanation": "6 - 4 = 2.",
+      "skill_tag": "data.compare",
+      "answer": {
+       "value": 2,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A pictogram uses pictures for votes",
+      "A block graph uses stacked blocks"
+     ],
+     "say": "Let us remember. A pictogram uses pictures. A block graph uses blocks. Both show data at a glance."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pictogram",
+       "meaning": "A graph that uses pictures to show data."
+      },
+      {
+       "term": "block graph",
+       "meaning": "A graph that uses stacks of blocks."
+      },
+      {
+       "term": "vote",
+       "meaning": "A choice we count."
+      },
+      {
+       "term": "data",
+       "meaning": "Information we collect."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does each picture in a pictogram stand for?",
+     "hint": "Check the caption.",
+     "explanation": "Each picture is one vote.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The whole class"
+      },
+      {
+       "id": "b",
+       "text": "One vote"
+      },
+      {
+       "id": "c",
+       "text": "A colour"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A taller stack on a block graph means more votes.",
+     "hint": "Tall means more.",
+     "explanation": "The tallest stack has the most.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "The orange row has 2 pictures. The banana row has 3. How many pictures in all?",
+     "hint": "Add 2 and 3.",
+     "explanation": "2 + 3 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "chance",
+   "kind": "play",
+   "title": "Heads or tails",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What might happen?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Chance** is how likely something is.\n\nA coin toss can land **heads** or **tails**. We cannot know which!",
+     "say": "Detectives also ask what might happen. When we toss a coin, it lands heads or tails. We cannot know which one before it lands. The words for this are chance and might. A coin has two sides, so each side has an equal chance. Watch the coin spin and land."
+    },
+    {
+     "type": "explainer",
+     "title": "Toss the coin",
+     "scenes": [
+      {
+       "caption": "The coin spins.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "The coin is in the air."
+      },
+      {
+       "caption": "Heads this time.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Heads"
+        }
+       ],
+       "say": "It lands. This time it is heads."
+      },
+      {
+       "caption": "Toss again. Heads or tails?",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 80,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Toss again. It may be heads or tails. We never know for sure!"
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A coin has two sides. What are they called?",
+      "hint": "Think about money.",
+      "explanation": "A coin has heads and tails.",
+      "skill_tag": "data.chance",
+      "options": [
+       {
+        "id": "a",
+        "text": "Red and blue"
+       },
+       {
+        "id": "b",
+        "text": "Heads and tails"
+       },
+       {
+        "id": "c",
+        "text": "Up and down"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game and find the pairs.",
+     "say": "Here is a memory game to sharpen your detective brain. Find the matching pairs. Keep your eyes sharp!"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Detective pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔍",
+      "📊",
+      "🪙",
+      "🎲"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Before we toss a coin, we can be sure it will land heads.",
+      "hint": "Can we know?",
+      "explanation": "We cannot know. It might be heads or tails.",
+      "skill_tag": "data.chance",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Chance is how likely something is",
+      "A coin lands heads or tails"
+     ],
+     "say": "Let us remember. Chance means how likely something is. We cannot always know what will happen."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "chance",
+       "meaning": "How likely something is to happen."
+      },
+      {
+       "term": "heads",
+       "meaning": "One side of a coin."
+      },
+      {
+       "term": "tails",
+       "meaning": "The other side of a coin."
+      },
+      {
+       "term": "might",
+       "meaning": "Could happen, but not for sure."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a word for how likely something is?",
+     "hint": "Think about luck.",
+     "explanation": "Chance is how likely something is.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Order"
+      },
+      {
+       "id": "b",
+       "text": "Chance"
+      },
+      {
+       "id": "c",
+       "text": "Stack"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A coin always lands on heads.",
+     "hint": "Is it always the same?",
+     "explanation": "It may land on heads or tails.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A coin is tossed. How many different ways can it land?",
+     "hint": "It has two sides.",
+     "explanation": "It can land heads or tails.",
+     "options": [
+      {
+       "id": "a",
+       "text": "1"
+      },
+      {
+       "id": "b",
+       "text": "2"
+      },
+      {
+       "id": "c",
+       "text": "6"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use_data",
+   "kind": "use",
+   "title": "Answering questions with data",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Reading a table"
+    },
+    {
+     "type": "text",
+     "markdown": "A **table** lists data in rows.\n\nWe can read a table to find which has the **most** and which has the **fewest**.",
+     "say": "Now use your skills to answer a question. Our class has voted for favourite playground games. Look at the table. It tells us how many children chose each game."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Favourite playground games",
+     "rows": [
+      {
+       "label": "Tag",
+       "value": 7
+      },
+      {
+       "label": "Skipping",
+       "value": 4
+      },
+      {
+       "label": "Hide and seek",
+       "value": 5
+      },
+      {
+       "label": "Cricket",
+       "value": 9
+      }
+     ],
+     "caption": "How many children chose each game."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which game was chosen by the most children?",
+      "hint": "Find the biggest number.",
+      "explanation": "Cricket has 9, the biggest number.",
+      "skill_tag": "data.read",
+      "options": [
+       {
+        "id": "a",
+        "text": "Skipping"
+       },
+       {
+        "id": "b",
+        "text": "Cricket"
+       },
+       {
+        "id": "c",
+        "text": "Tag"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Ask and answer"
+    },
+    {
+     "type": "text",
+     "markdown": "A good **detective** asks a question, collects data, makes a graph and shares what they found.",
+     "say": "A good detective asks a question first. What would you like to find out? Maybe your family's favourite colour, or what pets your cousins have. Then collect data, tally it, and draw a pictogram. Finally share what you found."
+    },
+    {
+     "type": "image",
+     "emoji": "🔍📊",
+     "alt": "Ask, collect, tally, graph, share.",
+     "caption": "Ask, collect, tally, graph, share.",
+     "say": "Ask a question, collect the data, tally it, draw a graph and share what you found."
+    },
+    {
+     "type": "activity",
+     "title": "My own survey",
+     "materials": [
+      "Pencil and paper",
+      "Five family members or friends"
+     ],
+     "instructions": [
+      "Choose a question, such as: what is your favourite fruit?",
+      "Ask five people and make a tally.",
+      "Draw a pictogram.",
+      "Which has the most votes? Tell your family."
+     ],
+     "say": "Time to be a data detective at home."
+    },
+    {
+     "type": "reveal",
+     "prompt": "What do you think would happen if you asked ten people instead of five?",
+     "answer_markdown": "You would get more data, so the answer would be more reliable."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Tag had 7 votes and skipping had 4. How many more votes did tag get?",
+      "hint": "Take 4 away from 7.",
+      "explanation": "7 - 4 = 3.",
+      "skill_tag": "data.compare",
+      "answer": {
+       "value": 3,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read tables and graphs to answer questions",
+      "Ask, collect, graph, share"
+     ],
+     "say": "Let us remember. We use tables and graphs to answer questions. A detective asks, collects, graphs and shares."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "table",
+       "meaning": "A list of data in rows."
+      },
+      {
+       "term": "most",
+       "meaning": "The biggest number."
+      },
+      {
+       "term": "fewest",
+       "meaning": "The smallest number."
+      },
+      {
+       "term": "detective",
+       "meaning": "Someone who uses clues to find out."
+      },
+      {
+       "term": "survey",
+       "meaning": "Asking people questions to collect data."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is the first thing a data detective does?",
+     "hint": "What do we want to find out?",
+     "explanation": "A detective starts with a question.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Go to sleep"
+      },
+      {
+       "id": "b",
+       "text": "Ask a question"
+      },
+      {
+       "id": "c",
+       "text": "Draw a picture"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A table says cricket 9, skipping 4. How many more chose cricket?",
+     "hint": "Take away 4 from 9.",
+     "explanation": "9 - 4 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "The fewest votes means the smallest number.",
+     "hint": "Fewest is not most.",
+     "explanation": "Fewest is the smallest number.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which animal goes in the fly group?",
+    "hint": "Which has wings?",
+    "explanation": "The eagle flies.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "🐟"
+     },
+     {
+      "id": "b",
+      "text": "🐠"
+     },
+     {
+      "id": "c",
+      "text": "🦅"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What do we do when we put things that are alike together?",
+    "hint": "Think about boxes.",
+    "explanation": "We sort them into groups.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "Break them"
+     },
+     {
+      "id": "b",
+      "text": "Sort them"
+     },
+     {
+      "id": "c",
+      "text": "Lose them"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "number",
+    "prompt": "A tally has one bundle of five and 2 more strokes. How many votes is that?",
+    "hint": "5 + 2.",
+    "explanation": "5 + 2 = 7.",
+    "skill_tag": "data.tally",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about data.",
+    "hint": "Use the lesson words.",
+    "explanation": "Data is information we collect.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "text": "{b1} is information we {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Bugs"
+       },
+       {
+        "id": "b",
+        "text": "Data"
+       },
+       {
+        "id": "c",
+        "text": "Stars"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "lose"
+       },
+       {
+        "id": "b",
+        "text": "collect"
+       },
+       {
+        "id": "c",
+        "text": "eat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "sorting",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which can show data? Pick two.",
+    "hint": "They show votes.",
+    "explanation": "A pictogram and a block graph both show data.",
+    "skill_tag": "data.vocab",
+    "options": [
+     {
+      "id": "a",
+      "text": "A block graph"
+     },
+     {
+      "id": "b",
+      "text": "A sandwich"
+     },
+     {
+      "id": "c",
+      "text": "A pillow"
+     },
+     {
+      "id": "d",
+      "text": "A pictogram"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Match each word to what it means.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Data"
+     },
+     {
+      "id": "l2",
+      "text": "Tally"
+     },
+     {
+      "id": "l3",
+      "text": "Pictogram"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Pictures that show votes"
+     },
+     {
+      "id": "r1",
+      "text": "Information we collect"
+     },
+     {
+      "id": "r2",
+      "text": "Strokes that count"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pictograms",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "In the fruit pictogram, mango has 6 and apple has 4. Which has fewer?",
+    "hint": "Fewer means a smaller number.",
+    "explanation": "4 is less than 6.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mango"
+     },
+     {
+      "id": "b",
+      "text": "They are the same"
+     },
+     {
+      "id": "c",
+      "text": "Apple"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Ria says a coin must land heads every time. Is she right?",
+    "hint": "Think about chance.",
+    "explanation": "Each toss can be heads or tails.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "Only on Fridays"
+     },
+     {
+      "id": "c",
+      "text": "No, it might land heads or tails"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chance",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show how many votes cricket had in our table.",
+    "hint": "Look at the table.",
+    "explanation": "Cricket had 9 votes.",
+    "skill_tag": "data.read",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap the picture of a coin.",
+    "hint": "It has heads and tails.",
+    "explanation": "A coin has two sides.",
+    "skill_tag": "data.chance",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪙",
+       "label": "A coin",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎲",
+       "label": "A dice",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧸",
+       "label": "A teddy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "chance",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which graph uses pictures to show each vote?",
+    "hint": "Think of pictures.",
+    "explanation": "A pictogram uses pictures.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A pictogram"
+     },
+     {
+      "id": "c",
+      "text": "A table"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "A table says tag 7 and skipping 4. How many children chose both games in all?",
+    "hint": "Add 7 and 4.",
+    "explanation": "7 + 4 = 11.",
+    "skill_tag": "data.compare",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "The most votes is the biggest number.",
+    "hint": "Fewest is small.",
+    "explanation": "The fewest votes is the smallest number.",
+    "skill_tag": "data.read",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a longer row on a pictogram has fewer votes. Is he right?",
+    "hint": "Long means more.",
+    "explanation": "A longer row means more votes.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes"
+     },
+     {
+      "id": "b",
+      "text": "Only for tally"
+     },
+     {
+      "id": "c",
+      "text": "No, a longer row has more votes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put the detective steps in order.",
+    "hint": "What comes first?",
+    "explanation": "Ask, collect, then graph.",
+    "skill_tag": "data.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Make a graph"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a question"
+     },
+     {
+      "id": "i2",
+      "text": "Collect the data"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these can fly, so it joins the fly group?",
+    "hint": "Which has wings?",
+    "explanation": "The eagle flies.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "🐟"
+     },
+     {
+      "id": "b",
+      "text": "🦅"
+     },
+     {
+      "id": "c",
+      "text": "🐠"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which one goes in the swim group?",
+    "hint": "Where does it live?",
+    "explanation": "The goldfish swims.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "🐦"
+     },
+     {
+      "id": "b",
+      "text": "🦅"
+     },
+     {
+      "id": "c",
+      "text": "🐠"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "What is a group of things that are alike called?",
+    "hint": "Alike things sit together.",
+    "explanation": "Things that are alike form a group.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bug"
+     },
+     {
+      "id": "b",
+      "text": "A coin"
+     },
+     {
+      "id": "c",
+      "text": "A group"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "multiple_choice",
+    "prompt": "What do we do when we put alike things together?",
+    "hint": "Think about boxes.",
+    "explanation": "We sort them into groups.",
+    "skill_tag": "data.sorting",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lose them"
+     },
+     {
+      "id": "b",
+      "text": "Sort them"
+     },
+     {
+      "id": "c",
+      "text": "Break them"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "number",
+    "prompt": "A tally has 2 bundles of five. How many votes is that?",
+    "hint": "5 + 5.",
+    "explanation": "Two bundles of five make 10.",
+    "skill_tag": "data.tally",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "number",
+    "prompt": "A tally has one bundle of five and 3 more strokes. How many votes?",
+    "hint": "5 + 3.",
+    "explanation": "5 + 3 = 8.",
+    "skill_tag": "data.tally",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about information.",
+    "hint": "Use the lesson words.",
+    "explanation": "Data is information we collect.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "text": "{b1} is information we {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Bugs"
+       },
+       {
+        "id": "b",
+        "text": "Stars"
+       },
+       {
+        "id": "c",
+        "text": "Data"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "lose"
+       },
+       {
+        "id": "b",
+        "text": "collect"
+       },
+       {
+        "id": "c",
+        "text": "eat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about sorting.",
+    "hint": "Use the lesson words.",
+    "explanation": "We sort things into groups.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "text": "We {b1} things into {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bake"
+       },
+       {
+        "id": "b",
+        "text": "hide"
+       },
+       {
+        "id": "c",
+        "text": "sort"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ears"
+       },
+       {
+        "id": "b",
+        "text": "groups"
+       },
+       {
+        "id": "c",
+        "text": "coins"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which can be used to show data? Pick two.",
+    "hint": "They show votes.",
+    "explanation": "A pictogram and block graph both show data.",
+    "skill_tag": "data.vocab",
+    "options": [
+     {
+      "id": "a",
+      "text": "A block graph"
+     },
+     {
+      "id": "b",
+      "text": "A pillow"
+     },
+     {
+      "id": "c",
+      "text": "A sandwich"
+     },
+     {
+      "id": "d",
+      "text": "A pictogram"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are ways to count votes? Pick two.",
+    "hint": "They organise data.",
+    "explanation": "Tally marks and tables record votes.",
+    "skill_tag": "data.vocab",
+    "options": [
+     {
+      "id": "a",
+      "text": "A table"
+     },
+     {
+      "id": "b",
+      "text": "A cushion"
+     },
+     {
+      "id": "c",
+      "text": "A hat"
+     },
+     {
+      "id": "d",
+      "text": "Tally marks"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Match each data word to its meaning.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Data"
+     },
+     {
+      "id": "l2",
+      "text": "Tally"
+     },
+     {
+      "id": "l3",
+      "text": "Pictogram"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Strokes that count"
+     },
+     {
+      "id": "r1",
+      "text": "Information we collect"
+     },
+     {
+      "id": "r3",
+      "text": "Pictures that show votes"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pictograms",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Match each graph to its picture idea.",
+    "hint": "Think about how each looks.",
+    "explanation": "Each kind of chart looks different.",
+    "skill_tag": "data.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pictogram"
+     },
+     {
+      "id": "l2",
+      "text": "Block graph"
+     },
+     {
+      "id": "l3",
+      "text": "Tally"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Uses stacked blocks"
+     },
+     {
+      "id": "r1",
+      "text": "Uses pictures"
+     },
+     {
+      "id": "r3",
+      "text": "Uses strokes"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pictograms",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "In the fruit pictogram, mango has 6 and orange has 2. Which has fewer?",
+    "hint": "Fewer means a smaller number.",
+    "explanation": "2 is less than 6.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mango"
+     },
+     {
+      "id": "b",
+      "text": "Orange"
+     },
+     {
+      "id": "c",
+      "text": "They are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "In the fruit pictogram, apple has 4 and banana has 3. Which has fewer?",
+    "hint": "Fewer means a smaller number.",
+    "explanation": "3 is less than 4.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "Apple"
+     },
+     {
+      "id": "b",
+      "text": "They are the same"
+     },
+     {
+      "id": "c",
+      "text": "Banana"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Ria says a coin must land heads three times in a row. Is she right?",
+    "hint": "Think about chance.",
+    "explanation": "Each toss can be heads or tails.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "No, it might land heads or tails each time"
+     },
+     {
+      "id": "c",
+      "text": "Only on Fridays"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "chance",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Omar says he knows the coin will land tails. Is he sure?",
+    "hint": "Think about chance.",
+    "explanation": "We cannot be sure before it lands.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tails always wins"
+     },
+     {
+      "id": "b",
+      "text": "Only with a red coin"
+     },
+     {
+      "id": "c",
+      "text": "No, he cannot be sure"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chance",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show the number of votes for cricket.",
+    "hint": "Look at the table.",
+    "explanation": "Cricket had 9 votes.",
+    "skill_tag": "data.read",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show how many votes tag had in our table.",
+    "hint": "Look at the table.",
+    "explanation": "Tag had 7 votes.",
+    "skill_tag": "data.read",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap the picture of a tally mark for 5.",
+    "hint": "Four strokes and a gate.",
+    "explanation": "A bundle of five has a stroke across four.",
+    "skill_tag": "data.tally",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "Five: four strokes and one across",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔤",
+       "label": "Letters",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎨",
+       "label": "Paint",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "chance",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows the coin.",
+    "hint": "It has heads and tails.",
+    "explanation": "A coin has two sides.",
+    "skill_tag": "data.chance",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪙",
+       "label": "A coin",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎲",
+       "label": "A dice",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧸",
+       "label": "A teddy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "chance",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which graph uses a picture for each vote?",
+    "hint": "Think of pictures.",
+    "explanation": "A pictogram uses pictures.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A pictogram"
+     },
+     {
+      "id": "c",
+      "text": "A table"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which graph uses stacked blocks?",
+    "hint": "Think about stacks.",
+    "explanation": "A block graph uses blocks.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A block graph"
+     },
+     {
+      "id": "c",
+      "text": "A pictogram"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "number",
+    "prompt": "A table says tag 7 and hide and seek 5. How many children chose both games in all?",
+    "hint": "Add 7 and 5.",
+    "explanation": "7 + 5 = 12.",
+    "skill_tag": "data.compare",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "number",
+    "prompt": "A table says skipping 4 and cricket 9. How many in all?",
+    "hint": "Add 4 and 9.",
+    "explanation": "4 + 9 = 13.",
+    "skill_tag": "data.compare",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "The most votes means the biggest number.",
+    "hint": "Most is biggest.",
+    "explanation": "The most votes is the biggest number.",
+    "skill_tag": "data.read",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "The fewest votes means the biggest number.",
+    "hint": "Fewest is small.",
+    "explanation": "The fewest votes is the smallest number.",
+    "skill_tag": "data.read",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a graph with a longer row has fewer votes. Is he right?",
+    "hint": "Long means more.",
+    "explanation": "A longer row means more votes.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only for tally"
+     },
+     {
+      "id": "b",
+      "text": "No, a longer row has more votes"
+     },
+     {
+      "id": "c",
+      "text": "Yes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Layla says the tallest stack has the least. Is she right?",
+    "hint": "Tall means more.",
+    "explanation": "The tallest stack means the most votes.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes"
+     },
+     {
+      "id": "b",
+      "text": "No, the tallest stack has the most"
+     },
+     {
+      "id": "c",
+      "text": "Only for tables"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Put the data detective jobs in order.",
+    "hint": "What comes first?",
+    "explanation": "Ask, collect, then graph.",
+    "skill_tag": "data.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Collect the data"
+     },
+     {
+      "id": "i3",
+      "text": "Make a graph"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Put these data steps in order.",
+    "hint": "What comes first?",
+    "explanation": "Sort, tally, then draw.",
+    "skill_tag": "data.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Count with tally"
+     },
+     {
+      "id": "i1",
+      "text": "Sort the things"
+     },
+     {
+      "id": "i3",
+      "text": "Draw the pictogram"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
