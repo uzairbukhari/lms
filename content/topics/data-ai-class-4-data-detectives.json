@@ -1,0 +1,2414 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-data-detectives",
+  "subject": "data-ai",
+  "title": "Data Detectives",
+  "summary": "Surveys and averages, honest charts, databases, Venn diagrams, chance experiments and trends over time.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Data detectives",
+  "learning_objectives": [
+   "Run a survey and find the mean, mode and median",
+   "Spot an honest chart and read a database",
+   "Sort with a Venn diagram and describe a trend"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 statistics",
+    "text": "Interpret and present discrete and continuous data using appropriate graphical methods, including bar charts and time graphs"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-DA-06",
+    "text": "Organise and present collected data visually to highlight relationships"
+   },
+   {
+    "framework": "csta",
+    "code": "1B-DA-07",
+    "text": "Use data to highlight or propose cause-and-effect relationships and predict outcomes"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-04-E"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ss.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ss.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ss.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Sp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Sp.02"
+   }
+  ],
+  "success_criteria": [
+   "I can find the mean, mode and median",
+   "I can tell whether a chart is honest",
+   "I can sort with a Venn diagram and describe a trend"
+  ],
+  "real_life": "Weather tables, cricket scores, class votes and library records all use data.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we call a mistake in a program?",
+    "hint": "Not an insect.",
+    "explanation": "A mistake is a bug.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A loop"
+     },
+     {
+      "id": "b",
+      "text": "A bug"
+     },
+     {
+      "id": "c",
+      "text": "A variable"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a loop do?",
+    "hint": "Again and again.",
+    "explanation": "A loop repeats steps.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Deletes steps"
+     },
+     {
+      "id": "b",
+      "text": "Hides steps"
+     },
+     {
+      "id": "c",
+      "text": "Repeats steps"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 45 + 28?",
+    "hint": "Add tens then ones.",
+    "explanation": "45 + 28 = 73.",
+    "answer": {
+     "value": 73,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, data detective!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we trust what data tells us?\n\nWe will collect, check and describe data like a detective.",
+   "say": "Welcome, data detective! Today's big question: how can we trust what data tells us? We will run surveys, find averages, spot tricky charts, search a database, sort with Venn diagrams and look for trends. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔍📊",
+   "alt": "Good detectives check their data.",
+   "caption": "Good detectives check their data."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "data",
+     "meaning": "Information we collect."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "surveys",
+   "kind": "learn",
+   "title": "Surveys and averages",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Asking questions with a survey"
+    },
+    {
+     "type": "text",
+     "markdown": "A **survey** asks the same question to many people.\n\nThe group we ask is the **sample**. A bigger, fairer sample is more reliable.",
+     "say": "A data detective starts with a question. To find the answer we run a survey. We ask a group of people the same question and record each answer. The group we ask is called the sample. A bigger, fairer sample gives a more reliable answer. Here a class of twenty chose a favourite sport."
+    },
+    {
+     "type": "chart",
+     "kind": "tally",
+     "title": "Favourite sport in class 4",
+     "rows": [
+      {
+       "label": "Cricket",
+       "value": 8
+      },
+      {
+       "label": "Football",
+       "value": 6
+      },
+      {
+       "label": "Badminton",
+       "value": 4
+      },
+      {
+       "label": "Hockey",
+       "value": 2
+      }
+     ],
+     "caption": "Twenty children voted. Cricket got the most."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "In the sport survey, how many children chose football?",
+      "hint": "Read the tally.",
+      "explanation": "Football got 6 votes.",
+      "skill_tag": "data4.survey",
+      "answer": {
+       "value": 6,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The average"
+    },
+    {
+     "type": "text",
+     "markdown": "The **mean** is the fair share: add up, then divide by how many.\n\nThe **mode** is the most common value. The **median** is the middle one.",
+     "say": "Sometimes we want one number to describe a whole set of numbers. The mean is the fair share. Add the numbers up, then divide by how many there are. Three friends read 3, 5 and 7 books. Together that is 15. Shared fairly between three, each gets 5. So the mean is 5. The mode is the number that appears most often. The median is the middle number when they are in order."
+    },
+    {
+     "type": "explainer",
+     "title": "The fair share",
+     "scenes": [
+      {
+       "caption": "3 + 5 + 7 = 15 books.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📚",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3"
+        },
+        {
+         "id": "b",
+         "emoji": "📚",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "c",
+         "emoji": "📚",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "7"
+        }
+       ],
+       "say": "Three friends read 3, 5 and 7 books. That is 15 books altogether."
+      },
+      {
+       "caption": "Share 15 equally between 3.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📚",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "5"
+        },
+        {
+         "id": "b",
+         "emoji": "📚",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "5"
+        },
+        {
+         "id": "c",
+         "emoji": "📚",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "5"
+        }
+       ],
+       "say": "Share them out equally between the three friends."
+      },
+      {
+       "caption": "15 divided by 3 is 5. The mean is 5!",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📚",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "b",
+         "emoji": "📚",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "c",
+         "emoji": "📚",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "m",
+         "emoji": "⭐",
+         "x": 50,
+         "y": 20,
+         "size": 3,
+         "anim": "bounce",
+         "label": "mean = 5"
+        }
+       ],
+       "say": "Each friend gets 5. So the mean number of books is 5."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Four friends score 2, 4, 6 and 8 in a game. What is the mean score?",
+      "hint": "Add them up, then divide by 4.",
+      "explanation": "20 divided by 4 is 5.",
+      "skill_tag": "data4.mean",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A survey asks the same question to a sample",
+      "Mean: add up, divide by how many",
+      "Mode is most common, median is the middle"
+     ],
+     "say": "Let us remember. A survey asks many people. The mean is the fair share, the mode is the most common and the median is the middle."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "survey",
+       "meaning": "Asking many people the same question."
+      },
+      {
+       "term": "sample",
+       "meaning": "The group of people we ask."
+      },
+      {
+       "term": "mean",
+       "meaning": "The fair share: add up the numbers and divide by how many."
+      },
+      {
+       "term": "mode",
+       "meaning": "The value that appears most often."
+      },
+      {
+       "term": "median",
+       "meaning": "The middle value when numbers are in order."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a survey?",
+     "hint": "Think about asking.",
+     "explanation": "A survey asks many people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Deleting data"
+      },
+      {
+       "id": "b",
+       "text": "Asking many people the same question"
+      },
+      {
+       "id": "c",
+       "text": "Drawing a graph only"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "Numbers 2, 4, 6. What is the mean?",
+     "hint": "12 divided by 3.",
+     "explanation": "2 + 4 + 6 = 12, and 12 / 3 = 4.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Numbers: 3, 3, 5, 9. Which is the mode?",
+     "hint": "Most often.",
+     "explanation": "3 appears twice.",
+     "options": [
+      {
+       "id": "a",
+       "text": "5"
+      },
+      {
+       "id": "b",
+       "text": "9"
+      },
+      {
+       "id": "c",
+       "text": "3"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The median is the middle value when numbers are in order.",
+     "hint": "In the middle.",
+     "explanation": "That is the median.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "honest",
+   "kind": "try",
+   "title": "Honest charts and databases",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Charts that tell the truth"
+    },
+    {
+     "type": "text",
+     "markdown": "An honest **bar chart** starts at **zero** and labels every bar.\n\nRead the numbers, not just the height!",
+     "say": "A chart should help people understand, not trick them. An honest bar chart starts its bars at zero, has a clear title, and labels each bar. A tricky chart might squash or stretch the scale so small differences look huge. Always read the numbers, not just the height of the bars. This chart shows rainy days in each month."
+    },
+    {
+     "type": "chart",
+     "kind": "bar_chart",
+     "title": "Rainy days per month",
+     "rows": [
+      {
+       "label": "Jun",
+       "value": 4
+      },
+      {
+       "label": "Jul",
+       "value": 10
+      },
+      {
+       "label": "Aug",
+       "value": 9
+      },
+      {
+       "label": "Sep",
+       "value": 5
+      }
+     ],
+     "caption": "July had the most rainy days.",
+     "say": "Look at the bars. Which month is tallest?"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In the rainy days chart, which month had the most rainy days?",
+      "hint": "Find the tallest bar.",
+      "explanation": "July has 10, the most.",
+      "skill_tag": "data4.chart",
+      "options": [
+       {
+        "id": "a",
+        "text": "June"
+       },
+       {
+        "id": "b",
+        "text": "September"
+       },
+       {
+        "id": "c",
+        "text": "July"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Spot the trick",
+     "materials": [
+      "Pencil and paper"
+     ],
+     "instructions": [
+      "Draw a bar chart of 3 votes and 5 votes, starting at zero.",
+      "Now draw it starting at 2. How do the bars look different?",
+      "Which chart is honest? Why?"
+     ],
+     "say": "Try drawing the same votes two ways and compare them."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Databases"
+    },
+    {
+     "type": "text",
+     "markdown": "A **database** is an organised table. Each **row** is one item and each **column** is a **field**.",
+     "say": "A database stores lots of information in an organised table. Each row is one thing, such as one book. Each column is one kind of fact, called a field, such as the title or the year. Computers can search and sort a database very quickly. Look at this small library database."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Library database: books read",
+     "rows": [
+      {
+       "label": "Dragon Tales",
+       "value": 12
+      },
+      {
+       "label": "Space Rocket",
+       "value": 9
+      },
+      {
+       "label": "Sea Secrets",
+       "value": 15
+      },
+      {
+       "label": "Tiny Ants",
+       "value": 7
+      }
+     ],
+     "caption": "Book title and the number of times borrowed."
+    },
+    {
+     "type": "image",
+     "emoji": "🔎📚",
+     "alt": "A database can be searched and sorted in an instant.",
+     "caption": "A database can be searched and sorted in an instant.",
+     "say": "Computers can sort this table from the most borrowed to the least borrowed in an instant."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which book was borrowed the most?",
+      "hint": "Find the biggest number.",
+      "explanation": "Sea Secrets was borrowed 15 times.",
+      "skill_tag": "data4.database",
+      "options": [
+       {
+        "id": "a",
+        "text": "Tiny Ants"
+       },
+       {
+        "id": "b",
+        "text": "Space Rocket"
+       },
+       {
+        "id": "c",
+        "text": "Sea Secrets"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Honest charts start at zero",
+      "A database has rows and columns"
+     ],
+     "say": "Let us remember. Honest charts start at zero and are clearly labelled. A database stores facts in rows and columns."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bar chart",
+       "meaning": "A chart that uses bars to compare amounts."
+      },
+      {
+       "term": "zero",
+       "meaning": "The starting point of a scale."
+      },
+      {
+       "term": "database",
+       "meaning": "An organised table of information."
+      },
+      {
+       "term": "row",
+       "meaning": "One item across a table."
+      },
+      {
+       "term": "column",
+       "meaning": "One kind of fact down a table."
+      },
+      {
+       "term": "field",
+       "meaning": "A column heading, such as title or year."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "An honest bar chart should start at...",
+     "hint": "The beginning of the scale.",
+     "explanation": "Honest charts start at zero.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fifty"
+      },
+      {
+       "id": "b",
+       "text": "Zero"
+      },
+      {
+       "id": "c",
+       "text": "The tallest bar"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A column in a database holds one kind of fact.",
+     "hint": "Think of titles.",
+     "explanation": "A column is one field.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A library database shows Dragon Tales 12 and Tiny Ants 7. How many more times was Dragon Tales borrowed?",
+     "hint": "Take 7 from 12.",
+     "explanation": "12 - 7 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "venn_chance",
+   "kind": "play",
+   "title": "Venn diagrams and chance experiments",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Venn diagrams"
+    },
+    {
+     "type": "text",
+     "markdown": "A **Venn diagram** uses overlapping circles. The middle holds things with **both** properties.",
+     "say": "A Venn diagram sorts things with two circles. Each circle holds things with one property. The overlap in the middle holds things that have both. Let us sort animals into those with wings and those that swim. A duck has wings and swims, so it goes in the overlap. An eagle has wings only. A fish swims only."
+    },
+    {
+     "type": "explainer",
+     "title": "Wings or swimming?",
+     "scenes": [
+      {
+       "caption": "Three animals to sort.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🦆",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "🦅",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🐟",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here are the animals before sorting: duck, eagle, fish."
+      },
+      {
+       "caption": "Two circles: wings and swim.",
+       "items": [
+        {
+         "id": "v",
+         "prop": {
+          "kind": "venn",
+          "labels": [
+           "Wings",
+           "Swim"
+          ]
+         },
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The Venn diagram has a circle for wings and a circle for swimming."
+      },
+      {
+       "caption": "The duck goes in the middle.",
+       "items": [
+        {
+         "id": "v",
+         "prop": {
+          "kind": "venn",
+          "labels": [
+           "Wings",
+           "Swim"
+          ]
+         },
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "🦅",
+         "x": 28,
+         "y": 60,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "f",
+         "emoji": "🐟",
+         "x": 72,
+         "y": 60,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "d",
+         "emoji": "🦆",
+         "x": 50,
+         "y": 62,
+         "size": 1,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The eagle goes in wings only, the fish in swim only, and the duck in the overlap because it has both."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where does a duck go in the wings and swim Venn diagram?",
+      "hint": "It does both.",
+      "explanation": "A duck has wings and swims, so it goes in the middle.",
+      "skill_tag": "data4.venn",
+      "options": [
+       {
+        "id": "a",
+        "text": "Only in wings"
+       },
+       {
+        "id": "b",
+        "text": "In the overlap"
+       },
+       {
+        "id": "c",
+        "text": "Outside the circles"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Chance experiments"
+    },
+    {
+     "type": "text",
+     "markdown": "A **chance experiment** repeats a test many times and records the results.",
+     "say": "In a chance experiment we try something many times and record the results. If you toss a coin twenty times, you might get about ten heads. But not exactly ten! The more times you try, the closer the results usually get to what you expect. Data from experiments helps us decide how likely things are. Play a memory game to warm up, then try the experiment at home."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Chance pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🪙",
+      "🎲",
+      "🃏",
+      "🎯"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Toss a coin 20 times",
+     "materials": [
+      "A coin",
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Toss the coin 20 times.",
+      "Make a tally of heads and tails.",
+      "Is it exactly 10 each? Is it close?"
+     ],
+     "say": "Toss a coin twenty times and keep a tally of heads and tails."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If we toss a coin 20 times we must get exactly 10 heads.",
+      "hint": "Chance is not certain.",
+      "explanation": "We expect about 10 but it can vary.",
+      "skill_tag": "data4.chance",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A Venn diagram has an overlap for both properties",
+      "Repeat a chance experiment to see what happens"
+     ],
+     "say": "Let us remember. Venn diagrams sort with overlapping circles. Chance experiments repeat tests and record results."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "both",
+       "meaning": "The two things together."
+      },
+      {
+       "term": "venn diagram",
+       "meaning": "Overlapping circles used to sort things."
+      },
+      {
+       "term": "overlap",
+       "meaning": "The part in the middle where circles meet."
+      },
+      {
+       "term": "experiment",
+       "meaning": "A test we do to find something out."
+      },
+      {
+       "term": "chance",
+       "meaning": "How likely something is."
+      },
+      {
+       "term": "record",
+       "meaning": "To write down results."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "The overlap of a Venn diagram holds things that...",
+     "hint": "The middle.",
+     "explanation": "The overlap is for both.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Have neither"
+      },
+      {
+       "id": "b",
+       "text": "Are broken"
+      },
+      {
+       "id": "c",
+       "text": "Have both properties"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "An experiment can be repeated to get more data.",
+     "hint": "Try again.",
+     "explanation": "More tries give more data.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A fish swims but has no wings. Which part of the wings and swim diagram?",
+     "hint": "It does not fly.",
+     "explanation": "Fish swim only.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wings only"
+      },
+      {
+       "id": "b",
+       "text": "Swim only"
+      },
+      {
+       "id": "c",
+       "text": "The overlap"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use_data",
+   "kind": "use",
+   "title": "Reading change over time",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Data over time"
+    },
+    {
+     "type": "text",
+     "markdown": "We can look for a **trend**: does the data go up, down or stay the same?",
+     "say": "Some data changes over time, like the temperature through a week. We can record it in a table and look for a pattern. Does it go up, go down, or stay the same? Here is the midday temperature in Lahore across four days in autumn."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Midday temperature (degrees C)",
+     "rows": [
+      {
+       "label": "Mon",
+       "value": 28
+      },
+      {
+       "label": "Tue",
+       "value": 30
+      },
+      {
+       "label": "Wed",
+       "value": 31
+      },
+      {
+       "label": "Thu",
+       "value": 33
+      }
+     ],
+     "caption": "Temperatures rise each day.",
+     "say": "Look at the table. The numbers get bigger each day."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is the trend in the temperature?",
+      "hint": "Compare the numbers.",
+      "explanation": "28, 30, 31, 33 rise each day.",
+      "skill_tag": "data4.trend",
+      "options": [
+       {
+        "id": "a",
+        "text": "It stays the same"
+       },
+       {
+        "id": "b",
+        "text": "It goes up each day"
+       },
+       {
+        "id": "c",
+        "text": "It goes down"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Tell the story"
+    },
+    {
+     "type": "text",
+     "markdown": "Describe the story with numbers, then make a careful **prediction**.",
+     "say": "A good detective tells the story of the data in a sentence. For example: the temperature rose by five degrees from Monday to Thursday. Then they ask a new question, like what might happen on Friday. A prediction must say it is a prediction, because we cannot be sure."
+    },
+    {
+     "type": "image",
+     "emoji": "🌡️📈",
+     "alt": "The temperature rose from 28 to 33 degrees.",
+     "caption": "The temperature rose from 28 to 33 degrees.",
+     "say": "The temperature rose by five degrees from Monday to Thursday."
+    },
+    {
+     "type": "activity",
+     "title": "My weather table",
+     "materials": [
+      "Pencil and paper",
+      "A thermometer or a weather app"
+     ],
+     "instructions": [
+      "Record the temperature at the same time for four days.",
+      "Write one sentence about the trend.",
+      "Make a careful prediction for tomorrow."
+     ],
+     "say": "Now collect real data at home."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Can we be sure the temperature will be 34 on Friday?",
+     "answer_markdown": "No. A prediction is a sensible guess from the pattern, but the weather can change."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "The temperature went from 28 on Monday to 33 on Thursday. By how many degrees did it rise?",
+      "hint": "Take 28 from 33.",
+      "explanation": "33 - 28 = 5.",
+      "skill_tag": "data4.compare",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Look for the trend: up, down or the same",
+      "A prediction is a careful guess"
+     ],
+     "say": "Let us remember. Tables show change over time. Find the trend and make a careful prediction."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "trend",
+       "meaning": "The way data changes: up, down or the same."
+      },
+      {
+       "term": "prediction",
+       "meaning": "A careful guess about what will happen next."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats or changes in a regular way."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a trend?",
+     "hint": "Up, down or the same.",
+     "explanation": "A trend is how data changes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of chart colour"
+      },
+      {
+       "id": "b",
+       "text": "The way data changes over time"
+      },
+      {
+       "id": "c",
+       "text": "A computer part"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A prediction is always right.",
+     "hint": "It is a guess.",
+     "explanation": "A prediction can be wrong.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "Temperatures: 28, 30, 31, 33. What was the rise from Tuesday to Wednesday?",
+     "hint": "31 minus 30.",
+     "explanation": "31 - 30 = 1.",
+     "answer": {
+      "value": 1,
+      "tolerance": 0
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which question could a survey answer?",
+    "hint": "Ask people.",
+    "explanation": "A survey asks people for their opinions.",
+    "skill_tag": "data4.survey",
+    "options": [
+     {
+      "id": "a",
+      "text": "What is 6 times 7?"
+     },
+     {
+      "id": "b",
+      "text": "What is our class's favourite fruit?"
+     },
+     {
+      "id": "c",
+      "text": "How tall is Everest?"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "Scores 3, 6 and 9. What is the mean?",
+    "hint": "18 divided by 3.",
+    "explanation": "3 + 6 + 9 = 18, divided by 3 is 6.",
+    "skill_tag": "data4.mean",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "Starting a bar chart at 3 instead of 0 can make small differences look big.",
+    "hint": "Think about the trick.",
+    "explanation": "A cut-off scale exaggerates differences.",
+    "skill_tag": "data4.chart",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "honest",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about databases.",
+    "hint": "Think of a table.",
+    "explanation": "Rows are items, columns are fields.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "text": "A database has {b1} for items and {b2} for facts.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "roofs"
+       },
+       {
+        "id": "b",
+        "text": "rows"
+       },
+       {
+        "id": "c",
+        "text": "roots"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "clouds"
+       },
+       {
+        "id": "b",
+        "text": "caves"
+       },
+       {
+        "id": "c",
+        "text": "columns"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "honest",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Pick the two honest chart habits.",
+    "hint": "Think about honesty.",
+    "explanation": "Zero start and labels are honest.",
+    "skill_tag": "data4.chart",
+    "options": [
+     {
+      "id": "a",
+      "text": "Label each bar"
+     },
+     {
+      "id": "b",
+      "text": "Hide the title"
+     },
+     {
+      "id": "c",
+      "text": "Stretch the scale"
+     },
+     {
+      "id": "d",
+      "text": "Start the bars at zero"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "honest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "match",
+    "prompt": "Pair each averages word with its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each average has its own meaning.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Mean"
+     },
+     {
+      "id": "l2",
+      "text": "Mode"
+     },
+     {
+      "id": "l3",
+      "text": "Median"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "The most common"
+     },
+     {
+      "id": "r3",
+      "text": "The middle value"
+     },
+     {
+      "id": "r1",
+      "text": "The fair share"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "surveys",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A coin is tossed 10 times and lands heads 6 times. What can we say?",
+    "hint": "Chance varies.",
+    "explanation": "Results vary, but near 5 is normal.",
+    "skill_tag": "data4.chance",
+    "options": [
+     {
+      "id": "a",
+      "text": "Heads always wins"
+     },
+     {
+      "id": "b",
+      "text": "It is close to what we expect, but not exactly 5"
+     },
+     {
+      "id": "c",
+      "text": "The coin is broken"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Idris says the mean must always be one of the numbers in the list. Is he right?",
+    "hint": "Try 2 and 3.",
+    "explanation": "The mean of 2 and 3 is 2.5, which is not in the list.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only for even numbers"
+     },
+     {
+      "id": "b",
+      "text": "No, it can be a number that is not in the list"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to show the mean of 3, 6 and 9.",
+    "hint": "Add, then divide by 3.",
+    "explanation": "18 divided by 3 is 6.",
+    "skill_tag": "data4.mean",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "hotspot",
+    "prompt": "Tap where a duck belongs in the wings and swim Venn diagram.",
+    "hint": "It does both.",
+    "explanation": "A duck has wings and swims.",
+    "skill_tag": "data4.venn",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⭕",
+       "label": "Wings only",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔘",
+       "label": "The overlap",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭕",
+       "label": "Swim only",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Which is the mode of 2, 2, 4, 5?",
+    "hint": "Most often.",
+    "explanation": "2 appears twice.",
+    "skill_tag": "data4.mode",
+    "options": [
+     {
+      "id": "a",
+      "text": "4"
+     },
+     {
+      "id": "b",
+      "text": "5"
+     },
+     {
+      "id": "c",
+      "text": "2"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "The temperature was 22 on Monday and 27 on Thursday. By how many degrees did it rise?",
+    "hint": "27 minus 22.",
+    "explanation": "27 - 22 = 5.",
+    "skill_tag": "data4.compare",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "true_false",
+    "prompt": "A trend can only go up.",
+    "hint": "It can fall.",
+    "explanation": "A trend can go down too.",
+    "skill_tag": "data4.trend",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a prediction is a fact. Is he right?",
+    "hint": "We cannot be sure.",
+    "explanation": "A prediction can be wrong.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only in maths"
+     },
+     {
+      "id": "b",
+      "text": "No, it is a careful guess"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always true"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these data detective steps in order.",
+    "hint": "Question first.",
+    "explanation": "Ask, collect, then describe.",
+    "skill_tag": "data4.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Describe the trend"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a question"
+     },
+     {
+      "id": "i2",
+      "text": "Collect data in a table"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which question can a survey answer?",
+    "hint": "Ask people.",
+    "explanation": "A survey asks people for their opinions.",
+    "skill_tag": "data4.survey",
+    "options": [
+     {
+      "id": "a",
+      "text": "What is 6 times 7?"
+     },
+     {
+      "id": "b",
+      "text": "What is our class's favourite fruit?"
+     },
+     {
+      "id": "c",
+      "text": "How tall is Everest?"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What do we call asking many people the same question?",
+    "hint": "Ask people.",
+    "explanation": "That is a survey.",
+    "skill_tag": "data4.survey",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bug"
+     },
+     {
+      "id": "b",
+      "text": "A survey"
+     },
+     {
+      "id": "c",
+      "text": "A flowchart"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "Scores 4, 6, 8. What is the mean?",
+    "hint": "18 divided by 3.",
+    "explanation": "4 + 6 + 8 = 18, divided by 3 is 6.",
+    "skill_tag": "data4.mean",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "Scores 3, 7, 5, 5. What is the mean?",
+    "hint": "20 divided by 4.",
+    "explanation": "3 + 7 + 5 + 5 = 20, divided by 4 is 5.",
+    "skill_tag": "data4.mean",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "Starting a bar chart at 2 instead of 0 can make small differences look big.",
+    "hint": "Think about the trick.",
+    "explanation": "A truncated scale exaggerates differences.",
+    "skill_tag": "data4.chart",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "honest",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "A chart is honest even if the bars are cut off.",
+    "hint": "Honest charts start at zero.",
+    "explanation": "Cut-off bars can mislead.",
+    "skill_tag": "data4.chart",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "honest",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish this sentence about databases.",
+    "hint": "Think of a table.",
+    "explanation": "Rows are items, columns are fields.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "text": "A database has {b1} for items and {b2} for facts.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "roots"
+       },
+       {
+        "id": "b",
+        "text": "rows"
+       },
+       {
+        "id": "c",
+        "text": "roofs"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "clouds"
+       },
+       {
+        "id": "b",
+        "text": "caves"
+       },
+       {
+        "id": "c",
+        "text": "columns"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "honest",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete this sentence about averages.",
+    "hint": "Think back.",
+    "explanation": "Median is the middle and mode is the most common.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "text": "The {b1} is the middle value and the {b2} is the most common.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "mean"
+       },
+       {
+        "id": "b",
+        "text": "total"
+       },
+       {
+        "id": "c",
+        "text": "median"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "range"
+       },
+       {
+        "id": "b",
+        "text": "mode"
+       },
+       {
+        "id": "c",
+        "text": "map"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "honest",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are honest chart habits? Pick two.",
+    "hint": "Think about honesty.",
+    "explanation": "Zero start and labels are honest.",
+    "skill_tag": "data4.chart",
+    "options": [
+     {
+      "id": "a",
+      "text": "Label each bar"
+     },
+     {
+      "id": "b",
+      "text": "Hide the title"
+     },
+     {
+      "id": "c",
+      "text": "Stretch the scale"
+     },
+     {
+      "id": "d",
+      "text": "Start the bars at zero"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "honest",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick two things a database has.",
+    "hint": "Think of a table.",
+    "explanation": "Databases have rows and columns.",
+    "skill_tag": "data4.database",
+    "options": [
+     {
+      "id": "a",
+      "text": "Columns"
+     },
+     {
+      "id": "b",
+      "text": "Wheels"
+     },
+     {
+      "id": "c",
+      "text": "Wings"
+     },
+     {
+      "id": "d",
+      "text": "Rows"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "honest",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "match",
+    "prompt": "Pair each average with what it tells us.",
+    "hint": "Think back.",
+    "explanation": "Each average has its own meaning.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Mean"
+     },
+     {
+      "id": "l2",
+      "text": "Mode"
+     },
+     {
+      "id": "l3",
+      "text": "Median"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "The most common"
+     },
+     {
+      "id": "r3",
+      "text": "The middle value"
+     },
+     {
+      "id": "r1",
+      "text": "The fair share"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "match",
+    "prompt": "Pair each database word with its meaning.",
+    "hint": "Think back.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "data4.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Row"
+     },
+     {
+      "id": "l2",
+      "text": "Column"
+     },
+     {
+      "id": "l3",
+      "text": "Database"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "One kind of fact"
+     },
+     {
+      "id": "r3",
+      "text": "An organised table"
+     },
+     {
+      "id": "r1",
+      "text": "One item"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A coin lands heads 6 times out of 10 tosses. What can we say?",
+    "hint": "Chance varies.",
+    "explanation": "Results vary, but near 5 is normal.",
+    "skill_tag": "data4.chance",
+    "options": [
+     {
+      "id": "a",
+      "text": "The coin is broken"
+     },
+     {
+      "id": "b",
+      "text": "It is close to what we expect, but not exactly 5"
+     },
+     {
+      "id": "c",
+      "text": "Heads always wins"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "A dice is rolled 12 times and lands on six 3 times. What can we say?",
+    "hint": "Chance varies.",
+    "explanation": "Results vary a little.",
+    "skill_tag": "data4.chance",
+    "options": [
+     {
+      "id": "a",
+      "text": "Six always wins"
+     },
+     {
+      "id": "b",
+      "text": "It is close to what we expect, but not exact"
+     },
+     {
+      "id": "c",
+      "text": "The dice is broken"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Idris says the mean is always in the list of numbers. Is he right?",
+    "hint": "Try 2 and 3.",
+    "explanation": "The mean of 2 and 3 is 2.5, which is not in the list.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "No, it can be a number that is not in the list"
+     },
+     {
+      "id": "c",
+      "text": "Only for even numbers"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "Rania says a bar chart that starts at 5 is just as honest. Is she right?",
+    "hint": "Think about the scale.",
+    "explanation": "Starting above zero can mislead.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only on Tuesdays"
+     },
+     {
+      "id": "b",
+      "text": "No, starting at zero is more honest"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to show the mean of 2, 5 and 8.",
+    "hint": "Add, then divide by 3.",
+    "explanation": "15 divided by 3 is 5.",
+    "skill_tag": "data4.mean",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "slider",
+    "prompt": "Slide to show the mean of 4, 6, 8 and 10.",
+    "hint": "Add, then divide by 4.",
+    "explanation": "28 divided by 4 is 7.",
+    "skill_tag": "data4.mean",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "surveys",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "hotspot",
+    "prompt": "Tap where the duck belongs in the wings and swim diagram.",
+    "hint": "It does both.",
+    "explanation": "A duck has wings and swims.",
+    "skill_tag": "data4.venn",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⭕",
+       "label": "Wings only",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔘",
+       "label": "The overlap",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭕",
+       "label": "Swim only",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "hotspot",
+    "prompt": "Tap where an animal that swims but has no wings belongs.",
+    "hint": "No wings.",
+    "explanation": "It swims but does not fly.",
+    "skill_tag": "data4.venn",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⭕",
+       "label": "Wings only",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔘",
+       "label": "The overlap",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭕",
+       "label": "Swim only",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "venn_chance",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is the mode of 2, 2, 4, 5?",
+    "hint": "Most often.",
+    "explanation": "2 appears twice.",
+    "skill_tag": "data4.mode",
+    "options": [
+     {
+      "id": "a",
+      "text": "5"
+     },
+     {
+      "id": "b",
+      "text": "2"
+     },
+     {
+      "id": "c",
+      "text": "4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Which is the mode of 7, 8, 8, 9, 8?",
+    "hint": "Most often.",
+    "explanation": "8 appears three times.",
+    "skill_tag": "data4.mode",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "8"
+     },
+     {
+      "id": "c",
+      "text": "7"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "surveys",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "number",
+    "prompt": "The temperature was 24 on Monday and 29 on Thursday. By how many degrees did it rise?",
+    "hint": "29 minus 24.",
+    "explanation": "29 - 24 = 5.",
+    "skill_tag": "data4.compare",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "number",
+    "prompt": "Lahore was 26 on Tuesday and 31 on Friday. How many degrees did it rise?",
+    "hint": "31 minus 26.",
+    "explanation": "31 - 26 = 5.",
+    "skill_tag": "data4.compare",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "true_false",
+    "prompt": "A trend can go up, go down or stay the same.",
+    "hint": "Three options.",
+    "explanation": "Those are the three types of trend.",
+    "skill_tag": "data4.trend",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "true_false",
+    "prompt": "A trend always goes up.",
+    "hint": "It can fall.",
+    "explanation": "A trend can go down too.",
+    "skill_tag": "data4.trend",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "use_data",
+    "depth": "recall",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a prediction is always a fact. Is he right?",
+    "hint": "We cannot be sure.",
+    "explanation": "A prediction can be wrong.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always true"
+     },
+     {
+      "id": "b",
+      "text": "Only in maths"
+     },
+     {
+      "id": "c",
+      "text": "No, it is a careful guess"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Mina says we can be sure about tomorrow's weather from one pattern. Is she right?",
+    "hint": "We cannot be sure.",
+    "explanation": "Weather can change.",
+    "skill_tag": "data4.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always sure"
+     },
+     {
+      "id": "b",
+      "text": "Only in autumn"
+     },
+     {
+      "id": "c",
+      "text": "No, it is only a prediction"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Put the data detective jobs in order.",
+    "hint": "Question first.",
+    "explanation": "Ask, collect, then describe.",
+    "skill_tag": "data4.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Collect data in a table"
+     },
+     {
+      "id": "i3",
+      "text": "Describe the trend"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "order",
+    "prompt": "Order these survey steps.",
+    "hint": "Plan first.",
+    "explanation": "Sample, ask, then show.",
+    "skill_tag": "data4.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask everyone the same question"
+     },
+     {
+      "id": "i3",
+      "text": "Show the results in a chart"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a fair sample"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

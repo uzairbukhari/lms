@@ -56,6 +56,8 @@ export function audit(file) {
     close();
     const gloss = (sub.blocks.find((b) => b.type === "glossary")?.terms ?? []).map((t) => norm(t.term));
     for (const b of sub.blocks) for (const m of (b.markdown ?? "").matchAll(/\*\*(.+?)\*\*/g)) { const w = norm(m[1]); if (!gloss.some((g) => g === w || g.includes(w) || w.includes(g))) fail(`${where}: bold word "${w}" is not in its glossary`); }
+    const said = sub.blocks.filter((b) => b.say).length + sub.blocks.flatMap((b) => (b.type === "explainer" ? b.scenes : [])).filter((sc) => sc.say).length;
+    if (said < 5) fail(`${where}: only ${said} narration scripts (needs at least 5)`);
     if (sub.mini_quiz.length < 3 || sub.mini_quiz.length > 5) fail(`${where}: mini quiz has ${sub.mini_quiz.length} questions (needs 3 to 5)`);
     for (const q of sub.mini_quiz) if (!q.hint || !q.explanation) fail(`${where}: a mini quiz question lacks a hint or explanation`);
   }
