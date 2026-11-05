@@ -1,0 +1,2777 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-measuring-time",
+  "subject": "maths",
+  "title": "Measuring and Time",
+  "summary": "Length, mass and capacity, converting units, perimeter and area, 12-hour and 24-hour clocks, timetables and time intervals.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 4: Measuring and time",
+  "learning_objectives": [
+   "Convert between units of length, mass and capacity",
+   "Find perimeter and area",
+   "Read 24-hour time and work out time intervals"
+  ],
+  "tags": [
+   "topic",
+   "topic-4"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 4
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 measurement",
+    "text": "Convert between units of measure; find the perimeter of rectilinear shapes and the area by counting squares"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y4 time",
+    "text": "Read, write and convert time between analogue and digital 12- and 24-hour clocks"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.09"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gt.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gt.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gt.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gt.04"
+   }
+  ],
+  "success_criteria": [
+   "I can change between metres and centimetres, grams and kilograms, litres and millilitres",
+   "I can find the perimeter and area of a rectangle",
+   "I can read a timetable and find how long something takes"
+  ],
+  "real_life": "Cooking recipes, planning journeys with timetables, and measuring how much water our family uses.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is 3/4 of 8?",
+    "hint": "8 ÷ 4 = 2, then times 3.",
+    "explanation": "2 × 3 = 6.",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "6"
+     },
+     {
+      "id": "c",
+      "text": "4"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which fraction equals 1/2?",
+    "hint": "Multiply top and bottom by 2.",
+    "explanation": "1/2 = 2/4.",
+    "options": [
+     {
+      "id": "a",
+      "text": "1/4"
+     },
+     {
+      "id": "b",
+      "text": "2/3"
+     },
+     {
+      "id": "c",
+      "text": "2/4"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 8 × 9?",
+    "hint": "Count in nines.",
+    "explanation": "8 × 9 = 72.",
+    "answer": {
+     "value": 72,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how can we measure our world, and our time, accurately?",
+   "say": "Welcome back, number explorer! Your family wants to use less water and energy this term. To do that, we need to measure carefully. How much water does a tap use? How long does a bus journey take? How big is a garden? Today you will learn to measure length, weight and liquid, work out perimeter and area, and read the twenty-four hour clock. Let's measure!"
+  },
+  {
+   "type": "image",
+   "emoji": "📏",
+   "alt": "Rulers, scales, jugs and clocks: tools for measuring.",
+   "caption": "Rulers, scales, jugs and clocks: tools for measuring."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "measure",
+     "meaning": "To find out how big, heavy or long something is."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "units",
+   "kind": "learn",
+   "title": "Length, mass and capacity",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Length"
+    },
+    {
+     "type": "text",
+     "markdown": "10 mm = 1 cm. 100 cm = 1 m. 1,000 m = 1 km.\n\nTo change to a smaller unit we **multiply**. To change to a bigger unit we **divide**.",
+     "say": "We measure how long something is in millimetres, centimetres, metres and kilometres. There are ten millimetres in one centimetre. There are one hundred centimetres in one metre. And there are one thousand metres in one kilometre. The words give us a clue. Kilo means one thousand. Centi means one hundred. Milli means one thousand. To change a big unit to a smaller one, we multiply."
+    },
+    {
+     "type": "explainer",
+     "title": "From metres to centimetres",
+     "scenes": [
+      {
+       "caption": "1 m",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "📏",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1 metre"
+        }
+       ],
+       "say": "Here is a metre stick. It is one metre long."
+      },
+      {
+       "caption": "2 m = 200 cm",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "📏",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "1 m"
+        },
+        {
+         "id": "n",
+         "emoji": "📏",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "2 m = 200 cm"
+        }
+       ],
+       "say": "A metre is a hundred centimetres. So two metres is two hundred centimetres."
+      },
+      {
+       "caption": "250 cm = 2 m 50 cm",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "📏",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "250 cm"
+        },
+        {
+         "id": "a",
+         "emoji": "➗",
+         "x": 50,
+         "y": 78,
+         "size": 2,
+         "anim": "pulse",
+         "label": "250 ÷ 100 = 2.5 m"
+        }
+       ],
+       "say": "To change metres to centimetres, multiply by one hundred. To change centimetres to metres, divide by one hundred. Two hundred and fifty centimetres is two metres and fifty centimetres."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many centimetres are in 3 metres?",
+      "hint": "Multiply by 100.",
+      "explanation": "3 × 100 = 300 cm.",
+      "skill_tag": "measure.length",
+      "answer": {
+       "value": 300,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Mass and capacity"
+    },
+    {
+     "type": "text",
+     "markdown": "**Mass** is how heavy something is: 1 kg = 1,000 g.\n\n**Capacity** is how much a container holds: 1 litre = 1,000 ml.",
+     "say": "We measure how heavy something is, its mass, in grams and kilograms. A kilogram is one thousand grams. And we measure how much a container holds, its capacity, in millilitres and litres. A litre is one thousand millilitres. Look at the scales. Two kilograms is two thousand grams."
+    },
+    {
+     "type": "explainer",
+     "title": "Weighing and pouring",
+     "scenes": [
+      {
+       "caption": "1 kg = 1,000 g",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1 kg = 1,000 g"
+        }
+       ],
+       "say": "A bag of rice is one kilogram. That is one thousand grams."
+      },
+      {
+       "caption": "1 l = 1,000 ml",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🍶",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1 litre = 1,000 ml"
+        }
+       ],
+       "say": "A bottle of water is one litre. That is one thousand millilitres."
+      },
+      {
+       "caption": "½ l = 500 ml, ½ kg = 500 g",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🍶",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "500 ml"
+        },
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "500 g"
+        }
+       ],
+       "say": "Half a litre is five hundred millilitres. Half a kilogram is five hundred grams."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the heaviest?",
+      "hint": "Change them all to grams.",
+      "explanation": "2 kg = 2,000 g, which is more than 1,500 g and 900 g.",
+      "skill_tag": "measure.mass",
+      "options": [
+       {
+        "id": "a",
+        "text": "1,500 g"
+       },
+       {
+        "id": "b",
+        "text": "2 kg"
+       },
+       {
+        "id": "c",
+        "text": "900 g"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "10 mm = 1 cm, 100 cm = 1 m, 1,000 m = 1 km",
+      "1 kg = 1,000 g and 1 l = 1,000 ml",
+      "Multiply for smaller units, divide for bigger"
+     ],
+     "say": "Remember. Multiply to go to a smaller unit and divide to go to a bigger one. One kilo or one kilometre is one thousand."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "multiply",
+       "meaning": "Make bigger by repeated adding, like 3 × 100."
+      },
+      {
+       "term": "divide",
+       "meaning": "Share into equal parts, like 300 ÷ 100."
+      },
+      {
+       "term": "mass",
+       "meaning": "How heavy something is."
+      },
+      {
+       "term": "capacity",
+       "meaning": "How much a container holds."
+      },
+      {
+       "term": "kilometre",
+       "meaning": "One thousand metres."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many millimetres are in 4 cm?",
+     "hint": "10 mm in 1 cm.",
+     "explanation": "4 × 10 = 40 mm.",
+     "answer": {
+      "value": 40,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "How many grams are in 2 kg?",
+     "hint": "1 kg = 1,000 g.",
+     "explanation": "2 × 1,000 = 2,000 g.",
+     "answer": {
+      "value": 2000,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is longest?",
+     "hint": "Change to centimetres.",
+     "explanation": "2 m = 200 cm, 1,000 mm = 100 cm.",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 cm"
+      },
+      {
+       "id": "b",
+       "text": "1,000 mm"
+      },
+      {
+       "id": "c",
+       "text": "2 m"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "2,500 ml is the same as 2 litres and 500 ml.",
+     "hint": "1 l = 1,000 ml.",
+     "explanation": "2,500 = 2,000 + 500.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perimeter_area",
+   "kind": "try",
+   "title": "Perimeter and area",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Perimeter"
+    },
+    {
+     "type": "text",
+     "markdown": "The **perimeter** is the distance around the outside. Add all the sides.\n\nRectangle 6 m by 4 m: 6 + 4 + 6 + 4 = 20 m.",
+     "say": "The perimeter is the distance all the way around the outside of a shape. Imagine walking round the edge of a garden. This garden is six metres long and four metres wide. Six plus four plus six plus four. That is twenty metres. Perimeter is a length, so we use metres, centimetres or other length units."
+    },
+    {
+     "type": "explainer",
+     "title": "Walking round a garden",
+     "scenes": [
+      {
+       "caption": "6 m",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "garden"
+        },
+        {
+         "id": "a",
+         "emoji": "👣",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "pulse",
+         "label": "6 m"
+        }
+       ],
+       "say": "Start with the long side, six metres."
+      },
+      {
+       "caption": "6 + 4",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "garden"
+        },
+        {
+         "id": "a",
+         "emoji": "👣",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "6 m"
+        },
+        {
+         "id": "b",
+         "emoji": "👣",
+         "x": 85,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4 m"
+        }
+       ],
+       "say": "Then the short side, four metres."
+      },
+      {
+       "caption": "6 + 4 + 6 + 4 = 20 m",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "garden"
+        },
+        {
+         "id": "a",
+         "emoji": "👣",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "6"
+        },
+        {
+         "id": "b",
+         "emoji": "👣",
+         "x": 85,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "4"
+        },
+        {
+         "id": "c",
+         "emoji": "👣",
+         "x": 50,
+         "y": 85,
+         "size": 2,
+         "anim": "none",
+         "label": "6"
+        },
+        {
+         "id": "d",
+         "emoji": "👣",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4"
+        }
+       ],
+       "say": "Then six metres back and four metres home. Six, four, six, four makes twenty metres."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A rectangle is 9 cm long and 5 cm wide. What is its perimeter?",
+      "hint": "Add all four sides.",
+      "explanation": "9 + 5 + 9 + 5 = 28 cm.",
+      "skill_tag": "measure.perimeter",
+      "answer": {
+       "value": 28,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Area"
+    },
+    {
+     "type": "text",
+     "markdown": "**Area** is the space inside a shape, counted in squares. Rectangle: length × width.\n\n4 × 3 = 12 square cm.",
+     "say": "Area is the amount of flat space inside a shape. We measure it by counting squares. A rectangle that is four squares long and three squares wide has three rows of four. Three fours are twelve. So the area is twelve square centimetres. For rectangles, multiply the length by the width."
+    },
+    {
+     "type": "explainer",
+     "title": "Counting squares",
+     "scenes": [
+      {
+       "caption": "1 row = 4",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "One row of four squares. That is four."
+      },
+      {
+       "caption": "2 rows = 8",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 55,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Add a second row. Two rows of four make eight."
+      },
+      {
+       "caption": "3 × 4 = 12 square cm",
+       "items": [
+        {
+         "id": "a1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 20,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 20,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 20,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "a4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 20,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c1",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c2",
+         "emoji": "🟦",
+         "x": 43.333333333333336,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c3",
+         "emoji": "🟦",
+         "x": 56.66666666666667,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c4",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A third row. Three rows of four make twelve square centimetres."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A rectangle is 6 squares long and 3 squares wide. What is its area in squares?",
+      "hint": "Length × width.",
+      "explanation": "6 × 3 = 18 squares.",
+      "skill_tag": "measure.area",
+      "answer": {
+       "value": 18,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "manipulative",
+     "title": "Tiles for a floor",
+     "goal": "Put the tiles in two groups to make rectangles. How many rows and columns?",
+     "emoji": "🟦",
+     "count": 20,
+     "zones": [
+      "Row 1",
+      "Row 2",
+      "Row 3",
+      "Row 4"
+     ],
+     "say": "Make a rectangle yourself. Here are twenty square tiles."
+    },
+    {
+     "type": "activity",
+     "title": "Measure a room",
+     "materials": [
+      "A ruler or tape measure",
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Measure the length and width of a table or book.",
+      "Add all four sides to find the perimeter.",
+      "Multiply length by width to find the area.",
+      "Say which is a length and which is a space."
+     ],
+     "say": "A job to try at home."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Perimeter: add the sides",
+      "Area: length × width for a rectangle",
+      "Perimeter is a length, area is square units"
+     ],
+     "say": "Remember. Perimeter is all the way around. Area is the space inside. Don't mix them up!"
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "perimeter",
+       "meaning": "The distance around the outside of a shape."
+      },
+      {
+       "term": "area",
+       "meaning": "The flat space inside a shape."
+      },
+      {
+       "term": "length",
+       "meaning": "How long something is."
+      },
+      {
+       "term": "width",
+       "meaning": "How wide something is."
+      },
+      {
+       "term": "rectangle",
+       "meaning": "A shape with four sides and four right angles."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A square has sides of 7 cm. What is its perimeter?",
+     "hint": "7 + 7 + 7 + 7.",
+     "explanation": "4 × 7 = 28 cm.",
+     "answer": {
+      "value": 28,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "A rectangle is 5 squares by 4 squares. What is its area?",
+     "hint": "5 × 4.",
+     "explanation": "20 squares.",
+     "answer": {
+      "value": 20,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Perimeter or area? \"The fence all round a field\"",
+     "hint": "All the way around.",
+     "explanation": "A fence goes round the edge.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Area"
+      },
+      {
+       "id": "b",
+       "text": "Neither"
+      },
+      {
+       "id": "c",
+       "text": "Perimeter"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The area of a 2 by 6 rectangle is 12.",
+     "hint": "2 × 6.",
+     "explanation": "2 × 6 = 12.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "kind": "play",
+   "title": "Clocks, 24-hour time and timetables",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: 12-hour and 24-hour clocks"
+    },
+    {
+     "type": "text",
+     "markdown": "**12-hour** time uses am and pm. **24-hour** time runs from 00:00 to 23:59.\n\n3:00 pm is 15:00. Add 12 to afternoon hours.",
+     "say": "A day has twenty-four hours, but a clock face only shows twelve. So we use am for the morning and pm for the afternoon and evening. Timetables often use the twenty-four hour clock instead. After midday, just add twelve. Three in the afternoon, three pm, is fifteen hundred hours, written fifteen oh oh."
+    },
+    {
+     "type": "explainer",
+     "title": "3:00 pm becomes 15:00",
+     "scenes": [
+      {
+       "caption": "3:00",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is a clock at three o'clock."
+      },
+      {
+       "caption": "3:00 pm = 15:00",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 15,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "In the afternoon, we add twelve to the hour. Three plus twelve is fifteen."
+      },
+      {
+       "caption": "7:40 pm = 19:40",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 19,
+          "minute": 40
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "And twenty to eight in the evening, seven forty pm, is nineteen forty."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 6:30 pm in 24-hour time?",
+      "hint": "Add 12 to the hour.",
+      "explanation": "6 + 12 = 18, so 18:30.",
+      "skill_tag": "time.24hour",
+      "options": [
+       {
+        "id": "a",
+        "text": "06:30"
+       },
+       {
+        "id": "b",
+        "text": "18:30"
+       },
+       {
+        "id": "c",
+        "text": "16:30"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Time intervals and timetables"
+    },
+    {
+     "type": "text",
+     "markdown": "To find a **time interval**, count on in steps: to the next hour, then whole hours, then minutes.\n\n09:40 to 12:10 is 2 hours 30 minutes.",
+     "say": "A timetable tells us when things happen. To find how long a journey takes, count on in easy steps. A train leaves at nine forty and arrives at twelve ten. Nine forty to ten is twenty minutes. Ten to twelve is two hours. Twelve to twelve ten is ten minutes. Add them: twenty, one hundred and twenty, ten. That is two hours and thirty minutes."
+    },
+    {
+     "type": "explainer",
+     "title": "09:40 to 12:10",
+     "scenes": [
+      {
+       "caption": "09:40",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 9,
+          "minute": 40
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The train leaves at nine forty."
+      },
+      {
+       "caption": "+20 minutes → 10:00",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 10,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "First count on to ten o'clock. That is twenty minutes."
+      },
+      {
+       "caption": "+2 hours → 12:00",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 12,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Then count on to twelve o'clock. That is two whole hours, one hundred and twenty minutes."
+      },
+      {
+       "caption": "+10 minutes → 12:10. Total 150 minutes",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 12,
+          "minute": 10
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Finally ten more minutes to twelve ten. Twenty, plus one hundred and twenty, plus ten, makes one hundred and fifty minutes: two and a half hours."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A film starts at 14:15 and finishes at 15:45. How many minutes long is it?",
+      "hint": "14:15 to 15:15 is 60 minutes.",
+      "explanation": "60 + 30 = 90 minutes.",
+      "skill_tag": "time.interval",
+      "answer": {
+       "value": 90,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain break"
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Clock lights",
+     "goal": "Watch, then copy.",
+     "emojis": [
+      "🕐",
+      "🕑",
+      "🕒",
+      "🕓"
+     ],
+     "say": "Brain break time. Watch the order, then copy it."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Ten minutes past 5 in the evening is 17:10.",
+      "hint": "5 + 12 = 17.",
+      "explanation": "17:10.",
+      "skill_tag": "time.24hour",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "24-hour time: add 12 after midday",
+      "Count on to find a time interval",
+      "Timetables use the 24-hour clock"
+     ],
+     "say": "Remember. In 24-hour time, add twelve for the afternoon. Count on in steps to find how long something takes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "12-hour",
+       "meaning": "Time with am and pm, counted twice around the clock."
+      },
+      {
+       "term": "24-hour",
+       "meaning": "Time counted from 00:00 to 23:59."
+      },
+      {
+       "term": "time interval",
+       "meaning": "How much time passes between two times."
+      },
+      {
+       "term": "timetable",
+       "meaning": "A list of times when things happen."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 08:15 in 12-hour time?",
+     "hint": "It is before 12.",
+     "explanation": "08:15 is in the morning.",
+     "options": [
+      {
+       "id": "a",
+       "text": "6:15 am"
+      },
+      {
+       "id": "b",
+       "text": "8:15 am"
+      },
+      {
+       "id": "c",
+       "text": "8:15 pm"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many minutes from 10:20 to 11:00?",
+     "hint": "Count on to the next hour.",
+     "explanation": "20 + 20 = 40.",
+     "answer": {
+      "value": 40,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "match",
+     "prompt": "Match the 12-hour time to the 24-hour time.",
+     "hint": "Add 12 for pm.",
+     "explanation": "2 + 12 = 14, 11 + 12 = 23.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "2:00 pm"
+      },
+      {
+       "id": "l2",
+       "text": "9:00 am"
+      },
+      {
+       "id": "l3",
+       "text": "11:00 pm"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "09:00"
+      },
+      {
+       "id": "r1",
+       "text": "14:00"
+      },
+      {
+       "id": "r3",
+       "text": "23:00"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "real_world",
+   "kind": "use",
+   "title": "Measuring our water",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How much water?"
+    },
+    {
+     "type": "text",
+     "markdown": "Project: how can our family use less water and energy?\n\nMeasure first, then plan. 4 litres each minute for 5 minutes is 20 litres.",
+     "say": "Your family project this term is about using less water and energy. First, we measure. If a tap fills a four litre bucket in one minute, then in five minutes it would fill twenty litres. Let's work out how a dripping tap wastes water. One drip a second might look tiny, but a drop is about a twentieth of a millilitre. Over a day, it adds up to a lot."
+    },
+    {
+     "type": "image",
+     "emoji": "🚰",
+     "alt": "A tap that runs 4 litres every minute.",
+     "caption": "A tap that runs 4 litres every minute."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A tap runs 6 litres every minute. How many litres in 5 minutes?",
+      "hint": "6 × 5.",
+      "explanation": "6 × 5 = 30 litres.",
+      "skill_tag": "measure.real_life",
+      "answer": {
+       "value": 30,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Recipe and timetable"
+    },
+    {
+     "type": "text",
+     "markdown": "Double a recipe by multiplying every amount by 2.\n\nSamosas baked from 4:15 for 35 minutes are ready at 4:50.",
+     "say": "Measuring helps in the kitchen too. A recipe for sixteen samosas needs two hundred and fifty grams of flour. For thirty-two samosas, we double everything: five hundred grams. If they bake from four fifteen for thirty-five minutes, when are they ready? Four fifteen plus thirty-five is four fifty."
+    },
+    {
+     "type": "explainer",
+     "title": "Baking samosas",
+     "scenes": [
+      {
+       "caption": "16 samosas = 250 g flour",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌾",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "250 g"
+        }
+       ],
+       "say": "Sixteen samosas need two hundred and fifty grams of flour."
+      },
+      {
+       "caption": "32 samosas = 500 g flour",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌾",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "250 g"
+        },
+        {
+         "id": "g",
+         "emoji": "🌾",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "500 g"
+        }
+       ],
+       "say": "Double it for thirty-two samosas. Five hundred grams."
+      },
+      {
+       "caption": "4:15 + 35 minutes",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 4,
+          "minute": 15
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "They go in the oven at four fifteen for thirty-five minutes."
+      },
+      {
+       "caption": "Ready at 4:50",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 4,
+          "minute": 50
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Ready at four fifty!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A cake goes in the oven at 13:30 and bakes for 45 minutes. When is it ready?",
+      "hint": "13:30 + 30 minutes is 14:00.",
+      "explanation": "13:30 + 45 minutes = 14:15.",
+      "skill_tag": "time.interval",
+      "options": [
+       {
+        "id": "a",
+        "text": "13:75"
+       },
+       {
+        "id": "b",
+        "text": "14:45"
+       },
+       {
+        "id": "c",
+        "text": "14:15"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Water audit milestone",
+     "materials": [
+      "A measuring jug or 1-litre bottle",
+      "A timer",
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "Run the kitchen tap for 30 seconds into a bucket.",
+      "Measure the litres. Double it to get litres per minute.",
+      "Work out the litres used for a 2 minute tooth brushing with the tap running.",
+      "Write down one way your family could save water."
+     ],
+     "say": "Time for your project work."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Measure and convert units",
+      "Double a recipe by multiplying everything by 2",
+      "Count on to find a finish time"
+     ],
+     "say": "Remember. Measure, convert and calculate. Double a recipe by multiplying everything, and count on to find the finish time."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "litre",
+       "meaning": "A unit of capacity. 1 litre = 1,000 ml."
+      },
+      {
+       "term": "recipe",
+       "meaning": "Instructions and amounts for cooking."
+      },
+      {
+       "term": "double",
+       "meaning": "Make twice as big, multiply by 2."
+      },
+      {
+       "term": "project",
+       "meaning": "A bigger task you plan and do over time."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A bucket holds 10 litres. A tap fills it in 2 minutes. How many litres per minute?",
+     "hint": "10 ÷ 2.",
+     "explanation": "10 ÷ 2 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "A recipe uses 150 g of sugar. How much for double the recipe?",
+     "hint": "150 × 2.",
+     "explanation": "300 g.",
+     "answer": {
+      "value": 300,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A bus leaves at 15:40 and the trip takes 25 minutes. When does it arrive?",
+     "hint": "15:40 + 20 minutes is 16:00.",
+     "explanation": "16:00 + 5 = 16:05.",
+     "options": [
+      {
+       "id": "a",
+       "text": "15:65"
+      },
+      {
+       "id": "b",
+       "text": "16:05"
+      },
+      {
+       "id": "c",
+       "text": "16:15"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "How many centimetres are in 1 metre?",
+    "hint": "Think of a metre ruler.",
+    "explanation": "100 cm = 1 m.",
+    "skill_tag": "measure.length",
+    "options": [
+     {
+      "id": "a",
+      "text": "10"
+     },
+     {
+      "id": "b",
+      "text": "1,000"
+     },
+     {
+      "id": "c",
+      "text": "100"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "units",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "How many grams are in 3 kg?",
+    "hint": "1 kg = 1,000 g.",
+    "explanation": "3 × 1,000 = 3,000 g.",
+    "skill_tag": "measure.mass",
+    "answer": {
+     "value": 3000,
+     "tolerance": 0
+    },
+    "sub_lesson": "units",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "1 litre is 1,000 millilitres.",
+    "hint": "Milli means one thousandth.",
+    "explanation": "1 l = 1,000 ml.",
+    "skill_tag": "measure.units",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "units",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Change 250 cm.",
+    "hint": "100 cm in 1 m.",
+    "explanation": "250 cm = 2 m 50 cm.",
+    "skill_tag": "measure.convert",
+    "points": 2,
+    "text": "250 cm = {b1} m and {b2} cm.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "250"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "25"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "50"
+       },
+       {
+        "id": "c",
+        "text": "25"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "units",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are the same as 2 kg? Pick two.",
+    "hint": "1 kg = 1,000 g.",
+    "explanation": "2 kg = 2,000 g.",
+    "skill_tag": "measure.convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "200 g"
+     },
+     {
+      "id": "b",
+      "text": "20 g"
+     },
+     {
+      "id": "c",
+      "text": "1,000 g + 1,000 g"
+     },
+     {
+      "id": "d",
+      "text": "2,000 g"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these lengths in order, shortest first.",
+    "hint": "Change all to centimetres.",
+    "explanation": "100 cm, 120 cm, 150 cm, 200 cm.",
+    "skill_tag": "measure.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "1.5 m"
+     },
+     {
+      "id": "i4",
+      "text": "2 m"
+     },
+     {
+      "id": "i2",
+      "text": "120 cm"
+     },
+     {
+      "id": "i1",
+      "text": "1,000 mm"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Slide to show the height of a door in centimetres.",
+    "hint": "A door is about 2 m tall.",
+    "explanation": "A door is about 200 cm.",
+    "skill_tag": "measure.estimate",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 300
+    },
+    "answer": {
+     "value": 200,
+     "tolerance": 20
+    },
+    "sub_lesson": "units",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "A rectangle is 8 cm long and 5 cm wide. What is its perimeter in cm?",
+    "hint": "Add all four sides.",
+    "explanation": "8 + 5 + 8 + 5 = 26.",
+    "skill_tag": "measure.perimeter",
+    "answer": {
+     "value": 26,
+     "tolerance": 0
+    },
+    "sub_lesson": "perimeter_area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Zara says a 4 cm by 3 cm rectangle has a perimeter of 12 because 4 × 3 = 12. Is she right?",
+    "hint": "Perimeter means all the way around.",
+    "explanation": "Multiplying gives the area.",
+    "skill_tag": "measure.perimeter_area",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the perimeter is 7 cm"
+     },
+     {
+      "id": "b",
+      "text": "No, 12 is the area. The perimeter is 4 + 3 + 4 + 3 = 14 cm"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 12 is the perimeter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Which 24-hour time matches each clock time?",
+    "hint": "Add 12 for pm.",
+    "explanation": "3 + 12 = 15, 11 + 12 = 23.",
+    "skill_tag": "time.24hour",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3:00 pm"
+     },
+     {
+      "id": "l2",
+      "text": "7:30 am"
+     },
+     {
+      "id": "l3",
+      "text": "11:45 pm"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "07:30"
+     },
+     {
+      "id": "r3",
+      "text": "23:45"
+     },
+     {
+      "id": "r1",
+      "text": "15:00"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "time",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the rectangle with an area of 12 squares.",
+    "hint": "Multiply the sides.",
+    "explanation": "3 × 4 = 12.",
+    "skill_tag": "measure.area",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 3 by 5",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 3 by 4",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 2 by 5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "A film starts at 14:15 and lasts 1 hour 30 minutes. Hana says it ends at 16:15. Is she right?",
+    "hint": "Add the hour, then the minutes.",
+    "explanation": "14:15 + 1:30 = 15:45.",
+    "skill_tag": "time.interval_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 16:15"
+     },
+     {
+      "id": "b",
+      "text": "No, it ends at 14:45"
+     },
+     {
+      "id": "c",
+      "text": "No, 14:15 + 1 hour is 15:15, plus 30 minutes is 15:45"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "time",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "number",
+    "prompt": "A train leaves at 09:40 and arrives at 12:10. How many minutes is the journey?",
+    "hint": "09:40 to 10:00 is 20 minutes.",
+    "explanation": "20 + 120 + 10 = 150 minutes.",
+    "skill_tag": "time.interval",
+    "answer": {
+     "value": 150,
+     "tolerance": 0
+    },
+    "sub_lesson": "time",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Sara says 2 litres is less than 500 ml because 2 is less than 500. Is she right?",
+    "hint": "Change to the same unit.",
+    "explanation": "2 l = 2,000 ml.",
+    "skill_tag": "measure.units_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 2 is less than 500"
+     },
+     {
+      "id": "b",
+      "text": "No, 2 litres is 2,000 ml, which is more than 500 ml"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "units",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A dripping tap wastes 50 ml every minute. How many litres is wasted in 60 minutes?",
+    "hint": "50 × 60 = 3,000 ml.",
+    "explanation": "3,000 ml = 3 litres.",
+    "skill_tag": "measure.real_life",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "How many millimetres are in 1 centimetre?",
+    "hint": "Think of a ruler.",
+    "explanation": "10 mm = 1 cm.",
+    "skill_tag": "measure.length",
+    "options": [
+     {
+      "id": "a",
+      "text": "100"
+     },
+     {
+      "id": "b",
+      "text": "10"
+     },
+     {
+      "id": "c",
+      "text": "1,000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "How many metres are in 1 kilometre?",
+    "hint": "Kilo means one thousand.",
+    "explanation": "1 km = 1,000 m.",
+    "skill_tag": "measure.length",
+    "options": [
+     {
+      "id": "a",
+      "text": "100"
+     },
+     {
+      "id": "b",
+      "text": "10,000"
+     },
+     {
+      "id": "c",
+      "text": "1,000"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "How many millilitres are in 4 litres?",
+    "hint": "1 l = 1,000 ml.",
+    "explanation": "4 × 1,000 = 4,000 ml.",
+    "skill_tag": "measure.capacity",
+    "answer": {
+     "value": 4000,
+     "tolerance": 0
+    },
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "How many grams are in 5 kg?",
+    "hint": "1 kg = 1,000 g.",
+    "explanation": "5 × 1,000 = 5,000 g.",
+    "skill_tag": "measure.mass",
+    "answer": {
+     "value": 5000,
+     "tolerance": 0
+    },
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "1 kilometre is 100 metres.",
+    "hint": "Kilo means one thousand.",
+    "explanation": "1 km = 1,000 m.",
+    "skill_tag": "measure.units",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "10 mm make 1 cm.",
+    "hint": "Look at a ruler.",
+    "explanation": "10 mm = 1 cm.",
+    "skill_tag": "measure.units",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "units",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Change 340 cm.",
+    "hint": "100 cm in 1 m.",
+    "explanation": "340 cm = 3 m 40 cm.",
+    "skill_tag": "measure.convert",
+    "points": 2,
+    "text": "340 cm = {b1} m and {b2} cm.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "34"
+       },
+       {
+        "id": "b",
+        "text": "340"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "34"
+       },
+       {
+        "id": "c",
+        "text": "40"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Change 125 cm.",
+    "hint": "100 cm in 1 m.",
+    "explanation": "125 cm = 1 m 25 cm.",
+    "skill_tag": "measure.convert",
+    "points": 2,
+    "text": "125 cm = {b1} m and {b2} cm.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "125"
+       },
+       {
+        "id": "b",
+        "text": "1"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "25"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are the same as 3 litres? Pick two.",
+    "hint": "1 l = 1,000 ml.",
+    "explanation": "3 l = 3,000 ml.",
+    "skill_tag": "measure.convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "2,000 ml + 1,000 ml"
+     },
+     {
+      "id": "b",
+      "text": "300 ml"
+     },
+     {
+      "id": "c",
+      "text": "30 ml"
+     },
+     {
+      "id": "d",
+      "text": "3,000 ml"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are the same as 5 m? Pick two.",
+    "hint": "100 cm = 1 m.",
+    "explanation": "5 m = 500 cm = 5,000 mm.",
+    "skill_tag": "measure.convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "5,000 mm"
+     },
+     {
+      "id": "b",
+      "text": "50 cm"
+     },
+     {
+      "id": "c",
+      "text": "5,000 cm"
+     },
+     {
+      "id": "d",
+      "text": "500 cm"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange these lengths from the shortest.",
+    "hint": "Change all to centimetres.",
+    "explanation": "30 cm, 40 cm, 50 cm, 100 cm.",
+    "skill_tag": "measure.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "0.5 m"
+     },
+     {
+      "id": "i4",
+      "text": "1 m"
+     },
+     {
+      "id": "i2",
+      "text": "40 cm"
+     },
+     {
+      "id": "i1",
+      "text": "300 mm"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Sort these masses from the lightest.",
+    "hint": "Change all to grams.",
+    "explanation": "800 g, 1,000 g, 1,500 g, 2,000 g.",
+    "skill_tag": "measure.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "1 kg"
+     },
+     {
+      "id": "i3",
+      "text": "1,500 g"
+     },
+     {
+      "id": "i4",
+      "text": "2 kg"
+     },
+     {
+      "id": "i1",
+      "text": "800 g"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Slide to show how many millilitres are in 1 litre.",
+    "hint": "Kilo-like prefix: milli.",
+    "explanation": "1 l = 1,000 ml.",
+    "skill_tag": "measure.estimate",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 2000
+    },
+    "answer": {
+     "value": 1000,
+     "tolerance": 0
+    },
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "slider",
+    "prompt": "Slide to show 1.5 kg in grams.",
+    "hint": "1 kg = 1,000 g.",
+    "explanation": "1.5 kg = 1,500 g.",
+    "skill_tag": "measure.estimate",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 3000
+    },
+    "answer": {
+     "value": 1500,
+     "tolerance": 0
+    },
+    "sub_lesson": "units",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "number",
+    "prompt": "A rectangle is 10 cm long and 6 cm wide. What is its perimeter in cm?",
+    "hint": "Add all four sides.",
+    "explanation": "10 + 6 + 10 + 6 = 32.",
+    "skill_tag": "measure.perimeter",
+    "answer": {
+     "value": 32,
+     "tolerance": 0
+    },
+    "sub_lesson": "perimeter_area",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "number",
+    "prompt": "A rectangle is 7 m long and 3 m wide. What is its perimeter in metres?",
+    "hint": "Add all four sides.",
+    "explanation": "7 + 3 + 7 + 3 = 20.",
+    "skill_tag": "measure.perimeter",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "perimeter_area",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a 5 cm by 2 cm rectangle has area 14 because she added 5 + 2 + 5 + 2. Is she right?",
+    "hint": "Area is length × width.",
+    "explanation": "Adding all the sides gives the perimeter.",
+    "skill_tag": "measure.perimeter_area",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 14 is the area"
+     },
+     {
+      "id": "b",
+      "text": "No, the area is 7"
+     },
+     {
+      "id": "c",
+      "text": "No, 14 is the perimeter. The area is 5 × 2 = 10 square cm"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multiple_choice",
+    "prompt": "Bilal says a square with sides of 3 cm has area 12 because 4 × 3. Is he right?",
+    "hint": "Area is length × width.",
+    "explanation": "4 × 3 adds the four sides, which is the perimeter.",
+    "skill_tag": "measure.perimeter_area",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the area is 6"
+     },
+     {
+      "id": "b",
+      "text": "No, 12 is the perimeter. The area is 3 × 3 = 9 square cm"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 12 is the area"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "match",
+    "prompt": "Which 24-hour time goes with each 12-hour time?",
+    "hint": "Add 12 for pm.",
+    "explanation": "6 + 12 = 18, 10 + 12 = 22.",
+    "skill_tag": "time.24hour",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "9:15 am"
+     },
+     {
+      "id": "l2",
+      "text": "6:00 pm"
+     },
+     {
+      "id": "l3",
+      "text": "10:50 pm"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "22:50"
+     },
+     {
+      "id": "r1",
+      "text": "09:15"
+     },
+     {
+      "id": "r2",
+      "text": "18:00"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "time",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "match",
+    "prompt": "Pair each 12-hour time with its 24-hour time.",
+    "hint": "Add 12 for pm.",
+    "explanation": "1 + 12 = 13, 9 + 12 = 21.",
+    "skill_tag": "time.24hour",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1:05 pm"
+     },
+     {
+      "id": "l2",
+      "text": "8:20 am"
+     },
+     {
+      "id": "l3",
+      "text": "9:35 pm"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "08:20"
+     },
+     {
+      "id": "r3",
+      "text": "21:35"
+     },
+     {
+      "id": "r1",
+      "text": "13:05"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "time",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "hotspot",
+    "prompt": "Tap the rectangle with an area of 18 squares.",
+    "hint": "Multiply the sides.",
+    "explanation": "3 × 6 = 18.",
+    "skill_tag": "measure.area",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 3 by 5",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 3 by 6",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 2 by 6",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "hotspot",
+    "prompt": "Tap the rectangle with an area of 20 squares.",
+    "hint": "Multiply the sides.",
+    "explanation": "4 × 5 = 20.",
+    "skill_tag": "measure.area",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 4 by 4",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 4 by 5",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 3 by 6",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "perimeter_area",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A lesson starts at 09:20 and lasts 50 minutes. Zain says it ends at 10:30. Is he right?",
+    "hint": "Count on to 10:00 first.",
+    "explanation": "09:20 + 50 minutes = 10:10.",
+    "skill_tag": "time.interval_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 10:30"
+     },
+     {
+      "id": "b",
+      "text": "No, 09:20 + 40 minutes is 10:00, plus 10 more is 10:10"
+     },
+     {
+      "id": "c",
+      "text": "No, it ends at 09:70"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "time",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "A bus leaves at 16:45 and the trip takes 2 hours 30 minutes. Mia says it arrives at 18:15. Is she right?",
+    "hint": "Add the hours first.",
+    "explanation": "16:45 + 2:30 = 19:15.",
+    "skill_tag": "time.interval_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 18:15"
+     },
+     {
+      "id": "b",
+      "text": "No, it arrives at 17:15"
+     },
+     {
+      "id": "c",
+      "text": "No, 16:45 + 2 hours is 18:45, plus 30 minutes is 19:15"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "time",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "number",
+    "prompt": "A film starts at 13:50 and finishes at 15:35. How many minutes long is it?",
+    "hint": "13:50 to 14:00 is 10 minutes.",
+    "explanation": "10 + 60 + 35 = 105 minutes.",
+    "skill_tag": "time.interval",
+    "answer": {
+     "value": 105,
+     "tolerance": 0
+    },
+    "sub_lesson": "time",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "number",
+    "prompt": "A bus leaves at 08:25 and arrives at 11:05. How many minutes is the journey?",
+    "hint": "08:25 to 09:00 is 35 minutes.",
+    "explanation": "35 + 120 + 5 = 160 minutes.",
+    "skill_tag": "time.interval",
+    "answer": {
+     "value": 160,
+     "tolerance": 0
+    },
+    "sub_lesson": "time",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Zara says 1.5 kg is lighter than 800 g because 1.5 is less than 800. Is she right?",
+    "hint": "Change to the same unit.",
+    "explanation": "1.5 kg = 1,500 g.",
+    "skill_tag": "measure.units_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 1.5 is less than 800"
+     },
+     {
+      "id": "b",
+      "text": "No, 1.5 kg is 1,500 g, which is heavier than 800 g"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "units",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Ali says 3 m is shorter than 250 cm because 3 is less than 250. Is he right?",
+    "hint": "Change to the same unit.",
+    "explanation": "3 m = 300 cm.",
+    "skill_tag": "measure.units_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 is less than 250"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No, 3 m is 300 cm, which is longer than 250 cm"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "units",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "A tap drips 40 ml every minute. How many litres is wasted in 50 minutes?",
+    "hint": "40 × 50 = 2,000 ml.",
+    "explanation": "2,000 ml = 2 litres.",
+    "skill_tag": "measure.real_life",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "A dripping tap wastes 20 ml every minute. How many litres is wasted in 50 minutes?",
+    "hint": "20 × 50 = 1,000 ml.",
+    "explanation": "1,000 ml = 1 litre.",
+    "skill_tag": "measure.real_life",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

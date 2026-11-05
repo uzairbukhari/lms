@@ -1,0 +1,2475 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-shape-position",
+  "subject": "maths",
+  "title": "Shape and Position",
+  "summary": "Angles, polygons, symmetry and Islamic star patterns, coordinates, reflection, 3D shapes and nets.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Shape and position",
+  "learning_objectives": [
+   "Name angles and polygons",
+   "Find lines of symmetry and use coordinates",
+   "Describe 3D shapes and nets"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 geometry",
+    "text": "Identify acute and obtuse angles; compare and classify shapes; lines of symmetry; describe positions on a 2-D grid"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.07"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gg.08"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.03"
+   }
+  ],
+  "success_criteria": [
+   "I can name acute, right and obtuse angles",
+   "I can find lines of symmetry",
+   "I can read coordinates and describe faces, edges and vertices"
+  ],
+  "real_life": "Tile patterns in mosques, reading maps, and buildings made from cubes, cylinders and pyramids.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "How many cm are in 2 m?",
+    "hint": "100 cm in 1 m.",
+    "explanation": "2 × 100 = 200.",
+    "answer": {
+     "value": 200,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "A rectangle is 6 cm by 4 cm. What is its area in square cm?",
+    "hint": "Length × width.",
+    "explanation": "6 × 4 = 24.",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is 3:00 pm in 24-hour time?",
+    "hint": "Add 12.",
+    "explanation": "3 + 12 = 15.",
+    "options": [
+     {
+      "id": "a",
+      "text": "03:00"
+     },
+     {
+      "id": "b",
+      "text": "15:00"
+     },
+     {
+      "id": "c",
+      "text": "13:00"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do shapes fit together to make beautiful patterns and buildings?",
+   "say": "Welcome back, number explorer! Have you ever looked closely at the tiles on a mosque wall? They are made from stars, squares and triangles that fit together perfectly. Mathematicians and artists planned them with angles and symmetry. Today you will learn how shapes work. You will name angles and polygons, find lines of symmetry, plot points on a grid, and fold nets into 3D shapes. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🕌",
+   "alt": "Mosque tiles use shapes and symmetry.",
+   "caption": "Mosque tiles use shapes and symmetry."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "shapes",
+     "meaning": "Flat or solid forms with sides, corners and faces."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "shapes_angles",
+   "kind": "learn",
+   "title": "Angles and polygons",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Angles"
+    },
+    {
+     "type": "text",
+     "markdown": "An **angle** is a turn. A **right angle** is 90°. **Acute** is smaller than 90°. **Obtuse** is bigger than 90° but smaller than 180°.\n\nA straight line is 180°.",
+     "say": "An angle is the amount of turn between two lines that meet at a point. We measure angles in degrees. Look at a clock. At three o'clock, the hands make a square corner. That is a right angle, exactly ninety degrees. An angle smaller than a right angle is acute. An angle bigger than a right angle, but smaller than a straight line, is obtuse. A straight line is one hundred and eighty degrees."
+    },
+    {
+     "type": "explainer",
+     "title": "Angles on a clock",
+     "scenes": [
+      {
+       "caption": "Acute: 60°",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 2,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "At two o'clock the hands make a small, sharp angle. That is an acute angle, sixty degrees."
+      },
+      {
+       "caption": "Right angle: 90°",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 3,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "At three o'clock the hands make a square corner. That is a right angle, ninety degrees."
+      },
+      {
+       "caption": "Obtuse: 120°",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 4,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "At four o'clock the hands open wider. That is an obtuse angle, one hundred and twenty degrees."
+      },
+      {
+       "caption": "Straight line: 180°",
+       "items": [
+        {
+         "id": "c",
+         "prop": {
+          "kind": "clock",
+          "hour": 6,
+          "minute": 0
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "At six o'clock the hands make a straight line. That is one hundred and eighty degrees."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A clock shows two o'clock. What kind of angle do the hands make?",
+      "hint": "Is it smaller or bigger than a square corner?",
+      "explanation": "At two o'clock the angle is 60°, smaller than a right angle, so it is acute.",
+      "skill_tag": "shape.angles",
+      "options": [
+       {
+        "id": "a",
+        "text": "Right"
+       },
+       {
+        "id": "b",
+        "text": "Obtuse"
+       },
+       {
+        "id": "c",
+        "text": "Acute"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Polygons"
+    },
+    {
+     "type": "text",
+     "markdown": "A **polygon** has straight sides. 3 triangle, 4 quadrilateral, 5 pentagon, 6 hexagon, 8 octagon.\n\nA square is a special rectangle with four equal sides.",
+     "say": "A polygon is a flat shape with straight sides. We name polygons by how many sides they have. Three sides make a triangle. Four make a quadrilateral. Five make a pentagon. Six make a hexagon. Eight make an octagon. A square is a special quadrilateral: it has four equal sides and four right angles. A rectangle has four right angles and opposite sides equal. So every square is a rectangle, but not every rectangle is a square."
+    },
+    {
+     "type": "image",
+     "emoji": "🔺⬛⬠⬡🛑",
+     "alt": "Triangle, square, pentagon, hexagon and octagon.",
+     "caption": "Triangle, square, pentagon, hexagon and octagon."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many sides does a heptagon have?",
+      "hint": "Hepta means seven.",
+      "explanation": "A heptagon has 7 sides.",
+      "skill_tag": "shape.polygons",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Right angle 90°, acute smaller, obtuse bigger",
+      "A straight line is 180°",
+      "Polygons are named by their number of sides"
+     ],
+     "say": "Remember. Angles are turns. Right is 90, acute is smaller and obtuse is bigger. Polygons are named by their sides."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "angle",
+       "meaning": "The amount of turn between two lines that meet."
+      },
+      {
+       "term": "right angle",
+       "meaning": "A square corner, 90 degrees."
+      },
+      {
+       "term": "acute",
+       "meaning": "An angle smaller than a right angle."
+      },
+      {
+       "term": "obtuse",
+       "meaning": "An angle bigger than a right angle but smaller than a straight line."
+      },
+      {
+       "term": "polygon",
+       "meaning": "A flat shape with straight sides."
+      },
+      {
+       "term": "degrees",
+       "meaning": "The unit we use to measure angles."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A right angle is 90°.",
+     "hint": "Think of a square corner.",
+     "explanation": "A right angle is 90 degrees.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "An angle of 120° is...",
+     "hint": "Bigger than 90°?",
+     "explanation": "120° is more than 90°, so it is obtuse.",
+     "options": [
+      {
+       "id": "a",
+       "text": "acute"
+      },
+      {
+       "id": "b",
+       "text": "right"
+      },
+      {
+       "id": "c",
+       "text": "obtuse"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many sides does a triangle have?",
+     "hint": "Tri means three.",
+     "explanation": "A triangle has 3 sides.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a quadrilateral?",
+     "hint": "Quad means four.",
+     "explanation": "A square has four sides.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A triangle"
+      },
+      {
+       "id": "b",
+       "text": "A square"
+      },
+      {
+       "id": "c",
+       "text": "A pentagon"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "symmetry",
+   "kind": "try",
+   "title": "Symmetry and Islamic star patterns",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Lines of symmetry"
+    },
+    {
+     "type": "text",
+     "markdown": "A shape is **symmetrical** if one half matches the other. The fold is the **line of symmetry**.\n\nA square has 4 lines of symmetry. A rectangle has 2.",
+     "say": "A shape is symmetrical if you can fold it in half and both sides match exactly. The fold line is called the line of symmetry, or mirror line. Look at the butterfly. Fold it down the middle, and the two wings match. A square has four lines of symmetry. A rectangle that is not a square has two."
+    },
+    {
+     "type": "explainer",
+     "title": "Folding a butterfly",
+     "scenes": [
+      {
+       "caption": "A butterfly",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🦋",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "butterfly"
+        }
+       ],
+       "say": "Here is a butterfly with its wings open."
+      },
+      {
+       "caption": "The line of symmetry",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🦋",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "butterfly"
+        },
+        {
+         "id": "l",
+         "emoji": "➖",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "mirror line"
+        }
+       ],
+       "say": "Draw a line down the middle. This is the line of symmetry."
+      },
+      {
+       "caption": "Both halves match",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🦋",
+         "x": 38,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "left"
+        },
+        {
+         "id": "m",
+         "emoji": "🦋",
+         "x": 62,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "right"
+        }
+       ],
+       "say": "Fold along the line and the left wing sits exactly on the right wing. They match, so the butterfly is symmetrical."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many lines of symmetry does the letter H have?",
+      "hint": "Fold across and down.",
+      "explanation": "The letter H has 2 lines of symmetry.",
+      "skill_tag": "shape.symmetry",
+      "answer": {
+       "value": 2,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "manipulative",
+     "title": "Mirror pattern",
+     "goal": "Place the tiles in the boxes so the left side is a mirror of the right side.",
+     "emoji": "🔷",
+     "count": 20,
+     "zones": [
+      "Left side",
+      "Right side"
+     ],
+     "say": "Now try it with shapes. Here are twenty tiles. Make a symmetrical pattern, with the left matching the right."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Islamic star patterns"
+    },
+    {
+     "type": "text",
+     "markdown": "Islamic star patterns use **repeating** shapes with many lines of symmetry.\n\nAn eight-pointed star has 8 lines of symmetry.",
+     "say": "Many mosques have beautiful tile patterns made from symmetrical stars. These patterns are built from simple shapes, like squares, triangles and hexagons, repeated again and again. They have many lines of symmetry. An eight-pointed star has eight lines of symmetry. Artists planned them with only a ruler and compass."
+    },
+    {
+     "type": "image",
+     "emoji": "🕌✴️",
+     "alt": "Star patterns on mosque tiles use repeating shapes and symmetry.",
+     "caption": "Star patterns on mosque tiles use repeating shapes and symmetry."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A scalene triangle has 3 lines of symmetry.",
+      "hint": "Can you fold it so it matches?",
+      "explanation": "A scalene triangle has no lines of symmetry.",
+      "skill_tag": "shape.symmetry",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Make a star pattern",
+     "materials": [
+      "Squared paper",
+      "Pencil and ruler",
+      "Coloured pencils"
+     ],
+     "instructions": [
+      "Draw a square and its two diagonals.",
+      "Add a second square turned a little.",
+      "Colour the pattern so it is symmetrical.",
+      "Count the lines of symmetry in your design."
+     ],
+     "say": "Try it at home."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Symmetrical shapes fold to match",
+      "The fold is the line of symmetry",
+      "Islamic patterns repeat shapes with lots of symmetry"
+     ],
+     "say": "Remember. A shape is symmetrical if one half is the mirror of the other. Patterns use repeating shapes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "symmetrical",
+       "meaning": "A shape that matches when folded along a line."
+      },
+      {
+       "term": "line of symmetry",
+       "meaning": "The fold line that makes both halves match."
+      },
+      {
+       "term": "repeating",
+       "meaning": "Happening again and again."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Shapes or colours that repeat in an order."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many lines of symmetry does a regular pentagon have?",
+     "hint": "One through each corner.",
+     "explanation": "It has 5 lines.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A rectangle has 2 lines of symmetry.",
+     "hint": "Fold across and down.",
+     "explanation": "A rectangle that is not a square has 2.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which shape has no lines of symmetry?",
+     "hint": "Try folding it.",
+     "explanation": "A scalene triangle has no matching halves.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Square"
+      },
+      {
+       "id": "b",
+       "text": "Circle"
+      },
+      {
+       "id": "c",
+       "text": "Scalene triangle"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coordinates",
+   "kind": "play",
+   "title": "Coordinates and reflection",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Reading coordinates"
+    },
+    {
+     "type": "text",
+     "markdown": "**Coordinates** give a position: (3, 2) means 3 across and 2 up.\n\nAcross first, then up.",
+     "say": "Coordinates tell us exactly where a point is on a grid. Two numbers in brackets. The first number says how far across, the second says how far up. Think of it as along the corridor, then up the stairs. The point three, two is three across and two up. Always across first, then up."
+    },
+    {
+     "type": "explainer",
+     "title": "Finding (3, 2)",
+     "scenes": [
+      {
+       "caption": "(0, 0)",
+       "items": [
+        {
+         "id": "g",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 0,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Start at zero, zero in the bottom left corner."
+      },
+      {
+       "caption": "3 across",
+       "items": [
+        {
+         "id": "g",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 0,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Move three squares across."
+      },
+      {
+       "caption": "then 2 up: (3, 2)",
+       "items": [
+        {
+         "id": "g",
+         "prop": {
+          "kind": "robot_grid",
+          "col": 3,
+          "row": 2,
+          "facing": "right"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Then two squares up. We are at three, two."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which point is 4 across and 1 up?",
+      "hint": "Across first, then up.",
+      "explanation": "(4, 1) means 4 across and 1 up.",
+      "skill_tag": "shape.coordinates",
+      "options": [
+       {
+        "id": "a",
+        "text": "(1, 4)"
+       },
+       {
+        "id": "b",
+        "text": "(4, 1)"
+       },
+       {
+        "id": "c",
+        "text": "(4, 4)"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Mirror images"
+    },
+    {
+     "type": "text",
+     "markdown": "A **reflection** is a mirror image. Each point is the same distance from the mirror line, on the other side.",
+     "say": "When we reflect a shape in a mirror line, every point is the same distance from the mirror, but on the other side. If the mirror is a vertical line, a point two squares to the left of the line ends up two squares to the right. The shape is the same size, just flipped."
+    },
+    {
+     "type": "explainer",
+     "title": "Reflecting a point",
+     "scenes": [
+      {
+       "caption": "2 left of the mirror",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⭐",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "star"
+        },
+        {
+         "id": "m",
+         "emoji": "➖",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "mirror"
+        }
+       ],
+       "say": "A star is two squares to the left of the mirror line."
+      },
+      {
+       "caption": "2 right of the mirror",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⭐",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "star"
+        },
+        {
+         "id": "m",
+         "emoji": "➖",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "mirror"
+        },
+        {
+         "id": "r",
+         "emoji": "⭐",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "reflection"
+        }
+       ],
+       "say": "Its reflection is two squares to the right. Same distance, other side."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A point is 3 squares left of the mirror. Where is its reflection?",
+      "hint": "Same distance, other side.",
+      "explanation": "A reflection is the same distance on the opposite side.",
+      "skill_tag": "shape.reflection",
+      "options": [
+       {
+        "id": "a",
+        "text": "3 squares left of the mirror"
+       },
+       {
+        "id": "b",
+        "text": "6 squares right of the mirror"
+       },
+       {
+        "id": "c",
+        "text": "3 squares right of the mirror"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain break"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Shape pairs",
+     "goal": "Find the matching shapes.",
+     "emojis": [
+      "🔺",
+      "🟦",
+      "⭐",
+      "🔷",
+      "🟡",
+      "🟩"
+     ],
+     "say": "Brain break. Find the pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The point (2, 5) is 2 across and 5 up.",
+      "hint": "Across first.",
+      "explanation": "The first number is across.",
+      "skill_tag": "shape.coordinates",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Coordinates: across, then up",
+      "(0, 0) is the corner",
+      "Reflection: same distance, other side"
+     ],
+     "say": "Remember. Coordinates are across first, then up. A reflection is the same distance on the other side of the mirror."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "coordinates",
+       "meaning": "Numbers that give a position on a grid."
+      },
+      {
+       "term": "reflection",
+       "meaning": "A mirror image of a shape."
+      },
+      {
+       "term": "grid",
+       "meaning": "Lines that cross to make squares."
+      },
+      {
+       "term": "axis",
+       "meaning": "The line along the bottom or up the side of a grid."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which point is 2 across and 5 up?",
+     "hint": "Across first.",
+     "explanation": "(2, 5).",
+     "options": [
+      {
+       "id": "a",
+       "text": "(2, 2)"
+      },
+      {
+       "id": "b",
+       "text": "(2, 5)"
+      },
+      {
+       "id": "c",
+       "text": "(5, 2)"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is the second number in (4, 7)?",
+     "hint": "It says how far up.",
+     "explanation": "7.",
+     "answer": {
+      "value": 7,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "(1, 3) and (3, 1) are the same point.",
+     "hint": "Across then up.",
+     "explanation": "They are different points.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  },
+  {
+   "id": "solids",
+   "kind": "use",
+   "title": "3D shapes and nets",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Faces, edges and vertices"
+    },
+    {
+     "type": "text",
+     "markdown": "**Faces** are flat surfaces, **edges** are where faces meet, and **vertices** are corners.\n\nA cube has 6 faces, 12 edges and 8 vertices.",
+     "say": "3D shapes have faces, edges and vertices. A face is a flat surface. An edge is where two faces meet. A vertex is a corner. A cube has six faces, twelve edges and eight vertices. Many buildings use 3D shapes. A minaret is a cylinder, the dome of a mosque is a half sphere, and a pyramid has a square base."
+    },
+    {
+     "type": "image",
+     "emoji": "🧊🥫🔺⚽",
+     "alt": "Cube, cylinder, pyramid and sphere.",
+     "caption": "Cube, cylinder, pyramid and sphere."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many faces does a cube have?",
+      "hint": "Think of a dice.",
+      "explanation": "A cube has 6 square faces.",
+      "skill_tag": "shape.solids",
+      "answer": {
+       "value": 6,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Nets"
+    },
+    {
+     "type": "text",
+     "markdown": "A **net** is a flat shape that folds into a 3D shape. A cube's net has 6 squares.",
+     "say": "A net is a flat pattern that folds up into a 3D shape. The net of a cube is six squares joined together. If you cut a cardboard box along its edges and flatten it, you get a net. Watch six squares fold up into a cube."
+    },
+    {
+     "type": "explainer",
+     "title": "Folding a cube net",
+     "scenes": [
+      {
+       "caption": "A net of 6 squares",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "none",
+         "label": "top"
+        },
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 45,
+         "size": 2,
+         "anim": "none",
+         "label": "side"
+        },
+        {
+         "id": "c",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 45,
+         "size": 2,
+         "anim": "none",
+         "label": "front"
+        },
+        {
+         "id": "d",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 45,
+         "size": 2,
+         "anim": "none",
+         "label": "side"
+        },
+        {
+         "id": "e",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 70,
+         "size": 2,
+         "anim": "none",
+         "label": "bottom"
+        },
+        {
+         "id": "f",
+         "emoji": "🟦",
+         "x": 90,
+         "y": 45,
+         "size": 2,
+         "anim": "none",
+         "label": "back"
+        }
+       ],
+       "say": "Six squares joined in a cross shape. This is a net."
+      },
+      {
+       "caption": "Folding up",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "front"
+        },
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 38,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "side"
+        },
+        {
+         "id": "d",
+         "emoji": "🟦",
+         "x": 62,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "side"
+        },
+        {
+         "id": "a",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 38,
+         "size": 2,
+         "anim": "none",
+         "label": "top"
+        }
+       ],
+       "say": "Fold the sides up. The squares start to make a box."
+      },
+      {
+       "caption": "A cube",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧊",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "cube"
+        }
+       ],
+       "say": "And it is a cube! Six faces, twelve edges and eight vertices."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which net folds into a cube?",
+      "hint": "A cube has 6 faces.",
+      "explanation": "A cube's net needs 6 squares.",
+      "skill_tag": "shape.nets",
+      "options": [
+       {
+        "id": "a",
+        "text": "4 squares in a row"
+       },
+       {
+        "id": "b",
+        "text": "6 squares in a cross"
+       },
+       {
+        "id": "c",
+        "text": "3 squares"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Make a cube",
+     "materials": [
+      "Squared paper",
+      "Scissors",
+      "Glue or tape"
+     ],
+     "instructions": [
+      "Draw a cross of 6 squares, each 4 cm.",
+      "Cut it out.",
+      "Fold along the lines.",
+      "Tape the edges. Count the faces, edges and corners."
+     ],
+     "say": "Time to make one."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Faces, edges and vertices",
+      "A cube has 6 faces, 12 edges, 8 vertices",
+      "A net is a flat pattern of a 3D shape"
+     ],
+     "say": "Remember. 3D shapes have faces, edges and vertices. A net folds into a 3D shape."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "faces",
+       "meaning": "Flat surfaces of a 3D shape."
+      },
+      {
+       "term": "edges",
+       "meaning": "Where two faces meet."
+      },
+      {
+       "term": "vertices",
+       "meaning": "Corners of a 3D shape."
+      },
+      {
+       "term": "net",
+       "meaning": "A flat pattern that folds into a 3D shape."
+      },
+      {
+       "term": "cube",
+       "meaning": "A 3D shape with six square faces."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many vertices does a square-based pyramid have?",
+     "hint": "4 at the base and 1 at the top.",
+     "explanation": "5 vertices.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What shape is a tin of beans?",
+     "hint": "It has circle ends.",
+     "explanation": "It is a cylinder.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cone"
+      },
+      {
+       "id": "b",
+       "text": "Cylinder"
+      },
+      {
+       "id": "c",
+       "text": "Cube"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A square-based pyramid has 5 faces.",
+     "hint": "1 square and 4 triangles.",
+     "explanation": "1 + 4 = 5.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which angle is smaller than a right angle?",
+    "hint": "A right angle is 90°.",
+    "explanation": "Acute angles are smaller than 90°.",
+    "skill_tag": "shape.angles",
+    "options": [
+     {
+      "id": "a",
+      "text": "Obtuse"
+     },
+     {
+      "id": "b",
+      "text": "Straight"
+     },
+     {
+      "id": "c",
+      "text": "Acute"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "How many sides does a hexagon have?",
+    "hint": "Hex means six.",
+    "explanation": "6 sides.",
+    "skill_tag": "shape.polygons",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A right angle is 90 degrees.",
+    "hint": "Think of a square corner.",
+    "explanation": "A right angle is 90°.",
+    "skill_tag": "shape.angles",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about shapes.",
+    "hint": "Penta means five.",
+    "explanation": "Pentagon has 5 sides; obtuse is bigger than 90°.",
+    "skill_tag": "shape.language",
+    "points": 2,
+    "text": "A shape with 5 sides is a {b1}. An angle bigger than 90° is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "octagon"
+       },
+       {
+        "id": "b",
+        "text": "pentagon"
+       },
+       {
+        "id": "c",
+        "text": "hexagon"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "acute"
+       },
+       {
+        "id": "b",
+        "text": "right"
+       },
+       {
+        "id": "c",
+        "text": "obtuse"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which shapes have a line of symmetry? Pick two.",
+    "hint": "Look for a mirror line.",
+    "explanation": "Squares and circles have lines of symmetry.",
+    "skill_tag": "shape.symmetry",
+    "options": [
+     {
+      "id": "a",
+      "text": "Circle"
+     },
+     {
+      "id": "b",
+      "text": "Scalene triangle"
+     },
+     {
+      "id": "c",
+      "text": "Parallelogram"
+     },
+     {
+      "id": "d",
+      "text": "Square"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these in order, smallest angle first.",
+    "hint": "Think about degrees.",
+    "explanation": "Acute < right < obtuse < straight.",
+    "skill_tag": "shape.angles",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "obtuse angle"
+     },
+     {
+      "id": "i4",
+      "text": "straight line"
+     },
+     {
+      "id": "i2",
+      "text": "right angle"
+     },
+     {
+      "id": "i1",
+      "text": "acute angle"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Slide to show a right angle in degrees.",
+    "hint": "A square corner.",
+    "explanation": "A right angle is 90°.",
+    "skill_tag": "shape.angles",
+    "range": {
+     "step": 5,
+     "min": 0,
+     "max": 180
+    },
+    "answer": {
+     "value": 90,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "How many edges does a cube have?",
+    "hint": "4 on top, 4 on the bottom, 4 up the sides.",
+    "explanation": "12 edges.",
+    "skill_tag": "shape.solids",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Ali says a square is not a rectangle. Is he right?",
+    "hint": "Compare the angles and sides.",
+    "explanation": "A square is a special rectangle with all sides equal.",
+    "skill_tag": "shape.properties",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are different"
+     },
+     {
+      "id": "b",
+      "text": "No, a square has four right angles and opposite sides equal, so it is a special rectangle"
+     },
+     {
+      "id": "c",
+      "text": "Only big squares are rectangles"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Match each shape to its number of sides.",
+    "hint": "Tri means three.",
+    "explanation": "Triangle 3, pentagon 5, octagon 8.",
+    "skill_tag": "shape.polygons",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Triangle"
+     },
+     {
+      "id": "l2",
+      "text": "Pentagon"
+     },
+     {
+      "id": "l3",
+      "text": "Octagon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "5"
+     },
+     {
+      "id": "r3",
+      "text": "8"
+     },
+     {
+      "id": "r1",
+      "text": "3"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the treasure at (3, 2).",
+    "hint": "3 across, 2 up.",
+    "explanation": "(3, 2).",
+    "skill_tag": "shape.coordinates",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📍",
+       "label": "A: (2, 3)",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📍",
+       "label": "B: (3, 2)",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📍",
+       "label": "C: (3, 3)",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Zainab says (4, 1) and (1, 4) are the same place. Is she right?",
+    "hint": "Across first, then up.",
+    "explanation": "The order of the numbers matters.",
+    "skill_tag": "shape.coordinates_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "Only on a small grid"
+     },
+     {
+      "id": "c",
+      "text": "No, (4, 1) is 4 across and 1 up; (1, 4) is 1 across and 4 up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "number",
+    "prompt": "How many lines of symmetry does a square have?",
+    "hint": "Fold across, down and both corners.",
+    "explanation": "4 lines.",
+    "skill_tag": "shape.symmetry",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hana says a rectangle has 4 lines of symmetry. Is she right?",
+    "hint": "Fold across and down.",
+    "explanation": "A rectangle that is not a square has 2 lines.",
+    "skill_tag": "shape.symmetry_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4"
+     },
+     {
+      "id": "b",
+      "text": "No, a rectangle has 2 lines of symmetry; a square has 4"
+     },
+     {
+      "id": "c",
+      "text": "No, it has none"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A cube has 6 faces and a square-based pyramid has 5 faces. How many faces together?",
+    "hint": "Add them.",
+    "explanation": "6 + 5 = 11.",
+    "skill_tag": "shape.solids_reason",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which angle is bigger than a right angle but smaller than a straight line?",
+    "hint": "Between 90° and 180°.",
+    "explanation": "Obtuse angles are between 90° and 180°.",
+    "skill_tag": "shape.angles",
+    "options": [
+     {
+      "id": "a",
+      "text": "Acute"
+     },
+     {
+      "id": "b",
+      "text": "Right"
+     },
+     {
+      "id": "c",
+      "text": "Obtuse"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What do we call an angle of exactly 90 degrees?",
+    "hint": "A square corner.",
+    "explanation": "Exactly 90° is a right angle.",
+    "skill_tag": "shape.angles",
+    "options": [
+     {
+      "id": "a",
+      "text": "An acute angle"
+     },
+     {
+      "id": "b",
+      "text": "A right angle"
+     },
+     {
+      "id": "c",
+      "text": "An obtuse angle"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "How many sides does an octagon have?",
+    "hint": "Think of a stop sign.",
+    "explanation": "8 sides.",
+    "skill_tag": "shape.polygons",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "How many sides does a pentagon have?",
+    "hint": "Penta means five.",
+    "explanation": "5 sides.",
+    "skill_tag": "shape.polygons",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A straight line is 180 degrees.",
+    "hint": "Half a full turn.",
+    "explanation": "A straight line is 180°.",
+    "skill_tag": "shape.angles",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "An acute angle is bigger than 90°.",
+    "hint": "Acute means sharp.",
+    "explanation": "Acute is smaller than 90°.",
+    "skill_tag": "shape.angles",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about 8-sided shapes.",
+    "hint": "Oct means eight.",
+    "explanation": "Octagon has 8 sides and acute is smaller than 90°.",
+    "skill_tag": "shape.language",
+    "points": 2,
+    "text": "A shape with 8 sides is an {b1}. An angle smaller than 90° is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hexagon"
+       },
+       {
+        "id": "b",
+        "text": "pentagon"
+       },
+       {
+        "id": "c",
+        "text": "octagon"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "right"
+       },
+       {
+        "id": "b",
+        "text": "acute"
+       },
+       {
+        "id": "c",
+        "text": "obtuse"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about 6-sided shapes.",
+    "hint": "Hex means six.",
+    "explanation": "Hexagon has 6 sides and 90° is a right angle.",
+    "skill_tag": "shape.language",
+    "points": 2,
+    "text": "A shape with 6 sides is a {b1}. An angle of exactly 90° is a {b2} angle.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pentagon"
+       },
+       {
+        "id": "b",
+        "text": "octagon"
+       },
+       {
+        "id": "c",
+        "text": "hexagon"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "acute"
+       },
+       {
+        "id": "b",
+        "text": "right"
+       },
+       {
+        "id": "c",
+        "text": "obtuse"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which shapes can be folded to match exactly? Pick two.",
+    "hint": "Look for a mirror line.",
+    "explanation": "Rectangles and isosceles triangles have lines of symmetry.",
+    "skill_tag": "shape.symmetry",
+    "options": [
+     {
+      "id": "a",
+      "text": "Isosceles triangle"
+     },
+     {
+      "id": "b",
+      "text": "Parallelogram"
+     },
+     {
+      "id": "c",
+      "text": "Scalene triangle"
+     },
+     {
+      "id": "d",
+      "text": "Rectangle"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Pick the two shapes that are symmetrical.",
+    "hint": "Look for a mirror line.",
+    "explanation": "Squares and circles have lines of symmetry.",
+    "skill_tag": "shape.symmetry",
+    "options": [
+     {
+      "id": "a",
+      "text": "Circle"
+     },
+     {
+      "id": "b",
+      "text": "Parallelogram"
+     },
+     {
+      "id": "c",
+      "text": "Scalene triangle"
+     },
+     {
+      "id": "d",
+      "text": "Square"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Sort these by number of sides, fewest first.",
+    "hint": "Count the sides.",
+    "explanation": "3, 4, 5, 6.",
+    "skill_tag": "shape.polygons",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "square"
+     },
+     {
+      "id": "i4",
+      "text": "hexagon"
+     },
+     {
+      "id": "i3",
+      "text": "pentagon"
+     },
+     {
+      "id": "i1",
+      "text": "triangle"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Put these turns in order, smallest first.",
+    "hint": "Think of how far you turn.",
+    "explanation": "90°, 180°, 270°, 360°.",
+    "skill_tag": "shape.angles",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "a half turn"
+     },
+     {
+      "id": "i3",
+      "text": "a three-quarter turn"
+     },
+     {
+      "id": "i4",
+      "text": "a full turn"
+     },
+     {
+      "id": "i1",
+      "text": "a quarter turn"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Slide to show a straight line in degrees.",
+    "hint": "Half a full turn.",
+    "explanation": "A straight line is 180°.",
+    "skill_tag": "shape.angles",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 360
+    },
+    "answer": {
+     "value": 180,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "slider",
+    "prompt": "Slide to show a full turn in degrees.",
+    "hint": "All the way round.",
+    "explanation": "A full turn is 360°.",
+    "skill_tag": "shape.angles",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 360
+    },
+    "answer": {
+     "value": 360,
+     "tolerance": 0
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "number",
+    "prompt": "How many vertices does a cube have?",
+    "hint": "Count the corners.",
+    "explanation": "8 vertices.",
+    "skill_tag": "shape.solids",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "number",
+    "prompt": "How many faces does a cuboid have?",
+    "hint": "Think of a shoebox.",
+    "explanation": "6 faces.",
+    "skill_tag": "shape.solids",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Sara says a rectangle is not always a square. Is she right?",
+    "hint": "Compare the sides.",
+    "explanation": "A square is a special rectangle.",
+    "skill_tag": "shape.properties",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, every rectangle is a square"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a rectangle only needs opposite sides equal; a square needs all 4 sides equal"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multiple_choice",
+    "prompt": "Omar says all triangles have a right angle. Is he right?",
+    "hint": "Think of an equilateral triangle.",
+    "explanation": "An equilateral triangle has three 60° angles.",
+    "skill_tag": "shape.properties",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only big triangles do"
+     },
+     {
+      "id": "b",
+      "text": "No, many triangles have no right angle"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all triangles do"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shapes_angles",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "match",
+    "prompt": "Which number of sides goes with each shape?",
+    "hint": "Hex means six.",
+    "explanation": "Hexagon 6, quadrilateral 4, heptagon 7.",
+    "skill_tag": "shape.polygons",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Hexagon"
+     },
+     {
+      "id": "l2",
+      "text": "Quadrilateral"
+     },
+     {
+      "id": "l3",
+      "text": "Heptagon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "4"
+     },
+     {
+      "id": "r1",
+      "text": "6"
+     },
+     {
+      "id": "r3",
+      "text": "7"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "match",
+    "prompt": "Pair each polygon with its sides.",
+    "hint": "Oct means eight.",
+    "explanation": "Octagon 8, pentagon 5, hexagon 6.",
+    "skill_tag": "shape.polygons",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Octagon"
+     },
+     {
+      "id": "l2",
+      "text": "Pentagon"
+     },
+     {
+      "id": "l3",
+      "text": "Hexagon"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "5"
+     },
+     {
+      "id": "r1",
+      "text": "8"
+     },
+     {
+      "id": "r3",
+      "text": "6"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "shapes_angles",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "hotspot",
+    "prompt": "Tap the treasure at (1, 4).",
+    "hint": "1 across, 4 up.",
+    "explanation": "(1, 4).",
+    "skill_tag": "shape.coordinates",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📍",
+       "label": "A: (4, 1)",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📍",
+       "label": "B: (1, 4)",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📍",
+       "label": "C: (2, 3)",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "hotspot",
+    "prompt": "Tap the treasure at (5, 2).",
+    "hint": "5 across, 2 up.",
+    "explanation": "(5, 2).",
+    "skill_tag": "shape.coordinates",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📍",
+       "label": "A: (2, 5)",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📍",
+       "label": "B: (5, 2)",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📍",
+       "label": "C: (5, 5)",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Mia says (2, 5) is 5 across and 2 up. Is she right?",
+    "hint": "Across comes first.",
+    "explanation": "The first number is across.",
+    "skill_tag": "shape.coordinates_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, (2, 5) is 5 across and 2 up"
+     },
+     {
+      "id": "b",
+      "text": "No, (2, 5) is 2 across and 5 up"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 2 across and 2 up"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Dan says you read the up number first in a coordinate. Is he right?",
+    "hint": "Think along the corridor, then up the stairs.",
+    "explanation": "Across first, then up.",
+    "skill_tag": "shape.coordinates_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, up first"
+     },
+     {
+      "id": "b",
+      "text": "No, any order works"
+     },
+     {
+      "id": "c",
+      "text": "No, read across first, then up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "coordinates",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "number",
+    "prompt": "How many lines of symmetry does a rectangle that is not a square have?",
+    "hint": "Fold across and down.",
+    "explanation": "2 lines.",
+    "skill_tag": "shape.symmetry",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "number",
+    "prompt": "How many lines of symmetry does an equilateral triangle have?",
+    "hint": "One through each corner.",
+    "explanation": "3 lines.",
+    "skill_tag": "shape.symmetry",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "symmetry",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Zain says a scalene triangle has 3 lines of symmetry. Is he right?",
+    "hint": "Its sides are all different.",
+    "explanation": "No fold makes both halves match.",
+    "skill_tag": "shape.symmetry_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it has 3"
+     },
+     {
+      "id": "b",
+      "text": "No, it has 1"
+     },
+     {
+      "id": "c",
+      "text": "No, a scalene triangle has no lines of symmetry"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Ali says an equilateral triangle has 1 line of symmetry. Is he right?",
+    "hint": "One from each corner.",
+    "explanation": "3 lines, one through each vertex.",
+    "skill_tag": "shape.symmetry_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it has 1"
+     },
+     {
+      "id": "b",
+      "text": "No, it has 3 lines of symmetry"
+     },
+     {
+      "id": "c",
+      "text": "No, it has none"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "symmetry",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "A cube has 8 vertices and a square-based pyramid has 5 vertices. How many vertices together?",
+    "hint": "Add them.",
+    "explanation": "8 + 5 = 13.",
+    "skill_tag": "shape.solids_reason",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "A cylinder has 3 faces and a cube has 6 faces. How many faces together?",
+    "hint": "Add them.",
+    "explanation": "3 + 6 = 9.",
+    "skill_tag": "shape.solids_reason",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "solids",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
