@@ -1,0 +1,2499 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-light-shadows",
+  "subject": "science",
+  "title": "Light and Shadows",
+  "summary": "Light sources, how we see, shadows and how they change, and staying safe with light and sun.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 6: Light and shadows",
+  "learning_objectives": [
+   "Say what a light source is",
+   "Explain how we see, with Ibn al-Haytham",
+   "Make and describe shadows",
+   "Say how shadows change through the day"
+  ],
+  "tags": [
+   "topic",
+   "topic-6"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 6
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y3 light (stretch)",
+    "text": "Recognise that we need light to see things and that dark is the absence of light; notice that light is reflected from surfaces; recognise that shadows are formed when light is blocked"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ps.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ps.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2ESs.01"
+   }
+  ],
+  "success_criteria": [
+   "I can name light sources",
+   "I can say how we see things",
+   "I can say what makes a shadow",
+   "I can say when shadows are long and short"
+  ],
+  "real_life": "Shadow puppets, walking in the sun, and being seen on a bike at night.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which season comes after summer?",
+    "hint": "Leaves fall.",
+    "explanation": "Autumn comes after summer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Spring"
+     },
+     {
+      "id": "b",
+      "text": "Winter"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a thermometer measure?",
+    "hint": "It shows a number in degrees.",
+    "explanation": "A thermometer measures temperature.",
+    "options": [
+     {
+      "id": "a",
+      "text": "How wet it is"
+     },
+     {
+      "id": "b",
+      "text": "How loud it is"
+     },
+     {
+      "id": "c",
+      "text": "How hot or cold it is"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which material can you see through?",
+    "hint": "Think of a window.",
+    "explanation": "Glass is transparent.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wood"
+     },
+     {
+      "id": "b",
+      "text": "Glass"
+     },
+     {
+      "id": "c",
+      "text": "Metal"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, young scientist!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do we see?\n\nWe will meet a famous Muslim scientist and play with shadows.",
+   "say": "Welcome back, young scientist! Today's big question is: how do we see, and what is a shadow? By the end, you will tell light sources from other things, explain how light helps us see, and make shadows grow and shrink. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🔦🌙☀️",
+   "alt": "Light comes from the Sun, torches and lamps.",
+   "caption": "Light comes from the Sun, torches and lamps."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "light",
+     "meaning": "What lets us see things."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "sources",
+   "kind": "learn",
+   "title": "Light and how we see",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Where does light come from?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **light source** makes its own light.\n\nThe Sun, a torch and a lamp are light sources. The Moon is not.",
+     "say": "Light helps us see. Some things make their own light. We call them light sources. The Sun is the biggest light source we know. A torch, a lamp and a candle are light sources too. The Moon is not a light source. It only looks bright because the Sun's light bounces off it. Look at some light sources."
+    },
+    {
+     "type": "explainer",
+     "title": "Light sources",
+     "scenes": [
+      {
+       "caption": "The Sun is a light source.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The Sun makes its own light. It lights up our whole day."
+      },
+      {
+       "caption": "A torch and a lamp are light sources.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔦",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "💡",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A torch makes light too. So does a lamp."
+      },
+      {
+       "caption": "The Moon only reflects light.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🌙",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 85,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The Moon does not make light. It only reflects the Sun's light, so it shines in the sky."
+      }
+     ],
+     "backdrop": "space"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is a light source?",
+      "hint": "It makes its own light.",
+      "explanation": "A torch makes its own light. A book and the Moon do not.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The Moon"
+       },
+       {
+        "id": "b",
+        "text": "A torch"
+       },
+       {
+        "id": "c",
+        "text": "A book"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How do we see?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Ibn al-Haytham** showed that we see when light bounces off things into our eyes.\n\nIn the dark, there is no light, so we cannot see.",
+     "say": "A long time ago, a Muslim scientist called Ibn al-Haytham worked out how we see. He lived in Basra and Cairo about a thousand years ago. He showed that light travels in straight lines. Light bounces off things and goes into our eyes. That is how we see them. In the dark, there is no light to bounce, so we cannot see."
+    },
+    {
+     "type": "explainer",
+     "title": "How we see a ball",
+     "scenes": [
+      {
+       "caption": "Light from a lamp.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 15,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "r",
+         "emoji": "➡️",
+         "x": 35,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A lamp sends out light. It travels in straight lines."
+      },
+      {
+       "caption": "Light bounces off the ball.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 15,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "⚽",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "↗️",
+         "x": 65,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "The light hits the ball and bounces off."
+      },
+      {
+       "caption": "The light goes into the eye.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 15,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "⚽",
+         "x": 45,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "👁️",
+         "x": 85,
+         "y": 35,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The light goes into your eye. Now you can see the ball!"
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We can see things in complete darkness.",
+      "hint": "What does light do?",
+      "explanation": "We need light to bounce off things into our eyes, so we cannot see in complete darkness.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A light source makes its own light",
+      "Light travels in straight lines",
+      "We see when light bounces into our eyes"
+     ],
+     "say": "Let us remember. Light sources make light. Light bounces into our eyes so we can see."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "light source",
+       "meaning": "Something that makes its own light, like the Sun."
+      },
+      {
+       "term": "Ibn al-Haytham",
+       "meaning": "A Muslim scientist who lived about 1,000 years ago and explained how we see."
+      },
+      {
+       "term": "darkness",
+       "meaning": "When there is no light."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which of these makes its own light?",
+     "hint": "It is a star.",
+     "explanation": "The Sun makes its own light.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The Moon"
+      },
+      {
+       "id": "b",
+       "text": "A mirror"
+      },
+      {
+       "id": "c",
+       "text": "The Sun"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Light travels in straight lines.",
+     "hint": "Think of a torch beam.",
+     "explanation": "Light goes in straight lines.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each thing to what it does with light.",
+     "hint": "Think about each one.",
+     "explanation": "A torch makes light, the Moon reflects it and an eye takes it in.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Torch"
+      },
+      {
+       "id": "l2",
+       "text": "Moon"
+      },
+      {
+       "id": "l3",
+       "text": "Eye"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Reflects light"
+      },
+      {
+       "id": "r1",
+       "text": "Makes light"
+      },
+      {
+       "id": "r3",
+       "text": "Takes in light"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who explained how we see?",
+     "hint": "A scientist from long ago.",
+     "explanation": "Ibn al-Haytham explained how light helps us see.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A baker"
+      },
+      {
+       "id": "b",
+       "text": "A king"
+      },
+      {
+       "id": "c",
+       "text": "Ibn al-Haytham"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shadows",
+   "kind": "try",
+   "title": "Making shadows",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is a shadow?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **shadow** forms when something blocks the light.\n\nThe shadow has the same shape as the object.",
+     "say": "A shadow is a dark shape. It forms when something blocks the light. Light cannot go through an opaque thing like you, so a dark patch appears behind you. That dark patch is your shadow. A shadow is the same shape as the thing blocking the light. Watch a shadow form."
+    },
+    {
+     "type": "explainer",
+     "title": "A shadow forms",
+     "scenes": [
+      {
+       "caption": "The Sun shines on the girl.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 20,
+         "y": 20,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "g",
+         "emoji": "🧍",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The sun shines on a girl. Her body blocks the light."
+      },
+      {
+       "caption": "The shadow is on the other side.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 20,
+         "y": 20,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "g",
+         "emoji": "🧍",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "sh",
+         "emoji": "🌑",
+         "x": 65,
+         "y": 72,
+         "size": 2,
+         "anim": "grow"
+        }
+       ],
+       "say": "A dark shadow appears on the ground behind her, on the side away from the Sun."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What makes a shadow?",
+      "hint": "Light cannot get through.",
+      "explanation": "A shadow forms where an object blocks the light.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A loud noise"
+       },
+       {
+        "id": "b",
+        "text": "Something blocks the light"
+       },
+       {
+        "id": "c",
+        "text": "The wind"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Shadow play"
+    },
+    {
+     "type": "manipulative",
+     "title": "Does it make a shadow?",
+     "goal": "Opaque things make a shadow. See-through things make a faint shadow. Sort them.",
+     "emoji": "🧱",
+     "count": 8,
+     "zones": [
+      "Dark shadow",
+      "Faint or no shadow"
+     ],
+     "say": "Time to play with shadows! Use a torch and your hands. Move your hand close to the wall and then further away. Which shadow is bigger? Try it, and put the objects into the boxes."
+    },
+    {
+     "type": "activity",
+     "title": "Shadow puppets",
+     "materials": [
+      "A torch",
+      "A plain wall",
+      "Your hands",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Switch off the big light and hold the torch pointing at the wall.",
+      "Make an animal shape with your hands in front of the torch.",
+      "Move your hands closer to the torch. What happens to the shadow? Is it bigger or smaller?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "You move your hand closer to the torch. What happens to the shadow?",
+      "hint": "Try it with a torch.",
+      "explanation": "The closer the object is to the light, the bigger its shadow.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It disappears"
+       },
+       {
+        "id": "b",
+        "text": "It gets bigger"
+       },
+       {
+        "id": "c",
+        "text": "It gets smaller"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A shadow forms when something blocks light",
+      "Closer to the light makes a bigger shadow"
+     ],
+     "say": "Remember. A shadow is made when something blocks light. Moving the object changes the shadow."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "shadow",
+       "meaning": "A dark shape made when something blocks light."
+      },
+      {
+       "term": "opaque",
+       "meaning": "Not able to be seen through, so it blocks light."
+      },
+      {
+       "term": "torch",
+       "meaning": "A small lamp you hold in your hand."
+      },
+      {
+       "term": "faint",
+       "meaning": "Not very dark or clear."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A shadow is the same shape as the thing that makes it.",
+     "hint": "Think of a hand puppet.",
+     "explanation": "A shadow has the same outline as the object.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which would make the darkest shadow?",
+     "hint": "Which is opaque?",
+     "explanation": "An opaque wooden box blocks all the light.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Clear plastic wrap"
+      },
+      {
+       "id": "b",
+       "text": "A wooden box"
+      },
+      {
+       "id": "c",
+       "text": "A clear glass jar"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these shadows in order, smallest first, as the hand moves closer to the torch.",
+     "hint": "Closer is bigger.",
+     "explanation": "A shadow grows as the object nears the light.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Halfway"
+      },
+      {
+       "id": "i1",
+       "text": "Far away"
+      },
+      {
+       "id": "i3",
+       "text": "Very close"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sunshadow",
+   "kind": "play",
+   "title": "Shadows through the day",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The Sun moves across the sky"
+    },
+    {
+     "type": "text",
+     "markdown": "Shadows are **long** when the Sun is low and **short** when the Sun is high.",
+     "say": "The Sun looks as if it moves across the sky from morning to evening. Really it is the Earth turning. This changes our shadows. In the morning the Sun is low, so shadows are long. At midday the Sun is high, so shadows are short. In the evening the Sun is low again, so shadows are long again. Watch a shadow change."
+    },
+    {
+     "type": "explainer",
+     "title": "A shadow through the day",
+     "scenes": [
+      {
+       "caption": "Morning: a long shadow.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 15,
+         "y": 35,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 45,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "sh",
+         "emoji": "🌑",
+         "x": 75,
+         "y": 72,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "In the morning the Sun is low. The tree has a long shadow."
+      },
+      {
+       "caption": "Midday: a short shadow.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 45,
+         "y": 12,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 45,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "sh",
+         "emoji": "🌑",
+         "x": 50,
+         "y": 76,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "At midday the Sun is high. The shadow is short, right under the tree."
+      },
+      {
+       "caption": "Evening: a long shadow again.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 85,
+         "y": 35,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 55,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "sh",
+         "emoji": "🌑",
+         "x": 25,
+         "y": 72,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "In the evening the Sun is low again, on the other side. The shadow is long again."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "When is a shadow shortest?",
+      "hint": "The Sun is highest.",
+      "explanation": "At midday the Sun is high, so shadows are short.",
+      "options": [
+       {
+        "id": "a",
+        "text": "In the morning"
+       },
+       {
+        "id": "b",
+        "text": "At midday"
+       },
+       {
+        "id": "c",
+        "text": "In the evening"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Sun and shadow",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "☀️",
+      "🌙",
+      "🌳",
+      "🔦"
+     ],
+     "say": "Time for a brain game. Find the pairs. Then work out when your shadow is the longest."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two times when shadows are long.",
+      "hint": "The Sun is low.",
+      "explanation": "Shadows are long in the morning and evening.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Evening"
+       },
+       {
+        "id": "b",
+        "text": "Noon"
+       },
+       {
+        "id": "c",
+        "text": "Midday"
+       },
+       {
+        "id": "d",
+        "text": "Morning"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The Sun is low in the morning and evening, so shadows are long",
+      "The Sun is high at midday, so shadows are short"
+     ],
+     "say": "Remember. Shadows change length through the day."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "long",
+       "meaning": "A lot of length from one end to the other."
+      },
+      {
+       "term": "short",
+       "meaning": "Not long."
+      },
+      {
+       "term": "midday",
+       "meaning": "The middle of the day, about twelve o'clock."
+      },
+      {
+       "term": "evening",
+       "meaning": "The end of the day, before night."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "When is your shadow longest?",
+     "hint": "The Sun is low.",
+     "explanation": "A low Sun makes long shadows.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Noon"
+      },
+      {
+       "id": "b",
+       "text": "Early morning"
+      },
+      {
+       "id": "c",
+       "text": "Midday"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Shadows are the same length all day.",
+     "hint": "Think of the tree.",
+     "explanation": "Shadows change length through the day.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where is the Sun at midday?",
+     "hint": "Think of the shortest shadow.",
+     "explanation": "At midday the Sun is high.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Behind the Moon"
+      },
+      {
+       "id": "b",
+       "text": "High in the sky"
+      },
+      {
+       "id": "c",
+       "text": "Low in the sky"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "useit",
+   "kind": "use",
+   "title": "Light and safety",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Seeing and being seen"
+    },
+    {
+     "type": "text",
+     "markdown": "**Reflective** materials bounce light back, so we can be seen in the dark.",
+     "say": "Light keeps us safe. At night, people wear bright or shiny clothes so drivers can see them. Cyclists use lights on their bikes. Street lamps help us see the road. Reflective strips bounce a car's light back so a person shows up in the dark. Look at things that help us be seen."
+    },
+    {
+     "type": "image",
+     "emoji": "🚲 🦺 💡",
+     "alt": "A bike light, a bright jacket and a street lamp help us be seen.",
+     "caption": "A bike light, a bright jacket and a street lamp help us be seen.",
+     "say": "Here are three helpers: a bike light, a bright jacket and a street lamp."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why do cyclists wear reflective strips at night?",
+      "hint": "Light bounces back.",
+      "explanation": "Reflective strips bounce car light back, so drivers can see the cyclist.",
+      "options": [
+       {
+        "id": "a",
+        "text": "So they feel warm"
+       },
+       {
+        "id": "b",
+        "text": "So drivers can see them"
+       },
+       {
+        "id": "c",
+        "text": "So they go faster"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sun safety"
+    },
+    {
+     "type": "image",
+     "emoji": "🌳 😎 🧢",
+     "alt": "A tree gives shade. Sunglasses and a hat protect us from strong sun.",
+     "caption": "A tree gives shade. Sunglasses and a hat protect us from strong sun.",
+     "say": "The Sun gives us light but its rays can harm our eyes and skin. Never look straight at the Sun. Wear sunglasses and a hat when it is bright, and stay in the shade at midday. Let's look at the shade made by a tree."
+    },
+    {
+     "type": "activity",
+     "title": "Find the shade",
+     "materials": [
+      "A sunny day",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Go outside on a sunny day.",
+      "Find a shadow made by a building or tree. Is it cooler there?",
+      "Draw where you would sit to stay safe from strong sun."
+     ],
+     "say": "Now try this on a sunny day with a grown-up. Find the shade and see how it feels."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Sunglasses can help protect our eyes in bright sun.",
+      "hint": "Think about squinting.",
+      "explanation": "Sunglasses make strong light safer for our eyes.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Reflective strips and lights help us be seen in the dark",
+      "Never look straight at the Sun"
+     ],
+     "say": "Remember. Reflective things help us be seen. Stay safe from the Sun."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "reflective",
+       "meaning": "Able to bounce light back."
+      },
+      {
+       "term": "shade",
+       "meaning": "A cool place out of the Sun."
+      },
+      {
+       "term": "rays",
+       "meaning": "Beams of light from the Sun."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is shade?",
+     "hint": "Cool and dark under a tree.",
+     "explanation": "Shade is a place where the sun is blocked.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of food"
+      },
+      {
+       "id": "b",
+       "text": "A place out of the sun"
+      },
+      {
+       "id": "c",
+       "text": "A light source"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A street lamp is a light source.",
+     "hint": "It makes light.",
+     "explanation": "A street lamp makes its own light.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick two things that help us be seen at night.",
+     "hint": "Think of bright and shiny.",
+     "explanation": "Lights and reflective clothes help people see us.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Reflective jacket"
+      },
+      {
+       "id": "b",
+       "text": "A black coat"
+      },
+      {
+       "id": "c",
+       "text": "A dark hat"
+      },
+      {
+       "id": "d",
+       "text": "Bike light"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which one of these gives out its own light?",
+    "hint": "It has a flame.",
+    "explanation": "A candle makes its own light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A pillow"
+     },
+     {
+      "id": "b",
+      "text": "A candle"
+     },
+     {
+      "id": "c",
+      "text": "A book"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.sources",
+    "sub_lesson": "sources",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "The Moon is a light source.",
+    "hint": "What lights the Moon?",
+    "explanation": "The Moon reflects the Sun's light.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "light.facts",
+    "sub_lesson": "sources",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Which job does each thing do with light? Match them.",
+    "hint": "Think about each one.",
+    "explanation": "A candle makes light, the Moon reflects it and an eye takes it in.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Candle"
+     },
+     {
+      "id": "l2",
+      "text": "Moon"
+     },
+     {
+      "id": "l3",
+      "text": "Eye"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Reflects light"
+     },
+     {
+      "id": "r1",
+      "text": "Makes light"
+     },
+     {
+      "id": "r3",
+      "text": "Takes in light"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.match",
+    "sub_lesson": "sources",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multi_select",
+    "prompt": "Pick two things that make a dark shadow.",
+    "hint": "They block light.",
+    "explanation": "Chairs and people block light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A person"
+     },
+     {
+      "id": "b",
+      "text": "Thin air"
+     },
+     {
+      "id": "c",
+      "text": "A clear glass"
+     },
+     {
+      "id": "d",
+      "text": "A wooden chair"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "light.shadow_makers",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the thing that gives out light.",
+    "hint": "It makes light.",
+    "explanation": "A torch makes light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "Torch",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧸",
+       "label": "Teddy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Stone",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.label",
+    "sub_lesson": "sources",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What is the word for a dark shape made when light is blocked?",
+    "hint": "It starts with sh.",
+    "explanation": "A shadow forms when light is blocked.",
+    "answer": {
+     "accepted": [
+      "shadow",
+      "a shadow"
+     ]
+    },
+    "skill_tag": "light.words",
+    "sub_lesson": "shadows",
+    "depth": "recall"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A child moves a toy nearer to a torch. What happens to its shadow on the wall?",
+    "hint": "Closer is bigger.",
+    "explanation": "A shadow grows as the object nears the light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It gets smaller"
+     },
+     {
+      "id": "b",
+      "text": "It disappears"
+     },
+     {
+      "id": "c",
+      "text": "It gets bigger"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.size",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "Think about Ibn al-Haytham.",
+    "explanation": "We see when light bounces into our eyes.",
+    "points": 2,
+    "text": "We see when {b1} bounces off things into our {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sound"
+       },
+       {
+        "id": "b",
+        "text": "light"
+       },
+       {
+        "id": "c",
+        "text": "heat"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ears"
+       },
+       {
+        "id": "b",
+        "text": "hands"
+       },
+       {
+        "id": "c",
+        "text": "eyes"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "light.fill",
+    "sub_lesson": "sources",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "The Sun, a torch, a candle and a lamp are light sources. How many is that?",
+    "hint": "Count them.",
+    "explanation": "There are four light sources.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "light.count",
+    "sub_lesson": "sunshadow",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "At what time of day is your shadow shortest? Slide to the hour (6 am to 6 pm).",
+    "hint": "The Sun is highest.",
+    "explanation": "Shadows are shortest around midday.",
+    "range": {
+     "step": 1,
+     "min": 6,
+     "max": 18,
+     "unit": "h"
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 1
+    },
+    "skill_tag": "light.time",
+    "sub_lesson": "sunshadow",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put these times of day in order.",
+    "hint": "Start with sunrise.",
+    "explanation": "The day goes from morning to midday to evening.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Evening"
+     },
+     {
+      "id": "i1",
+      "text": "Morning"
+     },
+     {
+      "id": "i2",
+      "text": "Midday"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "light.order",
+    "sub_lesson": "sunshadow",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Tia says we can see in the dark because our eyes make light. Why is she wrong?",
+    "hint": "Think about Ibn al-Haytham.",
+    "explanation": "We see when light bounces into our eyes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Eyes are light sources"
+     },
+     {
+      "id": "b",
+      "text": "Eyes do not make light; they need light to bounce in"
+     },
+     {
+      "id": "c",
+      "text": "Eyes only work at night"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.see",
+    "sub_lesson": "sources",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Why is your shadow long in the early morning?",
+    "hint": "Where is the Sun in the morning?",
+    "explanation": "A low Sun makes long shadows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Sun is high"
+     },
+     {
+      "id": "b",
+      "text": "The Sun is low in the sky"
+     },
+     {
+      "id": "c",
+      "text": "You grow in the morning"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.long",
+    "sub_lesson": "sunshadow",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Omar says a clear glass makes the darkest shadow. Why is he wrong?",
+    "hint": "Can you see through glass?",
+    "explanation": "Transparent glass lets light through, so its shadow is faint.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Glass is made of wood"
+     },
+     {
+      "id": "b",
+      "text": "Clear glass lets light through, so the shadow is faint"
+     },
+     {
+      "id": "c",
+      "text": "Glass is opaque"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.transparent",
+    "sub_lesson": "shadows",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why is a reflective jacket a good idea for a cyclist at night?",
+    "hint": "Think about headlights.",
+    "explanation": "Reflective jackets bounce light back.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They make people run faster"
+     },
+     {
+      "id": "b",
+      "text": "They bounce light back so drivers can see them"
+     },
+     {
+      "id": "c",
+      "text": "They keep the rain out"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.safety",
+    "sub_lesson": "useit",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which one of these is a source of light?",
+    "hint": "It makes its own light.",
+    "explanation": "A lamp makes its own light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rock"
+     },
+     {
+      "id": "b",
+      "text": "A pillow"
+     },
+     {
+      "id": "c",
+      "text": "A lamp"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.sources",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which one gives out its own light?",
+    "hint": "It makes light and heat.",
+    "explanation": "A candle flame makes light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cup"
+     },
+     {
+      "id": "b",
+      "text": "A mirror"
+     },
+     {
+      "id": "c",
+      "text": "A candle flame"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.sources",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "The Moon makes its own light.",
+    "hint": "What lights up the Moon?",
+    "explanation": "The Moon reflects the Sun's light.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "light.facts",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "The Sun is a light source.",
+    "hint": "It makes light.",
+    "explanation": "The Sun makes its own light.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "light.facts",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Pair each thing with what it does.",
+    "hint": "Think about each one.",
+    "explanation": "A lamp makes light, the Moon reflects it and eyes see it.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Lamp"
+     },
+     {
+      "id": "l2",
+      "text": "Moon"
+     },
+     {
+      "id": "l3",
+      "text": "Eyes"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Reflects light"
+     },
+     {
+      "id": "r3",
+      "text": "See light"
+     },
+     {
+      "id": "r1",
+      "text": "Makes light"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.match",
+    "sub_lesson": "sources",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "match",
+    "prompt": "Link each to its job with light.",
+    "hint": "Think about each one.",
+    "explanation": "The Sun makes light, a mirror bounces it and an eye takes it in.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sun"
+     },
+     {
+      "id": "l2",
+      "text": "Mirror"
+     },
+     {
+      "id": "l3",
+      "text": "Eye"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Bounces light"
+     },
+     {
+      "id": "r3",
+      "text": "Takes in light"
+     },
+     {
+      "id": "r1",
+      "text": "Makes light"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.match",
+    "sub_lesson": "sources",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multi_select",
+    "prompt": "Pick two light sources.",
+    "hint": "They make their own light.",
+    "explanation": "A torch and a candle make light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Book"
+     },
+     {
+      "id": "b",
+      "text": "Stone"
+     },
+     {
+      "id": "c",
+      "text": "Candle"
+     },
+     {
+      "id": "d",
+      "text": "Torch"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "light.shadow_makers",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "multi_select",
+    "prompt": "Pick two things that make shadows.",
+    "hint": "They block light.",
+    "explanation": "Trees and boxes block light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A clear window"
+     },
+     {
+      "id": "b",
+      "text": "Thin air"
+     },
+     {
+      "id": "c",
+      "text": "A box"
+     },
+     {
+      "id": "d",
+      "text": "A tree"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "light.shadow_makers",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the light source.",
+    "hint": "It makes light.",
+    "explanation": "A lamp makes light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💡",
+       "label": "Lamp",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📕",
+       "label": "Book",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.label",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "hotspot",
+    "prompt": "Tap the thing that makes light.",
+    "hint": "It makes its own light.",
+    "explanation": "A torch makes light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "Torch",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧸",
+       "label": "Toy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.label",
+    "sub_lesson": "sources",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "What do we call a dark shape made when light is blocked?",
+    "hint": "It starts with sh.",
+    "explanation": "A shadow forms when light is blocked.",
+    "answer": {
+     "accepted": [
+      "shadow",
+      "a shadow"
+     ]
+    },
+    "skill_tag": "light.words",
+    "sub_lesson": "shadows",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What do we call something that makes its own light? Write two words.",
+    "hint": "The Sun is one.",
+    "explanation": "A light source makes its own light.",
+    "answer": {
+     "accepted": [
+      "light source",
+      "a light source"
+     ]
+    },
+    "skill_tag": "light.words",
+    "sub_lesson": "shadows",
+    "depth": "recall",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A girl holds a toy close to a torch. What happens to the shadow?",
+    "hint": "Closer is bigger.",
+    "explanation": "A shadow grows as the object nears the light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It gets smaller"
+     },
+     {
+      "id": "b",
+      "text": "It gets bigger"
+     },
+     {
+      "id": "c",
+      "text": "It goes away"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.size",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "A boy moves his hand far from the torch. What happens to the shadow?",
+    "hint": "Further is smaller.",
+    "explanation": "A shadow shrinks as the object moves away from the light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It gets bigger"
+     },
+     {
+      "id": "b",
+      "text": "It gets smaller"
+     },
+     {
+      "id": "c",
+      "text": "It turns blue"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.size",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about shadows.",
+    "hint": "Think about a hand shadow.",
+    "explanation": "A shadow forms when light is blocked, and it has the object's shape.",
+    "points": 2,
+    "text": "A shadow is made when {b1} the light. It has the same {b2} as the object.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "something makes"
+       },
+       {
+        "id": "b",
+        "text": "something eats"
+       },
+       {
+        "id": "c",
+        "text": "something blocks"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "taste"
+       },
+       {
+        "id": "b",
+        "text": "sound"
+       },
+       {
+        "id": "c",
+        "text": "shape"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "skill_tag": "light.fill",
+    "sub_lesson": "sources",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about seeing.",
+    "hint": "Think about Ibn al-Haytham.",
+    "explanation": "We see when light bounces into our eyes.",
+    "points": 2,
+    "text": "We see when {b1} bounces into our {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sound"
+       },
+       {
+        "id": "b",
+        "text": "light"
+       },
+       {
+        "id": "c",
+        "text": "wind"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ears"
+       },
+       {
+        "id": "b",
+        "text": "feet"
+       },
+       {
+        "id": "c",
+        "text": "eyes"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "light.fill",
+    "sub_lesson": "sources",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "The Sun, a torch and a lamp are light sources. How many light sources is that?",
+    "hint": "Count them.",
+    "explanation": "There are three light sources.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "light.count",
+    "sub_lesson": "sunshadow",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "number",
+    "prompt": "Morning, midday and evening: how many times of day is that?",
+    "hint": "Count them.",
+    "explanation": "There are three.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "light.count",
+    "sub_lesson": "sunshadow",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show when your shadow is shortest, as an hour from 6 am to 6 pm (24 hour clock 6 to 18).",
+    "hint": "The Sun is highest.",
+    "explanation": "Shadows are shortest around midday, 12 o'clock.",
+    "range": {
+     "step": 1,
+     "min": 6,
+     "max": 18,
+     "unit": "h"
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 1
+    },
+    "skill_tag": "light.time",
+    "sub_lesson": "sunshadow",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show a time when the Sun is high (hour 6 to 18).",
+    "hint": "Around the middle of the day.",
+    "explanation": "The Sun is highest around midday.",
+    "range": {
+     "step": 1,
+     "min": 6,
+     "max": 18,
+     "unit": "h"
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 2
+    },
+    "skill_tag": "light.time",
+    "sub_lesson": "sunshadow",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these in order, from the longest shadow to the shortest, through the morning.",
+    "hint": "The Sun gets higher.",
+    "explanation": "As the Sun rises, the shadow gets shorter.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Mid morning"
+     },
+     {
+      "id": "i1",
+      "text": "Early morning"
+     },
+     {
+      "id": "i3",
+      "text": "Midday"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "light.order",
+    "sub_lesson": "sunshadow",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "order",
+    "prompt": "Put the times of day in order.",
+    "hint": "Start with sunrise.",
+    "explanation": "The day goes from morning to midday to evening.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Evening"
+     },
+     {
+      "id": "i1",
+      "text": "Morning"
+     },
+     {
+      "id": "i2",
+      "text": "Midday"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "light.order",
+    "sub_lesson": "sunshadow",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says we can see in the dark because our eyes make light. Why is he wrong?",
+    "hint": "Think about Ibn al-Haytham.",
+    "explanation": "We see when light bounces into our eyes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Eyes are light sources"
+     },
+     {
+      "id": "b",
+      "text": "Eyes only work at night"
+     },
+     {
+      "id": "c",
+      "text": "Eyes do not make light; they need light to bounce in"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.see",
+    "sub_lesson": "sources",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Sara says the Moon is a light source. Why is she wrong?",
+    "hint": "What lights the Moon?",
+    "explanation": "The Moon reflects the Sun's light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is too small"
+     },
+     {
+      "id": "b",
+      "text": "It only reflects the Sun's light"
+     },
+     {
+      "id": "c",
+      "text": "It is made of glass"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.see",
+    "sub_lesson": "sources",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Why is your shadow short at midday?",
+    "hint": "Where is the Sun at midday?",
+    "explanation": "A high Sun makes short shadows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Sun is far away"
+     },
+     {
+      "id": "b",
+      "text": "You are taller"
+     },
+     {
+      "id": "c",
+      "text": "The Sun is high in the sky"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.long",
+    "sub_lesson": "sunshadow",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Why is your shadow long in the morning?",
+    "hint": "Where is the Sun in the morning?",
+    "explanation": "A low Sun makes long shadows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Sun is high"
+     },
+     {
+      "id": "b",
+      "text": "The Sun is hot"
+     },
+     {
+      "id": "c",
+      "text": "The Sun is low in the sky"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.long",
+    "sub_lesson": "sunshadow",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana says glass makes the darkest shadow. Why is she wrong?",
+    "hint": "Can you see through glass?",
+    "explanation": "Transparent glass lets light through, so its shadow is faint.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Glass is opaque"
+     },
+     {
+      "id": "b",
+      "text": "Clear glass lets light through, so the shadow is faint"
+     },
+     {
+      "id": "c",
+      "text": "Glass is made of wood"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.transparent",
+    "sub_lesson": "shadows",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Noor says a clear window blocks all light. Why is she wrong?",
+    "hint": "Can you see through it?",
+    "explanation": "A clear window is transparent.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A window is opaque"
+     },
+     {
+      "id": "b",
+      "text": "A clear window lets most light through"
+     },
+     {
+      "id": "c",
+      "text": "A window makes light"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.transparent",
+    "sub_lesson": "shadows",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why do cyclists wear reflective strips?",
+    "hint": "Think about headlights.",
+    "explanation": "Reflective strips bounce car light back.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They make the bike faster"
+     },
+     {
+      "id": "b",
+      "text": "They bounce light back so drivers can see them"
+     },
+     {
+      "id": "c",
+      "text": "They keep the wind out"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.safety",
+    "sub_lesson": "useit",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why do bikes have lights at night?",
+    "hint": "Lights help us be seen.",
+    "explanation": "Bike lights help others see the cyclist.",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the bike is warmer"
+     },
+     {
+      "id": "b",
+      "text": "So the bike is quieter"
+     },
+     {
+      "id": "c",
+      "text": "So people can see the bike"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.safety",
+    "sub_lesson": "useit",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
