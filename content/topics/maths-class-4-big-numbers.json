@@ -1,0 +1,2687 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-big-numbers",
+  "subject": "maths",
+  "title": "Big Numbers",
+  "summary": "Place value to 10,000, rounding, adding and taking away big numbers, negative numbers, Roman numerals and sequences.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Big numbers",
+  "learning_objectives": [
+   "Read, write and order numbers to 10,000",
+   "Round, add and take away big numbers",
+   "Use negative numbers and Roman numerals"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 place value",
+    "text": "Recognise the place value of each digit in a four-digit number; round to the nearest 10, 100 or 1,000"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y4 add and subtract",
+    "text": "Add and subtract numbers with up to four digits using columns"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Np.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Np.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Np.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Np.05"
+   }
+  ],
+  "success_criteria": [
+   "I can say what each digit in a number to 10,000 is worth",
+   "I can add and take away 4-digit numbers",
+   "I can find a rule in a number sequence"
+  ],
+  "real_life": "Reading the height of mountains, the price of things in rupees and pounds, and the temperature on a winter day.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is 7 × 8?",
+    "hint": "Count in sevens or eights.",
+    "explanation": "7 × 8 = 56.",
+    "options": [
+     {
+      "id": "a",
+      "text": "54"
+     },
+     {
+      "id": "b",
+      "text": "56"
+     },
+     {
+      "id": "c",
+      "text": "63"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 345 + 120?",
+    "hint": "Add the hundreds and tens.",
+    "explanation": "345 + 120 = 465.",
+    "answer": {
+     "value": 465,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "The 5 in 5,000 is worth five thousand.",
+    "hint": "Which place is the 5 in?",
+    "explanation": "The 5 is in the thousands place.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do we read, write and compare really big numbers, like the height of K2 (8,611 m)?",
+   "say": "Welcome, number explorer! K2, the second highest mountain in the world, is in Pakistan. It is eight thousand, six hundred and eleven metres high. How do we read, write and compare numbers that big? Today you will become a big number expert. You will read numbers up to ten thousand, round them, add and take away, explore negative numbers, and spot patterns. Let's climb!"
+  },
+  {
+   "type": "image",
+   "emoji": "🏔️",
+   "alt": "K2 in Pakistan is 8,611 metres high.",
+   "caption": "K2 in Pakistan is 8,611 metres high."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "big numbers",
+     "meaning": "Numbers in the thousands, like 8,611."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "place_value",
+   "kind": "learn",
+   "title": "Place value to 10,000 and rounding",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Thousands, hundreds, tens and ones"
+    },
+    {
+     "type": "text",
+     "markdown": "A number up to 9,999 has four places: **thousands**, **hundreds**, **tens** and **ones**.\n\nEach place is ten times bigger than the one on its right.",
+     "say": "Big numbers are not scary. They are built from four little parts, called places. From the right they are ones, tens, hundreds and thousands. Let's build the number four thousand, three hundred and seventy-two, one place at a time. Watch how the number grows."
+    },
+    {
+     "type": "explainer",
+     "title": "Build 4,372",
+     "scenes": [
+      {
+       "caption": "4 thousands = 4,000",
+       "items": [
+        {
+         "id": "th",
+         "emoji": "🟦",
+         "x": 20,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4 thousands"
+        }
+       ],
+       "say": "Start on the left with the thousands. There are four thousands. That is four thousand."
+      },
+      {
+       "caption": "3 hundreds = 300",
+       "items": [
+        {
+         "id": "th",
+         "emoji": "🟦",
+         "x": 20,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "4 thousands"
+        },
+        {
+         "id": "hu",
+         "emoji": "🟩",
+         "x": 40,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3 hundreds"
+        }
+       ],
+       "say": "Next, the hundreds. Three hundreds make three hundred."
+      },
+      {
+       "caption": "7 tens = 70 and 2 ones = 2",
+       "items": [
+        {
+         "id": "th",
+         "emoji": "🟦",
+         "x": 20,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "4 thousands"
+        },
+        {
+         "id": "hu",
+         "emoji": "🟩",
+         "x": 40,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "3 hundreds"
+        },
+        {
+         "id": "te",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "7 tens"
+        },
+        {
+         "id": "on",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "2 ones"
+        }
+       ],
+       "say": "Then seven tens, which is seventy, and two ones, which is two."
+      },
+      {
+       "caption": "4,000 + 300 + 70 + 2 = 4,372",
+       "items": [
+        {
+         "id": "th",
+         "emoji": "🟦",
+         "x": 20,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "4 thousands"
+        },
+        {
+         "id": "hu",
+         "emoji": "🟩",
+         "x": 40,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "3 hundreds"
+        },
+        {
+         "id": "te",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "7 tens"
+        },
+        {
+         "id": "on",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "2 ones"
+        },
+        {
+         "id": "n",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 72,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4,372"
+        }
+       ],
+       "say": "Put them all together and we get four thousand, three hundred and seventy-two. We write it 4,372, with a comma after the thousands."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In the number 2,764, what does the 7 stand for?",
+      "hint": "Which place is the 7 in?",
+      "explanation": "The 7 is in the hundreds place, so it is worth 700.",
+      "skill_tag": "bignumbers.value",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "70"
+       },
+       {
+        "id": "c",
+        "text": "700"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: 10 more, 100 more, 1,000 more"
+    },
+    {
+     "type": "text",
+     "markdown": "To add 1,000 only the thousands digit changes: 3,250 becomes 4,250.\n\n10 more changes the tens digit and 100 more changes the hundreds digit.",
+     "say": "Here is a super power. To make a number ten more, only the tens digit changes. For one hundred more, only the hundreds digit changes. For one thousand more, only the thousands digit changes. The other digits stay still. Try with three thousand, two hundred and fifty. One thousand more is four thousand, two hundred and fifty."
+    },
+    {
+     "type": "image",
+     "emoji": "🔟",
+     "alt": "10 more, 100 more or 1,000 more changes one digit only.",
+     "caption": "10 more, 100 more or 1,000 more changes one digit only."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 1,000 more than 6,305?",
+      "hint": "Only the thousands digit changes.",
+      "explanation": "6,305 + 1,000 = 7,305.",
+      "skill_tag": "bignumbers.more_less",
+      "answer": {
+       "value": 7305,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Rounding"
+    },
+    {
+     "type": "text",
+     "markdown": "To **round** to the nearest 100, look at the tens digit. 5 or more rounds up. 4 or less rounds down.\n\n372 is closer to 400, so it rounds to 400.",
+     "say": "Rounding gives us a friendly number that is close. To round to the nearest hundred, look at the tens digit. Four or less, stay where you are. Five or more, go up to the next hundred. Look at three hundred and seventy-two on the number line. It sits between three hundred and four hundred. It is closer to four hundred, so it rounds up to four hundred."
+    },
+    {
+     "type": "chart",
+     "kind": "number_line",
+     "title": "372 on the line from 300 to 400",
+     "from": 300,
+     "to": 400,
+     "step": 10,
+     "marks": [
+      300,
+      350,
+      372,
+      400
+     ],
+     "caption": "372 is past the halfway mark of 350, so it rounds up to 400."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Round 5,382 to the nearest 100.",
+      "hint": "Look at the tens digit, 8.",
+      "explanation": "The tens digit 8 is 5 or more, so round up to 5,400.",
+      "skill_tag": "bignumbers.round",
+      "answer": {
+       "value": 5400,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Four places: thousands, hundreds, tens, ones",
+      "10, 100 or 1,000 more changes one digit",
+      "Round: 5 or more goes up, 4 or less stays"
+     ],
+     "say": "Remember. Each place is ten times bigger than the place on its right. To round, look at the digit just to the right of the place you are rounding to."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "thousands",
+       "meaning": "Big groups of one thousand. In 4,372 there are 4 thousands."
+      },
+      {
+       "term": "hundreds",
+       "meaning": "Groups of one hundred. In 4,372 there are 3 hundreds."
+      },
+      {
+       "term": "tens",
+       "meaning": "Groups of ten."
+      },
+      {
+       "term": "ones",
+       "meaning": "Single things."
+      },
+      {
+       "term": "round",
+       "meaning": "To change a number to a close, easier one, such as the nearest 100."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the value of the 7 in 7,260?",
+     "hint": "Which place is the 7 in?",
+     "explanation": "The 7 is in the thousands place, so it is worth 7,000.",
+     "options": [
+      {
+       "id": "a",
+       "text": "700"
+      },
+      {
+       "id": "b",
+       "text": "70"
+      },
+      {
+       "id": "c",
+       "text": "7,000"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 100 less than 4,520?",
+     "hint": "Only the hundreds digit changes.",
+     "explanation": "4,520 − 100 = 4,420.",
+     "answer": {
+      "value": 4420,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "8,615 rounded to the nearest 10 is 8,620.",
+     "hint": "Look at the ones digit, 5.",
+     "explanation": "5 rounds up, so 8,615 rounds to 8,620.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these numbers in order, smallest first.",
+     "hint": "Compare the thousands first.",
+     "explanation": "Compare thousands, then hundreds, then tens.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "3,019"
+      },
+      {
+       "id": "i4",
+       "text": "3,901"
+      },
+      {
+       "id": "i3",
+       "text": "3,190"
+      },
+      {
+       "id": "i1",
+       "text": "2,909"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "add_sub",
+   "kind": "try",
+   "title": "Adding and taking away big numbers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Column addition"
+    },
+    {
+     "type": "text",
+     "markdown": "Write numbers in columns. Start with the **ones** and **carry** when a column makes ten or more.\n\nAdd 2,468 + 1,357 one column at a time.",
+     "say": "To add big numbers, line them up in columns, ones under ones, tens under tens. Always start with the ones on the right. Let's add two thousand, four hundred and sixty-eight, and one thousand, three hundred and fifty-seven. Eight and seven make fifteen. We write five and carry one ten across."
+    },
+    {
+     "type": "explainer",
+     "title": "2,468 + 1,357",
+     "scenes": [
+      {
+       "caption": "8 + 7 = 15. Write 5, carry 1.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ones: 5, carry 1"
+        }
+       ],
+       "say": "Ones first. Eight plus seven is fifteen. Write five, and carry one ten to the tens column."
+      },
+      {
+       "caption": "6 + 5 + 1 = 12. Write 2, carry 1.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 2,
+         "anim": "none",
+         "label": "ones: 5"
+        },
+        {
+         "id": "t",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "tens: 2, carry 1"
+        }
+       ],
+       "say": "Tens next. Six plus five plus the carried one makes twelve. Write two, and carry one hundred."
+      },
+      {
+       "caption": "4 + 3 + 1 = 8, then 2 + 1 = 3.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 25,
+         "size": 3,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 2,
+         "anim": "none",
+         "label": "ones: 5"
+        },
+        {
+         "id": "t",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 65,
+         "size": 2,
+         "anim": "none",
+         "label": "tens: 2"
+        },
+        {
+         "id": "h",
+         "emoji": "🟩",
+         "x": 40,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "hundreds: 8"
+        },
+        {
+         "id": "k",
+         "emoji": "🟦",
+         "x": 20,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "thousands: 3"
+        }
+       ],
+       "say": "Hundreds. Four plus three plus one is eight. Then thousands. Two plus one is three."
+      },
+      {
+       "caption": "2,468 + 1,357 = 3,825",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "r",
+         "emoji": "🎉",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "bounce",
+         "label": "3,825"
+        }
+       ],
+       "say": "The answer is three thousand, eight hundred and twenty-five."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 1,236 + 2,145?",
+      "hint": "Start with the ones: 6 + 5.",
+      "explanation": "6 + 5 = 11, 3 + 4 + 1 = 8, 2 + 1 = 3, 1 + 2 = 3. So 3,381.",
+      "skill_tag": "bignumbers.add",
+      "answer": {
+       "value": 3381,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "manipulative",
+     "title": "Trade hundreds for a thousand",
+     "goal": "Each block is 100. Drag 10 blocks into the Thousands box to make 1,000.",
+     "emoji": "🟩",
+     "count": 20,
+     "zones": [
+      "Hundreds",
+      "Thousands"
+     ],
+     "say": "Here are twenty blocks. Each block is one hundred. Drag ten of them into the Thousands box. Ten hundreds make one thousand! That trade is exactly what carrying means."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Taking away with exchange"
+    },
+    {
+     "type": "text",
+     "markdown": "When you cannot take away, **exchange**: swap one from the next place left for ten here.\n\nCheck with the opposite: 2,387 + 2,817 should make 5,204.",
+     "say": "Taking away works the same way, but we exchange instead of carry. Look at five thousand, two hundred and four, take away two thousand, eight hundred and seventeen. We cannot take seven from four. So we swap one ten for ten ones. When a place has nothing to swap, we go to the next place left. Finally, always check with the opposite sum. Add your answer back and you should get the number you started with."
+    },
+    {
+     "type": "image",
+     "emoji": "🔁",
+     "alt": "Subtract, then check by adding the answer back.",
+     "caption": "Subtract, then check by adding the answer back."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 5,204 − 2,817?",
+      "hint": "Exchange from the hundreds, then the tens.",
+      "explanation": "5,204 − 2,817 = 2,387. Check: 2,387 + 2,817 = 5,204.",
+      "skill_tag": "bignumbers.subtract",
+      "answer": {
+       "value": 2387,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Shop receipt maths",
+     "materials": [
+      "Pencil and paper",
+      "A real shopping receipt or a price list"
+     ],
+     "instructions": [
+      "Pick two prices from the receipt that are in rupees or pounds and are over 1,000 pence or rupees.",
+      "Add them in columns.",
+      "Take the smaller from the bigger in columns.",
+      "Check each answer using the opposite sum."
+     ],
+     "say": "Time to try it away from the screen. Use a pencil and paper and a few real prices."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Is 1,000 + 1,000 + 1,000 + 1,000 + 1,000 + 1,000 + 1,000 + 1,000 + 1,000 + 1,000 the same as 10,000?",
+     "answer_markdown": "Yes! Ten thousands make ten thousand. That is the next place to the left after the thousands."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Line up columns and start with the ones",
+      "Carry when a column makes ten or more",
+      "Exchange when you cannot take away, then check with the opposite sum"
+     ],
+     "say": "Remember. Add and take away in columns, starting from the ones. Carry when a column makes ten or more, and exchange when you cannot take away. Always check with the opposite sum."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "carry",
+       "meaning": "Moving ten from one column into the next column to the left."
+      },
+      {
+       "term": "exchange",
+       "meaning": "Swapping one from the next place for ten in this place when taking away."
+      },
+      {
+       "term": "column",
+       "meaning": "Numbers lined up, ones under ones, tens under tens."
+      },
+      {
+       "term": "ones",
+       "meaning": "Single things."
+      },
+      {
+       "term": "opposite sum",
+       "meaning": "Adding to check a take away, or taking away to check an add."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 3,450 + 2,300?",
+     "hint": "Add the hundreds and thousands.",
+     "explanation": "3,450 + 2,300 = 5,750.",
+     "answer": {
+      "value": 5750,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 7,000 − 4,000?",
+     "hint": "7 thousands take away 4 thousands.",
+     "explanation": "7,000 − 4,000 = 3,000.",
+     "answer": {
+      "value": 3000,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which sum checks that 6,000 − 2,500 = 3,500?",
+     "hint": "Use the opposite operation.",
+     "explanation": "3,500 + 2,500 = 6,000, so the answer is right.",
+     "options": [
+      {
+       "id": "a",
+       "text": "6,000 + 2,500"
+      },
+      {
+       "id": "b",
+       "text": "3,500 + 2,500"
+      },
+      {
+       "id": "c",
+       "text": "3,500 − 2,500"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "When you add 9 and 8 in the ones column you carry 1 ten.",
+     "hint": "9 + 8 = 17.",
+     "explanation": "17 is one ten and 7 ones, so write 7 and carry 1.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "negatives",
+   "kind": "play",
+   "title": "Below zero and Roman numerals",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Numbers below zero"
+    },
+    {
+     "type": "text",
+     "markdown": "**Negative numbers** are below zero. −3 is colder than 0.\n\nThe further below zero, the smaller the number.",
+     "say": "Have you ever seen a temperature of minus three? Numbers below zero are called negative numbers. On a thermometer, zero is freezing, and the numbers keep going down below zero. Watch the mercury drop from five degrees, past zero, to minus three."
+    },
+    {
+     "type": "explainer",
+     "title": "Dropping below zero",
+     "scenes": [
+      {
+       "caption": "5°C",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 5,
+          "from": -10,
+          "to": 20
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "It is five degrees. That is a cool day in Murree."
+      },
+      {
+       "caption": "0°C",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 0,
+          "from": -10,
+          "to": 20
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The temperature falls to zero. Water would freeze now."
+      },
+      {
+       "caption": "−3°C",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": -3,
+          "from": -10,
+          "to": 20
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It keeps falling to minus three. That is three degrees below zero. Minus three is smaller than zero."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the coldest temperature?",
+      "hint": "The further below zero, the colder.",
+      "explanation": "−6°C is the furthest below zero.",
+      "skill_tag": "bignumbers.negative",
+      "options": [
+       {
+        "id": "a",
+        "text": "−2°C"
+       },
+       {
+        "id": "b",
+        "text": "−6°C"
+       },
+       {
+        "id": "c",
+        "text": "0°C"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Roman numerals"
+    },
+    {
+     "type": "text",
+     "markdown": "**Roman numerals** use letters: I = 1, V = 5, X = 10, L = 50, C = 100.\n\nA smaller letter before a bigger one is taken away: IV = 4. After it, we add: VI = 6.",
+     "say": "Long ago, Romans wrote numbers using letters. I is one, V is five, X is ten, L is fifty and C is one hundred. When a smaller letter comes before a bigger one, you take it away. IV is four, which is five take away one. When it comes after, you add. VI is six. You can still see Roman numerals on clock faces."
+    },
+    {
+     "type": "chart",
+     "kind": "table",
+     "title": "Roman numerals",
+     "rows": [
+      {
+       "label": "I",
+       "value": 1
+      },
+      {
+       "label": "V",
+       "value": 5
+      },
+      {
+       "label": "X",
+       "value": 10
+      },
+      {
+       "label": "L",
+       "value": 50
+      },
+      {
+       "label": "C",
+       "value": 100
+      }
+     ],
+     "caption": "The five Roman letters we use."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What number is XIV?",
+      "hint": "X is 10 and IV is 4.",
+      "explanation": "XIV = 10 + 4 = 14.",
+      "skill_tag": "bignumbers.roman",
+      "answer": {
+       "value": 14,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain break"
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Number lights",
+     "goal": "Watch the order, then copy it.",
+     "emojis": [
+      "🔴",
+      "🔵",
+      "🟡",
+      "🟢"
+     ],
+     "say": "Time to play. Watch the lights, then copy the order."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "−10 is bigger than −2.",
+      "hint": "Which is closer to zero?",
+      "explanation": "−2 is closer to zero, so −2 is bigger than −10.",
+      "skill_tag": "bignumbers.negative",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Negative numbers are below zero",
+      "−6 is smaller than −2",
+      "Roman numerals use letters: IV = 4, VI = 6"
+     ],
+     "say": "Remember. Negative numbers are below zero, and the further below zero the smaller they are. Roman numerals use letters, and a smaller letter before a bigger one is taken away."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "negative numbers",
+       "meaning": "Numbers below zero, like −3."
+      },
+      {
+       "term": "thermometer",
+       "meaning": "A tool that measures temperature."
+      },
+      {
+       "term": "Roman numerals",
+       "meaning": "Numbers written with letters, like XIV for 14."
+      },
+      {
+       "term": "zero",
+       "meaning": "The number between the positive and negative numbers."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is smallest?",
+     "hint": "Further below zero is smaller.",
+     "explanation": "−9 is furthest below zero.",
+     "options": [
+      {
+       "id": "a",
+       "text": "−3"
+      },
+      {
+       "id": "b",
+       "text": "0"
+      },
+      {
+       "id": "c",
+       "text": "−9"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is the temperature 5 degrees below 2°C?",
+     "hint": "Count back past zero.",
+     "explanation": "2 − 5 = −3, so −3°C.",
+     "answer": {
+      "value": -3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What number is XX?",
+     "hint": "X is 10.",
+     "explanation": "X + X = 20.",
+     "answer": {
+      "value": 20,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "match",
+     "prompt": "Match the Roman numeral to the number.",
+     "hint": "IX is 10 take away 1.",
+     "explanation": "IX = 9, XV = 15, L = 50.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "IX"
+      },
+      {
+       "id": "l2",
+       "text": "XV"
+      },
+      {
+       "id": "l3",
+       "text": "L"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "15"
+      },
+      {
+       "id": "r3",
+       "text": "50"
+      },
+      {
+       "id": "r1",
+       "text": "9"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "real_world",
+   "kind": "use",
+   "title": "Mountains, money and number patterns",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How much higher?"
+    },
+    {
+     "type": "text",
+     "markdown": "K2 is 8,611 m high. Ben Nevis is 1,345 m high.\n\nTo find **the difference**, take the smaller number away from the bigger one.",
+     "say": "Big numbers help us compare real things. K2 in Pakistan is the second highest mountain in the world. It is eight thousand, six hundred and eleven metres high. Ben Nevis in Scotland is the highest mountain in the United Kingdom. It is one thousand, three hundred and forty-five metres high. To find out how much higher K2 is, we take away."
+    },
+    {
+     "type": "explainer",
+     "title": "Two mountains",
+     "scenes": [
+      {
+       "caption": "K2: 8,611 m",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "K2 8,611 m"
+        }
+       ],
+       "say": "Here is K2. It is 8,611 metres high."
+      },
+      {
+       "caption": "Ben Nevis: 1,345 m",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "K2 8,611 m"
+        },
+        {
+         "id": "b",
+         "emoji": "⛰️",
+         "x": 72,
+         "y": 60,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Ben Nevis 1,345 m"
+        }
+       ],
+       "say": "Here is Ben Nevis. It is 1,345 metres high. It is much smaller."
+      },
+      {
+       "caption": "8,611 − 1,345 = 7,266 m",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "none",
+         "label": "K2"
+        },
+        {
+         "id": "b",
+         "emoji": "⛰️",
+         "x": 72,
+         "y": 60,
+         "size": 2,
+         "anim": "none",
+         "label": "Ben Nevis"
+        },
+        {
+         "id": "d",
+         "emoji": "📏",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "bounce",
+         "label": "7,266 m higher"
+        }
+       ],
+       "say": "The difference is eight thousand, six hundred and eleven take away one thousand, three hundred and forty-five. That is seven thousand, two hundred and sixty-six metres."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A tower is 3,200 m high. A hill is 1,150 m high. How many metres higher is the tower?",
+      "hint": "Take the smaller from the bigger.",
+      "explanation": "3,200 − 1,150 = 2,050.",
+      "skill_tag": "bignumbers.real_life",
+      "answer": {
+       "value": 2050,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Number sequences"
+    },
+    {
+     "type": "text",
+     "markdown": "A **sequence** follows a rule. 3,000, 3,500, 4,000, 4,500 ... the rule is add 500.\n\nFind the rule, then keep going.",
+     "say": "A sequence is a list of numbers that follows a rule. Look at three thousand, three thousand five hundred, four thousand, four thousand five hundred. The rule is add five hundred each time. Once you spot the rule, you can find any number that comes next."
+    },
+    {
+     "type": "explainer",
+     "title": "Add 500 each time",
+     "scenes": [
+      {
+       "caption": "3,000",
+       "items": [
+        {
+         "id": "s1",
+         "emoji": "🔢",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3,000"
+        }
+       ],
+       "say": "Start at three thousand."
+      },
+      {
+       "caption": "+500 → 3,500",
+       "items": [
+        {
+         "id": "s1",
+         "emoji": "🔢",
+         "x": 15,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3,000"
+        },
+        {
+         "id": "s2",
+         "emoji": "🔢",
+         "x": 38,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3,500"
+        }
+       ],
+       "say": "Add five hundred. That is three thousand five hundred."
+      },
+      {
+       "caption": "+500 → 4,000 → 4,500",
+       "items": [
+        {
+         "id": "s1",
+         "emoji": "🔢",
+         "x": 12,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3,000"
+        },
+        {
+         "id": "s2",
+         "emoji": "🔢",
+         "x": 33,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3,500"
+        },
+        {
+         "id": "s3",
+         "emoji": "🔢",
+         "x": 54,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "4,000"
+        },
+        {
+         "id": "s4",
+         "emoji": "🔢",
+         "x": 78,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4,500"
+        }
+       ],
+       "say": "Add five hundred again. Four thousand. And again, four thousand five hundred."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Find the next number: 2,000, 2,250, 2,500, 2,750, ...",
+      "hint": "Work out how much it goes up each time.",
+      "explanation": "The rule is add 250, so 2,750 + 250 = 3,000.",
+      "skill_tag": "bignumbers.sequence",
+      "answer": {
+       "value": 3000,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Number detective",
+     "materials": [
+      "Pencil and paper",
+      "A book about mountains or an atlas"
+     ],
+     "instructions": [
+      "Find three tall mountains or buildings and write their heights.",
+      "Put them in order from tallest to shortest.",
+      "Work out the difference between the tallest and the shortest.",
+      "Write a sequence of your own and ask someone to find the rule."
+     ],
+     "say": "Now be a number detective with a real list of heights or prices."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The difference: bigger take away smaller",
+      "A sequence follows a rule",
+      "Find the rule, then continue the pattern"
+     ],
+     "say": "Remember. The difference is the bigger number take away the smaller. A sequence follows a rule, so find the rule first."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "difference",
+       "meaning": "How much bigger one number is than another. Found by taking away."
+      },
+      {
+       "term": "sequence",
+       "meaning": "A list of numbers that follows a rule."
+      },
+      {
+       "term": "rule",
+       "meaning": "What changes each time, like add 500."
+      },
+      {
+       "term": "metre",
+       "meaning": "A unit of length. A door is about 2 metres high."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Karachi to Lahore is about 1,200 km by road. Lahore to Peshawar is about 500 km. How far is it in total?",
+     "hint": "Add the two distances.",
+     "explanation": "1,200 + 500 = 1,700 km.",
+     "answer": {
+      "value": 1700,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "The rule is add 100. What comes after 4,800?",
+     "hint": "4,800 + 100.",
+     "explanation": "4,800 + 100 = 4,900.",
+     "answer": {
+      "value": 4900,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the rule? 9,000, 8,000, 7,000, 6,000",
+     "hint": "Is it going up or down?",
+     "explanation": "Each number is 1,000 less.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Add 1,000"
+      },
+      {
+       "id": "b",
+       "text": "Take away 100"
+      },
+      {
+       "id": "c",
+       "text": "Take away 1,000"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "In the number 5,418, what does the 4 stand for?",
+    "hint": "Which place is the 4 in?",
+    "explanation": "The 4 is in the hundreds place, so it is worth 400.",
+    "skill_tag": "bignumbers.value",
+    "options": [
+     {
+      "id": "a",
+      "text": "40"
+     },
+     {
+      "id": "b",
+      "text": "400"
+     },
+     {
+      "id": "c",
+      "text": "4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "How many thousands are in 7,135?",
+    "hint": "Look at the left-hand digit.",
+    "explanation": "7,135 has 7 thousands.",
+    "skill_tag": "bignumbers.thousands",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "In 5,046 the 0 means there are no hundreds.",
+    "hint": "The 0 is in the hundreds place.",
+    "explanation": "A 0 in the hundreds place means no hundreds.",
+    "skill_tag": "bignumbers.zero",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the number story for 3,725.",
+    "hint": "3 is in the thousands place.",
+    "explanation": "3,725 is 3,000 + 700 + 20 + 5. The 7 is worth 700.",
+    "skill_tag": "bignumbers.expanded",
+    "points": 2,
+    "text": "3,725 = {b1} + 700 + 20 + 5. The 7 is worth {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "300"
+       },
+       {
+        "id": "b",
+        "text": "30"
+       },
+       {
+        "id": "c",
+        "text": "3,000"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "700"
+       },
+       {
+        "id": "c",
+        "text": "70"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are the same as 4,206? Pick two.",
+    "hint": "There are no tens.",
+    "explanation": "4,206 = 4,000 + 200 + 6 = four thousand, two hundred and six.",
+    "skill_tag": "bignumbers.expanded",
+    "options": [
+     {
+      "id": "a",
+      "text": "four thousand, two hundred and six"
+     },
+     {
+      "id": "b",
+      "text": "4,000 + 20 + 6"
+     },
+     {
+      "id": "c",
+      "text": "4,260"
+     },
+     {
+      "id": "d",
+      "text": "4,000 + 200 + 6"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Order these from smallest to biggest.",
+    "hint": "Compare the thousands first.",
+    "explanation": "Compare thousands, then hundreds.",
+    "skill_tag": "bignumbers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "4,908"
+     },
+     {
+      "id": "i3",
+      "text": "8,094"
+     },
+     {
+      "id": "i4",
+      "text": "9,048"
+     },
+     {
+      "id": "i1",
+      "text": "4,809"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Slide to show 2,500 on the line.",
+    "hint": "Halfway along.",
+    "explanation": "2,500 is exactly halfway between 0 and 5,000.",
+    "skill_tag": "bignumbers.line",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 2500,
+     "tolerance": 100
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "Round 6,748 to the nearest 100.",
+    "hint": "Look at the tens digit.",
+    "explanation": "4 is less than 5, so round down to 6,700.",
+    "skill_tag": "bignumbers.round",
+    "answer": {
+     "value": 6700,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Why does 4,350 round up to 4,400 to the nearest 100?",
+    "hint": "Halfway numbers go up.",
+    "explanation": "The tens digit is 5, so it rounds up.",
+    "skill_tag": "bignumbers.round_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "350 is closer to 300"
+     },
+     {
+      "id": "b",
+      "text": "The tens digit is 5, which rounds up"
+     },
+     {
+      "id": "c",
+      "text": "The 4 is bigger than 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Match each Roman numeral to its number.",
+    "hint": "Small before big takes away.",
+    "explanation": "XIV = 14, XL = 40, XIX = 19.",
+    "skill_tag": "bignumbers.roman",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "XIV"
+     },
+     {
+      "id": "l2",
+      "text": "XL"
+     },
+     {
+      "id": "l3",
+      "text": "XIX"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "40"
+     },
+     {
+      "id": "r1",
+      "text": "14"
+     },
+     {
+      "id": "r3",
+      "text": "19"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the coldest place.",
+    "hint": "Below zero is colder.",
+    "explanation": "−3°C is below zero, so it is the coldest.",
+    "skill_tag": "bignumbers.negative",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌡️",
+       "label": "Lahore 4°C",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌡️",
+       "label": "Murree −3°C",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌡️",
+       "label": "London 2°C",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Sara says −8 is bigger than −2 because 8 is bigger than 2. Is she right?",
+    "hint": "Think about a thermometer.",
+    "explanation": "−2 is warmer than −8, so −2 is bigger.",
+    "skill_tag": "bignumbers.negative_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 8 is bigger than 2"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No, −2 is closer to zero so it is bigger"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "number",
+    "prompt": "What is 3,486 + 2,538?",
+    "hint": "Start with the ones: 6 + 8.",
+    "explanation": "3,486 + 2,538 = 6,024.",
+    "skill_tag": "bignumbers.add",
+    "answer": {
+     "value": 6024,
+     "tolerance": 0
+    },
+    "sub_lesson": "add_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 5,000 − 2,634 = 3,466. How can you check?",
+    "hint": "Use the opposite operation.",
+    "explanation": "3,466 + 2,634 = 6,100, not 5,000, so Hamza is wrong. The answer is 2,366.",
+    "skill_tag": "bignumbers.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Subtract again the same way"
+     },
+     {
+      "id": "b",
+      "text": "Add 3,466 and 2,634: it should make 5,000"
+     },
+     {
+      "id": "c",
+      "text": "Add 5,000 and 2,634"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "add_sub",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "K2 is 8,611 m high. Ben Nevis is 1,345 m high. How many metres higher is K2?",
+    "hint": "Take the smaller from the bigger.",
+    "explanation": "8,611 − 1,345 = 7,266 m.",
+    "skill_tag": "bignumbers.real_life",
+    "answer": {
+     "value": 7266,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "In the number 3,962, what does the 9 stand for?",
+    "hint": "Which place is the 9 in?",
+    "explanation": "The 9 is in the hundreds place, so it is worth 900.",
+    "skill_tag": "bignumbers.value",
+    "options": [
+     {
+      "id": "a",
+      "text": "9"
+     },
+     {
+      "id": "b",
+      "text": "90"
+     },
+     {
+      "id": "c",
+      "text": "900"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "In the number 7,805, what does the 8 stand for?",
+    "hint": "Which place is the 8 in?",
+    "explanation": "The 8 is in the hundreds place, so it is worth 800.",
+    "skill_tag": "bignumbers.value",
+    "options": [
+     {
+      "id": "a",
+      "text": "8"
+     },
+     {
+      "id": "b",
+      "text": "800"
+     },
+     {
+      "id": "c",
+      "text": "80"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "How many thousands are in 9,351?",
+    "hint": "Look at the left-hand digit.",
+    "explanation": "9,351 has 9 thousands.",
+    "skill_tag": "bignumbers.thousands",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "How many thousands are in 4,086?",
+    "hint": "Look at the left-hand digit.",
+    "explanation": "4,086 has 4 thousands.",
+    "skill_tag": "bignumbers.thousands",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "In 7,031 the 0 means there are no hundreds.",
+    "hint": "The 0 is in the hundreds place.",
+    "explanation": "A 0 in the hundreds place means no hundreds.",
+    "skill_tag": "bignumbers.zero",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "In 2,908 the 0 means there are no thousands.",
+    "hint": "Which place is the 0 in?",
+    "explanation": "The 0 is in the tens place, so there are no tens.",
+    "skill_tag": "bignumbers.zero",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the number story for 6,148.",
+    "hint": "6 is in the thousands place.",
+    "explanation": "6,148 is 6,000 + 100 + 40 + 8. The 1 is worth 100.",
+    "skill_tag": "bignumbers.expanded",
+    "points": 2,
+    "text": "6,148 = {b1} + 100 + 40 + 8. The 1 is worth {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "600"
+       },
+       {
+        "id": "b",
+        "text": "6,000"
+       },
+       {
+        "id": "c",
+        "text": "60"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "100"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Complete the number story for 8,275.",
+    "hint": "8 is in the thousands place.",
+    "explanation": "8,275 is 8,000 + 200 + 70 + 5. The 2 is worth 200.",
+    "skill_tag": "bignumbers.expanded",
+    "points": 2,
+    "text": "8,275 = {b1} + 200 + 70 + 5. The 2 is worth {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "800"
+       },
+       {
+        "id": "b",
+        "text": "8,000"
+       },
+       {
+        "id": "c",
+        "text": "80"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "20"
+       },
+       {
+        "id": "b",
+        "text": "200"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are the same as 5,308? Pick two.",
+    "hint": "There are no tens.",
+    "explanation": "5,308 = 5,000 + 300 + 8 = five thousand, three hundred and eight.",
+    "skill_tag": "bignumbers.expanded",
+    "options": [
+     {
+      "id": "a",
+      "text": "five thousand, three hundred and eight"
+     },
+     {
+      "id": "b",
+      "text": "5,380"
+     },
+     {
+      "id": "c",
+      "text": "5,000 + 30 + 8"
+     },
+     {
+      "id": "d",
+      "text": "5,000 + 300 + 8"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are the same as 7,042? Pick two.",
+    "hint": "There are no hundreds.",
+    "explanation": "7,042 = 7,000 + 40 + 2 = seven thousand and forty-two.",
+    "skill_tag": "bignumbers.expanded",
+    "options": [
+     {
+      "id": "a",
+      "text": "seven thousand and forty-two"
+     },
+     {
+      "id": "b",
+      "text": "7,420"
+     },
+     {
+      "id": "c",
+      "text": "7,000 + 400 + 2"
+     },
+     {
+      "id": "d",
+      "text": "7,000 + 40 + 2"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange these numbers from the smallest.",
+    "hint": "Compare the thousands first.",
+    "explanation": "Compare thousands, then hundreds.",
+    "skill_tag": "bignumbers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "7,389"
+     },
+     {
+      "id": "i4",
+      "text": "9,837"
+     },
+     {
+      "id": "i2",
+      "text": "3,897"
+     },
+     {
+      "id": "i1",
+      "text": "3,799"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Put these in order, smallest first.",
+    "hint": "Compare the thousands first.",
+    "explanation": "Compare thousands, then hundreds.",
+    "skill_tag": "bignumbers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "1,675"
+     },
+     {
+      "id": "i4",
+      "text": "6,751"
+     },
+     {
+      "id": "i3",
+      "text": "5,176"
+     },
+     {
+      "id": "i1",
+      "text": "1,567"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Slide to show 3,000 on the line.",
+    "hint": "Three fifths of the way along.",
+    "explanation": "3,000 is more than halfway along 0 to 5,000.",
+    "skill_tag": "bignumbers.line",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 3000,
+     "tolerance": 100
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "slider",
+    "prompt": "Slide to show 1,000 on the line.",
+    "hint": "One fifth of the way along.",
+    "explanation": "1,000 is one fifth of 5,000.",
+    "skill_tag": "bignumbers.line",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 1000,
+     "tolerance": 100
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "number",
+    "prompt": "Round 3,462 to the nearest 100.",
+    "hint": "Look at the tens digit, 6.",
+    "explanation": "6 is 5 or more, so round up to 3,500.",
+    "skill_tag": "bignumbers.round",
+    "answer": {
+     "value": 3500,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "number",
+    "prompt": "Round 8,129 to the nearest 100.",
+    "hint": "Look at the tens digit, 2.",
+    "explanation": "2 is less than 5, so round down to 8,100.",
+    "skill_tag": "bignumbers.round",
+    "answer": {
+     "value": 8100,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Why does 6,450 round up to 6,500 to the nearest 100?",
+    "hint": "Halfway numbers go up.",
+    "explanation": "The tens digit is 5, so it rounds up.",
+    "skill_tag": "bignumbers.round_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 6 is bigger than 5"
+     },
+     {
+      "id": "b",
+      "text": "450 is closer to 400"
+     },
+     {
+      "id": "c",
+      "text": "The tens digit is 5, which rounds up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multiple_choice",
+    "prompt": "Why does 2,350 round up to 2,400 to the nearest 100?",
+    "hint": "Halfway numbers go up.",
+    "explanation": "The tens digit is 5, so it rounds up.",
+    "skill_tag": "bignumbers.round_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "350 is closer to 300"
+     },
+     {
+      "id": "b",
+      "text": "The tens digit is 5, which rounds up"
+     },
+     {
+      "id": "c",
+      "text": "The 2 is smaller than 5"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "match",
+    "prompt": "Which number goes with each Roman numeral?",
+    "hint": "Small before big takes away.",
+    "explanation": "XIX = 19, XL = 40, XIV = 14.",
+    "skill_tag": "bignumbers.roman",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "XIX"
+     },
+     {
+      "id": "l2",
+      "text": "XL"
+     },
+     {
+      "id": "l3",
+      "text": "XIV"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "40"
+     },
+     {
+      "id": "r3",
+      "text": "14"
+     },
+     {
+      "id": "r1",
+      "text": "19"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "match",
+    "prompt": "Pair up the Roman numerals and the numbers.",
+    "hint": "L is 50, X is 10.",
+    "explanation": "XXIV = 24, LX = 60, IX = 9.",
+    "skill_tag": "bignumbers.roman",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "XXIV"
+     },
+     {
+      "id": "l2",
+      "text": "LX"
+     },
+     {
+      "id": "l3",
+      "text": "IX"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "9"
+     },
+     {
+      "id": "r1",
+      "text": "24"
+     },
+     {
+      "id": "r2",
+      "text": "60"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "hotspot",
+    "prompt": "Tap the warmest place.",
+    "hint": "Above zero is warmer.",
+    "explanation": "6°C is above zero, so it is the warmest.",
+    "skill_tag": "bignumbers.negative",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌡️",
+       "label": "Lahore 6°C",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌡️",
+       "label": "Murree −2°C",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌡️",
+       "label": "Skardu −7°C",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "hotspot",
+    "prompt": "Tap the place with the lowest temperature.",
+    "hint": "Below zero is colder.",
+    "explanation": "−5°C is the furthest below zero.",
+    "skill_tag": "bignumbers.negative",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌡️",
+       "label": "Quetta 3°C",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌡️",
+       "label": "London 1°C",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌡️",
+       "label": "Gilgit −5°C",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Zara says −9 is bigger than −3 because 9 is bigger than 3. Is she right?",
+    "hint": "Think about a thermometer.",
+    "explanation": "−3 is warmer than −9, so −3 is bigger.",
+    "skill_tag": "bignumbers.negative_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 9 is bigger than 3"
+     },
+     {
+      "id": "b",
+      "text": "No, −3 is closer to zero so it is bigger"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Ali says −1 is smaller than −7 because 1 is smaller than 7. Is he right?",
+    "hint": "Think about a thermometer.",
+    "explanation": "−1 is warmer than −7, so −1 is bigger.",
+    "skill_tag": "bignumbers.negative_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 1 is smaller than 7"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No, −1 is closer to zero so it is bigger"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "number",
+    "prompt": "What is 2,718 + 3,405?",
+    "hint": "Start with the ones: 8 + 5.",
+    "explanation": "2,718 + 3,405 = 6,123.",
+    "skill_tag": "bignumbers.add",
+    "answer": {
+     "value": 6123,
+     "tolerance": 0
+    },
+    "sub_lesson": "add_sub",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "number",
+    "prompt": "What is 4,563 + 1,879?",
+    "hint": "Start with the ones: 3 + 9.",
+    "explanation": "4,563 + 1,879 = 6,442.",
+    "skill_tag": "bignumbers.add",
+    "answer": {
+     "value": 6442,
+     "tolerance": 0
+    },
+    "sub_lesson": "add_sub",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 6,000 − 3,452 = 3,548. How can he check?",
+    "hint": "Use the opposite operation.",
+    "explanation": "3,548 + 3,452 = 7,000, not 6,000, so Omar is wrong. The answer is 2,548.",
+    "skill_tag": "bignumbers.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Subtract again the same way"
+     },
+     {
+      "id": "b",
+      "text": "Add 3,548 and 3,452: it should make 6,000"
+     },
+     {
+      "id": "c",
+      "text": "Add 6,000 and 3,452"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "add_sub",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Hana says 8,000 − 2,375 = 5,625. How can she check?",
+    "hint": "Use the opposite operation.",
+    "explanation": "5,625 + 2,375 = 8,000, so Hana is right.",
+    "skill_tag": "bignumbers.check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Add 8,000 and 2,375"
+     },
+     {
+      "id": "b",
+      "text": "Add 5,625 and 2,375: it should make 8,000"
+     },
+     {
+      "id": "c",
+      "text": "Subtract again the same way"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "add_sub",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "Mount Everest is 8,849 m high. K2 is 8,611 m. How many metres higher is Everest?",
+    "hint": "Take the smaller from the bigger.",
+    "explanation": "8,849 − 8,611 = 238 m.",
+    "skill_tag": "bignumbers.real_life",
+    "answer": {
+     "value": 238,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "A plane flies at 9,500 m. A mountain is 4,260 m high. How many metres between them?",
+    "hint": "Take the smaller from the bigger.",
+    "explanation": "9,500 − 4,260 = 5,240 m.",
+    "skill_tag": "bignumbers.real_life",
+    "answer": {
+     "value": 5240,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}

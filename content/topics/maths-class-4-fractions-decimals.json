@@ -1,0 +1,2556 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-fractions-decimals",
+  "subject": "maths",
+  "title": "Fractions and Decimals",
+  "summary": "Equivalent fractions, comparing, fractions of amounts, adding fractions, tenths and hundredths, money and percentages.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 3: Fractions and decimals",
+  "learning_objectives": [
+   "Find equivalent fractions and compare them",
+   "Find fractions of amounts",
+   "Link fractions, decimals and percentages"
+  ],
+  "tags": [
+   "topic",
+   "topic-3"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 3
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 fractions",
+    "text": "Recognise and show equivalent fractions; add and subtract fractions with the same denominator"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y4 decimals",
+    "text": "Recognise and write decimal equivalents of tenths, hundredths and quarters"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "M-04-A-27"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.07"
+   }
+  ],
+  "success_criteria": [
+   "I can write equivalent fractions",
+   "I can find a fraction of a number",
+   "I can write tenths and hundredths as decimals and use money"
+  ],
+  "real_life": "Sharing a pizza, shop sales with percent off, and paying in pounds or rupees.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 6 × 7?",
+    "hint": "Count in sixes.",
+    "explanation": "6 × 7 = 42.",
+    "answer": {
+     "value": 42,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 45 ÷ 5?",
+    "hint": "5 × ? = 45",
+    "explanation": "5 × 9 = 45.",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is 23 ÷ 4?",
+    "hint": "4 × 5 = 20.",
+    "explanation": "23 − 20 = 3.",
+    "options": [
+     {
+      "id": "a",
+      "text": "6 remainder 1"
+     },
+     {
+      "id": "b",
+      "text": "5 remainder 3"
+     },
+     {
+      "id": "c",
+      "text": "5 remainder 1"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome back, number explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how are fractions, decimals and percentages all connected?",
+   "say": "Welcome back, number explorer! Imagine one pizza cut into eight slices. You eat two slices. Your sister eats two slices. Did you eat the same amount as someone who ate one quarter? Fractions help us share fairly. Decimals and percentages are fraction cousins, and shops use them every day. Today we will explore all three. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🍕",
+   "alt": "A pizza cut into 8 slices: 2/8 is the same as 1/4.",
+   "caption": "A pizza cut into 8 slices: 2/8 is the same as 1/4."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "fractions, decimals and percentages",
+     "meaning": "Three ways to write parts of a whole."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "equivalent",
+   "kind": "learn",
+   "title": "Equivalent fractions and comparing",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Same amount, different names"
+    },
+    {
+     "type": "text",
+     "markdown": "**Equivalent fractions** are the same amount with different names.\n\n1/2 = 2/4 = 4/8",
+     "say": "Here is a chocolate bar. If we cut it into two equal pieces and take one, we have one half. Now cut each half in two. We have four pieces, and two of them are shaded. Two quarters. The shaded part has not changed at all. It is the same amount with a different name. We say one half and two quarters are equivalent fractions. Cut again into eight, and four eighths is the same too."
+    },
+    {
+     "type": "explainer",
+     "title": "One half, two quarters, four eighths",
+     "scenes": [
+      {
+       "caption": "1/2 shaded",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 2,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "One half. The bar is in two equal parts and one is shaded."
+      },
+      {
+       "caption": "2/4 shaded = 1/2",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 4,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Cut each half in two. Now two out of four are shaded: two quarters. The same amount!"
+      },
+      {
+       "caption": "4/8 shaded = 1/2",
+       "items": [
+        {
+         "id": "b",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 8,
+          "shaded": 4
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Cut again. Four out of eight are shaded. Four eighths. Still the same amount."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which fraction is equivalent to 2/4?",
+      "hint": "Think about the chocolate bar.",
+      "explanation": "2 out of 4 equal parts is the same as 1 out of 2.",
+      "skill_tag": "fractions.equivalent",
+      "options": [
+       {
+        "id": "a",
+        "text": "1/4"
+       },
+       {
+        "id": "b",
+        "text": "3/4"
+       },
+       {
+        "id": "c",
+        "text": "1/2"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "markdown": "Multiply the top (**numerator**) and the bottom (**denominator**) by the same number: 1/3 = 2/6.",
+     "say": "Here is the trick. Multiply the top number and the bottom number by the same number, and the fraction keeps its value. One over three, times two on top and bottom, is two over six."
+    },
+    {
+     "type": "chart",
+     "kind": "fraction",
+     "title": "One third = two sixths",
+     "parts": 6,
+     "shaded": 2,
+     "caption": "2 of 6 parts shaded is the same as 1 of 3."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "1/5 = 3/?",
+      "hint": "What was 5 multiplied by to get the new bottom?",
+      "explanation": "1 × 3 = 3 and 5 × 3 = 15, so 1/5 = 3/15.",
+      "skill_tag": "fractions.equivalent",
+      "answer": {
+       "value": 15,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Which is bigger?"
+    },
+    {
+     "type": "text",
+     "markdown": "The bigger the denominator, the smaller each piece. 2/3 is bigger than 2/5.",
+     "say": "To compare fractions, look at the size of the pieces. Two thirds and two fifths both have two pieces. But thirds are bigger pieces than fifths, because the whole is cut into fewer parts. So two thirds is bigger than two fifths. The bigger the bottom number, the smaller each piece."
+    },
+    {
+     "type": "explainer",
+     "title": "2/3 and 2/5",
+     "scenes": [
+      {
+       "caption": "2/3",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 3,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Two thirds. The bar has three parts and two are shaded."
+      },
+      {
+       "caption": "2/5 is less than 2/3",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 3,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 5,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 65,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Two fifths. The bar has five parts and two are shaded. The shaded part is shorter."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is bigger?",
+      "hint": "Which has bigger pieces?",
+      "explanation": "Fourths are bigger pieces than eighths, so 3/4 is bigger than 3/8.",
+      "skill_tag": "fractions.compare",
+      "options": [
+       {
+        "id": "a",
+        "text": "3/8"
+       },
+       {
+        "id": "b",
+        "text": "3/4"
+       },
+       {
+        "id": "c",
+        "text": "They are equal"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Equivalent fractions are the same amount",
+      "Multiply top and bottom by the same number",
+      "Bigger denominator means smaller pieces"
+     ],
+     "say": "Remember. Equivalent fractions are the same amount. Multiply top and bottom by the same number. The bigger the bottom number, the smaller the pieces."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "equivalent fractions",
+       "meaning": "Fractions that are the same amount but look different."
+      },
+      {
+       "term": "numerator",
+       "meaning": "The top number. It says how many parts we have."
+      },
+      {
+       "term": "denominator",
+       "meaning": "The bottom number. It says how many equal parts the whole is cut into."
+      },
+      {
+       "term": "fraction",
+       "meaning": "Part of a whole."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is equal to 1/2?",
+     "hint": "Multiply top and bottom by the same number.",
+     "explanation": "1/2 = 3/6.",
+     "options": [
+      {
+       "id": "a",
+       "text": "1/6"
+      },
+      {
+       "id": "b",
+       "text": "3/6"
+      },
+      {
+       "id": "c",
+       "text": "2/6"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "2/3 = ?/9",
+     "hint": "3 × 3 = 9.",
+     "explanation": "2 × 3 = 6, so 2/3 = 6/9.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "1/8 is bigger than 1/4.",
+     "hint": "Which has bigger pieces?",
+     "explanation": "Eighths are smaller pieces than quarters.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order, smallest first.",
+     "hint": "Bigger bottom number means smaller piece.",
+     "explanation": "Eighths are the smallest pieces.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "1/4"
+      },
+      {
+       "id": "i3",
+       "text": "1/2"
+      },
+      {
+       "id": "i1",
+       "text": "1/8"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "amounts",
+   "kind": "try",
+   "title": "Fractions of amounts and adding fractions",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Finding a fraction of a number"
+    },
+    {
+     "type": "text",
+     "markdown": "To find a fraction of an amount: **divide** by the denominator, then multiply by the numerator.\n\n1/4 of 20 = 5 and 3/4 of 20 = 15.",
+     "say": "What is one quarter of twenty? Share twenty into four equal groups. Each group has five. So one quarter of twenty is five. What about three quarters? Three groups of five make fifteen. The bottom number tells us how many groups to share into. The top number tells us how many groups to take."
+    },
+    {
+     "type": "explainer",
+     "title": "3/4 of 20",
+     "scenes": [
+      {
+       "caption": "20 stars",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⭐",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "20 stars"
+        }
+       ],
+       "say": "Here are twenty stars."
+      },
+      {
+       "caption": "20 ÷ 4 = 5",
+       "items": [
+        {
+         "id": "g1",
+         "emoji": "⭐",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "g2",
+         "emoji": "⭐",
+         "x": 40,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "g3",
+         "emoji": "⭐",
+         "x": 60,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "5"
+        },
+        {
+         "id": "g4",
+         "emoji": "⭐",
+         "x": 80,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "5"
+        }
+       ],
+       "say": "Share them into four equal groups. Each group has five stars."
+      },
+      {
+       "caption": "3/4 of 20 = 15",
+       "items": [
+        {
+         "id": "g1",
+         "emoji": "⭐",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5"
+        },
+        {
+         "id": "g2",
+         "emoji": "⭐",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5"
+        },
+        {
+         "id": "g3",
+         "emoji": "⭐",
+         "x": 60,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5"
+        },
+        {
+         "id": "g4",
+         "emoji": "⭐",
+         "x": 80,
+         "y": 50,
+         "size": 1,
+         "anim": "none",
+         "label": "left"
+        }
+       ],
+       "say": "Take three of the four groups. Three times five is fifteen. So three quarters of twenty is fifteen."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 1/3 of 12?",
+      "hint": "Share 12 into 3 equal groups.",
+      "explanation": "12 ÷ 3 = 4.",
+      "skill_tag": "fractions.amounts",
+      "answer": {
+       "value": 4,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "manipulative",
+     "title": "Fractions of 20",
+     "goal": "Put the stars into 4 equal boxes. How many in one box? That is 1/4 of 20.",
+     "emoji": "⭐",
+     "count": 20,
+     "zones": [
+      "Box 1",
+      "Box 2",
+      "Box 3",
+      "Box 4"
+     ],
+     "say": "Now try it with your hands. There are twenty stars. Share them into the boxes to find a fraction."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Adding fractions"
+    },
+    {
+     "type": "text",
+     "markdown": "Same denominator? **Add** the numerators. The denominator stays the same: 2/7 + 3/7 = 5/7.",
+     "say": "When the bottom numbers are the same, adding is easy. Two sevenths plus three sevenths. The pieces are the same size, so we just add the tops: five sevenths. The bottom number stays the same. It only tells us the size of the pieces."
+    },
+    {
+     "type": "explainer",
+     "title": "2/7 + 3/7",
+     "scenes": [
+      {
+       "caption": "2/7",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 7,
+          "shaded": 2
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Two sevenths are shaded."
+      },
+      {
+       "caption": "2/7 + 3/7 = 5/7",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 7,
+          "shaded": 5
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Add three more sevenths. Now five of the seven parts are shaded."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 3/8 + 4/8?",
+      "hint": "Add the tops. Keep the bottom.",
+      "explanation": "3 + 4 = 7, and the denominator stays 8.",
+      "skill_tag": "fractions.add",
+      "options": [
+       {
+        "id": "a",
+        "text": "12/8"
+       },
+       {
+        "id": "b",
+        "text": "7/8"
+       },
+       {
+        "id": "c",
+        "text": "7/16"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Pizza fractions",
+     "materials": [
+      "Paper circles or a real pizza",
+      "Pencil"
+     ],
+     "instructions": [
+      "Cut a circle into 8 equal slices.",
+      "Colour 3 slices. What fraction is coloured?",
+      "Colour 2 more. How many eighths now?",
+      "Write the sum 3/8 + 2/8."
+     ],
+     "say": "A job to do at home."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Fraction of an amount: divide by the bottom, multiply by the top",
+      "Same denominator: add the numerators",
+      "The denominator stays the same"
+     ],
+     "say": "Remember. For a fraction of an amount, divide by the bottom, then multiply by the top. To add with the same bottom, add the tops."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "divide",
+       "meaning": "Share equally into groups."
+      },
+      {
+       "term": "numerator",
+       "meaning": "The top number."
+      },
+      {
+       "term": "denominator",
+       "meaning": "The bottom number."
+      },
+      {
+       "term": "add",
+       "meaning": "Put together to make a total."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 1/5 of 25?",
+     "hint": "25 ÷ 5.",
+     "explanation": "25 ÷ 5 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 3/4 of 8?",
+     "hint": "8 ÷ 4 = 2, then times 3.",
+     "explanation": "2 × 3 = 6.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 2/9 + 5/9?",
+     "hint": "Add the tops only.",
+     "explanation": "2 + 5 = 7 over 9.",
+     "options": [
+      {
+       "id": "a",
+       "text": "7/18"
+      },
+      {
+       "id": "b",
+       "text": "7/9"
+      },
+      {
+       "id": "c",
+       "text": "10/9"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "1/2 of 10 is 5.",
+     "hint": "Share 10 into 2.",
+     "explanation": "10 ÷ 2 = 5.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "decimals",
+   "kind": "play",
+   "title": "Tenths, hundredths and decimals",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Tenths"
+    },
+    {
+     "type": "text",
+     "markdown": "A **decimal** is a fraction written with a **decimal point**. 1/10 = 0.1 and 3/10 = 0.3.",
+     "say": "A decimal is another way to write a fraction. Cut one whole into ten equal parts. Each part is one tenth. We write one tenth as nought point one. Three tenths is nought point three. The dot is called the decimal point. It sits between the whole numbers and the parts."
+    },
+    {
+     "type": "chart",
+     "kind": "number_line",
+     "title": "Tenths from 0 to 1",
+     "from": 0,
+     "to": 1,
+     "step": 0.1,
+     "marks": [
+      0,
+      0.3,
+      0.5,
+      1
+     ],
+     "caption": "Ten equal steps from 0 to 1. Each step is one tenth, 0.1."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 7/10 as a decimal?",
+      "hint": "Tenths go straight after the decimal point.",
+      "explanation": "7 tenths = 0.7.",
+      "skill_tag": "decimals.tenths",
+      "options": [
+       {
+        "id": "a",
+        "text": "7.0"
+       },
+       {
+        "id": "b",
+        "text": "0.7"
+       },
+       {
+        "id": "c",
+        "text": "0.07"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Hundredths"
+    },
+    {
+     "type": "text",
+     "markdown": "**Hundredths** are two places after the decimal point. 1/100 = 0.01 and 25/100 = 0.25 = 1/4.",
+     "say": "Now cut each tenth into ten more pieces. Now the whole is cut into one hundred equal parts. Each tiny part is one hundredth, nought point nought one. Twenty-five hundredths is nought point two five. And that is exactly one quarter!"
+    },
+    {
+     "type": "explainer",
+     "title": "From 1 whole to hundredths",
+     "scenes": [
+      {
+       "caption": "1 whole",
+       "items": [
+        {
+         "id": "w",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 10
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is one whole."
+      },
+      {
+       "caption": "3/10 = 0.3",
+       "items": [
+        {
+         "id": "w",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 3
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Cut it into ten tenths. Three tenths are shaded: nought point three."
+      },
+      {
+       "caption": "25/100 = 0.25 = 1/4",
+       "items": [
+        {
+         "id": "q",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 4,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Each tenth cut in ten makes a hundred. Twenty-five of them make nought point two five, which is one quarter."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is 0.25 as a fraction?",
+      "hint": "25 out of 100 is one quarter.",
+      "explanation": "25/100 simplifies to 1/4.",
+      "skill_tag": "decimals.hundredths",
+      "options": [
+       {
+        "id": "a",
+        "text": "1/5"
+       },
+       {
+        "id": "b",
+        "text": "1/2"
+       },
+       {
+        "id": "c",
+        "text": "1/4"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain break"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Fraction pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🍕",
+      "🍫",
+      "🍰",
+      "🥧",
+      "🍩",
+      "🧁"
+     ],
+     "say": "A little brain break. Find the matching pairs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "0.5 is the same as one half.",
+      "hint": "5 tenths out of 10.",
+      "explanation": "5/10 = 1/2.",
+      "skill_tag": "decimals.hundredths",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Tenths: 0.1, 0.2, 0.3 ...",
+      "Hundredths: 0.01, 0.02 ...",
+      "0.5 = 1/2 and 0.25 = 1/4"
+     ],
+     "say": "Remember. Tenths are the first place after the decimal point. Hundredths are the second place. Nought point five is a half and nought point two five is a quarter."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "decimal",
+       "meaning": "A number with a decimal point, like 0.3."
+      },
+      {
+       "term": "decimal point",
+       "meaning": "The dot between whole numbers and parts."
+      },
+      {
+       "term": "tenths",
+       "meaning": "Ten equal parts of one whole."
+      },
+      {
+       "term": "hundredths",
+       "meaning": "One hundred equal parts of one whole."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 9/10 as a decimal?",
+     "hint": "9 tenths.",
+     "explanation": "9/10 = 0.9.",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.09"
+      },
+      {
+       "id": "b",
+       "text": "9.1"
+      },
+      {
+       "id": "c",
+       "text": "0.9"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many hundredths are in 0.4?",
+     "hint": "0.4 = 4 tenths = 40 hundredths.",
+     "explanation": "0.4 = 0.40 = 40/100.",
+     "answer": {
+      "value": 40,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "match",
+     "prompt": "Match the fraction to the decimal.",
+     "hint": "1/2 is 5 tenths.",
+     "explanation": "1/10 = 0.1, 1/2 = 0.5, 3/4 = 0.75.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "1/10"
+      },
+      {
+       "id": "l2",
+       "text": "1/2"
+      },
+      {
+       "id": "l3",
+       "text": "3/4"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "0.5"
+      },
+      {
+       "id": "r1",
+       "text": "0.1"
+      },
+      {
+       "id": "r3",
+       "text": "0.75"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "real_world",
+   "kind": "use",
+   "title": "Money and percentages",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Money is decimals"
+    },
+    {
+     "type": "text",
+     "markdown": "Money is a decimal: £4.60 means 4 pounds and 60 pence.\n\nLine up the decimal points when you add.",
+     "say": "Money uses decimals every day. Four pounds sixty is written four point six zero. The digits after the point are the pence. A pound is one hundred pence, so every pence is a hundredth. When we add money, line up the decimal points. Four pounds sixty plus two pounds seventy-five is seven pounds thirty-five."
+    },
+    {
+     "type": "image",
+     "emoji": "💷",
+     "alt": "£4.60 + £2.75 = £7.35",
+     "caption": "£4.60 + £2.75 = £7.35"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is £5.50 + £1.25?",
+      "hint": "Add the pence, then the pounds.",
+      "explanation": "50p + 25p = 75p, and £5 + £1 = £6, so £6.75.",
+      "skill_tag": "decimals.money",
+      "answer": {
+       "value": 6.75,
+       "tolerance": 0.005
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Percentages"
+    },
+    {
+     "type": "text",
+     "markdown": "A **percentage** means out of 100. 50% = 1/2, 25% = 1/4, 10% = 1/10.",
+     "say": "A percentage is a fraction out of one hundred. The word percent means per hundred. Fifty percent means fifty out of a hundred, and that is one half. Twenty-five percent is a quarter. Ten percent is one tenth. Shops use percentages for sales."
+    },
+    {
+     "type": "explainer",
+     "title": "Percentages as bars",
+     "scenes": [
+      {
+       "caption": "50% = 1/2",
+       "items": [
+        {
+         "id": "h",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 5
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Look at this bar, cut into ten equal parts. Five parts are shaded. That is fifty out of a hundred, fifty percent. It is one half."
+      },
+      {
+       "caption": "25% = 1/4",
+       "items": [
+        {
+         "id": "h",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 4,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Now a bar in four parts with one shaded. That is twenty-five out of a hundred, twenty-five percent. One quarter."
+      },
+      {
+       "caption": "10% = 1/10",
+       "items": [
+        {
+         "id": "h",
+         "prop": {
+          "kind": "fraction_bar",
+          "parts": 10,
+          "shaded": 1
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "And one part out of ten shaded is ten percent. One tenth."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A shop has 50% off. That is the same as taking off...",
+      "hint": "50 out of 100.",
+      "explanation": "50% = 1/2.",
+      "skill_tag": "decimals.percent",
+      "options": [
+       {
+        "id": "a",
+        "text": "one quarter"
+       },
+       {
+        "id": "b",
+        "text": "one half"
+       },
+       {
+        "id": "c",
+        "text": "one tenth"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Sale detective",
+     "materials": [
+      "A shop leaflet or website",
+      "Pencil and paper"
+     ],
+     "instructions": [
+      "Find an item with a sale price.",
+      "Work out 50% or 10% of the price.",
+      "Is the real saving the same as the shop says?",
+      "Which sale is better: 25% off or 10% off?"
+     ],
+     "say": "A job for you in a real shop."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Money is a decimal",
+      "Percent means out of 100",
+      "50% = 1/2, 25% = 1/4, 10% = 1/10"
+     ],
+     "say": "Remember. Money is a decimal, so line up the points. A percentage means out of one hundred."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "percentage",
+       "meaning": "A fraction out of 100."
+      },
+      {
+       "term": "percent",
+       "meaning": "Per hundred, written %."
+      },
+      {
+       "term": "pence",
+       "meaning": "Hundredths of a pound."
+      },
+      {
+       "term": "discount",
+       "meaning": "Money taken off a price."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 10% of 50?",
+     "hint": "10% is one tenth.",
+     "explanation": "50 ÷ 10 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 25% of 80?",
+     "hint": "25% is one quarter.",
+     "explanation": "80 ÷ 4 = 20.",
+     "answer": {
+      "value": 20,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "£3.20 + £1.80 = ?",
+     "hint": "20p + 80p = £1.",
+     "explanation": "£3.20 + £1.80 = £5.00.",
+     "options": [
+      {
+       "id": "a",
+       "text": "£4.90"
+      },
+      {
+       "id": "b",
+       "text": "£4.00"
+      },
+      {
+       "id": "c",
+       "text": "£5.00"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which fraction is equivalent to 1/2?",
+    "hint": "Multiply top and bottom by 4.",
+    "explanation": "1/2 = 4/8.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "3/8"
+     },
+     {
+      "id": "b",
+      "text": "4/8"
+     },
+     {
+      "id": "c",
+      "text": "2/8"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "What is 1/4 of 20?",
+    "hint": "Share 20 into 4 groups.",
+    "explanation": "20 ÷ 4 = 5.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "3/6 is equivalent to 1/2.",
+    "hint": "Divide top and bottom by 3.",
+    "explanation": "3/6 = 1/2.",
+    "skill_tag": "fractions.equivalent",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Finish the fraction facts about 3/4.",
+    "hint": "Multiply top and bottom by 2.",
+    "explanation": "3/4 = 6/8, and the top number is the numerator.",
+    "skill_tag": "fractions.language",
+    "points": 2,
+    "text": "3/4 = {b1}/8. The top number is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "denominator"
+       },
+       {
+        "id": "b",
+        "text": "remainder"
+       },
+       {
+        "id": "c",
+        "text": "numerator"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "equivalent",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which are equal to 2/5? Pick two.",
+    "hint": "Multiply top and bottom by the same number.",
+    "explanation": "2/5 = 4/10 = 6/15.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "6/15"
+     },
+     {
+      "id": "b",
+      "text": "4/5"
+     },
+     {
+      "id": "c",
+      "text": "3/10"
+     },
+     {
+      "id": "d",
+      "text": "4/10"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put these fractions in order, smallest first.",
+    "hint": "Think about the size of the pieces.",
+    "explanation": "1/8 < 1/4 < 1/2 < 3/4.",
+    "skill_tag": "fractions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "1/2"
+     },
+     {
+      "id": "i4",
+      "text": "3/4"
+     },
+     {
+      "id": "i2",
+      "text": "1/4"
+     },
+     {
+      "id": "i1",
+      "text": "1/8"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Slide to show 0.7 on the line from 0 to 1.",
+    "hint": "7 tenths along.",
+    "explanation": "0.7 is seven steps of 0.1.",
+    "skill_tag": "decimals.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 1
+    },
+    "answer": {
+     "value": 0.7,
+     "tolerance": 0.05
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "What is 3/5 of 35?",
+    "hint": "35 ÷ 5 = 7, then times 3.",
+    "explanation": "7 × 3 = 21.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 21,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Why is 2/3 bigger than 2/5?",
+    "hint": "Picture two bars.",
+    "explanation": "Fewer parts means each part is bigger.",
+    "skill_tag": "fractions.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 is smaller than 5 so 2/3 is smaller"
+     },
+     {
+      "id": "b",
+      "text": "They are the same size"
+     },
+     {
+      "id": "c",
+      "text": "Thirds are bigger pieces than fifths"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "match",
+    "prompt": "Match each fraction to its decimal.",
+    "hint": "Think tenths and hundredths.",
+    "explanation": "1/2 = 0.5, 1/4 = 0.25, 3/10 = 0.3.",
+    "skill_tag": "decimals.convert",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/2"
+     },
+     {
+      "id": "l2",
+      "text": "1/4"
+     },
+     {
+      "id": "l3",
+      "text": "3/10"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "0.3"
+     },
+     {
+      "id": "r1",
+      "text": "0.5"
+     },
+     {
+      "id": "r2",
+      "text": "0.25"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "hotspot",
+    "prompt": "Tap the bar that shows 3/4 shaded.",
+    "hint": "Simplify each one.",
+    "explanation": "6/8 = 3/4.",
+    "skill_tag": "fractions.pictures",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 3 of 8 shaded",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 6 of 8 shaded",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 2 of 4 shaded",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Sam says 0.35 is bigger than 0.5 because 35 is bigger than 5. Is he right?",
+    "hint": "Write 0.5 as hundredths.",
+    "explanation": "0.50 is more than 0.35.",
+    "skill_tag": "decimals.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 35 is bigger than 5"
+     },
+     {
+      "id": "b",
+      "text": "No, they are equal"
+     },
+     {
+      "id": "c",
+      "text": "No, 0.5 is 0.50, which is bigger than 0.35"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "number",
+    "prompt": "What is £4.60 + £2.75?",
+    "hint": "Add pence first.",
+    "explanation": "60p + 75p = £1.35, so £7.35.",
+    "skill_tag": "decimals.money",
+    "answer": {
+     "value": 7.35,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "real_world",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Ali says 50% off is the same as half price. Is he right?",
+    "hint": "50 × 2 = 100.",
+    "explanation": "50/100 = 1/2.",
+    "skill_tag": "decimals.percent_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 50% is one quarter"
+     },
+     {
+      "id": "b",
+      "text": "Yes, 50 out of 100 is one half"
+     },
+     {
+      "id": "c",
+      "text": "No, 50% is one tenth"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real_world",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "A phone costs Rs 2,000. It is 10% off. How many rupees is the discount?",
+    "hint": "10% is one tenth.",
+    "explanation": "2,000 ÷ 10 = 200.",
+    "skill_tag": "decimals.percent_of",
+    "answer": {
+     "value": 200,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which fraction equals 1/3?",
+    "hint": "Multiply top and bottom by 2.",
+    "explanation": "1/3 = 2/6.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "2/3"
+     },
+     {
+      "id": "b",
+      "text": "1/6"
+     },
+     {
+      "id": "c",
+      "text": "2/6"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Which fraction equals 3/4?",
+    "hint": "Multiply top and bottom by 2.",
+    "explanation": "3/4 = 6/8.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "5/8"
+     },
+     {
+      "id": "b",
+      "text": "3/6"
+     },
+     {
+      "id": "c",
+      "text": "6/8"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "What is 1/5 of 30?",
+    "hint": "Share 30 into 5 groups.",
+    "explanation": "30 ÷ 5 = 6.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "number",
+    "prompt": "What is 1/10 of 80?",
+    "hint": "Share 80 into 10 groups.",
+    "explanation": "80 ÷ 10 = 8.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "2/8 is equivalent to 1/3.",
+    "hint": "Simplify 2/8.",
+    "explanation": "2/8 = 1/4, not 1/3.",
+    "skill_tag": "fractions.equivalent",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "true_false",
+    "prompt": "4/10 is equivalent to 2/5.",
+    "hint": "Divide top and bottom by 2.",
+    "explanation": "4/10 = 2/5.",
+    "skill_tag": "fractions.equivalent",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the fractions facts about 2/3.",
+    "hint": "Multiply top and bottom by 2.",
+    "explanation": "2/3 = 4/6, and the bottom number is the denominator.",
+    "skill_tag": "fractions.language",
+    "points": 2,
+    "text": "2/3 = {b1}/6. The bottom number is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "numerator"
+       },
+       {
+        "id": "b",
+        "text": "remainder"
+       },
+       {
+        "id": "c",
+        "text": "denominator"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "fill_blank",
+    "prompt": "Finish the fractions facts about 1/2.",
+    "hint": "Multiply top and bottom by 5.",
+    "explanation": "1/2 = 5/10, and the top number is the numerator.",
+    "skill_tag": "fractions.language",
+    "points": 2,
+    "text": "1/2 = {b1}/10. The top number is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "denominator"
+       },
+       {
+        "id": "b",
+        "text": "numerator"
+       },
+       {
+        "id": "c",
+        "text": "remainder"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which are equal to 3/4? Pick two.",
+    "hint": "Multiply top and bottom by the same number.",
+    "explanation": "3/4 = 6/8 = 9/12.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "9/12"
+     },
+     {
+      "id": "b",
+      "text": "3/8"
+     },
+     {
+      "id": "c",
+      "text": "4/6"
+     },
+     {
+      "id": "d",
+      "text": "6/8"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multi_select",
+    "prompt": "Which are equal to 1/3? Pick two.",
+    "hint": "Multiply top and bottom by the same number.",
+    "explanation": "1/3 = 2/6 = 4/12.",
+    "skill_tag": "fractions.equivalent",
+    "options": [
+     {
+      "id": "a",
+      "text": "4/12"
+     },
+     {
+      "id": "b",
+      "text": "2/3"
+     },
+     {
+      "id": "c",
+      "text": "1/6"
+     },
+     {
+      "id": "d",
+      "text": "2/6"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Arrange these fractions from the smallest.",
+    "hint": "Think about the size of the pieces.",
+    "explanation": "1/10 < 1/5 < 1/2 < 4/5.",
+    "skill_tag": "fractions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "1/5"
+     },
+     {
+      "id": "i3",
+      "text": "1/2"
+     },
+     {
+      "id": "i4",
+      "text": "4/5"
+     },
+     {
+      "id": "i1",
+      "text": "1/10"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "order",
+    "prompt": "Sort these fractions from the smallest.",
+    "hint": "Think about the size of the pieces.",
+    "explanation": "1/6 < 1/3 < 2/3 < 5/6.",
+    "skill_tag": "fractions.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "1/3"
+     },
+     {
+      "id": "i3",
+      "text": "2/3"
+     },
+     {
+      "id": "i4",
+      "text": "5/6"
+     },
+     {
+      "id": "i1",
+      "text": "1/6"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Slide to show 0.3 on the line from 0 to 1.",
+    "hint": "3 tenths along.",
+    "explanation": "0.3 is three steps of 0.1.",
+    "skill_tag": "decimals.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 1
+    },
+    "answer": {
+     "value": 0.3,
+     "tolerance": 0.05
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "slider",
+    "prompt": "Slide to show 0.9 on the line from 0 to 1.",
+    "hint": "9 tenths along.",
+    "explanation": "0.9 is nine steps of 0.1.",
+    "skill_tag": "decimals.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 1
+    },
+    "answer": {
+     "value": 0.9,
+     "tolerance": 0.05
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "number",
+    "prompt": "What is 2/3 of 24?",
+    "hint": "24 ÷ 3 = 8, then times 2.",
+    "explanation": "8 × 2 = 16.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 16,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "number",
+    "prompt": "What is 3/4 of 40?",
+    "hint": "40 ÷ 4 = 10, then times 3.",
+    "explanation": "10 × 3 = 30.",
+    "skill_tag": "fractions.amounts",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Why is 1/4 bigger than 1/8?",
+    "hint": "Picture two bars.",
+    "explanation": "Fewer parts means each part is bigger.",
+    "skill_tag": "fractions.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same size"
+     },
+     {
+      "id": "b",
+      "text": "Fourths are bigger pieces than eighths"
+     },
+     {
+      "id": "c",
+      "text": "4 is smaller than 8 so 1/4 is smaller"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multiple_choice",
+    "prompt": "Why is 3/4 bigger than 3/6?",
+    "hint": "Picture two bars.",
+    "explanation": "Fewer parts means each part is bigger.",
+    "skill_tag": "fractions.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same size"
+     },
+     {
+      "id": "b",
+      "text": "Fourths are bigger pieces than sixths"
+     },
+     {
+      "id": "c",
+      "text": "4 is smaller than 6 so 3/4 is smaller"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "equivalent",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "match",
+    "prompt": "Which decimal goes with each fraction?",
+    "hint": "Tenths go after the point.",
+    "explanation": "1/10 = 0.1, 3/4 = 0.75, 7/10 = 0.7.",
+    "skill_tag": "decimals.convert",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/10"
+     },
+     {
+      "id": "l2",
+      "text": "3/4"
+     },
+     {
+      "id": "l3",
+      "text": "7/10"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "0.7"
+     },
+     {
+      "id": "r1",
+      "text": "0.1"
+     },
+     {
+      "id": "r2",
+      "text": "0.75"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "match",
+    "prompt": "Pair each fraction with its decimal.",
+    "hint": "1/5 = 2/10.",
+    "explanation": "1/5 = 0.2, 9/10 = 0.9, 1/100 = 0.01.",
+    "skill_tag": "decimals.convert",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1/5"
+     },
+     {
+      "id": "l2",
+      "text": "9/10"
+     },
+     {
+      "id": "l3",
+      "text": "1/100"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "0.9"
+     },
+     {
+      "id": "r1",
+      "text": "0.2"
+     },
+     {
+      "id": "r3",
+      "text": "0.01"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "hotspot",
+    "prompt": "Tap the bar that shows 1/3 shaded.",
+    "hint": "Simplify each one.",
+    "explanation": "2/6 = 1/3.",
+    "skill_tag": "fractions.pictures",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 2 of 6 shaded",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 3 of 6 shaded",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 1 of 6 shaded",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "hotspot",
+    "prompt": "Tap the bar that shows 2/5 shaded.",
+    "hint": "Simplify each one.",
+    "explanation": "4/10 = 2/5.",
+    "skill_tag": "fractions.pictures",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🟦",
+       "label": "A: 4 of 10 shaded",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "B: 5 of 10 shaded",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟦",
+       "label": "C: 2 of 10 shaded",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Lina says 0.4 is smaller than 0.25 because 4 is smaller than 25. Is she right?",
+    "hint": "Write 0.4 as hundredths.",
+    "explanation": "0.40 is more than 0.25.",
+    "skill_tag": "decimals.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 is smaller than 25"
+     },
+     {
+      "id": "b",
+      "text": "No, 0.4 is 0.40, which is bigger than 0.25"
+     },
+     {
+      "id": "c",
+      "text": "No, they are equal"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Omar says 0.07 is bigger than 0.7 because it has more digits. Is he right?",
+    "hint": "Think about the place of each 7.",
+    "explanation": "0.7 is much bigger than 0.07.",
+    "skill_tag": "decimals.compare_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it has more digits"
+     },
+     {
+      "id": "b",
+      "text": "No, they are equal"
+     },
+     {
+      "id": "c",
+      "text": "No, 0.7 is seven tenths and 0.07 is only seven hundredths"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decimals",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "number",
+    "prompt": "What is £5.40 + £3.85?",
+    "hint": "Add pence first.",
+    "explanation": "40p + 85p = £1.25, so £9.25.",
+    "skill_tag": "decimals.money",
+    "answer": {
+     "value": 9.25,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "real_world",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "number",
+    "prompt": "What is £10 − £3.65?",
+    "hint": "Take away from £10.",
+    "explanation": "£10 − £3.65 = £6.35.",
+    "skill_tag": "decimals.money",
+    "answer": {
+     "value": 6.35,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "real_world",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana says 25% is the same as one quarter. Is she right?",
+    "hint": "25 × 4 = 100.",
+    "explanation": "25/100 = 1/4.",
+    "skill_tag": "decimals.percent_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 25% is one half"
+     },
+     {
+      "id": "b",
+      "text": "Yes, 25 out of 100 is one quarter"
+     },
+     {
+      "id": "c",
+      "text": "No, 25% is one tenth"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Tom says 10% is the same as one half. Is he right?",
+    "hint": "10 × 10 = 100.",
+    "explanation": "10/100 = 1/10.",
+    "skill_tag": "decimals.percent_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 10% is one quarter"
+     },
+     {
+      "id": "b",
+      "text": "No, 10% is one tenth"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 10% is one half"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "A bag costs Rs 500. It is 20% off. How many rupees is the discount?",
+    "hint": "20% is one fifth.",
+    "explanation": "500 ÷ 5 = 100.",
+    "skill_tag": "decimals.percent_of",
+    "answer": {
+     "value": 100,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "number",
+    "prompt": "A book costs £8. It is 50% off. How many pounds is the discount?",
+    "hint": "50% is one half.",
+    "explanation": "8 ÷ 2 = 4.",
+    "skill_tag": "decimals.percent_of",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "real_world",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
