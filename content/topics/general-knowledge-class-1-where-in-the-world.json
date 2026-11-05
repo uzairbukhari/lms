@@ -1,0 +1,3078 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "general-knowledge-class-1-where-in-the-world",
+  "subject": "general-knowledge",
+  "title": "Where in the World?",
+  "summary": "Maps and directions, our country Pakistan, the United Kingdom, and the continents and oceans of our planet.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 1: Where in the world?",
+  "learning_objectives": [
+   "Read a simple map and use the four directions",
+   "Name the provinces, capital and special places of Pakistan",
+   "Name the four UK nations and their capitals",
+   "Name the seven continents and five oceans"
+  ],
+  "tags": [
+   "topic",
+   "topic-1"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-1-topics",
+   "semester": 1,
+   "topic": 1
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 geography",
+    "text": "Name and locate the world's continents and oceans, and the four countries of the United Kingdom and their capital cities"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "GK-01-D-01"
+   },
+   {
+    "framework": "pk_ncc",
+    "code": "GK-01-D-03"
+   },
+   {
+    "framework": "pyp",
+    "code": "Where we are in place and time"
+   }
+  ],
+  "success_criteria": [
+   "I can use north, east, south and west",
+   "I can say something about Pakistan and the UK",
+   "I can name the continents and oceans"
+  ],
+  "real_life": "Finding the way on a map in the car, spotting the Sun in the east, and talking to family who live far away.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "How many days are in a week?",
+    "hint": "Monday to Sunday.",
+    "explanation": "There are seven days in a week.",
+    "options": [
+     {
+      "id": "a",
+      "text": "10"
+     },
+     {
+      "id": "b",
+      "text": "7"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the name of the planet we live on?",
+    "hint": "It is our home.",
+    "explanation": "We live on planet Earth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mars"
+     },
+     {
+      "id": "b",
+      "text": "The Sun"
+     },
+     {
+      "id": "c",
+      "text": "Earth"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "The Sun gives us light and heat.",
+    "hint": "Think of a sunny day.",
+    "explanation": "The Sun gives us light and heat.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, world explorer!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: where in the world are we?\n\nWe will use maps to find out.",
+   "say": "Welcome, world explorer! Today we have a big question. Where in the world are we, and what is out there? We will learn to read a map, visit Pakistan and the United Kingdom, and zoom out to see the whole Earth. This is a game, not a test. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🗺️",
+   "alt": "A map helps us find places in the world.",
+   "caption": "A map helps us find places in the world."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "world",
+     "meaning": "All of the Earth and everything on it."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "maps",
+   "kind": "learn",
+   "title": "Maps and directions",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is a map?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **map** is a picture of a place seen from above.\n\nA **key** tells us what each little picture on the map means.",
+     "say": "Imagine you are a bird flying high above your school. What would you see? You would see the roof of the school, the playground and the road. A map is a picture like that. It shows a place as if we are looking down from above. A map uses little pictures for things like a mosque, a shop and a park. A box called a key tells us what each little picture means."
+    },
+    {
+     "type": "explainer",
+     "title": "A map of our street",
+     "scenes": [
+      {
+       "caption": "A bird looks down from above.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🦅",
+         "x": 50,
+         "y": 18,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "Here is a bird flying high above our street. What can it see from up there?"
+      },
+      {
+       "caption": "The map shows the school, mosque, shop and park.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏫",
+         "x": 25,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "School"
+        },
+        {
+         "id": "m",
+         "emoji": "🕌",
+         "x": 72,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "Mosque"
+        },
+        {
+         "id": "sh",
+         "emoji": "🏪",
+         "x": 25,
+         "y": 72,
+         "size": 2,
+         "anim": "none",
+         "label": "Shop"
+        },
+        {
+         "id": "p",
+         "emoji": "🌳",
+         "x": 72,
+         "y": 72,
+         "size": 2,
+         "anim": "none",
+         "label": "Park"
+        }
+       ],
+       "say": "Now we draw what the bird sees. Here is the school, the mosque, the shop and the park. The bird's view is turned into a map."
+      },
+      {
+       "caption": "The key tells us what each picture means.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏫",
+         "x": 25,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "School"
+        },
+        {
+         "id": "m",
+         "emoji": "🕌",
+         "x": 72,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "Mosque"
+        },
+        {
+         "id": "sh",
+         "emoji": "🏪",
+         "x": 25,
+         "y": 72,
+         "size": 2,
+         "anim": "none",
+         "label": "Shop"
+        },
+        {
+         "id": "p",
+         "emoji": "🌳",
+         "x": 72,
+         "y": 72,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Park"
+        },
+        {
+         "id": "k",
+         "emoji": "🔑",
+         "x": 50,
+         "y": 58,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Key"
+        }
+       ],
+       "say": "The little pictures are the key. The key tells us a school is this picture and a park is that picture. With a map and a key, we can find our way!"
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a map show us?",
+      "hint": "Think of the bird looking down.",
+      "explanation": "A map shows a place as if we are looking down from above.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A song"
+       },
+       {
+        "id": "b",
+        "text": "A place seen from above"
+       },
+       {
+        "id": "c",
+        "text": "A story about a bird"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: North, east, south and west"
+    },
+    {
+     "type": "text",
+     "markdown": "There are four main directions: **north**, **east**, **south** and **west**.\n\nA **compass** shows us which way is north.\n\nThe Sun rises in the east and sets in the west.",
+     "say": "Maps use special words for directions. There are four main ones: north, east, south and west. A compass is a tool that shows us which way is north. Here is a trick to remember the order: Never Eat Soggy Waffles. North, East, South, West, going round like a clock. And here is a helpful fact. The Sun rises in the east in the morning, and it sets in the west in the evening."
+    },
+    {
+     "type": "explainer",
+     "title": "The four directions",
+     "scenes": [
+      {
+       "caption": "A compass shows directions.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧭",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "This is a compass. It helps us find our way."
+      },
+      {
+       "caption": "North is at the top.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧭",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "⬆️",
+         "x": 50,
+         "y": 14,
+         "size": 1,
+         "anim": "pulse",
+         "label": "North"
+        }
+       ],
+       "say": "North is at the top of the map. Like the top of a mountain, we say up north."
+      },
+      {
+       "caption": "East is on the right.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧭",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "⬆️",
+         "x": 50,
+         "y": 14,
+         "size": 1,
+         "anim": "none",
+         "label": "North"
+        },
+        {
+         "id": "e",
+         "emoji": "➡️",
+         "x": 84,
+         "y": 50,
+         "size": 1,
+         "anim": "pulse",
+         "label": "East"
+        },
+        {
+         "id": "su",
+         "emoji": "🌅",
+         "x": 84,
+         "y": 28,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "East is to the right, where the Sun comes up in the morning."
+      },
+      {
+       "caption": "South is at the bottom, west is on the left.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧭",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "⬆️",
+         "x": 50,
+         "y": 14,
+         "size": 1,
+         "anim": "none",
+         "label": "North"
+        },
+        {
+         "id": "e",
+         "emoji": "➡️",
+         "x": 84,
+         "y": 50,
+         "size": 1,
+         "anim": "none",
+         "label": "East"
+        },
+        {
+         "id": "s",
+         "emoji": "⬇️",
+         "x": 50,
+         "y": 86,
+         "size": 1,
+         "anim": "pulse",
+         "label": "South"
+        },
+        {
+         "id": "w",
+         "emoji": "⬅️",
+         "x": 16,
+         "y": 50,
+         "size": 1,
+         "anim": "pulse",
+         "label": "West"
+        }
+       ],
+       "say": "South is at the bottom, and west is on the left, where the Sun goes down in the evening. Never Eat Soggy Waffles: North, East, South, West."
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The Sun rises in the east.",
+      "hint": "Where is the Sun when you wake up?",
+      "explanation": "The Sun rises in the east and sets in the west.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which direction is at the top of a map?",
+      "hint": "Think of the top of the compass.",
+      "explanation": "North is at the top of a map.",
+      "options": [
+       {
+        "id": "a",
+        "text": "South"
+       },
+       {
+        "id": "b",
+        "text": "North"
+       },
+       {
+        "id": "c",
+        "text": "West"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A map shows a place from above",
+      "A key tells us what the pictures mean",
+      "The four directions are north, east, south and west"
+     ],
+     "say": "Let us remember. A map shows a place from above. A key explains the pictures. And there are four directions: north, east, south and west."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "map",
+       "meaning": "A picture of a place seen from above."
+      },
+      {
+       "term": "key",
+       "meaning": "A box on a map that tells us what each picture means."
+      },
+      {
+       "term": "north",
+       "meaning": "The direction at the top of a map."
+      },
+      {
+       "term": "east",
+       "meaning": "The direction to the right, where the Sun rises."
+      },
+      {
+       "term": "south",
+       "meaning": "The direction at the bottom of a map."
+      },
+      {
+       "term": "west",
+       "meaning": "The direction to the left, where the Sun sets."
+      },
+      {
+       "term": "compass",
+       "meaning": "A tool with a needle that shows which way is north."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a key on a map do?",
+     "hint": "Think about the little pictures.",
+     "explanation": "The key explains each picture on the map.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It tells us the time"
+      },
+      {
+       "id": "b",
+       "text": "It tells us what the pictures mean"
+      },
+      {
+       "id": "c",
+       "text": "It locks the map"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which direction is opposite to south?",
+     "hint": "Opposite means the other end of the line.",
+     "explanation": "North and south are opposite each other.",
+     "options": [
+      {
+       "id": "a",
+       "text": "East"
+      },
+      {
+       "id": "b",
+       "text": "West"
+      },
+      {
+       "id": "c",
+       "text": "North"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A compass helps us find north.",
+     "hint": "Think about the needle.",
+     "explanation": "The needle of a compass points north.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "In the evening the Sun sets in the...",
+     "hint": "It rises in the east.",
+     "explanation": "It rises in the east, so it sets in the west.",
+     "options": [
+      {
+       "id": "a",
+       "text": "East"
+      },
+      {
+       "id": "b",
+       "text": "North"
+      },
+      {
+       "id": "c",
+       "text": "West"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pakistan",
+   "kind": "try",
+   "title": "Pakistan",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Our country"
+    },
+    {
+     "type": "text",
+     "markdown": "**Pakistan** is our country. Its capital city is **Islamabad**.\n\nPakistan has four **provinces**: Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan.",
+     "say": "Let us explore our own country. Pakistan is a country in Asia. Its capital city is Islamabad, which is where the leaders work. Pakistan is split into four big parts called provinces. They are Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan. Karachi, by the sea, is the biggest city."
+    },
+    {
+     "type": "explainer",
+     "title": "Pakistan and its provinces",
+     "scenes": [
+      {
+       "caption": "Pakistan has mountains in the north and the sea in the south.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 16,
+         "size": 2,
+         "anim": "none",
+         "label": "Mountains"
+        },
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 80,
+         "y": 86,
+         "size": 2,
+         "anim": "none",
+         "label": "Arabian Sea"
+        }
+       ],
+       "say": "This is the shape of Pakistan. It has mountains in the north and the sea in the south."
+      },
+      {
+       "caption": "The four provinces of Pakistan.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 16,
+         "size": 2,
+         "anim": "none",
+         "label": "Mountains"
+        },
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 80,
+         "y": 86,
+         "size": 2,
+         "anim": "none",
+         "label": "Arabian Sea"
+        },
+        {
+         "id": "b",
+         "emoji": "🟫",
+         "x": 25,
+         "y": 58,
+         "size": 1,
+         "anim": "pulse",
+         "label": "Balochistan"
+        },
+        {
+         "id": "s",
+         "emoji": "🟧",
+         "x": 55,
+         "y": 76,
+         "size": 1,
+         "anim": "pulse",
+         "label": "Sindh"
+        },
+        {
+         "id": "p",
+         "emoji": "🟩",
+         "x": 68,
+         "y": 45,
+         "size": 1,
+         "anim": "pulse",
+         "label": "Punjab"
+        },
+        {
+         "id": "kp",
+         "emoji": "🟦",
+         "x": 48,
+         "y": 26,
+         "size": 1,
+         "anim": "pulse",
+         "label": "Khyber Pakhtunkhwa"
+        }
+       ],
+       "say": "Pakistan has four provinces. Balochistan is in the west. Sindh is in the south-east. Punjab is in the east. And Khyber Pakhtunkhwa is in the north-west."
+      },
+      {
+       "caption": "Islamabad is the capital. Karachi and Lahore are big cities.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 16,
+         "size": 2,
+         "anim": "none",
+         "label": "Mountains"
+        },
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 80,
+         "y": 86,
+         "size": 2,
+         "anim": "none",
+         "label": "Arabian Sea"
+        },
+        {
+         "id": "i",
+         "emoji": "⭐",
+         "x": 48,
+         "y": 40,
+         "size": 1,
+         "anim": "pulse",
+         "label": "Islamabad"
+        },
+        {
+         "id": "l",
+         "emoji": "🏙️",
+         "x": 78,
+         "y": 55,
+         "size": 1,
+         "anim": "none",
+         "label": "Lahore"
+        },
+        {
+         "id": "kar",
+         "emoji": "🚢",
+         "x": 36,
+         "y": 76,
+         "size": 1,
+         "anim": "none",
+         "label": "Karachi"
+        }
+       ],
+       "say": "Islamabad is our capital city, in the north. Karachi is a big port city by the sea. Lahore is a famous city in Punjab."
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is the capital city of Pakistan?",
+      "hint": "It is the city in the north where the leaders work.",
+      "explanation": "Islamabad is the capital of Pakistan.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Lahore"
+       },
+       {
+        "id": "b",
+        "text": "Karachi"
+       },
+       {
+        "id": "c",
+        "text": "Islamabad"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Mountains, rivers and our flag"
+    },
+    {
+     "type": "text",
+     "markdown": "The **Indus** is a very long river that flows to the sea.\n\n**K2** is the second tallest mountain in the world.\n\nPakistan's flag is green and white, with a crescent and a star.",
+     "say": "Pakistan has amazing places. The Indus is a very long river. It starts in the high mountains and flows all the way south to the sea. And K2 is one of the tallest mountains in the whole world! Our flag is green and white. It has a crescent and a star. The green shows the Muslim majority, and the white stripe shows people of other faiths."
+    },
+    {
+     "type": "explainer",
+     "title": "The Indus river's journey",
+     "scenes": [
+      {
+       "caption": "The river begins in the mountains.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "K2 and the mountains"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 32,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "High in the mountains, snow melts into water. Here is where the river begins."
+      },
+      {
+       "caption": "The river flows past farms and towns.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "K2 and the mountains"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 56,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "f",
+         "emoji": "🌾",
+         "x": 22,
+         "y": 56,
+         "size": 1,
+         "anim": "none",
+         "label": "Farm"
+        }
+       ],
+       "say": "The water flows down, past farms and towns. The Indus brings water to the farmers' fields."
+      },
+      {
+       "caption": "The river reaches the Arabian Sea.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 15,
+         "size": 2,
+         "anim": "none",
+         "label": "K2 and the mountains"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 82,
+         "size": 2,
+         "anim": "bounce"
+        },
+        {
+         "id": "f",
+         "emoji": "🌾",
+         "x": 22,
+         "y": 56,
+         "size": 1,
+         "anim": "none",
+         "label": "Farm"
+        },
+        {
+         "id": "s",
+         "emoji": "🌊",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "none",
+         "label": "Arabian Sea"
+        }
+       ],
+       "say": "At last the river reaches the Arabian Sea. What a long journey from the mountains to the sea!"
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "activity",
+     "title": "Find Pakistan",
+     "materials": [
+      "A globe, an atlas or a map on a tablet",
+      "A grown-up helper"
+     ],
+     "instructions": [
+      "Find Pakistan on the globe or map.",
+      "Point to the mountains in the north and the sea in the south.",
+      "Find Islamabad, then try to find where your family lives."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The Indus flows from the mountains down to the sea.",
+      "hint": "Think about the river's journey.",
+      "explanation": "The Indus starts in the mountains and flows to the Arabian Sea.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pakistan has four provinces",
+      "Islamabad is the capital",
+      "The Indus river flows from the mountains to the sea",
+      "K2 is a giant mountain"
+     ],
+     "say": "Let us remember. Pakistan has four provinces and its capital is Islamabad. The Indus river flows to the sea. K2 is a giant mountain."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "Pakistan",
+       "meaning": "Our country, in the continent of Asia."
+      },
+      {
+       "term": "Islamabad",
+       "meaning": "The capital city of Pakistan."
+      },
+      {
+       "term": "provinces",
+       "meaning": "The big parts that a country is split into."
+      },
+      {
+       "term": "Indus",
+       "meaning": "A very long river in Pakistan."
+      },
+      {
+       "term": "K2",
+       "meaning": "A giant mountain in the north of Pakistan."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many provinces does Pakistan have?",
+     "hint": "Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan.",
+     "explanation": "Pakistan has four provinces.",
+     "options": [
+      {
+       "id": "a",
+       "text": "7"
+      },
+      {
+       "id": "b",
+       "text": "4"
+      },
+      {
+       "id": "c",
+       "text": "2"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which of these is the capital city of our country?",
+     "hint": "The leaders of Pakistan work there.",
+     "explanation": "Islamabad is the capital.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Peshawar"
+      },
+      {
+       "id": "b",
+       "text": "Islamabad"
+      },
+      {
+       "id": "c",
+       "text": "Quetta"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "K2 is a river in Pakistan.",
+     "hint": "K2 is very tall.",
+     "explanation": "K2 is a giant mountain, not a river.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where does the Indus river end?",
+     "hint": "It flows south.",
+     "explanation": "The Indus flows to the Arabian Sea.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In a desert"
+      },
+      {
+       "id": "b",
+       "text": "In a mountain"
+      },
+      {
+       "id": "c",
+       "text": "In the Arabian Sea"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uk",
+   "kind": "play",
+   "title": "The United Kingdom",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Four nations"
+    },
+    {
+     "type": "text",
+     "markdown": "The **United Kingdom** is made of four nations: England, Scotland, Wales and Northern Ireland.\n\nThe capital city of the UK is **London**.",
+     "say": "Now let us visit another country, far away from Pakistan. It is called the United Kingdom, or the UK. The UK is made of four parts, called nations. They are England, Scotland, Wales and Northern Ireland. The capital city of the UK is London. Each nation has its own capital too: Edinburgh in Scotland, Cardiff in Wales and Belfast in Northern Ireland."
+    },
+    {
+     "type": "explainer",
+     "title": "The four nations",
+     "scenes": [
+      {
+       "caption": "The UK is a group of islands.",
+       "items": [
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 85,
+         "y": 85,
+         "size": 2,
+         "anim": "none",
+         "label": "Sea"
+        }
+       ],
+       "say": "Here is the United Kingdom. It is a group of islands in the north-west of Europe."
+      },
+      {
+       "caption": "Scotland is in the north, England is in the south.",
+       "items": [
+        {
+         "id": "sc",
+         "emoji": "🦄",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Scotland"
+        },
+        {
+         "id": "en",
+         "emoji": "🌹",
+         "x": 58,
+         "y": 62,
+         "size": 2,
+         "anim": "pulse",
+         "label": "England"
+        },
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 85,
+         "y": 85,
+         "size": 2,
+         "anim": "none",
+         "label": "Sea"
+        }
+       ],
+       "say": "In the north is Scotland. Its special animal is the unicorn! In the south is England. Its flower is the rose."
+      },
+      {
+       "caption": "Wales is in the west. Northern Ireland is across the sea.",
+       "items": [
+        {
+         "id": "sc",
+         "emoji": "🦄",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "none",
+         "label": "Scotland"
+        },
+        {
+         "id": "en",
+         "emoji": "🌹",
+         "x": 58,
+         "y": 62,
+         "size": 2,
+         "anim": "none",
+         "label": "England"
+        },
+        {
+         "id": "wa",
+         "emoji": "🐉",
+         "x": 30,
+         "y": 60,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Wales"
+        },
+        {
+         "id": "ni",
+         "emoji": "☘️",
+         "x": 14,
+         "y": 34,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Northern Ireland"
+        },
+        {
+         "id": "sea",
+         "emoji": "🌊",
+         "x": 85,
+         "y": 85,
+         "size": 2,
+         "anim": "none",
+         "label": "Sea"
+        }
+       ],
+       "say": "To the west is Wales. Its special animal is the red dragon! And across the sea is Northern Ireland."
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How many nations are in the United Kingdom?",
+      "hint": "England, Scotland, Wales and Northern Ireland.",
+      "explanation": "The UK has four nations.",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The UK and Pakistan"
+    },
+    {
+     "type": "text",
+     "markdown": "The UK is in Europe. Pakistan is in Asia.\n\nA plane takes about nine hours to fly from Pakistan to London.",
+     "say": "How far is the UK from Pakistan? Quite far! A plane takes about nine hours to fly from Pakistan to London. The UK is in the continent of Europe, and Pakistan is in Asia. The UK is also often cooler and rainier than Pakistan, so people carry umbrellas and wear warm coats!"
+    },
+    {
+     "type": "image",
+     "emoji": "✈️",
+     "alt": "A plane flies from Pakistan to the UK in about nine hours.",
+     "caption": "A plane flies from Pakistan to the UK in about nine hours."
+    },
+    {
+     "type": "callout",
+     "style": "fun_fact",
+     "markdown": "The UK is often rainy, so people carry an umbrella. Some Pakistani families live in the UK, and many love cricket in both places!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The UK is in the continent of Asia.",
+      "hint": "Pakistan is in Asia. Where is the UK?",
+      "explanation": "The UK is in Europe.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Turn over two cards at a time. Can you find all the pairs?",
+     "say": "Time for a brain break! Find the matching pairs. You will see a unicorn, a dragon, a rose, a shamrock, a mosque and a mountain."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Pairs from Pakistan and the UK",
+     "goal": "Turn over two cards and find the pairs.",
+     "emojis": [
+      "🦄",
+      "🐉",
+      "🌹",
+      "☘️",
+      "🕌",
+      "🏔️"
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The UK has four nations",
+      "London is the capital of the UK",
+      "The UK is in Europe, a long flight from Pakistan"
+     ],
+     "say": "Let us remember. The UK has four nations, and London is its capital. The UK is in Europe."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "United Kingdom",
+       "meaning": "A country made of four nations: England, Scotland, Wales and Northern Ireland."
+      },
+      {
+       "term": "London",
+       "meaning": "The capital city of the United Kingdom."
+      },
+      {
+       "term": "nations",
+       "meaning": "The four parts that make up the UK."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the capital of the UK?",
+     "hint": "It has a famous clock tower called Big Ben.",
+     "explanation": "London is the capital of the UK.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cardiff"
+      },
+      {
+       "id": "b",
+       "text": "London"
+      },
+      {
+       "id": "c",
+       "text": "Islamabad"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which nation is in the north of the UK?",
+     "hint": "The unicorn nation.",
+     "explanation": "Scotland is in the north.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wales"
+      },
+      {
+       "id": "b",
+       "text": "Scotland"
+      },
+      {
+       "id": "c",
+       "text": "England"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Wales is one of the four nations of the UK.",
+     "hint": "Think of the red dragon.",
+     "explanation": "Wales is one of the four nations.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which continent is the UK in?",
+     "hint": "Pakistan is in Asia.",
+     "explanation": "The UK is in Europe.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Africa"
+      },
+      {
+       "id": "b",
+       "text": "Europe"
+      },
+      {
+       "id": "c",
+       "text": "Asia"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "continents",
+   "kind": "use",
+   "title": "Continents and oceans",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Seven continents"
+    },
+    {
+     "type": "text",
+     "markdown": "The land on Earth is split into seven **continents**.\n\nPakistan is in **Asia**. The UK is in **Europe**.",
+     "say": "Now let us zoom out and look at the whole Earth. The land on Earth is split into seven huge areas called continents. They are Asia, Africa, North America, South America, Antarctica, Europe and Australia. Pakistan is in Asia. The United Kingdom is in Europe."
+    },
+    {
+     "type": "explainer",
+     "title": "The seven continents",
+     "scenes": [
+      {
+       "caption": "Planet Earth.",
+       "items": [
+        {
+         "id": "g",
+         "prop": {
+          "kind": "globe"
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "This is our home, planet Earth. It is a big ball, turning slowly."
+      },
+      {
+       "caption": "Seven continents, seven pictures.",
+       "items": [
+        {
+         "id": "as",
+         "emoji": "🐼",
+         "x": 70,
+         "y": 25,
+         "size": 1,
+         "anim": "none",
+         "label": "Asia"
+        },
+        {
+         "id": "af",
+         "emoji": "🦁",
+         "x": 50,
+         "y": 50,
+         "size": 1,
+         "anim": "none",
+         "label": "Africa"
+        },
+        {
+         "id": "na",
+         "emoji": "🦬",
+         "x": 20,
+         "y": 25,
+         "size": 1,
+         "anim": "none",
+         "label": "North America"
+        },
+        {
+         "id": "sa",
+         "emoji": "🦙",
+         "x": 28,
+         "y": 70,
+         "size": 1,
+         "anim": "none",
+         "label": "South America"
+        },
+        {
+         "id": "an",
+         "emoji": "🐧",
+         "x": 50,
+         "y": 90,
+         "size": 1,
+         "anim": "none",
+         "label": "Antarctica"
+        },
+        {
+         "id": "eu",
+         "emoji": "🏰",
+         "x": 50,
+         "y": 12,
+         "size": 1,
+         "anim": "none",
+         "label": "Europe"
+        },
+        {
+         "id": "au",
+         "emoji": "🦘",
+         "x": 82,
+         "y": 72,
+         "size": 1,
+         "anim": "none",
+         "label": "Australia"
+        }
+       ],
+       "say": "The land is split into seven continents. Each has a special animal. A panda for Asia, a lion for Africa, a bison for North America, a llama for South America, a penguin for Antarctica, a castle for Europe, and a kangaroo for Australia."
+      },
+      {
+       "caption": "Pakistan is in Asia.",
+       "items": [
+        {
+         "id": "as",
+         "emoji": "🐼",
+         "x": 70,
+         "y": 25,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Asia"
+        },
+        {
+         "id": "pk",
+         "emoji": "📍",
+         "x": 60,
+         "y": 45,
+         "size": 1,
+         "anim": "bounce",
+         "label": "Pakistan"
+        }
+       ],
+       "say": "Look at Asia. This is where we live. Pakistan is in Asia, with lots of other countries."
+      }
+     ],
+     "backdrop": "map"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which continent is Pakistan in?",
+      "hint": "It has a panda.",
+      "explanation": "Pakistan is in the continent of Asia.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Africa"
+       },
+       {
+        "id": "b",
+        "text": "Europe"
+       },
+       {
+        "id": "c",
+        "text": "Asia"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "There are seven continents.",
+      "hint": "Count the animals: panda, lion, bison, llama, penguin, castle, kangaroo.",
+      "explanation": "There are seven continents.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Five oceans"
+    },
+    {
+     "type": "text",
+     "markdown": "There are five **oceans**: Pacific, Atlantic, Indian, Southern and Arctic.\n\nThe Pacific is the biggest ocean.",
+     "say": "Most of our planet is covered with water. The big areas of salty water are called oceans. There are five: the Pacific, the Atlantic, the Indian, the Southern and the Arctic. The Pacific Ocean is the biggest. Pakistan's coast is on the Arabian Sea, which is part of the Indian Ocean."
+    },
+    {
+     "type": "image",
+     "emoji": "🌊",
+     "alt": "Oceans cover most of our planet.",
+     "caption": "Oceans cover most of our planet."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the biggest ocean?",
+      "hint": "It is the biggest of the five.",
+      "explanation": "The Pacific is the biggest ocean.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The Indian Ocean"
+       },
+       {
+        "id": "b",
+        "text": "The Pacific Ocean"
+       },
+       {
+        "id": "c",
+        "text": "The Arctic Ocean"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Plan a journey"
+    },
+    {
+     "type": "text",
+     "markdown": "Aisha flies from Pakistan to the UK.\n\nWhich two continents does she travel between?",
+     "say": "Let us use what we know. Aisha lives in Pakistan and wants to visit her cousin in the UK. She will fly in a plane. Which continent does she start in? And which continent does she land in? Have a think, then tap to see."
+    },
+    {
+     "type": "image",
+     "emoji": "🛫",
+     "alt": "Aisha flies from Pakistan to the UK.",
+     "caption": "Aisha flies from Pakistan to the UK."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Which two continents does Aisha travel between?",
+     "answer_markdown": "She flies from **Asia** to **Europe**. And did she cross any ocean? Not really! She flew over land and across seas."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "There are seven continents",
+      "There are five oceans",
+      "Pakistan is in Asia and the UK is in Europe"
+     ],
+     "say": "Let us remember. There are seven continents and five oceans. Pakistan is in Asia and the UK is in Europe."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "continents",
+       "meaning": "The seven huge areas of land on Earth."
+      },
+      {
+       "term": "Asia",
+       "meaning": "The biggest continent, where Pakistan is."
+      },
+      {
+       "term": "Europe",
+       "meaning": "The continent where the UK is."
+      },
+      {
+       "term": "oceans",
+       "meaning": "The five huge areas of salty water."
+      },
+      {
+       "term": "Pacific",
+       "meaning": "The biggest ocean."
+      },
+      {
+       "term": "Pacific Ocean",
+       "meaning": "The biggest ocean."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many oceans are there?",
+     "hint": "Count them one by one.",
+     "explanation": "There are five oceans.",
+     "options": [
+      {
+       "id": "a",
+       "text": "7"
+      },
+      {
+       "id": "b",
+       "text": "5"
+      },
+      {
+       "id": "c",
+       "text": "3"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which continent is the UK in?",
+     "hint": "Aisha flew there from Asia.",
+     "explanation": "The UK is in Europe.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Antarctica"
+      },
+      {
+       "id": "b",
+       "text": "Europe"
+      },
+      {
+       "id": "c",
+       "text": "Asia"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where do penguins live?",
+     "hint": "It is very cold there.",
+     "explanation": "Penguins live in cold Antarctica.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Africa"
+      },
+      {
+       "id": "b",
+       "text": "Antarctica"
+      },
+      {
+       "id": "c",
+       "text": "Australia"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Pakistan is a continent.",
+     "hint": "Pakistan is inside Asia.",
+     "explanation": "Pakistan is a country in the continent of Asia.",
+     "answer": [
+      false
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What do we call a picture of a place drawn as if we are looking from above?",
+    "hint": "It shows places from above.",
+    "explanation": "A map shows a place from above.",
+    "skill_tag": "maps.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "A story"
+     },
+     {
+      "id": "b",
+      "text": "A map"
+     },
+     {
+      "id": "c",
+      "text": "A song"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "The Sun rises in the west.",
+    "hint": "Where does it come up in the morning?",
+    "explanation": "The Sun rises in the east.",
+    "skill_tag": "maps.sun",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Which direction is opposite to east?",
+    "hint": "Look at the compass.",
+    "explanation": "West is opposite east.",
+    "skill_tag": "maps.direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "South"
+     },
+     {
+      "id": "b",
+      "text": "West"
+     },
+     {
+      "id": "c",
+      "text": "North"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "order",
+    "prompt": "Put the directions in order going round, starting at north.",
+    "hint": "Never Eat Soggy Waffles.",
+    "explanation": "The order is north, east, south, west.",
+    "skill_tag": "maps.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "South"
+     },
+     {
+      "id": "i4",
+      "text": "West"
+     },
+     {
+      "id": "i2",
+      "text": "East"
+     },
+     {
+      "id": "i1",
+      "text": "North"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Which city is the capital of Pakistan?",
+    "hint": "It is in the north.",
+    "explanation": "Islamabad is the capital.",
+    "skill_tag": "pakistan.capital",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lahore"
+     },
+     {
+      "id": "b",
+      "text": "Islamabad"
+     },
+     {
+      "id": "c",
+      "text": "Karachi"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multi_select",
+    "prompt": "Which are provinces of Pakistan? Pick two.",
+    "hint": "They are parts of Pakistan.",
+    "explanation": "Punjab and Sindh are provinces.",
+    "skill_tag": "pakistan.provinces",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sindh"
+     },
+     {
+      "id": "b",
+      "text": "Scotland"
+     },
+     {
+      "id": "c",
+      "text": "Wales"
+     },
+     {
+      "id": "d",
+      "text": "Punjab"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "short_text",
+    "prompt": "What is the long river in Pakistan that flows down to the sea? Write its name.",
+    "hint": "Starts with I.",
+    "explanation": "The Indus flows to the Arabian Sea.",
+    "skill_tag": "pakistan.river",
+    "answer": {
+     "accepted": [
+      "indus",
+      "the indus",
+      "indus river",
+      "river indus"
+     ]
+    },
+    "sub_lesson": "pakistan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Why does a map have a key?",
+    "hint": "Think of the little pictures.",
+    "explanation": "The key explains the pictures.",
+    "skill_tag": "maps.key",
+    "options": [
+     {
+      "id": "a",
+      "text": "It tells us the time"
+     },
+     {
+      "id": "b",
+      "text": "It makes the map bigger"
+     },
+     {
+      "id": "c",
+      "text": "It tells us what the little pictures mean"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "maps",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "hotspot",
+    "prompt": "Tap the continent where Pakistan is.",
+    "hint": "It is the biggest continent.",
+    "explanation": "Pakistan is in Asia.",
+    "skill_tag": "continents.where",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌏",
+       "label": "Asia",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌍",
+       "label": "Africa",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌎",
+       "label": "South America",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "continents",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "England, Scotland, Wales and Northern Ireland.",
+    "explanation": "The UK has four nations. London is the capital.",
+    "skill_tag": "uk.nations",
+    "points": 2,
+    "text": "The UK has {b1} nations. Its capital city is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Cardiff"
+       },
+       {
+        "id": "b",
+        "text": "Islamabad"
+       },
+       {
+        "id": "c",
+        "text": "London"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "match",
+    "prompt": "Match each nation to its capital city.",
+    "hint": "Each nation has its own capital.",
+    "explanation": "Each nation has its own capital city.",
+    "skill_tag": "uk.capitals",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "England"
+     },
+     {
+      "id": "l2",
+      "text": "Scotland"
+     },
+     {
+      "id": "l3",
+      "text": "Wales"
+     },
+     {
+      "id": "l4",
+      "text": "Northern Ireland"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Edinburgh"
+     },
+     {
+      "id": "r3",
+      "text": "Cardiff"
+     },
+     {
+      "id": "r4",
+      "text": "Belfast"
+     },
+     {
+      "id": "r1",
+      "text": "London"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "slider",
+    "prompt": "Slide to show how many continents there are.",
+    "hint": "Panda, lion, bison, llama, penguin, castle, kangaroo.",
+    "explanation": "There are seven continents.",
+    "skill_tag": "continents.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "continents",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Aisha flies from Pakistan to the UK. Which continents does she travel between?",
+    "hint": "Pakistan is in Asia.",
+    "explanation": "She flies from Asia to Europe.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Africa and Asia"
+     },
+     {
+      "id": "b",
+      "text": "Asia and Europe"
+     },
+     {
+      "id": "c",
+      "text": "Europe and Antarctica"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Zayd says Pakistan is a continent. Is he right?",
+    "hint": "There are seven continents.",
+    "explanation": "Pakistan is a country inside Asia.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is a continent"
+     },
+     {
+      "id": "b",
+      "text": "No, Pakistan is a country in the continent of Asia"
+     },
+     {
+      "id": "c",
+      "text": "No, it is an ocean"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Fatima says Scotland and the UK are the same thing. Who is right?",
+    "hint": "How many nations are in the UK?",
+    "explanation": "Scotland is one of the four nations of the UK.",
+    "skill_tag": "uk.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Scotland is bigger than the UK"
+     },
+     {
+      "id": "b",
+      "text": "Scotland is one of four nations inside the UK"
+     },
+     {
+      "id": "c",
+      "text": "They are exactly the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "uk",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which one shows a place from above?",
+    "hint": "It is a picture drawn from above.",
+    "explanation": "A map shows a place from above.",
+    "skill_tag": "maps.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "A recipe"
+     },
+     {
+      "id": "b",
+      "text": "A map"
+     },
+     {
+      "id": "c",
+      "text": "A song"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "What would you use to find the way to the park?",
+    "hint": "It shows places from above.",
+    "explanation": "A map helps us find the way.",
+    "skill_tag": "maps.what",
+    "options": [
+     {
+      "id": "a",
+      "text": "A spoon"
+     },
+     {
+      "id": "b",
+      "text": "A map"
+     },
+     {
+      "id": "c",
+      "text": "A clock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "The Sun sets in the east.",
+    "hint": "It sets where it does not rise.",
+    "explanation": "The Sun sets in the west.",
+    "skill_tag": "maps.sun",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "true_false",
+    "prompt": "North, east, south and west are the four main directions.",
+    "hint": "Never Eat Soggy Waffles.",
+    "explanation": "Those are the four main directions.",
+    "skill_tag": "maps.sun",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "maps",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Which direction is opposite to north?",
+    "hint": "Top and bottom of the compass.",
+    "explanation": "South is opposite north.",
+    "skill_tag": "maps.direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "East"
+     },
+     {
+      "id": "b",
+      "text": "South"
+     },
+     {
+      "id": "c",
+      "text": "West"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "multiple_choice",
+    "prompt": "Which direction is opposite to west?",
+    "hint": "Left and right of the compass.",
+    "explanation": "East is opposite west.",
+    "skill_tag": "maps.direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "South"
+     },
+     {
+      "id": "b",
+      "text": "East"
+     },
+     {
+      "id": "c",
+      "text": "North"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "order",
+    "prompt": "Put the directions in order going round, starting at east.",
+    "hint": "Going round like a clock.",
+    "explanation": "After east comes south, then west, then north.",
+    "skill_tag": "maps.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "South"
+     },
+     {
+      "id": "i4",
+      "text": "North"
+     },
+     {
+      "id": "i3",
+      "text": "West"
+     },
+     {
+      "id": "i1",
+      "text": "East"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "order",
+    "prompt": "Put the directions in order going round, starting at south.",
+    "hint": "Going round like a clock.",
+    "explanation": "After south comes west, then north, then east.",
+    "skill_tag": "maps.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "North"
+     },
+     {
+      "id": "i4",
+      "text": "East"
+     },
+     {
+      "id": "i2",
+      "text": "West"
+     },
+     {
+      "id": "i1",
+      "text": "South"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "maps",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "Islamabad is the capital of which country?",
+    "hint": "It is our country.",
+    "explanation": "Islamabad is the capital of Pakistan.",
+    "skill_tag": "pakistan.capital",
+    "options": [
+     {
+      "id": "a",
+      "text": "England"
+     },
+     {
+      "id": "b",
+      "text": "Egypt"
+     },
+     {
+      "id": "c",
+      "text": "Pakistan"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "multiple_choice",
+    "prompt": "Which city is Pakistan's capital: Peshawar, Islamabad or Quetta?",
+    "hint": "It is in the north.",
+    "explanation": "Islamabad is the capital.",
+    "skill_tag": "pakistan.capital",
+    "options": [
+     {
+      "id": "a",
+      "text": "Peshawar"
+     },
+     {
+      "id": "b",
+      "text": "Quetta"
+     },
+     {
+      "id": "c",
+      "text": "Islamabad"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multi_select",
+    "prompt": "Pick the two names that are provinces in Pakistan.",
+    "hint": "They are parts of Pakistan.",
+    "explanation": "Khyber Pakhtunkhwa and Balochistan are provinces.",
+    "skill_tag": "pakistan.provinces",
+    "options": [
+     {
+      "id": "a",
+      "text": "Balochistan"
+     },
+     {
+      "id": "b",
+      "text": "Wales"
+     },
+     {
+      "id": "c",
+      "text": "England"
+     },
+     {
+      "id": "d",
+      "text": "Khyber Pakhtunkhwa"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "multi_select",
+    "prompt": "Which two are Pakistani provinces?",
+    "hint": "They are parts of Pakistan.",
+    "explanation": "Punjab and Sindh are provinces.",
+    "skill_tag": "pakistan.provinces",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sindh"
+     },
+     {
+      "id": "b",
+      "text": "Scotland"
+     },
+     {
+      "id": "c",
+      "text": "Northern Ireland"
+     },
+     {
+      "id": "d",
+      "text": "Punjab"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pakistan",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "short_text",
+    "prompt": "Which very long river flows through Pakistan to the Arabian Sea? Write its name.",
+    "hint": "Starts with I.",
+    "explanation": "The Indus is a long river.",
+    "skill_tag": "pakistan.river",
+    "answer": {
+     "accepted": [
+      "indus",
+      "the indus",
+      "indus river",
+      "river indus"
+     ]
+    },
+    "sub_lesson": "pakistan",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "short_text",
+    "prompt": "Name the giant mountain in Pakistan that is the second tallest in the world.",
+    "hint": "It is a letter and a number.",
+    "explanation": "K2 is the second tallest mountain.",
+    "skill_tag": "pakistan.river",
+    "answer": {
+     "accepted": [
+      "k2",
+      "mount k2",
+      "k 2"
+     ]
+    },
+    "sub_lesson": "pakistan",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Anna sees a tiny tree on a map. How can she find out what it means?",
+    "hint": "The key explains the pictures.",
+    "explanation": "The key tells us what each picture means.",
+    "skill_tag": "maps.key",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ask the tree"
+     },
+     {
+      "id": "b",
+      "text": "Look at the key"
+     },
+     {
+      "id": "c",
+      "text": "Turn the map upside down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "multiple_choice",
+    "prompt": "What is the job of a map key?",
+    "hint": "Think of the little pictures.",
+    "explanation": "The key explains the pictures.",
+    "skill_tag": "maps.key",
+    "options": [
+     {
+      "id": "a",
+      "text": "It shows the time"
+     },
+     {
+      "id": "b",
+      "text": "It explains the pictures on the map"
+     },
+     {
+      "id": "c",
+      "text": "It opens the map"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "maps",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "hotspot",
+    "prompt": "Tap the continent where the UK is.",
+    "hint": "Aisha flew there from Asia.",
+    "explanation": "The UK is in Europe.",
+    "skill_tag": "continents.where",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌍",
+       "label": "Europe",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌏",
+       "label": "Asia",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌎",
+       "label": "North America",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "continents",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "hotspot",
+    "prompt": "Tap the frozen continent where penguins live.",
+    "hint": "It is the coldest place on Earth.",
+    "explanation": "Penguins live in Antarctica.",
+    "skill_tag": "continents.where",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐧",
+       "label": "Antarctica",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦁",
+       "label": "Africa",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐼",
+       "label": "Asia",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "continents",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Think about the four provinces.",
+    "explanation": "Pakistan has four provinces. The capital is Islamabad.",
+    "skill_tag": "uk.nations",
+    "points": 2,
+    "text": "Pakistan has {b1} provinces. Its capital city is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "London"
+       },
+       {
+        "id": "b",
+        "text": "Islamabad"
+       },
+       {
+        "id": "c",
+        "text": "Lahore"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about Scotland.",
+    "hint": "England, Scotland, Wales and Northern Ireland.",
+    "explanation": "The UK has four nations. Edinburgh is Scotland's capital.",
+    "skill_tag": "uk.nations",
+    "points": 2,
+    "text": "The UK has {b1} nations. The capital of Scotland is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "London"
+       },
+       {
+        "id": "b",
+        "text": "Cardiff"
+       },
+       {
+        "id": "c",
+        "text": "Edinburgh"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "match",
+    "prompt": "Match each capital city to its nation.",
+    "hint": "Each nation has its own capital.",
+    "explanation": "Each nation of the UK has its own capital.",
+    "skill_tag": "uk.capitals",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "London"
+     },
+     {
+      "id": "l2",
+      "text": "Edinburgh"
+     },
+     {
+      "id": "l3",
+      "text": "Cardiff"
+     },
+     {
+      "id": "l4",
+      "text": "Belfast"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Scotland"
+     },
+     {
+      "id": "r3",
+      "text": "Wales"
+     },
+     {
+      "id": "r4",
+      "text": "Northern Ireland"
+     },
+     {
+      "id": "r1",
+      "text": "England"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "match",
+    "prompt": "Match three UK nations to their capital cities.",
+    "hint": "Each nation has its own capital.",
+    "explanation": "Each nation of the UK has its own capital.",
+    "skill_tag": "uk.capitals",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Scotland"
+     },
+     {
+      "id": "l2",
+      "text": "Wales"
+     },
+     {
+      "id": "l3",
+      "text": "England"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Cardiff"
+     },
+     {
+      "id": "r3",
+      "text": "London"
+     },
+     {
+      "id": "r1",
+      "text": "Edinburgh"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "uk",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "slider",
+    "prompt": "Slide to show how many oceans there are.",
+    "hint": "Pacific, Atlantic, Indian, Southern and Arctic.",
+    "explanation": "There are five oceans.",
+    "skill_tag": "continents.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "continents",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "slider",
+    "prompt": "Slide to show how many main directions a compass has.",
+    "hint": "North, east, south and west.",
+    "explanation": "A compass has four main directions.",
+    "skill_tag": "continents.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "continents",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Ruqayya lives in Pakistan. Her pen friend lives in the UK. Which continents do they live in?",
+    "hint": "Pakistan is in Asia.",
+    "explanation": "Pakistan is in Asia and the UK is in Europe.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Both in Europe"
+     },
+     {
+      "id": "b",
+      "text": "Asia and Europe"
+     },
+     {
+      "id": "c",
+      "text": "Africa and Asia"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "multiple_choice",
+    "prompt": "Hamza lives in Africa. Aisha lives in Europe. Do they live in the same continent?",
+    "hint": "Africa and Europe are two continents.",
+    "explanation": "Africa and Europe are different continents.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both live in Africa"
+     },
+     {
+      "id": "b",
+      "text": "Yes, both live in Europe"
+     },
+     {
+      "id": "c",
+      "text": "No, they live in different continents"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Zara says the UK is a continent. Is she right?",
+    "hint": "There are seven continents.",
+    "explanation": "The UK is a country in Europe.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is an ocean"
+     },
+     {
+      "id": "b",
+      "text": "No, the UK is a country in the continent of Europe"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is a continent"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Bilal says Asia is a country. Is he right?",
+    "hint": "Pakistan is inside Asia.",
+    "explanation": "Asia is a continent with many countries.",
+    "skill_tag": "continents.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is a country"
+     },
+     {
+      "id": "b",
+      "text": "No, Asia is a continent that holds many countries"
+     },
+     {
+      "id": "c",
+      "text": "No, it is an ocean"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "continents",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Sam says England and the UK mean exactly the same. Who is right?",
+    "hint": "How many nations are in the UK?",
+    "explanation": "England is one of the four nations in the UK.",
+    "skill_tag": "uk.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are the same"
+     },
+     {
+      "id": "b",
+      "text": "England is bigger than the UK"
+     },
+     {
+      "id": "c",
+      "text": "England is one of four nations inside the UK"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "uk",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Hana says Wales is a part of the UK. Is she right?",
+    "hint": "Think of the red dragon.",
+    "explanation": "Wales is one of the four UK nations.",
+    "skill_tag": "uk.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, Wales is in Asia"
+     },
+     {
+      "id": "b",
+      "text": "No, Wales is in Pakistan"
+     },
+     {
+      "id": "c",
+      "text": "Yes, Wales is one of the four nations of the UK"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "uk",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
