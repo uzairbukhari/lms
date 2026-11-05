@@ -35,8 +35,11 @@ export const FRAC = (title, parts, shaded, caption) => ({ type: "chart", kind: "
 // Explainer: scenes are S(caption, item, item...) and an item is [id, emoji, x, y, size?, anim?, label?]. Use id null for a thing that never moves.
 export const S = (caption, ...items) => ({
   caption,
-  items: items.map(([id, emoji, x, y, size = 2, anim = "none", label]) => ({ ...(id ? { id } : {}), emoji, x, y, size, anim, ...(label ? { label } : {}) })),
+  // `emoji` may be a prop object ({ kind: "base_ten", tens, ones }) to draw a diagram instead of an emoji.
+  items: items.map(([id, emoji, x, y, size = 2, anim = "none", label]) => ({ ...(id ? { id } : {}), ...(typeof emoji === "object" ? { prop: emoji } : { emoji }), x, y, size, anim, ...(label ? { label } : {}) })),
 });
+/** A place-value board (tens rods and ones squares) as a scene item. Same id in later scenes = it updates in place. */
+export const PV = (id, tens, ones, x = 50, y = 48, size = 3, anim = "none") => [id, { kind: "base_ten", tens, ones }, x, y, size, anim];
 export const EXP = (title, ...scenes) => ({ type: "explainer", title, scenes });
 /** n copies of an emoji in a row: ids prefix1..prefixN, evenly spaced from x0 to x1. */
 export const ROW = (prefix, emoji, n, x0, x1, y, size = 2, anim = "none") =>

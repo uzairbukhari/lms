@@ -20,6 +20,30 @@ export function setSoundOn(on: boolean): void {
   if (!on) stopSpeech();
 }
 
+// --- Narration speed ---------------------------------------------------------------------------------
+// Slow, normal or fast reading, kept on this device. Normal is a little slower than the voice's own pace.
+export const SPEEDS = [{ rate: 0.7, label: "Slow" }, { rate: 0.85, label: "Normal" }, { rate: 1, label: "Fast" }] as const;
+const SPEED_KEY = "lms-narration-rate";
+let rate = 0.85;
+try {
+  const saved = Number(localStorage.getItem(SPEED_KEY));
+  if (SPEEDS.some((s) => s.rate === saved)) rate = saved;
+} catch {
+  // storage blocked: normal speed
+}
+export function getNarrationRate(): number {
+  return rate;
+}
+export function setNarrationRate(r: number): void {
+  rate = r;
+  try {
+    localStorage.setItem(SPEED_KEY, String(r));
+  } catch {
+    // storage blocked: the choice lasts for this visit only
+  }
+  if (current) current.playbackRate.value = r; // applies to the sentence being read now
+}
+
 // --- Sound effects ---------------------------------------------------------------------------------
 
 type Ctx = AudioContext;
@@ -296,6 +320,7 @@ function playClip(buffer: AudioBuffer, mine: number): Promise<void> {
     if (!c || token !== mine) return resolve();
     const src = c.createBufferSource();
     src.buffer = buffer;
+    src.playbackRate.value = rate;
     src.connect(c.destination);
     src.onended = () => {
       if (current === src) current = null;
@@ -326,7 +351,7 @@ function deviceSpeak(parts: string[], mine: number, offset = 0, total = parts.le
     window.speechSynthesis.resume();
     parts.forEach((p, i) => {
       const u = new SpeechSynthesisUtterance(p);
-      u.rate = 0.9;
+      u.rate = rate * 1.05; // device voices run a touch slow at 0.85, so normal lands near their usual 0.9
       u.pitch = 1.05;
       u.lang = "en-GB";
       if (voice) u.voice = voice;
