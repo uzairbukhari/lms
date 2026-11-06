@@ -6,9 +6,14 @@ import { parseLessonFile } from "@lms/schema";
 // Every topic lesson (format 3.0) under content/topics must pass the importer's validation.
 const dir = join(process.cwd(), "../content/topics");
 const files = readdirSync(dir).filter((f: string) => f.endsWith(".json"));
+// Lessons not yet upgraded keep the old 15-question standard (scripts/legacy-15.json only ever shrinks).
+const legacy = new Set<string>(JSON.parse(readFileSync(join(process.cwd(), "../scripts/legacy-15.json"), "utf8")));
 
 describe("content/topics", () => {
   it("has the pilot topic lesson", () => expect(files).toContain("maths-class-1-place-value.json"));
+  it("keeps the legacy list honest: every entry still exists", () => {
+    for (const slug of legacy) expect(files, slug).toContain(slug + ".json");
+  });
   for (const f of files) {
     it(`${f} is valid and complete`, () => {
       const result = parseLessonFile(JSON.parse(readFileSync(join(dir, f), "utf8")));
@@ -17,12 +22,14 @@ describe("content/topics", () => {
       expect(file.schema_version).toBe("3.0");
       expect(file.sub_lessons?.map((s) => s.kind).sort()).toEqual(["learn", "play", "try", "use"]);
       const mains = file.quiz.questions.filter((q) => !q.variant_of);
-      expect(mains).toHaveLength(15);
-      expect(mains.filter((q) => q.depth === "reason").length).toBeGreaterThanOrEqual(4);
-      // every main question has at least two retake variants of the same type
+      const isLegacy = legacy.has(f.replace(".json", ""));
+      expect(mains).toHaveLength(isLegacy ? 15 : 30);
+      expect(mains.filter((q) => q.depth === "reason").length).toBeGreaterThanOrEqual(isLegacy ? 4 : 8);
+      expect(file.quiz.questions.length).toBeLessThanOrEqual(80);
+      // every main question has retake variants of the same type (at least 2 on the old standard, at least 1 on the new)
       for (const m of mains) {
         const vs = file.quiz.questions.filter((q) => q.variant_of === m.ref);
-        expect(vs.length, m.ref).toBeGreaterThanOrEqual(2);
+        expect(vs.length, m.ref).toBeGreaterThanOrEqual(isLegacy ? 2 : 1);
         for (const v of vs) expect(v.type).toBe(m.type);
       }
       expect(file.lesson.curriculum?.topic).toBeGreaterThan(0);

@@ -1,5 +1,14 @@
 // Builds topic lessons in format 3.0 (sub-lessons, mini quizzes, standards) and checks docs/LESSON_GUIDELINES.md parts 4 and 13.
+import { readFileSync } from "node:fs";
 import { audit as _unused } from "./lesson-kit.mjs";
+
+/**
+ * Lessons still on the old 15-question quiz. A lesson leaves this list when it is upgraded to the new standard
+ * (30 main questions, a clip, real media). The list only ever shrinks; when it is empty, delete it and the old rules.
+ */
+export const LEGACY_15 = new Set(JSON.parse(readFileSync(new URL("./legacy-15.json", import.meta.url), "utf8")));
+/** Longest spoken sentence, in words, by age band. Short sentences are easier to follow when read aloud. */
+export const MAX_SENTENCE_WORDS = { "7-8": 14, "9-10": 18 };
 
 const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "clip", "brain_game", "html_embed"]);
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
@@ -71,13 +80,30 @@ export function audit(file) {
   const qs = all.filter((q) => !q.variant_of);
   for (const m of qs) {
     const vs = all.filter((q) => q.variant_of === m.ref);
-    if (vs.length < 2) fail(`${m.ref} has ${vs.length} retake variants (needs at least 2)`);
+    if (LEGACY_15.has(slug) && vs.length < 2) fail(`${m.ref} has ${vs.length} retake variants (needs at least 2)`);
     for (const v of vs) if (v.type !== m.type) fail(`${v.ref} is ${v.type} but ${m.ref} is ${m.type}`);
   }
-  if (qs.length !== 15) fail(`quiz has ${qs.length} questions (needs 15)`);
+  const legacy = LEGACY_15.has(slug);
+  if (legacy) { if (qs.length !== 15) fail(`quiz has ${qs.length} questions (needs 15 while this lesson is still on the old standard)`); }
+  else {
+    if (qs.length !== 30) fail(`quiz has ${qs.length} questions (needs 30)`);
+    if (all.length > 80) fail(`quiz bank has ${all.length} questions including variants (the limit is 80)`);
+    for (const m of qs) if (!all.some((q) => q.variant_of === m.ref)) fail(`${m.ref} has no retake variant`);
+    const counts = new Map();
+    for (const q of qs) counts.set(q.type === "number" ? "short_text" : q.type, (counts.get(q.type === "number" ? "short_text" : q.type) ?? 0) + 1);
+    for (const t of ["multiple_choice", "multi_select", "true_false", "short_text", "fill_blank", "match", "order", "hotspot", "slider"]) if ((counts.get(t) ?? 0) < 2) fail(`quiz has fewer than 2 ${t} questions`);
+    if (!file.sub_lessons.some((s) => s.blocks.some((b) => b.type === "clip"))) fail("no clip block: every lesson needs its narrated clip");
+    const maxWords = MAX_SENTENCE_WORDS[file.lesson.age_band] ?? 18;
+    const spoken = [...file.blocks, ...file.sub_lessons.flatMap((s) => s.blocks)].flatMap((b) => [b.say, ...(b.type === "explainer" ? b.scenes.map((sc) => sc.say) : [])]).filter(Boolean);
+    for (const text of spoken) for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+      const words = sentence.trim().split(/\s+/).filter(Boolean).length;
+      if (words > maxWords) fail(`narration sentence has ${words} words (max ${maxWords} for age ${file.lesson.age_band}): "${sentence.slice(0, 60)}..."`);
+    }
+  }
   const qt = new Set(qs.map((q) => (q.type === "number" ? "short_text" : q.type)));
   for (const t of ["multiple_choice", "multi_select", "true_false", "short_text", "fill_blank", "match", "order", "hotspot", "slider"]) if (!qt.has(t)) fail(`quiz has no ${t} question`);
-  if (qs.filter((q) => q.depth === "reason").length < 4) fail("quiz needs at least 4 reason questions");
+  const needReason = legacy ? 4 : 8;
+  if (qs.filter((q) => q.depth === "reason").length < needReason) fail(`quiz needs at least ${needReason} reason questions`);
   for (const sub of file.sub_lessons) if (!qs.some((q) => q.sub_lesson === sub.id)) fail(`no quiz question for sub-lesson ${sub.id}`);
   for (const q of all) {
     if (!q.hint) fail(`${q.ref} has no hint`);
