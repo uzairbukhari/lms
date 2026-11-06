@@ -8,9 +8,10 @@ export type TopicData = {
   practise: { subId: string; title: string; wrong: number; total: number }[];
   subLessons: SubLessonCard[];
 };
-export type TopicLesson = { lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[] }; topic?: TopicData; readOnly: boolean; quiz: { questionCount: number; passPercent: number } };
+export type TopicLesson = { lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[] }; topic?: TopicData; readOnly: boolean; quiz: { questionCount: number; passPercent: number; inProgress?: { round: number; rounds: number } | null } };
 export type PathTopic = { lessonId: string; title: string; position: number; status: "done" | "current" | "early" | "locked"; bestPercent: number | null; attempts: number; partsDone: number; partsTotal: number };
-export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[] };
+export type GrandQuiz = { quizId: string; status: "locked" | "ready" | "passed"; bestPercent: number | null; attempts: number; questionCount: number };
+export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[]; grand?: GrandQuiz | null };
 
 export const KIND = {
   learn: { label: "Learn", emoji: "💡" },

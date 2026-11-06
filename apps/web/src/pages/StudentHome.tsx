@@ -167,6 +167,7 @@ function SubjectStop({ p, here, idx }: { p: SubjectPath; here: boolean; idx: num
         </div>
       )}
       <p className="text-center font-extrabold" style={{ color: soft }}>{cur ? `${cur.partsDone} of ${cur.partsTotal} parts · ` : ""}{doneN} of {p.topics.length} topics done</p>
+      {p.grand && <p className="text-center text-sm font-extrabold" style={{ color: soft }}>{p.grand.status === "passed" ? "🏆 Grand quiz passed" : p.grand.status === "ready" ? "🏆 Grand quiz ready!" : "🔒 Grand quiz: finish all topics"}</p>}
       <div className="mt-auto flex flex-col gap-2.5 pt-1">
         {done ? (
           <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={mapTo}>Open map</Link>
