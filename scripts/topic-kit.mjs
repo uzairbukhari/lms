@@ -1,6 +1,12 @@
 // Builds topic lessons in format 3.0 (sub-lessons, mini quizzes, standards) and checks docs/LESSON_GUIDELINES.md parts 4 and 13.
 import { readFileSync } from "node:fs";
 import { audit as _unused } from "./lesson-kit.mjs";
+import { clipBlockWith, loadSchema } from "./clip-kit.mjs";
+
+// The clip spec schema is TypeScript in packages/schema; load it once (a clip's spec is validated while the lesson is built).
+const schema = await loadSchema();
+/** Clip specs collected while lessons are built: lesson slug -> spec. scripts/build-topics.mjs writes each to content/clips/<slug>.json. */
+export const CLIP_SPECS = new Map();
 
 /**
  * Lessons still on the old 15-question quiz. A lesson leaves this list when it is upgraded to the new standard
@@ -12,6 +18,27 @@ export const MAX_SENTENCE_WORDS = { "7-8": 14, "9-10": 18 };
 
 const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "clip", "brain_game", "html_embed"]);
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
+
+/**
+ * Add the lesson's narrated clip to its learn part: a "Movie time" stop (a heading, then the clip block) just before the
+ * summary. The block's file names come from the spec hash, so rebuilding unchanged specs never renames anything.
+ */
+function withClip(slug, clip, subs) {
+  const { caption, ...rest } = clip;
+  const { block } = clipBlockWith(schema, slug, rest, caption);
+  CLIP_SPECS.set(slug, rest);
+  let done = false;
+  const out = subs.map((s) => {
+    if (done || s.kind !== "learn") return s;
+    done = true;
+    const at = s.blocks.findIndex((b) => b.type === "summary");
+    const blocks = [...s.blocks];
+    blocks.splice(at < 0 ? blocks.length : at, 0, { type: "heading", text: "Movie time" }, block);
+    return { ...s, blocks };
+  });
+  if (!done) throw new Error(`Topic ${slug}: a clip needs a learn sub-lesson to sit in`);
+  return out;
+}
 
 export function topicLesson(spec) {
   const { slug, subject, cls, topic, title, summary, unit, difficulty, objectives, success_criteria, real_life, standards, warm_up, intro, subs, quiz } = spec;
@@ -27,7 +54,7 @@ export function topicLesson(spec) {
       standards, success_criteria, real_life, warm_up,
     },
     blocks: intro,
-    sub_lessons: subs.map((s) => ({ id: s.id, kind: s.kind, title: s.title, blocks: s.blocks, mini_quiz: s.mini })),
+    sub_lessons: (spec.clip ? withClip(slug, spec.clip, subs) : subs).map((s) => ({ id: s.id, kind: s.kind, title: s.title, blocks: s.blocks, mini_quiz: s.mini })),
     quiz: {
       pass_percent: 70, shuffle_questions: true, shuffle_options: true, max_attempts: null,
       // Main questions first, then each one's retake variants (same type, same skill, different numbers or words).
@@ -94,7 +121,7 @@ export function audit(file) {
     for (const t of ["multiple_choice", "multi_select", "true_false", "short_text", "fill_blank", "match", "order", "hotspot", "slider"]) if ((counts.get(t) ?? 0) < 2) fail(`quiz has fewer than 2 ${t} questions`);
     if (!file.sub_lessons.some((s) => s.blocks.some((b) => b.type === "clip"))) fail("no clip block: every lesson needs its narrated clip");
     const maxWords = MAX_SENTENCE_WORDS[file.lesson.age_band] ?? 18;
-    const spoken = [...file.blocks, ...file.sub_lessons.flatMap((s) => s.blocks)].flatMap((b) => [b.say, ...(b.type === "explainer" ? b.scenes.map((sc) => sc.say) : [])]).filter(Boolean);
+    const spoken = [...file.blocks, ...file.sub_lessons.flatMap((s) => s.blocks)].flatMap((b) => [b.say, ...(b.type === "explainer" ? b.scenes.map((sc) => sc.say) : []), ...(b.type === "clip" ? [b.transcript] : [])]).filter(Boolean);
     for (const text of spoken) for (const sentence of text.split(/(?<=[.!?])\s+/)) {
       const words = sentence.trim().split(/\s+/).filter(Boolean).length;
       if (words > maxWords) fail(`narration sentence has ${words} words (max ${maxWords} for age ${file.lesson.age_band}): "${sentence.slice(0, 60)}..."`);

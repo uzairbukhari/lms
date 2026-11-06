@@ -1,6 +1,8 @@
 // Sound for the lesson slides: small synthesised effects (no audio files to download) and spoken narration in a
 // natural voice from the Worker, or the device's own voice when that is unavailable. Everything is optional and switched off together by the sound button.
 
+import { sentences } from "@lms/schema";
+
 const KEY = "lms-sound";
 
 export function getSoundOn(): boolean {
@@ -282,10 +284,8 @@ export function speechSupported(): boolean {
   return narrationOn && typeof window !== "undefined" && "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
 }
 
-/** How narration splits text into sentences (one voice clip each). Animation cues count sentences the same way. */
-export function sentences(text: string): string[] {
-  return text.match(/[^.!?]+[.!?]*/g)?.map((s) => s.trim()).filter(Boolean) ?? [];
-}
+/** How narration splits text into sentences (one voice clip each). Animation cues count sentences the same way. Shared with the Worker and the clip pipeline (packages/schema/src/sentences.ts). */
+export { sentences };
 
 function clip(sentence: string): Promise<AudioBuffer | null> {
   const known = clips.get(sentence);

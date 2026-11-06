@@ -28,7 +28,7 @@ import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 import { adminVideoRoutes } from "./admin-videos";
 import { adminWeekRoutes } from "./admin-week";
-import { prewarm } from "../lib/tts";
+import { cachedAudio, prewarm } from "../lib/tts";
 
 export const adminRoutes = new Hono<AppEnv>();
 adminRoutes.use("*", requireAdmin);
@@ -48,6 +48,8 @@ adminRoutes.route("/", adminWeekRoutes);
 adminRoutes.route("/", adminCardRoutes);
 /** Generate and store lesson narration ahead of time (also open to the automation service token). */
 adminRoutes.post("/voice/prewarm", prewarm);
+/** Download one stored sentence of narration (404 when not generated yet). Also open to the automation service token. */
+adminRoutes.get("/voice/audio", cachedAudio);
 adminRoutes.route("/", adminAiUsageRoutes);
 adminRoutes.route("/", adminVideoRoutes);
 

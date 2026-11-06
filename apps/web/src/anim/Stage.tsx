@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import type { Actor, Backdrop as BackdropName } from "@lms/schema";
 import { Backdrop } from "./Backdrop";
-import { Prop, propReadout, propWidth } from "./props/Prop";
+import { propReadout } from "./props/Prop";
+import { ActorView, CountUp, Effect } from "./Actor";
 import { sfx } from "../lib/sound";
 
 // A stage for a lesson picture: scenery behind, and each thing in the picture as its own actor that enters the
@@ -34,45 +35,7 @@ export function placeActors(actors: Actor[], cards: number): PlacedActor[] {
   }));
 }
 
-const EMOJI_SIZE = ["", "9cqw", "13cqw", "17cqw"];
-
-export function Effect({ kind }: { kind?: string }) {
-  if (!kind || kind === "none" || kind === "count") return null;
-  const bits = kind === "glow" ? 1 : kind.startsWith("arrow") ? 1 : 5;
-  return (
-    <span className={`fx fx--${kind}`} aria-hidden="true">
-      {Array.from({ length: bits }, (_, i) => (
-        <i key={i} style={{ ["--i" as string]: i }}>{kind === "hearts" ? "❤" : kind === "zzz" ? "z" : kind === "sparkle" ? "✦" : kind === "arrow_right" ? "➜" : kind === "arrow_down" ? "⬇" : ""}</i>
-      ))}
-    </span>
-  );
-}
-
-/** A number label that counts up from 0 when its actor arrives. */
-export function CountUp({ to, run }: { to: number; run: boolean }) {
-  const [n, setN] = useState(run ? 0 : to);
-  useEffect(() => {
-    if (!run) return;
-    let v = 0; setN(0);
-    const step = Math.max(1, Math.ceil(to / 20));
-    const t = window.setInterval(() => { v = Math.min(to, v + step); setN(v); if (v >= to) window.clearInterval(t); }, 60);
-    return () => window.clearInterval(t);
-  }, [to, run]);
-  return <>{n}</>;
-}
-
-export function ActorView({ a, shown }: { a: { emoji?: string; prop?: Actor["prop"]; label?: string; size: number; effect?: string }; shown: boolean }) {
-  const num = a.label && /^\d{1,4}$/.test(a.label) ? Number(a.label) : null;
-  return (
-    <>
-      <Effect kind={a.effect} />
-      {a.prop
-        ? <span className="block" style={{ width: `${propWidth(a.prop.kind, a.size)}cqw` }}><Prop spec={a.prop} /></span>
-        : <span className="actor-emoji leading-none" style={{ fontSize: EMOJI_SIZE[a.size] ?? EMOJI_SIZE[2] }}>{a.emoji}</span>}
-      {a.label && <span className="actor-label">{a.effect === "count" && num !== null ? <CountUp to={num} run={shown} /> : a.label}</span>}
-    </>
-  );
-}
+export { ActorView, CountUp, Effect };
 
 export function Stage({ actors, backdrop, cue, cards, alt }: { actors: Actor[]; backdrop: BackdropName; cue: number; cards: number; alt?: string }) {
   const placed = useMemo(() => placeActors(actors, cards), [actors, cards]);

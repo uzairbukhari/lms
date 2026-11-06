@@ -59,6 +59,17 @@ describe("voice prewarm", () => {
     expect((await post(["x".repeat(601)])).status).toBe(400);
   });
 
+  it("serves a stored sentence for download, and 404 for one that is not stored", async () => {
+    // "Hello there." was stored by the first test; stored audio is free, so this holds even after the daily ceiling was lowered.
+    const hit = await app.request(`/api/admin/voice/audio?text=${encodeURIComponent("Hello there.")}`, {}, env);
+    expect(hit.status).toBe(200);
+    expect(hit.headers.get("Content-Type")).toBe("audio/mpeg");
+    expect((await hit.arrayBuffer()).byteLength).toBe(300);
+    const miss = await app.request(`/api/admin/voice/audio?text=${encodeURIComponent("Never generated sentence.")}`, {}, env);
+    expect(miss.status).toBe(404);
+    expect((await app.request("/api/admin/voice/audio", {}, env)).status).toBe(400);
+  });
+
   it("defers everything when the voice service is missing", async () => {
     const saved = env.AI;
     env.AI = undefined;
