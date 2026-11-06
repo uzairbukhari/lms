@@ -269,6 +269,8 @@ export const blockSchema = z.discriminatedUnion("type", [
       type: z.literal("image"), say,
       emoji: z.string().max(16).optional(),
       asset: z.string().max(200).optional(),
+      /** Who to thank for a real photo or diagram, shown under it, e.g. "Photo by Aaron Burden on Unsplash". Needed for every asset. */
+      credit: line(200).optional(),
       alt: line(200).optional(),
       caption: line(200).optional(),
       /** Scenery behind the picture (default: the stop's backdrop, or one picked from the words). */
@@ -320,6 +322,16 @@ export const blockSchema = z.discriminatedUnion("type", [
       if (b.end <= b.start) ctx.addIssue({ code: "custom", path: ["end"], message: '"end" must be after "start"' });
       else if (b.end - b.start > 100) ctx.addIssue({ code: "custom", path: ["end"], message: "Clips must be 100 seconds or shorter: pick a shorter start and end" });
     }),
+  // A short narrated clip made for this lesson: an mp4 and a still poster uploaded as assets, plus the words spoken in it.
+  z.object({
+    type: z.literal("clip"),
+    title: line(100),
+    asset: z.string().regex(/^[a-z0-9][a-z0-9._-]{0,120}[.]mp4$/, "Use the uploaded mp4 file name (lower case, ending .mp4)"),
+    poster: z.string().regex(/^[a-z0-9][a-z0-9._-]{0,120}[.](webp|png|jpg)$/, "Use the uploaded poster picture name (.webp, .png or .jpg)"),
+    seconds: z.number().int().min(5).max(90),
+    transcript: longText(3000),
+    caption: line(200).optional(),
+  }),
   z.object({ type: z.literal("reveal"), say, prompt: line(300), answer_markdown: longText(800) }),
   z.object({ type: z.literal("check"), say, question: checkQuestionSchema }),
   z.object({ type: z.literal("steps"), say, items: z.array(line(300)).min(1).max(12) }),

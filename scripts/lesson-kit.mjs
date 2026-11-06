@@ -114,7 +114,7 @@ export const sld = (prompt, range, value, tol, o) => ({ type: "slider", ...commo
 
 // --- lessons --------------------------------------------------------------------------------------
 const SUBJECT_COURSE = { maths: "maths", science: "science", "data-ai": "data-ai", "general-knowledge": "general-knowledge", english: "english" };
-const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "brain_game", "html_embed"]);
+const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "clip", "brain_game", "html_embed"]);
 
 export function lesson(spec) {
   const { slug, subject, cls, week, title, summary, difficulty, unit, objectives, tags = [], blocks, quiz, pass = 70, shuffleQuestions = true } = spec;

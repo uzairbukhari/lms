@@ -1,7 +1,7 @@
 // Builds topic lessons in format 3.0 (sub-lessons, mini quizzes, standards) and checks docs/LESSON_GUIDELINES.md parts 4 and 13.
 import { audit as _unused } from "./lesson-kit.mjs";
 
-const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "brain_game", "html_embed"]);
+const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "clip", "brain_game", "html_embed"]);
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
 
 export function topicLesson(spec) {
