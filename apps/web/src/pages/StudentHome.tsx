@@ -69,7 +69,7 @@ const weekKey = (semester: number, week: number) => `${semester}-${week}`;
 const weekNum = (k: string) => { const [s = 0, w = 0] = k.split("-").map(Number); return s * 100 + w; };
 
 /** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
-function QuestStop({ c, here }: { c: Card; here: boolean }) {
+function QuestStop({ c, here, idx }: { c: Card; here: boolean; idx: number }) {
   const s = look(c.subject);
   const done = c.progress?.status === "completed";
   const best = c.quiz?.bestPercent;
@@ -80,13 +80,14 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
     <article aria-label={`${s.label}: ${c.title}${done ? " (done)" : ""}`} className="flex w-full flex-col gap-6">
       <div className="flex h-[132px] flex-col items-center gap-2">
         <div
-          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full"
+          className={"relative flex h-[104px] w-[104px] items-center justify-center rounded-full " + (here ? "m-pulse" : done ? "" : "m-float")}
           style={{
+            "--i": idx,
             background: done ? "var(--done-tint)" : (TINT[c.subject] ?? "var(--tint-english)"),
             color: done ? "var(--done-text)" : "var(--on-tint)",
             border: here ? "5px solid var(--accent)" : "var(--border-width) solid var(--surface-border)",
             boxShadow: "var(--shadow)",
-          }}
+          } as CSSProperties}
         >
           <SubjectIcon subject={c.subject} size={52} />
           {done && (
@@ -129,13 +130,13 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
             </div>
           ) : (
             <>
-              <Link className="btn btn-primary !min-h-[60px] !text-2xl" to={`/lesson/${c.id}`}>{c.progress ? "Keep going" : "Start"}</Link>
+              <Link className="btn btn-primary m-shine !min-h-[60px] !text-2xl" to={`/lesson/${c.id}`}>{c.progress ? "Keep going" : "Start"}</Link>
               <Link className="btn !min-h-12" to={`/lesson/${c.id}/quiz`}>{c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
             </>
           )}
         </div>
         {done && (
-          <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>
+          <span aria-hidden="true" className="m-wobble pointer-events-none absolute -top-5 right-3 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>
         )}
       </div>
     </article>
@@ -143,7 +144,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
 }
 
 /** One subject on the quest trail: its icon, the topic to do next, parts progress and a Keep going button. Finished subjects go grey with a DONE! stamp. */
-function SubjectStop({ p, here }: { p: SubjectPath; here: boolean }) {
+function SubjectStop({ p, here, idx }: { p: SubjectPath; here: boolean; idx: number }) {
   const s = look(p.subject);
   const doneN = p.topics.filter((t) => t.status === "done").length;
   const done = doneN === p.topics.length;
@@ -153,35 +154,30 @@ function SubjectStop({ p, here }: { p: SubjectPath; here: boolean }) {
   const percent = cur && cur.partsTotal ? Math.round((cur.partsDone / cur.partsTotal) * 100) : 0;
   const mapTo = `/path/${p.courseId}/${p.subject}`;
   return (
-    <article aria-label={`${s.label}: ${doneN} of ${p.topics.length} topics done`} className="flex w-full flex-col gap-6">
-      <div className="flex h-[132px] flex-col items-center gap-2">
-        <div className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full" style={{ background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: here ? "5px solid var(--accent)" : "var(--border-width) solid var(--surface-border)", boxShadow: "var(--shadow)" }}>
-          <SubjectIcon subject={p.subject} size={52} />
-          {done && <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-10 w-10 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}><Tick size={24} /></span>}
-        </div>
-        {here && <span className="rounded-full bg-accent px-3 text-base font-extrabold text-on-accent">You are here</span>}
+    <article aria-label={`${s.label}: ${doneN} of ${p.topics.length} topics done`} className={"relative flex w-full flex-col items-stretch gap-2.5 p-5 " + (here ? "m-glow" : "")} style={{ background: done ? "var(--done-bg)" : "var(--surface)", color: ink, border: here ? "3px solid var(--accent)" : `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`, borderRadius: "var(--radius)", boxShadow: done ? "none" : "var(--shadow)", paddingTop: done ? 32 : undefined }}>
+      <div className={"qc relative mx-auto flex flex-none items-center justify-center rounded-full " + (here ? "m-pulse" : "m-float")} style={{ "--i": idx, background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: "var(--border-width) solid var(--surface-border)" } as CSSProperties}>
+        <SubjectIcon subject={p.subject} size={56} />
+        {done && <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}><Tick size={22} /></span>}
       </div>
-      <div className="relative flex min-h-0 flex-1 flex-col gap-2.5 p-5" style={{ paddingTop: done ? 32 : undefined, background: done ? "var(--done-bg)" : "var(--surface)", color: ink, border: `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`, borderRadius: "var(--radius)", boxShadow: done ? "none" : "var(--shadow)" }}>
-        <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
-        <h3 data-len={titleTier(cur ? shortTitle(cur.title) : "All topics done")} className="font-display text-[26px] font-bold leading-tight data-[len=l]:text-[22px] data-[len=xl]:text-[19px]">{cur ? shortTitle(cur.title) : "All topics done"}</h3>
-        {cur && (
-          <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Topic progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
-            <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
-          </div>
+      <p className="text-center text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
+      <h3 data-len={titleTier(cur ? shortTitle(cur.title) : "All topics done")} className="text-center font-display text-[26px] font-bold leading-tight data-[len=l]:text-[22px] data-[len=xl]:text-[19px]">{cur ? shortTitle(cur.title) : "All topics done"}</h3>
+      {cur && (
+        <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Topic progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
+          <div className="m-shine h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
+        </div>
+      )}
+      <p className="text-center font-extrabold" style={{ color: soft }}>{cur ? `${cur.partsDone} of ${cur.partsTotal} parts · ` : ""}{doneN} of {p.topics.length} topics done</p>
+      <div className="mt-auto flex flex-col gap-2.5 pt-1">
+        {done ? (
+          <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={mapTo}>Open map</Link>
+        ) : (
+          <>
+            <Link className="btn btn-primary m-shine !min-h-[60px] !whitespace-nowrap !text-xl" to={cur ? `/topic/${cur.lessonId}` : mapTo}>{cur && cur.partsDone > 0 ? "Keep going" : "Start"}</Link>
+            <Link className="btn !min-h-12" to={mapTo}>Open map</Link>
+          </>
         )}
-        <p className="font-extrabold" style={{ color: soft }}>{cur ? `${cur.partsDone} of ${cur.partsTotal} parts · ` : ""}{doneN} of {p.topics.length} topics done</p>
-        <div className="mt-auto flex flex-col gap-2.5 pt-1">
-          {done ? (
-            <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={mapTo}>Open map</Link>
-          ) : (
-            <>
-              <Link className="btn btn-primary !min-h-[60px] !whitespace-nowrap !text-xl" to={cur ? `/topic/${cur.lessonId}` : mapTo}>{cur && cur.partsDone > 0 ? "Keep going" : "Start"}</Link>
-              <Link className="btn !min-h-12" to={mapTo}>Open map</Link>
-            </>
-          )}
-        </div>
-        {done && <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>}
       </div>
+      {done && <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>}
     </article>
   );
 }
@@ -268,7 +264,7 @@ export function StudentHome() {
     <main className="kh-main mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
       <header className="kh-header flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <Avatar name={user.displayName} avatar={user.avatar} size={72} />
+          <span className="m-float inline-block" style={{ "--i": 0 } as CSSProperties}><Avatar name={user.displayName} avatar={user.avatar} size={72} /></span>
           <div>
             <h1 className="font-display text-4xl font-extrabold">Hi, {user.displayName}!</h1>
             <p className="text-lg text-muted">
@@ -280,7 +276,7 @@ export function StudentHome() {
         <div className="flex items-center gap-3">
           {home && (
             <span className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 text-xl font-extrabold">
-              <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" fill="var(--star)" stroke="var(--text)" strokeWidth="1.2" strokeLinejoin="round" /></svg>
+              <svg className="m-twinkle" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" fill="var(--star)" stroke="var(--text)" strokeWidth="1.2" strokeLinejoin="round" /></svg>
               {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
             </span>
           )}
@@ -294,7 +290,7 @@ export function StudentHome() {
               <span aria-hidden="true">🔥</span> {rewards.streak.current}
             </Link>
           )}
-          <Link to="/map" className="btn btn-primary map-button relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
+          <Link to="/map" className="btn btn-primary map-button m-shine relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
             <span aria-hidden="true" className="text-2xl">🗺️</span> Map
             {points && <span className="rounded-full bg-surface px-2.5 py-0.5 text-base font-extrabold text-text">🪙 {points.total}</span>}
             {points && points.waiting > 0 && <span aria-hidden="true" className="chest-wiggle absolute -right-3 -top-4 text-3xl">🎁</span>}
@@ -313,8 +309,8 @@ export function StudentHome() {
       )}
 
       <nav aria-label="More to do" className="kh-nav flex flex-wrap gap-3">
-        {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
-        {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
+        {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary m-shine")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
+        {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary m-shine")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
         {cards && cards.words > 0 && <Link to="/words" className="btn !min-h-14"><span aria-hidden="true">📖</span> My word book ({cards.words})</Link>}
         {home?.now && (home.now.exam || home.now.week >= 12) && <Link to="/revision" className="btn !min-h-14"><span aria-hidden="true">🎓</span> Exam revision</Link>}
         <Link to="/teaser" className={"btn !min-h-14 " + (teaser && !teaser.done ? "btn-primary" : "")}><span aria-hidden="true">🧩</span> Brain teaser{teaser?.done ? " ✓" : ""}</Link>
@@ -344,22 +340,15 @@ export function StudentHome() {
         const topicsDone = paths.reduce((n, p) => n + p.topics.filter((t) => t.status === "done").length, 0);
         const topicsAll = paths.reduce((n, p) => n + p.topics.length, 0);
         return (
-          <section aria-labelledby="subjects" className="kh-week flex flex-col gap-4">
+          <section aria-labelledby="subjects" className="kh-quest flex flex-col gap-6">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <h2 id="subjects" className="font-display text-3xl font-extrabold">My quest</h2>
                 <p className="text-lg text-muted">Pick up where you left off in every subject. {topicsDone} of {topicsAll} topics done{topicsDone === topicsAll ? ", brilliant!" : "!"}</p>
               </div>
-              <div role="img" aria-label={`${topicsDone} of ${topicsAll} topics done`} className="flex gap-2">
-                {paths.map((p) => {
-                  const d = p.topics.filter((t) => t.status === "done").length;
-                  return <span key={`${p.courseId}:${p.subject}`} className="h-3.5 w-12 overflow-hidden rounded-full border-[length:var(--border-width)] border-line" style={{ background: "var(--track)" }}><span className="block h-full bg-accent" style={{ width: `${(d / Math.max(1, p.topics.length)) * 100}%` }} /></span>;
-                })}
-              </div>
             </div>
-            <div className="kh-grid relative mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
-              <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / paths.length}%`, right: `${50 / paths.length}%` }} />
-              {paths.map((p, i) => <div key={`${p.courseId}:${p.subject}`} className="relative flex"><SubjectStop p={p} here={i === paths.findIndex((x) => x.topics.some((t) => t.status === "current" || t.status === "early"))} /></div>)}
+            <div className="qgrid relative mt-2 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
+              {paths.map((p, i) => <div key={`${p.courseId}:${p.subject}`} className="relative flex"><SubjectStop idx={i} p={p} here={i === paths.findIndex((x) => x.topics.some((t) => t.status === "current" || t.status === "early"))} /></div>)}
             </div>
           </section>
         );
@@ -383,13 +372,13 @@ export function StudentHome() {
                 </div>
                 <div role="img" aria-label={`${weekDone} of ${weekCards.length} lessons done`} className="flex gap-2">
                   {weekCards.map((c, i) => (
-                    <span key={c.id} className="h-3.5 w-12 rounded-full border-[length:var(--border-width)] border-line" style={{ background: i < weekDone ? "var(--accent)" : "var(--track)" }} />
+                    <span key={c.id} className={"h-3.5 w-12 rounded-full border-[length:var(--border-width)] border-line " + (i < weekDone ? "m-shine" : "")} style={{ background: i < weekDone ? "var(--accent)" : "var(--track)" }} />
                   ))}
                 </div>
               </div>
               <div className="kh-grid relative mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
                 <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / weekCards.length}%`, right: `${50 / weekCards.length}%` }} />
-                {weekCards.map((c) => <div key={c.id} className="relative flex"><QuestStop c={c} here={c.id === hereId} /></div>)}
+                {weekCards.map((c, i) => <div key={c.id} className="relative flex"><QuestStop c={c} idx={i} here={c.id === hereId} /></div>)}
               </div>
             </>
           )}

@@ -31,3 +31,7 @@ export function tileGlyph(title: string, fallback: string): string {
   ];
   return rules.find(([re]) => re.test(t))?.[1] ?? fallback;
 }
+
+/** Pastel tile colours shared by the trail, card views and topic parts (dark ink on top). */
+export const PASTELS = ["#ffb3c7", "#a0e8c8", "#ffd166", "#a5d8ff", "#d0bfff", "#ffc9a0", "#9fe3e0", "#f7a8e0"];
+export const pastel = (i: number): string => PASTELS[i % PASTELS.length]!;
