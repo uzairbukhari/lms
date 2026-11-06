@@ -1,0 +1,2753 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "general-knowledge-class-4-our-physical-world",
+  "subject": "general-knowledge",
+  "title": "Our Physical World",
+  "summary": "How rivers flow, how mountains form, the Earth's climate zones, and the biomes where plants and animals live.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 2: Our physical world",
+  "learning_objectives": [
+   "Describe the course of a river",
+   "Explain how fold mountains form",
+   "Name the climate zones",
+   "Describe biomes and how living things are adapted"
+  ],
+  "tags": [
+   "topic",
+   "topic-2"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-4-topics",
+   "semester": 1,
+   "topic": 2
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 physical geography",
+    "text": "Describe and understand key aspects of physical geography, including climate zones, biomes, rivers and mountains"
+   },
+   {
+    "framework": "pyp",
+    "code": "How the world works"
+   }
+  ],
+  "success_criteria": [
+   "I can name the parts of a river",
+   "I can say how mountains form and why they are cold",
+   "I can describe climate zones and biomes"
+  ],
+  "real_life": "Seeing a river or canal, looking at snowy mountains, and noticing how plants and animals suit where they live.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is the longest river in Pakistan?",
+    "hint": "It ends at the Arabian Sea.",
+    "explanation": "The Indus is Pakistan's greatest river.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Thames"
+     },
+     {
+      "id": "b",
+      "text": "The Nile"
+     },
+     {
+      "id": "c",
+      "text": "The Indus"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "How high is K2, to the nearest thousand metres?",
+    "hint": "8,611 metres.",
+    "explanation": "About 9,000 metres.",
+    "options": [
+     {
+      "id": "a",
+      "text": "20,000 metres"
+     },
+     {
+      "id": "b",
+      "text": "9,000 metres"
+     },
+     {
+      "id": "c",
+      "text": "3,000 metres"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the capital of the UK?",
+    "hint": "It is on the Thames.",
+    "explanation": "London is the capital.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cardiff"
+     },
+     {
+      "id": "b",
+      "text": "London"
+     },
+     {
+      "id": "c",
+      "text": "Karachi"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [
+  {
+   "type": "heading",
+   "text": "Welcome, explorer of Earth!"
+  },
+  {
+   "type": "text",
+   "markdown": "Today's big question: how do rivers, mountains and climate shape life on Earth?\n\nWe will explore the physical world.",
+   "say": "Welcome, explorer of Earth! Our big question: how do rivers, mountains and climates shape the places where plants, animals and people live? We will follow a river from source to sea, build mountains from a towel, and meet the biomes of the world. This is a game, not a test. Let's go!"
+  },
+  {
+   "type": "image",
+   "emoji": "🌍🏔️🌊",
+   "alt": "Rivers, mountains and climates shape our planet.",
+   "caption": "Rivers, mountains and climates shape our planet."
+  },
+  {
+   "type": "glossary",
+   "terms": [
+    {
+     "term": "physical",
+     "meaning": "To do with the natural world, like rivers and mountains."
+    }
+   ]
+  }
+ ],
+ "sub_lessons": [
+  {
+   "id": "rivers",
+   "kind": "learn",
+   "title": "Rivers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The journey of a river"
+    },
+    {
+     "type": "text",
+     "markdown": "A river begins at its **source** and ends at its **mouth**, where it meets the sea.\n\nA smaller river that joins a bigger one is called a **tributary**.",
+     "say": "Every river has a journey from start to finish. It begins at a place called the source, often high in the hills or mountains, where rain falls or snow and ice melt. Smaller streams join to make a bigger river. A smaller river that joins a bigger one is called a tributary. Finally, the river reaches the sea, and the place where it meets the sea is called the mouth. Along its journey, a river carves valleys and carries soil and stones downstream."
+    },
+    {
+     "type": "explainer",
+     "title": "A river from source to mouth",
+     "scenes": [
+      {
+       "caption": "The source of the river.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 18,
+         "size": 3,
+         "anim": "none",
+         "label": "Source"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 36,
+         "size": 1,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The journey starts at the source, high in the mountains, where snow and rain trickle together."
+      },
+      {
+       "caption": "A tributary joins the river.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 14,
+         "size": 2,
+         "anim": "none",
+         "label": "Source"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 54,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "t",
+         "emoji": "💦",
+         "x": 82,
+         "y": 54,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Tributary"
+        }
+       ],
+       "say": "Downhill, a smaller stream joins the river. This is a tributary, and it adds more water."
+      },
+      {
+       "caption": "The river flows across the plain.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 14,
+         "size": 2,
+         "anim": "none",
+         "label": "Source"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 72,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "f",
+         "emoji": "🏘️",
+         "x": 22,
+         "y": 72,
+         "size": 2,
+         "anim": "none",
+         "label": "Farms and towns"
+        }
+       ],
+       "say": "On the flat land the river grows wide and slow, and farms and towns grow beside it."
+      },
+      {
+       "caption": "The mouth of the river.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 12,
+         "size": 2,
+         "anim": "none",
+         "label": "Source"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 84,
+         "size": 1,
+         "anim": "bounce"
+        },
+        {
+         "id": "m",
+         "emoji": "🌊",
+         "x": 78,
+         "y": 84,
+         "size": 2,
+         "anim": "pulse",
+         "label": "Mouth and sea"
+        }
+       ],
+       "say": "At last the river reaches the sea. This is its mouth."
+      }
+     ],
+     "backdrop": "mountain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we call the place where a river meets the sea?",
+      "hint": "It is the end of the journey.",
+      "explanation": "A river ends at its mouth.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The source"
+       },
+       {
+        "id": "b",
+        "text": "The mouth"
+       },
+       {
+        "id": "c",
+        "text": "A tributary"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Why rivers matter"
+    },
+    {
+     "type": "text",
+     "markdown": "Rivers give water for **crops**, drinking and travel.\n\nMany cities were built beside rivers.",
+     "say": "People have always settled near rivers. Rivers give us water to drink and to grow crops. They are used for travel and for carrying goods. Rich soil, left behind when rivers flood, helps crops grow. The Indus, the Nile and the Thames all had cities beside them. But rivers can flood and be polluted too, so we must take care of them."
+    },
+    {
+     "type": "image",
+     "emoji": "🌾🚤🏘️",
+     "alt": "Farms, boats and towns grow along rivers.",
+     "caption": "Farms, boats and towns grow along rivers."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "People often build towns beside rivers.",
+      "hint": "Think about water.",
+      "explanation": "Rivers give water, food and routes for travel.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A river runs from its source to its mouth",
+      "A tributary is a smaller river that joins a bigger one",
+      "People settle near rivers for water, soil and travel"
+     ],
+     "say": "Let us remember. A river runs from its source to its mouth, and tributaries join it. Rivers give water and good soil."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "source",
+       "meaning": "The place where a river begins."
+      },
+      {
+       "term": "mouth",
+       "meaning": "The place where a river meets the sea."
+      },
+      {
+       "term": "tributary",
+       "meaning": "A smaller river that flows into a bigger one."
+      },
+      {
+       "term": "crops",
+       "meaning": "Plants that farmers grow for food."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Where does a river begin?",
+     "hint": "Often high in the hills.",
+     "explanation": "A river begins at its source.",
+     "options": [
+      {
+       "id": "a",
+       "text": "At its mouth"
+      },
+      {
+       "id": "b",
+       "text": "At its source"
+      },
+      {
+       "id": "c",
+       "text": "At the sea"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a tributary?",
+     "hint": "It adds water.",
+     "explanation": "A tributary flows into a bigger river.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The end of a river"
+      },
+      {
+       "id": "b",
+       "text": "A smaller river that joins a bigger one"
+      },
+      {
+       "id": "c",
+       "text": "A kind of boat"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A river ends at its mouth.",
+     "hint": "Where it meets the sea.",
+     "explanation": "The mouth is where it meets the sea.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do farmers like to live near rivers?",
+     "hint": "Think about plants.",
+     "explanation": "Rivers give water for crops.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rivers stop the Sun"
+      },
+      {
+       "id": "b",
+       "text": "They have water for crops"
+      },
+      {
+       "id": "c",
+       "text": "Rivers make mountains"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mountains",
+   "kind": "try",
+   "title": "Mountains",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How mountains are made"
+    },
+    {
+     "type": "text",
+     "markdown": "The Earth's surface is made of huge **tectonic plates** that move very slowly.\n\nWhen plates push together, the land folds upwards into **fold mountains**.",
+     "say": "The Earth's surface is not one piece. It is broken into huge slabs called tectonic plates, which move very slowly, about as fast as your fingernails grow. Sometimes two plates push against each other. The land between them crumples and folds upwards, like a rug pushed from both ends. This makes fold mountains. The Himalaya and the Karakoram in the north of Pakistan formed this way, over millions of years."
+    },
+    {
+     "type": "explainer",
+     "title": "Plates push, mountains rise",
+     "scenes": [
+      {
+       "caption": "Two plates, side by side.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟫",
+         "x": 25,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Plate A"
+        },
+        {
+         "id": "b",
+         "emoji": "🟫",
+         "x": 75,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Plate B"
+        }
+       ],
+       "say": "Here are two plates of land, side by side."
+      },
+      {
+       "caption": "The plates push together.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟫",
+         "x": 38,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Plate A"
+        },
+        {
+         "id": "b",
+         "emoji": "🟫",
+         "x": 62,
+         "y": 62,
+         "size": 3,
+         "anim": "none",
+         "label": "Plate B"
+        },
+        {
+         "id": "arrow1",
+         "emoji": "➡️",
+         "x": 20,
+         "y": 40,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "arrow2",
+         "emoji": "⬅️",
+         "x": 80,
+         "y": 40,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "They move towards each other, very slowly, and push together."
+      },
+      {
+       "caption": "The land folds into mountains.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟫",
+         "x": 38,
+         "y": 66,
+         "size": 2,
+         "anim": "none",
+         "label": "Plate A"
+        },
+        {
+         "id": "b",
+         "emoji": "🟫",
+         "x": 62,
+         "y": 66,
+         "size": 2,
+         "anim": "none",
+         "label": "Plate B"
+        },
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "grow",
+         "label": "Fold mountains"
+        }
+       ],
+       "say": "The land between them has nowhere to go but up. Over millions of years, it folds into mountains."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Make fold mountains",
+     "materials": [
+      "A towel or a sheet of paper",
+      "A flat table"
+     ],
+     "instructions": [
+      "Lay the towel flat on the table. This is the Earth's surface.",
+      "Put a hand on each end and slowly push your hands together.",
+      "Watch what happens in the middle. The towel folds up into ridges!",
+      "What would happen if you pushed for a million years?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens when two plates push together?",
+      "hint": "Think of the towel.",
+      "explanation": "The land crumples and folds into mountains.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The land turns to sea"
+       },
+       {
+        "id": "b",
+        "text": "The land becomes flat"
+       },
+       {
+        "id": "c",
+        "text": "The land folds upwards"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Cold at the top"
+    },
+    {
+     "type": "text",
+     "markdown": "The higher the **altitude**, the colder it gets.\n\nThe peaks of high mountains are snowy all year.",
+     "say": "Have you noticed that mountain tops are cold? The higher up we go, the colder the air becomes, about six degrees cooler for every thousand metres. The height of land above the sea is called altitude. That is why the tops of high mountains like K2 are covered in snow and ice all year, even in a hot country. And high up, the air is thin, so climbers need extra oxygen."
+    },
+    {
+     "type": "image",
+     "emoji": "🏔️🥶",
+     "alt": "It gets colder as the altitude rises. The tops of high mountains are covered in snow.",
+     "caption": "It gets colder as the altitude rises. The tops of high mountains are covered in snow."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is colder at the top of a mountain than at the bottom.",
+      "hint": "Think about snow on peaks.",
+      "explanation": "Air gets colder with height.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Tectonic plates move slowly",
+      "Fold mountains form when plates push together",
+      "It gets colder as altitude rises"
+     ],
+     "say": "Let us remember. Fold mountains form when plates push together. It is colder at higher altitudes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tectonic plates",
+       "meaning": "Huge slabs that make up the Earth's surface and move very slowly."
+      },
+      {
+       "term": "fold mountains",
+       "meaning": "Mountains made when plates push land upwards in folds."
+      },
+      {
+       "term": "altitude",
+       "meaning": "The height of land above the sea."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What are tectonic plates?",
+     "hint": "They move very slowly.",
+     "explanation": "Tectonic plates are huge pieces of the Earth's surface.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Dinner plates"
+      },
+      {
+       "id": "b",
+       "text": "Types of cloud"
+      },
+      {
+       "id": "c",
+       "text": "Huge slabs that make up the Earth's surface"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which mountains formed from plates pushing together?",
+     "hint": "They are in the north of Pakistan.",
+     "explanation": "The Karakoram is a fold mountain range.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The Thar"
+      },
+      {
+       "id": "b",
+       "text": "The Karakoram"
+      },
+      {
+       "id": "c",
+       "text": "The Indus"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Mountains get warmer as you go higher.",
+     "hint": "Think about snow at the top.",
+     "explanation": "It gets colder as you go higher.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is altitude?",
+     "hint": "How high up a place is.",
+     "explanation": "Altitude is height above sea level.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of rock"
+      },
+      {
+       "id": "b",
+       "text": "The height above the sea"
+      },
+      {
+       "id": "c",
+       "text": "The speed of wind"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "climate",
+   "kind": "play",
+   "title": "Climate zones",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Four climates"
+    },
+    {
+     "type": "text",
+     "markdown": "**Climate** is the usual weather of a place over many years.\n\nThe **equator** is the imaginary line round the middle of the Earth. Places near it are hot.",
+     "say": "Weather changes from day to day, but climate is the usual weather of a place over many years. The Earth has different climate zones. Near the middle of the Earth, around a line called the equator, the Sun's rays shine most strongly, so it is hot all year. This is the tropical zone. Some places are dry, with very little rain: these are deserts. Further north and south the climate is temperate, with mild weather and four seasons. And near the North and South Poles it is polar: bitterly cold."
+    },
+    {
+     "type": "explainer",
+     "title": "Four climate zones",
+     "scenes": [
+      {
+       "caption": "Tropical: hot all year.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 30,
+          "from": -30,
+          "to": 50
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "Tropical"
+        }
+       ],
+       "say": "In the tropical zone near the equator, it is hot and often wet all year. A typical day is thirty degrees."
+      },
+      {
+       "caption": "Desert: very hot and dry.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 40,
+          "from": -30,
+          "to": 50
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Desert"
+        }
+       ],
+       "say": "In the desert zone, the days are very hot and it hardly ever rains. It can reach forty degrees."
+      },
+      {
+       "caption": "Temperate: mild.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": 12,
+          "from": -30,
+          "to": 50
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "Temperate"
+        }
+       ],
+       "say": "In the temperate zone, like the UK, the weather is mild. A typical day is twelve degrees, with four seasons."
+      },
+      {
+       "caption": "Polar: freezing cold.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "thermometer",
+          "value": -20,
+          "from": -30,
+          "to": 50
+         },
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Polar"
+        }
+       ],
+       "say": "In the polar zone, it is freezing. A typical day can be twenty degrees below zero."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which climate zone is hot all year, near the equator?",
+      "hint": "The Sun shines most strongly there.",
+      "explanation": "The tropical zone is hot all year.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Temperate"
+       },
+       {
+        "id": "b",
+        "text": "Tropical"
+       },
+       {
+        "id": "c",
+        "text": "Polar"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Where is Pakistan?"
+    },
+    {
+     "type": "text",
+     "markdown": "Pakistan has several climates. The plains are hot, the mountains are cold.",
+     "say": "Pakistan has a mix. Much of it is hot and dry, especially the south and the deserts. In the north, high in the mountains, it is cold, even polar on the highest peaks. The lower, greener north and the plains of Punjab have four seasons. So a small country can hold several climates, because altitude changes the weather as well as the distance from the equator."
+    },
+    {
+     "type": "image",
+     "emoji": "🏜️🏔️🌾",
+     "alt": "Pakistan has hot deserts, cold mountains and green farmland.",
+     "caption": "Pakistan has hot deserts, cold mountains and green farmland."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Pakistan has only one kind of climate.",
+      "hint": "Think about deserts and mountains.",
+      "explanation": "Pakistan has hot deserts, farm plains and snowy mountains.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 3: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Turn over two cards at a time. Can you find all the pairs?",
+     "say": "Time for a brain break. Match the pairs of weather and climate pictures."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Climate pairs",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🌴",
+      "🏜️",
+      "🌧️",
+      "❄️",
+      "☀️",
+      "🏔️"
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Climate is the usual weather over many years",
+      "There are tropical, desert, temperate and polar climates",
+      "Pakistan has hot deserts and cold mountains"
+     ],
+     "say": "Let us remember. There are tropical, dry, temperate and polar climates. Pakistan has several."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "climate",
+       "meaning": "The usual weather of a place over many years."
+      },
+      {
+       "term": "equator",
+       "meaning": "The imaginary line round the middle of the Earth."
+      },
+      {
+       "term": "tropical",
+       "meaning": "Hot all year, near the equator."
+      },
+      {
+       "term": "polar",
+       "meaning": "Very cold, near the North and South Poles."
+      },
+      {
+       "term": "temperate",
+       "meaning": "Mild, with four seasons."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is climate?",
+     "hint": "It is about a long time.",
+     "explanation": "Climate is the usual weather over many years.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Today's rain"
+      },
+      {
+       "id": "b",
+       "text": "The name of a season"
+      },
+      {
+       "id": "c",
+       "text": "The usual weather over many years"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which climate is freezing all year?",
+     "hint": "Near the poles.",
+     "explanation": "The polar climate is very cold.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tropical"
+      },
+      {
+       "id": "b",
+       "text": "Desert"
+      },
+      {
+       "id": "c",
+       "text": "Polar"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The UK has a temperate climate.",
+     "hint": "Mild and rainy.",
+     "explanation": "The UK has a mild, temperate climate.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the equator?",
+     "hint": "It is in the middle of the Earth.",
+     "explanation": "The equator is the line round the middle of the Earth.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A mountain"
+      },
+      {
+       "id": "b",
+       "text": "An imaginary line round the middle of the Earth"
+      },
+      {
+       "id": "c",
+       "text": "A kind of river"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biomes",
+   "kind": "use",
+   "title": "Biomes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is a biome?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **biome** is a huge area with a similar climate, plants and animals.\n\nLiving things are **adapted** to the biome they live in.",
+     "say": "A biome is a huge area with a similar climate, and with plants and animals that are suited to it. In a desert, plants like cacti store water, and camels can go many days without a drink. In a rainforest it is warm and wet, so thousands of different plants and animals live there. Grasslands have wide plains with grass and animals that graze. Forests are full of trees. And the tundra is frozen and treeless. Each living thing is adapted to its biome."
+    },
+    {
+     "type": "explainer",
+     "title": "Biomes",
+     "scenes": [
+      {
+       "caption": "Desert.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🌵",
+         "x": 30,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Cactus"
+        },
+        {
+         "id": "c",
+         "emoji": "🐪",
+         "x": 70,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Camel"
+        }
+       ],
+       "say": "In the desert it is hot and dry. A cactus stores water, and a camel can go many days without a drink."
+      },
+      {
+       "caption": "Rainforest.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌴",
+         "x": 30,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Rainforest"
+        },
+        {
+         "id": "p",
+         "emoji": "🦜",
+         "x": 70,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Parrot"
+        }
+       ],
+       "say": "In the rainforest it is warm and wet, with tall trees and colourful birds."
+      },
+      {
+       "caption": "Grassland.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌾",
+         "x": 30,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Grassland"
+        },
+        {
+         "id": "l",
+         "emoji": "🦁",
+         "x": 70,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Lion"
+        }
+       ],
+       "say": "On the grassland, lions and zebras roam across the wide plain."
+      },
+      {
+       "caption": "Tundra.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "❄️",
+         "x": 30,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Tundra"
+        },
+        {
+         "id": "b",
+         "emoji": "🐻‍❄️",
+         "x": 70,
+         "y": 55,
+         "size": 2,
+         "anim": "none",
+         "label": "Polar bear"
+        }
+       ],
+       "say": "In the cold tundra, polar bears have thick fur and a layer of fat to keep warm."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which animal is adapted to the desert?",
+      "hint": "It can go days without water.",
+      "explanation": "A camel stores energy and can live with little water.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A polar bear"
+       },
+       {
+        "id": "b",
+        "text": "A camel"
+       },
+       {
+        "id": "c",
+        "text": "A parrot"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Adapted to survive"
+    },
+    {
+     "type": "text",
+     "markdown": "An **adaptation** helps a living thing survive in its home.\n\nProtecting biomes protects the animals that live in them.",
+     "say": "Adaptation means a body part or behaviour that helps a living thing survive in its home. A camel has wide feet to walk on sand and a hump that stores fat. A polar bear has thick fur and a layer of fat. A parrot has a strong beak to crack nuts and bright feathers. If a living thing moved to the wrong biome, it might not survive. That is why protecting biomes protects the animals living in them."
+    },
+    {
+     "type": "image",
+     "emoji": "🐪🐻‍❄️🦜",
+     "alt": "Each animal is adapted to its biome.",
+     "caption": "Each animal is adapted to its biome."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Why couldn't a polar bear live in the desert?",
+     "answer_markdown": "It has thick fur and fat to stay warm in the cold. In the hot desert, it would overheat and could not find the food it needs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A polar bear's thick fur helps it live in the cold.",
+      "hint": "Think about warmth.",
+      "explanation": "Fur and fat keep a polar bear warm.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A biome has a similar climate, plants and animals",
+      "Animals and plants are adapted to their biome",
+      "Protecting biomes protects living things"
+     ],
+     "say": "Let us remember. A biome has a similar climate, plants and animals. Living things are adapted to their biome."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "biome",
+       "meaning": "A huge area with a similar climate, plants and animals."
+      },
+      {
+       "term": "adapted",
+       "meaning": "Suited to a certain home or way of living."
+      },
+      {
+       "term": "adaptation",
+       "meaning": "A body part or behaviour that helps a living thing survive."
+      },
+      {
+       "term": "tundra",
+       "meaning": "A cold, treeless biome."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which biome is cold and treeless?",
+     "hint": "It is frozen.",
+     "explanation": "The tundra is cold and treeless.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Desert"
+      },
+      {
+       "id": "b",
+       "text": "Tundra"
+      },
+      {
+       "id": "c",
+       "text": "Rainforest"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A cactus stores...",
+     "hint": "It lives in the desert.",
+     "explanation": "A cactus stores water.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Water"
+      },
+      {
+       "id": "c",
+       "text": "Snow"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A rainforest is warm and wet.",
+     "hint": "Think about parrots and tall trees.",
+     "explanation": "The rainforest is warm and wet.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is an adaptation?",
+     "hint": "Think of thick fur.",
+     "explanation": "Adaptations help living things survive.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of map"
+      },
+      {
+       "id": "b",
+       "text": "A type of weather"
+      },
+      {
+       "id": "c",
+       "text": "Something that helps a living thing survive"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is the place where a river begins called?",
+    "hint": "Often in the hills.",
+    "explanation": "A river begins at its source.",
+    "skill_tag": "rivers.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "The mouth"
+     },
+     {
+      "id": "b",
+      "text": "A tributary"
+     },
+     {
+      "id": "c",
+      "text": "The source"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "match",
+    "prompt": "Match each part of a river to its meaning.",
+    "hint": "Think about the journey.",
+    "explanation": "These are the parts of a river.",
+    "skill_tag": "rivers.words",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Source"
+     },
+     {
+      "id": "l2",
+      "text": "Mouth"
+     },
+     {
+      "id": "l3",
+      "text": "Tributary"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Where a river meets the sea"
+     },
+     {
+      "id": "r3",
+      "text": "A smaller river joining a bigger one"
+     },
+     {
+      "id": "r1",
+      "text": "Where a river begins"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "rivers",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "order",
+    "prompt": "Put a river's journey in order.",
+    "hint": "Start in the mountains.",
+    "explanation": "Source, tributary, plain, mouth.",
+    "skill_tag": "rivers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A tributary joins the river"
+     },
+     {
+      "id": "i4",
+      "text": "The river reaches the sea"
+     },
+     {
+      "id": "i3",
+      "text": "The river flows across the plain"
+     },
+     {
+      "id": "i1",
+      "text": "Snow melts in the mountains"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "true_false",
+    "prompt": "The Indus meets the sea in the south of Pakistan.",
+    "hint": "Think of the Arabian Sea.",
+    "explanation": "The Indus ends in the Arabian Sea.",
+    "skill_tag": "rivers.fact",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences.",
+    "hint": "Think of the towel and the snow.",
+    "explanation": "Plates push together; air gets colder with height.",
+    "skill_tag": "mountains.fill",
+    "points": 2,
+    "text": "Fold mountains form when plates {b1} together. It gets {b2} as altitude rises.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pull"
+       },
+       {
+        "id": "b",
+        "text": "push"
+       },
+       {
+        "id": "c",
+        "text": "freeze"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hotter"
+       },
+       {
+        "id": "b",
+        "text": "wetter"
+       },
+       {
+        "id": "c",
+        "text": "colder"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "short_text",
+    "prompt": "What word means the height of land above the sea? Write one word.",
+    "hint": "Begins with A.",
+    "explanation": "Altitude is height above sea level.",
+    "skill_tag": "mountains.alt",
+    "answer": {
+     "accepted": [
+      "altitude"
+     ]
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "What kind of mountains form when tectonic plates push together?",
+    "hint": "Think of folds in a towel.",
+    "explanation": "Fold mountains form this way.",
+    "skill_tag": "mountains.type",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand dunes"
+     },
+     {
+      "id": "b",
+      "text": "Fold mountains"
+     },
+     {
+      "id": "c",
+      "text": "Coral reefs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "recall"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the climate zone that gets very little rain.",
+    "hint": "Think of cacti.",
+    "explanation": "Deserts get very little rain.",
+    "skill_tag": "climate.zones",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏜️",
+       "label": "Desert",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌴",
+       "label": "Tropical rainforest",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "❄️",
+       "label": "Polar",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multi_select",
+    "prompt": "Which two are true of the polar climate? Pick two.",
+    "hint": "Think of ice.",
+    "explanation": "Polar climates are freezing and near the poles.",
+    "skill_tag": "climate.polar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hot all year"
+     },
+     {
+      "id": "b",
+      "text": "Found near the equator"
+     },
+     {
+      "id": "c",
+      "text": "Found near the North and South Poles"
+     },
+     {
+      "id": "d",
+      "text": "Freezing cold"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "slider",
+    "prompt": "Slide to show how many climate zones we met in the lesson.",
+    "hint": "Tropical, desert, temperate and polar.",
+    "explanation": "We met four.",
+    "skill_tag": "climate.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "climate",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Why is it colder at the top of a mountain than at the bottom?",
+    "hint": "Think about altitude.",
+    "explanation": "Air gets colder as altitude increases.",
+    "skill_tag": "mountains.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The air gets colder as you go higher"
+     },
+     {
+      "id": "b",
+      "text": "Mountains are made of ice"
+     },
+     {
+      "id": "c",
+      "text": "The Sun is farther away"
+     }
+    ],
+    "answer": [
+     "a"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Why are places near the equator hot all year?",
+    "hint": "Think about the Sun.",
+    "explanation": "The Sun's rays are strongest there.",
+    "skill_tag": "climate.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are close to the Poles"
+     },
+     {
+      "id": "b",
+      "text": "The Sun's rays hit them most directly"
+     },
+     {
+      "id": "c",
+      "text": "They have no clouds"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "climate",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "match",
+    "prompt": "Match each biome to an animal that lives there.",
+    "hint": "Think of adaptations.",
+    "explanation": "Each animal is adapted to its biome.",
+    "skill_tag": "biomes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Desert"
+     },
+     {
+      "id": "l2",
+      "text": "Rainforest"
+     },
+     {
+      "id": "l3",
+      "text": "Grassland"
+     },
+     {
+      "id": "l4",
+      "text": "Tundra"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Lion"
+     },
+     {
+      "id": "r4",
+      "text": "Polar bear"
+     },
+     {
+      "id": "r2",
+      "text": "Parrot"
+     },
+     {
+      "id": "r1",
+      "text": "Camel"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "biomes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Why can polar bears live in the tundra but not in the rainforest?",
+    "hint": "Think about adaptation.",
+    "explanation": "Thick fur and fat suit the cold tundra.",
+    "skill_tag": "biomes.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They like heat"
+     },
+     {
+      "id": "b",
+      "text": "They cannot swim"
+     },
+     {
+      "id": "c",
+      "text": "Their thick fur and fat suit the cold"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "biomes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Why do farmers build villages near rivers?",
+    "hint": "Think about what plants need.",
+    "explanation": "Rivers give water.",
+    "skill_tag": "rivers.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rivers stop floods"
+     },
+     {
+      "id": "b",
+      "text": "Rivers give water for crops and drinking"
+     },
+     {
+      "id": "c",
+      "text": "Rivers make mountains"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What do we call the place where a river starts?",
+    "hint": "Often in the hills.",
+    "explanation": "A river starts at its source.",
+    "skill_tag": "rivers.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "The mouth"
+     },
+     {
+      "id": "b",
+      "text": "The delta"
+     },
+     {
+      "id": "c",
+      "text": "The source"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q1b",
+    "type": "multiple_choice",
+    "prompt": "Where is the source of many rivers found?",
+    "hint": "Where rain or snow collects.",
+    "explanation": "Many rivers start in high places.",
+    "skill_tag": "rivers.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "In the middle of a town"
+     },
+     {
+      "id": "b",
+      "text": "High in the hills or mountains"
+     },
+     {
+      "id": "c",
+      "text": "Out at sea"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "match",
+    "prompt": "Match each river word to its meaning.",
+    "hint": "Think about the journey.",
+    "explanation": "These are the parts of a river.",
+    "skill_tag": "rivers.words",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Source"
+     },
+     {
+      "id": "l2",
+      "text": "Mouth"
+     },
+     {
+      "id": "l3",
+      "text": "Tributary"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "A smaller river joining a bigger one"
+     },
+     {
+      "id": "r1",
+      "text": "Where a river begins"
+     },
+     {
+      "id": "r2",
+      "text": "Where a river meets the sea"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "rivers",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q2b",
+    "type": "match",
+    "prompt": "Match each part of a river to what it is.",
+    "hint": "Think about the journey.",
+    "explanation": "These are the parts of a river.",
+    "skill_tag": "rivers.words",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tributary"
+     },
+     {
+      "id": "l2",
+      "text": "Source"
+     },
+     {
+      "id": "l3",
+      "text": "Mouth"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "The end"
+     },
+     {
+      "id": "r1",
+      "text": "Joins a bigger river"
+     },
+     {
+      "id": "r2",
+      "text": "The start"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "rivers",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "order",
+    "prompt": "Order a river's journey, from the start.",
+    "hint": "Start in the mountains.",
+    "explanation": "Source, tributary, plain, mouth.",
+    "skill_tag": "rivers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A tributary joins"
+     },
+     {
+      "id": "i3",
+      "text": "The river crosses the plain"
+     },
+     {
+      "id": "i4",
+      "text": "The river meets the sea"
+     },
+     {
+      "id": "i1",
+      "text": "Snow melts on the mountain"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q3b",
+    "type": "order",
+    "prompt": "Put these in order, starting with the source.",
+    "hint": "Start at the beginning.",
+    "explanation": "A river flows from source to mouth.",
+    "skill_tag": "rivers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "River flows downhill"
+     },
+     {
+      "id": "i3",
+      "text": "River widens on the plain"
+     },
+     {
+      "id": "i4",
+      "text": "River reaches the mouth"
+     },
+     {
+      "id": "i1",
+      "text": "Source in the hills"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "true_false",
+    "prompt": "A river's mouth is where it meets the sea.",
+    "hint": "It is the end.",
+    "explanation": "The mouth meets the sea.",
+    "skill_tag": "rivers.fact",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q4b",
+    "type": "true_false",
+    "prompt": "A river flows uphill.",
+    "hint": "Think about gravity.",
+    "explanation": "Rivers flow downhill.",
+    "skill_tag": "rivers.fact",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "rivers",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences.",
+    "hint": "Think of the towel and the snow.",
+    "explanation": "Plates push together; air gets colder with height.",
+    "skill_tag": "mountains.fill",
+    "points": 2,
+    "text": "Fold mountains form when plates {b1}. It is {b2} at the top of a high mountain.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "move apart"
+       },
+       {
+        "id": "b",
+        "text": "push together"
+       },
+       {
+        "id": "c",
+        "text": "melt"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wetter"
+       },
+       {
+        "id": "b",
+        "text": "colder"
+       },
+       {
+        "id": "c",
+        "text": "hotter"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q5b",
+    "type": "fill_blank",
+    "prompt": "Fill in the missing words.",
+    "hint": "Think about slow movements.",
+    "explanation": "Plates move slowly; altitude is height above sea level.",
+    "skill_tag": "mountains.fill",
+    "points": 2,
+    "text": "Tectonic plates move {b1}. Altitude is height above the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "very fast"
+       },
+       {
+        "id": "b",
+        "text": "very slowly"
+       },
+       {
+        "id": "c",
+        "text": "never"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "moon"
+       },
+       {
+        "id": "b",
+        "text": "sea"
+       },
+       {
+        "id": "c",
+        "text": "sky"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "short_text",
+    "prompt": "Which word describes how high a place is above sea level? Write one word.",
+    "hint": "It begins with A.",
+    "explanation": "Altitude is height above sea level.",
+    "skill_tag": "mountains.alt",
+    "answer": {
+     "accepted": [
+      "altitude"
+     ]
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q6b",
+    "type": "short_text",
+    "prompt": "What kind of mountains form when plates push together? Write two words.",
+    "hint": "Think of the towel.",
+    "explanation": "Fold mountains form when plates push together.",
+    "skill_tag": "mountains.alt",
+    "answer": {
+     "accepted": [
+      "fold mountains",
+      "fold"
+     ]
+    },
+    "sub_lesson": "mountains",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Which kind of mountain forms when plates push land upwards?",
+    "hint": "Think of folds in a towel.",
+    "explanation": "Fold mountains form this way.",
+    "skill_tag": "mountains.type",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand dune"
+     },
+     {
+      "id": "b",
+      "text": "Coral reef"
+     },
+     {
+      "id": "c",
+      "text": "Fold mountain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q7b",
+    "type": "multiple_choice",
+    "prompt": "What are the Himalaya and Karakoram?",
+    "hint": "They formed when plates pushed together.",
+    "explanation": "They are fold mountains.",
+    "skill_tag": "mountains.type",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rivers"
+     },
+     {
+      "id": "b",
+      "text": "Deserts"
+     },
+     {
+      "id": "c",
+      "text": "Fold mountain ranges"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the zone with hardly any rain.",
+    "hint": "Think of cacti.",
+    "explanation": "Deserts get very little rain.",
+    "skill_tag": "climate.zones",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏜️",
+       "label": "Desert",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌴",
+       "label": "Tropical rainforest",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌧️",
+       "label": "Rainy temperate land",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q8b",
+    "type": "hotspot",
+    "prompt": "Tap the climate zone that is freezing all year.",
+    "hint": "Near the poles.",
+    "explanation": "The polar zone is freezing.",
+    "skill_tag": "climate.zones",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❄️",
+       "label": "Polar",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏜️",
+       "label": "Desert",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌴",
+       "label": "Tropical",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multi_select",
+    "prompt": "Which two describe the polar climate? Pick two.",
+    "hint": "Think of ice.",
+    "explanation": "Polar climates are freezing and near the poles.",
+    "skill_tag": "climate.polar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Found near the North and South Poles"
+     },
+     {
+      "id": "b",
+      "text": "Hot all year"
+     },
+     {
+      "id": "c",
+      "text": "Found near the equator"
+     },
+     {
+      "id": "d",
+      "text": "Freezing cold"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q9b",
+    "type": "multi_select",
+    "prompt": "Which two describe the tropical climate?",
+    "hint": "Think of the Sun.",
+    "explanation": "Tropical climates are hot and near the equator.",
+    "skill_tag": "climate.polar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Found near the equator"
+     },
+     {
+      "id": "b",
+      "text": "Found near the poles"
+     },
+     {
+      "id": "c",
+      "text": "Freezing all year"
+     },
+     {
+      "id": "d",
+      "text": "Hot all year"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "climate",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "slider",
+    "prompt": "Slide to show how many climate zones we met: tropical, desert, temperate, polar.",
+    "hint": "Count them.",
+    "explanation": "We met four.",
+    "skill_tag": "climate.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "climate",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q10b",
+    "type": "slider",
+    "prompt": "Slide to show how many tectonic plates two sliding together make (counting each plate).",
+    "hint": "Plate A and plate B.",
+    "explanation": "Two plates.",
+    "skill_tag": "climate.count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "climate",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Why is it colder at the top of a mountain?",
+    "hint": "Think about altitude.",
+    "explanation": "Air gets colder as altitude increases.",
+    "skill_tag": "mountains.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Mountains are made of ice"
+     },
+     {
+      "id": "b",
+      "text": "The air gets colder as you go higher"
+     },
+     {
+      "id": "c",
+      "text": "The Sun is farther away"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q11b",
+    "type": "multiple_choice",
+    "prompt": "Why is there snow on K2 even in summer?",
+    "hint": "Think about altitude.",
+    "explanation": "The altitude makes it freezing.",
+    "skill_tag": "mountains.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Sun never shines"
+     },
+     {
+      "id": "b",
+      "text": "It is so high that the air is freezing"
+     },
+     {
+      "id": "c",
+      "text": "It is near the sea"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mountains",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Why is it so hot near the equator?",
+    "hint": "Think about the Sun.",
+    "explanation": "The Sun's rays are strongest there.",
+    "skill_tag": "climate.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They have no clouds"
+     },
+     {
+      "id": "b",
+      "text": "The Sun's rays hit them most directly"
+     },
+     {
+      "id": "c",
+      "text": "They are close to the Poles"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "climate",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q12b",
+    "type": "multiple_choice",
+    "prompt": "Why are the Poles so cold?",
+    "hint": "Compare with the equator.",
+    "explanation": "The Sun's rays are weak at the Poles.",
+    "skill_tag": "climate.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are near the equator"
+     },
+     {
+      "id": "b",
+      "text": "The Sun's rays reach them only at a low angle"
+     },
+     {
+      "id": "c",
+      "text": "They have no ice"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "climate",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "match",
+    "prompt": "Join each biome with an animal that lives in it.",
+    "hint": "Think of adaptations.",
+    "explanation": "Each animal is adapted to its biome.",
+    "skill_tag": "biomes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Desert"
+     },
+     {
+      "id": "l2",
+      "text": "Rainforest"
+     },
+     {
+      "id": "l3",
+      "text": "Grassland"
+     },
+     {
+      "id": "l4",
+      "text": "Tundra"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Parrot"
+     },
+     {
+      "id": "r3",
+      "text": "Lion"
+     },
+     {
+      "id": "r4",
+      "text": "Polar bear"
+     },
+     {
+      "id": "r1",
+      "text": "Camel"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "biomes",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q13b",
+    "type": "match",
+    "prompt": "Match each animal to its biome.",
+    "hint": "Think of adaptations.",
+    "explanation": "Each living thing is adapted to its biome.",
+    "skill_tag": "biomes.match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cactus"
+     },
+     {
+      "id": "l2",
+      "text": "Zebra"
+     },
+     {
+      "id": "l3",
+      "text": "Polar bear"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Grassland"
+     },
+     {
+      "id": "r1",
+      "text": "Desert"
+     },
+     {
+      "id": "r3",
+      "text": "Tundra"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "biomes",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Why would a polar bear struggle in a rainforest?",
+    "hint": "Think about adaptation.",
+    "explanation": "Thick fur and fat suit the cold tundra.",
+    "skill_tag": "biomes.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It dislikes parrots"
+     },
+     {
+      "id": "b",
+      "text": "Its thick fur and fat would make it too hot"
+     },
+     {
+      "id": "c",
+      "text": "It cannot climb trees"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "biomes",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q14b",
+    "type": "multiple_choice",
+    "prompt": "Why can camels live in the desert?",
+    "hint": "Think about adaptation.",
+    "explanation": "Camels are adapted to hot, dry places.",
+    "skill_tag": "biomes.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They need lots of water"
+     },
+     {
+      "id": "b",
+      "text": "They can go many days without water"
+     },
+     {
+      "id": "c",
+      "text": "They live in the snow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "biomes",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Why do so many villages stand beside rivers?",
+    "hint": "Think about what plants need.",
+    "explanation": "Rivers give water.",
+    "skill_tag": "rivers.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rivers give water for crops and drinking"
+     },
+     {
+      "id": "b",
+      "text": "Rivers make mountains"
+     },
+     {
+      "id": "c",
+      "text": "Rivers stop floods"
+     }
+    ],
+    "answer": [
+     "a"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q15b",
+    "type": "multiple_choice",
+    "prompt": "Why do many big cities lie beside rivers?",
+    "hint": "Think about what people need.",
+    "explanation": "Rivers give water, food and travel routes.",
+    "skill_tag": "rivers.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rivers are always empty"
+     },
+     {
+      "id": "b",
+      "text": "Rivers give water, food and routes for travel"
+     },
+     {
+      "id": "c",
+      "text": "Rivers keep cities cold"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rivers",
+    "depth": "reason",
+    "variant_of": "q15"
+   }
+  ]
+ }
+}
