@@ -102,12 +102,12 @@ function TopicBody({ lesson, topic, quiz, look, doneCount, total, allDone, nextI
         <p role="status" className="card p-3 text-lg font-bold" style={{ borderColor: "var(--accent)" }}>💪 Practise again: {topic.practise.map((p) => p.title).join(" and ")}. Then try the big quiz again.</p>
       )}
 
-      <div ref={rail} onScroll={onScroll} tabIndex={0} aria-label="Parts. Swipe sideways to see them all." className="flex min-h-[420px] flex-1 snap-x snap-mandatory gap-5 overflow-x-auto px-[calc(50%-150px)] pb-3 pt-2">
+      <div ref={rail} onScroll={onScroll} tabIndex={0} aria-label="Parts. Swipe sideways to see them all." className="flex min-h-[420px] flex-1 snap-x snap-mandatory gap-4 overflow-x-auto pb-3 pt-2">
         {topic.subLessons.map((s, i) => {
           const k = KIND[s.kind];
           const here = nextId === s.id;
           return (
-            <article key={s.id} aria-label={`Part ${i + 1}, ${k.label}: ${s.title}${s.viewed ? " (done)" : ""}`} className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (here ? "m-glow" : "")} style={here ? { borderColor: "#ffd166", borderWidth: 3 } : undefined}>
+            <article key={s.id} aria-label={`Part ${i + 1}, ${k.label}: ${s.title}${s.viewed ? " (done)" : ""}`} className={"card flex min-w-[188px] flex-1 basis-[188px] snap-start flex-col gap-3 p-4 " + (here ? "m-glow" : "")} style={here ? { borderColor: "#ffd166", borderWidth: 3 } : undefined}>
               <div className="relative flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 160, background: pastel(i), color: "#161a40" }}>
                 <span aria-hidden="true" className="m-bob inline-block" style={{ "--i": i, fontSize: "clamp(4.5rem, 12vh, 8rem)" } as CSSProperties}>{k.emoji}</span>
                 {s.viewed && <span aria-hidden="true" className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-lg font-extrabold" style={{ background: "#161a40", color: "#ffd166" }}>✓</span>}
@@ -122,7 +122,7 @@ function TopicBody({ lesson, topic, quiz, look, doneCount, total, allDone, nextI
             </article>
           );
         })}
-        <article aria-label="Big quiz" className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (allDone ? "m-glow" : "")} style={allDone ? { borderColor: "#ffd166", borderWidth: 3 } : { borderStyle: "dashed", opacity: 0.85 }}>
+        <article aria-label="Big quiz" className={"card flex min-w-[188px] flex-1 basis-[188px] snap-start flex-col gap-3 p-4 " + (allDone ? "m-glow" : "")} style={allDone ? { borderColor: "#ffd166", borderWidth: 3 } : { borderStyle: "dashed", opacity: 0.85 }}>
           <div className="flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 160, background: allDone ? "#ffd166" : "var(--done-bg)", color: "#161a40" }}>
             <span aria-hidden="true" className="m-bob inline-block">{allDone ? "🏁" : "🔒"}</span>
           </div>

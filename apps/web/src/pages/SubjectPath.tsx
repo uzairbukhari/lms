@@ -126,13 +126,13 @@ function Cards({ path, emoji, semester }: { path: SubjectPath; emoji: string; se
         <div className="h-3 flex-1 overflow-hidden rounded-full bg-done-bg" role="progressbar" aria-valuemin={0} aria-valuemax={path.topics.length} aria-valuenow={done}><div className="h-full rounded-full" style={{ width: `${(done / path.topics.length) * 100}%`, background: "var(--accent)" }} /></div>
         <p className="text-lg font-bold text-muted">{done} of {path.topics.length}</p>
       </div>
-      <div ref={ref} onScroll={onScroll} className="flex flex-1 snap-x snap-mandatory gap-5 overflow-x-auto px-[calc(50%-150px)] pb-2" tabIndex={0} aria-label="Topics. Swipe sideways to see them all.">
+      <div ref={ref} onScroll={onScroll} className="flex flex-1 snap-x snap-mandatory gap-5 overflow-x-auto pb-2" tabIndex={0} aria-label="Topics. Swipe sideways to see them all.">
         {path.topics.map((t, i) => {
           const locked = t.status === "locked";
           const stars = starsFor(t.bestPercent);
           const glyph = tileGlyph(t.title, emoji);
           return (
-            <article key={t.lessonId} className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (t.status === "current" || t.status === "early" ? "m-glow" : "")} style={{ maxHeight: 620, ...(t.status === "current" || t.status === "early" ? { borderColor: "#ffd166", borderWidth: 3 } : {}) }} aria-label={`Topic ${i + 1}: ${t.title}`}>
+            <article key={t.lessonId} className={"card flex min-w-[240px] flex-1 basis-[240px] snap-start flex-col gap-3 p-4 " + (t.status === "current" || t.status === "early" ? "m-glow" : "")} style={{ maxHeight: 620, ...(t.status === "current" || t.status === "early" ? { borderColor: "#ffd166", borderWidth: 3 } : {}) }} aria-label={`Topic ${i + 1}: ${t.title}`}>
               <div className="flex flex-1 items-center justify-center rounded-2xl font-display font-extrabold text-white" style={{ minHeight: 140, maxHeight: 320, background: locked ? "var(--done-bg)" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", fontSize: glyph.length > 3 ? 54 : 64 }}>
                 <span className="m-bob inline-block" style={{ "--i": i } as CSSProperties}>{locked ? <Lock size={56} /> : glyph}</span>
               </div>
