@@ -17,15 +17,15 @@ export const MAX_BYTES = 8_000_000;
 /** H.264 quality steps to try, best first (higher number = smaller file). */
 export const CRF_LADDER = [24, 28, 32, 36, 40, 45, 51];
 const POSTER_AT = 0.35;
-const MANIFEST = join(ROOT, "content", "media", "manifest.json");
+const MANIFEST_DIR = join(ROOT, "content", "media", "manifest.d"); // one manifest file per lesson, so parallel work never conflicts
 
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(`--${n}`);
 const targets = args.filter((a) => !a.startsWith("--"));
 
 /** Insert or replace the manifest records for a rendered clip. Only for clips that belong to a real lesson. */
-export function upsertManifest(slug, title, files, manifestPath = MANIFEST) {
-  const m = JSON.parse(readFileSync(manifestPath, "utf8"));
+export function upsertManifest(slug, title, files, manifestPath = join(MANIFEST_DIR, `${slug}.json`)) {
+  const m = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "utf8")) : { files: [] };
   for (const f of files) {
     const entry = { file: f.file, lessons: [slug], source: "generated", sha256: f.sha256, alt: f.alt, reviewed: false };
     const at = m.files.findIndex((x) => x.file === f.file);
@@ -98,7 +98,7 @@ async function renderOne(target) {
   if (!silent) {
     if (existsSync(join(ROOT, "content", "topics", `${clip.slug}.json`))) {
       upsertManifest(clip.slug, clip.spec.title, files);
-      console.log("Recorded both files in content/media/manifest.json (reviewed: false: watch the clip, then set it to true).");
+      console.log("Recorded both files in content/media/manifest.d/${clip.slug}.json (reviewed: false: watch the clip, then set it to true).");
     } else console.log(`No lesson "${clip.slug}" in content/topics, so the media manifest was left alone.`);
     console.log(`Upload:\n  node scripts/upload-media.mjs "${mp4}" "${poster}"`);
   }
