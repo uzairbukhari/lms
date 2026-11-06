@@ -89,8 +89,9 @@ export function TopicPage() {
             const here = next?.id === s.id;
             return (
               <Link key={s.id} to={`/topic/${lesson.id}/part/${s.id}`} className="card flex flex-col gap-2 p-5" style={here ? { borderColor: "var(--accent)", borderWidth: 4 } : undefined} aria-label={`Part ${i + 1}, ${k.label}: ${s.title}${s.viewed ? " (done)" : ""}`}>
+                <span aria-hidden="true" className="flex h-24 items-center justify-center rounded-2xl text-5xl" style={{ background: ["#ff7a59", "#2fb6f0", "#4cc35a", "#a779ff"][i % 4] }}>{k.emoji}</span>
                 <span className="flex items-center justify-between">
-                  <span className="text-sm font-extrabold uppercase tracking-wide text-muted"><span aria-hidden="true">{k.emoji} </span>{k.label}</span>
+                  <span className="text-sm font-extrabold uppercase tracking-wide text-muted">Part {i + 1} · {k.label}</span>
                   {s.viewed && <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full text-base" style={{ background: "var(--stamp)", color: "var(--on-stamp)" }}>✓</span>}
                 </span>
                 <h3 className="font-display text-2xl font-bold leading-tight">{s.title}</h3>

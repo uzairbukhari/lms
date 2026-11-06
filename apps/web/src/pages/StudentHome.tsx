@@ -56,7 +56,7 @@ function Tick({ size }: { size: number }) {
 
 /** The subject is already shown above the title, so drop it from the front of the title ("Maths Check-In: Where Am I?" becomes "Check-In: Where Am I?"). */
 export function shortTitle(title: string): string {
-  const t = title.replace(/^(maths|mathematics|science|english|general knowledge|computers?|computing|computer science)(,?\s*(and|&)?\s*data(\s*(and|&)\s*ai)?)?\s+/i, "").trim();
+  const t = title.replace(/^(maths|mathematics|science|english|general knowledge|computers?|computing|computer science)(,?\s*(and|&)?\s*data(\s*(and|&)\s*ai)?)?[,:]?\s+/i, "").trim();
   return t ? t.charAt(0).toUpperCase() + t.slice(1) : title;
 }
 
