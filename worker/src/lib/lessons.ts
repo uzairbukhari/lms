@@ -148,7 +148,8 @@ export async function importLesson(db: D1Database, incoming: LessonFile, opts: {
 
 /** Image assets named in a lesson that have not been uploaded yet (a warning, not an error). */
 export async function missingAssets(db: D1Database, file: LessonFile): Promise<string[]> {
-  const names = [...new Set(file.blocks.flatMap((b) => (b.type === "image" && b.asset ? [b.asset] : [])))];
+  const blocks = [...file.blocks, ...(file.sub_lessons ?? []).flatMap((s) => s.blocks)];
+  const names = [...new Set(blocks.flatMap((b) => (b.type === "image" && b.asset ? [b.asset] : [])))];
   const missing: string[] = [];
   for (const name of names) {
     const row = await db.prepare("SELECT 1 FROM assets WHERE filename = ?").bind(name).first();

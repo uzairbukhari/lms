@@ -50,7 +50,7 @@ adminExamRoutes.post("/exams", async (c) => {
          JOIN lessons l ON l.id = cl.lesson_id AND l.status = 'published'
          JOIN quizzes z ON z.lesson_id = l.id AND z.is_current = 1
          JOIN questions q ON q.quiz_id = z.id
-        WHERE cl.course_id = ? AND cl.semester IS NOT NULL AND cl.semester <= ?
+        WHERE cl.course_id = ? AND cl.semester IS NOT NULL AND cl.semester <= ? AND q.variant_of IS NULL
         ORDER BY cl.semester, cl.week, q.position`,
     )
     .bind(body.courseId, body.semester)

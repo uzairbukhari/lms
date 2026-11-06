@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { buildSlides, plain, splitSentences, type Block } from "./lib/slides";
 
@@ -54,7 +55,7 @@ describe("buildSlides", () => {
 
 describe("the real lessons", () => {
   it("make short slides with narration", () => {
-    const file = JSON.parse(readFileSync(new URL("../../../content/lessons/diag-maths-class-4.json", import.meta.url).pathname, "utf8")) as {
+    const file = JSON.parse(readFileSync(fileURLToPath(new URL("../../../content/lessons/diag-maths-class-4.json", import.meta.url)), "utf8")) as {
       lesson: { title: string; summary: string; learning_objectives: string[] };
       blocks: Block[];
     };
