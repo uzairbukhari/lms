@@ -235,7 +235,9 @@ export function StudentHome() {
 
   if (!user) return null;
   const allMine = home ? [...home.thisWeek, ...home.early, ...home.lookBack, ...home.open] : [];
-  const lessonsDone = allMine.filter((c) => c.progress?.status === "completed").length;
+  // Topic lessons on a path count as done once their big quiz is passed.
+  const topicsDone = paths.reduce((n, p) => n + p.topics.filter((t) => t.status === "done").length, 0);
+  const lessonsDone = allMine.filter((c) => c.progress?.status === "completed").length + topicsDone;
   const quizzesPassed = allMine.filter((c) => (c.quiz?.bestPercent ?? 0) >= 70).length;
 
   // Every week the child may open (this week, weeks opened early, and past weeks), one trail per week.

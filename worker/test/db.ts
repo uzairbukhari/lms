@@ -1,9 +1,10 @@
 import { readdirSync, readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { Miniflare } from "miniflare";
 import type { Bindings } from "../src/env";
 
 // Plain string paths: Workers and Node both define a global URL type, so avoid passing URL objects to node:fs.
-const MIGRATIONS_DIR = new URL("../../migrations/", import.meta.url).pathname;
+const MIGRATIONS_DIR = fileURLToPath(new URL("../../migrations/", import.meta.url).href);
 
 /** A real (local, in-memory) Cloudflare D1 database with all migrations applied, for tests. */
 export async function createTestDb(opts: { only?: (file: string) => boolean } = {}): Promise<{ db: D1Database; kv: KVNamespace; bucket: R2Bucket; dispose: () => Promise<void> }> {
@@ -31,7 +32,7 @@ export async function applyMigration(db: D1Database, file: string): Promise<void
 /** Split a migration file into statements (our migrations have no semicolons inside strings, and no triggers). */
 export function splitStatements(sql: string): string[] {
   return sql
-    .split("\n")
+    .split(/\r?\n/)
     .map((line) => line.replace(/--.*$/, "")) // comments (no string in our migrations contains "--")
     .join("\n")
     .split(";")

@@ -38,6 +38,12 @@ export function lessonQuizPoints(bestGraded: number | null, bestPractice: number
   return 0;
 }
 
+/** Stars for one quiz result, used everywhere a quiz shows stars: 3 for 90%+, 2 for 80%+, 1 for 70%+, else none. */
+export function quizStars(percent: number | null): 0 | 1 | 2 | 3 {
+  if (percent === null) return 0;
+  return percent >= 90 ? 3 : percent >= 80 ? 2 : percent >= 70 ? 1 : 0;
+}
+
 /** Stars for a week from the average best quiz percent: 90%+ three, 70%+ two, any quiz taken one. */
 export function weekStars(bestPercents: number[]): 0 | 1 | 2 | 3 {
   if (bestPercents.length === 0) return 0;

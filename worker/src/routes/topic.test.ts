@@ -100,6 +100,13 @@ describe("a child working through a topic", () => {
     expect(d.topic.ratings).toEqual([{ index: 0, rating: 3 }, { index: 1, rating: 2 }]);
   });
 
+  it("keeps the big quiz locked until every part has been viewed", async () => {
+    const locked = await call(`/api/lessons/${lessonId}/quiz/start`, { method: "POST", body: {}, cookie });
+    expect(locked.status).toBe(403);
+    expect((await json(locked)).error).toBe("parts_not_finished");
+    await call(`/api/lessons/${lessonId}/parts/two`, { method: "PUT", body: { viewed: true }, cookie });
+  });
+
   it("sends the child back to the sub-lessons they got wrong in a failed big quiz", async () => {
     const start = await json(await call(`/api/lessons/${lessonId}/quiz/start`, { method: "POST", body: {}, cookie }));
     const answers: Record<string, unknown> = {};
@@ -150,6 +157,7 @@ describe("retakes get fresh questions", () => {
     const creds = (await json<{ credentials: { username: string; password: string } }>(await call("/api/admin/students", { body: { displayName: "Vee", classIds: [classId] } }))).credentials;
     const cookie = ((await call("/api/login", { body: { username: creds.username, password: creds.password } })).headers.get("set-cookie") ?? "").split(";")[0] ?? "";
     expect((await json(await call(`/api/lessons/${r.lesson.lessonId}`, { cookie }))).quiz.questionCount).toBe(2);
+    for (const part of ["one", "two"]) await call(`/api/lessons/${r.lesson.lessonId}/parts/${part}`, { method: "PUT", body: { viewed: true }, cookie });
     const prompts: string[] = [];
     for (let n = 0; n < 4; n++) {
       const start = await json(await call(`/api/lessons/${r.lesson.lessonId}/quiz/start`, { method: "POST", body: {}, cookie }));

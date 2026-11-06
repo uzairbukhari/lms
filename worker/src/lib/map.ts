@@ -1,5 +1,6 @@
 import { gameForWeek, lessonQuizPoints, weekStars, type GameId, type GameLevel } from "@lms/schema";
 import { assignedCourseIds } from "./exams";
+import { pathsFor } from "./path";
 import { visibleLessonsFor, type Visibility } from "./visibility";
 
 // The semester map (docs/SEMESTER_MAP.md): 12 weekly checkpoints plus exam week, reached by finishing every lesson
@@ -77,6 +78,8 @@ async function allTotals(db: D1Database, userId: string, vis: Visibility, slots:
       else if (cp.state === "reached") waiting += cp.quizPoints;
     }
   }
+  // Topic lessons have no week, so their quizzes earn points here: a tenth of the best percent for each passed topic.
+  for (const p of await pathsFor(db, userId)) for (const t of p.topics) if (t.status === "done" && t.bestPercent !== null) total += Math.round(t.bestPercent / 10);
   // A few extra points for finishing the day's flashcards and the Boost round.
   const cards = await db.prepare("SELECT COALESCE(SUM(points), 0) AS n FROM card_days WHERE user_id = ?").bind(userId).first<{ n: number }>();
   total += cards?.n ?? 0;
