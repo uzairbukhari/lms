@@ -155,8 +155,8 @@ function SubjectStop({ p, here, idx }: { p: SubjectPath; here: boolean; idx: num
   const mapTo = `/path/${p.courseId}/${p.subject}`;
   return (
     <article aria-label={`${s.label}: ${doneN} of ${p.topics.length} topics done`} className={"relative flex w-full flex-col items-stretch gap-2.5 p-5 " + (here ? "m-glow" : "")} style={{ background: done ? "var(--done-bg)" : "var(--surface)", color: ink, border: here ? "3px solid var(--accent)" : `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`, borderRadius: "var(--radius)", boxShadow: done ? "none" : "var(--shadow)", paddingTop: done ? 32 : undefined }}>
-      <div className={"relative mx-auto flex h-[96px] w-[96px] flex-none items-center justify-center rounded-full " + (here ? "m-pulse" : "m-float")} style={{ "--i": idx, background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: "var(--border-width) solid var(--surface-border)" } as CSSProperties}>
-        <SubjectIcon subject={p.subject} size={48} />
+      <div className={"qc relative mx-auto flex flex-none items-center justify-center rounded-full " + (here ? "m-pulse" : "m-float")} style={{ "--i": idx, background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: "var(--border-width) solid var(--surface-border)" } as CSSProperties}>
+        <SubjectIcon subject={p.subject} size={56} />
         {done && <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}><Tick size={22} /></span>}
       </div>
       <p className="text-center text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
@@ -340,20 +340,14 @@ export function StudentHome() {
         const topicsDone = paths.reduce((n, p) => n + p.topics.filter((t) => t.status === "done").length, 0);
         const topicsAll = paths.reduce((n, p) => n + p.topics.length, 0);
         return (
-          <section aria-labelledby="subjects" className="kh-week flex flex-col gap-4">
+          <section aria-labelledby="subjects" className="kh-quest flex flex-col gap-6">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <h2 id="subjects" className="font-display text-3xl font-extrabold">My quest</h2>
                 <p className="text-lg text-muted">Pick up where you left off in every subject. {topicsDone} of {topicsAll} topics done{topicsDone === topicsAll ? ", brilliant!" : "!"}</p>
               </div>
-              <div role="img" aria-label={`${topicsDone} of ${topicsAll} topics done`} className="flex gap-2">
-                {paths.map((p) => {
-                  const d = p.topics.filter((t) => t.status === "done").length;
-                  return <span key={`${p.courseId}:${p.subject}`} className="h-3.5 w-12 overflow-hidden rounded-full border-[length:var(--border-width)] border-line" style={{ background: "var(--track)" }}><span className="block h-full bg-accent" style={{ width: `${(d / Math.max(1, p.topics.length)) * 100}%` }} /></span>;
-                })}
-              </div>
             </div>
-            <div className="relative mt-2 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
+            <div className="qgrid relative mt-2 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
               {paths.map((p, i) => <div key={`${p.courseId}:${p.subject}`} className="relative flex"><SubjectStop idx={i} p={p} here={i === paths.findIndex((x) => x.topics.some((t) => t.status === "current" || t.status === "early"))} /></div>)}
             </div>
           </section>

@@ -282,3 +282,14 @@ body {
 .m-shine::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent); animation: m-shine 3.6s ease-in-out infinite; pointer-events: none; }
 [data-calm] .m-pulse, [data-calm] .m-float, [data-calm] .m-bob, [data-calm] .m-march, [data-calm] .m-twinkle, [data-calm] .m-glow, [data-calm] .m-shine::after, [data-calm] .m-wobble, [data-calm] .kh-nav .btn > span[aria-hidden="true"]:first-child { animation: none !important; }
 @media (prefers-reduced-motion: reduce) { .m-pulse, .m-float, .m-bob, .m-march, .m-twinkle, .m-glow, .m-shine::after, .m-wobble, .kh-nav .btn > span[aria-hidden="true"]:first-child { animation: none !important; } }
+
+/* Quest dashboard (topic path): the cards stretch to use the spare height under the header. */
+.qc { width: 96px; height: 96px; }
+@media (min-width: 1024px) {
+  .kh-main > .kh-quest { flex: 1 1 auto; min-height: 0; gap: clamp(1.75rem, 6vh, 3.5rem); }
+  .kh-quest .qgrid { flex: 1 1 auto; min-height: 0; margin-top: 0; }
+  .kh-quest .qgrid > div { min-height: 0; }
+  .kh-quest .qgrid article { justify-content: space-between; padding: clamp(1.25rem, 3vh, 2rem) 1.25rem; }
+  .qc { width: clamp(96px, 15vh, 150px); height: clamp(96px, 15vh, 150px); }
+  .kh-quest .qgrid h3 { font-size: clamp(1.4rem, 3.2vh, 2rem); }
+}
