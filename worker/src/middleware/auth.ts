@@ -54,7 +54,7 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
 export function automationMayCall(method: string, path: string): boolean {
   const m = method.toUpperCase();
   if (m === "POST") return /^\/api\/admin\/(lessons\/(validate|import)|assets|voice\/prewarm)$/.test(path);
-  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets)$/.test(path);
+  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets|voice\/audio)$/.test(path);
   return false;
 }
 

@@ -1,0 +1,87 @@
+{
+ "title": "Sharing a pizza: halves",
+ "backdrop": "kitchen",
+ "scenes": [
+  {
+   "caption": "Pip has one big pizza.",
+   "say": "Hi! I am Pip the mouse. Today I made one big pizza. Two friends are coming to eat it!",
+   "items": [
+    { "id": "pizza", "prop": { "kind": "fraction_pizza", "parts": 1, "shaded": 0 }, "x": 55, "y": 44, "size": 2, "enter": "grow" },
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3, "enter": "walk_right", "anim": "bounce" }
+   ]
+  },
+  {
+   "caption": "Bo and Lulu arrive.",
+   "say": "Here come Bo and Lulu. They are both very hungry. We must share the pizza fairly.",
+   "items": [
+    { "id": "pizza", "prop": { "kind": "fraction_pizza", "parts": 1, "shaded": 0 }, "x": 55, "y": 44, "size": 2 },
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3 },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 86, "y": 26, "size": 2, "enter": "walk_left", "anim": "bounce" },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 86, "y": 60, "size": 2, "enter": "walk_left" }
+   ]
+  },
+  {
+   "caption": "Fair means equal.",
+   "say": "Fair means every piece is the same size. So we cut the pizza into two equal parts.",
+   "items": [
+    { "id": "pizza", "prop": { "kind": "fraction_pizza", "parts": 2, "shaded": 0 }, "x": 55, "y": 44, "size": 2, "effect": "sparkle" },
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3 },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 86, "y": 26, "size": 2 },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 86, "y": 60, "size": 2 }
+   ]
+  },
+  {
+   "caption": "Two equal parts.",
+   "say": "One cut down the middle. Now there are two parts. Both parts are the same size!",
+   "camera": { "zoom": 1.2, "x": 55, "y": 44 },
+   "items": [
+    { "id": "pizza", "prop": { "kind": "fraction_pizza", "parts": 2, "shaded": 1 }, "x": 55, "y": 44, "size": 2 },
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3 },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 86, "y": 26, "size": 2 },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 86, "y": 60, "size": 2 }
+   ]
+  },
+  {
+   "caption": "Each friend gets one half.",
+   "say": "Bo takes one part. Lulu takes the other part. Each part is called one half.",
+   "items": [
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3 },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 56, "y": 26, "size": 2 },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 56, "y": 60, "size": 2 },
+    { "id": "half1", "emoji": "🍕", "label": "½", "x": 80, "y": 26, "size": 3, "path": "arc", "effect": "glow" },
+    { "id": "half2", "emoji": "🍕", "label": "½", "x": 80, "y": 60, "size": 3, "path": "arc", "effect": "glow" }
+   ]
+  },
+  {
+   "caption": "Two halves make one whole.",
+   "say": "Two halves make one whole pizza. Count with me. One half, two halves!",
+   "items": [
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3 },
+    { "id": "half1", "emoji": "🍕", "label": "½", "x": 46, "y": 44, "size": 3, "path": "arc" },
+    { "id": "half2", "emoji": "🍕", "label": "½", "x": 64, "y": 44, "size": 3, "path": "arc" },
+    { "id": "count", "emoji": "🔢", "label": "2", "x": 86, "y": 44, "size": 2, "effect": "count", "enter": "pop" }
+   ]
+  },
+  {
+   "caption": "Unequal parts are not halves.",
+   "say": "What if one part is bigger? Then they are not halves. Bo gets a lot, and Lulu only a little.",
+   "items": [
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 16, "y": 52, "size": 3, "anim": "pulse" },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 48, "y": 26, "size": 2 },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 48, "y": 60, "size": 2 },
+    { "id": "big", "emoji": "🍕", "x": 76, "y": 26, "size": 3, "enter": "drop" },
+    { "id": "small", "emoji": "🍕", "x": 76, "y": 60, "size": 1, "enter": "drop" }
+   ]
+  },
+  {
+   "caption": "A half is one of two equal parts.",
+   "say": "So remember this. A half is one of two equal parts. Everyone is happy. The end!",
+   "items": [
+    { "id": "pip", "emoji": "🐭", "label": "Pip", "x": 22, "y": 56, "size": 3, "anim": "bounce" },
+    { "id": "bo", "emoji": "🐶", "label": "Bo", "x": 50, "y": 56, "size": 3, "anim": "bounce" },
+    { "id": "lulu", "emoji": "🐰", "label": "Lulu", "x": 78, "y": 56, "size": 3, "anim": "bounce" },
+    { "id": "star", "emoji": "⭐", "x": 50, "y": 20, "size": 3, "enter": "grow", "effect": "hearts" }
+   ]
+  }
+ ]
+}

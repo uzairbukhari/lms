@@ -1,4 +1,5 @@
 import type { Context } from "hono";
+import { sentences } from "@lms/schema";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { parseBody } from "./http";
@@ -21,10 +22,8 @@ const DAILY_CAP = 300;
 
 const bodySchema = z.object({ text: z.string().trim().min(1).max(600) });
 
-/** How narration splits text into sentences (one voice clip each). Must stay identical to sentences() in apps/web/src/lib/sound.ts. */
-export function sentences(text: string): string[] {
-  return text.match(/[^.!?]+[.!?]*/g)?.map((s) => s.trim()).filter(Boolean) ?? [];
-}
+/** How narration splits text into sentences (one voice clip each). One shared function (@lms/schema) used by the app, this Worker and the clip pipeline. */
+export { sentences };
 
 /** Where the audio for one sentence lives in R2. Children and the prewarm route share this key, so prewarmed audio is a cache hit. */
 export async function ttsKey(text: string): Promise<string> {
@@ -103,4 +102,16 @@ export async function narrate(c: Context<AppEnv>): Promise<Response> {
     console.error(err);
     return c.json({ error: "voice_unavailable" }, 503);
   }
+}
+
+/**
+ * GET ?text=<one sentence> (admin / automation): the stored mp3 for that sentence, or 404 when it has not been generated yet.
+ * Never generates audio and never spends AI budget. Used by the clip pipeline to fetch narration after prewarm.
+ */
+export async function cachedAudio(c: Context<AppEnv>): Promise<Response> {
+  const text = (c.req.query("text") ?? "").trim();
+  if (!text || text.length > 600) return c.json({ error: "bad_request", message: "Give one sentence in ?text= (1 to 600 characters)." }, 400);
+  const stored = await c.env.ASSETS_BUCKET.get(await ttsKey(text));
+  if (!stored) return c.json({ error: "not_cached" }, 404);
+  return new Response(stored.body, { headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=3600" } });
 }

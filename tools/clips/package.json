@@ -4,14 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "studio": "remotion studio src/index.ts",
-    "still": "remotion still src/index.ts"
+    "css": "node scripts/build-css.mjs",
+    "studio": "npm run css && remotion studio src/index.ts",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
+    "@remotion/bundler": "4.0.541",
     "@remotion/cli": "4.0.541",
+    "@remotion/media-utils": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "@tailwindcss/cli": "4.3.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "remotion": "4.0.541"
+    "remotion": "4.0.541",
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
     "@types/react": "19.1.8",

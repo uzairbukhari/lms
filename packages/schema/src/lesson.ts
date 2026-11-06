@@ -259,6 +259,37 @@ const actorSchema = z
 /** What the voice says instead of the words on screen: a friendly teaching script (spoken numbers, questions, links to the picture). */
 const say = longText(900).optional();
 
+/** One step of an explainer (also used by clip specs, which allow more steps than a lesson explainer). */
+export const explainerSceneSchema = z.object({
+  caption: line(200),
+  /** What the voice says for this step (default: the caption). */
+  say,
+  /** Zoom the stage onto a spot: zoom 1 to 3, x and y in percent of the stage. */
+  camera: z.object({ zoom: z.number().min(1).max(3), x: z.number().min(0).max(100), y: z.number().min(0).max(100) }).optional(),
+  items: z
+    .array(
+      z
+        .object({
+          id: shortId.optional(),
+          emoji: z.string().trim().min(1).max(16).optional(),
+          prop: propSchema.optional(),
+          label: line(30).optional(),
+          x: z.number().min(0).max(100),
+          y: z.number().min(0).max(100),
+          size: z.number().int().min(1).max(3).default(2),
+          anim: z.enum(["none", "bounce", "float", "spin", "pulse", "grow"]).default("none"),
+          /** How a thing arrives the first time it shows, how it leaves, and how it travels between steps. */
+          enter: z.enum(ENTERS).optional(),
+          exit: z.enum(EXITS).optional(),
+          path: z.enum(["straight", "arc", "hop"]).optional(),
+          effect: z.enum(EFFECTS).optional(),
+        })
+        .refine((it) => it.emoji || it.prop, { message: 'An explainer item needs an "emoji" or a "prop"' }),
+    )
+    .min(1)
+    .max(14),
+});
+
 // --- Lesson blocks --------------------------------------------------------------------------------
 
 export const blockSchema = z.discriminatedUnion("type", [
@@ -361,40 +392,7 @@ export const blockSchema = z.discriminatedUnion("type", [
     backdrop: z.enum(BACKDROPS).optional(),
     /** Plays by itself in time with the voice (default true). The child can still pause and step. */
     autoplay: z.boolean().optional(),
-    scenes: z
-      .array(
-        z.object({
-          caption: line(200),
-          /** What the voice says for this step (default: the caption). */
-          say,
-          /** Zoom the stage onto a spot: zoom 1 to 3, x and y in percent of the stage. */
-          camera: z.object({ zoom: z.number().min(1).max(3), x: z.number().min(0).max(100), y: z.number().min(0).max(100) }).optional(),
-          items: z
-            .array(
-              z
-                .object({
-                  id: shortId.optional(),
-                  emoji: z.string().trim().min(1).max(16).optional(),
-                  prop: propSchema.optional(),
-                  label: line(30).optional(),
-                  x: z.number().min(0).max(100),
-                  y: z.number().min(0).max(100),
-                  size: z.number().int().min(1).max(3).default(2),
-                  anim: z.enum(["none", "bounce", "float", "spin", "pulse", "grow"]).default("none"),
-                  /** How a thing arrives the first time it shows, how it leaves, and how it travels between steps. */
-                  enter: z.enum(ENTERS).optional(),
-                  exit: z.enum(EXITS).optional(),
-                  path: z.enum(["straight", "arc", "hop"]).optional(),
-                  effect: z.enum(EFFECTS).optional(),
-                })
-                .refine((it) => it.emoji || it.prop, { message: 'An explainer item needs an "emoji" or a "prop"' }),
-            )
-            .min(1)
-            .max(14),
-        }),
-      )
-      .min(2)
-      .max(8),
+    scenes: z.array(explainerSceneSchema).min(2).max(8),
   }),
   // A short brain exercise. Never graded or saved.
   z.object({

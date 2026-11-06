@@ -1,0 +1,18 @@
+/* The video frame: the lesson stage fills it edge to edge (1280 x 768 is exactly the stage's 5:3 shape). */
+.clip-bare { border-radius: 0 !important; border: 0 !important; box-shadow: none !important; position: absolute !important; inset: 0; width: 1280px !important; height: 768px !important; aspect-ratio: auto !important; }
+
+/* Burned-in captions: the sentence being spoken, large and high contrast, at the bottom. */
+.clip-caption {
+  position: absolute; left: 56px; right: 56px; bottom: 32px;
+  padding: 14px 30px 16px; border-radius: 22px;
+  background: rgba(8, 11, 36, 0.9); color: #fff;
+  font-family: var(--font-body); font-weight: 800; font-size: 46px; line-height: 1.22; text-align: center;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Title card and end card. */
+.clip-card { align-items: center; justify-content: center; gap: 18px; text-align: center; color: #fff; background: var(--bg-image), var(--bg); font-family: var(--font-display); }
+.clip-card-emoji { font-size: 120px; line-height: 1; }
+.clip-card-title { font-size: 76px; font-weight: 800; line-height: 1.1; max-width: 1080px; color: var(--accent); }
+.clip-card-sub { font-size: 34px; font-weight: 700; color: var(--text-muted); }
