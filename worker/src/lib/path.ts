@@ -1,7 +1,8 @@
+import { IS_GRAND, grandScopeKey, type GrandInfo } from "./grand";
 import { pathStatuses, type PathStatus } from "./visibility";
 
 export type PathTopic = { lessonId: string; title: string; position: number; status: PathStatus; bestPercent: number | null; attempts: number; partsDone: number; partsTotal: number };
-export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[] };
+export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[]; grand: GrandInfo | null };
 
 const marks = (n: number) => Array.from({ length: n }, () => "?").join(",");
 
@@ -51,6 +52,33 @@ export async function pathsFor(db: D1Database, userId: string): Promise<SubjectP
   const passed = new Set(scores.results.filter((s) => s.passed === 1).map((s) => s.lesson_id));
   const opened = new Set(openRows.results.map((r) => r.lesson_id));
 
+  // Each course's current grand quiz, with how the child has done on any version of it.
+  const courseIds = [...new Set(rows.map((r) => r.courseId))];
+  const grandQuizzes = (
+    await db
+      .prepare(
+        `SELECT z.id, z.course_id AS courseId, (SELECT COUNT(*) FROM questions q WHERE q.quiz_id = z.id) AS questionCount
+           FROM quizzes z WHERE ${IS_GRAND} AND z.is_current = 1 AND z.course_id IN (${marks(courseIds.length)})`,
+      )
+      .bind(...courseIds)
+      .all<{ id: string; courseId: string; questionCount: number }>()
+  ).results;
+  const grandTries = grandQuizzes.length
+    ? (
+        await db
+          .prepare(`SELECT scope_key, MAX(percent) AS best, MAX(passed) AS passed, COUNT(*) AS attempts FROM quiz_attempts WHERE user_id = ? AND status = 'submitted' AND scope_key IN (${marks(courseIds.length)}) GROUP BY scope_key`)
+          .bind(userId, ...courseIds.map(grandScopeKey))
+          .all<{ scope_key: string; best: number | null; passed: number | null; attempts: number }>()
+      ).results
+    : [];
+  const grandFor = (courseId: string): GrandInfo | null => {
+    const quiz = grandQuizzes.find((g) => g.courseId === courseId);
+    if (!quiz) return null;
+    const tries = grandTries.find((t) => t.scope_key === grandScopeKey(courseId));
+    const ready = rows.filter((r) => r.courseId === courseId).every((r) => passed.has(r.lessonId));
+    return { quizId: quiz.id, status: tries?.passed === 1 ? "passed" : ready ? "ready" : "locked", bestPercent: tries?.best ?? null, attempts: tries?.attempts ?? 0, questionCount: quiz.questionCount };
+  };
+
   const groups = new Map<string, typeof rows>();
   for (const r of rows) groups.set(`${r.courseId}:${r.subject}`, [...(groups.get(`${r.courseId}:${r.subject}`) ?? []), r]);
   return [...groups.values()].map((group) => {
@@ -58,6 +86,7 @@ export async function pathsFor(db: D1Database, userId: string): Promise<SubjectP
     const statuses = pathStatuses(group.map((g) => g.lessonId), passed, opened);
     return {
       courseId: group[0]!.courseId,
+      grand: grandFor(group[0]!.courseId),
       subject: group[0]!.subject,
       topics: group.map((g, i): PathTopic => {
         const s = scores.results.find((x) => x.lesson_id === g.lessonId);

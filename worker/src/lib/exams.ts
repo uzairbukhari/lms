@@ -17,7 +17,7 @@ export async function examsForCourses(db: D1Database, courseIds: string[]): Prom
               z.max_attempts AS maxAttempts, z.pass_percent AS passPercent,
               (SELECT COUNT(*) FROM questions q WHERE q.quiz_id = z.id) AS questionCount
          FROM quizzes z JOIN courses co ON co.id = z.course_id
-        WHERE z.kind = 'exam' AND z.is_current = 1 AND z.course_id IN (${marks(courseIds.length)})
+        WHERE z.kind = 'exam' AND z.semester IS NOT NULL AND z.is_current = 1 AND z.course_id IN (${marks(courseIds.length)})
         ORDER BY z.semester, co.title`,
     )
     .bind(...courseIds)

@@ -233,6 +233,7 @@ const ALLOWED_TYPES: Record<string, string[]> = {
   "image/gif": [".gif"],
   "image/svg+xml": [".svg"],
   "audio/mpeg": [".mp3"],
+  "video/mp4": [".mp4"],
 };
 const MAX_BYTES = 8 * 1024 * 1024;
 
@@ -250,12 +251,18 @@ adminContentRoutes.post("/assets", async (c) => {
   if (!(file instanceof File)) return fail(c, 400, "invalid_input", "Choose a file to upload.");
   const filename = file.name.toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/^-+/, "");
   const ext = filename.slice(filename.lastIndexOf("."));
-  if (!ALLOWED_TYPES[file.type]?.includes(ext)) return fail(c, 400, "bad_type", "Use a png, jpg, webp, gif, svg or mp3 file.");
+  if (!ALLOWED_TYPES[file.type]?.includes(ext)) return fail(c, 400, "bad_type", "Use a png, jpg, webp, gif, svg, mp3 or mp4 file.");
   if (file.size > MAX_BYTES) return fail(c, 400, "too_big", "That file is too big (8 MB at most).");
   const alt = form?.get("alt");
 
+  const bytes = await file.arrayBuffer();
+  // An MP4 starts with a box whose type, "ftyp", sits at byte offset 4. Anything else is not a real MP4.
+  if (file.type === "video/mp4" && (bytes.byteLength < 8 || new TextDecoder("latin1").decode(new Uint8Array(bytes, 4, 4)) !== "ftyp")) {
+    return fail(c, 400, "bad_type", "That file is not a real mp4 video.");
+  }
+
   const key = `lessons/${filename}`;
-  await c.env.ASSETS_BUCKET.put(key, await file.arrayBuffer(), { httpMetadata: { contentType: file.type } });
+  await c.env.ASSETS_BUCKET.put(key, bytes, { httpMetadata: { contentType: file.type } });
   const existing = await c.env.DB.prepare("SELECT id FROM assets WHERE filename = ?").bind(filename).first<{ id: string }>();
   if (existing) {
     await c.env.DB
