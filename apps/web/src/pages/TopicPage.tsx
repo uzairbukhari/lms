@@ -108,19 +108,22 @@ function TopicBody({ lesson, topic, quiz, look, doneCount, total, allDone, nextI
           const here = nextId === s.id;
           return (
             <article key={s.id} aria-label={`Part ${i + 1}, ${k.label}: ${s.title}${s.viewed ? " (done)" : ""}`} className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (here ? "m-glow" : "")} style={here ? { borderColor: "#ffd166", borderWidth: 3 } : undefined}>
-              <div className="relative flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 130, maxHeight: 280, background: pastel(i), color: "#161a40" }}>
-                <span aria-hidden="true" className="m-bob inline-block" style={{ "--i": i } as CSSProperties}>{k.emoji}</span>
+              <div className="relative flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 160, background: pastel(i), color: "#161a40" }}>
+                <span aria-hidden="true" className="m-bob inline-block" style={{ "--i": i, fontSize: "clamp(4.5rem, 12vh, 8rem)" } as CSSProperties}>{k.emoji}</span>
                 {s.viewed && <span aria-hidden="true" className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-lg font-extrabold" style={{ background: "#161a40", color: "#ffd166" }}>✓</span>}
               </div>
               <p className="text-sm font-extrabold uppercase tracking-wide text-muted">Part {i + 1} · {k.label}{s.viewed ? " · Done" : here ? " · Your quest" : ""}</p>
-              <h2 className="font-display text-2xl font-bold leading-tight">{s.title}</h2>
-              <p className="text-sm font-bold text-muted">{s.weak ? "💪 Practise again" : s.miniBest !== null ? `Mini quiz best ${s.miniBest}%` : `${s.miniCount} question mini quiz`}</p>
+              <h2 className="font-display text-[26px] font-bold leading-tight">{s.title}</h2>
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm font-bold text-muted">{s.weak ? "💪 Practise again" : s.miniBest !== null ? `Mini quiz best ${s.miniBest}%` : `${s.miniCount} question mini quiz`}</p>
+                <span aria-label={`${starsFor(s.miniBest)} of 3 stars`} className="text-xl tracking-wide" style={{ color: "#ffd166" }}>{"★".repeat(starsFor(s.miniBest))}<span style={{ opacity: 0.3 }}>{"★".repeat(3 - starsFor(s.miniBest))}</span></span>
+              </div>
               <Link to={`/topic/${lesson.id}/part/${s.id}`} className={"btn btn-primary mt-auto !min-h-12 text-lg " + (here ? "m-shine" : "")}>{s.viewed ? "Do it again" : "▶ " + (here ? "Keep going" : "Start")}</Link>
             </article>
           );
         })}
         <article aria-label="Big quiz" className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (allDone ? "m-glow" : "")} style={allDone ? { borderColor: "#ffd166", borderWidth: 3 } : { borderStyle: "dashed", opacity: 0.85 }}>
-          <div className="flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 130, maxHeight: 280, background: allDone ? "#ffd166" : "var(--done-bg)", color: "#161a40" }}>
+          <div className="flex flex-1 items-center justify-center rounded-2xl text-7xl" style={{ minHeight: 160, background: allDone ? "#ffd166" : "var(--done-bg)", color: "#161a40" }}>
             <span aria-hidden="true" className="m-bob inline-block">{allDone ? "🏁" : "🔒"}</span>
           </div>
           <p className="text-sm font-extrabold uppercase tracking-wide text-muted">Big quiz{topic.lastQuiz ? (topic.lastQuiz.passed ? " · Passed" : " · Try again") : allDone ? " · Ready" : " · Locked"}</p>
