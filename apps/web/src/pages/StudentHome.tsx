@@ -143,7 +143,7 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
 }
 
 /** One subject on the quest trail: its icon, the topic to do next, parts progress and a Keep going button. Finished subjects go grey with a DONE! stamp. */
-function SubjectStop({ p, here }: { p: SubjectPath; here: boolean }) {
+function SubjectStop({ p, here, idx }: { p: SubjectPath; here: boolean; idx: number }) {
   const s = look(p.subject);
   const doneN = p.topics.filter((t) => t.status === "done").length;
   const done = doneN === p.topics.length;
@@ -153,35 +153,30 @@ function SubjectStop({ p, here }: { p: SubjectPath; here: boolean }) {
   const percent = cur && cur.partsTotal ? Math.round((cur.partsDone / cur.partsTotal) * 100) : 0;
   const mapTo = `/path/${p.courseId}/${p.subject}`;
   return (
-    <article aria-label={`${s.label}: ${doneN} of ${p.topics.length} topics done`} className="flex w-full flex-col gap-6">
-      <div className="flex h-[132px] flex-col items-center gap-2">
-        <div className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full" style={{ background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: here ? "5px solid var(--accent)" : "var(--border-width) solid var(--surface-border)", boxShadow: "var(--shadow)" }}>
-          <SubjectIcon subject={p.subject} size={52} />
-          {done && <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-10 w-10 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}><Tick size={24} /></span>}
-        </div>
-        {here && <span className="rounded-full bg-accent px-3 text-base font-extrabold text-on-accent">You are here</span>}
+    <article aria-label={`${s.label}: ${doneN} of ${p.topics.length} topics done`} className={"relative flex w-full flex-col items-stretch gap-2.5 p-5 " + (here ? "m-glow" : "")} style={{ background: done ? "var(--done-bg)" : "var(--surface)", color: ink, border: here ? "3px solid var(--accent)" : `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`, borderRadius: "var(--radius)", boxShadow: done ? "none" : "var(--shadow)", paddingTop: done ? 32 : undefined }}>
+      <div className={"relative mx-auto flex h-[96px] w-[96px] flex-none items-center justify-center rounded-full " + (here ? "m-pulse" : "m-float")} style={{ "--i": idx, background: done ? "var(--done-tint)" : (TINT[p.subject] ?? "var(--tint-english)"), color: done ? "var(--done-text)" : "var(--on-tint)", border: "var(--border-width) solid var(--surface-border)" } as CSSProperties}>
+        <SubjectIcon subject={p.subject} size={48} />
+        {done && <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px]" style={{ background: "var(--stamp)", color: "var(--on-stamp)", borderColor: "var(--surface)" }}><Tick size={22} /></span>}
       </div>
-      <div className="relative flex min-h-0 flex-1 flex-col gap-2.5 p-5" style={{ paddingTop: done ? 32 : undefined, background: done ? "var(--done-bg)" : "var(--surface)", color: ink, border: `var(--border-width) ${done ? "dashed" : "solid"} var(--surface-border)`, borderRadius: "var(--radius)", boxShadow: done ? "none" : "var(--shadow)" }}>
-        <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
-        <h3 data-len={titleTier(cur ? shortTitle(cur.title) : "All topics done")} className="font-display text-[26px] font-bold leading-tight data-[len=l]:text-[22px] data-[len=xl]:text-[19px]">{cur ? shortTitle(cur.title) : "All topics done"}</h3>
-        {cur && (
-          <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Topic progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
-            <div className="h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
-          </div>
+      <p className="text-center text-sm font-extrabold uppercase tracking-wide" style={{ color: soft }}>{s.label}</p>
+      <h3 data-len={titleTier(cur ? shortTitle(cur.title) : "All topics done")} className="text-center font-display text-[26px] font-bold leading-tight data-[len=l]:text-[22px] data-[len=xl]:text-[19px]">{cur ? shortTitle(cur.title) : "All topics done"}</h3>
+      {cur && (
+        <div role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Topic progress" className="h-3.5 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }}>
+          <div className="m-shine h-full bg-accent transition-all duration-700" style={{ width: `${Math.max(percent, 4)}%` }} />
+        </div>
+      )}
+      <p className="text-center font-extrabold" style={{ color: soft }}>{cur ? `${cur.partsDone} of ${cur.partsTotal} parts · ` : ""}{doneN} of {p.topics.length} topics done</p>
+      <div className="mt-auto flex flex-col gap-2.5 pt-1">
+        {done ? (
+          <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={mapTo}>Open map</Link>
+        ) : (
+          <>
+            <Link className="btn btn-primary m-shine !min-h-[60px] !whitespace-nowrap !text-xl" to={cur ? `/topic/${cur.lessonId}` : mapTo}>{cur && cur.partsDone > 0 ? "Keep going" : "Start"}</Link>
+            <Link className="btn !min-h-12" to={mapTo}>Open map</Link>
+          </>
         )}
-        <p className="font-extrabold" style={{ color: soft }}>{cur ? `${cur.partsDone} of ${cur.partsTotal} parts · ` : ""}{doneN} of {p.topics.length} topics done</p>
-        <div className="mt-auto flex flex-col gap-2.5 pt-1">
-          {done ? (
-            <Link className="btn !min-h-12 !text-base !shadow-none" style={{ color: ink, borderColor: soft, background: "transparent" }} to={mapTo}>Open map</Link>
-          ) : (
-            <>
-              <Link className="btn btn-primary !min-h-[60px] !whitespace-nowrap !text-xl" to={cur ? `/topic/${cur.lessonId}` : mapTo}>{cur && cur.partsDone > 0 ? "Keep going" : "Start"}</Link>
-              <Link className="btn !min-h-12" to={mapTo}>Open map</Link>
-            </>
-          )}
-        </div>
-        {done && <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>}
       </div>
+      {done && <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>}
     </article>
   );
 }
@@ -357,9 +352,8 @@ export function StudentHome() {
                 })}
               </div>
             </div>
-            <div className="kh-grid relative mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
-              <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / paths.length}%`, right: `${50 / paths.length}%` }} />
-              {paths.map((p, i) => <div key={`${p.courseId}:${p.subject}`} className="relative flex"><SubjectStop p={p} here={i === paths.findIndex((x) => x.topics.some((t) => t.status === "current" || t.status === "early"))} /></div>)}
+            <div className="relative mt-2 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": paths.length } as CSSProperties}>
+              {paths.map((p, i) => <div key={`${p.courseId}:${p.subject}`} className="relative flex"><SubjectStop idx={i} p={p} here={i === paths.findIndex((x) => x.topics.some((t) => t.status === "current" || t.status === "early"))} /></div>)}
             </div>
           </section>
         );

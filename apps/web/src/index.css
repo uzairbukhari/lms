@@ -258,3 +258,22 @@ body {
 }
 /* A lone video can't be taller than the room under its title. */
 .video-frame { width: min(100%, calc((100dvh - 21rem) * 16 / 9)); margin-inline: auto; }
+
+/* Always-on gentle motion for the quest dashboard, the subject map, the card views and the topic parts. Off in Calm mode and for "reduce motion". */
+@keyframes m-pulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,209,102,0.55), 0 0 0 14px rgba(255,209,102,0.22); } 50% { transform: scale(1.09); box-shadow: 0 0 0 14px rgba(255,209,102,0), 0 0 0 30px rgba(255,209,102,0.06); } }
+@keyframes m-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes m-bob { 0%, 100% { transform: translateY(0) rotate(-3deg) scale(1); } 50% { transform: translateY(-8px) rotate(3deg) scale(1.06); } }
+@keyframes m-march { to { stroke-dashoffset: -32; } }
+@keyframes m-twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 0.85; } 50% { transform: scale(1.18) rotate(12deg); opacity: 1; } }
+@keyframes m-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,209,102,0.5), var(--shadow); } 50% { box-shadow: 0 0 0 12px rgba(255,209,102,0), var(--shadow); } }
+@keyframes m-shine { 0%, 100% { transform: translateX(-130%) skewX(-18deg); } 55%, 100% { transform: translateX(260%) skewX(-18deg); } }
+.m-pulse { animation: m-pulse 1.8s ease-in-out infinite; }
+.m-float { animation: m-float calc(3.2s + var(--i, 0) * 0.35s) ease-in-out calc(var(--i, 0) * -0.6s) infinite; }
+.m-bob { animation: m-bob calc(3s + var(--i, 0) * 0.3s) ease-in-out calc(var(--i, 0) * -0.7s) infinite; }
+.m-march { animation: m-march 1.4s linear infinite; }
+.m-twinkle { animation: m-twinkle 2.2s ease-in-out infinite; }
+.m-glow { animation: m-glow 2s ease-in-out infinite; }
+.m-shine { position: relative; overflow: hidden; }
+.m-shine::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent); animation: m-shine 3.6s ease-in-out infinite; pointer-events: none; }
+[data-calm] .m-pulse, [data-calm] .m-float, [data-calm] .m-bob, [data-calm] .m-march, [data-calm] .m-twinkle, [data-calm] .m-glow, [data-calm] .m-shine::after { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .m-pulse, .m-float, .m-bob, .m-march, .m-twinkle, .m-glow, .m-shine::after { animation: none !important; } }

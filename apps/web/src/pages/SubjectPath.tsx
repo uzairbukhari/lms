@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { Link, useParams } from "react-router";
 import { api } from "../api";
 import { Loader } from "../components/Loader";
-import { starsFor, tileGlyph, type PathTopic, type SubjectPath } from "../lib/topic";
+import { pastel, starsFor, tileGlyph, type PathTopic, type SubjectPath } from "../lib/topic";
 import { SUBJECT_LOOK, shortTitle } from "./StudentHome";
 
-const COLOURS = ["#ffb3c7", "#a0e8c8", "#ffd166", "#a5d8ff", "#d0bfff", "#ffc9a0", "#9fe3e0", "#f7a8e0"];
-const colourOf = (i: number) => COLOURS[i % COLOURS.length]!;
+const colourOf = pastel;
 
 function Lock({ size = 28 }: { size?: number }) {
   return (
@@ -59,7 +58,7 @@ function Trail({ path }: { path: SubjectPath }) {
   return (
     <div className="relative min-h-[520px] flex-1">
       <svg aria-hidden="true" className="absolute inset-0 h-full w-full" viewBox="0 0 1180 820" preserveAspectRatio="none">
-        <path d={curve(pts, 0, n)} fill="none" stroke="var(--trail)" strokeWidth="5" strokeDasharray="2 14" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+        <path className="m-march" d={curve(pts, 0, n)} fill="none" stroke="var(--trail)" strokeWidth="5" strokeDasharray="2 14" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
         {reached > 0 && <path d={curve(pts, 0, reached)} fill="none" stroke="#ffd166" strokeWidth="5" strokeLinecap="round" vectorEffect="non-scaling-stroke" />}
       </svg>
       {path.topics.map((t, i) => {
@@ -70,7 +69,7 @@ function Trail({ path }: { path: SubjectPath }) {
         const stars = starsFor(t.bestPercent);
         const body = (
           <>
-            <span className="relative flex items-center justify-center rounded-full font-display font-extrabold" style={{ width: size, height: size, fontSize: here ? 54 : 40, background: locked ? "#171c4d" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", border: locked ? "3px dashed rgba(140,150,230,0.45)" : "5px solid #ffd166", boxShadow: here ? "0 0 0 14px rgba(255,209,102,0.22), 0 0 0 30px rgba(255,209,102,0.1)" : undefined }}>
+            <span className={"relative flex items-center justify-center rounded-full font-display font-extrabold " + (here ? "m-pulse" : "m-float")} style={{ "--i": i, width: size, height: size, fontSize: here ? 54 : 40, background: locked ? "#171c4d" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", border: locked ? "3px dashed rgba(140,150,230,0.45)" : "5px solid #ffd166", } as CSSProperties}>
               {locked ? <Lock size={30} /> : i + 1}
             </span>
             <span className="max-w-[150px] text-center font-display text-base font-bold leading-tight" style={{ opacity: locked ? 0.6 : 1 }}>{shortTitle(t.title)}</span>
@@ -85,7 +84,7 @@ function Trail({ path }: { path: SubjectPath }) {
       })}
       <div className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1" style={{ left: `${pts[n]![0]}%`, top: `${pts[n]![1]}%`, opacity: allDone ? 1 : 0.6 }} aria-label={`Semester exam${allDone ? "" : " (locked)"}`}>
         <span className="flex h-[88px] w-[88px] items-center justify-center rounded-full" style={{ background: allDone ? "#ffd166" : "#171c4d", border: allDone ? "5px solid #fff3c4" : "3px dashed rgba(140,150,230,0.45)", color: allDone ? "#161a40" : "var(--done-text)" }}>
-          <svg width="34" height="34" viewBox="0 0 24 24" fill={allDone ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z" /></svg>
+          <svg className="m-twinkle" width="34" height="34" viewBox="0 0 24 24" fill={allDone ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z" /></svg>
         </span>
         <span className="max-w-[120px] text-center font-display text-base font-bold leading-tight">Semester exam</span>
       </div>
@@ -133,9 +132,9 @@ function Cards({ path, emoji, semester }: { path: SubjectPath; emoji: string; se
           const stars = starsFor(t.bestPercent);
           const glyph = tileGlyph(t.title, emoji);
           return (
-            <article key={t.lessonId} className="card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4" style={{ maxHeight: 620 }} aria-label={`Topic ${i + 1}: ${t.title}`}>
+            <article key={t.lessonId} className={"card flex w-[300px] shrink-0 snap-center flex-col gap-3 p-4 " + (t.status === "current" || t.status === "early" ? "m-glow" : "")} style={{ maxHeight: 620, ...(t.status === "current" || t.status === "early" ? { borderColor: "#ffd166", borderWidth: 3 } : {}) }} aria-label={`Topic ${i + 1}: ${t.title}`}>
               <div className="flex flex-1 items-center justify-center rounded-2xl font-display font-extrabold text-white" style={{ minHeight: 140, maxHeight: 320, background: locked ? "var(--done-bg)" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", fontSize: glyph.length > 3 ? 54 : 64 }}>
-                {locked ? <Lock size={56} /> : glyph}
+                <span className="m-bob inline-block" style={{ "--i": i } as CSSProperties}>{locked ? <Lock size={56} /> : glyph}</span>
               </div>
               <p className="text-sm font-extrabold uppercase tracking-wide text-muted">Topic {i + 1} · {statusWord(t)}</p>
               <h2 className="font-display text-2xl font-bold leading-tight">{shortTitle(t.title)}</h2>
@@ -144,7 +143,7 @@ function Cards({ path, emoji, semester }: { path: SubjectPath; emoji: string; se
                 <span className="text-sm font-bold text-muted">{t.status === "done" ? t.partsTotal : t.partsDone} of {t.partsTotal || "–"}</span>
               </div>
               <Stars n={stars} size={22} />
-              {locked ? <span className="btn !min-h-12 opacity-60" aria-disabled="true">🔒 Locked</span> : <Link to={`/topic/${t.lessonId}`} className="btn btn-primary !min-h-12 text-lg">{t.status === "done" ? "Revisit" : t.partsDone > 0 ? "Keep going" : "Start"}</Link>}
+              {locked ? <span className="btn !min-h-12 opacity-60" aria-disabled="true">🔒 Locked</span> : <Link to={`/topic/${t.lessonId}`} className={"btn btn-primary !min-h-12 text-lg " + (t.status === "done" ? "" : "m-shine")}>{t.status === "done" ? "Revisit" : t.partsDone > 0 ? "Keep going" : "Start"}</Link>}
             </article>
           );
         })}
