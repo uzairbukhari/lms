@@ -69,7 +69,7 @@ const weekKey = (semester: number, week: number) => `${semester}-${week}`;
 const weekNum = (k: string) => { const [s = 0, w = 0] = k.split("-").map(Number); return s * 100 + w; };
 
 /** One stop on the week's quest trail. Finished lessons go grey and dashed with a DONE! stamp. */
-function QuestStop({ c, here }: { c: Card; here: boolean }) {
+function QuestStop({ c, here, idx }: { c: Card; here: boolean; idx: number }) {
   const s = look(c.subject);
   const done = c.progress?.status === "completed";
   const best = c.quiz?.bestPercent;
@@ -80,13 +80,14 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
     <article aria-label={`${s.label}: ${c.title}${done ? " (done)" : ""}`} className="flex w-full flex-col gap-6">
       <div className="flex h-[132px] flex-col items-center gap-2">
         <div
-          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full"
+          className={"relative flex h-[104px] w-[104px] items-center justify-center rounded-full " + (here ? "m-pulse" : done ? "" : "m-float")}
           style={{
+            "--i": idx,
             background: done ? "var(--done-tint)" : (TINT[c.subject] ?? "var(--tint-english)"),
             color: done ? "var(--done-text)" : "var(--on-tint)",
             border: here ? "5px solid var(--accent)" : "var(--border-width) solid var(--surface-border)",
             boxShadow: "var(--shadow)",
-          }}
+          } as CSSProperties}
         >
           <SubjectIcon subject={c.subject} size={52} />
           {done && (
@@ -129,13 +130,13 @@ function QuestStop({ c, here }: { c: Card; here: boolean }) {
             </div>
           ) : (
             <>
-              <Link className="btn btn-primary !min-h-[60px] !text-2xl" to={`/lesson/${c.id}`}>{c.progress ? "Keep going" : "Start"}</Link>
+              <Link className="btn btn-primary m-shine !min-h-[60px] !text-2xl" to={`/lesson/${c.id}`}>{c.progress ? "Keep going" : "Start"}</Link>
               <Link className="btn !min-h-12" to={`/lesson/${c.id}/quiz`}>{c.quiz?.attempts ? "Quiz again" : "Quiz"}</Link>
             </>
           )}
         </div>
         {done && (
-          <span aria-hidden="true" className="pointer-events-none absolute -top-5 right-3 -rotate-6 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>
+          <span aria-hidden="true" className="m-wobble pointer-events-none absolute -top-5 right-3 rounded-xl border-4 px-3 py-0.5 font-display text-2xl font-extrabold tracking-wider" style={{ color: "var(--stamp)", borderColor: "var(--stamp)", background: "var(--done-bg)" }}>DONE!</span>
         )}
       </div>
     </article>
@@ -263,7 +264,7 @@ export function StudentHome() {
     <main className="kh-main mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
       <header className="kh-header flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <Avatar name={user.displayName} avatar={user.avatar} size={72} />
+          <span className="m-float inline-block" style={{ "--i": 0 } as CSSProperties}><Avatar name={user.displayName} avatar={user.avatar} size={72} /></span>
           <div>
             <h1 className="font-display text-4xl font-extrabold">Hi, {user.displayName}!</h1>
             <p className="text-lg text-muted">
@@ -275,7 +276,7 @@ export function StudentHome() {
         <div className="flex items-center gap-3">
           {home && (
             <span className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 text-xl font-extrabold">
-              <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" fill="var(--star)" stroke="var(--text)" strokeWidth="1.2" strokeLinejoin="round" /></svg>
+              <svg className="m-twinkle" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" fill="var(--star)" stroke="var(--text)" strokeWidth="1.2" strokeLinejoin="round" /></svg>
               {lessonsDone} {lessonsDone === 1 ? "star" : "stars"}
             </span>
           )}
@@ -289,7 +290,7 @@ export function StudentHome() {
               <span aria-hidden="true">🔥</span> {rewards.streak.current}
             </Link>
           )}
-          <Link to="/map" className="btn btn-primary map-button relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
+          <Link to="/map" className="btn btn-primary map-button m-shine relative !min-h-14 !text-xl" aria-label={`Open my map${points ? `, ${points.total} points` : ""}`}>
             <span aria-hidden="true" className="text-2xl">🗺️</span> Map
             {points && <span className="rounded-full bg-surface px-2.5 py-0.5 text-base font-extrabold text-text">🪙 {points.total}</span>}
             {points && points.waiting > 0 && <span aria-hidden="true" className="chest-wiggle absolute -right-3 -top-4 text-3xl">🎁</span>}
@@ -308,8 +309,8 @@ export function StudentHome() {
       )}
 
       <nav aria-label="More to do" className="kh-nav flex flex-wrap gap-3">
-        {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
-        {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
+        {cards && cards.daily > 0 && <Link to="/cards/daily" className={"btn !min-h-14 " + (cards.dailyDone ? "" : "btn-primary m-shine")}><span aria-hidden="true">🃏</span> Today's cards ({cards.daily}){cards.dailyDone ? " ✓" : ""}</Link>}
+        {cards && cards.boost > 0 && <Link to="/cards/boost" className={"btn !min-h-14 " + (cards.boostDone ? "" : "btn-primary m-shine")}><span aria-hidden="true">🚀</span> Boost round{cards.boostDone ? " ✓" : ""}</Link>}
         {cards && cards.words > 0 && <Link to="/words" className="btn !min-h-14"><span aria-hidden="true">📖</span> My word book ({cards.words})</Link>}
         {home?.now && (home.now.exam || home.now.week >= 12) && <Link to="/revision" className="btn !min-h-14"><span aria-hidden="true">🎓</span> Exam revision</Link>}
         <Link to="/teaser" className={"btn !min-h-14 " + (teaser && !teaser.done ? "btn-primary" : "")}><span aria-hidden="true">🧩</span> Brain teaser{teaser?.done ? " ✓" : ""}</Link>
@@ -377,13 +378,13 @@ export function StudentHome() {
                 </div>
                 <div role="img" aria-label={`${weekDone} of ${weekCards.length} lessons done`} className="flex gap-2">
                   {weekCards.map((c, i) => (
-                    <span key={c.id} className="h-3.5 w-12 rounded-full border-[length:var(--border-width)] border-line" style={{ background: i < weekDone ? "var(--accent)" : "var(--track)" }} />
+                    <span key={c.id} className={"h-3.5 w-12 rounded-full border-[length:var(--border-width)] border-line " + (i < weekDone ? "m-shine" : "")} style={{ background: i < weekDone ? "var(--accent)" : "var(--track)" }} />
                   ))}
                 </div>
               </div>
               <div className="kh-grid relative mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(var(--n),minmax(0,1fr))]" style={{ "--n": weekCards.length } as CSSProperties}>
                 <div aria-hidden="true" className="absolute top-[52px] hidden border-t-[6px] border-dashed lg:block" style={{ borderColor: "var(--trail)", left: `${50 / weekCards.length}%`, right: `${50 / weekCards.length}%` }} />
-                {weekCards.map((c) => <div key={c.id} className="relative flex"><QuestStop c={c} here={c.id === hereId} /></div>)}
+                {weekCards.map((c, i) => <div key={c.id} className="relative flex"><QuestStop c={c} idx={i} here={c.id === hereId} /></div>)}
               </div>
             </>
           )}
