@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { assignedCourseIds, examsForCourses, openExamSemesters } from "../lib/exams";
+import { allTopicsPassed, blueprintIsCourse, grandScopeKey } from "../lib/grand";
 import { fail, parseBody } from "../lib/http";
 import { attemptDraft, attemptQuestions, attemptReview, saveDraft, startAttempt, submitAttempt, type AttemptRow, type QuizRow } from "../lib/quiz";
 import { todayIn, visibleLessonsFor } from "../lib/visibility";
@@ -130,8 +131,18 @@ quizRoutes.get("/exams", async (c) => {
 quizRoutes.post("/exams/:id/start", async (c) => {
   const user = c.get("user");
   const db = c.env.DB;
-  const quiz = await db.prepare(`SELECT ${QUIZ_COLUMNS}, course_id, semester FROM quizzes WHERE id = ? AND kind = 'exam' AND is_current = 1`).bind(c.req.param("id")).first<QuizRow & { course_id: string; semester: number }>();
+  const quiz = await db.prepare(`SELECT ${QUIZ_COLUMNS}, course_id, semester, blueprint_json FROM quizzes WHERE id = ? AND kind = 'exam' AND is_current = 1`).bind(c.req.param("id")).first<QuizRow & { course_id: string; semester: number | null; blueprint_json: string | null }>();
   if (!quiz) return fail(c, 404, "not_found");
+  if (quiz.semester === null) {
+    // A course's grand quiz: only for a child on the course, and only once every published topic is passed.
+    if (!blueprintIsCourse(quiz.blueprint_json)) return fail(c, 404, "not_found");
+    const classIds = (await db.prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1").bind(user.id).all<{ id: string }>()).results.map((r) => r.id);
+    if (!(await assignedCourseIds(db, user.id, classIds)).includes(quiz.course_id)) return fail(c, 404, "not_found");
+    if (!(await allTopicsPassed(db, user.id, quiz.course_id))) return fail(c, 403, "topics_not_passed", "Pass every topic in this course first.");
+    const grand = await startAttempt(db, { userId: user.id, quiz, lessonId: null, scopeKey: grandScopeKey(quiz.course_id), mode: "graded" });
+    if (!grand.ok) return fail(c, 403, grand.reason, "This quiz has no questions yet.");
+    return c.json(startedBody(grand.attempt, quiz, await attemptQuestions(db, grand.attempt, quiz), grand.resumed));
+  }
   const open = await openExamSemesters(db, user.id, todayIn(c.env.TIMEZONE));
   if (!open.has(`${quiz.course_id}:${quiz.semester}`)) return fail(c, 404, "not_found");
   const started = await startAttempt(db, { userId: user.id, quiz, lessonId: null, scopeKey: `exam:${quiz.course_id}:${quiz.semester}`, mode: "graded" });
