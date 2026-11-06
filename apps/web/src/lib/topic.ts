@@ -9,7 +9,7 @@ export type TopicData = {
   subLessons: SubLessonCard[];
 };
 export type TopicLesson = { lesson: { id: string; title: string; subject: string; summary: string; minutes: number; objectives: string[] }; topic?: TopicData; readOnly: boolean; quiz: { questionCount: number; passPercent: number } };
-export type PathTopic = { lessonId: string; title: string; position: number; status: "done" | "current" | "early" | "locked"; bestPercent: number | null; attempts: number };
+export type PathTopic = { lessonId: string; title: string; position: number; status: "done" | "current" | "early" | "locked"; bestPercent: number | null; attempts: number; partsDone: number; partsTotal: number };
 export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[] };
 
 export const KIND = {
@@ -18,3 +18,16 @@ export const KIND = {
   play: { label: "Play", emoji: "🎮" },
   use: { label: "Use it", emoji: "🌍" },
 } as const;
+
+/** 3 stars for 90%+, 2 for 80%+, 1 for a pass (70%+), else none. */
+export const starsFor = (percent: number | null): number => (percent === null ? 0 : percent >= 90 ? 3 : percent >= 80 ? 2 : percent >= 70 ? 1 : 0);
+
+/** A big friendly glyph for a topic tile, picked from its title; falls back to the subject emoji. */
+export function tileGlyph(title: string, fallback: string): string {
+  const t = title.toLowerCase();
+  const rules: [RegExp, string][] = [
+    [/number facts|bonds/, "5+5"], [/place value/, "47"], [/add|subtract|taking/, "38+5"], [/money|coin/, "£1"],
+    [/multipl|shar|divid/, "2×5"], [/fraction/, "½"], [/time|measur/, "🕐"], [/shape|geometry/, "△"],
+  ];
+  return rules.find(([re]) => re.test(t))?.[1] ?? fallback;
+}
