@@ -1,5 +1,5 @@
 // Builds topic lessons in format 3.0 (sub-lessons, mini quizzes, standards) and checks docs/LESSON_GUIDELINES.md parts 4 and 13.
-import { readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { audit as _unused } from "./lesson-kit.mjs";
 import { clipBlockWith, loadSchema } from "./clip-kit.mjs";
 
@@ -12,7 +12,10 @@ export const CLIP_SPECS = new Map();
  * Lessons still on the old 15-question quiz. A lesson leaves this list when it is upgraded to the new standard
  * (30 main questions, a clip, real media). The list only ever shrinks; when it is empty, delete it and the old rules.
  */
-export const LEGACY_15 = new Set(JSON.parse(readFileSync(new URL("./legacy-15.json", import.meta.url), "utf8")));
+const UPGRADED_DIR = new URL("./upgraded/", import.meta.url);
+/** A lesson is upgraded by adding the file scripts/upgraded/<slug>.txt (one file per lesson, so parallel work never conflicts). */
+const upgradedSlugs = existsSync(UPGRADED_DIR) ? readdirSync(UPGRADED_DIR).filter((f) => f.endsWith(".txt")).map((f) => f.replace(".txt", "")) : [];
+export const LEGACY_15 = new Set(JSON.parse(readFileSync(new URL("./legacy-15.json", import.meta.url), "utf8")).filter((s) => !upgradedSlugs.includes(s)));
 /** Longest spoken sentence, in words, by age band. Short sentences are easier to follow when read aloud. */
 export const MAX_SENTENCE_WORDS = { "7-8": 14, "9-10": 18 };
 

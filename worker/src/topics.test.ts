@@ -7,12 +7,16 @@ import { parseLessonFile } from "@lms/schema";
 const dir = join(process.cwd(), "../content/topics");
 const files = readdirSync(dir).filter((f: string) => f.endsWith(".json"));
 // Lessons not yet upgraded keep the old 15-question standard (scripts/legacy-15.json only ever shrinks).
-const legacy = new Set<string>(JSON.parse(readFileSync(join(process.cwd(), "../scripts/legacy-15.json"), "utf8")));
+// A lesson leaves the list when the file scripts/upgraded/<slug>.txt exists.
+const upgradedDir = join(process.cwd(), "../scripts/upgraded");
+const upgradedSlugs = readdirSync(upgradedDir).filter((f: string) => f.endsWith(".txt")).map((f: string) => f.replace(".txt", ""));
+const legacy = new Set<string>((JSON.parse(readFileSync(join(process.cwd(), "../scripts/legacy-15.json"), "utf8")) as string[]).filter((s) => !upgradedSlugs.includes(s)));
 
 describe("content/topics", () => {
   it("has the pilot topic lesson", () => expect(files).toContain("maths-class-1-place-value.json"));
   it("keeps the legacy list honest: every entry still exists", () => {
     for (const slug of legacy) expect(files, slug).toContain(slug + ".json");
+    for (const slug of upgradedSlugs) expect(JSON.parse(readFileSync(join(process.cwd(), "../scripts/legacy-15.json"), "utf8")), slug).toContain(slug);
   });
   for (const f of files) {
     it(`${f} is valid and complete`, () => {

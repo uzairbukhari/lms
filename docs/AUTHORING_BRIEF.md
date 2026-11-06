@@ -6,7 +6,7 @@ Read this, `docs/LESSON_GUIDELINES.md`, `docs/CLIPS.md` and the syllabus entry (
 
 **New lesson** (syllabus entry marked NEW): write `scripts/topics/<slug>.mjs`.
 
-**Upgrade** (existing lesson): edit its `scripts/topics/<slug>.mjs`. Keep the slug, topic number and every sub-lesson id exactly the same. Keep the 15 existing main questions and their variants. Add 15 new main questions (themes are listed in the syllabus entry) with at least 1 variant each, so the lesson has 30 mains and at most 80 questions in total. Move the intro blocks (the welcome heading, text, picture and glossary at the top of the lesson) into the start of the `learn` sub-lesson, merge their glossary into that sub-lesson's glossary, and leave the top-level `blocks` empty: children never see the top-level blocks. Remove the slug from `scripts/legacy-15.json`.
+**Upgrade** (existing lesson): edit its `scripts/topics/<slug>.mjs`. Keep the slug, topic number and every sub-lesson id exactly the same. Keep the 15 existing main questions and their variants. Add 15 new main questions (themes are listed in the syllabus entry) with at least 1 variant each, so the lesson has 30 mains and at most 80 questions in total. Move the intro blocks (the welcome heading, text, picture and glossary at the top of the lesson) into the start of the `learn` sub-lesson, merge their glossary into that sub-lesson's glossary, and leave the top-level `blocks` empty: children never see the top-level blocks. Create the file `scripts/upgraded/<slug>.txt` (any one-line content, for example "upgraded") to move the lesson out of the old standard. Do not edit `scripts/legacy-15.json`.
 
 ## The standard (the build fails if you miss it)
 

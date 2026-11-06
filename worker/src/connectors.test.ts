@@ -10,7 +10,8 @@ import { parseLessonFile, type Block } from "@lms/schema";
 const root = join(process.cwd(), "..");
 const topicsDir = join(root, "content/topics");
 const read = (p: string) => JSON.parse(readFileSync(join(root, p), "utf8").replace(/^\uFEFF/, "")); // tolerate a byte order mark from PowerShell
-const legacy = new Set<string>(read("scripts/legacy-15.json"));
+const upgradedMarkers = readdirSync(join(root, "scripts/upgraded")).filter((f: string) => f.endsWith(".txt")).map((f: string) => f.replace(".txt", ""));
+const legacy = new Set<string>((read("scripts/legacy-15.json") as string[]).filter((s) => !upgradedMarkers.includes(s)));
 // Maths lessons whose Coteach diagrams are waiting for the owner to download them from the Coteach preview (the tool cannot be
 // run unattended) have a file content/media/coteach-requests/<slug>.md describing the diagrams. A lesson with such a file is exempt
 // from the diagram minimum only. Delete the file when the diagrams are added; the folder must be empty to finish.
