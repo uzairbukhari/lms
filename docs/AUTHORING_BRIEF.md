@@ -41,4 +41,15 @@ Write the clip spec only (the `clip` entry in the lesson spec, which `build-topi
 
 ## Worktree setup
 
-Your worktree may start on an old commit. First run `git merge --ff-only feat/phase-1-spikes`. If `node_modules` is missing, junction it from `C:\GitHub\lms\node_modules` (and `worker\node_modules`, `apps\web\node_modules`), never commit it.
+Your worktree may start on an old commit. First run `git merge --ff-only feat/phase-1-spikes` (or the branch name your instructions give). If `node_modules` is missing, junction it with PowerShell `New-Item -ItemType Junction` (cmd `mklink` is refused) from `C:\GitHub\lms\node_modules`, and likewise `worker\node_modules` and `apps\web\node_modules`. Never commit them.
+
+## Tooling gotchas
+
+- Bash commands with `/c/GitHub/...` paths can be refused by a guard. Use PowerShell for downloads (`Invoke-WebRequest -OutFile` or `curl.exe`), or relative paths.
+- Write JSON files with the Write or Edit tool, never PowerShell `Set-Content -Encoding utf8` (PowerShell 5.1 adds a byte order mark).
+- `node scripts/build-topics.mjs` now only rewrites files whose content changed.
+- Use `PHOTO(asset, alt, caption, credit)` from `scripts/lesson-kit.mjs` for real photos: `SAY("narration", PHOTO(...))`.
+- Fill-blank questions: the repeat check compares only the `prompt`, so every fill-blank prompt and each of its variants needs its own wording (not "Complete the sum" twice).
+- `base_ten` shows at most 9 tens and 9 ones. Use ten frames for a carry that needs more.
+- A reason question needs a claim with exactly one defensible answer. Check the arithmetic or fact of the claim yourself.
+- The top-level `intro` of a lesson is never shown to children. Put the opener at the start of the `learn` sub-lesson and leave `intro` as `[]`.

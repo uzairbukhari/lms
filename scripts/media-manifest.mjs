@@ -3,7 +3,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 
 const dir = new URL("../content/media/", import.meta.url);
-const read = (url) => JSON.parse(readFileSync(url, "utf8")).files ?? [];
+const read = (url) => JSON.parse(readFileSync(url, "utf8").replace(/^\uFEFF/, "")).files ?? []; // tolerate a byte order mark from PowerShell
 
 export function loadManifest() {
   const extra = new URL("manifest.d/", dir);

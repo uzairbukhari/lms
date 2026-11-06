@@ -9,7 +9,7 @@ import { parseLessonFile, type Block } from "@lms/schema";
 
 const root = join(process.cwd(), "..");
 const topicsDir = join(root, "content/topics");
-const read = (p: string) => JSON.parse(readFileSync(join(root, p), "utf8"));
+const read = (p: string) => JSON.parse(readFileSync(join(root, p), "utf8").replace(/^\uFEFF/, "")); // tolerate a byte order mark from PowerShell
 const legacy = new Set<string>(read("scripts/legacy-15.json"));
 // Maths lessons whose Coteach diagrams are waiting for the owner to download them from the Coteach preview (the tool cannot be
 // run unattended) have a file content/media/coteach-requests/<slug>.md describing the diagrams. A lesson with such a file is exempt
