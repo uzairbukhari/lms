@@ -8,6 +8,7 @@ import { Loader } from "../components/Loader";
 import { Markdown } from "../components/Markdown";
 import { Chart } from "../components/Chart";
 import { BrainGame } from "../components/BrainGame";
+import { ClipPlayer } from "../components/ClipPlayer";
 import { VideoClip } from "../components/VideoClip";
 import { Explainer } from "../components/Explainer";
 import { Manipulative } from "../components/Manipulative";
@@ -456,6 +457,16 @@ function SlideView(p: ViewProps) {
         </>
       );
     }
+    case "clip": {
+      const b = slide.blocks[0] as Extract<Block, { type: "clip" }>;
+      return (
+        <>
+          <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-muted">🎬 Movie time</p>
+          <h2 className={titleCls}>{b.title}</h2>
+          <ClipPlayer key={b.asset} title={b.title} src={p.assetUrl(b.asset)} poster={p.assetUrl(b.poster)} seconds={b.seconds} transcript={b.transcript} caption={b.caption} />
+        </>
+      );
+    }
     case "explain": {
       const b = slide.blocks[0] as Extract<Block, { type: "explainer" }>;
       return (
@@ -581,6 +592,7 @@ function ContentSlide({ slide, assetUrl, subject }: { slide: Slide; assetUrl: (n
               <figure key={bi} className="flex flex-col items-center gap-2">
                 <img src={assetUrl(b.asset)} alt={b.alt ?? ""} className="pop-in max-h-72 rounded-xl" />
                 {b.caption && <figcaption className="text-xl text-muted">{b.caption}</figcaption>}
+                {b.credit && <figcaption className="text-sm text-muted">{b.credit}</figcaption>}
               </figure>
             );
             const actors = b.actors ?? splitEmoji(b.emoji ?? "").map((emoji) => ({ emoji }));

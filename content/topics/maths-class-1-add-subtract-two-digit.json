@@ -1,0 +1,3325 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-add-subtract-two-digit",
+  "subject": "maths",
+  "title": "Adding and Subtracting 2-Digit Numbers",
+  "summary": "Add and take away two 2-digit numbers by splitting them into tens and ones, including crossing a ten.",
+  "age_band": "7-8",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 9: Add and subtract 2-digit numbers",
+  "learning_objectives": [
+   "Add two 2-digit numbers, even when I cross a ten",
+   "Take away two 2-digit numbers, even when I cross a ten",
+   "Solve word problems and find missing numbers"
+  ],
+  "tags": [
+   "topic",
+   "topic-9"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 9
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 add/sub",
+    "text": "Add and subtract a two-digit number and ones, and two two-digit numbers, using concrete objects, number lines and mental methods"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Ni.04"
+   }
+  ],
+  "success_criteria": [
+   "I can split numbers into tens and ones to add",
+   "I can cross a ten when I add or take away",
+   "I can solve a story problem and check my answer"
+  ],
+  "real_life": "Counting mangoes at a market stall, pens in a shop, or how many dates are left at iftar.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 8 + 5?",
+    "hint": "Make a ten first.",
+    "explanation": "8 + 2 = 10 and 10 + 3 = 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "How many tens are in 60?",
+    "hint": "The 6 is the tens digit.",
+    "explanation": "60 is 6 tens.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "37 has 3 tens and 7 ones.",
+    "hint": "The left digit is the tens.",
+    "explanation": "37 is 3 tens and 7 ones.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "tens_ones",
+   "kind": "learn",
+   "title": "Tens first, then ones",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Meet Zara and the mango stall",
+     "backdrop": "town"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-add-subtract-two-digit-1-f3462c9c.jpg",
+     "alt": "Ripe mangoes in a box at a market stall with hand-written price signs",
+     "caption": "Zara's uncle sells mangoes at a market stall.",
+     "credit": "Photo by leila goodman on Unsplash",
+     "say": "Meet Zara. She helps her uncle Bilal at his mango stall in Lahore. Mangoes, mangoes everywhere! Today Zara must count them all. We will help her. We will add and take away big numbers. We split them into tens and ones."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Split into tens and ones",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **2-digit number** is made of **tens** and **ones**.\n\n34 is 3 tens and 4 ones.\n\n**Partition** means to split a number into parts.",
+     "say": "Every two-digit number is made of tens and ones. Take thirty-four. It has three tens and four ones. A ten is a long rod. A one is a little square. Let's split thirty-four and twenty-three together."
+    },
+    {
+     "type": "explainer",
+     "title": "34 + 23: split into tens and ones",
+     "scenes": [
+      {
+       "caption": "34 = 3 tens and 4 ones.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 3,
+          "ones": 4
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here is thirty-four. Three tens and four ones. Say it with me: three tens, four ones."
+      },
+      {
+       "caption": "34 and 23, split into tens and ones.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 3,
+          "ones": 4
+         },
+         "x": 27,
+         "y": 48,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 2,
+          "ones": 3
+         },
+         "x": 73,
+         "y": 48,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now here is twenty-three. Two tens and three ones. Do we count every single one? No way!"
+      },
+      {
+       "caption": "30 + 20 = 50. Five tens.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 5,
+          "ones": 0
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Add the tens first. Three tens and two tens make five tens. That is fifty."
+      },
+      {
+       "caption": "4 + 3 = 7 ones. 50 + 7 = 57.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 5,
+          "ones": 7
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "34 + 23 = 57"
+        }
+       ],
+       "say": "Now add the ones. Four ones and three ones make seven ones. Fifty and seven make fifty-seven!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many tens are in the number 25?",
+      "hint": "Look at the left digit.",
+      "explanation": "25 is 2 tens and 5 ones.",
+      "skill_tag": "addsub2.partition",
+      "answer": {
+       "value": 2,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Add the tens, then the ones",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Add** the tens, then add the ones, then put them together.\n\n25 + 14: 20 + 10 = 30 and 5 + 4 = 9, so the **total** is 39.",
+     "say": "Here is the trick. Add the tens. Then add the ones. Then put the two answers together. Let's try twenty-five plus fourteen. Watch the frog hop along the number line."
+    },
+    {
+     "type": "explainer",
+     "title": "25 + 14 on the number line",
+     "scenes": [
+      {
+       "caption": "Start at 25.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 40,
+          "value": 25
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog starts on twenty-five. Fourteen is one ten and four ones."
+      },
+      {
+       "caption": "+ 10 makes 35.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 40,
+          "value": 35
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop one ten. Twenty-five to thirty-five. That is the tens part."
+      },
+      {
+       "caption": "+ 4 makes 39. 25 + 14 = 39.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 40,
+          "value": 39
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "25 + 14 = 39"
+        }
+       ],
+       "say": "Now hop four ones. Thirty-six, thirty-seven, thirty-eight, thirty-nine. The frog lands on thirty-nine!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 32 + 15? Add the tens, then the ones.",
+      "hint": "30 + 10 is 40. Then 2 + 5.",
+      "explanation": "30 + 10 = 40 and 2 + 5 = 7, so 32 + 15 = 47.",
+      "skill_tag": "addsub2.add_tens_ones",
+      "answer": {
+       "value": 47,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara fills a tray of ten",
+     "asset": "clip-maths-class-1-add-subtract-two-digit-26c4fd29.mp4",
+     "poster": "clip-maths-class-1-add-subtract-two-digit-26c4fd29.webp",
+     "seconds": 54,
+     "transcript": "This is Zara. She helps her uncle Bilal at his mango stall in Lahore. Uncle has twenty-seven mangoes. A van brings sixteen more. How many mangoes now? Zara has a tray that holds ten. Twenty-seven is two full trays and seven loose. Zara picks three mangoes from the new box. Seven and three make ten! The box had sixteen. Three are gone. Thirteen are left. Now we have three full trays. That is thirty. Plus the thirteen in the box. Thirty and thirteen. Thirty plus ten is forty. Forty plus three is forty-three! Forty-three mangoes! When the ones go past nine, fill a ten first. Shukriya, Zara!",
+     "caption": "Watch Zara cross a ten at the mango stall."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A 2-digit number is tens and ones",
+      "Add the tens, then add the ones",
+      "Put the two answers together"
+     ],
+     "say": "Remember. Split into tens and ones. Add the tens. Add the ones. Put them together."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "2-digit number",
+       "meaning": "A number with a tens digit and a ones digit, like 34."
+      },
+      {
+       "term": "tens",
+       "meaning": "Groups of ten. In 34 there are 3 tens."
+      },
+      {
+       "term": "ones",
+       "meaning": "The single ones. In 34 there are 4 ones."
+      },
+      {
+       "term": "partition",
+       "meaning": "To split a number into parts."
+      },
+      {
+       "term": "add",
+       "meaning": "To put numbers together."
+      },
+      {
+       "term": "total",
+       "meaning": "The answer when you add."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 21 + 34?",
+     "hint": "Add the tens, then the ones.",
+     "explanation": "20 + 30 = 50 and 1 + 4 = 5, so 55.",
+     "answer": {
+      "value": 55,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How many tens are in 47?",
+     "hint": "The left digit shows the tens.",
+     "explanation": "47 is 4 tens and 7 ones.",
+     "options": [
+      {
+       "id": "a",
+       "text": "47"
+      },
+      {
+       "id": "b",
+       "text": "4"
+      },
+      {
+       "id": "c",
+       "text": "7"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "In the number 56, the 6 is the tens digit.",
+     "hint": "The tens digit is on the left.",
+     "explanation": "In 56 the 5 is the tens digit. The 6 is the ones digit.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 40 + 3 + 20 + 5?",
+     "hint": "Add the tens, then the ones.",
+     "explanation": "40 + 20 = 60 and 3 + 5 = 8, so 68.",
+     "answer": {
+      "value": 68,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "cross",
+   "kind": "try",
+   "title": "Crossing the ten",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: 28 + 15 with ten frames",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "When the ones make more than 9, you make a new **ten**.\n\nThis is called **crossing a ten**.",
+     "say": "Zara has twenty-eight mangoes. Her uncle gives her fifteen more. Look at the ones. Eight and five make more than nine! That means a brand new ten is born. Watch the ten frames."
+    },
+    {
+     "type": "explainer",
+     "title": "28 + 15 with ten frames",
+     "scenes": [
+      {
+       "caption": "28 and 15.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 2,
+          "ones": 8
+         },
+         "x": 27,
+         "y": 48,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 1,
+          "ones": 5
+         },
+         "x": 73,
+         "y": 48,
+         "size": 1,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Twenty-eight is two tens and eight ones. Fifteen is one ten and five ones."
+      },
+      {
+       "caption": "20 + 10 = 30.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 3,
+          "ones": 0
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Add the tens first. Two tens and one ten make three tens. That is thirty."
+      },
+      {
+       "caption": "8 + 5 in ten frames.",
+       "items": [
+        {
+         "id": "f1",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 8
+         },
+         "x": 27,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "f2",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 5
+         },
+         "x": 73,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Now the ones. Eight and five. Each ten frame holds only ten. Will they fit?"
+      },
+      {
+       "caption": "8 + 2 = 10, and 3 left.",
+       "items": [
+        {
+         "id": "f1",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 10
+         },
+         "x": 27,
+         "y": 44,
+         "size": 1,
+         "anim": "pulse"
+        },
+        {
+         "id": "f2",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 3
+         },
+         "x": 73,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "➡️",
+         "x": 50,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Take two from the five to fill the first frame. That makes ten! Three are left over."
+      },
+      {
+       "caption": "8 + 5 = 13.",
+       "items": [
+        {
+         "id": "f1",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 10
+         },
+         "x": 27,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "f2",
+         "prop": {
+          "kind": "ten_frame",
+          "value": 3
+         },
+         "x": 73,
+         "y": 44,
+         "size": 1,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "13 = 1 ten and 3 ones"
+        }
+       ],
+       "say": "Eight and five make thirteen. That is one ten and three ones."
+      },
+      {
+       "caption": "30 + 13 = 43.",
+       "items": [
+        {
+         "id": "t",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 4,
+          "ones": 3
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "28 + 15 = 43"
+        }
+       ],
+       "say": "Now thirty and thirteen. Three tens and one more ten make four tens. Four tens and three ones is forty-three!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "manipulative",
+     "title": "Make a tray of ten",
+     "goal": "Zara has 8 mangoes. Her uncle gives her 5 more. Move 10 mangoes into the Tray of ten. How many are left over?",
+     "emoji": "🥭",
+     "count": 13,
+     "zones": [
+      "Loose mangoes",
+      "Tray of ten"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "You add 7 + 6 and get 13. After you make a ten, how many ones are left?",
+      "hint": "13 is one ten and some ones.",
+      "explanation": "13 is 1 ten and 3 ones.",
+      "skill_tag": "addsub2.cross_ones",
+      "answer": {
+       "value": 3,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Split just one number",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "Keep one number **whole** and split the other.\n\n28 + 15: 28 + 2 = 30, 30 + 10 = 40, 40 + 3 = 43.",
+     "say": "Here is a speedy way. Keep twenty-eight whole. Split only the fifteen. Split fifteen into two, ten and three. Hop two to reach thirty. Hop ten to forty. Hop three more."
+    },
+    {
+     "type": "explainer",
+     "title": "Hop across the ten",
+     "scenes": [
+      {
+       "caption": "Start at 28. 15 = 2 + 10 + 3.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 45,
+          "value": 28
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog is on twenty-eight. Fifteen is the same as two, ten and three."
+      },
+      {
+       "caption": "28 + 2 = 30.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 45,
+          "value": 30
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop two. Twenty-eight and two make thirty. Thirty is a friendly ten!"
+      },
+      {
+       "caption": "30 + 10 = 40.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 45,
+          "value": 40
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now hop one whole ten. Thirty to forty."
+      },
+      {
+       "caption": "40 + 3 = 43.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 25,
+          "to": 45,
+          "value": 43
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "28 + 15 = 43"
+        }
+       ],
+       "say": "Last, hop three. Forty-one, forty-two, forty-three. The frog lands on forty-three. It is the same answer!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Mango trays at home",
+     "materials": [
+      "Buttons, pasta shapes or paper circles",
+      "A small bowl for the tray of ten"
+     ],
+     "instructions": [
+      "Count out 36 buttons. How many full trays of ten can you make? How many are loose?",
+      "Now add 17 more buttons.",
+      "Fill up the loose ones to make another ten first.",
+      "How many full trays now? How many loose? What is 36 + 17?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 19 + 14? Split only the 14.",
+      "hint": "19 + 1 makes 20. Then add the rest.",
+      "explanation": "14 is 1 and 13. 19 + 1 = 20 and 20 + 13 = 33.",
+      "skill_tag": "addsub2.split_one",
+      "answer": {
+       "value": 33,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Ones more than 9 make a new ten",
+      "Fill a ten first",
+      "Or keep one number whole and split the other"
+     ],
+     "say": "Remember. When the ones make more than nine, a new ten is born. Fill a ten first, or split just one number."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "ten",
+       "meaning": "A group of 10 things."
+      },
+      {
+       "term": "ten frame",
+       "meaning": "A box with 10 spaces for counters."
+      },
+      {
+       "term": "crossing a ten",
+       "meaning": "When the ones add up to more than 9, so a new ten is made."
+      },
+      {
+       "term": "whole",
+       "meaning": "The complete number, not split."
+      },
+      {
+       "term": "ones",
+       "meaning": "The single ones, like the 8 in 28."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "8 + 7 = 15. That is 1 ten and how many ones?",
+     "hint": "15 is ten and some more.",
+     "explanation": "15 is 1 ten and 5 ones.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which sum makes a new ten in the ones?",
+     "hint": "Add only the ones digits. Is it more than 9?",
+     "explanation": "7 + 5 = 12, so 27 + 15 crosses a ten. The others make 7 and 3 ones.",
+     "options": [
+      {
+       "id": "a",
+       "text": "24 + 13"
+      },
+      {
+       "id": "b",
+       "text": "31 + 42"
+      },
+      {
+       "id": "c",
+       "text": "27 + 15"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 36 + 27?",
+     "hint": "30 + 20 = 50, then 6 + 7 = 13.",
+     "explanation": "50 + 13 = 63.",
+     "answer": {
+      "value": 63,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "In 26 + 17, the ones 6 + 7 make 13.",
+     "hint": "Six and seven.",
+     "explanation": "6 + 7 = 13.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "takeaway",
+   "kind": "play",
+   "title": "Take-away race",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: 63 - 24, split the part",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "To **take away** is to make a number smaller.\n\n63 - 24: take away 20 first, then take away 4.",
+     "say": "Time for a take-away race! Uncle Bilal had sixty-three mangoes. He sold twenty-four. How many are left? To take away means to make a number smaller. Here is the trick. Split only the part you take away."
+    },
+    {
+     "type": "explainer",
+     "title": "63 - 24",
+     "scenes": [
+      {
+       "caption": "63 = 6 tens and 3 ones.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 6,
+          "ones": 3
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Sixty-three is six tens and three ones. We must take away twenty-four."
+      },
+      {
+       "caption": "63 - 20 = 43.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 4,
+          "ones": 3
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "First take away the two tens. Four tens are left."
+      },
+      {
+       "caption": "Start at 43 and take away 4.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 36,
+          "to": 46,
+          "value": 43
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Now take away four more. The frog starts on forty-three."
+      },
+      {
+       "caption": "43 - 3 = 40.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 36,
+          "to": 46,
+          "value": 40
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop back three. That lands on forty. Forty is a friendly ten!"
+      },
+      {
+       "caption": "40 - 1 = 39. 63 - 24 = 39.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 36,
+          "to": 46,
+          "value": 39
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "63 - 24 = 39"
+        }
+       ],
+       "say": "One more to go. Hop back one. Thirty-nine! Zara has thirty-nine mangoes left."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 85 - 32?",
+      "hint": "Take away 30, then take away 2.",
+      "explanation": "85 - 30 = 55 and 55 - 2 = 53.",
+      "skill_tag": "addsub2.subtract_no_cross",
+      "answer": {
+       "value": 53,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Take away across a ten",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "Always start from the big number: 75 - 6.\n\n75 - 5 = 70, then 70 - 1 = 69.",
+     "say": "Careful with the ones! Look at seventy-five take away six. Do not do six take away five. The big number always comes first. Hop back five to reach seventy. Then hop back one more."
+    },
+    {
+     "type": "explainer",
+     "title": "75 - 6",
+     "scenes": [
+      {
+       "caption": "Start at 75. Take away 6.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 65,
+          "to": 75,
+          "value": 75
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog is on seventy-five. We take away six."
+      },
+      {
+       "caption": "75 - 5 = 70.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 65,
+          "to": 75,
+          "value": 70
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop back five. Seventy-five take away five is seventy. That is a friendly ten."
+      },
+      {
+       "caption": "70 - 1 = 69. 75 - 6 = 69.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 65,
+          "to": 75,
+          "value": 69
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "75 - 6 = 69"
+        }
+       ],
+       "say": "We still have one to take away. Hop back one. Sixty-nine!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Mango match",
+     "goal": "Find the matching pairs of fruit.",
+     "emojis": [
+      "🥭",
+      "🍎",
+      "🍌",
+      "🍇",
+      "🍊",
+      "🍉"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "activity",
+     "title": "Take-away race at home",
+     "materials": [
+      "A grown-up or friend",
+      "Paper and a pencil"
+     ],
+     "instructions": [
+      "Write a start number between 50 and 99, like 83.",
+      "Your friend picks a number between 10 and 40 to take away.",
+      "Race to work it out. Say how you split the number.",
+      "Check your answer by adding the part back on."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which first hop makes 52 - 7 easier?",
+      "hint": "Hop to the nearest friendly ten.",
+      "explanation": "52 - 2 = 50, then take away 5 more to make 45.",
+      "skill_tag": "addsub2.subtract_bridge",
+      "options": [
+       {
+        "id": "a",
+        "text": "Forward 2 to reach 54"
+       },
+       {
+        "id": "b",
+        "text": "Do 7 - 2 first"
+       },
+       {
+        "id": "c",
+        "text": "Back 2 to reach 50"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Split the part you take away",
+      "Hop back to a friendly ten",
+      "Always start with the big number"
+     ],
+     "say": "Remember. Split the part you take away. Hop to a friendly ten. Start with the big number."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "take away",
+       "meaning": "To make a number smaller by taking some off."
+      },
+      {
+       "term": "subtract",
+       "meaning": "To take away."
+      },
+      {
+       "term": "part",
+       "meaning": "A piece of the whole."
+      },
+      {
+       "term": "friendly ten",
+       "meaning": "A number like 30, 40 or 50 that is easy to work with."
+      },
+      {
+       "term": "ones",
+       "meaning": "The single ones, like the 3 in 63."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 48 - 5?",
+     "hint": "Only the ones change.",
+     "explanation": "8 - 5 = 3, so 48 - 5 = 43.",
+     "answer": {
+      "value": 43,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 73 - 20?",
+     "hint": "Take away two tens.",
+     "explanation": "7 tens take away 2 tens is 5 tens, so 53.",
+     "answer": {
+      "value": 53,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "75 - 6 = 71.",
+     "hint": "Hop back to 70, then one more.",
+     "explanation": "75 - 5 = 70 and 70 - 1 = 69. So 75 - 6 = 69.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Zara has 62 mangoes and sells 4. Which first step is a good one?",
+     "hint": "Go to the nearest ten.",
+     "explanation": "62 - 2 = 60, then take away 2 more to make 58.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Take 4 from 2"
+      },
+      {
+       "id": "b",
+       "text": "Take 2 to reach 60"
+      },
+      {
+       "id": "c",
+       "text": "Add 4 to 62"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shop",
+   "kind": "use",
+   "title": "Shop and school problems",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Lahore and London",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "**Sold** means take away. 46 - 28 = ?\n\nTake away 20 first, then take away 8.",
+     "say": "Uncle Bilal had forty-six mangoes in the morning. By lunchtime he had sold twenty-eight. How many are left? The word sold tells us to take away. Let's see."
+    },
+    {
+     "type": "explainer",
+     "title": "46 - 28",
+     "scenes": [
+      {
+       "caption": "46 mangoes.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 4,
+          "ones": 6
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Forty-six mangoes. Four tens and six ones."
+      },
+      {
+       "caption": "46 - 20 = 26.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 2,
+          "ones": 6
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Take away twenty. Two tens go. Twenty-six are left."
+      },
+      {
+       "caption": "26 - 8 = 18.",
+       "items": [
+        {
+         "id": "a",
+         "prop": {
+          "kind": "base_ten",
+          "tens": 1,
+          "ones": 8
+         },
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "46 - 28 = 18"
+        }
+       ],
+       "say": "Now take away eight. Take six to reach twenty. Then take two more. Eighteen left!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "emoji": "🍎🍏",
+     "alt": "37 red apples and 26 green apples. 30 + 20 = 50 and 7 + 6 = 13, so 63 apples.",
+     "caption": "37 red apples and 26 green apples. 30 + 20 = 50 and 7 + 6 = 13, so 63 apples.",
+     "say": "Now fly to London! Zara's cousin Hana helps at a corner shop. The shop has thirty-seven red apples and twenty-six green apples. How many apples in all? In all tells us to add. Fifty and thirteen make sixty-three."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A stall has 50 samosas. It sells 27. How many samosas are left?",
+      "hint": "Take away 20, then take away 7.",
+      "explanation": "50 - 20 = 30 and 30 - 7 = 23.",
+      "skill_tag": "addsub2.word_subtract",
+      "answer": {
+       "value": 23,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The missing number story",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "A **missing number** is a number we need to find.\n\n24 + ? = 41. Count up from 24 to 41.",
+     "say": "Zara has twenty-four dates for iftar. Her uncle gives her some more. Now she has forty-one. How many did he give her? We do not know the number. That is the missing number. Count up from twenty-four to forty-one."
+    },
+    {
+     "type": "explainer",
+     "title": "24 + ? = 41",
+     "scenes": [
+      {
+       "caption": "Start at 24. Target 41.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 24,
+          "to": 44,
+          "value": 24
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The frog starts on twenty-four. We want to land on forty-one."
+      },
+      {
+       "caption": "24 + 6 = 30.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 24,
+          "to": 44,
+          "value": 30
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop six to reach thirty. That is the first friendly ten."
+      },
+      {
+       "caption": "30 + 10 = 40, then 40 + 1 = 41.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 24,
+          "to": 44,
+          "value": 41
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hop ten to forty. Then one more to forty-one."
+      },
+      {
+       "caption": "6 + 10 + 1 = 17.",
+       "items": [
+        {
+         "id": "f",
+         "prop": {
+          "kind": "number_line",
+          "from": 24,
+          "to": 44,
+          "value": 41
+         },
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "24 + 17 = 41"
+        }
+       ],
+       "say": "Six, ten and one make seventeen. Uncle gave Zara seventeen dates!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "reveal",
+     "prompt": "Zara checks with a take-away. What is 41 - 24? Have a think first.",
+     "answer_markdown": "17. Adding and taking away are opposites, so 41 - 24 gives the missing number too."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Ali has 19 stickers. He gets some more and now has 32. How many more did he get?",
+      "hint": "Count up from 19 to 32.",
+      "explanation": "19 + 1 = 20 and 20 + 12 = 32, so he got 13 more.",
+      "skill_tag": "addsub2.missing_number",
+      "answer": {
+       "value": 13,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Sold means take away",
+      "In all means add",
+      "Check with the opposite sum"
+     ],
+     "say": "Remember. Sold means take away. In all means add. Check an answer with the opposite sum."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "sold",
+       "meaning": "Given away for money."
+      },
+      {
+       "term": "in all",
+       "meaning": "Altogether, so we add."
+      },
+      {
+       "term": "missing number",
+       "meaning": "A number we need to find."
+      },
+      {
+       "term": "opposite",
+       "meaning": "The sum that goes the other way. Adding is the opposite of taking away."
+      },
+      {
+       "term": "iftar",
+       "meaning": "The meal when Muslims break their fast."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A shop has 45 pens and sells 17. How many pens are left?",
+     "hint": "Take away 10, then 7.",
+     "explanation": "45 - 10 = 35 and 35 - 7 = 28.",
+     "answer": {
+      "value": 28,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "There are 26 red and 38 blue balloons. How many balloons in all?",
+     "hint": "20 + 30 = 50, then 6 + 8 = 14.",
+     "explanation": "50 + 14 = 64.",
+     "answer": {
+      "value": 64,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "In a story, the words 'in all' tell you to...",
+     "hint": "In all means altogether.",
+     "explanation": "In all means altogether, so we add.",
+     "options": [
+      {
+       "id": "a",
+       "text": "take away"
+      },
+      {
+       "id": "b",
+       "text": "do nothing"
+      },
+      {
+       "id": "c",
+       "text": "add"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "If 30 + 14 = 44, then 44 - 14 = 30.",
+     "hint": "Adding and taking away are opposites.",
+     "explanation": "Taking the 14 off again leaves 30.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "fill_blank",
+    "prompt": "Complete the split.",
+    "hint": "The left digit is the tens.",
+    "explanation": "46 is 4 tens and 6 ones.",
+    "skill_tag": "addsub2.partition",
+    "points": 2,
+    "text": "46 is {b1} tens and {b2} ones.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "6"
+       },
+       {
+        "id": "b",
+        "text": "46"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "46"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "In 43 + 25, the tens add up to 60.",
+    "hint": "Use 40 + 20.",
+    "explanation": "4 tens and 2 tens make 6 tens, which is 60.",
+    "skill_tag": "addsub2.add_tens",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Omar says that in 45 + 30 the 5 changes, because you add 30 to the whole number. Is he right?",
+    "hint": "30 is only tens. Which digit does it change?",
+    "explanation": "30 is 3 tens and no ones, so only the tens change. 45 + 30 = 75.",
+    "skill_tag": "addsub2.reason_ones_stay",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the answer is 48"
+     },
+     {
+      "id": "b",
+      "text": "Yes, the answer is 35"
+     },
+     {
+      "id": "c",
+      "text": "No. Only the tens change, so the ones stay as 5: the answer is 75"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "number",
+    "prompt": "What is 43 + 25?",
+    "hint": "Add the tens, then the ones.",
+    "explanation": "40 + 20 = 60 and 3 + 5 = 8, so 68.",
+    "skill_tag": "addsub2.add_no_cross",
+    "answer": {
+     "value": 68,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which numbers have 4 in the tens place? Pick two.",
+    "hint": "The tens digit is on the left.",
+    "explanation": "41 and 47 have 4 tens. In 14 and 24 the 4 is in the ones place.",
+    "skill_tag": "addsub2.tens_vs_ones",
+    "options": [
+     {
+      "id": "a",
+      "text": "14"
+     },
+     {
+      "id": "b",
+      "text": "24"
+     },
+     {
+      "id": "c",
+      "text": "47"
+     },
+     {
+      "id": "d",
+      "text": "41"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "hotspot",
+    "prompt": "Tap the number made of 4 tens and 2 ones.",
+    "hint": "Tens go on the left.",
+    "explanation": "4 tens and 2 ones is 42. 24 is 2 tens and 4 ones.",
+    "skill_tag": "addsub2.base_ten",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧱",
+       "label": "24",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧱",
+       "label": "42",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "40",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put the steps for 34 + 23 in the right order.",
+    "hint": "Split first, put together last.",
+    "explanation": "Split, then add the tens, then add the ones, then join the two answers.",
+    "skill_tag": "addsub2.record_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add the tens: 30 + 20 = 50"
+     },
+     {
+      "id": "i4",
+      "text": "Put them together: 50 + 7 = 57"
+     },
+     {
+      "id": "i3",
+      "text": "Add the ones: 4 + 3 = 7"
+     },
+     {
+      "id": "i1",
+      "text": "Split 34 and 23 into tens and ones"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "slider",
+    "prompt": "Slide to show 41 + 18.",
+    "hint": "40 + 10 = 50 and 1 + 8 = 9.",
+    "explanation": "50 + 9 = 59.",
+    "skill_tag": "addsub2.easy_mix",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 59,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "To work out 28 + 15, first make 30. How much of the 15 goes to the 28?",
+    "hint": "How many more does 28 need to reach 30?",
+    "explanation": "28 + 2 = 30, so 2 of the 15 goes to the 28. Then 13 is left.",
+    "skill_tag": "addsub2.bridge",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "cross",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Layla says you must always add the tens first and you can never add the ones first. Is she right?",
+    "hint": "Try 24 + 13 both ways.",
+    "explanation": "Adding tens first or ones first both give the same total. 24 + 13 = 37 either way.",
+    "skill_tag": "addsub2.reason_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tens must always go first"
+     },
+     {
+      "id": "b",
+      "text": "No. You can add the ones first or the tens first and the total is the same"
+     },
+     {
+      "id": "c",
+      "text": "No, you should never add the tens"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Complete the sum.",
+    "hint": "15 is one ten and some ones.",
+    "explanation": "8 + 7 = 15, which is 1 ten and 5 ones.",
+    "skill_tag": "addsub2.ones_over_nine",
+    "points": 3,
+    "text": "In 38 + 27, 8 + 7 = {b1}. That is {b2} ten and {b3} ones.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "14"
+       },
+       {
+        "id": "b",
+        "text": "16"
+       },
+       {
+        "id": "c",
+        "text": "15"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b3",
+      "options": [
+       {
+        "id": "a",
+        "text": "15"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c",
+     "b3": "b"
+    },
+    "sub_lesson": "cross",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "match",
+    "prompt": "Match each sum to its answer.",
+    "hint": "Make a ten first.",
+    "explanation": "26 + 17 = 43, 38 + 25 = 63 and 19 + 34 = 53.",
+    "skill_tag": "addsub2.cross_sums",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "26 + 17"
+     },
+     {
+      "id": "l2",
+      "text": "38 + 25"
+     },
+     {
+      "id": "l3",
+      "text": "19 + 34"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "53"
+     },
+     {
+      "id": "r1",
+      "text": "43"
+     },
+     {
+      "id": "r2",
+      "text": "63"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "cross",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A frog starts on 28. It hops 2, then 10, then 3. Slide to where it lands.",
+    "hint": "28 + 2 = 30. Then 30 + 10. Then 3 more.",
+    "explanation": "28 + 2 = 30, 30 + 10 = 40 and 40 + 3 = 43.",
+    "skill_tag": "addsub2.number_line_hops",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 43,
+     "tolerance": 0
+    },
+    "sub_lesson": "cross",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "28 + 15 gives the same answer as 15 + 28.",
+    "hint": "Try swapping the order.",
+    "explanation": "You can add in any order. Both are 43.",
+    "skill_tag": "addsub2.swap_check",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "cross",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Aisha works out 38 + 27. She does 30 + 20 = 50 and 8 + 7 = 15, then says the answer is 55. What went wrong?",
+    "hint": "What is 50 + 15?",
+    "explanation": "She should add all of the 15 to the 50. 50 + 15 = 65.",
+    "skill_tag": "addsub2.reason_extra_ten",
+    "options": [
+     {
+      "id": "a",
+      "text": "She should have said the answer is 15"
+     },
+     {
+      "id": "b",
+      "text": "The 15 is one ten and 5 ones, so she forgot the extra ten: 50 + 15 = 65"
+     },
+     {
+      "id": "c",
+      "text": "Nothing went wrong. 55 is right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 29 + 4 = 24 because he did 20 + 4. Is he right?",
+    "hint": "What happened to the 9?",
+    "explanation": "He forgot the 9 ones. 29 + 4 = 33.",
+    "skill_tag": "addsub2.reason_digits",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 24 is right"
+     },
+     {
+      "id": "b",
+      "text": "No. He left out the 9. 29 + 1 = 30 and 30 + 3 = 33"
+     },
+     {
+      "id": "c",
+      "text": "No, the answer is 25"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "What is 78 - 35?",
+    "hint": "Take away the tens, then the ones.",
+    "explanation": "78 - 30 = 48 and 48 - 5 = 43.",
+    "skill_tag": "addsub2.subtract_no_cross",
+    "answer": {
+     "value": 43,
+     "tolerance": 0
+    },
+    "sub_lesson": "takeaway",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "hotspot",
+    "prompt": "Tap the take-away that needs you to cross a ten.",
+    "hint": "Can you take the ones digit from the ones digit?",
+    "explanation": "In 72 - 38 you cannot take 8 from 2, so you cross a ten. In the others the ones fit.",
+    "skill_tag": "addsub2.subtract_cross",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧮",
+       "label": "68 - 23",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "72 - 38",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧮",
+       "label": "59 - 14",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Sam says 74 - 36 = 42 because 6 - 4 = 2 in the ones. Is he right?",
+    "hint": "Start with the big number: 74 take away 36.",
+    "explanation": "He turned the ones around. 74 - 30 = 44 and 44 - 6 = 38.",
+    "skill_tag": "addsub2.reason_flip",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, take the small digit from the big digit"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 48"
+     },
+     {
+      "id": "c",
+      "text": "No. You cannot take 6 from 4, so you cross a ten: 74 - 36 = 38"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Mira says 60 - 1 = 69 because you cannot take 1 from 0, so she swaps them. Is she right?",
+    "hint": "What is one less than 60?",
+    "explanation": "60 - 1 = 59, which is one less than 60.",
+    "skill_tag": "addsub2.reason_one_less",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 69 is right"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 61"
+     },
+     {
+      "id": "c",
+      "text": "No. Taking 1 from 60 gives one less: 59"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Ali says that in 74 - 36 you can take away the 6 first and then the 30, and get the same answer as taking the 30 first. Is he right?",
+    "hint": "Try both: 74 - 6 and 74 - 30.",
+    "explanation": "74 - 6 = 68 and 68 - 30 = 38. 74 - 30 = 44 and 44 - 6 = 38. Same answer.",
+    "skill_tag": "addsub2.reason_any_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, tens must always come first"
+     },
+     {
+      "id": "b",
+      "text": "No, the ones must always come first"
+     },
+     {
+      "id": "c",
+      "text": "Yes. You can take away tens and ones in any order and the answer is the same"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put the steps for 63 - 28 in the right order.",
+    "hint": "Tens first, then hop to the friendly ten.",
+    "explanation": "20 + 3 + 5 = 28, so the hops are 43, then 40, then 35.",
+    "skill_tag": "addsub2.subtract_hops",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Take away 3 to reach 40: 43 - 3 = 40"
+     },
+     {
+      "id": "i1",
+      "text": "Take away 20: 63 - 20 = 43"
+     },
+     {
+      "id": "i3",
+      "text": "Take away 5 more: 40 - 5 = 35"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "match",
+    "prompt": "Match each missing part to its number.",
+    "hint": "Count up from the small number, or take away.",
+    "explanation": "47 - 29 = 18, 61 - 38 = 23 and 50 - 36 = 14.",
+    "skill_tag": "addsub2.missing_part",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "47 - ? = 29"
+     },
+     {
+      "id": "l2",
+      "text": "61 - ? = 38"
+     },
+     {
+      "id": "l3",
+      "text": "50 - ? = 36"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "23"
+     },
+     {
+      "id": "r3",
+      "text": "14"
+     },
+     {
+      "id": "r1",
+      "text": "18"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "takeaway",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "number",
+    "prompt": "Uncle Bilal has 34 green mangoes and 29 yellow mangoes. How many mangoes does he have?",
+    "hint": "In all means add.",
+    "explanation": "30 + 20 = 50 and 4 + 9 = 13, so 63.",
+    "skill_tag": "addsub2.word_add",
+    "answer": {
+     "value": 63,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A stall has 82 mangoes. It sells 37. How many mangoes are left?",
+    "hint": "Sold means take away.",
+    "explanation": "82 - 30 = 52 and 52 - 7 = 45.",
+    "skill_tag": "addsub2.word_subtract",
+    "answer": {
+     "value": 45,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "number",
+    "prompt": "Zara has 25 dates. Her uncle gives her 18 more. At iftar she eats 9. How many dates does she have left?",
+    "hint": "Add first. Then take away.",
+    "explanation": "25 + 18 = 43. Then 43 - 9 = 34.",
+    "skill_tag": "addsub2.two_step",
+    "answer": {
+     "value": 34,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "A bar shows a whole of 75, split into two parts. One part is 36. Which sum finds the other part?",
+    "hint": "Whole take away the part you know.",
+    "explanation": "To find a missing part, take the known part away from the whole: 75 - 36 = 39.",
+    "skill_tag": "addsub2.bar_model",
+    "options": [
+     {
+      "id": "a",
+      "text": "36 - 75"
+     },
+     {
+      "id": "b",
+      "text": "75 - 36"
+     },
+     {
+      "id": "c",
+      "text": "75 + 36"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Fill in the gaps.",
+    "hint": "Count up from 24 to 41.",
+    "explanation": "24 + 17 = 41, and the opposite sum 41 - 24 = 17.",
+    "skill_tag": "addsub2.missing_sentence",
+    "points": 2,
+    "text": "24 + {b1} = 41, so 41 - 24 = {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "27"
+       },
+       {
+        "id": "b",
+        "text": "17"
+       },
+       {
+        "id": "c",
+        "text": "18"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "18"
+       },
+       {
+        "id": "b",
+        "text": "17"
+       },
+       {
+        "id": "c",
+        "text": "27"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multi_select",
+    "prompt": "Which two stories match 36 + 25? Pick two.",
+    "hint": "Look for the stories where there are more at the end.",
+    "explanation": "36 + 25 means putting groups together. The other two stories take away.",
+    "skill_tag": "addsub2.own_problem",
+    "options": [
+     {
+      "id": "a",
+      "text": "A shop has 36 pens and sells 25. How many are left?"
+     },
+     {
+      "id": "b",
+      "text": "Zara has 36 dates and eats 25. How many are left?"
+     },
+     {
+      "id": "c",
+      "text": "A shop has 36 pens and gets 25 more pens. How many pens now?"
+     },
+     {
+      "id": "d",
+      "text": "Zara has 36 dates and gets 25 more. How many now?"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "shop",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Zainab says 50 - 27 = 23. She did 50 - 30 = 20 and then added 3 back. Why did she add 3?",
+    "hint": "Is 30 bigger or smaller than 27?",
+    "explanation": "30 is 3 more than 27, so she took away too much. Adding 3 back fixes it: 20 + 3 = 23.",
+    "skill_tag": "addsub2.reason_inverse",
+    "options": [
+     {
+      "id": "a",
+      "text": "Because 3 is the tens digit in 30"
+     },
+     {
+      "id": "b",
+      "text": "She took away 30, which is 3 more than 27, so she gave 3 back"
+     },
+     {
+      "id": "c",
+      "text": "She should not have added. A take-away never adds"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shop",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "fill_blank",
+    "prompt": "Finish the split.",
+    "hint": "The left digit is the tens.",
+    "explanation": "52 is 5 tens and 2 ones.",
+    "skill_tag": "addsub2.partition",
+    "points": 2,
+    "text": "52 is {b1} tens and {b2} ones.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "In 52 + 36, the tens add up to 70.",
+    "hint": "Use 50 + 30.",
+    "explanation": "5 tens and 3 tens make 8 tens, which is 80, not 70.",
+    "skill_tag": "addsub2.add_tens",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Ben says that in 52 + 40 the 2 changes, because you add 40 to the whole number. Is he right?",
+    "hint": "40 is only tens. Which digit does it change?",
+    "explanation": "40 is 4 tens and no ones, so only the tens change. 52 + 40 = 92.",
+    "skill_tag": "addsub2.reason_ones_stay",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the answer is 56"
+     },
+     {
+      "id": "b",
+      "text": "No. Only the tens change, so the ones stay as 2: the answer is 92"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the answer is 42"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "number",
+    "prompt": "What is 52 + 36?",
+    "hint": "Add the tens, then the ones.",
+    "explanation": "50 + 30 = 80 and 2 + 6 = 8, so 88.",
+    "skill_tag": "addsub2.add_no_cross",
+    "answer": {
+     "value": 88,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which numbers have 6 tens? Pick two.",
+    "hint": "The tens digit is on the left.",
+    "explanation": "63 and 68 have 6 tens. In 36 and 46 the 6 is in the ones place.",
+    "skill_tag": "addsub2.tens_vs_ones",
+    "options": [
+     {
+      "id": "a",
+      "text": "36"
+     },
+     {
+      "id": "b",
+      "text": "46"
+     },
+     {
+      "id": "c",
+      "text": "68"
+     },
+     {
+      "id": "d",
+      "text": "63"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "hotspot",
+    "prompt": "Tap the number made of 6 tens and 3 ones.",
+    "hint": "Tens go on the left.",
+    "explanation": "6 tens and 3 ones is 63. 36 is 3 tens and 6 ones.",
+    "skill_tag": "addsub2.base_ten",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧱",
+       "label": "36",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧱",
+       "label": "60",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "63",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Put the steps for 45 + 32 in the right order.",
+    "hint": "Split first, put together last.",
+    "explanation": "Split, then add the tens, then add the ones, then join the two answers.",
+    "skill_tag": "addsub2.record_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add the ones: 5 + 2 = 7"
+     },
+     {
+      "id": "i4",
+      "text": "Put them together: 70 + 7 = 77"
+     },
+     {
+      "id": "i2",
+      "text": "Add the tens: 40 + 30 = 70"
+     },
+     {
+      "id": "i1",
+      "text": "Split 45 and 32 into tens and ones"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "slider",
+    "prompt": "Slide to show 52 + 17.",
+    "hint": "50 + 10 = 60 and 2 + 7 = 9.",
+    "explanation": "60 + 9 = 69.",
+    "skill_tag": "addsub2.easy_mix",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 69,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "To work out 57 + 16, first make 60. How much of the 16 goes to the 57?",
+    "hint": "How many more does 57 need to reach 60?",
+    "explanation": "57 + 3 = 60, so 3 of the 16 goes to the 57. Then 13 is left.",
+    "skill_tag": "addsub2.bridge",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "cross",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Sam says you must always add the ones first and never the tens first. Is he right?",
+    "hint": "Try 32 + 15 both ways.",
+    "explanation": "Adding ones first or tens first both give the same total. 32 + 15 = 47 either way.",
+    "skill_tag": "addsub2.reason_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, ones must always go first"
+     },
+     {
+      "id": "b",
+      "text": "No. You can add the tens first or the ones first and the total is the same"
+     },
+     {
+      "id": "c",
+      "text": "No, you should never add the ones"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Finish the sum.",
+    "hint": "13 is one ten and some ones.",
+    "explanation": "6 + 7 = 13, which is 1 ten and 3 ones.",
+    "skill_tag": "addsub2.ones_over_nine",
+    "points": 3,
+    "text": "In 36 + 27, 6 + 7 = {b1}. That is {b2} ten and {b3} ones.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "14"
+       },
+       {
+        "id": "b",
+        "text": "13"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b3",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "13"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c",
+     "b3": "b"
+    },
+    "sub_lesson": "cross",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "match",
+    "prompt": "Join each sum to its answer.",
+    "hint": "Make a ten first.",
+    "explanation": "44 + 19 = 63, 35 + 17 = 52 and 28 + 36 = 64.",
+    "skill_tag": "addsub2.cross_sums",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "44 + 19"
+     },
+     {
+      "id": "l2",
+      "text": "35 + 17"
+     },
+     {
+      "id": "l3",
+      "text": "28 + 36"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "52"
+     },
+     {
+      "id": "r3",
+      "text": "64"
+     },
+     {
+      "id": "r1",
+      "text": "63"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "cross",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A frog starts on 37. It hops 3, then 10, then 4. Slide to where it lands.",
+    "hint": "37 + 3 = 40. Then 40 + 10. Then 4 more.",
+    "explanation": "37 + 3 = 40, 40 + 10 = 50 and 50 + 4 = 54.",
+    "skill_tag": "addsub2.number_line_hops",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 54,
+     "tolerance": 0
+    },
+    "sub_lesson": "cross",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "36 + 27 gives a different answer from 27 + 36.",
+    "hint": "Try swapping the order.",
+    "explanation": "You can add in any order. Both are 63.",
+    "skill_tag": "addsub2.swap_check",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "cross",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Nora works out 47 + 26. She does 40 + 20 = 60 and 7 + 6 = 13, then says the answer is 63. What went wrong?",
+    "hint": "What is 60 + 13?",
+    "explanation": "She should add all of the 13 to the 60. 60 + 13 = 73.",
+    "skill_tag": "addsub2.reason_extra_ten",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing went wrong. 63 is right"
+     },
+     {
+      "id": "b",
+      "text": "She should have said the answer is 13"
+     },
+     {
+      "id": "c",
+      "text": "The 13 is one ten and 3 ones, so she forgot the extra ten: 60 + 13 = 73"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Mina says 39 + 5 = 34 because she did 30 + 4. Is she right?",
+    "hint": "What happened to the 9?",
+    "explanation": "She forgot the 9 ones. 39 + 5 = 44.",
+    "skill_tag": "addsub2.reason_digits",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 34 is right"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 35"
+     },
+     {
+      "id": "c",
+      "text": "No. She left out the 9. 39 + 1 = 40 and 40 + 4 = 44"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "cross",
+    "depth": "reason",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "What is 86 - 24?",
+    "hint": "Take away the tens, then the ones.",
+    "explanation": "86 - 20 = 66 and 66 - 4 = 62.",
+    "skill_tag": "addsub2.subtract_no_cross",
+    "answer": {
+     "value": 62,
+     "tolerance": 0
+    },
+    "sub_lesson": "takeaway",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "hotspot",
+    "prompt": "Tap the sum where you must cross a ten.",
+    "hint": "Can you take the ones digit from the ones digit?",
+    "explanation": "In 55 - 29 you cannot take 9 from 5, so you cross a ten. In the others the ones fit.",
+    "skill_tag": "addsub2.subtract_cross",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧮",
+       "label": "86 - 41",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "55 - 29",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧮",
+       "label": "97 - 62",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Nora says 83 - 47 = 44 because 7 - 3 = 4 in the ones. Is she right?",
+    "hint": "Start with the big number: 83 take away 47.",
+    "explanation": "She turned the ones around. 83 - 40 = 43 and 43 - 7 = 36.",
+    "skill_tag": "addsub2.reason_flip",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, take the small digit from the big digit"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 46"
+     },
+     {
+      "id": "c",
+      "text": "No. You cannot take 7 from 3, so you cross a ten: 83 - 47 = 36"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Zain says 50 - 1 = 59 because you cannot take 1 from 0, so he swaps them. Is he right?",
+    "hint": "What is one less than 50?",
+    "explanation": "50 - 1 = 49, which is one less than 50.",
+    "skill_tag": "addsub2.reason_one_less",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 59 is right"
+     },
+     {
+      "id": "b",
+      "text": "No. Taking 1 from 50 gives one less: 49"
+     },
+     {
+      "id": "c",
+      "text": "No, the answer is 51"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Hana says that in 85 - 27 you can take away the 7 first and then the 20, and get the same answer as taking the 20 first. Is she right?",
+    "hint": "Try both: 85 - 7 and 85 - 20.",
+    "explanation": "85 - 7 = 78 and 78 - 20 = 58. 85 - 20 = 65 and 65 - 7 = 58. Same answer.",
+    "skill_tag": "addsub2.reason_any_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the ones must always come first"
+     },
+     {
+      "id": "b",
+      "text": "Yes. You can take away tens and ones in any order and the answer is the same"
+     },
+     {
+      "id": "c",
+      "text": "No, tens must always come first"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Put the steps for 74 - 36 in the right order.",
+    "hint": "Tens first, then hop to the friendly ten.",
+    "explanation": "30 + 4 + 2 = 36, so the hops are 44, then 40, then 38.",
+    "skill_tag": "addsub2.subtract_hops",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Take away 4 to reach 40: 44 - 4 = 40"
+     },
+     {
+      "id": "i3",
+      "text": "Take away 2 more: 40 - 2 = 38"
+     },
+     {
+      "id": "i1",
+      "text": "Take away 30: 74 - 30 = 44"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "takeaway",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "match",
+    "prompt": "Join each missing part to its number.",
+    "hint": "Count up from the small number, or take away.",
+    "explanation": "72 - 49 = 23, 80 - 66 = 14 and 55 - 37 = 18.",
+    "skill_tag": "addsub2.missing_part",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "72 - ? = 49"
+     },
+     {
+      "id": "l2",
+      "text": "80 - ? = 66"
+     },
+     {
+      "id": "l3",
+      "text": "55 - ? = 37"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "18"
+     },
+     {
+      "id": "r1",
+      "text": "23"
+     },
+     {
+      "id": "r2",
+      "text": "14"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "takeaway",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "number",
+    "prompt": "Hana's shop has 56 red pens and 27 blue pens. How many pens does it have?",
+    "hint": "In all means add.",
+    "explanation": "50 + 20 = 70 and 6 + 7 = 13, so 83.",
+    "skill_tag": "addsub2.word_add",
+    "answer": {
+     "value": 83,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A shop has 64 apples. It sells 37. How many apples are left?",
+    "hint": "Sold means take away.",
+    "explanation": "64 - 30 = 34 and 34 - 7 = 27.",
+    "skill_tag": "addsub2.word_subtract",
+    "answer": {
+     "value": 27,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "number",
+    "prompt": "Omar has 36 stickers. He gets 27 more. Then he gives 15 away. How many stickers does he have left?",
+    "hint": "Add first. Then take away.",
+    "explanation": "36 + 27 = 63. Then 63 - 15 = 48.",
+    "skill_tag": "addsub2.two_step",
+    "answer": {
+     "value": 48,
+     "tolerance": 0
+    },
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "A bar shows a whole of 82, split into two parts. One part is 47. Which sum finds the other part?",
+    "hint": "Whole take away the part you know.",
+    "explanation": "To find a missing part, take the known part away from the whole: 82 - 47 = 35.",
+    "skill_tag": "addsub2.bar_model",
+    "options": [
+     {
+      "id": "a",
+      "text": "82 + 47"
+     },
+     {
+      "id": "b",
+      "text": "47 - 82"
+     },
+     {
+      "id": "c",
+      "text": "82 - 47"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Fill in the missing numbers.",
+    "hint": "Count up from 38 to 62.",
+    "explanation": "38 + 24 = 62, and the opposite sum 62 - 38 = 24.",
+    "skill_tag": "addsub2.missing_sentence",
+    "points": 2,
+    "text": "38 + {b1} = 62, so 62 - 38 = {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "34"
+       },
+       {
+        "id": "b",
+        "text": "24"
+       },
+       {
+        "id": "c",
+        "text": "23"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "34"
+       },
+       {
+        "id": "b",
+        "text": "23"
+       },
+       {
+        "id": "c",
+        "text": "24"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multi_select",
+    "prompt": "Which two stories match 60 - 24? Pick two.",
+    "hint": "Look for the stories where there are fewer at the end.",
+    "explanation": "60 - 24 means taking away. The other two stories add.",
+    "skill_tag": "addsub2.own_problem",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ali has 60 stickers and gives 24 away. How many are left?"
+     },
+     {
+      "id": "b",
+      "text": "A tray has 60 samosas and 24 more arrive. How many now?"
+     },
+     {
+      "id": "c",
+      "text": "Ali has 24 stickers and gets 60 more. How many now?"
+     },
+     {
+      "id": "d",
+      "text": "A tray has 60 samosas and 24 are eaten. How many are left?"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "shop",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 60 - 28 = 32. He did 60 - 30 = 30 and then added 2 back. Why did he add 2?",
+    "hint": "Is 30 bigger or smaller than 28?",
+    "explanation": "30 is 2 more than 28, so he took away too much. Adding 2 back fixes it: 30 + 2 = 32.",
+    "skill_tag": "addsub2.reason_inverse",
+    "options": [
+     {
+      "id": "a",
+      "text": "He should not have added. A take-away never adds"
+     },
+     {
+      "id": "b",
+      "text": "He took away 30, which is 2 more than 28, so he gave 2 back"
+     },
+     {
+      "id": "c",
+      "text": "Because 2 is the tens digit in 28"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shop",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

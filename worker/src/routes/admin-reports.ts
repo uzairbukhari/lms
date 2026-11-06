@@ -163,7 +163,7 @@ adminReportRoutes.get("/reports/students/:id/export.csv", async (c) => {
   if (!user) return fail(c, 404, "not_found");
   const { results } = await c.env.DB
     .prepare(
-      `SELECT a.submitted_at, COALESCE(l.title, 'Semester ' || z.semester || ' exam') AS what, z.kind, a.attempt_number, a.mode, a.score, a.max_score, a.percent, a.passed, a.duration_sec
+      `SELECT a.submitted_at, COALESCE(l.title, CASE WHEN z.semester IS NULL THEN 'Grand quiz' ELSE 'Semester ' || z.semester || ' exam' END) AS what, z.kind, a.attempt_number, a.mode, a.score, a.max_score, a.percent, a.passed, a.duration_sec
          FROM quiz_attempts a JOIN quizzes z ON z.id = a.quiz_id LEFT JOIN lessons l ON l.id = a.lesson_id
         WHERE a.user_id = ? AND a.status = 'submitted' ORDER BY a.submitted_at`,
     )

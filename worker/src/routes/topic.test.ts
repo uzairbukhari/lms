@@ -109,6 +109,7 @@ describe("a child working through a topic", () => {
 
   it("sends the child back to the sub-lessons they got wrong in a failed big quiz", async () => {
     const start = await json(await call(`/api/lessons/${lessonId}/quiz/start`, { method: "POST", body: {}, cookie }));
+    expect(start.ageBand).toMatch(/^[0-9]+-[0-9]+$/); // so the app can size the quiz rounds
     const answers: Record<string, unknown> = {};
     for (const q of start.questions as { id: string }[]) answers[q.id] = ["b"]; // all wrong
     await call(`/api/quiz/attempts/${start.attemptId}/submit`, { body: { answers }, cookie });

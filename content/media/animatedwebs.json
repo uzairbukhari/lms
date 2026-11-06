@@ -1,0 +1,14 @@
+{
+  "note": "Log of every AnimatedWebs component used. Components are ported to React and CSS in apps/web/src/anim/rewards/; nothing is embedded from AnimatedWebs at run time.",
+  "components": [
+    {
+      "id": "quiz-celebration-reference-1",
+      "tool": "generate_component",
+      "prompt": "A joyful quiz-complete celebration for young children: golden trophy bounces in, three stars pop one by one, confetti star burst, pure CSS and SVG, reduced motion respected.",
+      "generated_at": "2026-11-07",
+      "plan": "free (5 a day, 4 left after this)",
+      "used_for": "apps/web/src/anim/rewards/QuizCelebration.tsx and RewardBurst.tsx",
+      "how_used": "Sequencing reference only: trophy bounce-in about 0.8 s, stars popping in a 0.2 s stagger, confetti burst driven by CSS variables for direction and distance. The output itself was not embedded: it was an adult dark and gold page that loads the Tailwind CDN and Google Fonts. The components were written in our own React, SVG and CSS with theme tokens and calm mode."
+    }
+  ]
+}

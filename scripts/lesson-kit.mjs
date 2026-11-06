@@ -6,6 +6,8 @@
 export const H = (text) => ({ type: "heading", text });
 export const T = (...paras) => ({ type: "text", markdown: paras.join("\n\n") });
 export const IMG = (emoji, caption, alt) => ({ type: "image", emoji, alt: alt ?? caption, caption });
+/** A real photo or diagram uploaded as an asset (see content/media/README.md). Use it as SAY("narration", PHOTO(...)). The credit is required for Unsplash photos, e.g. "Photo by Ada Lovelace on Unsplash". */
+export const PHOTO = (asset, alt, caption, credit) => ({ type: "image", asset, alt, ...(caption ? { caption } : {}), ...(credit ? { credit } : {}) });
 export const TIP = (markdown) => ({ type: "callout", style: "tip", markdown });
 export const FACT = (markdown) => ({ type: "callout", style: "fun_fact", markdown });
 export const WARN = (markdown) => ({ type: "callout", style: "warning", markdown });
@@ -114,7 +116,7 @@ export const sld = (prompt, range, value, tol, o) => ({ type: "slider", ...commo
 
 // --- lessons --------------------------------------------------------------------------------------
 const SUBJECT_COURSE = { maths: "maths", science: "science", "data-ai": "data-ai", "general-knowledge": "general-knowledge", english: "english" };
-const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "brain_game", "html_embed"]);
+const VISUAL = new Set(["image", "chart", "explainer", "manipulative", "video", "clip", "brain_game", "html_embed"]);
 
 export function lesson(spec) {
   const { slug, subject, cls, week, title, summary, difficulty, unit, objectives, tags = [], blocks, quiz, pass = 70, shuffleQuestions = true } = spec;

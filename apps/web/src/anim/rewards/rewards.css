@@ -1,0 +1,36 @@
+/* Reward celebrations. Only transform and opacity are animated. Calm mode and "reduce motion" show the finished picture, still. */
+
+.rb { position: absolute; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; z-index: 0; }
+.rb-piece { position: absolute; left: 0; top: 0; width: 22px; height: 22px; margin: -11px 0 0 -11px; opacity: 0.9; transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(var(--s, 1)); animation: rb-fly 1.5s cubic-bezier(.2,.8,.3,1) var(--delay, 0s) both; }
+.rb-piece svg { display: block; width: 100%; height: 100%; }
+@keyframes rb-fly {
+  0% { transform: translate(0, 0) rotate(0deg) scale(0); opacity: 0; }
+  15% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(var(--s, 1)); opacity: 0.9; }
+}
+
+.qc-wrap { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; isolation: isolate; }
+.qc-stage { position: relative; display: flex; align-items: center; justify-content: center; width: var(--qc-size, 150px); height: var(--qc-size, 150px); }
+.qc-trophy { position: relative; z-index: 1; width: 100%; height: 100%; transform-origin: 50% 90%; animation: qc-bounce 1.1s cubic-bezier(.3,1.5,.5,1) both, qc-sway 3.2s ease-in-out 1.2s infinite; }
+.qc-sparkle { position: absolute; z-index: 2; width: 26px; height: 26px; opacity: 0; transform: scale(0.4); animation: qc-twinkle 2.2s ease-in-out var(--delay, 0s) infinite; }
+.qc-sparkle svg { display: block; width: 100%; height: 100%; }
+.qc-stars { display: flex; gap: 0.35rem; }
+.qc-star { display: block; transform-origin: center; animation: qc-pop 0.6s cubic-bezier(.3,1.6,.5,1) var(--delay, 0s) both; }
+@keyframes qc-bounce {
+  0% { transform: translateY(-60%) scale(0.5); opacity: 0; }
+  45% { transform: translateY(6%) scale(1.08, 0.94); opacity: 1; }
+  70% { transform: translateY(-8%) scale(0.98, 1.04); }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes qc-sway { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@keyframes qc-twinkle { 0%, 100% { opacity: 0; transform: scale(0.4); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes qc-pop { 0% { transform: scale(0); opacity: 0; } 100% { transform: none; opacity: 1; } }
+
+/* Calm mode and reduce motion: no movement at all, everything already in its final place. */
+[data-calm] .rb-piece, [data-calm] .qc-trophy, [data-calm] .qc-star { animation: none !important; }
+[data-calm] .qc-sparkle { animation: none !important; opacity: 0.9; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rb-piece, .qc-trophy, .qc-star { animation: none !important; }
+  .qc-sparkle { animation: none !important; opacity: 0.9; transform: none; }
+}

@@ -45,6 +45,10 @@ describe("service token (Claude importing lessons)", () => {
     expect(automationMayCall("POST", "/api/admin/lessons/import")).toBe(true);
     expect(automationMayCall("GET", "/api/admin/lessons")).toBe(true);
     expect(automationMayCall("POST", "/api/admin/assets")).toBe(true);
+    expect(automationMayCall("POST", "/api/admin/voice/prewarm")).toBe(true);
+    expect(automationMayCall("GET", "/api/admin/voice/prewarm")).toBe(false);
+    expect(automationMayCall("GET", "/api/admin/voice/audio")).toBe(true);
+    expect(automationMayCall("POST", "/api/admin/voice/audio")).toBe(false);
     expect(automationMayCall("GET", "/api/admin/students")).toBe(false);
     expect(automationMayCall("POST", "/api/admin/classes")).toBe(false);
     expect(automationMayCall("PATCH", "/api/admin/lessons/x")).toBe(false);

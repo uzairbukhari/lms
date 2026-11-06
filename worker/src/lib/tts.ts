@@ -1,4 +1,5 @@
 import type { Context } from "hono";
+import { sentences } from "@lms/schema";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { parseBody } from "./http";
@@ -13,7 +14,7 @@ import { todayIn } from "./visibility";
 
 export const TTS_MODEL = "@cf/deepgram/aura-1";
 /** Stored audio is kept per model, so changing the model never mixes voices: audio made with another model stays in R2 untouched. */
-const MODEL_DIR = TTS_MODEL.split("/").pop();
+export const MODEL_DIR =TTS_MODEL.split("/").pop();
 /** A warm, friendly voice for young children. Other good ones: "thalia", "aurora", "iris", "helena". */
 export const TTS_VOICE = "luna";
 /** New sentences a child can have voiced per day. Cached sentences are free and do not count. */
@@ -21,12 +22,67 @@ const DAILY_CAP = 300;
 
 const bodySchema = z.object({ text: z.string().trim().min(1).max(600) });
 
+/** How narration splits text into sentences (one voice clip each). One shared function (@lms/schema) used by the app, this Worker and the clip pipeline. */
+export { sentences };
+
+/** Where the audio for one sentence lives in R2. Children and the prewarm route share this key, so prewarmed audio is a cache hit. */
+export async function ttsKey(text: string): Promise<string> {
+  return `tts/v1/${MODEL_DIR}/${TTS_VOICE}/${await sha(text)}.mp3`;
+}
+
+/** Generate the audio for one sentence and keep it in R2. Records the usage. Throws when the model fails. The caller checks the budget first. */
+async function generateAndStore(c: Context<AppEnv>, key: string, text: string, userId: string | null): Promise<ArrayBuffer> {
+  const res = (await c.env.AI!.run(TTS_MODEL, { text, speaker: TTS_VOICE, encoding: "mp3" }, { returnRawResponse: true })) as unknown as Response;
+  const audio = await res.arrayBuffer();
+  if (!res.ok || audio.byteLength < 100) throw new Error(`tts failed: ${res.status}`);
+  await recordUsage(c.env.DB, { kind: "narration", model: TTS_MODEL, userId: userId ?? undefined, characters: text.length });
+  await c.env.ASSETS_BUCKET.put(key, audio, { httpMetadata: { contentType: "audio/mpeg" } });
+  return audio;
+}
+
+const prewarmSchema = z.object({ texts: z.array(z.string().trim().min(1).max(600)).min(1).max(100) });
+
+/**
+ * POST { texts } (admin / automation): make sure every sentence of every text has stored audio. Sentences already in R2 are
+ * skipped, new ones are generated until the day's AI ceiling is reached, and the rest are reported as deferred (run again
+ * after the budget resets). The per-child daily cap does not apply.
+ */
+export async function prewarm(c: Context<AppEnv>): Promise<Response> {
+  const { texts } = await parseBody(c, prewarmSchema);
+  const unique = [...new Set(texts.flatMap(sentences))];
+  let generated = 0;
+  let skipped = 0;
+  let deferred = 0;
+  let failed = 0;
+  let stopped = !c.env.AI;
+  for (const text of unique) {
+    const key = await ttsKey(text);
+    if (await c.env.ASSETS_BUCKET.head(key)) {
+      skipped++;
+      continue;
+    }
+    if (!stopped && !(await canSpend(c.env.DB, neuronsFor(TTS_MODEL, { characters: text.length })))) stopped = true;
+    if (stopped) {
+      deferred++;
+      continue;
+    }
+    try {
+      await generateAndStore(c, key, text, null);
+      generated++;
+    } catch (err) {
+      console.error(err);
+      failed++;
+    }
+  }
+  return c.json({ generated, skipped, deferred, failed, total: unique.length });
+}
+
 /** POST { text } and get back MP3 audio, or 503 when the voice is not available (the app then uses the device voice). */
 export async function narrate(c: Context<AppEnv>): Promise<Response> {
   // The parent's test student never uses the voice service, not even stored audio (the app stays silent for it).
   if ((c.var.user as AppEnv["Variables"]["user"] | undefined)?.isTest) return c.json({ error: "voice_unavailable" }, 503);
   const { text } = await parseBody(c, bodySchema);
-  const key = `tts/v1/${MODEL_DIR}/${TTS_VOICE}/${await sha(text)}.mp3`;
+  const key = await ttsKey(text);
   const headers = { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=604800" };
 
   const cached = await c.env.ASSETS_BUCKET.get(key);
@@ -41,14 +97,21 @@ export async function narrate(c: Context<AppEnv>): Promise<Response> {
   }
 
   try {
-    const res = (await c.env.AI.run(TTS_MODEL, { text, speaker: TTS_VOICE, encoding: "mp3" }, { returnRawResponse: true })) as unknown as Response;
-    const audio = await res.arrayBuffer();
-    if (!res.ok || audio.byteLength < 100) throw new Error(`tts failed: ${res.status}`);
-    await recordUsage(c.env.DB, { kind: "narration", model: TTS_MODEL, userId: user?.id, characters: text.length });
-    await c.env.ASSETS_BUCKET.put(key, audio, { httpMetadata: { contentType: "audio/mpeg" } });
-    return new Response(audio, { headers });
+    return new Response(await generateAndStore(c, key, text, user?.id ?? null), { headers });
   } catch (err) {
     console.error(err);
     return c.json({ error: "voice_unavailable" }, 503);
   }
+}
+
+/**
+ * GET ?text=<one sentence> (admin / automation): the stored mp3 for that sentence, or 404 when it has not been generated yet.
+ * Never generates audio and never spends AI budget. Used by the clip pipeline to fetch narration after prewarm.
+ */
+export async function cachedAudio(c: Context<AppEnv>): Promise<Response> {
+  const text = (c.req.query("text") ?? "").trim();
+  if (!text || text.length > 600) return c.json({ error: "bad_request", message: "Give one sentence in ?text= (1 to 600 characters)." }, 400);
+  const stored = await c.env.ASSETS_BUCKET.get(await ttsKey(text));
+  if (!stored) return c.json({ error: "not_cached" }, 404);
+  return new Response(stored.body, { headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=3600" } });
 }
