@@ -12,9 +12,15 @@ const topicsDir = join(root, "content/topics");
 const read = (p: string) => JSON.parse(readFileSync(join(root, p), "utf8"));
 const legacy = new Set<string>(read("scripts/legacy-15.json"));
 // Maths lessons whose Coteach diagrams are waiting for the owner to download them from the Coteach preview (the tool cannot be
-// run unattended). A slug listed here is exempt from the diagram minimum only. The list only ever shrinks, and must be empty to finish.
-const coteachPending = new Set<string>(read("content/media/coteach-pending.json"));
-const manifest = read("content/media/manifest.json") as { files: ManifestFile[] };
+// run unattended) have a file content/media/coteach-requests/<slug>.md describing the diagrams. A lesson with such a file is exempt
+// from the diagram minimum only. Delete the file when the diagrams are added; the folder must be empty to finish.
+const coteachPending = new Set<string>(readdirSync(join(root, "content/media/coteach-requests")).filter((f: string) => f.endsWith(".md")).map((f: string) => f.replace(".md", "")));
+// The media manifest is content/media/manifest.json plus one file per lesson in content/media/manifest.d/ (so parallel work never conflicts).
+const manifestFiles: ManifestFile[] = [
+  ...(read("content/media/manifest.json") as { files: ManifestFile[] }).files,
+  ...readdirSync(join(root, "content/media/manifest.d")).filter((f: string) => f.endsWith(".json")).flatMap((f: string) => (read(`content/media/manifest.d/${f}`) as { files: ManifestFile[] }).files),
+];
+const manifest = { files: manifestFiles };
 type ManifestFile = {
   file: string; lessons: string[]; source: "unsplash" | "coteach" | "generated"; source_id?: string; author?: string; author_url?: string;
   source_url?: string; license?: string; download_tracked_at?: string; sha256?: string; alt?: string; reviewed?: boolean;

@@ -4,7 +4,8 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const read = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const manifest = read("content/media/manifest.json").files;
+import { loadManifest } from "./media-manifest.mjs";
+const manifest = loadManifest();
 const photos = manifest.filter((f) => f.source === "unsplash");
 const diagrams = manifest.filter((f) => f.source === "coteach");
 const sourcesDir = new URL("../content/sources/", import.meta.url);

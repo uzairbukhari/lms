@@ -11,8 +11,8 @@ if (!LMS_URL || !id || !secret) { console.error("Set LMS_URL, CF_ACCESS_CLIENT_I
 const files = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 if (files.length === 0) { console.error("Give at least one media file."); process.exit(2); }
 
-const manifest = JSON.parse(readFileSync(new URL("../content/media/manifest.json", import.meta.url), "utf8"));
-const entries = new Map(manifest.files.map((f) => [f.file, f]));
+import { loadManifest } from "./media-manifest.mjs";
+const entries = new Map(loadManifest().map((f) => [f.file, f]));
 
 let failed = 0;
 for (const path of files) {
