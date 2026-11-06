@@ -34,3 +34,11 @@ Talk to one child. Use "you" and "let's". Ask questions out loud ("What do you t
 2. `npm test --workspace @lms/worker` must pass (topics, connectors and content tests). `npm run typecheck` must pass.
 3. Re-read your own narration aloud in your head: is each sentence short, playful and clear for the age? Are all answers correct? Does every `reason` question have exactly one defensible answer? Fix before finishing.
 4. Report: lessons done, anything you were unsure about, any Oak or Unsplash gap, and the exact list of media files saved.
+
+## Do not render clips
+
+Write the clip spec only (the `clip` entry in the lesson spec, which `build-topics.mjs` turns into `content/clips/<slug>.json` and a `clip` block with its final file names). Do not run `scripts/render-clip.mjs`: real clips need the live voice service and the owner's service token, and are rendered later in one batch. Until then the connector test accepts a clip whose spec exists, and `scripts/import-lessons.mjs` refuses to import the lesson.
+
+## Worktree setup
+
+Your worktree may start on an old commit. First run `git merge --ff-only feat/phase-1-spikes`. If `node_modules` is missing, junction it from `C:\GitHub\lms\node_modules` (and `worker\node_modules`, `apps\web\node_modules`), never commit it.
