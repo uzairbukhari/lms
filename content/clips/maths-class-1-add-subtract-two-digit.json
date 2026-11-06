@@ -1,0 +1,240 @@
+{
+ "title": "Zara fills a tray of ten",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "Zara at the mango stall.",
+   "say": "This is Zara. She helps her uncle Bilal at his mango stall in Lahore.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "u",
+     "emoji": "👨",
+     "label": "Uncle Bilal",
+     "x": 78,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_left"
+    },
+    {
+     "id": "m",
+     "emoji": "🥭",
+     "x": 50,
+     "y": 30,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "27 mangoes, and 16 more.",
+   "say": "Uncle has twenty-seven mangoes. A van brings sixteen more. How many mangoes now?",
+   "items": [
+    {
+     "id": "a",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 2,
+      "ones": 7
+     },
+     "label": "27",
+     "x": 28,
+     "y": 48,
+     "size": 1,
+     "enter": "slide_right"
+    },
+    {
+     "id": "b",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 1,
+      "ones": 6
+     },
+     "label": "16",
+     "x": 72,
+     "y": 48,
+     "size": 1,
+     "enter": "slide_left",
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "7 loose mangoes in a tray.",
+   "say": "Zara has a tray that holds ten. Twenty-seven is two full trays and seven loose.",
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "ten_frame",
+      "value": 7
+     },
+     "label": "7 loose",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "3 more fill the tray.",
+   "say": "Zara picks three mangoes from the new box. Seven and three make ten!",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "ten_frame",
+      "value": 10
+     },
+     "label": "full tray",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    },
+    {
+     "id": "t",
+     "emoji": "🥭",
+     "label": "+ 3",
+     "x": 82,
+     "y": 30,
+     "size": 2,
+     "path": "arc",
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "16 - 3 = 13 left in the box.",
+   "say": "The box had sixteen. Three are gone. Thirteen are left.",
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "ten_frame",
+      "value": 10
+     },
+     "label": "full tray",
+     "x": 25,
+     "y": 46,
+     "size": 2
+    },
+    {
+     "id": "c",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 1,
+      "ones": 3
+     },
+     "label": "13 left",
+     "x": 72,
+     "y": 48,
+     "size": 1,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Trays: 3 tens. Plus 13.",
+   "say": "Now we have three full trays. That is thirty. Plus the thirteen in the box.",
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 3,
+      "ones": 0
+     },
+     "label": "30",
+     "x": 28,
+     "y": 48,
+     "size": 1
+    },
+    {
+     "id": "c",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 1,
+      "ones": 3
+     },
+     "label": "13",
+     "x": 72,
+     "y": 48,
+     "size": 1
+    }
+   ]
+  },
+  {
+   "caption": "30 + 13 = 43.",
+   "say": "Thirty and thirteen. Thirty plus ten is forty. Forty plus three is forty-three!",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 48
+   },
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 4,
+      "ones": 3
+     },
+     "label": "43",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "27 + 16 = 43. Shukriya, Zara!",
+   "say": "Forty-three mangoes! When the ones go past nine, fill a ten first. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "u",
+     "emoji": "👨",
+     "label": "Uncle Bilal",
+     "x": 78,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "m",
+     "emoji": "🥭",
+     "x": 50,
+     "y": 30,
+     "size": 3,
+     "effect": "hearts",
+     "label": "43"
+    }
+   ]
+  }
+ ]
+}
