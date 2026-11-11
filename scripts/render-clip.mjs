@@ -98,7 +98,7 @@ async function renderOne(target) {
   if (!silent) {
     if (existsSync(join(ROOT, "content", "topics", `${clip.slug}.json`))) {
       upsertManifest(clip.slug, clip.spec.title, files);
-      console.log("Recorded both files in content/media/manifest.d/${clip.slug}.json (reviewed: false: watch the clip, then set it to true).");
+      console.log(`Recorded both files in content/media/manifest.d/${clip.slug}.json (reviewed: false: watch the clip, then set it to true).`);
     } else console.log(`No lesson "${clip.slug}" in content/topics, so the media manifest was left alone.`);
     console.log(`Upload:\n  node scripts/upload-media.mjs "${mp4}" "${poster}"`);
   }

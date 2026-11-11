@@ -16,3 +16,6 @@
 .clip-card-emoji { font-size: 120px; line-height: 1; }
 .clip-card-title { font-size: 76px; font-weight: 800; line-height: 1.1; max-width: 1080px; color: var(--accent); }
 .clip-card-sub { font-size: 34px; font-weight: 700; color: var(--text-muted); }
+
+/* A caption with no words draws nothing (used when stills are made of a bare backdrop). */
+.clip-caption:empty { display: none; }

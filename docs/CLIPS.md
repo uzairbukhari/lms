@@ -4,7 +4,7 @@ A clip is a short animated, narrated story (45 to 75 seconds, 90 at most) made f
 
 ## How it fits together
 
-- `content/clips/<slug>.json` is the **spec**: `{ title, backdrop?, subject?, scenes }`. Scenes use the explainer scene format (items sharing an `id` glide, `camera`, `effect`, and so on) and each needs a `say` script. At least 80% of scenes must have `say`; up to 24 scenes; the estimate (narration at 2.3 words a second, 0.5 s after each scene, two 1.5 s cards) must be 90 s or less. Validation is `clipSpecSchema` in `packages/schema/src/clip.ts`.
+- `content/clips/<slug>.json` is the **spec**: `{ title, backdrop?, subject?, scenes }`. Scenes use the explainer scene format (items sharing an `id` glide, `camera`, `effect`, and so on) and each needs a `say` script. At least 80% of scenes must have `say`; up to 24 scenes; the estimate (narration at 2.3 words a second played at 0.9 speed, 0.8 s between sentences, 2 s after each scene, two 1.5 s cards) must be 90 s or less. The pacing constants (`CLIP_VOICE_RATE`, `CLIP_SENTENCE_GAP_SECONDS`, `CLIP_SCENE_GAP_SECONDS`) are in `packages/schema/src/clip.ts`; slowing them further for younger children is a one-line change and needs no new voice audio. Validation is `clipSpecSchema` in `packages/schema/src/clip.ts`.
 - The files are named from the spec: `clip-<lesson-slug>-<first 8 hex of sha256 of the canonical spec>.mp4`, and the same with `.webp` for the poster. Change the spec and the names change; leave it alone and nothing is ever re-rendered or renamed.
 - `apps/web/src/components/ExplainerStage.tsx` draws the picture for both the lesson player and the video, so the clip looks exactly like the lesson animation.
 
