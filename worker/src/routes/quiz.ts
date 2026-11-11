@@ -18,6 +18,23 @@ function startedBody(attempt: AttemptRow, quiz: QuizRow, questions: unknown[], r
 }
 
 /**
+ * A topic's big quiz stays locked until every part has been viewed (the same rule the topic page shows). Lessons
+ * without parts are never locked, and a child who already passed can always retake it.
+ */
+async function partsUnfinished(db: D1Database, userId: string, lessonId: string): Promise<boolean> {
+  const row = await db
+    .prepare("SELECT COALESCE(json_array_length(source_json, '$.sub_lessons'), 0) AS total FROM lessons WHERE id = ?")
+    .bind(lessonId)
+    .first<{ total: number }>();
+  const total = row?.total ?? 0;
+  if (total === 0) return false;
+  const passed = await db.prepare("SELECT 1 FROM quiz_attempts WHERE user_id = ? AND lesson_id = ? AND status = 'submitted' AND passed = 1 LIMIT 1").bind(userId, lessonId).first();
+  if (passed) return false;
+  const viewed = await db.prepare("SELECT COUNT(*) AS n FROM sub_lesson_progress WHERE user_id = ? AND lesson_id = ? AND viewed = 1").bind(userId, lessonId).first<{ n: number }>();
+  return (viewed?.n ?? 0) < total;
+}
+
+/**
  * Start (or resume) the quiz for a lesson the child may open. During the lesson's own week it is a graded attempt;
  * from any later week it is a practice attempt. Both are recorded, and a quiz can be retaken as often as the child likes.
  */
@@ -29,6 +46,8 @@ quizRoutes.post("/lessons/:id/quiz/start", async (c) => {
   if (!v) return fail(c, 404, "not_found");
   const quiz = await c.env.DB.prepare(`SELECT ${QUIZ_COLUMNS} FROM quizzes WHERE lesson_id = ? AND is_current = 1`).bind(lessonId).first<QuizRow>();
   if (!quiz) return fail(c, 404, "not_found");
+  const locked = await partsUnfinished(c.env.DB, user.id, lessonId);
+  if (locked) return fail(c, 403, "parts_not_finished", "Finish all the parts of this topic first.");
   const mode = v.phase === "current" || v.phase === "early" ? "graded" : "practice";
   const started = await startAttempt(c.env.DB, { userId: user.id, quiz, lessonId, scopeKey: `lesson:${lessonId}`, mode, gradedUntilPassed: v.path === true });
   if (!started.ok) return fail(c, 403, started.reason, started.reason === "no_attempts_left" ? "You have used all your tries." : "This quiz has no questions yet.");

@@ -1,3 +1,5 @@
+import { quizStars } from "@lms/schema";
+
 export type SubLessonCard = { id: string; kind: "learn" | "try" | "play" | "use"; title: string; viewed: boolean; miniBest: number | null; miniCount: number; weak: boolean };
 export type TopicData = {
   successCriteria: string[];
@@ -20,7 +22,7 @@ export const KIND = {
 } as const;
 
 /** 3 stars for 90%+, 2 for 80%+, 1 for a pass (70%+), else none. */
-export const starsFor = (percent: number | null): number => (percent === null ? 0 : percent >= 90 ? 3 : percent >= 80 ? 2 : percent >= 70 ? 1 : 0);
+export const starsFor = (percent: number | null): number => quizStars(percent);
 
 /** A big friendly glyph for a topic tile, picked from its title; falls back to the subject emoji. */
 export function tileGlyph(title: string, fallback: string): string {

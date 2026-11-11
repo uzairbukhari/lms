@@ -1,4 +1,4 @@
-import type { Response } from "@lms/schema";
+import { quizStars, type Response } from "@lms/schema";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useParams } from "react-router";
 import { api, ApiError } from "../api";
@@ -210,7 +210,7 @@ function Shell({ children }: { children: ReactNode }) {
 
 function Results({ result, quiz, again, kind, lessonId }: { result: Result; quiz: Started; again: () => void; kind: "lesson" | "exam"; lessonId: string }) {
   const [why, setWhy] = useState<Record<string, string>>({});
-  const stars = result.percent >= 90 ? 3 : result.percent >= quiz.passPercent ? 2 : result.percent > 0 ? 1 : 0;
+  const stars = quizStars(result.percent);
   const explain = async (questionId: string) => {
     try {
       const r = await api<{ explanation: string }>("/api/ai/explain", { body: { attemptId: result.attemptId, questionId } });

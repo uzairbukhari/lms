@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { gameBonus, gameForWeek, lessonQuizPoints, weekStars } from "@lms/schema";
+import { gameBonus, gameForWeek, lessonQuizPoints, quizStars, weekStars } from "@lms/schema";
 import { app } from "../index";
 import type { Bindings } from "../env";
 import { addDays } from "../lib/terms";
@@ -72,6 +72,7 @@ describe("points rules", () => {
     expect(lessonQuizPoints(null, 100)).toBe(5);
     expect(lessonQuizPoints(60, 100)).toBe(6); // graded counts when there is one
     expect(lessonQuizPoints(null, null)).toBe(0);
+    expect([null, 50, 69, 70, 79, 80, 89, 90, 100].map(quizStars)).toEqual([0, 0, 0, 1, 1, 2, 2, 3, 3]);
     expect(weekStars([])).toBe(0);
     expect(weekStars([50])).toBe(1);
     expect(weekStars([70, 80])).toBe(2);
