@@ -1,6 +1,7 @@
 import { gameForWeek, lessonQuizPoints, weekStars, type GameId, type GameLevel } from "@lms/schema";
 import { assignedCourseIds } from "./exams";
 import { pathsFor } from "./path";
+import { GRAND_BONUS_POINTS } from "./grand";
 import { visibleLessonsFor, type Visibility } from "./visibility";
 
 // The semester map (docs/SEMESTER_MAP.md): 12 weekly checkpoints plus exam week, reached by finishing every lesson
@@ -83,6 +84,12 @@ async function allTotals(db: D1Database, userId: string, vis: Visibility, slots:
   // A few extra points for finishing the day's flashcards and the Boost round.
   const cards = await db.prepare("SELECT COALESCE(SUM(points), 0) AS n FROM card_days WHERE user_id = ?").bind(userId).first<{ n: number }>();
   total += cards?.n ?? 0;
+  // 50 bonus points once for each course's grand quiz the child has passed.
+  const grand = await db
+    .prepare("SELECT COUNT(DISTINCT scope_key) AS n FROM quiz_attempts WHERE user_id = ? AND status = 'submitted' AND passed = 1 AND scope_key LIKE 'grand:%'")
+    .bind(userId)
+    .first<{ n: number }>();
+  total += (grand?.n ?? 0) * GRAND_BONUS_POINTS;
   return { total, waiting };
 }
 

@@ -53,8 +53,8 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
 /** What a service token may do: check, import and read lessons and courses, and upload images. Nothing about children, classes, results or settings. */
 export function automationMayCall(method: string, path: string): boolean {
   const m = method.toUpperCase();
-  if (m === "POST") return /^\/api\/admin\/(lessons\/(validate|import)|assets)$/.test(path);
-  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets)$/.test(path);
+  if (m === "POST") return /^\/api\/admin\/(lessons\/(validate|import)|assets|voice\/prewarm)$/.test(path);
+  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets|voice\/audio)$/.test(path);
   return false;
 }
 

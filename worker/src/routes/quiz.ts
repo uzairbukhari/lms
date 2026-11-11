@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { assignedCourseIds, examsForCourses, openExamSemesters } from "../lib/exams";
+import { allTopicsPassed, blueprintIsCourse, grandScopeKey } from "../lib/grand";
 import { fail, parseBody } from "../lib/http";
 import { attemptDraft, attemptQuestions, attemptReview, saveDraft, startAttempt, submitAttempt, type AttemptRow, type QuizRow } from "../lib/quiz";
 import { todayIn, visibleLessonsFor } from "../lib/visibility";
@@ -13,8 +14,18 @@ for (const path of ["/lessons/:id/quiz/*", "/lessons/:id/attempts", "/quiz/*", "
 
 const QUIZ_COLUMNS = "id, kind, pass_percent, shuffle_questions, shuffle_options, max_attempts";
 
-function startedBody(attempt: AttemptRow, quiz: QuizRow, questions: unknown[], resumed: boolean) {
-  return { attemptId: attempt.id, attemptNumber: attempt.attempt_number, mode: attempt.mode, resumed, passPercent: quiz.pass_percent, questions, draft: attemptDraft(attempt) };
+function startedBody(attempt: AttemptRow, quiz: QuizRow, questions: unknown[], resumed: boolean, ageBand: string | null) {
+  return { attemptId: attempt.id, attemptNumber: attempt.attempt_number, mode: attempt.mode, resumed, passPercent: quiz.pass_percent, questions, draft: attemptDraft(attempt), ageBand };
+}
+
+/** The age band ("7-8" or "9-10") of the lesson, or of the course for a grand quiz, so the app can size the quiz rounds. */
+async function ageBandFor(db: D1Database, attempt: AttemptRow): Promise<string | null> {
+  const row = attempt.lesson_id
+    ? await db.prepare("SELECT age_band AS band FROM lessons WHERE id = ?").bind(attempt.lesson_id).first<{ band: string }>()
+    : attempt.scope_key.startsWith("grand:")
+      ? await db.prepare("SELECT l.age_band AS band FROM course_lessons cl JOIN lessons l ON l.id = cl.lesson_id WHERE cl.course_id = ? ORDER BY cl.position LIMIT 1").bind(attempt.scope_key.slice("grand:".length)).first<{ band: string }>()
+      : null;
+  return row?.band ?? null;
 }
 
 /**
@@ -51,7 +62,7 @@ quizRoutes.post("/lessons/:id/quiz/start", async (c) => {
   const mode = v.phase === "current" || v.phase === "early" ? "graded" : "practice";
   const started = await startAttempt(c.env.DB, { userId: user.id, quiz, lessonId, scopeKey: `lesson:${lessonId}`, mode, gradedUntilPassed: v.path === true });
   if (!started.ok) return fail(c, 403, started.reason, started.reason === "no_attempts_left" ? "You have used all your tries." : "This quiz has no questions yet.");
-  return c.json(startedBody(started.attempt, quiz, await attemptQuestions(c.env.DB, started.attempt, quiz), started.resumed));
+  return c.json(startedBody(started.attempt, quiz, await attemptQuestions(c.env.DB, started.attempt, quiz), started.resumed, await ageBandFor(c.env.DB, started.attempt)));
 });
 
 quizRoutes.get("/lessons/:id/attempts", async (c) => {
@@ -112,7 +123,7 @@ quizRoutes.get("/quiz/attempts/:id", async (c) => {
   if (own.attempt.status === "submitted") {
     return c.json({ attemptId: own.attempt.id, status: "submitted", mode: own.attempt.mode, attemptNumber: own.attempt.attempt_number, ...(await attemptReview(c.env.DB, own.attempt)) });
   }
-  return c.json({ status: own.attempt.status, ...startedBody(own.attempt, own.quiz, await attemptQuestions(c.env.DB, own.attempt, own.quiz), true) });
+  return c.json({ status: own.attempt.status, ...startedBody(own.attempt, own.quiz, await attemptQuestions(c.env.DB, own.attempt, own.quiz), true, await ageBandFor(c.env.DB, own.attempt)) });
 });
 
 /** The static hint for one question of an attempt in progress. (AI hints are layered on top in the AI routes.) */
@@ -149,11 +160,21 @@ quizRoutes.get("/exams", async (c) => {
 quizRoutes.post("/exams/:id/start", async (c) => {
   const user = c.get("user");
   const db = c.env.DB;
-  const quiz = await db.prepare(`SELECT ${QUIZ_COLUMNS}, course_id, semester FROM quizzes WHERE id = ? AND kind = 'exam' AND is_current = 1`).bind(c.req.param("id")).first<QuizRow & { course_id: string; semester: number }>();
+  const quiz = await db.prepare(`SELECT ${QUIZ_COLUMNS}, course_id, semester, blueprint_json FROM quizzes WHERE id = ? AND kind = 'exam' AND is_current = 1`).bind(c.req.param("id")).first<QuizRow & { course_id: string; semester: number | null; blueprint_json: string | null }>();
   if (!quiz) return fail(c, 404, "not_found");
+  if (quiz.semester === null) {
+    // A course's grand quiz: only for a child on the course, and only once every published topic is passed.
+    if (!blueprintIsCourse(quiz.blueprint_json)) return fail(c, 404, "not_found");
+    const classIds = (await db.prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1").bind(user.id).all<{ id: string }>()).results.map((r) => r.id);
+    if (!(await assignedCourseIds(db, user.id, classIds)).includes(quiz.course_id)) return fail(c, 404, "not_found");
+    if (!(await allTopicsPassed(db, user.id, quiz.course_id))) return fail(c, 403, "topics_not_passed", "Pass every topic in this course first.");
+    const grand = await startAttempt(db, { userId: user.id, quiz, lessonId: null, scopeKey: grandScopeKey(quiz.course_id), mode: "graded" });
+    if (!grand.ok) return fail(c, 403, grand.reason, "This quiz has no questions yet.");
+    return c.json(startedBody(grand.attempt, quiz, await attemptQuestions(db, grand.attempt, quiz), grand.resumed, await ageBandFor(db, grand.attempt)));
+  }
   const open = await openExamSemesters(db, user.id, todayIn(c.env.TIMEZONE));
   if (!open.has(`${quiz.course_id}:${quiz.semester}`)) return fail(c, 404, "not_found");
   const started = await startAttempt(db, { userId: user.id, quiz, lessonId: null, scopeKey: `exam:${quiz.course_id}:${quiz.semester}`, mode: "graded" });
   if (!started.ok) return fail(c, 403, started.reason, started.reason === "no_attempts_left" ? "You have used all your tries for this exam." : "This exam has no questions yet.");
-  return c.json(startedBody(started.attempt, quiz, await attemptQuestions(db, started.attempt, quiz), started.resumed));
+  return c.json(startedBody(started.attempt, quiz, await attemptQuestions(db, started.attempt, quiz), started.resumed, await ageBandFor(db, started.attempt)));
 });

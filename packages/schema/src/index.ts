@@ -16,3 +16,5 @@ export * from "./glossary";
 export * from "./visuals";
 export * from "./games";
 export * from "./rewards";
+export * from "./sentences";
+export * from "./clip";

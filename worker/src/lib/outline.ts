@@ -17,7 +17,7 @@ export function plainText(md: string): string {
 const bolds = (md: string) => [...md.matchAll(/\*\*([^*]+)\*\*/g)].map((m) => (m[1] ?? "").trim()).filter(Boolean);
 const uniq = <T,>(a: T[]) => [...new Set(a)];
 
-const ACTIVITY: Record<string, string> = { explainer: "Animation", brain_game: "Brain game", manipulative: "Hands-on", activity: "Try it at home", video: "Video", check: "Quick question" };
+const ACTIVITY: Record<string, string> = { explainer: "Animation", brain_game: "Brain game", manipulative: "Hands-on", activity: "Try it at home", video: "Video", clip: "Video", check: "Quick question" };
 
 export function lessonOutline(file: { lesson?: { learning_objectives?: string[] }; blocks?: Block[] }): Outline {
   const blocks = file.blocks ?? [];
@@ -53,6 +53,7 @@ export function lessonOutline(file: { lesson?: { learning_objectives?: string[] 
       case "manipulative": cur.activities.push(`${ACTIVITY.manipulative}: ${b.title}`); lines.push(`[Hands-on: ${b.title}] ${b.goal ?? ""}`); break;
       case "activity": cur.activities.push(`${ACTIVITY.activity}: ${b.title}`); lines.push(`[Activity: ${b.title}] ${(b.instructions ?? []).join(" ")}`); break;
       case "video": cur.activities.push(`${ACTIVITY.video}: ${b.title}`); break;
+      case "clip": cur.activities.push(`${ACTIVITY.clip}: ${b.title}`); lines.push(`[Clip: ${b.title}] ${b.transcript}`); break;
       case "check": if (b.question?.prompt) { cur.activities.push(`${ACTIVITY.check}: ${b.question.prompt}`); lines.push(`[Question] ${b.question.prompt}`); } break;
       case "reveal": lines.push(`[Think] ${b.prompt} ${plainText(String(b.answer_markdown ?? ""))}`); break;
       case "steps": lines.push((b.items ?? []).map((s: string, i: number) => `${i + 1}. ${s}`).join("\n")); break;

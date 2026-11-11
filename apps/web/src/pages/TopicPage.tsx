@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router";
 import { api, ApiError } from "../api";
 import { Loader } from "../components/Loader";
 import { QuestionView } from "../components/QuestionView";
+import { readActive } from "../lib/rounds";
 import { KIND, pastel, starsFor, type TopicLesson } from "../lib/topic";
 import { SUBJECT_LOOK, shortTitle } from "./StudentHome";
 
@@ -69,6 +70,9 @@ function TopicBody({ lesson, topic, quiz, look, doneCount, total, allDone, nextI
     if (!el?.children[0]) return;
     setAt(Math.min(items - 1, Math.round(el.scrollLeft / ((el.children[0] as HTMLElement).offsetWidth + 20))));
   };
+  // In-progress big quiz: the server field `quiz.inProgress` if it exists, else what the quiz player left on this device.
+  const active = readActive(lesson.id);
+  const carry = quiz.inProgress ?? (active ? { round: active.round, rounds: active.rounds } : null);
   const toggle = (k: "goals" | "remember") => setPanel(panel === k ? null : k);
   return (
     <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-3 px-4 py-5 sm:px-8">
@@ -130,7 +134,8 @@ function TopicBody({ lesson, topic, quiz, look, doneCount, total, allDone, nextI
           <h2 className="font-display text-2xl font-bold leading-tight">Show what you know</h2>
           <p className="text-sm font-bold text-muted">{quiz.questionCount} questions. You need {quiz.passPercent}% to open the next topic.{!allDone && " Finish all the parts first."}</p>
           {topic.lastQuiz && <span aria-label={`${stars} of 3 stars`} className="text-xl" style={{ color: "#ffd166" }}>{"★".repeat(stars)}<span style={{ opacity: 0.3 }}>{"★".repeat(3 - stars)}</span></span>}
-          {allDone ? <Link className="btn btn-primary m-shine mt-auto !min-h-12 text-lg" to={`/lesson/${lesson.id}/quiz`}>▶ {topic.lastQuiz ? "Try again" : "Start the big quiz"}</Link> : <span className="btn mt-auto !min-h-12 opacity-60" aria-disabled="true">🔒 Locked</span>}
+          {allDone && carry && <p className="text-base font-extrabold" style={{ color: "var(--accent)" }}>Carry on: round {carry.round} of {carry.rounds}</p>}
+          {allDone ? <Link className="btn btn-primary m-shine mt-auto !min-h-12 text-lg" to={`/lesson/${lesson.id}/quiz`}>▶ {carry ? "Carry on" : topic.lastQuiz ? "Try again" : "Start the big quiz"}</Link> : <span className="btn mt-auto !min-h-12 opacity-60" aria-disabled="true">🔒 Locked</span>}
         </article>
       </div>
       <div className="flex flex-col items-center gap-1">
