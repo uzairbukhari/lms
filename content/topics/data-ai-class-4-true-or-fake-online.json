@@ -1,0 +1,3279 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-true-or-fake-online",
+  "subject": "data-ai",
+  "title": "True or Fake? Checking What You Find Online",
+  "summary": "Learn who makes the web, ask four questions to check a page, spot fakes and scams, and share and credit things responsibly.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 9: True or fake online",
+  "learning_objectives": [
+   "Explain that anyone can publish on the web and every page has a purpose",
+   "Check a page with who, why, proof and when, and compare sources",
+   "Spot fakes and scams, and share, credit and report responsibly"
+  ],
+  "tags": [
+   "topic",
+   "topic-9"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 9
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing",
+    "text": "Use technology safely, respectfully and responsibly; be discerning in evaluating digital content"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 online safety",
+    "text": "Recognise acceptable and unacceptable behaviour; identify a range of ways to report concerns about content"
+   }
+  ],
+  "success_criteria": [
+   "I can say why we check what we read online",
+   "I can ask four questions and compare two sources",
+   "I pause before sharing, give credit and tell a trusted adult"
+  ],
+  "real_life": "Deciding whether a forwarded message about free prizes or a surprising news story is true before sharing it with family.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the internet?",
+    "hint": "Think about networks.",
+    "explanation": "The internet is a network of networks.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of screen"
+     },
+     {
+      "id": "b",
+      "text": "A network that joins computers all over the world"
+     },
+     {
+      "id": "c",
+      "text": "A single website"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a search engine for?",
+    "hint": "You type keywords.",
+    "explanation": "A search engine finds pages.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Playing music"
+     },
+     {
+      "id": "b",
+      "text": "Fixing a router"
+     },
+     {
+      "id": "c",
+      "text": "Finding web pages"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 9 x 3?",
+    "hint": "3 nines.",
+    "explanation": "9 x 3 = 27.",
+    "answer": {
+     "value": 27,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "web",
+   "kind": "learn",
+   "title": "Who makes the web?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, web detective!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we tell what is true online?",
+     "say": "Today we find out who makes the things we read online. Can we trust all of it?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-true-or-fake-online-1-e6350c21.jpg",
+     "alt": "Snow-covered mountains and their mirror reflection on a calm blue-green frozen lake",
+     "caption": "A reflection looks like the real mountain. Some things online look real but are copies.",
+     "credit": "Photo by Tim Stief on Unsplash",
+     "say": "This lake shows a mountain and its reflection. A reflection looks real but it is only a copy. Online things can fool us too."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: People make the web"
+    },
+    {
+     "type": "text",
+     "markdown": "The **web** is pages and sites that people publish.",
+     "say": "The web is a huge collection of pages that you visit using the internet. People make every page."
+    },
+    {
+     "type": "text",
+     "markdown": "Anyone with a device can publish on the web.",
+     "say": "Schools, shops, news teams and strangers all publish pages. Some are checked by experts. Many are not."
+    },
+    {
+     "type": "explainer",
+     "title": "Who made this page?",
+     "scenes": [
+      {
+       "caption": "School.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏫",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "📄",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "checked"
+        }
+       ],
+       "say": "A school makes a page about its trip to Hunza. Teachers check it."
+      },
+      {
+       "caption": "Shop.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🛒",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "📢",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "advert"
+        }
+       ],
+       "say": "A shop makes a page to sell trainers. It wants you to buy."
+      },
+      {
+       "caption": "Stranger.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "🧑",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "unchecked"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "who made it?"
+        }
+       ],
+       "say": "A stranger makes a page with a shocking claim. Nobody has checked it."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why should we check what we read on the web?",
+      "hint": "Think about who publishes.",
+      "explanation": "Many pages are not checked by anyone.",
+      "skill_tag": "fake.why_check_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "Because web pages are always long"
+       },
+       {
+        "id": "b",
+        "text": "Because anyone can publish a page, true or not"
+       },
+       {
+        "id": "c",
+        "text": "Because pages cost money"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Every page has a purpose"
+    },
+    {
+     "type": "text",
+     "markdown": "Every page has a **purpose**. Ask why it was made.",
+     "say": "A page may teach you, sell something, entertain you, or try to change your mind."
+    },
+    {
+     "type": "explainer",
+     "title": "Purposes",
+     "scenes": [
+      {
+       "caption": "Inform.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "📖",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "inform"
+        }
+       ],
+       "say": "An encyclopedia page wants to inform. It gives facts and names its author."
+      },
+      {
+       "caption": "Sell.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📢",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "💳",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "buy"
+        }
+       ],
+       "say": "An advert wants to sell. It shows prices and a buy button."
+      },
+      {
+       "caption": "Opinion.",
+       "items": [
+        {
+         "id": "o",
+         "emoji": "💬",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "📏",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "fact"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "fact or opinion"
+        }
+       ],
+       "say": "A blog post gives an opinion. An opinion is what someone thinks, not always a fact."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A website shows prices and a shopping basket. What is its main purpose?",
+      "hint": "Think about the basket.",
+      "explanation": "Prices and baskets mean it wants to sell.",
+      "skill_tag": "fake.purpose_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "To teach history"
+       },
+       {
+        "id": "b",
+        "text": "To give a weather forecast"
+       },
+       {
+        "id": "c",
+        "text": "To sell things"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara and the free tablets",
+     "asset": "clip-data-ai-class-4-true-or-fake-online-3ec7e508.mp4",
+     "poster": "clip-data-ai-class-4-true-or-fake-online-3ec7e508.webp",
+     "seconds": 71,
+     "transcript": "A friend sends Zara a message: free tablets, forward to ten friends! Zara does not forward it. She pauses and thinks. Who made it? There is no author and no website. That is a warning sign. Why was it made? To make her click. There is no proof at all. Zara searches. The tablet company says nothing about a giveaway. She decides it is a scam. It was made to trick people. She tells her teacher, who helps her report the message. The class writes a sharing promise. Pause, check, credit and tell.",
+     "caption": "Zara gets a message about free tablets and checks it before sharing."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "People make the web, and anyone can publish",
+      "Every page has a purpose: inform, sell, entertain or persuade",
+      "We check pages instead of believing everything"
+     ],
+     "say": "Let us remember. People make the web. Every page has a purpose. We do not believe everything."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "web",
+       "meaning": "Pages and sites that people publish for others to visit."
+      },
+      {
+       "term": "purpose",
+       "meaning": "The reason something was made."
+      },
+      {
+       "term": "publish",
+       "meaning": "To put something online for others to see."
+      },
+      {
+       "term": "advert",
+       "meaning": "A message paid for to sell something."
+      },
+      {
+       "term": "opinion",
+       "meaning": "What someone thinks, which may not be a fact."
+      },
+      {
+       "term": "fact",
+       "meaning": "Something that can be checked and is true."
+      },
+      {
+       "term": "reflection",
+       "meaning": "An image you see in still water or a mirror."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "The web is the same thing as the internet.",
+     "hint": "One runs on the other.",
+     "explanation": "The web is a service that runs on the internet.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is an opinion?",
+     "hint": "It says what someone thinks.",
+     "explanation": "Best food is a matter of opinion.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A week has seven days"
+      },
+      {
+       "id": "b",
+       "text": "Biryani is the best food ever"
+      },
+      {
+       "id": "c",
+       "text": "Water freezes at 0 degrees"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which page is trying to inform?",
+     "hint": "Think about facts.",
+     "explanation": "An encyclopedia gives facts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A flashing buy-now banner"
+      },
+      {
+       "id": "b",
+       "text": "A prize pop-up"
+      },
+      {
+       "id": "c",
+       "text": "An encyclopedia page that names its author"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "An advert is made to sell something.",
+     "hint": "Think about its purpose.",
+     "explanation": "Adverts want you to buy.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "kind": "try",
+   "title": "Check it with four questions",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Who, why, proof, when"
+    },
+    {
+     "type": "text",
+     "markdown": "Ask: **who**, why, proof and when?",
+     "say": "Zara asks four questions about a page. Who made it? Why did they make it? What proof is there? When was it written?"
+    },
+    {
+     "type": "explainer",
+     "title": "Four questions",
+     "scenes": [
+      {
+       "caption": "Who.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🧑‍🔬",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "K2"
+        }
+       ],
+       "say": "A page says K2 is about 8,611 metres high. Who made it? A mountain survey, named at the bottom."
+      },
+      {
+       "caption": "Why, proof, when.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📊",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "proof"
+        },
+        {
+         "id": "d",
+         "emoji": "📅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "this year"
+        }
+       ],
+       "say": "Why? To inform. What proof? A table of measurements. When? Written this year."
+      },
+      {
+       "caption": "Passes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "✅",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "🔍",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "good signs"
+        }
+       ],
+       "say": "The page passes the four questions. Zara still checks one more source."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the signs",
+     "goal": "Move the 6 signs into Trustworthy sign or Be careful.",
+     "emoji": "🔍",
+     "count": 6,
+     "zones": [
+      "Trustworthy sign",
+      "Be careful"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A page names its author and its date and links to a report. Which sign does this show?",
+      "hint": "Think about the four questions.",
+      "explanation": "Named author, date and links are good signs.",
+      "skill_tag": "fake.signs_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "A scam"
+       },
+       {
+        "id": "b",
+        "text": "An advert"
+       },
+       {
+        "id": "c",
+        "text": "Good signs of a trustworthy page"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Compare sources"
+    },
+    {
+     "type": "text",
+     "markdown": "**Evidence** is proof. Compare **sources** to be sure.",
+     "say": "Evidence is proof. When two or more trusted sources agree, a fact is stronger."
+    },
+    {
+     "type": "explainer",
+     "title": "Three sources agree",
+     "scenes": [
+      {
+       "caption": "Three sources.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "📰",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🏛️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 75,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara checks a news site, a museum site and her teacher."
+      },
+      {
+       "caption": "Agree.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🤝",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "c",
+         "emoji": "✅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "they agree"
+        }
+       ],
+       "say": "All three agree. Now she trusts the fact."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Check a claim",
+     "materials": [
+      "A claim you saw online, with a grown-up",
+      "Paper and pens"
+     ],
+     "instructions": [
+      "Write the claim.",
+      "Answer the four questions: who, why, proof, when.",
+      "Find a second source. Do the two agree?"
+     ],
+     "say": "Now you try. Pick a surprising claim with a grown-up and check it."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A fact is stronger when two trusted sources agree.",
+      "hint": "Think about comparing.",
+      "explanation": "Agreement between trusted sources is a strong sign.",
+      "skill_tag": "fake.agree_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Ask who, why, proof and when",
+      "Look for evidence",
+      "Compare at least two trusted sources"
+     ],
+     "say": "Let us remember. Ask four questions and compare sources."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "who",
+       "meaning": "The person or group that made the page."
+      },
+      {
+       "term": "evidence",
+       "meaning": "Proof that helps show something is true."
+      },
+      {
+       "term": "sources",
+       "meaning": "The places where information comes from."
+      },
+      {
+       "term": "trustworthy",
+       "meaning": "Deserving trust."
+      },
+      {
+       "term": "survey",
+       "meaning": "A careful study that collects facts."
+      },
+      {
+       "term": "claim",
+       "meaning": "A statement that something is true."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which question asks about the date?",
+     "hint": "Think about time.",
+     "explanation": "When asks about the date.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Who made it?"
+      },
+      {
+       "id": "b",
+       "text": "Why was it made?"
+      },
+      {
+       "id": "c",
+       "text": "When was it written?"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "One unknown website is enough proof of a surprising claim.",
+     "hint": "Compare sources.",
+     "explanation": "One unchecked source is not enough.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What counts as evidence?",
+     "hint": "It must prove something.",
+     "explanation": "Measurements are proof.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A cute picture"
+      },
+      {
+       "id": "b",
+       "text": "A table of measurements from a survey"
+      },
+      {
+       "id": "c",
+       "text": "A loud headline"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fake",
+   "kind": "play",
+   "title": "Spot the fake",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Clues to a fake"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-true-or-fake-online-2-f74e0902.jpg",
+     "alt": "A clear green lake with snowy mountains and forest, and a faint reflection of the peaks in the water",
+     "caption": "Reflections can fool the eye, just as fake posts can fool the mind.",
+     "credit": "Photo by Adam Vradenburg on Unsplash",
+     "say": "A fake is made to look real so that people believe it. Clear water can show a perfect copy too."
+    },
+    {
+     "type": "text",
+     "markdown": "A **fake** is made to look real so that people believe it.",
+     "say": "Fakes often shout. They use big words, scary news and a push to share quickly."
+    },
+    {
+     "type": "explainer",
+     "title": "Clues",
+     "scenes": [
+      {
+       "caption": "Shouting.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📰",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "‼️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "no source"
+        }
+       ],
+       "say": "A post says: SHOCKING! Share before they delete this! There is no author."
+      },
+      {
+       "caption": "Too good.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🎁",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "never entered"
+        }
+       ],
+       "say": "Another says: you won a free tablet! Click now! You never entered a prize draw."
+      },
+      {
+       "caption": "Likes.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "👍",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "❌",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "not proof"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "clues"
+        }
+       ],
+       "say": "Many likes do not prove anything. Popular is not the same as true."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A post says: SHOCKING news, share in the next ten minutes! It has no author. What does this suggest?",
+      "hint": "Think about pushing you.",
+      "explanation": "Pressure and no source are warning signs.",
+      "skill_tag": "fake.shout_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "It is from a trusted expert"
+       },
+       {
+        "id": "b",
+        "text": "It may be fake"
+       },
+       {
+        "id": "c",
+        "text": "It is certainly true"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Scams"
+    },
+    {
+     "type": "text",
+     "markdown": "A **scam** tricks you into clicking or giving details.",
+     "say": "A scam is a trick to get your details or money. Free prizes you did not enter are a classic sign."
+    },
+    {
+     "type": "text",
+     "markdown": "Do not click. Tell a grown-up. Play the memory game.",
+     "say": "If you are unsure, do not click. Tell a grown-up. First, a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Spot the clue",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔍",
+      "🎁",
+      "📰",
+      "🛡️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Which message has a warning sign of a scam? Tap it.",
+      "hint": "Look for a prize and a request for a password.",
+      "explanation": "Nobody should ask for your password to give a prize.",
+      "skill_tag": "fake.warning_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🎁",
+         "label": "Prize: send your password to claim",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "🏫",
+         "label": "Reminder: the class trip form is due",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "📚",
+         "label": "Your library book is ready",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h1"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Fakes look real and push you to share",
+      "Scams use prizes and ask for details",
+      "Likes and views do not prove something is true"
+     ],
+     "say": "Let us remember. Fakes shout, rush and offer prizes. Likes are not proof."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fake",
+       "meaning": "Made to look real so that people believe it."
+      },
+      {
+       "term": "scam",
+       "meaning": "A trick to get your details or money."
+      },
+      {
+       "term": "clue",
+       "meaning": "A small detail that helps you work something out."
+      },
+      {
+       "term": "popular",
+       "meaning": "Liked or used by many people."
+      },
+      {
+       "term": "urgent",
+       "meaning": "Needing quick action."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A post with many likes must be true.",
+     "hint": "Popular is not the same as true.",
+     "explanation": "Likes show popularity, not truth.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do with a message that offers a free prize you never entered?",
+     "hint": "Think about safety.",
+     "explanation": "It is probably a scam.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Share it with friends"
+      },
+      {
+       "id": "b",
+       "text": "Not click, and tell a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Click quickly"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a warning sign of a fake?",
+     "hint": "Look for pressure.",
+     "explanation": "Shouting without a source is a warning sign.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A named author"
+      },
+      {
+       "id": "b",
+       "text": "A date and a trusted link"
+      },
+      {
+       "id": "c",
+       "text": "A shouting headline with no source"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "share",
+   "kind": "use",
+   "title": "Think before you share",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pause and check"
+    },
+    {
+     "type": "text",
+     "markdown": "**Pause** before you share. Check first.",
+     "say": "Before sharing, Zara pauses. She asks whether it is true, kind and her right to share."
+    },
+    {
+     "type": "text",
+     "markdown": "Pressure to forward is a warning sign.",
+     "say": "She checks the four questions. If a message says forward to ten friends, she is even more careful."
+    },
+    {
+     "type": "text",
+     "markdown": "Ask permission and give credit.",
+     "say": "If it is a picture, she asks who made it. She asks permission and gives credit."
+    },
+    {
+     "type": "explainer",
+     "title": "Zara pauses",
+     "scenes": [
+      {
+       "caption": "Pause.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "📱",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "forward!"
+        }
+       ],
+       "say": "A friend sends a message: free tablets, forward to ten friends. Zara pauses."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🔍",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "fake?"
+        }
+       ],
+       "say": "She asks four questions. There is no author, no proof and a rush. It looks fake."
+      },
+      {
+       "caption": "Do not share.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🛡️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "stopped it"
+        }
+       ],
+       "say": "She does not forward it. She tells her teacher. That keeps friends safe."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of handling a suspicious post in order.",
+      "hint": "Stop first.",
+      "explanation": "Stop, check, tell, then report.",
+      "skill_tag": "fake.steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Check it using trusted sources"
+       },
+       {
+        "id": "i3",
+        "text": "Tell a trusted adult if it worries you"
+       },
+       {
+        "id": "i4",
+        "text": "Report it if it is harmful"
+       },
+       {
+        "id": "i1",
+        "text": "Stop and do not share it"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Credit and report"
+    },
+    {
+     "type": "text",
+     "markdown": "The owner of a picture should get **credit**.",
+     "say": "Pictures, music and writing have owners. A fair person asks first and gives credit."
+    },
+    {
+     "type": "text",
+     "markdown": "**Report** harmful things with a grown-up's help.",
+     "say": "If something harmful appears, we tell a trusted adult. We can also use the report button with their help."
+    },
+    {
+     "type": "explainer",
+     "title": "Kind and careful",
+     "scenes": [
+      {
+       "caption": "Owned.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📷",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "©️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "owner"
+        }
+       ],
+       "say": "Zara wants to use a lovely photo for her poster. The photographer owns it."
+      },
+      {
+       "caption": "Credit.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📝",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "🤝",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "She asks permission and writes a credit line. That is fair."
+      },
+      {
+       "caption": "Report.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🚩",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "report"
+        },
+        {
+         "id": "a",
+         "emoji": "👩‍🏫",
+         "x": 72,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "kind online"
+        }
+       ],
+       "say": "A harmful post appears. Zara tells her teacher, who helps her report it."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Our sharing promise",
+     "materials": [
+      "Paper and pens",
+      "Your class"
+     ],
+     "instructions": [
+      "Write three promises, such as pause and check.",
+      "Add one promise about asking permission and giving credit.",
+      "Add who you will tell if something worries you."
+     ],
+     "say": "Now you try. Write a class promise about sharing."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is fair to give credit to the maker of a picture you use.",
+      "hint": "Someone made it.",
+      "explanation": "Credit respects the maker.",
+      "skill_tag": "fake.credit_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pause and check before sharing",
+      "Ask permission and give credit",
+      "Report harmful things and tell a trusted adult"
+     ],
+     "say": "Let us remember. Pause, check, credit and report. Tell a trusted adult."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pause",
+       "meaning": "To stop for a moment."
+      },
+      {
+       "term": "credit",
+       "meaning": "A note saying who made something."
+      },
+      {
+       "term": "report",
+       "meaning": "To tell someone in charge about a problem."
+      },
+      {
+       "term": "permission",
+       "meaning": "Being allowed to do something."
+      },
+      {
+       "term": "harmful",
+       "meaning": "Likely to hurt or upset someone."
+      },
+      {
+       "term": "forward",
+       "meaning": "To send on a message you received."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What should Zara do with a chain message that says forward to ten friends?",
+     "hint": "Pressure is a warning sign.",
+     "explanation": "She should check, not forward.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Forward it to ten friends"
+      },
+      {
+       "id": "b",
+       "text": "Reply with her password"
+      },
+      {
+       "id": "c",
+       "text": "Pause, check and not forward it"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We can report harmful posts with a grown-up's help.",
+     "hint": "Tell someone who can help.",
+     "explanation": "Reporting helps keep people safe.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should you tell if something online worries you?",
+     "hint": "Someone who looks after you.",
+     "explanation": "A trusted adult can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nobody"
+      },
+      {
+       "id": "b",
+       "text": "A trusted adult"
+      },
+      {
+       "id": "c",
+       "text": "The sender"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is the World Wide Web?",
+    "hint": "You visit it in a browser.",
+    "explanation": "The web is pages and sites on the internet.",
+    "skill_tag": "fake.web_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "The cables under the sea"
+     },
+     {
+      "id": "b",
+      "text": "Pages and sites you can visit using the internet"
+     },
+     {
+      "id": "c",
+      "text": "A type of computer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Who can publish things on the web?",
+    "hint": "Think about blogs.",
+    "explanation": "Almost anyone can publish.",
+    "skill_tag": "fake.who_publish",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only teachers"
+     },
+     {
+      "id": "b",
+      "text": "Almost anyone with a device and internet"
+     },
+     {
+      "id": "c",
+      "text": "Only scientists"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "The internet and the web are exactly the same thing.",
+    "hint": "One runs on the other.",
+    "explanation": "The web is one service on the internet.",
+    "skill_tag": "fake.internet_web",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each term to its meaning.",
+    "hint": "Think about each term.",
+    "explanation": "Each term has its own meaning.",
+    "skill_tag": "fake.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Author"
+     },
+     {
+      "id": "l2",
+      "text": "Source"
+     },
+     {
+      "id": "l3",
+      "text": "Date"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Where information comes from"
+     },
+     {
+      "id": "r1",
+      "text": "The person who made the page"
+     },
+     {
+      "id": "r3",
+      "text": "When the page was written"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "web",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the item that is an opinion.",
+    "hint": "It says what someone thinks.",
+    "explanation": "Tastiest is an opinion.",
+    "skill_tag": "fake.tap_opinion",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💬",
+       "label": "Biryani is the tastiest food",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📏",
+       "label": "K2 is about 8,611 metres high",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌡️",
+       "label": "Water boils at 100 degrees at sea level",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Idris says everything on the web is true because it is on the internet. Is he right?",
+    "hint": "Think about who publishes.",
+    "explanation": "Many pages are not checked.",
+    "skill_tag": "fake.reason_true",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the internet is a library of truth"
+     },
+     {
+      "id": "b",
+      "text": "No. Anyone can publish, so we have to check"
+     },
+     {
+      "id": "c",
+      "text": "Yes, websites are checked"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Which kind of page is trying to sell you something?",
+    "hint": "Think about purpose.",
+    "explanation": "An advert wants you to buy.",
+    "skill_tag": "fake.advert",
+    "options": [
+     {
+      "id": "a",
+      "text": "An encyclopedia entry"
+     },
+     {
+      "id": "b",
+      "text": "An advert"
+     },
+     {
+      "id": "c",
+      "text": "A school timetable"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about the web.",
+    "hint": "Think about who makes pages.",
+    "explanation": "Anyone can publish, so we check.",
+    "skill_tag": "fake.fill_web",
+    "points": 2,
+    "text": "Anyone can {b1} on the web, so we must {b2} what we read.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pretend"
+       },
+       {
+        "id": "b",
+        "text": "paint"
+       },
+       {
+        "id": "c",
+        "text": "publish"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hide"
+       },
+       {
+        "id": "b",
+        "text": "check"
+       },
+       {
+        "id": "c",
+        "text": "ignore"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps of checking a web page in order.",
+    "hint": "Who first.",
+    "explanation": "Who, why, proof, then compare.",
+    "skill_tag": "fake.check_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Look for proof or evidence"
+     },
+     {
+      "id": "i4",
+      "text": "Compare with another source"
+     },
+     {
+      "id": "i2",
+      "text": "Think about why they made it"
+     },
+     {
+      "id": "i1",
+      "text": "Find out who made it"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "What does evidence mean?",
+    "hint": "Think about proof.",
+    "explanation": "Evidence is proof.",
+    "skill_tag": "fake.evidence",
+    "options": [
+     {
+      "id": "a",
+      "text": "A loud advert"
+     },
+     {
+      "id": "b",
+      "text": "Proof that helps show something is true"
+     },
+     {
+      "id": "c",
+      "text": "A web address"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "check",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about checking.",
+    "hint": "Think about who and when.",
+    "explanation": "Author and date make a page easier to check.",
+    "skill_tag": "fake.fill_check",
+    "points": 2,
+    "text": "A trustworthy page usually names its {b1} and its {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "apple"
+       },
+       {
+        "id": "b",
+        "text": "author"
+       },
+       {
+        "id": "c",
+        "text": "anchor"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "dinner"
+       },
+       {
+        "id": "b",
+        "text": "date"
+       },
+       {
+        "id": "c",
+        "text": "dragon"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "check",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "A page says school is closing next week, but only one unknown site says so. What should you do?",
+    "hint": "Think about checking.",
+    "explanation": "One unknown site is not enough.",
+    "skill_tag": "fake.school_closing",
+    "options": [
+     {
+      "id": "a",
+      "text": "Share it at once"
+     },
+     {
+      "id": "b",
+      "text": "Believe it"
+     },
+     {
+      "id": "c",
+      "text": "Check with the school or ask a grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A group checks 4 sources for each of 3 claims. Slide to show the total sources checked.",
+    "hint": "3 groups of 4.",
+    "explanation": "3 x 4 = 12 sources.",
+    "skill_tag": "fake.sources_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "A page that names its author and date is easier to check.",
+    "hint": "You can find out more.",
+    "explanation": "Named authors and dates can be checked.",
+    "skill_tag": "fake.author_date",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "check",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Zara says if a page looks professional with nice pictures, it must be trustworthy. Is she right?",
+    "hint": "Think about copying looks.",
+    "explanation": "Anyone can make a page look good.",
+    "skill_tag": "fake.reason_looks",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nice design means true"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only experts make nice pages"
+     },
+     {
+      "id": "c",
+      "text": "No. Looks can be copied, so check the author and evidence"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "check",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two are clues that a post may be fake? Pick two.",
+    "hint": "Think about pressure and hiding.",
+    "explanation": "Pressure and no source are warning signs.",
+    "skill_tag": "fake.clues_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It names its author and date"
+     },
+     {
+      "id": "b",
+      "text": "It links to a trusted report"
+     },
+     {
+      "id": "c",
+      "text": "It has no source or author"
+     },
+     {
+      "id": "d",
+      "text": "It shouts and says share quickly"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "fake",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "Hira sees 12 posts. 5 are fake. How many are not fake?",
+    "hint": "12 take away 5.",
+    "explanation": "12 - 5 = 7 posts.",
+    "skill_tag": "fake.count_posts",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "fake",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "A story is made up to trick people into clicking. What is it?",
+    "hint": "It looks real but is not.",
+    "explanation": "A fake is made to trick people.",
+    "skill_tag": "fake.fake_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A source"
+     },
+     {
+      "id": "b",
+      "text": "A fake"
+     },
+     {
+      "id": "c",
+      "text": "A password"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fake",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says if a post has lots of likes, it must be true. Is he right?",
+    "hint": "Think about popular.",
+    "explanation": "Popular is not the same as true.",
+    "skill_tag": "fake.reason_likes",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, likes mean true"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only true posts get likes"
+     },
+     {
+      "id": "c",
+      "text": "No. Likes show it is popular, not that it is true"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Maryam says a fake is always easy to spot. Is she right?",
+    "hint": "Think about the reflection.",
+    "explanation": "Some fakes look very real.",
+    "skill_tag": "fake.reason_easy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, fakes are obvious"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they always have spelling mistakes"
+     },
+     {
+      "id": "c",
+      "text": "No. Some fakes look very real, so we check"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says sharing a fake by mistake is harmless. Is he right?",
+    "hint": "Think about spreading.",
+    "explanation": "Fakes can spread quickly.",
+    "skill_tag": "fake.reason_harm",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, mistakes never matter"
+     },
+     {
+      "id": "b",
+      "text": "No. It can spread and upset people, so check first"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody reads shares"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each clue to what it suggests.",
+    "hint": "Think about each clue.",
+    "explanation": "Each clue points one way.",
+    "skill_tag": "fake.clue_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Shocking headline with no source"
+     },
+     {
+      "id": "l2",
+      "text": "Named author and trusted links"
+     },
+     {
+      "id": "l3",
+      "text": "Prize you never entered"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "More reliable"
+     },
+     {
+      "id": "r1",
+      "text": "Maybe fake"
+     },
+     {
+      "id": "r3",
+      "text": "Maybe a scam"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "fake",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the message that looks like a scam.",
+    "hint": "Look for a prize you never entered.",
+    "explanation": "Surprise prizes are scam clues.",
+    "skill_tag": "fake.tap_scam",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎁",
+       "label": "You won a free tablet! Click now",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📚",
+       "label": "Library book due Friday",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏫",
+       "label": "School trip form reminder",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "fake",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of sharing a photo fairly in order.",
+    "hint": "Check first.",
+    "explanation": "Check, ask, credit, then share.",
+    "skill_tag": "fake.photo_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add credit if needed"
+     },
+     {
+      "id": "i4",
+      "text": "Share it"
+     },
+     {
+      "id": "i2",
+      "text": "Ask anyone shown in it"
+     },
+     {
+      "id": "i1",
+      "text": "Check you made it or may use it"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "share",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are kind and careful ways to act online? Pick two.",
+    "hint": "Think about respect.",
+    "explanation": "Checking and asking are kind and careful.",
+    "skill_tag": "fake.kind_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ask before sharing someone else's picture"
+     },
+     {
+      "id": "b",
+      "text": "Share first and check later"
+     },
+     {
+      "id": "c",
+      "text": "Copy a picture and say you made it"
+     },
+     {
+      "id": "d",
+      "text": "Check before you share"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "share",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says reposting a picture without credit is fine because it is online. Is she right?",
+    "hint": "Think about the maker.",
+    "explanation": "Makers deserve credit.",
+    "skill_tag": "fake.reason_credit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, online means free"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody owns pictures"
+     },
+     {
+      "id": "c",
+      "text": "No. The owner made it, so credit and permission matter"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Hana says it is not her job to report harmful posts. Is she right?",
+    "hint": "Think about keeping others safe.",
+    "explanation": "Reporting helps keep people safe.",
+    "skill_tag": "fake.reason_report",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never report"
+     },
+     {
+      "id": "b",
+      "text": "No. Reporting helps keep everyone safe, with a grown-up's help"
+     },
+     {
+      "id": "c",
+      "text": "Yes, reports do nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Nadia says she must pass on every message from friends in case it is true. Is she right?",
+    "hint": "Think about pausing.",
+    "explanation": "Chain messages can spread fakes.",
+    "skill_tag": "fake.reason_chain",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, friends are always right"
+     },
+     {
+      "id": "b",
+      "text": "No. Pause and check first, because chains can spread fakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, pass on everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "Zara checks 6 posts before sharing. She decides 2 are fake. How many does she share?",
+    "hint": "6 take away 2.",
+    "explanation": "6 - 2 = 4 posts.",
+    "skill_tag": "fake.share_count",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "share",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "Zara spends 5 minutes checking each of 4 claims. Slide to show the total minutes.",
+    "hint": "4 groups of 5.",
+    "explanation": "4 x 5 = 20 minutes.",
+    "skill_tag": "fake.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "share",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is part of the web?",
+    "hint": "You visit it in a browser.",
+    "explanation": "A website is part of the web.",
+    "skill_tag": "fake.web_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cable"
+     },
+     {
+      "id": "b",
+      "text": "A website"
+     },
+     {
+      "id": "c",
+      "text": "A battery"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which statement about web pages is true?",
+    "hint": "Think about blogs.",
+    "explanation": "Anyone can publish.",
+    "skill_tag": "fake.who_publish",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only newspapers can publish"
+     },
+     {
+      "id": "b",
+      "text": "Anyone can publish, so quality varies"
+     },
+     {
+      "id": "c",
+      "text": "Experts check every page"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "The web is one service that runs on the internet.",
+    "hint": "One runs on the other.",
+    "explanation": "The web runs on the internet.",
+    "skill_tag": "fake.internet_web",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "fake.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Advert"
+     },
+     {
+      "id": "l2",
+      "text": "Opinion"
+     },
+     {
+      "id": "l3",
+      "text": "Fact"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Something that can be checked and is true"
+     },
+     {
+      "id": "r1",
+      "text": "A message paid for to sell something"
+     },
+     {
+      "id": "r2",
+      "text": "What someone thinks"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "web",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the item that is a fact.",
+    "hint": "It can be checked.",
+    "explanation": "A week has seven days is a fact.",
+    "skill_tag": "fake.tap_opinion",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💬",
+       "label": "Cricket is the most fun sport",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📅",
+       "label": "A week has seven days",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎨",
+       "label": "Blue is the nicest colour",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Hana says if many websites show something it must be true. Is she right?",
+    "hint": "Think about copying.",
+    "explanation": "Copies can repeat a mistake.",
+    "skill_tag": "fake.reason_true",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, many means true"
+     },
+     {
+      "id": "b",
+      "text": "Yes, copying makes it correct"
+     },
+     {
+      "id": "c",
+      "text": "No. Sites can copy the same mistake, so check the original source"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "web",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A page says Buy now! Limited offer! What is its likely purpose?",
+    "hint": "Think about purpose.",
+    "explanation": "Buy now means selling.",
+    "skill_tag": "fake.advert",
+    "options": [
+     {
+      "id": "a",
+      "text": "To give a weather forecast"
+     },
+     {
+      "id": "b",
+      "text": "To sell something"
+     },
+     {
+      "id": "c",
+      "text": "To teach a lesson"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about pages.",
+    "hint": "Think about each word.",
+    "explanation": "Author made it and source is the origin.",
+    "skill_tag": "fake.fill_web",
+    "points": 2,
+    "text": "The {b1} is the person who made a page. The {b2} is where the information comes from.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "anchor"
+       },
+       {
+        "id": "b",
+        "text": "author"
+       },
+       {
+        "id": "c",
+        "text": "audience"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sofa"
+       },
+       {
+        "id": "b",
+        "text": "source"
+       },
+       {
+        "id": "c",
+        "text": "sauce"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these steps for a surprising claim in order.",
+    "hint": "Pause first.",
+    "explanation": "Pause, search, check, then decide.",
+    "skill_tag": "fake.check_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Check who says it"
+     },
+     {
+      "id": "i4",
+      "text": "Decide if it is likely true"
+     },
+     {
+      "id": "i2",
+      "text": "Search for the claim"
+     },
+     {
+      "id": "i1",
+      "text": "Pause before believing it"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "A page states a claim and links to a measuring report. What is the report?",
+    "hint": "Think about proof.",
+    "explanation": "A measuring report is evidence.",
+    "skill_tag": "fake.evidence",
+    "options": [
+     {
+      "id": "a",
+      "text": "An advert"
+     },
+     {
+      "id": "b",
+      "text": "A password"
+     },
+     {
+      "id": "c",
+      "text": "Evidence"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "check",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about proof.",
+    "hint": "Think about comparing.",
+    "explanation": "Two agreeing trusted sources are stronger.",
+    "skill_tag": "fake.fill_check",
+    "points": 2,
+    "text": "Facts are stronger when {b1} trusted sources {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "no"
+       },
+       {
+        "id": "b",
+        "text": "two"
+       },
+       {
+        "id": "c",
+        "text": "zero"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "disagree"
+       },
+       {
+        "id": "b",
+        "text": "sleep"
+       },
+       {
+        "id": "c",
+        "text": "agree"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "check",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A message says a shop gives free phones to anyone who clicks. What should you do?",
+    "hint": "Think about checking.",
+    "explanation": "It may be a scam.",
+    "skill_tag": "fake.school_closing",
+    "options": [
+     {
+      "id": "a",
+      "text": "Send it to friends"
+     },
+     {
+      "id": "b",
+      "text": "Not click, and tell a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Click at once"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A group checks 5 sources for each of 3 claims. Slide to show the total sources checked.",
+    "hint": "3 groups of 5.",
+    "explanation": "3 x 5 = 15 sources.",
+    "skill_tag": "fake.sources_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "A page that hides who made it is just as easy to check.",
+    "hint": "You cannot find out more.",
+    "explanation": "Hidden authors are harder to check.",
+    "skill_tag": "fake.author_date",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "check",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a page with no spelling mistakes cannot be fake. Is he right?",
+    "hint": "Think about copying looks.",
+    "explanation": "Good writing does not prove truth.",
+    "skill_tag": "fake.reason_looks",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, fakes always have mistakes"
+     },
+     {
+      "id": "b",
+      "text": "No. A fake can be well written"
+     },
+     {
+      "id": "c",
+      "text": "Yes, no mistakes means true"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "check",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two clues suggest a message is a scam? Pick two.",
+    "hint": "Think about prizes and passwords.",
+    "explanation": "Surprise prizes and password requests are scam clues.",
+    "skill_tag": "fake.clues_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It asks for a password"
+     },
+     {
+      "id": "b",
+      "text": "It is a reminder about a library book you borrowed"
+     },
+     {
+      "id": "c",
+      "text": "It comes from your teacher on the school site"
+     },
+     {
+      "id": "d",
+      "text": "It says you won a prize you never entered"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "fake",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "Idris sees 20 posts. 8 are fake. How many are not fake?",
+    "hint": "20 take away 8.",
+    "explanation": "20 - 8 = 12 posts.",
+    "skill_tag": "fake.count_posts",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "fake",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Someone shares a made-up story just to get clicks. What kind of story is it?",
+    "hint": "It looks real but is not.",
+    "explanation": "It is made up to trick people.",
+    "skill_tag": "fake.fake_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A school timetable"
+     },
+     {
+      "id": "b",
+      "text": "A fake story"
+     },
+     {
+      "id": "c",
+      "text": "A true report"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fake",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a video with a million views must be accurate. Is she right?",
+    "hint": "Think about popular.",
+    "explanation": "Popular is not the same as true.",
+    "skill_tag": "fake.reason_likes",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a million people cannot be wrong"
+     },
+     {
+      "id": "b",
+      "text": "No. Views show popularity, not truth"
+     },
+     {
+      "id": "c",
+      "text": "Yes, views prove truth"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says only silly posts can be fake. Is he right?",
+    "hint": "Think about the reflection.",
+    "explanation": "Serious posts can be fake.",
+    "skill_tag": "fake.reason_easy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only silly ones"
+     },
+     {
+      "id": "b",
+      "text": "Yes, serious ones are always true"
+     },
+     {
+      "id": "c",
+      "text": "No. Serious-looking posts can be fake too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Layla says it is fine to share something unchecked if it seems funny. Is she right?",
+    "hint": "Think about spreading.",
+    "explanation": "Jokes can still mislead.",
+    "skill_tag": "fake.reason_harm",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, funny is always safe"
+     },
+     {
+      "id": "b",
+      "text": "Yes, jokes are never fakes"
+     },
+     {
+      "id": "c",
+      "text": "No. Check first, because jokes can still mislead"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fake",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each action with its result.",
+    "hint": "Think about each action.",
+    "explanation": "Each action has its own result.",
+    "skill_tag": "fake.clue_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pause and check"
+     },
+     {
+      "id": "l2",
+      "text": "Share at once"
+     },
+     {
+      "id": "l3",
+      "text": "Tell a grown-up"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "You get help"
+     },
+     {
+      "id": "r1",
+      "text": "You avoid spreading a fake"
+     },
+     {
+      "id": "r2",
+      "text": "A fake may spread"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "fake",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the post that looks fake.",
+    "hint": "Look for pressure and no source.",
+    "explanation": "Pressure and no source are warning signs.",
+    "skill_tag": "fake.tap_scam",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📰",
+       "label": "SHOCKING: share before it is deleted!",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌦️",
+       "label": "Forecast from the weather service",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📖",
+       "label": "Encyclopedia page with a named author",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "fake",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for a worrying message in order.",
+    "hint": "Do not reply first.",
+    "explanation": "Do not reply, show an adult, report, keep evidence.",
+    "skill_tag": "fake.photo_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Let them help you report it"
+     },
+     {
+      "id": "i4",
+      "text": "Keep the evidence safe"
+     },
+     {
+      "id": "i2",
+      "text": "Show a trusted adult"
+     },
+     {
+      "id": "i1",
+      "text": "Do not reply"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "share",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two should you do if you see something upsetting? Pick two.",
+    "hint": "Think about getting help.",
+    "explanation": "Tell an adult and report with help.",
+    "skill_tag": "fake.kind_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Use the report button with a grown-up"
+     },
+     {
+      "id": "b",
+      "text": "Reply angrily"
+     },
+     {
+      "id": "c",
+      "text": "Send it to your friends"
+     },
+     {
+      "id": "d",
+      "text": "Tell a trusted adult"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "share",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ali says he can say a photo he found online is his own. Is he right?",
+    "hint": "Think about the maker.",
+    "explanation": "It would be dishonest.",
+    "skill_tag": "fake.reason_credit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, finding it makes it his"
+     },
+     {
+      "id": "b",
+      "text": "No. That is dishonest and unfair to the owner"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody can check"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Sana says if she sees something harmful she should keep quiet. Is she right?",
+    "hint": "Think about keeping others safe.",
+    "explanation": "Telling an adult helps.",
+    "skill_tag": "fake.reason_report",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is nothing to do with her"
+     },
+     {
+      "id": "b",
+      "text": "No. She should tell a trusted adult"
+     },
+     {
+      "id": "c",
+      "text": "Yes, keep quiet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a message that says forward to ten friends must be important. Is he right?",
+    "hint": "Think about pausing.",
+    "explanation": "Pressure is a warning sign.",
+    "skill_tag": "fake.reason_chain",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is a friendly rule"
+     },
+     {
+      "id": "b",
+      "text": "No. Pressure to forward is a warning sign"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it must be important"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "share",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "Omar checks 9 posts before sharing. He decides 3 are fake. How many does he share?",
+    "hint": "9 take away 3.",
+    "explanation": "9 - 3 = 6 posts.",
+    "skill_tag": "fake.share_count",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "share",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "Maryam spends 3 minutes checking each of 6 claims. Slide to show the total minutes.",
+    "hint": "6 groups of 3.",
+    "explanation": "6 x 3 = 18 minutes.",
+    "skill_tag": "fake.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "share",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "title": "Zainab's nightlight",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "Bedtime.",
+   "say": "It is bedtime. Zainab's room gets dark.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zainab",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "m",
+     "emoji": "🌙",
+     "x": 78,
+     "y": 25,
+     "size": 3,
+     "anim": "float"
+    }
+   ]
+  },
+  {
+   "caption": "The light sensor.",
+   "say": "A light sensor in her nightlight notices the dark.",
+   "items": [
+    {
+     "id": "n",
+     "emoji": "💡",
+     "x": 40,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "s",
+     "emoji": "📡",
+     "label": "light sensor",
+     "x": 72,
+     "y": 45,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "If dark, then on.",
+   "say": "The program says: if dark, then turn on.",
+   "items": [
+    {
+     "id": "i",
+     "emoji": "❓",
+     "x": 30,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "n",
+     "emoji": "💡",
+     "x": 70,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "It glows.",
+   "say": "The nightlight glows. Zainab feels safe.",
+   "items": [
+    {
+     "id": "n",
+     "emoji": "💡",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "anim": "bounce",
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "An automatic door.",
+   "say": "At school, a door opens by itself. A movement sensor noticed her.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "d",
+     "emoji": "🚪",
+     "x": 72,
+     "y": 52,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Not magic.",
+   "say": "The door does not know her name. It only notices movement.",
+   "items": [
+    {
+     "id": "q",
+     "emoji": "🤔",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "Sensors can be wrong.",
+   "say": "Sometimes a sensor gets it wrong. A person can fix it.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "📡",
+     "x": 35,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "b",
+     "emoji": "🐛",
+     "x": 70,
+     "y": 35,
+     "size": 2,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "Ask first.",
+   "say": "Zainab asks her mum before using any new smart thing.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3
+    },
+    {
+     "id": "m",
+     "emoji": "👩",
+     "x": 70,
+     "y": 52,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

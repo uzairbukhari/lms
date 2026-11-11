@@ -1,0 +1,3157 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-chatbots-and-language-ai",
+  "subject": "data-ai",
+  "title": "Chatbots and Language AI",
+  "summary": "Find out what a chatbot is, how language AI predicts words, when chatbots get it wrong and how to use them safely and honestly.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 10: Chatbots and language AI",
+  "learning_objectives": [
+   "Explain that a chatbot is a program and language AI predicts words from patterns",
+   "Explain why chatbots can make things up, be out of date or be biased",
+   "Use chatbots safely, check answers and write your own work"
+  ],
+  "tags": [
+   "topic",
+   "topic-10"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 10
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 3",
+    "text": "Learning: computers can learn from data, and models make predictions from patterns"
+   },
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 5",
+    "text": "Societal impact: AI can impact the world in positive and negative ways"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a chatbot is and that it has no feelings",
+   "I can explain that language AI predicts words from patterns",
+   "I keep personal information private, check answers and tell a trusted adult"
+  ],
+  "real_life": "A school help chatbot, or a voice helper asked for ideas for a project, with answers checked by a grown-up.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a pattern?",
+    "hint": "Think about stripes.",
+    "explanation": "A pattern repeats.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of cable"
+     },
+     {
+      "id": "b",
+      "text": "Something that repeats in a regular way"
+     },
+     {
+      "id": "c",
+      "text": "A broken program"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is training data?",
+    "hint": "Think about the cat spotter.",
+    "explanation": "Programs learn from examples.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A password"
+     },
+     {
+      "id": "b",
+      "text": "Examples a program learns from"
+     },
+     {
+      "id": "c",
+      "text": "The power cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 7 x 6?",
+    "hint": "6 sevens.",
+    "explanation": "7 x 6 = 42.",
+    "answer": {
+     "value": 42,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "chat",
+   "kind": "learn",
+   "title": "What is a chatbot?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, curious coder!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does a chatbot make its words?",
+     "say": "Today we meet chatbots. A chatbot can answer in words. But does it understand us?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-chatbots-and-language-ai-1-aa69b44d.jpg",
+     "alt": "A close-up of a red, blue and green macaw parrot against a blurred green background",
+     "caption": "A parrot can copy words without knowing their meaning. A chatbot also does not understand like a person.",
+     "credit": "Photo by Barbora Dostálová on Unsplash",
+     "say": "A parrot can copy words it has heard without knowing what they mean. A chatbot works differently, but it does not think like a person either."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Chatbots are programs"
+    },
+    {
+     "type": "text",
+     "markdown": "A **chatbot** is a program that replies in everyday language.",
+     "say": "A chatbot is a computer program that chats in everyday words. People make it, and it runs on a computer."
+    },
+    {
+     "type": "text",
+     "markdown": "Scripted chatbots use ready-made replies.",
+     "say": "Some chatbots are scripted. They pick from ready-written replies. Others use AI trained on lots of text."
+    },
+    {
+     "type": "explainer",
+     "title": "Two kinds of chatbot",
+     "scenes": [
+      {
+       "caption": "Scripted.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "📋",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "menu"
+        }
+       ],
+       "say": "The school help bot has a menu. Zara taps opening times and gets a ready-made reply."
+      },
+      {
+       "caption": "Free typing.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "⌨️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "💬",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "any question"
+        }
+       ],
+       "say": "A language AI chatbot lets her type any question in her own words."
+      },
+      {
+       "caption": "Programs.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "💻",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "just programs"
+        }
+       ],
+       "say": "Both are programs made by people. Neither one is alive or a person."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara taps a menu and gets a ready-made reply about opening times. Which kind of chatbot is this?",
+      "hint": "The replies are ready-made.",
+      "explanation": "A menu with ready-made replies is scripted.",
+      "skill_tag": "chat.scripted_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "A living pet"
+       },
+       {
+        "id": "b",
+        "text": "A scripted chatbot"
+       },
+       {
+        "id": "c",
+        "text": "A hidden person"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Chatbots do not feel"
+    },
+    {
+     "type": "text",
+     "markdown": "A chatbot makes words. It does not have **feelings**.",
+     "say": "A chatbot can write I am happy. That does not mean it feels happy. It only makes words."
+    },
+    {
+     "type": "explainer",
+     "title": "Words without feelings",
+     "scenes": [
+      {
+       "caption": "A reply.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "💬",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "I am well!"
+        }
+       ],
+       "say": "Zara types: are you sad today? The chatbot writes: I am doing well!"
+      },
+      {
+       "caption": "Patterns.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🔤",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "🚫",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "no feelings"
+        }
+       ],
+       "say": "The reply is built from patterns in text. A program does not feel sad or happy."
+      },
+      {
+       "caption": "A tool.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🧰",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a tool"
+        }
+       ],
+       "say": "So we enjoy using it, but remember what it is: a tool."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If a chatbot writes I am happy, it must feel happy.",
+      "hint": "It only makes words.",
+      "explanation": "A program makes words and has no feelings.",
+      "skill_tag": "chat.feel_chk",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara and the school chatbot",
+     "asset": "clip-data-ai-class-4-chatbots-and-language-ai-9a24c54d.mp4",
+     "poster": "clip-data-ai-class-4-chatbots-and-language-ai-9a24c54d.webp",
+     "seconds": 73,
+     "transcript": "Zara's class meets a chatbot. It replies in everyday words. A chatbot is a program made by people. It is not alive. It predicts the next word, again and again, using patterns from training text. It names a book about K2. The librarian says the book does not exist. So Zara checks answers in a book. A chatbot can sound sure and be wrong. She never types her address or password. Private things stay private. She writes her K2 poster in her own words. That is her own work. When a reply is unkind, she stops and tells her teacher.",
+     "caption": "Zara learns how a chatbot works and how to use it safely."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A chatbot is a program that replies in everyday language",
+      "Some use ready-made replies, some use AI trained on text",
+      "A chatbot makes words and has no feelings"
+     ],
+     "say": "Let us remember. A chatbot is a program. It makes words. It does not feel."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "chatbot",
+       "meaning": "A program that replies in everyday language."
+      },
+      {
+       "term": "feelings",
+       "meaning": "Emotions such as happy or sad."
+      },
+      {
+       "term": "scripted",
+       "meaning": "Using ready-written replies."
+      },
+      {
+       "term": "language ai",
+       "meaning": "AI trained on lots of text so it can write and answer in words."
+      },
+      {
+       "term": "program",
+       "meaning": "Instructions a computer follows."
+      },
+      {
+       "term": "menu",
+       "meaning": "A list of choices."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A chatbot is made by people.",
+     "hint": "It is a program.",
+     "explanation": "People write and train chatbots.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a scripted chatbot use?",
+     "hint": "Think about the menu.",
+     "explanation": "Scripted bots choose from ready replies.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its own secret feelings"
+      },
+      {
+       "id": "b",
+       "text": "Ready-written replies"
+      },
+      {
+       "id": "c",
+       "text": "A hidden person's help"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Can a chatbot feel sad?",
+     "hint": "It is a program.",
+     "explanation": "Programs do not have feelings.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes, when it is lonely"
+      },
+      {
+       "id": "b",
+       "text": "No, it only makes words"
+      },
+      {
+       "id": "c",
+       "text": "Yes, when it is switched off"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a chatbot's reply made from?",
+     "hint": "Think about how it works.",
+     "explanation": "Replies come from patterns or scripts.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Magic"
+      },
+      {
+       "id": "b",
+       "text": "Patterns in text or ready-made replies"
+      },
+      {
+       "id": "c",
+       "text": "Its feelings"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "kind": "try",
+   "title": "Predicting the next word",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: One word at a time"
+    },
+    {
+     "type": "text",
+     "markdown": "**Training text** is the words the AI learned patterns from.",
+     "say": "Language AI learns from huge amounts of text. It finds patterns in which words usually follow other words."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-chatbots-and-language-ai-2-c23096ba.jpg",
+     "alt": "A long line of white dominoes with black dots standing in a row, fading into a blurred white background",
+     "caption": "One word leads to the next, like a chain of dominoes.",
+     "credit": "Photo by Robert Stump on Unsplash",
+     "say": "When you type, it predicts a likely next word. Then it predicts the next one, like a line of dominoes."
+    },
+    {
+     "type": "explainer",
+     "title": "Predicting",
+     "scenes": [
+      {
+       "caption": "Start.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "next word?"
+        }
+       ],
+       "say": "The sentence starts: the cat sat on the. What word is likely next?"
+      },
+      {
+       "caption": "Likely.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🧶",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "📊",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "likely"
+        }
+       ],
+       "say": "In its training text, the word mat came next many times. So mat is a likely choice."
+      },
+      {
+       "caption": "Repeat.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔁",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "word by word"
+        }
+       ],
+       "say": "It adds mat, then predicts again. A whole reply is built one word at a time."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word is most likely to finish: I brush my ___ every morning?",
+      "hint": "Think about what people brush.",
+      "explanation": "Patterns in text make teeth the likely word.",
+      "skill_tag": "chat.next_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "clouds"
+       },
+       {
+        "id": "b",
+        "text": "teeth"
+       },
+       {
+        "id": "c",
+        "text": "tyres"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Try it yourself"
+    },
+    {
+     "type": "text",
+     "markdown": "A **prediction** is a careful guess, not a fact.",
+     "say": "A prediction is a careful guess. It is not a fact. More training text usually gives better guesses."
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the sentence endings",
+     "goal": "Move the 6 endings into Likely or Unlikely.",
+     "emoji": "✍️",
+     "count": 6,
+     "zones": [
+      "Likely",
+      "Unlikely"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Predict the word",
+     "materials": [
+      "Paper and pens",
+      "A partner"
+     ],
+     "instructions": [
+      "Write the start of a sentence, such as at lunch I ate.",
+      "Your partner writes the most likely next word.",
+      "Compare. Did you pick the same word? Why or why not?"
+     ],
+     "say": "Now you try. Play a word-prediction game with a partner."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A prediction is a guess based on patterns, not a certain fact.",
+      "hint": "Think about likely words.",
+      "explanation": "Predictions are careful guesses.",
+      "skill_tag": "chat.guess_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Language AI learns patterns from lots of training text",
+      "It predicts the next word, again and again",
+      "A prediction is a careful guess, not a fact"
+     ],
+     "say": "Let us remember. Language AI predicts words from patterns in text."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "training text",
+       "meaning": "The words the AI learned patterns from."
+      },
+      {
+       "term": "prediction",
+       "meaning": "A careful guess about what comes next."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats in a regular way."
+      },
+      {
+       "term": "likely",
+       "meaning": "Probably going to happen or be right."
+      },
+      {
+       "term": "domino",
+       "meaning": "A small tile that can knock over the next one."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word best finishes: the cat sat on the ___?",
+     "hint": "Think about the pattern.",
+     "explanation": "Mat often follows that phrase.",
+     "options": [
+      {
+       "id": "a",
+       "text": "moon"
+      },
+      {
+       "id": "b",
+       "text": "soup"
+      },
+      {
+       "id": "c",
+       "text": "mat"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "More training text usually gives better predictions.",
+     "hint": "More patterns to learn.",
+     "explanation": "More text shows more patterns.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How does language AI build a reply?",
+     "hint": "Think about dominoes.",
+     "explanation": "It predicts word by word.",
+     "options": [
+      {
+       "id": "a",
+       "text": "All at once from a secret book"
+      },
+      {
+       "id": "b",
+       "text": "By asking a person"
+      },
+      {
+       "id": "c",
+       "text": "One predicted word after another"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wrong",
+   "kind": "play",
+   "title": "When chatbots get it wrong",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sounding right is not the same as being right"
+    },
+    {
+     "type": "text",
+     "markdown": "A chatbot can **make things up** that sound true.",
+     "say": "A chatbot predicts likely words. Likely words can sound right and still be false."
+    },
+    {
+     "type": "explainer",
+     "title": "A made-up answer",
+     "scenes": [
+      {
+       "caption": "Ask.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "a book"
+        }
+       ],
+       "say": "Zara asks for a book about K2 for children. The chatbot names one."
+      },
+      {
+       "caption": "Not real.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "👩‍🏫",
+         "x": 28,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "❌",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "not real"
+        }
+       ],
+       "say": "Zara asks her librarian. That book does not exist. The chatbot made it up."
+      },
+      {
+       "caption": "Confident.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "💬",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "check it"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "check"
+        }
+       ],
+       "say": "The chatbot was confident. Being confident does not make an answer true."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A chatbot names a book that no library has. What most likely happened?",
+      "hint": "Think about likely words.",
+      "explanation": "Likely-sounding titles can be invented.",
+      "skill_tag": "chat.made_up_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "It is a secret book"
+       },
+       {
+        "id": "b",
+        "text": "It made something up"
+       },
+       {
+        "id": "c",
+        "text": "The library lost it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Old and unfair"
+    },
+    {
+     "type": "text",
+     "markdown": "A chatbot can be **out of date**.",
+     "say": "A chatbot learned from old text. It may miss new events, so we cannot trust its news."
+    },
+    {
+     "type": "text",
+     "markdown": "Text can include **bias**. Play the memory game.",
+     "say": "It also learned from text written by people. That text can include unfair ideas, and a chatbot can copy them. First, a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Chatbot words",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "💬",
+      "🔍",
+      "📅",
+      "🤔"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Which claim is most worth checking in another source? Tap it.",
+      "hint": "Which one is recent?",
+      "explanation": "Recent events may be missing from its training text.",
+      "skill_tag": "chat.check_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "📅",
+         "label": "The score of yesterday's match",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "➕",
+         "label": "Two plus two is four",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🌞",
+         "label": "The sun is a star",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h1"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A chatbot can sound sure and be wrong",
+      "It can be out of date",
+      "It can copy unfair ideas from its text, so we check"
+     ],
+     "say": "Let us remember. Chatbots can make things up, be out of date, or copy bias. Check."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "make things up",
+       "meaning": "To give an answer that sounds right but is not true."
+      },
+      {
+       "term": "out of date",
+       "meaning": "Missing recent events."
+      },
+      {
+       "term": "bias",
+       "meaning": "An unfair leaning for or against something."
+      },
+      {
+       "term": "confident",
+       "meaning": "Sounding very sure."
+      },
+      {
+       "term": "librarian",
+       "meaning": "A person who looks after a library."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A chatbot that sounds sure is always right.",
+     "hint": "Think about the invented book.",
+     "explanation": "Sounding sure is not proof.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why might a chatbot miss yesterday's news?",
+     "hint": "Think about training.",
+     "explanation": "It only knows what was in its training text.",
+     "options": [
+      {
+       "id": "a",
+       "text": "News is secret"
+      },
+      {
+       "id": "b",
+       "text": "It learned from older text"
+      },
+      {
+       "id": "c",
+       "text": "It is switched off at night"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is bias?",
+     "hint": "Think about fairness.",
+     "explanation": "Bias is an unfair leaning.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fast reply"
+      },
+      {
+       "id": "b",
+       "text": "An unfair leaning"
+      },
+      {
+       "id": "c",
+       "text": "A kind of battery"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safe",
+   "kind": "use",
+   "title": "Use chatbots safely",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Safe habits"
+    },
+    {
+     "type": "text",
+     "markdown": "Rule 1: ask a grown-up first.",
+     "say": "Zara's class writes rules for using a chatbot. First, always ask a grown-up before you start."
+    },
+    {
+     "type": "text",
+     "markdown": "Rule 2: keep **personal information** private.",
+     "say": "Rule two: never type private things. That means your address, your password and your full name with your school."
+    },
+    {
+     "type": "text",
+     "markdown": "Rule 3: check important answers.",
+     "say": "Rule three: check important answers in another source. A chatbot can make things up."
+    },
+    {
+     "type": "explainer",
+     "title": "Three rules",
+     "scenes": [
+      {
+       "caption": "Rule 1.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🙋",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ask first"
+        }
+       ],
+       "say": "Rule one is a hand up. Ask a grown-up first."
+      },
+      {
+       "caption": "Rule 2.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "private"
+        }
+       ],
+       "say": "Rule two is a padlock. Personal information stays private."
+      },
+      {
+       "caption": "Rule 3.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔍",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "check"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "three rules"
+        }
+       ],
+       "say": "Rule three is a magnifier. Check important answers."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of using a chatbot safely in order.",
+      "hint": "Ask first.",
+      "explanation": "Ask, type safely, read, then check.",
+      "skill_tag": "chat.safe_steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Type a question with no private details"
+       },
+       {
+        "id": "i3",
+        "text": "Read the reply carefully"
+       },
+       {
+        "id": "i4",
+        "text": "Check it in another source"
+       },
+       {
+        "id": "i1",
+        "text": "Ask a grown-up first"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Honest and kind"
+    },
+    {
+     "type": "text",
+     "markdown": "Use a chatbot for ideas. Write your own work.",
+     "say": "A chatbot can give ideas. Then you must write your own work. Copying is not learning."
+    },
+    {
+     "type": "text",
+     "markdown": "If it says something unkind, stop and tell a trusted adult.",
+     "say": "If a chatbot says something unkind or strange, stop. Tell a trusted adult. It is not your fault."
+    },
+    {
+     "type": "explainer",
+     "title": "Honest and kind",
+     "scenes": [
+      {
+       "caption": "Ideas.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "💡",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara asks the chatbot for ideas for her K2 poster. She checks them in a book."
+      },
+      {
+       "caption": "Own work.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "✍️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🖼️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "her poster"
+        }
+       ],
+       "say": "She writes the poster in her own words. That is her own work."
+      },
+      {
+       "caption": "Tell.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🛑",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 72,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "tell a grown-up"
+        }
+       ],
+       "say": "Once, a reply is unkind. She stops and tells her teacher. That is the right thing."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Our chatbot rules",
+     "materials": [
+      "Paper and pens",
+      "Your class"
+     ],
+     "instructions": [
+      "Write three rules for using a chatbot safely.",
+      "Add one rule about writing your own work.",
+      "Add who you will tell if a reply upsets you."
+     ],
+     "say": "Now you try. Write your own class rules for chatbots."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is fine to hand in a chatbot's answer as your own work.",
+      "hint": "Think about learning.",
+      "explanation": "It is not your own work, and you would not learn.",
+      "skill_tag": "chat.own_work_chk",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Ask a grown-up and keep personal information private",
+      "Check important answers and write your own work",
+      "Stop and tell a trusted adult if a reply upsets you"
+     ],
+     "say": "Let us remember. Ask first, keep private, check, and write your own work."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "personal information",
+       "meaning": "Facts that could identify you, such as your address or password."
+      },
+      {
+       "term": "private",
+       "meaning": "Only for you and your family."
+      },
+      {
+       "term": "rule",
+       "meaning": "A sentence that says how we should act."
+      },
+      {
+       "term": "trusted adult",
+       "meaning": "A grown-up you know well and trust."
+      },
+      {
+       "term": "ideas",
+       "meaning": "Thoughts to start with."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is personal information?",
+     "hint": "It could identify you.",
+     "explanation": "An address is personal.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The colour blue"
+      },
+      {
+       "id": "b",
+       "text": "The number seven"
+      },
+      {
+       "id": "c",
+       "text": "Your home address"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A chatbot can give ideas, but we write our own work.",
+     "hint": "Think about honesty.",
+     "explanation": "Our own work shows what we learned.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do if a chatbot says something unkind?",
+     "hint": "Get help.",
+     "explanation": "A trusted adult can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep chatting"
+      },
+      {
+       "id": "b",
+       "text": "Stop and tell a trusted adult"
+      },
+      {
+       "id": "c",
+       "text": "Say something unkind back"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a chatbot?",
+    "hint": "It replies in words.",
+    "explanation": "A chatbot is a program that chats.",
+    "skill_tag": "chat.def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A robot with a face"
+     },
+     {
+      "id": "b",
+      "text": "A kind of website address"
+     },
+     {
+      "id": "c",
+      "text": "A program that holds a conversation in text or speech"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "How does a scripted chatbot choose its replies?",
+    "hint": "Think about the menu.",
+    "explanation": "Scripted bots use ready-made replies.",
+    "skill_tag": "chat.scripted",
+    "options": [
+     {
+      "id": "a",
+      "text": "It learns from the whole internet in a second"
+     },
+     {
+      "id": "b",
+      "text": "It asks the player to write them"
+     },
+     {
+      "id": "c",
+      "text": "It follows rules and picks ready-written replies"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A chatbot is a program made by people.",
+    "hint": "Who writes programs?",
+    "explanation": "People write and train chatbots.",
+    "skill_tag": "chat.made",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each term to its meaning.",
+    "hint": "Think about each term.",
+    "explanation": "Each term has its own meaning.",
+    "skill_tag": "chat.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Chatbot"
+     },
+     {
+      "id": "l2",
+      "text": "Prompt"
+     },
+     {
+      "id": "l3",
+      "text": "Reply"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "What you type to guide the reply"
+     },
+     {
+      "id": "r1",
+      "text": "A program that talks in words"
+     },
+     {
+      "id": "r3",
+      "text": "What the chatbot writes back"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "chat",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the one that is a chatbot.",
+    "hint": "It replies in words.",
+    "explanation": "A chatbot is a program that chats.",
+    "skill_tag": "chat.tap_bot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💬",
+       "label": "A program that answers typed questions",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📷",
+       "label": "A camera lens",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔌",
+       "label": "A plug",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Zara says a chatbot is a person typing from far away. Is she right?",
+    "hint": "Who writes programs?",
+    "explanation": "A chatbot is a program.",
+    "skill_tag": "chat.reason_person",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a real person always types"
+     },
+     {
+      "id": "b",
+      "text": "No. It is a computer program"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it lives inside the screen"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "chat",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Which is a good job for a chatbot?",
+    "hint": "Think about safe, simple jobs.",
+    "explanation": "Simple questions are a sensible job.",
+    "skill_tag": "chat.good_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "Keeping your secrets for you"
+     },
+     {
+      "id": "b",
+      "text": "Answering common questions about opening times"
+     },
+     {
+      "id": "c",
+      "text": "Deciding who is guilty of a crime"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "chat",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about chatbots.",
+    "hint": "Think about input and what it is.",
+    "explanation": "It answers your prompt, and it is a program.",
+    "skill_tag": "chat.fill_bot",
+    "points": 2,
+    "text": "A chatbot replies to the {b1} you type. It is a {b2}, not a person.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pocket"
+       },
+       {
+        "id": "b",
+        "text": "plate"
+       },
+       {
+        "id": "c",
+        "text": "prompt"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "pupil"
+       },
+       {
+        "id": "b",
+        "text": "program"
+       },
+       {
+        "id": "c",
+        "text": "pirate"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "chat",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps of how a language AI writes a reply in order.",
+    "hint": "Read first.",
+    "explanation": "Read, predict, repeat, show.",
+    "skill_tag": "chat.reply_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "It adds that word and predicts again"
+     },
+     {
+      "id": "i4",
+      "text": "It shows the finished reply"
+     },
+     {
+      "id": "i2",
+      "text": "It predicts the most likely next word"
+     },
+     {
+      "id": "i1",
+      "text": "It reads your prompt"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Which word is most likely to finish: the cat sat on the ___?",
+    "hint": "Think about the pattern.",
+    "explanation": "Mat often follows that phrase.",
+    "skill_tag": "chat.next_word",
+    "options": [
+     {
+      "id": "a",
+      "text": "soup"
+     },
+     {
+      "id": "b",
+      "text": "mat"
+     },
+     {
+      "id": "c",
+      "text": "moon"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about prediction.",
+    "hint": "Think about how it works.",
+    "explanation": "It learns patterns and predicts words.",
+    "skill_tag": "chat.fill_predict",
+    "points": 2,
+    "text": "Language AI learns {b1} from lots of text. It {b2} the next word.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "parcels"
+       },
+       {
+        "id": "b",
+        "text": "patterns"
+       },
+       {
+        "id": "c",
+        "text": "planets"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "packs"
+       },
+       {
+        "id": "b",
+        "text": "predicts"
+       },
+       {
+        "id": "c",
+        "text": "paints"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "predict",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Why does more training text usually help a language AI?",
+    "hint": "Think about learning.",
+    "explanation": "More text shows more patterns.",
+    "skill_tag": "chat.more_text",
+    "options": [
+     {
+      "id": "a",
+      "text": "The screen gets bigger"
+     },
+     {
+      "id": "b",
+      "text": "Every reply becomes true"
+     },
+     {
+      "id": "c",
+      "text": "It sees more patterns"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A prompt has 3 words. The AI adds 1 word at a time until the whole reply has 12 words. Slide to show how many words the AI added.",
+    "hint": "12 take away 3.",
+    "explanation": "12 - 3 = 9 words.",
+    "skill_tag": "chat.words_added",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "Language AI predicts words using patterns it learned from text.",
+    "hint": "Think about training.",
+    "explanation": "That is how it picks words.",
+    "skill_tag": "chat.uses_patterns",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "predict",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a chatbot understands words exactly as a person does. Is he right?",
+    "hint": "Think about the parrot.",
+    "explanation": "It uses patterns, not human understanding.",
+    "skill_tag": "chat.reason_understand",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it has feelings about words"
+     },
+     {
+      "id": "b",
+      "text": "No. It uses patterns in text and does not understand like a person"
+     },
+     {
+      "id": "c",
+      "text": "Yes, exactly like a person"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two can go wrong with a chatbot? Pick two.",
+    "hint": "Think about what it learned from.",
+    "explanation": "Chatbots can invent and can be out of date.",
+    "skill_tag": "chat.wrong_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It can be out of date"
+     },
+     {
+      "id": "b",
+      "text": "It can never be wrong"
+     },
+     {
+      "id": "c",
+      "text": "It always knows today's news"
+     },
+     {
+      "id": "d",
+      "text": "It can make things up"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "A chatbot gives 10 facts. 3 are wrong. How many are right?",
+    "hint": "10 take away 3.",
+    "explanation": "10 - 3 = 7 facts.",
+    "skill_tag": "chat.facts_count",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "What does it mean if a chatbot makes things up?",
+    "hint": "Think about the invented book.",
+    "explanation": "Made-up answers sound true but are false.",
+    "skill_tag": "chat.make_up",
+    "options": [
+     {
+      "id": "a",
+      "text": "It draws a picture"
+     },
+     {
+      "id": "b",
+      "text": "It deletes your work"
+     },
+     {
+      "id": "c",
+      "text": "It gives an answer that sounds right but is not true"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says a confident chatbot answer must be correct. Is he right?",
+    "hint": "Think about the invented book.",
+    "explanation": "Sounding sure is not proof.",
+    "skill_tag": "chat.reason_confident",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, confident means correct"
+     },
+     {
+      "id": "b",
+      "text": "Yes, chatbots only say true things"
+     },
+     {
+      "id": "c",
+      "text": "No. It can sound sure and still be wrong"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Maryam says a chatbot always knows today's news. Is she right?",
+    "hint": "Think about older text.",
+    "explanation": "It may be out of date.",
+    "skill_tag": "chat.reason_news",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it hears the world"
+     },
+     {
+      "id": "b",
+      "text": "No. It may only know what was in its training text"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it reads live news"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hira says a chatbot cannot be unfair because it is a computer. Is she right?",
+    "hint": "Think about where the text came from.",
+    "explanation": "Text from people can include bias.",
+    "skill_tag": "chat.reason_bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, computers are always fair"
+     },
+     {
+      "id": "b",
+      "text": "No. It learns from human text, which can contain unfair ideas"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it ignores people"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each problem to a good response.",
+    "hint": "Think about each problem.",
+    "explanation": "Each problem has a safe response.",
+    "skill_tag": "chat.problem_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "An answer sounds odd"
+     },
+     {
+      "id": "l2",
+      "text": "It asks for your address"
+     },
+     {
+      "id": "l3",
+      "text": "It says something unkind"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Stop and tell a trusted adult"
+     },
+     {
+      "id": "r1",
+      "text": "Check another source"
+     },
+     {
+      "id": "r2",
+      "text": "Do not share it, tell a grown-up"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the answer you should double check.",
+    "hint": "Which one is recent?",
+    "explanation": "Recent events may be missing.",
+    "skill_tag": "chat.tap_check",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📅",
+       "label": "The result of last night's match",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "➕",
+       "label": "Two plus two is four",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌞",
+       "label": "The sun is a star",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of using a chatbot for a school project in order.",
+    "hint": "Think first.",
+    "explanation": "Choose, ask, check, then write.",
+    "skill_tag": "chat.project_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask the chatbot for ideas"
+     },
+     {
+      "id": "i3",
+      "text": "Check the ideas in trusted sources"
+     },
+     {
+      "id": "i4",
+      "text": "Write it in your own words"
+     },
+     {
+      "id": "i1",
+      "text": "Choose your own question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "safe",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two should you never type into a chatbot? Pick two.",
+    "hint": "Think about private things.",
+    "explanation": "Addresses and passwords are private.",
+    "skill_tag": "chat.private_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Your passwords"
+     },
+     {
+      "id": "b",
+      "text": "Your favourite colour"
+     },
+     {
+      "id": "c",
+      "text": "A maths question"
+     },
+     {
+      "id": "d",
+      "text": "Your home address"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "safe",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says it is fine to let a chatbot do her homework and hand it in as hers. Is she right?",
+    "hint": "Think about learning.",
+    "explanation": "Handing in others' work is not honest.",
+    "skill_tag": "chat.reason_homework",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is faster"
+     },
+     {
+      "id": "b",
+      "text": "Yes, teachers like it"
+     },
+     {
+      "id": "c",
+      "text": "No. It is not her own work and she would not learn"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says a chatbot is a friend who keeps all her secrets. Is she right?",
+    "hint": "Is it a person?",
+    "explanation": "A chatbot is a program, not a friend.",
+    "skill_tag": "chat.reason_friend",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it keeps secrets forever"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it is her best friend"
+     },
+     {
+      "id": "c",
+      "text": "No. It is a program. Private things stay private and worries go to trusted adults"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hana says if a chatbot is rude, she must keep chatting. Is she right?",
+    "hint": "Think about getting help.",
+    "explanation": "We stop and tell an adult.",
+    "skill_tag": "chat.reason_rude",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rude is normal"
+     },
+     {
+      "id": "b",
+      "text": "No. Stop and tell a trusted adult"
+     },
+     {
+      "id": "c",
+      "text": "Yes, keep going"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "Zara asks 4 questions and checks each answer in 2 sources. How many checks in all?",
+    "hint": "4 groups of 2.",
+    "explanation": "4 x 2 = 8 checks.",
+    "skill_tag": "chat.checks",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "safe",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "Zara plans 3 minutes to ask and 4 minutes to check each question. She has 5 questions. Slide to show the total minutes.",
+    "hint": "7 minutes for each question.",
+    "explanation": "(3 + 4) x 5 = 35 minutes.",
+    "skill_tag": "chat.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 35,
+     "tolerance": 0
+    },
+    "sub_lesson": "safe",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which best describes a chatbot?",
+    "hint": "It replies in words.",
+    "explanation": "A chatbot is a program.",
+    "skill_tag": "chat.def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A person typing very fast"
+     },
+     {
+      "id": "b",
+      "text": "A computer program that answers in everyday language"
+     },
+     {
+      "id": "c",
+      "text": "A search cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "A shop bot gives only pre-written replies to a few options. What kind of chatbot is it?",
+    "hint": "Think about the menu.",
+    "explanation": "Pre-written replies mean scripted.",
+    "skill_tag": "chat.scripted",
+    "options": [
+     {
+      "id": "a",
+      "text": "A living creature"
+     },
+     {
+      "id": "b",
+      "text": "A search engine"
+     },
+     {
+      "id": "c",
+      "text": "A scripted chatbot"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A chatbot is a living creature.",
+    "hint": "Who writes programs?",
+    "explanation": "A chatbot is a program.",
+    "skill_tag": "chat.made",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "chat.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Training text"
+     },
+     {
+      "id": "l2",
+      "text": "Pattern"
+     },
+     {
+      "id": "l3",
+      "text": "Prediction"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "A careful guess"
+     },
+     {
+      "id": "r1",
+      "text": "Words the program learned patterns from"
+     },
+     {
+      "id": "r2",
+      "text": "Something that repeats in the data"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "chat",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that talks back in words using AI.",
+    "hint": "It replies in words.",
+    "explanation": "A chat assistant is a chatbot.",
+    "skill_tag": "chat.tap_bot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "A torch",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💬",
+       "label": "A chat assistant",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📏",
+       "label": "A ruler",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "chat",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a chatbot is alive because it chats. Is he right?",
+    "hint": "Who writes programs?",
+    "explanation": "Chatting does not make it alive.",
+    "skill_tag": "chat.reason_person",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, chatting means alive"
+     },
+     {
+      "id": "b",
+      "text": "Yes, all programs are alive"
+     },
+     {
+      "id": "c",
+      "text": "No. Chatting does not make a program alive"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "chat",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Which is a sensible use of a chatbot?",
+    "hint": "Think about safe, simple jobs.",
+    "explanation": "Ideas to check are sensible.",
+    "skill_tag": "chat.good_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "Replacing a doctor"
+     },
+     {
+      "id": "b",
+      "text": "Explaining a word, then checking with a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Choosing your passwords"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "chat",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about kinds of chatbot.",
+    "hint": "Think about the two kinds.",
+    "explanation": "Scripted bots use replies and language AI uses text.",
+    "skill_tag": "chat.fill_bot",
+    "points": 2,
+    "text": "Some chatbots use ready-made {b1}. Others use AI trained on lots of {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "rivers"
+       },
+       {
+        "id": "b",
+        "text": "replies"
+       },
+       {
+        "id": "c",
+        "text": "rugs"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "tape"
+       },
+       {
+        "id": "b",
+        "text": "toys"
+       },
+       {
+        "id": "c",
+        "text": "text"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "chat",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these steps in order.",
+    "hint": "Learn first.",
+    "explanation": "Learn, prompt, predict, show.",
+    "skill_tag": "chat.reply_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Predict words one at a time"
+     },
+     {
+      "id": "i4",
+      "text": "Show the reply"
+     },
+     {
+      "id": "i2",
+      "text": "Get a new prompt"
+     },
+     {
+      "id": "i1",
+      "text": "Learn patterns from lots of text"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Which is most likely to finish: I wash my hands with ___?",
+    "hint": "Think about the pattern.",
+    "explanation": "Soap often follows that phrase.",
+    "skill_tag": "chat.next_word",
+    "options": [
+     {
+      "id": "a",
+      "text": "clouds"
+     },
+     {
+      "id": "b",
+      "text": "tyres"
+     },
+     {
+      "id": "c",
+      "text": "soap"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about guesses.",
+    "hint": "Think about certainty.",
+    "explanation": "A prediction is a guess, not a fact.",
+    "skill_tag": "chat.fill_predict",
+    "points": 2,
+    "text": "A prediction is a careful {b1}, not a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "game"
+       },
+       {
+        "id": "b",
+        "text": "guess"
+       },
+       {
+        "id": "c",
+        "text": "gift"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fork"
+       },
+       {
+        "id": "b",
+        "text": "fact"
+       },
+       {
+        "id": "c",
+        "text": "fan"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "predict",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A program has read only ten sentences. Why might it do badly?",
+    "hint": "Think about learning.",
+    "explanation": "Too little text shows few patterns.",
+    "skill_tag": "chat.more_text",
+    "options": [
+     {
+      "id": "a",
+      "text": "Programs cannot read"
+     },
+     {
+      "id": "b",
+      "text": "It has seen too few patterns"
+     },
+     {
+      "id": "c",
+      "text": "Ten sentences are too many"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A prompt has 4 words. The AI adds 1 word at a time until the whole reply has 11 words. Slide to show how many words the AI added.",
+    "hint": "11 take away 4.",
+    "explanation": "11 - 4 = 7 words.",
+    "skill_tag": "chat.words_added",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "Language AI looks up every answer in a book of facts that is always right.",
+    "hint": "Think about training.",
+    "explanation": "It predicts from patterns, not a book of perfect facts.",
+    "skill_tag": "chat.uses_patterns",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "predict",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Layla says if a chatbot writes I feel happy, it really feels happy. Is she right?",
+    "hint": "Think about the parrot.",
+    "explanation": "It produces words, not feelings.",
+    "skill_tag": "chat.reason_understand",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it blushes"
+     },
+     {
+      "id": "b",
+      "text": "No. It is producing words, not feeling"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it feels happy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two are good reasons to check a chatbot's answer? Pick two.",
+    "hint": "Think about what it learned from.",
+    "explanation": "It can be wrong or biased.",
+    "skill_tag": "chat.wrong_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is always right"
+     },
+     {
+      "id": "b",
+      "text": "It never uses text"
+     },
+     {
+      "id": "c",
+      "text": "It may have learned from biased text"
+     },
+     {
+      "id": "d",
+      "text": "It may sound sure but be wrong"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "A chatbot gives 15 facts. 4 are wrong. How many are right?",
+    "hint": "15 take away 4.",
+    "explanation": "15 - 4 = 11 facts.",
+    "skill_tag": "chat.facts_count",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "sub_lesson": "wrong",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "A chatbot names a book that does not exist. What happened?",
+    "hint": "Think about the invented book.",
+    "explanation": "It invented a title.",
+    "skill_tag": "chat.make_up",
+    "options": [
+     {
+      "id": "a",
+      "text": "The book is secret"
+     },
+     {
+      "id": "b",
+      "text": "The library hid it"
+     },
+     {
+      "id": "c",
+      "text": "It made something up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a long, detailed answer must be true. Is she right?",
+    "hint": "Think about the invented book.",
+    "explanation": "Detail is not proof.",
+    "skill_tag": "chat.reason_confident",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, detail means true"
+     },
+     {
+      "id": "b",
+      "text": "No. Long answers can still contain mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, long means correct"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a chatbot's information is never out of date. Is he right?",
+    "hint": "Think about older text.",
+    "explanation": "Old training text can miss new events.",
+    "skill_tag": "chat.reason_news",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it updates every second"
+     },
+     {
+      "id": "c",
+      "text": "No. It can be out of date"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Zayn says text from people is always fair, so chatbots are fair too. Is he right?",
+    "hint": "Think about where the text came from.",
+    "explanation": "Text can include bias.",
+    "skill_tag": "chat.reason_bias",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always fair"
+     },
+     {
+      "id": "b",
+      "text": "No. Some text has bias, and a chatbot can copy it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, text cannot be unfair"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each risk with its meaning.",
+    "hint": "Think about each risk.",
+    "explanation": "Each risk has its own meaning.",
+    "skill_tag": "chat.problem_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Made-up answer"
+     },
+     {
+      "id": "l2",
+      "text": "Out of date"
+     },
+     {
+      "id": "l3",
+      "text": "Bias"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Misses recent events"
+     },
+     {
+      "id": "r1",
+      "text": "Sounds true but is not"
+     },
+     {
+      "id": "r3",
+      "text": "Unfair patterns copied from text"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "wrong",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the claim most worth checking.",
+    "hint": "Which one changes today?",
+    "explanation": "Today's weather is not in older text.",
+    "skill_tag": "chat.tap_check",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📚",
+       "label": "7 x 8 = 56",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌦️",
+       "label": "Today's exact weather in my town",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "A week has seven days",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "wrong",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for asking a chatbot in order.",
+    "hint": "Tell a grown-up first.",
+    "explanation": "Tell, type, read, then check.",
+    "skill_tag": "chat.project_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Type it without private details"
+     },
+     {
+      "id": "i4",
+      "text": "Check anything important"
+     },
+     {
+      "id": "i3",
+      "text": "Read the reply carefully"
+     },
+     {
+      "id": "i1",
+      "text": "Tell a grown-up what you want to ask"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two should stay private? Pick two.",
+    "hint": "Think about private things.",
+    "explanation": "These could identify you.",
+    "skill_tag": "chat.private_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "A fact about Mars"
+     },
+     {
+      "id": "b",
+      "text": "A joke you heard"
+     },
+     {
+      "id": "c",
+      "text": "Your phone number"
+     },
+     {
+      "id": "d",
+      "text": "Your full name with your school"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Idris says copying a chatbot's answer is the same as thinking for himself. Is he right?",
+    "hint": "Think about learning.",
+    "explanation": "Copying is not thinking.",
+    "skill_tag": "chat.reason_homework",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, same thing"
+     },
+     {
+      "id": "b",
+      "text": "Yes, copying is clever"
+     },
+     {
+      "id": "c",
+      "text": "No. He needs to understand and write his own"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Omar says it is safe to tell a chatbot his worries instead of an adult. Is he right?",
+    "hint": "Who can truly help?",
+    "explanation": "A trusted adult can help.",
+    "skill_tag": "chat.reason_friend",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, adults are too busy"
+     },
+     {
+      "id": "b",
+      "text": "No. A trusted adult can really help"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is safer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Sana says unkind chatbot replies mean she did something wrong. Is she right?",
+    "hint": "Think about getting help.",
+    "explanation": "It is not her fault.",
+    "skill_tag": "chat.reason_rude",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, she must apologise"
+     },
+     {
+      "id": "b",
+      "text": "No. Stop and tell a trusted adult. It is not her fault"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is her fault"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "safe",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "Idris asks 5 questions and checks each answer in 3 sources. How many checks in all?",
+    "hint": "5 groups of 3.",
+    "explanation": "5 x 3 = 15 checks.",
+    "skill_tag": "chat.checks",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "Maryam plans 2 minutes to ask and 3 minutes to check each question. She has 6 questions. Slide to show the total minutes.",
+    "hint": "5 minutes for each question.",
+    "explanation": "(2 + 3) x 6 = 30 minutes.",
+    "skill_tag": "chat.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "safe",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 1, topic 3: Plants (Zainab, age 7). Enquiry type: comparative test (grow cress).
 
+const SPROUT = "science-class-1-plants-1-26866491.jpg";
+const PEAS = "science-class-1-plants-2-5c86b9e3.jpg";
+const SUNFLOWER = "science-class-1-plants-3-8591ee7e.jpg";
+
 const parts = {
   id: "parts", kind: "learn", title: "Parts of a plant",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we learn how plants grow. What do seeds need to turn into plants?", T("Today's big question: how do plants grow?")),
+    SAY("These tiny shoots are growing from seeds in the soil.", PHOTO(SPROUT, "Tiny green shoots pushing up through dark soil", "Tiny shoots push up from seeds in the soil.", "Photo by Nora Jane Long on Unsplash")),
     H("Stop 1: Roots, stem, leaves and flower"),
     SAY("A plant has four main parts, and each has a job. The roots grow down in the soil. They hold the plant still and drink up water. The stem holds the plant up and carries water to every part. The leaves catch sunlight to make food. And the flower makes seeds. Let's look at each part.", T("A plant has **roots**, a **stem**, **leaves** and a **flower**.", "Each part has a job.")),
     EB("meadow", "Parts of a plant",
@@ -16,10 +23,11 @@ const parts = {
       SS("The flower makes seeds, so that new plants can grow.", S("The flower makes seeds.", ["p", { kind: "plant", highlight: "flower" }, 50, 52, 3, "none"]))),
     CHK(mc("Which part of a plant drinks water from the soil?", "Roots", ["Leaves", "Flower"], { hint: "It grows down in the soil.", why: "Roots take in water from the soil." })),
     H("Stop 2: Trees and flowers"),
-    SAY("Trees have all the same parts, only bigger. The trunk is the tree's stem, and it is very thick and strong. Plants come in many shapes: tall trees, little daisies and juicy fruit trees, like the mango and the date palm.", IMG("🌳 🌼 🌴", "A tree, a daisy and a date palm.")),
+    SAY("A sunflower shows every plant part. It has roots, a stem, leaves and a big flower.", PHOTO(SUNFLOWER, "A large yellow sunflower with a dark centre in a field under a blue sky", "A sunflower has roots, a stem, leaves and a flower.", "Photo by Aaron Burden on Unsplash")),
+    SAY("Trees have all the same parts, only bigger. The trunk is the tree's stem, and it is very thick and strong. Plants come in many shapes. There are tall trees, little daisies and juicy fruit trees, like the mango.", IMG("🌳 🌼 🌴", "A tree, a daisy and a date palm.")),
     SAY("Trees are plants too. Their trunk is just a thick, woody stem.", T("A tree's **trunk** is its big, strong stem.")),
     CHK(tf("A tree is a plant.", true, { hint: "It has roots, a stem and leaves.", why: "Trees are plants with a very thick stem called a trunk." })),
-    SAY("Remember. Roots drink and hold, the stem holds up, leaves catch light and the flower makes seeds.", SUM("Roots take in water and hold the plant", "The stem holds the plant up", "Leaves catch sunlight to make food", "The flower makes seeds")),
+    SAY("Remember. Roots drink and hold. The stem holds up. Leaves catch light. The flower makes seeds.", SUM("Roots take in water and hold the plant", "The stem holds the plant up", "Leaves catch sunlight to make food", "The flower makes seeds")),
     GLOSS({ roots: "The part of a plant under the soil. It drinks water.", stem: "The part that holds a plant up.", leaves: "The green parts that catch sunlight.", flower: "The part that makes seeds.", trunk: "The thick, woody stem of a tree." }),
   ],
   mini: [
@@ -59,7 +67,8 @@ const needs = {
   id: "needs", kind: "play", title: "What plants need",
   blocks: [
     H("Stop 1: Light, water and air"),
-    SAY("Growing plants need water from the soil, light from the sun and air around their leaves. They also need room to grow. A plant makes its own food using light. That is why plants on a dark shelf turn pale and droop. Watch what happens to three plants.", T("Plants need **light**, water, air and space to grow.", "A plant without light turns pale and droops.")),
+    SAY("These pea plants sit by a sunny window. Light and water help them grow.", PHOTO(PEAS, "Young pea plants with bright green leaves growing in a planter by a sunny window", "These pea plants grow well in the light.", "Photo by Elly M on Unsplash")),
+    SAY("Growing plants need water from the soil. They need light from the sun and air around their leaves. They also need room to grow. A plant makes its own food using light. That is why plants on a dark shelf turn pale and droop. Watch what happens to three plants.", T("Plants need **light**, water, air and space to grow.", "A plant without light turns pale and droops.")),
     EB("home", "Three cress cups",
       SS("Cup A had light and water. After a week, the cress is tall and green.", S("Cup A: light and water. Tall and green!", ["a", "🪴", 50, 60, 3, "grow"], ["l", "☀️", 80, 20, 2, "pulse"], ["w", "💧", 20, 30, 2, "bounce"])),
       SS("Cup B was in the dark. The cress is pale and yellow and floppy.", S("Cup B: dark. Pale and weak.", ["b", "🌾", 50, 66, 3, "none"])),
@@ -83,7 +92,7 @@ const plantsUse = {
   id: "plants_use", kind: "use", title: "Plants around us",
   blocks: [
     H("Stop 1: Why plants matter"),
-    SAY("Plants are everywhere and they help us in so many ways. We eat their fruits, seeds and roots. Wood from trees gives us furniture and paper. Plants make the air we breathe, and give animals food and shelter. Muslims are taught to care for nature and to plant trees, because planting a tree is a good deed. Look at plants in our lives.", T("We **eat** plants, build with them and need them for clean air.", "Planting a tree is a kind thing to do.")),
+    SAY("Plants are everywhere and they help us in so many ways. We eat their fruits, seeds and roots. Wood from trees gives us furniture and paper. Plants make the air we breathe, and give animals food and shelter. Muslims are taught to care for nature. Planting a tree is a good deed. Look at plants in our lives.", T("We **eat** plants, build with them and need them for clean air.", "Planting a tree is a kind thing to do.")),
     SAY("Look at these. An apple, a carrot, wheat grains and wood. They all come from plants.", IMG("🍎 🥕 🌾 🪵", "Fruit, vegetables, grain and wood all come from plants.")),
     CHK(mc("Which of these comes from a plant?", "Bread", ["Plastic", "Glass"], { hint: "Bread is made from wheat.", why: "Bread is made from wheat, a plant." })),
     H("Stop 2: Plant detective"),
@@ -117,6 +126,28 @@ const ALTS = [
   [mc("Sam's cress had no light and looked pale. What would you advise?", "Put it in a sunny place and give it water", ["Put it in a darker cupboard", "Give it only sweets"], { hint: "What does it need?", why: "Plants need light and water to grow well." }), mc("Layla's plant is droopy and the soil is dry. What should she do?", "Give it water", ["Put it in the dark", "Take off all its leaves"], { hint: "What is missing?", why: "A droopy plant with dry soil needs water." })],
 ];
 
+const clip = {
+  title: "Zainab grows a sunflower", backdrop: "meadow", caption: "Zainab plants a seed and watches it grow into a flower.",
+  scenes: [
+    { caption: "A seed.", say: "Zainab holds a sunflower seed. A tiny plant is asleep inside.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3, enter: "walk_right" }, { id: "s", emoji: "🌰", label: "seed", x: 72, y: 60, size: 2, enter: "pop" }] },
+    { caption: "Planting.", say: "She plants it in damp soil. Then she gives it a little water.",
+      items: [{ id: "p", emoji: "🪴", x: 40, y: 60, size: 3 }, { id: "w", emoji: "💧", x: 70, y: 40, size: 2, anim: "bounce" }] },
+    { caption: "Light and warmth.", say: "The pot sits in the sun. Warmth and light help the seed wake up.",
+      items: [{ id: "u", emoji: "☀️", x: 70, y: 22, size: 3, anim: "pulse" }, { id: "p", emoji: "🪴", x: 35, y: 60, size: 3 }] },
+    { caption: "Roots down.", say: "A root grows down first. It drinks water and holds the plant.",
+      items: [{ id: "r", emoji: "🌱", label: "root", x: 50, y: 62, size: 3, anim: "grow" }] },
+    { caption: "Shoot up.", say: "Then a shoot grows up towards the light. Leaves open on the stem.",
+      items: [{ id: "g", emoji: "🌿", label: "shoot and leaves", x: 50, y: 56, size: 3, anim: "grow" }] },
+    { caption: "A fair test.", say: "Hamza keeps one pot in a cupboard. That pot grows pale and weak.",
+      items: [{ id: "a", emoji: "🪴", label: "light", x: 30, y: 60, size: 3 }, { id: "b", emoji: "🥀", label: "no light", x: 72, y: 60, size: 3 }] },
+    { caption: "A flower.", say: "Weeks later, a big yellow flower opens. Bees buzz around it.",
+      items: [{ id: "f", emoji: "🌻", x: 40, y: 56, size: 3, anim: "bounce" }, { id: "b", emoji: "🐝", x: 72, y: 40, size: 2, anim: "float" }] },
+    { caption: "New seeds.", say: "The flower makes seeds. Zainab saves some to plant next year!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3, anim: "bounce" }, { id: "s", emoji: "🌰", x: 70, y: 56, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-1-plants", subject: "science", cls: 1, topic: 3, title: "Plants",
@@ -131,13 +162,9 @@ export const topics = [
       mc("Where would you find a camel?", "In a desert", ["In a pond", "In the sea"], { hint: "Camels like hot, dry places.", why: "Camels live in deserts." }),
       tf("A stone is a living thing.", false, { hint: "Does a stone grow?", why: "A stone was never alive." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: what do plants need to grow? By the end, you will name the parts of a plant, watch a seed grow, and plan a fair test with cress. Let's go!", T("Today's big question: what do plants need to grow?", "We will grow cress and be plant detectives.")),
-      IMG("🌱🌸🌳", "Plants come in all shapes and sizes."),
-      GLOSS({ plants: "Living things that grow in soil and make their own food." }),
-    ],
+    intro: [],
     subs: [parts, cress, needs, plantsUse],
+    clip,
     quiz: [
       Q("parts", "recall", "plants.parts", mc("Which plant part sucks up water from the ground?", "Roots", ["Leaves", "Flower"], { hint: "It is under the ground.", why: "Roots take in water from the soil." }), ...ALTS[0]),
       Q("parts", "recall", "plants.facts", tf("The leaves of a plant grow under the soil.", false, { hint: "Where do roots grow?", why: "Leaves are above the soil. Roots are under it." }), ...ALTS[1]),
@@ -156,6 +183,37 @@ export const topics = [
       Q("plants_use", "recall", "plants.use", mc("Which food on this list is made from a plant?", "Bread", ["Milk", "Egg"], { hint: "It is made from wheat.", why: "Bread is made from wheat, a plant." }),
         mc("Which of these is the fruit of a tree?", "A mango", ["A sausage", "Cheese"], { hint: "It grows on a tree.", why: "A mango is the fruit of a tree." }),
         mc("Which of these things is made from a plant?", "A wooden spoon", ["A glass cup", "A plastic toy"], { hint: "Wood comes from trees.", why: "A wooden spoon is made from wood, which comes from trees." })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("parts", "recall", "plants.leaf_st", st("What is the green part of a plant that catches sunlight?", ["leaf", "a leaf", "leaves"], { hint: "It is flat and green.", why: "Leaves catch sunlight to help the plant make food." }),
+        st("What do we call the coloured part of a plant that makes seeds?", ["flower", "a flower"], { hint: "Bees visit it.", why: "The flower makes the seeds." })),
+      Q("cress", "apply", "plants.bean_order", ord("Put the life of a bean plant in order.", ["A seed in damp soil", "A root grows down", "A shoot grows up", "Leaves open"], { hint: "The seed comes first.", why: "The seed splits, the root grows down, the shoot grows up, then leaves open." }),
+        ord("Put the cress job in order.", ["Sow the seeds", "Water them gently", "Wait for the shoots", "Measure how tall they are"], { hint: "Sow first.", why: "Sow, water, wait, then measure." })),
+      Q("cress", "apply", "plants.bulb", mc("A tulip grows from a bulb. What is a bulb?", "A store of food that grows into a plant", ["A kind of seed pod", "A flower petal"], { hint: "It sits under the soil.", why: "A bulb stores food and grows into a new plant." }),
+        mc("Which of these grows from a bulb?", "A tulip", ["A bean", "A sunflower"], { hint: "Beans and sunflowers grow from seeds.", why: "A tulip grows from a bulb. Beans and sunflowers grow from seeds." })),
+      Q("needs", "apply", "plants.too_wet", tf("A plant sitting in soaking wet soil all the time can get rotting roots.", true, { hint: "Roots need air too.", why: "Too much water leaves no air for the roots, so they can rot." }),
+        tf("Plants grow best when their roots get no air at all.", false, { hint: "Roots need air too.", why: "Roots need air as well as water." })),
+      Q("needs", "reason", "plants.lots_water", mc("Sam says plants need lots of water every day. Is he right?", "No, too much water can harm a plant", ["Yes, more water is always better", "Yes, plants never get enough"], { hint: "Think about the soggy pot.", why: "Plants need enough water, but not too much." }),
+        mc("Hana says a plant should sit in a bowl of water all week. Is she right?", "No, the roots need air as well as water", ["Yes, roots love sitting in water", "Yes, plants only need water"], { hint: "Think about the soggy pot.", why: "Roots need air too, so wet feet all week can harm them." })),
+      Q("needs", "apply", "plants.days_total", sld("Our cress grew for 3 days, then 4 more days. Slide to show the total days.", { min: 0, max: 14, unit: "days" }, 7, 0, { hint: "3 + 4.", why: "3 + 4 = 7 days." }),
+        sld("Our cress grew for 4 days, then 4 more days. Slide to show the total days.", { min: 0, max: 14, unit: "days" }, 8, 0, { hint: "4 + 4.", why: "4 + 4 = 8 days." })),
+      Q("parts", "apply", "plants.root_jobs", ms("Which two jobs do roots do? Pick two.", ["Drink water", "Hold the plant in the soil"], ["Make flowers", "Catch sunlight"], { hint: "Roots are under the ground.", why: "Roots drink water and hold the plant in place." }),
+        ms("Which two jobs does a stem do? Pick two.", ["Holds the plant up", "Carries water up"], ["Makes seeds", "Drinks from the soil"], { hint: "Think of a tall sunflower.", why: "A stem holds the plant up and carries water." })),
+      Q("plants_use", "apply", "plants.seed_fill", fill("Finish the sentences about seeds.", "Seeds grow into new {b1}. An oak tree begins life as an {b2}.", [["plants", "rocks", "toys"], ["acorn", "egg", "stone"]], { hint: "Think of a tiny seed.", why: "Seeds grow into new plants. An oak starts as an acorn." }),
+        fill("Finish the sentences about flowers.", "Flowers make {b1}. Seeds can grow into new {b2}.", [["seeds", "soil", "stones"], ["plants", "bricks", "clouds"]], { hint: "Think of a sunflower.", why: "Flowers make seeds, and seeds grow into new plants." })),
+      Q("plants_use", "reason", "plants.tree_seed", mc("Zainab says trees do not come from seeds. Is she right?", "No, a big oak tree starts as an acorn", ["Yes, trees just appear", "Yes, trees grow from stones"], { hint: "Where do acorns come from?", why: "Trees grow from seeds. An oak starts as an acorn." }),
+        mc("Sam says a mango tree never started as a seed. Is he right?", "No, every mango tree began as a seed", ["Yes, they come from bricks", "Yes, they are always planted as a tree"], { hint: "Think about the stone inside a mango.", why: "A mango tree grows from a seed inside the fruit." })),
+      Q("cress", "reason", "plants.cupboard", mc("Omar says a plant grows best in a dark cupboard. Is he right?", "No, plants need light to grow strong and green", ["Yes, plants like the dark", "Yes, light makes them shrink"], { hint: "Think of the pale cress.", why: "Plants need light. Without it they look pale and weak." }),
+        mc("Layla says a plant on a sunny windowsill will be pale. Is she right?", "No, light helps a plant stay green and healthy", ["Yes, sunlight turns plants white", "Yes, plants hate windows"], { hint: "Think of cress in the dark.", why: "A plant in the light stays green and healthy." })),
+      Q("parts", "reason", "plants.all_seeds", mc("Aisha says all plants grow from seeds. Is she right?", "No, some plants, such as tulips, grow from bulbs", ["Yes, every plant grows from a seed", "Yes, bulbs are seeds"], { hint: "Think about a tulip.", why: "Most plants grow from seeds, but tulips grow from bulbs." }),
+        mc("Layla says a daffodil is a seed. Is she right?", "No, a daffodil grows from a bulb", ["Yes, a daffodil is a seed", "Yes, daffodils grow from stones"], { hint: "Think about a bulb.", why: "A daffodil grows from a bulb, not a seed." })),
+      Q("cress", "apply", "plants.fair_same", mc("Layla tests if cress needs light. She uses two cups. What should stay the same?", "The water and the soil", ["The amount of light", "The kind of cup shape only"], { hint: "Change only one thing.", why: "In a fair test we change only the light and keep the rest the same." }),
+        mc("Hamza tests if cress needs water. What should he keep the same?", "The light and the soil", ["The amount of water", "Nothing at all"], { hint: "Change only one thing.", why: "In a fair test we change only the water and keep the rest the same." })),
+      Q("plants_use", "apply", "plants.eat_part", hot("Tap the plant part we eat when we eat spinach.", [["🍃", "Leaves", 22, 50], ["🌱", "Roots", 50, 50], ["🌼", "Flower", 78, 50]], ["Leaves"], { labels: true, hint: "Spinach is green and flat.", why: "We eat the leaves of a spinach plant." }),
+        hot("Tap the plant part we eat when we eat a carrot.", [["🍃", "Leaves", 22, 50], ["🥕", "Root", 50, 50], ["🌼", "Flower", 78, 50]], ["Root"], { labels: true, hint: "Carrots grow under the ground.", why: "A carrot is the root of a plant." })),
+      Q("needs", "apply", "plants.observe", mat("Match each way of observing a plant to the sense we use.", [["Feeling a leaf", "Touch"], ["Smelling mint", "Smell"], ["Looking at colours", "Sight"]], { hint: "Which part of the body does each job?", why: "We observe plants by touch, smell and sight. We never taste unknown plants." }),
+        mat("Join each way of looking at a plant to the sense we use.", [["Listening to leaves rustle", "Hearing"], ["Feeling the soil", "Touch"], ["Looking at petals", "Sight"]], { hint: "Which part of the body does each job?", why: "We can use hearing, touch and sight to observe plants." })),
+      Q("parts", "apply", "plants.tray_num", num("A cress tray has 3 rows of 5 seedlings. How many seedlings is that?", 15, { hint: "3 groups of 5.", why: "5 + 5 + 5 = 15 seedlings." }),
+        num("A tray has 4 rows of 4 seedlings. How many seedlings is that?", 16, { hint: "4 groups of 4.", why: "4 + 4 + 4 + 4 = 16 seedlings." })),
     ],
   }),
 ];

@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 3 for Fatima (Class 4): Reading closely. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 3/4 reading, Cambridge Stage 4).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const NOTES = "english-class-4-reading-closely-1-1149b763.jpg";
+const TREE = "english-class-4-reading-closely-2-85fc1fbf.jpg";
+
 const infer = {
   id: "infer", kind: "learn", title: "Retrieval and inference",
   blocks: [
+    H("Welcome back, close reader!"),
+    SAY("Today we read closely. How do we find facts, work out clues and spot big ideas?", T("Today's big question: how do readers find clues and big ideas?")),
+    SAY("Readers keep notes and look for evidence in the text. Handwritten notes like these can record clues.", PHOTO(NOTES, "An old open notebook filled with handwritten ink notes on both pages", "Readers often make notes and find evidence in the text.", "Photo by Gabriela on Unsplash")),
     H("Stop 1: Retrieval"),
     SAY("Reading closely means going back to the text. Retrieval is finding a fact that is stated right there in the words. Read this: Mina packed a torch, two sandwiches and a map. She set off at dawn. When did Mina set off? Dawn. The answer is written in the text, and we just have to find it. Scan for the key word.", T("**Retrieval** means finding a fact written in the text.", "Mina packed a torch, two sandwiches and a map. She set off at dawn.")),
     EXPP("Find it in the text",
@@ -63,6 +69,7 @@ const theme = {
       SS("He wins the race. The big idea, the theme, is perseverance: if you keep trying, you can succeed.", S("Theme: perseverance.", ["t", "🏆", 50, 50, 3, "grow", "perseverance"]))),
     CHK(mc("A boy shares his lunch with a hungry friend. What is the theme?", "kindness", ["speed", "money"], { hint: "What is the big idea?", why: "Sharing shows kindness.", tag: "theme.find" })),
     H("Stop 2: Viewpoint and a brain game"),
+    SAY("Many readers love to read under a tree. Quiet time helps us think about clues.", PHOTO(TREE, "A reader sitting against a tree trunk in a park, holding an open book", "Reading under a tree gives time to think about clues.", "Photo by roma on Unsplash")),
     SAY("Viewpoint is whose eyes we see the story through. In first person, the narrator says I. I crept into the cave, my heart pounding. We feel what the narrator feels. And two characters can see the same event very differently. Play the memory game, then think about viewpoint.", T("**Viewpoint** is how a character or narrator sees events. The narrator is the one telling the story.")),
     BRAIN("memory_match", "Feelings match", "Find the matching pairs.", ["😄", "😨", "😠", "😢", "🤩", "😴"]),
     CHK(mc("Mina loves the rain but Zain hates it. Why do they see it differently?", "They have different feelings", ["One of them is wrong", "The rain changed"], { hint: "Think about their feelings.", why: "People can see the same event differently.", tag: "viewpoint.find" })),
@@ -100,6 +107,28 @@ const devices = {
   ],
 };
 
+const clip = {
+  title: "Reading under the tree", backdrop: "meadow", caption: "A reader looks for clues and evidence in a story.",
+  scenes: [
+    { caption: "A tree.", say: "Maryam sits under a tree with a good book.",
+      items: [{ id: "m", emoji: "👧", label: "Maryam", x: 30, y: 58, size: 3 }, { id: "t", emoji: "🌳", x: 72, y: 50, size: 3 }] },
+    { caption: "Retrieval.", say: "The text says Mina set off at dawn. That is retrieval.",
+      items: [{ id: "b", emoji: "📖", x: 50, y: 56, size: 3 }, { id: "s", emoji: "🌅", x: 78, y: 28, size: 2 }] },
+    { caption: "Inference.", say: "Omar slammed the door. She infers that he was angry.",
+      items: [{ id: "d", emoji: "🚪", x: 35, y: 56, size: 3, anim: "bounce" }, { id: "a", emoji: "😠", x: 72, y: 50, size: 3 }] },
+    { caption: "Evidence.", say: "She finds a line as evidence. Stomped upstairs proves it.",
+      items: [{ id: "e", emoji: "🔍", x: 50, y: 56, size: 3, anim: "pulse" }] },
+    { caption: "Opinion.", say: "The most exciting city is an opinion, not a fact.",
+      items: [{ id: "o", emoji: "💭", x: 50, y: 40, size: 3 }] },
+    { caption: "Theme.", say: "The story shows that kindness matters. That is the theme.",
+      items: [{ id: "k", emoji: "🤝", x: 50, y: 56, size: 3, effect: "glow" }] },
+    { caption: "Sound.", say: "Crash! The poem uses a sound word.",
+      items: [{ id: "c", emoji: "💥", x: 50, y: 50, size: 3, anim: "pulse" }] },
+    { caption: "Prediction.", say: "The title is The Last Lantern. What will happen?",
+      items: [{ id: "l", emoji: "🏮", x: 50, y: 50, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "english-class-4-reading-closely", subject: "english", cls: 4, topic: 3, title: "Reading Closely",
@@ -117,13 +146,9 @@ export const topics = [
       tf("A noun is a naming word.", true, { hint: "Think of cat, school, Lahore.", why: "A noun names a person, place or thing." }),
       mc("Which is a synonym for big?", "huge", ["tiny", "narrow"], { hint: "Which means large?", why: "Big and huge both mean large." }),
     ],
-    intro: [
-      H("Welcome back, reading detective!"),
-      SAY("Welcome back, reading detective! Today's big question: how do we read closely, so we understand what an author really means? We will find facts, make inferences, tell fact from opinion, spot big ideas, and meet the tools poets use. Let's go!", T("Today's big question: how do we read closely and understand what an author really means?", "We will hunt for clues in the text.")),
-      IMG("🔎", "Close readers look for clues and evidence."),
-      GLOSS({ author: "The person who writes a book or story." }),
-    ],
+    intro: [],
     subs: [infer, fact, theme, devices],
+    clip,
     quiz: [
       Q(mc("Read: Mina packed a torch, a map and a flask of tea. She set off at noon. What time did Mina set off?", "noon", ["dawn", "midnight"], { hint: "Scan for set off.", why: "The text says she set off at noon.", tag: "retrieval.find" }), "infer", "recall", [
         mc("Read: Bilal fed the goats and collected three eggs. He finished before breakfast. What did Bilal collect?", "three eggs", ["two apples", "four books"], { hint: "Scan for collected.", why: "The text says he collected three eggs.", tag: "retrieval.find" }),
@@ -170,6 +195,37 @@ export const topics = [
       Q(mc("Why does a poet write the wind whispered instead of the wind blew?", "It gives the wind a gentle, human voice", ["It is shorter", "It is a fact"], { hint: "What does whispered add?", why: "Personification makes the picture come alive.", tag: "device.reason" }), "devices", "reason", [
         mc("Why does a writer use crash to describe a falling tray?", "The word sounds like the noise, so we can hear it", ["It is a longer word", "It is a describing word"], { hint: "What does the word sound like?", why: "Onomatopoeia lets us hear the sound.", tag: "device.reason" }),
         mc("Why does a poet repeat slippery, slithering snake?", "Alliteration makes a sound pattern that adds rhythm", ["It makes the poem shorter", "It is a fact about snakes"], { hint: "What do the repeated sounds do?", why: "Repeated first sounds make a pattern and rhythm.", tag: "device.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Which question needs inference?", "How did Omar feel when he slammed the door?", ["What did Omar slam?", "When did Omar leave?"], { hint: "The text does not say it directly.", why: "We work out Omar's feelings from clues, so it needs inference.", tag: "infer.type" }), "infer", "apply", [
+        mc("Which question can be answered by retrieval?", "What did Mina pack in her bag?", ["Why was Mina nervous?", "What will Mina do next year?"], { hint: "The answer is written in the text.", why: "Retrieval finds facts stated in the text.", tag: "infer.type" })]),
+      Q(mat("Match each line to what it shows.", [["Omar slammed the door.", "anger"], ["Mina packed a torch and a map.", "preparation"], ["She smiled and waved.", "happiness"]], { hint: "Think about what each action suggests.", why: "Actions give evidence of feelings and plans.", tag: "infer.evidence" }), "infer", "apply", [
+        mat("Pair each line with what it shows.", [["He trembled and hid.", "fear"], ["She checked her list twice.", "care"], ["They cheered and jumped.", "excitement"]], { hint: "Think about what each action suggests.", why: "Actions give evidence of feelings.", tag: "infer.evidence" })]),
+      Q(mc("Maryam says a myth must be ancient. Is she right?", "No, writers also create modern myths in the style of old ones", ["Yes, every myth is thousands of years old", "Yes, new stories cannot be myths"], { hint: "Think about stories like Arthur and the Golden Rope.", why: "A modern myth is a new story that uses features of traditional myths.", tag: "theme.myth" }), "theme", "reason", [
+        mc("Hamza says folklore only comes from long ago. Is he right?", "No, new tales are still told and shared", ["Yes, it must be ancient", "Yes, only museums have folklore"], { hint: "Think about stories families tell today.", why: "Folklore keeps growing as people share new stories.", tag: "theme.myth" })]),
+      Q(tf("A character who shares her food with a stranger shows the theme of kindness.", true, { hint: "Think about what sharing shows.", why: "Sharing with a stranger shows kindness.", tag: "theme.find" }), "theme", "apply", [
+        tf("A hero who faces danger bravely shows the theme of laziness.", false, { hint: "Think about what facing danger shows.", why: "Facing danger shows courage, not laziness.", tag: "theme.find" })]),
+      Q(ms("Which two sentences show the author's viewpoint? Pick two.", ["Sadly, nobody visits the beautiful old library.", "It was clearly the worst idea ever."], ["The library opens at nine.", "The library has two floors."], { hint: "Look for words that show a judgement.", why: "Sadly, beautiful and worst show opinions.", tag: "viewpoint.find" }), "theme", "apply", [
+        ms("Pick the two sentences that show a viewpoint.", ["What a wonderful, peaceful garden!", "Obviously, the plan was foolish."], ["The garden has a gate.", "The plan began at noon."], { hint: "Look for words that show feeling.", why: "Wonderful and foolish show opinions.", tag: "viewpoint.find" })]),
+      Q(hot("Tap the opinion.", [["1️⃣", "Lahore is a city in Punjab.", 22, 50], ["2️⃣", "Lahore is the most exciting city.", 50, 50], ["3️⃣", "Lahore has a fort.", 78, 50]], ["Lahore is the most exciting city."], { labels: true, hint: "Can it be proved?", why: "Most exciting is a view, not a fact.", tag: "fact.opinion" }), "fact", "apply", [
+        hot("Tap the fact.", [["1️⃣", "Everyone should visit Murree.", 22, 50], ["2️⃣", "Murree is in the mountains.", 50, 50], ["3️⃣", "Murree is the loveliest place.", 78, 50]], ["Murree is in the mountains."], { labels: true, hint: "Can it be checked?", why: "Murree being in the mountains can be checked.", tag: "fact.opinion" })]),
+      Q(st("Write the sound that repeats at the start of: slippery snakes slid silently.", ["s", "S"], { hint: "Look at the first letters.", why: "The s sound repeats, which is alliteration.", tag: "alliteration.find" }), "devices", "apply", [
+        st("Write the sound that repeats at the start of: Peter picked pink petals.", ["p", "P"], { hint: "Look at the first letters.", why: "The p sound repeats, which is alliteration.", tag: "alliteration.find" })]),
+      Q(mc("Choose the onomatopoeic word.", "crash", ["table", "gentle"], { hint: "It copies a sound.", why: "Crash sounds like the noise it names.", tag: "onomatopoeia.find" }), "devices", "apply", [
+        mc("Pick the word that imitates a sound.", "sizzle", ["sleepy", "window"], { hint: "It copies a sound.", why: "Sizzle sounds like the noise it names.", tag: "onomatopoeia.find" })]),
+      Q(mc("Hamza says an author's viewpoint is always a fact. Is he right?", "No, a viewpoint is what the author thinks, and it may be an opinion", ["Yes, every viewpoint is true", "Yes, authors only write facts"], { hint: "Is it what someone thinks?", why: "A viewpoint is a way of seeing, not necessarily a fact.", tag: "viewpoint.reason" }), "theme", "reason", [
+        mc("Zara says a viewpoint and a fact are the same. Is she right?", "No, a fact can be proved but a viewpoint is a personal view", ["Yes, they are the same", "Yes, both are always true"], { hint: "Can others disagree?", why: "Facts can be checked. Viewpoints can differ.", tag: "viewpoint.reason" })]),
+      Q(tf("Two characters can see the same event in different ways.", true, { hint: "Think about viewpoints.", why: "Characters often have different viewpoints.", tag: "viewpoint.compare" }), "theme", "apply", [
+        tf("Two characters must always have the same viewpoint.", false, { hint: "Think about viewpoints.", why: "Characters can disagree.", tag: "viewpoint.compare" })]),
+      Q(mc("Nadia says poets repeat lines because they ran out of ideas. Is she right?", "No, repetition can stress an idea or create rhythm", ["Yes, it is a mistake", "Yes, repetition is lazy"], { hint: "Think about why a chorus repeats.", why: "Repetition adds emphasis and rhythm.", tag: "devices.reason" }), "devices", "reason", [
+        mc("Ali says a repeated line is a printing error. Is he right?", "No, poets repeat lines on purpose for effect", ["Yes, it is an error", "Yes, it is always a mistake"], { hint: "Think about a chorus.", why: "Repetition is a deliberate technique.", tag: "devices.reason" })]),
+      Q(sld("Paragraphs 1 and 2 are calm. Paragraph 3 has a hint of danger. Paragraph 4 is the rope snapping. Slide to show which paragraph is the peak.", { min: 1, max: 6 }, 4, 0, { hint: "Where is the biggest moment?", why: "The rope snapping in paragraph 4 is the peak of tension.", tag: "tension.peak" }), "theme", "apply", [
+        sld("Paragraph 1 is calm. Paragraph 2 has a warning. Paragraph 3 is the escape. Paragraph 4 is quiet again. Slide to show which paragraph is the peak.", { min: 1, max: 6 }, 3, 0, { hint: "Where is the biggest moment?", why: "The escape in paragraph 3 is the peak.", tag: "tension.peak" })]),
+      Q(ord("Order the events of the quest.", ["The hero finds a map", "He crosses the river", "He meets the guardian", "He returns home"], { hint: "Follow the journey.", why: "The quest goes from map to river to guardian to home.", tag: "quest.order" }), "infer", "apply", [
+        ord("Order the quest events.", ["She hears a rumour", "She sets off at dawn", "She faces the storm", "She brings back the treasure"], { hint: "Follow the journey.", why: "The quest follows the order of rumour, journey, danger and return.", tag: "quest.order" })]),
+      Q(mat("Match each word to its meaning.", [["gloomy", "dark and sad-looking"], ["enormous", "extremely big"], ["whispered", "spoke very quietly"]], { hint: "Use the words around each one.", why: "Context helps us work out meaning.", tag: "vocab.context" }), "infer", "apply", [
+        mat("Join each word to its meaning.", [["tiny", "very small"], ["sprinted", "ran very fast"], ["peered", "looked closely"]], { hint: "Use the words around each one.", why: "Context helps us work out meaning.", tag: "vocab.context" })]),
+      Q(mc("Idris says you cannot predict a story from its title. Is he right?", "No, a title gives clues about the story", ["Yes, titles tell nothing", "Yes, predictions are always wrong"], { hint: "What can a title suggest?", why: "A title can hint at the setting, the character or the theme.", tag: "predict.title" }), "infer", "reason", [
+        mc("Maryam says covers and titles are useless for predicting. Is she right?", "No, they give clues we can use", ["Yes, ignore them", "Yes, only the last page helps"], { hint: "Think about The Last Lantern.", why: "Titles and covers give clues.", tag: "predict.title" })]),
     ],
   }),
 ];

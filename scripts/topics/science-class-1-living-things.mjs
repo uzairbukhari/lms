@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 1, topic 1: Living things and habitats (Zainab, age 7). Standards from docs/CURRICULUM_V2.md section 3.
 
+const POND = "science-class-1-living-things-1-c057b707.jpg";
+const LEAVES = "science-class-1-living-things-2-2bff4595.jpg";
+const RABBIT = "science-class-1-living-things-3-cd437b9c.jpg";
+
 const alive = {
   id: "alive", kind: "learn", title: "Alive, dead or never alive",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we find living things and their homes. How can we tell what is alive?", T("Today's big question: how can we tell what is alive?")),
+    SAY("This pond is a habitat. Frogs, fish and plants all live here.", PHOTO(POND, "Green reeds and round lily pads floating on dark pond water", "A pond is a habitat for frogs, fish and plants.", "Photo by Nick Fewings on Unsplash")),
     H("Stop 1: What makes something alive?"),
     SAY("Is a puppy alive? Yes! And is a stone alive? No! How can we tell? Living things do some special jobs. They move. They need food and water. They grow bigger. And they can have babies of their own. Let's watch a puppy do these jobs.", T("**Living** things move, feed, grow and have babies.", "A puppy does all of these jobs. A stone does none of them.")),
     EB("meadow", "A puppy is alive",
@@ -16,6 +23,7 @@ const alive = {
       SS("And one day the dog has puppies of its own. Living things can have babies.", S("The dog has babies.", ["p", "🐕", 35, 58, 3, "none"], ["b1", "🐶", 62, 66, 2, "bounce"], ["b2", "🐶", 78, 66, 2, "bounce"]))),
     CHK(mc("Which of these things is alive?", "A kitten", ["A pebble", "A toy car"], { hint: "Alive things move, grow and need food.", why: "A kitten eats, grows and moves. A pebble and a toy car do not." })),
     H("Stop 2: Dead and never alive"),
+    SAY("These dry leaves fell from trees. They were alive once, so they are dead.", PHOTO(LEAVES, "Dry brown leaves and pine cones lying on the woodland floor", "These dry leaves were alive once. They are dead.", "Photo by Annie Spratt on Unsplash")),
     SAY("Some things were alive once, but are not any more. We say they are dead. A fallen leaf, a bone and a log were all alive once. Other things were never alive at all. A stone, a spoon and a toy never ate, grew or had babies. Look at the two groups.", T("Some things are **dead**: they were alive once, like a leaf or a bone.", "Some things are **never alive**: a stone or a spoon.")),
     IMG("🍂 🦴 🪵", "Once alive: a leaf, a bone and a log."),
     IMG("🪨 🥄 🧸", "Never alive: a stone, a spoon and a toy."),
@@ -43,7 +51,7 @@ const habitats = {
       SS("The sea is salty and deep. Fish, turtles and crabs live there.", S("The sea: fish, turtle and crab.", ["a", "🐠", 25, 50, 2, "float"], ["b", "🐢", 55, 62, 2, "float"], ["c", "🦀", 80, 78, 2, "bounce"]))),
     CHK(mc("Where does a camel live?", "The desert", ["The pond", "The sea"], { hint: "Camels can go a long time without water.", why: "Camels live in hot, dry deserts.", })),
     H("Stop 2: Match the animal to its home"),
-    SAY("Now it is your turn to be a nature detective. Here are lots of animals. Drag the water animals into the Water box, and the land animals into the Land box. Think about where each one likes to live.", MAN("Water or land?", "Move the animals. Water animals go in Water. Land animals go in Land.", "🐸", 10, ["Water", "Land"])),
+    SAY("Now it is your turn to be a nature detective. Here are lots of animals. Drag water animals into the Water box. Drag land animals into the Land box. Think about where each one likes to live.", MAN("Water or land?", "Move the animals. Water animals go in Water. Land animals go in Land.", "🐸", 10, ["Water", "Land"])),
     ACT("A habitat walk", ["A grown-up", "A garden, park or balcony", "Paper and a pencil"], ["Go outside and look for one small animal, like an ant, a bird or a snail.", "Where is it? Is it in the soil, under a stone, in a tree or in water?", "Draw the animal and its home. Say why it likes to live there."]),
     CHK(tf("A habitat gives an animal food, water and a safe place to live.", true, { hint: "Why do animals stay in their habitat?", why: "A habitat gives animals what they need to live." })),
     SAY("Remember. A habitat is where a plant or animal lives. Different animals live in different habitats.", SUM("A habitat is where a plant or animal lives", "A habitat gives food, water and shelter")),
@@ -61,6 +69,7 @@ const needs = {
   id: "needs", kind: "play", title: "What animals need",
   blocks: [
     H("Stop 1: Food, water, air and shelter"),
+    SAY("This rabbit sits in grass. Grass is its food and its shelter.", PHOTO(RABBIT, "A brown rabbit sitting in short green grass", "A rabbit eats grass. The grass gives it food.", "Photo by Kedar Gadge on Unsplash")),
     SAY("All animals need four things to stay alive. They need food to give them energy. They need water to drink. They need air to breathe. And they need shelter, a safe place to rest and hide. Look at a rabbit and see what it has.", T("Animals need **food**, water, air and **shelter** to stay alive.")),
     EB("meadow", "What a rabbit needs",
       SS("The rabbit eats grass and carrots. That is its food.", S("Food: grass and carrots.", ["r", "🐇", 30, 62, 3, "bounce"], ["f", "🥕", 65, 70, 2, "bounce"], ["g", "🌿", 80, 72, 2, "none"])),
@@ -123,6 +132,28 @@ const ALTS = [
   [mc("A rabbit wanders into a desert with no grass. What will happen?", "It will struggle to find food", ["It will be fine", "It will turn into a camel"], { hint: "Does the desert have the rabbit's food?", why: "Animals need their habitat to give them the right food and water." }), mc("A fish is put on dry land. Why can it not live there?", "It cannot get the water and air it needs", ["It is too big", "It is too happy"], { hint: "Where do fish live?", why: "Fish need water to live." })],
 ];
 
+const clip = {
+  title: "Zainab's pond walk", backdrop: "meadow", caption: "Zainab finds living, dead and never alive things beside a pond.",
+  scenes: [
+    { caption: "A pond walk.", say: "Zainab walks to the pond with her big brother. What is alive here?",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3, enter: "walk_right" }, { id: "p", emoji: "🪷", x: 72, y: 62, size: 3, enter: "pop" }] },
+    { caption: "A living frog.", say: "A frog sits on a leaf. It breathes, it hops and it eats.",
+      items: [{ id: "f", emoji: "🐸", label: "alive", x: 50, y: 56, size: 3, anim: "bounce" }] },
+    { caption: "A dead leaf.", say: "A dry leaf lies on the path. It was alive once, so it is dead.",
+      items: [{ id: "l", emoji: "🍂", label: "dead", x: 50, y: 60, size: 3 }] },
+    { caption: "Never alive.", say: "A pebble sits by the water. It was never alive.",
+      items: [{ id: "s", emoji: "🪨", label: "never alive", x: 50, y: 62, size: 3 }] },
+    { caption: "A habitat.", say: "The pond is a habitat. Fish and ducks find food and shelter here.",
+      items: [{ id: "a", emoji: "🐟", x: 28, y: 62, size: 2, anim: "float" }, { id: "b", emoji: "🦆", x: 55, y: 55, size: 3, anim: "float" }, { id: "c", emoji: "🌿", x: 82, y: 65, size: 2 }] },
+    { caption: "A food chain.", say: "Pond plants feed a tadpole. A fish eats the tadpole.",
+      items: [{ id: "a", emoji: "🌿", x: 20, y: 55, size: 2 }, { id: "b", emoji: "🐸", x: 50, y: 55, size: 2 }, { id: "c", emoji: "🐟", x: 80, y: 55, size: 2, anim: "bounce" }] },
+    { caption: "Needs.", say: "Every animal needs food, water, air and shelter to stay alive.",
+      items: [{ id: "n", emoji: "🐇", x: 35, y: 58, size: 3 }, { id: "w", emoji: "💧", label: "food, water, air, shelter", x: 72, y: 50, size: 3, effect: "sparkle" }] },
+    { caption: "Well done.", say: "Zainab spots living things everywhere. SubhanAllah, what a busy pond!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3, anim: "bounce" }, { id: "h", emoji: "⭐", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-1-living-things", subject: "science", cls: 1, topic: 1, title: "Living Things and Habitats",
@@ -137,13 +168,9 @@ export const topics = [
       tf("Plants need water.", true, { hint: "Think of watering a flower.", why: "Plants need water to grow." }),
       mc("Where would you find a fish?", "In water", ["In the sky", "In a tree"], { hint: "Fish swim.", why: "Fish live in water." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how can we tell what is alive? And where do animals live? By the end, you will sort living things from things that are not, match animals to their homes, and build a food chain. Let's go!", T("Today's big question: how can we tell what is alive?", "We will meet animals in their homes.")),
-      IMG("🐸🌳🐟🐪", "Animals live in different places."),
-      GLOSS({ alive: "Living. Able to move, feed, grow and have babies." }),
-    ],
+    intro: [],
     subs: [alive, habitats, needs, chains],
+    clip,
     quiz: [
       Q("alive", "recall", "living.alive", mc("Which of these is alive?", "A tulip", ["A pencil", "A pebble"], { hint: "Which one grows?", why: "A tulip grows from a bulb and needs water." }), ...ALTS[0]),
       Q("alive", "recall", "living.not_alive", tf("A bicycle is a living thing.", false, { hint: "Does a bike eat or grow?", why: "A bike is made in a factory. It was never alive." }), ...ALTS[1]),
@@ -162,6 +189,37 @@ export const topics = [
       Q("needs", "reason", "needs.reason", mc("Sam says a rabbit only needs food to live. What is missing?", "It also needs water, air and shelter", ["Nothing is missing", "It needs a toy"], { hint: "How many needs are there?", why: "A rabbit needs food, water, air and shelter." }),
         mc("Nina says a fish only needs food. What is missing?", "It also needs water, air and shelter", ["Nothing is missing", "It needs a toy"], { hint: "How many needs are there?", why: "A fish needs food, water, air and shelter." }),
         mc("Hamza says a bird only needs a nest. What is missing?", "It also needs food, water and air", ["Nothing is missing", "It needs a toy"], { hint: "How many needs are there?", why: "A bird needs food, water, air and shelter." })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("alive", "apply", "living.stone_shell", mc("A pebble and an empty snail shell lie on the beach. Which one was once alive?", "The snail shell", ["The pebble", "Both of them"], { hint: "Which one was made by an animal?", why: "A snail grew its shell. A pebble was never alive." }),
+        mc("A marble and a dry crab shell lie in the sand. Which one was once alive?", "The crab shell", ["The marble", "Neither of them"], { hint: "Which one came from an animal?", why: "A crab grew its shell. A marble was never alive." })),
+      Q("alive", "recall", "living.sunflower", tf("A sunflower is alive even though it does not walk.", true, { hint: "Plants grow and turn to the light.", why: "Plants grow and need water, so they are alive." }),
+        tf("A tree is not alive because it stays in one place.", false, { hint: "Does a tree grow?", why: "A tree grows and makes seeds, so it is alive." })),
+      Q("habitats", "apply", "habitats.three_homes", mat("Match each animal to its home.", [["Frog", "Pond"], ["Squirrel", "Wood"], ["Lizard", "Desert"]], { hint: "Where does each one find food and shelter?", why: "Frogs live by ponds, squirrels in woods and lizards in deserts." }),
+        mat("Join each animal to where it lives.", [["Goldfish", "Water tank"], ["Mole", "Under the soil"], ["Monkey", "Tall trees"]], { hint: "Think about where each one is safe.", why: "Each animal lives where it finds what it needs." })),
+      Q("needs", "recall", "needs.sheep", ms("Which two things does a sheep need every day? Pick two.", ["Food", "Shelter"], ["A bicycle", "A pencil"], { hint: "What keeps animals alive?", why: "A sheep needs food, water, air and shelter." }),
+        ms("Which two things does a hen need? Pick two.", ["Water", "A safe place to sleep"], ["Paint", "Pocket money"], { hint: "Think of a farm yard.", why: "A hen needs water and shelter, as well as food and air." })),
+      Q("chains", "reason", "chains.grass_gone", mc("Hamza says if all the grass dies, the rabbits will be fine. Is he right?", "No, the rabbits would have no food", ["Yes, rabbits do not eat", "Yes, they would eat stones"], { hint: "What do rabbits eat?", why: "Rabbits eat grass. Without it they go hungry." }),
+        mc("Layla says if the pond plants die, the tadpoles will be fine. Is she right?", "No, the tadpoles would have less to eat", ["Yes, tadpoles eat nothing", "Yes, they would eat sand"], { hint: "What do tadpoles eat?", why: "Tadpoles eat pond plants. Without them they go hungry." })),
+      Q("chains", "apply", "chains.order_cabbage", ord("Put this chain in order. Which comes first, second and third?", ["Cabbage", "Caterpillar", "Sparrow"], { hint: "The plant comes first.", why: "The caterpillar eats the cabbage, then the sparrow eats the caterpillar." }),
+        ord("Order this chain from the plant to the last animal.", ["Wheat", "Mouse", "Cat"], { hint: "Start with the plant.", why: "The mouse eats the wheat, then the cat eats the mouse." })),
+      Q("chains", "apply", "chains.count_four", sld("A food chain is grass, rabbit, fox and eagle. Slide to show how many animals are in it.", { min: 0, max: 6, unit: "animals" }, 3, 0, { hint: "Grass is a plant.", why: "The rabbit, fox and eagle are three animals." }),
+        sld("A food chain is cabbage, caterpillar, sparrow and hawk. Slide to show how many animals are in it.", { min: 0, max: 6, unit: "animals" }, 3, 0, { hint: "A cabbage is a plant.", why: "The caterpillar, sparrow and hawk are three animals." })),
+      Q("chains", "recall", "chains.arrow", mc("In a food chain, an arrow goes from a mouse to an owl. What does it mean?", "The mouse is food for the owl", ["The owl is food for the mouse", "They are friends"], { hint: "The arrow points to the eater.", why: "The arrow points to the animal that does the eating." }),
+        mc("An arrow goes from seeds to a bird. What does it mean?", "The seeds are food for the bird", ["The bird is food for the seeds", "The bird is a plant"], { hint: "The arrow points to the eater.", why: "The bird eats the seeds." })),
+      Q("chains", "apply", "chains.eats_what", mat("Match each animal to what it eats.", [["Cow", "Grass"], ["Lion", "Meat"], ["Parrot", "Seeds and fruit"]], { hint: "Think about its teeth and beak.", why: "Cows eat grass, lions eat meat and parrots eat seeds and fruit." }),
+        mat("Join each animal to its food.", [["Goat", "Leaves"], ["Eagle", "Small animals"], ["Squirrel", "Nuts"]], { hint: "Think about what each one finds.", why: "Goats eat leaves, eagles hunt animals and squirrels eat nuts." })),
+      Q("habitats", "apply", "habitats.fish_home", hot("Tap the best home for a goldfish.", [["🪴", "Flower pot", 22, 50], ["🫧", "Fish tank", 50, 50], ["🌵", "Cactus", 78, 50]], ["Fish tank"], { labels: true, hint: "Goldfish need water.", why: "A fish tank has the water a goldfish needs." }),
+        hot("Tap the best home for a frog.", [["🌵", "Dry sand", 22, 50], ["🏜️", "Hot desert", 50, 50], ["🪷", "Pond", 78, 50]], ["Pond"], { labels: true, hint: "Frogs need water.", why: "A pond gives a frog water and shelter." })),
+      Q("habitats", "apply", "habitats.camel_why", fill("Finish the sentences about a camel.", "A camel can go a long time without {b1}. That helps it live in a hot {b2}.", [["water", "stones", "music"], ["desert", "pond", "fridge"]], { hint: "Think about a dry place.", why: "A camel copes without water, so a hot desert suits it." }),
+        fill("Finish the sentences about a duck.", "A duck can {b1} on a {b2}.", [["swim", "dig", "sing"], ["pond", "roof", "shelf"]], { hint: "Think about its feet.", why: "A duck swims on a pond." })),
+      Q("alive", "apply", "living.odd_one", mc("Which one is the odd one out? A cat, a tree and a toy car.", "The toy car", ["The cat", "The tree"], { hint: "Which one was never alive?", why: "A cat and a tree are alive. A toy car was never alive." }),
+        mc("Which one is the odd one out? A spoon, a fish and a worm.", "The spoon", ["The fish", "The worm"], { hint: "Which one never grew?", why: "A fish and a worm are alive. A spoon was never alive." })),
+      Q("alive", "reason", "living.log", mc("Zainab says a log was never alive. Is she right?", "No, a log came from a tree that was alive", ["Yes, a log is a stone", "Yes, wood is never alive"], { hint: "Where does a log come from?", why: "A log was part of a living tree, so it is dead, not never alive." }),
+        mc("Mira says a dry leaf was never alive. Is she right?", "No, it grew on a tree that was alive", ["Yes, leaves are plastic", "Yes, leaves cannot grow"], { hint: "Where did the leaf grow?", why: "A leaf grew on a living tree, so it is dead, not never alive." })),
+      Q("chains", "reason", "chains.meat", mc("Omar says all animals eat meat. Is he right?", "No, many animals eat only plants", ["Yes, every animal eats meat", "Yes, plants are meat"], { hint: "Think of cows and goats.", why: "Cows, goats and rabbits eat plants, not meat." }),
+        mc("Aisha says rabbits eat other animals. Is she right?", "No, rabbits eat plants", ["Yes, rabbits hunt", "Yes, they eat fish"], { hint: "What is in the rabbit's food bowl?", why: "Rabbits eat grass and vegetables." })),
+      Q("alive", "reason", "living.robot", mc("Sam says a toy robot is alive because it moves. Is he right?", "No, it only moves when it is switched on", ["Yes, it moves so it is alive", "Yes, it eats batteries"], { hint: "Does a robot grow or have babies?", why: "A toy robot was never alive. It does not grow or need food." }),
+        mc("Nina says a clock is alive because it ticks. Is she right?", "No, it was made and never grew or ate", ["Yes, it has a heartbeat", "Yes, it needs food"], { hint: "Does a clock eat or grow?", why: "A clock is made in a factory and was never alive." })),
     ],
   }),
 ];

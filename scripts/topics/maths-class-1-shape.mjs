@@ -1,26 +1,38 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-shape.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-1-shape-d1-a8828d00.png","alt":"A shape and its mirror image either side of a dashed fold line","caption":"A line of symmetry."};
+const COTEACH_B = {"type":"image","asset":"maths-class-1-shape-d2-f203440b.png","alt":"Turn arrows around a robot showing a quarter, a half and a three-quarter turn","caption":"Quarter, half and three-quarter turns."};
 // Class 1 Maths topic 8: shape and position (format 3.0). Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const RG = (id, col, row, facing, x = 50, y = 46, size = 3, anim = "none") => [id, { kind: "robot_grid", col, row, facing }, x, y, size, anim];
 
+const N = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const DICE = "maths-class-1-shape-1-70891d3b.jpg";
+
 const flat = {
   id: "flat", kind: "learn", title: "Flat shapes",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Today we look at shapes. We meet flat shapes and solid shapes. We spot shapes that match on both sides. And we help a robot find its way.",
+      T("Today we explore **shapes**, symmetry and directions.")),
+    SAY("Look at this little dice. It is a cube! How many faces can you see? Let's find out.",
+      PHOTO(DICE, "A small white dice with coloured dots on a grey surface", "A dice is a cube.", "Photo by Maxim Tolchinskiy on Unsplash")),
     H("Stop 1: Sides and corners"),
-    SAY("Flat shapes are called two D shapes. Every flat shape has sides and corners. A side is a straight edge. A corner is where two sides meet. A triangle has three sides and three corners. A square has four sides and four corners, and all its sides are the same length. A rectangle has four sides and four corners too, but the long sides are longer than the short sides.", T("Flat shapes have **sides** and **corners**.", "A triangle has 3 sides. A square and a rectangle have 4 sides.")),
+    SAY("Flat shapes are called two D shapes. Every flat shape has sides and corners. A side is a straight edge. A corner is where two sides meet. A triangle has three sides and three corners. A square has four sides and four corners. All its sides are the same length. A rectangle has four sides and four corners too. Its long sides are longer than its short sides.", T("Flat shapes have **sides** and **corners**.", "A triangle has 3 sides. A square and a rectangle have 4 sides.")),
     EXPP("Count the sides",
       SS("A triangle. Count the sides: one, two, three. Three corners as well.", S("Triangle: 3 sides, 3 corners.", ["a", "🔺", 50, 40, 3, "none", "triangle"])),
       SS("A square. Four sides, all the same length. And four corners.", S("Square: 4 equal sides, 4 corners.", ["a", "🟦", 50, 40, 3, "pulse", "square"])),
       SS("A circle. It has no straight sides and no corners at all. It is round all the way.", S("Circle: 0 sides, 0 corners.", ["a", "🔵", 50, 40, 3, "pulse", "circle"]))),
+    SAY("Fold along the dashed line. Both sides match. That is a line of symmetry.", COTEACH_A),
     CHK(num("How many sides does a triangle have?", 3, { hint: "Tri means three.", why: "A triangle has 3 sides.", tag: "shape.sides" })),
     H("Stop 2: Which shape is which?"),
     SAY("Let us sort shapes by their sides. Shapes with three sides are triangles. Shapes with four sides are squares and rectangles. A shape with five sides is a pentagon, and with six sides a hexagon. Look around you. A door is a rectangle. A clock is a circle. A road sign can be a triangle.", T("3 sides: triangle. 4 sides: square or rectangle. 5 sides: **pentagon**. 6 sides: **hexagon**.")),
     IMG("🔷", "Shapes are named by the number of their sides."),
     CHK(mc("A shape has 4 equal sides. What is it?", "A square", ["A triangle", "A circle"], { hint: "Four equal sides and corners.", why: "A square has 4 equal sides.", tag: "shape.names" })),
     SAY("Remember. Flat shapes have sides and corners. A circle has none. Count the sides to name the shape.", SUM("Flat shapes have sides and corners", "A circle has no sides or corners", "Count the sides to name a shape")),
-    GLOSS({ side: "A straight edge of a shape.", corner: "Where two sides meet.", triangle: "A shape with 3 sides.", square: "A shape with 4 equal sides.", rectangle: "A shape with 4 sides and 4 corners.", circle: "A round shape.", pentagon: "A shape with 5 sides.", hexagon: "A shape with 6 sides." }),
+    GLOSS({ shapes: "The outline or form of things.", side: "A straight edge of a shape.", corner: "Where two sides meet.", triangle: "A shape with 3 sides.", square: "A shape with 4 equal sides.", rectangle: "A shape with 4 sides and 4 corners.", circle: "A round shape.", pentagon: "A shape with 5 sides.", hexagon: "A shape with 6 sides." }),
   ],
   mini: [
     num("How many corners does a square have?", 4, { hint: "Count where sides meet.", why: "A square has 4 corners." }),
@@ -39,10 +51,11 @@ const solid = {
       SS("A cube, like a dice. Six square faces.", S("Cube.", ["a", "🎲", 50, 40, 3, "none", "cube"])),
       SS("A sphere, like a ball. It rolls because it is round all over.", S("Sphere.", ["a", "⚽", 50, 40, 3, "pulse", "sphere"])),
       SS("A cylinder like a tin. A cone like an ice cream cone.", S("Cylinder and cone.", ["a", "🥫", 28, 40, 3, "none", "cylinder"], ["b", "🍦", 72, 40, 3, "pulse", "cone"]))),
+    SAY("The robot can turn a quarter, a half or three quarters.", COTEACH_B),
     CHK(mc("Which solid shape is like a ball?", "Sphere", ["Cube", "Cone"], { hint: "It rolls in every direction.", why: "A ball is a sphere.", tag: "shape.solid" })),
     H("Stop 2: Shape hunt"),
     SAY("Time for a shape hunt at home. Find a cube, a sphere, a cylinder and a cone. Look in the kitchen, your toy box and your school bag. A tin is a cylinder. A tissue box is a cuboid. Draw or tick each one you find.", T("Go on a shape hunt at home and find a cube, sphere, cylinder and cone.")),
-    SAY("Look for solid shapes at home: a ball, a tin, a box and a cone.", IMG("🔎", "A shape hunt at home.")),
+    SAY("Look for solid shapes at home. Find a ball, a tin, a box and a cone.", IMG("🔎", "A shape hunt at home.")),
     ACT("Shape hunt", ["Paper and a pencil", "A parent to help"], ["Find something shaped like a ball. What is it?", "Find something shaped like a tin. What is it?", "Find something shaped like a box.", "Which shape did you find most of?"]),
     CHK(mc("A tin of beans is a...", "cylinder", ["cube", "sphere"], { hint: "It has two flat circles.", why: "A tin is a cylinder.", tag: "shape.solid" })),
     SAY("Remember. Solid shapes are three D. A cube has square faces. A sphere is round. A cylinder has two circles. A cone has a point.", SUM("Solid shapes are 3D", "Cube, sphere, cylinder and cone")),
@@ -110,6 +123,29 @@ const turns = {
   ],
 };
 
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara finds shapes in the mosque", backdrop: "town", caption: "Zara spots shapes, symmetry and turns on a walk.",
+  scenes: [
+    { caption: "Shapes on a walk.", say: "Zara goes for a walk with her brother. She spots shapes everywhere.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "s", emoji: "🔷", x: 72, y: 40, size: 3, enter: "pop" }] },
+    { caption: "A cube, a sphere, a cone.", say: "A dice is a cube. A ball is a sphere. A party hat is a cone.",
+      items: [{ id: "a", emoji: "🎲", label: "cube", x: 22, y: 46, size: 3, enter: "pop" }, { id: "b", emoji: "⚽", label: "sphere", x: 50, y: 46, size: 3, enter: "pop" }, { id: "c", emoji: "🍦", label: "cone", x: 78, y: 46, size: 3, enter: "pop" }] },
+    { caption: "Tile pattern.", say: "At the mosque there is a tile pattern. Squares and triangles repeat.",
+      items: [{ id: "m", emoji: "🕌", label: "mosque", x: 50, y: 40, size: 3, enter: "grow" }] },
+    { caption: "A mirror line.", say: "Fold the star down the middle. Both halves match. That is symmetry!",
+      items: [{ id: "t", emoji: "⭐", label: "mirror line", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "A robot facing right.", say: "Zara's brother has a toy robot. It faces right.",
+      items: [{ id: "r", prop: { kind: "robot_grid", col: 0, row: 0, facing: "right" }, x: 50, y: 46, size: 3, enter: "grow" }] },
+    { caption: "A quarter turn.", say: "A quarter turn to the right. Now the robot faces down.",
+      items: [{ id: "r", prop: { kind: "robot_grid", col: 0, row: 0, facing: "down" }, x: 50, y: 46, size: 3, effect: "sparkle" }] },
+    { caption: "A half turn.", say: "Another quarter turn makes a half turn. It faces left!",
+      items: [{ id: "r", prop: { kind: "robot_grid", col: 0, row: 0, facing: "left" }, x: 50, y: 46, size: 3, effect: "sparkle" }] },
+    { caption: "Shukriya, Zara!", say: "Shapes, symmetry and turns are everywhere. Shukriya, Zara!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "⭐", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-1-shape", subject: "maths", cls: 1, topic: 8, title: "Shape and Position",
@@ -127,13 +163,9 @@ export const topics = [
       num("What is 4 + 4?", 8, { hint: "Double 4.", why: "4 + 4 = 8." }),
       tf("A circle has corners.", false, { hint: "It is round.", why: "A circle has no corners." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Today we look at shapes. Flat shapes like triangles and squares, and solid shapes like cubes and spheres. We will spot shapes that match on both sides, look at the patterns in mosques, and help a robot find its way.", T("Today we explore shapes, symmetry and directions.")),
-      IMG("🔷", "Shapes are all around us."),
-      GLOSS({ shape: "The outline or form of something." }),
-    ],
+    intro: [],
     subs: [flat, solid, symmetry, turns],
+    clip,
     quiz: [
       { q: num("How many sides does a square have?", 4, { hint: "Count the edges.", why: "A square has 4 sides.", tag: "shape.sides" }), sub: "flat", depth: "recall", alts: [num("How many corners does a rectangle have?", 4, { hint: "Count where sides meet.", why: "A rectangle has 4 corners.", tag: "shape.sides" }), num("How many sides does a pentagon have?", 5, { hint: "Penta means five.", why: "A pentagon has 5 sides.", tag: "shape.sides" })] },
       { q: tf("A circle has 3 corners.", false, { hint: "A circle is round.", why: "A circle has no corners.", tag: "shape.sides" }), sub: "flat", depth: "recall", alts: [tf("A triangle has 3 corners.", true, { hint: "Count where sides meet.", why: "A triangle has 3 corners.", tag: "shape.sides" }), tf("A hexagon has 4 sides.", false, { hint: "Hex means six.", why: "A hexagon has 6 sides.", tag: "shape.sides" })] },
@@ -150,6 +182,37 @@ export const topics = [
       { q: mc("Why does a sphere roll but a cube does not roll easily?", "A sphere is round all over, but a cube has flat faces and corners", ["A sphere is heavier", "A cube is smaller"], { hint: "Think of a ball and a dice.", why: "A sphere is round, so it rolls. A cube has flat faces.", tag: "shape.reason" }), sub: "solid", depth: "reason", alts: [mc("Why does a tin of beans roll on its side but not stand easily on a point?", "A cylinder has a curved side that rolls", ["It is heavy", "It is a cube"], { hint: "Think of a tin rolling.", why: "A cylinder has a curved side, so it rolls on its side.", tag: "shape.reason" }), mc("Why can you stack cubes but not spheres?", "Cubes have flat faces, but spheres are round and roll away", ["Spheres are heavier", "Cubes are bigger"], { hint: "Think about flat faces.", why: "Flat faces stack. Round shapes roll.", tag: "shape.reason" })] },
       { q: mc("Sara folds a heart down the middle and both halves match. What does this show?", "The fold is a line of symmetry", ["The heart has corners", "The heart is a cube"], { hint: "Both halves are mirror images.", why: "When both halves match, the fold is a line of symmetry.", tag: "shape.reason" }), sub: "symmetry", depth: "reason", alts: [mc("Zain folds a butterfly's picture and both wings match. What does this show?", "The fold is a line of symmetry", ["The butterfly has corners", "The butterfly is a cone"], { hint: "Both halves are mirror images.", why: "When both halves match, the fold is a line of symmetry.", tag: "shape.reason" }), mc("Layla folds a leaf and one half is much bigger. What does this show?", "The leaf is not symmetrical", ["The leaf is a cube", "The leaf has corners"], { hint: "Do both halves match?", why: "If the halves do not match, it is not symmetrical.", tag: "shape.reason" })] },
       { q: mc("A robot faces left and makes a half turn. Aisha says it now faces left again. Is she right?", "No. A half turn faces the opposite way, so it now faces right", ["Yes, it faces left again", "No, it faces up"], { hint: "Half way round.", why: "A half turn faces the opposite way, so left becomes right.", tag: "shape.reason" }), sub: "turns", depth: "reason", alts: [mc("A robot faces up and makes a half turn. Ravi says it now faces up. Is he right?", "No. A half turn faces the opposite way, so it now faces down", ["Yes, it faces up again", "No, it faces right"], { hint: "Half way round.", why: "A half turn faces the opposite way, so up becomes down.", tag: "shape.reason" }), mc("A robot faces right and makes a whole turn. Sana says it faces left. Is she right?", "No. A whole turn brings it back to face right", ["Yes, it faces left", "No, it faces down"], { hint: "All the way round.", why: "A whole turn brings it back to the start.", tag: "shape.reason" })] },
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      N(tf("A cone has one flat circle and a point.", true, { hint: "Think of an ice cream cone.", why: "A cone has one flat circular face and one point.", tag: "shape.solid" }), "solid", "recall",
+        [tf("A cylinder has a point.", false, { hint: "Think of a tin.", why: "A cylinder has two flat circles and no point.", tag: "shape.solid" })]),
+      N(fill("Count the faces and corners.", "A cube has {b1} faces and {b2} corners.", [["6", "4", "8"], ["8", "6", "12"]], { hint: "Think of a dice.", why: "A cube has 6 faces and 8 corners.", tag: "shape.properties" }), "solid", "apply",
+        [fill("Count the sides and corners.", "A pentagon has {b1} sides and {b2} corners.", [["5", "4", "6"], ["5", "4", "6"]], { hint: "Penta means five.", why: "A pentagon has 5 sides and 5 corners.", tag: "shape.properties" })]),
+      N(ms("Which two shapes are flat shapes? Pick two.", ["Hexagon", "Pentagon"], ["Sphere", "Cube"], { hint: "Flat shapes can be drawn on paper.", why: "A hexagon and a pentagon are flat 2D shapes.", tag: "shape.names" }), "flat", "apply",
+        [ms("Which two shapes are flat shapes? Choose two.", ["Triangle", "Circle"], ["Cone", "Cylinder"], { hint: "Flat shapes can be drawn on paper.", why: "A triangle and a circle are flat 2D shapes.", tag: "shape.names" })]),
+      N(ord("Put these turns in order, smallest first.", ["Quarter turn", "Half turn", "Three-quarter turn", "Whole turn"], { hint: "Think of 1, 2, 3 and 4 quarters.", why: "A quarter, a half, three quarters and a whole turn go up in order.", tag: "shape.turns" }), "turns", "apply",
+        [ord("Order these turns, smallest first.", ["Quarter turn", "Half turn", "Whole turn", "Two whole turns"], { hint: "Think of quarters and wholes.", why: "A quarter, a half, a whole and two whole turns go up in order.", tag: "shape.turns" })]),
+      N(mat("Match each solid shape to the flat shape on its faces.", [["Cube", "Square faces"], ["Cylinder", "Circle ends"], ["Cone", "Circle base"]], { hint: "Each face of a solid is a flat shape.", why: "A cube has square faces, a cylinder has circle ends and a cone has a circle base.", tag: "shape.faces" }), "solid", "apply",
+        [mat("Match each solid shape to its flat faces.", [["Cuboid", "Rectangle faces"], ["Cylinder", "Circle ends"], ["Sphere", "No flat faces"]], { hint: "Each face of a solid is a flat shape.", why: "A cuboid has rectangle faces, a cylinder circle ends and a sphere no flat faces.", tag: "shape.faces" })]),
+      N(hot("Tap the shape that is a hexagon.", [["🔷", "A: 6 sides", 22, 50], ["🔷", "B: 5 sides", 50, 50], ["🔷", "C: 3 sides", 78, 50]], ["A: 6 sides"], { labels: true, hint: "Hex means six.", why: "A hexagon has 6 sides.", tag: "shape.names" }), "flat", "apply",
+        [hot("Tap the shape that is a pentagon.", [["🔷", "A: 6 sides", 22, 50], ["🔷", "B: 5 sides", 50, 50], ["🔷", "C: 3 sides", 78, 50]], ["B: 5 sides"], { labels: true, hint: "Penta means five.", why: "A pentagon has 5 sides.", tag: "shape.names" })]),
+      N(sld("Slide to show how many edges a cube has.", { min: 0, max: 14 }, 12, 0, { hint: "4 on the top, 4 on the bottom and 4 going down.", why: "A cube has 12 edges.", tag: "shape.properties" }), "solid", "apply",
+        [sld("Slide to show how many faces a cuboid has.", { min: 0, max: 8 }, 6, 0, { hint: "Think of a cereal box.", why: "A cuboid has 6 faces.", tag: "shape.properties" })]),
+      N(mc("Which solid shape has one flat circle and a point?", "Cone", ["Cylinder", "Sphere"], { hint: "Think of a party hat.", why: "A cone has one flat circle and one point.", tag: "shape.solid" }), "solid", "apply",
+        [mc("Which solid shape has two flat circles and a curved side?", "Cylinder", ["Cone", "Cube"], { hint: "Think of a tin.", why: "A cylinder has two flat circles and a curved side.", tag: "shape.solid" })]),
+      N(mc("A robot faces up and makes a three-quarter turn to the right. Which way does it face?", "Left", ["Right", "Down"], { hint: "Turn right three times: right, down, left.", why: "Three quarter turns right from up is right, down, then left.", tag: "shape.turns" }), "turns", "apply",
+        [mc("A robot faces right and makes a three-quarter turn to the right. Which way does it face?", "Up", ["Down", "Left"], { hint: "Turn right three times: down, left, up.", why: "Three quarter turns right from right is down, left, then up.", tag: "shape.turns" })]),
+      N(num("A robot moves forward 3 squares, turns right, then moves forward 2 squares. How many squares did it move in all?", 5, { hint: "Turning does not move it. Add the moves.", why: "3 + 2 = 5 squares.", tag: "shape.route" }), "turns", "apply",
+        [num("A robot moves forward 4 squares, turns left, then moves forward 3 squares. How many squares did it move in all?", 7, { hint: "Turning does not move it. Add the moves.", why: "4 + 3 = 7 squares.", tag: "shape.route" })]),
+      N(mc("Which shape is a clock on the wall?", "Circle", ["Square", "Triangle"], { hint: "It is round.", why: "A wall clock is a circle.", tag: "shape.real_life" }), "flat", "apply",
+        [mc("Which shape is a classroom door?", "Rectangle", ["Circle", "Triangle"], { hint: "Four sides, two long and two short.", why: "A door is a rectangle.", tag: "shape.real_life" })]),
+      N(mc("Omar says a square is not a rectangle. Is he right?", "No. A square has 4 sides and 4 corners, so it is a special rectangle", ["Yes, they are different shapes", "No, a square is a triangle"], { hint: "Count the sides and corners.", why: "A square has 4 sides and 4 square corners, like a rectangle. It is a rectangle with equal sides.", tag: "shape.reason_square" }), "flat", "reason",
+        [mc("Sam says a square cannot be a rectangle because all its sides are equal. Is he right?", "No. A square has 4 sides and 4 corners, so it is a special rectangle", ["Yes, they are different shapes", "No, a square is a circle"], { hint: "Count the sides and corners.", why: "A square has 4 sides and 4 square corners, like a rectangle. It is a rectangle with equal sides.", tag: "shape.reason_square" })]),
+      N(mc("Zainab says a cylinder has 3 flat faces. Is she right?", "No. It has 2 flat faces and one curved surface", ["Yes, 3 flat faces", "No, it has 1 flat face"], { hint: "Run your finger over a tin.", why: "A cylinder has 2 flat circles. The curved side is a surface, not a flat face.", tag: "shape.reason_faces" }), "solid", "reason",
+        [mc("Ben says a cone has 3 flat faces. Is he right?", "No. It has 1 flat face and one curved surface", ["Yes, 3 flat faces", "No, it has 2 flat faces"], { hint: "Run your finger over a cone.", why: "A cone has 1 flat circle. The curved side is a surface, not a flat face.", tag: "shape.reason_faces" })]),
+      N(mc("Ben says the line from corner to corner on a rectangle is a line of symmetry. Is he right?", "No. If you fold along it, the two halves do not match", ["Yes, any line down the middle works", "No, a rectangle has no lines of symmetry"], { hint: "Imagine folding it along that line.", why: "Folding a rectangle corner to corner leaves the halves not matching. Its lines go through the middle of the sides.", tag: "shape.reason_symmetry" }), "symmetry", "reason",
+        [mc("Mina says any line down the middle of a shape is a line of symmetry. Is she right?", "No. Both halves must match when you fold", ["Yes, any middle line works", "No, shapes never have symmetry"], { hint: "Imagine folding along the line.", why: "A line of symmetry must make two halves that match exactly.", tag: "shape.reason_symmetry" })]),
+      N(mc("Mina says a cube is a square because a cube has square faces. Is she right?", "No. A cube is a solid shape. A square is a flat shape", ["Yes, they are the same", "No, a cube is a circle"], { hint: "Can you pick it up?", why: "A square is flat, but a cube is solid. A cube has square faces.", tag: "shape.reason_2d_3d" }), "solid", "reason",
+        [mc("Ali says a sphere is a circle because it is round. Is he right?", "No. A sphere is a solid shape. A circle is a flat shape", ["Yes, they are the same", "No, a sphere is a square"], { hint: "Can you pick it up?", why: "A circle is flat, but a sphere is solid like a ball.", tag: "shape.reason_2d_3d" })]),
     ],
   }),
 ];

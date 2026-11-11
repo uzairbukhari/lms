@@ -1,0 +1,3212 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-program-a-decision-quiz",
+  "subject": "data-ai",
+  "title": "Decision Quizzes: If and Else",
+  "summary": "Build a quiz that makes decisions with if and else, compares answers, keeps a score variable, and finds and fixes bugs.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Program a decision quiz",
+  "learning_objectives": [
+   "Explain conditions, selection and the if and else paths",
+   "Use input, comparisons and a score variable in a quiz",
+   "Plan, test and debug a decision quiz"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing",
+    "text": "Use sequence, selection and repetition in programs; work with variables and various forms of input and output; detect and correct errors"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing algorithms",
+    "text": "Design, write and debug programs that accomplish specific goals; use logical reasoning to explain how algorithms work"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a condition is and how if and else work",
+   "I can compare an answer and keep a score",
+   "I can trace, test and fix a bug in a quiz"
+  ],
+  "real_life": "Quiz apps that say well done or try again, and traffic lights that choose go or wait.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a loop do?",
+    "hint": "Think about repeat 4 times.",
+    "explanation": "A loop repeats steps.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Draws a picture"
+     },
+     {
+      "id": "b",
+      "text": "Stops the program"
+     },
+     {
+      "id": "c",
+      "text": "Repeats steps"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a bug?",
+    "hint": "You debug it.",
+    "explanation": "A bug is a mistake in a program.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A small insect inside the computer"
+     },
+     {
+      "id": "b",
+      "text": "A type of cable"
+     },
+     {
+      "id": "c",
+      "text": "A mistake in a program"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 x 4?",
+    "hint": "4 sixes.",
+    "explanation": "6 x 4 = 24.",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "decide",
+   "kind": "learn",
+   "title": "If and else",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, quiz maker!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does a program make a decision?",
+     "say": "Today we make a quiz that decides what to say. How does a program choose between two paths?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-program-a-decision-quiz-1-f33c6a96.jpg",
+     "alt": "A winding dirt path through tall pine trees with purple heather on both sides",
+     "caption": "A path leads one way. A program can choose between paths.",
+     "credit": "Photo by Jack Skinner on Unsplash",
+     "say": "Zara's class is building a quiz about Pakistan. The program must check each answer and choose what to say."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Conditions"
+    },
+    {
+     "type": "text",
+     "markdown": "A **condition** is a question with a true or false answer.",
+     "say": "A program decides using a condition. A condition is a question that is either true or false."
+    },
+    {
+     "type": "explainer",
+     "title": "True or false",
+     "scenes": [
+      {
+       "caption": "The answer.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🧒",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "⌨️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "Islamabad"
+        }
+       ],
+       "say": "The quiz asks: what is the capital city of Pakistan? Hamza types Islamabad."
+      },
+      {
+       "caption": "Condition.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "❓",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "answer = Islamabad?"
+        }
+       ],
+       "say": "The program asks itself: is the answer equal to Islamabad? That is the condition."
+      },
+      {
+       "caption": "True.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "true"
+        },
+        {
+         "id": "f",
+         "emoji": "❌",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "false"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "true or false"
+        }
+       ],
+       "say": "The answer matches, so the condition is true. If it did not match, it would be false."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is a condition a program can check?",
+      "hint": "It is true or false.",
+      "explanation": "A condition is a question with a true or false answer.",
+      "skill_tag": "quiz.cond_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "move 10 steps"
+       },
+       {
+        "id": "b",
+        "text": "say Hello"
+       },
+       {
+        "id": "c",
+        "text": "score > 5"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: If and else"
+    },
+    {
+     "type": "text",
+     "markdown": "**Selection** means the program chooses a path. **Else** is the path for false.",
+     "say": "An if block runs steps when the condition is true. The else part runs different steps when it is false."
+    },
+    {
+     "type": "explainer",
+     "title": "Two paths",
+     "scenes": [
+      {
+       "caption": "If true.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "🟢",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "if"
+        },
+        {
+         "id": "w",
+         "emoji": "🎉",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "If the answer is right, the quiz says Well done."
+      },
+      {
+       "caption": "Else.",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🔴",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "else"
+        },
+        {
+         "id": "t",
+         "emoji": "🔄",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Else, the quiz says Try again. Only one of the two paths runs each time."
+      },
+      {
+       "caption": "Decisions.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🔀",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "one path"
+        }
+       ],
+       "say": "Selection lets the program react in different ways. Without it, it would say the same thing every time."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A quiz says: if the answer is right, say Well done, else say Try again. The answer is wrong. What does it say?",
+      "hint": "Is the condition true?",
+      "explanation": "A wrong answer makes the condition false, so the else path runs.",
+      "skill_tag": "quiz.else_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "Well done"
+       },
+       {
+        "id": "b",
+        "text": "Try again"
+       },
+       {
+        "id": "c",
+        "text": "Both messages"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara's Pakistan quiz",
+     "asset": "clip-data-ai-class-4-program-a-decision-quiz-60437090.mp4",
+     "poster": "clip-data-ai-class-4-program-a-decision-quiz-60437090.webp",
+     "seconds": 74,
+     "transcript": "Zara's group plans a quiz about Pakistan. Each question has one right answer. The program asks: is the answer equal to Islamabad? That is a condition. If it is true, say Well done. Else say the right answer. A variable called score starts at zero. A right answer adds one. They test with a right answer and a wrong answer. Both paths must work. A right answer says Try again. There is a bug. They trace the steps and find a spelling slip. They fix it. They add a hint and a final score. The class loves the quiz.",
+     "caption": "Zara's group builds a decision quiz about Pakistan and fixes a bug."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A condition is a true or false question",
+      "If runs when the condition is true",
+      "Else runs when it is false. Only one path runs"
+     ],
+     "say": "Let us remember. Conditions are true or false. If and else choose one path."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "condition",
+       "meaning": "A question that is either true or false."
+      },
+      {
+       "term": "selection",
+       "meaning": "When a program chooses between paths."
+      },
+      {
+       "term": "else",
+       "meaning": "The path a program follows when the condition is false."
+      },
+      {
+       "term": "true",
+       "meaning": "Correct. The test passes."
+      },
+      {
+       "term": "false",
+       "meaning": "Not correct. The test fails."
+      },
+      {
+       "term": "quiz",
+       "meaning": "A set of questions."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Both branches of an if-else block run every time.",
+     "hint": "The program chooses.",
+     "explanation": "Only one branch runs each time.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "When does the else part run?",
+     "hint": "It is the other path.",
+     "explanation": "Else runs when the condition is false.",
+     "options": [
+      {
+       "id": "a",
+       "text": "When the condition is true"
+      },
+      {
+       "id": "b",
+       "text": "Never"
+      },
+      {
+       "id": "c",
+       "text": "When the condition is false"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is selection in programming?",
+     "hint": "Think about the forest path.",
+     "explanation": "Selection lets a program choose a path.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Repeating steps"
+      },
+      {
+       "id": "b",
+       "text": "Choosing between paths"
+      },
+      {
+       "id": "c",
+       "text": "Drawing a shape"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "If the answer is Islamabad, say Well done. Hamza types Lahore. What happens?",
+     "hint": "The condition is false.",
+     "explanation": "The wrong answer follows the else path.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Well done is said"
+      },
+      {
+       "id": "b",
+       "text": "The else path runs"
+      },
+      {
+       "id": "c",
+       "text": "The program stops"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "kind": "try",
+   "title": "Checking answers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Ask and compare"
+    },
+    {
+     "type": "text",
+     "markdown": "**Input** is what a player types or sends into the program.",
+     "say": "The quiz asks a question and waits. What the player types is called the input."
+    },
+    {
+     "type": "text",
+     "markdown": "The symbol = checks if two values are the same.",
+     "say": "The program compares the input with the right answer. It uses the equals symbol for that."
+    },
+    {
+     "type": "explainer",
+     "title": "Comparing",
+     "scenes": [
+      {
+       "caption": "Ask.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "👧",
+         "x": 72,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The quiz asks a question. Nadia types an answer."
+      },
+      {
+       "caption": "Compare.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📝",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "📝",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "🟰",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The program compares her input with the stored answer. The text must match."
+      },
+      {
+       "caption": "Exact.",
+       "items": [
+        {
+         "id": "x",
+         "emoji": "🔍",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Lahor"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "match must be exact"
+        }
+       ],
+       "say": "A missing letter makes the match fail. Lahore and Lahor are different."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The condition 5 > 8 is true.",
+      "hint": "Is 5 more than 8?",
+      "explanation": "5 is less than 8, so it is false.",
+      "skill_tag": "quiz.five_chk",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Numbers and symbols"
+    },
+    {
+     "type": "text",
+     "markdown": "> means greater than. < means less than.",
+     "say": "Numbers can be compared too. The symbol > means greater than, and < means less than."
+    },
+    {
+     "type": "text",
+     "markdown": "Conditions can compare numbers.",
+     "say": "In a guessing game, the program says higher, lower or correct. First sort some conditions."
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the conditions",
+     "goal": "Move the 6 conditions into True or False.",
+     "emoji": "❓",
+     "count": 6,
+     "zones": [
+      "True",
+      "False"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Write conditions",
+     "materials": [
+      "Paper and pens",
+      "A quiz question idea"
+     ],
+     "instructions": [
+      "Write a quiz question and its right answer.",
+      "Write the condition that checks the answer.",
+      "Write what the program says if the answer is right and if it is wrong."
+     ],
+     "say": "Now you try. Write three conditions for your own quiz."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A game says: if guess > 7, say too high. The guess is 10. What does it say?",
+      "hint": "Is 10 more than 7?",
+      "explanation": "10 > 7 is true, so it says too high.",
+      "skill_tag": "quiz.guess_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "Too low"
+       },
+       {
+        "id": "b",
+        "text": "Too high"
+       },
+       {
+        "id": "c",
+        "text": "Correct"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Input is what the player types",
+      "= checks if values match exactly",
+      "> and < compare numbers"
+     ],
+     "say": "Let us remember. Input is checked with conditions. Equals and greater than compare values."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "input",
+       "meaning": "Information typed or sent into a program."
+      },
+      {
+       "term": "equal",
+       "meaning": "The same as."
+      },
+      {
+       "term": "compare",
+       "meaning": "To look at two things to see how they match."
+      },
+      {
+       "term": "greater than",
+       "meaning": "Bigger than."
+      },
+      {
+       "term": "less than",
+       "meaning": "Smaller than."
+      },
+      {
+       "term": "symbol",
+       "meaning": "A sign that stands for something."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which symbol means less than?",
+     "hint": "It points the small end.",
+     "explanation": "< means less than.",
+     "options": [
+      {
+       "id": "a",
+       "text": "="
+      },
+      {
+       "id": "b",
+       "text": "<"
+      },
+      {
+       "id": "c",
+       "text": ">"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Lahore and Lahor match exactly.",
+     "hint": "One letter is missing.",
+     "explanation": "A missing letter makes the text different.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is input?",
+     "hint": "It comes in.",
+     "explanation": "Input is information sent in.",
+     "options": [
+      {
+       "id": "a",
+       "text": "What the program draws"
+      },
+      {
+       "id": "b",
+       "text": "What a player types into the program"
+      },
+      {
+       "id": "c",
+       "text": "A kind of loop"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "score",
+   "kind": "play",
+   "title": "Scores and tracing",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Keep a score"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-program-a-decision-quiz-2-bae0ed5a.jpg",
+     "alt": "A traffic light on a pole with only the green light lit against a clear blue sky",
+     "caption": "A traffic light decides by a condition: if green, go. Else, wait.",
+     "credit": "Photo by Jametlene Reskp on Unsplash",
+     "say": "A traffic light also makes decisions. If the light is green, cars go. Else they wait."
+    },
+    {
+     "type": "text",
+     "markdown": "A **variable** is a named box that holds a value that can change.",
+     "say": "The quiz keeps score in a variable. A variable is a named box that holds a value."
+    },
+    {
+     "type": "explainer",
+     "title": "Score variable",
+     "scenes": [
+      {
+       "caption": "Start.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📦",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "score: 0"
+        }
+       ],
+       "say": "At the start, the program sets score to 0."
+      },
+      {
+       "caption": "Add one.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "➕",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "📦",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "score: 1"
+        }
+       ],
+       "say": "A right answer adds 1 to the score. A wrong answer leaves it as it was."
+      },
+      {
+       "caption": "Final.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🏆",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "📦",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "score: 3"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "remembered"
+        }
+       ],
+       "say": "At the end, the program says the final score. The variable remembered it all."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why does the program set score to 0 at the start?",
+      "hint": "Think about starting fresh.",
+      "explanation": "Starting at 0 clears the old score.",
+      "skill_tag": "quiz.start_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "So the quiz is easier"
+       },
+       {
+        "id": "b",
+        "text": "So it plays music"
+       },
+       {
+        "id": "c",
+        "text": "So a score from the last game is not kept"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Trace and test"
+    },
+    {
+     "type": "text",
+     "markdown": "To **trace** is to follow a program one step at a time.",
+     "say": "To trace is to follow a program step by step. We write the value of the variable at each step."
+    },
+    {
+     "type": "text",
+     "markdown": "Test both paths. Play the memory game.",
+     "say": "Zara tests with a right answer and a wrong answer. Both paths need testing. First a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Programming words",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔀",
+      "📦",
+      "🔍",
+      "✅"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "This quiz should add 1 for a right answer. Tap the line with the bug.",
+      "hint": "When should the score go up?",
+      "explanation": "Adding in the else path gives points for wrong answers.",
+      "skill_tag": "quiz.bug_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "▫️",
+         "label": "if answer = Islamabad",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "▫️",
+         "label": "else change score by 1",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "▫️",
+         "label": "say Well done",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h2"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A variable holds a value that can change",
+      "Set the score to 0 at the start",
+      "Trace the steps and test both paths"
+     ],
+     "say": "Let us remember. Variables hold changing values. We trace and test both paths."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "variable",
+       "meaning": "A named box that holds a value that can change."
+      },
+      {
+       "term": "trace",
+       "meaning": "To follow a program one step at a time."
+      },
+      {
+       "term": "bug",
+       "meaning": "A mistake in a program."
+      },
+      {
+       "term": "test",
+       "meaning": "To try a program to see if it works."
+      },
+      {
+       "term": "score",
+       "meaning": "The number of points so far."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a variable do in the quiz?",
+     "hint": "A named box.",
+     "explanation": "A variable holds the score.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Draws the question"
+      },
+      {
+       "id": "b",
+       "text": "Plays the sound"
+      },
+      {
+       "id": "c",
+       "text": "Remembers the score"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A traffic light follows a condition: if green, go.",
+     "hint": "Think about the photo.",
+     "explanation": "A condition decides what the cars do.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why test with a wrong answer as well as a right one?",
+     "hint": "Think about both paths.",
+     "explanation": "Both paths need testing.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Because wrong answers are fun"
+      },
+      {
+       "id": "b",
+       "text": "To check the else path works"
+      },
+      {
+       "id": "c",
+       "text": "Because it is quicker"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "build",
+   "kind": "use",
+   "title": "Build a decision quiz",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plan the quiz"
+    },
+    {
+     "type": "text",
+     "markdown": "Plan the questions and the right answers first.",
+     "say": "Zara's group plans before coding. They choose five questions about Pakistan, each with one right answer."
+    },
+    {
+     "type": "text",
+     "markdown": "Write the **pseudocode**: the plan in plain words.",
+     "say": "They write each decision in words. If right, say Well done and add 1. Else say the right answer."
+    },
+    {
+     "type": "text",
+     "markdown": "Build and test one part at a time.",
+     "say": "They break the quiz into small parts. First one question, then the score, then the final message."
+    },
+    {
+     "type": "explainer",
+     "title": "From plan to blocks",
+     "scenes": [
+      {
+       "caption": "Plan.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📝",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🔀",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Question one is planned. Ask, wait, check, then say Well done or the right answer."
+      },
+      {
+       "caption": "Test one.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🧩",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🧪",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The group builds only that question and tests it with a right and a wrong answer."
+      },
+      {
+       "caption": "Next.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📋",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "✅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "small steps"
+        }
+       ],
+       "say": "It works, so they copy the idea for question two. Small steps make fewer bugs."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of making a decision quiz in order.",
+      "hint": "Plan first.",
+      "explanation": "Plan, build, test, then improve.",
+      "skill_tag": "quiz.make_steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Build the program"
+       },
+       {
+        "id": "i3",
+        "text": "Test with right and wrong answers"
+       },
+       {
+        "id": "i4",
+        "text": "Fix bugs and improve it"
+       },
+       {
+        "id": "i1",
+        "text": "Plan the questions and answers"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Debug and improve"
+    },
+    {
+     "type": "text",
+     "markdown": "A **bug** is a mistake. Trace the program to find it.",
+     "say": "The group finds a bug. A right answer says Try again. They trace the condition and find a typing slip."
+    },
+    {
+     "type": "text",
+     "markdown": "Improve the quiz with hints and a final score.",
+     "say": "Then they improve the quiz. It gives a hint after a wrong answer and shows the final score."
+    },
+    {
+     "type": "explainer",
+     "title": "Debug and improve",
+     "scenes": [
+      {
+       "caption": "Bug.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🐛",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "q",
+         "emoji": "❌",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "wrong message"
+        }
+       ],
+       "say": "Question three says Try again for the right answer. The condition has a spelling slip."
+      },
+      {
+       "caption": "Fix.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🔧",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "They fix the spelling and test again. Now right answers get Well done."
+      },
+      {
+       "caption": "Improve.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "💡",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "hint"
+        },
+        {
+         "id": "s",
+         "emoji": "🏆",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "score"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "better quiz"
+        }
+       ],
+       "say": "They add a hint and a final score. The quiz is kinder and clearer."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan a quiz",
+     "materials": [
+      "Paper and pens",
+      "A partner"
+     ],
+     "instructions": [
+      "Write three questions and their answers.",
+      "Write the if and else messages for each question.",
+      "Swap with a partner and trace each other's plan."
+     ],
+     "say": "Now you try. Plan a short quiz with a grown-up or classmate."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A quiz that runs without crashing can still have bugs.",
+      "hint": "Right answer, wrong message.",
+      "explanation": "A program can run and still give wrong results.",
+      "skill_tag": "quiz.runs_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plan with pseudocode, then build one part at a time",
+      "Trace and test to find bugs",
+      "Improve with hints and a final score"
+     ],
+     "say": "Let us remember. Plan, build in small steps, test both paths and improve."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pseudocode",
+       "meaning": "A plan for a program written in plain words."
+      },
+      {
+       "term": "bug",
+       "meaning": "A mistake in a program."
+      },
+      {
+       "term": "improve",
+       "meaning": "To make something better."
+      },
+      {
+       "term": "hint",
+       "meaning": "A small clue to help someone."
+      },
+      {
+       "term": "decision quiz",
+       "meaning": "A quiz that chooses what to say using if and else."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why build and test one question at a time?",
+     "hint": "Think about small steps.",
+     "explanation": "Small parts are easier to test.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It makes the quiz longer"
+      },
+      {
+       "id": "b",
+       "text": "It means no testing"
+      },
+      {
+       "id": "c",
+       "text": "Bugs are easier to find in small parts"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Pseudocode is a plan written in plain words.",
+     "hint": "No blocks yet.",
+     "explanation": "Pseudocode describes the plan in words.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What could the quiz do after a wrong answer to help?",
+     "hint": "Be kind to the player.",
+     "explanation": "A hint helps the player learn.",
+     "options": [
+      {
+       "id": "a",
+       "text": "End the quiz at once"
+      },
+      {
+       "id": "b",
+       "text": "Give a hint"
+      },
+      {
+       "id": "c",
+       "text": "Delete the score"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a condition in a program?",
+    "hint": "It gives yes or no.",
+    "explanation": "A condition is a true or false question.",
+    "skill_tag": "quiz.cond",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of loop"
+     },
+     {
+      "id": "b",
+      "text": "A question that is true or false"
+     },
+     {
+      "id": "c",
+      "text": "A picture on the stage"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does else do in an if block?",
+    "hint": "It is the other path.",
+    "explanation": "Else is the path for false.",
+    "skill_tag": "quiz.else",
+    "options": [
+     {
+      "id": "a",
+      "text": "Repeats the steps"
+     },
+     {
+      "id": "b",
+      "text": "Stops the program"
+     },
+     {
+      "id": "c",
+      "text": "Says what to do when the condition is false"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A program with if and else follows only one of its two paths each time.",
+    "hint": "It chooses.",
+    "explanation": "Only one branch runs.",
+    "skill_tag": "quiz.one_path",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each programming word to its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "quiz.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Selection"
+     },
+     {
+      "id": "l2",
+      "text": "Condition"
+     },
+     {
+      "id": "l3",
+      "text": "Else"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A true or false test"
+     },
+     {
+      "id": "r1",
+      "text": "The program chooses a path"
+     },
+     {
+      "id": "r3",
+      "text": "The path if the test is false"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "decide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the block that is a condition.",
+    "hint": "True or false.",
+    "explanation": "answer = Islamabad is true or false.",
+    "skill_tag": "quiz.tap_cond",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "answer = Islamabad",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "➡️",
+       "label": "move 10 steps",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔊",
+       "label": "say Hello",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Zara says a program with if and else runs both paths every time. Is she right?",
+    "hint": "Think about choosing.",
+    "explanation": "Only one path runs.",
+    "skill_tag": "quiz.reason_both",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, else means also"
+     },
+     {
+      "id": "b",
+      "text": "No. It runs only one path, depending on the condition"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both always run"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decide",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "If it is cloudy, say take a coat, else say wear a hat. It is sunny. What does it say?",
+    "hint": "Is the condition true?",
+    "explanation": "Sunny is not cloudy, so the else path runs.",
+    "skill_tag": "quiz.weather",
+    "options": [
+     {
+      "id": "a",
+      "text": "Take a coat"
+     },
+     {
+      "id": "b",
+      "text": "Both messages"
+     },
+     {
+      "id": "c",
+      "text": "Wear a hat"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about decisions.",
+    "hint": "Think about the two paths.",
+    "explanation": "A condition decides, and true follows the if branch.",
+    "skill_tag": "quiz.fill_decide",
+    "points": 2,
+    "text": "A program checks a {b1}. If it is true it follows the {b2} branch.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "candle"
+       },
+       {
+        "id": "b",
+        "text": "condition"
+       },
+       {
+        "id": "c",
+        "text": "cushion"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "else"
+       },
+       {
+        "id": "b",
+        "text": "if"
+       },
+       {
+        "id": "c",
+        "text": "loop"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "decide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Which symbol means greater than?",
+    "hint": "The open end faces the bigger number.",
+    "explanation": "> means greater than.",
+    "skill_tag": "quiz.gt",
+    "options": [
+     {
+      "id": "a",
+      "text": "<"
+     },
+     {
+      "id": "b",
+      "text": ">"
+     },
+     {
+      "id": "c",
+      "text": "="
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the steps of one quiz question in order.",
+    "hint": "Ask first.",
+    "explanation": "Ask, wait, check, then respond.",
+    "skill_tag": "quiz.q_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Wait for the answer"
+     },
+     {
+      "id": "i4",
+      "text": "Say well done or try again"
+     },
+     {
+      "id": "i3",
+      "text": "Check the answer with if"
+     },
+     {
+      "id": "i1",
+      "text": "Ask the question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about answers.",
+    "hint": "Think about what comes in.",
+    "explanation": "The typed words are input and if compares them.",
+    "skill_tag": "quiz.fill_input",
+    "points": 2,
+    "text": "The player's typed words are the {b1}. The program uses an {b2} block to compare them.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ice"
+       },
+       {
+        "id": "b",
+        "text": "input"
+       },
+       {
+        "id": "c",
+        "text": "ink"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "iron"
+       },
+       {
+        "id": "b",
+        "text": "inch"
+       },
+       {
+        "id": "c",
+        "text": "if"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "compare",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "The right answer is Lahore. A player types Lahor with a letter missing. What happens?",
+    "hint": "The text must match.",
+    "explanation": "A missing letter makes the text different.",
+    "skill_tag": "quiz.mismatch",
+    "options": [
+     {
+      "id": "a",
+      "text": "The program guesses Lahore"
+     },
+     {
+      "id": "b",
+      "text": "The program says wrong, because the text does not match"
+     },
+     {
+      "id": "c",
+      "text": "The program draws a picture"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "The program says: if guess > 7, say too high. The guess is 10. Slide to show how much more than 7 the guess is.",
+    "hint": "10 take away 7.",
+    "explanation": "10 - 7 = 3.",
+    "skill_tag": "quiz.diff",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "Is the test 5 > 8 true? It is true.",
+    "hint": "Is 5 more than 8?",
+    "explanation": "5 is less than 8.",
+    "skill_tag": "quiz.true_false",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the condition score = 10 is the same as score > 10. Is he right?",
+    "hint": "Think about 10 itself.",
+    "explanation": "= and > are different tests.",
+    "skill_tag": "quiz.reason_eq",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both mean at least 10"
+     },
+     {
+      "id": "b",
+      "text": "No. = checks for exactly 10, but > checks for more than 10"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two are true about a variable? Pick two.",
+    "hint": "Think about a named box.",
+    "explanation": "A variable has a name and a changeable value.",
+    "skill_tag": "quiz.var_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Its value can change"
+     },
+     {
+      "id": "b",
+      "text": "It only holds pictures"
+     },
+     {
+      "id": "c",
+      "text": "Its value can never change"
+     },
+     {
+      "id": "d",
+      "text": "It has a name"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "score",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "Score starts at 0. Three answers are right and each adds 2. What is the score?",
+    "hint": "2 + 2 + 2.",
+    "explanation": "3 x 2 = 6.",
+    "skill_tag": "quiz.score_calc",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "score",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "At the start of a quiz, what should the score be set to?",
+    "hint": "A fresh start.",
+    "explanation": "Setting score to 0 starts clean.",
+    "skill_tag": "quiz.start_zero",
+    "options": [
+     {
+      "id": "a",
+      "text": "The last game's score"
+     },
+     {
+      "id": "b",
+      "text": "0"
+     },
+     {
+      "id": "c",
+      "text": "10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says if he forgets the add-points line, the quiz will still count correctly. Is he right?",
+    "hint": "Who changes the score?",
+    "explanation": "The program must change the variable.",
+    "skill_tag": "quiz.reason_add",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, computers guess"
+     },
+     {
+      "id": "b",
+      "text": "No. A variable changes only when the program changes it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it counts by itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Hamza says tracing a program is a waste of time because the computer will do it anyway. Is he right?",
+    "hint": "Think about finding bugs.",
+    "explanation": "Tracing helps us find bugs.",
+    "skill_tag": "quiz.reason_trace",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tracing slows the computer"
+     },
+     {
+      "id": "b",
+      "text": "No. Tracing helps us find mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, computers never go wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Maryam says a quiz that only tests right answers is fully tested. Is she right?",
+    "hint": "Think about else.",
+    "explanation": "The else path needs testing.",
+    "skill_tag": "quiz.reason_else",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, wrong answers cannot happen"
+     },
+     {
+      "id": "b",
+      "text": "No. We must test wrong answers too, to check the else path"
+     },
+     {
+      "id": "c",
+      "text": "Yes, right answers are enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each bug to its fix.",
+    "hint": "Think about each symptom.",
+    "explanation": "Each bug has its own fix.",
+    "skill_tag": "quiz.bug_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Score stays at 0"
+     },
+     {
+      "id": "l2",
+      "text": "Right answer says Try again"
+     },
+     {
+      "id": "l3",
+      "text": "Score starts at 7"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Fix the condition or swap the messages"
+     },
+     {
+      "id": "r1",
+      "text": "Add a block to change score"
+     },
+     {
+      "id": "r3",
+      "text": "Set score to 0 at the start"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "score",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the line that sets the wrong starting value.",
+    "hint": "Where should score start?",
+    "explanation": "Score should start at 0.",
+    "skill_tag": "quiz.tap_start",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "▫️",
+       "label": "set score to 10",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "▫️",
+       "label": "ask What is the capital of Pakistan?",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "▫️",
+       "label": "if answer = Islamabad",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "score",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the stages of creating a decision quiz in order.",
+    "hint": "Plan first.",
+    "explanation": "Plan, build, test, improve.",
+    "skill_tag": "quiz.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Build the program"
+     },
+     {
+      "id": "i4",
+      "text": "Fix bugs and improve it"
+     },
+     {
+      "id": "i3",
+      "text": "Test with right and wrong answers"
+     },
+     {
+      "id": "i1",
+      "text": "Plan the questions and answers"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are good extra features for a quiz? Pick two.",
+    "hint": "Think about helping the player.",
+    "explanation": "A final score and a hint help the player.",
+    "skill_tag": "quiz.extras",
+    "options": [
+     {
+      "id": "a",
+      "text": "Give a hint after a wrong answer"
+     },
+     {
+      "id": "b",
+      "text": "Delete the questions"
+     },
+     {
+      "id": "c",
+      "text": "Hide the score always"
+     },
+     {
+      "id": "d",
+      "text": "Tell the player their final score"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says a big quiz is easier if she builds it all at once. Is she right?",
+    "hint": "Think about small steps.",
+    "explanation": "Small parts are easier to test.",
+    "skill_tag": "quiz.reason_small",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all at once is faster"
+     },
+     {
+      "id": "b",
+      "text": "Yes, testing is not needed"
+     },
+     {
+      "id": "c",
+      "text": "No. Build and test one part at a time"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says her quiz is finished once it runs without crashing. Is she right?",
+    "hint": "Think about the bug in question three.",
+    "explanation": "A program can run and still be wrong.",
+    "skill_tag": "quiz.reason_runs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, running means correct"
+     },
+     {
+      "id": "b",
+      "text": "No. It must also give correct messages and scores"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bugs always crash"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says copying another group's quiz and calling it his own is fine. Is he right?",
+    "hint": "Think about being fair.",
+    "explanation": "We make our own work and credit ideas.",
+    "skill_tag": "quiz.reason_copy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, copying is clever"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody checks"
+     },
+     {
+      "id": "c",
+      "text": "No. Make your own, and credit any ideas you borrow"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "A quiz has 8 questions worth 2 points each. What is the highest score?",
+    "hint": "8 groups of 2.",
+    "explanation": "8 x 2 = 16.",
+    "skill_tag": "quiz.max_score",
+    "answer": {
+     "value": 16,
+     "tolerance": 0
+    },
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "A quiz has 5 questions. A player gets 3 right. Slide to show the percent right.",
+    "hint": "3 fifths.",
+    "explanation": "3 out of 5 is 60 percent.",
+    "skill_tag": "quiz.percent",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "build",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a condition?",
+    "hint": "It is true or false.",
+    "explanation": "score > 5 is true or false.",
+    "skill_tag": "quiz.cond",
+    "options": [
+     {
+      "id": "a",
+      "text": "say Hello"
+     },
+     {
+      "id": "b",
+      "text": "score > 5"
+     },
+     {
+      "id": "c",
+      "text": "move 10 steps"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "A quiz says: if the answer is right, say Well done, else say Try again. When does it say Try again?",
+    "hint": "It is the other path.",
+    "explanation": "Else runs when the answer is wrong.",
+    "skill_tag": "quiz.else",
+    "options": [
+     {
+      "id": "a",
+      "text": "When the answer is right"
+     },
+     {
+      "id": "b",
+      "text": "When the answer is wrong"
+     },
+     {
+      "id": "c",
+      "text": "Always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "Every time an if-else block runs, both of its paths are followed.",
+    "hint": "It chooses.",
+    "explanation": "Only one branch runs.",
+    "skill_tag": "quiz.one_path",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "quiz.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Input"
+     },
+     {
+      "id": "l2",
+      "text": "Output"
+     },
+     {
+      "id": "l3",
+      "text": "Variable"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "A named box that holds a value"
+     },
+     {
+      "id": "r1",
+      "text": "Information typed or sent in"
+     },
+     {
+      "id": "r2",
+      "text": "What the program shows or says"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "decide",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the true-or-false test.",
+    "hint": "True or false.",
+    "explanation": "score > 3 is true or false.",
+    "skill_tag": "quiz.tap_cond",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "score > 3",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔁",
+       "label": "repeat 5 times",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎵",
+       "label": "play drum",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "decide",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Idris says the else path runs whenever the if path runs. Is he right?",
+    "hint": "Think about choosing.",
+    "explanation": "Only one path runs.",
+    "skill_tag": "quiz.reason_both",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they always run together"
+     },
+     {
+      "id": "b",
+      "text": "Yes, else runs first"
+     },
+     {
+      "id": "c",
+      "text": "No. Else runs only when the condition is false"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "decide",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "If the temperature is less than 10, say wear a scarf, else say no scarf needed. The temperature is 20. What does it say?",
+    "hint": "Is 20 less than 10?",
+    "explanation": "The condition is false, so else runs.",
+    "skill_tag": "quiz.weather",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wear a scarf"
+     },
+     {
+      "id": "b",
+      "text": "No scarf needed"
+     },
+     {
+      "id": "c",
+      "text": "Both messages"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "decide",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about else.",
+    "hint": "Think about the other path.",
+    "explanation": "Else runs when the condition is false.",
+    "skill_tag": "quiz.fill_decide",
+    "points": 2,
+    "text": "An {b1} branch runs when the condition is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "if"
+       },
+       {
+        "id": "b",
+        "text": "else"
+       },
+       {
+        "id": "c",
+        "text": "loop"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "true"
+       },
+       {
+        "id": "b",
+        "text": "loud"
+       },
+       {
+        "id": "c",
+        "text": "false"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "decide",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Which symbol stands for less than?",
+    "hint": "The point faces the smaller number.",
+    "explanation": "< means less than.",
+    "skill_tag": "quiz.gt",
+    "options": [
+     {
+      "id": "a",
+      "text": ">"
+     },
+     {
+      "id": "b",
+      "text": "="
+     },
+     {
+      "id": "c",
+      "text": "<"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "compare",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put these steps of a number guess in order.",
+    "hint": "Pick the number first.",
+    "explanation": "Pick, ask, compare, then answer.",
+    "skill_tag": "quiz.q_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask for a guess"
+     },
+     {
+      "id": "i3",
+      "text": "Compare the guess with the secret number"
+     },
+     {
+      "id": "i4",
+      "text": "Say higher, lower or correct"
+     },
+     {
+      "id": "i1",
+      "text": "Pick a secret number"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about symbols.",
+    "hint": "Think about each symbol.",
+    "explanation": "= means equal and > means bigger.",
+    "skill_tag": "quiz.fill_input",
+    "points": 2,
+    "text": "The symbol = checks if two values are {b1}. The symbol > checks if one is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "empty"
+       },
+       {
+        "id": "b",
+        "text": "equal"
+       },
+       {
+        "id": "c",
+        "text": "early"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rounder"
+       },
+       {
+        "id": "b",
+        "text": "bigger"
+       },
+       {
+        "id": "c",
+        "text": "tinier"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "compare",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "The right answer is Karachi. A player types Karchi. What happens?",
+    "hint": "The text must match.",
+    "explanation": "A missing letter makes the text different.",
+    "skill_tag": "quiz.mismatch",
+    "options": [
+     {
+      "id": "a",
+      "text": "The program fixes it by itself"
+     },
+     {
+      "id": "b",
+      "text": "The program says wrong, because the text does not match"
+     },
+     {
+      "id": "c",
+      "text": "The program plays a song"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "The program says: if guess > 15, say too high. The guess is 20. Slide to show how much more than 15 the guess is.",
+    "hint": "20 take away 15.",
+    "explanation": "20 - 15 = 5.",
+    "skill_tag": "quiz.diff",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "The condition 9 > 4 is true.",
+    "hint": "Is 9 more than 4?",
+    "explanation": "9 is more than 4.",
+    "skill_tag": "quiz.true_false",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Layla says age < 9 is true when age is 9. Is she right?",
+    "hint": "Think about 9 itself.",
+    "explanation": "9 is not less than 9.",
+    "skill_tag": "quiz.reason_eq",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is always true"
+     },
+     {
+      "id": "b",
+      "text": "No. 9 is not less than 9, so it is false"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 9 counts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two do you do with a score variable? Pick two.",
+    "hint": "Think about the quiz.",
+    "explanation": "Start at 0 and add for right answers.",
+    "skill_tag": "quiz.var_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Delete it after each question"
+     },
+     {
+      "id": "b",
+      "text": "Make it a picture"
+     },
+     {
+      "id": "c",
+      "text": "Add 1 for a right answer"
+     },
+     {
+      "id": "d",
+      "text": "Set it to 0 at the start"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "score",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "Score starts at 0. Four answers are right and each adds 5. What is the score?",
+    "hint": "5 + 5 + 5 + 5.",
+    "explanation": "4 x 5 = 20.",
+    "skill_tag": "quiz.score_calc",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "score",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Why set score to 0 when the quiz starts?",
+    "hint": "A fresh start.",
+    "explanation": "It clears the old score.",
+    "skill_tag": "quiz.start_zero",
+    "options": [
+     {
+      "id": "a",
+      "text": "So the answers are easier"
+     },
+     {
+      "id": "b",
+      "text": "So the last game's score does not carry over"
+     },
+     {
+      "id": "c",
+      "text": "So the quiz is faster"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Nina says a variable remembers the score without the program updating it. Is she right?",
+    "hint": "Who changes the score?",
+    "explanation": "The program must change the variable.",
+    "skill_tag": "quiz.reason_add",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it updates itself"
+     },
+     {
+      "id": "b",
+      "text": "No. The program must update it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it reads the player's mind"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Sana says we only need to test a quiz once. Is she right?",
+    "hint": "Think about both paths.",
+    "explanation": "Both paths need testing.",
+    "skill_tag": "quiz.reason_trace",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, testing is not needed"
+     },
+     {
+      "id": "b",
+      "text": "No. Test with right and wrong answers to check both paths"
+     },
+     {
+      "id": "c",
+      "text": "Yes, once is enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Omar says testing the else path is not needed. Is he right?",
+    "hint": "Think about else.",
+    "explanation": "The else path needs testing.",
+    "skill_tag": "quiz.reason_else",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, else never has bugs"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it is never used"
+     },
+     {
+      "id": "c",
+      "text": "No. A mistake could be hiding in it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "score",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each test with what it checks.",
+    "hint": "Think about each test.",
+    "explanation": "Each test checks something different.",
+    "skill_tag": "quiz.bug_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Right answer"
+     },
+     {
+      "id": "l2",
+      "text": "Wrong answer"
+     },
+     {
+      "id": "l3",
+      "text": "Empty answer"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "What happens with no input"
+     },
+     {
+      "id": "r1",
+      "text": "The if path"
+     },
+     {
+      "id": "r2",
+      "text": "The else path"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "score",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the line that should be an if or else but is a bug.",
+    "hint": "When should points be added?",
+    "explanation": "Points belong in the right-answer path.",
+    "skill_tag": "quiz.tap_start",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "▫️",
+       "label": "if answer = Islamabad then say Well done",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "▫️",
+       "label": "else add 1 to score",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "▫️",
+       "label": "set score to 0",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "score",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for improving a quiz in order.",
+    "hint": "Notice first.",
+    "explanation": "Notice, find, change, test.",
+    "skill_tag": "quiz.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find the line that causes it"
+     },
+     {
+      "id": "i4",
+      "text": "Test again"
+     },
+     {
+      "id": "i3",
+      "text": "Change one thing"
+     },
+     {
+      "id": "i1",
+      "text": "Play it and notice a problem"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two help the players of a quiz? Pick two.",
+    "hint": "Think about helping the player.",
+    "explanation": "Clear messages and instructions help.",
+    "skill_tag": "quiz.extras",
+    "options": [
+     {
+      "id": "a",
+      "text": "Instructions at the start"
+     },
+     {
+      "id": "b",
+      "text": "Silent errors"
+     },
+     {
+      "id": "c",
+      "text": "No score at all"
+     },
+     {
+      "id": "d",
+      "text": "Clear messages for right and wrong"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Idris says breaking a quiz into small parts wastes time. Is he right?",
+    "hint": "Think about small steps.",
+    "explanation": "Small parts are easier to test.",
+    "skill_tag": "quiz.reason_small",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it wastes time"
+     },
+     {
+      "id": "b",
+      "text": "Yes, big parts never have bugs"
+     },
+     {
+      "id": "c",
+      "text": "No. Small parts are easier to test and fix"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Hira says if the quiz starts, nobody can find a bug. Is she right?",
+    "hint": "Think about the bug in question three.",
+    "explanation": "A program can run and still be wrong.",
+    "skill_tag": "quiz.reason_runs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, bugs stop it starting"
+     },
+     {
+      "id": "b",
+      "text": "No. A program can run and still be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bugs cannot hide"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Sana says she can copy a friend's code without asking. Is she right?",
+    "hint": "Think about being fair.",
+    "explanation": "We ask and credit.",
+    "skill_tag": "quiz.reason_copy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, code is free for all"
+     },
+     {
+      "id": "b",
+      "text": "No. Ask permission and give credit"
+     },
+     {
+      "id": "c",
+      "text": "Yes, friends never mind"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "build",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "A quiz has 10 questions worth 3 points each. What is the highest score?",
+    "hint": "10 groups of 3.",
+    "explanation": "10 x 3 = 30.",
+    "skill_tag": "quiz.max_score",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "A quiz has 5 questions. A player gets 4 right. Slide to show the percent right.",
+    "hint": "4 fifths.",
+    "explanation": "4 out of 5 is 80 percent.",
+    "skill_tag": "quiz.percent",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 80,
+     "tolerance": 0
+    },
+    "sub_lesson": "build",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

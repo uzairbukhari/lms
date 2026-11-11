@@ -1,0 +1,3101 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "general-knowledge-class-1-weather-and-seasons",
+  "subject": "general-knowledge",
+  "title": "Weather and the Seasons",
+  "summary": "Name the weather, measure it and see how the year turns through four seasons.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Weather and the seasons",
+  "learning_objectives": [
+   "Name and measure weather types",
+   "Order the four seasons",
+   "Say why we have seasons in simple words"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "general-knowledge-class-1-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 geography",
+    "text": "Identify seasonal and daily weather patterns in the United Kingdom and the location of hot and cold areas of the world"
+   }
+  ],
+  "success_criteria": [
+   "I can name the weather",
+   "I can use a thermometer and a rain gauge",
+   "I can order the four seasons"
+  ],
+  "real_life": "Monsoon rain in Lahore, snow in Murree, long summer evenings and drizzle in the UK, and Eid in different seasons.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we use an umbrella for?",
+    "hint": "Think of a rainy day.",
+    "explanation": "An umbrella keeps us dry.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To catch fish"
+     },
+     {
+      "id": "b",
+      "text": "To tell the time"
+     },
+     {
+      "id": "c",
+      "text": "To keep dry in the rain"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "The Sun is a star.",
+    "hint": "It shines on us.",
+    "explanation": "The Sun is a star.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a season?",
+    "hint": "It is part of the year.",
+    "explanation": "Winter is a season.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Monday"
+     },
+     {
+      "id": "b",
+      "text": "London"
+     },
+     {
+      "id": "c",
+      "text": "Winter"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "words",
+   "kind": "learn",
+   "title": "Weather words",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, weather watcher!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does the weather change through the year?",
+     "say": "Today we ask a big question. What is the weather like today?"
+    },
+    {
+     "type": "image",
+     "asset": "general-knowledge-class-1-weather-and-seasons-1-ae1baed5.jpg",
+     "alt": "Many small rain drops on a window with a dark blue and green background",
+     "caption": "Raindrops on a window. Rain is one kind of weather.",
+     "credit": "Photo by ERIC ZHU on Unsplash",
+     "say": "Rain drops cling to this window. Rain is one kind of weather."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Sunny, rainy, windy and snowy"
+    },
+    {
+     "type": "text",
+     "markdown": "**Weather** is what the air and sky are like today.",
+     "say": "Weather is what the air outside is like today. It can change in a day."
+    },
+    {
+     "type": "explainer",
+     "title": "Four kinds of weather",
+     "scenes": [
+      {
+       "caption": "Sunny.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It is sunny. The sky is blue and the Sun is bright."
+      },
+      {
+       "caption": "Rainy.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "It is rainy. Water falls from grey clouds."
+      },
+      {
+       "caption": "Windy.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "💨",
+         "x": 30,
+         "y": 44,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "k",
+         "emoji": "🪁",
+         "x": 72,
+         "y": 36,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "It is windy. Moving air blows the kites and trees."
+      },
+      {
+       "caption": "Snowy.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "❄️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "It is snowy. Snow falls in cold places like Murree."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which weather has water falling from the clouds?",
+      "hint": "Think about an umbrella.",
+      "explanation": "Rain is water falling from clouds.",
+      "skill_tag": "words.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sunny"
+       },
+       {
+        "id": "b",
+        "text": "Windy"
+       },
+       {
+        "id": "c",
+        "text": "Rainy"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Weather symbols"
+    },
+    {
+     "type": "text",
+     "markdown": "A **symbol** is a little picture that stands for something.",
+     "say": "On the news, weather has little pictures called symbols. A sun means sunny."
+    },
+    {
+     "type": "explainer",
+     "title": "Weather symbols",
+     "scenes": [
+      {
+       "caption": "Sun.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☀️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A sun is the symbol for a sunny day."
+      },
+      {
+       "caption": "Rain.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A cloud with drops is the symbol for rain."
+      },
+      {
+       "caption": "Snow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "❄️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A snowflake is the symbol for snow."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A snowflake is the symbol for a sunny day.",
+      "hint": "Snow is cold and white.",
+      "explanation": "A snowflake means snow, not sun.",
+      "skill_tag": "words.chk2",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's weather diary",
+     "asset": "clip-general-knowledge-class-1-weather-and-seasons-83d06a37.mp4",
+     "poster": "clip-general-knowledge-class-1-weather-and-seasons-83d06a37.webp",
+     "seconds": 52,
+     "transcript": "Zainab starts a weather diary in Lahore. On Monday it is sunny and very hot. On Wednesday the sky fills with grey clouds. On Thursday the wind blows her kite. On Friday the monsoon rain arrives. The rain gauge fills up. She measures the rain. She puts all the days in a weather table. Summer in Lahore has the monsoon. Weather follows the seasons.",
+     "caption": "Zainab keeps a weather diary for a week in Lahore and sees the monsoon arrive."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Weather is what the air is like today",
+      "Sunny, rainy, windy and snowy",
+      "Symbols are little weather pictures"
+     ],
+     "say": "Let us remember. Weather can be sunny, rainy, windy or snowy. We use symbols for it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "weather",
+       "meaning": "What the air and sky are like today."
+      },
+      {
+       "term": "symbol",
+       "meaning": "A little picture that stands for something."
+      },
+      {
+       "term": "sunny",
+       "meaning": "Bright with the Sun shining."
+      },
+      {
+       "term": "rainy",
+       "meaning": "With rain falling."
+      },
+      {
+       "term": "windy",
+       "meaning": "With a lot of moving air."
+      },
+      {
+       "term": "snowy",
+       "meaning": "With snow falling."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is wind?",
+     "hint": "It blows kites.",
+     "explanation": "Wind is moving air.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Falling water"
+      },
+      {
+       "id": "b",
+       "text": "Moving air"
+      },
+      {
+       "id": "c",
+       "text": "Hot sand"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The weather can change in one day.",
+     "hint": "Think of sun then rain.",
+     "explanation": "Weather can change quickly.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where might we see snow in Pakistan?",
+     "hint": "It is cold up high.",
+     "explanation": "Snow falls in cold mountain places.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In a hot desert"
+      },
+      {
+       "id": "b",
+       "text": "In the mountains, like Murree"
+      },
+      {
+       "id": "c",
+       "text": "In the sea"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a cloud with drops mean?",
+     "hint": "Think of water drops.",
+     "explanation": "That symbol shows rain.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Snow"
+      },
+      {
+       "id": "b",
+       "text": "Wind"
+      },
+      {
+       "id": "c",
+       "text": "Rain"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "measure",
+   "kind": "try",
+   "title": "Measure the weather",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Thermometer and rain gauge"
+    },
+    {
+     "type": "text",
+     "markdown": "A **thermometer** measures temperature.",
+     "say": "We can measure weather. A thermometer tells us how hot or cold it is."
+    },
+    {
+     "type": "text",
+     "markdown": "**Temperature** tells us how hot or cold something is.",
+     "say": "Temperature is measured in degrees Celsius. We write it as °C."
+    },
+    {
+     "type": "explainer",
+     "title": "Measuring tools",
+     "scenes": [
+      {
+       "caption": "Thermometer.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌡️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A thermometer shows temperature. A high number means hot."
+      },
+      {
+       "caption": "Rain gauge.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 50,
+         "y": 36,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🧪",
+         "x": 50,
+         "y": 66,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A rain gauge is a tube. It collects rain so we can measure it."
+      },
+      {
+       "caption": "Wind vane.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🧭",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "A wind vane points the way the wind is blowing."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which tool measures how hot or cold it is?",
+      "hint": "It shows degrees.",
+      "explanation": "A thermometer measures temperature.",
+      "skill_tag": "measure.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A wind vane"
+       },
+       {
+        "id": "b",
+        "text": "A thermometer"
+       },
+       {
+        "id": "c",
+        "text": "A rain gauge"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Record in a table"
+    },
+    {
+     "type": "text",
+     "markdown": "A **table** lists facts in rows and columns.",
+     "say": "A table helps us keep our weather facts in order. Each day gets a row."
+    },
+    {
+     "type": "explainer",
+     "title": "A weather table",
+     "scenes": [
+      {
+       "caption": "Monday.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "☀️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🌡️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On Monday it is sunny and 30 degrees."
+      },
+      {
+       "caption": "Tuesday.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌧️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🌡️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "On Tuesday it is rainy and 24 degrees."
+      },
+      {
+       "caption": "Compare.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📋",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A table makes it easy to compare the days."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "manipulative",
+     "title": "Wet or dry?",
+     "goal": "Move each weather word. Rain goes in Wet. Sunshine goes in Dry.",
+     "emoji": "🌦️",
+     "count": 8,
+     "zones": [
+      "Wet",
+      "Dry"
+     ],
+     "say": "Sort the weather. Does each one belong with Wet or Dry?"
+    },
+    {
+     "type": "activity",
+     "title": "Make a weather table",
+     "materials": [
+      "Paper and a pencil",
+      "A ruler"
+     ],
+     "instructions": [
+      "Draw a table with a row for each day.",
+      "Look out of the window each day.",
+      "Write the weather in the row.",
+      "Say which weather happened most."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A table helps us compare the weather on different days.",
+      "hint": "Think about rows.",
+      "explanation": "Tables help us compare.",
+      "skill_tag": "measure.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A thermometer measures temperature",
+      "A rain gauge measures rain",
+      "A table keeps weather facts"
+     ],
+     "say": "Let us remember. We measure weather with tools. A table keeps our facts tidy."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "thermometer",
+       "meaning": "A tool that measures temperature."
+      },
+      {
+       "term": "temperature",
+       "meaning": "How hot or cold something is."
+      },
+      {
+       "term": "rain gauge",
+       "meaning": "A tube that collects rain to measure it."
+      },
+      {
+       "term": "wind vane",
+       "meaning": "A tool that shows which way the wind blows."
+      },
+      {
+       "term": "table",
+       "meaning": "Facts set out in rows and columns."
+      },
+      {
+       "term": "Celsius",
+       "meaning": "The scale we use to measure temperature."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a rain gauge collect?",
+     "hint": "It is a tube.",
+     "explanation": "It collects rain.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wind"
+      },
+      {
+       "id": "b",
+       "text": "Sunlight"
+      },
+      {
+       "id": "c",
+       "text": "Rain"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A wind vane shows which way the wind is blowing.",
+     "hint": "It points.",
+     "explanation": "A wind vane shows wind direction.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does °C stand for?",
+     "hint": "It measures temperature.",
+     "explanation": "°C means degrees Celsius.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Clear sky"
+      },
+      {
+       "id": "b",
+       "text": "Degrees Celsius"
+      },
+      {
+       "id": "c",
+       "text": "Cold cloud"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "season",
+   "kind": "play",
+   "title": "Season sort",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Clothes and fruit for each season"
+    },
+    {
+     "type": "text",
+     "markdown": "A **season** is a part of the year with its own weather.",
+     "say": "A year has four seasons: spring, summer, autumn and winter. They come round again and again."
+    },
+    {
+     "type": "explainer",
+     "title": "Four seasons",
+     "scenes": [
+      {
+       "caption": "Spring.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌸",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "Spring is mild. New leaves and flowers come out."
+      },
+      {
+       "caption": "Summer.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 72,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Summer is hot. We wear light clothes and eat mangoes."
+      },
+      {
+       "caption": "Autumn.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍂",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "Autumn is cooler. Leaves turn brown and fall."
+      },
+      {
+       "caption": "Winter.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🧣",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Winter is cold. We wear a coat, a scarf and a hat."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which season is the hottest?",
+      "hint": "Think of mangoes.",
+      "explanation": "Summer is the hottest season.",
+      "skill_tag": "season.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Winter"
+       },
+       {
+        "id": "b",
+        "text": "Autumn"
+       },
+       {
+        "id": "c",
+        "text": "Summer"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The seasons wheel"
+    },
+    {
+     "type": "image",
+     "asset": "general-knowledge-class-1-weather-and-seasons-2-5c8bff96.jpg",
+     "alt": "A path covered in red and orange leaves under trees with orange autumn leaves",
+     "caption": "Autumn leaves on a path. Leaves change colour as the weather turns cooler.",
+     "credit": "Photo by Konstantin Dyadyun on Unsplash",
+     "say": "The seasons go round like a wheel. After winter comes spring again."
+    },
+    {
+     "type": "text",
+     "markdown": "The Earth's **tilt** gives us the seasons.",
+     "say": "The Earth goes round the Sun once a year. Its tilt gives us seasons."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Seasons wheel",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🌸",
+      "☀️",
+      "🍂",
+      "❄️"
+     ],
+     "say": "Warm up your memory. Watch the season pictures light up, then copy them."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "After winter, spring comes again.",
+      "hint": "Think of a wheel.",
+      "explanation": "Seasons repeat each year.",
+      "skill_tag": "season.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Four seasons make a year",
+      "They repeat like a wheel",
+      "The Earth's tilt gives us seasons"
+     ],
+     "say": "Let us remember. There are four seasons. They come round again every year."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "season",
+       "meaning": "A part of the year with its own weather."
+      },
+      {
+       "term": "spring",
+       "meaning": "The mild season when new leaves and flowers grow."
+      },
+      {
+       "term": "summer",
+       "meaning": "The hottest season."
+      },
+      {
+       "term": "autumn",
+       "meaning": "The season when leaves fall."
+      },
+      {
+       "term": "winter",
+       "meaning": "The coldest season."
+      },
+      {
+       "term": "tilt",
+       "meaning": "A lean to one side."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many seasons are in a year?",
+     "hint": "Spring, summer, autumn, winter.",
+     "explanation": "A year has four seasons.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ten"
+      },
+      {
+       "id": "b",
+       "text": "Four"
+      },
+      {
+       "id": "c",
+       "text": "Two"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Leaves often fall in autumn.",
+     "hint": "Look at the picture.",
+     "explanation": "Leaves fall in autumn.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which season is coldest?",
+     "hint": "Think of a coat.",
+     "explanation": "Winter is the coldest.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Spring"
+      },
+      {
+       "id": "b",
+       "text": "Winter"
+      },
+      {
+       "id": "c",
+       "text": "Summer"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "diary",
+   "kind": "use",
+   "title": "Weather diary",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A week of weather"
+    },
+    {
+     "type": "text",
+     "markdown": "A **diary** is a record you write each day.",
+     "say": "A weather diary shows weather over a week. We draw a symbol for each day."
+    },
+    {
+     "type": "explainer",
+     "title": "A week of weather",
+     "scenes": [
+      {
+       "caption": "A diary.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📔",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Write the day. Draw the symbol. Add the temperature."
+      },
+      {
+       "caption": "Seven days.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📅",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Do this every day for a week."
+      },
+      {
+       "caption": "Count.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "At the end, count the symbols. Which weather happened most?"
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What do we draw each day in a weather diary?",
+      "hint": "Think of the sun picture.",
+      "explanation": "We draw a weather symbol.",
+      "skill_tag": "diary.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A flag"
+       },
+       {
+        "id": "b",
+        "text": "A weather symbol"
+       },
+       {
+        "id": "c",
+        "text": "A new tree"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Compare Pakistan and the UK"
+    },
+    {
+     "type": "text",
+     "markdown": "The **monsoon** is a season of heavy rain.",
+     "say": "In Lahore the monsoon rain arrives in summer. It can pour for hours."
+    },
+    {
+     "type": "image",
+     "asset": "general-knowledge-class-1-weather-and-seasons-3-51a8d288.jpg",
+     "alt": "A white bicycle covered in snow beside houses with snowy roofs at sunrise",
+     "caption": "Snow on a bicycle in a cold country. Winter weather is very different from Lahore's summer.",
+     "credit": "Photo by Haberdoedas on Unsplash",
+     "say": "In the UK, it often drizzles in any season. Summer evenings are long."
+    },
+    {
+     "type": "explainer",
+     "title": "Two places",
+     "scenes": [
+      {
+       "caption": "Lahore.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "☀️",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🌧️",
+         "x": 72,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Lahore has a hot summer and the monsoon."
+      },
+      {
+       "caption": "Murree.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "❄️",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "Murree has cold snowy winters."
+      },
+      {
+       "caption": "The UK.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "🌦️",
+         "x": 50,
+         "y": 44,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The UK is often cool and rainy, with a few warm days."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "activity",
+     "title": "Compare two places",
+     "materials": [
+      "Your weather table",
+      "A partner"
+     ],
+     "instructions": [
+      "Pick two places, such as Lahore and London.",
+      "Say one weather fact about each place.",
+      "Say one way the places are the same.",
+      "Say one way they are different."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Pakistan has the same weather in every place.",
+      "hint": "Think of Murree and Lahore.",
+      "explanation": "Weather is different in different places.",
+      "skill_tag": "diary.chk2",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A diary records weather each day",
+      "The monsoon brings heavy rain",
+      "Places have different weather"
+     ],
+     "say": "Let us remember. A diary records the week. Places can have different weather."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "diary",
+       "meaning": "A record you write each day."
+      },
+      {
+       "term": "monsoon",
+       "meaning": "A season of heavy rain."
+      },
+      {
+       "term": "compare",
+       "meaning": "To say how things are the same and different."
+      },
+      {
+       "term": "Lahore",
+       "meaning": "A big city in Pakistan."
+      },
+      {
+       "term": "Murree",
+       "meaning": "A cool hill town in Pakistan."
+      },
+      {
+       "term": "drizzle",
+       "meaning": "Light, fine rain."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the monsoon?",
+     "hint": "Think of Lahore in summer.",
+     "explanation": "The monsoon brings heavy rain.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of wind vane"
+      },
+      {
+       "id": "b",
+       "text": "A season of heavy rain"
+      },
+      {
+       "id": "c",
+       "text": "A cold wind"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We can compare weather in two places.",
+     "hint": "Think about Lahore and the UK.",
+     "explanation": "We compare places.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where does snow fall in Pakistan?",
+     "hint": "It is cold up high.",
+     "explanation": "Snow falls on high mountains.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the desert"
+      },
+      {
+       "id": "b",
+       "text": "Under the sea"
+      },
+      {
+       "id": "c",
+       "text": "On high mountains"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which words best describe weather?",
+    "hint": "Think about looking outside.",
+    "explanation": "Weather is what the air and sky are like.",
+    "skill_tag": "wx.weather_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A day of the week"
+     },
+     {
+      "id": "b",
+      "text": "What the air and sky are like today"
+     },
+     {
+      "id": "c",
+      "text": "A kind of tool"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "words",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a rain gauge measures wind. Is she right?",
+    "hint": "Think about the tube.",
+    "explanation": "A rain gauge collects and measures rain.",
+    "skill_tag": "wx.rain_gauge",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it measures wind"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it measures heat"
+     },
+     {
+      "id": "c",
+      "text": "No, a rain gauge measures rain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "short_text",
+    "prompt": "Write the name of the tool that measures temperature. It starts with T.",
+    "hint": "It shows degrees.",
+    "explanation": "A thermometer measures temperature.",
+    "skill_tag": "wx.thermo_st",
+    "answer": {
+     "accepted": [
+      "thermometer",
+      "a thermometer"
+     ]
+    },
+    "sub_lesson": "words",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "What does a wind vane show?",
+    "hint": "Think about an arrow.",
+    "explanation": "A wind vane shows wind direction.",
+    "skill_tag": "wx.vane_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "How much rain fell"
+     },
+     {
+      "id": "b",
+      "text": "How hot it is"
+     },
+     {
+      "id": "c",
+      "text": "Which way the wind blows"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "match",
+    "prompt": "Match each weather to its symbol.",
+    "hint": "Look at each picture.",
+    "explanation": "Each symbol stands for a weather.",
+    "skill_tag": "wx.symbol_mat",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sunny"
+     },
+     {
+      "id": "l2",
+      "text": "Rainy"
+     },
+     {
+      "id": "l3",
+      "text": "Snowy"
+     },
+     {
+      "id": "l4",
+      "text": "Windy"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "❄️"
+     },
+     {
+      "id": "r4",
+      "text": "💨"
+     },
+     {
+      "id": "r2",
+      "text": "🌧️"
+     },
+     {
+      "id": "r1",
+      "text": "☀️"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "words",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "hotspot",
+    "prompt": "Tap the cloud.",
+    "hint": "It is grey or white.",
+    "explanation": "That picture is a cloud.",
+    "skill_tag": "wx.cloud_hot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☁️",
+       "label": "Cloud",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "☀️",
+       "label": "Sun",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌈",
+       "label": "Rainbow",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "words",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "true_false",
+    "prompt": "We measure temperature in degrees Celsius.",
+    "hint": "We write °C.",
+    "explanation": "Temperature uses degrees Celsius.",
+    "skill_tag": "wx.unit_tf",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "words",
+    "depth": "recall"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Aisha says one day's weather is the climate. Is she right?",
+    "hint": "Think about a long time.",
+    "explanation": "Climate is the usual weather over a long time.",
+    "skill_tag": "wx.climate",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "Yes, climate is only rain"
+     },
+     {
+      "id": "c",
+      "text": "No, climate is the usual weather over many years"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "A thermometer shows 25 degrees. Slide to show the temperature.",
+    "hint": "Read the number.",
+    "explanation": "The thermometer shows 25 degrees.",
+    "skill_tag": "wx.read_sld",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 50
+    },
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "fill_blank",
+    "prompt": "Complete the weather table sentence.",
+    "hint": "Think of our table.",
+    "explanation": "Monday was sunny and Tuesday was rainy.",
+    "skill_tag": "wx.table_fill",
+    "points": 2,
+    "text": "On Monday it was {b1} and on Tuesday it was {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "square"
+       },
+       {
+        "id": "b",
+        "text": "sunny"
+       },
+       {
+        "id": "c",
+        "text": "loud"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "green"
+       },
+       {
+        "id": "b",
+        "text": "rainy"
+       },
+       {
+        "id": "c",
+        "text": "tall"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "The week was sunny, sunny, rainy, sunny, windy. Which weather happened most?",
+    "hint": "Count each one.",
+    "explanation": "Sunny happened three times.",
+    "skill_tag": "wx.common_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rainy"
+     },
+     {
+      "id": "b",
+      "text": "Sunny"
+     },
+     {
+      "id": "c",
+      "text": "Windy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "slider",
+    "prompt": "Monday was 30 degrees and Tuesday was 22. Slide to show how many degrees colder Tuesday was.",
+    "hint": "Take 22 away from 30.",
+    "explanation": "30 take away 22 is 8.",
+    "skill_tag": "wx.drop_sld",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "It is a very cold day. Pick two things to wear.",
+    "hint": "Think of winter.",
+    "explanation": "A coat and a hat keep us warm.",
+    "skill_tag": "wx.clothes_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sunglasses and shorts"
+     },
+     {
+      "id": "b",
+      "text": "A swimsuit"
+     },
+     {
+      "id": "c",
+      "text": "A woolly hat"
+     },
+     {
+      "id": "d",
+      "text": "A warm coat"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with spring.",
+    "hint": "Spring, summer, autumn, winter.",
+    "explanation": "The order is spring, summer, autumn, winter.",
+    "skill_tag": "wx.season_ord",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Autumn"
+     },
+     {
+      "id": "i4",
+      "text": "Winter"
+     },
+     {
+      "id": "i2",
+      "text": "Summer"
+     },
+     {
+      "id": "i1",
+      "text": "Spring"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Which is true about spring?",
+    "hint": "Think of new growth.",
+    "explanation": "In spring new leaves and flowers come out.",
+    "skill_tag": "wx.spring_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "The days are the hottest"
+     },
+     {
+      "id": "b",
+      "text": "New leaves and flowers grow"
+     },
+     {
+      "id": "c",
+      "text": "Snow covers every road"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about summer.",
+    "hint": "Think of a long sunny evening.",
+    "explanation": "Summer is hot with long days.",
+    "skill_tag": "wx.summer_fill",
+    "points": 2,
+    "text": "In summer it is {b1} and the days are {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "frozen"
+       },
+       {
+        "id": "b",
+        "text": "tiny"
+       },
+       {
+        "id": "c",
+        "text": "hot"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "dark"
+       },
+       {
+        "id": "b",
+        "text": "square"
+       },
+       {
+        "id": "c",
+        "text": "long"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "What often happens to leaves in autumn?",
+    "hint": "Look at the picture.",
+    "explanation": "Leaves change colour and fall in autumn.",
+    "skill_tag": "wx.autumn_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "They turn to snow"
+     },
+     {
+      "id": "b",
+      "text": "They grow bigger"
+     },
+     {
+      "id": "c",
+      "text": "They change colour and fall"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "season",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Sam says we have seasons because Earth gets closer to the Sun. Is he right?",
+    "hint": "Think about the tilt.",
+    "explanation": "The tilt of the Earth gives us seasons.",
+    "skill_tag": "wx.closer_sun",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it gets closer"
+     },
+     {
+      "id": "b",
+      "text": "No, seasons happen because the Earth is tilted"
+     },
+     {
+      "id": "c",
+      "text": "Yes, because the Moon moves"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "The four seasons come round again every year.",
+    "hint": "Think of a wheel.",
+    "explanation": "Seasons repeat each year.",
+    "skill_tag": "wx.repeat_tf",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "season",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multi_select",
+    "prompt": "Pick two true things about the Earth.",
+    "hint": "Think about the seasons wheel.",
+    "explanation": "The Earth is tilted and goes round the Sun in a year.",
+    "skill_tag": "wx.tilt_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It stands still"
+     },
+     {
+      "id": "b",
+      "text": "It goes round the Moon every day"
+     },
+     {
+      "id": "c",
+      "text": "It goes round the Sun once a year"
+     },
+     {
+      "id": "d",
+      "text": "It is tilted"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "season",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Sam says the Earth goes round the Sun but does not spin at the same time. Is he right?",
+    "hint": "Think about day and night too.",
+    "explanation": "The Earth spins and goes round the Sun together.",
+    "skill_tag": "wx.spin_orbit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it never spins"
+     },
+     {
+      "id": "b",
+      "text": "No, the Earth does both at the same time"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it can only do one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Aisha says winter is the same everywhere. Is she right?",
+    "hint": "Think about two cities.",
+    "explanation": "Winter weather depends on the place.",
+    "skill_tag": "wx.same_winter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, winter is the same everywhere"
+     },
+     {
+      "id": "b",
+      "text": "No, winter in Murree is very cold, but in Karachi it is mild"
+     },
+     {
+      "id": "c",
+      "text": "Yes, every place gets snow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason"
+   },
+   {
+    "ref": "q23",
+    "type": "true_false",
+    "prompt": "Pakistan has the same weather in every place at the same time.",
+    "hint": "Think of Murree and Lahore.",
+    "explanation": "Weather differs from place to place.",
+    "skill_tag": "wx.place_tf",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "season",
+    "depth": "recall"
+   },
+   {
+    "ref": "q24",
+    "type": "hotspot",
+    "prompt": "Tap what we need for the monsoon rain.",
+    "hint": "It keeps us dry.",
+    "explanation": "An umbrella keeps us dry in the rain.",
+    "skill_tag": "wx.umbrella_hot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☂️",
+       "label": "Umbrella",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧢",
+       "label": "Sun hat",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧤",
+       "label": "Gloves",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "match",
+    "prompt": "Match each place to its usual weather.",
+    "hint": "Think about each place.",
+    "explanation": "Places have different weather.",
+    "skill_tag": "wx.compare_mat",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Murree in winter"
+     },
+     {
+      "id": "l2",
+      "text": "Lahore in summer"
+     },
+     {
+      "id": "l3",
+      "text": "The UK"
+     },
+     {
+      "id": "l4",
+      "text": "A desert"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "often cool and rainy"
+     },
+     {
+      "id": "r4",
+      "text": "dry and sunny"
+     },
+     {
+      "id": "r2",
+      "text": "hot with monsoon rain"
+     },
+     {
+      "id": "r1",
+      "text": "cold and snowy"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with winter.",
+    "hint": "After winter comes spring.",
+    "explanation": "The order is winter, spring, summer, autumn.",
+    "skill_tag": "wx.monsoon_ord",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Summer"
+     },
+     {
+      "id": "i4",
+      "text": "Autumn"
+     },
+     {
+      "id": "i2",
+      "text": "Spring"
+     },
+     {
+      "id": "i1",
+      "text": "Winter"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Omar says clouds make wind. Is he right?",
+    "hint": "Think about what wind is.",
+    "explanation": "Wind is moving air.",
+    "skill_tag": "wx.clouds_wind",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clouds make wind"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rain makes wind"
+     },
+     {
+      "id": "c",
+      "text": "No, wind is moving air, and clouds do not make it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Layla says it is hot at night because the Sun is behind us. Is she right?",
+    "hint": "Think about day and night.",
+    "explanation": "Night is cooler because our side faces away.",
+    "skill_tag": "wx.hot_night",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, night is the hottest time"
+     },
+     {
+      "id": "b",
+      "text": "No, at night our side faces away from the Sun, so it cools down"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the Sun is behind us"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "short_text",
+    "prompt": "Write the weather word for low cloud on the ground that is hard to see through. It starts with F.",
+    "hint": "Three letters.",
+    "explanation": "Fog is cloud near the ground.",
+    "skill_tag": "wx.fog_st",
+    "answer": {
+     "accepted": [
+      "fog",
+      "foggy"
+     ]
+    },
+    "sub_lesson": "diary",
+    "depth": "recall"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Omar says snow only falls at the North Pole. Is he right?",
+    "hint": "Think about Murree.",
+    "explanation": "Snow falls anywhere it is cold enough.",
+    "skill_tag": "wx.snow_pole",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only the North Pole"
+     },
+     {
+      "id": "b",
+      "text": "No, snow also falls on high mountains like those in Pakistan"
+     },
+     {
+      "id": "c",
+      "text": "Yes, snow falls in deserts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is weather?",
+    "hint": "Think about the sky.",
+    "explanation": "Sunny is a kind of weather.",
+    "skill_tag": "wx.weather_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A school bag"
+     },
+     {
+      "id": "b",
+      "text": "A tall building"
+     },
+     {
+      "id": "c",
+      "text": "A sunny afternoon"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a thermometer measures rain. Is he right?",
+    "hint": "Think about degrees.",
+    "explanation": "A thermometer measures temperature.",
+    "skill_tag": "wx.rain_gauge",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it measures rain"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it measures wind"
+     },
+     {
+      "id": "c",
+      "text": "No, a thermometer measures temperature"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "short_text",
+    "prompt": "Write the name of the tool that shows wind direction. It starts with W.",
+    "hint": "It points like an arrow.",
+    "explanation": "A wind vane shows wind direction.",
+    "skill_tag": "wx.thermo_st",
+    "answer": {
+     "accepted": [
+      "wind vane",
+      "windvane",
+      "a wind vane"
+     ]
+    },
+    "sub_lesson": "words",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multiple_choice",
+    "prompt": "What does a rain gauge show?",
+    "hint": "It is a tube.",
+    "explanation": "A rain gauge shows rainfall.",
+    "skill_tag": "wx.vane_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Which way the wind blows"
+     },
+     {
+      "id": "b",
+      "text": "How much rain fell"
+     },
+     {
+      "id": "c",
+      "text": "How cold it is"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "words",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "match",
+    "prompt": "Join each weather to its symbol.",
+    "hint": "Look at each picture.",
+    "explanation": "Each symbol stands for a weather.",
+    "skill_tag": "wx.symbol_mat",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cloudy"
+     },
+     {
+      "id": "l2",
+      "text": "Stormy"
+     },
+     {
+      "id": "l3",
+      "text": "Foggy"
+     },
+     {
+      "id": "l4",
+      "text": "Rainbow"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "🌫️"
+     },
+     {
+      "id": "r4",
+      "text": "🌈"
+     },
+     {
+      "id": "r2",
+      "text": "⛈️"
+     },
+     {
+      "id": "r1",
+      "text": "☁️"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "words",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "hotspot",
+    "prompt": "Tap the snowflake.",
+    "hint": "It is cold and white.",
+    "explanation": "That picture is a snowflake.",
+    "skill_tag": "wx.cloud_hot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❄️",
+       "label": "Snowflake",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌧️",
+       "label": "Rain",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "💨",
+       "label": "Wind",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "words",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "true_false",
+    "prompt": "We measure temperature in kilograms.",
+    "hint": "Kilograms measure weight.",
+    "explanation": "Temperature is not measured in kilograms.",
+    "skill_tag": "wx.unit_tf",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "words",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Hana says one rainy day means a place is always wet. Is she right?",
+    "hint": "Think about many days.",
+    "explanation": "One day is not the usual weather.",
+    "skill_tag": "wx.climate",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is always wet"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rain never stops there"
+     },
+     {
+      "id": "c",
+      "text": "No, one day does not show the usual weather"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "words",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "A thermometer shows 18 degrees. Slide to show the temperature.",
+    "hint": "Read the number.",
+    "explanation": "The thermometer shows 18 degrees.",
+    "skill_tag": "wx.read_sld",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 50
+    },
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence about the end of the week.",
+    "hint": "Think of our table.",
+    "explanation": "Friday was windy and Saturday was cloudy.",
+    "skill_tag": "wx.table_fill",
+    "points": 2,
+    "text": "On Friday it was {b1} and on Saturday it was {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "round"
+       },
+       {
+        "id": "b",
+        "text": "quiet"
+       },
+       {
+        "id": "c",
+        "text": "windy"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "heavy"
+       },
+       {
+        "id": "b",
+        "text": "cloudy"
+       },
+       {
+        "id": "c",
+        "text": "blue"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "The week was rainy, windy, rainy, rainy, sunny. Which weather happened most?",
+    "hint": "Count each one.",
+    "explanation": "Rainy happened three times.",
+    "skill_tag": "wx.common_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Windy"
+     },
+     {
+      "id": "b",
+      "text": "Rainy"
+     },
+     {
+      "id": "c",
+      "text": "Sunny"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "slider",
+    "prompt": "Monday was 28 degrees and Tuesday was 20. Slide to show how many degrees colder Tuesday was.",
+    "hint": "Take 20 away from 28.",
+    "explanation": "28 take away 20 is 8.",
+    "skill_tag": "wx.drop_sld",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "It is a hot sunny day. Pick two things to wear.",
+    "hint": "Think of summer.",
+    "explanation": "A sun hat and light clothes keep us cool.",
+    "skill_tag": "wx.clothes_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "A thick scarf"
+     },
+     {
+      "id": "b",
+      "text": "Snow boots"
+     },
+     {
+      "id": "c",
+      "text": "Light clothes"
+     },
+     {
+      "id": "d",
+      "text": "A sun hat"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Put the seasons in order, starting with summer.",
+    "hint": "After summer comes autumn.",
+    "explanation": "The order is summer, autumn, winter, spring.",
+    "skill_tag": "wx.season_ord",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Winter"
+     },
+     {
+      "id": "i4",
+      "text": "Spring"
+     },
+     {
+      "id": "i2",
+      "text": "Autumn"
+     },
+     {
+      "id": "i1",
+      "text": "Summer"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Which is true about summer?",
+    "hint": "Think of mangoes.",
+    "explanation": "Summer is hot with long days.",
+    "skill_tag": "wx.spring_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Snow falls in the city"
+     },
+     {
+      "id": "b",
+      "text": "The days are hot and long"
+     },
+     {
+      "id": "c",
+      "text": "Leaves fall from every tree"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about winter.",
+    "hint": "Think of dark evenings.",
+    "explanation": "Winter is cold with short days.",
+    "skill_tag": "wx.summer_fill",
+    "points": 2,
+    "text": "In winter it is {b1} and the days are {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "boiling"
+       },
+       {
+        "id": "b",
+        "text": "sticky"
+       },
+       {
+        "id": "c",
+        "text": "cold"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "long"
+       },
+       {
+        "id": "b",
+        "text": "round"
+       },
+       {
+        "id": "c",
+        "text": "short"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Which season has falling leaves?",
+    "hint": "Think of a leafy path.",
+    "explanation": "Autumn has falling leaves.",
+    "skill_tag": "wx.autumn_mc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Summer"
+     },
+     {
+      "id": "b",
+      "text": "Autumn"
+     },
+     {
+      "id": "c",
+      "text": "Spring"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Omar says it is summer when Earth is nearest to the Sun. Is he right?",
+    "hint": "Think about the lean.",
+    "explanation": "The tilt makes the seasons.",
+    "skill_tag": "wx.closer_sun",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, summer is the Moon's job"
+     },
+     {
+      "id": "b",
+      "text": "No, tilt, not distance, makes the seasons"
+     },
+     {
+      "id": "c",
+      "text": "Yes, closeness makes summer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "Once autumn has finished, the seasons stop for ever.",
+    "hint": "Think about the wheel.",
+    "explanation": "Seasons keep repeating.",
+    "skill_tag": "wx.repeat_tf",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "season",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multi_select",
+    "prompt": "Pick two true things about the seasons.",
+    "hint": "Think about the wheel.",
+    "explanation": "Seasons repeat and change the weather.",
+    "skill_tag": "wx.tilt_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "They change the weather"
+     },
+     {
+      "id": "b",
+      "text": "They are caused by the wind"
+     },
+     {
+      "id": "c",
+      "text": "They only happen at night"
+     },
+     {
+      "id": "d",
+      "text": "They repeat each year"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "season",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Hira says the Earth stops spinning when it moves round the Sun. Is she right?",
+    "hint": "Think about a spinning top that moves.",
+    "explanation": "The Earth does both at once.",
+    "skill_tag": "wx.spin_orbit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it stops"
+     },
+     {
+      "id": "b",
+      "text": "No, it spins and orbits together"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it does one at a time"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Layla says all of Pakistan is hot in summer, even the high mountains. Is she right?",
+    "hint": "Think about snow on peaks.",
+    "explanation": "Mountains are cooler than the plains.",
+    "skill_tag": "wx.same_winter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, everywhere is boiling"
+     },
+     {
+      "id": "b",
+      "text": "Yes, mountains are the hottest"
+     },
+     {
+      "id": "c",
+      "text": "No, high mountains stay much cooler"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "season",
+    "depth": "reason",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "true_false",
+    "prompt": "It can be snowy in one place and sunny in another on the same day.",
+    "hint": "Think about hills and plains.",
+    "explanation": "Weather can differ at the same time.",
+    "skill_tag": "wx.place_tf",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "season",
+    "depth": "recall",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "hotspot",
+    "prompt": "Tap what we need for a very cold day.",
+    "hint": "It warms our hands.",
+    "explanation": "Gloves keep our hands warm.",
+    "skill_tag": "wx.umbrella_hot",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧤",
+       "label": "Gloves",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🩴",
+       "label": "Flip-flops",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕶️",
+       "label": "Sunglasses",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "match",
+    "prompt": "Join each place to its usual weather.",
+    "hint": "Think about each place.",
+    "explanation": "Places have different weather.",
+    "skill_tag": "wx.compare_mat",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Karachi"
+     },
+     {
+      "id": "l2",
+      "text": "High mountains"
+     },
+     {
+      "id": "l3",
+      "text": "A rainforest"
+     },
+     {
+      "id": "l4",
+      "text": "Antarctica"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "cold with snow"
+     },
+     {
+      "id": "r4",
+      "text": "freezing cold"
+     },
+     {
+      "id": "r3",
+      "text": "warm and very wet"
+     },
+     {
+      "id": "r1",
+      "text": "warm and near the sea"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3",
+     "l4": "r4"
+    },
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "order",
+    "prompt": "Put the days in order, starting with Monday.",
+    "hint": "Monday starts the week.",
+    "explanation": "The order is Monday, Tuesday, Wednesday, Thursday.",
+    "skill_tag": "wx.monsoon_ord",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Wednesday"
+     },
+     {
+      "id": "i4",
+      "text": "Thursday"
+     },
+     {
+      "id": "i2",
+      "text": "Tuesday"
+     },
+     {
+      "id": "i1",
+      "text": "Monday"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Sana says the Sun's heat is why a kite never flies. Is she right?",
+    "hint": "Think about what blows a kite.",
+    "explanation": "Moving air makes a kite fly.",
+    "skill_tag": "wx.clouds_wind",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the Sun stops kites"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only rain makes kites fly"
+     },
+     {
+      "id": "c",
+      "text": "No, wind makes a kite fly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the Sun warms us at night. Is he right?",
+    "hint": "Think about the spinning Earth.",
+    "explanation": "The Sun cannot warm our side at night.",
+    "skill_tag": "wx.hot_night",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it warms us at night"
+     },
+     {
+      "id": "b",
+      "text": "Yes, the Moon makes the heat"
+     },
+     {
+      "id": "c",
+      "text": "No, the Sun warms our side only in the day"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "short_text",
+    "prompt": "Write the season of heavy rain in Pakistan. It starts with M.",
+    "hint": "It comes in summer.",
+    "explanation": "The monsoon brings heavy rain.",
+    "skill_tag": "wx.fog_st",
+    "answer": {
+     "accepted": [
+      "monsoon",
+      "the monsoon"
+     ]
+    },
+    "sub_lesson": "diary",
+    "depth": "recall",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Zara says snow cannot fall in Pakistan. Is she right?",
+    "hint": "Think about the north.",
+    "explanation": "Pakistan's mountains get snow.",
+    "skill_tag": "wx.snow_pole",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only in the sea"
+     },
+     {
+      "id": "c",
+      "text": "No, snow falls on the mountains in the north"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

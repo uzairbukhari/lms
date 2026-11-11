@@ -1,24 +1,32 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 3: Materials, states of matter (Fatima, age 9). Enquiry type: fair test.
 
+const STEAM = "science-class-4-materials-1-423b2705.jpg";
+const ICE = "science-class-4-materials-2-f98b752a.jpg";
+const DROPS = "science-class-4-materials-3-856583d1.jpg";
+
 const states = {
   id: "states", kind: "learn", title: "Solids, liquids and gases",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore what things are made of and what happens when we heat them.", T("Today's big question: what happens when materials are heated or cooled?")),
+    SAY("A pot of hot water gives off steam. Steam is water in the gas state.", PHOTO(STEAM, "A boiling pot with steam rising from under its lid", "Hot water gives off steam, which is a gas.", "Photo by Sergio Camalich on Unsplash")),
     H("Stop 1: Three states of matter"),
-    SAY("All materials are made of tiny pieces called particles. How the particles are arranged decides whether a material is a solid, a liquid or a gas. In a solid, the particles are packed tightly in fixed places, so a solid keeps its shape. In a liquid, the particles are close but can slide past each other, so a liquid flows and takes the shape of its container. In a gas, the particles are far apart and move everywhere, so a gas spreads out to fill any space. Watch the particles.", T("A **solid** keeps its shape. A **liquid** flows. A **gas** spreads out.", "They are made of tiny **particles**, arranged in different ways.")),
+    SAY("All materials are made of tiny pieces called particles. How the particles are arranged decides whether a material is a solid, a liquid or a gas. In a solid, the particles are packed tightly in fixed places, so a solid keeps its shape. In a liquid, the particles are close but slide past each other. So a liquid flows and takes the shape of its container. In a gas, the particles are far apart and move everywhere. So a gas spreads out to fill any space. Watch the particles.", T("A **solid** keeps its shape. A **liquid** flows. A **gas** spreads out.", "They are made of tiny **particles**, arranged in different ways.")),
     EB("lab", "Particles in three states",
       SS("In a solid, such as ice, the particles are packed tightly in a neat pattern. They can only wobble in place.", S("Solid: packed tightly.", ["a", "🧊", 50, 50, 3, "none"], ["b", "🔹", 30, 70, 1, "pulse"], ["c", "🔹", 40, 70, 1, "pulse"], ["d", "🔹", 50, 70, 1, "pulse"], ["e", "🔹", 60, 70, 1, "pulse"], ["f", "🔹", 70, 70, 1, "pulse"])),
       SS("In a liquid, such as water, the particles are close together but can slide around, so water pours.", S("Liquid: sliding past each other.", ["a", "💧", 50, 40, 3, "bounce"], ["b", "🔹", 35, 72, 1, "float"], ["c", "🔹", 50, 75, 1, "float"], ["d", "🔹", 65, 70, 1, "float"])),
       SS("In a gas, such as steam, the particles are far apart and fly in all directions. A gas fills the whole space.", S("Gas: far apart and moving fast.", ["a", "☁️", 50, 30, 3, "float"], ["b", "🔹", 20, 60, 1, "bounce"], ["c", "🔹", 80, 25, 1, "bounce"], ["d", "🔹", 70, 75, 1, "bounce"]))),
     CHK(mc("Which state of matter keeps its own shape?", "Solid", ["Liquid", "Gas"], { hint: "The particles are packed tightly.", why: "A solid keeps its shape because its particles are fixed in place." })),
     H("Stop 2: Sorting materials"),
+    SAY("Ice is a solid. Its particles are packed tightly, so it keeps its shape.", PHOTO(ICE, "Clear ice cubes with tiny bubbles", "Ice is water in the solid state.", "Photo by Giorgio Trovato on Unsplash")),
     SAY("Now think about everyday materials. A wooden desk is a solid. Milk is a liquid. The air inside a balloon is a gas. Some materials are tricky, like sand. It pours like a liquid, but each grain is a tiny solid. Let's sort.", IMG("🪑 🥛 🎈", "A desk is a solid, milk is a liquid and the air in a balloon is a gas.")),
     CHK(mc("Which is a gas?", "The air in a balloon", ["Milk", "A desk"], { hint: "It fills the whole balloon.", why: "Air is a gas. It spreads out to fill the balloon." })),
     SAY("Remember. Solids, liquids and gases differ in how their particles are arranged.", SUM("Solid: particles packed tightly; keeps its shape", "Liquid: particles slide past each other; flows", "Gas: particles far apart; spreads out")),
-    GLOSS({ particles: "The tiny pieces that all materials are made of.", solid: "A material that keeps its own shape.", liquid: "A material that flows and takes the shape of its container.", gas: "A material that spreads out to fill any space.", container: "Something that holds a material, like a jar." }),
+    GLOSS({ "states of matter": "The three forms of matter: solid, liquid and gas.", particles: "The tiny pieces that all materials are made of.", solid: "A material that keeps its own shape.", liquid: "A material that flows and takes the shape of its container.", gas: "A material that spreads out to fill any space.", container: "Something that holds a material, like a jar." }),
   ],
   mini: [
     mat("Match each material to its state.", [["Ice", "Solid"], ["Milk", "Liquid"], ["Steam", "Gas"]], { hint: "Think about how it behaves.", why: "Ice is a solid, milk is a liquid and steam is a gas." }),
@@ -56,6 +64,7 @@ const cycle = {
   id: "cycle", kind: "play", title: "Evaporation and the water cycle",
   blocks: [
     H("Stop 1: Water goes up and comes down"),
+    SAY("Look at the droplets. Water vapour cooled on cold glass and condensed into liquid.", PHOTO(DROPS, "Water droplets on a window pane", "Droplets form when water vapour cools.", "Photo by Dmitry Tomashek on Unsplash")),
     SAY("Water does not only change state when it boils. Puddles dry up on a warm day, even though they never boil. This is evaporation. Water on the surface slowly turns into an invisible gas called water vapour, and rises. High up, it is cold. The vapour condenses into tiny droplets that form clouds. When the droplets get heavy, they fall as rain. The rain flows back to rivers and seas. This loop is the water cycle.", T("**Evaporation** is when liquid slowly becomes a gas. **Condensation** is when a gas cools into liquid.", "Together they make the **water cycle**.")),
     EB("sea", "The water cycle",
       SS("The Sun warms the sea. Water evaporates and rises as invisible water vapour.", S("Evaporation.", ["s", "☀️", 80, 15, 3, "pulse"], ["w", "🌊", 25, 78, 3, "none"], ["v", "💨", 25, 50, 2, "float"])),
@@ -86,7 +95,7 @@ const dissolving = {
       SS("The sugar has dissolved. It is still there, as tiny particles spread through the water. The water tastes sweet.", S("A sugar solution.", ["g", "🥛", 50, 58, 3, "none"], ["h", "😋", 80, 25, 2, "bounce"]))),
     CHK(mc("Which of these is soluble in water?", "Sugar", ["Sand", "Pebbles"], { hint: "It disappears when you stir.", why: "Sugar dissolves in water. Sand and pebbles do not." })),
     H("Stop 2: Separating mixtures"),
-    SAY("We can get a mixture apart again. To separate sand from water, we filter. Pour the mixture through filter paper. The water passes through but the sand is left behind. To get dissolved salt back from salt water, we leave it in the sun and let the water evaporate. The salt is left behind. This is how salt is collected from the sea in some countries, including Pakistan's Sindh coast.", T("**Filtering** separates a solid that has not dissolved from a liquid.", "**Evaporating** gets a dissolved solid back from a solution.")),
+    SAY("We can get a mixture apart again. To separate sand from water, we filter. Pour the mixture through filter paper. The water passes through but the sand is left behind. To get dissolved salt back, we leave salt water in the sun and let the water evaporate. The salt is left behind. This is how salt is collected from the sea in some countries, including Pakistan's Sindh coast.", T("**Filtering** separates a solid that has not dissolved from a liquid.", "**Evaporating** gets a dissolved solid back from a solution.")),
     ACT("Sort it out", ["Sand", "Salt", "Water", "Two glasses", "Coffee filter paper", "A grown-up"], ["Stir sand into one glass and salt into the other.", "Which dissolved and which did not? Filter both mixtures through filter paper into clean glasses.", "Leave the filtered liquids in the sun for a day. What is left behind?"]),
     IMG("🧂 🏖️ 🧪", "Salt, sand and a filter test."),
     CHK(mc("How can you separate sand from water?", "Filter it", ["Stir it", "Freeze it"], { hint: "The sand is too big to go through the paper.", why: "Filter paper lets water through but holds back the sand." })),
@@ -119,6 +128,28 @@ const ALTS = [
   [mc("Sara tries to get salt out of salty water by filtering. Why will it not work?", "The dissolved salt is made of tiny particles that pass through the paper", ["Salt is too big", "Filter paper is too thick"], { hint: "Dissolved particles are tiny.", why: "Dissolved particles pass through filter paper. Evaporating works instead." }), mc("Omar stirs sand into water and says it has dissolved because the water looks cloudy. Why is he wrong?", "The sand will settle again because it is insoluble", ["Sand always dissolves", "Cloudy water means a solution"], { hint: "Does sand disappear?", why: "Sand is insoluble. It settles back and can be filtered out." })],
 ];
 
+const clip = {
+  title: "A drop of water's journey", backdrop: "sea", caption: "Follow one drop through the water cycle.",
+  scenes: [
+    { caption: "A drop in the sea.", say: "This drop of water sits in the sea. It is a liquid.",
+      items: [{ id: "w", emoji: "🌊", x: 50, y: 70, size: 3 }, { id: "d", emoji: "💧", label: "liquid", x: 50, y: 40, size: 2, anim: "bounce" }] },
+    { caption: "The Sun warms it.", say: "The Sun warms the sea. Heat gives the particles more energy.",
+      items: [{ id: "s", emoji: "☀️", x: 80, y: 15, size: 3, effect: "glow" }, { id: "w", emoji: "🌊", x: 40, y: 75, size: 3 }] },
+    { caption: "Evaporation.", say: "The drop evaporates. It rises as invisible water vapour, a gas.",
+      items: [{ id: "w", emoji: "🌊", x: 40, y: 78, size: 3 }, { id: "v", emoji: "💨", label: "water vapour", x: 50, y: 40, size: 3, anim: "float" }] },
+    { caption: "High up it is cold.", say: "High in the sky, the air is cold. The vapour cools down.",
+      items: [{ id: "v", emoji: "💨", x: 50, y: 50, size: 2, anim: "float" }, { id: "c", emoji: "🥶", label: "cold air", x: 75, y: 30, size: 2 }] },
+    { caption: "Condensation.", say: "The vapour condenses into tiny droplets. They gather to make a cloud.",
+      items: [{ id: "c", emoji: "☁️", label: "cloud", x: 50, y: 30, size: 3, effect: "sparkle" }] },
+    { caption: "Rain falls.", say: "The droplets grow heavy and fall as rain. This is precipitation.",
+      items: [{ id: "c", emoji: "☁️", x: 50, y: 22, size: 3 }, { id: "r", emoji: "🌧️", x: 50, y: 55, size: 3, anim: "bounce" }] },
+    { caption: "Back to the sea.", say: "Rivers carry the rain back to the sea. The journey begins again.",
+      items: [{ id: "m", emoji: "⛰️", x: 30, y: 65, size: 3 }, { id: "w", emoji: "🌊", x: 72, y: 78, size: 3 }] },
+    { caption: "A cycle.", say: "Water never runs out. It keeps moving around the water cycle.",
+      items: [{ id: "d", emoji: "💧", x: 30, y: 50, size: 3, anim: "bounce" }, { id: "h", emoji: "🔄", label: "water cycle", x: 70, y: 50, size: 3, anim: "pulse" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-materials", subject: "science", cls: 4, topic: 3, title: "Materials: States of Matter",
@@ -133,13 +164,9 @@ export const topics = [
       mc("What does a producer do in a food chain?", "Makes its own food", ["Hunts prey", "Eats other animals"], { hint: "Think of plants.", why: "Producers, like plants, make their own food." }),
       tf("Muscles work in pairs.", true, { hint: "Biceps and triceps.", why: "Muscles pull in pairs." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: what are things made of, and what happens when we heat them? By the end, you will describe solids, liquids and gases using particles, follow the water cycle, and plan a fair test. Let's go!", T("Today's big question: what happens when materials are heated or cooled?", "We will see the tiny particles that make up everything.")),
-      IMG("🧊💧☁️", "Ice, water and steam are the same stuff in three states."),
-      GLOSS({ materials: "The stuff things are made from." }),
-    ],
+    intro: [],
     subs: [states, heating, cycle, dissolving],
+    clip,
     quiz: [
       Q("states", "recall", "materials4.states", mc("Which state of matter fills any container it is in?", "Gas", ["Solid", "Liquid"], { hint: "Particles far apart.", why: "A gas spreads out to fill any container." }), ...ALTS[0]),
       Q("states", "recall", "materials4.facts", tf("The particles in a solid are far apart.", false, { hint: "Solids are packed tightly.", why: "Solid particles are packed tightly together." }), ...ALTS[1]),
@@ -156,6 +183,37 @@ export const topics = [
       Q("cycle", "reason", "materials4.reason_evaporation", mc("Why does washing dry faster on a warm, windy day?", "Warmth and wind speed up evaporation", ["Wind adds water", "Warmth freezes the water"], { hint: "Think about evaporation.", why: "Heat and moving air make water evaporate faster." }), ...ALTS[12]),
       Q("heating", "reason", "materials4.reason_fair", mc("Noor wants a fair test of which ice cube melts fastest on a warm day. Which plan is best?", "Use ice cubes of the same size and change only the place", ["Use a big cube in the sun and a small one in the shade", "Use a different time for each"], { hint: "Change only one thing.", why: "Only the place should change in a fair test." }), ...ALTS[13]),
       Q("dissolving", "reason", "materials4.method", mc("Ali tries to get sugar out of sugar water by filtering. Why will it not work?", "The dissolved sugar is made of tiny particles that pass through the paper", ["Sugar is too big", "Filter paper is too thick"], { hint: "Dissolved particles are tiny.", why: "Dissolved particles pass through filter paper. Evaporating works instead." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("states", "recall", "materials4.gases_ms", ms("Which two of these are gases?", ["Steam", "The air in a balloon"], ["Ice", "Milk"], { hint: "They spread out.", why: "Steam and air are gases." }),
+        ms("Which two of these are liquids?", ["Milk", "Water"], ["Ice", "Steam"], { hint: "They flow.", why: "Milk and water are liquids." })),
+      Q("states", "recall", "materials4.rock_hot", hot("Tap the picture of a gas.", [["🪨", "Rock", 22, 50], ["💧", "Water", 50, 50], ["💨", "Steam", 78, 50]], ["Steam"], { labels: true, hint: "It spreads out.", why: "Steam is a gas." }),
+        hot("Tap the picture of a solid.", [["🪨", "Rock", 22, 50], ["💧", "Water", 50, 50], ["💨", "Steam", 78, 50]], ["Rock"], { labels: true, hint: "It keeps its shape.", why: "Rock is a solid." })),
+      Q("states", "recall", "materials4.vapour_tf", tf("Water vapour is a gas.", true, { hint: "It is invisible.", why: "Water vapour is water in the gas state." }),
+        tf("Steam is a solid.", false, { hint: "Steam spreads out.", why: "Steam is a gas." })),
+      Q("states", "recall", "materials4.volume_tf", tf("A gas has a fixed volume.", false, { hint: "It spreads out.", why: "A gas fills its whole container, so its volume is not fixed." }),
+        tf("A liquid takes the shape of its container.", true, { hint: "Think of water in a glass.", why: "A liquid takes the shape of its container." })),
+      Q("heating", "apply", "materials4.cooling_ord", ord("Put these in order as steam is cooled.", ["Steam", "Water", "Ice"], { hint: "Cool it step by step.", why: "Steam condenses to water, and water freezes to ice." }),
+        ord("Order the states from the most spread-out particles to the least.", ["Gas", "Liquid", "Solid"], { hint: "Gas is most spread out.", why: "Gas particles are far apart. Solid particles are packed tightly." })),
+      Q("heating", "apply", "materials4.change_mat", mat("Match each example to its change of state.", [["Ice lolly in the sun", "Melts"], ["Water in a freezer", "Freezes"], ["Steam on a cold window", "Condenses"]], { hint: "Heat or cold?", why: "Heat melts, cold freezes, and cooling steam condenses." }),
+        mat("Match each event to what is happening.", [["Washing drying on a line", "Evaporates"], ["Kettle at 100 °C", "Boils"], ["Ice cube on a hot plate", "Melts"]], { hint: "Think about the states.", why: "Each event is a change of state." })),
+      Q("heating", "apply", "materials4.change_fill", fill("Complete the sentences about changes of state.", "Melting is solid to {b1}. Boiling is liquid to {b2}.", [["liquid", "gas", "solid"], ["gas", "solid", "liquid"]], { hint: "Heat moves it up.", why: "Melting makes a liquid and boiling makes a gas." }),
+        fill("Complete the sentences about cooling.", "Freezing is liquid to {b1}. Condensing is gas to {b2}.", [["solid", "gas", "liquid"], ["liquid", "solid", "gas"]], { hint: "Cooling moves it down.", why: "Freezing makes a solid and condensing makes a liquid." })),
+      Q("cycle", "recall", "materials4.vapour_st", st("What is the name for water when it is a gas?", ["water vapour", "vapour"], { hint: "Two words, starts with w.", why: "Water as a gas is called water vapour." }),
+        st("What is the word for a gas cooling into a liquid?", ["condensation", "condensing", "condense"], { hint: "It starts with c.", why: "Condensation is a gas cooling into a liquid." })),
+      Q("cycle", "apply", "materials4.puddle_num", num("A puddle holds 500 ml of water. 200 ml evaporates. How many millilitres are left?", 300, { hint: "500 minus 200.", why: "500 - 200 = 300." }),
+        num("A tray holds 400 ml of water. 150 ml evaporates. How many millilitres are left?", 250, { hint: "400 minus 150.", why: "400 - 150 = 250." })),
+      Q("heating", "apply", "materials4.rise_sld", sld("Water is heated from 20 °C to 100 °C. Slide to show how many degrees it rises.", { min: 0, max: 150, unit: "°C" }, 80, 0, { hint: "100 minus 20.", why: "100 - 20 = 80 degrees." }),
+        sld("Water is heated from 30 °C to 100 °C. Slide to show how many degrees it rises.", { min: 0, max: 150, unit: "°C" }, 70, 0, { hint: "100 minus 30.", why: "100 - 30 = 70 degrees." })),
+      Q("dissolving", "recall", "materials4.tools_mc", mc("Which tool holds back sand but lets water through?", "Filter paper", ["A spoon", "A cup"], { hint: "It has tiny holes.", why: "Filter paper catches the sand and lets water pass." }),
+        mc("What do we call sugar mixed evenly into water?", "A solution", ["A solid", "A gas"], { hint: "Sugar has dissolved.", why: "Dissolved sugar and water make a solution." })),
+      Q("heating", "reason", "materials4.reason_two_changes", mc("Zain tests which cloth dries fastest. He changes the cloth and the place. Why is this unfair?", "Two things change, so he cannot tell which caused the result", ["Cloths cannot dry", "The sun does not matter"], { hint: "Change one thing.", why: "A fair test changes only one variable." }),
+        mc("Hira tests which sugar dissolves fastest. She changes the water temperature and the spoon size. Why is this unfair?", "Two things change, so she cannot tell which caused the result", ["Sugar cannot dissolve", "Spoons do not matter"], { hint: "Change one thing.", why: "A fair test changes only one variable." })),
+      Q("cycle", "reason", "materials4.reason_vanish", mc("Imran says a puddle vanishes because the water is destroyed. Why is he wrong?", "It evaporates into the air as water vapour", ["It sinks into space", "It turns into rock"], { hint: "Think of evaporation.", why: "The water becomes invisible water vapour in the air." }),
+        mc("Dua says the Earth loses its water when it evaporates. Why is she wrong?", "It condenses and falls again in the water cycle", ["It leaves the Earth for ever", "It turns into soil"], { hint: "Follow the cycle.", why: "Water stays in the water cycle and falls again as rain." })),
+      Q("dissolving", "reason", "materials4.reason_sand_sugar", mc("Rida says sand and sugar both dissolve because both go into the water. Why is she wrong?", "Only sugar dissolves. Sand stays as bits and settles", ["Both dissolve", "Only sand dissolves"], { hint: "Which one disappears?", why: "Sugar is soluble. Sand is insoluble." }),
+        mc("Zara says stirring makes salt vanish for ever. Why is she wrong?", "The salt is still in the water, and evaporating gets it back", ["Salt turns into water", "Salt stops existing"], { hint: "Taste the water.", why: "Dissolved salt is still there. Evaporating the water leaves it behind." })),
+      Q("states", "reason", "materials4.reason_air_mass", mc("Maya says an inflated balloon weighs the same as an empty one because air weighs nothing. Why is she wrong?", "Air is a gas made of particles, so it has mass", ["Air is too light to count", "Balloons stretch"], { hint: "Particles have mass.", why: "A gas is made of particles, so it has mass." }),
+        mc("Ahmed says a gas takes up no space. Why is he wrong?", "A gas spreads to fill its whole container, so it has volume", ["Gas has no particles", "Gas is always a liquid"], { hint: "Think of a balloon.", why: "A gas fills its container, so it takes up space." })),
     ],
   }),
 ];

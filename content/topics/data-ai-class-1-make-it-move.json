@@ -1,0 +1,3229 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-make-it-move",
+  "subject": "data-ai",
+  "title": "Make Characters Move",
+  "summary": "Join command blocks so a sprite moves, grows and talks, then test the program.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: Make characters move",
+  "learning_objectives": [
+   "Join blocks into a sequence",
+   "Change values and see the result",
+   "Test and fix a small program"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 algorithms",
+    "text": "Create and debug simple programs; use logical reasoning to predict the behaviour of simple programs"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-AP-10",
+    "text": "Develop programs with sequences and simple loops, to express ideas or address a problem"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a sprite and a block are",
+   "I can change a number and predict what happens",
+   "I can test a program and fix a bug"
+  ],
+  "real_life": "Making a cartoon on a tablet, or telling a robot toy where to go.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a loop?",
+    "hint": "Do it again.",
+    "explanation": "A loop repeats instructions.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mistake"
+     },
+     {
+      "id": "b",
+      "text": "A background"
+     },
+     {
+      "id": "c",
+      "text": "Instructions that repeat"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which key makes a capital letter?",
+    "hint": "Hold it down.",
+    "explanation": "Shift makes capitals.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Space bar"
+     },
+     {
+      "id": "b",
+      "text": "Shift"
+     },
+     {
+      "id": "c",
+      "text": "Delete"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 + 4?",
+    "hint": "Count on from 6.",
+    "explanation": "6 + 4 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "blocks",
+   "kind": "learn",
+   "title": "Sprites and blocks",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young coder!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we make a character move?",
+     "say": "Today we make a character move. Layla wants her cartoon cat to walk and talk."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-make-it-move-1-c6b54415.jpg",
+     "alt": "An orange and white cat sitting on a paved path looking up",
+     "caption": "A real cat. Layla draws a cartoon cat from it.",
+     "credit": "Photo by Louis Droege on Unsplash",
+     "say": "This real cat inspired Layla. She turns it into a character on a screen."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: A sprite is a picture you control"
+    },
+    {
+     "type": "text",
+     "markdown": "A **sprite** is a picture that a program can move.",
+     "say": "A character on a screen is called a sprite. A sprite is a picture a program can move."
+    },
+    {
+     "type": "explainer",
+     "title": "Meet the sprite",
+     "scenes": [
+      {
+       "caption": "The cat sprite.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "sprite"
+        }
+       ],
+       "say": "Here is Layla's cat. It is a sprite on a green background."
+      },
+      {
+       "caption": "A garden background.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌳",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 62,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "sprite"
+        }
+       ],
+       "say": "A background is the picture behind the sprite. This one is a garden."
+      },
+      {
+       "caption": "A program controls it.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "p",
+         "emoji": "💻",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The program tells the sprite what to do. The sprite cannot move alone."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which one is a sprite?",
+      "hint": "It is a picture you control.",
+      "explanation": "A sprite is a character a program can move.",
+      "skill_tag": "move.sprite",
+      "options": [
+       {
+        "id": "a",
+        "text": "A cable"
+       },
+       {
+        "id": "b",
+        "text": "The keyboard"
+       },
+       {
+        "id": "c",
+        "text": "A cartoon cat on the screen"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Blocks snap in order"
+    },
+    {
+     "type": "text",
+     "markdown": "A **command block** tells the sprite to do one thing.",
+     "say": "We give the sprite commands. Each command is a block. Blocks snap together in order."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-make-it-move-2-8baff485.jpg",
+     "alt": "A wooden stacking toy with red, yellow, blue, orange, purple and green rings",
+     "caption": "Rings go on in order, like blocks in a program.",
+     "credit": "Photo by Tomáš Petz on Unsplash",
+     "say": "The cat does the first block first. Then the next block. The order matters."
+    },
+    {
+     "type": "explainer",
+     "title": "Blocks in order",
+     "scenes": [
+      {
+       "caption": "Move 5 steps.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "move 5"
+        }
+       ],
+       "say": "The first block says move five steps. The cat walks."
+      },
+      {
+       "caption": "Grow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "b",
+         "emoji": "🟩",
+         "x": 80,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse",
+         "label": "grow"
+        }
+       ],
+       "say": "The next block says grow. The cat gets bigger."
+      },
+      {
+       "caption": "Meow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "🔊",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "meow"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a sequence"
+        }
+       ],
+       "say": "The last block says meow. The program is a sequence."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a command block do?",
+      "hint": "It is one command.",
+      "explanation": "Each block gives the sprite one job.",
+      "skill_tag": "move.block",
+      "options": [
+       {
+        "id": "a",
+        "text": "Makes the cat sleep for ever"
+       },
+       {
+        "id": "b",
+        "text": "Tells the sprite to do one thing"
+       },
+       {
+        "id": "c",
+        "text": "Turns off the screen"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Layla's cartoon cat",
+     "asset": "clip-data-ai-class-1-make-it-move-3504887b.mp4",
+     "poster": "clip-data-ai-class-1-make-it-move-3504887b.webp",
+     "seconds": 59,
+     "transcript": "Layla draws a cartoon cat. It is her sprite. She plans three boxes. Walk, grow, meow. She snaps blocks together in order. She runs it. The cat walks across the garden. The cat grows bigger. Next it should meow. Oh no. The cat turns the wrong way. That is a bug. Layla swaps one block. She runs it again. Now it walks, grows and meows. Layla shares it kindly.",
+     "caption": "Layla joins blocks so her cat walks, grows and meows."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A sprite is a picture a program can move",
+      "Command blocks tell the sprite what to do",
+      "The order of blocks matters"
+     ],
+     "say": "Let us remember. A sprite is a picture you control. Blocks tell it what to do, in order."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "sprite",
+       "meaning": "A picture or character that a program can move."
+      },
+      {
+       "term": "command block",
+       "meaning": "A block that tells a sprite to do one thing."
+      },
+      {
+       "term": "background",
+       "meaning": "The picture behind the sprite."
+      },
+      {
+       "term": "program",
+       "meaning": "Blocks that tell a computer what to do."
+      },
+      {
+       "term": "sequence",
+       "meaning": "Steps in a set order."
+      },
+      {
+       "term": "block",
+       "meaning": "A piece that snaps into a program."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the picture behind a sprite called?",
+     "hint": "It is behind.",
+     "explanation": "The background is behind the sprite.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The mouse"
+      },
+      {
+       "id": "b",
+       "text": "The background"
+      },
+      {
+       "id": "c",
+       "text": "The block"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A sprite moves because blocks tell it to.",
+     "hint": "A program controls it.",
+     "explanation": "Blocks give the sprite its commands.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Blocks run...",
+     "hint": "Think of a sequence.",
+     "explanation": "A program runs blocks in order.",
+     "options": [
+      {
+       "id": "a",
+       "text": "All at the same moment"
+      },
+      {
+       "id": "b",
+       "text": "In order, one after another"
+      },
+      {
+       "id": "c",
+       "text": "Never"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a grow block do?",
+     "hint": "Its name says it.",
+     "explanation": "Grow makes a sprite bigger.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Makes it sing"
+      },
+      {
+       "id": "b",
+       "text": "Makes the sprite bigger"
+      },
+      {
+       "id": "c",
+       "text": "Makes it vanish"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "walk",
+   "kind": "try",
+   "title": "Make a sprite walk",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Change the numbers"
+    },
+    {
+     "type": "text",
+     "markdown": "Change the **number** in a block to change what happens.",
+     "say": "A move block has a number. Move three steps goes a short way. Move five steps goes further."
+    },
+    {
+     "type": "explainer",
+     "title": "Change the number",
+     "scenes": [
+      {
+       "caption": "Move 3.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "move 3"
+        }
+       ],
+       "say": "The block says move three steps. The cat walks a little."
+      },
+      {
+       "caption": "Move 5.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 55,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 80,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "move 5"
+        }
+       ],
+       "say": "Change it to five. Now the cat walks further."
+      },
+      {
+       "caption": "Bigger means further.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "bigger number, further"
+        }
+       ],
+       "say": "A bigger number moves the sprite further."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Hop along",
+     "goal": "Move the 6 hops of the cat across the garden. Each hop is one block.",
+     "emoji": "🐱",
+     "count": 6,
+     "zones": [
+      "Hops done",
+      "Hops to do"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A block says move 3. You change it to 6. What happens?",
+      "hint": "A bigger number goes further.",
+      "explanation": "A bigger number moves the sprite further.",
+      "skill_tag": "move.number",
+      "options": [
+       {
+        "id": "a",
+        "text": "The sprite goes backwards"
+       },
+       {
+        "id": "b",
+        "text": "Nothing at all"
+       },
+       {
+        "id": "c",
+        "text": "The sprite goes further"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Each sprite has its own blocks"
+    },
+    {
+     "type": "text",
+     "markdown": "Each sprite has its own set of **blocks**.",
+     "say": "Layla adds a dog. The dog has its own blocks. The cat's blocks do not move the dog."
+    },
+    {
+     "type": "explainer",
+     "title": "Two sprites",
+     "scenes": [
+      {
+       "caption": "Two sets.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "cat blocks"
+        },
+        {
+         "id": "d",
+         "emoji": "🐶",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "dog blocks"
+        }
+       ],
+       "say": "The cat has move blocks. The dog has turn blocks."
+      },
+      {
+       "caption": "Both act.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "d",
+         "emoji": "🐶",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "Run the program. The cat walks and the dog turns round."
+      },
+      {
+       "caption": "Own blocks.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "d",
+         "emoji": "🐶",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "own blocks"
+        }
+       ],
+       "say": "Each sprite follows only its own blocks."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Make it walk",
+     "materials": [
+      "A tablet with a blocks coding app",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Pick a sprite and add a move block.",
+      "Change the number and run it. What changes?",
+      "Add a second sprite with its own blocks."
+     ],
+     "say": "Now you try. Ask a grown-up to open a blocks program on a tablet."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The cat's blocks also control the dog.",
+      "hint": "Each sprite has its own blocks.",
+      "explanation": "Each sprite follows only its own blocks.",
+      "skill_tag": "move.own_blocks",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A bigger number moves further",
+      "Each sprite has its own blocks"
+     ],
+     "say": "Let us remember. Numbers change what blocks do. Each sprite has its own blocks."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "number",
+       "meaning": "A value in a block, like 3 or 5."
+      },
+      {
+       "term": "blocks",
+       "meaning": "The pieces of a program."
+      },
+      {
+       "term": "step",
+       "meaning": "One small move."
+      },
+      {
+       "term": "turn",
+       "meaning": "A block that changes the way a sprite faces."
+      },
+      {
+       "term": "hop",
+       "meaning": "A small jump."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which block makes the sprite face a new way?",
+     "hint": "Think about direction.",
+     "explanation": "Turn changes the way it faces.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Say"
+      },
+      {
+       "id": "b",
+       "text": "Turn"
+      },
+      {
+       "id": "c",
+       "text": "Grow"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Changing a number changes what the block does.",
+     "hint": "3 and 5 are different.",
+     "explanation": "A different number means a different amount.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How many sets of blocks does each sprite have?",
+     "hint": "Think of the dog and cat.",
+     "explanation": "Each sprite has its own blocks.",
+     "options": [
+      {
+       "id": "a",
+       "text": "No blocks"
+      },
+      {
+       "id": "b",
+       "text": "One set shared by all"
+      },
+      {
+       "id": "c",
+       "text": "Its own set"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "predict",
+   "kind": "play",
+   "title": "Predict the animation",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Guess, then run"
+    },
+    {
+     "type": "text",
+     "markdown": "A **prediction** is a guess about what will happen.",
+     "say": "Before we run a program, we predict. A prediction is a guess about what will happen."
+    },
+    {
+     "type": "explainer",
+     "title": "Predict and test",
+     "scenes": [
+      {
+       "caption": "Predict.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 70,
+         "y": 40,
+         "size": 2,
+         "anim": "pulse",
+         "label": "guess"
+        }
+       ],
+       "say": "The blocks say: move two, turn right, move two. Where will the cat go?"
+      },
+      {
+       "caption": "Run.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 60,
+         "y": 70,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "run it"
+        }
+       ],
+       "say": "Run it. The cat goes right, turns and goes down."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 60,
+         "y": 70,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "👍",
+         "x": 80,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Our prediction was right! If it is wrong, we learn."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a prediction?",
+      "hint": "We make it before running.",
+      "explanation": "A prediction is a guess before we run it.",
+      "skill_tag": "move.predict",
+      "options": [
+       {
+        "id": "a",
+        "text": "A mistake"
+       },
+       {
+        "id": "b",
+        "text": "A guess about what will happen"
+       },
+       {
+        "id": "c",
+        "text": "A background"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then look for a **bug**.",
+     "say": "First a memory game. Then spot the bug in a program."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Block pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🐱",
+      "➡️",
+      "⬆️",
+      "🔊"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The cat should turn right but turns left. What is that?",
+      "hint": "It is a mistake in the blocks.",
+      "explanation": "A wrong turn block is a bug.",
+      "skill_tag": "move.bug",
+      "options": [
+       {
+        "id": "a",
+        "text": "A new sprite"
+       },
+       {
+        "id": "b",
+        "text": "A bug"
+       },
+       {
+        "id": "c",
+        "text": "A background"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A prediction is a guess",
+      "A bug is a mistake in the blocks",
+      "Run the program to test it"
+     ],
+     "say": "Let us remember. Predict first, then run. Fix any bug."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "prediction",
+       "meaning": "A guess about what will happen."
+      },
+      {
+       "term": "bug",
+       "meaning": "A mistake in a program."
+      },
+      {
+       "term": "run",
+       "meaning": "To start a program."
+      },
+      {
+       "term": "test",
+       "meaning": "To try something to see if it works."
+      },
+      {
+       "term": "debug",
+       "meaning": "To find and fix a bug."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do before running a program?",
+     "hint": "A guess.",
+     "explanation": "We predict first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Turn it off"
+      },
+      {
+       "id": "b",
+       "text": "Make a prediction"
+      },
+      {
+       "id": "c",
+       "text": "Delete it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A bug is a mistake in a program.",
+     "hint": "It is not a real insect.",
+     "explanation": "A bug is a mistake.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do to a bug?",
+     "hint": "Debug.",
+     "explanation": "We fix bugs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ignore it"
+      },
+      {
+       "id": "b",
+       "text": "Find it and fix it"
+      },
+      {
+       "id": "c",
+       "text": "Hide it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "design",
+   "kind": "use",
+   "title": "Design a short animation",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plan with a picture"
+    },
+    {
+     "type": "text",
+     "markdown": "**Design** first. Draw what each sprite will do.",
+     "say": "Layla wants a short cartoon. A cat walks, grows and meows. First she draws a plan."
+    },
+    {
+     "type": "text",
+     "markdown": "A plan has steps, like a story.",
+     "say": "She draws three boxes. Box one: the cat walks. Box two: the cat grows. Box three: the cat meows."
+    },
+    {
+     "type": "activity",
+     "title": "Plan an animation",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Draw three boxes. Show what happens in each.",
+      "Write which block each box needs.",
+      "Share your plan with a friend."
+     ],
+     "say": "She writes which block goes with each box. The plan tells her what to build."
+    },
+    {
+     "type": "explainer",
+     "title": "Layla's three boxes",
+     "scenes": [
+      {
+       "caption": "Box 1: walk.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "1️⃣",
+         "x": 75,
+         "y": 25,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Box one shows the cat walking across the garden."
+      },
+      {
+       "caption": "Box 2: grow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "b",
+         "emoji": "2️⃣",
+         "x": 75,
+         "y": 25,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Box two shows the cat growing bigger."
+      },
+      {
+       "caption": "Box 3: meow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "🔊",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "3️⃣",
+         "x": 85,
+         "y": 25,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Box three shows the cat saying meow. A plan saves time."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the animation steps in order.",
+      "hint": "Plan first.",
+      "explanation": "Plan, build, test, then improve.",
+      "skill_tag": "move.design_order",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Build the blocks"
+       },
+       {
+        "id": "i3",
+        "text": "Test it"
+       },
+       {
+        "id": "i4",
+        "text": "Make it better"
+       },
+       {
+        "id": "i1",
+        "text": "Draw a plan"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Test and improve"
+    },
+    {
+     "type": "text",
+     "markdown": "**Test** your program. Then make it better.",
+     "say": "Layla builds her program and runs it. The cat walks. But it turns the wrong way."
+    },
+    {
+     "type": "explainer",
+     "title": "Test and fix",
+     "scenes": [
+      {
+       "caption": "A bug.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "b",
+         "emoji": "🐛",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce",
+         "label": "bug"
+        }
+       ],
+       "say": "She runs the program. The cat walks. Then it spins the wrong way."
+      },
+      {
+       "caption": "Fix it.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "🔧",
+         "x": 80,
+         "y": 40,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "She swaps the turn block to the right one. She runs it again."
+      },
+      {
+       "caption": "It works.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "it works"
+        }
+       ],
+       "say": "Now it works. She asks a friend for kind feedback."
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "markdown": "Kind feedback says what is good and what could be better.",
+     "say": "Her friend says, I like the meow. Maybe make the cat bigger."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What should you do after you build a program?",
+      "hint": "Try it out.",
+      "explanation": "We test to find bugs.",
+      "skill_tag": "move.test",
+      "options": [
+       {
+        "id": "a",
+        "text": "Delete it"
+       },
+       {
+        "id": "b",
+        "text": "Test it"
+       },
+       {
+        "id": "c",
+        "text": "Hide it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plan with a picture first",
+      "Test to find bugs",
+      "Improve with kind feedback"
+     ],
+     "say": "Let us remember. Plan, build, test and improve with kind feedback."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "design",
+       "meaning": "A plan for what you will make."
+      },
+      {
+       "term": "test",
+       "meaning": "Try it to see if it works."
+      },
+      {
+       "term": "feedback",
+       "meaning": "Kind comments that help someone improve."
+      },
+      {
+       "term": "improve",
+       "meaning": "Make something better."
+      },
+      {
+       "term": "plan",
+       "meaning": "Steps drawn or written before you build."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do before building?",
+     "hint": "Think first.",
+     "explanation": "A plan comes before building.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Go to sleep"
+      },
+      {
+       "id": "b",
+       "text": "Run it"
+      },
+      {
+       "id": "c",
+       "text": "Make a plan"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Testing can help us find bugs.",
+     "hint": "Try it out.",
+     "explanation": "Testing shows bugs.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which feedback is kind?",
+     "hint": "Be helpful.",
+     "explanation": "Kind feedback names a good thing and a way to improve.",
+     "options": [
+      {
+       "id": "a",
+       "text": "That is rubbish"
+      },
+      {
+       "id": "b",
+       "text": "I like it. Maybe add a sound"
+      },
+      {
+       "id": "c",
+       "text": "Delete it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a sprite in a program?",
+    "hint": "Think about the cat.",
+    "explanation": "A sprite is a character a program can move.",
+    "skill_tag": "move.sprite",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of cable"
+     },
+     {
+      "id": "b",
+      "text": "A picture or character that the program can move"
+     },
+     {
+      "id": "c",
+      "text": "A computer screen"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does one command block do?",
+    "hint": "One block, one job.",
+    "explanation": "A command block gives one command.",
+    "skill_tag": "move.block",
+    "options": [
+     {
+      "id": "a",
+      "text": "It turns off the screen"
+     },
+     {
+      "id": "b",
+      "text": "It tells the sprite to do one thing"
+     },
+     {
+      "id": "c",
+      "text": "It builds a whole movie"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "The order of the blocks matters.",
+    "hint": "Blocks run one after another.",
+    "explanation": "A different order can give a different result.",
+    "skill_tag": "move.order",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each block to what the sprite does.",
+    "hint": "Think about each name.",
+    "explanation": "Each block makes the sprite do one thing.",
+    "skill_tag": "move.match_block",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Move 3 steps"
+     },
+     {
+      "id": "l2",
+      "text": "Turn right"
+     },
+     {
+      "id": "l3",
+      "text": "Grow"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Faces right"
+     },
+     {
+      "id": "r1",
+      "text": "Walks forward"
+     },
+     {
+      "id": "r3",
+      "text": "Gets bigger"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "blocks",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the sprite.",
+    "hint": "It is the character.",
+    "explanation": "The cat is the sprite.",
+    "skill_tag": "move.tap_sprite",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐱",
+       "label": "Cat sprite",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌳",
+       "label": "Background tree",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "Block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Aisha says the order of blocks does not matter. Is she right?",
+    "hint": "Think about walk then grow.",
+    "explanation": "Blocks run in order, so order matters.",
+    "skill_tag": "move.reason_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, order never matters"
+     },
+     {
+      "id": "b",
+      "text": "No. A different order can make a different result"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only the first block matters"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Sam says all sprites share one set of blocks. Is he right?",
+    "hint": "Think about the cat and dog.",
+    "explanation": "Each sprite has its own blocks.",
+    "skill_tag": "move.reason_own",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they all share"
+     },
+     {
+      "id": "b",
+      "text": "No. Each sprite has its own blocks"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only the first sprite has blocks"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a scene.",
+    "hint": "Think about the cat and the garden.",
+    "explanation": "A sprite moves. The background is behind it.",
+    "skill_tag": "move.vocab",
+    "points": 2,
+    "text": "A {b1} is a character you can move. The {b2} is the picture behind it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "block"
+       },
+       {
+        "id": "b",
+        "text": "cable"
+       },
+       {
+        "id": "c",
+        "text": "sprite"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sprite"
+       },
+       {
+        "id": "b",
+        "text": "number"
+       },
+       {
+        "id": "c",
+        "text": "background"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "blocks",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A sprite moves 3 steps, then 4 steps. How many steps is that in all?",
+    "hint": "Add 3 and 4.",
+    "explanation": "3 + 4 = 7 steps.",
+    "skill_tag": "move.add_steps",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "true_false",
+    "prompt": "If you change 3 to 5 in a move block, the sprite goes further.",
+    "hint": "Bigger number, further.",
+    "explanation": "5 steps is further than 3 steps.",
+    "skill_tag": "move.number",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put the blocks in order to make the cat walk and then meow.",
+    "hint": "Start first.",
+    "explanation": "Start, move, then meow.",
+    "skill_tag": "move.block_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Move 5 steps"
+     },
+     {
+      "id": "i3",
+      "text": "Play the meow sound"
+     },
+     {
+      "id": "i1",
+      "text": "When the green flag is tapped"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Which block makes a sprite face a new way?",
+    "hint": "Think about direction.",
+    "explanation": "Turn changes the way a sprite faces.",
+    "skill_tag": "move.turn",
+    "options": [
+     {
+      "id": "a",
+      "text": "A grow block"
+     },
+     {
+      "id": "b",
+      "text": "A turn block"
+     },
+     {
+      "id": "c",
+      "text": "A say block"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A cat hops 3 times. Each hop is 2 steps. Slide to show the total steps.",
+    "hint": "2 + 2 + 2.",
+    "explanation": "3 hops of 2 steps is 6 steps.",
+    "skill_tag": "move.hops",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "The blocks swap: move first then turn becomes turn first then move. What changes?",
+    "hint": "Think about where it faces.",
+    "explanation": "Swapping blocks changes the route.",
+    "skill_tag": "move.swap",
+    "options": [
+     {
+      "id": "a",
+      "text": "The sprite's name"
+     },
+     {
+      "id": "b",
+      "text": "The path the sprite takes"
+     },
+     {
+      "id": "c",
+      "text": "Nothing at all"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Zainab says bigger numbers in a block always mean the sprite goes faster. Is she right?",
+    "hint": "Think about move 3 and move 5.",
+    "explanation": "A bigger move number means a longer move.",
+    "skill_tag": "move.reason_numbers",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, numbers are speed"
+     },
+     {
+      "id": "b",
+      "text": "No. A bigger number usually means further, not faster"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bigger is always faster"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two blocks change how a sprite looks or sounds? Pick two.",
+    "hint": "Think about size and noise.",
+    "explanation": "Grow changes size and play sound makes noise.",
+    "skill_tag": "move.look_sound",
+    "options": [
+     {
+      "id": "a",
+      "text": "Play sound"
+     },
+     {
+      "id": "b",
+      "text": "Wait"
+     },
+     {
+      "id": "c",
+      "text": "Move 5 steps"
+     },
+     {
+      "id": "d",
+      "text": "Grow"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "A sprite faces up. The blocks say: move 2, turn right, move 2. Which way does it face at the end?",
+    "hint": "Turn right from facing up.",
+    "explanation": "Facing up, a turn right makes it face right.",
+    "skill_tag": "move.predict_dir",
+    "options": [
+     {
+      "id": "a",
+      "text": "Left"
+     },
+     {
+      "id": "b",
+      "text": "Down"
+     },
+     {
+      "id": "c",
+      "text": "Right"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Sam says a program can only be built in one way. Is he right?",
+    "hint": "Think about move 4 and move 2 twice.",
+    "explanation": "There can be many ways to reach the same outcome.",
+    "skill_tag": "move.reason_one_way",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, programs are never changed"
+     },
+     {
+      "id": "b",
+      "text": "No. Different blocks can give the same result"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only one way"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "match",
+    "prompt": "Match each bug to its fix.",
+    "hint": "Think about what went wrong.",
+    "explanation": "Each fix matches the bug.",
+    "skill_tag": "move.bug_fix",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sprite faces the wrong way"
+     },
+     {
+      "id": "l2",
+      "text": "Sprite stops too soon"
+     },
+     {
+      "id": "l3",
+      "text": "Nothing happens"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Make the number bigger"
+     },
+     {
+      "id": "r1",
+      "text": "Change the turn block"
+     },
+     {
+      "id": "r3",
+      "text": "Add a start block"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Omar says if his program does not work, the computer is broken. Is he right?",
+    "hint": "Check the blocks.",
+    "explanation": "Usually a bug in the blocks is the problem.",
+    "skill_tag": "move.reason_broken",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, computers are broken"
+     },
+     {
+      "id": "b",
+      "text": "Yes, blocks never fail"
+     },
+     {
+      "id": "c",
+      "text": "No. There is probably a bug in the blocks"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about testing.",
+    "hint": "Guess, then try.",
+    "explanation": "We predict first and then run it to check.",
+    "skill_tag": "move.predict_fill",
+    "points": 2,
+    "text": "We {b1} what will happen, then {b2} the program to check.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "forget"
+       },
+       {
+        "id": "b",
+        "text": "predict"
+       },
+       {
+        "id": "c",
+        "text": "hide"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "paint"
+       },
+       {
+        "id": "b",
+        "text": "run"
+       },
+       {
+        "id": "c",
+        "text": "sleep"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "hotspot",
+    "prompt": "Tap the block that makes the cat bigger.",
+    "hint": "Think about size.",
+    "explanation": "Grow makes the sprite bigger.",
+    "skill_tag": "move.tap_block",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⬆️",
+       "label": "Grow",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "↩️",
+       "label": "Turn",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "➡️",
+       "label": "Move",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "predict",
+    "depth": "recall"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Aisha says testing once is enough. Is she right?",
+    "hint": "Did the fix work?",
+    "explanation": "We test again after fixing, to check the fix.",
+    "skill_tag": "move.reason_test",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, once is enough"
+     },
+     {
+      "id": "b",
+      "text": "Yes, testing is not needed"
+     },
+     {
+      "id": "c",
+      "text": "No. Test again after every fix"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put these animation steps in order.",
+    "hint": "Plan comes first.",
+    "explanation": "Plan, build, test, then improve.",
+    "skill_tag": "move.make_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Build the blocks"
+     },
+     {
+      "id": "i3",
+      "text": "Test the animation"
+     },
+     {
+      "id": "i4",
+      "text": "Improve it with feedback"
+     },
+     {
+      "id": "i1",
+      "text": "Draw a plan"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "slider",
+    "prompt": "A plan has 5 steps. You have built 3. Slide to show how many steps are left.",
+    "hint": "5 take away 3.",
+    "explanation": "5 - 3 = 2 steps left.",
+    "skill_tag": "move.steps_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "design",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Layla says you should start coding with no plan. Is she right?",
+    "hint": "Think about the three boxes.",
+    "explanation": "A plan saves time and shows what to build.",
+    "skill_tag": "move.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plans make coding slower"
+     },
+     {
+      "id": "b",
+      "text": "No. A plan helps you know what to build"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plans are never needed"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Omar says a sprite moves by itself without any blocks. Is he right?",
+    "hint": "Who controls the sprite?",
+    "explanation": "A program controls the sprite.",
+    "skill_tag": "move.reason_alone",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, sprites are alive"
+     },
+     {
+      "id": "b",
+      "text": "Yes, sprites think for themselves"
+     },
+     {
+      "id": "c",
+      "text": "No. A sprite only does what its blocks say"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "design",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "number",
+    "prompt": "An animation has 4 pictures. Each picture shows 2 sprites. How many sprites is that in all?",
+    "hint": "2 + 2 + 2 + 2.",
+    "explanation": "4 pictures of 2 sprites make 8 sprites.",
+    "skill_tag": "move.count_sprites",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "design",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Which is a kind way to give feedback on a friend's animation?",
+    "hint": "Say something good and helpful.",
+    "explanation": "Kind feedback names a good thing and a way to improve.",
+    "skill_tag": "move.kind_feedback",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is boring"
+     },
+     {
+      "id": "b",
+      "text": "I like the meow. Maybe make the cat bigger"
+     },
+     {
+      "id": "c",
+      "text": "You are bad at this"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two things help you improve a program? Pick two.",
+    "hint": "Try again and listen.",
+    "explanation": "Testing and feedback help you improve.",
+    "skill_tag": "move.improve",
+    "options": [
+     {
+      "id": "a",
+      "text": "Listen to kind feedback"
+     },
+     {
+      "id": "b",
+      "text": "Never run it"
+     },
+     {
+      "id": "c",
+      "text": "Ignore the bugs"
+     },
+     {
+      "id": "d",
+      "text": "Test it again"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "In a blocks program, what do we call the character we move?",
+    "hint": "Think about the cat.",
+    "explanation": "The character is called a sprite.",
+    "skill_tag": "move.sprite",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mouse"
+     },
+     {
+      "id": "b",
+      "text": "A sprite"
+     },
+     {
+      "id": "c",
+      "text": "A cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which describes a command block?",
+    "hint": "One block, one job.",
+    "explanation": "A command block gives one command.",
+    "skill_tag": "move.block",
+    "options": [
+     {
+      "id": "a",
+      "text": "A sprite's tail"
+     },
+     {
+      "id": "b",
+      "text": "A piece that gives the sprite one job"
+     },
+     {
+      "id": "c",
+      "text": "A kind of battery"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A program works the same if you swap all the blocks around.",
+    "hint": "Blocks run in order.",
+    "explanation": "Swapping blocks can change what happens.",
+    "skill_tag": "move.order",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Join each block to its action.",
+    "hint": "Think about each name.",
+    "explanation": "Each block makes the sprite do one thing.",
+    "skill_tag": "move.match_block",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Say hello"
+     },
+     {
+      "id": "l2",
+      "text": "Shrink"
+     },
+     {
+      "id": "l3",
+      "text": "Play sound"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Gets smaller"
+     },
+     {
+      "id": "r3",
+      "text": "Makes a noise"
+     },
+     {
+      "id": "r1",
+      "text": "Shows words"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "blocks",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the background.",
+    "hint": "It is behind the sprite.",
+    "explanation": "The park scene is the background.",
+    "skill_tag": "move.tap_sprite",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐱",
+       "label": "Cat sprite",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏞️",
+       "label": "Park scene",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "Block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Ben says you can put blocks in any order and get the same result. Is he right?",
+    "hint": "Think about walk then grow.",
+    "explanation": "Blocks run in order.",
+    "skill_tag": "move.reason_order",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, blocks run all at once"
+     },
+     {
+      "id": "b",
+      "text": "No. Changing the order can change what happens"
+     },
+     {
+      "id": "c",
+      "text": "Yes, any order works"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Mina says the cat's blocks also move the dog. Is she right?",
+    "hint": "Think about the cat and dog.",
+    "explanation": "Each sprite has its own blocks.",
+    "skill_tag": "move.reason_own",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the dog has none"
+     },
+     {
+      "id": "b",
+      "text": "No. The dog follows its own blocks"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they share"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "blocks",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about blocks.",
+    "hint": "Think about a sequence.",
+    "explanation": "Command blocks run one after another in order.",
+    "skill_tag": "move.vocab",
+    "points": 2,
+    "text": "Each {b1} tells a sprite to do one thing. The blocks run in {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "background"
+       },
+       {
+        "id": "b",
+        "text": "cable"
+       },
+       {
+        "id": "c",
+        "text": "command block"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "colour"
+       },
+       {
+        "id": "b",
+        "text": "order"
+       },
+       {
+        "id": "c",
+        "text": "pairs"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "blocks",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A sprite moves 6 steps, then 2 steps. How many steps is that in all?",
+    "hint": "Add 6 and 2.",
+    "explanation": "6 + 2 = 8 steps.",
+    "skill_tag": "move.add_steps",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "true_false",
+    "prompt": "Changing the number in a move block changes the sprite's colour.",
+    "hint": "What does a move block do?",
+    "explanation": "A move block changes how far, not colour.",
+    "skill_tag": "move.number",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put the blocks in order to make the cat grow and then say hello.",
+    "hint": "Start first.",
+    "explanation": "Start, grow, then say hello.",
+    "skill_tag": "move.block_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Grow"
+     },
+     {
+      "id": "i1",
+      "text": "When the green flag is tapped"
+     },
+     {
+      "id": "i3",
+      "text": "Say hello"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Which block makes a sprite look bigger?",
+    "hint": "Think about size.",
+    "explanation": "Grow makes a sprite bigger.",
+    "skill_tag": "move.grow",
+    "options": [
+     {
+      "id": "a",
+      "text": "A turn block"
+     },
+     {
+      "id": "b",
+      "text": "A grow block"
+     },
+     {
+      "id": "c",
+      "text": "A sound block"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A cat hops 4 times. Each hop is 2 steps. Slide to show the total steps.",
+    "hint": "2 + 2 + 2 + 2.",
+    "explanation": "4 hops of 2 steps is 8 steps.",
+    "skill_tag": "move.hops",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "You swap a grow block and a move block. What can change?",
+    "hint": "Think about order.",
+    "explanation": "Swapping blocks changes the order of actions.",
+    "skill_tag": "move.swap",
+    "options": [
+     {
+      "id": "a",
+      "text": "The sprite becomes a dog"
+     },
+     {
+      "id": "b",
+      "text": "The order things happen in"
+     },
+     {
+      "id": "c",
+      "text": "The tablet turns off"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a bigger number makes the sprite angry. Is she right?",
+    "hint": "Numbers are amounts.",
+    "explanation": "A number sets an amount.",
+    "skill_tag": "move.reason_numbers",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, bigger turns it red"
+     },
+     {
+      "id": "b",
+      "text": "No. A bigger number only changes how far or how big"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bigger makes it angry"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "walk",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Pick two blocks that change size or speech.",
+    "hint": "Think about size and words.",
+    "explanation": "Shrink changes size and say shows words.",
+    "skill_tag": "move.look_sound",
+    "options": [
+     {
+      "id": "a",
+      "text": "Say hello"
+     },
+     {
+      "id": "b",
+      "text": "Turn left"
+     },
+     {
+      "id": "c",
+      "text": "Move 3 steps"
+     },
+     {
+      "id": "d",
+      "text": "Shrink"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "walk",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "A sprite faces up. The blocks say: move 3, turn left, move 1. Which way does it face at the end?",
+    "hint": "Turn left from facing up.",
+    "explanation": "Facing up, a turn left makes it face left.",
+    "skill_tag": "move.predict_dir",
+    "options": [
+     {
+      "id": "a",
+      "text": "Right"
+     },
+     {
+      "id": "b",
+      "text": "Down"
+     },
+     {
+      "id": "c",
+      "text": "Left"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Layla says there is only one program for walking to the tree. Is she right?",
+    "hint": "Think of two routes.",
+    "explanation": "Different programs can reach the same place.",
+    "skill_tag": "move.reason_one_way",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only one"
+     },
+     {
+      "id": "b",
+      "text": "No. There are many programs that get there"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the tree decides"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "match",
+    "prompt": "Pair each problem with a fix.",
+    "hint": "Think about what went wrong.",
+    "explanation": "Each fix matches the problem.",
+    "skill_tag": "move.bug_fix",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sprite goes too far"
+     },
+     {
+      "id": "l2",
+      "text": "Sprite will not speak"
+     },
+     {
+      "id": "l3",
+      "text": "Sprite is too small"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a say block"
+     },
+     {
+      "id": "r3",
+      "text": "Add a grow block"
+     },
+     {
+      "id": "r1",
+      "text": "Make the number smaller"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Mina says a wrong turn means her tablet is broken. Is she right?",
+    "hint": "Check the blocks.",
+    "explanation": "A bug is a mistake in blocks, not a broken tablet.",
+    "skill_tag": "move.reason_broken",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, wrong turns are normal for tablets"
+     },
+     {
+      "id": "b",
+      "text": "No. She can check and fix the blocks"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the tablet is broken"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about bugs.",
+    "hint": "Think about fixing.",
+    "explanation": "We debug a bug to fix it.",
+    "skill_tag": "move.predict_fill",
+    "points": 2,
+    "text": "A {b1} is a mistake in a program. We {b2} it to fix it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sprite"
+       },
+       {
+        "id": "b",
+        "text": "bug"
+       },
+       {
+        "id": "c",
+        "text": "block"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "paint"
+       },
+       {
+        "id": "b",
+        "text": "debug"
+       },
+       {
+        "id": "c",
+        "text": "eat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "hotspot",
+    "prompt": "Tap the block that makes the cat smaller.",
+    "hint": "Think about size.",
+    "explanation": "Shrink makes the sprite smaller.",
+    "skill_tag": "move.tap_block",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⬇️",
+       "label": "Shrink",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "↩️",
+       "label": "Turn",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "➡️",
+       "label": "Move",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "predict",
+    "depth": "recall",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Ravi says you should never test a program twice. Is he right?",
+    "hint": "Did the fix work?",
+    "explanation": "We test again after changes.",
+    "skill_tag": "move.reason_test",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never twice"
+     },
+     {
+      "id": "b",
+      "text": "No. A new fix needs a new test"
+     },
+     {
+      "id": "c",
+      "text": "Yes, once is perfect"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for a bus animation in order.",
+    "hint": "Sketch first.",
+    "explanation": "Sketch, build, run, then fix.",
+    "skill_tag": "move.make_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Snap the blocks together"
+     },
+     {
+      "id": "i4",
+      "text": "Fix any bug"
+     },
+     {
+      "id": "i3",
+      "text": "Run it and watch"
+     },
+     {
+      "id": "i1",
+      "text": "Sketch the bus route"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "slider",
+    "prompt": "A plan has 6 steps. You have built 4. Slide to show how many steps are left.",
+    "hint": "6 take away 4.",
+    "explanation": "6 - 4 = 2 steps left.",
+    "skill_tag": "move.steps_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "design",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says he does not need a design for a long animation. Is he right?",
+    "hint": "Think about the three boxes.",
+    "explanation": "A design shows what each part does.",
+    "skill_tag": "move.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, long ones design themselves"
+     },
+     {
+      "id": "b",
+      "text": "Yes, designs are useless"
+     },
+     {
+      "id": "c",
+      "text": "No. A design helps most with long animations"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "design",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Sana says a sprite chooses what to do on its own. Is she right?",
+    "hint": "Who controls the sprite?",
+    "explanation": "A sprite follows its program.",
+    "skill_tag": "move.reason_alone",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it chooses"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it is alive"
+     },
+     {
+      "id": "c",
+      "text": "No. The blocks tell it what to do"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "design",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "number",
+    "prompt": "An animation has 5 pictures. Each picture shows 2 sprites. How many sprites is that in all?",
+    "hint": "2 + 2 + 2 + 2 + 2.",
+    "explanation": "5 pictures of 2 sprites make 10 sprites.",
+    "skill_tag": "move.count_sprites",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "design",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "What could you say about a friend's animation to be kind?",
+    "hint": "Say something good and helpful.",
+    "explanation": "Kind feedback is helpful.",
+    "skill_tag": "move.kind_feedback",
+    "options": [
+     {
+      "id": "a",
+      "text": "I hate it"
+     },
+     {
+      "id": "b",
+      "text": "Delete it now"
+     },
+     {
+      "id": "c",
+      "text": "The jump is fun. Could it be faster?"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two help you make an animation better? Pick two.",
+    "hint": "Fix and ask.",
+    "explanation": "Fixing bugs and asking for feedback improve work.",
+    "skill_tag": "move.improve",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hide it from everyone"
+     },
+     {
+      "id": "b",
+      "text": "Delete it at once"
+     },
+     {
+      "id": "c",
+      "text": "Ask a friend what they think"
+     },
+     {
+      "id": "d",
+      "text": "Fix the bugs"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "design",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

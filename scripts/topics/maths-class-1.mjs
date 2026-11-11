@@ -1,19 +1,31 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, S, EXP, ROW, PV, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, S, EXP, ROW, PV, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-place-value.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-1-place-value-d1-56172ada.png","alt":"A place value chart showing 47 as 4 tens and 7 ones","caption":"47 = 4 tens and 7 ones."};
+const COTEACH_B = {"type":"image","asset":"maths-class-1-place-value-d2-0bd9fcaa.png","alt":"Base ten blocks showing 63 as 6 tens rods and 3 ones cubes","caption":"63 = 6 tens and 3 ones."};
 // Pilot topic lesson (format 3.0): Zainab, Class 1, Maths topic 2. Standards from docs/CURRICULUM_V2.md.
 // Place-value boards read best on a plain background.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const N = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const BUNDLES = "maths-class-1-place-value-1-34a08dde.jpg";
+
 const tensOnes = {
   id: "tens_ones", kind: "learn", title: "Tens and ones",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Today's big question: how can we read big numbers quickly? The secret is tens and ones. Let's go!",
+      T("Today's big question: how can we read big numbers like 47 and 83 quickly?", "We will use **tens and ones** to find out.")),
+    SAY("Look at these bundles. Each bundle ties many sticks together. A bundle of ten is a ten!",
+      PHOTO(BUNDLES, "Bundles of thin bamboo strips tied with purple string", "Bundles of sticks help us count in tens.", "Photo by Bernd Dittrich on Unsplash")),
     H("Stop 1: Two-digit numbers"),
     SAY("Look at this number: thirty-four. Is it just one big lump? No! It is made of two parts. One part is tens. The other part is ones. A ten is a bundle of ten things, like ten sticks tied together. A one is a single thing on its own. Let's see thirty-four built from tens and ones.", T("Every two-digit number is made of **tens** and **ones**.", "In 34 the 3 means 3 tens. The 4 means 4 **ones**.")),
     EXPP("34 is 3 tens and 4 ones",
       SS("First, the tens. Count the blue sticks with me. One ten, two tens, three tens. Each stick is a bundle of ten, so three sticks is thirty.", S("Here are 3 tens. Each blue stick is a ten.", PV("pv", 3, 0))),
       SS("Now the ones. Each yellow square is just one. Count them: one, two, three, four. Four single ones.", S("And here are 4 ones. Each yellow square is one.", PV("pv", 3, 4))),
       SS("Put them together: thirty, and four more, makes thirty-four. So in thirty-four, the three is the tens, and the four is the ones. Tens first, then ones.", S("3 tens and 4 ones make 34.", PV("pv", 3, 4, 50, 48, 3, "pulse")))),
+    SAY("Forty-seven has four tens and seven ones.", COTEACH_A),
     CHK(mc("In the number 52, how many tens are there?", "5", ["2", "52"], { hint: "The first digit is the tens.", why: "52 is 5 tens and 2 ones.", tag: "placevalue.tens" })),
     H("Stop 2: Which digit is which?"),
     SAY("Here is a secret. Where a digit sits matters. The digit on the left tells us the tens. The digit on the right tells us the ones. Look at forty-seven and seventy-four. They use the very same digits, a four and a seven. But they are different numbers! In forty-seven there are four tens. In seventy-four there are seven tens. Seven tens is much bigger.", T("The digit on the left shows the tens. The digit on the right shows the ones.", "The same digits in a different order make a different number!")),
@@ -23,7 +35,7 @@ const tensOnes = {
       SS("Now seventy-four. The seven is on the left, so it means seven tens. Seven sticks, and four yellow squares. Same digits, but a different number!", S("74: 7 tens and 4 ones.", PV("pv", 7, 4, 50, 48, 3, "pulse")))),
     CHK(tf("In 47 the 4 means 4 ones.", false, { hint: "Which side are the tens on?", why: "The 4 is on the left, so it means 4 tens.", tag: "placevalue.digits" })),
     SAY("Let us remember. A two-digit number is made of tens and ones. The left digit is the tens. The right digit is the ones.", SUM("A two-digit number is tens and ones", "The left digit is the tens, the right digit is the ones")),
-    GLOSS({ tens: "Groups of ten. In 34 there are 3 tens.", ones: "Single things. In 34 there are 4 ones.", digit: "One of the number symbols 0 to 9." }),
+    GLOSS({ "tens and ones": "The two parts of a number up to 100.", tens: "Groups of ten. In 34 there are 3 tens.", ones: "Single things. In 34 there are 4 ones.", digit: "One of the number symbols 0 to 9." }),
   ],
   mini: [
     mc("How many tens are in 63?", "6", ["3", "9"], { hint: "Look at the left digit.", why: "63 is 6 tens and 3 ones." }),
@@ -38,13 +50,14 @@ const partition = {
   blocks: [
     H("Stop 1: Count in tens"),
     SAY("Counting in tens is a speedy way to count. Instead of one, two, three, we jump by ten each time. Ten, twenty, thirty, forty, fifty. Each jump is one more ten. Say it with me, and keep going all the way to one hundred.", T("Counting in **tens** is quick: 10, 20, 30, 40, 50 and on to 100.", "Each jump is one more ten.")),
-    SAY("Here is the number line. Look at the jumps of ten as we go along from zero to one hundred.", NLINE("Count in tens", 0, 100, [0, 20, 40, 60, 80, 100], "Every jump of ten along the number line: 10, 20, 30 and on to 100.", 10)),
+    SAY("Here is the number line. Look at the jumps of ten from zero to one hundred.", NLINE("Count in tens", 0, 100, [0, 20, 40, 60, 80, 100], "Every jump of ten along the number line: 10, 20, 30 and on to 100.", 10)),
     EXPP("Counting in tens",
       SS("Here is one stick. One stick is a ten. So we say: ten.", S("One ten is 10.", PV("pv", 1, 0, 50, 48, 3, "pulse"))),
       SS("Add another stick. Now there are two tens. Count in tens: ten, twenty.", S("Two tens is 20.", PV("pv", 2, 0, 50, 48, 3, "pulse"))),
       SS("A third stick. Three tens. Ten, twenty, thirty.", S("Three tens is 30.", PV("pv", 3, 0, 50, 48, 3, "pulse"))),
       SS("A fourth stick. Four tens. Ten, twenty, thirty, forty.", S("Four tens is 40.", PV("pv", 4, 0, 50, 48, 3, "pulse"))),
       SS("And a fifth. Five tens is fifty! Every stick adds ten. You can count in tens all the way to one hundred.", S("Five tens is 50.", PV("pv", 5, 0, 50, 48, 3, "pulse")))),
+    SAY("Sixty-three is six tens rods and three ones cubes.", COTEACH_B),
     CHK(mc("Count in tens: 30, 40, 50, ... What comes next?", "60", ["55", "51"], { hint: "Add one more ten.", why: "50 and 10 more is 60.", tag: "placevalue.count_tens" })),
     H("Stop 2: Make a number"),
     SAY("Now a big word: partition. It just means splitting a number into its tens and its ones. Take thirty-six. We can split it into thirty and six. Thirty is three tens. Six is six ones. Time for you to try it!", T("To **partition** a number means to split it into tens and ones. 36 is 30 and 6.")),
@@ -71,7 +84,7 @@ const numberline = {
   id: "numberline", kind: "play", title: "Number line detective",
   blocks: [
     H("Stop 1: The number line to 100"),
-    SAY("A number line is like a ruler for numbers. The numbers sit in order, small ones on the left and big ones on the right. As you move to the right, the numbers get bigger. Let's use it to find a number.", T("A **number line** shows numbers in order. Numbers get bigger as you go right.")),
+    SAY("A number line is like a ruler for numbers. The numbers sit in order. Small ones are on the left. Big ones are on the right. As you move to the right, the numbers get bigger. Let's use it to find a number.", T("A **number line** shows numbers in order. Numbers get bigger as you go right.")),
     NLINE("0 to 100 in tens", 0, 100, [0, 25, 50, 75, 100], "The marks show 0, 25, 50, 75 and 100.", 25),
     EXP("Find 65",
       SS("Let's find sixty-five. First ask: which two tens is it between? Sixty-five is six tens and five ones. So it is past sixty, but not yet seventy.", S("65 is between 60 and 70.", ["a", "📍", 60, 55, 2, "none", "60"], ["b", "📍", 80, 55, 2, "none", "70"])),
@@ -141,6 +154,29 @@ const ALTS = [
   [num("Lena has 2 packs of 10 stickers and 9 loose ones. She needs 30. How many more does she need?", 1, { hint: "She has 29. Count on to 30.", why: "29 and 1 more make 30.", tag: "compare.real_life" }), num("Hamza has 4 bags of 10 marbles and 6 loose ones. He needs 50. How many more does he need?", 4, { hint: "He has 46. Count on to 50.", why: "46 and 4 more make 50.", tag: "compare.real_life" })],
 ];
 
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zainab ties the sticks in tens", backdrop: "classroom", caption: "Zainab makes 47 from tens and ones.",
+  scenes: [
+    { caption: "Zainab and the sticks.", say: "This is Zainab. Today she tidies the class sticks.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 30, y: 56, size: 3, enter: "walk_right" }, { id: "s", emoji: "🥢", x: 70, y: 40, size: 3, enter: "pop" }] },
+    { caption: "Ten sticks make a bundle.", say: "She ties ten sticks in one bundle. One bundle is one ten.",
+      items: [{ id: "b", prop: { kind: "base_ten", tens: 1, ones: 0 }, label: "1 ten", x: 50, y: 46, size: 3, enter: "grow" }] },
+    { caption: "4 bundles = 40.", say: "She makes four bundles. Ten, twenty, thirty, forty!",
+      items: [{ id: "b", prop: { kind: "base_ten", tens: 4, ones: 0 }, label: "40", x: 50, y: 46, size: 3, effect: "sparkle" }] },
+    { caption: "7 loose sticks.", say: "Seven sticks are left over. They are seven ones.",
+      items: [{ id: "b", prop: { kind: "base_ten", tens: 4, ones: 7 }, label: "4 tens and 7 ones", x: 50, y: 46, size: 3 }] },
+    { caption: "40 + 7 = 47.", say: "Forty and seven make forty-seven. The four is the tens digit.",
+      items: [{ id: "b", prop: { kind: "base_ten", tens: 4, ones: 7 }, label: "47", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "Swap the digits: 74.", say: "Now swap the digits. Seventy-four has seven tens. It is much bigger!",
+      items: [{ id: "a", prop: { kind: "base_ten", tens: 4, ones: 7 }, label: "47", x: 28, y: 48, size: 2 }, { id: "b", prop: { kind: "base_ten", tens: 7, ones: 4 }, label: "74", x: 72, y: 48, size: 2, effect: "sparkle" }] },
+    { caption: "More tens is bigger.", say: "More tens means a bigger number. Seventy-four is bigger than forty-seven.",
+      items: [{ id: "c", emoji: "👀", label: "74 > 47", x: 50, y: 46, size: 3, anim: "bounce" }] },
+    { caption: "Well done, Zainab!", say: "Tens first, then ones. Well done, Zainab!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "s", emoji: "⭐", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-1-place-value", subject: "maths", cls: 1, topic: 2, title: "Place Value to 100",
@@ -159,13 +195,9 @@ export const topics = [
       num("What is double 4?", 8, { hint: "4 + 4.", why: "Double 4 is 8." }),
       tf("10 is bigger than 9.", true, { hint: "Count: 9 then 10.", why: "10 comes after 9, so it is bigger." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Today we have a big question. How can we read big numbers, like forty-seven and eighty-three, quickly? The secret is tens and ones. By the end, you will be able to tell what any number up to one hundred is made of, find it on a number line, and say which of two numbers is bigger. Let's go!", T("Today's big question: how can we read big numbers like 47 and 83 quickly?", "We will use tens and ones to find out.")),
-      IMG("🔢", "Tens and ones make every number to 100."),
-      GLOSS({ "tens and ones": "The two parts of a number up to 100." }),
-    ],
+    intro: [],
     subs: [tensOnes, partition, numberline, compare],
+    clip,
     quiz: [
       { q: mc("In the number 47, how many tens are there?", "4", ["7", "47"], { hint: "The left digit is the tens.", why: "47 is 4 tens and 7 ones.", tag: "placevalue.tens" }), sub: "tens_ones", depth: "recall" },
       { q: num("How many ones are in 63?", 3, { hint: "The right digit is the ones.", why: "63 is 6 tens and 3 ones.", tag: "placevalue.ones" }), sub: "tens_ones", depth: "recall" },
@@ -182,6 +214,37 @@ export const topics = [
       { q: mc("Which sign goes in 38 __ 83?", "<", [">", "="], { hint: "Which has more tens?", why: "83 has 8 tens and 38 has 3 tens, so 38 < 83.", tag: "compare.signs" }), sub: "compare", depth: "recall" },
       { q: mc("Why is 72 bigger than 27, when both use a 7 and a 2?", "72 has 7 tens but 27 has only 2 tens", ["72 has more ones", "They are the same size"], { hint: "Compare the tens first.", why: "The tens decide: 7 tens is more than 2 tens.", tag: "compare.reason" }), sub: "compare", depth: "reason" },
       { q: num("Ali has 3 packs of 10 pencils and 8 loose ones. He needs 40. How many more does he need?", 2, { hint: "He has 38. Count on to 40.", why: "38 and 2 more make 40.", tag: "compare.real_life" }), sub: "compare", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      N(num("Zara ties sticks in bundles of ten. She has 3 bundles and 4 loose sticks. How many sticks in all?", 34, { hint: "3 tens and 4 ones.", why: "30 + 4 = 34 sticks.", tag: "placevalue.count_tens" }), "partition", "apply",
+        [num("Hana has 5 bundles of ten beads and 2 loose beads. How many beads in all?", 52, { hint: "5 tens and 2 ones.", why: "50 + 2 = 52 beads.", tag: "placevalue.count_tens" })]),
+      N(ms("Which two ways build 56 from tens rods and ones? Pick two.", ["5 tens and 6 ones", "50 + 6"], ["6 tens and 5 ones", "5 + 6"], { hint: "56 has 5 tens and 6 ones.", why: "56 is 5 tens and 6 ones, or 50 + 6.", tag: "placevalue.build" }), "partition", "apply",
+        [ms("Which two ways build 74 from tens rods and ones? Pick two.", ["7 tens and 4 ones", "70 + 4"], ["4 tens and 7 ones", "7 + 4"], { hint: "74 has 7 tens and 4 ones.", why: "74 is 7 tens and 4 ones, or 70 + 4.", tag: "placevalue.build" })]),
+      N(num("What is 10 more than 38?", 48, { hint: "Add one more ten.", why: "38 has 3 tens. One more ten makes 4 tens, so 48.", tag: "placevalue.ten_more" }), "partition", "apply",
+        [num("What is 10 more than 54?", 64, { hint: "Add one more ten.", why: "54 has 5 tens. One more ten makes 6 tens, so 64.", tag: "placevalue.ten_more" })]),
+      N(mat("Match each number to the number that is 10 less.", [["71", "61"], ["45", "35"], ["90", "80"]], { hint: "Take away one ten. The ones stay.", why: "71 - 10 = 61, 45 - 10 = 35 and 90 - 10 = 80.", tag: "placevalue.ten_less" }), "numberline", "apply",
+        [mat("Join each number to the number that is 10 less.", [["53", "43"], ["28", "18"], ["64", "54"]], { hint: "Take away one ten. The ones stay.", why: "53 - 10 = 43, 28 - 10 = 18 and 64 - 10 = 54.", tag: "placevalue.ten_less" })]),
+      N(mc("Which is another way to split 72?", "6 tens and 12 ones", ["7 tens and 12 ones", "2 tens and 7 ones"], { hint: "Break one ten into 10 ones.", why: "6 tens is 60 and 12 ones is 12, and 60 + 12 = 72.", tag: "placevalue.partition_two_ways" }), "partition", "apply",
+        [mc("Which is another way to split 53?", "4 tens and 13 ones", ["5 tens and 13 ones", "3 tens and 5 ones"], { hint: "Break one ten into 10 ones.", why: "4 tens is 40 and 13 ones is 13, and 40 + 13 = 53.", tag: "placevalue.partition_two_ways" })]),
+      N(mc("Which one does NOT show 45?", "3 tens and 5 ones", ["4 tens and 5 ones", "40 + 5"], { hint: "Work out each one.", why: "3 tens and 5 ones is 35. The others are 45.", tag: "placevalue.representations" }), "tens_ones", "apply",
+        [mc("Which one does NOT show 62?", "5 tens and 2 ones", ["6 tens and 2 ones", "60 + 2"], { hint: "Work out each one.", why: "5 tens and 2 ones is 52. The others are 62.", tag: "placevalue.representations" })]),
+      N(ord("Put these numbers in order, biggest first.", ["76", "67", "48", "39"], { hint: "Look at the tens first.", why: "76 has the most tens, then 67, 48 and 39.", tag: "compare.order_desc" }), "compare", "apply",
+        [ord("Arrange these from the biggest to the smallest.", ["81", "65", "56", "18"], { hint: "Look at the tens first.", why: "81 has the most tens, then 65, 56 and 18.", tag: "compare.order_desc" })]),
+      N(tf("57 is greater than 75.", false, { hint: "Compare the tens.", why: "75 has 7 tens and 57 has 5 tens, so 75 is greater.", tag: "compare.signs" }), "compare", "apply",
+        [tf("90 is greater than 19.", true, { hint: "Compare the tens.", why: "90 has 9 tens and 19 has 1 ten, so 90 is greater.", tag: "compare.signs" })]),
+      N(sld("A number line shows 30, 40, 50 and then a gap. Slide to the missing label.", { min: 0, max: 100 }, 60, 0, { hint: "Count on in tens.", why: "30, 40, 50, 60. The missing label is 60.", tag: "numberline.missing" }), "numberline", "apply",
+        [sld("A number line shows 70, 80 and then a gap. Slide to the missing label.", { min: 0, max: 100 }, 90, 0, { hint: "Count on in tens.", why: "70, 80, 90. The missing label is 90.", tag: "numberline.missing" })]),
+      N(fill("Solve the riddle.", "I have 6 tens and 3 ones. I am {b1}.", [["63", "36", "9"]], { hint: "Tens first, then ones.", why: "6 tens and 3 ones make 63.", tag: "placevalue.riddle" }), "tens_ones", "apply",
+        [fill("Guess the number.", "I have 2 tens and 8 ones. I am {b1}.", [["28", "82", "10"]], { hint: "Tens first, then ones.", why: "2 tens and 8 ones make 28.", tag: "placevalue.riddle" })]),
+      N(hot("Tap the number in the same column as 24 on a hundred square.", [["🔢", "34", 22, 50], ["🔢", "25", 50, 50], ["🔢", "42", 78, 50]], ["34"], { labels: true, hint: "Going down a column, the tens go up by 1.", why: "24 and 34 have the same ones digit, so they are in the same column.", tag: "placevalue.hundred_square" }), "numberline", "apply",
+        [hot("Tap the number in the same column as 17 on a hundred square.", [["🔢", "18", 22, 50], ["🔢", "27", 50, 50], ["🔢", "71", 78, 50]], ["27"], { labels: true, hint: "Going down a column, the tens go up by 1.", why: "17 and 27 have the same ones digit, so they are in the same column.", tag: "placevalue.hundred_square" })]),
+      N(mc("Aisha says 45 is made of 4 ones and 5 tens. Is she right?", "No. 45 is made of 4 tens and 5 ones", ["Yes, 4 ones and 5 tens", "No, 45 is 45 tens"], { hint: "The left digit is the tens.", why: "The 4 is on the left, so it is 4 tens. The 5 is 5 ones.", tag: "placevalue.reason_digits" }), "tens_ones", "reason",
+        [mc("Ben says 62 is made of 6 ones and 2 tens. Is he right?", "No. 62 is made of 6 tens and 2 ones", ["Yes, 6 ones and 2 tens", "No, 62 is 62 tens"], { hint: "The left digit is the tens.", why: "The 6 is on the left, so it is 6 tens. The 2 is 2 ones.", tag: "placevalue.reason_digits" })]),
+      N(mc("Sam says 91 is smaller than 19 because 91 ends in 1. Is he right?", "No. 91 has 9 tens and 19 has only 1 ten, so 91 is bigger", ["Yes, ending in 1 is smaller", "No, they are the same"], { hint: "Compare the tens first.", why: "9 tens is much more than 1 ten, so 91 is bigger than 19.", tag: "compare.reason_tens" }), "compare", "reason",
+        [mc("Mina says 82 is smaller than 28 because 82 ends in 2. Is she right?", "No. 82 has 8 tens and 28 has only 2 tens, so 82 is bigger", ["Yes, ending in 2 is smaller", "No, they are the same"], { hint: "Compare the tens first.", why: "8 tens is much more than 2 tens, so 82 is bigger than 28.", tag: "compare.reason_tens" })]),
+      N(mc("Layla says the ten just before 45 is 30. Is she right?", "No. 45 is 4 tens and 5 ones, so the ten before it is 40", ["Yes, it is 30", "No, it is 50"], { hint: "How many tens are in 45?", why: "45 is past 40 and not yet 50, so the ten before it is 40.", tag: "numberline.reason_before" }), "numberline", "reason",
+        [mc("Ben says the ten just before 72 is 60. Is he right?", "No. 72 is 7 tens and 2 ones, so the ten before it is 70", ["Yes, it is 60", "No, it is 80"], { hint: "How many tens are in 72?", why: "72 is past 70 and not yet 80, so the ten before it is 70.", tag: "numberline.reason_before" })]),
+      N(mc("Ben says 54 is just 5 and 4, so it is 5 + 4. Is he right?", "No. 54 is 50 + 4, because the 5 means 5 tens", ["Yes, 54 = 5 + 4", "No, 54 is 5 + 40"], { hint: "What does the 5 mean in 54?", why: "The 5 is 5 tens, which is 50. So 54 = 50 + 4.", tag: "placevalue.reason_partition" }), "tens_ones", "reason",
+        [mc("Mina says 36 is just 3 and 6, so it is 3 + 6. Is she right?", "No. 36 is 30 + 6, because the 3 means 3 tens", ["Yes, 36 = 3 + 6", "No, 36 is 3 + 60"], { hint: "What does the 3 mean in 36?", why: "The 3 is 3 tens, which is 30. So 36 = 30 + 6.", tag: "placevalue.reason_partition" })]),
+    ].map((x, i) => ({ ...x, alts: x.alts ?? ALTS[i] })),
   }),
 ];

@@ -1,0 +1,3101 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "english-class-1-dear-diary",
+  "subject": "english",
+  "title": "Dear Diary",
+  "summary": "Write a short diary entry that tells what happened and how you felt.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: Dear Diary",
+  "learning_objectives": [
+   "Say what a diary is for",
+   "Use I, the past tense and feeling words",
+   "Write two linked diary entries"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "english-class-1-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 writing",
+    "text": "Write about real events, in the correct tense, with capital letters and full stops; say what to write and read it aloud"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a diary is for",
+   "I can use I, the past tense and a feeling",
+   "I can write two entries"
+  ],
+  "real_life": "A Ramadan evening diary, helping Nani cook for Eid, or a rainy walk in the UK.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word tells us it already happened?",
+    "hint": "It is the past.",
+    "explanation": "Went is the past tense.",
+    "options": [
+     {
+      "id": "a",
+      "text": "going"
+     },
+     {
+      "id": "b",
+      "text": "went"
+     },
+     {
+      "id": "c",
+      "text": "go"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A sentence starts with a capital letter.",
+    "hint": "Look at the first letter.",
+    "explanation": "Every sentence starts with a capital.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which word names a feeling?",
+    "hint": "It is inside you.",
+    "explanation": "Happy is a feeling.",
+    "options": [
+     {
+      "id": "a",
+      "text": "table"
+     },
+     {
+      "id": "b",
+      "text": "happy"
+     },
+     {
+      "id": "c",
+      "text": "pen"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "what",
+   "kind": "learn",
+   "title": "What is a diary?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young writer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: what goes in a diary?",
+     "say": "Today we meet the diary. What is it, and what goes inside?"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-1-dear-diary-1-7d92ab0b.jpg",
+     "alt": "An open lined notebook with a pen lying on the page and pencils on a wooden desk",
+     "caption": "A diary is a notebook where you write about your own days.",
+     "credit": "Photo by Clay Banks on Unsplash",
+     "say": "This empty notebook is ready for a diary entry. Someone will fill it soon."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: A personal book"
+    },
+    {
+     "type": "text",
+     "markdown": "A **diary** is a personal book about your own days.",
+     "say": "A diary is a book about you. You write about your own days."
+    },
+    {
+     "type": "text",
+     "markdown": "People write diaries to remember.",
+     "say": "Famous people kept diaries too. Florence Nightingale wrote about caring for others."
+    },
+    {
+     "type": "text",
+     "markdown": "Caring people are remembered.",
+     "say": "Abdul Sattar Edhi also cared for others in Pakistan. Many people wrote about his kindness."
+    },
+    {
+     "type": "explainer",
+     "title": "A diary",
+     "scenes": [
+      {
+       "caption": "Private.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📔",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "k",
+         "emoji": "🔒",
+         "x": 75,
+         "y": 52,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A diary is private. You choose who reads it."
+      },
+      {
+       "caption": "Any kind of day.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "😀",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "😢",
+         "x": 72,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "You can write about happy days. You can write about sad days too."
+      },
+      {
+       "caption": "Remember.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📔",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "A diary helps you remember. You can read it years later."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a diary?",
+      "hint": "It is about you.",
+      "explanation": "A diary is a personal book where you write about your days.",
+      "skill_tag": "what.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A shopping list"
+       },
+       {
+        "id": "b",
+        "text": "A personal book about your own days"
+       },
+       {
+        "id": "c",
+        "text": "A story about a king"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Features of an entry"
+    },
+    {
+     "type": "text",
+     "markdown": "An **entry** starts with the date and Dear Diary.",
+     "say": "Each entry starts with the date. Then we write Dear Diary."
+    },
+    {
+     "type": "explainer",
+     "title": "An entry",
+     "scenes": [
+      {
+       "caption": "The date.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📅",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "First, the date. Friday the fifth of May."
+      },
+      {
+       "caption": "Dear Diary.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📔",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Then, Dear Diary. I write to my diary like a friend."
+      },
+      {
+       "caption": "Past and I.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "✏️",
+         "x": 72,
+         "y": 58,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "I write in the past tense. I went, I saw, I felt."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A diary entry starts with the date.",
+      "hint": "Think of the top of the page.",
+      "explanation": "Entries begin with the date.",
+      "skill_tag": "what.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's Eid diary",
+     "asset": "clip-english-class-1-dear-diary-4e746166.mp4",
+     "poster": "clip-english-class-1-dear-diary-4e746166.webp",
+     "seconds": 58,
+     "transcript": "Today I helped Nani cook for Eid. First, I washed the rice in cold water. Then I stirred the big pot. It smelled delicious. I felt proud. Nani said I helped so much. That night, I opened my diary and wrote the date. Dear Diary, today was wonderful. I felt delighted. I checked my capitals and full stops. Then I read it aloud. I closed my diary. It is my private book.",
+     "caption": "Zainab writes about helping Nani cook for Eid."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A diary is a personal book",
+      "An entry has a date and Dear Diary",
+      "We use I, the past tense and feelings"
+     ],
+     "say": "Let us remember. A diary is personal. Entries have a date, I, the past tense and feelings."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "diary",
+       "meaning": "A personal book where you write about your own days."
+      },
+      {
+       "term": "entry",
+       "meaning": "One piece of writing in a diary for one day."
+      },
+      {
+       "term": "date",
+       "meaning": "The day, month and year."
+      },
+      {
+       "term": "private",
+       "meaning": "Only for you, unless you choose to share."
+      },
+      {
+       "term": "feelings",
+       "meaning": "How you feel inside, like happy or sad."
+      },
+      {
+       "term": "first person",
+       "meaning": "Writing with I, as if you are telling it."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What goes at the top of a diary entry?",
+     "hint": "It tells us which day.",
+     "explanation": "An entry starts with the date.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A picture of a cat"
+      },
+      {
+       "id": "b",
+       "text": "The date"
+      },
+      {
+       "id": "c",
+       "text": "A recipe"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A diary is for everyone to read.",
+     "hint": "It is personal.",
+     "explanation": "A diary is private.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tense does a diary use?",
+     "hint": "It tells what happened.",
+     "explanation": "A diary entry tells what already happened.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The future tense"
+      },
+      {
+       "id": "b",
+       "text": "No tense at all"
+      },
+      {
+       "id": "c",
+       "text": "The past tense"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word starts most diary entries?",
+     "hint": "Dear Diary.",
+     "explanation": "Many entries begin Dear Diary.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Banana"
+      },
+      {
+       "id": "b",
+       "text": "Dear"
+      },
+      {
+       "id": "c",
+       "text": "Under"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "kind": "try",
+   "title": "Plan an entry",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What happened first?"
+    },
+    {
+     "type": "text",
+     "markdown": "A plan lists what happened, in order.",
+     "say": "Plan before you write. First, think what happened."
+    },
+    {
+     "type": "explainer",
+     "title": "Zainab's evening",
+     "scenes": [
+      {
+       "caption": "First.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 72,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zainab helped Nani cook for Eid. She washed the rice first."
+      },
+      {
+       "caption": "Then.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍲",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🥄",
+         "x": 75,
+         "y": 52,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Then she stirred the pot of biryani. It smelled wonderful."
+      },
+      {
+       "caption": "At last.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "👨‍👩‍👧",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "At last, the family sat down to eat. Everyone smiled."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put what happened in order.",
+      "hint": "Follow first, then, last.",
+      "explanation": "She washed, stirred, then the family ate.",
+      "skill_tag": "plan.chk1",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "She stirred the pot"
+       },
+       {
+        "id": "i1",
+        "text": "Zainab washed the rice"
+       },
+       {
+        "id": "i3",
+        "text": "The family ate together"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How did I feel?"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-1-dear-diary-2-2761f39c.jpg",
+     "alt": "A silver pen resting on an open notebook on a wooden desk",
+     "caption": "A pen waits to write about a day and how it felt.",
+     "credit": "Photo by Zoran Borojevic on Unsplash",
+     "say": "A diary also says how you felt. This is what makes it personal."
+    },
+    {
+     "type": "text",
+     "markdown": "Write a **feeling** sentence for each part.",
+     "say": "Add a feeling to each part. I felt happy. I felt proud."
+    },
+    {
+     "type": "manipulative",
+     "title": "Happy or sad?",
+     "goal": "Move each feeling word. Cheerful ones go in Happy. Gloomy ones go in Sad.",
+     "emoji": "😀",
+     "count": 8,
+     "zones": [
+      "Happy",
+      "Sad"
+     ],
+     "say": "Now sort the feelings. Are they happy or sad?"
+    },
+    {
+     "type": "activity",
+     "title": "Plan an entry",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Choose a day you remember.",
+      "Write three things that happened, in order.",
+      "Write a feeling word beside each one."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sentence says how Zainab felt?",
+      "hint": "Look for I felt.",
+      "explanation": "I felt proud says how she felt.",
+      "skill_tag": "plan.chk2",
+      "options": [
+       {
+        "id": "a",
+        "text": "The pot was hot."
+       },
+       {
+        "id": "b",
+        "text": "I felt proud of my biryani."
+       },
+       {
+        "id": "c",
+        "text": "I washed the rice."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "List what happened in order",
+      "Add a feeling to each part",
+      "Choose a day you remember"
+     ],
+     "say": "Let us remember. Plan what happened and how you felt."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plan",
+       "meaning": "A way to get ready before writing."
+      },
+      {
+       "term": "feeling",
+       "meaning": "How you feel inside, like happy, sad or proud."
+      },
+      {
+       "term": "proud",
+       "meaning": "Very pleased about something you did."
+      },
+      {
+       "term": "biryani",
+       "meaning": "A tasty dish made with rice, spices and meat or vegetables."
+      },
+      {
+       "term": "at last",
+       "meaning": "After a long time."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do before writing an entry?",
+     "hint": "Think of the plan.",
+     "explanation": "A plan helps us get ready.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hide the pen"
+      },
+      {
+       "id": "b",
+       "text": "Plan what happened"
+      },
+      {
+       "id": "c",
+       "text": "Close the book"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A diary says how you felt.",
+     "hint": "It is personal.",
+     "explanation": "A diary includes feelings.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word below is a feeling?",
+     "hint": "It is inside you.",
+     "explanation": "Proud is a feeling.",
+     "options": [
+      {
+       "id": "a",
+       "text": "pot"
+      },
+      {
+       "id": "b",
+       "text": "proud"
+      },
+      {
+       "id": "c",
+       "text": "rice"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "kind": "play",
+   "title": "Feeling words",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pick the best word"
+    },
+    {
+     "type": "text",
+     "markdown": "Different feeling words say different things.",
+     "say": "Happy is a good word. But there are better ones. Glad, joyful and delighted are happy words."
+    },
+    {
+     "type": "explainer",
+     "title": "Feeling words",
+     "scenes": [
+      {
+       "caption": "Happy words.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "😄",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Glad and joyful are happy words. Delighted means very happy."
+      },
+      {
+       "caption": "Sad words.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "😢",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Gloomy and tearful are sad words. Heartbroken means very sad."
+      },
+      {
+       "caption": "Worry words.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "😰",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Nervous and scared are worry words. We feel them before something big."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word means very happy?",
+      "hint": "It is a very happy word.",
+      "explanation": "Delighted means very happy.",
+      "skill_tag": "feel.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "gloomy"
+       },
+       {
+        "id": "b",
+        "text": "delighted"
+       },
+       {
+        "id": "c",
+        "text": "nervous"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then answer a question.",
+     "say": "Warm up your memory. Watch the feelings light up, then copy them."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Feeling faces",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "😄",
+      "😢",
+      "😰",
+      "😍"
+     ],
+     "say": "Watch the order closely. Then copy it."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two happy words.",
+      "hint": "Think of smiling.",
+      "explanation": "Glad and joyful are happy words.",
+      "skill_tag": "feel.chk2",
+      "options": [
+       {
+        "id": "a",
+        "text": "gloomy"
+       },
+       {
+        "id": "b",
+        "text": "tearful"
+       },
+       {
+        "id": "c",
+        "text": "joyful"
+       },
+       {
+        "id": "d",
+        "text": "glad"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Happy words: glad, joyful, delighted",
+      "Sad words: gloomy, tearful",
+      "Different words say different things"
+     ],
+     "say": "Let us remember. Pick feeling words that match the day. Use different ones."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "delighted",
+       "meaning": "Very happy."
+      },
+      {
+       "term": "gloomy",
+       "meaning": "Sad and heavy."
+      },
+      {
+       "term": "nervous",
+       "meaning": "A little worried about what will happen."
+      },
+      {
+       "term": "joyful",
+       "meaning": "Full of happiness."
+      },
+      {
+       "term": "heartbroken",
+       "meaning": "Very, very sad."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word is a sad word?",
+     "hint": "It feels heavy.",
+     "explanation": "Gloomy means sad.",
+     "options": [
+      {
+       "id": "a",
+       "text": "glad"
+      },
+      {
+       "id": "b",
+       "text": "joyful"
+      },
+      {
+       "id": "c",
+       "text": "gloomy"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Delighted is a sad word.",
+     "hint": "It means very happy.",
+     "explanation": "Delighted means very happy.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word tells us someone is worried?",
+     "hint": "Think of a big day.",
+     "explanation": "Nervous means a little worried.",
+     "options": [
+      {
+       "id": "a",
+       "text": "delighted"
+      },
+      {
+       "id": "b",
+       "text": "nervous"
+      },
+      {
+       "id": "c",
+       "text": "joyful"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "two",
+   "kind": "use",
+   "title": "Write two entries",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The first entry"
+    },
+    {
+     "type": "text",
+     "markdown": "Write two **linked** entries.",
+     "say": "Now we write two diary entries. They tell about two parts of one day."
+    },
+    {
+     "type": "text",
+     "markdown": "Ramadan evenings are good diary days.",
+     "say": "In Pakistan, many families cook and share food in Ramadan. That makes a lovely entry."
+    },
+    {
+     "type": "text",
+     "markdown": "Any kind of day can be a diary entry.",
+     "say": "In the UK, you might write about a rainy walk with family."
+    },
+    {
+     "type": "text",
+     "markdown": "Start the first entry.",
+     "say": "Begin with the date. Then write Dear Diary and what happened first."
+    },
+    {
+     "type": "explainer",
+     "title": "Entry one",
+     "scenes": [
+      {
+       "caption": "Opening.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "👵",
+         "x": 72,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Friday 5 May. Dear Diary, today I helped Nani cook."
+      },
+      {
+       "caption": "What happened.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 40,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "😊",
+         "x": 75,
+         "y": 50,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "First, I washed the rice. I felt proud to help."
+      },
+      {
+       "caption": "Then.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍲",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Then I stirred the pot. It smelled delicious."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the best start to an entry?",
+      "hint": "Date, Dear Diary, what happened.",
+      "explanation": "It starts with the date and Dear Diary.",
+      "skill_tag": "two.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Rice pot."
+       },
+       {
+        "id": "b",
+        "text": "Friday 5 May. Dear Diary, today I helped Nani."
+       },
+       {
+        "id": "c",
+        "text": "Cooking."
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The second entry"
+    },
+    {
+     "type": "text",
+     "markdown": "The second entry continues the day.",
+     "say": "The second entry follows the first. It tells what happened next."
+    },
+    {
+     "type": "explainer",
+     "title": "Entry two",
+     "scenes": [
+      {
+       "caption": "Later.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "👨‍👩‍👧",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "That evening, we all sat down to eat. The biryani tasted wonderful."
+      },
+      {
+       "caption": "A feeling.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "😊",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "I felt delighted. Everyone said thank you to Nani and me."
+      },
+      {
+       "caption": "The end.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📔",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "Before bed, I closed my diary. It was a lovely day."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "activity",
+     "title": "Write two entries",
+     "materials": [
+      "Your plan",
+      "A notebook",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Write the date and Dear Diary.",
+      "Tell what happened first and how you felt.",
+      "Write a second entry for later that day.",
+      "Check capital letters and full stops, then read aloud."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The second entry tells what happened next.",
+      "hint": "It follows the first.",
+      "explanation": "The second entry continues the day.",
+      "skill_tag": "two.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Start with the date and Dear Diary",
+      "Tell what happened and how you felt",
+      "Check and read aloud, then share with permission"
+     ],
+     "say": "Let us remember. Date, Dear Diary, what happened and how you felt. Check and read aloud."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "linked",
+       "meaning": "Joined, one after the other."
+      },
+      {
+       "term": "entry",
+       "meaning": "One piece of writing in a diary."
+      },
+      {
+       "term": "permission",
+       "meaning": "A yes from someone before you do something."
+      },
+      {
+       "term": "share",
+       "meaning": "Let someone else read or hear."
+      },
+      {
+       "term": "ramadan",
+       "meaning": "The holy month when Muslims fast from dawn to sunset."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What should an entry start with?",
+     "hint": "Which day is it?",
+     "explanation": "An entry starts with the date.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The page number"
+      },
+      {
+       "id": "b",
+       "text": "The date"
+      },
+      {
+       "id": "c",
+       "text": "A joke"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We share our diary only with permission.",
+     "hint": "A diary is private.",
+     "explanation": "We share only if the writer says yes.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does the second entry do?",
+     "hint": "It continues the day.",
+     "explanation": "The second entry continues the day.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Repeats the first"
+      },
+      {
+       "id": "b",
+       "text": "Tells what happened next"
+      },
+      {
+       "id": "c",
+       "text": "Tells a made-up story"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Why do people keep a diary?",
+    "hint": "It is personal.",
+    "explanation": "People keep a diary to remember.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To tell the whole class"
+     },
+     {
+      "id": "b",
+      "text": "To remember their days and feelings"
+     },
+     {
+      "id": "c",
+      "text": "To sell it in a shop"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.meaning",
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Sam says a diary is only for sad days. Is he right?",
+    "hint": "Think of Zainab and Eid.",
+    "explanation": "A diary can hold happy and sad days.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only sad days count"
+     },
+     {
+      "id": "b",
+      "text": "Yes, happy days are not allowed"
+     },
+     {
+      "id": "c",
+      "text": "No, you can write about any kind of day"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.sad_days",
+    "sub_lesson": "what",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a diary is written in the future. Is she right?",
+    "hint": "Think of I went and I saw.",
+    "explanation": "A diary uses the past tense.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it says what will happen"
+     },
+     {
+      "id": "b",
+      "text": "No, a diary tells what already happened"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it uses the word will"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.future",
+    "sub_lesson": "what",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "short_text",
+    "prompt": "What one-letter word do we use to write about ourselves?",
+    "hint": "It is a capital letter.",
+    "explanation": "We use I in a diary.",
+    "answer": {
+     "accepted": [
+      "I",
+      "i"
+     ]
+    },
+    "skill_tag": "diary.first_st",
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "true_false",
+    "prompt": "A diary can say how you felt.",
+    "hint": "It is personal.",
+    "explanation": "Diaries include feelings.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "diary.feelings_tf",
+    "sub_lesson": "what",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Layla says everyone must read your diary. Is she right?",
+    "hint": "Think about privacy.",
+    "explanation": "You choose who reads your diary.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is for everyone"
+     },
+     {
+      "id": "b",
+      "text": "No, a diary is private"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the teacher must read it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.everyone",
+    "sub_lesson": "what",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "hotspot",
+    "prompt": "Tap the date in this diary entry.",
+    "hint": "It shows the day.",
+    "explanation": "Friday 5 May is the date.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📅",
+       "label": "Friday 5 May",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐕",
+       "label": "dog",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "😀",
+       "label": "happy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "diary.date_tap",
+    "sub_lesson": "what",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Who should read your diary?",
+    "hint": "It is private.",
+    "explanation": "A diary is private.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The whole street"
+     },
+     {
+      "id": "b",
+      "text": "Only you, or someone you choose"
+     },
+     {
+      "id": "c",
+      "text": "Anybody who finds it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.who_reads",
+    "sub_lesson": "what",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Zainab says dates do not matter in a diary. Is she right?",
+    "hint": "Think about reading it later.",
+    "explanation": "The date helps us remember when it happened.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, dates are never needed"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only the title matters"
+     },
+     {
+      "id": "c",
+      "text": "No, the date shows which day you wrote about"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.dates",
+    "sub_lesson": "plan",
+    "depth": "reason"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the day's events in order.",
+    "hint": "Start with waking up.",
+    "explanation": "Waking, school, play, homework.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "I played with my friend"
+     },
+     {
+      "id": "i4",
+      "text": "I did my homework"
+     },
+     {
+      "id": "i2",
+      "text": "I went to school"
+     },
+     {
+      "id": "i1",
+      "text": "I woke up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "diary.order",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the diary sentences.",
+    "hint": "Use the past tense and a feeling.",
+    "explanation": "Went is past tense and excited is a feeling.",
+    "points": 2,
+    "text": "Dear Diary, I {b1} to the market. I felt {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "going"
+       },
+       {
+        "id": "b",
+        "text": "went"
+       },
+       {
+        "id": "c",
+        "text": "go"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "table"
+       },
+       {
+        "id": "b",
+        "text": "excited"
+       },
+       {
+        "id": "c",
+        "text": "pencil"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "diary.fill_feeling",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Which word shows a feeling?",
+    "hint": "It is inside you.",
+    "explanation": "Proud is a feeling.",
+    "options": [
+     {
+      "id": "a",
+      "text": "pencil"
+     },
+     {
+      "id": "b",
+      "text": "proud"
+     },
+     {
+      "id": "c",
+      "text": "table"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.feeling_word",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Omar says a diary should not have feelings. Is he right?",
+    "hint": "Think about Zainab's entry.",
+    "explanation": "Feelings are what make a diary personal.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, feelings are banned"
+     },
+     {
+      "id": "b",
+      "text": "No, feelings make a diary personal"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only facts are allowed"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.no_feelings",
+    "sub_lesson": "plan",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multi_select",
+    "prompt": "Pick two things that belong in an entry.",
+    "hint": "Think of an entry.",
+    "explanation": "An entry has a date and feelings.",
+    "options": [
+     {
+      "id": "a",
+      "text": "How I felt"
+     },
+     {
+      "id": "b",
+      "text": "A shopping list"
+     },
+     {
+      "id": "c",
+      "text": "A recipe"
+     },
+     {
+      "id": "d",
+      "text": "The date"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "diary.entry_parts",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "slider",
+    "prompt": "I felt happy because I saw Nani. Slide to show how many words are in the sentence.",
+    "hint": "Count every word.",
+    "explanation": "There are 7 words.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "words"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "diary.words_sld",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "match",
+    "prompt": "Match each event to a feeling that fits.",
+    "hint": "How would you feel?",
+    "explanation": "Each event matches a feeling.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "I got a new toy"
+     },
+     {
+      "id": "l2",
+      "text": "I lost my kite"
+     },
+     {
+      "id": "l3",
+      "text": "I heard loud thunder"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "sad"
+     },
+     {
+      "id": "r1",
+      "text": "happy"
+     },
+     {
+      "id": "r3",
+      "text": "scared"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "diary.event_match",
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "slider",
+    "prompt": "Zainab wrote 3 sentences on Monday and 4 on Tuesday. Slide to show how many sentences in all.",
+    "hint": "3 + 4.",
+    "explanation": "3 + 4 = 7 sentences.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10,
+     "unit": "sentences"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "diary.sentences_sld",
+    "sub_lesson": "feel",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Sam says using the same word for every feeling is best. Is he right?",
+    "hint": "Glad, joyful, delighted.",
+    "explanation": "Different words show different feelings.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one word is neater"
+     },
+     {
+      "id": "b",
+      "text": "No, different feeling words say different things"
+     },
+     {
+      "id": "c",
+      "text": "Yes, happy is enough for everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.same_word",
+    "sub_lesson": "feel",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multi_select",
+    "prompt": "Which two words are happy words? Pick two.",
+    "hint": "Think of smiling.",
+    "explanation": "Glad and joyful are happy words.",
+    "options": [
+     {
+      "id": "a",
+      "text": "gloomy"
+     },
+     {
+      "id": "b",
+      "text": "tearful"
+     },
+     {
+      "id": "c",
+      "text": "joyful"
+     },
+     {
+      "id": "d",
+      "text": "glad"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "diary.happy_ms",
+    "sub_lesson": "feel",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each word to happy or sad.",
+    "hint": "Which one feels light?",
+    "explanation": "Glad and delighted are happy. Gloomy is sad.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "glad"
+     },
+     {
+      "id": "l2",
+      "text": "gloomy"
+     },
+     {
+      "id": "l3",
+      "text": "delighted"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "happy"
+     },
+     {
+      "id": "r1",
+      "text": "happy"
+     },
+     {
+      "id": "r2",
+      "text": "sad"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "diary.word_match",
+    "sub_lesson": "feel",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a diary uses he and she. Is she right?",
+    "hint": "Who is writing?",
+    "explanation": "A diary uses I because it is about you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a diary is about other people"
+     },
+     {
+      "id": "b",
+      "text": "No, a diary uses I, because you are the writer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always he and she"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.he_she",
+    "sub_lesson": "feel",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "fill_blank",
+    "prompt": "Join the ideas with so.",
+    "hint": "One thing happened because of the other.",
+    "explanation": "So shows a result.",
+    "points": 2,
+    "text": "I felt tired, {b1} I went to bed early. I was thirsty, {b2} I drank some water.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "or"
+       },
+       {
+        "id": "b",
+        "text": "so"
+       },
+       {
+        "id": "c",
+        "text": "but"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "but"
+       },
+       {
+        "id": "b",
+        "text": "so"
+       },
+       {
+        "id": "c",
+        "text": "or"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "diary.so_fill",
+    "sub_lesson": "feel",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "true_false",
+    "prompt": "Delighted and glad are both happy words.",
+    "hint": "Think of smiling.",
+    "explanation": "Both mean happy.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "diary.tense_tf",
+    "sub_lesson": "feel",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the writing steps in order.",
+    "hint": "Date first.",
+    "explanation": "Date, Dear Diary, what happened, feelings.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write Dear Diary"
+     },
+     {
+      "id": "i3",
+      "text": "Tell what happened"
+     },
+     {
+      "id": "i4",
+      "text": "Say how you felt"
+     },
+     {
+      "id": "i1",
+      "text": "Write the date"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "diary.steps_ord",
+    "sub_lesson": "two",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Omar says you cannot write about a long day. Is he right?",
+    "hint": "We pick key moments.",
+    "explanation": "You can pick the big moments of a long day.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only short days work"
+     },
+     {
+      "id": "b",
+      "text": "Yes, long days are secret"
+     },
+     {
+      "id": "c",
+      "text": "No, you choose the key parts and write them"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.long_day",
+    "sub_lesson": "two",
+    "depth": "reason"
+   },
+   {
+    "ref": "q26",
+    "type": "hotspot",
+    "prompt": "Tap the correct sentence.",
+    "hint": "Capital letter and full stop.",
+    "explanation": "A sentence starts with a capital and ends with a full stop.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "1️⃣",
+       "label": "i felt happy.",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "2️⃣",
+       "label": "I felt happy.",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "3️⃣",
+       "label": "I felt happy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "diary.punct_tap",
+    "sub_lesson": "two",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Which sentence tells what happened and how you felt?",
+    "hint": "It needs both.",
+    "explanation": "It says what happened and how you felt.",
+    "options": [
+     {
+      "id": "a",
+      "text": "I won the race."
+     },
+     {
+      "id": "b",
+      "text": "I felt proud."
+     },
+     {
+      "id": "c",
+      "text": "I won the race and I felt proud."
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.both_mc",
+    "sub_lesson": "two",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "short_text",
+    "prompt": "Write a feeling word to finish: I got a gold star and I felt ___.",
+    "hint": "How would you feel?",
+    "explanation": "Proud, happy and pleased all show how you felt.",
+    "answer": {
+     "accepted": [
+      "proud",
+      "happy",
+      "delighted",
+      "pleased",
+      "excited",
+      "glad"
+     ]
+    },
+    "skill_tag": "diary.feeling_st",
+    "sub_lesson": "two",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "true_false",
+    "prompt": "We share a diary entry only if we want to.",
+    "hint": "A diary is private.",
+    "explanation": "We share a diary only with permission.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "diary.share_tf",
+    "sub_lesson": "two",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "fill_blank",
+    "prompt": "Finish the checking rule.",
+    "hint": "Proofreaders check this.",
+    "explanation": "Sentences start with a capital letter and end with a full stop.",
+    "points": 2,
+    "text": "Every sentence starts with a {b1} and ends with a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "small letter"
+       },
+       {
+        "id": "b",
+        "text": "capital letter"
+       },
+       {
+        "id": "c",
+        "text": "picture"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "comma"
+       },
+       {
+        "id": "b",
+        "text": "capital"
+       },
+       {
+        "id": "c",
+        "text": "full stop"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "diary.check_fill",
+    "sub_lesson": "two",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What is a diary used for?",
+    "hint": "It is personal.",
+    "explanation": "A diary is for your own days.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Learning to count"
+     },
+     {
+      "id": "b",
+      "text": "Writing about your own days"
+     },
+     {
+      "id": "c",
+      "text": "Finding the way"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.meaning",
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a diary is only for birthdays. Is she right?",
+    "hint": "Think of an ordinary day.",
+    "explanation": "A diary can tell about any day.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, other days are boring"
+     },
+     {
+      "id": "b",
+      "text": "No, you can write about any day"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only birthdays count"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.sad_days",
+    "sub_lesson": "what",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Ali says we write a diary entry before the day happens. Is he right?",
+    "hint": "Think of past tense.",
+    "explanation": "We write about events that are finished.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, before the day"
+     },
+     {
+      "id": "b",
+      "text": "No, we write it after, about what happened"
+     },
+     {
+      "id": "c",
+      "text": "Yes, in the morning only"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.future",
+    "sub_lesson": "what",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "short_text",
+    "prompt": "What two-letter word do we use for ourselves and others?",
+    "hint": "It starts with w.",
+    "explanation": "We means the writer and others.",
+    "answer": {
+     "accepted": [
+      "we",
+      "We"
+     ]
+    },
+    "skill_tag": "diary.first_st",
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "true_false",
+    "prompt": "A diary should never say how you felt.",
+    "hint": "It is personal.",
+    "explanation": "Feelings belong in a diary.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "diary.feelings_tf",
+    "sub_lesson": "what",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Zara says it is fine to read someone's diary without asking. Is she right?",
+    "hint": "Think about permission.",
+    "explanation": "A diary is private. We ask first.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is fine"
+     },
+     {
+      "id": "b",
+      "text": "Yes, diaries have no owner"
+     },
+     {
+      "id": "c",
+      "text": "No, we only read it if they say yes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.everyone",
+    "sub_lesson": "what",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "hotspot",
+    "prompt": "Tap the opening of an entry.",
+    "hint": "It greets the diary.",
+    "explanation": "Dear Diary starts an entry.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📔",
+       "label": "Dear Diary",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐕",
+       "label": "dog",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍚",
+       "label": "rice",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "diary.date_tap",
+    "sub_lesson": "what",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "When can you share your diary?",
+    "hint": "Think about permission.",
+    "explanation": "We share when we choose to.",
+    "options": [
+     {
+      "id": "a",
+      "text": "When anyone asks"
+     },
+     {
+      "id": "b",
+      "text": "Never, not even to you"
+     },
+     {
+      "id": "c",
+      "text": "When you say yes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.who_reads",
+    "sub_lesson": "what",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Omar says you can leave out the date. Is he right?",
+    "hint": "Think about years later.",
+    "explanation": "Dates help us remember the day.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never write one"
+     },
+     {
+      "id": "b",
+      "text": "Yes, dates are only for homework"
+     },
+     {
+      "id": "c",
+      "text": "No, the date tells when it happened"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.dates",
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put the evening in order.",
+    "hint": "Start with dinner.",
+    "explanation": "Dinner, washing, book, bed.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "I read a book"
+     },
+     {
+      "id": "i4",
+      "text": "I went to bed"
+     },
+     {
+      "id": "i2",
+      "text": "I washed my hands"
+     },
+     {
+      "id": "i1",
+      "text": "I ate dinner"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "diary.order",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the diary lines.",
+    "hint": "Use the past tense and a feeling.",
+    "explanation": "Had is past tense and happy is a feeling.",
+    "points": 2,
+    "text": "Dear Diary, we {b1} a picnic. I felt {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "having"
+       },
+       {
+        "id": "b",
+        "text": "had"
+       },
+       {
+        "id": "c",
+        "text": "have"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "spoon"
+       },
+       {
+        "id": "b",
+        "text": "happy"
+       },
+       {
+        "id": "c",
+        "text": "window"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "diary.fill_feeling",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Which word is a feeling word?",
+    "hint": "It is inside you.",
+    "explanation": "Nervous is a feeling.",
+    "options": [
+     {
+      "id": "a",
+      "text": "window"
+     },
+     {
+      "id": "b",
+      "text": "nervous"
+     },
+     {
+      "id": "c",
+      "text": "carpet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.feeling_word",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a diary entry should be only a list of facts. Is she right?",
+    "hint": "Think about I felt.",
+    "explanation": "A diary includes feelings.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never say how you felt"
+     },
+     {
+      "id": "b",
+      "text": "No, we also say how we felt"
+     },
+     {
+      "id": "c",
+      "text": "Yes, facts only"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.no_feelings",
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multi_select",
+    "prompt": "Pick two parts of a diary entry.",
+    "hint": "Think of an entry.",
+    "explanation": "An entry has Dear Diary and what happened.",
+    "options": [
+     {
+      "id": "a",
+      "text": "What happened"
+     },
+     {
+      "id": "b",
+      "text": "A song"
+     },
+     {
+      "id": "c",
+      "text": "A maths sum"
+     },
+     {
+      "id": "d",
+      "text": "Dear Diary"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "diary.entry_parts",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "slider",
+    "prompt": "Today I went to the park. Slide to show how many words are in the sentence.",
+    "hint": "Count every word.",
+    "explanation": "There are 6 words.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "words"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "diary.words_sld",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "match",
+    "prompt": "Join each event to a feeling that fits.",
+    "hint": "How would you feel?",
+    "explanation": "Each event matches a feeling.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "I won a prize"
+     },
+     {
+      "id": "l2",
+      "text": "I fell and hurt my knee"
+     },
+     {
+      "id": "l3",
+      "text": "I waited for a big test"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "nervous"
+     },
+     {
+      "id": "r1",
+      "text": "proud"
+     },
+     {
+      "id": "r2",
+      "text": "sore"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "diary.event_match",
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "slider",
+    "prompt": "Hamza wrote 5 sentences and then 3 more. Slide to show how many sentences in all.",
+    "hint": "5 + 3.",
+    "explanation": "5 + 3 = 8 sentences.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10,
+     "unit": "sentences"
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "diary.sentences_sld",
+    "sub_lesson": "feel",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Mira says we should only use the word nice. Is she right?",
+    "hint": "Think of delighted.",
+    "explanation": "Better words paint a clearer picture.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nice is best"
+     },
+     {
+      "id": "b",
+      "text": "No, stronger words say more"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never use other words"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.same_word",
+    "sub_lesson": "feel",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multi_select",
+    "prompt": "Pick the two happy words.",
+    "hint": "Think of smiling.",
+    "explanation": "Delighted and cheerful are happy words.",
+    "options": [
+     {
+      "id": "a",
+      "text": "heartbroken"
+     },
+     {
+      "id": "b",
+      "text": "gloomy"
+     },
+     {
+      "id": "c",
+      "text": "cheerful"
+     },
+     {
+      "id": "d",
+      "text": "delighted"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "diary.happy_ms",
+    "sub_lesson": "feel",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Join each word to happy or sad.",
+    "hint": "Which one feels light?",
+    "explanation": "Joyful and cheerful are happy. Tearful is sad.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "joyful"
+     },
+     {
+      "id": "l2",
+      "text": "tearful"
+     },
+     {
+      "id": "l3",
+      "text": "cheerful"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "sad"
+     },
+     {
+      "id": "r3",
+      "text": "happy"
+     },
+     {
+      "id": "r1",
+      "text": "happy"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "diary.word_match",
+    "sub_lesson": "feel",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a diary should say Zainab did this and that. Is he right?",
+    "hint": "You are the writer.",
+    "explanation": "A diary uses I.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, write as a stranger"
+     },
+     {
+      "id": "b",
+      "text": "No, you write I did this and that"
+     },
+     {
+      "id": "c",
+      "text": "Yes, use names for yourself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "diary.he_she",
+    "sub_lesson": "feel",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "fill_blank",
+    "prompt": "Use so to join ideas.",
+    "hint": "One thing happened because of the other.",
+    "explanation": "So shows a result.",
+    "points": 2,
+    "text": "It was raining, {b1} I took an umbrella. I was cold, {b2} I wore a coat.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "but"
+       },
+       {
+        "id": "b",
+        "text": "so"
+       },
+       {
+        "id": "c",
+        "text": "or"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "but"
+       },
+       {
+        "id": "b",
+        "text": "or"
+       },
+       {
+        "id": "c",
+        "text": "so"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "diary.so_fill",
+    "sub_lesson": "feel",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "true_false",
+    "prompt": "Gloomy is a very happy word.",
+    "hint": "Think of how gloomy feels.",
+    "explanation": "Gloomy means sad.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "diary.tense_tf",
+    "sub_lesson": "feel",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put the entry steps in order.",
+    "hint": "Plan first.",
+    "explanation": "Plan, write, check, read aloud.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write the entry"
+     },
+     {
+      "id": "i3",
+      "text": "Check the punctuation"
+     },
+     {
+      "id": "i4",
+      "text": "Read it aloud"
+     },
+     {
+      "id": "i1",
+      "text": "Plan the day"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "diary.steps_ord",
+    "sub_lesson": "two",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a diary entry must tell every minute. Is she right?",
+    "hint": "Think of key moments.",
+    "explanation": "We write the parts that mattered.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every minute"
+     },
+     {
+      "id": "b",
+      "text": "Yes, even the tiny details"
+     },
+     {
+      "id": "c",
+      "text": "No, we choose what mattered most"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.long_day",
+    "sub_lesson": "two",
+    "depth": "reason",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "hotspot",
+    "prompt": "Tap the sentence with the right punctuation.",
+    "hint": "Capital letter and full stop.",
+    "explanation": "A sentence starts with a capital and ends with a full stop.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "1️⃣",
+       "label": "We cooked rice",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "2️⃣",
+       "label": "we cooked rice.",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "3️⃣",
+       "label": "We cooked rice.",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "diary.punct_tap",
+    "sub_lesson": "two",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Pick the line that says what happened and how you felt.",
+    "hint": "It needs both.",
+    "explanation": "It says what happened and how you felt.",
+    "options": [
+     {
+      "id": "a",
+      "text": "I fell off my bike."
+     },
+     {
+      "id": "b",
+      "text": "I felt sore."
+     },
+     {
+      "id": "c",
+      "text": "I fell off my bike and I felt sore."
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "diary.both_mc",
+    "sub_lesson": "two",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "short_text",
+    "prompt": "Write a feeling word to finish: I lost my kite and I felt ___.",
+    "hint": "How would you feel?",
+    "explanation": "Sad and upset show how you felt.",
+    "answer": {
+     "accepted": [
+      "sad",
+      "gloomy",
+      "upset",
+      "disappointed",
+      "unhappy",
+      "tearful"
+     ]
+    },
+    "skill_tag": "diary.feeling_st",
+    "sub_lesson": "two",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "true_false",
+    "prompt": "Anyone may read your diary without asking.",
+    "hint": "A diary is private.",
+    "explanation": "We should ask permission first.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "diary.share_tf",
+    "sub_lesson": "two",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "fill_blank",
+    "prompt": "Complete the checking rule.",
+    "hint": "Names and days start with capitals.",
+    "explanation": "Names and days begin with capital letters.",
+    "points": 2,
+    "text": "My name Zainab starts with a {b1} letter. The date, such as Friday, also starts with a {b2} letter.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "small"
+       },
+       {
+        "id": "b",
+        "text": "capital"
+       },
+       {
+        "id": "c",
+        "text": "wavy"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "round"
+       },
+       {
+        "id": "b",
+        "text": "capital"
+       },
+       {
+        "id": "c",
+        "text": "small"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "diary.check_fill",
+    "sub_lesson": "two",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

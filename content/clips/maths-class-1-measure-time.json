@@ -1,0 +1,158 @@
+{
+ "title": "Zara's measuring morning",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "A pencil and a ruler.",
+   "say": "Zara has a new pencil. She wants to measure it.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "p",
+     "emoji": "✏️",
+     "x": 72,
+     "y": 40,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Start at zero.",
+   "say": "She lines the pencil up with the zero on the ruler.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "📏",
+     "label": "start at 0",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "15 cm long.",
+   "say": "The end of the pencil is at fifteen. It is fifteen centimetres long!",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "📏",
+     "label": "15 cm",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "How hot is it?",
+   "say": "Now the weather. Zara reads the thermometer. It says thirty degrees.",
+   "items": [
+    {
+     "id": "t",
+     "prop": {
+      "kind": "thermometer",
+      "value": 30,
+      "from": -10,
+      "to": 50
+     },
+     "label": "30 degrees",
+     "x": 50,
+     "y": 46,
+     "size": 1,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Quarter past 8.",
+   "say": "School starts soon. The long hand is on the three. It is quarter past eight.",
+   "items": [
+    {
+     "id": "c",
+     "prop": {
+      "kind": "clock",
+      "hour": 8,
+      "minute": 15
+     },
+     "label": "quarter past 8",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Half past 8.",
+   "say": "Fifteen minutes later, the long hand is on the six. It is half past eight.",
+   "items": [
+    {
+     "id": "c",
+     "prop": {
+      "kind": "clock",
+      "hour": 8,
+      "minute": 30
+     },
+     "label": "half past 8",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Quarter to 9.",
+   "say": "At quarter to nine, the long hand is on the nine. The bell rings!",
+   "items": [
+    {
+     "id": "c",
+     "prop": {
+      "kind": "clock",
+      "hour": 8,
+      "minute": 45
+     },
+     "label": "quarter to 9",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Zara!",
+   "say": "Rulers, thermometers and clocks. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "b",
+     "emoji": "🔔",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

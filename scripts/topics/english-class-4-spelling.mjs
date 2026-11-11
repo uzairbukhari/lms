@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 2 for Fatima (Class 4): Spelling detective. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 3/4, Cambridge Stage 4).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const TILES = "english-class-4-spelling-detective-1-ee195080.jpg";
+const WORDS = "english-class-4-spelling-detective-2-e51aa379.jpg";
+
 const tricky = {
   id: "tricky", kind: "learn", title: "Homophones and silent letters",
   blocks: [
+    H("Welcome back, spelling detective!"),
+    SAY("Today we hunt for tricky spellings. How do we spot clues and fix mistakes?", T("Today's big question: how do spelling detectives find and fix mistakes?")),
+    SAY("Every word is built from letters like these. A detective checks each one, even the silent ones.", PHOTO(TILES, "A heap of wooden letter tiles with black capital letters", "Spelling detectives study every letter, even the silent ones.", "Photo by Sven Brandsma on Unsplash")),
     H("Stop 1: Homophones"),
     SAY("Spelling detectives need sharp eyes and ears. Some words sound identical but are spelled differently. There, their and they're. There points to a place: over there. Their shows belonging: their coats. They're is they are squashed together: they're late. Same sound, three jobs. We call these homophones. Let's see each one at work.", T("**Homophones** sound the same but are spelled differently.", "there = a place, their = belonging, they're = they are.")),
     EXPP("There, their, they're",
@@ -37,7 +43,7 @@ const plurals = {
   id: "plurals", kind: "try", title: "Plurals and prefixes",
   blocks: [
     H("Stop 1: Plural patterns"),
-    SAY("Plurals follow patterns. Most words add s. Words ending in s, x, sh or ch add es. And when a word ends in a consonant followed by y, we swap the y for i and add es. Baby becomes babies. Story becomes stories. Let's see it happen.", T("A **plural** means more than one. Most add s, some add es.", "A consonant then y: change y to i and add es. baby → babies.")),
+    SAY("Plurals follow patterns. Most words add s. Words ending in s, x, sh or ch add es. When a word ends in a consonant plus y, we swap the y for i and add es. Baby becomes babies. Story becomes stories. Let's see it happen.", T("A **plural** means more than one. Most add s, some add es.", "A consonant then y: change y to i and add es. baby → babies.")),
     EXPP("Baby to babies",
       SS("One baby.", S("one baby", ["b", "👶", 50, 50, 3, "grow", "baby"])),
       SS("To make a plural, the y changes to i, and we add es. Babies.", S("babies", ...ROW("b", "👶", 3, 25, 75, 50, 3, "grow"), ["l", "✏️", 50, 18, 1, "none", "babies"]))),
@@ -94,6 +100,7 @@ const synonyms = {
       SS("Enormous is the strongest word of all. The elephant fills the page.", S("enormous", ["e", "🐘", 50, 50, 3, "grow", "enormous"]))),
     CHK(mc("Which word is a synonym for glad?", "joyful", ["gloomy", "angry"], { hint: "Which word means happy?", why: "Glad and joyful both mean happy.", tag: "synonym.find" })),
     H("Stop 2: Choosing the best word"),
+    SAY("Choosing the best word is a skill. Spell it right and pick it well.", PHOTO(WORDS, "Wooden letter tiles spelling the words CHOOSE YOUR WORDS in a crossword layout", "Choosing the right word is a spelling skill and a writing skill.", "Photo by Brett Jordan on Unsplash")),
     SAY("Great writers choose their words carefully. Instead of said, they might write whispered, shouted or muttered. Each one paints a different picture. Try upgrading some plain words in your own writing.", T("Choose the word that gives the clearest picture.")),
     SAY("A writer's word choices change the whole picture.", IMG("🎨", "Choosing a stronger word paints a clearer picture.")),
     SAY("Have a go at a real writing job. Take a plain sentence and make it come alive by swapping the dull words for stronger ones.", ACT("Word upgrade", ["Paper and a pencil"], ["Write: The dog was big and it ran.", "Swap big for a stronger word, like enormous.", "Swap ran for a stronger word, like sprinted.", "Read both sentences to a grown-up. Which is better?"])),
@@ -105,6 +112,28 @@ const synonyms = {
     mc("Which word is a synonym for small?", "tiny", ["huge", "tall"], { hint: "Which means little?", why: "Small and tiny both mean little.", tag: "synonym.find" }),
     tf("Whispered and shouted have the same shade of meaning.", false, { hint: "One is quiet, one is loud.", why: "Whispered is quiet and shouted is loud.", tag: "synonym.shade" }),
     mc("Which word is the strongest?", "exhausted", ["tired", "sleepy"], { hint: "Which shows the most tiredness?", why: "Exhausted means very, very tired.", tag: "synonym.shade" }),
+  ],
+};
+
+const clip = {
+  title: "The spelling detective", backdrop: "classroom", caption: "A detective hunts for tricky spellings.",
+  scenes: [
+    { caption: "A case.", say: "Detective Zara has a case. Someone has misspelt a word.",
+      items: [{ id: "z", emoji: "🕵️", label: "Zara", x: 30, y: 58, size: 3, enter: "pop" }, { id: "p", emoji: "📄", x: 72, y: 58, size: 3 }] },
+    { caption: "A silent letter.", say: "The word is knee. The k is silent, but it must stay.",
+      items: [{ id: "k", emoji: "🦵", x: 50, y: 56, size: 3 }] },
+    { caption: "Homophones.", say: "Allowed and aloud sound alike but mean different things.",
+      items: [{ id: "a", emoji: "🔊", x: 30, y: 54, size: 3 }, { id: "b", emoji: "✅", x: 72, y: 54, size: 3 }] },
+    { caption: "Plurals.", say: "Baby becomes babies. A city becomes cities.",
+      items: [{ id: "b", emoji: "👶", x: 30, y: 58, size: 3 }, { id: "c", emoji: "🏙️", x: 72, y: 54, size: 3 }] },
+    { caption: "Prefixes.", say: "Kind becomes unkind. Possible becomes impossible.",
+      items: [{ id: "p", emoji: "➖", x: 50, y: 56, size: 3, anim: "pulse" }] },
+    { caption: "Suffixes.", say: "Quick becomes quickly. Sun becomes sunny.",
+      items: [{ id: "s", emoji: "☀️", x: 50, y: 40, size: 3 }] },
+    { caption: "Strategy.", say: "Look, cover, write, check. That is the detective's method.",
+      items: [{ id: "l", emoji: "🔍", x: 50, y: 56, size: 3, anim: "bounce" }] },
+    { caption: "Solved.", say: "Case closed. Every word is spelt right!",
+      items: [{ id: "z", emoji: "🕵️", x: 50, y: 56, size: 3, effect: "sparkle" }] },
   ],
 };
 
@@ -125,13 +154,9 @@ export const topics = [
       tf("A noun is a naming word.", true, { hint: "Think of cat, school, Lahore.", why: "A noun names a person, place or thing." }),
       mc("Which pronoun replaces the girls?", "they", ["she", "it"], { hint: "More than one person.", why: "The girls is more than one, so they." }),
     ],
-    intro: [
-      H("Welcome back, spelling detective!"),
-      SAY("Welcome back, spelling detective! Today's big question: how can we crack the code of tricky spellings? English words come with clues: roots, prefixes, suffixes, and patterns. Good detectives spot the clues and solve the case. Let's go!", T("Today's big question: how can we crack the code of tricky spellings?", "We will hunt for clues in words.")),
-      IMG("🕵️", "Spelling detectives follow the clues in words."),
-      GLOSS({ spelling: "The right order of letters in a word." }),
-    ],
+    intro: [],
     subs: [tricky, plurals, suffixes, synonyms],
+    clip,
     quiz: [
       Q(mc("Pick the right word: ___ going to the park.", "They're", ["Their", "There"], { hint: "Can you say they are?", why: "They are going, so they're.", tag: "homophone.their" }), "tricky", "recall", [
         mc("Pick the right word: ___ coats are on the hook.", "Their", ["There", "They're"], { hint: "Whose coats?", why: "Their shows the coats belong to them.", tag: "homophone.their" }),
@@ -178,6 +203,37 @@ export const topics = [
       Q(mc("Why is enormous a better word than big for an elephant?", "It paints a stronger picture of the size", ["It is a shorter word", "It means something different"], { hint: "Think about the picture the word makes.", why: "A strong word gives the reader a clearer picture.", tag: "synonym.reason" }), "synonyms", "reason", [
         mc("Why is sprinted a better word than ran in a race story?", "It paints a stronger picture of the speed", ["It is a shorter word", "It means something different"], { hint: "Think about the picture the word makes.", why: "A strong word gives the reader a clearer picture.", tag: "synonym.reason" }),
         mc("Why is delicious a better word than nice for a mango?", "It paints a stronger picture of the taste", ["It is a shorter word", "It means something different"], { hint: "Think about the picture the word makes.", why: "A strong word gives the reader a clearer picture.", tag: "synonym.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(st("Write the word for the joint between your hand and arm. It has a silent w.", ["wrist"], { hint: "It starts with wr.", why: "Wrist has a silent w.", tag: "silent.write" }), "tricky", "recall", [
+        st("Write the word for the joint in the middle of your leg. It has a silent k.", ["knee"], { hint: "It starts with kn.", why: "Knee has a silent k.", tag: "silent.write" })]),
+      Q(mc("Idris says silent letters have no reason. Is he right?", "No, many come from how the words were once pronounced", ["Yes, they were put in by accident", "Yes, they are never needed"], { hint: "Think about the history of words.", why: "The k in knee was once said aloud, so many silent letters are echoes of old pronunciation.", tag: "silent.reason" }), "tricky", "reason", [
+        mc("Maryam says silent letters can be left out when you spell. Is she right?", "No, the word is spelt wrongly without them", ["Yes, they can always be dropped", "Yes, only teachers need them"], { hint: "Try writing nee for knee.", why: "Silent letters are still part of the correct spelling.", tag: "silent.reason" })]),
+      Q(st("Write the adverb made from gentle.", ["gently"], { hint: "Drop the e and add y after l.", why: "Gentle becomes gently.", tag: "suffix.ly" }), "suffixes", "apply", [
+        st("Write the adverb made from happy.", ["happily"], { hint: "Change the y to i before ly.", why: "Happy becomes happily.", tag: "suffix.ly" })]),
+      Q(mc("Idris says copying a misspelt word ten times will fix it. Is he right?", "No, you would practise the mistake, so check the correct spelling first", ["Yes, copying always fixes it", "Yes, the more the better"], { hint: "What are you practising?", why: "Practise only the correct spelling. Use look, cover, write, check.", tag: "strategy.reason" }), "tricky", "reason", [
+        mc("Hamza copies wich many times. Is that a good plan?", "No, he should find the correct spelling, which, and practise that", ["Yes, practice always helps", "Yes, it will become correct"], { hint: "Check it first.", why: "Practice only helps if the spelling is correct.", tag: "strategy.reason" })]),
+      Q(ms("Which two words show the -est form? Pick two.", ["biggest", "hottest"], ["bigger", "hotter"], { hint: "Est means the most.", why: "Biggest and hottest are -est forms.", tag: "suffix.est" }), "suffixes", "apply", [
+        ms("Pick the two -est words.", ["tallest", "smallest"], ["taller", "smaller"], { hint: "Est means the most.", why: "Tallest and smallest are -est forms.", tag: "suffix.est" })]),
+      Q(fill("Make adjectives with -y.", "A {b1} day and a {b2} afternoon.", [["sunny", "suny", "sunnie"], ["rainy", "rainey", "rainny"]], { hint: "Double the final consonant after a short vowel.", why: "Sun becomes sunny. Rain becomes rainy.", tag: "suffix.y" }), "suffixes", "apply", [
+        fill("Add -y to these words.", "A {b1} dog and a {b2} jumper.", [["furry", "fury", "furrie"], ["woolly", "wooly", "wolly"]], { hint: "Double the consonant after a short vowel.", why: "Fur becomes furry and wool becomes woolly.", tag: "suffix.y" })]),
+      Q(mc("Idris says allowed and aloud mean the same because they sound the same. Is he right?", "No, they are homophones with different meanings", ["Yes, same sound means same meaning", "Yes, they can be swapped"], { hint: "Think about permission and speaking.", why: "Allowed means permitted. Aloud means out loud.", tag: "homophone.reason" }), "tricky", "reason", [
+        mc("Mira says their and there mean the same. Is she right?", "No, their shows belonging and there shows place", ["Yes, they mean the same", "Yes, they are interchangeable"], { hint: "Think of belonging and place.", why: "Their and there are homophones with different meanings.", tag: "homophone.reason" })]),
+      Q(mat("Match each word to the prefix that makes its opposite.", [["kind", "un"], ["possible", "im"], ["regular", "ir"]], { hint: "Think about unkind, impossible and irregular.", why: "Kind takes un, possible takes im and regular takes ir.", tag: "prefix.opposite" }), "plurals", "apply", [
+        mat("Join each word to its opposite prefix.", [["happy", "un"], ["visible", "in"], ["patient", "im"]], { hint: "Think about unhappy, invisible and impatient.", why: "Happy takes un, visible takes in and patient takes im.", tag: "prefix.opposite" })]),
+      Q(sld("Slide to show how many letters are in the word knee.", { min: 0, max: 8 }, 4, 0, { hint: "Count every letter, even the silent one.", why: "Knee has 4 letters.", tag: "silent.count" }), "tricky", "apply", [
+        sld("Slide to show how many letters are in the word wrist.", { min: 0, max: 8 }, 5, 0, { hint: "Count every letter, even the silent one.", why: "Wrist has 5 letters.", tag: "silent.count" })]),
+      Q(st("Write the plural of potato.", ["potatoes"], { hint: "Add es after o.", why: "Potato becomes potatoes.", tag: "plural.o" }), "plurals", "apply", [
+        st("Write the plural of tomato.", ["tomatoes"], { hint: "Add es after o.", why: "Tomato becomes tomatoes.", tag: "plural.o" })]),
+      Q(mc("Maryam says all words ending in y just add s to make plurals. Is she right?", "No, after a consonant we change y to i and add es", ["Yes, always add s", "Yes, y never changes"], { hint: "Think of baby and babies.", why: "Baby becomes babies, but day becomes days.", tag: "plural.reason" }), "plurals", "reason", [
+        mc("Ali says the plural of city is citys. Is he right?", "No, it is cities", ["Yes, citys is right", "Yes, cityes is right"], { hint: "Consonant then y.", why: "City ends in a consonant plus y, so it becomes cities.", tag: "plural.reason" })]),
+      Q(ord("Order the shades of cold from mildest to coldest.", ["cool", "chilly", "cold", "freezing"], { hint: "Think of a gentle chill first.", why: "Cool is mildest and freezing is the coldest.", tag: "synonym.shade" }), "synonyms", "apply", [
+        ord("Order the shades of hot from mildest to hottest.", ["warm", "hot", "boiling"], { hint: "Think of a gentle warmth first.", why: "Warm is mildest and boiling is hottest.", tag: "synonym.shade" })]),
+      Q(tf("Aloud and allowed are homophones.", true, { hint: "They sound the same.", why: "They sound the same but have different meanings.", tag: "homophone.def" }), "tricky", "apply", [
+        tf("Its and it's are homophones that mean exactly the same.", false, { hint: "One has an apostrophe.", why: "It's means it is. Its shows belonging.", tag: "homophone.def" })]),
+      Q(ord("Put the look, cover, write, check steps in order.", ["Look at the word", "Cover it", "Write it from memory", "Check it"], { hint: "Look before you cover.", why: "Look, cover, write, check.", tag: "strategy.order" }), "tricky", "apply", [
+        ord("Order these spelling steps.", ["Choose a tricky word", "Look carefully", "Cover and write", "Check and fix"], { hint: "Choose first.", why: "Choose, look, cover and write, then check.", tag: "strategy.order" })]),
+      Q(hot("Tap the silent letter in knee.", [["1️⃣", "k", 22, 50], ["2️⃣", "n", 50, 50], ["3️⃣", "e", 78, 50]], ["k"], { labels: true, hint: "It is not said aloud.", why: "The k in knee is silent.", tag: "silent.find" }), "tricky", "apply", [
+        hot("Tap the silent letter in lamb.", [["1️⃣", "l", 22, 50], ["2️⃣", "a", 50, 50], ["3️⃣", "b", 78, 50]], ["b"], { labels: true, hint: "It is not said aloud.", why: "The b in lamb is silent.", tag: "silent.find" })]),
     ],
   }),
 ];

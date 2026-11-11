@@ -1,0 +1,3273 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-photo-editing-and-truth",
+  "subject": "data-ai",
+  "title": "Photo Editing: Changing Pictures",
+  "summary": "Crop, resize, recolour and clone pictures, spot edited photos and make an honest poster.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Photo editing and truth",
+  "learning_objectives": [
+   "Explain how digital pictures are made of pixels and how crop, resize, recolour and clone change them",
+   "Spot clues that a picture may be edited",
+   "Edit honestly, keep originals and credit the maker"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing",
+    "text": "Select, use and combine a variety of software on digital devices to design and create digital content"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 online safety",
+    "text": "Use technology safely, respectfully and responsibly; recognise acceptable and unacceptable behaviour"
+   }
+  ],
+  "success_criteria": [
+   "I can explain pixels, crop, recolour and clone",
+   "I can spot clues of editing",
+   "I can make an honest poster that credits the maker"
+  ],
+  "real_life": "Editing Eid or Hunza holiday photos for a family album or school poster, and checking which photos online have been changed.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a computer use to store a picture?",
+    "hint": "Computers store everything as data.",
+    "explanation": "A digital picture is stored as numbers.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ink"
+     },
+     {
+      "id": "b",
+      "text": "Numbers"
+     },
+     {
+      "id": "c",
+      "text": "Wood"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does it mean to edit something?",
+    "hint": "Think about changing a story.",
+    "explanation": "To edit is to change.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To print it"
+     },
+     {
+      "id": "b",
+      "text": "To change it"
+     },
+     {
+      "id": "c",
+      "text": "To lose it"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 24 divided by 4?",
+    "hint": "4 times what is 24?",
+    "explanation": "24 / 4 = 6.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "images",
+   "kind": "learn",
+   "title": "How images change",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, photo detective!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we edit pictures, and how do we stay honest?",
+     "say": "Today we find out how pictures are made and changed. Can we always trust what a photo shows?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-photo-editing-and-truth-1-ab271d55.jpg",
+     "alt": "A dirt road leading toward snow-capped mountains under a deep blue sky, with a tree on the right",
+     "caption": "A mountain road. Every part of a digital photo is made of tiny squares.",
+     "credit": "Photo by Vinu T on Unsplash",
+     "say": "Zara found this mountain photo. Zoom in far enough and the picture turns into tiny squares."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Pixels"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pixel** is one tiny square of colour in a digital picture.",
+     "say": "A digital picture is a grid of tiny coloured squares. Each square is called a pixel."
+    },
+    {
+     "type": "explainer",
+     "title": "Zooming in",
+     "scenes": [
+      {
+       "caption": "Zoom.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "🔍",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "🟦",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara zooms in on the blue sky. She sees a few big squares."
+      },
+      {
+       "caption": "Many squares.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🟩",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "i",
+         "emoji": "🟨",
+         "x": 70,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "j",
+         "emoji": "🟫",
+         "x": 50,
+         "y": 65,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Each pixel has just one colour. Together, thousands of pixels make a smooth picture."
+      },
+      {
+       "caption": "Detail.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🖼️",
+         "x": 35,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "✨",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "more detail"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "more pixels"
+        }
+       ],
+       "say": "A photo with more pixels can show finer detail. A photo with few pixels looks blocky."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara zooms right in on a photo until she sees single coloured squares. What are they?",
+      "hint": "A picture is built from them.",
+      "explanation": "A digital picture is a grid of pixels.",
+      "skill_tag": "photo.pixel",
+      "options": [
+       {
+        "id": "a",
+        "text": "Pieces of glass"
+       },
+       {
+        "id": "b",
+        "text": "Pixels"
+       },
+       {
+        "id": "c",
+        "text": "Pages"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Crop and resize"
+    },
+    {
+     "type": "text",
+     "markdown": "To **crop** is to cut away the edges of a picture.",
+     "say": "Zara wants only the mountains. She can cut away the sky and the road. That is cropping."
+    },
+    {
+     "type": "text",
+     "markdown": "To **resize** is to make a picture bigger or smaller.",
+     "say": "She can also make the whole picture bigger or smaller. That is called resizing it."
+    },
+    {
+     "type": "explainer",
+     "title": "Crop and resize",
+     "scenes": [
+      {
+       "caption": "Crop.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🖼️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "frame"
+        },
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara drags a frame around the mountains. Everything outside the frame is cut away."
+      },
+      {
+       "caption": "Smaller.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🏔️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "smaller"
+        }
+       ],
+       "say": "Now she makes the cropped picture smaller. It fits on a postcard."
+      },
+      {
+       "caption": "Too big.",
+       "items": [
+        {
+         "id": "x",
+         "emoji": "🏔️",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "blurry"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "careful stretching"
+        }
+       ],
+       "say": "If she stretches a small picture very big, the pixels get blocky and blurry."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Cropping a photo adds new parts around its edges.",
+      "hint": "Which way does a crop go?",
+      "explanation": "A crop cuts parts away. It does not add anything.",
+      "skill_tag": "photo.crop_adds",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara edits a Hunza photo",
+     "asset": "clip-data-ai-class-4-photo-editing-and-truth-c7245b43.mp4",
+     "poster": "clip-data-ai-class-4-photo-editing-and-truth-c7245b43.webp",
+     "seconds": 75,
+     "transcript": "Zara has a photo from her family trip to Hunza. The sky looks grey. She zooms in. The picture is made of tiny coloured squares called pixels. She crops away the grey road. Now the mountains fill the picture. She makes the colours warmer. The sky turns a pale blue. She saves her edit as a new file. The original photo stays safe. A friend says, add a rainbow! But no rainbow was there that day. Zara says no. She writes, lightly edited by Zara, on her poster. She credits the photographer for a second photo. The poster is honest and fair.",
+     "caption": "Zara edits a family photo from Hunza and learns to say what she changed."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A digital picture is a grid of pixels",
+      "Crop cuts away edges",
+      "Resize changes the size, and a big stretch can look blurry"
+     ],
+     "say": "Let us remember. Pictures are made of pixels. We can crop and resize them."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pixel",
+       "meaning": "One tiny square of colour in a digital picture."
+      },
+      {
+       "term": "crop",
+       "meaning": "To cut away the edges of a picture."
+      },
+      {
+       "term": "resize",
+       "meaning": "To make a picture bigger or smaller."
+      },
+      {
+       "term": "digital picture",
+       "meaning": "A picture stored as numbers on a computer."
+      },
+      {
+       "term": "detail",
+       "meaning": "The small parts you can see in a picture."
+      },
+      {
+       "term": "blurry",
+       "meaning": "Not clear or sharp."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which photo shows more fine detail?",
+     "hint": "Think about the squares.",
+     "explanation": "More pixels means finer detail.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The one with fewer pixels"
+      },
+      {
+       "id": "b",
+       "text": "The one with a frame"
+      },
+      {
+       "id": "c",
+       "text": "The one with more pixels"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A very small picture stretched to poster size can look blurry.",
+     "hint": "The pixels get stretched.",
+     "explanation": "Stretching spreads the pixels out so it looks blocky.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which action cuts away the edges of a photo?",
+     "hint": "Think of a frame.",
+     "explanation": "To crop is to cut away the edges.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Recolour"
+      },
+      {
+       "id": "b",
+       "text": "Print"
+      },
+      {
+       "id": "c",
+       "text": "Crop"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is each tiny square in a digital picture called?",
+     "hint": "It has one colour.",
+     "explanation": "Each square of colour is a pixel.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A pebble"
+      },
+      {
+       "id": "b",
+       "text": "A pixel"
+      },
+      {
+       "id": "c",
+       "text": "A page"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recolour",
+   "kind": "try",
+   "title": "Recolour and clone",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Recolour and filters"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-photo-editing-and-truth-2-baa38349.jpg",
+     "alt": "A pink camellia flower with water droplets surrounded by dark green leaves and a wire fence",
+     "caption": "A pink flower with raindrops. Editing can make the colours warmer, cooler or brighter.",
+     "credit": "Photo by Laura Gilbert on Unsplash",
+     "say": "Zara's pink flower photo looks cool and blue-green. She can recolour it so it looks warmer."
+    },
+    {
+     "type": "text",
+     "markdown": "To **recolour** is to change colours. A **filter** changes the whole look in one go.",
+     "say": "To recolour is to change the colours in a picture. A filter changes many colours at once."
+    },
+    {
+     "type": "explainer",
+     "title": "Recolour a flower",
+     "scenes": [
+      {
+       "caption": "Dull.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🥶",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "cold"
+        }
+       ],
+       "say": "Zara sees that the flower looks a little dull and cold."
+      },
+      {
+       "caption": "Warmer.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "🌞",
+         "x": 72,
+         "y": 40,
+         "size": 3,
+         "anim": "float",
+         "label": "warm"
+        }
+       ],
+       "say": "She makes the colours warmer. The pink glows and the leaves look golden."
+      },
+      {
+       "caption": "Same flower.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "only colours"
+        }
+       ],
+       "say": "The flower is the same. Only the colours changed. A filter can do this in one click."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara paints the grey sky in her photo bright orange. What is this?",
+      "hint": "Colours change.",
+      "explanation": "Changing colours is recolouring.",
+      "skill_tag": "photo.recolour",
+      "options": [
+       {
+        "id": "a",
+        "text": "Cropping"
+       },
+       {
+        "id": "b",
+        "text": "Printing"
+       },
+       {
+        "id": "c",
+        "text": "Recolouring"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Clone and save a copy"
+    },
+    {
+     "type": "text",
+     "markdown": "The **clone** tool copies one part of a picture and pastes it somewhere else.",
+     "say": "The clone tool copies one part of a picture onto another place. Zara uses it to hide a bin."
+    },
+    {
+     "type": "text",
+     "markdown": "Keep the **original** safe. Edit a copy.",
+     "say": "She always saves a copy first. The **original** stays safe, so she can start again."
+    },
+    {
+     "type": "explainer",
+     "title": "Clone it away",
+     "scenes": [
+      {
+       "caption": "Copy.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🗑️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🌿",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Zara's photo has a bin on the grass. She copies a patch of clean grass."
+      },
+      {
+       "caption": "Paste.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌿",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🗑️",
+         "x": 72,
+         "y": 50,
+         "size": 2,
+         "anim": "float",
+         "label": "hidden"
+        }
+       ],
+       "say": "She pastes the grass over the bin. The bin seems to vanish."
+      },
+      {
+       "caption": "Two files.",
+       "items": [
+        {
+         "id": "o",
+         "emoji": "📁",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "📁",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "copy"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "keep the original"
+        }
+       ],
+       "say": "Her edit is saved as a new file. The original photo is untouched."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the edits",
+     "goal": "Move the 6 edits into Only improves the look or Changes the story.",
+     "emoji": "🖌️",
+     "count": 6,
+     "zones": [
+      "Only improves the look",
+      "Changes the story"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Edit a copy",
+     "materials": [
+      "A photo you took",
+      "A photo editing app or website, with a grown-up"
+     ],
+     "instructions": [
+      "Save a copy of your photo first.",
+      "Crop it, then try one recolour or filter.",
+      "Compare it with the original. Did the edit help or change the story?"
+     ],
+     "say": "Now you try. Ask a grown-up to help you edit one of your own photos."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The clone tool copies part of a picture to another place.",
+      "hint": "Copy and paste.",
+      "explanation": "Cloning copies one part and pastes it elsewhere.",
+      "skill_tag": "photo.clone",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Recolour and filters change how colours look",
+      "Clone copies one part to another place",
+      "Edit a copy and keep the original"
+     ],
+     "say": "Let us remember. We can recolour, filter and clone. We always edit a copy."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "recolour",
+       "meaning": "To change the colours in a picture."
+      },
+      {
+       "term": "filter",
+       "meaning": "A ready-made edit that changes the whole look of a picture."
+      },
+      {
+       "term": "clone",
+       "meaning": "To copy part of a picture and paste it somewhere else."
+      },
+      {
+       "term": "original",
+       "meaning": "The first, unchanged version of a picture."
+      },
+      {
+       "term": "edit",
+       "meaning": "To change something."
+      },
+      {
+       "term": "warm",
+       "meaning": "Having more yellow and orange."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Zara keeps her original photo and edits a copy. Why?",
+     "hint": "Think about going back.",
+     "explanation": "A copy lets her start again and compare.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Originals cannot be seen"
+      },
+      {
+       "id": "b",
+       "text": "She can go back and compare"
+      },
+      {
+       "id": "c",
+       "text": "Copies are always smaller"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A filter changes the whole look of a picture in one click.",
+     "hint": "It is ready-made.",
+     "explanation": "A filter changes many colours at once.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool can hide a bin by copying clean grass over it?",
+     "hint": "It copies and pastes.",
+     "explanation": "The clone tool copies one part to another place.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Crop"
+      },
+      {
+       "id": "b",
+       "text": "Clone"
+      },
+      {
+       "id": "c",
+       "text": "Resize"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "edited",
+   "kind": "play",
+   "title": "Edited or not?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Clues in a picture"
+    },
+    {
+     "type": "text",
+     "markdown": "A picture can be **edited** and still look real.",
+     "say": "Many pictures online have been edited. Some edits are small. Some change what really happened."
+    },
+    {
+     "type": "explainer",
+     "title": "Spot the clues",
+     "scenes": [
+      {
+       "caption": "Shadows.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🧒",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "different shadow"
+        }
+       ],
+       "say": "A photo shows a boy with a shadow pointing left. The tree shadow points right."
+      },
+      {
+       "caption": "Fuzzy edge.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🧍",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "glow line"
+        }
+       ],
+       "say": "Zara sees a fuzzy glowing line around one person. Something was pasted in."
+      },
+      {
+       "caption": "Twin clouds.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☁️",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "☁️",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "copied?"
+        }
+       ],
+       "say": "Two clouds look exactly the same, side by side. That may be cloning."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara sees one person with a fuzzy glowing outline in a photo. What might that mean?",
+      "hint": "Think about cut and paste.",
+      "explanation": "A rough, glowing outline can show a pasted-in object.",
+      "skill_tag": "photo.clue_outline",
+      "options": [
+       {
+        "id": "a",
+        "text": "The camera is broken"
+       },
+       {
+        "id": "b",
+        "text": "The photo is very old"
+       },
+       {
+        "id": "c",
+        "text": "That person may have been pasted in"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Is it evidence?"
+    },
+    {
+     "type": "text",
+     "markdown": "A photo is only good **evidence** if we trust where it came from.",
+     "say": "A photo can be used as evidence, but only if we know where it came from. Ask who took it."
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then find the edited detail.",
+     "say": "First a memory game. Then tap the detail that looks edited."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Edit tools and clues",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "✂️",
+      "🎨",
+      "🔍",
+      "🖼️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the detail in this photo that looks edited.",
+      "hint": "Look for a sharp, glowing outline.",
+      "explanation": "A hard glowing edge suggests something was pasted in.",
+      "skill_tag": "photo.tap_edit",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🏔️",
+         "label": "Mountains in the distance",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "🎈",
+         "label": "Balloon with a hard glowing edge",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🌳",
+         "label": "A tree with a soft shadow",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h2"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Edited pictures can look real",
+      "Clues: odd shadows, glowing edges, copied parts",
+      "Ask who made the picture and where it came from"
+     ],
+     "say": "Let us remember. Edited pictures can look real. Check clues and ask where a picture came from."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "edited",
+       "meaning": "Changed using a program after it was taken."
+      },
+      {
+       "term": "evidence",
+       "meaning": "Something that helps show what is true."
+      },
+      {
+       "term": "clue",
+       "meaning": "A small detail that helps you work something out."
+      },
+      {
+       "term": "shadow",
+       "meaning": "A dark shape made when light is blocked."
+      },
+      {
+       "term": "pasted",
+       "meaning": "Copied from one place and put in another."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a clue that a photo might be edited?",
+     "hint": "One sun, one direction.",
+     "explanation": "Shadows from one sun should point the same way.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A date on the file"
+      },
+      {
+       "id": "b",
+       "text": "Two shadows that point different ways"
+      },
+      {
+       "id": "c",
+       "text": "A colour photo"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A photo that looks real cannot be edited.",
+     "hint": "Good edits are hard to see.",
+     "explanation": "Edited pictures can look completely real.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you ask about a photo used as evidence?",
+     "hint": "Think about trust.",
+     "explanation": "We trust a photo more if we know its source.",
+     "options": [
+      {
+       "id": "a",
+       "text": "How big is the file?"
+      },
+      {
+       "id": "b",
+       "text": "What is the filename?"
+      },
+      {
+       "id": "c",
+       "text": "Where did it come from?"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "poster",
+   "kind": "use",
+   "title": "Make an honest poster",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Choose and edit honestly"
+    },
+    {
+     "type": "text",
+     "markdown": "An honest poster tells the truth about its pictures.",
+     "say": "Zara makes a poster about her Hunza trip. She picks a photo and thinks about the rules."
+    },
+    {
+     "type": "text",
+     "markdown": "Use your own photos or ask **permission** first.",
+     "say": "She only uses photos she has permission to use. Her own photos are the easiest choice."
+    },
+    {
+     "type": "text",
+     "markdown": "Small fixes are fine. Do not mislead.",
+     "say": "She crops and brightens her photo lightly. Small fixes do not change the story."
+    },
+    {
+     "type": "explainer",
+     "title": "Zara's honest edit",
+     "scenes": [
+      {
+       "caption": "Her photo.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "📷",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "her own photo"
+        }
+       ],
+       "say": "Zara picks a photo she took herself in Hunza. She has full permission."
+      },
+      {
+       "caption": "Light edits.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "✂️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔆",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "brighter"
+        }
+       ],
+       "say": "She crops to the valley and makes it a little brighter. The scene is still true."
+      },
+      {
+       "caption": "No fake rainbow.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌈",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "never there"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "honest"
+        }
+       ],
+       "say": "She does not add a rainbow that was never there. That would mislead people."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan an honest poster",
+     "materials": [
+      "Paper and pens",
+      "Two or three photos you may use"
+     ],
+     "instructions": [
+      "Choose photos you took or have permission to use.",
+      "Write a caption that says what each picture shows.",
+      "Note any edits, such as cropped or brightened."
+     ],
+     "say": "Now you try. Plan a poster with a grown-up and check each picture."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of making an honest poster in order.",
+      "hint": "Permission comes first.",
+      "explanation": "Choose legally, edit lightly, say what changed, then credit.",
+      "skill_tag": "photo.poster_steps",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Add a caption saying what you changed"
+       },
+       {
+        "id": "i4",
+        "text": "Credit the photographer"
+       },
+       {
+        "id": "i2",
+        "text": "Edit it lightly"
+       },
+       {
+        "id": "i1",
+        "text": "Pick a photo you have permission to use"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Credit and copyright"
+    },
+    {
+     "type": "text",
+     "markdown": "**Copyright** means the maker owns the picture. Give **credit** when you use it.",
+     "say": "Every picture has a maker who owns it. That ownership is called copyright. We credit the maker."
+    },
+    {
+     "type": "explainer",
+     "title": "Credit the maker",
+     "scenes": [
+      {
+       "caption": "Owned.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📷",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "©️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "copyright"
+        }
+       ],
+       "say": "Zara finds a lovely photo online. The photographer owns it."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "may I?"
+        }
+       ],
+       "say": "She checks if she is allowed to use it. She asks for permission when needed."
+      },
+      {
+       "caption": "Credit.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📝",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "photo by"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "credit given"
+        }
+       ],
+       "say": "On her poster she writes the maker's name and where the photo came from."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "An honest poster says when a picture has been edited.",
+      "hint": "Think about being truthful.",
+      "explanation": "Saying what you changed keeps a poster honest.",
+      "skill_tag": "photo.say_edited",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Use your own photos or ask permission",
+      "Light edits are fine, misleading edits are not",
+      "Credit the maker and say when you edited"
+     ],
+     "say": "Let us remember. Use pictures fairly, edit lightly and say what you changed."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "permission",
+       "meaning": "Being allowed to do something."
+      },
+      {
+       "term": "copyright",
+       "meaning": "The rule that says the maker owns their work."
+      },
+      {
+       "term": "credit",
+       "meaning": "A note saying who made something."
+      },
+      {
+       "term": "honest",
+       "meaning": "Telling the truth."
+      },
+      {
+       "term": "mislead",
+       "meaning": "To make someone believe something that is not true."
+      },
+      {
+       "term": "poster",
+       "meaning": "A large printed page with pictures and words."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the easiest kind of photo to use on a poster?",
+     "hint": "You own it.",
+     "explanation": "Your own photos need no one else's permission.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Any photo from a search"
+      },
+      {
+       "id": "b",
+       "text": "A photo from a stranger"
+      },
+      {
+       "id": "c",
+       "text": "One you took yourself"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A credit line says who made a picture.",
+     "hint": "Think of a name label.",
+     "explanation": "A credit names the maker.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Zara adds a rainbow that was never there. Is that honest?",
+     "hint": "Was it really there?",
+     "explanation": "Adding things that were not there misleads people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes, rainbows are pretty"
+      },
+      {
+       "id": "b",
+       "text": "Yes, nobody checks"
+      },
+      {
+       "id": "c",
+       "text": "No, it misleads people"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a pixel in a digital picture?",
+    "hint": "Zoom in far enough.",
+    "explanation": "A pixel is one tiny coloured square.",
+    "skill_tag": "photo.pixel_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A type of camera"
+     },
+     {
+      "id": "b",
+      "text": "A picture frame"
+     },
+     {
+      "id": "c",
+      "text": "One tiny square of colour"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does it mean to crop a photo?",
+    "hint": "Think of a frame.",
+    "explanation": "To crop is to cut away the edges.",
+    "skill_tag": "photo.crop_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Change its colours"
+     },
+     {
+      "id": "b",
+      "text": "Make it black and white"
+     },
+     {
+      "id": "c",
+      "text": "Cut away the edges"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "More pixels in a photo usually means more detail.",
+    "hint": "Think about the squares.",
+    "explanation": "More pixels show finer detail.",
+    "skill_tag": "photo.more_pixels",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "images",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each action to what it does.",
+    "hint": "Think about each action.",
+    "explanation": "Each action has its own job.",
+    "skill_tag": "photo.action_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Crop"
+     },
+     {
+      "id": "l2",
+      "text": "Resize"
+     },
+     {
+      "id": "l3",
+      "text": "Save a copy"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Makes the picture bigger or smaller"
+     },
+     {
+      "id": "r3",
+      "text": "Keeps the original safe"
+     },
+     {
+      "id": "r1",
+      "text": "Cuts away the edges"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "images",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the picture that is made of pixels.",
+    "hint": "Which one is digital?",
+    "explanation": "A photo on a screen is made of pixels.",
+    "skill_tag": "photo.tap_pixels",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📱",
+       "label": "Photo on a tablet screen",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🖼️",
+       "label": "Oil painting on canvas",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Pebble on a beach",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Hamza says it is safest to save an edited photo over the original. Is he right?",
+    "hint": "Think about starting again.",
+    "explanation": "A saved original lets you go back and compare.",
+    "skill_tag": "photo.reason_original",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a copy takes up too much room"
+     },
+     {
+      "id": "b",
+      "text": "No. Save a copy so the original is kept"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the original is not needed"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "images",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Zara stretches a small photo to fill a huge poster. What may happen?",
+    "hint": "The pixels get stretched.",
+    "explanation": "Stretching spreads pixels out, so it looks blurry.",
+    "skill_tag": "photo.stretch",
+    "options": [
+     {
+      "id": "a",
+      "text": "It becomes sharper"
+     },
+     {
+      "id": "b",
+      "text": "It gains new detail"
+     },
+     {
+      "id": "c",
+      "text": "It may look blurry or blocky"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "images",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about digital images.",
+    "hint": "Think about the squares and the frame.",
+    "explanation": "Pictures are made of pixels, and to crop is to cut away edges.",
+    "skill_tag": "photo.fill_images",
+    "points": 2,
+    "text": "A digital image is made of {b1}. To {b2} a picture is to cut away its edges.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "pebbles"
+       },
+       {
+        "id": "b",
+        "text": "pixels"
+       },
+       {
+        "id": "c",
+        "text": "pages"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bake"
+       },
+       {
+        "id": "b",
+        "text": "fold"
+       },
+       {
+        "id": "c",
+        "text": "crop"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "images",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps of editing a photo safely in order.",
+    "hint": "Copy first.",
+    "explanation": "Copy, edit, compare, then say what changed.",
+    "skill_tag": "photo.edit_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Compare with the original"
+     },
+     {
+      "id": "i4",
+      "text": "Say what you changed"
+     },
+     {
+      "id": "i2",
+      "text": "Make your edit"
+     },
+     {
+      "id": "i1",
+      "text": "Save a copy of the original"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "What does the clone tool do?",
+    "hint": "Think copy and paste.",
+    "explanation": "Clone copies part of a picture to somewhere else.",
+    "skill_tag": "photo.clone_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turns the photo into sound"
+     },
+     {
+      "id": "b",
+      "text": "Copies one part of a picture onto another place"
+     },
+     {
+      "id": "c",
+      "text": "Deletes the whole photo"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about recolouring.",
+    "hint": "Think about colours.",
+    "explanation": "Recolour changes colours, and a filter changes the whole look.",
+    "skill_tag": "photo.fill_recolour",
+    "points": 2,
+    "text": "To {b1} a photo is to change its colours. A {b2} changes the whole look in one click.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "relabel"
+       },
+       {
+        "id": "b",
+        "text": "recolour"
+       },
+       {
+        "id": "c",
+        "text": "recycle"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fence"
+       },
+       {
+        "id": "b",
+        "text": "flag"
+       },
+       {
+        "id": "c",
+        "text": "filter"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "recolour",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "A filter makes a photo look warmer and more orange. What has changed?",
+    "hint": "Think about what a filter touches.",
+    "explanation": "A filter changes how colours look.",
+    "skill_tag": "photo.filter_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "The people in the photo"
+     },
+     {
+      "id": "b",
+      "text": "The place where it was taken"
+     },
+     {
+      "id": "c",
+      "text": "The colours, not what is in the photo"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A photo is 12 squares wide. Zara crops 2 squares off each side. Slide to show the new width.",
+    "hint": "Take off 2 twice.",
+    "explanation": "12 - 2 - 2 = 8 squares.",
+    "skill_tag": "photo.crop_width",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "recolour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "Recolouring a photo can change how a place looks without changing the place.",
+    "hint": "Think about the flower.",
+    "explanation": "The edit changes the picture, not the real place.",
+    "skill_tag": "photo.recolour_place",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Maryam says one edit is always enough, so she never checks the result. Is she right?",
+    "hint": "Think about comparing.",
+    "explanation": "Comparing shows whether the edit helped or harmed.",
+    "skill_tag": "photo.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the first edit is always perfect"
+     },
+     {
+      "id": "b",
+      "text": "No. Always look at the result and compare with the original"
+     },
+     {
+      "id": "c",
+      "text": "Yes, checking wastes time"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two are clues that a photo may have been edited? Pick two.",
+    "hint": "Look for odd details.",
+    "explanation": "Odd shadows and rough edges can show editing.",
+    "skill_tag": "photo.clues_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Blurry edges around one object"
+     },
+     {
+      "id": "b",
+      "text": "The photo is in colour"
+     },
+     {
+      "id": "c",
+      "text": "The photo has a date"
+     },
+     {
+      "id": "d",
+      "text": "Shadows that point different ways"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "Zara has 24 holiday photos. She edits one third of them. How many does she edit?",
+    "hint": "24 divided by 3.",
+    "explanation": "24 / 3 = 8 photos.",
+    "skill_tag": "photo.third",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "edited",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Zara finds a photo of a snowman standing in a hot desert. What should she think first?",
+    "hint": "Is that likely?",
+    "explanation": "An unlikely scene is a clue it may be edited.",
+    "skill_tag": "photo.snowman",
+    "options": [
+     {
+      "id": "a",
+      "text": "It must be real"
+     },
+     {
+      "id": "b",
+      "text": "It may be edited or made up"
+     },
+     {
+      "id": "c",
+      "text": "It must be from the news"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says any recoloured photo is a lie. Is he right?",
+    "hint": "Think about the aim of the edit.",
+    "explanation": "Honest editing does not mislead.",
+    "skill_tag": "photo.reason_lie",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every edit is a lie"
+     },
+     {
+      "id": "b",
+      "text": "No. It is honest if you say you changed it and it does not mislead"
+     },
+     {
+      "id": "c",
+      "text": "Yes, colours are always true"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Idris says every photo he sees online is unedited. Is he right?",
+    "hint": "Think about filters.",
+    "explanation": "Many photos online are edited.",
+    "skill_tag": "photo.reason_online",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, websites check every photo"
+     },
+     {
+      "id": "b",
+      "text": "No. Many online photos are edited or filtered"
+     },
+     {
+      "id": "c",
+      "text": "Yes, online photos are always raw"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a filter can never mislead because it only changes colours. Is she right?",
+    "hint": "Think about a dirty sea.",
+    "explanation": "A filter can change how true a scene seems.",
+    "skill_tag": "photo.reason_filter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, filters cannot change a picture at all"
+     },
+     {
+      "id": "b",
+      "text": "No. Colour changes can hide the truth, such as making dirty water look clean"
+     },
+     {
+      "id": "c",
+      "text": "Yes, colours never mislead"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each edit to the question it raises.",
+    "hint": "Think about what each edit hides.",
+    "explanation": "Each edit changes what we are shown.",
+    "skill_tag": "photo.edit_question",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Crop out a bin"
+     },
+     {
+      "id": "l2",
+      "text": "Recolour the sky"
+     },
+     {
+      "id": "l3",
+      "text": "Clone a person away"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Is it still the real weather?"
+     },
+     {
+      "id": "r1",
+      "text": "Is the full scene still shown?"
+     },
+     {
+      "id": "r3",
+      "text": "Was someone really there?"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "edited",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the clue that this photo has been edited.",
+    "hint": "One sun, one direction.",
+    "explanation": "Shadows from one sun should match.",
+    "skill_tag": "photo.tap_shadow",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☀️",
+       "label": "Shadows pointing left and right",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌳",
+       "label": "A tree with a normal shadow",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏔️",
+       "label": "Mountains in the distance",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of sharing an edited poster picture in order.",
+    "hint": "Permission first.",
+    "explanation": "Choose legally, edit, explain, credit.",
+    "skill_tag": "photo.share_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Edit it lightly"
+     },
+     {
+      "id": "i4",
+      "text": "Credit the photographer"
+     },
+     {
+      "id": "i3",
+      "text": "Add a caption saying what you changed"
+     },
+     {
+      "id": "i1",
+      "text": "Pick a photo you may use"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "poster",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two things should an honest poster include? Pick two.",
+    "hint": "Think about honesty and fairness.",
+    "explanation": "Credit and edit notes keep a poster honest.",
+    "skill_tag": "photo.poster_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "A note when a photo was edited"
+     },
+     {
+      "id": "b",
+      "text": "A hidden edit"
+     },
+     {
+      "id": "c",
+      "text": "A copied logo"
+     },
+     {
+      "id": "d",
+      "text": "A credit for the photographer"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "poster",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Hamza says he can edit his friend's photo and share it without asking. Is he right?",
+    "hint": "Think about the person in it.",
+    "explanation": "We ask before editing and sharing others' photos.",
+    "skill_tag": "photo.reason_ask",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, editing makes it his"
+     },
+     {
+      "id": "b",
+      "text": "No. Ask permission first, especially if the photo shows someone"
+     },
+     {
+      "id": "c",
+      "text": "Yes, photos belong to everyone"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Zara says she can copy any picture from a website onto her poster. Is she right?",
+    "hint": "Think about copyright.",
+    "explanation": "The maker owns their picture.",
+    "skill_tag": "photo.reason_copy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a school poster never needs permission"
+     },
+     {
+      "id": "b",
+      "text": "No. Pictures have owners, so check you may use them"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all online pictures are free"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Maryam says cropping cannot change the story because nothing is added. Is she right?",
+    "hint": "Think about what is left out.",
+    "explanation": "A crop can leave out important context.",
+    "skill_tag": "photo.reason_crop",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only adding things matters"
+     },
+     {
+      "id": "b",
+      "text": "No. Cutting parts out can change what a photo seems to show"
+     },
+     {
+      "id": "c",
+      "text": "Yes, crops never change meaning"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "A poster has 3 photos. Each has 1 credit line and 1 edit note. How many lines in all?",
+    "hint": "2 lines for each photo.",
+    "explanation": "3 x 2 = 6 lines.",
+    "skill_tag": "photo.lines",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "poster",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "Zara's class makes 5 posters. Each uses 2 photos. Slide to show how many photos in all.",
+    "hint": "5 groups of 2.",
+    "explanation": "5 x 2 = 10 photos.",
+    "skill_tag": "photo.poster_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "poster",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A digital photo is made from a grid of what?",
+    "hint": "Zoom in far enough.",
+    "explanation": "A digital picture is a grid of pixels.",
+    "skill_tag": "photo.pixel_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Thin glass layers"
+     },
+     {
+      "id": "b",
+      "text": "Tiny coloured pixels"
+     },
+     {
+      "id": "c",
+      "text": "Paper squares"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Zara removes the empty sky at the top of her photo. What did she do?",
+    "hint": "She cut away part.",
+    "explanation": "Cutting away the edges is cropping.",
+    "skill_tag": "photo.crop_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "She cloned it"
+     },
+     {
+      "id": "b",
+      "text": "She cropped it"
+     },
+     {
+      "id": "c",
+      "text": "She recoloured it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A photo with only a few pixels shows lots of fine detail.",
+    "hint": "Think about the squares.",
+    "explanation": "Few pixels look blocky and show little detail.",
+    "skill_tag": "photo.more_pixels",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "images",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "photo.action_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pixel"
+     },
+     {
+      "id": "l2",
+      "text": "Digital image"
+     },
+     {
+      "id": "l3",
+      "text": "Edit"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "To change a picture"
+     },
+     {
+      "id": "r1",
+      "text": "One tiny square of colour"
+     },
+     {
+      "id": "r2",
+      "text": "A picture made of pixels"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "images",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the one that stores a digital image.",
+    "hint": "Which one is digital?",
+    "explanation": "A camera roll stores digital images.",
+    "skill_tag": "photo.tap_pixels",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📷",
+       "label": "Phone camera roll",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪑",
+       "label": "Wooden chair",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "Real apple",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "images",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Maryam says she can delete the original once a photo is edited. Is she right?",
+    "hint": "Think about starting again.",
+    "explanation": "A kept original lets you go back.",
+    "skill_tag": "photo.reason_original",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, originals are useless"
+     },
+     {
+      "id": "b",
+      "text": "No. Keep the original so you can compare or start again"
+     },
+     {
+      "id": "c",
+      "text": "Yes, edits can never be undone anyway"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "images",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A tiny photo is stretched to four times its width. What is likely?",
+    "hint": "The pixels get stretched.",
+    "explanation": "Stretching makes pixels bigger and blurrier.",
+    "skill_tag": "photo.stretch",
+    "options": [
+     {
+      "id": "a",
+      "text": "It looks clearer"
+     },
+     {
+      "id": "b",
+      "text": "It looks blurry or blocky"
+     },
+     {
+      "id": "c",
+      "text": "The pixels disappear"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "images",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about size.",
+    "hint": "Think about the size.",
+    "explanation": "Changing the size is resizing, and stretching can blur.",
+    "skill_tag": "photo.fill_images",
+    "points": 2,
+    "text": "To make a photo bigger or smaller is to {b1} it. A big stretch can make it {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wrap"
+       },
+       {
+        "id": "b",
+        "text": "resize"
+       },
+       {
+        "id": "c",
+        "text": "taste"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "tasty"
+       },
+       {
+        "id": "b",
+        "text": "round"
+       },
+       {
+        "id": "c",
+        "text": "blurry"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "images",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these steps for fixing a dark photo in order.",
+    "hint": "Open a copy first.",
+    "explanation": "Open a copy, adjust, check, then save.",
+    "skill_tag": "photo.edit_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Raise the brightness a little"
+     },
+     {
+      "id": "i3",
+      "text": "Look at the result"
+     },
+     {
+      "id": "i4",
+      "text": "Save it with a new name"
+     },
+     {
+      "id": "i1",
+      "text": "Open a copy"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Zara hides a bin by copying nearby grass over it. Which tool is this?",
+    "hint": "She copied grass over it.",
+    "explanation": "Copying one part onto another is cloning.",
+    "skill_tag": "photo.clone_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Crop"
+     },
+     {
+      "id": "b",
+      "text": "Clone"
+     },
+     {
+      "id": "c",
+      "text": "Resize"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about cloning.",
+    "hint": "Think copy and paste.",
+    "explanation": "Clone copies a part and puts it somewhere different.",
+    "skill_tag": "photo.fill_recolour",
+    "points": 2,
+    "text": "The clone tool {b1} part of a picture and puts it in a {b2} place.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "eats"
+       },
+       {
+        "id": "b",
+        "text": "counts"
+       },
+       {
+        "id": "c",
+        "text": "copies"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "silent"
+       },
+       {
+        "id": "b",
+        "text": "different"
+       },
+       {
+        "id": "c",
+        "text": "hungry"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "recolour",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Zara adds a black and white filter. What does she change?",
+    "hint": "Think about what a filter touches.",
+    "explanation": "A filter changes colours, not the place.",
+    "skill_tag": "photo.filter_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "What really happened"
+     },
+     {
+      "id": "b",
+      "text": "Only how the colours look"
+     },
+     {
+      "id": "c",
+      "text": "Where the photo was taken"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A photo is 10 squares wide. Maryam crops 3 squares off each side. Slide to show the new width.",
+    "hint": "Take off 3 twice.",
+    "explanation": "10 - 3 - 3 = 4 squares.",
+    "skill_tag": "photo.crop_width",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "recolour",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "A filter changes the real place where a photo was taken.",
+    "hint": "Think about the flower.",
+    "explanation": "A filter changes only the picture.",
+    "skill_tag": "photo.recolour_place",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "recolour",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Idris says an edit cannot go wrong, so he skips comparing it. Is he right?",
+    "hint": "Think about comparing.",
+    "explanation": "Edits can go wrong, so we compare.",
+    "skill_tag": "photo.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, originals do not matter"
+     },
+     {
+      "id": "b",
+      "text": "No. Comparing shows whether the edit helped or harmed"
+     },
+     {
+      "id": "c",
+      "text": "Yes, edits never go wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recolour",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two clues suggest a picture was changed? Pick two.",
+    "hint": "Look for odd details.",
+    "explanation": "Repeated parts and glowing outlines suggest editing.",
+    "skill_tag": "photo.clues_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "The picture is a JPEG file"
+     },
+     {
+      "id": "b",
+      "text": "The picture has a frame"
+     },
+     {
+      "id": "c",
+      "text": "A glowing outline around a person"
+     },
+     {
+      "id": "d",
+      "text": "Two identical clouds side by side"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "Idris has 30 photos and edits one fifth of them. How many does he edit?",
+    "hint": "30 divided by 5.",
+    "explanation": "30 / 5 = 6 photos.",
+    "skill_tag": "photo.third",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "edited",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "A photo shows a cow flying over a school. What should you think first?",
+    "hint": "Is that likely?",
+    "explanation": "An impossible scene is a clue it was edited.",
+    "skill_tag": "photo.snowman",
+    "options": [
+     {
+      "id": "a",
+      "text": "It must be real"
+     },
+     {
+      "id": "b",
+      "text": "It may be edited or made up"
+     },
+     {
+      "id": "c",
+      "text": "It is certainly a news photo"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hana says brightening a dark family photo is always cheating. Is she right?",
+    "hint": "Think about the aim of the edit.",
+    "explanation": "Fixing light does not change the story.",
+    "skill_tag": "photo.reason_lie",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only cameras may fix photos"
+     },
+     {
+      "id": "b",
+      "text": "No. Small fixes that do not change the story are fine"
+     },
+     {
+      "id": "c",
+      "text": "Yes, any change is cheating"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Hira says a photo on a serious-looking website cannot be edited. Is she right?",
+    "hint": "Think about filters.",
+    "explanation": "Any photo can be edited.",
+    "skill_tag": "photo.reason_online",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, those sites never edit"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only drawings can be edited"
+     },
+     {
+      "id": "c",
+      "text": "No. Any photo can be edited, so check where it came from"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a filter that makes a dirty sea look clean is harmless. Is she right?",
+    "hint": "Think about a dirty sea.",
+    "explanation": "A filter can hide the truth.",
+    "skill_tag": "photo.reason_filter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the sea is always clean"
+     },
+     {
+      "id": "b",
+      "text": "No. It could mislead people about the sea"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a filter is harmless"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "edited",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each edit with its honest label.",
+    "hint": "Think about what to tell people.",
+    "explanation": "A label says what was changed.",
+    "skill_tag": "photo.edit_question",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Brightened a dark photo"
+     },
+     {
+      "id": "l2",
+      "text": "Added a filter"
+     },
+     {
+      "id": "l3",
+      "text": "Cloned a person out"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Filter used"
+     },
+     {
+      "id": "r1",
+      "text": "Lightly edited"
+     },
+     {
+      "id": "r3",
+      "text": "Changed: person removed"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "edited",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the detail that looks edited.",
+    "hint": "Look for rough edges.",
+    "explanation": "A hard glowing outline suggests pasting.",
+    "skill_tag": "photo.tap_shadow",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🚗",
+       "label": "A car with a clear shadow",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌤️",
+       "label": "Soft natural clouds",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧍",
+       "label": "A person with a hard glowing outline",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "edited",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for sharing an edited photo in order.",
+    "hint": "Think before sharing.",
+    "explanation": "Check truth, note edits, ask permission, then share.",
+    "skill_tag": "photo.share_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add a note that it was edited"
+     },
+     {
+      "id": "i4",
+      "text": "Share it"
+     },
+     {
+      "id": "i3",
+      "text": "Ask permission if it shows someone"
+     },
+     {
+      "id": "i1",
+      "text": "Decide if it still tells the truth"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "poster",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two are good habits when using an online picture? Pick two.",
+    "hint": "Think about the maker.",
+    "explanation": "Check permission and credit the source.",
+    "skill_tag": "photo.poster_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Say where it came from"
+     },
+     {
+      "id": "b",
+      "text": "Pretend you took it"
+     },
+     {
+      "id": "c",
+      "text": "Remove the maker's name"
+     },
+     {
+      "id": "d",
+      "text": "Check you are allowed to use it"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "poster",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Sana says she can post a funny edit of a classmate. Is she right?",
+    "hint": "Think about the person in it.",
+    "explanation": "We ask first to be kind.",
+    "skill_tag": "photo.reason_ask",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, funny is always fine"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody minds"
+     },
+     {
+      "id": "c",
+      "text": "No. An edit could upset them, so ask first"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Idris says an image on a search page is free because it is easy to save. Is he right?",
+    "hint": "Think about copyright.",
+    "explanation": "Ownership stays with the maker.",
+    "skill_tag": "photo.reason_copy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, saving makes it his"
+     },
+     {
+      "id": "b",
+      "text": "Yes, search engines own them all"
+     },
+     {
+      "id": "c",
+      "text": "No. Easy to save does not mean free to use"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Omar says cutting half a photo away is always harmless. Is he right?",
+    "hint": "Think about what is left out.",
+    "explanation": "Removing parts can change the story.",
+    "skill_tag": "photo.reason_crop",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always harmless"
+     },
+     {
+      "id": "b",
+      "text": "No. A crop can leave out important context"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody notices crops"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poster",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "A poster has 4 photos. Each has 1 credit line and 1 edit note. How many lines in all?",
+    "hint": "2 lines for each photo.",
+    "explanation": "4 x 2 = 8 lines.",
+    "skill_tag": "photo.lines",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "poster",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "Maryam's group makes 4 posters. Each uses 3 photos. Slide to show how many photos in all.",
+    "hint": "4 groups of 3.",
+    "explanation": "4 x 3 = 12 photos.",
+    "skill_tag": "photo.poster_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "poster",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "title": "Zara finds shapes in the mosque",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "Shapes on a walk.",
+   "say": "Zara goes for a walk with her brother. She spots shapes everywhere.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "s",
+     "emoji": "🔷",
+     "x": 72,
+     "y": 40,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "A cube, a sphere, a cone.",
+   "say": "A dice is a cube. A ball is a sphere. A party hat is a cone.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🎲",
+     "label": "cube",
+     "x": 22,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "b",
+     "emoji": "⚽",
+     "label": "sphere",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "c",
+     "emoji": "🍦",
+     "label": "cone",
+     "x": 78,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Tile pattern.",
+   "say": "At the mosque there is a tile pattern. Squares and triangles repeat.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "🕌",
+     "label": "mosque",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "A mirror line.",
+   "say": "Fold the star down the middle. Both halves match. That is symmetry!",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "⭐",
+     "label": "mirror line",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "A robot facing right.",
+   "say": "Zara's brother has a toy robot. It faces right.",
+   "items": [
+    {
+     "id": "r",
+     "prop": {
+      "kind": "robot_grid",
+      "col": 0,
+      "row": 0,
+      "facing": "right"
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "A quarter turn.",
+   "say": "A quarter turn to the right. Now the robot faces down.",
+   "items": [
+    {
+     "id": "r",
+     "prop": {
+      "kind": "robot_grid",
+      "col": 0,
+      "row": 0,
+      "facing": "down"
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "A half turn.",
+   "say": "Another quarter turn makes a half turn. It faces left!",
+   "items": [
+    {
+     "id": "r",
+     "prop": {
+      "kind": "robot_grid",
+      "col": 0,
+      "row": 0,
+      "facing": "left"
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Zara!",
+   "say": "Shapes, symmetry and turns are everywhere. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "h",
+     "emoji": "⭐",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "title": "The tall jug and the wide jug",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "A small bakery.",
+   "say": "Baker Imran has a small shop. Today he makes milk bread.",
+   "items": [
+    {
+     "id": "b",
+     "emoji": "👨‍🍳",
+     "label": "Imran",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "o",
+     "emoji": "🍞",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Weigh the flour.",
+   "say": "First he weighs the flour. One kilogram is one thousand grams.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "⚖️",
+     "label": "balance",
+     "x": 35,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    },
+    {
+     "id": "f",
+     "emoji": "🌾",
+     "label": "1 kg",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "The heavier side goes down.",
+   "say": "The heavier side goes down. When they match, it is just right.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "⚖️",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Two jugs of milk.",
+   "say": "Now the milk. Imran has a tall jug and a wide jug.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🥛",
+     "label": "tall",
+     "x": 30,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "w",
+     "emoji": "🫙",
+     "label": "wide",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Which holds more?",
+   "say": "Which one holds more? It looks like the tall one!",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🥛",
+     "label": "tall",
+     "x": 30,
+     "y": 46,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "w",
+     "emoji": "🫙",
+     "label": "wide",
+     "x": 70,
+     "y": 46,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Pour the tall into the wide.",
+   "say": "Imran pours the tall jug into the wide jug.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🥛",
+     "x": 30,
+     "y": 36,
+     "size": 3,
+     "path": "arc"
+    },
+    {
+     "id": "w",
+     "emoji": "🫙",
+     "x": 70,
+     "y": 52,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Both hold 1 litre.",
+   "say": "It fits exactly! Both jugs hold one litre.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🥛",
+     "label": "1 litre",
+     "x": 30,
+     "y": 46,
+     "size": 3
+    },
+    {
+     "id": "w",
+     "emoji": "🫙",
+     "label": "1 litre",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Check, do not guess!",
+   "say": "Shape can fool our eyes. Always measure. Shukriya, Imran!",
+   "items": [
+    {
+     "id": "b",
+     "emoji": "👨‍🍳",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "o",
+     "emoji": "🍞",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

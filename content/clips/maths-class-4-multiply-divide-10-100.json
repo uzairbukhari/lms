@@ -1,0 +1,120 @@
+{
+ "title": "The sticky worm",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "A little worm.",
+   "say": "This is Zara's sticky-tack worm. It is four blobs long.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "w",
+     "emoji": "🐛",
+     "label": "4 blobs",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Ten times longer.",
+   "say": "Zara makes the worm ten times longer. How many blobs now?",
+   "items": [
+    {
+     "id": "w",
+     "emoji": "🐛",
+     "label": "4 × 10",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Forty blobs.",
+   "say": "Four tens is forty blobs. The four moves into the tens column.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🟨",
+     "label": "40",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Ten times bigger.",
+   "say": "Each blob is now a ten. Ten times bigger, one place to the left.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "b",
+     "emoji": "🟦",
+     "label": "tens",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Back to four.",
+   "say": "Now divide by ten. The digits move one place to the right again.",
+   "items": [
+    {
+     "id": "d",
+     "emoji": "✂️",
+     "label": "÷ 10",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "Zara says shukriya!",
+   "say": "Forty divided by ten is four. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "r",
+     "emoji": "🎉",
+     "label": "40 ÷ 10 = 4",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

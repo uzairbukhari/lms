@@ -96,38 +96,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome, robot trainer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do we tell a robot exactly what to do?\n\nWe will use instructions, loops and debugging to find out.",
-   "say": "Welcome, robot trainer! Today's big question: how do we tell a robot exactly what to do? Robots cannot guess. They need clear instructions in the right order. By the end, you will give a robot directions, use a loop, and even fix a bug. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🤖",
-   "alt": "Robots follow clear instructions, one step at a time.",
-   "caption": "Robots follow clear instructions, one step at a time."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "instructions",
-     "meaning": "Clear orders that tell a robot what to do."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "directions",
    "kind": "learn",
    "title": "Directions and algorithms",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, robot trainer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we give clear steps?",
+     "say": "Today we learn how to tell a robot exactly what to do."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-algorithms-robots-1-5c921c25.jpg",
+     "alt": "Two slices of white bread on a dark table",
+     "caption": "Even a sandwich needs steps in order.",
+     "credit": "Photo by Graphy Co on Unsplash",
+     "say": "These two slices of bread are the start of a sandwich. Steps matter."
+    },
     {
      "type": "heading",
      "text": "Stop 1: Giving a robot directions"
@@ -377,6 +369,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab and the robot",
+     "asset": "clip-data-ai-class-1-algorithms-robots-ba765e5f.mp4",
+     "poster": "clip-data-ai-class-1-algorithms-robots-ba765e5f.webp",
+     "seconds": 63,
+     "transcript": "Zainab has a toy robot. It only follows exact steps. She says forward, forward. The robot moves two squares. Then turn. The robot now faces the star. Oh no! The robot stops short. One forward is missing. Zainab adds one more forward. That is called debugging. Now she uses a loop. Repeat forward four times. The robot reaches the star. Clear steps in order worked. Zainab uses steps to make a sandwich too. Order matters!",
+     "caption": "Zainab gives a robot exact steps and fixes a bug."
+    },
+    {
      "type": "summary",
      "points": [
       "Instructions tell a robot what to do",
@@ -387,6 +392,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "robot",
+       "meaning": "A machine that follows exact instructions."
+      },
       {
        "term": "instructions",
        "meaning": "Clear orders that tell a robot or computer what to do."
@@ -786,7 +795,7 @@
     {
      "type": "text",
      "markdown": "A **bug** is a mistake in the instructions.\n\n**Debugging** means finding and fixing the bug.",
-     "say": "Sometimes our instructions have a mistake. A mistake in instructions is called a bug. Finding and fixing a bug is called debugging. Look at this robot. We told it forward, forward, forward, forward, then turn. But the star is in the corner, and the robot stopped before it got there. Where is the bug?"
+     "say": "Sometimes our instructions have a mistake. A mistake in instructions is called a bug. Finding and fixing a bug is called debugging. Look at this robot. We told it forward, forward, forward, forward, then turn. But the star is in the corner. The robot stopped before it got there. Where is the bug?"
     },
     {
      "type": "explainer",
@@ -836,7 +845,7 @@
          "anim": "bounce"
         }
        ],
-       "say": "It needed four steps to reach the corner, so the star is still far away. The bug is that one forward is missing."
+       "say": "It needed four steps to reach the corner. The star is still far away. The bug is that one forward is missing."
       },
       {
        "caption": "Add one forward. Bug fixed!",
@@ -1028,6 +1037,14 @@
      "text": "Stop 1: Algorithms at home"
     },
     {
+     "type": "image",
+     "asset": "data-ai-class-1-algorithms-robots-2-ab974f83.jpg",
+     "alt": "A sandwich with cheese, lettuce and tomato on a wooden board",
+     "caption": "Bread, filling, then the top slice.",
+     "credit": "Photo by Raphael Nogueira on Unsplash",
+     "say": "A sandwich has steps in order. Bread, filling, then the top slice."
+    },
+    {
      "type": "text",
      "markdown": "We follow **algorithms** at home: making chai, cooking rice, getting ready for school.",
      "say": "Algorithms are not only for robots. People follow them all the time. Getting ready for school has steps. So does making a cup of chai, or cooking rice, or tidying a room. If you do the steps in order, the job works. What other algorithms can you think of at home?"
@@ -1037,7 +1054,7 @@
      "emoji": "🍚🫖🎒",
      "alt": "Cooking rice, making chai and packing a school bag all have steps in order.",
      "caption": "Cooking rice, making chai and packing a school bag all have steps in order.",
-     "say": "Here are three algorithms from home: cooking rice, making chai, and packing a school bag."
+     "say": "Here are three algorithms from home. Cooking rice, making chai and packing a bag."
     },
     {
      "type": "check",
@@ -1630,6 +1647,427 @@
      "i1",
      "i2",
      "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "number",
+    "prompt": "A robot goes forward 2 times, then forward 3 times. How many squares has it moved?",
+    "hint": "Add 2 and 3.",
+    "explanation": "2 + 3 = 5 squares.",
+    "skill_tag": "algo.count_steps",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Aisha says only one set of instructions can reach the star. Is she right?",
+    "hint": "Try two different routes.",
+    "explanation": "There can be more than one correct algorithm.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, there is only one way"
+     },
+     {
+      "id": "b",
+      "text": "No. Different instructions can reach the same star"
+     },
+     {
+      "id": "c",
+      "text": "No, robots cannot reach stars"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Layla makes toast. She puts the bread in the toaster before she gets the bread. What goes wrong?",
+    "hint": "Which step comes first?",
+    "explanation": "Changing the order of steps can break an algorithm.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing goes wrong"
+     },
+     {
+      "id": "b",
+      "text": "The order is wrong, so it does not work"
+     },
+     {
+      "id": "c",
+      "text": "The toaster gets hungry"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Zayn says a robot can understand 'go to the star' without any other steps. Why is he wrong?",
+    "hint": "Robots cannot guess.",
+    "explanation": "A robot does only what the exact steps say.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Robots hate stars"
+     },
+     {
+      "id": "b",
+      "text": "Robots only need one word"
+     },
+     {
+      "id": "c",
+      "text": "A robot needs exact steps, such as forward and turn"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Sam tells a robot: 'Go over there.' Why is that a bad instruction?",
+    "hint": "Which way is there?",
+    "explanation": "A good instruction is clear and exact.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is too short"
+     },
+     {
+      "id": "b",
+      "text": "It is too vague. The robot needs clear steps"
+     },
+     {
+      "id": "c",
+      "text": "Robots do not like talking"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "match",
+    "prompt": "Match each command to what the robot does.",
+    "hint": "Think about each word.",
+    "explanation": "Each command makes the robot do one thing.",
+    "skill_tag": "algo.instructions",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Forward"
+     },
+     {
+      "id": "l2",
+      "text": "Turn left"
+     },
+     {
+      "id": "l3",
+      "text": "Turn right"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Faces its left"
+     },
+     {
+      "id": "r1",
+      "text": "Moves one square"
+     },
+     {
+      "id": "r3",
+      "text": "Faces its right"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about loops.",
+    "hint": "Think about repeating.",
+    "explanation": "A loop saves us writing the same line 5 times.",
+    "skill_tag": "algo.loops",
+    "points": 2,
+    "text": "A {b1} lets us write repeat clap 5 times instead of {b2} lines.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "star"
+       },
+       {
+        "id": "b",
+        "text": "loop"
+       },
+       {
+        "id": "c",
+        "text": "bug"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "0"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the instruction that is too vague for a robot.",
+    "hint": "Which one is not exact?",
+    "explanation": "Go over there does not say how far or which way.",
+    "skill_tag": "algo.instructions",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "➡️",
+       "label": "Forward 2 squares",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "❓",
+       "label": "Go over there",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "↪️",
+       "label": "Turn right",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "slider",
+    "prompt": "The star is 5 squares away. Slide to show how many forwards the robot needs.",
+    "hint": "Count the squares.",
+    "explanation": "It needs 5 forward steps.",
+    "skill_tag": "algo.count_steps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two instructions turn a robot? Pick two.",
+    "hint": "Look for the word turn.",
+    "explanation": "Turn left and turn right change the way it faces.",
+    "skill_tag": "algo.instructions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Turn right"
+     },
+     {
+      "id": "b",
+      "text": "Forward"
+     },
+     {
+      "id": "c",
+      "text": "Repeat"
+     },
+     {
+      "id": "d",
+      "text": "Turn left"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "true_false",
+    "prompt": "If it is raining, then take an umbrella. It is sunny. You must take an umbrella.",
+    "hint": "Is the if part true?",
+    "explanation": "It is not raining, so you do not need an umbrella.",
+    "skill_tag": "algo.if_then",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "order",
+    "prompt": "Put these steps for crossing the road safely in order.",
+    "hint": "What first?",
+    "explanation": "Stop, look, then cross.",
+    "skill_tag": "algo.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Look both ways"
+     },
+     {
+      "id": "i1",
+      "text": "Stop at the kerb"
+     },
+     {
+      "id": "i3",
+      "text": "Cross when it is clear"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "true_false",
+    "prompt": "A program can have a bug even when the robot moves.",
+    "hint": "Moving is not the same as correct.",
+    "explanation": "The robot can move but go the wrong way.",
+    "skill_tag": "algo.debug",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "A robot faces right. It does turn right. Which way does it face now?",
+    "hint": "Turn right like a clock hand.",
+    "explanation": "Right then turn right faces down.",
+    "skill_tag": "algo.turns",
+    "options": [
+     {
+      "id": "a",
+      "text": "Up"
+     },
+     {
+      "id": "b",
+      "text": "Left"
+     },
+     {
+      "id": "c",
+      "text": "Down"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Steps for a sandwich: bread on plate, add the top slice. Which step is missing?",
+    "hint": "What goes in the middle?",
+    "explanation": "The filling goes between the slices.",
+    "skill_tag": "algo.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wash the plate"
+     },
+     {
+      "id": "b",
+      "text": "Add the filling"
+     },
+     {
+      "id": "c",
+      "text": "Sing a song"
+     }
+    ],
+    "answer": [
+     "b"
     ],
     "sub_lesson": "around",
     "depth": "apply"
@@ -2493,6 +2931,442 @@
     "sub_lesson": "around",
     "depth": "apply",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "number",
+    "prompt": "A robot goes forward 4 times, then forward 2 times. How many squares has it moved?",
+    "hint": "Add 4 and 2.",
+    "explanation": "4 + 2 = 6 squares.",
+    "skill_tag": "algo.count_steps",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Omar says there is only one way to get to the corner. Is he right?",
+    "hint": "Think of two routes.",
+    "explanation": "Different routes can reach the same place.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only one route works"
+     },
+     {
+      "id": "b",
+      "text": "No, robots cannot move"
+     },
+     {
+      "id": "c",
+      "text": "No. A robot can take different routes to the same corner"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Sam puts on his shoes before his socks. What goes wrong?",
+    "hint": "Which step comes first?",
+    "explanation": "The order of steps matters.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "The socks get happy"
+     },
+     {
+      "id": "b",
+      "text": "The order is wrong, so the socks end up outside"
+     },
+     {
+      "id": "c",
+      "text": "Nothing goes wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a robot can just guess what she means. Why is she wrong?",
+    "hint": "Robots cannot guess.",
+    "explanation": "A robot follows exact steps.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Robots guess very well"
+     },
+     {
+      "id": "b",
+      "text": "Robots read minds"
+     },
+     {
+      "id": "c",
+      "text": "A robot only does exactly what the steps say"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "directions",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Mina tells a robot: 'Move a bit.' Why is that a bad instruction?",
+    "hint": "How far is a bit?",
+    "explanation": "A good instruction is clear and exact.",
+    "skill_tag": "algo.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Robots only move at night"
+     },
+     {
+      "id": "b",
+      "text": "It is too vague. The robot needs an exact number of steps"
+     },
+     {
+      "id": "c",
+      "text": "It has too many words"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "match",
+    "prompt": "Match each word to its job.",
+    "hint": "Think about each word.",
+    "explanation": "Each word tells the robot what to do.",
+    "skill_tag": "algo.instructions",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Repeat 3 times"
+     },
+     {
+      "id": "l2",
+      "text": "Stop"
+     },
+     {
+      "id": "l3",
+      "text": "Forward"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Moves ahead"
+     },
+     {
+      "id": "r1",
+      "text": "Does it three times"
+     },
+     {
+      "id": "r2",
+      "text": "Stops moving"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about repeating.",
+    "hint": "Think about repeating.",
+    "explanation": "Repeat 4 times means 4 hops, and it uses a loop.",
+    "skill_tag": "algo.loops",
+    "points": 2,
+    "text": "Repeat hop 4 times is the same as hop {b1} times. It uses a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "star"
+       },
+       {
+        "id": "c",
+        "text": "loop"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the step that does NOT help the robot reach the star.",
+    "hint": "Which one is not a robot move?",
+    "explanation": "Eating cake does not move the robot.",
+    "skill_tag": "algo.instructions",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⬇️",
+       "label": "Forward",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎂",
+       "label": "Eat a cake",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "↪️",
+       "label": "Turn",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "slider",
+    "prompt": "The star is 6 squares away. Slide to show how many forwards the robot needs.",
+    "hint": "Count the squares.",
+    "explanation": "It needs 6 forward steps.",
+    "skill_tag": "algo.count_steps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two are good steps for brushing teeth? Pick two.",
+    "hint": "Think about brushing teeth.",
+    "explanation": "Paste and rinsing are part of brushing teeth.",
+    "skill_tag": "algo.order",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rinse your mouth"
+     },
+     {
+      "id": "b",
+      "text": "Eat a sandwich"
+     },
+     {
+      "id": "c",
+      "text": "Go to bed"
+     },
+     {
+      "id": "d",
+      "text": "Put paste on the brush"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "true_false",
+    "prompt": "If it is dark, then switch on the light. It is dark. You switch on the light.",
+    "hint": "Is the if part true?",
+    "explanation": "It is dark, so you switch on the light.",
+    "skill_tag": "algo.if_then",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "order",
+    "prompt": "Put these steps for making a paper boat in order.",
+    "hint": "What first?",
+    "explanation": "Fold, fold, then open.",
+    "skill_tag": "algo.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Fold the corners"
+     },
+     {
+      "id": "i1",
+      "text": "Fold the paper in half"
+     },
+     {
+      "id": "i3",
+      "text": "Open it into a boat"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "true_false",
+    "prompt": "Once we fix a bug, we never need to test again.",
+    "hint": "Always test again.",
+    "explanation": "We test again to check the fix worked.",
+    "skill_tag": "algo.debug",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "A robot faces right. It does turn left. Which way does it face now?",
+    "hint": "Turn left like a clock hand going back.",
+    "explanation": "Right then turn left faces up.",
+    "skill_tag": "algo.turns",
+    "options": [
+     {
+      "id": "a",
+      "text": "Down"
+     },
+     {
+      "id": "b",
+      "text": "Up"
+     },
+     {
+      "id": "c",
+      "text": "Right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "directions",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Steps for brushing teeth: put paste on the brush, then rinse. Which step is missing?",
+    "hint": "What do you do with the brush?",
+    "explanation": "You must brush before you rinse.",
+    "skill_tag": "algo.debug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Open the window"
+     },
+     {
+      "id": "b",
+      "text": "Brush your teeth"
+     },
+     {
+      "id": "c",
+      "text": "Play a game"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "around",
+    "depth": "apply",
+    "variant_of": "q30"
    }
   ]
  }

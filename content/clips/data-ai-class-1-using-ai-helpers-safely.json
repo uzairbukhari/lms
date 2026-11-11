@@ -1,0 +1,167 @@
+{
+ "title": "Sam asks about Eid",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "A question.",
+   "say": "Sam wants to know the day of Eid. He asks the voice helper.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🧒",
+     "label": "Sam",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "h",
+     "emoji": "🔊",
+     "label": "helper",
+     "x": 72,
+     "y": 45,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Unsure.",
+   "say": "The helper says it is not sure. Eid depends on the moon.",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "🔊",
+     "x": 30,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    },
+    {
+     "id": "m",
+     "emoji": "🌙",
+     "x": 72,
+     "y": 35,
+     "size": 3,
+     "anim": "float"
+    }
+   ]
+  },
+  {
+   "caption": "Ask Abbu.",
+   "say": "So Sam asks Abbu. Abbu listens carefully.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👨",
+     "label": "Abbu",
+     "x": 35,
+     "y": 52,
+     "size": 3
+    },
+    {
+     "id": "s",
+     "emoji": "🧒",
+     "x": 72,
+     "y": 52,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Check the calendar.",
+   "say": "They check the calendar and the news about the moon.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "📅",
+     "x": 35,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    },
+    {
+     "id": "n",
+     "emoji": "📰",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Private things.",
+   "say": "Sam never tells the helper his address. That is private.",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "🏠",
+     "x": 35,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "n",
+     "emoji": "🚫",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "A fake picture.",
+   "say": "Sam sees a picture of a cow with five legs. It looks odd.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "🐄",
+     "label": "five legs?",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "Tell Abbu.",
+   "say": "He tells Abbu. Abbu says, good checking, Sam.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👨",
+     "x": 30,
+     "y": 52,
+     "size": 3
+    },
+    {
+     "id": "s",
+     "emoji": "🧒",
+     "x": 70,
+     "y": 52,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  },
+  {
+   "caption": "Family rules.",
+   "say": "At home they put up their three AI rules.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "📜",
+     "label": "3 rules",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "enter": "grow",
+     "effect": "glow"
+    }
+   ]
+  }
+ ]
+}

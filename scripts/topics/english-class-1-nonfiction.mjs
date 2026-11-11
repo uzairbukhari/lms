@@ -1,15 +1,21 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, TABLE, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, TABLE, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 4 for Zainab (Class 1): Reading to find out. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 2 non-fiction, Cambridge Stage 2).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const HEDGEHOG = "english-class-1-reading-to-find-out-1-f2cff183.jpg";
+const SHELF = "english-class-1-reading-to-find-out-2-d78a2881.jpg";
+
 const contents = {
   id: "contents", kind: "learn", title: "Contents, headings and index",
   blocks: [
+    H("Welcome back, fact finder!"),
+    SAY("Today we read to find out. How can we find true facts quickly in a book?", T("Today's big question: how can we find true facts quickly in a book?")),
+    SAY("This hedgehog lives in gardens in the UK. What facts could we find about it?", PHOTO(HEDGEHOG, "A small brown hedgehog with pale-tipped spines walking through green grass", "A hedgehog has sharp spines. We can read to find out more facts.", "Photo by Rainer Bleek on Unsplash")),
     H("Stop 1: Finding your way in a book"),
-    SAY("Some books tell stories. Others, called non-fiction books, tell us true facts. They have special parts to help us find things quickly. The contents page, near the front, lists the chapters and their page numbers. Headings tell us what each section is about. And the index, at the very back, lists words in alphabetical order with page numbers. Let's open a book about animals.", T("A **contents page** lists the chapters and page numbers.", "A **heading** tells us what a section is about.", "An **index** at the back lists words in ABC order with page numbers.")),
+    SAY("Some books tell stories. Others, called non-fiction books, tell us true facts. They have special parts to help us find things quickly. The contents page, near the front, lists the chapters and their page numbers. Headings tell us what each section is about. And the index, at the back, lists words in ABC order with page numbers. Let's open a book about animals.", T("A **contents page** lists the chapters and page numbers.", "A **heading** tells us what a section is about.", "An **index** at the back lists words in ABC order with page numbers.")),
     EXPP("Parts of a book",
       SS("The contents page is near the front. It lists the chapters, like Frogs on page four and Birds on page eight.", S("Contents: Frogs 4, Birds 8.", ["c", "📑", 50, 50, 3, "grow", "contents"])),
       SS("Each chapter has a heading. The heading Frogs tells us this part is all about frogs.", S("Heading: Frogs.", ["h", "🐸", 50, 50, 3, "grow", "heading"])),
@@ -30,15 +36,15 @@ const diagrams = {
   id: "diagrams", kind: "try", title: "Diagrams and tables",
   blocks: [
     H("Stop 1: Labelled diagrams"),
-    SAY("A diagram is a picture that explains something. It has labels, which are words with lines pointing to the parts. Look at a diagram of a flower. The label petal points to the coloured bit, and the label stem points to the long green part. Labels tell us the name of each part.", T("A **diagram** is a picture that explains something.", "A **label** names a part of the diagram.")),
+    SAY("A diagram is a picture that explains something. It has labels, which are words with lines pointing to the parts. Look at a diagram of a flower. The label petal points to the coloured bit. The label stem points to the long green part. Labels tell us the name of each part.", T("A **diagram** is a picture that explains something.", "A **label** names a part of the diagram.")),
     EXPP("A labelled flower",
       SS("Here is a flower. A plain picture, but no names.", S("A flower.", ["f", "🌸", 50, 40, 3, "grow", "flower"])),
       SS("Now we add labels. The petals are on top, and the stem holds the flower up. Labels name each part.", S("Labels name the parts.", ["f", "🌸", 30, 40, 3, "none", "petals"], ["s", "🌿", 70, 55, 3, "grow", "stem"]))),
     CHK(mc("What does a label do?", "names a part of the picture", ["makes it bigger", "colours it in"], { hint: "Think about the words with the lines.", why: "A label names a part.", tag: "diagram.label" })),
     H("Stop 2: Tables"),
-    SAY("A table puts facts in rows and columns so they are easy to find. Here is a table about pets. Read across the row to find an animal, and read along to see how many legs it has. Cat, four legs. Bird, two legs. Spider, eight legs.", T("A **table** puts facts in rows and columns.")),
+    SAY("A table puts facts in rows and columns so they are easy to find. Here is a table about pets. Read across the row to find an animal. Read along to see how many legs it has. Cat, four legs. Bird, two legs. Spider, eight legs.", T("A **table** puts facts in rows and columns.")),
     TABLE("Legs", [["Cat", 4, "🐈"], ["Bird", 2, "🐦"], ["Spider", 8, "🕷️"]], "Cat has 4 legs, bird has 2 legs, spider has 8 legs."),
-    SAY("Time to make your own. Collect facts about three pets or toys, and put them in a table with a grown-up.", ACT("My own table", ["Paper and a pencil", "A ruler"], ["Draw a table with two columns.", "Write three animals in the first column.", "Write how many legs each has in the second column.", "Ask a grown-up a question that your table can answer."])),
+    SAY("Time to make your own. Collect facts about three pets or toys. Put them in a table with a grown-up.", ACT("My own table", ["Paper and a pencil", "A ruler"], ["Draw a table with two columns.", "Write three animals in the first column.", "Write how many legs each has in the second column.", "Ask a grown-up a question that your table can answer."])),
     CHK(mc("Look at the legs table. Which animal has the most legs?", "spider", ["cat", "bird"], { hint: "Find the biggest number.", why: "Spider has 8 legs, the most.", tag: "table.read" })),
     SAY("Let us remember. A diagram has labels that name its parts. A table puts facts in rows and columns.", SUM("Labels name the parts of a diagram", "A table puts facts in rows and columns")),
     GLOSS({ diagram: "A picture that explains something.", label: "A word that names a part of a picture.", table: "Facts organised in rows and columns.", column: "A line of facts going down." }),
@@ -54,6 +60,7 @@ const facts = {
   id: "facts", kind: "play", title: "Fact hunt",
   blocks: [
     H("Stop 1: True or made up?"),
+    SAY("Libraries have shelves of non-fiction books. They are full of true facts.", PHOTO(SHELF, "Tall shelves packed with old leather-bound books", "Non-fiction books on a library shelf are full of true facts.", "Photo by Peter Herrmann on Unsplash")),
     SAY("A fact is something that is true. Spiders have eight legs. A made-up idea is something that is not true, like cats can fly. Non-fiction books are full of facts. Fiction books are full of stories. When we read to find out, we look for the facts.", T("A **fact** is something that is true.", "**Fiction** is a made-up story.")),
     EXPP("Fact or made-up?",
       SS("A spider has eight legs. Is it true? Yes, we can check it in a book. That is a fact.", S("Fact: a spider has 8 legs.", ["s", "🕷️", 50, 50, 3, "grow", "fact"])),
@@ -95,6 +102,28 @@ const filecard = {
   ],
 };
 
+const clip = {
+  title: "Haniya the hedgehog", backdrop: "meadow", caption: "A hedgehog helps a child find true facts in a book.",
+  scenes: [
+    { caption: "A question.", say: "Zainab asks, what do hedgehogs eat? She goes to find out.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 28, y: 58, size: 3, enter: "walk_right" }, { id: "h", emoji: "🦔", x: 72, y: 62, size: 2 }] },
+    { caption: "The book.", say: "She picks a non-fiction book about garden animals.",
+      items: [{ id: "b", emoji: "📖", x: 50, y: 56, size: 3, enter: "pop" }] },
+    { caption: "Contents.", say: "The contents page says hedgehogs are on page 12.",
+      items: [{ id: "c", emoji: "📑", x: 50, y: 56, size: 3 }] },
+    { caption: "Heading.", say: "A heading says All About Hedgehogs. She is in the right place.",
+      items: [{ id: "h", emoji: "🦔", label: "All About Hedgehogs", x: 50, y: 56, size: 3, anim: "pulse" }] },
+    { caption: "A diagram.", say: "A labelled diagram points to the spines and the nose.",
+      items: [{ id: "h", emoji: "🦔", x: 40, y: 58, size: 3 }, { id: "l", emoji: "🏷️", x: 72, y: 48, size: 2 }] },
+    { caption: "Facts.", say: "Fact one. Hedgehogs eat beetles and worms.",
+      items: [{ id: "w", emoji: "🪱", x: 30, y: 62, size: 2 }, { id: "b", emoji: "🪲", x: 55, y: 62, size: 2 }, { id: "h", emoji: "🦔", x: 80, y: 62, size: 2 }] },
+    { caption: "The index.", say: "The index at the back lists hedgehog in ABC order.",
+      items: [{ id: "i", emoji: "🔤", x: 50, y: 56, size: 3 }] },
+    { caption: "A fact file.", say: "Zainab makes a fact file with a heading, facts and a label.",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3 }, { id: "f", emoji: "📋", x: 72, y: 58, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "english-class-1-reading-to-find-out", subject: "english", cls: 1, topic: 4, title: "Reading to Find Out",
@@ -112,13 +141,9 @@ export const topics = [
       tf("A story has a beginning, a middle and an end.", true, { hint: "Think of the three parts.", why: "Stories have three parts." }),
       mc("What does a question end with?", "a question mark", ["a full stop", "a comma"], { hint: "It looks like a hook with a dot.", why: "Questions end with a question mark." }),
     ],
-    intro: [
-      H("Welcome back, fact finder!"),
-      SAY("Welcome back, fact finder! Today's big question: how can we find out true facts quickly from a book? Non-fiction books have secret helpers, like contents pages, headings and tables. We will learn how to use them all. Let's go!", T("Today's big question: how can we find true facts quickly in a book?", "We will use contents, headings, diagrams and tables.")),
-      IMG("🔎", "Fact finders use clues in books."),
-      GLOSS({ fact: "Something that is true." }),
-    ],
+    intro: [],
     subs: [contents, diagrams, facts, filecard],
+    clip,
     quiz: [
       Q(mc("Which part of a book tells you the page where a chapter starts?", "the contents page", ["the cover", "the last sentence"], { hint: "It is near the front and lists chapters.", why: "The contents page lists chapters and page numbers.", tag: "nonfiction.contents" }), "contents", "recall", [
         mc("Where would you look to find a word quickly at the back of a book?", "the index", ["the cover", "the title"], { hint: "It is in ABC order.", why: "The index lists words in ABC order.", tag: "nonfiction.contents" }),
@@ -165,6 +190,37 @@ export const topics = [
       Q(mc("Why do we check facts in a book before adding them to a fact file?", "So our fact file is true", ["So it is longer", "So it has more colours"], { hint: "What must facts be?", why: "Facts must be true, so we check a book.", tag: "factfile.reason" }), "filecard", "reason", [
         mc("Why does a fact file have a heading?", "It tells the reader what the page is about", ["It makes the page heavier", "It hides the facts"], { hint: "What does a heading say?", why: "A heading says what the topic is.", tag: "factfile.reason" }),
         mc("Why do we add labels to the picture in a fact file?", "They name the parts so readers understand", ["They make it look busy", "They are the title"], { hint: "What do labels do?", why: "Labels name the parts of the picture.", tag: "factfile.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Where in a non-fiction book do you find the list of chapters?", "On the contents page near the front", ["In the index at the back", "On the very last page"], { hint: "Think about the front of the book.", why: "The contents page lists the chapters and sits near the front.", tag: "contents.find" }), "contents", "recall", [
+        mc("Where do you find the list of words in ABC order with page numbers?", "In the index at the back", ["On the contents page", "On the cover"], { hint: "Think about the back of the book.", why: "The index is at the back and lists words in ABC order.", tag: "contents.find" })]),
+      Q(mat("Match each part of a book to its job.", [["Contents page", "Lists the chapters"], ["Heading", "Says what a section is about"], ["Index", "Lists words in ABC order"]], { hint: "Think about where each one is.", why: "Each part helps us find things in a book.", tag: "contents.parts" }), "contents", "recall", [
+        mat("Join each part to what it does.", [["Label", "Names a part of a picture"], ["Table", "Puts facts in rows and columns"], ["Diagram", "Explains with a labelled picture"]], { hint: "Think about each one.", why: "Labels, tables and diagrams all help us read to find out.", tag: "contents.parts" })]),
+      Q(mc("Sam says the index is at the front of a book. Is he right?", "No, the index is at the very back", ["Yes, the index is the first page", "Yes, the index is on the cover"], { hint: "Think about ABC order at the end.", why: "The contents page is near the front. The index is at the back.", tag: "contents.reason" }), "contents", "reason", [
+        mc("Layla says headings list every word in ABC order. Is she right?", "No, headings say what a section is about", ["Yes, headings are the index", "Yes, headings list page numbers only"], { hint: "Which part is in ABC order?", why: "An index lists words in ABC order. A heading says what a section is about.", tag: "contents.reason" })]),
+      Q(st("What do we call a picture that explains something with labels?", ["diagram", "a diagram"], { hint: "It has labels pointing to parts.", why: "A labelled picture that explains is a diagram.", tag: "diagram.def" }), "diagrams", "recall", [
+        st("What do we call a grid that puts facts in rows and columns?", ["table", "a table"], { hint: "Cat, four legs. Bird, two legs.", why: "A table puts facts in rows and columns.", tag: "table.def" })]),
+      Q(hot("Tap the true fact.", [["1️⃣", "Hedgehogs have spines", 22, 50], ["2️⃣", "Hedgehogs can fly", 50, 50], ["3️⃣", "Hedgehogs live in the sea", 78, 50]], ["Hedgehogs have spines"], { labels: true, hint: "Think of the picture.", why: "Hedgehogs have sharp spines. They cannot fly or live in the sea.", tag: "facts.true" }), "facts", "apply", [
+        hot("Tap the fact that is true about bats.", [["1️⃣", "Bats are mammals", 22, 50], ["2️⃣", "Bats lay eggs", 50, 50], ["3️⃣", "Bats have gills", 78, 50]], ["Bats are mammals"], { labels: true, hint: "Bats feed their babies milk.", why: "Bats are mammals. They have fur and feed their babies milk.", tag: "facts.true" })]),
+      Q(fill("Finish the sentence about a fact file.", "A fact file has a {b1}, some {b2} and a labelled picture.", [["heading", "song", "joke"], ["facts", "tunes", "dreams"]], { hint: "Think about what we planned.", why: "A fact file has a heading, facts and a labelled picture.", tag: "filecard.parts" }), "filecard", "apply", [
+        fill("Finish the sentence about a table.", "A table puts facts in {b1} and {b2}.", [["rows", "circles", "clouds"], ["columns", "bubbles", "stars"]], { hint: "Read across and along.", why: "A table has rows and columns.", tag: "table.def" })]),
+      Q(tf("An index is in alphabetical order.", true, { hint: "Think of ABC.", why: "An index lists words in alphabetical order.", tag: "contents.index" }), "contents", "apply", [
+        tf("A diagram never has labels.", false, { hint: "What do labels do?", why: "A diagram has labels that name its parts.", tag: "diagram.def" })]),
+      Q(mc("Hamza says a fact file can have made-up facts. Is he right?", "No, a fact file must have true facts", ["Yes, fun made-up facts are fine", "Yes, only the heading must be true"], { hint: "What is a fact?", why: "A fact is true, so a fact file only has facts.", tag: "facts.reason" }), "facts", "reason", [
+        mc("Aisha says it is fine to guess a fact and write it down. Is she right?", "No, we check facts in a book first", ["Yes, a guess is a fact", "Yes, guesses are better than books"], { hint: "How do we know it is true?", why: "We find facts in non-fiction books to be sure they are true.", tag: "facts.reason" })]),
+      Q(ord("Put the fact file steps in order.", ["Choose an animal", "Find three facts", "Draw and label a picture", "Read it aloud"], { hint: "Choose before you write.", why: "We choose, find facts, draw and label, then read aloud.", tag: "filecard.order" }), "filecard", "apply", [
+        ord("Put the steps in order.", ["Write a heading", "Add facts", "Add a labelled picture"], { hint: "The heading comes first.", why: "A fact file starts with a heading, then facts, then a picture.", tag: "filecard.order" })]),
+      Q(sld("The contents page says Cats is on page 4 and Dogs is on page 9. Slide to show how many pages from page 4 to page 9.", { min: 0, max: 12 }, 5, 0, { hint: "9 take away 4.", why: "9 - 4 = 5 pages.", tag: "contents.pages" }), "contents", "apply", [
+        sld("The contents page says Birds is on page 6 and Fish is on page 14. Slide to show how many pages from page 6 to page 14.", { min: 0, max: 16 }, 8, 0, { hint: "14 take away 6.", why: "14 - 6 = 8 pages.", tag: "contents.pages" })]),
+      Q(mc("Zainab says a story book is the best place for true facts. Is she right?", "No, non-fiction books are full of facts", ["Yes, stories have only facts", "Yes, fiction books list facts"], { hint: "Which books give facts?", why: "Non-fiction books give facts. Fiction books are made-up stories.", tag: "facts.reason" }), "facts", "reason", [
+        mc("Mira says fiction books are full of facts. Is she right?", "No, fiction books are made-up stories", ["Yes, fiction means fact", "Yes, fiction books are the same as non-fiction"], { hint: "Think about the word made up.", why: "Fiction means made-up stories.", tag: "facts.reason" })]),
+      Q(ms("Which two things belong in a fact file? Pick two.", ["A heading", "True facts"], ["A made-up story", "A song"], { hint: "Think of what we planned.", why: "A fact file has a heading and true facts.", tag: "filecard.parts" }), "filecard", "apply", [
+        ms("Pick two things that help us find facts.", ["A contents page", "An index"], ["A bedtime story", "A funny joke"], { hint: "Think of the helpers in a book.", why: "A contents page and an index help us find facts.", tag: "contents.parts" })]),
+      Q(st("What word means a made-up story?", ["fiction"], { hint: "It is not a fact.", why: "Fiction is a made-up story.", tag: "facts.def" }), "facts", "recall", [
+        st("What word means something that is true?", ["fact", "a fact"], { hint: "Spiders have eight legs.", why: "A fact is something that is true.", tag: "facts.def" })]),
+      Q(mat("Match each fact to its heading.", [["Spiders have eight legs", "Spiders"], ["Frogs lay eggs in water", "Frogs"], ["Bees make honey", "Bees"]], { hint: "Which animal is the fact about?", why: "Each fact belongs under the right heading.", tag: "facts.sort" }), "facts", "apply", [
+        mat("Join each fact to its heading.", [["Camels store fat in humps", "Camels"], ["Owls hunt at night", "Owls"], ["Sheep give us wool", "Sheep"]], { hint: "Which animal is the fact about?", why: "Each fact belongs under the right heading.", tag: "facts.sort" })]),
+      Q(mc("Omar says headings are only for stories. Is he right?", "No, non-fiction books use headings to show what each section is about", ["Yes, only stories have headings", "Yes, headings are only on covers"], { hint: "Think of a fact file.", why: "Non-fiction books use headings too.", tag: "contents.reason" }), "contents", "reason", [
+        mc("Mira says a table is just a picture. Is she right?", "No, a table puts facts in rows and columns", ["Yes, a table is a picture of a table", "Yes, tables have no facts"], { hint: "Read across the row.", why: "A table is a neat way to show facts.", tag: "table.reason" })]),
     ],
   }),
 ];

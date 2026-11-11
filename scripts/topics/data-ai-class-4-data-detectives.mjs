@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, BAR, TABLE, TALLY, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, BAR, TABLE, TALLY, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 4 (Fatima, age 9), topic 2: Data detectives.
 // Standards: NC Y4 statistics, CSTA 1B data and analysis, PK M-04-E, CAM 4Ss.01-4Ss.03, 4Sp.01, 4Sp.02 (docs/CURRICULUM_V2.md).
 const o = (hint, why, tag) => ({ hint, why, tag });
 
+const THERMO = "data-ai-class-4-data-detectives-1-1e3b4322.jpg";
+const STORM = "data-ai-class-4-data-detectives-2-2c1bf976.jpg";
+
 const surveys = {
   id: "surveys", kind: "learn", title: "Surveys and averages",
   blocks: [
+    H("Welcome back, data detective!"),
+    SAY("Today we collect, check and describe data. How can we trust what data tells us?", T("Today's big question: how can we trust what data tells us?")),
+    SAY("A thermometer gives one reading. A data logger can take hundreds, all through the day.", PHOTO(THERMO, "A glass thermometer scale held up close, showing degrees Celsius", "A thermometer measures temperature. A data logger takes many readings.", "Photo by Matteo Fusco on Unsplash")),
     H("Stop 1: Asking questions with a survey"),
     SAY("A data detective starts with a question. To find the answer we run a survey. We ask a group of people the same question and record each answer. The group we ask is called the sample. A bigger, fairer sample gives a more reliable answer. Here a class of twenty chose a favourite sport.", T("A **survey** asks the same question to many people.", "The group we ask is the **sample**. A bigger, fairer sample is more reliable.")),
     TALLY("Favourite sport in class 4", [["Cricket", 8], ["Football", 6], ["Badminton", 4], ["Hockey", 2]], "Twenty children voted. Cricket got the most."),
@@ -20,7 +26,7 @@ const surveys = {
       SS("Each friend gets 5. So the mean number of books is 5.", S("15 divided by 3 is 5. The mean is 5!", ["a", "📚", 20, 50, 3, "none", "5"], ["b", "📚", 50, 50, 3, "none", "5"], ["c", "📚", 80, 50, 3, "none", "5"], ["m", "⭐", 50, 20, 3, "bounce", "mean = 5"]))),
     CHK(num("Four friends score 2, 4, 6 and 8 in a game. What is the mean score?", 5, o("Add them up, then divide by 4.", "20 divided by 4 is 5.", "data4.mean"))),
     SAY("Let us remember. A survey asks many people. The mean is the fair share, the mode is the most common and the median is the middle.", SUM("A survey asks the same question to a sample", "Mean: add up, divide by how many", "Mode is most common, median is the middle")),
-    GLOSS({ survey: "Asking many people the same question.", sample: "The group of people we ask.", mean: "The fair share: add up the numbers and divide by how many.", mode: "The value that appears most often.", median: "The middle value when numbers are in order." }),
+    GLOSS({ "data logger": "A device that records readings again and again over time.", range: "The difference between the biggest and smallest value.", interval: "The time between two readings.", survey: "Asking many people the same question.", sample: "The group of people we ask.", mean: "The fair share: add up the numbers and divide by how many.", mode: "The value that appears most often.", median: "The middle value when numbers are in order." }),
   ],
   mini: [
     mc("What is a survey?", "Asking many people the same question", ["Drawing a graph only", "Deleting data"], o("Think about asking.", "A survey asks many people.")),
@@ -61,7 +67,7 @@ const venn = {
     EXP("Wings or swimming?",
       SS("Here are the animals before sorting: duck, eagle, fish.", S("Three animals to sort.", ["d", "🦆", 25, 50, 3], ["e", "🦅", 50, 50, 3], ["f", "🐟", 75, 50, 3])),
       SS("The Venn diagram has a circle for wings and a circle for swimming.", S("Two circles: wings and swim.", ["v", { kind: "venn", labels: ["Wings", "Swim"] }, 50, 55, 3])),
-      SS("The eagle goes in wings only, the fish in swim only, and the duck in the overlap because it has both.", S("The duck goes in the middle.", ["v", { kind: "venn", labels: ["Wings", "Swim"] }, 50, 55, 3], ["e", "🦅", 28, 60, 1, "bounce"], ["f", "🐟", 72, 60, 1, "bounce"], ["d", "🦆", 50, 62, 1, "bounce"]))),
+      SS("The eagle goes in wings only. The fish goes in swim only. The duck goes in the overlap, because it has both.", S("The duck goes in the middle.", ["v", { kind: "venn", labels: ["Wings", "Swim"] }, 50, 55, 3], ["e", "🦅", 28, 60, 1, "bounce"], ["f", "🐟", 72, 60, 1, "bounce"], ["d", "🦆", 50, 62, 1, "bounce"]))),
     CHK(mc("Where does a duck go in the wings and swim Venn diagram?", "In the overlap", ["Outside the circles", "Only in wings"], o("It does both.", "A duck has wings and swims, so it goes in the middle.", "data4.venn"))),
     H("Stop 2: Chance experiments"),
     SAY("In a chance experiment we try something many times and record the results. If you toss a coin twenty times, you might get about ten heads. But not exactly ten! The more times you try, the closer the results usually get to what you expect. Data from experiments helps us decide how likely things are. Play a memory game to warm up, then try the experiment at home.", T("A **chance experiment** repeats a test many times and records the results.")),
@@ -82,6 +88,7 @@ const useData = {
   id: "use_data", kind: "use", title: "Reading change over time",
   blocks: [
     H("Stop 1: Data over time"),
+    SAY("Weather changes through the day. Storm clouds like these are a clue to rain, and data helps us predict it.", PHOTO(STORM, "Dark storm clouds over a green field", "Weather data helps us predict storms and rain.", "Photo by Dave Hoefler on Unsplash")),
     SAY("Some data changes over time, like the temperature through a week. We can record it in a table and look for a pattern. Does it go up, go down, or stay the same? Here is the midday temperature in Lahore across four days in autumn.", T("We can look for a **trend**: does the data go up, down or stay the same?")),
     SAY("Look at the table. The numbers get bigger each day.", TABLE("Midday temperature (degrees C)", [["Mon", 28], ["Tue", 30], ["Wed", 31], ["Thu", 33]], "Temperatures rise each day.")),
     CHK(mc("What is the trend in the temperature?", "It goes up each day", ["It goes down", "It stays the same"], o("Compare the numbers.", "28, 30, 31, 33 rise each day.", "data4.trend"))),
@@ -120,6 +127,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Fatima's weather study", backdrop: "home", caption: "Fatima logs the weather and checks whether her chart is honest.",
+  scenes: [
+    { caption: "A question.", say: "Fatima asks: how does the temperature change during the day?",
+      items: [{ id: "f", emoji: "👧", label: "Fatima", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "t", emoji: "🌡️", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "A data logger.", say: "A data logger takes a reading every ten minutes. That is six readings an hour.",
+      items: [{ id: "l", emoji: "📟", label: "logger", x: 35, y: 50, size: 3, anim: "pulse" }, { id: "t", emoji: "🌡️", x: 72, y: 50, size: 3 }] },
+    { caption: "A table.", say: "The readings go into a table. Each row is one reading.",
+      items: [{ id: "t", emoji: "🗒️", label: "table", x: 50, y: 48, size: 3, enter: "grow" }] },
+    { caption: "A line graph.", say: "She draws a line graph. It rises to a peak at three o'clock.",
+      items: [{ id: "g", emoji: "📈", label: "peak at 3pm", x: 50, y: 48, size: 3, effect: "glow" }] },
+    { caption: "Averages.", say: "She finds the mean, the mode and the median of the readings.",
+      items: [{ id: "m", emoji: "➗", label: "mean", x: 25, y: 50, size: 2 }, { id: "o", emoji: "🔁", label: "mode", x: 50, y: 50, size: 2 }, { id: "d", emoji: "🎯", label: "median", x: 75, y: 50, size: 2 }] },
+    { caption: "A tricky chart.", say: "A friend's chart starts at fifty. Small differences look huge.",
+      items: [{ id: "c", emoji: "📊", label: "starts at 50", x: 40, y: 50, size: 3 }, { id: "w", emoji: "⚠️", x: 75, y: 35, size: 2, anim: "pulse" }] },
+    { caption: "An honest chart.", say: "Fatima redraws it from zero. Now it tells the truth.",
+      items: [{ id: "c", emoji: "📊", label: "starts at 0", x: 40, y: 50, size: 3, effect: "sparkle" }, { id: "t", emoji: "✅", x: 75, y: 40, size: 3, anim: "bounce" }] },
+    { caption: "A careful prediction.", say: "She predicts tomorrow's peak. A prediction is a careful guess, not a fact.",
+      items: [{ id: "f", emoji: "👧", x: 30, y: 56, size: 3 }, { id: "p", emoji: "🤔", x: 70, y: 40, size: 3, anim: "pulse" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-4-data-detectives", subject: "data-ai", cls: 4, topic: 2, title: "Data Detectives",
@@ -140,13 +170,9 @@ export const topics = [
       mc("What does a loop do?", "Repeats steps", ["Deletes steps", "Hides steps"], o("Again and again.", "A loop repeats steps.")),
       num("What is 45 + 28?", 73, o("Add tens then ones.", "45 + 28 = 73.")),
     ],
-    intro: [
-      H("Welcome, data detective!"),
-      SAY("Welcome, data detective! Today's big question: how can we trust what data tells us? We will run surveys, find averages, spot tricky charts, search a database, sort with Venn diagrams and look for trends. Let's go!", T("Today's big question: how can we trust what data tells us?", "We will collect, check and describe data like a detective.")),
-      IMG("🔍📊", "Good detectives check their data."),
-      GLOSS({ data: "Information we collect." }),
-    ],
+    intro: [],
     subs: [surveys, honest, venn, useData],
+    clip,
     quiz: [
       qd(mc("Which question could a survey answer?", "What is our class's favourite fruit?", ["How tall is Everest?", "What is 6 times 7?"], o("Ask people.", "A survey asks people for their opinions.", "data4.survey")), "surveys", "recall"),
       qd(num("Scores 3, 6 and 9. What is the mean?", 6, o("18 divided by 3.", "3 + 6 + 9 = 18, divided by 3 is 6.", "data4.mean")), "surveys", "apply"),
@@ -163,6 +189,37 @@ export const topics = [
       qd(tf("A trend can only go up.", false, o("It can fall.", "A trend can go down too.", "data4.trend")), "use_data", "recall"),
       qd(mc("Hamza says a prediction is a fact. Is he right?", "No, it is a careful guess", ["Yes, always true", "Only in maths"], o("We cannot be sure.", "A prediction can be wrong.", "data4.reason")), "use_data", "reason"),
       qd(ord("Put these data detective steps in order.", ["Ask a question", "Collect data in a table", "Describe the trend"], o("Question first.", "Ask, collect, then describe.", "data4.process")), "use_data", "reason"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(mc("Which question is best answered with a data logger?", "How does the temperature in the garden change over a whole day?", ["Which sport do children prefer?", "What is our class's favourite colour?"], o("A logger records over time.", "A data logger measures again and again over time.", "data4.logger")), "use_data", "apply",
+        [mc("Which question needs a data logger rather than a survey?", "How does the light level in a classroom change from morning to evening?", ["Which pet do pupils like best?", "How many pupils walk to school?"], o("A logger records over time.", "A data logger measures again and again over time.", "data4.logger"))]),
+      qa(num("A data logger records a reading every 10 minutes for 1 hour. How many readings does it take?", 6, o("60 divided by 10.", "60 / 10 = 6 readings.", "data4.interval")), "use_data", "apply",
+        [num("A data logger records a reading every 15 minutes for 1 hour. How many readings does it take?", 4, o("60 divided by 15.", "60 / 15 = 4 readings.", "data4.interval"))]),
+      qa(mc("Hina says shorter intervals between readings give less detailed data. Is she right?", "No. Shorter intervals give more readings and more detail", ["Yes, shorter means less detail", "Yes, intervals do not matter"], o("Count the readings in an hour.", "More readings means a more detailed picture.", "data4.reason_interval")), "use_data", "reason",
+        [mc("Omar says taking a reading every minute gives less detail than every hour. Is he right?", "No. Every minute gives far more detail", ["Yes, less detail", "Yes, it is the same"], o("Count the readings in an hour.", "More readings means more detail.", "data4.reason_interval"))]),
+      qa(mc("A line graph shows temperature: 6am 15, 9am 20, 12pm 28, 3pm 30, 6pm 24. When was it hottest?", "3pm", ["12pm", "6pm"], o("Find the highest point.", "30 degrees at 3pm is the peak.", "data4.peak")), "use_data", "apply",
+        [mc("A line graph shows rainfall: Mon 2, Tue 9, Wed 6, Thu 4. Which day had the most rain?", "Tuesday", ["Monday", "Thursday"], o("Find the highest point.", "9 mm on Tuesday is the peak.", "data4.peak"))]),
+      qa(num("Find the mode of this list: 4, 7, 4, 9, 4.", 4, o("Which appears most often?", "4 appears three times.", "data4.mode2")), "surveys", "apply",
+        [num("Find the mode of this list: 6, 2, 6, 8, 6.", 6, o("Which appears most often?", "6 appears three times.", "data4.mode2"))]),
+      qa(sld("Slide to show the median of 3, 9, 4, 7, 5.", { min: 0, max: 12 }, 5, 0, o("Put them in order first.", "In order: 3, 4, 5, 7, 9. The middle is 5.", "data4.median")), "surveys", "apply",
+        [sld("Slide to show the median of 8, 2, 6, 10, 4.", { min: 0, max: 12 }, 6, 0, o("Put them in order first.", "In order: 2, 4, 6, 8, 10. The middle is 6.", "data4.median"))]),
+      qa(num("Temperatures were 18, 25, 22 and 30 degrees. What is the range?", 12, o("Biggest take smallest.", "30 - 18 = 12 degrees.", "data4.range")), "surveys", "apply",
+        [num("Scores were 14, 9, 20 and 16. What is the range?", 11, o("Biggest take smallest.", "20 - 9 = 11.", "data4.range"))]),
+      qa(ord("Put the steps of data analysis in order.", ["Collect the data", "Organise it in a table", "Draw a graph", "Describe what it shows"], o("Collect first.", "Collect, organise, graph, then describe.", "data4.analysis_steps")), "use_data", "apply",
+        [ord("Put these steps for a rainfall study in order.", ["Choose the question", "Record daily rainfall", "Make a bar chart", "Write a conclusion"], o("Question first.", "Question, record, chart, conclude.", "data4.analysis_steps"))]),
+      qa(mat("Match each type of data display to its best use.", [["Line graph", "Change over time"], ["Bar chart", "Comparing groups"], ["Venn diagram", "Sorting with two properties"]], o("Think about what each shows.", "Each display suits its own job.", "data4.display_match")), "honest", "apply",
+        [mat("Pair each display with its best use.", [["Table", "Storing exact numbers"], ["Pictogram", "Showing counts with pictures"], ["Carroll diagram", "Sorting by yes or no"]], o("Think about what each shows.", "Each display suits its own job.", "data4.display_match"))]),
+      qa(ms("Which two are advantages of a data logger over a person measuring? Pick two.", ["It can record through the night", "It records at exact set times"], ["It never needs setting up", "It understands the results"], o("Think about sensors.", "A logger records without tiring at exact times.", "data4.logger_pros")), "use_data", "apply",
+        [ms("Which two are good reasons to use a sensor to log data? Pick two.", ["It can take many readings quickly", "It does not get tired"], ["It explains the data for us", "It makes no mistakes ever"], o("Think about sensors.", "Sensors are quick and do not tire.", "data4.logger_pros"))]),
+      qa(fill("Finish the sentences about averages.", "The {b1} is the difference between the biggest and smallest. The {b2} is the middle value.", [["range", "mean", "mode"], ["median", "mode", "range"]], o("Think about each word.", "Range is the spread and median is the middle.", "data4.vocab3")), "surveys", "recall",
+        [fill("Complete the sentences about databases.", "A database can hold words and {b1}, not just {b2}.", [["dates", "drums", "dots"], ["numbers", "wings", "bricks"]], o("Think about the fields.", "Databases hold words, dates and numbers.", "data4.vocab3"))]),
+      qa(mc("Hamza says a database can only store numbers. Is he right?", "No. It can store words, dates and numbers", ["Yes, only numbers", "Yes, only words"], o("Think about the library table.", "A database field can hold words, dates or numbers.", "data4.reason_db")), "honest", "reason",
+        [mc("Layla says a database cannot hold names. Is she right?", "No. It can hold names, dates and numbers", ["Yes, no names", "Yes, only maths"], o("Think about the library table.", "A database field can hold words.", "data4.reason_db"))]),
+      qa(hot("Tap the chart with the misleading axis.", [["📊", "Bars start at zero", 22, 50], ["📊", "Bars cut off at 50", 50, 50], ["📊", "Every bar labelled", 78, 50]], ["Bars cut off at 50"], { labels: true, ...o("Which scale is cut?", "A cut-off scale makes small differences look large.", "data4.axis") }), "honest", "apply",
+        [hot("Tap the chart that is the most honest.", [["📊", "Bars cut off at 20", 22, 50], ["📊", "Bars start at zero with labels", 50, 50], ["📊", "Stretched tall scale", 78, 50]], ["Bars start at zero with labels"], { labels: true, ...o("Which starts at zero?", "A zero start and labels are honest.", "data4.axis") })]),
+      qa(mc("Zayn says a chart with a cut-off axis shows the differences just as truthfully. Is he right?", "No. A cut-off axis can exaggerate small differences", ["Yes, same truth", "Yes, only the colours matter"], o("Think about starting at 2.", "A cut-off axis can mislead.", "data4.reason_axis")), "honest", "reason",
+        [mc("Ayesha says it is fine to start a bar chart at 40 if it looks more dramatic. Is she right?", "No. Honest charts start at zero", ["Yes, drama is good", "Yes, nobody checks"], o("Think about starting at 2.", "A cut-off axis can mislead.", "data4.reason_axis"))]),
+      qa(mc("Hina says one experiment of 10 coin tosses is enough to know a coin is fair. Is she right?", "No. More repeats give more reliable results", ["Yes, 10 is always enough", "Yes, one experiment proves it"], o("Think about repeating.", "Repeating an experiment gives more reliable data.", "data4.reason_repeat")), "venn_chance", "reason",
+        [mc("Tariq says rolling a dice 6 times proves it is fair. Is he right?", "No. Many more rolls give better evidence", ["Yes, 6 proves it", "Yes, once is enough"], o("Think about repeating.", "Repeating gives more reliable data.", "data4.reason_repeat"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

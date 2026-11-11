@@ -1,0 +1,3156 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-paint-on-a-computer",
+  "subject": "data-ai",
+  "title": "Paint on a Computer",
+  "summary": "Use line, shape, fill, brush and undo tools to make a digital picture.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 5: Paint on a computer",
+  "learning_objectives": [
+   "Use line and shape tools",
+   "Use undo to fix a mistake",
+   "Say how digital painting differs from paper painting"
+  ],
+  "tags": [
+   "topic",
+   "topic-5"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 5
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 uses of IT",
+    "text": "Use technology purposefully to create, organise, store, manipulate and retrieve digital content"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-CS-01",
+    "text": "Select and operate appropriate software and hardware to perform a variety of tasks"
+   }
+  ],
+  "success_criteria": [
+   "I can name the line, shape, fill and undo tools",
+   "I can fix a mistake with undo",
+   "I can say one way digital and paper art differ"
+  ],
+  "real_life": "Making an Eid card, a poster for a school fair or a picture on a family tablet.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a bug in a program?",
+    "hint": "It is not an insect.",
+    "explanation": "A bug is a mistake in instructions.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flower"
+     },
+     {
+      "id": "b",
+      "text": "A button"
+     },
+     {
+      "id": "c",
+      "text": "A mistake"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is private?",
+    "hint": "A secret key.",
+    "explanation": "Passwords are private.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A funny joke"
+     },
+     {
+      "id": "b",
+      "text": "A password"
+     },
+     {
+      "id": "c",
+      "text": "A favourite colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 4 + 3?",
+    "hint": "Count on from 4.",
+    "explanation": "4 + 3 = 7.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "tools",
+   "kind": "learn",
+   "title": "Tools in a paint app",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, digital artist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we paint on a screen?",
+     "say": "Today we paint with a computer. Zainab is going to make a picture on her tablet."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-paint-on-a-computer-1-f1bd43d8.jpg",
+     "alt": "A wooden palette covered in pink and orange paint with many brushes",
+     "caption": "Real brushes and paint. A paint app has tools too.",
+     "credit": "Photo by Jennie Razumnaya on Unsplash",
+     "say": "These are real brushes and real paint. Today we paint with tools on a screen."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: What does digital mean?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **digital** picture is made on a computer, not on paper.",
+     "say": "Digital means made or shown on a computer. A digital picture lives on a screen."
+    },
+    {
+     "type": "explainer",
+     "title": "Paper or screen",
+     "scenes": [
+      {
+       "caption": "Paper: brush and paint.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🖌️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "paper"
+        },
+        {
+         "id": "w",
+         "emoji": "🎨",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Zainab can paint on paper. She uses a brush and wet paint."
+      },
+      {
+       "caption": "Screen: finger and tools.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "screen"
+        },
+        {
+         "id": "f",
+         "emoji": "👆",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Or she can paint on a tablet. She uses her finger or a stylus."
+      },
+      {
+       "caption": "Digital: saved on a computer.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "digital picture"
+        }
+       ],
+       "say": "The tablet picture is digital. It can be saved and opened again."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A picture made on a tablet is called...",
+      "hint": "It is made on a computer.",
+      "explanation": "A picture made on a computer or tablet is digital.",
+      "skill_tag": "paint.digital",
+      "options": [
+       {
+        "id": "a",
+        "text": "Wooden"
+       },
+       {
+        "id": "b",
+        "text": "Digital"
+       },
+       {
+        "id": "c",
+        "text": "Wet"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Line, shape and fill"
+    },
+    {
+     "type": "text",
+     "markdown": "The **line tool** draws lines. The **shape tool** makes shapes.",
+     "say": "A paint app has tools. The line tool draws a line. The shape tool makes a square or a circle."
+    },
+    {
+     "type": "text",
+     "markdown": "The **fill tool** colours inside. The **undo tool** takes back a step.",
+     "say": "The fill tool pours colour inside a shape. The undo tool takes back your last step."
+    },
+    {
+     "type": "explainer",
+     "title": "Four tools",
+     "scenes": [
+      {
+       "caption": "Line tool.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "📏",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "line"
+        }
+       ],
+       "say": "The line tool draws a straight line across the screen."
+      },
+      {
+       "caption": "Shape tool.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🔷",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "shape"
+        },
+        {
+         "id": "c",
+         "emoji": "🔴",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The shape tool makes a circle, a square or a triangle."
+      },
+      {
+       "caption": "Fill tool.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🟨",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "fill"
+        }
+       ],
+       "say": "The fill tool colours the inside of the shape yellow."
+      },
+      {
+       "caption": "Undo tool.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "↩️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "undo"
+        }
+       ],
+       "say": "Oops, a mistake. Undo takes back the last step."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which tool colours inside a shape?",
+      "hint": "It pours colour in.",
+      "explanation": "The fill tool colours the inside of a shape.",
+      "skill_tag": "paint.fill",
+      "options": [
+       {
+        "id": "a",
+        "text": "Undo"
+       },
+       {
+        "id": "b",
+        "text": "Fill"
+       },
+       {
+        "id": "c",
+        "text": "Line"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab paints an Eid card",
+     "asset": "clip-data-ai-class-1-paint-on-a-computer-ffc91761.mp4",
+     "poster": "clip-data-ai-class-1-paint-on-a-computer-ffc91761.webp",
+     "seconds": 55,
+     "transcript": "Zainab wants to make an Eid card for her cousin. She uses the shape tool to draw a big dome. The fill tool pours dark blue into the sky. She draws a yellow moon and some stars. Oops! She fills the dome pink by mistake. She taps undo. The mistake goes away. She types Eid Mubarak on her card. She saves the card and sends it with her mum's help.",
+     "caption": "Zainab paints a mosque skyline and fixes a mistake with undo."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Digital means made on a computer",
+      "Line and shape tools draw",
+      "Fill colours inside, undo takes a step back"
+     ],
+     "say": "Let us remember. A digital picture is made on a computer. Tools draw lines and shapes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "digital",
+       "meaning": "Made or shown on a computer."
+      },
+      {
+       "term": "line tool",
+       "meaning": "A tool that draws a line."
+      },
+      {
+       "term": "shape tool",
+       "meaning": "A tool that makes shapes."
+      },
+      {
+       "term": "fill tool",
+       "meaning": "A tool that colours inside a shape."
+      },
+      {
+       "term": "undo tool",
+       "meaning": "A tool that takes back your last step."
+      },
+      {
+       "term": "tool",
+       "meaning": "Something that helps you do a job."
+      },
+      {
+       "term": "brush",
+       "meaning": "A tool that paints soft lines."
+      },
+      {
+       "term": "stylus",
+       "meaning": "A pen you use on a screen."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does digital mean?",
+     "hint": "Think of a tablet.",
+     "explanation": "Digital means on a computer.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Made of wood"
+      },
+      {
+       "id": "b",
+       "text": "Very heavy"
+      },
+      {
+       "id": "c",
+       "text": "Made or shown on a computer"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool takes back the last step?",
+     "hint": "It goes backwards.",
+     "explanation": "Undo takes back the last step.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fill"
+      },
+      {
+       "id": "b",
+       "text": "Line"
+      },
+      {
+       "id": "c",
+       "text": "Undo"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A shape tool can make a circle.",
+     "hint": "Think of round shapes.",
+     "explanation": "The shape tool makes circles and squares.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool draws a straight line?",
+     "hint": "Its name says it.",
+     "explanation": "The line tool draws lines.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fill tool"
+      },
+      {
+       "id": "b",
+       "text": "Undo tool"
+      },
+      {
+       "id": "c",
+       "text": "Line tool"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "house",
+   "kind": "try",
+   "title": "Draw with shapes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Build a house from shapes"
+    },
+    {
+     "type": "text",
+     "markdown": "Make a picture from **shapes**: a square wall and a triangle roof.",
+     "say": "Shapes can build a house. A square is the wall. A triangle is the roof."
+    },
+    {
+     "type": "explainer",
+     "title": "A house from shapes",
+     "scenes": [
+      {
+       "caption": "Square wall.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "grow",
+         "label": "wall"
+        }
+       ],
+       "say": "First the shape tool makes a big square for the wall."
+      },
+      {
+       "caption": "Triangle roof.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 32,
+         "size": 3,
+         "anim": "grow",
+         "label": "roof"
+        }
+       ],
+       "say": "Next a triangle on top is the roof."
+      },
+      {
+       "caption": "Rectangle door.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🔺",
+         "x": 50,
+         "y": 32,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🟫",
+         "x": 50,
+         "y": 72,
+         "size": 2,
+         "anim": "grow",
+         "label": "door"
+        }
+       ],
+       "say": "Last a small rectangle is the door. Then fill in the colours."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Build the house",
+     "goal": "Move the shapes into the picture. Use 3 shapes.",
+     "emoji": "🔷",
+     "count": 3,
+     "zones": [
+      "Shapes in the picture",
+      "Waiting"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which shape makes a good roof?",
+      "hint": "It has a point at the top.",
+      "explanation": "A triangle makes a sloping roof.",
+      "skill_tag": "paint.roof",
+      "options": [
+       {
+        "id": "a",
+        "text": "A circle"
+       },
+       {
+        "id": "b",
+        "text": "A star"
+       },
+       {
+        "id": "c",
+        "text": "A triangle"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fix it with undo"
+    },
+    {
+     "type": "text",
+     "markdown": "Do not start again. Tap **undo** to fix a mistake.",
+     "say": "Everyone makes mistakes. Zainab fills the door green by mistake. She taps undo."
+    },
+    {
+     "type": "explainer",
+     "title": "Undo a mistake",
+     "scenes": [
+      {
+       "caption": "Wrong colour.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🟩",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "green door"
+        }
+       ],
+       "say": "Oh no. The door is green. Zainab wanted brown."
+      },
+      {
+       "caption": "Tap undo.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "↩️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "undo"
+        },
+        {
+         "id": "d",
+         "emoji": "🟩",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "She taps the undo tool. The last step goes away."
+      },
+      {
+       "caption": "Fixed.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🟫",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "mistake fixed"
+        }
+       ],
+       "say": "Now the door is plain again. She fills it brown."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Shape house",
+     "materials": [
+      "A tablet or computer with a paint app",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Draw a square for the wall and a triangle for the roof.",
+      "Fill the wall with a colour. Fill the roof with another.",
+      "Make a mistake on purpose. Tap undo to fix it."
+     ],
+     "say": "Now you try at home. Ask a grown-up to open a paint app."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Undo takes back your last step.",
+      "hint": "It goes backwards one step.",
+      "explanation": "Undo takes back the last thing you did.",
+      "skill_tag": "paint.undo",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A square wall and a triangle roof make a house",
+      "Undo takes back a mistake"
+     ],
+     "say": "Let us remember. Shapes build pictures. Undo fixes mistakes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "undo",
+       "meaning": "Takes back your last step."
+      },
+      {
+       "term": "shape",
+       "meaning": "A flat form like a square, circle or triangle."
+      },
+      {
+       "term": "triangle",
+       "meaning": "A shape with three sides."
+      },
+      {
+       "term": "rectangle",
+       "meaning": "A shape with four sides and square corners."
+      },
+      {
+       "term": "mistake",
+       "meaning": "Something that went wrong."
+      },
+      {
+       "term": "roof",
+       "meaning": "The top of a house."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which shape is a good wall?",
+     "hint": "Think of a box.",
+     "explanation": "A square makes a wall.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A triangle"
+      },
+      {
+       "id": "b",
+       "text": "A square"
+      },
+      {
+       "id": "c",
+       "text": "A star"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "If you make a mistake, you must start the whole picture again.",
+     "hint": "Is there a tool?",
+     "explanation": "Undo can fix a mistake.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do after drawing a shape?",
+     "hint": "Which tool pours colour?",
+     "explanation": "Fill makes the shape colourful.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Close the eyes"
+      },
+      {
+       "id": "b",
+       "text": "Fill it with colour"
+      },
+      {
+       "id": "c",
+       "text": "Delete the tablet"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "match",
+   "kind": "play",
+   "title": "Tool match-up",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Name that tool"
+    },
+    {
+     "type": "text",
+     "markdown": "Each **tool** has its own job.",
+     "say": "A paint app has many tools. Each one has a job. Let us match them up."
+    },
+    {
+     "type": "explainer",
+     "title": "Tool jobs",
+     "scenes": [
+      {
+       "caption": "Pencil and brush.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "✏️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "line"
+        },
+        {
+         "id": "b",
+         "emoji": "🖌️",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "brush"
+        }
+       ],
+       "say": "A pencil icon draws a thin line. A brush icon paints soft lines."
+      },
+      {
+       "caption": "Bucket and shape.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🪣",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "fill"
+        },
+        {
+         "id": "s",
+         "emoji": "🔷",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "shape"
+        }
+       ],
+       "say": "A bucket icon fills. A shape icon makes shapes."
+      },
+      {
+       "caption": "Undo arrow.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "↩️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "undo"
+        }
+       ],
+       "say": "An arrow icon goes back. That is undo."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which tool paints soft, wavy lines?",
+      "hint": "Think of a paint brush.",
+      "explanation": "A brush paints soft lines.",
+      "skill_tag": "paint.brush",
+      "options": [
+       {
+        "id": "a",
+        "text": "Shape"
+       },
+       {
+        "id": "b",
+        "text": "Brush"
+       },
+       {
+        "id": "c",
+        "text": "Undo"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then pick the best tool.",
+     "say": "First, a memory game. Then choose the best tool for each job."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Paint pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🖌️",
+      "🪣",
+      "🔷",
+      "↩️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each job to the best tool.",
+      "hint": "Think about each job.",
+      "explanation": "Fill colours, shape draws shapes and undo takes back.",
+      "skill_tag": "paint.matchjob",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Colour inside a square"
+       },
+       {
+        "id": "l2",
+        "text": "Draw a circle"
+       },
+       {
+        "id": "l3",
+        "text": "Take back a mistake"
+       }
+      ],
+      "right": [
+       {
+        "id": "r2",
+        "text": "Shape"
+       },
+       {
+        "id": "r1",
+        "text": "Fill"
+       },
+       {
+        "id": "r3",
+        "text": "Undo"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Brush for soft lines",
+      "Fill colours inside, shape makes shapes",
+      "Undo takes back a step"
+     ],
+     "say": "Let us remember. Pick the tool that fits the job."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "tool",
+       "meaning": "Something that helps you do a job."
+      },
+      {
+       "term": "icon",
+       "meaning": "A small picture on a screen that you tap."
+      },
+      {
+       "term": "bucket",
+       "meaning": "The picture for the fill tool."
+      },
+      {
+       "term": "job",
+       "meaning": "What a tool is for."
+      },
+      {
+       "term": "wavy",
+       "meaning": "Going up and down, like waves."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool makes a circle?",
+     "hint": "Shapes!",
+     "explanation": "The shape tool makes circles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Undo"
+      },
+      {
+       "id": "b",
+       "text": "Brush"
+      },
+      {
+       "id": "c",
+       "text": "Shape tool"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "You can use more than one tool in a picture.",
+     "hint": "Think of a house.",
+     "explanation": "Pictures use many tools together.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tool is a bucket icon?",
+     "hint": "It pours colour.",
+     "explanation": "The bucket is the fill tool.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shape"
+      },
+      {
+       "id": "b",
+       "text": "Fill"
+      },
+      {
+       "id": "c",
+       "text": "Line"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "card",
+   "kind": "use",
+   "title": "Paint a card",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Plan the card"
+    },
+    {
+     "type": "text",
+     "markdown": "Plan first. Think about shapes, colours and a message.",
+     "say": "Zainab will paint an Eid card for her cousin. First she plans on paper."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-paint-on-a-computer-2-9dcdecfa.jpg",
+     "alt": "A mosque dome and two minarets in silhouette against an orange sunset",
+     "caption": "A dome and minarets at sunset. Zainab uses this idea.",
+     "credit": "Photo by Simon Infanger on Unsplash",
+     "say": "She wants a dome, a crescent moon and some stars. Domes and moons are shapes."
+    },
+    {
+     "type": "text",
+     "markdown": "Pick colours that are easy to see together.",
+     "say": "She picks dark blue for the sky and yellow for the moon. Those colours are easy to see."
+    },
+    {
+     "type": "activity",
+     "title": "Plan an Eid card",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Draw a small plan of your card.",
+      "Write which tools you will use for each part.",
+      "Choose colours that are easy to see."
+     ],
+     "say": "Planning saves time. You know which tools you need."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the card steps in order.",
+      "hint": "Plan comes first.",
+      "explanation": "We plan, then draw, then fill.",
+      "skill_tag": "paint.order",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Draw the shapes"
+       },
+       {
+        "id": "i1",
+        "text": "Plan on paper"
+       },
+       {
+        "id": "i3",
+        "text": "Fill in the colours"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Paint it and compare with paper"
+    },
+    {
+     "type": "text",
+     "markdown": "Use tools to build the picture. Undo fixes mistakes.",
+     "say": "Now she paints it on the tablet. She makes a dome with shapes. She fills the sky."
+    },
+    {
+     "type": "explainer",
+     "title": "Zainab paints her card",
+     "scenes": [
+      {
+       "caption": "Draw the dome.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🕌",
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "grow",
+         "label": "dome"
+        }
+       ],
+       "say": "She draws a big dome with the shape tool."
+      },
+      {
+       "caption": "Fill the colours.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse",
+         "label": "yellow moon"
+        },
+        {
+         "id": "d",
+         "emoji": "🕌",
+         "x": 40,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "She fills the sky dark blue and the moon yellow."
+      },
+      {
+       "caption": "Save the card.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "💌",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "saved"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "saved"
+        }
+       ],
+       "say": "She saves the card. A digital card can be sent or printed."
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "markdown": "Paper and screen are different. Both can make good art.",
+     "say": "Paper paint is real and wet. Digital paint can be undone and saved. Both are real art."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What can digital paint do that paper paint cannot?",
+      "hint": "Think about the arrow tool.",
+      "explanation": "Digital paint has undo. Paper paint cannot undo.",
+      "skill_tag": "paint.compare",
+      "options": [
+       {
+        "id": "a",
+        "text": "Get wet"
+       },
+       {
+        "id": "b",
+        "text": "Undo a mistake"
+       },
+       {
+        "id": "c",
+        "text": "Smell of paint"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Plan before you paint",
+      "Choose colours that are easy to see",
+      "Paper and digital art are both real art"
+     ],
+     "say": "Let us remember. Plan first, then paint. Both paper and digital art are real art."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plan",
+       "meaning": "A picture or list of what you will make."
+      },
+      {
+       "term": "crescent",
+       "meaning": "A thin curved moon shape."
+      },
+      {
+       "term": "compare",
+       "meaning": "Look at two things to see what is the same and different."
+      },
+      {
+       "term": "save",
+       "meaning": "Keep your work so you can open it later."
+      },
+      {
+       "term": "dome",
+       "meaning": "A round roof, like half a ball."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do before painting a card?",
+     "hint": "Think before you start.",
+     "explanation": "A plan makes painting easier.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Delete it"
+      },
+      {
+       "id": "b",
+       "text": "Plan it"
+      },
+      {
+       "id": "c",
+       "text": "Hide it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A digital picture can be saved and opened later.",
+     "hint": "Think of a tablet.",
+     "explanation": "Digital pictures can be saved.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which colours are easy to read together?",
+     "hint": "They should look different.",
+     "explanation": "Different colours are easy to see.",
+     "options": [
+      {
+       "id": "a",
+       "text": "White and white"
+      },
+      {
+       "id": "b",
+       "text": "Dark blue and yellow"
+      },
+      {
+       "id": "c",
+       "text": "Pink and pink"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which word means made or shown on a computer?",
+    "hint": "Think of a tablet.",
+    "explanation": "Digital means made or shown on a computer.",
+    "skill_tag": "paint.digital",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wooden"
+     },
+     {
+      "id": "b",
+      "text": "Digital"
+     },
+     {
+      "id": "c",
+      "text": "Heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which tool draws a thin straight line?",
+    "hint": "Its name has the answer.",
+    "explanation": "The line tool draws lines.",
+    "skill_tag": "paint.line",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fill tool"
+     },
+     {
+      "id": "b",
+      "text": "Undo tool"
+     },
+     {
+      "id": "c",
+      "text": "Line tool"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "The fill tool colours the inside of a shape.",
+    "hint": "Think of a bucket.",
+    "explanation": "Fill pours colour inside a shape.",
+    "skill_tag": "paint.fill",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each tool to its job.",
+    "hint": "Think about each name.",
+    "explanation": "Each tool does a different job.",
+    "skill_tag": "paint.matchtool",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Line tool"
+     },
+     {
+      "id": "l2",
+      "text": "Shape tool"
+     },
+     {
+      "id": "l3",
+      "text": "Fill tool"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Makes a shape"
+     },
+     {
+      "id": "r1",
+      "text": "Draws a line"
+     },
+     {
+      "id": "r3",
+      "text": "Colours inside"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tools",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the brush.",
+    "hint": "It paints.",
+    "explanation": "A brush paints soft lines.",
+    "skill_tag": "paint.brush",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🖌️",
+       "label": "Brush",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "✂️",
+       "label": "Scissors",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📎",
+       "label": "Paper clip",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Aisha says undo deletes the whole picture. Is she right?",
+    "hint": "Think about one step.",
+    "explanation": "Undo takes back only your last step.",
+    "skill_tag": "paint.reason_undo",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it turns the tablet off"
+     },
+     {
+      "id": "b",
+      "text": "No. Undo only takes back the last step"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it deletes everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Zainab says the fill tool draws lines. Is she right?",
+    "hint": "Think about the bucket.",
+    "explanation": "Fill pours colour into a space. It does not draw lines.",
+    "skill_tag": "paint.reason_fill",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, fill draws lines"
+     },
+     {
+      "id": "b",
+      "text": "No. The fill tool colours inside a shape"
+     },
+     {
+      "id": "c",
+      "text": "Yes, fill makes circles"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Sam says you can only use the shape tool and never the brush. Is he right?",
+    "hint": "Think of the house.",
+    "explanation": "A picture can use many tools together.",
+    "skill_tag": "paint.reason_tools",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the brush is not allowed"
+     },
+     {
+      "id": "b",
+      "text": "No. You can use many tools in one picture"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only one tool at a time"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps for the house in order.",
+    "hint": "Wall first.",
+    "explanation": "Wall, roof, then colours.",
+    "skill_tag": "paint.house_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Fill in the colours"
+     },
+     {
+      "id": "i1",
+      "text": "Draw the square wall"
+     },
+     {
+      "id": "i2",
+      "text": "Add the triangle roof"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "number",
+    "prompt": "A house has 1 square, 1 triangle and 1 rectangle door. How many shapes is that?",
+    "hint": "Count each one.",
+    "explanation": "1 + 1 + 1 = 3 shapes.",
+    "skill_tag": "paint.count_shapes",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "You filled the door green by mistake. Which tool fixes it?",
+    "hint": "It takes back a step.",
+    "explanation": "Undo takes back your mistake.",
+    "skill_tag": "paint.undo_fix",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shape"
+     },
+     {
+      "id": "b",
+      "text": "Line"
+     },
+     {
+      "id": "c",
+      "text": "Undo"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a house.",
+    "hint": "Think of a real house.",
+    "explanation": "A square makes a wall and a triangle makes a roof.",
+    "skill_tag": "paint.house_shapes",
+    "points": 2,
+    "text": "A {b1} is a good shape for the wall, and a {b2} is a good shape for the roof.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "star"
+       },
+       {
+        "id": "b",
+        "text": "heart"
+       },
+       {
+        "id": "c",
+        "text": "square"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "circle"
+       },
+       {
+        "id": "b",
+        "text": "cloud"
+       },
+       {
+        "id": "c",
+        "text": "triangle"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put these steps in order to fix a mistake.",
+    "hint": "Notice first.",
+    "explanation": "Notice, undo, then carry on.",
+    "skill_tag": "paint.fix_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Tap undo"
+     },
+     {
+      "id": "i1",
+      "text": "Notice the mistake"
+     },
+     {
+      "id": "i3",
+      "text": "Carry on painting"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "A street has 5 houses. Each roof is 1 triangle. Slide to show how many triangles there are.",
+    "hint": "One roof for each house.",
+    "explanation": "5 houses with 1 roof each need 5 triangles.",
+    "skill_tag": "paint.slider_triangles",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Sam says one mistake means you must start the whole picture again. Is he right?",
+    "hint": "Is there a tool?",
+    "explanation": "Undo lets you fix a mistake and keep going.",
+    "skill_tag": "paint.reason_start_again",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always start again"
+     },
+     {
+      "id": "b",
+      "text": "Yes, delete the app"
+     },
+     {
+      "id": "c",
+      "text": "No. You can tap undo and keep going"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "house",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two ways fix a wrong colour? Pick two.",
+    "hint": "Use tools in the app.",
+    "explanation": "Undo or a new fill both fix a wrong colour.",
+    "skill_tag": "paint.fix_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fill it with the right colour"
+     },
+     {
+      "id": "b",
+      "text": "Turn the tablet upside down"
+     },
+     {
+      "id": "c",
+      "text": "Hide the screen"
+     },
+     {
+      "id": "d",
+      "text": "Tap undo"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each job to the tool that does it.",
+    "hint": "Think about each job.",
+    "explanation": "Fill colours, shape draws and undo takes back.",
+    "skill_tag": "paint.matchjob",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Colour inside a square"
+     },
+     {
+      "id": "l2",
+      "text": "Draw a circle"
+     },
+     {
+      "id": "l3",
+      "text": "Take back a mistake"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Shape"
+     },
+     {
+      "id": "r3",
+      "text": "Undo"
+     },
+     {
+      "id": "r1",
+      "text": "Fill"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "match",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "true_false",
+    "prompt": "You can use undo on a paper painting.",
+    "hint": "Paper paint is wet and real.",
+    "explanation": "Undo is a digital tool. Paper cannot undo.",
+    "skill_tag": "paint.paper_screen",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "match",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Which tool is best for a soft, wavy line?",
+    "hint": "Think of a paint brush.",
+    "explanation": "A brush paints soft lines.",
+    "skill_tag": "paint.brush",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shape"
+     },
+     {
+      "id": "b",
+      "text": "Undo"
+     },
+     {
+      "id": "c",
+      "text": "Brush"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "match",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Aisha says the brush and the line tool do exactly the same job. Is she right?",
+    "hint": "Compare the lines they make.",
+    "explanation": "A brush is soft and wavy. A line tool is straight.",
+    "skill_tag": "paint.reason_brush_line",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both only fill"
+     },
+     {
+      "id": "b",
+      "text": "No. A brush paints soft lines. The line tool makes straight lines"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "match",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "slider",
+    "prompt": "A paint app shows 3 tools: line, shape and fill. Slide to show how many tools.",
+    "hint": "Count them.",
+    "explanation": "Line, shape and fill make 3 tools.",
+    "skill_tag": "paint.slider_tools",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "match",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "fill_blank",
+    "prompt": "Finish the sentence about saving.",
+    "hint": "Think about keeping your work.",
+    "explanation": "We save a picture so we can open it later.",
+    "skill_tag": "paint.save",
+    "points": 2,
+    "text": "We {b1} a picture so we can {b2} it later.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "melt"
+       },
+       {
+        "id": "b",
+        "text": "save"
+       },
+       {
+        "id": "c",
+        "text": "lose"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "eat"
+       },
+       {
+        "id": "b",
+        "text": "open"
+       },
+       {
+        "id": "c",
+        "text": "wash"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "match",
+    "depth": "recall"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Omar says computer pictures cannot be as nice as paper paintings. Is he right?",
+    "hint": "Think about the Eid card.",
+    "explanation": "Digital and paper art can both be beautiful.",
+    "skill_tag": "paint.reason_nice",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, paper is always better"
+     },
+     {
+      "id": "b",
+      "text": "Yes, computers cannot make art"
+     },
+     {
+      "id": "c",
+      "text": "No. Both can be lovely. They are just different"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "match",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put these steps for making the card in order.",
+    "hint": "Plan first, save last.",
+    "explanation": "Plan, draw, fill, then save.",
+    "skill_tag": "paint.card_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Draw the shapes"
+     },
+     {
+      "id": "i4",
+      "text": "Save the card"
+     },
+     {
+      "id": "i3",
+      "text": "Fill the colours"
+     },
+     {
+      "id": "i1",
+      "text": "Plan on paper"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two colour pairs are easy to see? Pick two.",
+    "hint": "They should look very different.",
+    "explanation": "Dark colours and light colours stand out.",
+    "skill_tag": "paint.colours",
+    "options": [
+     {
+      "id": "a",
+      "text": "Black and white"
+     },
+     {
+      "id": "b",
+      "text": "Pink on pink"
+     },
+     {
+      "id": "c",
+      "text": "Yellow on white"
+     },
+     {
+      "id": "d",
+      "text": "Dark blue and yellow"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Layla says planning first wastes time. Is she right?",
+    "hint": "Think about the card plan.",
+    "explanation": "A plan saves time and helps you choose tools.",
+    "skill_tag": "paint.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never plan"
+     },
+     {
+      "id": "b",
+      "text": "Yes, planning is slow"
+     },
+     {
+      "id": "c",
+      "text": "No. A plan helps you know which tools to use"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "card",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "hotspot",
+    "prompt": "Tap the clearest card to read.",
+    "hint": "Look for colours that stand out.",
+    "explanation": "Dark blue on yellow is easy to read.",
+    "skill_tag": "paint.clear_card",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📕",
+       "label": "Dark blue on yellow",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📗",
+       "label": "Green on green",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📘",
+       "label": "Blue on blue",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "number",
+    "prompt": "Zainab uses 3 colours and 2 shapes on her card. How many things is that in all?",
+    "hint": "Add 3 and 2.",
+    "explanation": "3 + 2 = 5.",
+    "skill_tag": "paint.count_card",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "card",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Omar says a computer picture is not real art. Is he right?",
+    "hint": "Think about the Eid card.",
+    "explanation": "Digital art takes ideas, plans and skill.",
+    "skill_tag": "paint.reason_real",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only paper is art"
+     },
+     {
+      "id": "b",
+      "text": "Yes, screens cannot be art"
+     },
+     {
+      "id": "c",
+      "text": "No. A digital picture is real art"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "card",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Which is a kind thing to say about a friend's picture?",
+    "hint": "Be kind and helpful.",
+    "explanation": "Kind feedback names something good.",
+    "skill_tag": "paint.kind",
+    "options": [
+     {
+      "id": "a",
+      "text": "That is rubbish"
+     },
+     {
+      "id": "b",
+      "text": "I like the colours you chose"
+     },
+     {
+      "id": "c",
+      "text": "I do not like it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A picture painted on a tablet is called...",
+    "hint": "It is on a screen.",
+    "explanation": "A picture on a screen is a digital picture.",
+    "skill_tag": "paint.digital",
+    "options": [
+     {
+      "id": "a",
+      "text": "A paper picture"
+     },
+     {
+      "id": "b",
+      "text": "A digital picture"
+     },
+     {
+      "id": "c",
+      "text": "A wooden picture"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which tool makes a square or a circle?",
+    "hint": "Think about shapes.",
+    "explanation": "The shape tool makes shapes.",
+    "skill_tag": "paint.shape",
+    "options": [
+     {
+      "id": "a",
+      "text": "Undo tool"
+     },
+     {
+      "id": "b",
+      "text": "Shape tool"
+     },
+     {
+      "id": "c",
+      "text": "Fill tool"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "The fill tool draws a new line.",
+    "hint": "Fill pours colour.",
+    "explanation": "Fill colours inside. It does not draw lines.",
+    "skill_tag": "paint.fill",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Join each tool to its job.",
+    "hint": "Think about each name.",
+    "explanation": "Each tool has its own job.",
+    "skill_tag": "paint.matchtool",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Undo tool"
+     },
+     {
+      "id": "l2",
+      "text": "Brush"
+     },
+     {
+      "id": "l3",
+      "text": "Fill tool"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Paints soft lines"
+     },
+     {
+      "id": "r1",
+      "text": "Takes back a step"
+     },
+     {
+      "id": "r3",
+      "text": "Colours inside"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tools",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the undo arrow.",
+    "hint": "It goes backwards.",
+    "explanation": "The back arrow is undo.",
+    "skill_tag": "paint.undo",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "↩️",
+       "label": "Undo",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔷",
+       "label": "Shape",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪣",
+       "label": "Fill",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "tools",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Hana says undo wipes the whole screen. Is she right?",
+    "hint": "It goes back one step.",
+    "explanation": "Undo takes back one step at a time.",
+    "skill_tag": "paint.reason_undo",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it clears the screen"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it breaks the app"
+     },
+     {
+      "id": "c",
+      "text": "No. It takes back only the last thing you did"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Sam says the shape tool pours colour. Is he right?",
+    "hint": "Think about the bucket.",
+    "explanation": "Fill pours colour. Shape makes shapes.",
+    "skill_tag": "paint.reason_fill",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shape pours colour"
+     },
+     {
+      "id": "b",
+      "text": "No. The fill tool pours colour"
+     },
+     {
+      "id": "c",
+      "text": "Yes, shape deletes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a picture can use only one tool. Is she right?",
+    "hint": "Think of the house.",
+    "explanation": "We combine tools to make a picture.",
+    "skill_tag": "paint.reason_tools",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it is digital"
+     },
+     {
+      "id": "b",
+      "text": "No. Artists use many tools together"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tools",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put the steps for a tree in order.",
+    "hint": "Trunk first.",
+    "explanation": "Trunk, top, then leaves.",
+    "skill_tag": "paint.house_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add leaves with the brush"
+     },
+     {
+      "id": "i1",
+      "text": "Draw the brown trunk"
+     },
+     {
+      "id": "i2",
+      "text": "Draw a green circle on top"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "number",
+    "prompt": "A picture has 2 squares, 1 triangle and 1 circle. How many shapes is that?",
+    "hint": "Count each one.",
+    "explanation": "2 + 1 + 1 = 4 shapes.",
+    "skill_tag": "paint.count_shapes",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "You drew a line in the wrong place. Which tool fixes it quickly?",
+    "hint": "It goes back a step.",
+    "explanation": "Undo takes back the line.",
+    "skill_tag": "paint.undo_fix",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fill"
+     },
+     {
+      "id": "b",
+      "text": "Shape"
+     },
+     {
+      "id": "c",
+      "text": "Undo"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about tools.",
+    "hint": "Think about the jobs.",
+    "explanation": "Fill colours inside and undo takes back a step.",
+    "skill_tag": "paint.house_shapes",
+    "points": 2,
+    "text": "The {b1} tool colours inside, and the {b2} tool takes back a step.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "line"
+       },
+       {
+        "id": "b",
+        "text": "shape"
+       },
+       {
+        "id": "c",
+        "text": "fill"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fill"
+       },
+       {
+        "id": "b",
+        "text": "brush"
+       },
+       {
+        "id": "c",
+        "text": "undo"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put these steps in order for painting a sun.",
+    "hint": "Circle first.",
+    "explanation": "Circle, fill, then rays.",
+    "skill_tag": "paint.fix_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add lines for rays"
+     },
+     {
+      "id": "i1",
+      "text": "Draw a circle"
+     },
+     {
+      "id": "i2",
+      "text": "Fill it yellow"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "A street has 6 houses. Each roof is 1 triangle. Slide to show how many triangles there are.",
+    "hint": "One roof for each house.",
+    "explanation": "6 houses need 6 triangles.",
+    "skill_tag": "paint.slider_triangles",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Mina says a wrong colour means her picture is ruined. Is she right?",
+    "hint": "Is there a tool?",
+    "explanation": "Undo or a new fill fixes the colour.",
+    "skill_tag": "paint.reason_start_again",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is ruined"
+     },
+     {
+      "id": "b",
+      "text": "Yes, she must stop"
+     },
+     {
+      "id": "c",
+      "text": "No. She can undo it and try again"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "house",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two help fix a mistake? Pick two.",
+    "hint": "Use tools in the app.",
+    "explanation": "Undo and painting over both fix mistakes.",
+    "skill_tag": "paint.fix_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "Painting over it"
+     },
+     {
+      "id": "b",
+      "text": "Shouting at the screen"
+     },
+     {
+      "id": "c",
+      "text": "Closing your eyes"
+     },
+     {
+      "id": "d",
+      "text": "The undo tool"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "house",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Pair each job with the best tool.",
+    "hint": "Think about each job.",
+    "explanation": "Each tool has a job.",
+    "skill_tag": "paint.matchjob",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Paint a soft line"
+     },
+     {
+      "id": "l2",
+      "text": "Make a triangle"
+     },
+     {
+      "id": "l3",
+      "text": "Colour the sky"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Shape"
+     },
+     {
+      "id": "r1",
+      "text": "Brush"
+     },
+     {
+      "id": "r3",
+      "text": "Fill"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "match",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "true_false",
+    "prompt": "You can save a digital picture and open it later.",
+    "hint": "Think of a tablet.",
+    "explanation": "Digital pictures can be saved.",
+    "skill_tag": "paint.paper_screen",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "match",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Which tool is best for a neat straight line?",
+    "hint": "Think of a ruler.",
+    "explanation": "The line tool makes straight lines.",
+    "skill_tag": "paint.line_brush",
+    "options": [
+     {
+      "id": "a",
+      "text": "Brush"
+     },
+     {
+      "id": "b",
+      "text": "Undo"
+     },
+     {
+      "id": "c",
+      "text": "Line tool"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "match",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says the shape tool and the fill tool are the same. Is he right?",
+    "hint": "Compare their jobs.",
+    "explanation": "Shape draws. Fill colours.",
+    "skill_tag": "paint.reason_brush_line",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. Shape draws shapes and fill colours them"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both undo"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "match",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "slider",
+    "prompt": "A paint app shows 5 tools. You use 2. Slide to show how many are left unused.",
+    "hint": "5 take away 2.",
+    "explanation": "5 - 2 = 3 tools unused.",
+    "skill_tag": "paint.slider_tools",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "match",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about digital art.",
+    "hint": "Think about screens.",
+    "explanation": "Digital pictures are made on a tablet or a computer.",
+    "skill_tag": "paint.save",
+    "points": 2,
+    "text": "A digital picture is made on a {b1} or {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bucket"
+       },
+       {
+        "id": "b",
+        "text": "tablet"
+       },
+       {
+        "id": "c",
+        "text": "shoe"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "banana"
+       },
+       {
+        "id": "b",
+        "text": "computer"
+       },
+       {
+        "id": "c",
+        "text": "ladder"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "match",
+    "depth": "recall",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Sana says only paper paint is real art. Is she right?",
+    "hint": "Think about the Eid card.",
+    "explanation": "Digital and paper art are both real art.",
+    "skill_tag": "paint.reason_nice",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only paper counts"
+     },
+     {
+      "id": "b",
+      "text": "Yes, screens cannot be art"
+     },
+     {
+      "id": "c",
+      "text": "No. Digital art is real art too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "match",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for an Eid card in order.",
+    "hint": "Plan first, share last.",
+    "explanation": "Choose, draw, write, then share.",
+    "skill_tag": "paint.card_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Draw the moon and dome"
+     },
+     {
+      "id": "i4",
+      "text": "Share it kindly"
+     },
+     {
+      "id": "i3",
+      "text": "Add a message"
+     },
+     {
+      "id": "i1",
+      "text": "Choose colours"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two colour pairs are easy to read? Pick two.",
+    "hint": "They should look very different.",
+    "explanation": "Strong differences are easy to read.",
+    "skill_tag": "paint.colours",
+    "options": [
+     {
+      "id": "a",
+      "text": "Grey on grey"
+     },
+     {
+      "id": "b",
+      "text": "Light yellow on white"
+     },
+     {
+      "id": "c",
+      "text": "Green and white"
+     },
+     {
+      "id": "d",
+      "text": "Navy and cream"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says he does not need a plan for a big picture. Is he right?",
+    "hint": "Think about the card plan.",
+    "explanation": "A plan helps you choose shapes, colours and tools.",
+    "skill_tag": "paint.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plans are useless"
+     },
+     {
+      "id": "b",
+      "text": "No. A plan helps with a big picture"
+     },
+     {
+      "id": "c",
+      "text": "Yes, big pictures plan themselves"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "card",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "hotspot",
+    "prompt": "Tap the card with colours that stand out.",
+    "hint": "Look for very different colours.",
+    "explanation": "Black on white stands out.",
+    "skill_tag": "paint.clear_card",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📙",
+       "label": "White on yellow",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📘",
+       "label": "Black on white",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📗",
+       "label": "Green on green",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "number",
+    "prompt": "A card has 4 stars and 3 moons. How many shapes is that in all?",
+    "hint": "Add 4 and 3.",
+    "explanation": "4 + 3 = 7.",
+    "skill_tag": "paint.count_card",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "card",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says art must be made with paint to count. Is she right?",
+    "hint": "Think about the Eid card.",
+    "explanation": "Art can be made in many ways.",
+    "skill_tag": "paint.reason_real",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only paint counts"
+     },
+     {
+      "id": "b",
+      "text": "Yes, screens are not art"
+     },
+     {
+      "id": "c",
+      "text": "No. Art can be made on paper or on a screen"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "card",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "A friend shares a picture. What kind thing could you say?",
+    "hint": "Be kind and helpful.",
+    "explanation": "Kind words help friends keep trying.",
+    "skill_tag": "paint.kind",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yours is the worst"
+     },
+     {
+      "id": "b",
+      "text": "Delete it"
+     },
+     {
+      "id": "c",
+      "text": "Your moon looks lovely"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "card",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

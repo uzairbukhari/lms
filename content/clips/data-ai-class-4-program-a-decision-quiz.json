@@ -1,0 +1,174 @@
+{
+ "title": "Zara's Pakistan quiz",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "A plan.",
+   "say": "Zara's group plans a quiz about Pakistan. Each question has one right answer.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "p",
+     "emoji": "📝",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "A condition.",
+   "say": "The program asks: is the answer equal to Islamabad? That is a condition.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "❓",
+     "label": "answer = Islamabad?",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "If and else.",
+   "say": "If it is true, say Well done. Else say the right answer.",
+   "items": [
+    {
+     "id": "i",
+     "emoji": "🟢",
+     "label": "if",
+     "x": 30,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "e",
+     "emoji": "🔴",
+     "label": "else",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A score.",
+   "say": "A variable called score starts at zero. A right answer adds one.",
+   "items": [
+    {
+     "id": "v",
+     "emoji": "📦",
+     "label": "score: 0",
+     "x": 40,
+     "y": 52,
+     "size": 3
+    },
+    {
+     "id": "a",
+     "emoji": "➕",
+     "x": 75,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Test.",
+   "say": "They test with a right answer and a wrong answer. Both paths must work.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🧪",
+     "x": 30,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    },
+    {
+     "id": "b",
+     "emoji": "🔀",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A bug!",
+   "say": "A right answer says Try again. There is a bug.",
+   "items": [
+    {
+     "id": "b",
+     "emoji": "🐛",
+     "x": 35,
+     "y": 45,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "w",
+     "emoji": "❌",
+     "label": "Try again",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Trace it.",
+   "say": "They trace the steps and find a spelling slip. They fix it.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🔍",
+     "x": 30,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    },
+    {
+     "id": "f",
+     "emoji": "🔧",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Improve.",
+   "say": "They add a hint and a final score. The class loves the quiz.",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "💡",
+     "label": "hint",
+     "x": 28,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "t",
+     "emoji": "🏆",
+     "x": 72,
+     "y": 45,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

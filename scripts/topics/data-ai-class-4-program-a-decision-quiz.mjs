@@ -1,0 +1,266 @@
+import { SAY, SS, H, T, PHOTO, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { topicLesson } from "../topic-kit.mjs";
+
+// Computer Science, Data & AI, Class 4 (Zara, age 9), topic 8: Program a decision quiz with if and else.
+// Story thread: Zara's class builds a quiz about Pakistan that checks answers, keeps a score and gets debugged.
+const PATH = "data-ai-class-4-program-a-decision-quiz-1-f33c6a96.jpg";
+const LIGHT = "data-ai-class-4-program-a-decision-quiz-2-bae0ed5a.jpg";
+const OKM = (label) => ["ok", "✅", 50, 88, 2, "bounce", label];
+const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+
+// ---------------------------------------------------------------------------------------------- 1. learn
+const decide = {
+  id: "decide", kind: "learn", title: "If and else",
+  blocks: [
+    H("Welcome back, quiz maker!"),
+    SAY("Today we make a quiz that decides what to say. How does a program choose between two paths?",
+      T("Today's big question: how does a program make a decision?")),
+    SAY("Zara's class is building a quiz about Pakistan. The program must check each answer and choose what to say.",
+      PHOTO(PATH, "A winding dirt path through tall pine trees with purple heather on both sides", "A path leads one way. A program can choose between paths.", "Photo by Jack Skinner on Unsplash")),
+    H("Stop 1: Conditions"),
+    SAY("A program decides using a condition. A condition is a question that is either true or false.",
+      T("A **condition** is a question with a true or false answer.")),
+    EXP("True or false",
+      SS("The quiz asks: what is the capital city of Pakistan? Hamza types Islamabad.", S("The answer.", ["h", "🧒", 28, 55, 3], ["a", "⌨️", 72, 50, 3, "pulse", "Islamabad"])),
+      SS("The program asks itself: is the answer equal to Islamabad? That is the condition.", S("Condition.", ["c", "❓", 50, 48, 3, "pulse", "answer = Islamabad?"])),
+      SS("The answer matches, so the condition is true. If it did not match, it would be false.", S("True.", ["t", "✅", 40, 50, 3, "bounce", "true"], ["f", "❌", 72, 50, 3, "pulse", "false"], OKM("true or false")))),
+    CHK(mc("Which of these is a condition a program can check?", "score > 5", ["move 10 steps", "say Hello"], { hint: "It is true or false.", why: "A condition is a question with a true or false answer.", tag: "quiz.cond_chk" })),
+    H("Stop 2: If and else"),
+    SAY("An if block runs steps when the condition is true. The else part runs different steps when it is false.",
+      T("**Selection** means the program chooses a path. **Else** is the path for false.")),
+    EXP("Two paths",
+      SS("If the answer is right, the quiz says Well done.", S("If true.", ["i", "🟢", 28, 50, 3, "pulse", "if"], ["w", "🎉", 72, 50, 3])),
+      SS("Else, the quiz says Try again. Only one of the two paths runs each time.", S("Else.", ["e", "🔴", 28, 50, 3, "pulse", "else"], ["t", "🔄", 72, 50, 3])),
+      SS("Selection lets the program react in different ways. Without it, it would say the same thing every time.", S("Decisions.", ["s", "🔀", 50, 48, 3, "pulse"], OKM("one path")))),
+    CHK(mc("A quiz says: if the answer is right, say Well done, else say Try again. The answer is wrong. What does it say?", "Try again", ["Well done", "Both messages"], { hint: "Is the condition true?", why: "A wrong answer makes the condition false, so the else path runs.", tag: "quiz.else_chk" })),
+    SAY("Let us remember. Conditions are true or false. If and else choose one path.",
+      SUM("A condition is a true or false question", "If runs when the condition is true", "Else runs when it is false. Only one path runs")),
+    GLOSS({ condition: "A question that is either true or false.", selection: "When a program chooses between paths.", else: "The path a program follows when the condition is false.", true: "Correct. The test passes.", false: "Not correct. The test fails.", quiz: "A set of questions." }),
+  ],
+  mini: [
+    tf("Both branches of an if-else block run every time.", false, { hint: "The program chooses.", why: "Only one branch runs each time." }),
+    mc("When does the else part run?", "When the condition is false", ["When the condition is true", "Never"], { hint: "It is the other path.", why: "Else runs when the condition is false." }),
+    mc("What is selection in programming?", "Choosing between paths", ["Repeating steps", "Drawing a shape"], { hint: "Think about the forest path.", why: "Selection lets a program choose a path." }),
+    mc("If the answer is Islamabad, say Well done. Hamza types Lahore. What happens?", "The else path runs", ["Well done is said", "The program stops"], { hint: "The condition is false.", why: "The wrong answer follows the else path." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 2. try
+const compare = {
+  id: "compare", kind: "try", title: "Checking answers",
+  blocks: [
+    H("Stop 1: Ask and compare"),
+    SAY("The quiz asks a question and waits. What the player types is called the input.",
+      T("**Input** is what a player types or sends into the program.")),
+    SAY("The program compares the input with the right answer. It uses the equals symbol for that.",
+      T("The symbol = checks if two values are the same.")),
+    EXP("Comparing",
+      SS("The quiz asks a question. Nadia types an answer.", S("Ask.", ["q", "❓", 28, 50, 3], ["n", "👧", 72, 55, 3, "pulse"])),
+      SS("The program compares her input with the stored answer. The text must match.", S("Compare.", ["a", "📝", 28, 50, 3], ["b", "📝", 72, 50, 3], ["e", "🟰", 50, 50, 2, "pulse"])),
+      SS("A missing letter makes the match fail. Lahore and Lahor are different.", S("Exact.", ["x", "🔍", 30, 50, 3, "pulse"], ["w", "⚠️", 72, 45, 3, "bounce", "Lahor"], OKM("match must be exact")))),
+    CHK(tf("The condition 5 > 8 is true.", false, { hint: "Is 5 more than 8?", why: "5 is less than 8, so it is false.", tag: "quiz.five_chk" })),
+    H("Stop 2: Numbers and symbols"),
+    SAY("Numbers can be compared too. The symbol > means greater than, and < means less than.",
+      T("> means greater than. < means less than.")),
+    SAY("In a guessing game, the program says higher, lower or correct. First sort some conditions.",
+      T("Conditions can compare numbers.")),
+    MAN("Sort the conditions", "Move the 6 conditions into True or False.", "❓", 6, ["True", "False"]),
+    SAY("Now you try. Write three conditions for your own quiz.",
+      ACT("Write conditions", ["Paper and pens", "A quiz question idea"], ["Write a quiz question and its right answer.", "Write the condition that checks the answer.", "Write what the program says if the answer is right and if it is wrong."])),
+    CHK(mc("A game says: if guess > 7, say too high. The guess is 10. What does it say?", "Too high", ["Too low", "Correct"], { hint: "Is 10 more than 7?", why: "10 > 7 is true, so it says too high.", tag: "quiz.guess_chk" })),
+    SAY("Let us remember. Input is checked with conditions. Equals and greater than compare values.",
+      SUM("Input is what the player types", "= checks if values match exactly", "> and < compare numbers")),
+    GLOSS({ input: "Information typed or sent into a program.", equal: "The same as.", compare: "To look at two things to see how they match.", "greater than": "Bigger than.", "less than": "Smaller than.", symbol: "A sign that stands for something." }),
+  ],
+  mini: [
+    mc("Which symbol means less than?", "<", [">", "="], { hint: "It points the small end.", why: "< means less than." }),
+    tf("Lahore and Lahor match exactly.", false, { hint: "One letter is missing.", why: "A missing letter makes the text different." }),
+    mc("What is input?", "What a player types into the program", ["What the program draws", "A kind of loop"], { hint: "It comes in.", why: "Input is information sent in." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 3. play
+const score = {
+  id: "score", kind: "play", title: "Scores and tracing",
+  blocks: [
+    H("Stop 1: Keep a score"),
+    SAY("A traffic light also makes decisions. If the light is green, cars go. Else they wait.",
+      PHOTO(LIGHT, "A traffic light on a pole with only the green light lit against a clear blue sky", "A traffic light decides by a condition: if green, go. Else, wait.", "Photo by Jametlene Reskp on Unsplash")),
+    SAY("The quiz keeps score in a variable. A variable is a named box that holds a value.",
+      T("A **variable** is a named box that holds a value that can change.")),
+    EXP("Score variable",
+      SS("At the start, the program sets score to 0.", S("Start.", ["s", "📦", 50, 48, 3, "pulse", "score: 0"])),
+      SS("A right answer adds 1 to the score. A wrong answer leaves it as it was.", S("Add one.", ["p", "➕", 28, 50, 3], ["b", "📦", 72, 50, 3, "bounce", "score: 1"])),
+      SS("At the end, the program says the final score. The variable remembered it all.", S("Final.", ["f", "🏆", 30, 50, 3], ["n", "📦", 72, 50, 3, "pulse", "score: 3"], OKM("remembered")))),
+    CHK(mc("Why does the program set score to 0 at the start?", "So a score from the last game is not kept", ["So the quiz is easier", "So it plays music"], { hint: "Think about starting fresh.", why: "Starting at 0 clears the old score.", tag: "quiz.start_chk" })),
+    H("Stop 2: Trace and test"),
+    SAY("To trace is to follow a program step by step. We write the value of the variable at each step.",
+      T("To **trace** is to follow a program one step at a time.")),
+    SAY("Zara tests with a right answer and a wrong answer. Both paths need testing. First a memory game.",
+      T("Test both paths. Play the memory game.")),
+    BRAIN("memory_match", "Programming words", "Find the pairs.", ["🔀", "📦", "🔍", "✅"]),
+    CHK(hot("This quiz should add 1 for a right answer. Tap the line with the bug.", [["▫️", "if answer = Islamabad", 22, 50], ["▫️", "else change score by 1", 50, 50], ["▫️", "say Well done", 78, 50]], ["else change score by 1"], { labels: true, hint: "When should the score go up?", why: "Adding in the else path gives points for wrong answers.", tag: "quiz.bug_chk" })),
+    SAY("Let us remember. Variables hold changing values. We trace and test both paths.",
+      SUM("A variable holds a value that can change", "Set the score to 0 at the start", "Trace the steps and test both paths")),
+    GLOSS({ variable: "A named box that holds a value that can change.", trace: "To follow a program one step at a time.", bug: "A mistake in a program.", test: "To try a program to see if it works.", score: "The number of points so far." }),
+  ],
+  mini: [
+    mc("What does a variable do in the quiz?", "Remembers the score", ["Draws the question", "Plays the sound"], { hint: "A named box.", why: "A variable holds the score." }),
+    tf("A traffic light follows a condition: if green, go.", true, { hint: "Think about the photo.", why: "A condition decides what the cars do." }),
+    mc("Why test with a wrong answer as well as a right one?", "To check the else path works", ["Because it is quicker", "Because wrong answers are fun"], { hint: "Think about both paths.", why: "Both paths need testing." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 4. use
+const build = {
+  id: "build", kind: "use", title: "Build a decision quiz",
+  blocks: [
+    H("Stop 1: Plan the quiz"),
+    SAY("Zara's group plans before coding. They choose five questions about Pakistan, each with one right answer.",
+      T("Plan the questions and the right answers first.")),
+    SAY("They write each decision in words. If right, say Well done and add 1. Else say the right answer.",
+      T("Write the **pseudocode**: the plan in plain words.")),
+    SAY("They break the quiz into small parts. First one question, then the score, then the final message.",
+      T("Build and test one part at a time.")),
+    EXP("From plan to blocks",
+      SS("Question one is planned. Ask, wait, check, then say Well done or the right answer.", S("Plan.", ["p", "📝", 28, 50, 3], ["a", "🔀", 72, 50, 3, "pulse"])),
+      SS("The group builds only that question and tests it with a right and a wrong answer.", S("Test one.", ["b", "🧩", 28, 50, 3], ["t", "🧪", 72, 50, 3, "pulse"])),
+      SS("It works, so they copy the idea for question two. Small steps make fewer bugs.", S("Next.", ["c", "📋", 40, 50, 3], ["w", "✅", 72, 50, 3, "bounce"], OKM("small steps")))),
+    CHK(ord("Put the steps of making a decision quiz in order.", ["Plan the questions and answers", "Build the program", "Test with right and wrong answers", "Fix bugs and improve it"], { hint: "Plan first.", why: "Plan, build, test, then improve.", tag: "quiz.make_steps_chk" })),
+    H("Stop 2: Debug and improve"),
+    SAY("The group finds a bug. A right answer says Try again. They trace the condition and find a typing slip.",
+      T("A **bug** is a mistake. Trace the program to find it.")),
+    SAY("Then they improve the quiz. It gives a hint after a wrong answer and shows the final score.",
+      T("Improve the quiz with hints and a final score.")),
+    EXP("Debug and improve",
+      SS("Question three says Try again for the right answer. The condition has a spelling slip.", S("Bug.", ["b", "🐛", 28, 50, 3, "bounce"], ["q", "❌", 72, 50, 3, "pulse", "wrong message"])),
+      SS("They fix the spelling and test again. Now right answers get Well done.", S("Fix.", ["f", "🔧", 28, 50, 3], ["t", "✅", 72, 50, 3, "bounce"])),
+      SS("They add a hint and a final score. The quiz is kinder and clearer.", S("Improve.", ["h", "💡", 28, 50, 3, "pulse", "hint"], ["s", "🏆", 72, 50, 3, "pulse", "score"], OKM("better quiz")))),
+    SAY("Now you try. Plan a short quiz with a grown-up or classmate.",
+      ACT("Plan a quiz", ["Paper and pens", "A partner"], ["Write three questions and their answers.", "Write the if and else messages for each question.", "Swap with a partner and trace each other's plan."])),
+    CHK(tf("A quiz that runs without crashing can still have bugs.", true, { hint: "Right answer, wrong message.", why: "A program can run and still give wrong results.", tag: "quiz.runs_chk" })),
+    SAY("Let us remember. Plan, build in small steps, test both paths and improve.",
+      SUM("Plan with pseudocode, then build one part at a time", "Trace and test to find bugs", "Improve with hints and a final score")),
+    GLOSS({ pseudocode: "A plan for a program written in plain words.", bug: "A mistake in a program.", improve: "To make something better.", hint: "A small clue to help someone.", "decision quiz": "A quiz that chooses what to say using if and else." }),
+  ],
+  mini: [
+    mc("Why build and test one question at a time?", "Bugs are easier to find in small parts", ["It makes the quiz longer", "It means no testing"], { hint: "Think about small steps.", why: "Small parts are easier to test." }),
+    tf("Pseudocode is a plan written in plain words.", true, { hint: "No blocks yet.", why: "Pseudocode describes the plan in words." }),
+    mc("What could the quiz do after a wrong answer to help?", "Give a hint", ["Delete the score", "End the quiz at once"], { hint: "Be kind to the player.", why: "A hint helps the player learn." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara's Pakistan quiz", backdrop: "classroom", caption: "Zara's group builds a decision quiz about Pakistan and fixes a bug.",
+  scenes: [
+    { caption: "A plan.", say: "Zara's group plans a quiz about Pakistan. Each question has one right answer.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "p", emoji: "📝", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "A condition.", say: "The program asks: is the answer equal to Islamabad? That is a condition.",
+      items: [{ id: "c", emoji: "❓", label: "answer = Islamabad?", x: 50, y: 48, size: 3, anim: "pulse" }] },
+    { caption: "If and else.", say: "If it is true, say Well done. Else say the right answer.",
+      items: [{ id: "i", emoji: "🟢", label: "if", x: 30, y: 50, size: 3 }, { id: "e", emoji: "🔴", label: "else", x: 72, y: 50, size: 3 }] },
+    { caption: "A score.", say: "A variable called score starts at zero. A right answer adds one.",
+      items: [{ id: "v", emoji: "📦", label: "score: 0", x: 40, y: 52, size: 3 }, { id: "a", emoji: "➕", x: 75, y: 40, size: 3, effect: "sparkle" }] },
+    { caption: "Test.", say: "They test with a right answer and a wrong answer. Both paths must work.",
+      items: [{ id: "t", emoji: "🧪", x: 30, y: 50, size: 3, anim: "pulse" }, { id: "b", emoji: "🔀", x: 72, y: 50, size: 3 }] },
+    { caption: "A bug!", say: "A right answer says Try again. There is a bug.",
+      items: [{ id: "b", emoji: "🐛", x: 35, y: 45, size: 3, anim: "bounce" }, { id: "w", emoji: "❌", label: "Try again", x: 72, y: 50, size: 3 }] },
+    { caption: "Trace it.", say: "They trace the steps and find a spelling slip. They fix it.",
+      items: [{ id: "s", emoji: "🔍", x: 30, y: 50, size: 3, effect: "glow" }, { id: "f", emoji: "🔧", x: 72, y: 50, size: 3 }] },
+    { caption: "Improve.", say: "They add a hint and a final score. The class loves the quiz.",
+      items: [{ id: "h", emoji: "💡", label: "hint", x: 28, y: 50, size: 3 }, { id: "t", emoji: "🏆", x: 72, y: 45, size: 3, effect: "hearts" }] },
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- quiz
+const quiz = [
+  // ----- decide (q1-q8)
+  Q(mc("What is a condition in a program?", "A question that is true or false", ["A kind of loop", "A picture on the stage"], { hint: "It gives yes or no.", why: "A condition is a true or false question.", tag: "quiz.cond" }), "decide", "recall",
+    [mc("Which of these is a condition?", "score > 5", ["move 10 steps", "say Hello"], { hint: "It is true or false.", why: "score > 5 is true or false.", tag: "quiz.cond" })]),
+  Q(mc("What does else do in an if block?", "Says what to do when the condition is false", ["Repeats the steps", "Stops the program"], { hint: "It is the other path.", why: "Else is the path for false.", tag: "quiz.else" }), "decide", "recall",
+    [mc("A quiz says: if the answer is right, say Well done, else say Try again. When does it say Try again?", "When the answer is wrong", ["When the answer is right", "Always"], { hint: "It is the other path.", why: "Else runs when the answer is wrong.", tag: "quiz.else" })]),
+  Q(tf("A program with if and else follows only one of its two paths each time.", true, { hint: "It chooses.", why: "Only one branch runs.", tag: "quiz.one_path" }), "decide", "recall",
+    [tf("Every time an if-else block runs, both of its paths are followed.", false, { hint: "It chooses.", why: "Only one branch runs.", tag: "quiz.one_path" })]),
+  Q(mat("Match each programming word to its meaning.", [["Selection", "The program chooses a path"], ["Condition", "A true or false test"], ["Else", "The path if the test is false"]], { hint: "Think about each word.", why: "Each word has its own meaning.", tag: "quiz.word_match" }), "decide", "apply",
+    [mat("Pair each word with its meaning.", [["Input", "Information typed or sent in"], ["Output", "What the program shows or says"], ["Variable", "A named box that holds a value"]], { hint: "Think about each word.", why: "Each word has its own meaning.", tag: "quiz.word_match" })]),
+  Q(hot("Tap the block that is a condition.", [["❓", "answer = Islamabad", 22, 50], ["➡️", "move 10 steps", 50, 50], ["🔊", "say Hello", 78, 50]], ["answer = Islamabad"], { labels: true, hint: "True or false.", why: "answer = Islamabad is true or false.", tag: "quiz.tap_cond" }), "decide", "recall",
+    [hot("Tap the true-or-false test.", [["❓", "score > 3", 22, 50], ["🔁", "repeat 5 times", 50, 50], ["🎵", "play drum", 78, 50]], ["score > 3"], { labels: true, hint: "True or false.", why: "score > 3 is true or false.", tag: "quiz.tap_cond" })]),
+  Q(mc("Zara says a program with if and else runs both paths every time. Is she right?", "No. It runs only one path, depending on the condition", ["Yes, both always run", "Yes, else means also"], { hint: "Think about choosing.", why: "Only one path runs.", tag: "quiz.reason_both" }), "decide", "reason",
+    [mc("Idris says the else path runs whenever the if path runs. Is he right?", "No. Else runs only when the condition is false", ["Yes, they always run together", "Yes, else runs first"], { hint: "Think about choosing.", why: "Only one path runs.", tag: "quiz.reason_both" })]),
+  Q(mc("If it is cloudy, say take a coat, else say wear a hat. It is sunny. What does it say?", "Wear a hat", ["Take a coat", "Both messages"], { hint: "Is the condition true?", why: "Sunny is not cloudy, so the else path runs.", tag: "quiz.weather" }), "decide", "apply",
+    [mc("If the temperature is less than 10, say wear a scarf, else say no scarf needed. The temperature is 20. What does it say?", "No scarf needed", ["Wear a scarf", "Both messages"], { hint: "Is 20 less than 10?", why: "The condition is false, so else runs.", tag: "quiz.weather" })]),
+  Q(fill("Finish the sentences about decisions.", "A program checks a {b1}. If it is true it follows the {b2} branch.", [["condition", "cushion", "candle"], ["if", "else", "loop"]], { hint: "Think about the two paths.", why: "A condition decides, and true follows the if branch.", tag: "quiz.fill_decide" }), "decide", "recall",
+    [fill("Complete the sentences about else.", "An {b1} branch runs when the condition is {b2}.", [["else", "if", "loop"], ["false", "true", "loud"]], { hint: "Think about the other path.", why: "Else runs when the condition is false.", tag: "quiz.fill_decide" })]),
+  // ----- compare (q9-q15)
+  Q(mc("Which symbol means greater than?", ">", ["<", "="], { hint: "The open end faces the bigger number.", why: "> means greater than.", tag: "quiz.gt" }), "compare", "recall",
+    [mc("Which symbol stands for less than?", "<", [">", "="], { hint: "The point faces the smaller number.", why: "< means less than.", tag: "quiz.gt" })]),
+  Q(ord("Put the steps of one quiz question in order.", ["Ask the question", "Wait for the answer", "Check the answer with if", "Say well done or try again"], { hint: "Ask first.", why: "Ask, wait, check, then respond.", tag: "quiz.q_steps" }), "compare", "apply",
+    [ord("Put these steps of a number guess in order.", ["Pick a secret number", "Ask for a guess", "Compare the guess with the secret number", "Say higher, lower or correct"], { hint: "Pick the number first.", why: "Pick, ask, compare, then answer.", tag: "quiz.q_steps" })]),
+  Q(fill("Finish the sentences about answers.", "The player's typed words are the {b1}. The program uses an {b2} block to compare them.", [["input", "ink", "ice"], ["if", "iron", "inch"]], { hint: "Think about what comes in.", why: "The typed words are input and if compares them.", tag: "quiz.fill_input" }), "compare", "recall",
+    [fill("Complete the sentences about symbols.", "The symbol = checks if two values are {b1}. The symbol > checks if one is {b2}.", [["equal", "empty", "early"], ["bigger", "tinier", "rounder"]], { hint: "Think about each symbol.", why: "= means equal and > means bigger.", tag: "quiz.fill_input" })]),
+  Q(mc("The right answer is Lahore. A player types Lahor with a letter missing. What happens?", "The program says wrong, because the text does not match", ["The program guesses Lahore", "The program draws a picture"], { hint: "The text must match.", why: "A missing letter makes the text different.", tag: "quiz.mismatch" }), "compare", "apply",
+    [mc("The right answer is Karachi. A player types Karchi. What happens?", "The program says wrong, because the text does not match", ["The program fixes it by itself", "The program plays a song"], { hint: "The text must match.", why: "A missing letter makes the text different.", tag: "quiz.mismatch" })]),
+  Q(sld("The program says: if guess > 7, say too high. The guess is 10. Slide to show how much more than 7 the guess is.", { min: 0, max: 10 }, 3, 0, { hint: "10 take away 7.", why: "10 - 7 = 3.", tag: "quiz.diff" }), "compare", "apply",
+    [sld("The program says: if guess > 15, say too high. The guess is 20. Slide to show how much more than 15 the guess is.", { min: 0, max: 10 }, 5, 0, { hint: "20 take away 15.", why: "20 - 15 = 5.", tag: "quiz.diff" })]),
+  Q(tf("Is the test 5 > 8 true? It is true.", false, { hint: "Is 5 more than 8?", why: "5 is less than 8.", tag: "quiz.true_false" }), "compare", "apply",
+    [tf("The condition 9 > 4 is true.", true, { hint: "Is 9 more than 4?", why: "9 is more than 4.", tag: "quiz.true_false" })]),
+  Q(mc("Hamza says the condition score = 10 is the same as score > 10. Is he right?", "No. = checks for exactly 10, but > checks for more than 10", ["Yes, they are the same", "Yes, both mean at least 10"], { hint: "Think about 10 itself.", why: "= and > are different tests.", tag: "quiz.reason_eq" }), "compare", "reason",
+    [mc("Layla says age < 9 is true when age is 9. Is she right?", "No. 9 is not less than 9, so it is false", ["Yes, 9 counts", "Yes, it is always true"], { hint: "Think about 9 itself.", why: "9 is not less than 9.", tag: "quiz.reason_eq" })]),
+  // ----- score (q16-q23)
+  Q(ms("Which two are true about a variable? Pick two.", ["It has a name", "Its value can change"], ["Its value can never change", "It only holds pictures"], { hint: "Think about a named box.", why: "A variable has a name and a changeable value.", tag: "quiz.var_ms" }), "score", "apply",
+    [ms("Which two do you do with a score variable? Pick two.", ["Set it to 0 at the start", "Add 1 for a right answer"], ["Delete it after each question", "Make it a picture"], { hint: "Think about the quiz.", why: "Start at 0 and add for right answers.", tag: "quiz.var_ms" })]),
+  Q(num("Score starts at 0. Three answers are right and each adds 2. What is the score?", 6, { hint: "2 + 2 + 2.", why: "3 x 2 = 6.", tag: "quiz.score_calc" }), "score", "apply",
+    [num("Score starts at 0. Four answers are right and each adds 5. What is the score?", 20, { hint: "5 + 5 + 5 + 5.", why: "4 x 5 = 20.", tag: "quiz.score_calc" })]),
+  Q(mc("At the start of a quiz, what should the score be set to?", "0", ["10", "The last game's score"], { hint: "A fresh start.", why: "Setting score to 0 starts clean.", tag: "quiz.start_zero" }), "score", "recall",
+    [mc("Why set score to 0 when the quiz starts?", "So the last game's score does not carry over", ["So the quiz is faster", "So the answers are easier"], { hint: "A fresh start.", why: "It clears the old score.", tag: "quiz.start_zero" })]),
+  Q(mc("Idris says if he forgets the add-points line, the quiz will still count correctly. Is he right?", "No. A variable changes only when the program changes it", ["Yes, it counts by itself", "Yes, computers guess"], { hint: "Who changes the score?", why: "The program must change the variable.", tag: "quiz.reason_add" }), "score", "reason",
+    [mc("Nina says a variable remembers the score without the program updating it. Is she right?", "No. The program must update it", ["Yes, it updates itself", "Yes, it reads the player's mind"], { hint: "Who changes the score?", why: "The program must change the variable.", tag: "quiz.reason_add" })]),
+  Q(mc("Hamza says tracing a program is a waste of time because the computer will do it anyway. Is he right?", "No. Tracing helps us find mistakes", ["Yes, computers never go wrong", "Yes, tracing slows the computer"], { hint: "Think about finding bugs.", why: "Tracing helps us find bugs.", tag: "quiz.reason_trace" }), "score", "reason",
+    [mc("Sana says we only need to test a quiz once. Is she right?", "No. Test with right and wrong answers to check both paths", ["Yes, once is enough", "Yes, testing is not needed"], { hint: "Think about both paths.", why: "Both paths need testing.", tag: "quiz.reason_trace" })]),
+  Q(mc("Maryam says a quiz that only tests right answers is fully tested. Is she right?", "No. We must test wrong answers too, to check the else path", ["Yes, right answers are enough", "Yes, wrong answers cannot happen"], { hint: "Think about else.", why: "The else path needs testing.", tag: "quiz.reason_else" }), "score", "reason",
+    [mc("Omar says testing the else path is not needed. Is he right?", "No. A mistake could be hiding in it", ["Yes, else never has bugs", "Yes, it is never used"], { hint: "Think about else.", why: "The else path needs testing.", tag: "quiz.reason_else" })]),
+  Q(mat("Match each bug to its fix.", [["Score stays at 0", "Add a block to change score"], ["Right answer says Try again", "Fix the condition or swap the messages"], ["Score starts at 7", "Set score to 0 at the start"]], { hint: "Think about each symptom.", why: "Each bug has its own fix.", tag: "quiz.bug_match" }), "score", "apply",
+    [mat("Pair each test with what it checks.", [["Right answer", "The if path"], ["Wrong answer", "The else path"], ["Empty answer", "What happens with no input"]], { hint: "Think about each test.", why: "Each test checks something different.", tag: "quiz.bug_match" })]),
+  Q(hot("Tap the line that sets the wrong starting value.", [["▫️", "set score to 10", 22, 50], ["▫️", "ask What is the capital of Pakistan?", 50, 50], ["▫️", "if answer = Islamabad", 78, 50]], ["set score to 10"], { labels: true, hint: "Where should score start?", why: "Score should start at 0.", tag: "quiz.tap_start" }), "score", "apply",
+    [hot("Tap the line that should be an if or else but is a bug.", [["▫️", "if answer = Islamabad then say Well done", 22, 50], ["▫️", "else add 1 to score", 50, 50], ["▫️", "set score to 0", 78, 50]], ["else add 1 to score"], { labels: true, hint: "When should points be added?", why: "Points belong in the right-answer path.", tag: "quiz.tap_start" })]),
+  // ----- build (q24-q30)
+  Q(ord("Put the stages of creating a decision quiz in order.", ["Plan the questions and answers", "Build the program", "Test with right and wrong answers", "Fix bugs and improve it"], { hint: "Plan first.", why: "Plan, build, test, improve.", tag: "quiz.make_steps" }), "build", "apply",
+    [ord("Put these steps for improving a quiz in order.", ["Play it and notice a problem", "Find the line that causes it", "Change one thing", "Test again"], { hint: "Notice first.", why: "Notice, find, change, test.", tag: "quiz.make_steps" })]),
+  Q(ms("Which two are good extra features for a quiz? Pick two.", ["Tell the player their final score", "Give a hint after a wrong answer"], ["Delete the questions", "Hide the score always"], { hint: "Think about helping the player.", why: "A final score and a hint help the player.", tag: "quiz.extras" }), "build", "apply",
+    [ms("Which two help the players of a quiz? Pick two.", ["Clear messages for right and wrong", "Instructions at the start"], ["Silent errors", "No score at all"], { hint: "Think about helping the player.", why: "Clear messages and instructions help.", tag: "quiz.extras" })]),
+  Q(mc("Zara says a big quiz is easier if she builds it all at once. Is she right?", "No. Build and test one part at a time", ["Yes, all at once is faster", "Yes, testing is not needed"], { hint: "Think about small steps.", why: "Small parts are easier to test.", tag: "quiz.reason_small" }), "build", "reason",
+    [mc("Idris says breaking a quiz into small parts wastes time. Is he right?", "No. Small parts are easier to test and fix", ["Yes, it wastes time", "Yes, big parts never have bugs"], { hint: "Think about small steps.", why: "Small parts are easier to test.", tag: "quiz.reason_small" })]),
+  Q(mc("Maryam says her quiz is finished once it runs without crashing. Is she right?", "No. It must also give correct messages and scores", ["Yes, running means correct", "Yes, bugs always crash"], { hint: "Think about the bug in question three.", why: "A program can run and still be wrong.", tag: "quiz.reason_runs" }), "build", "reason",
+    [mc("Hira says if the quiz starts, nobody can find a bug. Is she right?", "No. A program can run and still be wrong", ["Yes, bugs stop it starting", "Yes, bugs cannot hide"], { hint: "Think about the bug in question three.", why: "A program can run and still be wrong.", tag: "quiz.reason_runs" })]),
+  Q(mc("Hamza says copying another group's quiz and calling it his own is fine. Is he right?", "No. Make your own, and credit any ideas you borrow", ["Yes, copying is clever", "Yes, nobody checks"], { hint: "Think about being fair.", why: "We make our own work and credit ideas.", tag: "quiz.reason_copy" }), "build", "reason",
+    [mc("Sana says she can copy a friend's code without asking. Is she right?", "No. Ask permission and give credit", ["Yes, code is free for all", "Yes, friends never mind"], { hint: "Think about being fair.", why: "We ask and credit.", tag: "quiz.reason_copy" })]),
+  Q(num("A quiz has 8 questions worth 2 points each. What is the highest score?", 16, { hint: "8 groups of 2.", why: "8 x 2 = 16.", tag: "quiz.max_score" }), "build", "apply",
+    [num("A quiz has 10 questions worth 3 points each. What is the highest score?", 30, { hint: "10 groups of 3.", why: "10 x 3 = 30.", tag: "quiz.max_score" })]),
+  Q(sld("A quiz has 5 questions. A player gets 3 right. Slide to show the percent right.", { min: 0, max: 100 }, 60, 0, { hint: "3 fifths.", why: "3 out of 5 is 60 percent.", tag: "quiz.percent" }), "build", "apply",
+    [sld("A quiz has 5 questions. A player gets 4 right. Slide to show the percent right.", { min: 0, max: 100 }, 80, 0, { hint: "4 fifths.", why: "4 out of 5 is 80 percent.", tag: "quiz.percent" })]),
+];
+
+export const topics = [
+  topicLesson({
+    slug: "data-ai-class-4-program-a-decision-quiz", subject: "data-ai", cls: 4, topic: 8, title: "Decision Quizzes: If and Else",
+    summary: "Build a quiz that makes decisions with if and else, compares answers, keeps a score variable, and finds and fixes bugs.",
+    unit: "Topic 8: Program a decision quiz", difficulty: 2,
+    objectives: ["Explain conditions, selection and the if and else paths", "Use input, comparisons and a score variable in a quiz", "Plan, test and debug a decision quiz"],
+    success_criteria: ["I can say what a condition is and how if and else work", "I can compare an answer and keep a score", "I can trace, test and fix a bug in a quiz"],
+    real_life: "Quiz apps that say well done or try again, and traffic lights that choose go or wait.",
+    standards: [
+      { framework: "nc_england", code: "KS2 computing", text: "Use sequence, selection and repetition in programs; work with variables and various forms of input and output; detect and correct errors" },
+      { framework: "nc_england", code: "KS2 computing algorithms", text: "Design, write and debug programs that accomplish specific goals; use logical reasoning to explain how algorithms work" },
+    ],
+    warm_up: [
+      mc("What does a loop do?", "Repeats steps", ["Draws a picture", "Stops the program"], { hint: "Think about repeat 4 times.", why: "A loop repeats steps." }),
+      mc("What is a bug?", "A mistake in a program", ["A small insect inside the computer", "A type of cable"], { hint: "You debug it.", why: "A bug is a mistake in a program." }),
+      num("What is 6 x 4?", 24, { hint: "4 sixes.", why: "6 x 4 = 24." }),
+    ],
+    intro: [],
+    subs: [decide, compare, score, build],
+    clip,
+    quiz,
+  }),
+];

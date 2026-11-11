@@ -1,19 +1,29 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, FRAC, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, FRAC, S, EXP, ROW, PHOTO, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-4-fractions-decimals.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-4-fractions-decimals-d1-3a54b971.png","alt":"A fraction wall with bars for 1/2, 2/4 and 4/8 lined up to compare equal parts","caption":"1/2 = 2/4 = 4/8."};
+const COTEACH_B = {"type":"image","asset":"maths-class-4-fractions-decimals-d2-c34fb903.png","alt":"A number line from 0 to 1 in tenths with 0.7 marked","caption":"0.7 on a tenths number line."};
 // Class 4 (Fatima) Maths topic 3: Fractions and decimals. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
+const CHOC_PHOTO = "maths-class-4-fractions-decimals-1-9c0a0fab.jpg";
 const bar = (id, parts, shaded, x = 50, y = 50, size = 3) => [id, { kind: "fraction_bar", parts, shaded }, x, y, size];
 
 const equivalent = {
   id: "equivalent", kind: "learn", title: "Equivalent fractions and comparing",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Imagine one pizza cut into eight slices. You eat two slices. Your sister eats two slices. Did you eat the same amount as someone who ate one quarter? Fractions help us share fairly. Decimals and percentages are fraction cousins, and shops use them every day. Today we will explore all three. Let's go!",
+      PHOTO(CHOC_PHOTO, "A chocolate bar with its squares, broken into pieces", "A bar of chocolate split into equal pieces shows fractions.", "Photo by Tetiana Bykovets on Unsplash")),
+    T("Today's big question: how are fractions, decimals and percentages all connected?"),
+    IMG("🍕", "A pizza cut into 8 slices: 2/8 is the same as 1/4."),
     H("Stop 1: Same amount, different names"),
     SAY("Here is a chocolate bar. If we cut it into two equal pieces and take one, we have one half. Now cut each half in two. We have four pieces, and two of them are shaded. Two quarters. The shaded part has not changed at all. It is the same amount with a different name. We say one half and two quarters are equivalent fractions. Cut again into eight, and four eighths is the same too.", T("**Equivalent fractions** are the same amount with different names.", "1/2 = 2/4 = 4/8")),
     EXPP("One half, two quarters, four eighths",
       SS("One half. The bar is in two equal parts and one is shaded.", S("1/2 shaded", bar("b", 2, 1))),
       SS("Cut each half in two. Now two out of four are shaded: two quarters. The same amount!", S("2/4 shaded = 1/2", bar("b", 4, 2))),
       SS("Cut again. Four out of eight are shaded. Four eighths. Still the same amount.", S("4/8 shaded = 1/2", bar("b", 8, 4)))),
+    SAY("The fraction wall lines up the bars. One half, two quarters and four eighths are equal.", COTEACH_A),
     CHK(mc("Which fraction is equivalent to 2/4?", "1/2", ["1/4", "3/4"], { hint: "Think about the chocolate bar.", why: "2 out of 4 equal parts is the same as 1 out of 2.", tag: "fractions.equivalent" })),
     SAY("Here is the trick. Multiply the top number and the bottom number by the same number, and the fraction keeps its value. One over three, times two on top and bottom, is two over six.", T("Multiply the top (**numerator**) and the bottom (**denominator**) by the same number: 1/3 = 2/6.")),
     FRAC("One third = two sixths", 6, 2, "2 of 6 parts shaded is the same as 1 of 3."),
@@ -23,9 +33,10 @@ const equivalent = {
     EXPP("2/3 and 2/5",
       SS("Two thirds. The bar has three parts and two are shaded.", S("2/3", bar("a", 3, 2, 50, 30))),
       SS("Two fifths. The bar has five parts and two are shaded. The shaded part is shorter.", S("2/5 is less than 2/3", bar("a", 3, 2, 50, 30), bar("b", 5, 2, 50, 65)))),
+    SAY("Zero point seven is seven tenths of the way from zero to one.", COTEACH_B),
     CHK(mc("Which is bigger?", "3/4", ["3/8", "They are equal"], { hint: "Which has bigger pieces?", why: "Fourths are bigger pieces than eighths, so 3/4 is bigger than 3/8.", tag: "fractions.compare" })),
     SAY("Remember. Equivalent fractions are the same amount. Multiply top and bottom by the same number. The bigger the bottom number, the smaller the pieces.", SUM("Equivalent fractions are the same amount", "Multiply top and bottom by the same number", "Bigger denominator means smaller pieces")),
-    GLOSS({ "equivalent fractions": "Fractions that are the same amount but look different.", numerator: "The top number. It says how many parts we have.", denominator: "The bottom number. It says how many equal parts the whole is cut into.", fraction: "Part of a whole." }),
+    GLOSS({ "fractions, decimals and percentages": "Three ways to write parts of a whole.", "equivalent fractions": "Fractions that are the same amount but look different.", numerator: "The top number. It says how many parts we have.", denominator: "The bottom number. It says how many equal parts the whole is cut into.", fraction: "Part of a whole." }),
   ],
   mini: [
     mc("Which is equal to 1/2?", "3/6", ["2/6", "1/6"], { hint: "Multiply top and bottom by the same number.", why: "1/2 = 3/6." }),
@@ -134,6 +145,25 @@ const ALTS = [
   [num("A bag costs Rs 500. It is 20% off. How many rupees is the discount?", 100, { hint: "20% is one fifth.", why: "500 ÷ 5 = 100.", tag: "decimals.percent_of" }), num("A book costs £8. It is 50% off. How many pounds is the discount?", 4, { hint: "50% is one half.", why: "8 ÷ 2 = 4.", tag: "decimals.percent_of" })],
 ];
 
+const clip = {
+  title: "Sharing the chocolate bar", backdrop: "home", caption: "Ayesha shares a chocolate bar and finds the fraction and the decimal.",
+  scenes: [
+    { caption: "Ayesha and the bar.", say: "This is Ayesha. She has one chocolate bar to share with her cousins.",
+      items: [{ id: "a", emoji: "👧", label: "Ayesha", x: 22, y: 56, size: 3, anim: "bounce", enter: "walk_right" }, { id: "c", emoji: "🍫", label: "1 bar", x: 70, y: 44, size: 3, enter: "pop" }] },
+    { caption: "Four equal pieces.", say: "Ayesha cuts the bar into four equal pieces. Each piece is one quarter.",
+      items: [{ id: "f", prop: { kind: "fraction_bar", parts: 4, shaded: 1 }, label: "1/4", x: 50, y: 46, size: 3, enter: "grow" }] },
+    { caption: "Two quarters.", say: "Two pieces together make two quarters. Two quarters is the same as one half.",
+      items: [{ id: "f", prop: { kind: "fraction_bar", parts: 4, shaded: 2 }, label: "2/4 = 1/2", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "Three quarters gone.", say: "Her cousins each take a piece. Three quarters are gone, and one quarter is left.",
+      items: [{ id: "f", prop: { kind: "fraction_bar", parts: 4, shaded: 3 }, label: "3/4 gone", x: 50, y: 46, size: 3 }] },
+    { caption: "0.75 of the bar.", say: "Three quarters is the same as nought point seven five.",
+      camera: { zoom: 1.2, x: 50, y: 44 },
+      items: [{ id: "d", emoji: "🔢", label: "0.75", x: 50, y: 40, size: 3, effect: "sparkle" }] },
+    { caption: "Shukriya, Ayesha!", say: "Sharing fairly is fractions in action. Shukriya, Ayesha!",
+      items: [{ id: "a", emoji: "👧", label: "Ayesha", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "r", emoji: "🎉", label: "0.75", x: 70, y: 40, size: 2, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-4-fractions-decimals", subject: "maths", cls: 4, topic: 3, title: "Fractions and Decimals",
@@ -153,13 +183,9 @@ export const topics = [
       num("What is 45 ÷ 5?", 9, { hint: "5 × ? = 45", why: "5 × 9 = 45." }),
       mc("What is 23 ÷ 4?", "5 remainder 3", ["5 remainder 1", "6 remainder 1"], { hint: "4 × 5 = 20.", why: "23 − 20 = 3." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Imagine one pizza cut into eight slices. You eat two slices. Your sister eats two slices. Did you eat the same amount as someone who ate one quarter? Fractions help us share fairly. Decimals and percentages are fraction cousins, and shops use them every day. Today we will explore all three. Let's go!", T("Today's big question: how are fractions, decimals and percentages all connected?")),
-      IMG("🍕", "A pizza cut into 8 slices: 2/8 is the same as 1/4."),
-      GLOSS({ "fractions, decimals and percentages": "Three ways to write parts of a whole." }),
-    ],
+    intro: [],
     subs: [equivalent, amounts, decimals, money],
+    clip,
     quiz: [
       { q: mc("Which fraction is equivalent to 1/2?", "4/8", ["3/8", "2/8"], { hint: "Multiply top and bottom by 4.", why: "1/2 = 4/8.", tag: "fractions.equivalent" }), sub: "equivalent", depth: "recall" },
       { q: num("What is 1/4 of 20?", 5, { hint: "Share 20 into 4 groups.", why: "20 ÷ 4 = 5.", tag: "fractions.amounts" }), sub: "amounts", depth: "recall" },
@@ -176,6 +202,36 @@ export const topics = [
       { q: num("What is £4.60 + £2.75?", 7.35, { tol: 0.005, hint: "Add pence first.", why: "60p + 75p = £1.35, so £7.35.", tag: "decimals.money" }), sub: "real_world", depth: "apply" },
       { q: mc("Ali says 50% off is the same as half price. Is he right?", "Yes, 50 out of 100 is one half", ["No, 50% is one quarter", "No, 50% is one tenth"], { hint: "50 × 2 = 100.", why: "50/100 = 1/2.", tag: "decimals.percent_reason" }), sub: "real_world", depth: "reason" },
       { q: num("A phone costs Rs 2,000. It is 10% off. How many rupees is the discount?", 200, { hint: "10% is one tenth.", why: "2,000 ÷ 10 = 200.", tag: "decimals.percent_of" }), sub: "real_world", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      { q: tf("1/3 is equivalent to 3/9.", true, { hint: "Multiply top and bottom by 3.", why: "1 × 3 = 3 and 3 × 3 = 9, so 1/3 = 3/9.", tag: "fractions.equivalent" }), sub: "equivalent", depth: "recall",
+        alts: [tf("2/3 is equivalent to 3/9.", false, { hint: "Multiply 2/3 top and bottom by 3.", why: "2/3 = 6/9, not 3/9.", tag: "fractions.equivalent" })] },
+      { q: fill("Fill in the gaps about 5/6.", "5/6 = {b1}/12. The bottom number is the {b2}.", [["10", "5", "6"], ["denominator", "numerator", "remainder"]], { hint: "Multiply top and bottom by 2.", why: "5/6 = 10/12, and the bottom number is the denominator.", tag: "fractions.language" }), sub: "equivalent", depth: "apply",
+        alts: [fill("Fill in the gaps about 3/5.", "3/5 = {b1}/10. The top number is the {b2}.", [["6", "3", "5"], ["numerator", "denominator", "remainder"]], { hint: "Multiply top and bottom by 2.", why: "3/5 = 6/10, and the top number is the numerator.", tag: "fractions.language" })] },
+      { q: ms("Which are equal to 1/2? Pick two.", ["5/10", "8/16"], ["3/5", "2/5"], { hint: "Multiply top and bottom by the same number.", why: "1/2 = 5/10 = 8/16.", tag: "fractions.equivalent" }), sub: "equivalent", depth: "apply",
+        alts: [ms("Which are equal to 2/3? Pick two.", ["4/6", "6/9"], ["2/6", "3/9"], { hint: "Multiply top and bottom by the same number.", why: "2/3 = 4/6 = 6/9.", tag: "fractions.equivalent" })] },
+      { q: ord("Put these fractions in order, largest first.", ["3/4", "2/3", "1/2", "1/3"], { hint: "Think about the size of the pieces.", why: "3/4 is biggest, then 2/3, then 1/2, then 1/3.", tag: "fractions.order" }), sub: "equivalent", depth: "apply",
+        alts: [ord("Sort these fractions, largest first.", ["7/8", "5/6", "3/4", "1/2"], { hint: "Think about the size of the pieces.", why: "7/8, then 5/6, then 3/4, then 1/2.", tag: "fractions.order" })] },
+      { q: sld("Slide to show 0.6 on the line from 0 to 1.", { min: 0, max: 1, step: 0.1 }, 0.6, 0.05, { hint: "6 tenths along.", why: "0.6 is six steps of 0.1.", tag: "decimals.line" }), sub: "decimals", depth: "apply",
+        alts: [sld("Slide to show 0.4 on the line from 0 to 1.", { min: 0, max: 1, step: 0.1 }, 0.4, 0.05, { hint: "4 tenths along.", why: "0.4 is four steps of 0.1.", tag: "decimals.line" })] },
+      { q: mat("Join each fraction to its decimal.", [["1/100", "0.01"], ["9/10", "0.9"], ["1/5", "0.2"]], { hint: "Tenths go after the point.", why: "1/100 = 0.01, 9/10 = 0.9 and 1/5 = 0.2.", tag: "decimals.convert" }), sub: "decimals", depth: "apply",
+        alts: [mat("Pair each fraction with its decimal, please.", [["1/4", "0.25"], ["3/5", "0.6"], ["7/100", "0.07"]], { hint: "Hundredths have two places after the point.", why: "1/4 = 0.25, 3/5 = 0.6 and 7/100 = 0.07.", tag: "decimals.convert" })] },
+      { q: hot("Tap the bar that shows 1/2 shaded.", [["🟦", "A: 3 of 8 shaded", 22, 50], ["🟦", "B: 4 of 8 shaded", 50, 50], ["🟦", "C: 2 of 5 shaded", 78, 50]], ["B: 4 of 8 shaded"], { labels: true, hint: "Simplify each one.", why: "4/8 = 1/2.", tag: "fractions.pictures" }), sub: "decimals", depth: "apply",
+        alts: [hot("Tap the bar that shows 1/4 shaded.", [["🟦", "A: 3 of 8 shaded", 22, 50], ["🟦", "B: 5 of 8 shaded", 50, 50], ["🟦", "C: 1 of 4 shaded", 78, 50]], ["C: 1 of 4 shaded"], { labels: true, hint: "Simplify each one.", why: "1 of 4 is 1/4. The others are not 1/4.", tag: "fractions.pictures" })] },
+      { q: mc("Ben says 1/5 is bigger than 1/3 because 5 is bigger than 3. Is he right?", "No. Fifths are smaller pieces than thirds, so 1/3 is bigger", ["Yes, 5 is bigger than 3", "No, they are equal"], { hint: "Which bar has bigger pieces?", why: "A whole cut into 5 parts has smaller pieces than one cut into 3 parts.", tag: "fractions.compare_reason" }), sub: "equivalent", depth: "reason",
+        alts: [mc("Sara says 1/8 is bigger than 1/4 because 8 is bigger than 4. Is she right?", "No. Eighths are smaller pieces than quarters, so 1/4 is bigger", ["Yes, 8 is bigger than 4", "No, they are equal"], { hint: "Which bar has bigger pieces?", why: "1/4 is bigger because quarters are bigger pieces than eighths.", tag: "fractions.compare_reason" })] },
+      { q: mc("Layla says 0.5 and 0.50 are different amounts. Is she right?", "No. 0.5 is 5 tenths, and 0.50 is 50 hundredths. They are the same", ["Yes, 0.50 has more digits", "No, 0.50 is bigger"], { hint: "Write 0.5 as hundredths.", why: "5 tenths is the same as 50 hundredths. A zero at the end does not change the value.", tag: "decimals.zero_reason" }), sub: "decimals", depth: "reason",
+        alts: [mc("Aisha says 0.2 and 0.20 are different. Is she right?", "No. 0.2 is 20 hundredths, so they are the same", ["Yes, 0.20 is bigger", "No, 0.2 is bigger"], { hint: "Write 0.2 as hundredths.", why: "2 tenths is 20 hundredths, so 0.2 and 0.20 are the same.", tag: "decimals.zero_reason" })] },
+      { q: mc("Hamza says 2/8 is bigger than 1/2 because 2 is bigger than 1. Is he right?", "No. 2/8 is 1/4, which is smaller than 1/2", ["Yes, 2 is bigger than 1", "No, they are equal"], { hint: "Simplify 2/8 first.", why: "2/8 = 1/4, and 1/4 is smaller than 1/2.", tag: "fractions.compare_reason" }), sub: "equivalent", depth: "reason",
+        alts: [mc("Mira says 4/6 is bigger than 2/3 because 4 is bigger than 2. Is she right?", "No. 4/6 = 2/3, so they are equal", ["Yes, 4/6 is bigger", "No, 2/3 is bigger"], { hint: "Divide top and bottom of 4/6 by 2.", why: "4/6 = 2/3, so they are the same amount.", tag: "fractions.compare_reason" })] },
+      { q: mc("Ali says 0.3 is the same as 3/100. Is he right?", "No. 0.3 is 3 tenths, which is 30 hundredths", ["Yes, 0.3 is 3 hundredths", "No, 0.3 is 3 wholes"], { hint: "The first place after the point is tenths.", why: "0.3 = 3/10 = 30/100. The number 3/100 is 0.03.", tag: "decimals.place_reason" }), sub: "decimals", depth: "reason",
+        alts: [mc("Nora says 0.08 is the same as 8/10. Is she right?", "No. 0.08 is 8 hundredths, which is 8/100", ["Yes, 0.08 is 8 tenths", "No, 0.08 is 80 tenths"], { hint: "The second place after the point is hundredths.", why: "0.08 = 8/100, which is smaller than 8/10.", tag: "decimals.place_reason" })] },
+      { q: mc("Omar says 50% of 40 is 20 because 50% is one half. Is he right?", "Yes. 50% is one half, and one half of 40 is 20", ["No, 50% of 40 is 10", "No, 50% is one quarter"], { hint: "What is half of 40?", why: "Half of 40 is 20, so Omar is right.", tag: "decimals.percent_reason" }), sub: "real_world", depth: "reason",
+        alts: [mc("Zara says 25% of 40 is 20 because 25% is one half. Is she right?", "No. 25% is one quarter, and one quarter of 40 is 10", ["Yes, 25% is one half", "No, it is 30"], { hint: "25% is one quarter.", why: "One quarter of 40 is 10, so Zara is wrong.", tag: "decimals.percent_reason" })] },
+      { q: num("What is 3/4 of 12?", 9, { hint: "12 ÷ 4 = 3, then times 3.", why: "3 × 3 = 9.", tag: "fractions.amounts" }), sub: "amounts", depth: "apply",
+        alts: [num("What is 2/5 of 25?", 10, { hint: "25 ÷ 5 = 5, then times 2.", why: "5 × 2 = 10.", tag: "fractions.amounts" })] },
+      { q: num("What is £6.25 + £1.80?", 8.05, { tol: 0.005, hint: "Add the pence first.", why: "25p + 80p = £1.05, so the total is £8.05.", tag: "decimals.money" }), sub: "real_world", depth: "apply",
+        alts: [num("What is £3.40 + £2.75?", 6.15, { tol: 0.005, hint: "Add the pence first.", why: "40p + 75p = £1.15, so the total is £6.15.", tag: "decimals.money" })] },
+      { q: mc("What is 5/8 + 2/8?", "7/8", ["7/16", "10/8"], { hint: "Add the tops. Keep the bottom.", why: "5 + 2 = 7, and the bottom stays 8.", tag: "fractions.add" }), sub: "amounts", depth: "apply",
+        alts: [mc("What is 4/9 + 3/9?", "7/9", ["7/18", "12/9"], { hint: "Add the tops. Keep the bottom.", why: "4 + 3 = 7, and the bottom stays 9.", tag: "fractions.add" })] },
+    ].map((x, i) => ({ alts: ALTS[i], ...x })),
   }),
 ];

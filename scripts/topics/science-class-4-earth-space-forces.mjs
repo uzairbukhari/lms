@@ -1,26 +1,34 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 6: Earth, space and forces (Fatima, age 9). Enquiry type: fair testing.
 
+const EARTH = "science-class-4-earth-space-forces-2-bf85e2aa.jpg";
+const MOON = "science-class-4-earth-space-forces-1-a6d0f2a7.jpg";
+const BRAKE = "science-class-4-earth-space-forces-3-db528748.jpg";
+
 const space = {
   id: "space", kind: "learn", title: "Earth, Sun and Moon",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore Earth, the Moon and forces. How do they work?", T("Today's big question: how do Earth and forces work?")),
+    SAY("This is Earth from space. Our planet spins and travels around the Sun.", PHOTO(EARTH, "Planet Earth seen from space, with white clouds over Africa", "Earth from space. Our planet spins and orbits the Sun.", "Photo by NASA on Unsplash")),
     H("Stop 1: Day and night, and the seasons"),
-    SAY("The Sun is a star. It is the centre of our solar system, and Earth is one of the planets that travel around it. Earth spins like a top. It takes twenty-four hours to spin once, and this spin is what gives us day and night. The side of Earth facing the Sun has daytime. The side facing away has night. Earth also travels around the Sun once every year, and its tilt gives us the seasons.", T("The **Sun** is a star. Earth **orbits** it once a year.", "Earth **rotates** once in 24 hours, which gives us day and night.")),
+    SAY("The Sun is a star. It is the centre of our solar system. Earth is one of the planets that travel around it. Earth spins like a top. It takes twenty-four hours to spin once, and this spin is what gives us day and night. The side of Earth facing the Sun has daytime. The side facing away has night. Earth also travels around the Sun once every year, and its tilt gives us the seasons.", T("The **Sun** is a star. Earth **orbits** it once a year.", "Earth **rotates** once in 24 hours, which gives us day and night.")),
     EB("space", "Earth and the Sun",
       SS("Earth spins. The side facing the Sun has day, and Pakistan sees the Sun rise in the morning.", S("Facing the Sun: day.", ["s", "☀️", 20, 50, 3, "pulse"], ["e", "🌍", 70, 55, 3, "spin"])),
       SS("As Earth keeps turning, our side faces away from the Sun, and it becomes night.", S("Facing away: night.", ["s", "☀️", 20, 50, 3, "pulse"], ["e", "🌏", 70, 55, 3, "spin"], ["n", "🌙", 85, 30, 2, "float"]))),
     CHK(mc("What causes day and night?", "Earth spinning on its axis", ["The Sun moving round Earth", "The Moon covering the Sun"], { hint: "Earth turns once in 24 hours.", why: "Earth rotates, so different places face the Sun at different times." })),
     H("Stop 2: The Moon"),
-    SAY("The Moon is a natural satellite, which means it orbits a planet. It orbits Earth about once a month. The Moon does not make its own light. We see it because it reflects light from the Sun. As the Moon travels around Earth, we see different amounts of its lit half. These are called the phases of the Moon, such as the new moon, the crescent, the half moon and the full moon. Muslims use the sighting of the new crescent moon to mark the start of each month in the Islamic calendar.", T("The Moon is a **satellite** that orbits Earth.", "The Moon reflects sunlight. Its **phases** change over about a month.")),
+    SAY("We see the Moon because it reflects light from the Sun.", PHOTO(MOON, "The Moon with craters against a dark sky", "The Moon reflects light from the Sun.", "Photo by Dmytro Koplyk on Unsplash")),
+    SAY("The Moon is a natural satellite, which means it orbits a planet. It orbits Earth about once a month. The Moon does not make its own light. We see it because it reflects light from the Sun. As the Moon travels around Earth, we see different amounts of its lit half. These are the phases of the Moon. They include the new moon, the crescent, the half moon and the full moon. Muslims use the new crescent moon to mark the start of each Islamic month.", T("The Moon is a **satellite** that orbits Earth.", "The Moon reflects sunlight. Its **phases** change over about a month.")),
     EB("sky", "Moon phases",
       SS("A thin crescent moon. Only a small part of the lit half faces us.", S("Crescent moon.", ["m", "🌙", 50, 45, 3, "float"])),
       SS("A full moon. The whole lit half faces us, so it looks like a bright circle.", S("Full moon.", ["m", "🌕", 50, 45, 3, "pulse"]))),
     CHK(tf("The Moon makes its own light.", false, { hint: "It reflects light.", why: "The Moon reflects light from the Sun." })),
     SAY("Remember. Earth spins to give day and night and orbits the Sun. The Moon orbits Earth.", SUM("Earth rotates once in 24 hours", "Earth orbits the Sun once a year", "The Moon orbits Earth and reflects sunlight")),
-    GLOSS({ Sun: "The star at the centre of our solar system.", orbits: "Travels in a curved path around something.", rotates: "Spins around.", satellite: "An object that orbits a planet.", phases: "The different shapes of the Moon that we see." }),
+    GLOSS({ axis: "An imaginary line through Earth from the North Pole to the South Pole.", Sun: "The star at the centre of our solar system.", orbits: "Travels in a curved path around something.", rotates: "Spins around.", satellite: "An object that orbits a planet.", phases: "The different shapes of the Moon that we see." }),
   ],
   mini: [
     mc("How long does Earth take to spin once?", "24 hours", ["One year", "One month"], { hint: "One day.", why: "Earth rotates once every 24 hours." }),
@@ -40,7 +48,7 @@ const forces = {
       SS("A heavier object is pulled harder. We measure the pull in newtons.", S("Heavier means a bigger pull.", ["h", "🏋️", 40, 55, 3, "none"], ["g", "⬇️", 75, 55, 3, "pulse"]))),
     CHK(mc("Which force pulls things towards the Earth?", "Gravity", ["Friction", "Magnetism"], { hint: "Why do things fall?", why: "Gravity pulls objects towards the centre of the Earth." })),
     H("Stop 2: Friction and air resistance"),
-    SAY("Friction is a force between two surfaces that rub together. It slows things down. A rough surface such as carpet has lots of friction, and a smooth surface such as ice has very little. Air resistance and water resistance are forces that push against things moving through air or water. A parachute has a large surface, so it catches lots of air and falls slowly. A fair test of parachutes changes only the size of the canopy, and keeps the weight and drop height the same.", MAN("Rough or smooth?", "Put surfaces with lots of friction in High and surfaces with little friction in Low.", "🛷", 8, ["High friction", "Low friction"])),
+    SAY("Friction is a force between two surfaces that rub together. It slows things down. A rough surface such as carpet has lots of friction. A smooth surface such as ice has very little. Air resistance and water resistance are forces that push against things moving through air or water. A parachute has a large surface, so it catches lots of air and falls slowly. A fair test of parachutes changes only the size of the canopy. Weight and drop height stay the same.", MAN("Rough or smooth?", "Put surfaces with lots of friction in High and surfaces with little friction in Low.", "🛷", 8, ["High friction", "Low friction"])),
     ACT("Parachute test", ["A small toy or a coin", "Thread and a plastic bag or cloth", "A stopwatch", "A grown-up to help you drop safely"], ["Make two parachutes of different sizes, but the same weight attached.", "Drop each one from the same height. Time how long each takes to land.", "Which fell more slowly? Write your pattern. What did you keep the same?"]),
     CHK(mc("Which surface has the least friction?", "Ice", ["Carpet", "Sandpaper"], { hint: "Think about sliding.", why: "Ice is smooth, so it has very little friction." })),
     SAY("Remember. Gravity pulls things down, friction slows things down and air resistance slows things moving through air.", SUM("Forces are pushes or pulls", "Gravity pulls things towards Earth", "Friction and air resistance slow things down")),
@@ -79,11 +87,12 @@ const safe = {
   id: "safe", kind: "use", title: "Forces and safety in real life",
   blocks: [
     H("Stop 1: Using forces to stay safe"),
-    SAY("We use what we know about forces every day. Seat belts hold us in our seats when a car stops suddenly. Brakes use friction to slow down a bike or a car, and tyres with a good grip give more friction on the road. Bike helmets protect our heads if we fall. Crumple zones in cars soak up a crash. A skydiver uses a parachute to increase air resistance. All of them help to keep people safe.", T("Forces help us stay safe: **seat belts**, **brakes** and **helmets**.", "Friction helps brakes and tyres to grip.")),
+    SAY("Bike brakes press on the wheel. Friction slows the bike down.", PHOTO(BRAKE, "A bicycle brake close to the wheel rim", "Bike brakes use friction to slow the wheel.", "Photo by Rafał Karoń on Unsplash")),
+    SAY("We use what we know about forces every day. Seat belts hold us in our seats when a car stops suddenly. Brakes use friction to slow down a bike or a car. Tyres with a good grip give more friction on the road. Bike helmets protect our heads if we fall. Crumple zones in cars soak up a crash. A skydiver uses a parachute to increase air resistance. All of them help to keep people safe.", T("Forces help us stay safe: **seat belts**, **brakes** and **helmets**.", "Friction helps brakes and tyres to grip.")),
     SAY("Seat belts, brakes and helmets all use what we know about forces.", IMG("🚗 🚲 ⛑️", "Seat belts, brakes and helmets keep us safe.")),
     CHK(mc("What do brakes use to slow a bike down?", "Friction", ["Gravity", "Light"], { hint: "Rubbing surfaces.", why: "Brakes rub against the wheel, and friction slows it." })),
     H("Stop 2: Earthquake safety"),
-    SAY("Earthquakes can be frightening, but knowing what to do keeps us safe. If the ground shakes, drop to the ground, take cover under a strong table, and hold on. Stay away from windows and heavy furniture. When the shaking stops, walk outside carefully to an open space, away from buildings. We remember the people who were hurt in earthquakes, and we pray for them and help in any way we can. Make a family plan.", ACT("My family safety plan", ["Paper and pencil", "A grown-up"], ["Draw a plan of your home. Mark strong tables and the exits.", "Choose a meeting place outside, away from buildings.", "Practise Drop, Cover and Hold with your family."])),
+    SAY("Earthquakes can be frightening, but knowing what to do keeps us safe. If the ground shakes, drop to the ground, take cover under a strong table, and hold on. Stay away from windows and heavy furniture. When the shaking stops, walk outside carefully to an open space, away from buildings. We remember the people hurt in earthquakes. We pray for them and help in any way we can. Make a family plan.", ACT("My family safety plan", ["Paper and pencil", "A grown-up"], ["Draw a plan of your home. Mark strong tables and the exits.", "Choose a meeting place outside, away from buildings.", "Practise Drop, Cover and Hold with your family."])),
     SAY("Under a strong table, away from windows, is a safe place to take cover.", IMG("🪑 🏃 🏠", "Take cover under a strong table, then go to an open space.")),
     CHK(tf("In an earthquake, you should hide next to a large window.", false, { hint: "Glass can break.", why: "You should stay away from windows and take cover under a strong table." })),
     SAY("Remember. We use forces and our science knowledge to stay safe.", SUM("Seat belts, brakes and helmets keep us safe", "Friction helps brakes and tyres grip", "In an earthquake, drop, cover and hold")),
@@ -114,6 +123,28 @@ const ALTS = [
   [mc("Sami says the Moon is a star because we can see it shine. Why is he wrong?", "The Moon only reflects light from the Sun", ["The Moon is too small to shine", "The Moon is made of light"], { hint: "Reflected light.", why: "The Moon does not make light. It reflects sunlight." }), mc("Dina says gravity only works on Earth. Why is she wrong?", "Gravity pulls on everything with mass, including the Moon", ["Gravity is a kind of light", "Gravity only works at night"], { hint: "The Moon orbits Earth.", why: "Gravity pulls the Moon too, keeping it in orbit." })],
 ];
 
+const clip = {
+  title: "Fatima looks at the sky", backdrop: "space", caption: "Follow Earth, the Moon and forces through one day.",
+  scenes: [
+    { caption: "Our star.", say: "The Sun is a star. Earth and the other planets orbit it.",
+      items: [{ id: "s", emoji: "☀️", x: 25, y: 50, size: 3, effect: "glow" }, { id: "e", emoji: "🌍", x: 72, y: 50, size: 3, anim: "spin" }] },
+    { caption: "Day and night.", say: "Earth spins once in 24 hours. The side facing the Sun has day.",
+      items: [{ id: "s", emoji: "☀️", x: 22, y: 50, size: 3 }, { id: "e", emoji: "🌏", x: 70, y: 50, size: 3, anim: "spin" }] },
+    { caption: "The Moon.", say: "The Moon orbits Earth about once a month. It reflects sunlight.",
+      items: [{ id: "e", emoji: "🌍", x: 40, y: 55, size: 3 }, { id: "m", emoji: "🌙", x: 72, y: 40, size: 2, anim: "float" }] },
+    { caption: "Gravity.", say: "Gravity pulls things towards Earth. That is why apples fall down.",
+      items: [{ id: "t", emoji: "🌳", x: 30, y: 55, size: 3 }, { id: "a", emoji: "🍎", x: 60, y: 30, size: 2, anim: "bounce" }, { id: "g", emoji: "⬇️", x: 80, y: 55, size: 2, anim: "pulse" }] },
+    { caption: "Friction.", say: "Brakes press on the wheel. Friction slows the bike down.",
+      items: [{ id: "b", emoji: "🚲", x: 45, y: 58, size: 3 }, { id: "f", emoji: "🛑", label: "friction", x: 78, y: 45, size: 2 }] },
+    { caption: "Air resistance.", say: "A parachute catches the air. Air resistance slows the fall.",
+      items: [{ id: "p", emoji: "🪂", x: 50, y: 45, size: 3, anim: "float" }] },
+    { caption: "Inside Earth.", say: "Earth has a thin crust, a hot mantle and a very hot core.",
+      items: [{ id: "c", emoji: "🌋", label: "plates move", x: 40, y: 55, size: 3 }, { id: "l", emoji: "🔴", label: "core", x: 75, y: 50, size: 2, anim: "pulse" }] },
+    { caption: "Stay safe.", say: "In an earthquake, drop, take cover and hold on.",
+      items: [{ id: "t", emoji: "🪑", x: 40, y: 58, size: 3 }, { id: "p", emoji: "🧎", x: 70, y: 58, size: 3, enter: "pop" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-earth-space-forces", subject: "science", cls: 4, topic: 6, title: "Earth, Space and Forces",
@@ -128,13 +159,9 @@ export const topics = [
       tf("Plastic is an electrical conductor.", false, { hint: "It covers wires.", why: "Plastic is an insulator." }),
       mc("What is energy never?", "Used up", ["Transferred", "Useful"], { hint: "It just changes form.", why: "Energy is never used up. It is transferred." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how do Earth, the Moon and forces work? By the end, you will explain day and night, describe the layers of the Earth, and name the forces that act on you every day. Let's go!", T("Today's big question: how do Earth and forces work?", "We will also plan a fair test.")),
-      IMG("🌍🌙⬇️", "Earth, the Moon and gravity."),
-      GLOSS({ space: "The huge empty region beyond Earth's air." }),
-    ],
+    intro: [],
     subs: [space, forces, earth, safe],
+    clip,
     quiz: [
       Q("space", "recall", "earth.rotate", mc("What happens during one full rotation of Earth?", "One day and one night pass", ["One year passes", "One month passes"], { hint: "24 hours.", why: "One rotation of Earth takes 24 hours, giving a day and night." }), ...ALTS[0]),
       Q("space", "recall", "earth.moon", tf("The Moon gives out its own light.", false, { hint: "Reflected light.", why: "The Moon only reflects sunlight." }), ...ALTS[1]),
@@ -151,6 +178,37 @@ export const topics = [
       Q("forces", "reason", "earth.reason_chute", mc("Why does a skydiver open a parachute?", "To increase air resistance and fall more slowly", ["To increase gravity", "To fall faster"], { hint: "A big canopy.", why: "A parachute increases air resistance, which slows the fall." }), ...ALTS[12]),
       Q("earth", "reason", "earth.reason_quake", mc("Why can Pakistan have earthquakes?", "It sits near the edges of tectonic plates", ["It is too hot", "It has too many dunes of sand"], { hint: "Moving plates.", why: "Plates push against each other near Pakistan, causing earthquakes." }), ...ALTS[13]),
       Q("space", "reason", "earth.reason_moon", mc("Sami says the Moon is a star because it shines. Why is he wrong?", "The Moon only reflects light from the Sun", ["The Moon is too small to shine", "The Moon is made of light"], { hint: "Reflected light.", why: "The Moon does not make light. It reflects sunlight." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("space", "recall", "earth.orbit_ms", ms("Which two of these travel in an orbit?", ["Earth", "The Moon"], ["A stone on the ground", "A parked bus"], { hint: "They go around something.", why: "Earth orbits the Sun and the Moon orbits Earth." }),
+        ms("Pick two things that Earth does.", ["Rotates once a day", "Orbits the Sun"], ["Stands still", "Orbits the Moon"], { hint: "Spinning and travelling.", why: "Earth rotates and orbits the Sun." })),
+      Q("space", "recall", "earth.star_hot", hot("Tap the object that is a star.", [["☀️", "Sun", 22, 50], ["🌍", "Earth", 50, 50], ["🌙", "Moon", 78, 50]], ["Sun"], { labels: true, hint: "It gives out its own light.", why: "The Sun is a star." }),
+        hot("Tap the object that orbits Earth.", [["☀️", "Sun", 22, 50], ["🌍", "Earth", 50, 50], ["🌙", "Moon", 78, 50]], ["Moon"], { labels: true, hint: "It is a satellite.", why: "The Moon orbits Earth." })),
+      Q("space", "recall", "earth.year_tf", tf("Earth takes about a year to orbit the Sun.", true, { hint: "Think about the calendar.", why: "One orbit of the Sun takes a year." }),
+        tf("The Sun orbits the Earth.", false, { hint: "Which is the star?", why: "Earth orbits the Sun." })),
+      Q("forces", "recall", "earth.friction_tf", tf("Friction slows moving things down.", true, { hint: "Think about rubbing.", why: "Friction acts against movement." }),
+        tf("Gravity pushes objects away from Earth.", false, { hint: "Gravity pulls.", why: "Gravity pulls objects towards Earth." })),
+      Q("forces", "apply", "earth.force_mat", mat("Match each example to the force it shows.", [["Brakes on a bike", "Friction"], ["Parachute opening", "Air resistance"], ["Apple falling", "Gravity"]], { hint: "Slowing or pulling?", why: "Brakes use friction, parachutes use air resistance and apples fall because of gravity." }),
+        mat("Match each surface to the friction it gives.", [["Rough tyre tread", "More grip"], ["Ice", "Little friction"], ["Carpet", "Lots of friction"]], { hint: "Rough or smooth?", why: "Rough surfaces give more friction." })),
+      Q("earth", "apply", "earth.layer_fill", fill("Complete the sentences about the Earth's layers.", "The thin outer layer is the {b1}. The very hot centre is the {b2}.", [["crust", "core", "mantle"], ["core", "crust", "plate"]], { hint: "Outside and inside.", why: "The crust is outside and the core is at the centre." }),
+        fill("Complete the sentences about melted rock.", "Melted rock under the ground is {b1}. Above the ground it is {b2}.", [["magma", "lava", "crust"], ["lava", "magma", "core"]], { hint: "Under or above?", why: "Magma is underground and lava is above ground." })),
+      Q("forces", "recall", "earth.resist_st", st("What is the name of the force that slows things moving through the air?", ["air resistance"], { hint: "Two words, starts with a.", why: "Air resistance pushes against things moving through the air." }),
+        st("What are the units for measuring force called?", ["newtons", "newton", "n"], { hint: "It starts with n.", why: "Forces are measured in newtons." })),
+      Q("forces", "apply", "earth.newton_num", num("A shoe needs 4 newtons to slide on lino and 9 newtons on carpet. How many more newtons does carpet need?", 5, { hint: "9 minus 4.", why: "9 - 4 = 5 newtons." }),
+        num("A shoe needs 3 newtons on ice and 11 newtons on sandpaper. How many more newtons does sandpaper need?", 8, { hint: "11 minus 3.", why: "11 - 3 = 8 newtons." })),
+      Q("space", "apply", "earth.days_sld", sld("A day has 24 hours. Slide to show the hours in 2 days.", { min: 0, max: 100, unit: "hours" }, 48, 0, { hint: "24 times 2.", why: "24 x 2 = 48 hours." }),
+        sld("A day has 24 hours. Slide to show the hours in 3 days.", { min: 0, max: 100, unit: "hours" }, 72, 0, { hint: "24 times 3.", why: "24 x 3 = 72 hours." })),
+      Q("space", "apply", "earth.phase_ord", ord("Put these Moon phases in order, starting with the new moon.", ["New moon", "Crescent", "Half moon", "Full moon"], { hint: "The lit part grows.", why: "The lit part grows from new moon to full moon." }),
+        ord("Put these steps of a parachute test in order.", ["Make two parachutes", "Drop them from the same height", "Time each fall", "Compare the times"], { hint: "Build, test, compare.", why: "Build, drop, time and then compare." })),
+      Q("earth", "recall", "earth.layer_mc", mc("What is the very hot centre of the Earth called?", "The core", ["The crust", "The mantle"], { hint: "It is in the middle.", why: "The core is the hottest layer at the centre." }),
+        mc("What are the huge moving pieces of the Earth's crust called?", "Tectonic plates", ["Volcanoes", "Satellites"], { hint: "They move slowly.", why: "The crust is broken into tectonic plates." })),
+      Q("space", "reason", "earth.reason_phases", mc("Sana says the Moon really changes shape in the sky. Why is she wrong?", "The Moon stays the same. We see different amounts of its lit half", ["The Moon melts and grows", "Clouds cut the Moon"], { hint: "Think about the lit half.", why: "The Moon's phases come from how much of its lit half we see." }),
+        mc("Ahmed says clouds cover part of the Moon to make its phases. Why is he wrong?", "Phases happen because we see different amounts of the lit half", ["Clouds change the Moon's size", "The Moon turns off"], { hint: "Think about the orbit.", why: "As the Moon orbits Earth, we see more or less of its lit half." })),
+      Q("forces", "reason", "earth.reason_friction", mc("Ali says friction is always bad and we should remove it. Why is he wrong?", "Friction helps us grip, walk and brake", ["Friction makes things fall", "Friction makes light"], { hint: "Think about brakes.", why: "Friction is useful for grip and braking." }),
+        mc("Rida says there is no friction on a smooth floor. Why is she wrong?", "All surfaces have some friction. Smooth ones have less", ["Floors cannot have friction", "Only rough things have friction"], { hint: "Smooth is not zero.", why: "Every surface has some friction." })),
+      Q("earth", "reason", "earth.reason_core", mc("Hana says the core is cold because it is far from the Sun. Why is she wrong?", "The core is the hottest layer of the Earth", ["The Sun heats the core", "The core is made of ice"], { hint: "It is deep inside.", why: "The core is extremely hot." }),
+        mc("Bilal says Earth is solid rock all the way through. Why is he wrong?", "It has layers: a thin crust, a hot mantle and a core", ["It is made of water", "It is empty inside"], { hint: "Think about the peach.", why: "Earth has a crust, a mantle and a core." })),
+      Q("safe", "reason", "earth.reason_run", mc("Faisal says it is safest to run outside during the shaking. Why is he wrong?", "Falling objects could hurt him. Drop, cover and hold is safer", ["Running stops the shaking", "Outside is always unsafe"], { hint: "Things can fall.", why: "During the shaking, drop, cover and hold on." }),
+        mc("Layla says a seat belt is not needed on a short trip. Why is she wrong?", "A sudden stop can throw you forward, even on a short trip", ["Short trips have no forces", "Seat belts only work at night"], { hint: "Think about stopping suddenly.", why: "A seat belt holds you when a car stops suddenly." })),
     ],
   }),
 ];

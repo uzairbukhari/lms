@@ -133,38 +133,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, young scientist!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: why do we use different materials?\n\nWe will test them and choose.",
-   "say": "Welcome back, young scientist! Today's big question is: why do we use different materials for different things? By the end, you will name materials, describe how they feel, squash and stretch them, and pick the best material for a job. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🪵🥄🧴🪟",
-   "alt": "Wood, metal, plastic and glass.",
-   "caption": "Wood, metal, plastic and glass."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "materials",
-     "meaning": "What things are made from, like wood or metal."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "names",
    "kind": "learn",
    "title": "Materials and their properties",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: why do we choose different materials?",
+     "say": "Today we explore materials. What are things made of, and why does it matter?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-materials-1-284039a6.jpg",
+     "alt": "A wooden spoon holding white flakes on a plain white surface",
+     "caption": "A spoon is an object. This one is made of wood.",
+     "credit": "Photo by Joanna Kosinska on Unsplash",
+     "say": "This spoon is an object. It is made of wood."
+    },
     {
      "type": "heading",
      "text": "Stop 1: What is it made of?"
@@ -322,6 +314,14 @@
      "text": "Stop 2: Describing materials"
     },
     {
+     "type": "image",
+     "asset": "science-class-1-materials-2-aa651927.jpg",
+     "alt": "A clear empty drinking glass with a reflection on a white surface",
+     "caption": "Glass is transparent. We can see through it.",
+     "credit": "Photo by engin akyurt on Unsplash",
+     "say": "Glass is transparent. We can see right through this glass."
+    },
+    {
      "type": "text",
      "markdown": "A **property** tells us what a material is like: hard, soft, rough, smooth.\n\n**Transparent** means you can see through it. **Opaque** means you cannot.",
      "say": "We can describe a material by its properties. A property tells us what a material is like. Is it hard or soft? Is it rough or smooth? Is it see-through, which we call transparent? Or can you not see through it, which is called opaque? Let's look at a window and a wall."
@@ -357,6 +357,19 @@
        "c"
       ]
      }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's rainy day",
+     "asset": "clip-science-class-1-materials-99504d7e.mp4",
+     "poster": "clip-science-class-1-materials-99504d7e.webp",
+     "seconds": 70,
+     "transcript": "It is raining hard. Zainab needs the right things to wear. Her boots are rubber. Rubber is waterproof, so her feet stay dry. Her raincoat is plastic. It is bendy and keeps the rain out. Hamza wears a paper hat. It goes soggy! Paper is not waterproof. At home, a glass window lets in light. We can see through it. A woolly jumper is soft. A wooden spoon is hard. She squashes a sponge and stretches a rubber band. Alhamdulillah, Zainab is warm and dry. The right material for the job!",
+     "caption": "Zainab chooses the right materials for a wet day."
     },
     {
      "type": "summary",
@@ -602,7 +615,7 @@
       "Squashy",
       "Hard"
      ],
-     "say": "Let's test some materials. We will squash each one and see if it changes. Put the materials that can be squashed in one box and the materials that cannot in the other. Then try it at home."
+     "say": "Let's test some materials. We will squash each one and see if it changes. Put materials you can squash in one box. Put the others in the other box. Then try it at home."
     },
     {
      "type": "activity",
@@ -763,6 +776,14 @@
     {
      "type": "heading",
      "text": "Stop 1: Choosing materials"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-materials-3-db310bfc.jpg",
+     "alt": "A pair of muddy yellow rubber boots standing in a rain puddle",
+     "caption": "Rubber boots keep our feet dry in the rain.",
+     "credit": "Photo by Joe Lee on Unsplash",
+     "say": "Rubber is waterproof and bendy. That makes it a good choice for boots."
     },
     {
      "type": "text",
@@ -1112,7 +1133,7 @@
     {
      "type": "text",
      "markdown": "**Rocks** are hard natural materials from the ground.\n\nA **quarry** is a place where stone is dug out.",
-     "say": "Rocks are natural materials from the ground. People dig them from places called quarries and mines. Stone from quarries is used for building and roads. Marble from the mountains of Pakistan and Italy is used for beautiful buildings, and the Badshahi Mosque uses red sandstone. Look at some rocks."
+     "say": "Rocks are natural materials from the ground. People dig them from places called quarries and mines. Stone from quarries is used for building and roads. Marble from the mountains of Pakistan and Italy is used for beautiful buildings. The Badshahi Mosque uses red sandstone. Look at some rocks."
     },
     {
      "type": "image",
@@ -1653,6 +1674,451 @@
     ],
     "skill_tag": "materials.rocks",
     "sub_lesson": "changes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "A wooden spoon is an object. Wood is the material it is made from.",
+    "hint": "The object is the thing. The material is what it is made from.",
+    "explanation": "The spoon is the object and wood is the material.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "materials.object_vs",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each object to the property that helps it.",
+    "hint": "Think about what each object has to do.",
+    "explanation": "A raincoat is waterproof, a window is see-through and a pillow is soft.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Raincoat"
+     },
+     {
+      "id": "l2",
+      "text": "Window"
+     },
+     {
+      "id": "l3",
+      "text": "Pillow"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Soft"
+     },
+     {
+      "id": "r1",
+      "text": "Waterproof"
+     },
+     {
+      "id": "r2",
+      "text": "See-through"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials.property_match",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Zainab needs boots for a wet day. Which material keeps her feet dry?",
+    "hint": "Which one does not let water in?",
+    "explanation": "Rubber is waterproof, so it keeps feet dry.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wool"
+     },
+     {
+      "id": "b",
+      "text": "Rubber"
+     },
+     {
+      "id": "c",
+      "text": "Paper"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.boots",
+    "sub_lesson": "jobs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "order",
+    "prompt": "Put the steps of a waterproof test in order.",
+    "hint": "Pour first.",
+    "explanation": "Pour, watch, feel, then decide.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Watch what happens"
+     },
+     {
+      "id": "i4",
+      "text": "Decide if it is waterproof"
+     },
+     {
+      "id": "i3",
+      "text": "Feel if the material is wet"
+     },
+     {
+      "id": "i1",
+      "text": "Pour a little water on the material"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "materials.test_order",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multi_select",
+    "prompt": "Which two materials are waterproof? Pick two.",
+    "hint": "Which ones keep water out?",
+    "explanation": "Rubber and plastic keep water out.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plastic"
+     },
+     {
+      "id": "b",
+      "text": "Paper"
+     },
+     {
+      "id": "c",
+      "text": "Cotton cloth"
+     },
+     {
+      "id": "d",
+      "text": "Rubber"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials.waterproof_ms",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about changing shape.",
+    "hint": "Think about pulling and pushing.",
+    "explanation": "We stretch a band to make it longer and squash a sponge to make it flat.",
+    "points": 2,
+    "text": "To make a rubber band longer we {b1} it. To push a sponge flat we {b2} it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "freeze"
+       },
+       {
+        "id": "b",
+        "text": "stretch"
+       },
+       {
+        "id": "c",
+        "text": "twist"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stretch"
+       },
+       {
+        "id": "b",
+        "text": "melt"
+       },
+       {
+        "id": "c",
+        "text": "squash"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "materials.actions_fill",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Zainab pulls play dough long. It stays long. What does that show?",
+    "hint": "Compare it with a rubber band.",
+    "explanation": "A rubber band springs back, but dough stays stretched.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dough is waterproof"
+     },
+     {
+      "id": "b",
+      "text": "Not every stretchy material springs back"
+     },
+     {
+      "id": "c",
+      "text": "Dough is hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.dough",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the one that feels rough.",
+    "hint": "Which one is bumpy?",
+    "explanation": "A brick wall feels rough and bumpy.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧱",
+       "label": "Brick wall",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪟",
+       "label": "Window glass",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧸",
+       "label": "Soft teddy",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "materials.rough_tap",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a natural material?",
+    "hint": "Which one comes from an animal?",
+    "explanation": "Wool comes from sheep. Plastic and glass are made by people.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A glass bottle"
+     },
+     {
+      "id": "b",
+      "text": "Wool from a sheep"
+     },
+     {
+      "id": "c",
+      "text": "Plastic"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.natural",
+    "sub_lesson": "names",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "short_text",
+    "prompt": "What word means a material soaks up water, like a sponge?",
+    "hint": "It starts with an a.",
+    "explanation": "A sponge is absorbent. It soaks up water.",
+    "answer": {
+     "accepted": [
+      "absorbent",
+      "absorbs",
+      "it absorbs",
+      "absorb"
+     ]
+    },
+    "skill_tag": "materials.absorb_st",
+    "sub_lesson": "forces",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "slider",
+    "prompt": "A box holds 3 metal spoons and 5 wooden spoons. Slide to show how many spoons.",
+    "hint": "3 + 5.",
+    "explanation": "3 + 5 = 8 spoons.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "spoons"
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.spoon_count",
+    "sub_lesson": "jobs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Hana says all plastic is bendy. Is she right?",
+    "hint": "Think of a plastic bucket.",
+    "explanation": "Plastic can be bendy or stiff. A bucket is hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all plastic bends"
+     },
+     {
+      "id": "b",
+      "text": "No, some plastic is hard and stiff"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plastic is always soft"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.plastic_bendy",
+    "sub_lesson": "changes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Sam says a brick wall is made of rock. Is he right?",
+    "hint": "Where do bricks come from?",
+    "explanation": "Rock is natural. Bricks are made from clay by people.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, bricks grow in the ground"
+     },
+     {
+      "id": "b",
+      "text": "No, bricks are made by people from clay"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a brick is a rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.brick_rock",
+    "sub_lesson": "changes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Aisha says glass is the best material for a football because it is shiny. Is she right?",
+    "hint": "What happens when glass is dropped?",
+    "explanation": "A football needs a bendy, bouncy material, not glass.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shiny things bounce"
+     },
+     {
+      "id": "b",
+      "text": "No, glass would smash. Rubber is better"
+     },
+     {
+      "id": "c",
+      "text": "Yes, glass is bendy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.glass_ball",
+    "sub_lesson": "jobs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Hamza says all soft things are smooth. Is he right?",
+    "hint": "Think about wool.",
+    "explanation": "Soft and smooth are different. Wool is soft but not smooth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soft and smooth mean the same"
+     },
+     {
+      "id": "b",
+      "text": "No, a woolly jumper is soft but bumpy"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a jumper is hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.soft_smooth",
+    "sub_lesson": "names",
     "depth": "reason"
    },
    {
@@ -2533,6 +2999,464 @@
     "sub_lesson": "changes",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "A spoon is a material and metal is an object.",
+    "hint": "Which one is the thing you hold?",
+    "explanation": "A spoon is an object. Metal is the material.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "materials.object_vs",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Join each object to the property that helps it.",
+    "hint": "Think about what each object has to do.",
+    "explanation": "Boots keep out water, a jar lets us see inside and a cushion is soft.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Boots"
+     },
+     {
+      "id": "l2",
+      "text": "Glass jar"
+     },
+     {
+      "id": "l3",
+      "text": "Cushion"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Transparent"
+     },
+     {
+      "id": "r1",
+      "text": "Waterproof"
+     },
+     {
+      "id": "r3",
+      "text": "Soft"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "materials.property_match",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Which material is best for a bicycle tyre?",
+    "hint": "It must bend and grip.",
+    "explanation": "Rubber is bendy and grips the road.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Glass"
+     },
+     {
+      "id": "b",
+      "text": "Wood"
+     },
+     {
+      "id": "c",
+      "text": "Rubber"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.boots",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "order",
+    "prompt": "Put the steps of a squash test in order.",
+    "hint": "Pick first.",
+    "explanation": "Pick, squash, let go, then write.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Let go and watch"
+     },
+     {
+      "id": "i4",
+      "text": "Write what happened"
+     },
+     {
+      "id": "i2",
+      "text": "Squash it gently"
+     },
+     {
+      "id": "i1",
+      "text": "Pick a material"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "materials.test_order",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multi_select",
+    "prompt": "Which two materials would keep the rain out? Pick two.",
+    "hint": "Which ones keep water out?",
+    "explanation": "A plastic sheet and rubber keep rain out.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rubber"
+     },
+     {
+      "id": "b",
+      "text": "A paper towel"
+     },
+     {
+      "id": "c",
+      "text": "Cotton wool"
+     },
+     {
+      "id": "d",
+      "text": "A plastic sheet"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "materials.waterproof_ms",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about changing shape.",
+    "hint": "Think about pushing and curving.",
+    "explanation": "We squash a sponge to make it smaller and bend a ruler to make it curved.",
+    "points": 2,
+    "text": "To make a sponge smaller we {b1} it. To make a ruler curved we {b2} it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stretch"
+       },
+       {
+        "id": "b",
+        "text": "freeze"
+       },
+       {
+        "id": "c",
+        "text": "squash"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "lift"
+       },
+       {
+        "id": "b",
+        "text": "bend"
+       },
+       {
+        "id": "c",
+        "text": "melt"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "materials.actions_fill",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "An elastic band goes back to its shape after stretching. How is it different from dough?",
+    "hint": "What happens when you let go?",
+    "explanation": "Elastic springs back, but dough stays stretched.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is made of wood"
+     },
+     {
+      "id": "b",
+      "text": "It springs back and dough does not"
+     },
+     {
+      "id": "c",
+      "text": "It is waterproof"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.dough",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the one that feels smooth.",
+    "hint": "Which one has no bumps?",
+    "explanation": "A glass bowl feels smooth.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Rough rock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🥣",
+       "label": "Glass bowl",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "Brick",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "materials.rough_tap",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which of these comes from nature?",
+    "hint": "Which one grows?",
+    "explanation": "Wood comes from a tree. A plastic toy is made in a factory.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rubber tyre"
+     },
+     {
+      "id": "b",
+      "text": "Wood from a tree"
+     },
+     {
+      "id": "c",
+      "text": "A plastic toy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.natural",
+    "sub_lesson": "names",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "short_text",
+    "prompt": "What word describes a material that feels bumpy and not smooth?",
+    "hint": "It starts with an r.",
+    "explanation": "A rough material feels bumpy.",
+    "answer": {
+     "accepted": [
+      "rough",
+      "bumpy"
+     ]
+    },
+    "skill_tag": "materials.absorb_st",
+    "sub_lesson": "forces",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "slider",
+    "prompt": "A box holds 4 metal spoons and 6 wooden spoons. Slide to show how many spoons.",
+    "hint": "4 + 6.",
+    "explanation": "4 + 6 = 10 spoons.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "spoons"
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "materials.spoon_count",
+    "sub_lesson": "jobs",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Omar says plastic is always soft. Is he right?",
+    "hint": "Think of a plastic chair.",
+    "explanation": "Plastic can be soft or hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plastic is a sponge"
+     },
+     {
+      "id": "b",
+      "text": "No, a plastic bucket is hard"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plastic cannot be hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.plastic_bendy",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a concrete path is a natural rock. Is she right?",
+    "hint": "Is concrete found in nature?",
+    "explanation": "Concrete is a man-made material.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is cut from a mountain"
+     },
+     {
+      "id": "b",
+      "text": "No, concrete is made by people"
+     },
+     {
+      "id": "c",
+      "text": "Yes, concrete grows"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.brick_rock",
+    "sub_lesson": "changes",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a paper umbrella is best for heavy rain. Is he right?",
+    "hint": "What happens to paper in the rain?",
+    "explanation": "Paper goes soggy in rain, so it makes a poor umbrella.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, paper is waterproof"
+     },
+     {
+      "id": "b",
+      "text": "Yes, paper is stiff"
+     },
+     {
+      "id": "c",
+      "text": "No, paper goes soggy. Plastic or tight cloth is better"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "materials.glass_ball",
+    "sub_lesson": "jobs",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Zainab says all smooth things are soft. Is she right?",
+    "hint": "Think about glass.",
+    "explanation": "Smooth and soft are different. Glass is smooth but hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, glass is soft"
+     },
+     {
+      "id": "b",
+      "text": "No, a glass window is smooth but hard"
+     },
+     {
+      "id": "c",
+      "text": "Yes, smooth things squash"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "materials.soft_smooth",
+    "sub_lesson": "names",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

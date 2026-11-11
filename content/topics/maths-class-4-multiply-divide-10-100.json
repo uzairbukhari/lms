@@ -1,0 +1,2719 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-multiply-divide-10-100",
+  "subject": "maths",
+  "title": "Multiplying and Dividing by 10 and 100",
+  "summary": "See that digits move columns when we multiply or divide by 10 and 100, and scale known facts.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: Multiplying and dividing by 10 and 100",
+  "learning_objectives": [
+   "Multiply and divide whole numbers by 10 and 100",
+   "Explain it with place value",
+   "Scale known times table facts"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 place value",
+    "text": "Find 1,000 more or less than a given number; multiply and divide by 10 and 100 using place value"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.05"
+   }
+  ],
+  "success_criteria": [
+   "I can say what happens to the digits when I multiply by 10 or 100",
+   "I can divide by 10 and 100 using place value",
+   "I can scale a fact I know"
+  ],
+  "real_life": "Counting packs of pencils, notes and coins, and scaling a recipe or a shop order.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 6 + 7?",
+    "hint": "Make a ten first.",
+    "explanation": "6 + 4 = 10, then 3 more is 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 5 × 4?",
+    "hint": "Count in fours.",
+    "explanation": "5 × 4 = 20.",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "3 tens is 30.",
+    "hint": "10 + 10 + 10.",
+    "explanation": "3 tens is 30.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "tens_times",
+   "kind": "learn",
+   "title": "Ten times bigger",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara and the mango boxes",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: what happens to the digits when we multiply by 10 and 100?",
+     "say": "Zara's uncle Bilal packs mangoes in boxes. Each box holds ten mangoes. Ten boxes make a bigger pile. When we multiply by ten, every number gets ten times bigger. Let's see what happens to the digits."
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-multiply-divide-10-100-1-8d5cde76.jpg",
+     "alt": "Twelve white eggs arranged together on a white surface",
+     "caption": "A group of twelve. Ten groups of ten would make one hundred.",
+     "credit": "Photo by Mae Mu on Unsplash"
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Moving up a column",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Multiplying by 10** moves every digit one place to the left.\n\n4 × 10 = 40. The 4 moves into the tens column.",
+     "say": "Here is a secret. When we multiply by ten, each digit moves one place to the left. The digits do not change. Only their places change. Look at four. Four times ten is forty. The four moves up one column, into the tens."
+    },
+    {
+     "type": "explainer",
+     "title": "4 × 10 with place value",
+     "scenes": [
+      {
+       "caption": "4 ones",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟥",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "4 ones"
+        }
+       ],
+       "say": "Four ones. The 4 sits in the ones column."
+      },
+      {
+       "caption": "4 × 10",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟥",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "4 ones"
+        },
+        {
+         "id": "b",
+         "emoji": "🟨",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4 tens"
+        }
+       ],
+       "say": "Multiply by ten. The 4 moves one place left, into the tens column."
+      },
+      {
+       "caption": "4 × 10 = 40",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🟨",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "4 tens"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4 × 10 = 40"
+        }
+       ],
+       "say": "Four tens is forty. The zero fills the ones place."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-multiply-divide-10-100-d1-c8423e8e.png",
+     "alt": "A place value chart with an arrow showing 4 tens multiplied by 10 becomes 4 hundreds",
+     "caption": "× 10 moves a digit one place left.",
+     "say": "When we multiply by ten, every digit moves one place to the left. Four tens become four hundreds."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 53 × 10?",
+      "hint": "Each digit moves one place left.",
+      "explanation": "53 × 10 = 530. The 5 moves to the hundreds, the 3 to the tens, and a zero fills the ones.",
+      "skill_tag": "tens.times10",
+      "answer": {
+       "value": 530,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Two places for times 100",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Multiplying by 100** moves every digit two places to the left.\n\n6 × 100 = 600.",
+     "say": "Times one hundred moves each digit two places to the left. Six times one hundred is six hundred. The six moves from the ones, past the tens, into the hundreds. Two zeros fill the gaps."
+    },
+    {
+     "type": "image",
+     "emoji": "🔟💯",
+     "alt": "Each place is ten times bigger than the place on its right.",
+     "caption": "Each place is ten times bigger than the place on its right."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is 36 × 100?",
+      "hint": "Move each digit two places left.",
+      "explanation": "36 × 100 = 3,600.",
+      "skill_tag": "tens.times100",
+      "options": [
+       {
+        "id": "a",
+        "text": "360"
+       },
+       {
+        "id": "b",
+        "text": "3,600"
+       },
+       {
+        "id": "c",
+        "text": "36,000"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The sticky worm",
+     "asset": "clip-maths-class-4-multiply-divide-10-100-00ae0ae1.mp4",
+     "poster": "clip-maths-class-4-multiply-divide-10-100-00ae0ae1.webp",
+     "seconds": 53,
+     "transcript": "This is Zara's sticky-tack worm. It is four blobs long. Zara makes the worm ten times longer. How many blobs now? Four tens is forty blobs. The four moves into the tens column. Each blob is now a ten. Ten times bigger, one place to the left. Now divide by ten. The digits move one place to the right again. Forty divided by ten is four. Shukriya, Zara!",
+     "caption": "A sticky-tack worm grows ten times longer, then is cut back into tens."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Times 10: one place left",
+      "Times 100: two places left",
+      "Zeros fill the empty places"
+     ],
+     "say": "Remember. Times ten moves digits one place left. Times one hundred moves them two places left. Zeros fill the empty places."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "multiplying by 10",
+       "meaning": "Making a number ten times bigger, like 4 becomes 40."
+      },
+      {
+       "term": "multiplying by 100",
+       "meaning": "Making a number a hundred times bigger, like 4 becomes 400."
+      },
+      {
+       "term": "ten times the size",
+       "meaning": "Ten times bigger, like 4 becomes 40."
+      },
+      {
+       "term": "placeholder",
+       "meaning": "A zero that holds a place, like the zero in 40."
+      },
+      {
+       "term": "place value",
+       "meaning": "What each digit is worth."
+      },
+      {
+       "term": "product",
+       "meaning": "The answer when you multiply."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 8 × 10?",
+     "hint": "Move the 8 one place left.",
+     "explanation": "8 × 10 = 80.",
+     "answer": {
+      "value": 80,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 9 × 100?",
+     "hint": "Move the 9 two places left.",
+     "explanation": "9 × 100 = 900.",
+     "answer": {
+      "value": 900,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "7 × 10 and 70 are the same number.",
+     "hint": "Move the 7 one place left.",
+     "explanation": "7 × 10 = 70.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number is 10 times the size of 25?",
+     "hint": "Move each digit one place left.",
+     "explanation": "25 × 10 = 250.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2,500"
+      },
+      {
+       "id": "b",
+       "text": "250"
+      },
+      {
+       "id": "c",
+       "text": "35"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tens_divide",
+   "kind": "try",
+   "title": "One tenth the size",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Dividing by 10 moves digits right",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Dividing by 10** moves every digit one place to the right.\n\n300 ÷ 10 = 30.",
+     "say": "Now the other way. Dividing by ten makes a number one tenth the size. So each digit moves one place to the right. Look at three hundred. Divide by ten and you get thirty. The three moves from the hundreds into the tens."
+    },
+    {
+     "type": "explainer",
+     "title": "300 ÷ 10",
+     "scenes": [
+      {
+       "caption": "300",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "300"
+        }
+       ],
+       "say": "Three hundreds. The 3 sits in the hundreds column."
+      },
+      {
+       "caption": "300 ÷ 10",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "300"
+        },
+        {
+         "id": "b",
+         "emoji": "🟨",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "30"
+        }
+       ],
+       "say": "Divide by ten. The 3 moves one place right, into the tens."
+      },
+      {
+       "caption": "300 ÷ 10 = 30",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🟨",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "30"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "300 ÷ 10 = 30"
+        }
+       ],
+       "say": "Thirty. Check: thirty times ten is three hundred."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-multiply-divide-10-100-d2-4b83efa8.png",
+     "alt": "Blocks showing 3 hundreds, 30 tens and 300 ones",
+     "caption": "3 hundreds = 30 tens = 300 ones.",
+     "say": "Three hundreds, thirty tens and three hundred ones are all the same amount."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 8,100 ÷ 10?",
+      "hint": "Move each digit one place right.",
+      "explanation": "8,100 ÷ 10 = 810.",
+      "skill_tag": "tens.divide10",
+      "answer": {
+       "value": 810,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "image",
+     "emoji": "➗",
+     "alt": "Divide by 10 moves digits one place right. Divide by 100 moves them two places right.",
+     "caption": "Divide by 10 moves digits one place right. Divide by 100 moves them two places right."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Dividing by 100",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Dividing by 100** moves every digit two places to the right.\n\n900 ÷ 100 = 9.",
+     "say": "Divide by one hundred and the digits move two places to the right. Take nine hundred. Divide by one hundred and you get nine. Check it with the opposite. Nine times one hundred is nine hundred."
+    },
+    {
+     "type": "image",
+     "emoji": "➗",
+     "alt": "2,400 becomes 24 when the digits move two places right.",
+     "caption": "2,400 becomes 24 when the digits move two places right."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "2,400 ÷ 100 = 24.",
+      "hint": "Move each digit two places right.",
+      "explanation": "The digits move two places right: 2,400 becomes 24.",
+      "skill_tag": "tens.divide100",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Shopping cards",
+     "materials": [
+      "A hundred paper cards or coins",
+      "A pencil"
+     ],
+     "instructions": [
+      "Make 10 piles of 10 cards each. How many cards in all?",
+      "Divide the 100 cards into 10 piles. How many in each pile?",
+      "Divide the 100 cards into 100 piles of 1. Which number do you divide by?",
+      "Write the sum for each and check with a times fact."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "÷ 10: one place right",
+      "÷ 100: two places right",
+      "Check with the opposite times fact"
+     ],
+     "say": "Remember. Divide by ten: digits move one place right. Divide by one hundred: digits move two places right."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "dividing by 10",
+       "meaning": "Making a number one tenth the size, like 300 becomes 30."
+      },
+      {
+       "term": "dividing by 100",
+       "meaning": "Making a number one hundredth the size, like 900 becomes 9."
+      },
+      {
+       "term": "quotient",
+       "meaning": "The answer when you divide."
+      },
+      {
+       "term": "one tenth",
+       "meaning": "One part out of ten equal parts."
+      },
+      {
+       "term": "check",
+       "meaning": "Test an answer with the opposite operation."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 600 ÷ 10?",
+     "hint": "Move the 6 one place right.",
+     "explanation": "600 ÷ 10 = 60.",
+     "answer": {
+      "value": 60,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 7,000 ÷ 100?",
+     "hint": "Move each digit two places right.",
+     "explanation": "7,000 ÷ 100 = 70.",
+     "answer": {
+      "value": 70,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "80 ÷ 10 = 8.",
+     "hint": "8 tens divided by 10.",
+     "explanation": "80 ÷ 10 = 8.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which fact checks that 50 ÷ 10 = 5?",
+     "hint": "Divide and multiply undo each other.",
+     "explanation": "5 × 10 = 50, so 50 ÷ 10 = 5 is right.",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 × 10 = 5"
+      },
+      {
+       "id": "b",
+       "text": "5 × 10 = 50"
+      },
+      {
+       "id": "c",
+       "text": "5 × 100 = 50"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scaling",
+   "kind": "play",
+   "title": "Scaling facts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Six sevens and sixty sevens",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Scaling**: if one factor is 10 times bigger, the product is 10 times bigger.\n\n6 × 7 = 42, so 60 × 7 = 420.",
+     "say": "You already know six times seven is forty-two. Now look at sixty times seven. Sixty is ten times six. So the answer is ten times forty-two. That is four hundred and twenty. We scaled the fact."
+    },
+    {
+     "type": "explainer",
+     "title": "6 × 7 scaled to 60 × 7",
+     "scenes": [
+      {
+       "caption": "6 × 7 = 42",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "✖️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "6 × 7 = 42"
+        }
+       ],
+       "say": "Start with the fact you know: 6 × 7 = 42."
+      },
+      {
+       "caption": "60 × 7",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "✖️",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "6 × 7 = 42"
+        },
+        {
+         "id": "b",
+         "emoji": "🔟",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ten times"
+        }
+       ],
+       "say": "Sixty is ten times six. So 60 × 7 is ten times bigger than 6 × 7."
+      },
+      {
+       "caption": "60 × 7 = 420",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🔟",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "ten times"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "60 × 7 = 420"
+        }
+       ],
+       "say": "Ten times forty-two is four hundred and twenty."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "9 × 4 = 36. What is 90 × 4?",
+      "hint": "90 is ten times 9.",
+      "explanation": "Ten times 36 is 360.",
+      "skill_tag": "tens.scale",
+      "answer": {
+       "value": 360,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Scale a division fact",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "42 ÷ 6 = 7, so 4,200 ÷ 6 = 700 because 4,200 is 100 times 42.\n\nScale the number you divide, and the answer scales too.",
+     "say": "Division scales too. We know that forty-two divided by six is seven. What about four thousand two hundred divided by six? Four thousand two hundred is one hundred times forty-two. So the answer is one hundred times seven, which is seven hundred."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If 56 ÷ 7 = 8, then 560 ÷ 7 = 80.",
+      "hint": "560 is ten times 56.",
+      "explanation": "Ten times the number gives ten times the answer when the divisor stays the same.",
+      "skill_tag": "tens.scale_divide",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Scaled pairs",
+     "goal": "Find the matching facts.",
+     "emojis": [
+      "✖️",
+      "➗",
+      "🔟",
+      "💯",
+      "🟦",
+      "🟩"
+     ],
+     "say": "Brain break. Match the pairs."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Can you scale 5 × 9 to 500 × 9 in your head?",
+     "answer_markdown": "Yes! 5 × 9 = 45, so 500 × 9 = 4,500, because 500 is 100 times 5."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Know one fact, scale it",
+      "Times 10 or 100 scales the answer",
+      "Division scales the same way"
+     ],
+     "say": "Remember. Scale one fact by ten or a hundred, and the answer is scaled by the same amount."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "scaling",
+       "meaning": "Changing a fact by the same amount in each part, like 6 × 7 becoming 60 × 7."
+      },
+      {
+       "term": "scale",
+       "meaning": "Make a number bigger or smaller by a set amount."
+      },
+      {
+       "term": "factor",
+       "meaning": "A number that multiplies another."
+      },
+      {
+       "term": "product",
+       "meaning": "The answer to a multiplication."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "3 × 9 = 27. What is 30 × 9?",
+     "hint": "30 is ten times 3.",
+     "explanation": "10 times 27 is 270.",
+     "answer": {
+      "value": 270,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 40 × 5?",
+     "hint": "4 × 5 = 20, then times 10.",
+     "explanation": "40 × 5 = 200.",
+     "answer": {
+      "value": 200,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "5 × 8 = 40, so 500 × 8 = 4,000.",
+     "hint": "500 is 100 times 5.",
+     "explanation": "100 times 40 is 4,000.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "If 7 × 4 = 28, which fact is 70 × 4?",
+     "hint": "70 is ten times 7.",
+     "explanation": "70 × 4 = 280.",
+     "options": [
+      {
+       "id": "a",
+       "text": "28"
+      },
+      {
+       "id": "b",
+       "text": "280"
+      },
+      {
+       "id": "c",
+       "text": "2,800"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "money_scale",
+   "kind": "use",
+   "title": "Money, packs and notes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Packs of pencils",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "A pack of 24 times 10 packs is 240 pencils.\n\n24 × 10 = 240.",
+     "say": "Zara's school buys pencils in packs. Each pack has 24 pencils. The school buys 10 packs. How many pencils is that? Ten packs means ten times 24. Multiply by ten and the digits move one place left."
+    },
+    {
+     "type": "explainer",
+     "title": "24 pencils, ten packs",
+     "scenes": [
+      {
+       "caption": "24",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "✏️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "24 pencils"
+        }
+       ],
+       "say": "One pack has 24 pencils."
+      },
+      {
+       "caption": "24 × 10",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "✏️",
+         "x": 40,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "24"
+        },
+        {
+         "id": "q",
+         "emoji": "📦",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "10 packs"
+        }
+       ],
+       "say": "Ten packs. Multiply by ten. The digits move one place left."
+      },
+      {
+       "caption": "240",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "✏️",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "24 × 10 = 240"
+        }
+       ],
+       "say": "Two hundred and forty pencils."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A bag has 15 sweets. How many sweets are in 10 bags?",
+      "hint": "Move the digits one place left.",
+      "explanation": "15 × 10 = 150.",
+      "skill_tag": "tens.pack",
+      "answer": {
+       "value": 150,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Notes and coins",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "50 × 100 = 5,000. Two places left.\n\nRs 50 × 100 notes = Rs 5,000.",
+     "say": "A shop has a hundred notes of fifty rupees each. How much money is that? Fifty times one hundred is five thousand rupees. Two zeros move the digits two places left."
+    },
+    {
+     "type": "image",
+     "emoji": "💵",
+     "alt": "A hundred notes of Rs 50 make Rs 5,000.",
+     "caption": "A hundred notes of Rs 50 make Rs 5,000."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Mina has 100 coins of Rs 5. How much money does she have?",
+      "hint": "5 × 100.",
+      "explanation": "5 × 100 = 500 rupees.",
+      "skill_tag": "tens.money",
+      "options": [
+       {
+        "id": "a",
+        "text": "Rs 50"
+       },
+       {
+        "id": "b",
+        "text": "Rs 5,000"
+       },
+       {
+        "id": "c",
+        "text": "Rs 500"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Times 10: one place left",
+      "Times 100: two places left",
+      "Check with a real-life example"
+     ],
+     "say": "Remember. Multiplying by ten moves digits one place left. Multiplying by a hundred moves them two places left."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pack",
+       "meaning": "A set of things sold together."
+      },
+      {
+       "term": "note",
+       "meaning": "A paper money note."
+      },
+      {
+       "term": "coin",
+       "meaning": "A round piece of metal money."
+      },
+      {
+       "term": "total",
+       "meaning": "All of it added together."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A box has 30 rulers. How many in 10 boxes?",
+     "hint": "30 × 10.",
+     "explanation": "30 × 10 = 300.",
+     "answer": {
+      "value": 300,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "One bag holds 2 kg. How many kg in 100 bags?",
+     "hint": "2 × 100.",
+     "explanation": "200 kg.",
+     "answer": {
+      "value": 200,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A lollipop costs Rs 20. How much for 10 lollipops?",
+     "hint": "20 × 10.",
+     "explanation": "20 × 10 = 200.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rs 30"
+      },
+      {
+       "id": "b",
+       "text": "Rs 2,000"
+      },
+      {
+       "id": "c",
+       "text": "Rs 200"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A note of Rs 100 times 10 is Rs 1,000.",
+     "hint": "Move the digit one place left.",
+     "explanation": "100 × 10 = 1,000.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What is 45 × 10?",
+    "hint": "Move each digit one place left.",
+    "explanation": "45 × 10 = 450.",
+    "skill_tag": "tens.times10",
+    "answer": {
+     "value": 450,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "What is 47 × 100?",
+    "hint": "Move each digit two places left.",
+    "explanation": "47 × 100 = 4,700.",
+    "skill_tag": "tens.times100",
+    "answer": {
+     "value": 4700,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 70 × 10 is 710 because you add 10 to 70. Is she right?",
+    "hint": "Think about the digits moving.",
+    "explanation": "The digits move one place left, so 7 becomes 7 hundreds.",
+    "skill_tag": "tens.reason_addzero",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 80"
+     },
+     {
+      "id": "b",
+      "text": "No. 70 × 10 = 700, because the digits move one place left"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 710"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "true_false",
+    "prompt": "7 × 10 is 70.",
+    "hint": "Move the 7 one place left.",
+    "explanation": "The 7 moves into the tens, and a zero fills the ones.",
+    "skill_tag": "tens.times10",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Complete the place value.",
+    "hint": "Two places left.",
+    "explanation": "4 moves two places left, so 4 × 100 = 400.",
+    "skill_tag": "tens.times100",
+    "points": 2,
+    "text": "When you multiply 4 by 100, the 4 moves {b1} places left, so 4 × 100 = {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "40"
+       },
+       {
+        "id": "b",
+        "text": "400"
+       },
+       {
+        "id": "c",
+        "text": "4,000"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multi_select",
+    "prompt": "Which two numbers are ten times the size of 30? Pick two.",
+    "hint": "Multiply 30 by 10.",
+    "explanation": "30 × 10 = 300, and 30 tens is also 300.",
+    "skill_tag": "tens.size",
+    "options": [
+     {
+      "id": "a",
+      "text": "30 tens"
+     },
+     {
+      "id": "b",
+      "text": "130"
+     },
+     {
+      "id": "c",
+      "text": "33"
+     },
+     {
+      "id": "d",
+      "text": "300"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put these in order, smallest first.",
+    "hint": "Each one is ten times the one before.",
+    "explanation": "4, 40, 400.",
+    "skill_tag": "tens.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "4 × 10"
+     },
+     {
+      "id": "i3",
+      "text": "4 × 100"
+     },
+     {
+      "id": "i1",
+      "text": "4 × 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each times-ten fact to its answer.",
+    "hint": "Move each digit one place left.",
+    "explanation": "8 × 10 = 80, 12 × 10 = 120, 25 × 10 = 250.",
+    "skill_tag": "tens.times10",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "8 × 10"
+     },
+     {
+      "id": "l2",
+      "text": "12 × 10"
+     },
+     {
+      "id": "l3",
+      "text": "25 × 10"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "120"
+     },
+     {
+      "id": "r3",
+      "text": "250"
+     },
+     {
+      "id": "r1",
+      "text": "80"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "What is 3,000 ÷ 10?",
+    "hint": "Move each digit one place right.",
+    "explanation": "3,000 ÷ 10 = 300.",
+    "skill_tag": "tens.divide10",
+    "answer": {
+     "value": 300,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Layla says 500 ÷ 10 = 50 because you take away one zero. Is she right?",
+    "hint": "Where does each digit move?",
+    "explanation": "The 5 moves one place right into the tens, so 50.",
+    "skill_tag": "tens.reason_divide",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 5"
+     },
+     {
+      "id": "b",
+      "text": "Yes. Dividing by 10 moves each digit one place right, so 500 becomes 50"
+     },
+     {
+      "id": "c",
+      "text": "No, 500 ÷ 10 is 500"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "700 ÷ 100 = 7.",
+    "hint": "Move each digit two places right.",
+    "explanation": "7 hundreds divided by 100 is 7.",
+    "skill_tag": "tens.divide100",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Complete the division.",
+    "hint": "Two places for ÷ 100.",
+    "explanation": "2,400 ÷ 100 = 24, and the digits move two places right.",
+    "skill_tag": "tens.divide100",
+    "points": 2,
+    "text": "2,400 ÷ 100 = {b1}, because the digits move {b2} places right.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "240"
+       },
+       {
+        "id": "b",
+        "text": "24"
+       },
+       {
+        "id": "c",
+        "text": "2.4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "three"
+       },
+       {
+        "id": "b",
+        "text": "two"
+       },
+       {
+        "id": "c",
+        "text": "one"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two divisions give 60? Pick two.",
+    "hint": "Work out each answer.",
+    "explanation": "600 ÷ 10 = 60 and 6,000 ÷ 100 = 60.",
+    "skill_tag": "tens.divide_facts",
+    "options": [
+     {
+      "id": "a",
+      "text": "60 ÷ 10"
+     },
+     {
+      "id": "b",
+      "text": "600 ÷ 100"
+     },
+     {
+      "id": "c",
+      "text": "6,000 ÷ 100"
+     },
+     {
+      "id": "d",
+      "text": "600 ÷ 10"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Put these in order, smallest answer first.",
+    "hint": "Work out each answer.",
+    "explanation": "5, then 50, then 500.",
+    "skill_tag": "tens.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "5,000 ÷ 10"
+     },
+     {
+      "id": "i1",
+      "text": "500 ÷ 100"
+     },
+     {
+      "id": "i2",
+      "text": "5,000 ÷ 100"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "slider",
+    "prompt": "A shop packs 3,000 stickers equally into 100 bags. Slide to show how many stickers are in each bag.",
+    "hint": "Divide by 100: move the digits two places right.",
+    "explanation": "3,000 ÷ 100 = 30.",
+    "skill_tag": "tens.divide100",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 1
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the answer to 8,000 ÷ 100.",
+    "hint": "Two places right.",
+    "explanation": "8,000 ÷ 100 = 80.",
+    "skill_tag": "tens.divide100",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "8",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "80",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "800",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "6 × 7 = 42. What is 60 × 7?",
+    "hint": "60 is ten times 6.",
+    "explanation": "Ten times 42 is 420.",
+    "skill_tag": "tens.scale",
+    "answer": {
+     "value": 420,
+     "tolerance": 0
+    },
+    "sub_lesson": "scaling",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Mira says 6 × 70 = 42 because the tens do not count. Is she right?",
+    "hint": "Scale 42 by ten.",
+    "explanation": "70 is ten times 7, so the answer is ten times 42.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 42"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 4,200"
+     },
+     {
+      "id": "c",
+      "text": "No. 6 × 7 = 42, so 6 × 70 = 420"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "If 7 × 8 = 56, then 70 × 8 = 560.",
+    "hint": "70 is ten times 7.",
+    "explanation": "Ten times 56 is 560.",
+    "skill_tag": "tens.scale",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "scaling",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "hotspot",
+    "prompt": "Tap the answer to 30 × 8.",
+    "hint": "30 is ten times 3.",
+    "explanation": "3 × 8 = 24, so 30 × 8 = 240.",
+    "skill_tag": "tens.scale",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "✖️",
+       "label": "24",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "✖️",
+       "label": "240",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "✖️",
+       "label": "2,400",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "match",
+    "prompt": "Match each scaled fact to its answer.",
+    "hint": "Scale the answer by the same amount.",
+    "explanation": "120, 300 and 180.",
+    "skill_tag": "tens.scale",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3 × 4 = 12, so 30 × 4"
+     },
+     {
+      "id": "l2",
+      "text": "5 × 6 = 30, so 50 × 6"
+     },
+     {
+      "id": "l3",
+      "text": "9 × 2 = 18, so 90 × 2"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "300"
+     },
+     {
+      "id": "r3",
+      "text": "180"
+     },
+     {
+      "id": "r1",
+      "text": "120"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "scaling",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Ben says 4 × 3 = 12 so 400 × 3 = 120 because the zeros are removed. Is he right?",
+    "hint": "400 is a hundred times 4.",
+    "explanation": "12 times 100 is 1,200.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 120"
+     },
+     {
+      "id": "b",
+      "text": "No. 4 × 3 = 12, so 400 × 3 = 1,200"
+     },
+     {
+      "id": "c",
+      "text": "No, 12,000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two are the same as 60 × 9? Pick two.",
+    "hint": "6 × 9 = 54.",
+    "explanation": "54 times 10 and 9 times 60 both make 540.",
+    "skill_tag": "tens.scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "(6 × 9) × 100"
+     },
+     {
+      "id": "b",
+      "text": "60 × 90"
+     },
+     {
+      "id": "c",
+      "text": "9 × 6 tens"
+     },
+     {
+      "id": "d",
+      "text": "(6 × 9) × 10"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Sara says 7 × 8 = 56 so 700 × 8 = 560. Is she right?",
+    "hint": "700 is a hundred times 7.",
+    "explanation": "56 times 100 is 5,600.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 560"
+     },
+     {
+      "id": "b",
+      "text": "No, 56,000"
+     },
+     {
+      "id": "c",
+      "text": "No. 700 × 8 = 5,600, because 700 is a hundred times 7"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "slider",
+    "prompt": "Each pack has 10 pencils. A school buys 24 packs. Slide to show how many pencils.",
+    "hint": "24 × 10.",
+    "explanation": "24 × 10 = 240.",
+    "skill_tag": "tens.pack",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 500
+    },
+    "answer": {
+     "value": 240,
+     "tolerance": 10
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "number",
+    "prompt": "A note is Rs 50. How much is 100 notes?",
+    "hint": "50 × 100.",
+    "explanation": "5 × 100 = 500, then 50 × 100 = 5,000.",
+    "skill_tag": "tens.money",
+    "answer": {
+     "value": 5000,
+     "tolerance": 0
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "A bag has 2 kg of rice. How many kg are in 100 bags?",
+    "hint": "2 × 100.",
+    "explanation": "200 kg.",
+    "skill_tag": "tens.money",
+    "answer": {
+     "value": 200,
+     "tolerance": 0
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Zara says Rs 40 × 10 = Rs 410 because you add 10. Is she right?",
+    "hint": "Think about the digits moving.",
+    "explanation": "40 × 10 = 400.",
+    "skill_tag": "tens.reason_money",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, Rs 50"
+     },
+     {
+      "id": "b",
+      "text": "No. Rs 40 × 10 = Rs 400, because the digits move one place left"
+     },
+     {
+      "id": "c",
+      "text": "Yes, Rs 410"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Layla says 100 notes of Rs 20 make Rs 200. Is she right?",
+    "hint": "Multiply 20 by 100.",
+    "explanation": "20 × 100 = 2,000.",
+    "skill_tag": "tens.reason_money",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, Rs 200"
+     },
+     {
+      "id": "b",
+      "text": "No. 20 × 100 = 2,000, so it is Rs 2,000"
+     },
+     {
+      "id": "c",
+      "text": "No, Rs 20,000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Zainab says 3,000 ÷ 100 = 300 because she removes one zero. Is she right?",
+    "hint": "Divide by 100 moves the digits two places right.",
+    "explanation": "3,000 ÷ 100 = 30, not 300.",
+    "skill_tag": "tens.reason_divide",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 3,000"
+     },
+     {
+      "id": "b",
+      "text": "No. Removing two zeros gives 30, so 3,000 ÷ 100 = 30"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 300"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "What is 70 × 10?",
+    "hint": "Move the 7 one place left.",
+    "explanation": "70 × 10 = 700.",
+    "skill_tag": "tens.times10",
+    "answer": {
+     "value": 700,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "What is 58 × 100?",
+    "hint": "Move each digit two places left.",
+    "explanation": "58 × 100 = 5,800.",
+    "skill_tag": "tens.times100",
+    "answer": {
+     "value": 5800,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Sam says 9 × 10 is 19 because you add 10 to 9. Is he right?",
+    "hint": "Where does the 9 move?",
+    "explanation": "The 9 moves one place left, into the tens. So 90.",
+    "skill_tag": "tens.reason_addzero",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 900"
+     },
+     {
+      "id": "b",
+      "text": "No. 9 × 10 = 90, because the 9 moves one place left"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 19"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "true_false",
+    "prompt": "4 × 10 is 400.",
+    "hint": "Move the 4 one place left.",
+    "explanation": "4 × 10 = 40.",
+    "skill_tag": "tens.times10",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "fill_blank",
+    "prompt": "Complete the place value about 9.",
+    "hint": "One place left.",
+    "explanation": "9 moves one place left, so 9 × 10 = 90.",
+    "skill_tag": "tens.times10",
+    "points": 2,
+    "text": "When you multiply 9 by 10, the 9 moves {b1} place left, so 9 × 10 = {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "9"
+       },
+       {
+        "id": "b",
+        "text": "90"
+       },
+       {
+        "id": "c",
+        "text": "900"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multi_select",
+    "prompt": "Which two numbers are ten times the size of 70? Pick two.",
+    "hint": "Multiply 70 by 10.",
+    "explanation": "70 × 10 = 700, and 70 tens is also 700.",
+    "skill_tag": "tens.size",
+    "options": [
+     {
+      "id": "a",
+      "text": "77"
+     },
+     {
+      "id": "b",
+      "text": "170"
+     },
+     {
+      "id": "c",
+      "text": "70 tens"
+     },
+     {
+      "id": "d",
+      "text": "700"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Put these in order, biggest first.",
+    "hint": "Each one is ten times smaller than the one before.",
+    "explanation": "600, then 60, then 6.",
+    "skill_tag": "tens.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "6 × 10"
+     },
+     {
+      "id": "i1",
+      "text": "6 × 100"
+     },
+     {
+      "id": "i3",
+      "text": "6 × 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each times-ten fact to its answer.",
+    "hint": "Move the digits.",
+    "explanation": "40 × 10 = 400, 7 × 100 = 700, 90 × 10 = 900.",
+    "skill_tag": "tens.times10",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "40 × 10"
+     },
+     {
+      "id": "l2",
+      "text": "7 × 100"
+     },
+     {
+      "id": "l3",
+      "text": "90 × 10"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "900"
+     },
+     {
+      "id": "r1",
+      "text": "400"
+     },
+     {
+      "id": "r2",
+      "text": "700"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "tens_times",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "What is 4,500 ÷ 10?",
+    "hint": "Move each digit one place right.",
+    "explanation": "4,500 ÷ 10 = 450.",
+    "skill_tag": "tens.divide10",
+    "answer": {
+     "value": 450,
+     "tolerance": 0
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 800 ÷ 10 = 80 because he moves each digit one place right. Is he right?",
+    "hint": "One place for ÷ 10.",
+    "explanation": "8 hundreds ÷ 10 = 8 tens = 80.",
+    "skill_tag": "tens.reason_divide",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 800"
+     },
+     {
+      "id": "b",
+      "text": "Yes. The 8 moves from the hundreds into the tens, so 80"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 8"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "true_false",
+    "prompt": "900 ÷ 100 = 90.",
+    "hint": "Move each digit two places right.",
+    "explanation": "900 ÷ 100 = 9.",
+    "skill_tag": "tens.divide100",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Complete the division about 3,600.",
+    "hint": "One place for ÷ 10.",
+    "explanation": "3,600 ÷ 10 = 360 and the digits move one place right.",
+    "skill_tag": "tens.divide10",
+    "points": 2,
+    "text": "3,600 ÷ 10 = {b1}, because the digits move {b2} place right.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "36"
+       },
+       {
+        "id": "b",
+        "text": "3,060"
+       },
+       {
+        "id": "c",
+        "text": "360"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "two"
+       },
+       {
+        "id": "b",
+        "text": "one"
+       },
+       {
+        "id": "c",
+        "text": "zero"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Which two divisions give 300? Pick two.",
+    "hint": "Work out each answer.",
+    "explanation": "3,000 ÷ 10 = 300 and 30,000 ÷ 100 = 300.",
+    "skill_tag": "tens.divide_facts",
+    "options": [
+     {
+      "id": "a",
+      "text": "30,000 ÷ 100"
+     },
+     {
+      "id": "b",
+      "text": "300 ÷ 10"
+     },
+     {
+      "id": "c",
+      "text": "3,000 ÷ 100"
+     },
+     {
+      "id": "d",
+      "text": "3,000 ÷ 10"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Order these from the smallest answer.",
+    "hint": "Work out each answer.",
+    "explanation": "6, then 60, then 600.",
+    "skill_tag": "tens.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "6,000 ÷ 100"
+     },
+     {
+      "id": "i1",
+      "text": "600 ÷ 100"
+     },
+     {
+      "id": "i3",
+      "text": "6,000 ÷ 10"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "slider",
+    "prompt": "A shop packs 4,000 stickers equally into 100 bags. Slide to show how many stickers are in each bag.",
+    "hint": "Divide by 100: move the digits two places right.",
+    "explanation": "4,000 ÷ 100 = 40.",
+    "skill_tag": "tens.divide100",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 40,
+     "tolerance": 1
+    },
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the answer to 2,500 ÷ 100.",
+    "hint": "Two places right.",
+    "explanation": "2,500 ÷ 100 = 25.",
+    "skill_tag": "tens.divide100",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "205",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "25",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "250",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "tens_divide",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "8 × 6 = 48. What is 80 × 6?",
+    "hint": "80 is ten times 8.",
+    "explanation": "Ten times 48 is 480.",
+    "skill_tag": "tens.scale",
+    "answer": {
+     "value": 480,
+     "tolerance": 0
+    },
+    "sub_lesson": "scaling",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Sam says 9 × 40 = 36 because 40 has a zero that does not count. Is he right?",
+    "hint": "40 is ten times 4.",
+    "explanation": "Ten times 36 is 360.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 36"
+     },
+     {
+      "id": "b",
+      "text": "No. 9 × 4 = 36, so 9 × 40 = 360"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 3,600"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "If 7 × 8 = 56, then 70 × 8 = 56.",
+    "hint": "70 is ten times 7.",
+    "explanation": "The answer must be ten times 56.",
+    "skill_tag": "tens.scale",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "scaling",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "hotspot",
+    "prompt": "Tap the answer to 50 × 6.",
+    "hint": "5 × 6 = 30.",
+    "explanation": "50 × 6 = 300.",
+    "skill_tag": "tens.scale",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "✖️",
+       "label": "30",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "✖️",
+       "label": "300",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "✖️",
+       "label": "3,000",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "match",
+    "prompt": "Join each scaled fact to its answer.",
+    "hint": "Scale the answer by ten.",
+    "explanation": "210, 320 and 300.",
+    "skill_tag": "tens.scale",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "7 × 3 = 21, so 70 × 3"
+     },
+     {
+      "id": "l2",
+      "text": "4 × 8 = 32, so 40 × 8"
+     },
+     {
+      "id": "l3",
+      "text": "6 × 5 = 30, so 60 × 5"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "320"
+     },
+     {
+      "id": "r1",
+      "text": "210"
+     },
+     {
+      "id": "r3",
+      "text": "300"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "scaling",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Ella says 2 × 5 = 10 so 200 × 5 = 100. Is she right?",
+    "hint": "200 is a hundred times 2.",
+    "explanation": "10 times 100 is 1,000.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 10,000"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 × 5 = 10, so 200 × 5 = 1,000"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 100"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two are the same as 40 × 5? Pick two.",
+    "hint": "4 × 5 = 20.",
+    "explanation": "20 times 10 and 5 times 40 both make 200.",
+    "skill_tag": "tens.scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "(4 × 5) × 100"
+     },
+     {
+      "id": "b",
+      "text": "40 × 50"
+     },
+     {
+      "id": "c",
+      "text": "5 × 4 tens"
+     },
+     {
+      "id": "d",
+      "text": "(4 × 5) × 10"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 5 × 9 = 45 so 500 × 9 = 450. Is he right?",
+    "hint": "500 is a hundred times 5.",
+    "explanation": "45 times 100 is 4,500.",
+    "skill_tag": "tens.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 450"
+     },
+     {
+      "id": "b",
+      "text": "No, 45,000"
+     },
+     {
+      "id": "c",
+      "text": "No. 500 × 9 = 4,500, because 500 is a hundred times 5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "scaling",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "slider",
+    "prompt": "Each pack has 10 pencils. A school buys 36 packs. Slide to show how many pencils.",
+    "hint": "36 × 10.",
+    "explanation": "36 × 10 = 360.",
+    "skill_tag": "tens.pack",
+    "range": {
+     "step": 10,
+     "min": 0,
+     "max": 500
+    },
+    "answer": {
+     "value": 360,
+     "tolerance": 10
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "number",
+    "prompt": "A coin is Rs 5. How much is 100 coins?",
+    "hint": "5 × 100.",
+    "explanation": "5 × 100 = 500.",
+    "skill_tag": "tens.money",
+    "answer": {
+     "value": 500,
+     "tolerance": 0
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "A bag has 3 kg of flour. How many kg are in 100 bags?",
+    "hint": "3 × 100.",
+    "explanation": "300 kg.",
+    "skill_tag": "tens.money",
+    "answer": {
+     "value": 300,
+     "tolerance": 0
+    },
+    "sub_lesson": "money_scale",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ali says Rs 9 × 100 = Rs 109 because you add 100. Is he right?",
+    "hint": "Two places left for × 100.",
+    "explanation": "9 × 100 = 900.",
+    "skill_tag": "tens.reason_money",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, Rs 109"
+     },
+     {
+      "id": "b",
+      "text": "No, Rs 90"
+     },
+     {
+      "id": "c",
+      "text": "No. Rs 9 × 100 = Rs 900, because the digit moves two places left"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 100 notes of Rs 10 make Rs 100. Is he right?",
+    "hint": "Multiply 10 by 100.",
+    "explanation": "10 × 100 = 1,000.",
+    "skill_tag": "tens.reason_money",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, Rs 10,000"
+     },
+     {
+      "id": "b",
+      "text": "No. 10 × 100 = 1,000, so it is Rs 1,000"
+     },
+     {
+      "id": "c",
+      "text": "Yes, Rs 100"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Hana says 4,000 ÷ 10 = 40 because she removes two zeros. Is she right?",
+    "hint": "Divide by 10 moves digits one place right.",
+    "explanation": "4,000 ÷ 10 = 400.",
+    "skill_tag": "tens.reason_divide",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 40"
+     },
+     {
+      "id": "b",
+      "text": "No. Removing one zero gives 400, so 4,000 ÷ 10 = 400"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "money_scale",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

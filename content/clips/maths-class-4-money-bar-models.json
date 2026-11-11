@@ -1,0 +1,133 @@
+{
+ "title": "The school fair till",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "The school fair.",
+   "say": "This is Hana at the school fair. She sells toys and keeps the money safe.",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👧",
+     "label": "Hana",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "t",
+     "emoji": "🧸",
+     "label": "toys",
+     "x": 72,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Add the prices.",
+   "say": "A toy costs £3.40 and a ball costs £1.60. Let's add them.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🧸",
+     "label": "£3.40",
+     "x": 30,
+     "y": 46,
+     "size": 2,
+     "enter": "slide_right"
+    },
+    {
+     "id": "b",
+     "emoji": "⚽",
+     "label": "£1.60",
+     "x": 70,
+     "y": 46,
+     "size": 2,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "The total is £5.",
+   "say": "Three pounds forty plus one pound sixty makes exactly five pounds.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🧾",
+     "label": "£5.00",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Count on to £10.",
+   "say": "The customer pays with a ten pound note. Count on from five pounds to ten.",
+   "items": [
+    {
+     "id": "n",
+     "emoji": "💷",
+     "label": "£10",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Bar model.",
+   "say": "Draw a bar. The whole is ten pounds, and five pounds is the change.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "bar",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 2,
+      "shaded": 1
+     },
+     "label": "£10 = £5 + £5",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Hana!",
+   "say": "Ten pounds take away five pounds is five pounds of change. Shukriya, Hana!",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👧",
+     "label": "Hana",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "r",
+     "emoji": "🎉",
+     "label": "£5 change",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

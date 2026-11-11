@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 1 (Zainab, age 7), topic 1: Algorithms and robots.
@@ -6,9 +6,15 @@ import { topicLesson } from "../topic-kit.mjs";
 const o = (hint, why, tag) => ({ hint, why, tag });
 const RG = (id, col, row, facing, anim = "none") => [id, { kind: "robot_grid", col, row, facing }, 50, 50, 3, anim];
 
+const BREAD = "data-ai-class-1-algorithms-robots-1-5c921c25.jpg";
+const SANDWICH = "data-ai-class-1-algorithms-robots-2-ab974f83.jpg";
+
 const directions = {
   id: "directions", kind: "learn", title: "Directions and algorithms",
   blocks: [
+    H("Welcome back, robot trainer!"),
+    SAY("Today we learn how to tell a robot exactly what to do.", T("Today's big question: how do we give clear steps?")),
+    SAY("These two slices of bread are the start of a sandwich. Steps matter.", PHOTO(BREAD, "Two slices of white bread on a dark table", "Even a sandwich needs steps in order.", "Photo by Graphy Co on Unsplash")),
     H("Stop 1: Giving a robot directions"),
     SAY("Meet our robot. It cannot think for itself. It only does exactly what we tell it, one instruction at a time. The robot wants to reach the star in the corner. We can say forward, to move one square. Or turn, to face a new way. Watch the robot walk along the top row.", T("A robot does exactly what we tell it. These are **instructions**.", "**Forward** moves one square. **Turn** changes the way it faces.")),
     EXP("The robot walks to the star",
@@ -26,7 +32,7 @@ const directions = {
       SS("Step three. Put the top slice on. Now it is a sandwich! The order mattered.", S("3. Top slice on. Yum!", ["b", "🍞", 50, 68, 3], ["c", "🧀", 50, 52, 3], ["t", "🍞", 50, 34, 3, "bounce"]))),
     CHK(ord("Put these steps for washing your hands in order.", ["Turn on the tap", "Use soap", "Rinse and dry"], o("What do you do first?", "We wet our hands, then use soap, then rinse and dry.", "algo.order"))),
     SAY("Let us remember. Instructions tell a robot what to do. An algorithm is a list of clear steps in the right order.", SUM("Instructions tell a robot what to do", "An algorithm is clear steps in the right order")),
-    GLOSS({ instructions: "Clear orders that tell a robot or computer what to do.", forward: "Move one square the way you are facing.", turn: "Change the way you are facing.", algorithm: "A list of clear steps in the right order.", order: "What comes first, next and last." }),
+    GLOSS({ robot: "A machine that follows exact instructions.", instructions: "Clear orders that tell a robot or computer what to do.", forward: "Move one square the way you are facing.", turn: "Change the way you are facing.", algorithm: "A list of clear steps in the right order.", order: "What comes first, next and last." }),
   ],
   mini: [
     mc("What do we call a list of clear steps in the right order?", "An algorithm", ["A picture", "A bug"], o("It is a word for a recipe of steps.", "A list of clear steps in order is an algorithm.")),
@@ -67,10 +73,10 @@ const bugs = {
   id: "bugs", kind: "play", title: "Bug hunt",
   blocks: [
     H("Stop 1: Finding the bug"),
-    SAY("Sometimes our instructions have a mistake. A mistake in instructions is called a bug. Finding and fixing a bug is called debugging. Look at this robot. We told it forward, forward, forward, forward, then turn. But the star is in the corner, and the robot stopped before it got there. Where is the bug?", T("A **bug** is a mistake in the instructions.", "**Debugging** means finding and fixing the bug.")),
+    SAY("Sometimes our instructions have a mistake. A mistake in instructions is called a bug. Finding and fixing a bug is called debugging. Look at this robot. We told it forward, forward, forward, forward, then turn. But the star is in the corner. The robot stopped before it got there. Where is the bug?", T("A **bug** is a mistake in the instructions.", "**Debugging** means finding and fixing the bug.")),
     EXP("The robot stops too soon",
       SS("The robot follows: forward, forward, forward. That is only three steps.", S("Three forwards only.", RG("r", 3, 0, "right"))),
-      SS("It needed four steps to reach the corner, so the star is still far away. The bug is that one forward is missing.", S("One forward is missing. That is the bug!", RG("r", 3, 0, "right", "pulse"), ["bug", "🐛", 80, 20, 2, "bounce"])),
+      SS("It needed four steps to reach the corner. The star is still far away. The bug is that one forward is missing.", S("One forward is missing. That is the bug!", RG("r", 3, 0, "right", "pulse"), ["bug", "🐛", 80, 20, 2, "bounce"])),
       SS("We add one more forward. Now the robot reaches the corner. We fixed the bug!", S("Add one forward. Bug fixed!", RG("r", 4, 0, "right", "bounce")))),
     CHK(mc("A robot must go forward 3 steps but only goes 2. What is the bug?", "A forward is missing", ["The robot is too tall", "The floor is blue"], o("Count the steps.", "The instructions are missing one forward.", "algo.debug"))),
     H("Stop 2: Brain game"),
@@ -91,8 +97,9 @@ const around = {
   id: "around", kind: "use", title: "Algorithms around us",
   blocks: [
     H("Stop 1: Algorithms at home"),
+    SAY("A sandwich has steps in order. Bread, filling, then the top slice.", PHOTO(SANDWICH, "A sandwich with cheese, lettuce and tomato on a wooden board", "Bread, filling, then the top slice.", "Photo by Raphael Nogueira on Unsplash")),
     SAY("Algorithms are not only for robots. People follow them all the time. Getting ready for school has steps. So does making a cup of chai, or cooking rice, or tidying a room. If you do the steps in order, the job works. What other algorithms can you think of at home?", T("We follow **algorithms** at home: making chai, cooking rice, getting ready for school.")),
-    SAY("Here are three algorithms from home: cooking rice, making chai, and packing a school bag.", IMG("🍚🫖🎒", "Cooking rice, making chai and packing a school bag all have steps in order.")),
+    SAY("Here are three algorithms from home. Cooking rice, making chai and packing a bag.", IMG("🍚🫖🎒", "Cooking rice, making chai and packing a school bag all have steps in order.")),
     CHK(mc("Which of these is an algorithm?", "Steps to make a cup of chai", ["A song you like", "A big red ball"], o("Look for steps in order.", "Making chai has steps in a fixed order.", "algo.everyday"))),
     H("Stop 2: Write your own"),
     SAY("Now it is your turn to be the programmer. Choose a job, like making a sandwich or tidying the toys. Write the steps in order, or draw them. Then ask a grown-up to follow only your steps, exactly. If they get stuck, you found a bug!", T("Write your own **algorithm**. Then test it on a grown-up. If it goes wrong, **debug** it!")),
@@ -129,6 +136,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Zainab and the robot", backdrop: "classroom", caption: "Zainab gives a robot exact steps and fixes a bug.",
+  scenes: [
+    { caption: "Meet the robot.", say: "Zainab has a toy robot. It only follows exact steps.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "r", emoji: "🤖", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Forward!", say: "She says forward, forward. The robot moves two squares.",
+      items: [{ id: "r", emoji: "🤖", x: 55, y: 50, size: 3, enter: "slide_right" }, { id: "a", emoji: "➡️", x: 25, y: 50, size: 2 }] },
+    { caption: "Turn.", say: "Then turn. The robot now faces the star.",
+      items: [{ id: "r", emoji: "🤖", x: 40, y: 50, size: 3, anim: "spin" }, { id: "s", emoji: "⭐", x: 75, y: 50, size: 3 }] },
+    { caption: "A bug!", say: "Oh no! The robot stops short. One forward is missing.",
+      items: [{ id: "r", emoji: "🤖", x: 40, y: 50, size: 3 }, { id: "b", emoji: "🐛", label: "bug", x: 62, y: 35, size: 2, anim: "bounce" }, { id: "s", emoji: "⭐", x: 80, y: 50, size: 3 }] },
+    { caption: "Debug it.", say: "Zainab adds one more forward. That is called debugging.",
+      items: [{ id: "z", emoji: "👧", x: 25, y: 56, size: 3 }, { id: "f", emoji: "➕", label: "forward", x: 65, y: 45, size: 3, effect: "sparkle" }] },
+    { caption: "A loop.", say: "Now she uses a loop. Repeat forward four times.",
+      items: [{ id: "l", emoji: "🔁", label: "repeat 4", x: 50, y: 45, size: 3, anim: "pulse" }] },
+    { caption: "The star!", say: "The robot reaches the star. Clear steps in order worked.",
+      items: [{ id: "r", emoji: "🤖", x: 40, y: 50, size: 3, anim: "bounce" }, { id: "s", emoji: "⭐", x: 75, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Sandwich steps.", say: "Zainab uses steps to make a sandwich too. Order matters!",
+      items: [{ id: "s", emoji: "🥪", x: 50, y: 48, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-1-algorithms-robots", subject: "data-ai", cls: 1, topic: 1, title: "Algorithms and Robots",
@@ -148,13 +178,9 @@ export const topics = [
       num("What is 5 + 3?", 8, o("Count on from 5.", "5 and 3 make 8.")),
       tf("A triangle has three sides.", true, o("Count the sides.", "A triangle has three sides.")),
     ],
-    intro: [
-      H("Welcome, robot trainer!"),
-      SAY("Welcome, robot trainer! Today's big question: how do we tell a robot exactly what to do? Robots cannot guess. They need clear instructions in the right order. By the end, you will give a robot directions, use a loop, and even fix a bug. Let's go!", T("Today's big question: how do we tell a robot exactly what to do?", "We will use instructions, loops and debugging to find out.")),
-      IMG("🤖", "Robots follow clear instructions, one step at a time."),
-      GLOSS({ instructions: "Clear orders that tell a robot what to do." }),
-    ],
+    intro: [],
     subs: [directions, loopsIf, bugs, around],
+    clip,
     quiz: [
       qd(mc("Which instruction moves the robot one square along?", "Forward", ["Turn", "Loop"], o("Think about walking.", "Forward moves one square.", "algo.instructions")), "directions", "recall"),
       qd(tf("A robot can guess what we mean if our instruction is unclear.", false, o("Robots do exactly what we tell them.", "A robot only follows the exact instructions.", "algo.robots")), "directions", "recall"),
@@ -171,6 +197,37 @@ export const topics = [
       qd(tf("In computing, a bug is a real insect inside the computer.", false, o("A bug is a mistake.", "A bug is a mistake in the instructions.", "algo.debug")), "bugs", "recall"),
       qd(mc("Aliyah followed steps for toast but forgot to put the bread in. What was the problem?", "A step was missing, so there was a bug", ["Nothing was wrong", "The toaster was too cold"], o("A step was missed.", "A missing step is a bug.", "algo.reason")), "around", "reason"),
       qd(ord("Put these steps for making a cup of chai in order.", ["Boil the water", "Add the tea", "Pour into a cup"], o("What is first?", "Boil, add, then pour.", "algo.everyday")), "around", "apply"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(num("A robot goes forward 2 times, then forward 3 times. How many squares has it moved?", 5, o("Add 2 and 3.", "2 + 3 = 5 squares.", "algo.count_steps")), "directions", "apply",
+        [num("A robot goes forward 4 times, then forward 2 times. How many squares has it moved?", 6, o("Add 4 and 2.", "4 + 2 = 6 squares.", "algo.count_steps"))]),
+      qa(mc("Aisha says only one set of instructions can reach the star. Is she right?", "No. Different instructions can reach the same star", ["Yes, there is only one way", "No, robots cannot reach stars"], o("Try two different routes.", "There can be more than one correct algorithm.", "algo.reason")), "directions", "reason",
+        [mc("Omar says there is only one way to get to the corner. Is he right?", "No. A robot can take different routes to the same corner", ["Yes, only one route works", "No, robots cannot move"], o("Think of two routes.", "Different routes can reach the same place.", "algo.reason"))]),
+      qa(mc("Layla makes toast. She puts the bread in the toaster before she gets the bread. What goes wrong?", "The order is wrong, so it does not work", ["Nothing goes wrong", "The toaster gets hungry"], o("Which step comes first?", "Changing the order of steps can break an algorithm.", "algo.reason")), "directions", "reason",
+        [mc("Sam puts on his shoes before his socks. What goes wrong?", "The order is wrong, so the socks end up outside", ["Nothing goes wrong", "The socks get happy"], o("Which step comes first?", "The order of steps matters.", "algo.reason"))]),
+      qa(mc("Zayn says a robot can understand 'go to the star' without any other steps. Why is he wrong?", "A robot needs exact steps, such as forward and turn", ["Robots hate stars", "Robots only need one word"], o("Robots cannot guess.", "A robot does only what the exact steps say.", "algo.reason")), "directions", "reason",
+        [mc("Hana says a robot can just guess what she means. Why is she wrong?", "A robot only does exactly what the steps say", ["Robots guess very well", "Robots read minds"], o("Robots cannot guess.", "A robot follows exact steps.", "algo.reason"))]),
+      qa(mc("Sam tells a robot: 'Go over there.' Why is that a bad instruction?", "It is too vague. The robot needs clear steps", ["It is too short", "Robots do not like talking"], o("Which way is there?", "A good instruction is clear and exact.", "algo.reason")), "bugs", "reason",
+        [mc("Mina tells a robot: 'Move a bit.' Why is that a bad instruction?", "It is too vague. The robot needs an exact number of steps", ["It has too many words", "Robots only move at night"], o("How far is a bit?", "A good instruction is clear and exact.", "algo.reason"))]),
+      qa(mat("Match each command to what the robot does.", [["Forward", "Moves one square"], ["Turn left", "Faces its left"], ["Turn right", "Faces its right"]], o("Think about each word.", "Each command makes the robot do one thing.", "algo.instructions")), "directions", "apply",
+        [mat("Match each word to its job.", [["Repeat 3 times", "Does it three times"], ["Stop", "Stops moving"], ["Forward", "Moves ahead"]], o("Think about each word.", "Each word tells the robot what to do.", "algo.instructions"))]),
+      qa(fill("Finish the sentences about loops.", "A {b1} lets us write repeat clap 5 times instead of {b2} lines.", [["loop", "bug", "star"], ["5", "1", "0"]], o("Think about repeating.", "A loop saves us writing the same line 5 times.", "algo.loops")), "loops_if", "apply",
+        [fill("Complete the sentences about repeating.", "Repeat hop 4 times is the same as hop {b1} times. It uses a {b2}.", [["4", "1", "2"], ["loop", "bug", "star"]], o("Think about repeating.", "Repeat 4 times means 4 hops, and it uses a loop.", "algo.loops"))]),
+      qa(hot("Tap the instruction that is too vague for a robot.", [["➡️", "Forward 2 squares", 22, 50], ["❓", "Go over there", 50, 50], ["↪️", "Turn right", 78, 50]], ["Go over there"], { labels: true, ...o("Which one is not exact?", "Go over there does not say how far or which way.", "algo.instructions") }), "bugs", "apply",
+        [hot("Tap the step that does NOT help the robot reach the star.", [["⬇️", "Forward", 22, 50], ["🎂", "Eat a cake", 50, 50], ["↪️", "Turn", 78, 50]], ["Eat a cake"], { labels: true, ...o("Which one is not a robot move?", "Eating cake does not move the robot.", "algo.instructions") })]),
+      qa(sld("The star is 5 squares away. Slide to show how many forwards the robot needs.", { min: 0, max: 8 }, 5, 0, o("Count the squares.", "It needs 5 forward steps.", "algo.count_steps")), "directions", "apply",
+        [sld("The star is 6 squares away. Slide to show how many forwards the robot needs.", { min: 0, max: 8 }, 6, 0, o("Count the squares.", "It needs 6 forward steps.", "algo.count_steps"))]),
+      qa(ms("Which two instructions turn a robot? Pick two.", ["Turn left", "Turn right"], ["Forward", "Repeat"], o("Look for the word turn.", "Turn left and turn right change the way it faces.", "algo.instructions")), "directions", "apply",
+        [ms("Which two are good steps for brushing teeth? Pick two.", ["Put paste on the brush", "Rinse your mouth"], ["Eat a sandwich", "Go to bed"], o("Think about brushing teeth.", "Paste and rinsing are part of brushing teeth.", "algo.order"))]),
+      qa(tf("If it is raining, then take an umbrella. It is sunny. You must take an umbrella.", false, o("Is the if part true?", "It is not raining, so you do not need an umbrella.", "algo.if_then")), "loops_if", "apply",
+        [tf("If it is dark, then switch on the light. It is dark. You switch on the light.", true, o("Is the if part true?", "It is dark, so you switch on the light.", "algo.if_then"))]),
+      qa(ord("Put these steps for crossing the road safely in order.", ["Stop at the kerb", "Look both ways", "Cross when it is clear"], o("What first?", "Stop, look, then cross.", "algo.order")), "around", "apply",
+        [ord("Put these steps for making a paper boat in order.", ["Fold the paper in half", "Fold the corners", "Open it into a boat"], o("What first?", "Fold, fold, then open.", "algo.order"))]),
+      qa(tf("A program can have a bug even when the robot moves.", true, o("Moving is not the same as correct.", "The robot can move but go the wrong way.", "algo.debug")), "bugs", "recall",
+        [tf("Once we fix a bug, we never need to test again.", false, o("Always test again.", "We test again to check the fix worked.", "algo.debug"))]),
+      qa(mc("A robot faces right. It does turn right. Which way does it face now?", "Down", ["Up", "Left"], o("Turn right like a clock hand.", "Right then turn right faces down.", "algo.turns")), "directions", "apply",
+        [mc("A robot faces right. It does turn left. Which way does it face now?", "Up", ["Down", "Right"], o("Turn left like a clock hand going back.", "Right then turn left faces up.", "algo.turns"))]),
+      qa(mc("Steps for a sandwich: bread on plate, add the top slice. Which step is missing?", "Add the filling", ["Wash the plate", "Sing a song"], o("What goes in the middle?", "The filling goes between the slices.", "algo.debug")), "around", "apply",
+        [mc("Steps for brushing teeth: put paste on the brush, then rinse. Which step is missing?", "Brush your teeth", ["Open the window", "Play a game"], o("What do you do with the brush?", "You must brush before you rinse.", "algo.debug"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

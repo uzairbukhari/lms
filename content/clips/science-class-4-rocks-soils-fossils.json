@@ -1,0 +1,168 @@
+{
+ "title": "A shell in the cliff",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "A living shell.",
+   "say": "Millions of years ago, a shelled animal lives in a warm sea.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🐚",
+     "label": "alive",
+     "x": 50,
+     "y": 55,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "w",
+     "emoji": "🌊",
+     "x": 50,
+     "y": 78,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "It dies.",
+   "say": "It dies and sinks to the sea floor. Mud and sand cover it.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🐚",
+     "x": 50,
+     "y": 60,
+     "size": 3
+    },
+    {
+     "id": "m",
+     "emoji": "🟫",
+     "label": "sediment",
+     "x": 50,
+     "y": 80,
+     "size": 3,
+     "enter": "slide_right"
+    }
+   ]
+  },
+  {
+   "caption": "Layers build.",
+   "say": "Layer on layer builds up. Over a long time, the layers turn to rock.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🪨",
+     "label": "rock layers",
+     "x": 50,
+     "y": 55,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "A fossil forms.",
+   "say": "The shell leaves a fossil in the rock. It stays there for millions of years.",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "🐚",
+     "label": "fossil",
+     "x": 50,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Weathering.",
+   "say": "Wind, rain and frost weather the cliff. The rock crumbles into pieces.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "⛰️",
+     "x": 40,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "w",
+     "emoji": "🌧️",
+     "x": 70,
+     "y": 30,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Erosion and soil.",
+   "say": "A river carries bits away. They mix with humus to make soil.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🌊",
+     "x": 40,
+     "y": 60,
+     "size": 3,
+     "anim": "pulse"
+    },
+    {
+     "id": "p",
+     "emoji": "🌱",
+     "label": "soil",
+     "x": 75,
+     "y": 60,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Found!",
+   "say": "A girl finds the fossil in the cliff, just like Mary Anning did.",
+   "items": [
+    {
+     "id": "g",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "f",
+     "emoji": "🐚",
+     "label": "fossil",
+     "x": 70,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "In a museum.",
+   "say": "Now the fossil sits in a museum. It tells us about life long ago.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "🏛️",
+     "x": 50,
+     "y": 40,
+     "size": 3
+    },
+    {
+     "id": "f",
+     "emoji": "🐚",
+     "label": "fossil",
+     "x": 50,
+     "y": 65,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

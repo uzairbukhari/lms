@@ -1,0 +1,2979 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-magnets-machines",
+  "subject": "science",
+  "title": "Magnets and Simple Machines",
+  "summary": "Magnetic forces, and levers, pulleys and gears that make work easier.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 10: Magnets and simple machines",
+  "learning_objectives": [
+   "Test materials for magnetism and explain attract and repel",
+   "Explain that magnetic force acts at a distance",
+   "Describe how levers, pulleys and gears help us"
+  ],
+  "tags": [
+   "topic",
+   "topic-10"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 10
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 forces",
+    "text": "Compare how things move; notice that some forces need contact and some act at a distance; describe magnets as having two poles; identify magnetic materials"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pf.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say which materials are magnetic",
+   "I can explain what poles do",
+   "I can name the parts of a lever"
+  ],
+  "real_life": "Fridge magnets, recycling centres, seesaws, wheelbarrows and bicycle gears.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a force?",
+    "hint": "Think of pushing a door.",
+    "explanation": "A force is a push or a pull.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A sound"
+     },
+     {
+      "id": "b",
+      "text": "A push or a pull"
+     },
+     {
+      "id": "c",
+      "text": "A colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Metals are shiny.",
+    "hint": "Think of copper.",
+    "explanation": "Most metals are shiny.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a metal?",
+    "hint": "Think of a nail.",
+    "explanation": "Iron is a metal.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wood"
+     },
+     {
+      "id": "b",
+      "text": "Iron"
+     },
+     {
+      "id": "c",
+      "text": "Plastic"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "magnets",
+   "kind": "learn",
+   "title": "Magnets",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today we explore **magnets** and simple machines.",
+     "say": "Welcome, young scientist! Today we test magnets, then look at levers, pulleys and gears."
+    },
+    {
+     "type": "image",
+     "emoji": "🧲🔩⚙️",
+     "alt": "A magnet, an iron nail and a gear.",
+     "caption": "A magnet, an iron nail and a gear."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Magnetic or not?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **magnetic** material is attracted to a magnet.",
+     "say": "A magnet attracts some materials. Magnetic materials always contain a metal, but not all metals are magnetic."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-magnets-machines-1-da518795.jpg",
+     "alt": "A pink coated paperclip on a teal felt surface",
+     "caption": "A steel paperclip is magnetic.",
+     "credit": "Photo by Андрей Сизов on Unsplash",
+     "say": "Iron is magnetic. Steel is magnetic because it contains iron. Copper, aluminium and gold are metals, but they are not magnetic. This paperclip is steel, so a magnet would pick it up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these will a magnet attract?",
+      "hint": "Iron is magnetic.",
+      "explanation": "A magnet attracts iron and steel.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A plastic ruler"
+       },
+       {
+        "id": "b",
+        "text": "An iron nail"
+       },
+       {
+        "id": "c",
+        "text": "A wooden spoon"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Poles"
+    },
+    {
+     "type": "text",
+     "markdown": "A magnet has a north and a south **pole**.",
+     "say": "A magnet has two poles, a north pole and a south pole. The pull is strongest at the poles."
+    },
+    {
+     "type": "text",
+     "markdown": "Opposite poles **attract**. Matching poles **repel**.",
+     "say": "Opposite poles attract. Matching poles repel, which means they push apart. The force acts at a distance, without touching."
+    },
+    {
+     "type": "explainer",
+     "title": "Poles attract and repel",
+     "scenes": [
+      {
+       "caption": "Opposite poles attract.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧲",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "North meets south. The two magnets pull together."
+      },
+      {
+       "caption": "Matching poles repel.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧲",
+         "x": 22,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧲",
+         "x": 78,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "↔️",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "North meets north. The two magnets push apart."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Two matching poles pull together.",
+      "hint": "Like poles push apart.",
+      "explanation": "Matching poles repel each other.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The rescue magnet",
+     "asset": "clip-science-class-4-magnets-machines-8021ad29.mp4",
+     "poster": "clip-science-class-4-magnets-machines-8021ad29.webp",
+     "seconds": 79,
+     "transcript": "Hamza drops his steel key down a drain. How can he get it back? He ties a magnet to a string. Steel is magnetic, so the magnet attracts it. The key jumps up and sticks to the magnet. Magnetic force acts without touching. Next, a big rock blocks the path. It is far too heavy to lift. He puts a long bar on a block, the pivot. Pushing down lifts the rock. At the well, a pulley raises the bucket. The rope runs over a wheel. On his bicycle, gears turn in opposite directions to help him up the hill. Magnets, levers, pulleys and gears make life easier. No engines needed!",
+     "caption": "A magnet, a lever and a pulley solve three jobs."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Iron and steel are magnetic",
+      "Magnets have a north and a south pole",
+      "Opposite poles attract, matching poles repel"
+     ],
+     "say": "Remember. Iron and steel are magnetic. Opposite poles attract and matching poles repel."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "magnets",
+       "meaning": "Objects that attract magnetic materials."
+      },
+      {
+       "term": "magnet",
+       "meaning": "An object that attracts iron and steel."
+      },
+      {
+       "term": "magnetic",
+       "meaning": "Attracted to a magnet."
+      },
+      {
+       "term": "pole",
+       "meaning": "An end of a magnet where the force is strongest."
+      },
+      {
+       "term": "attract",
+       "meaning": "To pull towards."
+      },
+      {
+       "term": "repel",
+       "meaning": "To push away."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which material is magnetic?",
+     "hint": "It contains iron.",
+     "explanation": "Steel is magnetic.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wood"
+      },
+      {
+       "id": "b",
+       "text": "Steel"
+      },
+      {
+       "id": "c",
+       "text": "Glass"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Aluminium foil is magnetic.",
+     "hint": "Is it iron or steel?",
+     "explanation": "Aluminium is a metal but not magnetic.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where is a magnet strongest?",
+     "hint": "At the ends.",
+     "explanation": "The pull is strongest at the poles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the middle"
+      },
+      {
+       "id": "b",
+       "text": "At the corners only"
+      },
+      {
+       "id": "c",
+       "text": "At its poles"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each pair of poles to what happens.",
+     "hint": "Opposites attract.",
+     "explanation": "Opposite poles attract and matching poles repel.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "North and south"
+      },
+      {
+       "id": "l2",
+       "text": "North and north"
+      },
+      {
+       "id": "l3",
+       "text": "South and south"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Repel"
+      },
+      {
+       "id": "r1",
+       "text": "Attract"
+      },
+      {
+       "id": "r2",
+       "text": "Repel"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "invest",
+   "kind": "try",
+   "title": "Magnet investigations",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Through paper, wood and plastic"
+    },
+    {
+     "type": "text",
+     "markdown": "Magnetic force can act through some **materials**.",
+     "say": "Magnetic force can pass through thin paper, wood and plastic. A magnet can move a paperclip through a card."
+    },
+    {
+     "type": "explainer",
+     "title": "A force through card",
+     "scenes": [
+      {
+       "caption": "Magnet under card.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📎",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 50,
+         "y": 75,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A paperclip sits on a thin card. A magnet is held under the card."
+      },
+      {
+       "caption": "The force passes through.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📎",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 75,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The clip is pulled across the card. The force went through the card."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A magnet moves a clip through a card. What does this show?",
+      "hint": "The clip moved.",
+      "explanation": "The magnetic force passed through the card.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Card is heavy"
+       },
+       {
+        "id": "b",
+        "text": "Magnetic force can pass through card"
+       },
+       {
+        "id": "c",
+        "text": "The card is magnetic"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Strength test"
+    },
+    {
+     "type": "text",
+     "markdown": "Count the paperclips each magnet picks up for a **fair test**.",
+     "say": "To compare magnets, count how many paperclips each one picks up. Keep everything else the same, so the test is fair."
+    },
+    {
+     "type": "manipulative",
+     "title": "Count the clips",
+     "goal": "Move the paperclips the magnet picks up into the Picked up box.",
+     "emoji": "📎",
+     "count": 12,
+     "zones": [
+      "On the table",
+      "Picked up"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Magnet strength test",
+     "materials": [
+      "Two or three magnets",
+      "A box of paperclips",
+      "A table and a ruler"
+     ],
+     "instructions": [
+      "Predict which magnet is strongest.",
+      "Dip each magnet in the clips and count how many it picks up.",
+      "Record the results in a table.",
+      "Try the test again with a card between the magnet and clips."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why do we use the same box of clips for each magnet?",
+      "hint": "Change one thing.",
+      "explanation": "Using the same clips keeps the test fair.",
+      "options": [
+       {
+        "id": "a",
+        "text": "To make the magnets warm"
+       },
+       {
+        "id": "b",
+        "text": "To make it a fair test"
+       },
+       {
+        "id": "c",
+        "text": "To make the clips heavier"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Magnetic force passes through thin materials",
+      "It gets weaker with distance",
+      "Count paperclips to compare magnets"
+     ],
+     "say": "Remember. Magnetic force passes through thin materials but weakens with distance. Count clips to compare strength."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "materials",
+       "meaning": "What things are made from, such as wood or metal."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing changes."
+      },
+      {
+       "term": "predict",
+       "meaning": "To say what you think will happen."
+      },
+      {
+       "term": "strength",
+       "meaning": "How strong a magnet is."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A magnet pulls harder when it is closer.",
+     "hint": "Distance matters.",
+     "explanation": "Magnetic force weakens with distance.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put the strength test in order.",
+     "hint": "Predict first.",
+     "explanation": "Predict, test, count and record.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Pick up clips"
+      },
+      {
+       "id": "i4",
+       "text": "Record the results"
+      },
+      {
+       "id": "i3",
+       "text": "Count the clips"
+      },
+      {
+       "id": "i1",
+       "text": "Predict"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which magnet is strongest?",
+     "hint": "Count the clips.",
+     "explanation": "More clips means a stronger magnet.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The biggest one"
+      },
+      {
+       "id": "b",
+       "text": "The one that picks up the most clips"
+      },
+      {
+       "id": "c",
+       "text": "The brightest one"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you change in a fair test of distance?",
+     "hint": "One thing.",
+     "explanation": "Change only the distance.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Everything"
+      },
+      {
+       "id": "b",
+       "text": "Only the distance"
+      },
+      {
+       "id": "c",
+       "text": "The magnet and the clips"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "machines",
+   "kind": "play",
+   "title": "Lever, pulley and gear",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Levers"
+    },
+    {
+     "type": "text",
+     "markdown": "A **lever** turns on a **pivot**. The **load** is lifted by the **effort**.",
+     "say": "A lever is a bar that turns on a fixed point called a pivot. The thing you lift is the load, and your push is the effort."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-magnets-machines-2-51cde3fe.jpg",
+     "alt": "A blue and yellow spring seesaw on snow",
+     "caption": "A seesaw is a lever with a pivot in the middle.",
+     "credit": "Photo by Luca Fabbri on Unsplash",
+     "say": "A seesaw is a lever. The pivot is in the middle. Push down on one end, and the other end goes up."
+    },
+    {
+     "type": "explainer",
+     "title": "A lever lifts a rock",
+     "scenes": [
+      {
+       "caption": "The pivot is the block.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 25,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🔺",
+         "x": 45,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "➖",
+         "x": 60,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A bar rests on a block, the pivot. A rock sits on the short end."
+      },
+      {
+       "caption": "Push here: the rock lifts.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 25,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "p",
+         "emoji": "🔺",
+         "x": 45,
+         "y": 70,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "👇",
+         "x": 80,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Push down on the long end. The rock lifts easily. A small effort moves a heavy load."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In a lever, what is the load?",
+      "hint": "Load means the thing.",
+      "explanation": "The load is what is being lifted.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The fixed point"
+       },
+       {
+        "id": "b",
+        "text": "The thing being lifted"
+       },
+       {
+        "id": "c",
+        "text": "The push you give"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Pulleys and gears"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pulley** is a wheel with a rope.",
+     "say": "A pulley is a wheel with a rope. It helps you lift a load and can change the direction of your pull."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-magnets-machines-3-145ece44.jpg",
+     "alt": "Bicycle gears and a chain on a rear wheel",
+     "caption": "Gear wheels on a bicycle.",
+     "credit": "Photo by Wayne Bishop on Unsplash",
+     "say": "Gears are wheels with teeth that fit together. Touching gears turn in opposite directions. Bicycle gears change how hard you pedal."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Machine match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "⚙️",
+      "🧲",
+      "🔩",
+      "🚲",
+      "⚖️",
+      "🪝"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Two gears that touch turn in opposite directions.",
+      "hint": "The teeth push each other.",
+      "explanation": "Meshing gears turn in opposite directions.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A lever turns on a pivot",
+      "A pulley is a wheel with a rope",
+      "Gears are toothed wheels that turn together"
+     ],
+     "say": "Remember. Levers, pulleys and gears are simple machines that make work easier."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "lever",
+       "meaning": "A bar that turns on a pivot."
+      },
+      {
+       "term": "pivot",
+       "meaning": "The fixed point a lever turns on."
+      },
+      {
+       "term": "load",
+       "meaning": "The thing being lifted or moved."
+      },
+      {
+       "term": "effort",
+       "meaning": "The force you use to do a job."
+      },
+      {
+       "term": "pulley",
+       "meaning": "A wheel with a rope for lifting."
+      },
+      {
+       "term": "gear",
+       "meaning": "A wheel with teeth."
+      },
+      {
+       "term": "machine",
+       "meaning": "A tool that makes work easier."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the fixed point of a lever called?",
+     "hint": "It does not move.",
+     "explanation": "A lever turns on its pivot.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The load"
+      },
+      {
+       "id": "b",
+       "text": "The gear"
+      },
+      {
+       "id": "c",
+       "text": "The pivot"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A pulley can change the direction of a pull.",
+     "hint": "Pull down, load goes up.",
+     "explanation": "A pulley changes direction.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A wheelbarrow is...",
+     "hint": "Pivot at the wheel.",
+     "explanation": "A wheelbarrow is a lever.",
+     "options": [
+      {
+       "id": "a",
+       "text": "a pulley"
+      },
+      {
+       "id": "b",
+       "text": "a magnet"
+      },
+      {
+       "id": "c",
+       "text": "a lever"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A seesaw has 2 children on one end and 3 on the other. How many children is that?",
+     "hint": "Add them.",
+     "explanation": "2 + 3 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "kind": "use",
+   "title": "Machines at home",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Machines in the kitchen"
+    },
+    {
+     "type": "text",
+     "markdown": "Scissors and wheelbarrows are **levers** that make work easier.",
+     "say": "Many things at home are levers. Scissors, a can opener, a door handle and a wheelbarrow all use a pivot to make work easier."
+    },
+    {
+     "type": "explainer",
+     "title": "Levers at home",
+     "scenes": [
+      {
+       "caption": "Scissors: two levers.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "✂️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Scissors are two levers joined at a pivot. A small squeeze cuts thick card."
+      },
+      {
+       "caption": "Wheelbarrow: a lever.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🛒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A wheelbarrow carries a heavy load. The pivot is the wheel, and you lift the handles."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is a lever?",
+      "hint": "It has a pivot.",
+      "explanation": "Scissors use a pivot.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A plate"
+       },
+       {
+        "id": "b",
+        "text": "A mug"
+       },
+       {
+        "id": "c",
+        "text": "A pair of scissors"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Magnets in everyday life"
+    },
+    {
+     "type": "text",
+     "markdown": "Magnets **separate** steel from other rubbish.",
+     "say": "Magnets hold fridge doors shut. At a recycling centre, big magnets lift steel cans out of the rubbish."
+    },
+    {
+     "type": "image",
+     "emoji": "🧲🥫♻️",
+     "alt": "A magnet picks out steel cans for recycling.",
+     "caption": "A magnet picks out steel cans for recycling."
+    },
+    {
+     "type": "reveal",
+     "prompt": "Why can a magnet not pick up aluminium cans? Have a think first.",
+     "answer_markdown": "Aluminium is not magnetic. Steel cans contain iron, so a magnet picks them up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A recycling magnet picks up aluminium cans.",
+      "hint": "Is aluminium magnetic?",
+      "explanation": "Aluminium is not magnetic.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Levers, pulleys and gears make work easier",
+      "Simple machines need no engine",
+      "Magnets must be used safely"
+     ],
+     "say": "Remember. Machines make work easier, and they do not need engines. Magnets are useful, but keep them safe."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "levers",
+       "meaning": "Bars that turn on a pivot."
+      },
+      {
+       "term": "separate",
+       "meaning": "To split things into groups."
+      },
+      {
+       "term": "recycling",
+       "meaning": "Turning used things into new materials."
+      },
+      {
+       "term": "engineer",
+       "meaning": "A person who designs machines."
+      },
+      {
+       "term": "safely",
+       "meaning": "In a way that avoids harm."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What can a pulley help you do?",
+     "hint": "A bucket on a rope.",
+     "explanation": "Pulleys help lift loads.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Make a shadow"
+      },
+      {
+       "id": "b",
+       "text": "Make a magnet"
+      },
+      {
+       "id": "c",
+       "text": "Lift a load"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Simple machines always need an engine.",
+     "hint": "Think of scissors.",
+     "explanation": "Simple machines use our muscle power.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A magnet on a fridge door holds...",
+     "hint": "Steel door.",
+     "explanation": "A magnet holds notes on a steel door.",
+     "options": [
+      {
+       "id": "a",
+       "text": "a shadow"
+      },
+      {
+       "id": "b",
+       "text": "a pulley"
+      },
+      {
+       "id": "c",
+       "text": "a note"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do engineers use gears?",
+     "hint": "Think of a bike.",
+     "explanation": "Gears change speed and force.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make magnets"
+      },
+      {
+       "id": "b",
+       "text": "To make shadows"
+      },
+      {
+       "id": "c",
+       "text": "To change speed or force"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "true_false",
+    "prompt": "Iron is a magnetic material.",
+    "hint": "Think of a nail.",
+    "explanation": "Iron is attracted to magnets.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "mag.iron",
+    "sub_lesson": "magnets",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which of these will a magnet pick up?",
+    "hint": "Steel contains iron.",
+    "explanation": "A steel paperclip is magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plastic ruler"
+     },
+     {
+      "id": "b",
+      "text": "A steel paperclip"
+     },
+     {
+      "id": "c",
+      "text": "A wooden pencil"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.pickup",
+    "sub_lesson": "magnets",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says all metals are magnetic. Is he right?",
+    "hint": "Think of copper wire.",
+    "explanation": "Only some metals, such as iron and steel, are magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every metal is magnetic"
+     },
+     {
+      "id": "b",
+      "text": "No. Iron and steel are magnetic, but copper and aluminium are not"
+     },
+     {
+      "id": "c",
+      "text": "Yes, if it is shiny"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.all_metals",
+    "sub_lesson": "magnets",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about poles.",
+    "hint": "Opposites attract.",
+    "explanation": "Opposite poles attract and matching poles repel.",
+    "points": 2,
+    "text": "Opposite poles {b1}. Matching poles {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "melt"
+       },
+       {
+        "id": "b",
+        "text": "attract"
+       },
+       {
+        "id": "c",
+        "text": "repel"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "attract"
+       },
+       {
+        "id": "b",
+        "text": "repel"
+       },
+       {
+        "id": "c",
+        "text": "break"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "mag.fill_poles",
+    "sub_lesson": "magnets",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the object a magnet will attract.",
+    "hint": "Iron.",
+    "explanation": "A magnet attracts an iron nail.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔩",
+       "label": "Iron nail",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🥤",
+       "label": "Plastic cup",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪵",
+       "label": "Wooden block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "mag.hotspot",
+    "sub_lesson": "magnets",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "A magnet picks up 7 paperclips on one end and 6 on the other end. How many paperclips is that in total?",
+    "hint": "Add them.",
+    "explanation": "7 + 6 = 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.count_clips",
+    "sub_lesson": "magnets",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two are magnetic materials? Pick two.",
+    "hint": "Iron-containing.",
+    "explanation": "Iron and steel are magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Aluminium"
+     },
+     {
+      "id": "b",
+      "text": "Copper"
+     },
+     {
+      "id": "c",
+      "text": "Steel"
+     },
+     {
+      "id": "d",
+      "text": "Iron"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "mag.magnetic_two",
+    "sub_lesson": "magnets",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a magnet must touch an object to pull it. Is she right?",
+    "hint": "Think of two magnets pushing apart.",
+    "explanation": "Magnetic force works at a distance.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, magnets only work by touch"
+     },
+     {
+      "id": "b",
+      "text": "Yes, the force needs contact"
+     },
+     {
+      "id": "c",
+      "text": "No. Magnetic force acts at a distance, without touching"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.touch",
+    "sub_lesson": "magnets",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each material to magnetic or non-magnetic.",
+    "hint": "Iron and steel.",
+    "explanation": "Iron and steel are magnetic. Aluminium is not.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Iron nail"
+     },
+     {
+      "id": "l2",
+      "text": "Aluminium foil"
+     },
+     {
+      "id": "l3",
+      "text": "Steel can"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Non-magnetic"
+     },
+     {
+      "id": "r3",
+      "text": "Magnetic"
+     },
+     {
+      "id": "r1",
+      "text": "Magnetic"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "mag.classify",
+    "sub_lesson": "invest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Layla says bigger magnets are always stronger. Is she right?",
+    "hint": "Test with clips.",
+    "explanation": "A small strong magnet can beat a big weak one.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, bigger is always stronger"
+     },
+     {
+      "id": "b",
+      "text": "No. Strength depends on the material, not just the size"
+     },
+     {
+      "id": "c",
+      "text": "Yes, small magnets are weak"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.bigger",
+    "sub_lesson": "invest",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "A magnet picks up 20 clips when touching. It picks up 5 fewer clips for every 1 cm of distance. Slide to show how many it picks up at 2 cm.",
+    "hint": "5 fewer twice.",
+    "explanation": "20 - 5 - 5 = 10 clips.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "clips"
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.distance_slider",
+    "sub_lesson": "invest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Omar says if you break a magnet in half, one piece has only a north pole and the other only a south pole. Is he right?",
+    "hint": "Can a magnet have one pole?",
+    "explanation": "Magnetic poles always come in pairs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the poles separate"
+     },
+     {
+      "id": "b",
+      "text": "No. Each piece becomes a new magnet with its own north and south pole"
+     },
+     {
+      "id": "c",
+      "text": "Yes, one piece loses its magnetism"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.poles_split",
+    "sub_lesson": "invest",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the paperclip strength test in order.",
+    "hint": "Test, count, repeat, compare.",
+    "explanation": "Test, count, repeat and compare.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Repeat for the next magnet"
+     },
+     {
+      "id": "i4",
+      "text": "Compare and record the results"
+     },
+     {
+      "id": "i2",
+      "text": "Count the clips it picks up"
+     },
+     {
+      "id": "i1",
+      "text": "Place the magnet over a pile of clips"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "mag.test_order",
+    "sub_lesson": "invest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "Magnet A picks up 15 clips and magnet B picks up 9. How many more clips does magnet A pick up?",
+    "hint": "15 minus 9.",
+    "explanation": "15 - 9 = 6 more.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.compare",
+    "sub_lesson": "invest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about magnetic force.",
+    "hint": "Further means less.",
+    "explanation": "Magnetic force weakens with distance and thickness.",
+    "points": 2,
+    "text": "A magnet can pull through paper and wood. The force gets {b1} with distance and {b2} with thickness.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stronger"
+       },
+       {
+        "id": "b",
+        "text": "louder"
+       },
+       {
+        "id": "c",
+        "text": "weaker"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stronger"
+       },
+       {
+        "id": "b",
+        "text": "weaker"
+       },
+       {
+        "id": "c",
+        "text": "hotter"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "mag.fill_test",
+    "sub_lesson": "invest",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "A magnet's force is weaker when it is further from an object.",
+    "hint": "Closer is stronger.",
+    "explanation": "Magnetic force weakens with distance.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "mag.weaker",
+    "sub_lesson": "invest",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "hotspot",
+    "prompt": "Tap the lever.",
+    "hint": "It turns on a pivot.",
+    "explanation": "A seesaw is a lever.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "⚖️",
+       "label": "A seesaw",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🚲",
+       "label": "A bike wheel",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "💡",
+       "label": "A light bulb",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "mag.lever_hot",
+    "sub_lesson": "machines",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Zainab says magnetism cannot go through a table. Is she right?",
+    "hint": "Think of a clip on card.",
+    "explanation": "Magnetic force passes through thin non-magnetic materials.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tables block all magnetism"
+     },
+     {
+      "id": "b",
+      "text": "Yes, wood is magnetic"
+     },
+     {
+      "id": "c",
+      "text": "No. Magnetic force can pass through thin wood, though it gets weaker with thickness"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.through_table",
+    "sub_lesson": "machines",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Hamza says all levers work the same way. Is he right?",
+    "hint": "Compare a seesaw and wheelbarrow.",
+    "explanation": "The pivot can be in different places.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are all the same"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they all have the pivot in the middle"
+     },
+     {
+      "id": "c",
+      "text": "No. The pivot, load and effort can be in different places, so levers work in different ways"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.levers_same",
+    "sub_lesson": "machines",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each part of a lever to its job.",
+    "hint": "Think of the seesaw.",
+    "explanation": "A lever has a pivot, a load and an effort.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pivot"
+     },
+     {
+      "id": "l2",
+      "text": "Load"
+     },
+     {
+      "id": "l3",
+      "text": "Effort"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "The force you apply"
+     },
+     {
+      "id": "r1",
+      "text": "The fixed point it turns on"
+     },
+     {
+      "id": "r2",
+      "text": "The thing being lifted"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "mag.lever_parts",
+    "sub_lesson": "machines",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put the steps of lifting a rock with a lever in order.",
+    "hint": "Set up, then push.",
+    "explanation": "Place the bar, add the pivot, push and lift.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Put a block under the bar as the pivot"
+     },
+     {
+      "id": "i4",
+      "text": "The rock lifts"
+     },
+     {
+      "id": "i3",
+      "text": "Push down on the long end"
+     },
+     {
+      "id": "i1",
+      "text": "Place a bar under the rock"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "mag.lift_order",
+    "sub_lesson": "machines",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A gear with 10 teeth turns a gear with 20 teeth. Slide to show how many turns the small gear makes while the big gear turns once.",
+    "hint": "20 divided by 10.",
+    "explanation": "The small gear has half the teeth, so it turns 2 times.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "turns"
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.gear_turns",
+    "sub_lesson": "machines",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two are simple machines? Pick two.",
+    "hint": "They make work easier.",
+    "explanation": "A pulley and a lever are simple machines.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A lever"
+     },
+     {
+      "id": "b",
+      "text": "A battery"
+     },
+     {
+      "id": "c",
+      "text": "A torch"
+     },
+     {
+      "id": "d",
+      "text": "A pulley"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "mag.machines_two",
+    "sub_lesson": "machines",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a lever used in the kitchen or garden?",
+    "hint": "Pivot at the wheel.",
+    "explanation": "A wheelbarrow is a lever.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bucket"
+     },
+     {
+      "id": "b",
+      "text": "A hose"
+     },
+     {
+      "id": "c",
+      "text": "A wheelbarrow"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.home_lever",
+    "sub_lesson": "home",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A fridge has 6 magnets on each of 3 doors. How many magnets are there?",
+    "hint": "6 times 3.",
+    "explanation": "6 x 3 = 18 magnets.",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.fridge",
+    "sub_lesson": "home",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Mira says machines need engines to work. Is she right?",
+    "hint": "Think of scissors.",
+    "explanation": "Simple machines need no engine.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they need electricity"
+     },
+     {
+      "id": "b",
+      "text": "No. Simple machines like levers and pulleys work using our muscle power"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all machines need engines"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.engine",
+    "sub_lesson": "home",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "Using a pulley, you can pull down to lift a load up.",
+    "hint": "Pull down, load goes up.",
+    "explanation": "A pulley can change the direction of the force.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "mag.pulley_tf",
+    "sub_lesson": "home",
+    "depth": "recall"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about levers.",
+    "hint": "Fixed point and lifted thing.",
+    "explanation": "A lever turns on a pivot and lifts a load.",
+    "points": 2,
+    "text": "A lever turns around a {b1}. The thing lifted is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "effort"
+       },
+       {
+        "id": "b",
+        "text": "pivot"
+       },
+       {
+        "id": "c",
+        "text": "wheel"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "pivot"
+       },
+       {
+        "id": "b",
+        "text": "load"
+       },
+       {
+        "id": "c",
+        "text": "gear"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "mag.fill_lever",
+    "sub_lesson": "home",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Ali says gears are only found on bikes. Is he right?",
+    "hint": "Look in the kitchen.",
+    "explanation": "Gears are in many machines.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only bikes have gears"
+     },
+     {
+      "id": "b",
+      "text": "Yes, gears are only for transport"
+     },
+     {
+      "id": "c",
+      "text": "No. Gears are also in clocks, cars, hand whisks and can openers"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.gears_bikes",
+    "sub_lesson": "home",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two are safe ways to use magnets? Pick two.",
+    "hint": "Think of safety.",
+    "explanation": "Keep magnets away from cards and small children.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Swallow a small magnet"
+     },
+     {
+      "id": "b",
+      "text": "Throw magnets at friends"
+     },
+     {
+      "id": "c",
+      "text": "Keep small magnets away from young children"
+     },
+     {
+      "id": "d",
+      "text": "Keep them away from cards and phones"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "mag.safe_magnets",
+    "sub_lesson": "home",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "true_false",
+    "prompt": "Plastic is attracted to a magnet.",
+    "hint": "Is plastic iron or steel?",
+    "explanation": "Plastic is not magnetic.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "mag.iron",
+    "sub_lesson": "magnets",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which of these will a magnet NOT pick up?",
+    "hint": "Aluminium is not magnetic.",
+    "explanation": "Aluminium is not magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A steel spoon"
+     },
+     {
+      "id": "b",
+      "text": "An aluminium can"
+     },
+     {
+      "id": "c",
+      "text": "An iron nail"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.pickup",
+    "sub_lesson": "magnets",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Mina says anything silver-coloured is magnetic. Is she right?",
+    "hint": "Think of foil.",
+    "explanation": "Colour does not tell us if something is magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shiny means magnetic"
+     },
+     {
+      "id": "b",
+      "text": "No. Aluminium looks silver but is not magnetic"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all silver things are magnetic"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.all_metals",
+    "sub_lesson": "magnets",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about magnets.",
+    "hint": "The ends.",
+    "explanation": "A magnet is strongest at its poles. Iron and steel are magnetic.",
+    "points": 2,
+    "text": "A magnet is strongest at its {b1}. Iron and {b2} are magnetic.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "side"
+       },
+       {
+        "id": "b",
+        "text": "poles"
+       },
+       {
+        "id": "c",
+        "text": "middle"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wood"
+       },
+       {
+        "id": "b",
+        "text": "glass"
+       },
+       {
+        "id": "c",
+        "text": "steel"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "mag.fill_poles",
+    "sub_lesson": "magnets",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the object a magnet will pick up.",
+    "hint": "Steel.",
+    "explanation": "A magnet picks up a steel paperclip.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧴",
+       "label": "Plastic bottle",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📎",
+       "label": "Steel paperclip",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧵",
+       "label": "Cotton reel",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "mag.hotspot",
+    "sub_lesson": "magnets",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "A magnet picks up 8 paperclips on one end and 9 on the other end. How many paperclips is that in total?",
+    "hint": "Add them.",
+    "explanation": "8 + 9 = 17.",
+    "answer": {
+     "value": 17,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.count_clips",
+    "sub_lesson": "magnets",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Which two are NOT magnetic? Pick two.",
+    "hint": "Not metals.",
+    "explanation": "Wood and glass are not magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Glass"
+     },
+     {
+      "id": "b",
+      "text": "Iron"
+     },
+     {
+      "id": "c",
+      "text": "Steel"
+     },
+     {
+      "id": "d",
+      "text": "Wood"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "mag.magnetic_two",
+    "sub_lesson": "magnets",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a magnet only works when it touches the metal. Is he right?",
+    "hint": "Think of clips jumping.",
+    "explanation": "The force acts without contact.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it needs glue"
+     },
+     {
+      "id": "b",
+      "text": "No. A magnet can pull a paperclip across a gap"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only by touching"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.touch",
+    "sub_lesson": "magnets",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Link each material to magnetic or non-magnetic.",
+    "hint": "Iron and steel.",
+    "explanation": "Steel is magnetic. Copper and plastic are not.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Copper wire"
+     },
+     {
+      "id": "l2",
+      "text": "Steel spoon"
+     },
+     {
+      "id": "l3",
+      "text": "Plastic bag"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Magnetic"
+     },
+     {
+      "id": "r3",
+      "text": "Non-magnetic"
+     },
+     {
+      "id": "r1",
+      "text": "Non-magnetic"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "mag.classify",
+    "sub_lesson": "invest",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Mira says the biggest magnet will pick up the most clips every time. Is she right?",
+    "hint": "Test with clips.",
+    "explanation": "Strength depends on the material and type.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, size decides"
+     },
+     {
+      "id": "b",
+      "text": "Yes, always"
+     },
+     {
+      "id": "c",
+      "text": "No. You have to test it, because size does not always decide strength"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.bigger",
+    "sub_lesson": "invest",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "A magnet picks up 24 clips when touching. It picks up 6 fewer clips for every 1 cm of distance. Slide to show how many it picks up at 3 cm.",
+    "hint": "6 fewer three times.",
+    "explanation": "24 - 18 = 6 clips.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 24,
+     "unit": "clips"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.distance_slider",
+    "sub_lesson": "invest",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ben says you can make a magnet with just one pole. Is he right?",
+    "hint": "Poles come in pairs.",
+    "explanation": "Magnetic poles always come in pairs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, with a strong magnet"
+     },
+     {
+      "id": "b",
+      "text": "No. Every magnet has two poles, a north and a south"
+     },
+     {
+      "id": "c",
+      "text": "Yes, if you cut it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.poles_split",
+    "sub_lesson": "invest",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put the distance test in order.",
+    "hint": "Set up, move, mark, record.",
+    "explanation": "Set up, move, mark and record.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Mark where the clip jumps"
+     },
+     {
+      "id": "i4",
+      "text": "Record the distance"
+     },
+     {
+      "id": "i2",
+      "text": "Move the magnet slowly towards a clip"
+     },
+     {
+      "id": "i1",
+      "text": "Put a ruler on the table"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "mag.test_order",
+    "sub_lesson": "invest",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "Magnet A picks up 18 clips and magnet B picks up 11. How many more clips does magnet A pick up?",
+    "hint": "18 minus 11.",
+    "explanation": "18 - 11 = 7 more.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.compare",
+    "sub_lesson": "invest",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about a fair test.",
+    "hint": "Fair means the same.",
+    "explanation": "A fair test keeps other things the same and counts the clips.",
+    "points": 2,
+    "text": "In a fair test we change one thing and {b1} the others. We count the {b2} each magnet picks up.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "remove"
+       },
+       {
+        "id": "b",
+        "text": "keep"
+       },
+       {
+        "id": "c",
+        "text": "change"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "poles"
+       },
+       {
+        "id": "b",
+        "text": "colours"
+       },
+       {
+        "id": "c",
+        "text": "paperclips"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "mag.fill_test",
+    "sub_lesson": "invest",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "Magnetic force can never pass through paper.",
+    "hint": "The clip moved across card.",
+    "explanation": "Magnetic force passes through thin paper and card.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "mag.weaker",
+    "sub_lesson": "invest",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "hotspot",
+    "prompt": "Tap the tool that is a lever.",
+    "hint": "It has a pivot.",
+    "explanation": "Scissors are levers.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "✂️",
+       "label": "Scissors",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔦",
+       "label": "A torch",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪟",
+       "label": "A window",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "mag.lever_hot",
+    "sub_lesson": "machines",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Ben says magnets cannot work through paper. Is he right?",
+    "hint": "Think of a clip on card.",
+    "explanation": "Magnetic force passes through paper.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, paper is magnetic"
+     },
+     {
+      "id": "b",
+      "text": "No. A magnet can pull a clip through paper"
+     },
+     {
+      "id": "c",
+      "text": "Yes, paper blocks magnetism"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.through_table",
+    "sub_lesson": "machines",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a seesaw and a wheelbarrow are the same type of lever. Is he right?",
+    "hint": "Where is the pivot?",
+    "explanation": "The pivot is in a different place on each.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, exactly the same"
+     },
+     {
+      "id": "b",
+      "text": "No. A seesaw has its pivot in the middle. A wheelbarrow has its pivot at the wheel"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both have a middle pivot"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.levers_same",
+    "sub_lesson": "machines",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Match each machine to what it is.",
+    "hint": "Think of each one.",
+    "explanation": "These are the simple machines.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pulley"
+     },
+     {
+      "id": "l2",
+      "text": "Gear"
+     },
+     {
+      "id": "l3",
+      "text": "Lever"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "A bar that turns on a pivot"
+     },
+     {
+      "id": "r1",
+      "text": "A wheel with a rope"
+     },
+     {
+      "id": "r2",
+      "text": "A wheel with teeth"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "mag.lever_parts",
+    "sub_lesson": "machines",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Put the steps of raising a bucket with a pulley in order.",
+    "hint": "Hook, pass, pull, rise.",
+    "explanation": "Hook, pass, pull and the bucket rises.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Pull down on the rope"
+     },
+     {
+      "id": "i4",
+      "text": "The bucket rises"
+     },
+     {
+      "id": "i2",
+      "text": "Pass the rope over the wheel"
+     },
+     {
+      "id": "i1",
+      "text": "Hook the bucket to the rope"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "mag.lift_order",
+    "sub_lesson": "machines",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A gear with 10 teeth turns a gear with 30 teeth. Slide to show how many turns the small gear makes while the big gear turns once.",
+    "hint": "30 divided by 10.",
+    "explanation": "The small gear turns 3 times.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "turns"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.gear_turns",
+    "sub_lesson": "machines",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two are simple machines? Choose two.",
+    "hint": "They make work easier.",
+    "explanation": "A gear wheel and a seesaw are simple machines.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A seesaw"
+     },
+     {
+      "id": "b",
+      "text": "A cup"
+     },
+     {
+      "id": "c",
+      "text": "A light bulb"
+     },
+     {
+      "id": "d",
+      "text": "A gear wheel"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "mag.machines_two",
+    "sub_lesson": "machines",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a lever you can use to cut?",
+    "hint": "Two blades on a pivot.",
+    "explanation": "Scissors are two levers.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plate"
+     },
+     {
+      "id": "b",
+      "text": "Scissors"
+     },
+     {
+      "id": "c",
+      "text": "A mug"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.home_lever",
+    "sub_lesson": "home",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A classroom board has 4 magnets in each of 5 rows. How many magnets are there?",
+    "hint": "4 times 5.",
+    "explanation": "4 x 5 = 20 magnets.",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "skill_tag": "mag.fridge",
+    "sub_lesson": "home",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a lever cannot work without electricity. Is he right?",
+    "hint": "Think of a seesaw.",
+    "explanation": "A lever works by hand.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it needs batteries"
+     },
+     {
+      "id": "b",
+      "text": "No. A lever works with just a push"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it needs electricity"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "mag.engine",
+    "sub_lesson": "home",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "A recycling magnet separates plastic from paper.",
+    "hint": "Is plastic magnetic?",
+    "explanation": "A magnet separates magnetic materials such as steel.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "mag.pulley_tf",
+    "sub_lesson": "home",
+    "depth": "recall",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about machines.",
+    "hint": "Think of a gear wheel.",
+    "explanation": "Machines make work easier, and gears have teeth.",
+    "points": 2,
+    "text": "Machines make jobs {b1}. A gear has {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "slower"
+       },
+       {
+        "id": "b",
+        "text": "easier"
+       },
+       {
+        "id": "c",
+        "text": "heavier"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "horns"
+       },
+       {
+        "id": "b",
+        "text": "teeth"
+       },
+       {
+        "id": "c",
+        "text": "legs"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "mag.fill_lever",
+    "sub_lesson": "home",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Hana says gears are only found in cars. Is she right?",
+    "hint": "Think of a hand whisk.",
+    "explanation": "Gears are in many machines.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only cars have gears"
+     },
+     {
+      "id": "b",
+      "text": "Yes, gears are only for engines"
+     },
+     {
+      "id": "c",
+      "text": "No. Gears are in clocks, bikes and hand whisks too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "mag.gears_bikes",
+    "sub_lesson": "home",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two are safe ways to use magnets? Choose two.",
+    "hint": "Think of safety.",
+    "explanation": "Use magnets carefully and tell a grown-up if one breaks.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tell a grown-up if a magnet breaks"
+     },
+     {
+      "id": "b",
+      "text": "Hit magnets with a hammer"
+     },
+     {
+      "id": "c",
+      "text": "Play with magnets near a TV"
+     },
+     {
+      "id": "d",
+      "text": "Use magnets only for the experiment"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "mag.safe_magnets",
+    "sub_lesson": "home",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

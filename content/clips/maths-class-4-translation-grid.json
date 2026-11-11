@@ -1,0 +1,120 @@
+{
+ "title": "Robo-Zara crosses the courtyard",
+ "backdrop": "plain",
+ "scenes": [
+  {
+   "caption": "The courtyard.",
+   "say": "This is a tiled courtyard grid. Zara's tiny robot starts in the corner.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "label": "robot",
+     "x": 72,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Three right.",
+   "say": "The robot moves three squares right, across the courtyard.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "➡️",
+     "label": "3 right",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_right"
+    }
+   ]
+  },
+  {
+   "caption": "Two up.",
+   "say": "Then it moves two squares up. Now it is on a new tile.",
+   "items": [
+    {
+     "id": "u",
+     "emoji": "⬆️",
+     "label": "2 up",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "A tile slides.",
+   "say": "A pattern tile slides one square at a time. It keeps its shape.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🔷",
+     "label": "slides",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "The treasure at (3, 2).",
+   "say": "The treasure is at three across and two up. Across first, then up.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "tr",
+     "emoji": "📍",
+     "label": "(3, 2)",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Zara!",
+   "say": "The robot found the treasure. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "h",
+     "emoji": "🎉",
+     "label": "Found it!",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

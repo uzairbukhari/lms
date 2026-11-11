@@ -84,38 +84,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, number explorer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today we learn how to measure and how to tell the time.",
-   "say": "Welcome back, number explorer! Today we measure and tell the time. How long is your pencil? How heavy is your bag? And what is the time right now? By the end you will know which tool to pick, read a clock, and use a calendar."
-  },
-  {
-   "type": "image",
-   "emoji": "⏰",
-   "alt": "Measuring and telling the time.",
-   "caption": "Measuring and telling the time."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "measure",
-     "meaning": "To find out how big, heavy, long or hot something is."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "measure",
    "kind": "learn",
    "title": "Length, mass, capacity and temperature",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, number explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today we learn how to **measure** and how to tell the time.",
+     "say": "Welcome back, number explorer! Today we measure and tell the time. How long is your pencil? How heavy is your bag? What is the time now?"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-measure-time-1-e05db8fc.jpg",
+     "alt": "A row of colouring pencils of different lengths",
+     "caption": "Pencils of different lengths.",
+     "credit": "Photo by Jess Bailey on Unsplash",
+     "say": "Look at these pencils. Some are tall and some are short. How could we measure them? We need a ruler!"
+    },
     {
      "type": "heading",
      "text": "Stop 1: Measuring things"
@@ -130,6 +122,13 @@
      "emoji": "📏",
      "alt": "A ruler measures length. Scales measure mass. A jug measures capacity.",
      "caption": "A ruler measures length. Scales measure mass. A jug measures capacity."
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-measure-time-d1-83fecf93.png",
+     "alt": "A ruler from 0 to 10 cm with a pencil starting at 0 and ending at 7 cm",
+     "caption": "The pencil is 7 cm long.",
+     "say": "Line the pencil up at zero. Its end is at seven centimetres."
     },
     {
      "type": "check",
@@ -264,6 +263,13 @@
      "backdrop": "plain"
     },
     {
+     "type": "image",
+     "asset": "maths-class-1-measure-time-d2-858053e3.png",
+     "alt": "Two clocks showing quarter past 3 and quarter to 4",
+     "caption": "Quarter past 3 and quarter to 4.",
+     "say": "Quarter past three, and quarter to four. Watch where the hour hand sits."
+    },
+    {
      "type": "check",
      "question": {
       "type": "multiple_choice",
@@ -291,16 +297,33 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara's measuring morning",
+     "asset": "clip-maths-class-1-measure-time-e950f017.mp4",
+     "poster": "clip-maths-class-1-measure-time-e950f017.webp",
+     "seconds": 73,
+     "transcript": "Zara has a new pencil. She wants to measure it. She lines the pencil up with the zero on the ruler. The end of the pencil is at fifteen. It is fifteen centimetres long! Now the weather. Zara reads the thermometer. It says thirty degrees. School starts soon. The long hand is on the three. It is quarter past eight. Fifteen minutes later, the long hand is on the six. It is half past eight. At quarter to nine, the long hand is on the nine. The bell rings! Rulers, thermometers and clocks. Shukriya, Zara!",
+     "caption": "Zara measures a pencil, the weather and the time."
+    },
+    {
      "type": "summary",
      "points": [
       "Length, mass, capacity and temperature",
       "Ruler, scales, jug and thermometer"
      ],
-     "say": "Remember. Length is how long, mass is how heavy, capacity is how much it holds, and temperature is how hot or cold. Each one has its own tool."
+     "say": "Remember. Length is how long. Mass is how heavy. Capacity is how much it holds. Temperature is how hot or cold."
     },
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "measure",
+       "meaning": "To find out how big, heavy, long or hot something is."
+      },
       {
        "term": "length",
        "meaning": "How long or tall something is."
@@ -437,7 +460,7 @@
     {
      "type": "text",
      "markdown": "The short hand shows the **hour**. When the long hand points to 12, it is **o'clock**.\n\nLong hand on 12, short hand on 3: three o'clock.",
-     "say": "A clock has two hands. The short hand is the hour hand. The long hand is the minute hand. When the long hand points straight up to the twelve, it is an o'clock time. The short hand tells us which hour. Here the short hand points to three. So it is three o'clock."
+     "say": "A clock has two hands. The short hand is the hour hand. The long hand is the minute hand. The long hand points straight up to the twelve. That is an o'clock time. The short hand tells us which hour. Here the short hand points to three. So it is three o'clock."
     },
     {
      "type": "explainer",
@@ -1065,7 +1088,7 @@
       "Write down one family birthday or event.",
       "Count how many days until it."
      ],
-     "say": "Now make a calendar for your family. Write the seven days across the top, find today, and count the days to a birthday."
+     "say": "Now make a calendar for your family. Write the seven days across the top. Find today. Count the days to a birthday."
     },
     {
      "type": "check",
@@ -1629,6 +1652,446 @@
      "tolerance": 0
     },
     "sub_lesson": "calendar",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "A metre is longer than a centimetre.",
+    "hint": "A metre is about as high as a door handle.",
+    "explanation": "A metre is much longer. There are 100 centimetres in a metre.",
+    "skill_tag": "measure.metre_cm",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "fill_blank",
+    "prompt": "Choose the unit.",
+    "hint": "Big things use metres, small things centimetres.",
+    "explanation": "A door is about 2 metres and a pencil about 15 centimetres.",
+    "skill_tag": "measure.units",
+    "points": 2,
+    "text": "A door is about 2 {b1} tall. A pencil is about 15 {b2} long.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "centimetres"
+       },
+       {
+        "id": "b",
+        "text": "metres"
+       },
+       {
+        "id": "c",
+        "text": "litres"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "metres"
+       },
+       {
+        "id": "b",
+        "text": "kilograms"
+       },
+       {
+        "id": "c",
+        "text": "centimetres"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multi_select",
+    "prompt": "Which two things are best measured in metres? Pick two.",
+    "hint": "Think of big things.",
+    "explanation": "A classroom and a tree are big, so metres suit them.",
+    "skill_tag": "measure.units",
+    "options": [
+     {
+      "id": "a",
+      "text": "The length of a rubber"
+     },
+     {
+      "id": "b",
+      "text": "The width of a coin"
+     },
+     {
+      "id": "c",
+      "text": "The height of a tree"
+     },
+     {
+      "id": "d",
+      "text": "The length of a classroom"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "order",
+    "prompt": "Put these lengths in order, shortest first.",
+    "hint": "1 metre is 100 cm.",
+    "explanation": "5 cm, 20 cm, 1 metre (100 cm) and 10 metres go up in order.",
+    "skill_tag": "measure.order_length",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "1 metre"
+     },
+     {
+      "id": "i4",
+      "text": "10 metres"
+     },
+     {
+      "id": "i2",
+      "text": "20 cm"
+     },
+     {
+      "id": "i1",
+      "text": "5 cm"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each clock time to what we say.",
+    "hint": "15 is a quarter past. 45 is a quarter to.",
+    "explanation": "5:15 is quarter past 5, 8:45 is quarter to 9 and 2:30 is half past 2.",
+    "skill_tag": "time.digital_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "5:15"
+     },
+     {
+      "id": "l2",
+      "text": "8:45"
+     },
+     {
+      "id": "l3",
+      "text": "2:30"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "quarter to 9"
+     },
+     {
+      "id": "r3",
+      "text": "half past 2"
+     },
+     {
+      "id": "r1",
+      "text": "quarter past 5"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows quarter past 5.",
+    "hint": "Long hand on 3, short hand just past 5.",
+    "explanation": "Quarter past 5 is 5:15.",
+    "skill_tag": "time.quarter",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕔",
+       "label": "A: 5 o'clock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕠",
+       "label": "B: half past 5",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕔",
+       "label": "C: quarter past 5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A thermometer scale goes from 0 to 40. The red line is halfway. Slide to the temperature.",
+    "hint": "Half of 40.",
+    "explanation": "Halfway between 0 and 40 is 20 degrees.",
+    "skill_tag": "measure.read_scale",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "number",
+    "prompt": "It is 18 degrees at breakfast. At lunch it is 9 degrees warmer. What is the temperature at lunch?",
+    "hint": "Add 9 to 18.",
+    "explanation": "18 + 9 = 27 degrees.",
+    "skill_tag": "measure.temperature",
+    "answer": {
+     "value": 27,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "What time is 15 minutes after 5 o'clock?",
+    "hint": "A quarter of an hour is 15 minutes.",
+    "explanation": "15 minutes after 5 o'clock is quarter past 5.",
+    "skill_tag": "time.quarter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Half past 5"
+     },
+     {
+      "id": "b",
+      "text": "Quarter past 5"
+     },
+     {
+      "id": "c",
+      "text": "Quarter to 5"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Which day comes just before Wednesday?",
+    "hint": "Before means the day earlier.",
+    "explanation": "Tuesday comes just before Wednesday.",
+    "skill_tag": "calendar.days",
+    "options": [
+     {
+      "id": "a",
+      "text": "Thursday"
+     },
+     {
+      "id": "b",
+      "text": "Tuesday"
+     },
+     {
+      "id": "c",
+      "text": "Monday"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Which month comes after March?",
+    "hint": "January, February, March ...",
+    "explanation": "April comes after March.",
+    "skill_tag": "calendar.months",
+    "options": [
+     {
+      "id": "a",
+      "text": "February"
+     },
+     {
+      "id": "b",
+      "text": "April"
+     },
+     {
+      "id": "c",
+      "text": "May"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Layla measures a pencil from the 1 on a ruler. The end is at 8. She says it is 8 cm long. Is she right?",
+    "hint": "Start counting from where the pencil starts.",
+    "explanation": "From 1 to 8 is 7 cm. A pencil should start at 0 to read the end number.",
+    "skill_tag": "measure.reason_ruler",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is 8 cm"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 9 cm"
+     },
+     {
+      "id": "c",
+      "text": "No. It starts at 1, so it is 7 cm long"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Sam says it is 7 o'clock when the short hand is on 7 and the long hand is on 6. Is he right?",
+    "hint": "Which number is the long hand on?",
+    "explanation": "The long hand on 6 means half past. So it is half past 7.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the short hand is on 7"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 6 o'clock"
+     },
+     {
+      "id": "c",
+      "text": "No. The long hand on 6 means half past, so it is half past 7"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Omar says thermometer A is hotter because its red line is higher up the page. A reads 10 degrees and B reads 30 degrees. Is he right?",
+    "hint": "What do the numbers say?",
+    "explanation": "The temperature is the number on the scale. 30 is more than 10, so B is hotter.",
+    "skill_tag": "measure.reason_thermometer",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the higher line is hotter"
+     },
+     {
+      "id": "b",
+      "text": "No. Read the numbers. B reads 30 degrees, so B is hotter"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Ben says at quarter to 8 the short hand is exactly on the 8. Is he right?",
+    "hint": "Is it 8 o'clock yet?",
+    "explanation": "Quarter to 8 is 7:45. The short hand has not reached 8 yet.",
+    "skill_tag": "time.reason_hour_hand",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is exactly on the 8"
+     },
+     {
+      "id": "b",
+      "text": "No. It is not 8 yet, so the short hand is just before the 8"
+     },
+     {
+      "id": "c",
+      "text": "No, it is on the 7"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
     "depth": "reason"
    },
    {
@@ -2514,6 +2977,461 @@
     "sub_lesson": "calendar",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "A centimetre is longer than a metre.",
+    "hint": "A centimetre is about a thumbnail wide.",
+    "explanation": "A metre is much longer than a centimetre.",
+    "skill_tag": "measure.metre_cm",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "measure",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "fill_blank",
+    "prompt": "Pick the units.",
+    "hint": "Big things use metres, small things centimetres.",
+    "explanation": "A bus is about 10 metres and a finger about 1 centimetre.",
+    "skill_tag": "measure.units",
+    "points": 2,
+    "text": "A bus is about 10 {b1} long. A finger is about 1 {b2} wide.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "centimetres"
+       },
+       {
+        "id": "b",
+        "text": "litres"
+       },
+       {
+        "id": "c",
+        "text": "metres"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "kilograms"
+       },
+       {
+        "id": "b",
+        "text": "centimetres"
+       },
+       {
+        "id": "c",
+        "text": "metres"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multi_select",
+    "prompt": "Which two things are best measured in metres? Choose two.",
+    "hint": "Think of big things.",
+    "explanation": "A pitch and a bus are big, so metres suit them.",
+    "skill_tag": "measure.units",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bus"
+     },
+     {
+      "id": "b",
+      "text": "A button"
+     },
+     {
+      "id": "c",
+      "text": "A bean"
+     },
+     {
+      "id": "d",
+      "text": "A football pitch"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "order",
+    "prompt": "Order these lengths, shortest first.",
+    "hint": "1 metre is 100 cm.",
+    "explanation": "2 cm, 30 cm, 2 metres and 50 metres go up in order.",
+    "skill_tag": "measure.order_length",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "2 metres"
+     },
+     {
+      "id": "i4",
+      "text": "50 metres"
+     },
+     {
+      "id": "i2",
+      "text": "30 cm"
+     },
+     {
+      "id": "i1",
+      "text": "2 cm"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Match each clock time to its words.",
+    "hint": "15 is a quarter past. 45 is a quarter to.",
+    "explanation": "7:15 is quarter past 7, 11:45 is quarter to 12 and 4:30 is half past 4.",
+    "skill_tag": "time.digital_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "7:15"
+     },
+     {
+      "id": "l2",
+      "text": "11:45"
+     },
+     {
+      "id": "l3",
+      "text": "4:30"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "half past 4"
+     },
+     {
+      "id": "r1",
+      "text": "quarter past 7"
+     },
+     {
+      "id": "r2",
+      "text": "quarter to 12"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows quarter to 8.",
+    "hint": "Long hand on 9, short hand just before 8.",
+    "explanation": "Quarter to 8 is 7:45.",
+    "skill_tag": "time.quarter",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕖",
+       "label": "A: quarter to 8",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕗",
+       "label": "B: quarter past 8",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕗",
+       "label": "C: 8 o'clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A thermometer scale goes from 0 to 100. The red line is halfway. Slide to the temperature.",
+    "hint": "Half of 100.",
+    "explanation": "Halfway between 0 and 100 is 50 degrees.",
+    "skill_tag": "measure.read_scale",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 50,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "number",
+    "prompt": "It is 12 degrees in the morning. By afternoon it is 8 degrees warmer. What is the temperature in the afternoon?",
+    "hint": "Add 8 to 12.",
+    "explanation": "12 + 8 = 20 degrees.",
+    "skill_tag": "measure.temperature",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "measure",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "What time is 15 minutes before 8 o'clock?",
+    "hint": "A quarter of an hour is 15 minutes.",
+    "explanation": "15 minutes before 8 o'clock is quarter to 8.",
+    "skill_tag": "time.quarter",
+    "options": [
+     {
+      "id": "a",
+      "text": "Half past 7"
+     },
+     {
+      "id": "b",
+      "text": "Quarter to 8"
+     },
+     {
+      "id": "c",
+      "text": "Quarter past 8"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Which day comes just after Saturday?",
+    "hint": "After means the next day.",
+    "explanation": "Sunday comes just after Saturday.",
+    "skill_tag": "calendar.days",
+    "options": [
+     {
+      "id": "a",
+      "text": "Friday"
+     },
+     {
+      "id": "b",
+      "text": "Monday"
+     },
+     {
+      "id": "c",
+      "text": "Sunday"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Which month comes after July?",
+    "hint": "June, July ...",
+    "explanation": "August comes after July.",
+    "skill_tag": "calendar.months",
+    "options": [
+     {
+      "id": "a",
+      "text": "June"
+     },
+     {
+      "id": "b",
+      "text": "September"
+     },
+     {
+      "id": "c",
+      "text": "August"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "calendar",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ben measures a pencil from the 2 on a ruler. The end is at 9. He says it is 9 cm long. Is he right?",
+    "hint": "Start counting from where the pencil starts.",
+    "explanation": "From 2 to 9 is 7 cm. A pencil should start at 0 to read the end number.",
+    "skill_tag": "measure.reason_ruler",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 11 cm"
+     },
+     {
+      "id": "b",
+      "text": "No. It starts at 2, so it is 7 cm long"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is 9 cm"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ben says it is 4 o'clock when the short hand is near 4 and the long hand is on 6. Is he right?",
+    "hint": "Which number is the long hand on?",
+    "explanation": "The long hand on 6 means half past. So it is half past 4.",
+    "skill_tag": "time.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 6 o'clock"
+     },
+     {
+      "id": "b",
+      "text": "No. The long hand on 6 means half past, so it is half past 4"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the short hand is near 4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "oclock",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Mina says thermometer A is hotter because its red line is higher up the page. A reads 5 degrees and B reads 35 degrees. Is she right?",
+    "hint": "What do the numbers say?",
+    "explanation": "The temperature is the number on the scale. 35 is more than 5, so B is hotter.",
+    "skill_tag": "measure.reason_thermometer",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the higher line is hotter"
+     },
+     {
+      "id": "b",
+      "text": "No. Read the numbers. B reads 35 degrees, so B is hotter"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "measure",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Mia says at quarter to 5 the short hand is exactly on the 4. Is she right?",
+    "hint": "Is it 5 o'clock yet?",
+    "explanation": "Quarter to 5 is 4:45. The short hand is almost at 5.",
+    "skill_tag": "time.reason_hour_hand",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is exactly on the 4"
+     },
+     {
+      "id": "b",
+      "text": "No. It is nearly 5, so the short hand is just before the 5"
+     },
+     {
+      "id": "c",
+      "text": "No, it is on the 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "quarter",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

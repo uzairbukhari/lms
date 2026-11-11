@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 1, topic 2: Animals and us (Zainab, age 7). Standards from docs/CURRICULUM_V2.md section 3.
 
+const PARROT = "science-class-1-animals-and-us-1-aa69b44d.jpg";
+const FROG = "science-class-1-animals-and-us-2-8fcf38e7.jpg";
+const BRUSH = "science-class-1-animals-and-us-3-0afeb772.jpg";
+
 const groups = {
   id: "groups", kind: "learn", title: "Animal groups",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we group animals and look after our bodies. How are animals alike and different?", T("Today's big question: how do we group animals?")),
+    SAY("This parrot is a bird. Its feathers are one clue to its group.", PHOTO(PARROT, "A red, blue and green macaw parrot seen from the side", "A parrot is a bird. Its body is covered in feathers.", "Photo by Barbora Dostálová on Unsplash")),
     H("Stop 1: Mammals, birds and fish"),
     SAY("Scientists put animals into groups by looking at how they are alike. Mammals have fur or hair, and the babies drink milk. A cat, a goat and you are mammals! Birds have feathers and wings, and they lay eggs. Fish have scales and fins, and they live in water. Let's meet each group.", T("**Mammals** have fur or hair and feed their babies milk.", "**Birds** have feathers and lay eggs.", "**Fish** have scales and fins.")),
     EB("meadow", "Three animal groups",
@@ -15,6 +22,7 @@ const groups = {
       SS("Fish live in water. They have scales and fins, and they breathe with gills.", S("Fish live in water.", ["a", "🐟", 30, 55, 2, "float"], ["b", "🐠", 55, 65, 2, "float"], ["c", "🐡", 78, 50, 2, "float"]))),
     CHK(mc("Which group has feathers?", "Birds", ["Fish", "Mammals"], { hint: "Think of a parrot.", why: "Birds are the animals with feathers." })),
     H("Stop 2: Reptiles and amphibians"),
+    SAY("This frog has smooth, wet skin. It is an amphibian.", PHOTO(FROG, "A bright green tree frog clinging to a green stem", "A frog is an amphibian. It has smooth, wet skin.", "Photo by David Clode on Unsplash")),
     SAY("Two more groups. Reptiles have dry skin covered in scales. Snakes, lizards and crocodiles are reptiles. Amphibians, like frogs, start life in water and have wet, smooth skin. Look at one animal from each group.", T("**Reptiles** have dry, scaly skin.", "**Amphibians** have wet skin and start life in water.")),
     IMG("🐍 🦎 🐊", "Reptiles: a snake, a lizard and a crocodile."),
     IMG("🐸 🐸 🐸", "Amphibians: frogs."),
@@ -60,13 +68,14 @@ const teeth = {
   id: "teeth", kind: "play", title: "Teeth and being healthy",
   blocks: [
     H("Stop 1: Looking after our teeth"),
-    SAY("We use our teeth to bite and chew. Our first teeth are milk teeth. They wobble and fall out when we are about six or seven, and bigger teeth grow in their place. Those grown-up teeth must last all our lives, so we look after them. We brush twice a day, eat fewer sweets, and visit the dentist. Many Muslims also clean their teeth with a miswak, a small twig, following the Sunnah.", T("**Teeth** help us bite and chew food.", "Brush twice a day, eat fewer sweets and visit the dentist.")),
+    SAY("A small blob of toothpaste on a soft brush is all you need.", PHOTO(BRUSH, "An orange toothbrush with a line of green toothpaste on a yellow background", "A toothbrush and a little toothpaste keep teeth clean.", "Photo by Tosan Dudun on Unsplash")),
+    SAY("We use our teeth to bite and chew. Our first teeth are milk teeth. They wobble and fall out at about six or seven. Bigger teeth grow in their place. Those grown-up teeth must last all our lives, so we look after them. We brush twice a day, eat fewer sweets, and visit the dentist. Many Muslims also clean their teeth with a miswak, a small twig. This follows the Sunnah.", T("**Teeth** help us bite and chew food.", "Brush twice a day, eat fewer sweets and visit the dentist.")),
     EB("home", "Clean teeth",
       SS("A tooth with sugar on it can get a hole. The sugar is eaten by tiny germs, and they make acid.", S("Sugar can harm teeth.", ["t", "🦷", 40, 55, 3, "none"], ["s", "🍬", 70, 40, 2, "bounce"])),
       SS("Brushing washes the sugar away. Now the tooth is clean and shiny.", S("Brushing cleans teeth.", ["t", "🦷", 40, 55, 3, "pulse"], ["b", "🪥", 70, 40, 2, "bounce"], ["sp", "✨", 20, 40, 2, "float"]))),
     CHK(mc("How often should we brush our teeth?", "Twice a day", ["Once a year", "Never"], { hint: "Morning and night.", why: "We brush in the morning and at night." })),
     H("Stop 2: Staying healthy"),
-    SAY("To stay healthy, a body needs good food, water, sleep, exercise and clean hands. Washing your hands with soap stops germs spreading. Muslims wash their hands and faces for wudu before prayer, so it is a good habit already. Play the memory game, then tell me which habit you do best.", MAN("Healthy or not?", "Put healthy things in Healthy. Put things we should have fewer of in Not often.", "🍎", 8, ["Healthy", "Not often"])),
+    SAY("To stay healthy, a body needs good food, water, sleep, exercise and clean hands. Washing your hands with soap stops germs spreading. Muslims wash their hands and faces for wudu before prayer. That is a good habit already. Play the memory game, then tell me which habit you do best.", MAN("Healthy or not?", "Put healthy things in Healthy. Put things we should have fewer of in Not often.", "🍎", 8, ["Healthy", "Not often"])),
     SAY("Warm up your memory. Watch the healthy things light up, then copy the order.", BRAIN("remember_order", "Healthy lights", "Watch the order, then copy it.", ["🍎", "💧", "😴", "🧼"])),
     CHK(tf("Washing your hands with soap helps stop germs spreading.", true, { hint: "Why do doctors wash their hands?", why: "Soap and water remove germs." })),
     SAY("Remember. Look after your teeth. Eat well, sleep well, move, and wash your hands.", SUM("Brush your teeth twice a day", "Good food, water, sleep, exercise and clean hands keep us healthy")),
@@ -88,10 +97,10 @@ const growing = {
       SS("A hen lays an egg.", S("An egg.", ["e", "🥚", 50, 60, 3, "pulse"])),
       SS("The egg cracks, and a chick comes out. Cheep cheep!", S("A chick hatches.", ["e", "🐣", 50, 60, 3, "bounce"])),
       SS("The chick grows bigger and gets feathers.", S("The chick grows.", ["e", "🐥", 50, 60, 3, "grow"])),
-      SS("In time it is a hen, and the hen can lay eggs of her own.", S("A hen.", ["e", "🐔", 50, 60, 3, "bounce"], ["f", "🥚", 80, 70, 2, "bounce"]))),
+      SS("In time it is a hen. The hen can lay eggs of her own.", S("A hen.", ["e", "🐔", 50, 60, 3, "bounce"], ["f", "🥚", 80, 70, 2, "bounce"]))),
     CHK(ord("Put the chicken life cycle in order.", ["Egg", "Chick", "Hen"], { hint: "Starts with an egg.", why: "An egg hatches into a chick that grows into a hen." })),
     H("Stop 2: How I have changed"),
-    SAY("You have a life cycle too. You were a baby, then a toddler, a child, and one day you will be a grown-up. Think about how you have changed since you were a baby. You are taller, you can run, you can read. Talk to a grown-up about your baby photos.", IMG("👶 🧒 🧑", "A baby, a child and a grown-up.")),
+    SAY("You have a life cycle too. You were a baby, then a toddler, then a child. One day you will be a grown-up. Think about how you have changed since you were a baby. You are taller, you can run, you can read. Talk to a grown-up about your baby photos.", IMG("👶 🧒 🧑", "A baby, a child and a grown-up.")),
     ACT("My growing up chart", ["Paper and pencils", "A grown-up", "Baby photos if you have them"], ["Draw yourself as a baby, as you are now, and as a grown-up.", "Write one thing you could not do as a baby but can do now.", "Show your chart to your family."]),
     CHK(mc("Which comes first in a chicken's life cycle?", "Egg", ["Hen", "Chick"], { hint: "It starts in a shell.", why: "The life cycle starts with an egg." })),
     SAY("Remember. Animals have life cycles. A chicken goes from egg to chick to hen. Humans grow and change too.", SUM("A life cycle shows how an animal grows and changes", "Egg, chick, hen", "People grow and change too")),
@@ -122,6 +131,28 @@ const ALTS = [
   [mc("Sam eats lots of sweets and never brushes. What might happen?", "His teeth could get holes", ["His teeth will grow bigger", "Nothing at all"], { hint: "Sugar and germs make acid.", why: "Sugar not brushed away can make holes in teeth." }), mc("Lena never washes her hands before eating. What might happen?", "She could get germs in her tummy", ["She will grow taller", "She will become a bird"], { hint: "Think about germs.", why: "Germs on hands can make us ill." })],
 ];
 
+const clip = {
+  title: "Zainab's animal day", backdrop: "meadow", caption: "Zainab sorts animals into groups and looks after her teeth.",
+  scenes: [
+    { caption: "A busy morning.", say: "Zainab visits the farm with Dadi. So many animals live here!",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3, enter: "walk_right" }, { id: "f", emoji: "🐄", x: 72, y: 56, size: 3, enter: "pop" }] },
+    { caption: "Mammals.", say: "The cow and the cat have fur. Their babies drink milk.",
+      items: [{ id: "c", emoji: "🐄", x: 30, y: 58, size: 3 }, { id: "k", emoji: "🐈", label: "mammals", x: 70, y: 62, size: 3, anim: "bounce" }] },
+    { caption: "Birds.", say: "Hens have feathers and a beak. They lay eggs.",
+      items: [{ id: "h", emoji: "🐓", label: "bird", x: 35, y: 58, size: 3, anim: "bounce" }, { id: "e", emoji: "🥚", x: 68, y: 66, size: 2 }] },
+    { caption: "Fish and frogs.", say: "Fish have scales and gills. A frog has wet skin and lives in two homes.",
+      items: [{ id: "f", emoji: "🐟", label: "fish", x: 30, y: 60, size: 3, anim: "float" }, { id: "g", emoji: "🐸", label: "amphibian", x: 70, y: 62, size: 3, anim: "bounce" }] },
+    { caption: "Five senses.", say: "Zainab smells the hay and hears the cow. She uses her senses.",
+      items: [{ id: "n", emoji: "👃", x: 28, y: 52, size: 3 }, { id: "e", emoji: "👂", x: 50, y: 52, size: 3 }, { id: "y", emoji: "👀", x: 72, y: 52, size: 3 }] },
+    { caption: "Growing up.", say: "A lamb grows bigger each day. Zainab was small once too.",
+      items: [{ id: "l", emoji: "🐑", x: 35, y: 60, size: 3, anim: "grow" }, { id: "b", emoji: "👶", x: 70, y: 60, size: 2 }] },
+    { caption: "Brush teeth.", say: "At night she brushes her teeth. That keeps them clean and strong.",
+      items: [{ id: "b", emoji: "🪥", x: 38, y: 52, size: 3 }, { id: "t", emoji: "🦷", x: 65, y: 52, size: 3, effect: "sparkle" }] },
+    { caption: "Healthy me.", say: "Alhamdulillah, she feels well. Sleep tight, Zainab!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3, anim: "bounce" }, { id: "h", emoji: "❤️", x: 70, y: 42, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-1-animals-and-us", subject: "science", cls: 1, topic: 2, title: "Animals and Us",
@@ -136,13 +167,9 @@ export const topics = [
       mc("Where does a fish live?", "In water", ["In a nest", "In a desert"], { hint: "Fish swim.", why: "Fish live in water." }),
       ms("Pick two things animals need.", ["Food", "Water"], ["Toys", "Phones"], { hint: "What keeps animals alive?", why: "Animals need food and water." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how are animals and people the same, and how are they different? By the end, you will sort animals into groups, use your five senses, look after your body and teeth, and see how animals grow. Let's go!", T("Today's big question: how are animals and people alike?", "We will find out about groups, senses and growing up.")),
-      IMG("🐈🐦🐟🧒", "Animals and people have a lot in common."),
-      GLOSS({ animals: "Living things that move, eat and have babies." }),
-    ],
+    intro: [],
     subs: [groups, senses, teeth, growing],
+    clip,
     quiz: [
       Q("groups", "recall", "animals.groups", mc("Which of these animals is a mammal?", "A cow", ["A hen", "A frog"], { hint: "Which one has hair and drinks milk as a baby?", why: "A cow is a mammal. It feeds its calf milk." }), ...ALTS[0]),
       Q("groups", "recall", "animals.reptile", mc("A lizard has dry, scaly skin. What group is it in?", "Reptiles", ["Mammals", "Fish"], { hint: "Dry scaly skin.", why: "Lizards are reptiles." }), ...ALTS[1]),
@@ -159,6 +186,37 @@ export const topics = [
       Q("teeth", "reason", "health.why", mc("Why do we brush our teeth after sweet food?", "To wash away sugar that can make holes", ["To make the sugar grow", "To make our teeth fall out"], { hint: "What does sugar do to teeth?", why: "Brushing removes sugar that could harm our teeth." }), ...ALTS[12]),
       Q("groups", "reason", "animals.reason", mc("Ali says a penguin is a mammal because it cannot fly. Why is he wrong?", "A penguin has feathers and lays eggs, so it is a bird", ["A penguin is a fish", "A penguin has fur"], { hint: "Look at what covers its body.", why: "A penguin has feathers and lays eggs. It is a bird that swims instead of flies." }), ...ALTS[13]),
       Q("teeth", "reason", "health.reason", mc("Noor eats lots of sweets and never brushes. What might happen to her teeth?", "They could get holes", ["They will grow bigger", "Nothing at all"], { hint: "Sugar and germs make acid.", why: "Sugar not brushed away can make holes in teeth." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("groups", "apply", "animals.sort3", mat("Sort these three animals into their groups.", [["Snake", "Reptile"], ["Sparrow", "Bird"], ["Goldfish", "Fish"]], { hint: "Think about skin, feathers or scales.", why: "A snake is a reptile, a sparrow is a bird and a goldfish is a fish." }),
+        mat("Which group does each of these animals belong to?", [["Cat", "Mammal"], ["Frog", "Amphibian"], ["Eagle", "Bird"]], { hint: "Think about fur, wet skin or feathers.", why: "A cat is a mammal, a frog is an amphibian and an eagle is a bird." })),
+      Q("groups", "recall", "animals.amphibian", mc("What do we call an animal like a frog that lives in water and on land?", "An amphibian", ["A reptile", "A mammal"], { hint: "It starts as a tadpole.", why: "Frogs are amphibians. They live in water and on land." }),
+        mc("A toad starts life in water and later lives on land. What group is it in?", "Amphibians", ["Reptiles", "Birds"], { hint: "Think of a frog.", why: "Toads are amphibians, like frogs." })),
+      Q("senses", "apply", "senses.match5", mat("Match each sense to the body part we use.", [["Seeing", "Eyes"], ["Hearing", "Ears"], ["Tasting", "Tongue"]], { hint: "Which part does each job?", why: "We see with our eyes, hear with our ears and taste with our tongue." }),
+        mat("Join each sense to the body part that does it.", [["Smelling", "Nose"], ["Touching", "Skin"], ["Seeing", "Eyes"]], { hint: "Which part does each job?", why: "We smell with our nose, touch with our skin and see with our eyes." })),
+      Q("groups", "reason", "animals.gills", mc("Noor says fish breathe air through noses like us. Is she right?", "No, fish take air from the water with gills", ["Yes, fish have noses on top", "Yes, fish have lungs like us"], { hint: "Look at the sides of a fish's head.", why: "Fish use gills to take oxygen from the water." }),
+        mc("Ali says fish never need air. Is he right?", "No, they take oxygen from the water with gills", ["Yes, fish need nothing", "Yes, fish breathe through their fins"], { hint: "Think about gills.", why: "Fish need oxygen. Their gills take it from the water." })),
+      Q("groups", "recall", "animals.milk", tf("Baby mammals drink milk from their mothers.", true, { hint: "Think of a kitten or a lamb.", why: "All mammal mothers feed their babies milk." }),
+        tf("Baby birds drink milk from their mothers.", false, { hint: "Do birds feed milk?", why: "Birds feed their chicks worms and seeds, not milk." })),
+      Q("groups", "apply", "animals.bird_clues", ms("Which two clues tell you an animal is a bird? Pick two.", ["It has feathers", "It has a beak"], ["It has scales", "It has fur"], { hint: "Look at a parrot.", why: "Birds have feathers and a beak." }),
+        ms("Which two clues tell you an animal is a fish? Pick two.", ["It has scales", "It has gills"], ["It has feathers", "It has fur"], { hint: "Look at a goldfish.", why: "Fish have scales and gills." })),
+      Q("groups", "apply", "animals.fur_tap", hot("Tap the animal that has fur.", [["🐈", "Cat", 22, 50], ["🐍", "Snake", 50, 50], ["🐟", "Fish", 78, 50]], ["Cat"], { labels: true, hint: "Which one is soft to stroke?", why: "A cat is a mammal. Mammals have fur or hair." }),
+        hot("Tap the animal that has feathers.", [["🐓", "Hen", 22, 50], ["🐘", "Elephant", 50, 50], ["🐢", "Turtle", 78, 50]], ["Hen"], { labels: true, hint: "Which one can lay eggs and has a beak?", why: "A hen is a bird. Birds have feathers." })),
+      Q("senses", "apply", "senses.smell_st", st("Which part of the body do we use to smell?", ["nose", "the nose"], { hint: "It is in the middle of your face.", why: "We smell with our nose." }),
+        st("Which part of the body helps us taste food?", ["tongue", "the tongue"], { hint: "It is inside your mouth.", why: "We taste with our tongue." })),
+      Q("teeth", "apply", "health.brush_steps", ord("Put the steps for brushing teeth in order.", ["Put toothpaste on the brush", "Brush all your teeth", "Spit out the toothpaste", "Rinse your mouth"], { hint: "Toothpaste goes on first.", why: "Add toothpaste, brush, spit, then rinse." }),
+        ord("Put these steps in order.", ["Wet the toothbrush", "Add a small blob of toothpaste", "Brush the front, back and top", "Spit and rinse"], { hint: "Wet the brush first.", why: "Wet, add paste, brush, then spit and rinse." })),
+      Q("teeth", "apply", "health.brush_days", sld("Ali brushes his teeth twice a day. Slide to show how many brushes in 3 days.", { min: 0, max: 10, unit: "brushes" }, 6, 0, { hint: "Two brushes, three times.", why: "2 + 2 + 2 = 6 brushes." }),
+        sld("Hana brushes her teeth twice a day. Slide to show how many brushes in 4 days.", { min: 0, max: 10, unit: "brushes" }, 8, 0, { hint: "Two brushes, four times.", why: "2 + 2 + 2 + 2 = 8 brushes." })),
+      Q("growing", "apply", "growing.baby_match", mat("Match each baby to its parent.", [["Chick", "Hen"], ["Lamb", "Sheep"], ["Puppy", "Dog"]], { hint: "Think about a farm.", why: "A chick has a hen for a parent, a lamb a sheep and a puppy a dog." }),
+        mat("Join each young animal to its parent.", [["Calf", "Cow"], ["Kitten", "Cat"], ["Kid", "Goat"]], { hint: "Think about a farm.", why: "A calf has a cow for a parent, a kitten a cat and a kid a goat." })),
+      Q("groups", "apply", "animals.cover_fill", fill("Finish the sentences about animal coverings.", "Mammals have {b1} or fur. Birds have {b2}.", [["hair", "scales", "feathers"], ["feathers", "fur", "gills"]], { hint: "Think of a cat and a hen.", why: "Mammals have hair or fur. Birds have feathers." }),
+        fill("Finish the sentences about fish.", "Fish have {b1} and breathe with {b2}.", [["scales", "feathers", "fur"], ["gills", "wings", "hooves"]], { hint: "Think of a goldfish.", why: "Fish have scales and breathe with gills." })),
+      Q("groups", "reason", "animals.bat_bird", mc("Layla says a bat is a bird because it flies. Is she right?", "No, a bat has fur and feeds its babies milk", ["Yes, all flying animals are birds", "Yes, bats have feathers"], { hint: "Is a bat's body furry?", why: "A bat is a mammal. Flying does not make it a bird." }),
+        mc("Aisha says a penguin is a fish because it swims. Is she right?", "No, a penguin has feathers and lays eggs", ["Yes, all swimmers are fish", "Yes, penguins have gills"], { hint: "Look at a penguin's body.", why: "A penguin is a bird. Swimming does not make it a fish." })),
+      Q("groups", "reason", "animals.people", mc("Sam says people are not animals. Is he right?", "No, people are animals too. We are mammals", ["Yes, only pets are animals", "Yes, people are plants"], { hint: "Do people grow, eat and have babies?", why: "People are animals. We are mammals." }),
+        mc("Mira says only animals with four legs are animals. Is she right?", "No, birds, fish and snakes are animals too", ["Yes, only four legs count", "Yes, birds are plants"], { hint: "Think of a sparrow.", why: "Animals can have two legs, no legs or many legs." })),
+      Q("teeth", "reason", "health.dentist", mc("Hana says she only needs to brush her teeth when they hurt. Is she right?", "No, brushing every day stops tooth decay before it starts", ["Yes, only brush when they hurt", "Yes, teeth clean themselves"], { hint: "Think about sugar and germs.", why: "Brushing each day removes sugar and germs before they hurt." }),
+        mc("Omar says clean teeth never need a dentist. Is he right?", "No, a dentist checks teeth to keep them healthy", ["Yes, never", "Yes, a dentist only pulls teeth out"], { hint: "What does a dentist do?", why: "Dentists check and look after our teeth." })),
     ],
   }),
 ];

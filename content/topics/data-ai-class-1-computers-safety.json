@@ -114,38 +114,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome, computer explorer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do we use computers and stay safe?\n\nWe will learn about inputs, outputs and online safety.",
-   "say": "Welcome, computer explorer! Today's big question: how do we use computers and stay safe? We will find out how computers take in information and give it out, and how to be careful and kind online. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "💻",
-   "alt": "Computers help us, and we help ourselves by staying safe.",
-   "caption": "Computers help us, and we help ourselves by staying safe."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "safe",
-     "meaning": "Not likely to hurt you."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "in_out",
    "kind": "learn",
    "title": "Inside a computer: in and out",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, computer explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we use computers safely?",
+     "say": "Today we learn how computers work and how to stay safe."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-computers-safety-1-a38b89b8.jpg",
+     "alt": "A combination padlock resting on a computer keyboard",
+     "caption": "A padlock keeps things safe, like a password.",
+     "credit": "Photo by Sasun Bughdaryan on Unsplash",
+     "say": "A padlock keeps things safe. A password does the same job for us."
+    },
     {
      "type": "heading",
      "text": "Stop 1: How we talk to a computer"
@@ -315,6 +307,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab stays safe",
+     "asset": "clip-data-ai-class-1-computers-safety-f471e505.mp4",
+     "poster": "clip-data-ai-class-1-computers-safety-f471e505.webp",
+     "seconds": 66,
+     "transcript": "Zainab uses the family tablet. A touch screen is input and output. The keyboard is an input. The speaker is an output. After twenty minutes, Zainab takes a break. Her eyes need a rest. Her password is a secret key. Only Mum knows it. A stranger in a game asks where she lives. She does not answer. She tells Mum straight away. Telling is always right. Then she sends Nani a kind message with Mum's help. Plugs are for grown-ups. Zainab never touches sockets.",
+     "caption": "Zainab uses the tablet safely and kindly."
+    },
+    {
      "type": "summary",
      "points": [
       "An input tells the computer something",
@@ -326,6 +331,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "trusted",
+       "meaning": "Someone you know well who looks after you."
+      },
       {
        "term": "input",
        "meaning": "How we put information into a computer."
@@ -610,6 +619,14 @@
     {
      "type": "heading",
      "text": "Stop 2: Using devices well and being safe with electricity"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-computers-safety-2-6afe4bdc.jpg",
+     "alt": "A white wall socket on a blue wall",
+     "caption": "A wall socket. Never touch it. Ask a grown-up.",
+     "credit": "Photo by Gleb Paniotov on Unsplash",
+     "say": "This is a wall socket. Never touch it. Ask a grown-up."
     },
     {
      "type": "text",
@@ -963,7 +980,7 @@
     {
      "type": "text",
      "markdown": "Be **kind** online. If something worries you, **tell a grown-up**.",
-     "say": "Being kind online is just like being kind in real life. We say please and thank you. We write friendly messages. If someone is unkind, or something online makes you feel worried, you should tell a grown-up straight away. You will not be in trouble."
+     "say": "Being kind online is just like being kind in real life. We say please and thank you. We write friendly messages. If someone is unkind, tell a grown-up straight away. Do the same if you feel worried. You will not be in trouble."
     },
     {
      "type": "image",
@@ -1509,6 +1526,441 @@
     ],
     "sub_lesson": "online",
     "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about passwords.",
+    "hint": "Think about secret keys.",
+    "explanation": "A password is secret, so we do not share it.",
+    "skill_tag": "cs.private",
+    "points": 2,
+    "text": "A {b1} is a secret code. We never {b2} it with friends.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "apple"
+       },
+       {
+        "id": "b",
+        "text": "password"
+       },
+       {
+        "id": "c",
+        "text": "table"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "eat"
+       },
+       {
+        "id": "b",
+        "text": "share"
+       },
+       {
+        "id": "c",
+        "text": "paint"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multi_select",
+    "prompt": "Which two are private? Pick two.",
+    "hint": "Think about what only family should know.",
+    "explanation": "Passwords and addresses are private.",
+    "skill_tag": "cs.private",
+    "options": [
+     {
+      "id": "a",
+      "text": "Our home address"
+     },
+     {
+      "id": "b",
+      "text": "Our favourite colour"
+     },
+     {
+      "id": "c",
+      "text": "A funny joke"
+     },
+     {
+      "id": "d",
+      "text": "Our password"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "match",
+    "prompt": "Match each online rule to its reason.",
+    "hint": "Why do we have the rule?",
+    "explanation": "Each rule keeps us safe or kind.",
+    "skill_tag": "cs.rules",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Keep passwords private"
+     },
+     {
+      "id": "l2",
+      "text": "Tell a grown-up if worried"
+     },
+     {
+      "id": "l3",
+      "text": "Be kind online"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "They can help"
+     },
+     {
+      "id": "r1",
+      "text": "Only you can get in"
+     },
+     {
+      "id": "r3",
+      "text": "Unkind words hurt"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "slider",
+    "prompt": "Aisha takes a break after every 20 minutes. She plays for 40 minutes. Slide to show how many breaks she takes.",
+    "hint": "40 is two lots of 20.",
+    "explanation": "40 minutes is 2 lots of 20, so 2 breaks.",
+    "skill_tag": "cs.devices",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is private.",
+    "hint": "Where you live.",
+    "explanation": "An address is private.",
+    "skill_tag": "cs.private",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏠",
+       "label": "Home address",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌈",
+       "label": "Favourite colour",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⚽",
+       "label": "Favourite game",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "number",
+    "prompt": "A family shares one tablet. Each of 3 children gets 15 minutes. How many minutes is that in all?",
+    "hint": "Add 15 three times.",
+    "explanation": "15 + 15 + 15 = 45 minutes.",
+    "skill_tag": "cs.devices",
+    "answer": {
+     "value": 45,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put these in order when a screen scares you.",
+    "hint": "What first?",
+    "explanation": "Stop, go to a grown-up, then tell them.",
+    "skill_tag": "cs.kind",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Go to a grown-up"
+     },
+     {
+      "id": "i1",
+      "text": "Stop and put the device down"
+     },
+     {
+      "id": "i3",
+      "text": "Tell them what you saw"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Layla shares her password with a kind friend. Is that okay?",
+    "hint": "Who can know your password?",
+    "explanation": "Only a parent should know your password.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, friends are safe"
+     },
+     {
+      "id": "b",
+      "text": "Yes, if they promise"
+     },
+     {
+      "id": "c",
+      "text": "No. A password is private, even from kind friends"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "In a game, a kind player asks for Sam's real name. Should Sam tell them?",
+    "hint": "Can we be sure who they are?",
+    "explanation": "We cannot know who a stranger online really is.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, kind people are safe"
+     },
+     {
+      "id": "b",
+      "text": "No. Even a kind stranger can be unsafe, so tell a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, names are not private"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Hamza says home rules for devices are not needed. Why do families have them?",
+    "hint": "Rules help us.",
+    "explanation": "Home rules keep us safe and healthy.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are not useful"
+     },
+     {
+      "id": "b",
+      "text": "They help everyone stay safe and take breaks"
+     },
+     {
+      "id": "c",
+      "text": "They stop all fun"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "reason"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Nora says all websites are safe because they are on a screen. Is she right?",
+    "hint": "Can everything online be trusted?",
+    "explanation": "Not every website is safe.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, screens are safe"
+     },
+     {
+      "id": "b",
+      "text": "No. Some are not safe, so ask a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, if they are colourful"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Which is a good way to keep a tablet safe?",
+    "hint": "Water and devices do not mix.",
+    "explanation": "Spills can damage a device.",
+    "skill_tag": "cs.devices",
+    "options": [
+     {
+      "id": "a",
+      "text": "Put it in the bath"
+     },
+     {
+      "id": "b",
+      "text": "Leave it on the floor"
+     },
+     {
+      "id": "c",
+      "text": "Keep drinks away from it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "true_false",
+    "prompt": "All websites are safe to visit.",
+    "hint": "Not everything online is safe.",
+    "explanation": "Some websites are not safe, so ask a grown-up.",
+    "skill_tag": "cs.safety",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "online",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "A screen shows something that scares you. Who should you tell?",
+    "hint": "Who looks after you?",
+    "explanation": "Tell a trusted adult.",
+    "skill_tag": "cs.safety",
+    "options": [
+     {
+      "id": "a",
+      "text": "A stranger online"
+     },
+     {
+      "id": "b",
+      "text": "A trusted adult"
+     },
+     {
+      "id": "c",
+      "text": "Nobody"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Which message is kind?",
+    "hint": "Be kind.",
+    "explanation": "Kind messages are friendly.",
+    "skill_tag": "cs.kind",
+    "options": [
+     {
+      "id": "a",
+      "text": "You are bad at this"
+     },
+     {
+      "id": "b",
+      "text": "Give me your password"
+     },
+     {
+      "id": "c",
+      "text": "Well done on your game!"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "recall"
    },
    {
     "ref": "q1a",
@@ -2353,6 +2805,456 @@
     "sub_lesson": "online",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about passwords.",
+    "hint": "Who looks after you?",
+    "explanation": "Only a parent should know your password.",
+    "skill_tag": "cs.private",
+    "points": 2,
+    "text": "Only tell your password to a {b1}. Never tell a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stranger"
+       },
+       {
+        "id": "b",
+        "text": "parent"
+       },
+       {
+        "id": "c",
+        "text": "bus"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bus"
+       },
+       {
+        "id": "b",
+        "text": "chair"
+       },
+       {
+        "id": "c",
+        "text": "stranger"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multi_select",
+    "prompt": "Which two should we keep private online? Pick two.",
+    "hint": "Think about who could find you.",
+    "explanation": "Full names and school names are private.",
+    "skill_tag": "cs.private",
+    "options": [
+     {
+      "id": "a",
+      "text": "Our school name"
+     },
+     {
+      "id": "b",
+      "text": "Our favourite game"
+     },
+     {
+      "id": "c",
+      "text": "Our favourite fruit"
+     },
+     {
+      "id": "d",
+      "text": "Our full name"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "match",
+    "prompt": "Match each rule to its reason.",
+    "hint": "Why do we have the rule?",
+    "explanation": "Each rule keeps us safe.",
+    "skill_tag": "cs.rules",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Take screen breaks"
+     },
+     {
+      "id": "l2",
+      "text": "Ask before downloading"
+     },
+     {
+      "id": "l3",
+      "text": "Dry hands near plugs"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Water and electricity are dangerous"
+     },
+     {
+      "id": "r1",
+      "text": "It rests your eyes"
+     },
+     {
+      "id": "r2",
+      "text": "A grown-up checks it is safe"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "slider",
+    "prompt": "Zayd takes a break after every 20 minutes. He plays for 60 minutes. Slide to show how many breaks he takes.",
+    "hint": "60 is three lots of 20.",
+    "explanation": "60 minutes is 3 lots of 20, so 3 breaks.",
+    "skill_tag": "cs.devices",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that keeps an account safe.",
+    "hint": "A secret key.",
+    "explanation": "A password keeps an account safe.",
+    "skill_tag": "cs.private",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔑",
+       "label": "Password",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🖍️",
+       "label": "Crayon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍎",
+       "label": "Apple",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "number",
+    "prompt": "A family shares one tablet. Each of 4 children gets 10 minutes. How many minutes is that in all?",
+    "hint": "Add 10 four times.",
+    "explanation": "10 + 10 + 10 + 10 = 40 minutes.",
+    "skill_tag": "cs.devices",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Put these in order when a stranger messages you.",
+    "hint": "What first?",
+    "explanation": "Do not answer, tell a grown-up, then let them help.",
+    "skill_tag": "cs.kind",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Tell a grown-up"
+     },
+     {
+      "id": "i3",
+      "text": "Let them help you"
+     },
+     {
+      "id": "i1",
+      "text": "Do not answer"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Omar gives his password to a classmate so they can play. Is that okay?",
+    "hint": "Who can know your password?",
+    "explanation": "Only a parent should know your password.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are in his class"
+     },
+     {
+      "id": "b",
+      "text": "Yes, if it is just once"
+     },
+     {
+      "id": "c",
+      "text": "No. A password is private, even from classmates"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "A friendly stranger online asks Aisha which school she goes to. Should she tell?",
+    "hint": "Can we be sure who they are?",
+    "explanation": "We cannot know who a stranger online really is.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, schools are not private"
+     },
+     {
+      "id": "b",
+      "text": "No. She should not answer and should tell a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they seem nice"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Zara says she can download anything without asking. Why is that wrong?",
+    "hint": "Who can check?",
+    "explanation": "A grown-up can check that a download is safe.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "All downloads are safe"
+     },
+     {
+      "id": "b",
+      "text": "Asking is silly"
+     },
+     {
+      "id": "c",
+      "text": "Some downloads are not safe, so a grown-up should check"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "reason",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says every message online is true. Is he right?",
+    "hint": "Can everything online be trusted?",
+    "explanation": "Not every message is true.",
+    "skill_tag": "cs.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all are true"
+     },
+     {
+      "id": "b",
+      "text": "No. Some are not true, so check with a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, if it is long"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "online",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Which is a good way to look after a charging cable?",
+    "hint": "Be gentle with cables.",
+    "explanation": "A tidy cable lasts longer and is safer.",
+    "skill_tag": "cs.electricity",
+    "options": [
+     {
+      "id": "a",
+      "text": "Chew it"
+     },
+     {
+      "id": "b",
+      "text": "Wind it loosely and keep it tidy"
+     },
+     {
+      "id": "c",
+      "text": "Bend it hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_well",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "true_false",
+    "prompt": "A trusted adult can help us if we see something scary online.",
+    "hint": "Who can help?",
+    "explanation": "A trusted adult can help.",
+    "skill_tag": "cs.safety",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "online",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Who is a trusted adult?",
+    "hint": "Who looks after you?",
+    "explanation": "Parents and teachers are trusted adults.",
+    "skill_tag": "cs.safety",
+    "options": [
+     {
+      "id": "a",
+      "text": "A stranger online"
+     },
+     {
+      "id": "b",
+      "text": "A pop-up message"
+     },
+     {
+      "id": "c",
+      "text": "A parent or a teacher"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Which is a kind thing to write?",
+    "hint": "Be kind.",
+    "explanation": "Thanking someone is kind.",
+    "skill_tag": "cs.kind",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nobody likes you"
+     },
+     {
+      "id": "b",
+      "text": "Tell me your address"
+     },
+     {
+      "id": "c",
+      "text": "Thank you for helping me"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "online",
+    "depth": "recall",
+    "variant_of": "q30"
    }
   ]
  }

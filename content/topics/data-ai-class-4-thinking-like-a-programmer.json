@@ -110,38 +110,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome, young programmer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do programmers solve big problems?\n\nWe will learn the tools programmers use every day.",
-   "say": "Welcome, young programmer! Today's big question: how do programmers solve big problems? They break them down, plan with flowcharts, repeat with loops, decide with if and else, remember with variables, and fix bugs. By the end you will think like a programmer. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "💻🧩",
-   "alt": "Programmers solve problems one small step at a time.",
-   "caption": "Programmers solve problems one small step at a time."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "programmer",
-     "meaning": "A person who writes instructions for a computer."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "decompose",
    "kind": "learn",
    "title": "Breaking problems down and flowcharts",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young programmer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do programmers solve big problems?",
+     "say": "Today we think like a programmer. How do we solve a big problem in small steps?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-thinking-like-a-programmer-1-4ef8ce11.jpg",
+     "alt": "A blue jigsaw puzzle with one piece missing",
+     "caption": "Small pieces make a big picture.",
+     "credit": "Photo by Tanja Tepavac on Unsplash",
+     "say": "A jigsaw has many small pieces. Programmers solve big problems by fitting small parts together."
+    },
     {
      "type": "heading",
      "text": "Stop 1: Decomposition"
@@ -415,6 +407,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Fatima's dice game",
+     "asset": "clip-data-ai-class-4-thinking-like-a-programmer-b3391146.mp4",
+     "poster": "clip-data-ai-class-4-thinking-like-a-programmer-b3391146.webp",
+     "seconds": 75,
+     "transcript": "Fatima wants to make a dice game. It feels like a very big problem. She breaks it into small parts. This is called decomposition. She draws a flowchart. A diamond asks whether the roll is a six. A loop repeats the roll three times. Fatima does not copy the steps. A variable called score remembers the points. It starts at zero. She runs it. The score stays at zero. There is a bug. She traces it step by step. She forgot to add one to the score. She adds the line and tests again. Now the score goes up.",
+     "caption": "Fatima plans a dice game, traces it and finds a bug."
+    },
+    {
      "type": "summary",
      "points": [
       "Decomposition breaks a big problem into parts",
@@ -425,6 +430,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "procedure",
+       "meaning": "A named set of steps that can be used again."
+      },
       {
        "term": "decomposition",
        "meaning": "Breaking a big problem into smaller parts."
@@ -536,6 +545,14 @@
     {
      "type": "heading",
      "text": "Stop 1: Loops"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-thinking-like-a-programmer-2-ce564075.jpg",
+     "alt": "A spiral staircase seen from above",
+     "caption": "A spiral repeats the same step again and again, like a loop.",
+     "credit": "Photo by Jean-Luc Benazet on Unsplash",
+     "say": "A spiral staircase repeats the same step again and again. A loop repeats steps in a program."
     },
     {
      "type": "text",
@@ -1127,7 +1144,7 @@
     {
      "type": "text",
      "markdown": "Design a program: decompose it, draw a flowchart, use a variable, then test and debug.",
-     "say": "Now design a program of your own. Choose a game idea, like a dice game. Break it into parts, draw a flowchart, decide what variables you need, and use a loop and a decision. Test it with a friend. If it goes wrong, debug it."
+     "say": "Now design a program of your own. Choose a game idea, like a dice game. Break it into parts and draw a flowchart. Decide what variables you need, and use a loop and a decision. Test it with a friend. If it goes wrong, debug it."
     },
     {
      "type": "image",
@@ -1699,6 +1716,433 @@
      "i3"
     ],
     "sub_lesson": "debug",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "number",
+    "prompt": "Trace the program: repeat 4 times: move 3 steps. How many steps does the sprite move in all?",
+    "hint": "Four lots of three.",
+    "explanation": "4 x 3 = 12 steps.",
+    "skill_tag": "prog.trace_loop",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "A robot draws a triangle with a loop. How many times should the loop repeat?",
+    "hint": "A triangle has three sides.",
+    "explanation": "One pass for each of the three sides.",
+    "skill_tag": "prog.shapes_loop",
+    "options": [
+     {
+      "id": "a",
+      "text": "4 times"
+     },
+     {
+      "id": "b",
+      "text": "3 times"
+     },
+     {
+      "id": "c",
+      "text": "6 times"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "match",
+    "prompt": "Match each programming word to its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "prog.vocab2",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Procedure"
+     },
+     {
+      "id": "l2",
+      "text": "Trace"
+     },
+     {
+      "id": "l3",
+      "text": "Value"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Follow a program step by step"
+     },
+     {
+      "id": "r1",
+      "text": "A named set of steps you can use again"
+     },
+     {
+      "id": "r3",
+      "text": "What a variable stores"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "debug",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says a loop that repeats 20 times always draws a big shape. Is he right?",
+    "hint": "Think about what controls the size.",
+    "explanation": "The size comes from the side length. The repeat count sets how many sides.",
+    "skill_tag": "prog.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, more repeats is always bigger"
+     },
+     {
+      "id": "b",
+      "text": "Yes, 20 is always the biggest"
+     },
+     {
+      "id": "c",
+      "text": "No. How big it is depends on the length of each side, not just how many repeats"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Maryam says changing the repeat value from 3 to 6 changes nothing about the loop. Is she right?",
+    "hint": "Trace both versions.",
+    "explanation": "Changing the value changes how many times the loop runs.",
+    "skill_tag": "prog.reason_value",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nothing changes"
+     },
+     {
+      "id": "b",
+      "text": "No. The loop will run twice as many times"
+     },
+     {
+      "id": "c",
+      "text": "No, it runs half as many times"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "slider",
+    "prompt": "A program says: repeat 3 times: (repeat 4 times: step). Slide to show the total number of steps.",
+    "hint": "Three lots of four.",
+    "explanation": "3 x 4 = 12 steps.",
+    "skill_tag": "prog.nested",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multi_select",
+    "prompt": "Which two things does a count-controlled loop need? Pick two.",
+    "hint": "Think about repeat 4 times: forward.",
+    "explanation": "A loop needs how many times and what to repeat.",
+    "skill_tag": "prog.loop_parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "Steps to repeat"
+     },
+     {
+      "id": "b",
+      "text": "A dice"
+     },
+     {
+      "id": "c",
+      "text": "A flowchart diamond"
+     },
+     {
+      "id": "d",
+      "text": "A number of repeats"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "order",
+    "prompt": "Put these debugging steps in order.",
+    "hint": "Watch first.",
+    "explanation": "Run, spot, change one thing, then run again.",
+    "skill_tag": "prog.debug_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Change one thing"
+     },
+     {
+      "id": "i4",
+      "text": "Run it again"
+     },
+     {
+      "id": "i2",
+      "text": "Spot where it goes wrong"
+     },
+     {
+      "id": "i1",
+      "text": "Run the program and watch"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about loops and variables.",
+    "hint": "Think about the jobs.",
+    "explanation": "A loop repeats and a variable can change.",
+    "skill_tag": "prog.vocab3",
+    "points": 2,
+    "text": "A loop {b1} its steps. A {b2} changes as the program runs.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hides"
+       },
+       {
+        "id": "b",
+        "text": "repeats"
+       },
+       {
+        "id": "c",
+        "text": "deletes"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "flowchart"
+       },
+       {
+        "id": "c",
+        "text": "variable"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "variables",
+    "depth": "recall"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "A loop says: repeat until the score reaches 10. The score never changes. What is the problem?",
+    "hint": "What would stop the loop?",
+    "explanation": "If the score never changes, the loop cannot finish.",
+    "skill_tag": "prog.infinite",
+    "options": [
+     {
+      "id": "a",
+      "text": "The loop draws a square"
+     },
+     {
+      "id": "b",
+      "text": "The loop never ends"
+     },
+     {
+      "id": "c",
+      "text": "The loop ends too early"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Hana says a procedure can only ever be used once. Is she right?",
+    "hint": "Why give it a name?",
+    "explanation": "A name lets us call the same steps again.",
+    "skill_tag": "prog.reason_procedure",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only once"
+     },
+     {
+      "id": "b",
+      "text": "Yes, procedures are deleted after use"
+     },
+     {
+      "id": "c",
+      "text": "No. A procedure is named so it can be used again and again"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "hotspot",
+    "prompt": "This program should draw a square. Tap the line with the bug.",
+    "hint": "A square turns a quarter turn.",
+    "explanation": "A square needs a 90 degree turn.",
+    "skill_tag": "prog.bug_line",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "▫️",
+       "label": "repeat 4 times",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "▫️",
+       "label": "forward 10",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "▫️",
+       "label": "turn 45 degrees",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "true_false",
+    "prompt": "If it is sunny, we go out. It is raining. We go out.",
+    "hint": "Is the condition true?",
+    "explanation": "It is not sunny, so we do not go out.",
+    "skill_tag": "prog.if_sunny",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Ali says a variable called score will always show the right score even if you forget to add 1. Is he right?",
+    "hint": "Who changes the value?",
+    "explanation": "A variable only changes when the program changes it.",
+    "skill_tag": "prog.reason_score",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, variables are magic"
+     },
+     {
+      "id": "b",
+      "text": "No. The variable only changes when the program changes it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it updates by itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "variables",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "number",
+    "prompt": "Score starts at 0 and adds 2 each round. What is score after 3 rounds?",
+    "hint": "Add 2 three times.",
+    "explanation": "2 + 2 + 2 = 6.",
+    "skill_tag": "prog.score_rounds",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "variables",
     "depth": "apply"
    },
    {
@@ -2600,6 +3044,448 @@
     "sub_lesson": "debug",
     "depth": "apply",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "number",
+    "prompt": "Trace the program: repeat 5 times: move 2 steps. How many steps does the sprite move in all?",
+    "hint": "Five lots of two.",
+    "explanation": "5 x 2 = 10 steps.",
+    "skill_tag": "prog.trace_loop",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "A robot draws a pentagon with a loop. How many times should the loop repeat?",
+    "hint": "A pentagon has five sides.",
+    "explanation": "One pass for each of the five sides.",
+    "skill_tag": "prog.shapes_loop",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 times"
+     },
+     {
+      "id": "b",
+      "text": "5 times"
+     },
+     {
+      "id": "c",
+      "text": "6 times"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "match",
+    "prompt": "Pair each word with what it means.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "prog.vocab2",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Condition"
+     },
+     {
+      "id": "l2",
+      "text": "Repeat"
+     },
+     {
+      "id": "l3",
+      "text": "Debug"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Do the steps again"
+     },
+     {
+      "id": "r1",
+      "text": "A question that is true or false"
+     },
+     {
+      "id": "r3",
+      "text": "Find and fix a mistake"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "debug",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Zara says repeating more times always makes a shape larger. Is she right?",
+    "hint": "Think about what controls the size.",
+    "explanation": "The side length controls the size.",
+    "skill_tag": "prog.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always larger"
+     },
+     {
+      "id": "b",
+      "text": "Yes, repeats set the size"
+     },
+     {
+      "id": "c",
+      "text": "No. More repeats can draw more sides, but each side's length sets the size"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says changing a loop's value from 2 to 8 does not matter. Is he right?",
+    "hint": "Trace both versions.",
+    "explanation": "A new value changes how many repeats happen.",
+    "skill_tag": "prog.reason_value",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it does not matter"
+     },
+     {
+      "id": "b",
+      "text": "No, it runs half as often"
+     },
+     {
+      "id": "c",
+      "text": "No. The loop will run four times as often"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "slider",
+    "prompt": "A program says: repeat 2 times: (repeat 5 times: step). Slide to show the total number of steps.",
+    "hint": "Two lots of five.",
+    "explanation": "2 x 5 = 10 steps.",
+    "skill_tag": "prog.nested",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multi_select",
+    "prompt": "Which two are part of a decision? Pick two.",
+    "hint": "Think about if and else.",
+    "explanation": "A decision has a condition and an else branch.",
+    "skill_tag": "prog.decision_parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "A loop counter"
+     },
+     {
+      "id": "b",
+      "text": "A sprite"
+     },
+     {
+      "id": "c",
+      "text": "An else branch"
+     },
+     {
+      "id": "d",
+      "text": "A condition"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "order",
+    "prompt": "Put these steps for fixing a score bug in order.",
+    "hint": "See the problem first.",
+    "explanation": "See, trace, fix, then test.",
+    "skill_tag": "prog.debug_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Trace each step"
+     },
+     {
+      "id": "i4",
+      "text": "Test again"
+     },
+     {
+      "id": "i3",
+      "text": "Fix the line that is wrong"
+     },
+     {
+      "id": "i1",
+      "text": "See the score is wrong"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about procedures.",
+    "hint": "Think about reuse.",
+    "explanation": "A procedure has a name so we can use it again.",
+    "skill_tag": "prog.vocab3",
+    "points": 2,
+    "text": "A procedure is a {b1} set of steps. We give it a {b2} so we can use it again.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "broken"
+       },
+       {
+        "id": "b",
+        "text": "named"
+       },
+       {
+        "id": "c",
+        "text": "hidden"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "name"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "variables",
+    "depth": "recall",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "A program waits until a button is pressed. Nobody can press it. What happens?",
+    "hint": "What would end the wait?",
+    "explanation": "Nothing ends the wait, so it never finishes.",
+    "skill_tag": "prog.infinite",
+    "options": [
+     {
+      "id": "a",
+      "text": "It finishes at once"
+     },
+     {
+      "id": "b",
+      "text": "It waits for ever"
+     },
+     {
+      "id": "c",
+      "text": "It draws a circle"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ali says writing the same steps again is better than a procedure. Is he right?",
+    "hint": "Why give it a name?",
+    "explanation": "A procedure avoids repeating the same steps.",
+    "skill_tag": "prog.reason_procedure",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, procedures are slower"
+     },
+     {
+      "id": "b",
+      "text": "No. A procedure saves time and avoids mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, copying is better"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "debug",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "hotspot",
+    "prompt": "This program should draw a triangle. Tap the line with the bug.",
+    "hint": "A triangle turns 120 degrees.",
+    "explanation": "A triangle needs a 120 degree turn.",
+    "skill_tag": "prog.bug_line",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "▫️",
+       "label": "repeat 3 times",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "▫️",
+       "label": "forward 10",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "▫️",
+       "label": "turn 90 degrees",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "debug",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "true_false",
+    "prompt": "If the score is more than 10, show well done. The score is 12. The program shows well done.",
+    "hint": "Is the condition true?",
+    "explanation": "12 is more than 10, so it shows well done.",
+    "skill_tag": "prog.if_sunny",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "loops_if",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Nina says the score fixes itself if the program forgets to add points. Is she right?",
+    "hint": "Who changes the value?",
+    "explanation": "The program must change the variable.",
+    "skill_tag": "prog.reason_score",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it fixes itself"
+     },
+     {
+      "id": "b",
+      "text": "Yes, computers guess"
+     },
+     {
+      "id": "c",
+      "text": "No. The program must add the points"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "variables",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "number",
+    "prompt": "Score starts at 0 and adds 5 each round. What is score after 4 rounds?",
+    "hint": "Add 5 four times.",
+    "explanation": "5 + 5 + 5 + 5 = 20.",
+    "skill_tag": "prog.score_rounds",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "variables",
+    "depth": "apply",
+    "variant_of": "q30"
    }
   ]
  }

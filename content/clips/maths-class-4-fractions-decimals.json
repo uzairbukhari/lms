@@ -1,0 +1,131 @@
+{
+ "title": "Sharing the chocolate bar",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "Ayesha and the bar.",
+   "say": "This is Ayesha. She has one chocolate bar to share with her cousins.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👧",
+     "label": "Ayesha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "c",
+     "emoji": "🍫",
+     "label": "1 bar",
+     "x": 70,
+     "y": 44,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Four equal pieces.",
+   "say": "Ayesha cuts the bar into four equal pieces. Each piece is one quarter.",
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 4,
+      "shaded": 1
+     },
+     "label": "1/4",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Two quarters.",
+   "say": "Two pieces together make two quarters. Two quarters is the same as one half.",
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 4,
+      "shaded": 2
+     },
+     "label": "2/4 = 1/2",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Three quarters gone.",
+   "say": "Her cousins each take a piece. Three quarters are gone, and one quarter is left.",
+   "items": [
+    {
+     "id": "f",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 4,
+      "shaded": 3
+     },
+     "label": "3/4 gone",
+     "x": 50,
+     "y": 46,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "0.75 of the bar.",
+   "say": "Three quarters is the same as nought point seven five.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 44
+   },
+   "items": [
+    {
+     "id": "d",
+     "emoji": "🔢",
+     "label": "0.75",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Ayesha!",
+   "say": "Sharing fairly is fractions in action. Shukriya, Ayesha!",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👧",
+     "label": "Ayesha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "r",
+     "emoji": "🎉",
+     "label": "0.75",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

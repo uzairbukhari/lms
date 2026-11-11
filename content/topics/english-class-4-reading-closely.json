@@ -136,38 +136,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, reading detective!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do we read closely and understand what an author really means?\n\nWe will hunt for clues in the text.",
-   "say": "Welcome back, reading detective! Today's big question: how do we read closely, so we understand what an author really means? We will find facts, make inferences, tell fact from opinion, spot big ideas, and meet the tools poets use. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🔎",
-   "alt": "Close readers look for clues and evidence.",
-   "caption": "Close readers look for clues and evidence."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "author",
-     "meaning": "The person who writes a book or story."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "infer",
    "kind": "learn",
    "title": "Retrieval and inference",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, close reader!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do readers find clues and big ideas?",
+     "say": "Today we read closely. How do we find facts, work out clues and spot big ideas?"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-4-reading-closely-1-1149b763.jpg",
+     "alt": "An old open notebook filled with handwritten ink notes on both pages",
+     "caption": "Readers often make notes and find evidence in the text.",
+     "credit": "Photo by Gabriela on Unsplash",
+     "say": "Readers keep notes and look for evidence in the text. Handwritten notes like these can record clues."
+    },
     {
      "type": "heading",
      "text": "Stop 1: Retrieval"
@@ -322,6 +314,19 @@
        "c"
       ]
      }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Reading under the tree",
+     "asset": "clip-english-class-4-reading-closely-0cee0756.mp4",
+     "poster": "clip-english-class-4-reading-closely-0cee0756.webp",
+     "seconds": 61,
+     "transcript": "Maryam sits under a tree with a good book. The text says Mina set off at dawn. That is retrieval. Omar slammed the door. She infers that he was angry. She finds a line as evidence. Stomped upstairs proves it. The most exciting city is an opinion, not a fact. The story shows that kindness matters. That is the theme. Crash! The poem uses a sound word. The title is The Last Lantern. What will happen?",
+     "caption": "A reader looks for clues and evidence in a story."
     },
     {
      "type": "summary",
@@ -717,6 +722,14 @@
     {
      "type": "heading",
      "text": "Stop 2: Viewpoint and a brain game"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-4-reading-closely-2-85fc1fbf.jpg",
+     "alt": "A reader sitting against a tree trunk in a park, holding an open book",
+     "caption": "Reading under a tree gives time to think about clues.",
+     "credit": "Photo by roma on Unsplash",
+     "say": "Many readers love to read under a tree. Quiet time helps us think about clues."
     },
     {
      "type": "text",
@@ -1555,6 +1568,426 @@
      "b"
     ],
     "sub_lesson": "devices",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Which question needs inference?",
+    "hint": "The text does not say it directly.",
+    "explanation": "We work out Omar's feelings from clues, so it needs inference.",
+    "skill_tag": "infer.type",
+    "options": [
+     {
+      "id": "a",
+      "text": "What did Omar slam?"
+     },
+     {
+      "id": "b",
+      "text": "When did Omar leave?"
+     },
+     {
+      "id": "c",
+      "text": "How did Omar feel when he slammed the door?"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "infer",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each line to what it shows.",
+    "hint": "Think about what each action suggests.",
+    "explanation": "Actions give evidence of feelings and plans.",
+    "skill_tag": "infer.evidence",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Omar slammed the door."
+     },
+     {
+      "id": "l2",
+      "text": "Mina packed a torch and a map."
+     },
+     {
+      "id": "l3",
+      "text": "She smiled and waved."
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "preparation"
+     },
+     {
+      "id": "r1",
+      "text": "anger"
+     },
+     {
+      "id": "r3",
+      "text": "happiness"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "infer",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Maryam says a myth must be ancient. Is she right?",
+    "hint": "Think about stories like Arthur and the Golden Rope.",
+    "explanation": "A modern myth is a new story that uses features of traditional myths.",
+    "skill_tag": "theme.myth",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every myth is thousands of years old"
+     },
+     {
+      "id": "b",
+      "text": "Yes, new stories cannot be myths"
+     },
+     {
+      "id": "c",
+      "text": "No, writers also create modern myths in the style of old ones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "theme",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "A character who shares her food with a stranger shows the theme of kindness.",
+    "hint": "Think about what sharing shows.",
+    "explanation": "Sharing with a stranger shows kindness.",
+    "skill_tag": "theme.find",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multi_select",
+    "prompt": "Which two sentences show the author's viewpoint? Pick two.",
+    "hint": "Look for words that show a judgement.",
+    "explanation": "Sadly, beautiful and worst show opinions.",
+    "skill_tag": "viewpoint.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "It was clearly the worst idea ever."
+     },
+     {
+      "id": "b",
+      "text": "The library has two floors."
+     },
+     {
+      "id": "c",
+      "text": "The library opens at nine."
+     },
+     {
+      "id": "d",
+      "text": "Sadly, nobody visits the beautiful old library."
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "hotspot",
+    "prompt": "Tap the opinion.",
+    "hint": "Can it be proved?",
+    "explanation": "Most exciting is a view, not a fact.",
+    "skill_tag": "fact.opinion",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "1️⃣",
+       "label": "Lahore is a city in Punjab.",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "2️⃣",
+       "label": "Lahore is the most exciting city.",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "3️⃣",
+       "label": "Lahore has a fort.",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "fact",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "short_text",
+    "prompt": "Write the sound that repeats at the start of: slippery snakes slid silently.",
+    "hint": "Look at the first letters.",
+    "explanation": "The s sound repeats, which is alliteration.",
+    "skill_tag": "alliteration.find",
+    "answer": {
+     "accepted": [
+      "s",
+      "S"
+     ]
+    },
+    "sub_lesson": "devices",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Choose the onomatopoeic word.",
+    "hint": "It copies a sound.",
+    "explanation": "Crash sounds like the noise it names.",
+    "skill_tag": "onomatopoeia.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "table"
+     },
+     {
+      "id": "b",
+      "text": "gentle"
+     },
+     {
+      "id": "c",
+      "text": "crash"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "devices",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Hamza says an author's viewpoint is always a fact. Is he right?",
+    "hint": "Is it what someone thinks?",
+    "explanation": "A viewpoint is a way of seeing, not necessarily a fact.",
+    "skill_tag": "viewpoint.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every viewpoint is true"
+     },
+     {
+      "id": "b",
+      "text": "Yes, authors only write facts"
+     },
+     {
+      "id": "c",
+      "text": "No, a viewpoint is what the author thinks, and it may be an opinion"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "theme",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "true_false",
+    "prompt": "Two characters can see the same event in different ways.",
+    "hint": "Think about viewpoints.",
+    "explanation": "Characters often have different viewpoints.",
+    "skill_tag": "viewpoint.compare",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Nadia says poets repeat lines because they ran out of ideas. Is she right?",
+    "hint": "Think about why a chorus repeats.",
+    "explanation": "Repetition adds emphasis and rhythm.",
+    "skill_tag": "devices.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, repetition is lazy"
+     },
+     {
+      "id": "b",
+      "text": "No, repetition can stress an idea or create rhythm"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is a mistake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "devices",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "slider",
+    "prompt": "Paragraphs 1 and 2 are calm. Paragraph 3 has a hint of danger. Paragraph 4 is the rope snapping. Slide to show which paragraph is the peak.",
+    "hint": "Where is the biggest moment?",
+    "explanation": "The rope snapping in paragraph 4 is the peak of tension.",
+    "skill_tag": "tension.peak",
+    "range": {
+     "step": 1,
+     "min": 1,
+     "max": 6
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "theme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "order",
+    "prompt": "Order the events of the quest.",
+    "hint": "Follow the journey.",
+    "explanation": "The quest goes from map to river to guardian to home.",
+    "skill_tag": "quest.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "He crosses the river"
+     },
+     {
+      "id": "i3",
+      "text": "He meets the guardian"
+     },
+     {
+      "id": "i4",
+      "text": "He returns home"
+     },
+     {
+      "id": "i1",
+      "text": "The hero finds a map"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "infer",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Use the words around each one.",
+    "explanation": "Context helps us work out meaning.",
+    "skill_tag": "vocab.context",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "gloomy"
+     },
+     {
+      "id": "l2",
+      "text": "enormous"
+     },
+     {
+      "id": "l3",
+      "text": "whispered"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "extremely big"
+     },
+     {
+      "id": "r3",
+      "text": "spoke very quietly"
+     },
+     {
+      "id": "r1",
+      "text": "dark and sad-looking"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "infer",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Idris says you cannot predict a story from its title. Is he right?",
+    "hint": "What can a title suggest?",
+    "explanation": "A title can hint at the setting, the character or the theme.",
+    "skill_tag": "predict.title",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, predictions are always wrong"
+     },
+     {
+      "id": "b",
+      "text": "No, a title gives clues about the story"
+     },
+     {
+      "id": "c",
+      "text": "Yes, titles tell nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "infer",
     "depth": "reason"
    },
    {
@@ -2523,6 +2956,441 @@
     "sub_lesson": "devices",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Which question can be answered by retrieval?",
+    "hint": "The answer is written in the text.",
+    "explanation": "Retrieval finds facts stated in the text.",
+    "skill_tag": "infer.type",
+    "options": [
+     {
+      "id": "a",
+      "text": "Why was Mina nervous?"
+     },
+     {
+      "id": "b",
+      "text": "What will Mina do next year?"
+     },
+     {
+      "id": "c",
+      "text": "What did Mina pack in her bag?"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "infer",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Pair each line with what it shows.",
+    "hint": "Think about what each action suggests.",
+    "explanation": "Actions give evidence of feelings.",
+    "skill_tag": "infer.evidence",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "He trembled and hid."
+     },
+     {
+      "id": "l2",
+      "text": "She checked her list twice."
+     },
+     {
+      "id": "l3",
+      "text": "They cheered and jumped."
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "care"
+     },
+     {
+      "id": "r1",
+      "text": "fear"
+     },
+     {
+      "id": "r3",
+      "text": "excitement"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "infer",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says folklore only comes from long ago. Is he right?",
+    "hint": "Think about stories families tell today.",
+    "explanation": "Folklore keeps growing as people share new stories.",
+    "skill_tag": "theme.myth",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only museums have folklore"
+     },
+     {
+      "id": "b",
+      "text": "No, new tales are still told and shared"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it must be ancient"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "theme",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "A hero who faces danger bravely shows the theme of laziness.",
+    "hint": "Think about what facing danger shows.",
+    "explanation": "Facing danger shows courage, not laziness.",
+    "skill_tag": "theme.find",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multi_select",
+    "prompt": "Pick the two sentences that show a viewpoint.",
+    "hint": "Look for words that show feeling.",
+    "explanation": "Wonderful and foolish show opinions.",
+    "skill_tag": "viewpoint.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "Obviously, the plan was foolish."
+     },
+     {
+      "id": "b",
+      "text": "The plan began at noon."
+     },
+     {
+      "id": "c",
+      "text": "The garden has a gate."
+     },
+     {
+      "id": "d",
+      "text": "What a wonderful, peaceful garden!"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "hotspot",
+    "prompt": "Tap the fact.",
+    "hint": "Can it be checked?",
+    "explanation": "Murree being in the mountains can be checked.",
+    "skill_tag": "fact.opinion",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "1️⃣",
+       "label": "Everyone should visit Murree.",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "2️⃣",
+       "label": "Murree is in the mountains.",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "3️⃣",
+       "label": "Murree is the loveliest place.",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "fact",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "short_text",
+    "prompt": "Write the sound that repeats at the start of: Peter picked pink petals.",
+    "hint": "Look at the first letters.",
+    "explanation": "The p sound repeats, which is alliteration.",
+    "skill_tag": "alliteration.find",
+    "answer": {
+     "accepted": [
+      "p",
+      "P"
+     ]
+    },
+    "sub_lesson": "devices",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Pick the word that imitates a sound.",
+    "hint": "It copies a sound.",
+    "explanation": "Sizzle sounds like the noise it names.",
+    "skill_tag": "onomatopoeia.find",
+    "options": [
+     {
+      "id": "a",
+      "text": "sleepy"
+     },
+     {
+      "id": "b",
+      "text": "window"
+     },
+     {
+      "id": "c",
+      "text": "sizzle"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "devices",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Zara says a viewpoint and a fact are the same. Is she right?",
+    "hint": "Can others disagree?",
+    "explanation": "Facts can be checked. Viewpoints can differ.",
+    "skill_tag": "viewpoint.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both are always true"
+     },
+     {
+      "id": "b",
+      "text": "No, a fact can be proved but a viewpoint is a personal view"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "theme",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "true_false",
+    "prompt": "Two characters must always have the same viewpoint.",
+    "hint": "Think about viewpoints.",
+    "explanation": "Characters can disagree.",
+    "skill_tag": "viewpoint.compare",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "theme",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a repeated line is a printing error. Is he right?",
+    "hint": "Think about a chorus.",
+    "explanation": "Repetition is a deliberate technique.",
+    "skill_tag": "devices.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is always a mistake"
+     },
+     {
+      "id": "b",
+      "text": "No, poets repeat lines on purpose for effect"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is an error"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "devices",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "slider",
+    "prompt": "Paragraph 1 is calm. Paragraph 2 has a warning. Paragraph 3 is the escape. Paragraph 4 is quiet again. Slide to show which paragraph is the peak.",
+    "hint": "Where is the biggest moment?",
+    "explanation": "The escape in paragraph 3 is the peak.",
+    "skill_tag": "tension.peak",
+    "range": {
+     "step": 1,
+     "min": 1,
+     "max": 6
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "theme",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "order",
+    "prompt": "Order the quest events.",
+    "hint": "Follow the journey.",
+    "explanation": "The quest follows the order of rumour, journey, danger and return.",
+    "skill_tag": "quest.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "She faces the storm"
+     },
+     {
+      "id": "i4",
+      "text": "She brings back the treasure"
+     },
+     {
+      "id": "i2",
+      "text": "She sets off at dawn"
+     },
+     {
+      "id": "i1",
+      "text": "She hears a rumour"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "infer",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "match",
+    "prompt": "Join each word to its meaning.",
+    "hint": "Use the words around each one.",
+    "explanation": "Context helps us work out meaning.",
+    "skill_tag": "vocab.context",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "tiny"
+     },
+     {
+      "id": "l2",
+      "text": "sprinted"
+     },
+     {
+      "id": "l3",
+      "text": "peered"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "ran very fast"
+     },
+     {
+      "id": "r1",
+      "text": "very small"
+     },
+     {
+      "id": "r3",
+      "text": "looked closely"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "infer",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Maryam says covers and titles are useless for predicting. Is she right?",
+    "hint": "Think about The Last Lantern.",
+    "explanation": "Titles and covers give clues.",
+    "skill_tag": "predict.title",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, ignore them"
+     },
+     {
+      "id": "b",
+      "text": "No, they give clues we can use"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only the last page helps"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "infer",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

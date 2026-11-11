@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 5: Electricity (Fatima, age 9). Enquiry type: comparative and fair test.
 
+const BULB = "science-class-4-electricity-1-6c0739a4.jpg";
+const COPPER = "science-class-4-electricity-2-50858c9f.jpg";
+const PYLONS = "science-class-4-electricity-3-60535be1.jpg";
+
 const circuit = {
   id: "circuit", kind: "learn", title: "Circuits and what they need",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore electricity. How does it flow, and how do we use it safely?", T("Today's big question: how does electricity flow?")),
+    SAY("A glowing bulb turns electrical energy into light and some heat.", PHOTO(BULB, "A glowing filament light bulb in the dark", "A bulb turns electrical energy into light and heat.", "Photo by Rodion Kutsaiev on Unsplash")),
     H("Stop 1: A complete circuit"),
     SAY("Electricity is a form of energy that flows around a loop. A loop of wire joined to a power source is called a circuit. The power source can be a cell, which is what we often call a battery. A bulb, a buzzer or a motor in the loop is a component that uses the energy. For the bulb to light, the circuit must be complete, with no gaps. If there is a gap anywhere, the electricity cannot flow and the bulb stays off.", T("A **circuit** is a loop that electricity flows around.", "It must be **complete**, with no gaps, for the bulb to light.")),
     EB("lab", "A simple circuit",
@@ -20,7 +27,7 @@ const circuit = {
       SS("The switch is open. There is a gap, so the lamp is off.", S("Open switch: lamp off.", ["s", "⭕", 25, 60, 3, "none"], ["l", "🌑", 75, 45, 3, "none"]))),
     CHK(tf("When a switch is open, the bulb is on.", false, { hint: "Open means a gap.", why: "An open switch makes a gap, so the bulb is off." })),
     SAY("Remember. A complete circuit with a power source lets electricity flow. A switch opens or closes it.", SUM("A circuit is a complete loop", "A gap in the circuit stops the flow", "A switch opens or closes a circuit")),
-    GLOSS({ circuit: "A complete loop that electricity can flow around.", complete: "Joined up with no gaps.", switch: "A part that opens or closes a circuit." }),
+    GLOSS({ appliance: "A machine that uses electricity to do a job.", circuit: "A complete loop that electricity can flow around.", complete: "Joined up with no gaps.", switch: "A part that opens or closes a circuit." }),
   ],
   mini: [
     mc("What does a cell provide in a circuit?", "Energy", ["Shadows", "Sound only"], { hint: "It is the power source.", why: "A cell is the power source that supplies electrical energy." }),
@@ -34,6 +41,7 @@ const conduct = {
   id: "conduct", kind: "try", title: "Conductors and insulators",
   blocks: [
     H("Stop 1: Which materials let electricity through?"),
+    SAY("Metals such as copper are good conductors, so wires have a metal centre.", PHOTO(COPPER, "Coils of shiny copper wire", "Copper is a metal and a good conductor.", "Photo by Ra Dragon on Unsplash")),
     SAY("Some materials let electricity flow through them easily. These are called electrical conductors. Metals such as copper, iron and aluminium are good conductors. That is why wires have a metal centre. Other materials do not let electricity flow. These are called electrical insulators. Plastic, rubber, wood and glass are insulators. That is why wires are covered in plastic, and why a plug has a plastic case. Look at which materials are which.", T("An electrical **conductor** lets electricity flow through it. Metals are conductors.", "An electrical **insulator** does not. Plastic, rubber, wood and glass are insulators.")),
     EB("lab", "Conductors and insulators",
       SS("A copper wire completes the circuit and the bulb lights. Copper is a conductor.", S("Copper conducts.", ["c", "🔋", 20, 60, 3, "none"], ["m", "🔩", 50, 60, 3, "none"], ["b", "💡", 80, 45, 3, "pulse"])),
@@ -80,11 +88,12 @@ const safety = {
   id: "safety", kind: "use", title: "Staying safe with electricity",
   blocks: [
     H("Stop 1: Mains electricity"),
+    SAY("Pylons carry mains electricity across the country. Never go near them.", PHOTO(PYLONS, "Power pylons carrying cables across a field at sunset", "Pylons carry mains electricity. Stay far away from them.", "Photo by Matthew Henry on Unsplash")),
     SAY("The electricity in our homes comes from the mains. It is much stronger than the electricity in a small cell, and it can hurt or even kill. Never play with plugs, sockets or wires, and never poke anything into a socket. Water is a good conductor, so never touch electrical things with wet hands. Never fly a kite near pylons or overhead power lines. If someone is in danger, do not touch them. Switch off the power if it is safe, or call a grown-up for help.", T("**Mains** electricity is strong and can be dangerous.", "Water conducts electricity, so keep electrical things away from it.")),
     SAY("Sockets, plugs and wet hands do not mix with electricity.", IMG("🔌 💧 ⚡", "Plugs, sockets and wet hands are dangerous together.")),
     CHK(mc("Why should you never touch a plug with wet hands?", "Water conducts electricity", ["Water is an insulator", "Plugs are heavy"], { hint: "Think about conductors.", why: "Water is a good conductor, so electricity could flow through you." })),
     H("Stop 2: Using electricity wisely"),
-    SAY("Electricity costs money and often comes from burning fuels, which can harm the environment. So we should use it wisely. We should switch off lights and fans when we leave a room, and unplug chargers we are not using. We can also use energy saving LED bulbs. In Pakistan, where power cuts can happen, saving electricity helps the whole family. Make a plan for your home.", ACT("My energy saving plan", ["Paper and pencil", "A grown-up"], ["Walk around your home. List five things that use electricity.", "For each one, write how we could save electricity.", "Choose one change to try for a week and tell your family."])),
+    SAY("Electricity costs money and often comes from burning fuels, which can harm the environment. So we should use it wisely. We should switch off lights and fans when we leave. We should unplug chargers we are not using. We can also use energy saving LED bulbs. In Pakistan, where power cuts can happen, saving electricity helps the whole family. Make a plan for your home.", ACT("My energy saving plan", ["Paper and pencil", "A grown-up"], ["Walk around your home. List five things that use electricity.", "For each one, write how we could save electricity.", "Choose one change to try for a week and tell your family."])),
     SAY("Switching off lights and fans when no one is using them saves energy.", IMG("💡 🌀 🔌", "Switching things off saves electricity.")),
     CHK(tf("It is a good idea to leave lights on in empty rooms.", false, { hint: "Think about wasting energy.", why: "Switching off lights in empty rooms saves electricity." })),
     SAY("Remember. Mains electricity is dangerous, so stay safe, and save electricity.", SUM("Mains electricity can be dangerous", "Water conducts electricity, so keep away from it", "Switch things off to save electricity")),
@@ -115,6 +124,28 @@ const ALTS = [
   [mc("What is the danger of switching on a lamp with dripping wet hands?", "Water conducts electricity and could carry it to you", ["Water insulates the switch", "Wet hands make the bulb brighter"], { hint: "Water is a conductor.", why: "Water conducts electricity, so it can carry a shock to you." }), mc("Why should you never fly a kite near pylons?", "The string could conduct electricity to you", ["Pylons are too small", "Pylons make kites heavy"], { hint: "Think about the string.", why: "A damp string can conduct electricity from the power lines to you." })],
 ];
 
+const clip = {
+  title: "Lights on at Fatima's house", backdrop: "home", caption: "Follow electricity around a circuit and keep safe.",
+  scenes: [
+    { caption: "A circuit.", say: "A cell, wires and a bulb make a circuit. Electricity flows round the loop.",
+      items: [{ id: "c", emoji: "🔋", x: 22, y: 60, size: 3 }, { id: "b", emoji: "💡", x: 78, y: 45, size: 3, effect: "glow" }] },
+    { caption: "A gap.", say: "A wire comes loose. The loop has a gap and the bulb goes out.",
+      items: [{ id: "c", emoji: "🔋", x: 22, y: 60, size: 3 }, { id: "x", emoji: "❌", x: 50, y: 60, size: 3, anim: "pulse" }, { id: "b", emoji: "🌑", x: 78, y: 45, size: 3 }] },
+    { caption: "A switch.", say: "A switch opens and closes the circuit. Closed means the bulb is on.",
+      items: [{ id: "s", emoji: "🔘", label: "closed switch", x: 30, y: 60, size: 3 }, { id: "b", emoji: "💡", x: 72, y: 45, size: 3, effect: "glow" }] },
+    { caption: "Conductors.", say: "A copper wire is a conductor. Electricity flows through metals easily.",
+      items: [{ id: "m", emoji: "🔩", label: "conductor", x: 35, y: 55, size: 3 }, { id: "b", emoji: "💡", x: 72, y: 45, size: 3, effect: "glow" }] },
+    { caption: "Insulators.", say: "A wooden spoon is an insulator. The bulb stays off.",
+      items: [{ id: "w", emoji: "🥄", label: "insulator", x: 35, y: 55, size: 3 }, { id: "b", emoji: "🌑", x: 72, y: 45, size: 3 }] },
+    { caption: "More cells.", say: "Two cells give more energy. The bulb shines more brightly.",
+      items: [{ id: "c", emoji: "🔋", x: 20, y: 60, size: 3 }, { id: "d", emoji: "🔋", x: 42, y: 60, size: 3 }, { id: "b", emoji: "🌟", x: 78, y: 45, size: 3, effect: "sparkle" }] },
+    { caption: "Stay safe.", say: "Water conducts electricity. Never touch a plug with wet hands.",
+      items: [{ id: "p", emoji: "🔌", x: 35, y: 55, size: 3 }, { id: "w", emoji: "💧", x: 65, y: 40, size: 3, anim: "bounce" }, { id: "n", emoji: "🚫", x: 50, y: 70, size: 2 }] },
+    { caption: "Save energy.", say: "Fatima switches off the light and fan when she leaves. That saves electricity.",
+      items: [{ id: "f", emoji: "👧", x: 30, y: 56, size: 3, enter: "walk_right" }, { id: "b", emoji: "💡", x: 70, y: 40, size: 3 }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-electricity", subject: "science", cls: 4, topic: 5, title: "Electricity",
@@ -129,13 +160,9 @@ export const topics = [
       tf("Sound can travel through a vacuum.", false, { hint: "No particles.", why: "Sound needs particles to travel." }),
       mc("Which is a form of energy?", "Light", ["Rock", "Plastic"], { hint: "Think about what energy can do.", why: "Light is a form of energy." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how does electricity flow, and how do we use it safely? By the end, you will build a circuit in your mind, sort conductors and insulators, and explain how to stay safe. Let's go!", T("Today's big question: how does electricity flow?", "We will also learn to stay safe.")),
-      IMG("🔋💡🔘", "Electricity is all around us."),
-      GLOSS({ electricity: "A form of energy that flows around a circuit." }),
-    ],
+    intro: [],
     subs: [circuit, conduct, build, safety],
+    clip,
     quiz: [
       Q("circuit", "recall", "elec.switch", mc("A bulb is off because a switch is open. Why?", "The open switch makes a gap in the circuit", ["The bulb is too bright", "The wire is made of plastic"], { hint: "Think about a gap.", why: "An open switch breaks the circuit, so electricity cannot flow." }), ...ALTS[0]),
       Q("circuit", "recall", "elec.complete", tf("A bulb will light if the circuit has a gap.", false, { hint: "Electricity needs a loop.", why: "A gap stops the electricity flowing, so the bulb stays off." }), ...ALTS[1]),
@@ -152,6 +179,37 @@ export const topics = [
       Q("conduct", "reason", "elec.reason_wires", mc("Why are electrical wires made of metal inside but covered in plastic?", "Metal conducts the electricity and plastic keeps us safe", ["Metal is an insulator", "Plastic is a conductor"], { hint: "One conducts, one insulates.", why: "The metal centre conducts electricity. The plastic is an insulator that protects us." }), ...ALTS[12]),
       Q("build", "reason", "elec.reason_bulbs", mc("Hira adds three bulbs to one cell. What happens to the brightness of each bulb?", "Each bulb is dimmer", ["Each bulb is brighter", "They are all the same"], { hint: "They share the energy.", why: "More bulbs on one cell share the energy, so each is dimmer." }), ...ALTS[13]),
       Q("safety", "reason", "elec.reason_wet", mc("Why is it dangerous to touch a switch with wet hands?", "Water conducts electricity and could carry it to you", ["Water insulates the switch", "Wet hands make the bulb brighter"], { hint: "Water is a conductor.", why: "Water conducts electricity, so it can carry a shock to you." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("circuit", "recall", "elec.parts_ms", ms("Which two parts could be in a circuit?", ["A cell", "A bulb"], ["A stone", "A pencil"], { hint: "They are made for circuits.", why: "A cell and a bulb are circuit parts." }),
+        ms("Pick two parts that use electrical energy.", ["A buzzer", "A motor"], ["A cushion", "A stone"], { hint: "They make sound or movement.", why: "A buzzer and a motor use electrical energy." })),
+      Q("circuit", "recall", "elec.part_hot", hot("Tap the part that opens and closes the circuit.", [["🔋", "Cell", 22, 50], ["🔘", "Switch", 50, 50], ["💡", "Bulb", 78, 50]], ["Switch"], { labels: true, hint: "It makes or breaks a gap.", why: "A switch opens or closes a circuit." }),
+        hot("Tap the part that supplies the energy.", [["🔋", "Cell", 22, 50], ["🔘", "Switch", 50, 50], ["💡", "Bulb", 78, 50]], ["Cell"], { labels: true, hint: "It is the power source.", why: "A cell supplies electrical energy." })),
+      Q("circuit", "recall", "elec.source_tf", tf("A complete circuit needs a power source.", true, { hint: "Think about the cell.", why: "Without a power source nothing makes the electricity flow." }),
+        tf("A wire made only of plastic can complete a circuit.", false, { hint: "Plastic is an insulator.", why: "Plastic does not let electricity flow." })),
+      Q("conduct", "recall", "elec.water_tf", tf("Water can conduct electricity.", true, { hint: "Think about wet hands.", why: "Water is an electrical conductor, so we keep it away from electricity." }),
+        tf("Rubber is an electrical conductor.", false, { hint: "Think about gloves.", why: "Rubber is an insulator." })),
+      Q("conduct", "apply", "elec.use_mat", mat("Match each item to its job.", [["Rubber gloves", "Insulator that keeps you safe"], ["Copper wire", "Conductor that carries electricity"], ["Plastic plug case", "Insulator that covers metal pins"]], { hint: "Conductor or insulator?", why: "Metals conduct and plastic and rubber insulate." }),
+        mat("Match each object to its type.", [["Iron nail", "Conductor"], ["Glass jar", "Insulator"], ["Coin", "Conductor"]], { hint: "Metals conduct.", why: "Iron and coins are metals. Glass is an insulator." })),
+      Q("build", "apply", "elec.bright_fill", fill("Complete the sentences about brightness.", "More cells make a bulb {b1}. More bulbs on one cell make each bulb {b2}.", [["brighter", "dimmer", "wetter"], ["dimmer", "brighter", "colder"]], { hint: "Think about the energy.", why: "More cells give a brighter bulb. More bulbs share the energy." }),
+        fill("Complete the sentences about components.", "A buzzer makes {b1}. A motor makes something {b2}.", [["sound", "light", "heat"], ["spin", "melt", "freeze"]], { hint: "What does each one do?", why: "A buzzer makes sound and a motor makes things spin." })),
+      Q("circuit", "recall", "elec.switch_st", st("What do we call the part that opens or closes a circuit?", ["switch"], { hint: "It starts with s.", why: "A switch opens or closes a circuit." }),
+        st("What word describes a circuit with no gaps?", ["complete"], { hint: "It starts with c.", why: "A complete circuit has no gaps." })),
+      Q("build", "apply", "elec.cells_num", num("A circuit needs 2 cells. A class builds 7 circuits. How many cells do they need?", 14, { hint: "2 times 7.", why: "2 x 7 = 14 cells." }),
+        num("Each circuit uses 3 wires. How many wires do 8 circuits use?", 24, { hint: "3 times 8.", why: "3 x 8 = 24 wires." })),
+      Q("safety", "apply", "elec.save_sld", sld("A family switches off 4 lights. Each light uses 10 units of energy an hour. Slide to show the units saved in one hour.", { min: 0, max: 150, unit: "units" }, 40, 0, { hint: "4 times 10.", why: "4 x 10 = 40 units." }),
+        sld("A family switches off 3 fans. Each fan uses 25 units of energy an hour. Slide to show the units saved in one hour.", { min: 0, max: 150, unit: "units" }, 75, 0, { hint: "3 times 25.", why: "3 x 25 = 75 units." })),
+      Q("safety", "apply", "elec.safe_ord", ord("Put these electricity safety steps in order.", ["Dry your hands", "Check the plug is not damaged", "Push the plug into the socket", "Switch the socket on"], { hint: "Check before you plug in.", why: "Dry hands, check the plug, plug in, then switch on." }),
+        ord("Put these in order to save electricity when you leave a room.", ["Finish what you are doing", "Switch off the light", "Switch off the fan", "Close the door"], { hint: "Switch off before you leave.", why: "Switch things off, then leave." })),
+      Q("safety", "recall", "elec.save_mc", mc("Which is a good way to save electricity?", "Switch off lights in empty rooms", ["Leave the television on", "Open the fridge door often"], { hint: "Think about waste.", why: "Switching off lights in empty rooms saves electricity." }),
+        mc("What should you do if a wire looks damaged?", "Tell an adult and keep away", ["Mend it yourself", "Touch it to check"], { hint: "Keep safe.", why: "Damaged wires are dangerous. Tell an adult." })),
+      Q("conduct", "reason", "elec.reason_water", mc("Sana says only metals can conduct electricity, so water cannot. Why is she wrong?", "Water can conduct too, so we keep it away from electricity", ["Water is a metal", "Water is an insulator"], { hint: "Think about wet hands.", why: "Water is an electrical conductor." }),
+        mc("Dua says all liquids are insulators. Why is she wrong?", "Water is a liquid that conducts electricity", ["Liquids have no particles", "Water is a solid"], { hint: "Think about safety.", why: "Water conducts electricity, so it is dangerous near mains." })),
+      Q("build", "reason", "elec.reason_more_cells", mc("Imran says adding a cell makes a bulb dimmer. Why is he wrong?", "More cells give more energy, so the bulb is brighter", ["Cells take energy away", "Cells make the wire longer"], { hint: "More energy.", why: "More cells make a brighter bulb." }),
+        mc("Mina says two bulbs on one cell are each as bright as one bulb. Why is she wrong?", "The two bulbs share the energy, so each is dimmer", ["Bulbs never share", "Two bulbs make more energy"], { hint: "They share.", why: "Bulbs on one cell share its energy." })),
+      Q("circuit", "reason", "elec.reason_loose", mc("Ravi's lamp is off, but its switch is closed. He finds a loose wire. Why is the lamp off?", "The loose wire leaves a gap, so the circuit is not complete", ["Closed switches stop electricity", "The bulb is too bright"], { hint: "Think about the loop.", why: "A gap anywhere stops the electricity." }),
+        mc("Maya joins both wires to the same end of the cell. Why does the bulb not light?", "The wires do not make a complete loop around the cell", ["Cells only work in the dark", "The wires are too long"], { hint: "Think about the loop.", why: "A circuit needs a complete loop from one end of the cell to the other." })),
+      Q("safety", "reason", "elec.reason_kite", mc("Hana says it is fine to fly a kite near pylons on a dry day. Why is she wrong?", "The kite string could carry electricity from the power lines", ["Pylons attract kites", "Dry days make kites heavy"], { hint: "Think about the string.", why: "A string can conduct electricity from power lines to you." }),
+        mc("Faisal uses a metal knife to get toast out of a plugged-in toaster. Why is this dangerous?", "Metal conducts electricity and could give him a shock", ["Metal is an insulator", "The toast gets cold"], { hint: "Metals conduct.", why: "Metal can carry electricity to your hand." })),
     ],
   }),
 ];

@@ -1,0 +1,3017 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-trees-flowers",
+  "subject": "science",
+  "title": "Trees and Flowering Plants",
+  "summary": "Trees and flowers around us: their parts, their kinds and how they change with the seasons.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 12: Trees and flowering plants",
+  "learning_objectives": [
+   "Name parts of a tree and of a flowering plant",
+   "Tell evergreen and deciduous trees apart",
+   "Name some wild and garden plants"
+  ],
+  "tags": [
+   "topic",
+   "topic-12"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 12
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y1 plants",
+    "text": "Identify and name common wild and garden plants, including deciduous and evergreen trees; describe the basic structure of common flowering plants, including trees"
+   }
+  ],
+  "success_criteria": [
+   "I can name parts of a tree",
+   "I can say if a tree is evergreen or deciduous",
+   "I can name some wild and garden plants"
+  ],
+  "real_life": "Oak, pine and daisies in the UK, and neem, mango, shisham and sarson fields in Pakistan, with neem trees giving shade by schools and mosques.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a tree?",
+    "hint": "It has roots.",
+    "explanation": "A tree is a big plant.",
+    "options": [
+     {
+      "id": "a",
+      "text": "An animal"
+     },
+     {
+      "id": "b",
+      "text": "A big plant"
+     },
+     {
+      "id": "c",
+      "text": "A rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Roots grow under the ground.",
+    "hint": "They drink water.",
+    "explanation": "Roots grow underground.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which part of a plant has petals?",
+    "hint": "It is bright.",
+    "explanation": "Petals are part of a flower.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The root"
+     },
+     {
+      "id": "b",
+      "text": "The flower"
+     },
+     {
+      "id": "c",
+      "text": "The trunk"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "parts",
+   "kind": "learn",
+   "title": "Parts of a tree",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: what are the parts of a tree?",
+     "say": "Today we meet trees and flowers. What are their parts called?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-trees-flowers-1-584e1752.jpg",
+     "alt": "A large oak tree with golden autumn leaves standing in a grassy field",
+     "caption": "An oak tree in autumn. Its leaves change colour before they fall.",
+     "credit": "Photo by Sabin Zablau on Unsplash",
+     "say": "This old oak tree stands alone in a field. Its leaves have turned golden."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Trunk, branches, roots and leaves"
+    },
+    {
+     "type": "text",
+     "markdown": "A tree is a **plant** with a **trunk**, branches, roots and leaves.",
+     "say": "A tree is a very big plant. It has four main parts."
+    },
+    {
+     "type": "explainer",
+     "title": "Parts of a tree",
+     "scenes": [
+      {
+       "caption": "Trunk.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🪵",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The trunk is the thick middle. It holds the tree up."
+      },
+      {
+       "caption": "Branches and leaves.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Branches grow out from the trunk. Leaves grow on the branches."
+      },
+      {
+       "caption": "Roots.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🟤",
+         "x": 50,
+         "y": 74,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Roots grow under the ground. They take in water and hold the tree."
+      }
+     ],
+     "backdrop": "forest"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which part of a tree holds it up?",
+      "hint": "It is thick and strong.",
+      "explanation": "The trunk holds the tree up.",
+      "skill_tag": "parts.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "The leaves"
+       },
+       {
+        "id": "b",
+        "text": "The petals"
+       },
+       {
+        "id": "c",
+        "text": "The trunk"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Trees are plants"
+    },
+    {
+     "type": "text",
+     "markdown": "**Bark** is the tough skin of a tree.",
+     "say": "Some people think trees are not plants. But trees are plants, just very big ones."
+    },
+    {
+     "type": "explainer",
+     "title": "Tree facts",
+     "scenes": [
+      {
+       "caption": "Bark.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🪵",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The bark covers the trunk. It protects the tree."
+      },
+      {
+       "caption": "Leaves.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🍃",
+         "x": 40,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Leaves catch sunlight. A tree uses it to make food."
+      },
+      {
+       "caption": "Small and tall.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌱",
+         "x": 30,
+         "y": 66,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 70,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Trees can be small or very tall. A young tree is still a tree."
+      }
+     ],
+     "backdrop": "forest"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A tree is a plant.",
+      "hint": "Trees grow from seeds and need water.",
+      "explanation": "Trees are big plants with roots, trunks and leaves.",
+      "skill_tag": "parts.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "A walk with Zainab",
+     "asset": "clip-science-class-1-trees-flowers-1b7ed75d.mp4",
+     "poster": "clip-science-class-1-trees-flowers-1b7ed75d.webp",
+     "seconds": 65,
+     "transcript": "Zainab goes for a walk. She will visit three plants. First is an oak tree. Its leaves are green in summer. In autumn, the oak leaves turn gold and fall down. In winter the oak is bare. It is only resting. Next is a pine tree. Its needles stay green all year. Then a meadow of wildflowers. Nobody planted them. A bee visits a flower for sweet nectar. Zainab watches quietly. Zainab draws what she saw. She did not pick a single flower.",
+     "caption": "A child spots which leaves fall and which stay on a seasonal walk."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A tree is a big plant",
+      "Roots hold the tree and take in water",
+      "Leaves catch sunlight to make food"
+     ],
+     "say": "Let us remember. A tree is a plant. It has roots, a trunk, branches and leaves."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plant",
+       "meaning": "A living thing that grows in the ground and makes its own food."
+      },
+      {
+       "term": "trunk",
+       "meaning": "The thick, strong stem of a tree."
+      },
+      {
+       "term": "bark",
+       "meaning": "The tough skin that covers a trunk."
+      },
+      {
+       "term": "roots",
+       "meaning": "Parts under the ground that take in water."
+      },
+      {
+       "term": "branches",
+       "meaning": "Arms that grow out of the trunk."
+      },
+      {
+       "term": "leaves",
+       "meaning": "Flat green parts that catch sunlight."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do roots do?",
+     "hint": "They are underground.",
+     "explanation": "Roots hold a tree and take in water.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Make flowers"
+      },
+      {
+       "id": "b",
+       "text": "Make sounds"
+      },
+      {
+       "id": "c",
+       "text": "Hold the tree and take in water"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Bark covers the trunk.",
+     "hint": "It is the tree's skin.",
+     "explanation": "Bark protects the trunk.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where do leaves grow?",
+     "hint": "They catch the sun.",
+     "explanation": "Leaves grow on the branches.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Under the ground"
+      },
+      {
+       "id": "b",
+       "text": "On branches"
+      },
+      {
+       "id": "c",
+       "text": "Inside the trunk"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do leaves catch?",
+     "hint": "Trees make food with it.",
+     "explanation": "Leaves catch sunlight.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rain only"
+      },
+      {
+       "id": "b",
+       "text": "Stones"
+      },
+      {
+       "id": "c",
+       "text": "Sunlight"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "evergreen",
+   "kind": "try",
+   "title": "Evergreen and deciduous",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Trees that drop their leaves"
+    },
+    {
+     "type": "text",
+     "markdown": "**Deciduous** trees lose their leaves in autumn.",
+     "say": "Many trees lose their leaves in autumn. They are called deciduous trees."
+    },
+    {
+     "type": "explainer",
+     "title": "A deciduous year",
+     "scenes": [
+      {
+       "caption": "Spring.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌳",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "In spring, oak buds open. New green leaves unfold."
+      },
+      {
+       "caption": "Autumn.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🍂",
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "In autumn, the leaves turn gold and brown. They fall to the ground."
+      },
+      {
+       "caption": "Winter.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🌲",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "❄️",
+         "x": 78,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In winter, the branches are bare. The tree is resting, not dead."
+      }
+     ],
+     "backdrop": "forest"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens to an oak tree in autumn?",
+      "hint": "They turn gold first.",
+      "explanation": "Deciduous trees lose their leaves in autumn.",
+      "skill_tag": "evergreen.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "It grows flowers"
+       },
+       {
+        "id": "b",
+        "text": "Its leaves fall"
+       },
+       {
+        "id": "c",
+        "text": "It runs away"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Trees that stay green"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-trees-flowers-2-e267c577.jpg",
+     "alt": "A close-up of long, thin dark green pine needles",
+     "caption": "Pine needles stay green all year. A pine is an evergreen tree.",
+     "credit": "Photo by matthew Feeney on Unsplash",
+     "say": "Pine trees have thin, sharp needles. These are their leaves."
+    },
+    {
+     "type": "text",
+     "markdown": "**Evergreen** trees stay green all year.",
+     "say": "An evergreen tree keeps its leaves all year. It loses a few at a time."
+    },
+    {
+     "type": "manipulative",
+     "title": "Deciduous or evergreen?",
+     "goal": "Move each tree. Trees that drop leaves go in Deciduous. Trees that stay green go in Evergreen.",
+     "emoji": "🌳",
+     "count": 8,
+     "zones": [
+      "Deciduous",
+      "Evergreen"
+     ],
+     "say": "Now sort the trees. Do they drop their leaves, or stay green?"
+    },
+    {
+     "type": "activity",
+     "title": "Leaf hunt",
+     "materials": [
+      "Paper and crayons",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Look for leaves on the ground in autumn, or pictures of leaves.",
+      "Draw three different leaf shapes.",
+      "Say if each leaf is from a deciduous or an evergreen tree."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Pine needles are leaves.",
+      "hint": "They grow on the branches.",
+      "explanation": "Needles are thin leaves on a pine tree.",
+      "skill_tag": "evergreen.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Deciduous trees lose leaves in autumn",
+      "Evergreens keep their leaves all year",
+      "A bare tree in winter is resting, not dead"
+     ],
+     "say": "Let us remember. Deciduous trees drop leaves. Evergreen trees stay green."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "deciduous",
+       "meaning": "Dropping leaves in autumn."
+      },
+      {
+       "term": "evergreen",
+       "meaning": "Staying green all year."
+      },
+      {
+       "term": "needles",
+       "meaning": "Thin, sharp leaves, like on a pine tree."
+      },
+      {
+       "term": "bud",
+       "meaning": "A tiny closed shoot that opens into leaves or a flower."
+      },
+      {
+       "term": "resting",
+       "meaning": "Not growing for a while, but still alive."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tree keeps its leaves in winter?",
+     "hint": "Its needles stay green.",
+     "explanation": "A pine is evergreen.",
+     "options": [
+      {
+       "id": "a",
+       "text": "An oak"
+      },
+      {
+       "id": "b",
+       "text": "A beech"
+      },
+      {
+       "id": "c",
+       "text": "A pine"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A bare tree in winter is dead.",
+     "hint": "Buds are ready for spring.",
+     "explanation": "It is resting, ready to grow leaves in spring.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What colour do many leaves turn in autumn?",
+     "hint": "Think of the oak photo.",
+     "explanation": "Many leaves turn gold or brown.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bright pink"
+      },
+      {
+       "id": "b",
+       "text": "Pure white"
+      },
+      {
+       "id": "c",
+       "text": "Gold and brown"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "flower",
+   "kind": "play",
+   "title": "Flowering plants",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Parts of a flowering plant"
+    },
+    {
+     "type": "text",
+     "markdown": "A flowering plant has a **root**, a stem, leaves and a flower.",
+     "say": "Daisies, roses and tulips are flowering plants. Each has four parts."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-trees-flowers-3-5b956b21.jpg",
+     "alt": "Wild daisies with white petals and yellow centres in a sunny meadow",
+     "caption": "Daisies grow in meadows. The petals attract bees and butterflies.",
+     "credit": "Photo by Daiga Ellaby on Unsplash",
+     "say": "These daisies grow wild in a meadow. They have white petals and yellow centres."
+    },
+    {
+     "type": "explainer",
+     "title": "A flowering plant",
+     "scenes": [
+      {
+       "caption": "Root.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🟤",
+         "x": 50,
+         "y": 76,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The root holds the plant in the soil. It drinks water."
+      },
+      {
+       "caption": "Stem.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌿",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The stem carries water up. It holds the flower high."
+      },
+      {
+       "caption": "Petals.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🌼",
+         "x": 40,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐝",
+         "x": 75,
+         "y": 40,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "The petals are bright. Bees come to the flower for nectar."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which part of a plant holds up the flower?",
+      "hint": "It carries water too.",
+      "explanation": "The stem holds up the flower.",
+      "skill_tag": "flower.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "The root"
+       },
+       {
+        "id": "b",
+        "text": "The stem"
+       },
+       {
+        "id": "c",
+        "text": "The bark"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then answer a question.",
+     "say": "Flowers come in many colours. Mango blossom is creamy. Roses can be red."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Flower parade",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🌼",
+      "🌹",
+      "🌷",
+      "🌻"
+     ],
+     "say": "Warm up your memory. Watch the flowers light up, then copy them."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two parts of a flowering plant.",
+      "hint": "Look at the daisy.",
+      "explanation": "A flowering plant has a stem and petals.",
+      "skill_tag": "flower.chk2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Wheels"
+       },
+       {
+        "id": "b",
+        "text": "Pages"
+       },
+       {
+        "id": "c",
+        "text": "Petals"
+       },
+       {
+        "id": "d",
+        "text": "Stem"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Roots, stem, leaves and flower",
+      "Petals attract bees",
+      "Flowers come in many colours"
+     ],
+     "say": "Let us remember. A flowering plant has roots, a stem, leaves and a flower."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "root",
+       "meaning": "The part of a plant under the ground."
+      },
+      {
+       "term": "stem",
+       "meaning": "The part that holds the plant up."
+      },
+      {
+       "term": "petal",
+       "meaning": "A coloured part of a flower."
+      },
+      {
+       "term": "petals",
+       "meaning": "The coloured parts of a flower."
+      },
+      {
+       "term": "blossom",
+       "meaning": "Flowers on a tree."
+      },
+      {
+       "term": "nectar",
+       "meaning": "The sweet juice in a flower."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do petals attract?",
+     "hint": "They visit for nectar.",
+     "explanation": "Bright petals attract bees.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stones"
+      },
+      {
+       "id": "b",
+       "text": "Fish"
+      },
+      {
+       "id": "c",
+       "text": "Bees"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "All flowers look the same.",
+     "hint": "Think of a daisy and a rose.",
+     "explanation": "Flowers differ in colour and shape.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part is under the ground?",
+     "hint": "It takes in water.",
+     "explanation": "Roots grow under the ground.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The leaf"
+      },
+      {
+       "id": "b",
+       "text": "The root"
+      },
+      {
+       "id": "c",
+       "text": "The petal"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "area",
+   "kind": "use",
+   "title": "Plants in my area",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Wild and garden plants"
+    },
+    {
+     "type": "text",
+     "markdown": "**Wildflowers** grow without anyone planting them.",
+     "say": "Wildflowers grow by themselves. Wind, birds and animals carry their seeds."
+    },
+    {
+     "type": "text",
+     "markdown": "Look out for wild plants near you.",
+     "say": "In the UK, daisies and buttercups grow wild on grass and by roads."
+    },
+    {
+     "type": "text",
+     "markdown": "Fields of sarson turn the land yellow.",
+     "say": "In Pakistan, bright yellow sarson flowers cover fields in late winter."
+    },
+    {
+     "type": "explainer",
+     "title": "Plants near me",
+     "scenes": [
+      {
+       "caption": "Mango.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 40,
+         "y": 54,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐝",
+         "x": 75,
+         "y": 40,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "A mango tree blossoms in spring. Later it makes fruit."
+      },
+      {
+       "caption": "Neem shade.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🌳",
+         "x": 40,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🕌",
+         "x": 78,
+         "y": 58,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A neem tree gives cool shade near a school or mosque."
+      },
+      {
+       "caption": "Garden plant.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌹",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A rose in a garden is planted by a gardener."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Wildflowers need a gardener to plant them.",
+      "hint": "Think about seeds blowing in the wind.",
+      "explanation": "Wildflowers grow from seeds spread by wind, birds and animals.",
+      "skill_tag": "area.chk1",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: A safe garden walk"
+    },
+    {
+     "type": "text",
+     "markdown": "Observe plants **safely**.",
+     "say": "Go on a plant walk with a grown-up. Look, draw and count, but do not pick."
+    },
+    {
+     "type": "text",
+     "markdown": "Never taste an unknown plant.",
+     "say": "Never taste a plant or berry you do not know. Some are poisonous."
+    },
+    {
+     "type": "text",
+     "markdown": "Leave wildflowers for the bees.",
+     "say": "Leave wildflowers growing. Bees and butterflies need their nectar."
+    },
+    {
+     "type": "text",
+     "markdown": "Look after plants.",
+     "say": "Muslims are taught to look after the earth and its plants. Let us care for them."
+    },
+    {
+     "type": "explainer",
+     "title": "Plant walk safety",
+     "scenes": [
+      {
+       "caption": "Look.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🌼",
+         "x": 68,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Look closely with your eyes. Draw what you see in a notebook."
+      },
+      {
+       "caption": "Ask.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🧑",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Ask a grown-up what a plant is called. They can use a chart."
+      },
+      {
+       "caption": "Wash.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🧼",
+         "x": 68,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Wash your hands after touching plants. Then count how many you saw."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "activity",
+     "title": "Plant spotting chart",
+     "materials": [
+      "Paper and pencil",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Make a table with Plant, Colour and Place.",
+      "Walk outside and spot five plants.",
+      "Fill in the table. Do not pick or taste anything."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two safe things to do on a plant walk.",
+      "hint": "Think about safety and kindness.",
+      "explanation": "Looking, drawing and asking are safe. Tasting and pulling are not.",
+      "skill_tag": "area.chk2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Taste unknown berries"
+       },
+       {
+        "id": "b",
+        "text": "Pull up every flower"
+       },
+       {
+        "id": "c",
+        "text": "Ask a grown-up the name"
+       },
+       {
+        "id": "d",
+        "text": "Look and draw"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Wildflowers grow by themselves",
+      "Look, draw and ask, but do not taste",
+      "Leave flowers for the bees"
+     ],
+     "say": "Let us remember. Wild and garden plants grow all around us. We look but do not pick."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "wildflowers",
+       "meaning": "Flowers that grow on their own, not planted by people."
+      },
+      {
+       "term": "safely",
+       "meaning": "In a way that does not hurt you or the plants."
+      },
+      {
+       "term": "poisonous",
+       "meaning": "Able to make you ill if eaten."
+      },
+      {
+       "term": "shade",
+       "meaning": "A cool, dark place under something."
+      },
+      {
+       "term": "chart",
+       "meaning": "A picture list that helps you name things."
+      },
+      {
+       "term": "sarson",
+       "meaning": "A plant with bright yellow flowers grown in Pakistan."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do before touching an unknown plant?",
+     "hint": "Think about safety.",
+     "explanation": "Ask a grown-up first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Taste it"
+      },
+      {
+       "id": "b",
+       "text": "Ask a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Pull it out"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Bees visit flowers for nectar.",
+     "hint": "It is sweet.",
+     "explanation": "Bees collect nectar from flowers.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which tree gives shade near a school in Pakistan?",
+     "hint": "It has a wide, leafy top.",
+     "explanation": "A neem tree gives cool shade.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A cactus"
+      },
+      {
+       "id": "b",
+       "text": "A neem"
+      },
+      {
+       "id": "c",
+       "text": "A pine"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "match",
+    "prompt": "Match each part of a tree to its job.",
+    "hint": "Think about where each part is.",
+    "explanation": "Roots drink, the trunk supports and leaves catch sunlight.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Roots"
+     },
+     {
+      "id": "l2",
+      "text": "Trunk"
+     },
+     {
+      "id": "l3",
+      "text": "Leaves"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Holds the tree up"
+     },
+     {
+      "id": "r1",
+      "text": "Take in water"
+     },
+     {
+      "id": "r3",
+      "text": "Catch sunlight"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.part_match",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Sam says trees are not plants. Is he right?",
+    "hint": "Trees grow from seeds.",
+    "explanation": "Trees are plants with roots, stems and leaves.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, trees are animals"
+     },
+     {
+      "id": "b",
+      "text": "No, trees are very big plants"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only small things are plants"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.not_plants",
+    "sub_lesson": "parts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "short_text",
+    "prompt": "What is the tough outer skin of a tree trunk called?",
+    "hint": "A dog does it too.",
+    "explanation": "The skin of a trunk is called bark.",
+    "answer": {
+     "accepted": [
+      "bark"
+     ]
+    },
+    "skill_tag": "trees.bark_st",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "hotspot",
+    "prompt": "Tap the part that holds up the tree.",
+    "hint": "It is thick and strong.",
+    "explanation": "The trunk holds up the tree.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍃",
+       "label": "Leaves",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪵",
+       "label": "Trunk",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌼",
+       "label": "Flower",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "trees.trunk_tap",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "order",
+    "prompt": "Put the tree parts in order, from the ground up.",
+    "hint": "Roots start underground.",
+    "explanation": "Roots are lowest, then the trunk, branches and leaves.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Trunk"
+     },
+     {
+      "id": "i4",
+      "text": "Leaves"
+     },
+     {
+      "id": "i3",
+      "text": "Branches"
+     },
+     {
+      "id": "i1",
+      "text": "Roots"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "trees.ground_ord",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "true_false",
+    "prompt": "A tree is a kind of plant.",
+    "hint": "It grows from a seed.",
+    "explanation": "Trees are plants.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "trees.tree_tf",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Layla says every tree is as tall as a house. Is she right?",
+    "hint": "Think about a young tree.",
+    "explanation": "Trees come in many sizes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all trees are huge"
+     },
+     {
+      "id": "b",
+      "text": "Yes, small trees are bushes"
+     },
+     {
+      "id": "c",
+      "text": "No, trees can be small or tall"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.all_tall",
+    "sub_lesson": "parts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "number",
+    "prompt": "A tree has 4 branches. Each branch has 3 leaves. How many leaves is that?",
+    "hint": "3 + 3 + 3 + 3.",
+    "explanation": "4 branches of 3 leaves make 12 leaves.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.leaf_num",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each tree to deciduous or evergreen.",
+    "hint": "Which lose leaves in autumn?",
+    "explanation": "Pine and mango stay green. Oak loses its leaves.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pine"
+     },
+     {
+      "id": "l2",
+      "text": "Oak"
+     },
+     {
+      "id": "l3",
+      "text": "Mango"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Deciduous"
+     },
+     {
+      "id": "r1",
+      "text": "Evergreen"
+     },
+     {
+      "id": "r3",
+      "text": "Evergreen"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.type_match",
+    "sub_lesson": "evergreen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says all trees lose their leaves in autumn. Is she right?",
+    "hint": "Think about pine needles.",
+    "explanation": "Evergreen trees stay green all year.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every tree loses leaves"
+     },
+     {
+      "id": "b",
+      "text": "No, evergreen trees keep their leaves"
+     },
+     {
+      "id": "c",
+      "text": "Yes, pine trees go bald too"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.all_lose",
+    "sub_lesson": "evergreen",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "multiple_choice",
+    "prompt": "Mira says pine trees are dead in winter. Is she right?",
+    "hint": "Look at the needles.",
+    "explanation": "Pine needles stay green all year.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they all die in winter"
+     },
+     {
+      "id": "b",
+      "text": "No, their green needles show they are alive"
+     },
+     {
+      "id": "c",
+      "text": "Yes, green means dead"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.pine_dead",
+    "sub_lesson": "evergreen",
+    "depth": "reason"
+   },
+   {
+    "ref": "q12",
+    "type": "multi_select",
+    "prompt": "Which two trees lose their leaves in autumn? Pick two.",
+    "hint": "They are deciduous.",
+    "explanation": "Oak and beech are deciduous.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pine"
+     },
+     {
+      "id": "b",
+      "text": "Holly"
+     },
+     {
+      "id": "c",
+      "text": "Beech"
+     },
+     {
+      "id": "d",
+      "text": "Oak"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "trees.decid_ms",
+    "sub_lesson": "evergreen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a deciduous tree.",
+    "hint": "Think about the seasons.",
+    "explanation": "A deciduous tree drops its leaves and grows new ones.",
+    "points": 2,
+    "text": "In autumn a deciduous tree {b1} its leaves. In spring it grows new {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "keeps"
+       },
+       {
+        "id": "b",
+        "text": "eats"
+       },
+       {
+        "id": "c",
+        "text": "drops"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shells"
+       },
+       {
+        "id": "b",
+        "text": "leaves"
+       },
+       {
+        "id": "c",
+        "text": "wheels"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "trees.autumn_fill",
+    "sub_lesson": "evergreen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "A park has 15 trees. 9 are evergreen. Slide to show how many are deciduous.",
+    "hint": "15 take away 9.",
+    "explanation": "15 - 9 = 6 trees.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 18,
+     "unit": "trees"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.park_sld",
+    "sub_lesson": "evergreen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "true_false",
+    "prompt": "Needles on a pine tree are its leaves.",
+    "hint": "They grow on the branches.",
+    "explanation": "Needles are thin leaves.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "trees.needle_tf",
+    "sub_lesson": "evergreen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "short_text",
+    "prompt": "What word describes a tree that drops its leaves in autumn?",
+    "hint": "It starts with d.",
+    "explanation": "A tree that drops its leaves in autumn is deciduous.",
+    "answer": {
+     "accepted": [
+      "deciduous"
+     ]
+    },
+    "skill_tag": "trees.decid_st",
+    "sub_lesson": "evergreen",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each part of a flowering plant to its job.",
+    "hint": "Think about each part.",
+    "explanation": "Roots drink, stems support and petals attract bees.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Root"
+     },
+     {
+      "id": "l2",
+      "text": "Stem"
+     },
+     {
+      "id": "l3",
+      "text": "Petals"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Holds the plant up"
+     },
+     {
+      "id": "r1",
+      "text": "Takes in water"
+     },
+     {
+      "id": "r3",
+      "text": "Attract bees"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.flower_match",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Hamza says all flowers look the same. Is he right?",
+    "hint": "Think about a rose and a daisy.",
+    "explanation": "Flowers differ in colour and shape.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every flower is white"
+     },
+     {
+      "id": "b",
+      "text": "Yes, flowers have no petals"
+     },
+     {
+      "id": "c",
+      "text": "No, flowers have many colours and shapes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.same_look",
+    "sub_lesson": "flower",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Omar says a plant with no flower is dead. Is he right?",
+    "hint": "Think about seasons.",
+    "explanation": "Many living plants flower only for a short time.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, no flower means dead"
+     },
+     {
+      "id": "b",
+      "text": "No, plants only flower at some times of the year"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only flowers are alive"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.no_flower_dead",
+    "sub_lesson": "flower",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "number",
+    "prompt": "A buttercup has 5 petals. How many petals do 2 buttercups have?",
+    "hint": "5 + 5.",
+    "explanation": "5 + 5 = 10 petals.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.petal_num",
+    "sub_lesson": "flower",
+    "depth": "recall"
+   },
+   {
+    "ref": "q21",
+    "type": "short_text",
+    "prompt": "What do we call the bright parts of a flower that attract bees?",
+    "hint": "It starts with p.",
+    "explanation": "The bright parts are petals.",
+    "answer": {
+     "accepted": [
+      "petals",
+      "petal"
+     ]
+    },
+    "skill_tag": "trees.petal_st",
+    "sub_lesson": "flower",
+    "depth": "recall"
+   },
+   {
+    "ref": "q22",
+    "type": "hotspot",
+    "prompt": "Tap the part that attracts bees.",
+    "hint": "It is bright.",
+    "explanation": "Bright petals attract bees.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌸",
+       "label": "Petals",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌿",
+       "label": "Stem",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟤",
+       "label": "Soil",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "trees.flower_tap",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "order",
+    "prompt": "Put the parts of a flowering plant in order, from the ground up.",
+    "hint": "Roots are underground.",
+    "explanation": "Root, then stem, then leaf, then flower at the top.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Stem"
+     },
+     {
+      "id": "i4",
+      "text": "Flower"
+     },
+     {
+      "id": "i3",
+      "text": "Leaf"
+     },
+     {
+      "id": "i1",
+      "text": "Root"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "trees.plant_ord",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Zainab says wildflowers need people to plant them. Is she right?",
+    "hint": "Think about a meadow.",
+    "explanation": "Wildflowers grow from seeds spread by wind, birds and animals.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only people plant seeds"
+     },
+     {
+      "id": "b",
+      "text": "Yes, wildflowers never grow alone"
+     },
+     {
+      "id": "c",
+      "text": "No, wind and animals carry their seeds"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.wild_planted",
+    "sub_lesson": "area",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Sam says it is safe to taste any berry he finds. Is he right?",
+    "hint": "Think about safety.",
+    "explanation": "Never taste a plant you do not know.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all berries are sweet"
+     },
+     {
+      "id": "b",
+      "text": "No, some are poisonous, so ask a grown-up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, wild berries are always safe"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.taste_safe",
+    "sub_lesson": "area",
+    "depth": "reason"
+   },
+   {
+    "ref": "q26",
+    "type": "multi_select",
+    "prompt": "Which two are safe things to do on a plant walk? Pick two.",
+    "hint": "Be safe and kind.",
+    "explanation": "Looking and asking are safe.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Ask a grown-up for names"
+     },
+     {
+      "id": "b",
+      "text": "Taste unknown berries"
+     },
+     {
+      "id": "c",
+      "text": "Pull up every flower"
+     },
+     {
+      "id": "d",
+      "text": "Look and draw"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "trees.safe_ms",
+    "sub_lesson": "area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "Bees visit flowers to collect nectar.",
+    "hint": "It is sweet.",
+    "explanation": "Bees drink nectar.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "trees.bee_tf",
+    "sub_lesson": "area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about Pakistan.",
+    "hint": "Think of a yellow field.",
+    "explanation": "Sarson flowers in late winter in Pakistan.",
+    "points": 2,
+    "text": "Fields of yellow {b1} flower in {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cactus"
+       },
+       {
+        "id": "b",
+        "text": "seaweed"
+       },
+       {
+        "id": "c",
+        "text": "sarson"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "a stone"
+       },
+       {
+        "id": "b",
+        "text": "late winter"
+       },
+       {
+        "id": "c",
+        "text": "a minute"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "trees.local_fill",
+    "sub_lesson": "area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "slider",
+    "prompt": "A garden walk has 12 plants. Aisha spots 7 with flowers. Slide to show how many have no flowers.",
+    "hint": "12 take away 7.",
+    "explanation": "12 - 7 = 5 plants.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15,
+     "unit": "plants"
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.spot_sld",
+    "sub_lesson": "area",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Mira says plants only live in gardens and pots. Is she right?",
+    "hint": "Think about a meadow.",
+    "explanation": "Wild plants grow in many places.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plants need a gardener"
+     },
+     {
+      "id": "b",
+      "text": "No, wild plants grow in fields, forests and by roads"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plants cannot live outside"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.only_gardens",
+    "sub_lesson": "area",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "match",
+    "prompt": "Join each tree part to its job.",
+    "hint": "Think about where each part is.",
+    "explanation": "Branches hold leaves, bark protects and roots anchor the tree.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Branches"
+     },
+     {
+      "id": "l2",
+      "text": "Bark"
+     },
+     {
+      "id": "l3",
+      "text": "Roots"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Protects the trunk"
+     },
+     {
+      "id": "r3",
+      "text": "Hold the tree in the ground"
+     },
+     {
+      "id": "r1",
+      "text": "Hold the leaves up"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.part_match",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Bilal says a tree is not a plant because it is tall. Is he right?",
+    "hint": "Trees grow from seeds.",
+    "explanation": "A tree is a plant, however tall.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tall things are rocks"
+     },
+     {
+      "id": "b",
+      "text": "No, tall trees are still plants"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plants must be small"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.not_plants",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "short_text",
+    "prompt": "Which part of a tree grows under the ground and takes in water?",
+    "hint": "It starts with r.",
+    "explanation": "Roots take in water under the ground.",
+    "answer": {
+     "accepted": [
+      "roots",
+      "root",
+      "the roots"
+     ]
+    },
+    "skill_tag": "trees.bark_st",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "hotspot",
+    "prompt": "Tap the part that catches sunlight.",
+    "hint": "It is green and flat.",
+    "explanation": "Leaves catch sunlight.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍃",
+       "label": "Leaves",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪵",
+       "label": "Trunk",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🟤",
+       "label": "Soil",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "trees.trunk_tap",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "order",
+    "prompt": "Put these in order, from smallest to biggest.",
+    "hint": "A leaf is small.",
+    "explanation": "A leaf is smallest and the trunk is biggest.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Trunk"
+     },
+     {
+      "id": "i1",
+      "text": "Leaf"
+     },
+     {
+      "id": "i2",
+      "text": "Branch"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "trees.ground_ord",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "true_false",
+    "prompt": "A tree is a kind of animal.",
+    "hint": "Does it have roots?",
+    "explanation": "A tree is a plant, not an animal.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "trees.tree_tf",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a small tree is not a tree. Is she right?",
+    "hint": "Look at the parts.",
+    "explanation": "A young tree is still a tree.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, small trees are flowers"
+     },
+     {
+      "id": "b",
+      "text": "No, a small tree still has a trunk and branches"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only tall things are trees"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.all_tall",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "number",
+    "prompt": "A small tree has 5 branches. Each branch has 2 leaves. How many leaves is that?",
+    "hint": "2 + 2 + 2 + 2 + 2.",
+    "explanation": "5 branches of 2 leaves make 10 leaves.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.leaf_num",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Join each tree to deciduous or evergreen.",
+    "hint": "Which lose leaves?",
+    "explanation": "Holly stays green. Beech and shisham lose their leaves.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Holly"
+     },
+     {
+      "id": "l2",
+      "text": "Beech"
+     },
+     {
+      "id": "l3",
+      "text": "Shisham"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Deciduous"
+     },
+     {
+      "id": "r3",
+      "text": "Deciduous"
+     },
+     {
+      "id": "r1",
+      "text": "Evergreen"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.type_match",
+    "sub_lesson": "evergreen",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Ali says every tree is bare in winter. Is he right?",
+    "hint": "Think about pine trees.",
+    "explanation": "Evergreens keep their leaves in winter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all trees are bare"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only oaks are green"
+     },
+     {
+      "id": "c",
+      "text": "No, pine and holly trees stay green"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.all_lose",
+    "sub_lesson": "evergreen",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a bare oak tree in winter is dead. Is she right?",
+    "hint": "Think about spring buds.",
+    "explanation": "A bare deciduous tree is only resting.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, oaks die every winter"
+     },
+     {
+      "id": "b",
+      "text": "No, it is resting and has buds ready for spring"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bare means dead"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.pine_dead",
+    "sub_lesson": "evergreen",
+    "depth": "reason",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multi_select",
+    "prompt": "Which two trees stay green all year? Pick two.",
+    "hint": "They are evergreen.",
+    "explanation": "Pine and holly are evergreen.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Holly"
+     },
+     {
+      "id": "b",
+      "text": "Beech"
+     },
+     {
+      "id": "c",
+      "text": "Oak"
+     },
+     {
+      "id": "d",
+      "text": "Pine"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "trees.decid_ms",
+    "sub_lesson": "evergreen",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about an evergreen tree.",
+    "hint": "It keeps its needles.",
+    "explanation": "An evergreen stays green all year.",
+    "points": 2,
+    "text": "An evergreen tree stays {b1} all {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bare"
+       },
+       {
+        "id": "b",
+        "text": "blue"
+       },
+       {
+        "id": "c",
+        "text": "green"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "night"
+       },
+       {
+        "id": "b",
+        "text": "year"
+       },
+       {
+        "id": "c",
+        "text": "week"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "trees.autumn_fill",
+    "sub_lesson": "evergreen",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "A forest path has 14 trees. 6 are evergreen. Slide to show how many are deciduous.",
+    "hint": "14 take away 6.",
+    "explanation": "14 - 6 = 8 trees.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 18,
+     "unit": "trees"
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.park_sld",
+    "sub_lesson": "evergreen",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "true_false",
+    "prompt": "Needles are the roots of a pine tree.",
+    "hint": "Roots are underground.",
+    "explanation": "Needles are leaves, not roots.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "trees.needle_tf",
+    "sub_lesson": "evergreen",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "short_text",
+    "prompt": "What word describes a tree that stays green all year?",
+    "hint": "It has green in it.",
+    "explanation": "A tree that keeps its leaves is evergreen.",
+    "answer": {
+     "accepted": [
+      "evergreen"
+     ]
+    },
+    "skill_tag": "trees.decid_st",
+    "sub_lesson": "evergreen",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Join each plant part to what it does.",
+    "hint": "Think about each part.",
+    "explanation": "Flowers make seeds, leaves catch sunlight and stems carry water.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Flower"
+     },
+     {
+      "id": "l2",
+      "text": "Leaf"
+     },
+     {
+      "id": "l3",
+      "text": "Stem"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Catches sunlight"
+     },
+     {
+      "id": "r1",
+      "text": "Makes seeds"
+     },
+     {
+      "id": "r3",
+      "text": "Carries water up"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "trees.flower_match",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Layla says every flower has white petals. Is she right?",
+    "hint": "Think about a rose.",
+    "explanation": "Petals come in many colours.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all petals are white"
+     },
+     {
+      "id": "b",
+      "text": "No, petals can be red, yellow, pink and many more colours"
+     },
+     {
+      "id": "c",
+      "text": "Yes, petals have no colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.same_look",
+    "sub_lesson": "flower",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a flower always means it is spring. Is he right?",
+    "hint": "Think about sarson in late winter.",
+    "explanation": "Different plants flower in different seasons.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, flowers only open in spring"
+     },
+     {
+      "id": "b",
+      "text": "Yes, flowers never open in winter"
+     },
+     {
+      "id": "c",
+      "text": "No, some plants flower in summer or winter"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.no_flower_dead",
+    "sub_lesson": "flower",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "number",
+    "prompt": "A flower has 6 petals. How many petals do 3 flowers have?",
+    "hint": "6 + 6 + 6.",
+    "explanation": "6 + 6 + 6 = 18 petals.",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.petal_num",
+    "sub_lesson": "flower",
+    "depth": "recall",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "short_text",
+    "prompt": "What part of a plant carries water up and holds the flower?",
+    "hint": "It starts with s.",
+    "explanation": "The stem carries water up.",
+    "answer": {
+     "accepted": [
+      "stem",
+      "the stem"
+     ]
+    },
+    "skill_tag": "trees.petal_st",
+    "sub_lesson": "flower",
+    "depth": "recall",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "hotspot",
+    "prompt": "Tap the flowering plant.",
+    "hint": "It has petals.",
+    "explanation": "A daisy is a flowering plant.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌼",
+       "label": "Daisy",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌲",
+       "label": "Pine",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "trees.flower_tap",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "order",
+    "prompt": "Put a plant's life in order.",
+    "hint": "It starts as a seed.",
+    "explanation": "A seed grows into a seedling, then a flower.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Seedling"
+     },
+     {
+      "id": "i1",
+      "text": "Seed"
+     },
+     {
+      "id": "i3",
+      "text": "Flower"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "trees.plant_ord",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Sana says all wild plants are planted by farmers. Is she right?",
+    "hint": "Think about a meadow.",
+    "explanation": "Wild plants grow on their own.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, farmers plant every plant"
+     },
+     {
+      "id": "b",
+      "text": "Yes, wild plants come from shops"
+     },
+     {
+      "id": "c",
+      "text": "No, wild plants grow without help"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "trees.wild_planted",
+    "sub_lesson": "area",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Bilal says it is fine to pick every wildflower to take home. Is he right?",
+    "hint": "Think about bees.",
+    "explanation": "Wildflowers give food to bees and butterflies.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, picking helps the bees"
+     },
+     {
+      "id": "b",
+      "text": "No, bees need them, so leave them growing"
+     },
+     {
+      "id": "c",
+      "text": "Yes, wildflowers always grow back overnight"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.taste_safe",
+    "sub_lesson": "area",
+    "depth": "reason",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multi_select",
+    "prompt": "Which two help us to name a plant? Pick two.",
+    "hint": "Be safe and careful.",
+    "explanation": "A chart and a grown-up can help.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rub unknown leaves on your skin"
+     },
+     {
+      "id": "b",
+      "text": "Eat the seeds"
+     },
+     {
+      "id": "c",
+      "text": "Ask a grown-up"
+     },
+     {
+      "id": "d",
+      "text": "Use a plant chart"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "trees.safe_ms",
+    "sub_lesson": "area",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "Bees visit flowers to eat the roots.",
+    "hint": "Where is nectar?",
+    "explanation": "Bees take nectar from flowers.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "trees.bee_tf",
+    "sub_lesson": "area",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about shade.",
+    "hint": "Think about a hot day.",
+    "explanation": "A neem tree gives shade near a school or mosque.",
+    "points": 2,
+    "text": "A {b1} tree gives shade near a mosque or {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "metal"
+       },
+       {
+        "id": "b",
+        "text": "neem"
+       },
+       {
+        "id": "c",
+        "text": "plastic"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sea"
+       },
+       {
+        "id": "b",
+        "text": "school"
+       },
+       {
+        "id": "c",
+        "text": "cave"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "trees.local_fill",
+    "sub_lesson": "area",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "slider",
+    "prompt": "A park walk has 15 plants. Hamza spots 9 with flowers. Slide to show how many have no flowers.",
+    "hint": "15 take away 9.",
+    "explanation": "15 - 9 = 6 plants.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 18,
+     "unit": "plants"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "trees.spot_sld",
+    "sub_lesson": "area",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Hana says only people can plant trees. Is she right?",
+    "hint": "Think about acorns and squirrels.",
+    "explanation": "Wind, birds and animals spread seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, trees grow only in gardens"
+     },
+     {
+      "id": "b",
+      "text": "No, trees grow from seeds that animals and wind spread"
+     },
+     {
+      "id": "c",
+      "text": "Yes, seeds cannot move"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "trees.only_gardens",
+    "sub_lesson": "area",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -1,0 +1,3037 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-light-reflection",
+  "subject": "science",
+  "title": "Light, Reflection and Shadows",
+  "summary": "How light lets us see, how it bounces off surfaces, and how shadows form and change.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: Light, reflection and shadows",
+  "learning_objectives": [
+   "Explain that we see because light enters the eye",
+   "Compare transparent, translucent and opaque materials",
+   "Investigate shadow size and reflection"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 light",
+    "text": "Recognise that we need light to see things and that light is reflected from surfaces; recognise that shadows are formed when light is blocked by an opaque object"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pl.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Pl.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say why we need light to see",
+   "I can sort materials by how much light they let through",
+   "I can explain what changes a shadow's size"
+  ],
+  "real_life": "Staying safe in the Sun, being seen on a bike at night and understanding why shadows change.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we need to see things?",
+    "hint": "Think about the dark.",
+    "explanation": "We need light to see.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sound"
+     },
+     {
+      "id": "b",
+      "text": "Light"
+     },
+     {
+      "id": "c",
+      "text": "Heat"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A torch makes its own light.",
+    "hint": "It has a bulb.",
+    "explanation": "A torch is a light source.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a form of energy?",
+    "hint": "Think about what energy can do.",
+    "explanation": "Light is a form of energy.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Rock"
+     },
+     {
+      "id": "b",
+      "text": "Plastic"
+     },
+     {
+      "id": "c",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "seeing",
+   "kind": "learn",
+   "title": "Light and seeing",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today we explore **light**, reflection and shadows.",
+     "say": "Welcome, young scientist! Today we find out how light helps us see, how it bounces, and how shadows form."
+    },
+    {
+     "type": "image",
+     "emoji": "☀️🔦🪞",
+     "alt": "A light source, a torch and a mirror.",
+     "caption": "A light source, a torch and a mirror.",
+     "say": "A torch, a mirror and the Sun will help us."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Sources and reflectors"
+    },
+    {
+     "type": "text",
+     "markdown": "A **light source** makes its own light.\n\nThe Sun, a torch and a candle are light sources.",
+     "say": "A light source makes its own light. The Sun, a torch, a candle flame and a lamp are all light sources."
+    },
+    {
+     "type": "text",
+     "markdown": "To **reflect** is to bounce light off a surface.\n\nThe Moon only reflects light from the Sun.",
+     "say": "Most things are not light sources. We can see them because light bounces off them and into our eyes. The Moon is one of these."
+    },
+    {
+     "type": "explainer",
+     "title": "Source or reflector?",
+     "scenes": [
+      {
+       "caption": "The Sun: a light source.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☀️",
+         "x": 25,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🌍",
+         "x": 75,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The Sun makes its own light. It is a light source."
+      },
+      {
+       "caption": "The Moon reflects sunlight.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "☀️",
+         "x": 20,
+         "y": 30,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 80,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The Moon makes no light. It reflects light from the Sun, so we can see it at night."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is NOT a light source?",
+      "hint": "Which one only bounces light?",
+      "explanation": "The Moon reflects the Sun's light. It does not make its own.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A candle flame"
+       },
+       {
+        "id": "b",
+        "text": "The Moon"
+       },
+       {
+        "id": "c",
+        "text": "A torch"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Light travels in straight lines"
+    },
+    {
+     "type": "text",
+     "markdown": "Light travels in **straight lines**.\n\nWe see when light enters the eye.",
+     "say": "Light travels in straight lines. We see an object when light bounces off it and enters our eyes."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-light-reflection-3-dce141da.jpg",
+     "alt": "Mountains reflected in a calm blue lake",
+     "caption": "Still water reflects the mountains.",
+     "credit": "Photo by Shai Pal on Unsplash",
+     "say": "Look at this still lake. Light bounces off the mountains onto the water. The calm water then reflects the mountains back to your eyes, like a mirror."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We see a book because light bounces off the book and enters our eyes.",
+      "hint": "Light must reach the eyes.",
+      "explanation": "A book is not a light source. We see it because light reflects off it into our eyes.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "A night walk with a torch",
+     "asset": "clip-science-class-4-light-reflection-bfa38d03.mp4",
+     "poster": "clip-science-class-4-light-reflection-bfa38d03.webp",
+     "seconds": 70,
+     "transcript": "Fatima and her dad go for a walk at night. Fatima has a torch. The torch makes its own light. It is a light source. Two eyes shine in the bushes. A cat! Its eyes reflect the torch light. Fatima holds a toy near the torch. Its shadow on the wall is big. She moves the toy away from the torch. The shadow gets smaller. A cyclist rides by. The reflective strips on his jacket glow in the headlights. Light helps us see and stay safe. We reflect it, block it, and use it wisely.",
+     "caption": "A torch shows how light reflects and shadows change."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A light source makes its own light",
+      "Other things reflect light into our eyes",
+      "Light travels in straight lines"
+     ],
+     "say": "Remember. Light sources make light. Other things reflect it. We see when light enters our eyes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "light",
+       "meaning": "Energy that lets us see. It comes from a source."
+      },
+      {
+       "term": "light source",
+       "meaning": "Something that makes its own light, like the Sun."
+      },
+      {
+       "term": "reflect",
+       "meaning": "To bounce light off a surface."
+      },
+      {
+       "term": "straight lines",
+       "meaning": "Light does not bend. It goes directly from one place to another."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do our eyes need to see an object?",
+     "hint": "Think about what reaches the eyes.",
+     "explanation": "We see when light enters our eyes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heat from the object"
+      },
+      {
+       "id": "b",
+       "text": "Light entering them"
+      },
+      {
+       "id": "c",
+       "text": "Sound from the object"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A street lamp is a light source.",
+     "hint": "Does it make light?",
+     "explanation": "A lit lamp makes its own light.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each item to the right group.",
+     "hint": "Which make light?",
+     "explanation": "The Sun and a candle make light. A mirror only reflects it.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Sun"
+      },
+      {
+       "id": "l2",
+       "text": "Mirror"
+      },
+      {
+       "id": "l3",
+       "text": "Candle"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Light source"
+      },
+      {
+       "id": "r1",
+       "text": "Light source"
+      },
+      {
+       "id": "r2",
+       "text": "Reflector"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Light travels in...",
+     "hint": "Think of a torch beam.",
+     "explanation": "Light travels in straight lines.",
+     "options": [
+      {
+       "id": "a",
+       "text": "zigzags"
+      },
+      {
+       "id": "b",
+       "text": "circles"
+      },
+      {
+       "id": "c",
+       "text": "straight lines"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "materials",
+   "kind": "try",
+   "title": "Which materials let light through?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Transparent, translucent and opaque"
+    },
+    {
+     "type": "text",
+     "markdown": "**Transparent** materials let all light through.",
+     "say": "Some materials let all light through. We can see clearly through them. These are transparent, like clear glass."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-light-reflection-2-67503b5b.jpg",
+     "alt": "Rough frosted glass with a bumpy surface",
+     "caption": "Frosted glass lets some light through.",
+     "credit": "Photo by Zhiqiang Wang on Unsplash",
+     "say": "Translucent materials let some light through, but we cannot see clearly through them. Look at this rough, frosted glass. Opaque materials, like wood, let no light through."
+    },
+    {
+     "type": "text",
+     "markdown": "**Translucent** lets some light through. **Opaque** lets none through."
+    },
+    {
+     "type": "explainer",
+     "title": "Three kinds of material",
+     "scenes": [
+      {
+       "caption": "Transparent: all light passes.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔦",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "g",
+         "emoji": "🪟",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "💡",
+         "x": 85,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A torch shines on clear glass. All the light passes through, so the glass is transparent."
+      },
+      {
+       "caption": "Translucent: some light passes.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔦",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🧊",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🌫️",
+         "x": 85,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Frosted glass lets only some light through. It is translucent."
+      },
+      {
+       "caption": "Opaque: no light passes.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔦",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🚪",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🌑",
+         "x": 85,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A wooden board stops all the light. It is opaque."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Frosted glass lets some light through but you cannot see clearly. It is...",
+      "hint": "Some light, but not clear.",
+      "explanation": "Translucent materials let some light through.",
+      "options": [
+       {
+        "id": "a",
+        "text": "transparent"
+       },
+       {
+        "id": "b",
+        "text": "translucent"
+       },
+       {
+        "id": "c",
+        "text": "opaque"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: A fair test"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fair test** changes only one thing.\n\nKeep the torch, distance and room the same.",
+     "say": "To test materials fairly, use the same torch, the same distance and a dark room. Change only the material."
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the materials",
+     "goal": "Sort 8 materials into those that let light through and those that do not.",
+     "emoji": "🪟",
+     "count": 8,
+     "zones": [
+      "Lets light through",
+      "Blocks light"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Light test",
+     "materials": [
+      "A torch",
+      "Materials such as paper, foil, clear plastic and card",
+      "A dark room and a grown-up"
+     ],
+     "instructions": [
+      "Shine the torch at each material in a dark room.",
+      "Look at how much light passes through.",
+      "Record: transparent, translucent or opaque.",
+      "Test shiny foil and dull card too. Which reflects more light?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "In a fair test of materials, what changes?",
+      "hint": "One thing at a time.",
+      "explanation": "A fair test changes only the one thing being tested.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The torch and the distance"
+       },
+       {
+        "id": "b",
+        "text": "Only the material"
+       },
+       {
+        "id": "c",
+        "text": "The room and the torch"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Transparent lets all light through",
+      "Translucent lets some light through",
+      "Opaque lets no light through"
+     ],
+     "say": "Remember. Transparent, translucent and opaque describe how much light gets through. Shiny surfaces reflect more."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "transparent",
+       "meaning": "Lets all light through so you can see clearly."
+      },
+      {
+       "term": "translucent",
+       "meaning": "Lets some light through but not clearly."
+      },
+      {
+       "term": "opaque",
+       "meaning": "Lets no light through."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing changes."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "Clear glass is opaque.",
+     "hint": "Can you see through it?",
+     "explanation": "Clear glass is transparent.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which material is opaque?",
+     "hint": "No light passes.",
+     "explanation": "Wood lets no light through.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plastic bottle of water"
+      },
+      {
+       "id": "b",
+       "text": "A wooden door"
+      },
+      {
+       "id": "c",
+       "text": "A clear window"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do we test in a dark room?",
+     "hint": "Think about seeing the light.",
+     "explanation": "A dark room makes it easier to see light passing through.",
+     "options": [
+      {
+       "id": "a",
+       "text": "So the material is warmer"
+      },
+      {
+       "id": "b",
+       "text": "So we can see how much light passes through"
+      },
+      {
+       "id": "c",
+       "text": "So the torch is heavier"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put the steps in order.",
+     "hint": "Set up first.",
+     "explanation": "You choose, test, observe and then record.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "Observe the light"
+      },
+      {
+       "id": "i4",
+       "text": "Record the result"
+      },
+      {
+       "id": "i2",
+       "text": "Shine the torch at it"
+      },
+      {
+       "id": "i1",
+       "text": "Pick a material"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shadows",
+   "kind": "play",
+   "title": "Shadow lab",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How shadows form"
+    },
+    {
+     "type": "text",
+     "markdown": "A **shadow** forms when an object blocks light.\n\nThe shadow has the same shape as the object.",
+     "say": "A shadow forms when an opaque object blocks light. The shadow is dark, and it has the same outline as the object."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-light-reflection-1-b330144d.jpg",
+     "alt": "Shadows of tree branches on green grass",
+     "caption": "Branches block sunlight and make shadows.",
+     "credit": "Photo by Marija Zaric on Unsplash",
+     "say": "See the dark branch shapes on the grass. Sunlight cannot pass through the opaque branches, so they leave shadows."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What must an object do to make a shadow?",
+      "hint": "Think about what shadows are.",
+      "explanation": "A shadow forms where an object blocks light.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Make light"
+       },
+       {
+        "id": "b",
+        "text": "Block the light"
+       },
+       {
+        "id": "c",
+        "text": "Reflect all colours"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Changing the size"
+    },
+    {
+     "type": "text",
+     "markdown": "Closer to the light means a **bigger** shadow.\n\nFurther away means a **smaller** shadow.",
+     "say": "Move the object closer to the torch and the shadow gets bigger. Move it away and the shadow gets smaller."
+    },
+    {
+     "type": "explainer",
+     "title": "Shadow size",
+     "scenes": [
+      {
+       "caption": "Close: big shadow.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔦",
+         "x": 12,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "o",
+         "emoji": "🧸",
+         "x": 38,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "⬛",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The toy is close to the torch. Its shadow on the wall is big."
+      },
+      {
+       "caption": "Far: small shadow.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔦",
+         "x": 12,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "o",
+         "emoji": "🧸",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "⬛",
+         "x": 88,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Now the toy is far from the torch. Its shadow is smaller."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Light match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "☀️",
+      "🔦",
+      "🕯️",
+      "💡",
+      "🌙",
+      "🪞"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The torch moves further from the toy. What happens to the shadow?",
+      "hint": "Further away.",
+      "explanation": "The further the light, the smaller the shadow.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It gets bigger"
+       },
+       {
+        "id": "b",
+        "text": "It turns blue"
+       },
+       {
+        "id": "c",
+        "text": "It gets smaller"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Opaque objects make shadows",
+      "A shadow has the shape of the object",
+      "Closer to the light means a bigger shadow"
+     ],
+     "say": "Remember. Shadows form where light is blocked. Their size depends on the distance from the light."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "shadow",
+       "meaning": "A dark shape made when an object blocks light."
+      },
+      {
+       "term": "bigger",
+       "meaning": "Larger in size."
+      },
+      {
+       "term": "smaller",
+       "meaning": "Not as large in size."
+      },
+      {
+       "term": "outline",
+       "meaning": "The shape around the edge of something."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "A shadow shows the colours of an object.",
+     "hint": "It is dark.",
+     "explanation": "A shadow is a dark shape.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A sundial uses a shadow to show...",
+     "hint": "The Sun moves.",
+     "explanation": "The Sun's moving shadow shows the time.",
+     "options": [
+      {
+       "id": "a",
+       "text": "the weather"
+      },
+      {
+       "id": "b",
+       "text": "the wind"
+      },
+      {
+       "id": "c",
+       "text": "the time"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which can make a clear shadow?",
+     "hint": "Opaque.",
+     "explanation": "Opaque objects make clear shadows.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Clean glass"
+      },
+      {
+       "id": "b",
+       "text": "A cardboard shape"
+      },
+      {
+       "id": "c",
+       "text": "Clear plastic"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A shadow is 12 cm long. The torch moves closer and the shadow doubles. How long is it now?",
+     "hint": "Double 12.",
+     "explanation": "12 x 2 = 24 cm.",
+     "answer": {
+      "value": 24,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "safety",
+   "kind": "use",
+   "title": "Staying safe in the Sun",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Protect your eyes and skin"
+    },
+    {
+     "type": "text",
+     "markdown": "Never look straight at the **Sun**.\n\nSunglasses with UV protection help in bright light.",
+     "say": "The Sun is very bright. Never look straight at it, even for a moment. It can damage your eyes for ever."
+    },
+    {
+     "type": "image",
+     "emoji": "😎🧢☀️",
+     "alt": "Sunglasses and a hat for Sun safety.",
+     "caption": "Sunglasses and a hat for Sun safety.",
+     "say": "Sun safety needs a hat, shade and sunglasses."
+    },
+    {
+     "type": "activity",
+     "title": "Sun safety plan",
+     "materials": [
+      "Paper and pencil"
+     ],
+     "instructions": [
+      "List three ways to stay safe in strong sunshine.",
+      "Pick the shadiest spot in your school playground.",
+      "Tell a friend one thing you learned."
+     ],
+     "say": "Sunglasses cut down glare, but they are not safe for looking at the Sun. UV light passes through thin cloud too, so cover up on cloudy days. Every skin tone needs sun protection."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why must you never look straight at the Sun?",
+      "hint": "Think about safety.",
+      "explanation": "The Sun is so bright it can damage the eyes.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It makes your eyes cold"
+       },
+       {
+        "id": "b",
+        "text": "It makes shadows blue"
+       },
+       {
+        "id": "c",
+        "text": "Its light can damage your eyes"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Being seen in the dark"
+    },
+    {
+     "type": "text",
+     "markdown": "**Reflective** strips bounce light back.\n\nBike lights make their own light.",
+     "say": "Reflective strips on jackets and bikes bounce light from car headlights back to the driver. That helps drivers see people at night."
+    },
+    {
+     "type": "explainer",
+     "title": "Seen at night",
+     "scenes": [
+      {
+       "caption": "Reflective strips glow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🚗",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "j",
+         "emoji": "🚴",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A car's headlights shine on a cycling jacket. The strips reflect the light back."
+      },
+      {
+       "caption": "Dark clothes are hard to see.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🚗",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "j",
+         "emoji": "🌑",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Without reflective strips, the cyclist is hard to see in the dark."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Reflective strips make their own light.",
+      "hint": "They bounce light.",
+      "explanation": "Reflective strips only reflect light from other sources.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Never look at the Sun",
+      "Protect your skin on bright days",
+      "Wear reflective strips at night"
+     ],
+     "say": "Remember. Protect your eyes and skin from the Sun. Wear reflective clothing to be seen at night."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "Sun",
+       "meaning": "The star that gives us light and heat."
+      },
+      {
+       "term": "reflective",
+       "meaning": "Bouncing light back to where it came from."
+      },
+      {
+       "term": "UV",
+       "meaning": "Ultraviolet light from the Sun that can harm skin and eyes."
+      },
+      {
+       "term": "glare",
+       "meaning": "Very bright light that is hard to look at."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which keeps you safer in strong Sun?",
+     "hint": "Think about protection.",
+     "explanation": "Hats and shade protect skin and eyes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wearing nothing"
+      },
+      {
+       "id": "b",
+       "text": "A sun hat and shade"
+      },
+      {
+       "id": "c",
+       "text": "Staring at the Sun"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "UV light can reach you on a cloudy day.",
+     "hint": "Clouds are thin.",
+     "explanation": "UV passes through thin cloud.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do bikes have reflectors?",
+     "hint": "Headlights.",
+     "explanation": "Reflectors bounce headlight beams back.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make their own light"
+      },
+      {
+       "id": "b",
+       "text": "To make the bike lighter"
+      },
+      {
+       "id": "c",
+       "text": "To bounce light back to drivers"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Lights left on at night all over a city can cause...",
+     "hint": "Too much light.",
+     "explanation": "Too much artificial light is light pollution.",
+     "options": [
+      {
+       "id": "a",
+       "text": "more shadows at noon"
+      },
+      {
+       "id": "b",
+       "text": "colder weather"
+      },
+      {
+       "id": "c",
+       "text": "light pollution"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "true_false",
+    "prompt": "The Moon is a light source.",
+    "hint": "Does it make light?",
+    "explanation": "The Moon reflects light from the Sun. It does not make light.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "light.sources",
+    "sub_lesson": "seeing",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which of these is a light source?",
+    "hint": "Which one makes light?",
+    "explanation": "A burning candle makes its own light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The Moon"
+     },
+     {
+      "id": "b",
+      "text": "A burning candle"
+     },
+     {
+      "id": "c",
+      "text": "A mirror"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.source_id",
+    "sub_lesson": "seeing",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says we can see in a completely dark room if we wait long enough. Is he right?",
+    "hint": "What must enter the eye?",
+    "explanation": "We need light to enter our eyes. In total darkness there is none.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, our eyes make their own light"
+     },
+     {
+      "id": "b",
+      "text": "Yes, eyes work better in the dark"
+     },
+     {
+      "id": "c",
+      "text": "No. With no light at all, no light enters the eyes, so we cannot see"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.dark",
+    "sub_lesson": "seeing",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about seeing.",
+    "hint": "Light must reach the eyes.",
+    "explanation": "We see when light enters our eyes.",
+    "points": 2,
+    "text": "We see an object when light {b1} into our {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "leaves"
+       },
+       {
+        "id": "b",
+        "text": "stops"
+       },
+       {
+        "id": "c",
+        "text": "enters"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hands"
+       },
+       {
+        "id": "b",
+        "text": "eyes"
+       },
+       {
+        "id": "c",
+        "text": "ears"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "light.seeing",
+    "sub_lesson": "seeing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the light source.",
+    "hint": "Which one makes its own light?",
+    "explanation": "The Sun makes light. The Moon and a mirror reflect it.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "☀️",
+       "label": "The Sun",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌙",
+       "label": "The Moon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪞",
+       "label": "A mirror",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.hotspot",
+    "sub_lesson": "seeing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "A lamp sends one straight ray to each of 4 toys. How many rays are there?",
+    "hint": "One for each toy.",
+    "explanation": "1 ray x 4 toys = 4 rays.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "light.rays",
+    "sub_lesson": "seeing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two light sources are natural? Pick two.",
+    "hint": "Not made by people.",
+    "explanation": "The Sun and lightning are natural light sources.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lightning"
+     },
+     {
+      "id": "b",
+      "text": "The Moon"
+     },
+     {
+      "id": "c",
+      "text": "A mirror"
+     },
+     {
+      "id": "d",
+      "text": "The Sun"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "light.natural",
+    "sub_lesson": "seeing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Zainab says the Moon makes its own light because it glows at night. Is she right?",
+    "hint": "What lights the Moon?",
+    "explanation": "The Moon only reflects sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the Moon is a star"
+     },
+     {
+      "id": "b",
+      "text": "No. The Moon reflects light from the Sun"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it glows by itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.moon",
+    "sub_lesson": "seeing",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each material to how it lets light through.",
+    "hint": "Clear, cloudy or blocked?",
+    "explanation": "Clear glass is transparent, frosted glass translucent and wood opaque.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Clear glass"
+     },
+     {
+      "id": "l2",
+      "text": "Frosted glass"
+     },
+     {
+      "id": "l3",
+      "text": "Wood"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Translucent"
+     },
+     {
+      "id": "r1",
+      "text": "Transparent"
+     },
+     {
+      "id": "r3",
+      "text": "Opaque"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.classify",
+    "sub_lesson": "materials",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says translucent and transparent mean the same, because both let light through. Is she right?",
+    "hint": "Can you see clearly?",
+    "explanation": "Transparent materials let you see clearly. Translucent ones do not.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are exactly the same"
+     },
+     {
+      "id": "b",
+      "text": "No, translucent materials let no light through"
+     },
+     {
+      "id": "c",
+      "text": "No. Transparent lets you see clearly. Translucent lets some light through but you cannot see clearly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.translucent",
+    "sub_lesson": "materials",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "Ten materials were tested. Six let some or all light through. Slide to show how many were opaque.",
+    "hint": "10 minus 6.",
+    "explanation": "Opaque materials let no light through, so 10 - 6 = 4.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10,
+     "unit": "materials"
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "light.count_opaque",
+    "sub_lesson": "materials",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Layla says only mirrors reflect light. Is she right?",
+    "hint": "How do we see a book?",
+    "explanation": "We see objects because they reflect light into our eyes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only shiny metals reflect"
+     },
+     {
+      "id": "b",
+      "text": "No. Most objects reflect some light, which is how we see them"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only mirrors reflect"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.reflect",
+    "sub_lesson": "materials",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the steps of the light test in order.",
+    "hint": "Set up, test, observe, record.",
+    "explanation": "Choose, test, observe, then record.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Shine a torch at it in a dark room"
+     },
+     {
+      "id": "i3",
+      "text": "Check how much light passes through"
+     },
+     {
+      "id": "i4",
+      "text": "Record the result in a table"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a material"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "light.test_order",
+    "sub_lesson": "materials",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "A table shows 3 transparent, 2 translucent and 5 opaque materials. How many materials were tested?",
+    "hint": "Add them up.",
+    "explanation": "3 + 2 + 5 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "light.table",
+    "sub_lesson": "materials",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about materials.",
+    "hint": "All or none.",
+    "explanation": "Transparent lets all light through. Opaque lets none.",
+    "points": 2,
+    "text": "A {b1} material lets all light through. An {b2} material lets none through.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "opaque"
+       },
+       {
+        "id": "b",
+        "text": "transparent"
+       },
+       {
+        "id": "c",
+        "text": "translucent"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "translucent"
+       },
+       {
+        "id": "b",
+        "text": "opaque"
+       },
+       {
+        "id": "c",
+        "text": "transparent"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "light.fill_types",
+    "sub_lesson": "materials",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "A shiny surface reflects more light than a dull one.",
+    "hint": "Think of a mirror.",
+    "explanation": "Shiny surfaces reflect more light.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "light.shiny",
+    "sub_lesson": "materials",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "hotspot",
+    "prompt": "Tap the picture where the shadow will be biggest.",
+    "hint": "Closer light, bigger shadow.",
+    "explanation": "The closer the torch, the bigger the shadow.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "Torch close to the toy",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔦",
+       "label": "Torch far from the toy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔦",
+       "label": "Torch very far away",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.shadow_big",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Omar says a shadow shows the details of a face, like the eyes and nose. Is he right?",
+    "hint": "Is a shadow dark all over?",
+    "explanation": "A shadow is a dark outline. It has no detail or colour.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shadows show every detail"
+     },
+     {
+      "id": "b",
+      "text": "No. A shadow is a dark shape that only shows the outline"
+     },
+     {
+      "id": "c",
+      "text": "Yes, shadows show the colours too"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.shadow_detail",
+    "sub_lesson": "shadows",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a shadow's size never changes. Is he right?",
+    "hint": "Try moving the toy.",
+    "explanation": "Shadow size changes with the distance from the light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, but only the colour changes"
+     },
+     {
+      "id": "b",
+      "text": "No. Moving the object closer to the torch makes the shadow bigger"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it always stays the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.shadow_change",
+    "sub_lesson": "shadows",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each change to what happens to the shadow.",
+    "hint": "Closer is bigger.",
+    "explanation": "Closer makes it bigger, further makes it smaller, and a blocked light forms a shadow.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Object moves closer to the torch"
+     },
+     {
+      "id": "l2",
+      "text": "Object moves away from the torch"
+     },
+     {
+      "id": "l3",
+      "text": "An opaque object blocks the light"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "A shadow forms"
+     },
+     {
+      "id": "r1",
+      "text": "Shadow gets bigger"
+     },
+     {
+      "id": "r2",
+      "text": "Shadow gets smaller"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.shadow_match",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put these torch distances in order, giving the smallest shadow first.",
+    "hint": "Further means smaller.",
+    "explanation": "The further the torch, the smaller the shadow.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "60 cm away"
+     },
+     {
+      "id": "i3",
+      "text": "30 cm away"
+     },
+     {
+      "id": "i4",
+      "text": "10 cm away"
+     },
+     {
+      "id": "i1",
+      "text": "100 cm away"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "light.distance_order",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A shadow stick casts a 10 cm shadow at midday. In the afternoon it is twice as long. Slide to its length.",
+    "hint": "Double 10.",
+    "explanation": "10 x 2 = 20 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "skill_tag": "light.shadow_clock",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two things will make a clear shadow? Pick two.",
+    "hint": "Opaque things.",
+    "explanation": "Wood and metal are opaque, so they make clear shadows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Clear glass"
+     },
+     {
+      "id": "b",
+      "text": "A clean plastic bag"
+     },
+     {
+      "id": "c",
+      "text": "A metal tray"
+     },
+     {
+      "id": "d",
+      "text": "A wooden board"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "light.make_shadow",
+    "sub_lesson": "shadows",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "What is the main danger of looking straight at the Sun?",
+    "hint": "Think about safety.",
+    "explanation": "The Sun is so bright it can damage the eyes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes your eyes cold"
+     },
+     {
+      "id": "b",
+      "text": "Its bright light can damage your eyes"
+     },
+     {
+      "id": "c",
+      "text": "It turns shadows blue"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.sun_eyes",
+    "sub_lesson": "safety",
+    "depth": "recall"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A cycling jacket has 4 reflective strips on each of its 2 sleeves. How many sleeve strips are there?",
+    "hint": "4 times 2.",
+    "explanation": "4 x 2 = 8 strips.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "light.strips",
+    "sub_lesson": "safety",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Mira says wearing sunglasses makes it safe to stare at the Sun. Is she right?",
+    "hint": "Is the Sun still too bright?",
+    "explanation": "Ordinary sunglasses do not make staring at the Sun safe.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, dark glasses are enough"
+     },
+     {
+      "id": "b",
+      "text": "No. It is never safe to stare at the Sun, even with sunglasses"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sunglasses block all the light"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.sunglasses",
+    "sub_lesson": "safety",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "Reflective strips on clothing help drivers see people at night.",
+    "hint": "They bounce headlight beams.",
+    "explanation": "Reflective strips bounce car headlights back to the driver.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "light.reflective",
+    "sub_lesson": "safety",
+    "depth": "recall"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about bikes.",
+    "hint": "Think of bike safety.",
+    "explanation": "A reflector bounces headlight beams, so the rider is seen.",
+    "points": 2,
+    "text": "A bike {b1} reflects light from car headlights so riders are {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "shadow"
+       },
+       {
+        "id": "b",
+        "text": "window"
+       },
+       {
+        "id": "c",
+        "text": "reflector"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hidden"
+       },
+       {
+        "id": "b",
+        "text": "seen"
+       },
+       {
+        "id": "c",
+        "text": "heavy"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "light.fill_safety",
+    "sub_lesson": "safety",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Ali says only people with fair skin need sun protection. Is he right?",
+    "hint": "Does UV care about skin tone?",
+    "explanation": "UV light can harm any skin, so everyone needs protection.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only fair skin has UV damage"
+     },
+     {
+      "id": "b",
+      "text": "No. Everyone's skin can be damaged by the Sun, whatever skin tone"
+     },
+     {
+      "id": "c",
+      "text": "Yes, darker skin never burns"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.skin",
+    "sub_lesson": "safety",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two keep you safe in strong sunshine? Pick two.",
+    "hint": "Protect eyes and skin.",
+    "explanation": "A hat and shade protect you. Looking at the Sun is dangerous.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Looking at the Sun"
+     },
+     {
+      "id": "b",
+      "text": "Sunbathing at midday"
+     },
+     {
+      "id": "c",
+      "text": "Shade at midday"
+     },
+     {
+      "id": "d",
+      "text": "A sun hat"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "light.safe_two",
+    "sub_lesson": "safety",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "true_false",
+    "prompt": "A candle flame is a light source.",
+    "hint": "Does it make light?",
+    "explanation": "A flame makes its own light.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "light.sources",
+    "sub_lesson": "seeing",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which of these makes its own light?",
+    "hint": "Which one makes light?",
+    "explanation": "A lit torch is a light source.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A white wall"
+     },
+     {
+      "id": "b",
+      "text": "A book"
+     },
+     {
+      "id": "c",
+      "text": "A lit torch"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.source_id",
+    "sub_lesson": "seeing",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Mina says cats can see in total darkness. Is she right?",
+    "hint": "What must enter the eye?",
+    "explanation": "Every animal needs some light to see. Cats just use very little.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, cats make their own light"
+     },
+     {
+      "id": "b",
+      "text": "Yes, cats need no light"
+     },
+     {
+      "id": "c",
+      "text": "No. Cats see in very dim light, but with no light at all they cannot see either"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.dark",
+    "sub_lesson": "seeing",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about light.",
+    "hint": "Source or reflector?",
+    "explanation": "A light source makes light. A mirror reflects it.",
+    "points": 2,
+    "text": "A {b1} makes its own light. A mirror only {b2} light.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "reflector"
+       },
+       {
+        "id": "b",
+        "text": "shadow"
+       },
+       {
+        "id": "c",
+        "text": "light source"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "absorbs"
+       },
+       {
+        "id": "b",
+        "text": "reflects"
+       },
+       {
+        "id": "c",
+        "text": "makes"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "light.seeing",
+    "sub_lesson": "seeing",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the object that makes its own light.",
+    "hint": "Which one has a bulb?",
+    "explanation": "A torch makes its own light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "A torch",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📖",
+       "label": "A book",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "A rock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "light.hotspot",
+    "sub_lesson": "seeing",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "A lamp sends one straight ray to each of 6 toys. How many rays are there?",
+    "hint": "One for each toy.",
+    "explanation": "1 ray x 6 toys = 6 rays.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "light.rays",
+    "sub_lesson": "seeing",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Which two light sources are made by people? Pick two.",
+    "hint": "Made by people.",
+    "explanation": "A torch and a street lamp are made by people.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A street lamp"
+     },
+     {
+      "id": "b",
+      "text": "Lightning"
+     },
+     {
+      "id": "c",
+      "text": "The Sun"
+     },
+     {
+      "id": "d",
+      "text": "A torch"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "light.natural",
+    "sub_lesson": "seeing",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the planet Venus shines because it makes its own light. Is he right?",
+    "hint": "What lights the planets?",
+    "explanation": "Planets reflect sunlight. They do not make light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, Venus is a star"
+     },
+     {
+      "id": "b",
+      "text": "No. Venus reflects light from the Sun"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it glows by itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.moon",
+    "sub_lesson": "seeing",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Link each material to how it lets light through.",
+    "hint": "Clear, cloudy or blocked?",
+    "explanation": "A pane is transparent, tracing paper translucent and a metal tray opaque.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Window pane"
+     },
+     {
+      "id": "l2",
+      "text": "Tracing paper"
+     },
+     {
+      "id": "l3",
+      "text": "Metal tray"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Translucent"
+     },
+     {
+      "id": "r3",
+      "text": "Opaque"
+     },
+     {
+      "id": "r1",
+      "text": "Transparent"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.classify",
+    "sub_lesson": "materials",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Ben says frosted glass is transparent because light gets through it. Is he right?",
+    "hint": "Can you see clearly?",
+    "explanation": "Frosted glass lets some light through but not a clear view, so it is translucent.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, frosted glass is opaque"
+     },
+     {
+      "id": "b",
+      "text": "No. Frosted glass is translucent, because you cannot see clearly through it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, light gets through, so it is transparent"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.translucent",
+    "sub_lesson": "materials",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "Ten materials were tested. Three let light through. Slide to show how many were opaque.",
+    "hint": "10 minus 3.",
+    "explanation": "10 - 3 = 7 were opaque.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10,
+     "unit": "materials"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "light.count_opaque",
+    "sub_lesson": "materials",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ben says dull things reflect no light at all. Is he right?",
+    "hint": "How do we see a dull cloth?",
+    "explanation": "We see dull objects because they reflect some light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only shiny things reflect"
+     },
+     {
+      "id": "b",
+      "text": "No. Dull things reflect light too, but scatter it in all directions"
+     },
+     {
+      "id": "c",
+      "text": "Yes, dull things absorb all light"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.reflect",
+    "sub_lesson": "materials",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put the steps of a reflection test in order.",
+    "hint": "Test, observe, compare, record.",
+    "explanation": "Test, observe, compare, then record.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Look at the bright spot on the wall"
+     },
+     {
+      "id": "i3",
+      "text": "Compare shiny and dull materials"
+     },
+     {
+      "id": "i4",
+      "text": "Record the results"
+     },
+     {
+      "id": "i1",
+      "text": "Shine the torch at the material"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "light.test_order",
+    "sub_lesson": "materials",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "A table shows 4 transparent, 3 translucent and 6 opaque materials. How many materials were tested?",
+    "hint": "Add them up.",
+    "explanation": "4 + 3 + 6 = 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "skill_tag": "light.table",
+    "sub_lesson": "materials",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about light and surfaces.",
+    "hint": "Some light, and shiny surfaces.",
+    "explanation": "Translucent lets some through. Shiny surfaces reflect more.",
+    "points": 2,
+    "text": "A {b1} material lets only some light through. A shiny surface {b2} more light than a dull one.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "opaque"
+       },
+       {
+        "id": "b",
+        "text": "transparent"
+       },
+       {
+        "id": "c",
+        "text": "translucent"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "makes"
+       },
+       {
+        "id": "b",
+        "text": "reflects"
+       },
+       {
+        "id": "c",
+        "text": "absorbs"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "light.fill_types",
+    "sub_lesson": "materials",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "A dull black cloth reflects more light than a mirror.",
+    "hint": "Think of a mirror.",
+    "explanation": "A mirror reflects far more light than a dull black cloth.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "light.shiny",
+    "sub_lesson": "materials",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "hotspot",
+    "prompt": "Tap the picture where the shadow will be smallest.",
+    "hint": "Further light, smaller shadow.",
+    "explanation": "The further the torch, the smaller the shadow.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔦",
+       "label": "Torch close to the toy",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔦",
+       "label": "Torch far from the toy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔦",
+       "label": "Torch very close indeed",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "light.shadow_big",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Mina says the shadow of a red hat is red. Is she right?",
+    "hint": "Is a shadow dark all over?",
+    "explanation": "A shadow is a dark shape with no colour.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shadows copy the colour"
+     },
+     {
+      "id": "b",
+      "text": "No. A shadow is dark, whatever colour the object is"
+     },
+     {
+      "id": "c",
+      "text": "Yes, shadows are always red"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.shadow_detail",
+    "sub_lesson": "shadows",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a shadow outside stays the same length all day. Is he right?",
+    "hint": "The Sun moves.",
+    "explanation": "As the Sun moves, shadows change length and direction.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it only changes at night"
+     },
+     {
+      "id": "b",
+      "text": "No. The Sun moves across the sky, so the shadow changes length"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it never changes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "light.shadow_change",
+    "sub_lesson": "shadows",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Match each change to its effect on the shadow.",
+    "hint": "Closer is bigger.",
+    "explanation": "Closer light, bigger shadow. Clear glass hardly blocks light.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Torch moves closer to the object"
+     },
+     {
+      "id": "l2",
+      "text": "Torch moves away from the object"
+     },
+     {
+      "id": "l3",
+      "text": "Object is clear glass"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Shadow gets smaller"
+     },
+     {
+      "id": "r1",
+      "text": "Shadow gets bigger"
+     },
+     {
+      "id": "r3",
+      "text": "Hardly any shadow"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "light.shadow_match",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Order these torch distances so the smallest shadow comes first.",
+    "hint": "Further means smaller.",
+    "explanation": "The further the torch, the smaller the shadow.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "50 cm away"
+     },
+     {
+      "id": "i3",
+      "text": "25 cm away"
+     },
+     {
+      "id": "i4",
+      "text": "5 cm away"
+     },
+     {
+      "id": "i1",
+      "text": "80 cm away"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "light.distance_order",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A shadow stick casts a 15 cm shadow at midday. In the afternoon it is twice as long. Slide to its length.",
+    "hint": "Double 15.",
+    "explanation": "15 x 2 = 30 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "skill_tag": "light.shadow_clock",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two things will make a clear shadow? Choose two.",
+    "hint": "Opaque things.",
+    "explanation": "A book and a box are opaque, so they make clear shadows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cardboard box"
+     },
+     {
+      "id": "b",
+      "text": "A clear window"
+     },
+     {
+      "id": "c",
+      "text": "Clear plastic wrap"
+     },
+     {
+      "id": "d",
+      "text": "A thick book"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "light.make_shadow",
+    "sub_lesson": "shadows",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "What should you do if the Sun is too bright?",
+    "hint": "Protect your eyes.",
+    "explanation": "Look away and wear sunglasses and a hat. Never stare at the Sun.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Look at it for a few seconds"
+     },
+     {
+      "id": "b",
+      "text": "Close the curtains and stare"
+     },
+     {
+      "id": "c",
+      "text": "Look away and wear sunglasses and a hat"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.sun_eyes",
+    "sub_lesson": "safety",
+    "depth": "recall",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A school bag has 5 reflective patches on each of its 2 straps. How many strap patches are there?",
+    "hint": "5 times 2.",
+    "explanation": "5 x 2 = 10 patches.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "light.strips",
+    "sub_lesson": "safety",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Zain says very dark sunglasses are safe for staring at the Sun. Is he right?",
+    "hint": "Is the Sun still too bright?",
+    "explanation": "Never stare at the Sun, whatever you wear.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, if they are dark enough"
+     },
+     {
+      "id": "b",
+      "text": "Yes, for a short time"
+     },
+     {
+      "id": "c",
+      "text": "No. It is never safe, however dark the lenses are"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.sunglasses",
+    "sub_lesson": "safety",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "Dark clothes are the easiest for drivers to see at night.",
+    "hint": "Which are easiest to see?",
+    "explanation": "Dark clothes are hard to see. Bright or reflective clothes help.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "light.reflective",
+    "sub_lesson": "safety",
+    "depth": "recall",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about cities.",
+    "hint": "Think about the night sky.",
+    "explanation": "Light pollution hides the stars from view.",
+    "points": 2,
+    "text": "Too many bright lights cause light {b1}, which makes it hard to see {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "reflection"
+       },
+       {
+        "id": "b",
+        "text": "shadows"
+       },
+       {
+        "id": "c",
+        "text": "pollution"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wood"
+       },
+       {
+        "id": "b",
+        "text": "books"
+       },
+       {
+        "id": "c",
+        "text": "stars"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "skill_tag": "light.fill_safety",
+    "sub_lesson": "safety",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Hana says darker skin never needs hats or shade. Is she right?",
+    "hint": "Does UV care about skin tone?",
+    "explanation": "Everyone needs shade, hats and sunscreen in strong sun.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, darker skin is fully safe"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only children need protection"
+     },
+     {
+      "id": "c",
+      "text": "No. All skin tones need protection from strong sunshine"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "light.skin",
+    "sub_lesson": "safety",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two keep you safe in strong sunshine? Choose two.",
+    "hint": "Protect eyes and skin.",
+    "explanation": "Sunscreen and UV sunglasses protect you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sunglasses with UV protection"
+     },
+     {
+      "id": "b",
+      "text": "Standing in full Sun all day"
+     },
+     {
+      "id": "c",
+      "text": "Looking at the Sun"
+     },
+     {
+      "id": "d",
+      "text": "Sunscreen"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "light.safe_two",
+    "sub_lesson": "safety",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

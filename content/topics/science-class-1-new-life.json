@@ -1,0 +1,3218 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-new-life",
+  "subject": "science",
+  "title": "New Life and Growing Up",
+  "summary": "Baby animals, how animals and people grow and change, and what animals need to stay alive.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: New life and growing up",
+  "learning_objectives": [
+   "Say that animals have young that grow into adults",
+   "Put a life cycle in order",
+   "Name what animals need to stay alive"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 animals incl. humans",
+    "text": "Notice that animals, including humans, have offspring which grow into adults; find out about and describe the basic needs of animals, including humans, for survival (water, food and air)"
+   }
+  ],
+  "success_criteria": [
+   "I can name some baby animals",
+   "I can put a life cycle in order",
+   "I can say what animals need to stay alive"
+  ],
+  "real_life": "Lambs and goats on a farm, hens in a village, and ducklings in a park in spring.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we call a baby cat?",
+    "hint": "It says miaow.",
+    "explanation": "A baby cat is a kitten.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A chick"
+     },
+     {
+      "id": "b",
+      "text": "A kitten"
+     },
+     {
+      "id": "c",
+      "text": "A calf"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A hen lays eggs.",
+    "hint": "Think of a farm.",
+    "explanation": "Hens lay eggs.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What do animals drink?",
+    "hint": "Animals need it to live.",
+    "explanation": "Animals need water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand"
+     },
+     {
+      "id": "b",
+      "text": "Water"
+     },
+     {
+      "id": "c",
+      "text": "Paint"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "young",
+   "kind": "learn",
+   "title": "Young animals",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do animals grow and change?",
+     "say": "Today we meet baby animals. How do animals grow and change?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-new-life-1-c68f38b1.jpg",
+     "alt": "A fluffy yellow chick standing in short green grass",
+     "caption": "A chick is a young bird. It will grow into a hen or a rooster.",
+     "credit": "Photo by Murphy Stay on Unsplash",
+     "say": "This chick is only a few days old. It is a baby bird."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Young animals"
+    },
+    {
+     "type": "text",
+     "markdown": "**Young** animals are baby animals. Many look like a smaller parent.",
+     "say": "A baby animal is called a young animal. Many young animals look like their parents."
+    },
+    {
+     "type": "explainer",
+     "title": "Parents and their young",
+     "scenes": [
+      {
+       "caption": "Hen and chicks.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐔",
+         "x": 28,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🐥",
+         "x": 68,
+         "y": 68,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A hen has chicks. The chicks look like tiny hens."
+      },
+      {
+       "caption": "Cow and calf.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐄",
+         "x": 28,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🐄",
+         "x": 68,
+         "y": 68,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A cow has a calf. A calf looks like a small cow."
+      },
+      {
+       "caption": "Sheep and lamb.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐑",
+         "x": 28,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🐑",
+         "x": 68,
+         "y": 68,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A sheep has a lamb. The lamb stays close to its mother."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which one of these is a young animal?",
+      "hint": "Which one is a baby?",
+      "explanation": "A lamb is a baby sheep.",
+      "skill_tag": "young.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A hen"
+       },
+       {
+        "id": "b",
+        "text": "A lamb"
+       },
+       {
+        "id": "c",
+        "text": "A cow"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Young animals that look different"
+    },
+    {
+     "type": "text",
+     "markdown": "A **tadpole** looks very different from a frog.",
+     "say": "Some babies look very different from their parents. They change a lot as they grow."
+    },
+    {
+     "type": "explainer",
+     "title": "Different babies",
+     "scenes": [
+      {
+       "caption": "A tadpole.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🐟",
+         "x": 30,
+         "y": 62,
+         "size": 2,
+         "anim": "float"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A tadpole has a tail and no legs. It lives in water."
+      },
+      {
+       "caption": "A frog.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🐸",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A frog has legs and no tail. It can live on land."
+      },
+      {
+       "caption": "Caterpillar and butterfly.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐛",
+         "x": 28,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🦋",
+         "x": 68,
+         "y": 45,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "A caterpillar has no wings. A butterfly has big colourful wings."
+      }
+     ],
+     "backdrop": "pond"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A tadpole looks just like a grown-up frog.",
+      "hint": "Does a tadpole have legs?",
+      "explanation": "A tadpole has a tail and no legs. It changes as it grows.",
+      "skill_tag": "young.chk2",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Tara the tadpole",
+     "asset": "clip-science-class-1-new-life-148e5669.mp4",
+     "poster": "clip-science-class-1-new-life-148e5669.webp",
+     "seconds": 68,
+     "transcript": "I am Tara. I start life as an egg in a pond. I hatch! I have a tail and no legs. I swim. A duckling paddles by. She looks like a small duck. A lamb drinks by the pond. She looks like a small sheep. My back legs grow. I am a froglet now. My tail is gone. I am a frog and I can hop on land. I need food, water, air and shelter, just like you. One day I lay eggs. The life cycle begins again!",
+     "caption": "A tadpole tells how she grows into a frog."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Young animals are baby animals",
+      "Many look like their parents",
+      "A tadpole and a caterpillar look very different"
+     ],
+     "say": "Let us remember. Young animals are babies. Some look like their parents. Some look very different."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "young",
+       "meaning": "A baby animal."
+      },
+      {
+       "term": "tadpole",
+       "meaning": "A baby frog that lives in water and has a tail."
+      },
+      {
+       "term": "parent",
+       "meaning": "A mother or father animal."
+      },
+      {
+       "term": "calf",
+       "meaning": "A baby cow."
+      },
+      {
+       "term": "lamb",
+       "meaning": "A baby sheep."
+      },
+      {
+       "term": "caterpillar",
+       "meaning": "A baby butterfly with no wings."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call a baby hen?",
+     "hint": "It is yellow and fluffy.",
+     "explanation": "A baby hen is a chick.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A calf"
+      },
+      {
+       "id": "b",
+       "text": "A lamb"
+      },
+      {
+       "id": "c",
+       "text": "A chick"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A calf looks like a small cow.",
+     "hint": "Think of a baby cow.",
+     "explanation": "A calf looks like a small cow.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which baby has a tail and lives in water?",
+     "hint": "It becomes a frog.",
+     "explanation": "A tadpole lives in water.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A lamb"
+      },
+      {
+       "id": "b",
+       "text": "A tadpole"
+      },
+      {
+       "id": "c",
+       "text": "A chick"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A caterpillar will become which animal?",
+     "hint": "It gets wings.",
+     "explanation": "A caterpillar turns into a butterfly.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A frog"
+      },
+      {
+       "id": "b",
+       "text": "A butterfly"
+      },
+      {
+       "id": "c",
+       "text": "A hen"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cycles",
+   "kind": "try",
+   "title": "Life cycles",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: From egg to hen"
+    },
+    {
+     "type": "text",
+     "markdown": "A **life cycle** shows the stages of an animal's life.",
+     "say": "A hen lays an egg. A chick grows inside the egg. Then the chick hatches."
+    },
+    {
+     "type": "explainer",
+     "title": "A hen's life",
+     "scenes": [
+      {
+       "caption": "An egg.",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "🥚",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "First there is an egg. The egg is warm and safe."
+      },
+      {
+       "caption": "A chick.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐥",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "The chick hatches. It is small and fluffy."
+      },
+      {
+       "caption": "A hen.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🐔",
+         "x": 40,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "🥚",
+         "x": 72,
+         "y": 70,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "The chick grows into a hen. She can lay eggs too."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What comes first in a hen's life?",
+      "hint": "A chick hatches from it.",
+      "explanation": "A hen's life begins as an egg.",
+      "skill_tag": "cycles.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A chick"
+       },
+       {
+        "id": "b",
+        "text": "An egg"
+       },
+       {
+        "id": "c",
+        "text": "A hen"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Frogs and butterflies"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-new-life-2-dcd4c6c9.jpg",
+     "alt": "A cluster of clear frog eggs with dark centres floating among dry reeds in a pond",
+     "caption": "Frogspawn is a mass of frog eggs. Each egg has a tiny tadpole inside.",
+     "credit": "Photo by Barnabas Davoti on Unsplash",
+     "say": "Frogs lay eggs in water. These eggs are called frogspawn. Tadpoles hatch from them."
+    },
+    {
+     "type": "explainer",
+     "title": "Two life cycles",
+     "scenes": [
+      {
+       "caption": "Frog stages.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🫧",
+         "x": 15,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐟",
+         "x": 38,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🐸",
+         "x": 60,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🐸",
+         "x": 84,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A frog goes from frogspawn to tadpole to froglet to frog."
+      },
+      {
+       "caption": "Butterfly stages.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥚",
+         "x": 15,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐛",
+         "x": 38,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🛖",
+         "x": 60,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🦋",
+         "x": 84,
+         "y": 50,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "A butterfly goes from egg to caterpillar to chrysalis to butterfly."
+      },
+      {
+       "caption": "More than two.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "4️⃣",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Both animals have more than two stages. Many animals do."
+      }
+     ],
+     "backdrop": "pond"
+    },
+    {
+     "type": "manipulative",
+     "title": "Young or adult?",
+     "goal": "Move the animals. Young animals go in Young. Grown-up animals go in Adult.",
+     "emoji": "🐣",
+     "count": 8,
+     "zones": [
+      "Young",
+      "Adult"
+     ],
+     "say": "Now sort the animals. Are they young or grown-up?"
+    },
+    {
+     "type": "activity",
+     "title": "Draw a life cycle",
+     "materials": [
+      "Paper and crayons",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Draw a frog's life in four boxes.",
+      "Draw frogspawn, a tadpole, a froglet and a frog.",
+      "Add arrows to show the cycle goes round."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A caterpillar changes into a butterfly.",
+      "hint": "It grows wings.",
+      "explanation": "A caterpillar turns into a chrysalis, then a butterfly.",
+      "skill_tag": "cycles.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A hen goes from egg to chick to hen",
+      "A frog and a butterfly have more stages",
+      "A life cycle goes round and round"
+     ],
+     "say": "Let us remember. A life cycle shows the stages of an animal's life."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "life cycle",
+       "meaning": "The stages of an animal's life, from egg to adult."
+      },
+      {
+       "term": "frogspawn",
+       "meaning": "A mass of frog eggs in jelly."
+      },
+      {
+       "term": "chrysalis",
+       "meaning": "The case a caterpillar sits in while it changes."
+      },
+      {
+       "term": "hatch",
+       "meaning": "To come out of an egg."
+      },
+      {
+       "term": "stage",
+       "meaning": "One step in a life cycle."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multi_select",
+     "prompt": "Which two are stages of a hen's life? Pick two.",
+     "hint": "Think of a farm.",
+     "explanation": "A hen's life has an egg, a chick and a hen.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Chick"
+      },
+      {
+       "id": "b",
+       "text": "Chrysalis"
+      },
+      {
+       "id": "c",
+       "text": "Tadpole"
+      },
+      {
+       "id": "d",
+       "text": "Egg"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call frog eggs?",
+     "hint": "They float in jelly.",
+     "explanation": "Frog eggs are called frogspawn.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A calf"
+      },
+      {
+       "id": "b",
+       "text": "Frogspawn"
+      },
+      {
+       "id": "c",
+       "text": "Chrysalis"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A life cycle goes round and round.",
+     "hint": "Adults lay eggs again.",
+     "explanation": "Adults have young, so the cycle starts again.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "growing",
+   "kind": "play",
+   "title": "Growing up",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Baby to older adult"
+    },
+    {
+     "type": "text",
+     "markdown": "People **grow** and change through their whole lives.",
+     "say": "People have a life cycle too. We start as babies and grow bigger."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-new-life-3-90e57dbe.jpg",
+     "alt": "A ewe standing on green grass with two newborn lambs beside her",
+     "caption": "A mother sheep with her new lambs. Lambs grow quickly in spring.",
+     "credit": "Photo by Nick Fewings on Unsplash",
+     "say": "These lambs are only a few days old. Soon they will be bigger and stronger."
+    },
+    {
+     "type": "explainer",
+     "title": "A person grows",
+     "scenes": [
+      {
+       "caption": "A baby.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "👶",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A baby needs milk and sleep. Babies grow fast."
+      },
+      {
+       "caption": "A child.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧒",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A child learns, plays and gets taller. Baby teeth fall out."
+      },
+      {
+       "caption": "An adult.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧑",
+         "x": 35,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🧒",
+         "x": 70,
+         "y": 66,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "An adult is fully grown. Adults can work and look after children."
+      },
+      {
+       "caption": "An older adult.",
+       "items": [
+        {
+         "id": "o",
+         "emoji": "🧓",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Older adults change too. Their hair can turn grey."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which stage comes straight after a child?",
+      "hint": "Think of growing up.",
+      "explanation": "A child grows into an adult.",
+      "skill_tag": "growing.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A baby"
+       },
+       {
+        "id": "b",
+        "text": "A tadpole"
+       },
+       {
+        "id": "c",
+        "text": "An adult"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then answer a question.",
+     "say": "Warm up your memory. Watch the pictures light up, then copy them."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Growing up",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "👶",
+      "🧒",
+      "🧑",
+      "🧓"
+     ],
+     "say": "Watch the stages carefully. Then copy the order."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things that change as a child grows.",
+      "hint": "Look at a photo of yourself as a baby.",
+      "explanation": "A child gets taller and loses baby teeth.",
+      "skill_tag": "growing.chk2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Teeth"
+       },
+       {
+        "id": "b",
+        "text": "Family name"
+       },
+       {
+        "id": "c",
+        "text": "Birthday cake"
+       },
+       {
+        "id": "d",
+        "text": "Height"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "People go from baby to child to adult",
+      "We change as we grow",
+      "Good food, sleep and care help us grow"
+     ],
+     "say": "Let us remember. People grow through stages. We change all our lives."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "grow",
+       "meaning": "To get bigger and change over time."
+      },
+      {
+       "term": "baby",
+       "meaning": "A very young child."
+      },
+      {
+       "term": "adult",
+       "meaning": "A fully grown person."
+      },
+      {
+       "term": "toddler",
+       "meaning": "A small child who is learning to walk."
+      },
+      {
+       "term": "teeth",
+       "meaning": "The hard white parts in your mouth."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a baby need to grow?",
+     "hint": "Babies need care.",
+     "explanation": "Babies need milk and sleep.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cola and crisps"
+      },
+      {
+       "id": "b",
+       "text": "Nothing"
+      },
+      {
+       "id": "c",
+       "text": "Milk and sleep"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Children lose their baby teeth.",
+     "hint": "Think of a wobbly tooth.",
+     "explanation": "Baby teeth fall out and bigger ones grow.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who is fully grown?",
+     "hint": "Think of parents.",
+     "explanation": "An adult is fully grown.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A baby"
+      },
+      {
+       "id": "b",
+       "text": "An adult"
+      },
+      {
+       "id": "c",
+       "text": "A toddler"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "needs",
+   "kind": "use",
+   "title": "What animals need",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Food, water, air and shelter"
+    },
+    {
+     "type": "text",
+     "markdown": "Animals need **food**, water, air and shelter.",
+     "say": "All animals need four things to stay alive. They need food and water."
+    },
+    {
+     "type": "text",
+     "markdown": "Young animals need these things even more.",
+     "say": "They also need air to breathe. And they need shelter, a safe place to rest."
+    },
+    {
+     "type": "text",
+     "markdown": "Parents **care** for their young.",
+     "say": "Young animals need care from their parents. A lamb drinks its mother's milk."
+    },
+    {
+     "type": "explainer",
+     "title": "What a lamb needs",
+     "scenes": [
+      {
+       "caption": "Food.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🐑",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🥛",
+         "x": 70,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A lamb drinks milk to grow. Later it eats grass."
+      },
+      {
+       "caption": "Water.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🐑",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 70,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "It drinks water from a trough. All animals need water."
+      },
+      {
+       "caption": "Air and shelter.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🐑",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🛖",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It breathes air and sleeps in a barn. That is its shelter."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things that every animal needs.",
+      "hint": "Think about what keeps animals alive.",
+      "explanation": "Every animal needs water and air.",
+      "skill_tag": "needs.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Air"
+       },
+       {
+        "id": "b",
+        "text": "A toy"
+       },
+       {
+        "id": "c",
+        "text": "A bicycle"
+       },
+       {
+        "id": "d",
+        "text": "Water"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Caring for a pet"
+    },
+    {
+     "type": "text",
+     "markdown": "A pet needs **care** from us.",
+     "say": "A pet cannot look after itself. We must care for it every day."
+    },
+    {
+     "type": "text",
+     "markdown": "Be kind to animals.",
+     "say": "Muslims are taught to be kind to animals. Giving a pet water is a good deed."
+    },
+    {
+     "type": "text",
+     "markdown": "Food, water and a safe home.",
+     "say": "Zainab's rabbit needs fresh food, clean water and a dry hutch."
+    },
+    {
+     "type": "explainer",
+     "title": "Zainab's rabbit",
+     "scenes": [
+      {
+       "caption": "Food.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🥕",
+         "x": 65,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Zainab gives her rabbit fresh carrots and hay."
+      },
+      {
+       "caption": "Water.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 65,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "She changes the water every morning. The bowl stays clean."
+      },
+      {
+       "caption": "Shelter.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🏠",
+         "x": 65,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "She cleans the hutch so the rabbit has a safe, dry home."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "activity",
+     "title": "Pet care chart",
+     "materials": [
+      "Paper and pens",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Draw a pet you know or would like.",
+      "List its food, water and shelter.",
+      "Say who looks after it each day."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A pet can look after itself without any help.",
+      "hint": "Who gives it food and water?",
+      "explanation": "A pet depends on people to care for it.",
+      "skill_tag": "needs.chk2",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Animals need food, water, air and shelter",
+      "Parents care for their young",
+      "We must care for pets every day"
+     ],
+     "say": "Let us remember. Animals need food, water, air and shelter. We care for our pets."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "food",
+       "meaning": "What an animal eats to get energy."
+      },
+      {
+       "term": "shelter",
+       "meaning": "A safe place to rest and hide."
+      },
+      {
+       "term": "care",
+       "meaning": "Looking after someone or something."
+      },
+      {
+       "term": "hutch",
+       "meaning": "A small wooden house for a rabbit."
+      },
+      {
+       "term": "trough",
+       "meaning": "A long bowl that holds water or food for animals."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a pet rabbit need every day?",
+     "hint": "Think of what keeps it alive.",
+     "explanation": "Pets need food and water every day.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A phone"
+      },
+      {
+       "id": "b",
+       "text": "Food and water"
+      },
+      {
+       "id": "c",
+       "text": "A toy car"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A shelter is a safe place to rest.",
+     "hint": "Think of a hutch or a barn.",
+     "explanation": "A shelter keeps an animal safe.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who cares for a lamb?",
+     "hint": "Think about milk.",
+     "explanation": "A mother sheep feeds and protects her lamb.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A stone"
+      },
+      {
+       "id": "b",
+       "text": "Its mother"
+      },
+      {
+       "id": "c",
+       "text": "A lorry"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "short_text",
+    "prompt": "What do we call a baby cow?",
+    "hint": "It starts with c.",
+    "explanation": "A baby cow is a calf.",
+    "answer": {
+     "accepted": [
+      "calf",
+      "a calf"
+     ]
+    },
+    "skill_tag": "newlife.baby_cow",
+    "sub_lesson": "young",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "match",
+    "prompt": "Match each baby to its parent.",
+    "hint": "Think about a farm.",
+    "explanation": "A chick belongs to a hen, a calf to a cow and a kitten to a cat.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Chick"
+     },
+     {
+      "id": "l2",
+      "text": "Calf"
+     },
+     {
+      "id": "l3",
+      "text": "Kitten"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Cat"
+     },
+     {
+      "id": "r1",
+      "text": "Hen"
+     },
+     {
+      "id": "r2",
+      "text": "Cow"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.parent_match",
+    "sub_lesson": "young",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a bird cannot lay eggs. Is she right?",
+    "hint": "Think of a hen.",
+    "explanation": "All birds lay eggs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only fish lay eggs"
+     },
+     {
+      "id": "b",
+      "text": "No, all birds lay eggs"
+     },
+     {
+      "id": "c",
+      "text": "Yes, birds have live babies"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.bird_eggs",
+    "sub_lesson": "young",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a caterpillar is a different animal from a butterfly. Is she right?",
+    "hint": "Think about the life cycle.",
+    "explanation": "A caterpillar is the young stage of a butterfly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are never linked"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a butterfly eats caterpillars"
+     },
+     {
+      "id": "c",
+      "text": "No, the caterpillar turns into the butterfly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.caterpillar_diff",
+    "sub_lesson": "young",
+    "depth": "reason"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the baby bird.",
+    "hint": "It is small and yellow.",
+    "explanation": "A chick is a baby bird.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐥",
+       "label": "Chick",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐔",
+       "label": "Hen",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥚",
+       "label": "Egg",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "newlife.baby_bird_tap",
+    "sub_lesson": "young",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says every baby animal looks like its parent. Is he right?",
+    "hint": "Think about a tadpole.",
+    "explanation": "Some young animals look very different from their parents.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every baby looks the same as its parent"
+     },
+     {
+      "id": "b",
+      "text": "Yes, babies are always the same size"
+     },
+     {
+      "id": "c",
+      "text": "No, a tadpole looks very different from a frog"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.same_looks",
+    "sub_lesson": "young",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "short_text",
+    "prompt": "What do we call a baby frog before it has legs?",
+    "hint": "It has a tail.",
+    "explanation": "A baby frog is called a tadpole.",
+    "answer": {
+     "accepted": [
+      "tadpole",
+      "a tadpole"
+     ]
+    },
+    "skill_tag": "newlife.baby_frog_st",
+    "sub_lesson": "young",
+    "depth": "recall"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about hens.",
+    "hint": "Think about a farm.",
+    "explanation": "A hen lays an egg and a chick hatches from it.",
+    "points": 2,
+    "text": "A hen lays an {b1}. A {b2} hatches from it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stone"
+       },
+       {
+        "id": "b",
+        "text": "egg"
+       },
+       {
+        "id": "c",
+        "text": "seed"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "calf"
+       },
+       {
+        "id": "b",
+        "text": "chick"
+       },
+       {
+        "id": "c",
+        "text": "kitten"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "newlife.egg_fill",
+    "sub_lesson": "young",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the life of a chicken in order.",
+    "hint": "An egg comes first.",
+    "explanation": "An egg hatches into a chick, and the chick grows into a hen.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Hen"
+     },
+     {
+      "id": "i1",
+      "text": "Egg"
+     },
+     {
+      "id": "i2",
+      "text": "Chick"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "newlife.hen_order",
+    "sub_lesson": "cycles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "number",
+    "prompt": "A chicken's life has 3 stages: egg, chick and hen. How many stages is that?",
+    "hint": "Count them.",
+    "explanation": "Egg, chick and hen make 3 stages.",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.stage_count",
+    "sub_lesson": "cycles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "Which two animals lay eggs? Pick two.",
+    "hint": "Think about a farm and a pond.",
+    "explanation": "Hens and frogs lay eggs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A frog"
+     },
+     {
+      "id": "b",
+      "text": "A cat"
+     },
+     {
+      "id": "c",
+      "text": "A dog"
+     },
+     {
+      "id": "d",
+      "text": "A hen"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "newlife.lay_eggs_ms",
+    "sub_lesson": "cycles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Layla says a frog only has two stages in its life. Is she right?",
+    "hint": "Think about frogspawn.",
+    "explanation": "A frog has four stages.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only egg and frog"
+     },
+     {
+      "id": "b",
+      "text": "No, a frog has egg, tadpole, froglet and frog"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tadpoles are not part of it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.frog_stages",
+    "sub_lesson": "cycles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A butterfly has 4 stages. Zainab has seen 2. Slide to show how many are left to see.",
+    "hint": "4 take away 2.",
+    "explanation": "4 - 2 = 2 stages.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6,
+     "unit": "stages"
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.stages_left",
+    "sub_lesson": "cycles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Ali says only people have a life cycle. Is he right?",
+    "hint": "Think about frogs and hens.",
+    "explanation": "All living things have a life cycle.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only people have one"
+     },
+     {
+      "id": "b",
+      "text": "Yes, animals just stay the same"
+     },
+     {
+      "id": "c",
+      "text": "No, every animal and plant has a life cycle"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.only_people",
+    "sub_lesson": "cycles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "match",
+    "prompt": "Match each stage to its animal.",
+    "hint": "Think about each life cycle.",
+    "explanation": "Frogspawn belongs to a frog, a chrysalis to a butterfly and a chick to a hen.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Frogspawn"
+     },
+     {
+      "id": "l2",
+      "text": "Chrysalis"
+     },
+     {
+      "id": "l3",
+      "text": "Chick"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Hen"
+     },
+     {
+      "id": "r1",
+      "text": "Frog"
+     },
+     {
+      "id": "r2",
+      "text": "Butterfly"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.stage_match",
+    "sub_lesson": "cycles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the stage that is NOT part of a frog's life.",
+    "hint": "Which one is an insect?",
+    "explanation": "A butterfly is not part of a frog's life cycle.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🫧",
+       "label": "Frogspawn",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐸",
+       "label": "Frog",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🦋",
+       "label": "Butterfly",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "newlife.not_stage",
+    "sub_lesson": "cycles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "order",
+    "prompt": "Put the stages of a person's life in order.",
+    "hint": "A baby comes first.",
+    "explanation": "A baby grows into a child, then an adult, then an older adult.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Child"
+     },
+     {
+      "id": "i3",
+      "text": "Adult"
+     },
+     {
+      "id": "i1",
+      "text": "Baby"
+     },
+     {
+      "id": "i4",
+      "text": "Older adult"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "newlife.people_order",
+    "sub_lesson": "growing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Which is a sign that a child is growing?",
+    "hint": "Think about size.",
+    "explanation": "Growing feet make shoes feel too small.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They get a new name"
+     },
+     {
+      "id": "b",
+      "text": "Their shoes feel too small"
+     },
+     {
+      "id": "c",
+      "text": "They like a different colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.growth_sign",
+    "sub_lesson": "growing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "slider",
+    "prompt": "Amna was 90 cm tall. She grew 6 cm. Slide to show how tall she is now.",
+    "hint": "90 + 6.",
+    "explanation": "90 + 6 = 96 cm.",
+    "range": {
+     "step": 1,
+     "min": 80,
+     "max": 120,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 96,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.height_sld",
+    "sub_lesson": "growing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Mira says adults stop changing. Is she right?",
+    "hint": "Think about grandparents.",
+    "explanation": "Adults keep changing as they get older.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, adults get younger"
+     },
+     {
+      "id": "b",
+      "text": "No, adults change too. Their hair can turn grey"
+     },
+     {
+      "id": "c",
+      "text": "Yes, adults never change"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.adults_change",
+    "sub_lesson": "growing",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says babies do not need food. Is he right?",
+    "hint": "Think about a baby's bottle.",
+    "explanation": "Babies need milk to grow.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, babies eat stones"
+     },
+     {
+      "id": "b",
+      "text": "No, babies need milk to grow"
+     },
+     {
+      "id": "c",
+      "text": "Yes, babies need nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.babies_food",
+    "sub_lesson": "growing",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "true_false",
+    "prompt": "Children lose their baby teeth and grow bigger teeth.",
+    "hint": "Think of a wobbly tooth.",
+    "explanation": "Baby teeth fall out and bigger teeth grow in.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "newlife.teeth_tf",
+    "sub_lesson": "growing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "match",
+    "prompt": "Match each age to what a person can do.",
+    "hint": "Think about each age.",
+    "explanation": "Babies drink milk, children go to school and adults go to work.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Baby"
+     },
+     {
+      "id": "l2",
+      "text": "Child"
+     },
+     {
+      "id": "l3",
+      "text": "Adult"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Goes to school"
+     },
+     {
+      "id": "r3",
+      "text": "Goes to work"
+     },
+     {
+      "id": "r1",
+      "text": "Drinks milk"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.age_match",
+    "sub_lesson": "growing",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multi_select",
+    "prompt": "Which two things does every animal need? Pick two.",
+    "hint": "Think about staying alive.",
+    "explanation": "Every animal needs water and food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A toy"
+     },
+     {
+      "id": "b",
+      "text": "A bed with pillows"
+     },
+     {
+      "id": "c",
+      "text": "Food"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "newlife.needs_ms",
+    "sub_lesson": "needs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q25",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a pet.",
+    "hint": "Think about a rabbit.",
+    "explanation": "A pet needs food, water, a safe home and care.",
+    "points": 2,
+    "text": "A pet needs food, {b1}, a safe {b2} and care.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sand"
+       },
+       {
+        "id": "b",
+        "text": "water"
+       },
+       {
+        "id": "c",
+        "text": "paint"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "phone"
+       },
+       {
+        "id": "b",
+        "text": "tree"
+       },
+       {
+        "id": "c",
+        "text": "home"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "newlife.pet_fill",
+    "sub_lesson": "needs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zainab's rabbit hutch has food and a roof but no water bowl. What is missing?",
+    "hint": "What does the rabbit drink from?",
+    "explanation": "The rabbit needs water to drink.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Air"
+     },
+     {
+      "id": "b",
+      "text": "Water"
+     },
+     {
+      "id": "c",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.missing_need",
+    "sub_lesson": "needs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "Food, water, air and shelter: how many needs is that?",
+    "hint": "Count them.",
+    "explanation": "Food, water, air and shelter make 4 needs.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.count_needs",
+    "sub_lesson": "needs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Omar says a fish needs different things from a cow to stay alive. Is he right?",
+    "hint": "Think about the four needs.",
+    "explanation": "All animals need food, water, air and shelter, each in their own way.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, cows need no water"
+     },
+     {
+      "id": "b",
+      "text": "No, all animals need food, water, air and shelter"
+     },
+     {
+      "id": "c",
+      "text": "Yes, fish need nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.diff_needs",
+    "sub_lesson": "needs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "hotspot",
+    "prompt": "Tap the best shelter for a hen.",
+    "hint": "Where does a hen sleep?",
+    "explanation": "A hen house keeps a hen safe.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛖",
+       "label": "Hen house",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌵",
+       "label": "Cactus",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "newlife.shelter_tap",
+    "sub_lesson": "needs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "true_false",
+    "prompt": "A farmer cares for animals by giving them food, water and shelter.",
+    "hint": "Think about a farm.",
+    "explanation": "Farmers look after their animals.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "newlife.farmer_tf",
+    "sub_lesson": "needs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "short_text",
+    "prompt": "What do we call a baby sheep?",
+    "hint": "It starts with l.",
+    "explanation": "A baby sheep is a lamb.",
+    "answer": {
+     "accepted": [
+      "lamb",
+      "a lamb"
+     ]
+    },
+    "skill_tag": "newlife.baby_cow",
+    "sub_lesson": "young",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "match",
+    "prompt": "Join each young animal to its parent.",
+    "hint": "Think about a farm.",
+    "explanation": "A lamb belongs to a sheep, a puppy to a dog and a duckling to a duck.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Lamb"
+     },
+     {
+      "id": "l2",
+      "text": "Puppy"
+     },
+     {
+      "id": "l3",
+      "text": "Duckling"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Duck"
+     },
+     {
+      "id": "r1",
+      "text": "Sheep"
+     },
+     {
+      "id": "r2",
+      "text": "Dog"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.parent_match",
+    "sub_lesson": "young",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says only hens lay eggs. Is he right?",
+    "hint": "Think of a duck.",
+    "explanation": "All birds lay eggs, not only hens.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, other birds do not have babies"
+     },
+     {
+      "id": "b",
+      "text": "No, many birds lay eggs, such as ducks and sparrows"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only hens lay eggs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.bird_eggs",
+    "sub_lesson": "young",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a tadpole and a frog are different animals. Is she right?",
+    "hint": "Think about the life cycle.",
+    "explanation": "A tadpole is the young stage of a frog.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tadpoles are fish"
+     },
+     {
+      "id": "b",
+      "text": "No, a tadpole grows into a frog"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they never meet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.caterpillar_diff",
+    "sub_lesson": "young",
+    "depth": "reason",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the baby dog.",
+    "hint": "It is small and playful.",
+    "explanation": "A puppy is a baby dog.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐕",
+       "label": "Dog",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐶",
+       "label": "Puppy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐈",
+       "label": "Cat",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "newlife.baby_bird_tap",
+    "sub_lesson": "young",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Mira says a caterpillar looks like a butterfly. Is she right?",
+    "hint": "Look at their bodies.",
+    "explanation": "A caterpillar looks very different from a butterfly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they look the same"
+     },
+     {
+      "id": "b",
+      "text": "No, a caterpillar has no wings and looks very different"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both have big wings"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.same_looks",
+    "sub_lesson": "young",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "short_text",
+    "prompt": "What do we call a baby cat?",
+    "hint": "It starts with k.",
+    "explanation": "A baby cat is a kitten.",
+    "answer": {
+     "accepted": [
+      "kitten",
+      "a kitten"
+     ]
+    },
+    "skill_tag": "newlife.baby_frog_st",
+    "sub_lesson": "young",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about cows.",
+    "hint": "Think about a baby cow.",
+    "explanation": "A cow has a calf, and the calf drinks milk.",
+    "points": 2,
+    "text": "A cow gives birth to a {b1}. It drinks {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "chick"
+       },
+       {
+        "id": "b",
+        "text": "calf"
+       },
+       {
+        "id": "c",
+        "text": "tadpole"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "soup"
+       },
+       {
+        "id": "b",
+        "text": "milk"
+       },
+       {
+        "id": "c",
+        "text": "juice"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "newlife.egg_fill",
+    "sub_lesson": "young",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Order the frog's life, from first to last.",
+    "hint": "Frogspawn comes first.",
+    "explanation": "Frogspawn hatches into a tadpole, then a froglet, then a frog.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Tadpole"
+     },
+     {
+      "id": "i3",
+      "text": "Froglet"
+     },
+     {
+      "id": "i4",
+      "text": "Frog"
+     },
+     {
+      "id": "i1",
+      "text": "Frogspawn"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "newlife.hen_order",
+    "sub_lesson": "cycles",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "number",
+    "prompt": "A butterfly has 4 stages: egg, caterpillar, chrysalis and butterfly. How many stages is that?",
+    "hint": "Count them.",
+    "explanation": "There are 4 stages.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.stage_count",
+    "sub_lesson": "cycles",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multi_select",
+    "prompt": "Which two animals start life as an egg? Pick two.",
+    "hint": "Think about a pond and a garden.",
+    "explanation": "Butterflies and ducks hatch from eggs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A duck"
+     },
+     {
+      "id": "b",
+      "text": "A lamb"
+     },
+     {
+      "id": "c",
+      "text": "A kitten"
+     },
+     {
+      "id": "d",
+      "text": "A butterfly"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "newlife.lay_eggs_ms",
+    "sub_lesson": "cycles",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a butterfly goes straight from egg to butterfly. Is he right?",
+    "hint": "Think about the caterpillar.",
+    "explanation": "A butterfly has four stages.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, there are no stages in between"
+     },
+     {
+      "id": "b",
+      "text": "Yes, caterpillars are a different animal"
+     },
+     {
+      "id": "c",
+      "text": "No, it is a caterpillar and a chrysalis first"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.frog_stages",
+    "sub_lesson": "cycles",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A frog has 4 stages. Hamza has seen 1. Slide to show how many are left to see.",
+    "hint": "4 take away 1.",
+    "explanation": "4 - 1 = 3 stages.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6,
+     "unit": "stages"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.stages_left",
+    "sub_lesson": "cycles",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Sana says a lamb never changes. Is she right?",
+    "hint": "Think about how it grows.",
+    "explanation": "A lamb grows into an adult sheep.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it turns into a frog"
+     },
+     {
+      "id": "b",
+      "text": "No, a lamb grows into a sheep"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it stays a lamb for ever"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.only_people",
+    "sub_lesson": "cycles",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "match",
+    "prompt": "Join each stage to its animal.",
+    "hint": "Think about each life cycle.",
+    "explanation": "A tadpole becomes a frog, a caterpillar a butterfly and a duck starts as an egg.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tadpole"
+     },
+     {
+      "id": "l2",
+      "text": "Caterpillar"
+     },
+     {
+      "id": "l3",
+      "text": "Egg"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Duck"
+     },
+     {
+      "id": "r1",
+      "text": "Frog"
+     },
+     {
+      "id": "r2",
+      "text": "Butterfly"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.stage_match",
+    "sub_lesson": "cycles",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the stage that is NOT part of a hen's life.",
+    "hint": "Which one belongs to a butterfly?",
+    "explanation": "A caterpillar is not part of a hen's life cycle.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🥚",
+       "label": "Egg",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐛",
+       "label": "Caterpillar",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐔",
+       "label": "Hen",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "newlife.not_stage",
+    "sub_lesson": "cycles",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "order",
+    "prompt": "Arrange the stages of growing up.",
+    "hint": "A baby comes first.",
+    "explanation": "A baby becomes a toddler, a child and then an adult.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Child"
+     },
+     {
+      "id": "i4",
+      "text": "Adult"
+     },
+     {
+      "id": "i2",
+      "text": "Toddler"
+     },
+     {
+      "id": "i1",
+      "text": "Baby"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "newlife.people_order",
+    "sub_lesson": "growing",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "What changes as a baby grows into a child?",
+    "hint": "Think about size and teeth.",
+    "explanation": "A child gets taller and grows teeth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It never changes"
+     },
+     {
+      "id": "b",
+      "text": "It gets taller and gets teeth"
+     },
+     {
+      "id": "c",
+      "text": "It gets smaller"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.growth_sign",
+    "sub_lesson": "growing",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "slider",
+    "prompt": "Bilal was 100 cm tall. He grew 5 cm. Slide to show how tall he is now.",
+    "hint": "100 + 5.",
+    "explanation": "100 + 5 = 105 cm.",
+    "range": {
+     "step": 1,
+     "min": 80,
+     "max": 120,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 105,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.height_sld",
+    "sub_lesson": "growing",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Hana says grown-ups never change at all. Is she right?",
+    "hint": "Think about grandparents.",
+    "explanation": "People change all their lives.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they shrink to babies"
+     },
+     {
+      "id": "b",
+      "text": "No, bodies and hair change as people get older"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they stay the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.adults_change",
+    "sub_lesson": "growing",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Mira says a newborn lamb does not need to drink. Is she right?",
+    "hint": "Think about a lamb and its mother.",
+    "explanation": "A newborn lamb drinks milk.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, lambs only eat grass at birth"
+     },
+     {
+      "id": "b",
+      "text": "No, a lamb drinks its mother's milk"
+     },
+     {
+      "id": "c",
+      "text": "Yes, lambs need nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "newlife.babies_food",
+    "sub_lesson": "growing",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "true_false",
+    "prompt": "A person keeps the same teeth all their life.",
+    "hint": "Think of a wobbly tooth.",
+    "explanation": "Children lose their baby teeth.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "newlife.teeth_tf",
+    "sub_lesson": "growing",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "match",
+    "prompt": "Join each age to what a person does.",
+    "hint": "Think about each age.",
+    "explanation": "Toddlers learn to walk, children play and learn, and older adults may have grandchildren.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Toddler"
+     },
+     {
+      "id": "l2",
+      "text": "Child"
+     },
+     {
+      "id": "l3",
+      "text": "Older adult"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Plays and learns"
+     },
+     {
+      "id": "r3",
+      "text": "Has grandchildren"
+     },
+     {
+      "id": "r1",
+      "text": "Learns to walk"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "newlife.age_match",
+    "sub_lesson": "growing",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multi_select",
+    "prompt": "Which two do all animals need to stay alive? Pick two.",
+    "hint": "Think about breathing and safety.",
+    "explanation": "Animals need air and shelter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shelter"
+     },
+     {
+      "id": "b",
+      "text": "Games"
+     },
+     {
+      "id": "c",
+      "text": "Music"
+     },
+     {
+      "id": "d",
+      "text": "Air"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "newlife.needs_ms",
+    "sub_lesson": "needs",
+    "depth": "recall",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about animals.",
+    "hint": "Think about eating.",
+    "explanation": "Food gives animals energy.",
+    "points": 2,
+    "text": "Animals need {b1} to give them {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "paint"
+       },
+       {
+        "id": "b",
+        "text": "toys"
+       },
+       {
+        "id": "c",
+        "text": "food"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "feathers"
+       },
+       {
+        "id": "b",
+        "text": "energy"
+       },
+       {
+        "id": "c",
+        "text": "wheels"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "newlife.pet_fill",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "A hamster has food, water and a cage, but the cage has no cover and is in the cold. What is missing?",
+    "hint": "Think about a safe place to rest.",
+    "explanation": "A hamster needs a warm, safe shelter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "More toys"
+     },
+     {
+      "id": "b",
+      "text": "A mirror"
+     },
+     {
+      "id": "c",
+      "text": "A warm shelter"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.missing_need",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "A pet needs food, water, air, shelter and care. How many needs is that?",
+    "hint": "Count them.",
+    "explanation": "There are 5 needs.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "newlife.count_needs",
+    "sub_lesson": "needs",
+    "depth": "recall",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says only pets need water. Is she right?",
+    "hint": "Think about a deer in a forest.",
+    "explanation": "All animals need water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only pets drink"
+     },
+     {
+      "id": "b",
+      "text": "Yes, wild animals never drink"
+     },
+     {
+      "id": "c",
+      "text": "No, all animals need water"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "newlife.diff_needs",
+    "sub_lesson": "needs",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "hotspot",
+    "prompt": "Tap the best home for a duck.",
+    "hint": "Ducks swim.",
+    "explanation": "A pond gives a duck water and shelter.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪷",
+       "label": "Pond",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏜️",
+       "label": "Desert",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧊",
+       "label": "Ice",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "newlife.shelter_tap",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "true_false",
+    "prompt": "Pets can look after themselves with no help from people.",
+    "hint": "Who gives them food?",
+    "explanation": "Pets depend on people.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "newlife.farmer_tf",
+    "sub_lesson": "needs",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

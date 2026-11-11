@@ -129,38 +129,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome, data detective!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how can we find answers by counting clues?\n\nWe will sort, tally and make graphs.",
-   "say": "Welcome, data detective! Today's big question: how can we find answers by counting? Detectives collect clues, sort them, count them and draw them. By the end you will make a tally, read a pictogram, and answer questions from a graph. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🔍",
-   "alt": "Data detectives collect clues and count them.",
-   "caption": "Data detectives collect clues and count them."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "clues",
-     "meaning": "Pieces of information that help us find out."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "sorting",
    "kind": "learn",
    "title": "Sorting and tally marks",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, data detective!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how can counting answer a question?",
+     "say": "Today we find answers by sorting and counting."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-data-detectives-1-551d0e10.jpg",
+     "alt": "Wooden blocks in many colours laid in rows",
+     "caption": "Blocks can be sorted by colour.",
+     "credit": "Photo by Michael Dziedzic on Unsplash",
+     "say": "These blocks come in many colours. Colour is one attribute we can sort by."
+    },
     {
      "type": "heading",
      "text": "Stop 1: Sorting into groups"
@@ -389,6 +381,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's block survey",
+     "asset": "clip-data-ai-class-1-data-detectives-7570c458.mp4",
+     "poster": "clip-data-ai-class-1-data-detectives-7570c458.webp",
+     "seconds": 68,
+     "transcript": "Zainab has a pile of coloured blocks. She wants to find out something. First she sorts them. Colour is one attribute of a block. She makes tally marks. Four strokes, then one across makes five. Red has two bundles of five. That is ten red blocks. Now she draws a pictogram. Each picture is one block. The longest row has the most. Red has the most blocks. Red has ten and blue has six. Red has four more. Zainab found her answer. Counting clues is detective work!",
+     "caption": "Zainab sorts, counts and makes a pictogram."
+    },
+    {
      "type": "summary",
      "points": [
       "Sorting puts alike things in a group",
@@ -399,6 +404,14 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "attribute",
+       "meaning": "Something that describes a thing, like its colour or size."
+      },
+      {
+       "term": "compare",
+       "meaning": "To look at two things and say how they differ."
+      },
       {
        "term": "data",
        "meaning": "Information we collect."
@@ -494,6 +507,14 @@
     {
      "type": "heading",
      "text": "Stop 1: Pictures that count"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-data-detectives-2-b27e7ba0.jpg",
+     "alt": "A basket of bananas, apples and an orange",
+     "caption": "A fruit basket is full of data to count.",
+     "credit": "Photo by Ray Shrewsberry on Unsplash",
+     "say": "A fruit basket is good for counting. How many of each kind?"
     },
     {
      "type": "text",
@@ -997,7 +1018,7 @@
      "emoji": "🔍📊",
      "alt": "Ask, collect, tally, graph, share.",
      "caption": "Ask, collect, tally, graph, share.",
-     "say": "Ask a question, collect the data, tally it, draw a graph and share what you found."
+     "say": "Ask a question, collect data and tally it. Then draw a graph and share."
     },
     {
      "type": "activity",
@@ -1540,6 +1561,441 @@
     ],
     "sub_lesson": "use_data",
     "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about attributes.",
+    "hint": "Think about how we describe things.",
+    "explanation": "An attribute tells us about a thing, such as its colour or size.",
+    "skill_tag": "data.attribute",
+    "points": 2,
+    "text": "An {b1} tells us about a thing, like its colour or {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "answer"
+       },
+       {
+        "id": "b",
+        "text": "attribute"
+       },
+       {
+        "id": "c",
+        "text": "apple"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "size"
+       },
+       {
+        "id": "c",
+        "text": "loop"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multi_select",
+    "prompt": "Which two are attributes of a red ball? Pick two.",
+    "hint": "Look at the ball.",
+    "explanation": "A red ball is red and round.",
+    "skill_tag": "data.attribute",
+    "options": [
+     {
+      "id": "a",
+      "text": "Round"
+     },
+     {
+      "id": "b",
+      "text": "Loud"
+     },
+     {
+      "id": "c",
+      "text": "Sleepy"
+     },
+     {
+      "id": "d",
+      "text": "Red"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "match",
+    "prompt": "Match each thing to one of its attributes.",
+    "hint": "Think about each thing.",
+    "explanation": "Each attribute describes the thing.",
+    "skill_tag": "data.attribute",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Banana"
+     },
+     {
+      "id": "l2",
+      "text": "Ball"
+     },
+     {
+      "id": "l3",
+      "text": "Brick"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Hard"
+     },
+     {
+      "id": "r1",
+      "text": "Yellow"
+     },
+     {
+      "id": "r2",
+      "text": "Round"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "slider",
+    "prompt": "A tally has two bundles of five and 3 strokes. Slide to show the votes.",
+    "hint": "Count in fives: 5, 10, then 3 more.",
+    "explanation": "5 + 5 + 3 = 13 votes.",
+    "skill_tag": "data.tally",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "hotspot",
+    "prompt": "Tap the yes or no question that splits a group.",
+    "hint": "Which one can be answered yes or no?",
+    "explanation": "Is it red? has a yes or no answer, so it splits the group.",
+    "skill_tag": "data.sorting",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "Is it red?",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "❓",
+       "label": "What is your name?",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "❓",
+       "label": "Tell me a story",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "true_false",
+    "prompt": "To find the total of all the votes, we add every row.",
+    "hint": "Total means all together.",
+    "explanation": "The total is every row added up.",
+    "skill_tag": "data.compare",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "recall"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put the steps for making a graph in order.",
+    "hint": "What first?",
+    "explanation": "Count, draw, then add a title.",
+    "skill_tag": "data.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add a title"
+     },
+     {
+      "id": "i1",
+      "text": "Count each group"
+     },
+     {
+      "id": "i2",
+      "text": "Draw the pictures or blocks"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Zain puts colour and size in one pictogram row. Is that a clear chart?",
+    "hint": "One chart, one attribute.",
+    "explanation": "Mixing attributes makes the chart confusing.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, more is always better"
+     },
+     {
+      "id": "b",
+      "text": "No. One chart should show one attribute at a time"
+     },
+     {
+      "id": "c",
+      "text": "Yes, pictograms need two"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "A pictogram key says one picture means 2 votes. There are 4 pictures. Sam says 4 votes. Is he right?",
+    "hint": "Read the key first.",
+    "explanation": "4 pictures of 2 votes each make 8 votes.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 votes"
+     },
+     {
+      "id": "b",
+      "text": "No, 2 votes"
+     },
+     {
+      "id": "c",
+      "text": "No. 4 pictures mean 8 votes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Omar says we should count the votes before choosing a game. Why is that a good idea?",
+    "hint": "What does the data tell us?",
+    "explanation": "Comparing data helps us make a fair choice.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Counting is quicker than playing"
+     },
+     {
+      "id": "b",
+      "text": "The data shows which game most children like"
+     },
+     {
+      "id": "c",
+      "text": "Data is always wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Sara counts a tally of one bundle of five and 2 strokes as 8. Is she right?",
+    "hint": "Count in fives, then add.",
+    "explanation": "5 + 2 = 7, not 8.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 8"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 6"
+     },
+     {
+      "id": "c",
+      "text": "No. 5 and 2 make 7"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "A pictogram shows 7 cats and 3 fish. How many more cats than fish?",
+    "hint": "Take 3 away from 7.",
+    "explanation": "7 - 3 = 4 more cats.",
+    "skill_tag": "data.compare",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "pictograms",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Which chart helps us see which pet is the most popular?",
+    "hint": "Think about tall stacks.",
+    "explanation": "The tallest stack of a block graph shows the most popular.",
+    "skill_tag": "data.pictogram",
+    "options": [
+     {
+      "id": "a",
+      "text": "A drawing of a house"
+     },
+     {
+      "id": "b",
+      "text": "A story"
+     },
+     {
+      "id": "c",
+      "text": "A block graph"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Votes: tag 7, skipping 4, hide and seek 5. Which game has the fewest votes?",
+    "hint": "Find the smallest number.",
+    "explanation": "4 is the smallest, so skipping has the fewest.",
+    "skill_tag": "data.read",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tag"
+     },
+     {
+      "id": "b",
+      "text": "Hide and seek"
+     },
+     {
+      "id": "c",
+      "text": "Skipping"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Which word names an attribute of a mango?",
+    "hint": "An attribute describes a thing.",
+    "explanation": "Sweet describes a mango.",
+    "skill_tag": "data.attribute",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tuesday"
+     },
+     {
+      "id": "b",
+      "text": "Quickly"
+     },
+     {
+      "id": "c",
+      "text": "Sweet"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall"
    },
    {
     "ref": "q1a",
@@ -2414,6 +2870,461 @@
     "sub_lesson": "use_data",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about comparing.",
+    "hint": "Think about picking a winner.",
+    "explanation": "We compare data to find the most votes.",
+    "skill_tag": "data.compare",
+    "points": 2,
+    "text": "We {b1} data to find out which has the {b2} votes.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hide"
+       },
+       {
+        "id": "b",
+        "text": "lose"
+       },
+       {
+        "id": "c",
+        "text": "compare"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "blue"
+       },
+       {
+        "id": "b",
+        "text": "most"
+       },
+       {
+        "id": "c",
+        "text": "soft"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multi_select",
+    "prompt": "Which two are attributes of a mango? Pick two.",
+    "hint": "Think about a mango.",
+    "explanation": "A mango can be yellow and sweet.",
+    "skill_tag": "data.attribute",
+    "options": [
+     {
+      "id": "a",
+      "text": "Barking"
+     },
+     {
+      "id": "b",
+      "text": "Fast"
+     },
+     {
+      "id": "c",
+      "text": "Sweet"
+     },
+     {
+      "id": "d",
+      "text": "Yellow"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "match",
+    "prompt": "Join each thing to one of its attributes.",
+    "hint": "Think about each thing.",
+    "explanation": "Each attribute describes the thing.",
+    "skill_tag": "data.attribute",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Ice cube"
+     },
+     {
+      "id": "l2",
+      "text": "Feather"
+     },
+     {
+      "id": "l3",
+      "text": "Rock"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Light"
+     },
+     {
+      "id": "r1",
+      "text": "Cold"
+     },
+     {
+      "id": "r3",
+      "text": "Heavy"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "slider",
+    "prompt": "A tally has three bundles of five and 2 strokes. Slide to show the votes.",
+    "hint": "Count in fives: 5, 10, 15, then 2 more.",
+    "explanation": "15 + 2 = 17 votes.",
+    "skill_tag": "data.tally",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 17,
+     "tolerance": 0
+    },
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "hotspot",
+    "prompt": "Tap the question we can answer with a tally.",
+    "hint": "Which one gives votes to count?",
+    "explanation": "Children can vote for a pet, so we can tally.",
+    "skill_tag": "data.tally",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "Which pet do you like best?",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "❓",
+       "label": "Why is the sky blue?",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "❓",
+       "label": "Sing a song",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "true_false",
+    "prompt": "To find the total votes, we only look at the tallest row.",
+    "hint": "Total means all together.",
+    "explanation": "The total needs every row added.",
+    "skill_tag": "data.compare",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "recall",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Put these in order for a class vote.",
+    "hint": "What first?",
+    "explanation": "Ask, vote, count, then say who won.",
+    "skill_tag": "data.process",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Each child votes"
+     },
+     {
+      "id": "i3",
+      "text": "Count the tally"
+     },
+     {
+      "id": "i4",
+      "text": "Say which won"
+     },
+     {
+      "id": "i1",
+      "text": "Ask the question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Mina sorts by shape and colour in the same chart. Is that clear?",
+    "hint": "One chart, one attribute.",
+    "explanation": "Mixing attributes makes a chart confusing.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is clearer"
+     },
+     {
+      "id": "b",
+      "text": "Yes, charts need two"
+     },
+     {
+      "id": "c",
+      "text": "No. Choose one attribute for each chart"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "The key says one picture means 2 votes. There are 3 pictures. Aisha says 3 votes. Is she right?",
+    "hint": "Read the key first.",
+    "explanation": "3 pictures of 2 votes each make 6 votes.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 2 votes"
+     },
+     {
+      "id": "b",
+      "text": "No. 3 pictures mean 6 votes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 3 votes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Layla says she can guess the favourite pet without asking. Why is asking better?",
+    "hint": "What does the data tell us?",
+    "explanation": "Data shows real choices, not guesses.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Guessing is always right"
+     },
+     {
+      "id": "b",
+      "text": "Asking is a waste of time"
+     },
+     {
+      "id": "c",
+      "text": "Asking shows what everyone really chose"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "reason",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben counts two bundles of five and 1 stroke as 12. Is he right?",
+    "hint": "Count in fives, then add.",
+    "explanation": "10 + 1 = 11, not 12.",
+    "skill_tag": "data.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 12"
+     },
+     {
+      "id": "b",
+      "text": "No. 10 and 1 make 11"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "A pictogram shows 8 dogs and 5 rabbits. How many more dogs than rabbits?",
+    "hint": "Take 5 away from 8.",
+    "explanation": "8 - 5 = 3 more dogs.",
+    "skill_tag": "data.compare",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "pictograms",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Which helps us count votes as children give them?",
+    "hint": "Think about one stroke for each vote.",
+    "explanation": "A tally chart records each vote as it comes.",
+    "skill_tag": "data.tally",
+    "options": [
+     {
+      "id": "a",
+      "text": "A block graph"
+     },
+     {
+      "id": "b",
+      "text": "A tally chart"
+     },
+     {
+      "id": "c",
+      "text": "A pillow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pictograms",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Votes: cats 6, dogs 3, fish 8. Which pet has the fewest votes?",
+    "hint": "Find the smallest number.",
+    "explanation": "3 is the smallest, so dogs have the fewest.",
+    "skill_tag": "data.read",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fish"
+     },
+     {
+      "id": "b",
+      "text": "Dogs"
+     },
+     {
+      "id": "c",
+      "text": "Cats"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_data",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Which is an attribute of a football?",
+    "hint": "An attribute describes a thing.",
+    "explanation": "Round describes a football.",
+    "skill_tag": "data.attribute",
+    "options": [
+     {
+      "id": "a",
+      "text": "Monday"
+     },
+     {
+      "id": "b",
+      "text": "Round"
+     },
+     {
+      "id": "c",
+      "text": "Slowly"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sorting",
+    "depth": "recall",
+    "variant_of": "q30"
    }
   ]
  }

@@ -1,0 +1,2817 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-translation-grid",
+  "subject": "maths",
+  "title": "Translating Shapes on a Grid",
+  "summary": "Give directions on a grid, translate shapes left, right, up and down, and find new coordinates in the first quadrant.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 12: Translating shapes on a grid",
+  "learning_objectives": [
+   "Give directions on a grid",
+   "Translate a shape left, right, up and down",
+   "Describe a translation with coordinates"
+  ],
+  "tags": [
+   "topic",
+   "topic-12"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 12
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 position",
+    "text": "Describe positions on a 2-D grid as coordinates in the first quadrant; describe movements between positions as translations"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Gp.03"
+   }
+  ],
+  "success_criteria": [
+   "I can give directions using left, right, up and down",
+   "I can slide a shape and keep its size",
+   "I can find new coordinates after a translation"
+  ],
+  "real_life": "Following a map, moving a robot, and tile patterns that slide across a floor.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 4 + 5?",
+    "hint": "Count on from 4.",
+    "explanation": "4 + 5 = 9.",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 7 + 6?",
+    "hint": "Make a ten first.",
+    "explanation": "7 + 3 = 10 and 3 more is 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A square has four equal sides.",
+    "hint": "Think about a square tile.",
+    "explanation": "A square has four equal sides.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "grid_moves",
+   "kind": "learn",
+   "title": "Moves on a grid",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara's robot",
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-translation-grid-1-80e2bc51.jpg",
+     "alt": "Square grey paving slabs laid in a grid with gravel between them",
+     "caption": "Rows and columns of squares make a grid, like the robot grid.",
+     "credit": "Photo by Egor Myznik on Unsplash",
+     "say": "Zara has a tiny robot. It can only move on a grid of squares. It moves left, right, up and down, one square at a time. Let's help the robot find the treasure."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Left, right, up, down",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Right, left, up, down**: say how many squares, and which way.\n\nMove 3 squares right.",
+     "say": "Right moves the robot towards the right edge. Left moves it towards the left edge. Up moves it towards the top. Down moves it towards the bottom. Count the squares carefully."
+    },
+    {
+     "type": "explainer",
+     "title": "Three squares right",
+     "scenes": [
+      {
+       "caption": "start",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🤖",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "start"
+        }
+       ],
+       "say": "The robot starts on a square."
+      },
+      {
+       "caption": "3 right",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🤖",
+         "x": 20,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "start"
+        },
+        {
+         "id": "p",
+         "emoji": "📍",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3 right"
+        }
+       ],
+       "say": "Move three squares right. Count them: one, two, three."
+      },
+      {
+       "caption": "3 right",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🤖",
+         "x": 60,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3 right"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 squares right"
+        }
+       ],
+       "say": "The robot is now on the treasure square."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-translation-grid-d1-735d0c12.png",
+     "alt": "A triangle on a coordinate grid translated 3 right and 2 up",
+     "caption": "Translate 3 right, 2 up.",
+     "say": "Every corner of the triangle moves three right and two up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which way does the robot go to move up?",
+      "hint": "Up is the top of the page.",
+      "explanation": "Up moves towards the top of the grid.",
+      "skill_tag": "translation.direction",
+      "options": [
+       {
+        "id": "a",
+        "text": "Towards the right"
+       },
+       {
+        "id": "b",
+        "text": "Towards the top of the grid"
+       },
+       {
+        "id": "c",
+        "text": "Towards the bottom"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Count the squares",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Count from the start**, one square at a time.\n\nFrom the start, 3 right means you count squares 1, 2, 3.",
+     "say": "Counting squares is easy to get wrong. Start from the robot, not from the edge. Count each square you cross, but do not count the square you start on."
+    },
+    {
+     "type": "image",
+     "emoji": "🔢",
+     "alt": "Count each square crossed, starting after the robot's square.",
+     "caption": "Count each square crossed, starting after the robot's square."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A robot starts at 9 across and moves 4 left. Where is it across now?",
+      "hint": "Count 4 squares back from 9.",
+      "explanation": "9 − 4 = 5.",
+      "skill_tag": "translation.count",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Robo-Zara crosses the courtyard",
+     "asset": "clip-maths-class-4-translation-grid-560cc6cc.mp4",
+     "poster": "clip-maths-class-4-translation-grid-560cc6cc.webp",
+     "seconds": 52,
+     "transcript": "This is a tiled courtyard grid. Zara's tiny robot starts in the corner. The robot moves three squares right, across the courtyard. Then it moves two squares up. Now it is on a new tile. A pattern tile slides one square at a time. It keeps its shape. The treasure is at three across and two up. Across first, then up. The robot found the treasure. Shukriya, Zara!",
+     "caption": "A tiny robot crosses a tiled courtyard grid, and a tile slides one square at a time."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Left and right: across",
+      "Up and down: height",
+      "Count from the start, not the edge"
+     ],
+     "say": "Remember. Right and left change across. Up and down change the height. Count from the start."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "right, left, up, down",
+       "meaning": "The four directions a robot can move on a grid."
+      },
+      {
+       "term": "count from the start",
+       "meaning": "Start counting from the robot's square, not from the edge."
+      },
+      {
+       "term": "grid",
+       "meaning": "Lines that cross to make squares."
+      },
+      {
+       "term": "direction",
+       "meaning": "Which way something moves: left, right, up or down."
+      },
+      {
+       "term": "across",
+       "meaning": "Along the grid from left to right."
+      },
+      {
+       "term": "square",
+       "meaning": "One small box on a grid."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A robot starts at 1 across and moves 4 right. Where is it across now?",
+     "hint": "1 + 4.",
+     "explanation": "1 + 4 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which way is down on a grid?",
+     "hint": "Think of the floor.",
+     "explanation": "Down is towards the bottom.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Towards the top edge"
+      },
+      {
+       "id": "b",
+       "text": "Towards the right edge"
+      },
+      {
+       "id": "c",
+       "text": "Towards the bottom edge"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A robot moving left changes its height.",
+     "hint": "Left goes along the grid.",
+     "explanation": "Left changes the across number only.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these moves in order from the start, first first.",
+     "hint": "Read the order you make them.",
+     "explanation": "Right, up, left in that order.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Up 1"
+      },
+      {
+       "id": "i3",
+       "text": "Left 1"
+      },
+      {
+       "id": "i1",
+       "text": "Right 2"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "slide_shape",
+   "kind": "try",
+   "title": "Slide a shape",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Slide a triangle",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **translation** slides every point the same way.\n\nTriangle: 3 right and 2 up.",
+     "say": "A translation slides a shape. Every point moves the same distance in the same direction. The shape does not turn and does not change size. Here is a triangle that slides 3 squares right and 2 squares up."
+    },
+    {
+     "type": "explainer",
+     "title": "Slide 3 right and 2 up",
+     "scenes": [
+      {
+       "caption": "triangle",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "start"
+        }
+       ],
+       "say": "The triangle starts in the corner."
+      },
+      {
+       "caption": "3 right",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 45,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "start"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "3 right"
+        }
+       ],
+       "say": "Slide it 3 squares right. Every corner moves 3 right."
+      },
+      {
+       "caption": "3 right, 2 up",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 60,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "moved"
+        },
+        {
+         "id": "b",
+         "emoji": "⬆️",
+         "x": 75,
+         "y": 65,
+         "size": 2,
+         "anim": "pulse",
+         "label": "2 up"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Same shape, moved"
+        }
+       ],
+       "say": "Slide it 2 squares up. The shape is the same, only moved."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-translation-grid-d2-1982f801.png",
+     "alt": "Points (3, 2) and (6, 2) on a grid with an arrow labelled 3 right",
+     "caption": "(3, 2) moves 3 right to (6, 2).",
+     "say": "The point moves from three, two to six, two. That is three squares right."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A point at 2 across moves 3 right. Where is it across now?",
+      "hint": "2 + 3.",
+      "explanation": "2 + 3 = 5.",
+      "skill_tag": "translation.slide",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Move point by point",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Move each corner** the same amount, then join them.\n\nA corner at (1, 1) moves 2 right and 1 up to (3, 2).",
+     "say": "To slide a shape, move each corner the same way. Write the new position of each corner. Then join the corners to draw the new shape. It will be the same size and turned the same way."
+    },
+    {
+     "type": "image",
+     "emoji": "🔷",
+     "alt": "Move each corner the same way, then join the new corners.",
+     "caption": "Move each corner the same way, then join the new corners."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A corner at (1, 1) moves 2 right and 1 up. Where is the new corner?",
+      "hint": "Across first, then up.",
+      "explanation": "1 + 2 = 3 across, and 1 + 1 = 2 up.",
+      "skill_tag": "translation.corner",
+      "options": [
+       {
+        "id": "a",
+        "text": "(2, 3)"
+       },
+       {
+        "id": "b",
+        "text": "(3, 2)"
+       },
+       {
+        "id": "c",
+        "text": "(1, 3)"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Slide a shape",
+     "materials": [
+      "Squared paper",
+      "Pencil and ruler"
+     ],
+     "instructions": [
+      "Draw a triangle with corners on the grid.",
+      "Slide each corner 3 right and 1 up.",
+      "Join the new corners.",
+      "Check the shape is the same size."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Every point moves the same way",
+      "Shape stays the same size",
+      "Move each corner, then join"
+     ],
+     "say": "Remember. A translation slides, it does not turn or change size."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "translation",
+       "meaning": "A slide where every point moves the same distance in the same direction."
+      },
+      {
+       "term": "corner",
+       "meaning": "A point where two sides meet."
+      },
+      {
+       "term": "vertex",
+       "meaning": "A corner of a shape."
+      },
+      {
+       "term": "slide",
+       "meaning": "Move a shape without turning it."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A point at 4 across moves 2 right. Where is it now?",
+     "hint": "4 + 2.",
+     "explanation": "4 + 2 = 6.",
+     "answer": {
+      "value": 6,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A translation turns the shape.",
+     "hint": "Think of a slide.",
+     "explanation": "A translation slides and does not turn.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A shape slides 2 right and 2 up. What is the shape like now?",
+     "hint": "Translation keeps the size.",
+     "explanation": "A translation moves the shape but keeps it the same.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A turned shape"
+      },
+      {
+       "id": "b",
+       "text": "The same shape, moved"
+      },
+      {
+       "id": "c",
+       "text": "A bigger shape"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these new x-values in order, smallest first.",
+     "hint": "Compare the numbers.",
+     "explanation": "2, 4, 5.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "4"
+      },
+      {
+       "id": "i1",
+       "text": "5"
+      },
+      {
+       "id": "i2",
+       "text": "2"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "treasure_moves",
+   "kind": "play",
+   "title": "Treasure map moves",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Coordinates in the first quadrant",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**(x, y)**: first across, then up.\n\n(3, 2) is 3 across and 2 up.",
+     "say": "Zara's treasure map has coordinates. The first number is across and the second is up. The point (3, 2) is 3 across and 2 up from the corner. Across first, then up."
+    },
+    {
+     "type": "explainer",
+     "title": "Finding (3, 2)",
+     "scenes": [
+      {
+       "caption": "(0, 0)",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🏁",
+         "x": 15,
+         "y": 80,
+         "size": 2,
+         "anim": "none",
+         "label": "(0, 0)"
+        }
+       ],
+       "say": "Start at the corner, (0, 0)."
+      },
+      {
+       "caption": "3 across",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🏁",
+         "x": 15,
+         "y": 80,
+         "size": 2,
+         "anim": "none",
+         "label": "(0, 0)"
+        },
+        {
+         "id": "d",
+         "emoji": "📍",
+         "x": 60,
+         "y": 80,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3 across"
+        }
+       ],
+       "say": "Move 3 across to the right."
+      },
+      {
+       "caption": "(3, 2)",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🏁",
+         "x": 15,
+         "y": 80,
+         "size": 2,
+         "anim": "none",
+         "label": "(0, 0)"
+        },
+        {
+         "id": "e",
+         "emoji": "📍",
+         "x": 60,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "(3, 2)"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "(3, 2) found"
+        }
+       ],
+       "say": "Move 2 up. The treasure is at (3, 2)."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A point is at 3 across. It moves 4 right. Where is it across now?",
+      "hint": "3 + 4.",
+      "explanation": "3 + 4 = 7.",
+      "skill_tag": "translation.coords",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Right changes x, up changes y",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Right changes x**, and **up changes y**.\n\n(2, 3) moved 3 right is (5, 3).",
+     "say": "Here is a secret. Moving right changes the first number. Moving up changes the second number. Always change the number that matches the direction."
+    },
+    {
+     "type": "image",
+     "emoji": "🗺️",
+     "alt": "Right changes the first number. Up changes the second.",
+     "caption": "Right changes the first number. Up changes the second."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The point (2, 3) moves 3 right. Where is it now?",
+      "hint": "Change only the first number.",
+      "explanation": "2 + 3 = 5, and y stays 3.",
+      "skill_tag": "translation.coords",
+      "options": [
+       {
+        "id": "a",
+        "text": "(2, 6)"
+       },
+       {
+        "id": "b",
+        "text": "(3, 5)"
+       },
+       {
+        "id": "c",
+        "text": "(5, 3)"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Treasure pairs",
+     "goal": "Find the matching treasure maps.",
+     "emojis": [
+      "🗺️",
+      "📍",
+      "🏁",
+      "🤖",
+      "🔺",
+      "🔷"
+     ],
+     "say": "Brain break. Find the pairs."
+    },
+    {
+     "type": "activity",
+     "title": "Treasure map at home",
+     "materials": [
+      "Squared paper",
+      "Pencil"
+     ],
+     "instructions": [
+      "Draw a grid from 0 to 6.",
+      "Place a treasure at (4, 2).",
+      "Move it 2 right and 3 up.",
+      "Write the new coordinates."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "(x, y): across, then up",
+      "Right changes x",
+      "Up changes y"
+     ],
+     "say": "Remember. Across first, then up. Right changes the first number, and up changes the second."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "x y",
+       "meaning": "The first number is x (across) and the second is y (up)."
+      },
+      {
+       "term": "right changes x",
+       "meaning": "Moving right changes the first number."
+      },
+      {
+       "term": "up changes y",
+       "meaning": "Moving up changes the second number."
+      },
+      {
+       "term": "coordinates",
+       "meaning": "Two numbers that give a position on a grid."
+      },
+      {
+       "term": "first quadrant",
+       "meaning": "The top-right part of a grid, where both numbers are positive."
+      },
+      {
+       "term": "origin",
+       "meaning": "The corner (0, 0) where we start counting."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A point at (1, 4) moves 2 right. What is the new first number?",
+     "hint": "1 + 2.",
+     "explanation": "1 + 2 = 3.",
+     "answer": {
+      "value": 3,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which point is 2 across and 5 up?",
+     "hint": "Across first.",
+     "explanation": "(2, 5) is 2 across and 5 up.",
+     "options": [
+      {
+       "id": "a",
+       "text": "(2, 2)"
+      },
+      {
+       "id": "b",
+       "text": "(2, 5)"
+      },
+      {
+       "id": "c",
+       "text": "(5, 2)"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Moving 3 up changes the first number.",
+     "hint": "Up changes height.",
+     "explanation": "Up changes the second number.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is the second number in (4, 7)?",
+     "hint": "The second number says how far up.",
+     "explanation": "7.",
+     "answer": {
+      "value": 7,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "design_path",
+   "kind": "use",
+   "title": "Design a path",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A route for the robot",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "**Same direction**: add the moves. 3 right + 4 right = 7 right.\n\nThe robot ends 7 squares right.",
+     "say": "Zara designs a route for the robot. The robot goes 3 right, then 4 right. How many squares right in total? Add the moves in the same direction."
+    },
+    {
+     "type": "explainer",
+     "title": "A robot route",
+     "scenes": [
+      {
+       "caption": "3 right",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🤖",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "3 right"
+        }
+       ],
+       "say": "The robot moves 3 right."
+      },
+      {
+       "caption": "3 right",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🤖",
+         "x": 25,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3 right"
+        },
+        {
+         "id": "q",
+         "emoji": "➡️",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "4 more right"
+        }
+       ],
+       "say": "Then it moves 4 more right."
+      },
+      {
+       "caption": "7 right",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🤖",
+         "x": 25,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 + 4 = 7 right"
+        }
+       ],
+       "say": "Total: 7 squares right."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A robot moves 2 left and then 6 left. How many squares left in total?",
+      "hint": "Add the moves.",
+      "explanation": "2 + 6 = 8.",
+      "skill_tag": "translation.route",
+      "answer": {
+       "value": 8,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Back to the start",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Reverse**: right becomes left, up becomes down.\n\n3 right is reversed by 3 left.",
+     "say": "To go back to the start, reverse the route. If the robot went 3 right, it goes 3 left to come back. Reverse each move."
+    },
+    {
+     "type": "image",
+     "emoji": "↩️",
+     "alt": "To go back, move the opposite way by the same number of squares.",
+     "caption": "To go back, move the opposite way by the same number of squares."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "To reverse a move of 4 up, what do you do?",
+      "hint": "Opposite of up is down.",
+      "explanation": "Down undoes up.",
+      "skill_tag": "translation.reverse",
+      "options": [
+       {
+        "id": "a",
+        "text": "Move 4 up again"
+       },
+       {
+        "id": "b",
+        "text": "Move 4 down"
+       },
+       {
+        "id": "c",
+        "text": "Move 4 left"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Design a path",
+     "materials": [
+      "Squared paper",
+      "Pencil"
+     ],
+     "instructions": [
+      "Draw a 6 by 6 grid.",
+      "Start at (0, 0) and make 3 moves.",
+      "Reverse the moves to go back.",
+      "Check that you end at the start."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Same direction: add the moves",
+      "Reverse each move to go back",
+      "Check your end point"
+     ],
+     "say": "Remember. Add moves in the same direction. Reverse a route to come back."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "same direction",
+       "meaning": "Moves that go the same way, so you add them."
+      },
+      {
+       "term": "route",
+       "meaning": "The path a robot takes."
+      },
+      {
+       "term": "reverse",
+       "meaning": "Go the opposite way."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A robot moves 5 right then 2 right. How many squares right?",
+     "hint": "5 + 2.",
+     "explanation": "5 + 2 = 7.",
+     "answer": {
+      "value": 7,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How do you reverse 6 left?",
+     "hint": "The opposite of left.",
+     "explanation": "Right undoes left.",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 left"
+      },
+      {
+       "id": "b",
+       "text": "6 right"
+      },
+      {
+       "id": "c",
+       "text": "6 up"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A route with 2 right and 2 left ends at the start.",
+     "hint": "The moves cancel.",
+     "explanation": "2 right then 2 left is back where you began.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A robot moves 3 up and 3 down. How many squares from the start?",
+     "hint": "The moves cancel.",
+     "explanation": "3 − 3 = 0.",
+     "answer": {
+      "value": 0,
+      "tolerance": 0
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "A robot starts at 5 across and moves 3 left. Where is it across now?",
+    "hint": "Count 3 squares back from 5.",
+    "explanation": "5 − 3 = 2.",
+    "skill_tag": "translation.count",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Ali says up on a grid means towards the bottom edge. Is he right?",
+    "hint": "Think about the top of the page.",
+    "explanation": "Up moves towards the top.",
+    "skill_tag": "translation.reason_direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, down is up"
+     },
+     {
+      "id": "b",
+      "text": "No. Up means towards the top of the grid"
+     },
+     {
+      "id": "c",
+      "text": "No, up is to the left"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "Left and right change the first number of a coordinate.",
+    "hint": "Across is the first number.",
+    "explanation": "Across is the first number, so left and right change it.",
+    "skill_tag": "translation.direction",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the moves from (0, 0) to (2, 3).",
+    "hint": "Read each direction.",
+    "explanation": "Two right and three up.",
+    "skill_tag": "translation.direction",
+    "points": 2,
+    "text": "Move two squares {b1} and three squares {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "left"
+       },
+       {
+        "id": "b",
+        "text": "down"
+       },
+       {
+        "id": "c",
+        "text": "right"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "right"
+       },
+       {
+        "id": "b",
+        "text": "up"
+       },
+       {
+        "id": "c",
+        "text": "down"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two moves are horizontal? Pick two.",
+    "hint": "Horizontal means side to side.",
+    "explanation": "Left and right are horizontal.",
+    "skill_tag": "translation.direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "Up 3"
+     },
+     {
+      "id": "b",
+      "text": "Down 2"
+     },
+     {
+      "id": "c",
+      "text": "Right 2"
+     },
+     {
+      "id": "d",
+      "text": "Left 3"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Order these x-values from the left edge.",
+    "hint": "Smallest is nearest the left edge.",
+    "explanation": "0, 2, 4, 7.",
+    "skill_tag": "translation.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "2"
+     },
+     {
+      "id": "i3",
+      "text": "4"
+     },
+     {
+      "id": "i4",
+      "text": "7"
+     },
+     {
+      "id": "i1",
+      "text": "0"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "A robot starts at 2 across and moves 4 right. Slide to show where it is across.",
+    "hint": "2 + 4.",
+    "explanation": "2 + 4 = 6.",
+    "skill_tag": "translation.line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 1
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each direction to its arrow.",
+    "hint": "Think about where the arrow points.",
+    "explanation": "Left ←, right →, up ↑.",
+    "skill_tag": "translation.direction",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Left"
+     },
+     {
+      "id": "l2",
+      "text": "Right"
+     },
+     {
+      "id": "l3",
+      "text": "Up"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "↑"
+     },
+     {
+      "id": "r1",
+      "text": "←"
+     },
+     {
+      "id": "r2",
+      "text": "→"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A triangle is translated 3 squares right. A point at 2 across moves to where across?",
+    "hint": "2 + 3.",
+    "explanation": "2 + 3 = 5.",
+    "skill_tag": "translation.slide",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a translation makes a shape bigger. Is she right?",
+    "hint": "A slide keeps the size.",
+    "explanation": "A translation keeps the size and shape.",
+    "skill_tag": "translation.reason_size",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it turns"
+     },
+     {
+      "id": "b",
+      "text": "No. A translation slides the shape without changing its size"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it gets bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "Every point of a shape moves the same distance in the same direction in a translation.",
+    "hint": "Think of a slide.",
+    "explanation": "That is what a translation is.",
+    "skill_tag": "translation.slide",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "A triangle's corner moves from (1, 1) to (4, 3).",
+    "hint": "Read the move.",
+    "explanation": "3 right and 2 up.",
+    "skill_tag": "translation.slide",
+    "points": 2,
+    "text": "It moves {b1} squares right and {b2} squares up.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two statements describe a translation? Pick two.",
+    "hint": "Think of a slide.",
+    "explanation": "A translation slides and keeps the size.",
+    "skill_tag": "translation.describe",
+    "options": [
+     {
+      "id": "a",
+      "text": "The size stays the same"
+     },
+     {
+      "id": "b",
+      "text": "Every point gets bigger"
+     },
+     {
+      "id": "c",
+      "text": "The shape turns"
+     },
+     {
+      "id": "d",
+      "text": "Every point moves the same way"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Put these new x-values in order, smallest first, after moving each point 2 right.",
+    "hint": "Start x-values were 1, 2 and 4.",
+    "explanation": "1 + 2 = 3, 2 + 2 = 4, 4 + 2 = 6.",
+    "skill_tag": "translation.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "4"
+     },
+     {
+      "id": "i3",
+      "text": "6"
+     },
+     {
+      "id": "i1",
+      "text": "3"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "slider",
+    "prompt": "Slide to show the new x-value after moving 5 right from 2.",
+    "hint": "2 + 5.",
+    "explanation": "2 + 5 = 7.",
+    "skill_tag": "translation.slide",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 1
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the shape that is a slide of the triangle, 3 right.",
+    "hint": "A slide keeps the shape.",
+    "explanation": "Only the slide keeps the same direction and size.",
+    "skill_tag": "translation.pick",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔺",
+       "label": "Slid 3 right",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔺",
+       "label": "Turned 90°",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔺",
+       "label": "Doubled",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "The point (3, 2) moves 3 right. What is its new first number?",
+    "hint": "Add 3 to the first number.",
+    "explanation": "3 + 3 = 6.",
+    "skill_tag": "translation.coords",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Hamza says moving up changes the first number. Is he right?",
+    "hint": "Which number is up?",
+    "explanation": "The second number is up.",
+    "skill_tag": "translation.reason_axis",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the first number changes"
+     },
+     {
+      "id": "b",
+      "text": "No, nothing changes"
+     },
+     {
+      "id": "c",
+      "text": "No. Moving up changes the second number, the one that says how far up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "The point (2, 5) is 2 across and 5 up.",
+    "hint": "Across first.",
+    "explanation": "The first number is across.",
+    "skill_tag": "translation.coords",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "hotspot",
+    "prompt": "Tap the point at (3, 2) after moving 3 right.",
+    "hint": "Change only the first number.",
+    "explanation": "(3, 2) moved 3 right is (6, 2).",
+    "skill_tag": "translation.coords",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📍",
+       "label": "(6, 2)",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📍",
+       "label": "(3, 5)",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📍",
+       "label": "(6, 5)",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "match",
+    "prompt": "Match each start point to its point after moving 2 right.",
+    "hint": "Add 2 to the first number.",
+    "explanation": "(3, 3), (6, 2) and (2, 0).",
+    "skill_tag": "translation.coords",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "(1, 3)"
+     },
+     {
+      "id": "l2",
+      "text": "(4, 2)"
+     },
+     {
+      "id": "l3",
+      "text": "(0, 0)"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "(2, 0)"
+     },
+     {
+      "id": "r1",
+      "text": "(3, 3)"
+     },
+     {
+      "id": "r2",
+      "text": "(6, 2)"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Mira says (2, 3) to (5, 3) is 3 up. Is she right?",
+    "hint": "Which number changes?",
+    "explanation": "The first number changes from 2 to 5.",
+    "skill_tag": "translation.reason_axis",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 up"
+     },
+     {
+      "id": "b",
+      "text": "No. (2, 3) to (5, 3) is 3 right, because the second number stays 3"
+     },
+     {
+      "id": "c",
+      "text": "No, 3 down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "reason"
+   },
+   {
+    "ref": "q23",
+    "type": "slider",
+    "prompt": "Slide to show the new first number after moving (3, 2) 4 right.",
+    "hint": "3 + 4.",
+    "explanation": "3 + 4 = 7.",
+    "skill_tag": "translation.coords",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 1
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which move takes (1, 1) to (1, 4)?",
+    "hint": "Only the second number changes.",
+    "explanation": "1 + 3 = 4 for the second number.",
+    "skill_tag": "translation.coords",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 left"
+     },
+     {
+      "id": "b",
+      "text": "3 up"
+     },
+     {
+      "id": "c",
+      "text": "3 right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A robot moves 3 right and then 4 right. How many squares right in total?",
+    "hint": "Add the moves in the same direction.",
+    "explanation": "3 + 4 = 7.",
+    "skill_tag": "translation.route",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "design_path",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Layla says to reverse a move of 3 right, you move 3 right again. Is she right?",
+    "hint": "Reverse means opposite.",
+    "explanation": "Left undoes right.",
+    "skill_tag": "translation.reason_reverse",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 right again"
+     },
+     {
+      "id": "b",
+      "text": "No, 3 up"
+     },
+     {
+      "id": "c",
+      "text": "No. To go back, move 3 left"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "A tile pattern moves 2 squares right on each row. After 4 rows, how far right in total?",
+    "hint": "Four lots of two.",
+    "explanation": "4 × 2 = 8.",
+    "skill_tag": "translation.route",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "design_path",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Zara says a tile pattern slid 2 right and 2 up is the same as turning it. Is she right?",
+    "hint": "A slide keeps the direction.",
+    "explanation": "A slide moves the pattern without turning it.",
+    "skill_tag": "translation.reason_slide",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a slide is a turn"
+     },
+     {
+      "id": "b",
+      "text": "No. The pattern is slid, not turned"
+     },
+     {
+      "id": "c",
+      "text": "No, it is a flip"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Ava says a path right 2, up 2, right 1 ends 5 right and 2 up from the start. Is she right?",
+    "hint": "Add the right moves.",
+    "explanation": "2 + 1 = 3 right and 2 up.",
+    "skill_tag": "translation.reason_path",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 5 right"
+     },
+     {
+      "id": "b",
+      "text": "No. Right 2 and right 1 make 3 right, so it ends 3 right and 2 up"
+     },
+     {
+      "id": "c",
+      "text": "No, 2 right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Omar says a route of 2 up and 2 down ends back at the start. Is he right?",
+    "hint": "Up and down undo each other.",
+    "explanation": "2 up then 2 down is back where it began.",
+    "skill_tag": "translation.reason_cancel",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 4 squares away"
+     },
+     {
+      "id": "b",
+      "text": "Yes. The moves cancel out, so the robot is back at the start"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 2 up"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "A robot starts at 2 across and moves 4 right. Where is it across now?",
+    "hint": "Count 4 squares forward.",
+    "explanation": "2 + 4 = 6.",
+    "skill_tag": "translation.count",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Hana says right means towards the left edge. Is she right?",
+    "hint": "Think about the right of the page.",
+    "explanation": "Right moves towards the right edge.",
+    "skill_tag": "translation.reason_direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, right is left"
+     },
+     {
+      "id": "b",
+      "text": "No. Right means towards the right edge"
+     },
+     {
+      "id": "c",
+      "text": "No, right is down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "Up and down change the first number of a coordinate.",
+    "hint": "Up is the second number.",
+    "explanation": "Up and down change the second number.",
+    "skill_tag": "translation.direction",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the moves from (5, 4) to (1, 3).",
+    "hint": "Read each direction.",
+    "explanation": "Four left and one down.",
+    "skill_tag": "translation.direction",
+    "points": 2,
+    "text": "Move four squares {b1} and one square {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "right"
+       },
+       {
+        "id": "b",
+        "text": "left"
+       },
+       {
+        "id": "c",
+        "text": "up"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "left"
+       },
+       {
+        "id": "b",
+        "text": "down"
+       },
+       {
+        "id": "c",
+        "text": "up"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two moves are vertical? Pick two.",
+    "hint": "Vertical means up and down.",
+    "explanation": "Up and down are vertical.",
+    "skill_tag": "translation.direction",
+    "options": [
+     {
+      "id": "a",
+      "text": "Down 1"
+     },
+     {
+      "id": "b",
+      "text": "Left 4"
+     },
+     {
+      "id": "c",
+      "text": "Right 1"
+     },
+     {
+      "id": "d",
+      "text": "Up 4"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these y-values from the bottom.",
+    "hint": "Smallest is nearest the bottom.",
+    "explanation": "1, 3, 5.",
+    "skill_tag": "translation.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "3"
+     },
+     {
+      "id": "i1",
+      "text": "1"
+     },
+     {
+      "id": "i3",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "A robot starts at 8 across and moves 5 left. Slide to show where it is across.",
+    "hint": "8 − 5.",
+    "explanation": "8 − 5 = 3.",
+    "skill_tag": "translation.line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 1
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each direction to its arrow.",
+    "hint": "Think about where the arrow points.",
+    "explanation": "Down ↓, right →, left ←.",
+    "skill_tag": "translation.direction",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Down"
+     },
+     {
+      "id": "l2",
+      "text": "Right"
+     },
+     {
+      "id": "l3",
+      "text": "Left"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "→"
+     },
+     {
+      "id": "r3",
+      "text": "←"
+     },
+     {
+      "id": "r1",
+      "text": "↓"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "grid_moves",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A point at 4 across is translated 2 squares right. Where is it across now?",
+    "hint": "4 + 2.",
+    "explanation": "4 + 2 = 6.",
+    "skill_tag": "translation.slide",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Sam says a translation turns the shape. Is he right?",
+    "hint": "Think of a slide.",
+    "explanation": "A translation keeps the same direction.",
+    "skill_tag": "translation.reason_size",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it turns"
+     },
+     {
+      "id": "b",
+      "text": "No, it flips"
+     },
+     {
+      "id": "c",
+      "text": "No. A translation slides the shape, it does not turn it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "true_false",
+    "prompt": "Each point of a shape moves a different distance in a translation.",
+    "hint": "Think of a slide.",
+    "explanation": "Every point moves the same.",
+    "skill_tag": "translation.slide",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "A square's corner moves from (5, 4) to (1, 3).",
+    "hint": "Read the move.",
+    "explanation": "4 left and 1 down.",
+    "skill_tag": "translation.slide",
+    "points": 2,
+    "text": "It moves {b1} squares left and {b2} squares down.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "1"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Pick two true statements about translation.",
+    "hint": "Think of a slide.",
+    "explanation": "A translation slides and keeps its shape.",
+    "skill_tag": "translation.describe",
+    "options": [
+     {
+      "id": "a",
+      "text": "It flips over"
+     },
+     {
+      "id": "b",
+      "text": "It doubles in size"
+     },
+     {
+      "id": "c",
+      "text": "It keeps its shape"
+     },
+     {
+      "id": "d",
+      "text": "The shape slides"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Put these new x-values in order after moving 3 right: 0, 2 and 5.",
+    "hint": "Add 3 to each start.",
+    "explanation": "0 + 3 = 3, 2 + 3 = 5, 5 + 3 = 8.",
+    "skill_tag": "translation.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "8"
+     },
+     {
+      "id": "i1",
+      "text": "3"
+     },
+     {
+      "id": "i2",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "slider",
+    "prompt": "Slide to show the new x-value after moving 4 right from 1.",
+    "hint": "1 + 4.",
+    "explanation": "1 + 4 = 5.",
+    "skill_tag": "translation.slide",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 1
+    },
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the shape that is a slide of the triangle, 2 up.",
+    "hint": "A slide keeps the shape.",
+    "explanation": "Only the slide keeps the same shape and direction.",
+    "skill_tag": "translation.pick",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔺",
+       "label": "Turned 180°",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔺",
+       "label": "Slid 2 up",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔺",
+       "label": "Shrunk",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "slide_shape",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "The point (1, 5) moves 4 right. What is its new first number?",
+    "hint": "Add 4 to the first number.",
+    "explanation": "1 + 4 = 5.",
+    "skill_tag": "translation.coords",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Layla says moving right changes the second number. Is she right?",
+    "hint": "Which number is across?",
+    "explanation": "The first number is across.",
+    "skill_tag": "translation.reason_axis",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the second changes"
+     },
+     {
+      "id": "b",
+      "text": "No. Moving right changes the first number, the across number"
+     },
+     {
+      "id": "c",
+      "text": "No, both change"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "The point (5, 2) is 2 across and 5 up.",
+    "hint": "Across first.",
+    "explanation": "(5, 2) is 5 across and 2 up.",
+    "skill_tag": "translation.coords",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "hotspot",
+    "prompt": "Tap the point after moving (4, 1) 2 up.",
+    "hint": "Change only the second number.",
+    "explanation": "(4, 1) moved 2 up is (4, 3).",
+    "skill_tag": "translation.coords",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📍",
+       "label": "(4, 3)",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📍",
+       "label": "(6, 1)",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📍",
+       "label": "(2, 3)",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "match",
+    "prompt": "Join each start point to its point after moving 4 right.",
+    "hint": "Add 4 to the first number.",
+    "explanation": "(9, 1), (6, 6) and (7, 4).",
+    "skill_tag": "translation.coords",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "(5, 1)"
+     },
+     {
+      "id": "l2",
+      "text": "(2, 6)"
+     },
+     {
+      "id": "l3",
+      "text": "(3, 4)"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "(6, 6)"
+     },
+     {
+      "id": "r3",
+      "text": "(7, 4)"
+     },
+     {
+      "id": "r1",
+      "text": "(9, 1)"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Ben says (1, 1) to (1, 4) is 3 right. Is he right?",
+    "hint": "Which number changes?",
+    "explanation": "The second number changes from 1 to 4.",
+    "skill_tag": "translation.reason_axis",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 right"
+     },
+     {
+      "id": "b",
+      "text": "No, 3 left"
+     },
+     {
+      "id": "c",
+      "text": "No. The first number stays 1, and the second goes up by 3"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "reason",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "slider",
+    "prompt": "Slide to show the new first number after moving (2, 5) 6 right.",
+    "hint": "2 + 6.",
+    "explanation": "2 + 6 = 8.",
+    "skill_tag": "translation.coords",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 1
+    },
+    "sub_lesson": "treasure_moves",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which move takes (4, 2) to (1, 2)?",
+    "hint": "Only the first number changes.",
+    "explanation": "4 − 3 = 1.",
+    "skill_tag": "translation.coords",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 up"
+     },
+     {
+      "id": "b",
+      "text": "3 left"
+     },
+     {
+      "id": "c",
+      "text": "3 down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "treasure_moves",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A robot moves 6 right and then 3 right. How many squares right in total?",
+    "hint": "Add the moves.",
+    "explanation": "6 + 3 = 9.",
+    "skill_tag": "translation.route",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "sub_lesson": "design_path",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Sam says to reverse a move of 4 up, you move 4 up again. Is he right?",
+    "hint": "Reverse means opposite.",
+    "explanation": "Down undoes up.",
+    "skill_tag": "translation.reason_reverse",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 4 left"
+     },
+     {
+      "id": "b",
+      "text": "No. To go back, move 4 down"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 4 up again"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "A pattern shifts 3 squares right each row. After 5 rows, how far right in total?",
+    "hint": "Five lots of three.",
+    "explanation": "5 × 3 = 15.",
+    "skill_tag": "translation.route",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "design_path",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a tile that slides 1 right is no longer the same shape. Is he right?",
+    "hint": "A slide keeps the shape.",
+    "explanation": "Sliding keeps the shape.",
+    "skill_tag": "translation.reason_slide",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it changes shape"
+     },
+     {
+      "id": "b",
+      "text": "No. A slide keeps the same shape and size"
+     },
+     {
+      "id": "c",
+      "text": "No, it grows"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "A path goes left 1, down 3, left 2. Where is it compared with the start?",
+    "hint": "Add the left moves and the down moves.",
+    "explanation": "1 + 2 = 3 left, and 3 down.",
+    "skill_tag": "translation.path",
+    "options": [
+     {
+      "id": "a",
+      "text": "6 left and 3 down"
+     },
+     {
+      "id": "b",
+      "text": "3 left and 3 down"
+     },
+     {
+      "id": "c",
+      "text": "3 left and 1 down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Nora says a route of 3 left and 1 right ends 2 left of the start. Is she right?",
+    "hint": "Add the left moves and take away the right move.",
+    "explanation": "3 − 1 = 2 left.",
+    "skill_tag": "translation.reason_cancel",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it ends 1 right"
+     },
+     {
+      "id": "b",
+      "text": "Yes. 3 left take away 1 right leaves 2 left"
+     },
+     {
+      "id": "c",
+      "text": "No, it ends 4 left"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "design_path",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

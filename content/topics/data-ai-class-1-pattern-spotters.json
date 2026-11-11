@@ -1,0 +1,3160 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-pattern-spotters",
+  "subject": "data-ai",
+  "title": "Pattern Spotters",
+  "summary": "Find patterns in pictures and sounds the way a machine does to sort things.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 10: Pattern spotters",
+  "learning_objectives": [
+   "Find a pattern in a set of examples",
+   "Say how a machine uses patterns to sort",
+   "Know a pattern guess can be wrong"
+  ],
+  "tags": [
+   "topic",
+   "topic-10"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 10
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 3",
+    "text": "Learning: computers can learn from data"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-DA-07",
+    "text": "Identify and describe patterns in data visualisations"
+   }
+  ],
+  "success_criteria": [
+   "I can say what comes next in a pattern",
+   "I can sort things with a rule",
+   "I know a machine's guess can be wrong"
+  ],
+  "real_life": "Rangoli and truck art, tiled floors and the days of the week.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What does IT stand for?",
+    "hint": "Computers and information.",
+    "explanation": "IT is information technology.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Indoor toys"
+     },
+     {
+      "id": "b",
+      "text": "Instant tea"
+     },
+     {
+      "id": "c",
+      "text": "Information technology"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a bug?",
+    "hint": "Not an insect.",
+    "explanation": "A bug is a mistake.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flower"
+     },
+     {
+      "id": "b",
+      "text": "A sprite"
+     },
+     {
+      "id": "c",
+      "text": "A mistake in a program"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 9 + 1?",
+    "hint": "Count on from 9.",
+    "explanation": "9 + 1 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "patterns",
+   "kind": "learn",
+   "title": "Patterns everywhere",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, pattern spotter!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do machines find patterns?",
+     "say": "Today we look for patterns. Aisha wants to teach her robot friend to spot them."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-pattern-spotters-1-743f59b6.jpg",
+     "alt": "A floor of black, white and grey square tiles in a repeating pattern",
+     "caption": "A tiled floor with a repeating pattern.",
+     "credit": "Photo by note thanun on Unsplash",
+     "say": "Look at this floor. The same shapes come again and again. That is a pattern."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Patterns in shapes and sounds"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pattern** repeats in a set way.",
+     "say": "A pattern is something that repeats in a set way. Colours, shapes and sounds can make patterns."
+    },
+    {
+     "type": "explainer",
+     "title": "Spot the pattern",
+     "scenes": [
+      {
+       "caption": "Colour pattern.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔴",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 38,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🔴",
+         "x": 61,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🔵",
+         "x": 84,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Red, blue, red, blue. The colours take turns. It is a pattern."
+      },
+      {
+       "caption": "Sound pattern.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👏",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "🦶",
+         "x": 45,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "c",
+         "emoji": "👏",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Clap, stamp, clap, stamp. Sounds can make a pattern too."
+      },
+      {
+       "caption": "What is next?",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔴",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 45,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🔴",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 90,
+         "y": 30,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "After a pattern, we can say what comes next."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Red, blue, red, blue, ... What comes next?",
+      "hint": "The colours take turns.",
+      "explanation": "The pattern goes red then blue, so red is next.",
+      "skill_tag": "pattern.next",
+      "options": [
+       {
+        "id": "a",
+        "text": "Yellow"
+       },
+       {
+        "id": "b",
+        "text": "Red"
+       },
+       {
+        "id": "c",
+        "text": "Green"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Patterns in days"
+    },
+    {
+     "type": "text",
+     "markdown": "Days of the week repeat in a **cycle**.",
+     "say": "Days make a pattern. Monday, Tuesday, Wednesday, and then Monday again after Sunday."
+    },
+    {
+     "type": "explainer",
+     "title": "The week",
+     "scenes": [
+      {
+       "caption": "A week.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "📅",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "7 days"
+        }
+       ],
+       "say": "Seven days make one week. They go in the same order."
+      },
+      {
+       "caption": "Again.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "📅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "Monday"
+        }
+       ],
+       "say": "After Sunday, a new week starts with Monday."
+      },
+      {
+       "caption": "A cycle.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔁",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a cycle"
+        }
+       ],
+       "say": "A pattern that repeats is a cycle."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The days of the week form a repeating pattern.",
+      "hint": "Think about Monday after Sunday.",
+      "explanation": "The days repeat in order.",
+      "skill_tag": "pattern.days",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Aisha's scarf robot",
+     "asset": "clip-data-ai-class-1-pattern-spotters-b33944c8.mp4",
+     "poster": "clip-data-ai-class-1-pattern-spotters-b33944c8.webp",
+     "seconds": 62,
+     "transcript": "Aisha has a robot friend. She wants to teach it patterns. She shows a striped scarf. She says the label: striped. Then a spotty scarf. She says: spotty. She only shows two. The robot gets confused. So she shows many more. Each one has a label. Now a new scarf. The robot looks for the pattern. The robot guesses: striped. It is right! But a robot can still be wrong. People check its guesses.",
+     "caption": "Aisha shows her robot friend striped and spotty scarves."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A pattern repeats in a set way",
+      "Patterns can be seen and heard",
+      "A repeating pattern is a cycle"
+     ],
+     "say": "Let us remember. Patterns repeat. They can be colours, shapes, sounds or days."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats in a set way."
+      },
+      {
+       "term": "cycle",
+       "meaning": "A pattern that goes round and round."
+      },
+      {
+       "term": "next",
+       "meaning": "What comes after."
+      },
+      {
+       "term": "repeat",
+       "meaning": "To happen again."
+      },
+      {
+       "term": "colour",
+       "meaning": "How something looks, like red or blue."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a pattern?",
+     "hint": "Think about red, blue, red, blue.",
+     "explanation": "A pattern repeats.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A loud noise"
+      },
+      {
+       "id": "b",
+       "text": "Something that repeats in a set way"
+      },
+      {
+       "id": "c",
+       "text": "A kind of food"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A sound can make a pattern.",
+     "hint": "Think about clap, stamp.",
+     "explanation": "Sounds can repeat.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which day comes after Sunday in a new week?",
+     "hint": "A new week starts.",
+     "explanation": "Monday starts the week again.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Friday"
+      },
+      {
+       "id": "b",
+       "text": "Wednesday"
+      },
+      {
+       "id": "c",
+       "text": "Monday"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sort",
+   "kind": "try",
+   "title": "Sort like a machine",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sort by looks"
+    },
+    {
+     "type": "text",
+     "markdown": "To **sort** is to put things that are alike into groups.",
+     "say": "A machine can sort things into groups. It looks at things that are alike."
+    },
+    {
+     "type": "explainer",
+     "title": "Sort the cups",
+     "scenes": [
+      {
+       "caption": "Many cups.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔴",
+         "x": 20,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🔴",
+         "x": 60,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🔵",
+         "x": 80,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Here are cups in many colours. Aisha will sort them."
+      },
+      {
+       "caption": "Two groups.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔴",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Red cups go in one box. Blue cups go in another."
+      },
+      {
+       "caption": "Sorted.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔴",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "sorted"
+        }
+       ],
+       "say": "Sorting by colour is one way to sort."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Aisha sorts cups by colour. How many groups for red and blue cups?",
+      "hint": "Red and blue.",
+      "explanation": "Red cups are one group. Blue cups are another.",
+      "skill_tag": "pattern.sort_groups",
+      "options": [
+       {
+        "id": "a",
+        "text": "One"
+       },
+       {
+        "id": "b",
+        "text": "Two"
+       },
+       {
+        "id": "c",
+        "text": "Five"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sort with a rule"
+    },
+    {
+     "type": "text",
+     "markdown": "A **rule** says how to sort.",
+     "say": "A rule says how to sort. Rule: put animals with four legs in one box."
+    },
+    {
+     "type": "explainer",
+     "title": "A rule for legs",
+     "scenes": [
+      {
+       "caption": "The rule.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "📏",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "four legs?"
+        }
+       ],
+       "say": "The rule: four legs go in the first box. Others go in the second."
+      },
+      {
+       "caption": "Apply the rule.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "4 legs"
+        },
+        {
+         "id": "b",
+         "emoji": "🐦",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "2 legs"
+        }
+       ],
+       "say": "A cat has four legs. A bird has two legs."
+      },
+      {
+       "caption": "Sorted by the rule.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐦",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "rule used"
+        }
+       ],
+       "say": "The cat goes in box one. The bird goes in box two."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Sort at home",
+     "materials": [
+      "Some socks, spoons or toys",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Choose one rule, such as colour or size.",
+      "Sort everything into groups using your rule.",
+      "Try a different rule. Do the groups change?"
+     ],
+     "say": "Now you try. Sort things at home with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The same things can be sorted in different ways.",
+      "hint": "Colour, size, legs.",
+      "explanation": "Different rules make different groups.",
+      "skill_tag": "pattern.sort_rules",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Sort alike things together",
+      "A rule says how to sort",
+      "Different rules make different groups"
+     ],
+     "say": "Let us remember. Sorting puts alike things together. A rule says how."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "sort",
+       "meaning": "To put things that are alike into groups."
+      },
+      {
+       "term": "rule",
+       "meaning": "A sentence that says how to do something."
+      },
+      {
+       "term": "group",
+       "meaning": "Things that belong together."
+      },
+      {
+       "term": "legs",
+       "meaning": "Parts an animal walks on."
+      },
+      {
+       "term": "box",
+       "meaning": "A container to hold a group."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a rule do when sorting?",
+     "hint": "It tells you what to do.",
+     "explanation": "A rule says how to sort.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mixes things up"
+      },
+      {
+       "id": "b",
+       "text": "Hides things"
+      },
+      {
+       "id": "c",
+       "text": "Says how to sort"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "There is only one way to sort a pile of toys.",
+     "hint": "Colour, size, kind...",
+     "explanation": "There are many ways to sort.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A bird has two legs. Which box for the rule 'four legs'?",
+     "hint": "Count the legs.",
+     "explanation": "Two legs does not fit four legs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the sky box"
+      },
+      {
+       "id": "b",
+       "text": "Not in the four-leg box"
+      },
+      {
+       "id": "c",
+       "text": "In the four-leg box"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "guess",
+   "kind": "play",
+   "title": "Guess the next one",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Predict the pattern"
+    },
+    {
+     "type": "text",
+     "markdown": "A pattern helps us **predict** the next one.",
+     "say": "Spotting a pattern lets us guess what comes next. A machine does this too."
+    },
+    {
+     "type": "explainer",
+     "title": "What comes next?",
+     "scenes": [
+      {
+       "caption": "Look.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔵",
+         "x": 15,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🟨",
+         "x": 38,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🔵",
+         "x": 61,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🟨",
+         "x": 84,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Spot, stripe, spot, stripe. What is next?"
+      },
+      {
+       "caption": "Predict.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🔵",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "next"
+        }
+       ],
+       "say": "The pattern is spot, stripe. So the next one is a spot."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🔵",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🤔",
+         "x": 75,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a guess"
+        }
+       ],
+       "say": "The guess can be wrong. We check the next one."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Spot, stripe, spot, stripe. What is next?",
+      "hint": "They take turns.",
+      "explanation": "After a stripe comes a spot.",
+      "skill_tag": "pattern.predict",
+      "options": [
+       {
+        "id": "a",
+        "text": "A stripe"
+       },
+       {
+        "id": "b",
+        "text": "A star"
+       },
+       {
+        "id": "c",
+        "text": "A spot"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then find the **odd one out**.",
+     "say": "First a memory game. Then find the odd one out."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Pattern pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔴",
+      "🔵",
+      "🟨",
+      "🟩"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the odd one out.",
+      "hint": "Two are the same.",
+      "explanation": "Blue is different from the two reds.",
+      "skill_tag": "pattern.odd_one",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🔴",
+         "label": "Red",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "🔴",
+         "label": "Red",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🔵",
+         "label": "Blue",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h3"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Spot a pattern to guess what comes next",
+      "The odd one out is different",
+      "A guess can be wrong"
+     ],
+     "say": "Let us remember. A pattern helps us guess. A guess can be wrong."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "predict",
+       "meaning": "To say what will come next."
+      },
+      {
+       "term": "odd one out",
+       "meaning": "The one that is different from the others."
+      },
+      {
+       "term": "guess",
+       "meaning": "To say what you think without being sure."
+      },
+      {
+       "term": "check",
+       "meaning": "To make sure."
+      },
+      {
+       "term": "stripe",
+       "meaning": "A long line of colour."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Red, red, blue, red, red, blue. What is next?",
+     "hint": "Two reds then a blue.",
+     "explanation": "The pattern is red, red, blue.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Blue"
+      },
+      {
+       "id": "b",
+       "text": "Red"
+      },
+      {
+       "id": "c",
+       "text": "Green"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A guess from a pattern can sometimes be wrong.",
+     "hint": "Patterns can change.",
+     "explanation": "A guess is not always right.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the odd one out?",
+     "hint": "Think about different.",
+     "explanation": "The odd one out is different from the rest.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The biggest one"
+      },
+      {
+       "id": "b",
+       "text": "The first one"
+      },
+      {
+       "id": "c",
+       "text": "The one that is different"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "teach",
+   "kind": "use",
+   "title": "Teach a robot friend",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Show examples"
+    },
+    {
+     "type": "text",
+     "markdown": "An **example** shows what something is like.",
+     "say": "Aisha wants her robot friend to tell striped scarves from spotty ones. She shows examples."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-pattern-spotters-2-4307bf4f.jpg",
+     "alt": "A close-up of woven fabric in orange, blue, red and turquoise threads",
+     "caption": "A woven cloth. Aisha shows her robot different patterns.",
+     "credit": "Photo by Mikaela Wiedenhoff on Unsplash",
+     "say": "This cloth has a woven pattern. Aisha shows the robot many scarves with different patterns."
+    },
+    {
+     "type": "text",
+     "markdown": "Each example has a **label**.",
+     "say": "She shows a striped scarf and says, striped. She shows a spotty scarf and says, spotty."
+    },
+    {
+     "type": "activity",
+     "title": "Teach a friend",
+     "materials": [
+      "Some striped and spotty things",
+      "A grown-up or a friend"
+     ],
+     "instructions": [
+      "Show five striped things. Say: striped.",
+      "Show five spotty things. Say: spotty.",
+      "Show a new thing. Can your friend guess?"
+     ],
+     "say": "More examples help the robot learn. One example is not enough."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why does Aisha show many examples?",
+      "hint": "More practice helps.",
+      "explanation": "Many examples help a machine learn.",
+      "skill_tag": "pattern.many_examples",
+      "options": [
+       {
+        "id": "a",
+        "text": "To hide the scarves"
+       },
+       {
+        "id": "b",
+        "text": "To help the robot learn the pattern"
+       },
+       {
+        "id": "c",
+        "text": "To tire the robot"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Test with a new one"
+    },
+    {
+     "type": "text",
+     "markdown": "**Test** with a new example the robot has not seen.",
+     "say": "Now Aisha shows a new scarf. The robot guesses. It says, striped. It is right."
+    },
+    {
+     "type": "explainer",
+     "title": "Test the robot",
+     "scenes": [
+      {
+       "caption": "A new scarf.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧣",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A new scarf with thin stripes comes in."
+      },
+      {
+       "caption": "Good guess.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🤖",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The robot guesses: striped. Aisha says, correct!"
+      },
+      {
+       "caption": "A mistake.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🤖",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "wrong?"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "learn from it"
+        }
+       ],
+       "say": "A scarf with spots and a few stripes confuses it. It guesses wrong."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The robot guesses wrong. What can Aisha do?",
+      "hint": "Teach it more.",
+      "explanation": "More examples can fix mistakes.",
+      "skill_tag": "pattern.fix",
+      "options": [
+       {
+        "id": "a",
+        "text": "Be angry"
+       },
+       {
+        "id": "b",
+        "text": "Show more examples and try again"
+       },
+       {
+        "id": "c",
+        "text": "Throw it away"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Show many labelled examples",
+      "Test with a new example",
+      "Mistakes help us teach better"
+     ],
+     "say": "Let us remember. Show many examples with labels. Test with new ones."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "example",
+       "meaning": "One case that shows what something is like."
+      },
+      {
+       "term": "label",
+       "meaning": "A name that says what something is."
+      },
+      {
+       "term": "test",
+       "meaning": "To try something new to see if it works."
+      },
+      {
+       "term": "robot",
+       "meaning": "A machine that follows instructions."
+      },
+      {
+       "term": "teach",
+       "meaning": "To help someone or something learn."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a label?",
+     "hint": "Like a name tag.",
+     "explanation": "A label names an example.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A number"
+      },
+      {
+       "id": "b",
+       "text": "A name for an example"
+      },
+      {
+       "id": "c",
+       "text": "A kind of cloth"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A new example is a good way to test the robot.",
+     "hint": "It has not seen it before.",
+     "explanation": "A new example tests what it learned.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What helps a robot learn best?",
+     "hint": "Practice helps.",
+     "explanation": "Many examples help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "One example only"
+      },
+      {
+       "id": "b",
+       "text": "Many different examples"
+      },
+      {
+       "id": "c",
+       "text": "No examples"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which best tells what a pattern is?",
+    "hint": "Think about red, blue, red, blue.",
+    "explanation": "A pattern repeats in a set way.",
+    "skill_tag": "pattern.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mix with no order"
+     },
+     {
+      "id": "b",
+      "text": "A kind of toy"
+     },
+     {
+      "id": "c",
+      "text": "Something that repeats in a set way"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Circle, square, circle, square, circle, ... What comes next?",
+    "hint": "They take turns.",
+    "explanation": "After a circle comes a square.",
+    "skill_tag": "pattern.next_shape",
+    "options": [
+     {
+      "id": "a",
+      "text": "Star"
+     },
+     {
+      "id": "b",
+      "text": "Square"
+     },
+     {
+      "id": "c",
+      "text": "Circle"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A pattern repeats in a set way.",
+    "hint": "Think about the tiles.",
+    "explanation": "Patterns repeat.",
+    "skill_tag": "pattern.repeat",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each set to its pattern name.",
+    "hint": "Use letters for colours.",
+    "explanation": "Each set follows its own pattern.",
+    "skill_tag": "pattern.names",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Red, blue, red, blue"
+     },
+     {
+      "id": "l2",
+      "text": "Red, blue, blue, red, blue, blue"
+     },
+     {
+      "id": "l3",
+      "text": "Red, red, red"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "ABB, ABB"
+     },
+     {
+      "id": "r3",
+      "text": "A, A, A"
+     },
+     {
+      "id": "r1",
+      "text": "AB, AB"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "patterns",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the repeating pattern.",
+    "hint": "Look for repeats.",
+    "explanation": "Red blue repeats.",
+    "skill_tag": "pattern.tap",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔴🔵🔴🔵",
+       "label": "Red blue red blue",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔴🟨🟩⚪",
+       "label": "Four colours",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭐",
+       "label": "One star",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says a pattern must repeat exactly three times to count. Is he right?",
+    "hint": "Think about a tiled floor.",
+    "explanation": "A pattern repeats as many times as it needs.",
+    "skill_tag": "pattern.reason_three",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, exactly three"
+     },
+     {
+      "id": "b",
+      "text": "Yes, exactly two"
+     },
+     {
+      "id": "c",
+      "text": "No. A pattern can repeat any number of times"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Zainab says patterns only exist in pictures. Is she right?",
+    "hint": "Think about clap, stamp.",
+    "explanation": "Patterns can be heard and done as well.",
+    "skill_tag": "pattern.reason_pictures",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only pictures"
+     },
+     {
+      "id": "b",
+      "text": "No. Sounds, days and actions can make patterns too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only on floors"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about patterns.",
+    "hint": "Think about the week.",
+    "explanation": "A pattern repeats. A cycle goes round again.",
+    "skill_tag": "pattern.fill_cycle",
+    "points": 2,
+    "text": "A {b1} repeats in a set way. A pattern that goes round again and again is a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "puddle"
+       },
+       {
+        "id": "b",
+        "text": "pencil"
+       },
+       {
+        "id": "c",
+        "text": "pattern"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "chair"
+       },
+       {
+        "id": "b",
+        "text": "cycle"
+       },
+       {
+        "id": "c",
+        "text": "cloud"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "patterns",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Aisha sorts cups into red cups and blue cups. What did she use to sort?",
+    "hint": "Look at the cups.",
+    "explanation": "She sorted by colour.",
+    "skill_tag": "pattern.sort_by",
+    "options": [
+     {
+      "id": "a",
+      "text": "Time"
+     },
+     {
+      "id": "b",
+      "text": "Colour"
+     },
+     {
+      "id": "c",
+      "text": "Smell"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the sorting steps in order.",
+    "hint": "Look first.",
+    "explanation": "Look, choose a rule, then sort.",
+    "skill_tag": "pattern.sort_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Choose a rule"
+     },
+     {
+      "id": "i1",
+      "text": "Look at all the things"
+     },
+     {
+      "id": "i3",
+      "text": "Put each thing in its group"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "There are 10 shapes. 6 are red. Slide to show how many are not red.",
+    "hint": "10 take away 6.",
+    "explanation": "10 - 6 = 4 shapes.",
+    "skill_tag": "pattern.not_red",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "There are 9 animals. 4 have four legs. How many do not have four legs?",
+    "hint": "9 take away 4.",
+    "explanation": "9 - 4 = 5 animals.",
+    "skill_tag": "pattern.legs_count",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two rules could sort animals? Pick two.",
+    "hint": "Think about the animals.",
+    "explanation": "Legs and flying describe animals.",
+    "skill_tag": "pattern.rule_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "Whether they can fly"
+     },
+     {
+      "id": "b",
+      "text": "What time it is"
+     },
+     {
+      "id": "c",
+      "text": "The smell of tea"
+     },
+     {
+      "id": "d",
+      "text": "How many legs they have"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Sam says the odd one out is always wrong. Is he right?",
+    "hint": "Different is not wrong.",
+    "explanation": "The odd one out is only different.",
+    "skill_tag": "pattern.reason_odd",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it must be thrown away"
+     },
+     {
+      "id": "b",
+      "text": "No. It is just different from the others"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sort",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "match",
+    "prompt": "Match each rule to the group it makes.",
+    "hint": "Count the legs.",
+    "explanation": "Each rule makes a different group.",
+    "skill_tag": "pattern.rule_group",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Has four legs"
+     },
+     {
+      "id": "l2",
+      "text": "Has two legs"
+     },
+     {
+      "id": "l3",
+      "text": "Has no legs"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Bird and person"
+     },
+     {
+      "id": "r1",
+      "text": "Cat and dog"
+     },
+     {
+      "id": "r3",
+      "text": "Fish and snake"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "sort",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Red, blue, blue, red, blue, blue, red, ... What comes next?",
+    "hint": "Red then two blues.",
+    "explanation": "The pattern is red, blue, blue.",
+    "skill_tag": "pattern.abb",
+    "options": [
+     {
+      "id": "a",
+      "text": "Red"
+     },
+     {
+      "id": "b",
+      "text": "Blue"
+     },
+     {
+      "id": "c",
+      "text": "Green"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "true_false",
+    "prompt": "A machine can find patterns by looking at many examples.",
+    "hint": "Think about the robot.",
+    "explanation": "Machines find patterns in examples.",
+    "skill_tag": "pattern.machine_finds",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "guess",
+    "depth": "recall"
+   },
+   {
+    "ref": "q18",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about guessing.",
+    "hint": "Think about guessing.",
+    "explanation": "A pattern helps us predict what comes next.",
+    "skill_tag": "pattern.fill_predict",
+    "points": 2,
+    "text": "A pattern helps us {b1} what comes {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "lose"
+       },
+       {
+        "id": "b",
+        "text": "predict"
+       },
+       {
+        "id": "c",
+        "text": "ignore"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "never"
+       },
+       {
+        "id": "b",
+        "text": "next"
+       },
+       {
+        "id": "c",
+        "text": "blue"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "guess",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "hotspot",
+    "prompt": "Tap the one that is not a fruit.",
+    "hint": "Two are fruit.",
+    "explanation": "A car is not fruit.",
+    "skill_tag": "pattern.tap_odd",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍎",
+       "label": "Apple",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍌",
+       "label": "Banana",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🚗",
+       "label": "Car",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a machine always guesses right. Is she right?",
+    "hint": "Think about the scarf that confused the robot.",
+    "explanation": "Machines can make mistakes.",
+    "skill_tag": "pattern.reason_always_right",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, machines cannot be wrong"
+     },
+     {
+      "id": "b",
+      "text": "No. A machine can guess wrong, so people check"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "guess",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "number",
+    "prompt": "The pattern is 2, 4, 6, ... What number comes next?",
+    "hint": "Add 2 each time.",
+    "explanation": "2, 4, 6, 8 adds 2 each time.",
+    "skill_tag": "pattern.number",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "guess",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put the pattern steps in order.",
+    "hint": "Look first.",
+    "explanation": "Look, find the rule, guess, then check.",
+    "skill_tag": "pattern.guess_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Guess what comes next"
+     },
+     {
+      "id": "i4",
+      "text": "Check your guess"
+     },
+     {
+      "id": "i2",
+      "text": "Say the rule"
+     },
+     {
+      "id": "i1",
+      "text": "Look at the pattern"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Omar says a rule never needs changing. Is he right?",
+    "hint": "Think about the confused robot.",
+    "explanation": "We can improve a rule when it fails.",
+    "skill_tag": "pattern.reason_rule",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a rule is always right"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rules never change"
+     },
+     {
+      "id": "c",
+      "text": "No. If the rule fails we can change it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "guess",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which helps a robot learn a pattern best?",
+    "hint": "Think about practice.",
+    "explanation": "More examples help a machine learn.",
+    "skill_tag": "pattern.good_examples",
+    "options": [
+     {
+      "id": "a",
+      "text": "One example"
+     },
+     {
+      "id": "b",
+      "text": "Many different examples"
+     },
+     {
+      "id": "c",
+      "text": "No examples"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Omar says one example is enough to teach a robot. Is he right?",
+    "hint": "Think about the two scarves.",
+    "explanation": "Many examples help it learn.",
+    "skill_tag": "pattern.reason_one",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one is enough"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a robot learns instantly"
+     },
+     {
+      "id": "c",
+      "text": "No. A robot needs many examples"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Layla says if the rule fails, it is the robot's fault. Is she right?",
+    "hint": "Who chose the examples?",
+    "explanation": "Better examples and rules fix mistakes.",
+    "skill_tag": "pattern.reason_fault",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always the robot's fault"
+     },
+     {
+      "id": "b",
+      "text": "No. The examples or rule may need improving"
+     },
+     {
+      "id": "c",
+      "text": "Yes, robots are lazy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Aisha says people do not need patterns. Is she right?",
+    "hint": "Think about days of the week.",
+    "explanation": "People use patterns too.",
+    "skill_tag": "pattern.reason_people",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only machines use them"
+     },
+     {
+      "id": "b",
+      "text": "No. People use patterns to learn, plan and guess"
+     },
+     {
+      "id": "c",
+      "text": "Yes, people never use patterns"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "slider",
+    "prompt": "The robot saw 3 striped scarves and 2 spotty scarves. Slide to show how many scarves it saw.",
+    "hint": "3 + 2.",
+    "explanation": "3 + 2 = 5 scarves.",
+    "skill_tag": "pattern.scarf_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multi_select",
+    "prompt": "Which two help you teach a robot well? Pick two.",
+    "hint": "Think about practice.",
+    "explanation": "Many and varied examples help.",
+    "skill_tag": "pattern.teach_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "Different kinds of examples"
+     },
+     {
+      "id": "b",
+      "text": "No examples"
+     },
+     {
+      "id": "c",
+      "text": "One blurry example"
+     },
+     {
+      "id": "d",
+      "text": "Many examples"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "When should you ask a person to check the robot's answer?",
+    "hint": "Think about important choices.",
+    "explanation": "A person should check answers that matter.",
+    "skill_tag": "pattern.ask_person",
+    "options": [
+     {
+      "id": "a",
+      "text": "Never"
+     },
+     {
+      "id": "b",
+      "text": "Only when it is right"
+     },
+     {
+      "id": "c",
+      "text": "When the answer matters"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What do we call things that repeat in a set order, like red, blue, red, blue?",
+    "hint": "They repeat.",
+    "explanation": "A repeating order is a pattern.",
+    "skill_tag": "pattern.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A secret"
+     },
+     {
+      "id": "b",
+      "text": "A pattern"
+     },
+     {
+      "id": "c",
+      "text": "A mess"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Cat, dog, cat, dog, cat, ... What comes next?",
+    "hint": "They take turns.",
+    "explanation": "After a cat comes a dog.",
+    "skill_tag": "pattern.next_shape",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cat"
+     },
+     {
+      "id": "b",
+      "text": "Fish"
+     },
+     {
+      "id": "c",
+      "text": "Dog"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A pattern never repeats.",
+    "hint": "Think about the tiles.",
+    "explanation": "A pattern repeats.",
+    "skill_tag": "pattern.repeat",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Join each pattern to its letters.",
+    "hint": "Use letters for sounds.",
+    "explanation": "Each set follows its own pattern.",
+    "skill_tag": "pattern.names",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Clap, stamp, clap, stamp"
+     },
+     {
+      "id": "l2",
+      "text": "Up, up, down, up, up, down"
+     },
+     {
+      "id": "l3",
+      "text": "Sun, sun, sun"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "AAB, AAB"
+     },
+     {
+      "id": "r1",
+      "text": "AB, AB"
+     },
+     {
+      "id": "r3",
+      "text": "A, A, A"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "patterns",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the pattern that repeats.",
+    "hint": "Look for repeats.",
+    "explanation": "Moon star repeats.",
+    "skill_tag": "pattern.tap",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌙⭐🌙⭐",
+       "label": "Moon star moon star",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌙",
+       "label": "One moon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⭐🌙🍎",
+       "label": "Three different",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Ben says patterns stop after two repeats. Is he right?",
+    "hint": "Think about a tiled floor.",
+    "explanation": "A pattern can continue.",
+    "skill_tag": "pattern.reason_three",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always two"
+     },
+     {
+      "id": "b",
+      "text": "Yes, always three"
+     },
+     {
+      "id": "c",
+      "text": "No. A pattern can keep repeating"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Mina says you cannot hear a pattern. Is she right?",
+    "hint": "Think about clap, stamp.",
+    "explanation": "Sounds can make patterns.",
+    "skill_tag": "pattern.reason_pictures",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only see them"
+     },
+     {
+      "id": "c",
+      "text": "No. A drum beat can make a pattern"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "patterns",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about days.",
+    "hint": "Think about the week.",
+    "explanation": "A week has seven days and Monday follows Sunday.",
+    "skill_tag": "pattern.fill_cycle",
+    "points": 2,
+    "text": "There are {b1} days in a week. After Sunday comes {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "ten"
+       },
+       {
+        "id": "b",
+        "text": "two"
+       },
+       {
+        "id": "c",
+        "text": "seven"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Friday"
+       },
+       {
+        "id": "b",
+        "text": "Monday"
+       },
+       {
+        "id": "c",
+        "text": "Wednesday"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "patterns",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Sam sorts shapes into big and small. What did he use to sort?",
+    "hint": "Look at the shapes.",
+    "explanation": "He sorted by size.",
+    "skill_tag": "pattern.sort_by",
+    "options": [
+     {
+      "id": "a",
+      "text": "Smell"
+     },
+     {
+      "id": "b",
+      "text": "Size"
+     },
+     {
+      "id": "c",
+      "text": "Colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put these steps for sorting shoes in order.",
+    "hint": "Pile first.",
+    "explanation": "Pile, choose a rule, then make groups.",
+    "skill_tag": "pattern.sort_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Pick a rule, like colour"
+     },
+     {
+      "id": "i1",
+      "text": "Pile the shoes up"
+     },
+     {
+      "id": "i3",
+      "text": "Make groups"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "There are 9 shapes. 5 are blue. Slide to show how many are not blue.",
+    "hint": "9 take away 5.",
+    "explanation": "9 - 5 = 4 shapes.",
+    "skill_tag": "pattern.not_red",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "number",
+    "prompt": "There are 8 animals. 3 can fly. How many cannot fly?",
+    "hint": "8 take away 3.",
+    "explanation": "8 - 3 = 5 animals.",
+    "skill_tag": "pattern.legs_count",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Which two rules could sort toys? Pick two.",
+    "hint": "Think about the toys.",
+    "explanation": "Colour and size describe toys.",
+    "skill_tag": "pattern.rule_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "The size"
+     },
+     {
+      "id": "b",
+      "text": "The weather"
+     },
+     {
+      "id": "c",
+      "text": "The day of the month"
+     },
+     {
+      "id": "d",
+      "text": "The colour"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a different shape in a row is a mistake. Is she right?",
+    "hint": "Different is not wrong.",
+    "explanation": "It may be an odd one out on purpose.",
+    "skill_tag": "pattern.reason_odd",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always a mistake"
+     },
+     {
+      "id": "b",
+      "text": "Yes, delete it"
+     },
+     {
+      "id": "c",
+      "text": "No. It might just be the odd one out"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "sort",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "match",
+    "prompt": "Join each rule to its group.",
+    "hint": "Think about colours.",
+    "explanation": "Each rule picks its own group.",
+    "skill_tag": "pattern.rule_group",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Is red"
+     },
+     {
+      "id": "l2",
+      "text": "Is yellow"
+     },
+     {
+      "id": "l3",
+      "text": "Is green"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Banana and lemon"
+     },
+     {
+      "id": "r3",
+      "text": "Lime and pea"
+     },
+     {
+      "id": "r1",
+      "text": "Apple and tomato"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "sort",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Star, moon, moon, star, moon, moon, star, ... What comes next?",
+    "hint": "Star then two moons.",
+    "explanation": "The pattern is star, moon, moon.",
+    "skill_tag": "pattern.abb",
+    "options": [
+     {
+      "id": "a",
+      "text": "Star"
+     },
+     {
+      "id": "b",
+      "text": "Moon"
+     },
+     {
+      "id": "c",
+      "text": "Sun"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "true_false",
+    "prompt": "A machine can find patterns with no examples at all.",
+    "hint": "It needs examples.",
+    "explanation": "Machines need examples to find patterns.",
+    "skill_tag": "pattern.machine_finds",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "guess",
+    "depth": "recall",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about the odd one out.",
+    "hint": "Think about different.",
+    "explanation": "The odd one out is different and we spot it.",
+    "skill_tag": "pattern.fill_predict",
+    "points": 2,
+    "text": "The odd one out is {b1} from the others. We {b2} the odd one out.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bigger"
+       },
+       {
+        "id": "b",
+        "text": "different"
+       },
+       {
+        "id": "c",
+        "text": "the same"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hide"
+       },
+       {
+        "id": "b",
+        "text": "spot"
+       },
+       {
+        "id": "c",
+        "text": "break"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "guess",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "hotspot",
+    "prompt": "Tap the one that does not belong.",
+    "hint": "Two are animals.",
+    "explanation": "A chair is not an animal.",
+    "skill_tag": "pattern.tap_odd",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐱",
+       "label": "Cat",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐶",
+       "label": "Dog",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a robot's guess must be true. Is he right?",
+    "hint": "Think about the confused robot.",
+    "explanation": "Machines can be wrong.",
+    "skill_tag": "pattern.reason_always_right",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, must be true"
+     },
+     {
+      "id": "b",
+      "text": "No. A robot's guess can be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, robots know everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "guess",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "number",
+    "prompt": "The pattern is 5, 10, 15, ... What number comes next?",
+    "hint": "Add 5 each time.",
+    "explanation": "5, 10, 15, 20 adds 5 each time.",
+    "skill_tag": "pattern.number",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "guess",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Put these steps in order for finding the next one.",
+    "hint": "See first.",
+    "explanation": "See, spot, predict, then test.",
+    "skill_tag": "pattern.guess_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Spot the repeat"
+     },
+     {
+      "id": "i3",
+      "text": "Predict the next one"
+     },
+     {
+      "id": "i4",
+      "text": "Test it"
+     },
+     {
+      "id": "i1",
+      "text": "See the first few items"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "guess",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Sana says a rule that fails must never be changed. Is she right?",
+    "hint": "Think about the confused robot.",
+    "explanation": "Rules can be improved.",
+    "skill_tag": "pattern.reason_rule",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rules are fixed for ever"
+     },
+     {
+      "id": "b",
+      "text": "No. We can change it to work better"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "guess",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "What makes a robot learn better?",
+    "hint": "Think about practice.",
+    "explanation": "More labelled examples help.",
+    "skill_tag": "pattern.good_examples",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fewer labelled examples"
+     },
+     {
+      "id": "b",
+      "text": "No labels"
+     },
+     {
+      "id": "c",
+      "text": "More labelled examples"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Layla says one picture teaches a robot all cats. Is she right?",
+    "hint": "Think about the two scarves.",
+    "explanation": "One example cannot show every kind.",
+    "skill_tag": "pattern.reason_one",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one picture"
+     },
+     {
+      "id": "b",
+      "text": "No. Cats look different, so it needs many"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all cats look the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a wrong guess means the robot is bad. Is he right?",
+    "hint": "Who chose the examples?",
+    "explanation": "More examples can help.",
+    "skill_tag": "pattern.reason_fault",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, throw it away"
+     },
+     {
+      "id": "b",
+      "text": "No. It might need better examples"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bad robot"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Zayd says only machines notice patterns. Is he right?",
+    "hint": "Think about days of the week.",
+    "explanation": "People notice patterns.",
+    "skill_tag": "pattern.reason_people",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, patterns are only for computers"
+     },
+     {
+      "id": "b",
+      "text": "No. People notice patterns every day"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only machines"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "slider",
+    "prompt": "The robot saw 4 striped scarves and 3 spotty scarves. Slide to show how many scarves it saw.",
+    "hint": "4 + 3.",
+    "explanation": "4 + 3 = 7 scarves.",
+    "skill_tag": "pattern.scarf_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multi_select",
+    "prompt": "Which two make a good test for a robot? Pick two.",
+    "hint": "Think about testing.",
+    "explanation": "A new and clear example makes a good test.",
+    "skill_tag": "pattern.teach_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "A clear picture"
+     },
+     {
+      "id": "b",
+      "text": "A blank page"
+     },
+     {
+      "id": "c",
+      "text": "An example it already saw"
+     },
+     {
+      "id": "d",
+      "text": "A new example it has not seen"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Who can check a robot's guess about something important?",
+    "hint": "Think about someone you trust.",
+    "explanation": "A trusted adult can check.",
+    "skill_tag": "pattern.ask_person",
+    "options": [
+     {
+      "id": "a",
+      "text": "Another robot only"
+     },
+     {
+      "id": "b",
+      "text": "A trusted adult"
+     },
+     {
+      "id": "c",
+      "text": "Nobody"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "teach",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

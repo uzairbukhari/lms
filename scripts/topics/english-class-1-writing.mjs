@@ -1,15 +1,21 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 5 for Zainab (Class 1): Writing to help others. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 2 writing, Cambridge Stage 2).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const BUTTER = "english-class-1-writing-to-help-1-b66fe31a.jpg";
+const COOKBOOK = "english-class-1-writing-to-help-2-c30fbc70.jpg";
+
 const instr = {
   id: "instructions", kind: "learn", title: "Instructions and bossy verbs",
   blocks: [
+    H("Welcome back, young writer!"),
+    SAY("Today we write to help other people. How do we write clear steps for them?", T("Today's big question: how do we write clear steps that help other people?")),
+    SAY("Someone is making a snack. Could you tell a friend exactly how to do it?", PHOTO(BUTTER, "Hands spreading soft cheese on a slice of bread with a knife on a wooden board", "Spread the butter. Each step starts with a bossy verb.", "Photo by insung yoon on Unsplash")),
     H("Stop 1: What are instructions?"),
-    SAY("Instructions tell someone how to do something, step by step, like a recipe for making a sandwich. They are full of bossy verbs, also called commands. A bossy verb tells you what to do, and it comes first in the step. Spread the butter. Add the cheese. Cut it in half. Each step is one short job, and the steps go in order.", T("**Instructions** tell us how to do something, step by step.", "A bossy verb, or **command**, tells you what to do: spread, add, cut.")),
+    SAY("Instructions tell someone how to do something, step by step. Think of a recipe for making a sandwich. They are full of bossy verbs, also called commands. A bossy verb tells you what to do. It comes first in the step. Spread the butter. Add the cheese. Cut it in half. Each step is one short job, and the steps go in order.", T("**Instructions** tell us how to do something, step by step.", "A bossy verb, or **command**, tells you what to do: spread, add, cut.")),
     EXPP("Make a sandwich",
       SS("Step one. Spread the butter on the bread. Spread is a bossy verb.", S("1. Spread the butter.", ["b", "🍞", 30, 50, 3, "grow", "spread"], ["k", "🧈", 70, 50, 3, "grow", "butter"])),
       SS("Step two. Add the cheese. Add is a bossy verb.", S("2. Add the cheese.", ["b", "🍞", 30, 50, 3, "none", "bread"], ["c", "🧀", 70, 50, 3, "grow", "add"])),
@@ -30,6 +36,7 @@ const plan = {
   id: "plan", kind: "try", title: "Plan and write a short story",
   blocks: [
     H("Stop 1: Plan first"),
+    SAY("A recipe book is full of instructions. Each one is a list of short steps.", PHOTO(COOKBOOK, "An open cookbook with pictures of food lying on a kitchen counter", "A recipe is a set of instructions for cooking.", "Photo by Mike Gattorna on Unsplash")),
     SAY("Good writers plan before they write. A story plan has three boxes. In the beginning, we meet the characters and the place. In the middle, a problem happens. At the end, the problem is solved. A plan helps our story make sense, and it stops us getting stuck.", T("A **plan** has a beginning, a middle and an end.")),
     EXPP("A story plan",
       SS("Box one, the beginning. A girl called Mina finds a lost kitten.", S("Beginning: Mina finds a kitten.", ["m", "👧", 30, 50, 3, "grow", "Mina"], ["k", "🐱", 70, 55, 3, "grow", "kitten"])),
@@ -56,7 +63,7 @@ const check = {
     H("Stop 1: Be a proofreader"),
     SAY("After we write, we check. Good writers are proofreaders. They look for mistakes and fix them. Does each sentence start with a capital letter? Does it end with a full stop, or a question mark? Look at this sentence: the cat sat on the mat. It has no capital letter and no full stop. Let's fix it.", T("**Proofreading** means checking your writing for mistakes.", "Capital letter at the start. Full stop at the end.")),
     EXPP("Fix the sentence",
-      SS("Here is a sentence with no capital and no full stop: the cat sat on the mat.", S("the cat sat on the mat", ["s", "🐈", 50, 50, 3, "bounce", "the cat sat on the mat"])),
+      SS("No capital or full stop here: the cat sat on the mat.", S("the cat sat on the mat", ["s", "🐈", 50, 50, 3, "bounce", "the cat sat on the mat"])),
       SS("Add a capital T at the start and a full stop at the end. The cat sat on the mat. Much better!", S("The cat sat on the mat.", ["s", "🐈", 50, 50, 3, "grow", "The cat sat on the mat."]))),
     CHK(mc("Which sentence is written correctly?", "The dog barked.", ["the dog barked", "the dog barked."], { hint: "Look for a capital and a full stop.", why: "It has a capital letter and a full stop.", tag: "check.punct" })),
     H("Stop 2: Brain game"),
@@ -76,7 +83,7 @@ const aloud = {
   id: "aloud", kind: "use", title: "Read it aloud",
   blocks: [
     H("Stop 1: Reading aloud"),
-    SAY("The last step is to read our writing aloud. When we say it out loud, we can hear if something does not sound right. We can hear a missing word, or a sentence that runs on. Read slowly, with a clear voice, and pause at each full stop. Listen to the sentences, like music.", T("To **read aloud** means to read out loud so people can hear.", "Pause at each full stop.")),
+    SAY("The last step is to read our writing aloud. When we say it aloud, we can hear if something sounds wrong. We can hear a missing word, or a sentence that runs on. Read slowly with a clear voice. Pause at each full stop. Listen to the sentences, like music.", T("To **read aloud** means to read out loud so people can hear.", "Pause at each full stop.")),
     EXPP("Reading aloud",
       SS("A girl reads her story aloud. She reads slowly and clearly.", S("A clear voice.", ["g", "👧", 40, 50, 3, "grow", "reading aloud"], ["s", "📖", 70, 55, 3, "grow", "story"])),
       SS("She stops at the full stop. A little pause, then on to the next sentence.", S("Pause at a full stop.", ["g", "👧", 40, 50, 3, "bounce", "pause"], ["p", "⏸️", 75, 30, 2, "pulse", "full stop"]))),
@@ -92,6 +99,28 @@ const aloud = {
     mc("Why do we read aloud?", "to hear mistakes", ["to make it quieter", "to make it shorter"], { hint: "What can we hear?", why: "We hear what does not sound right.", tag: "aloud.why" }),
     tf("We should pause at a full stop.", true, { hint: "Think about breathing.", why: "A full stop means a short pause.", tag: "aloud.why" }),
     mc("How should we read aloud?", "slowly and clearly", ["very fast", "in a whisper"], { hint: "So everyone can understand.", why: "A slow, clear voice helps listeners.", tag: "aloud.why" }),
+  ],
+};
+
+const clip = {
+  title: "Making chai with Nani", backdrop: "kitchen", caption: "Zainab follows and writes instructions for making chai.",
+  scenes: [
+    { caption: "The recipe.", say: "Nani shows Zainab how to make chai. Zainab writes the steps.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3 }, { id: "n", emoji: "👵", x: 75, y: 58, size: 3 }] },
+    { caption: "Step one.", say: "Step one. Boil the water in a pan.",
+      items: [{ id: "p", emoji: "🍲", x: 50, y: 58, size: 3, anim: "pulse" }, { id: "w", emoji: "💧", x: 75, y: 40, size: 2 }] },
+    { caption: "Step two.", say: "Step two. Add the tea leaves.",
+      items: [{ id: "t", emoji: "🍃", x: 35, y: 50, size: 2, anim: "float" }, { id: "p", emoji: "🍲", x: 65, y: 58, size: 3 }] },
+    { caption: "Step three.", say: "Step three. Pour in the milk.",
+      items: [{ id: "m", emoji: "🥛", x: 35, y: 52, size: 3 }, { id: "p", emoji: "🍲", x: 65, y: 58, size: 3 }] },
+    { caption: "Step four.", say: "Step four. Serve in a cup.",
+      items: [{ id: "c", emoji: "🍵", x: 50, y: 58, size: 3, effect: "sparkle" }] },
+    { caption: "Check.", say: "Zainab checks. Is there a capital letter and a full stop?",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3 }, { id: "c", emoji: "🔍", x: 72, y: 58, size: 3 }] },
+    { caption: "Read aloud.", say: "She reads the steps aloud. They sound just right.",
+      items: [{ id: "z", emoji: "👧", x: 35, y: 58, size: 3, anim: "bounce" }, { id: "s", emoji: "🗣️", x: 72, y: 40, size: 2 }] },
+    { caption: "Share.", say: "Nani follows the steps and the chai tastes lovely!",
+      items: [{ id: "n", emoji: "👵", x: 30, y: 58, size: 3 }, { id: "c", emoji: "🍵", x: 70, y: 58, size: 3, effect: "hearts" }] },
   ],
 };
 
@@ -112,13 +141,9 @@ export const topics = [
       tf("A fact file has a heading.", true, { hint: "Think about the top of the page.", why: "A fact file starts with a heading." }),
       mc("Which word is a describing word?", "big", ["run", "dog"], { hint: "It tells us what a thing is like.", why: "Big describes a thing." }),
     ],
-    intro: [
-      H("Welcome back, young writer!"),
-      SAY("Welcome back, young writer! Today's big question: how can our writing help other people? Instructions help someone make a sandwich. Stories make someone smile. We will plan, write, check and share. Let's go!", T("Today's big question: how can our writing help other people?", "We will write instructions and stories, then check and share them.")),
-      IMG("✏️", "Writers plan, write, check and share."),
-      GLOSS({ writer: "Someone who writes." }),
-    ],
+    intro: [],
     subs: [instr, plan, check, aloud],
+    clip,
     quiz: [
       Q(mc("Find the instruction: which sentence is one?", "Mix the flour and the milk.", ["The flour is white.", "Is there any milk?"], { hint: "Which tells you what to do?", why: "It starts with a bossy verb, mix.", tag: "instructions.find" }), "instructions", "recall", [
         mc("Pick the sentence that is an instruction.", "Cut the paper in half.", ["The paper is white.", "Where is the paper?"], { hint: "Which tells you what to do?", why: "It starts with a bossy verb, cut.", tag: "instructions.find" }),
@@ -165,6 +190,37 @@ export const topics = [
       Q(mc("Why do we read aloud before sharing our writing?", "To hear anything that does not sound right", ["To make it shorter", "To hide mistakes"], { hint: "What can we hear?", why: "Reading aloud shows what to fix.", tag: "aloud.reason" }), "aloud", "reason", [
         mc("Why do we read slowly and clearly?", "So listeners can understand every word", ["So the page is longer", "So we can hide mistakes"], { hint: "Who are we reading to?", why: "Listeners need to understand.", tag: "aloud.reason" }),
         mc("Why do we pause at a full stop?", "It shows where a sentence ends", ["It makes words longer", "It hides a mistake"], { hint: "What does a full stop mean?", why: "A pause shows the sentence has ended.", tag: "aloud.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Which word is the bossy verb in: Chop the onion?", "chop", ["onion", "the"], { hint: "Which word tells you what to do?", why: "Chop is the bossy verb that starts the step.", tag: "instructions.verb" }), "instructions", "apply", [
+        mc("Which word is the bossy verb in: Pour the water slowly?", "pour", ["water", "slowly"], { hint: "Which word tells you what to do?", why: "Pour is the bossy verb that starts the step.", tag: "instructions.verb" })]),
+      Q(mc("Aisha says instructions are only for recipes. Is she right?", "No, instructions also tell us how to play a game or wash our hands", ["Yes, only cooks use instructions", "Yes, instructions are always food"], { hint: "Think about washing hands.", why: "Instructions can explain many jobs, not only cooking.", tag: "instructions.reason" }), "instructions", "reason", [
+        mc("Layla says only grown-ups need instructions. Is she right?", "No, children use them to make things and play games too", ["Yes, children never follow steps", "Yes, instructions are only for work"], { hint: "Think about a board game.", why: "Anyone can follow instructions.", tag: "instructions.reason" })]),
+      Q(ord("Put the chai steps in order.", ["Boil the water", "Add the tea leaves", "Pour in the milk", "Serve in a cup"], { hint: "Start with the water.", why: "We boil the water, add the tea, pour in the milk and serve.", tag: "instructions.order" }), "instructions", "apply", [
+        ord("Put the hand-washing steps in order.", ["Wet your hands", "Add soap", "Scrub for twenty seconds", "Rinse and dry"], { hint: "Wet before soap.", why: "We wet, add soap, scrub, then rinse and dry.", tag: "instructions.order" })]),
+      Q(mc("What do the numbers 1, 2 and 3 show in a list of instructions?", "The order of the steps", ["The names of the cooks", "How many people can read"], { hint: "Think about doing step one first.", why: "Numbers show the order in which to do the steps.", tag: "instructions.order" }), "instructions", "recall", [
+        mc("Why must the steps go in order?", "So the job works properly", ["So the page looks long", "So the verbs rhyme"], { hint: "What if you add soap after drying?", why: "If the steps are in the wrong order the job may not work.", tag: "instructions.order" })]),
+      Q(st("Write a bossy verb to finish: ___ the eggs into the bowl.", ["crack", "pour", "add", "put", "drop", "tip"], { hint: "What do you do with an egg?", why: "Crack, pour, add and put all tell you what to do.", tag: "instructions.verb" }), "instructions", "apply", [
+        st("Write a bossy verb to finish: ___ your hands with soap.", ["wash", "rub", "scrub"], { hint: "What do you do with soap?", why: "Wash, rub and scrub tell you what to do.", tag: "instructions.verb" })]),
+      Q(tf("Each step in instructions is one short job.", true, { hint: "Think of spread, add, cut.", why: "Each step gives one short job.", tag: "instructions.step" }), "instructions", "apply", [
+        tf("A good step has ten jobs squashed into it.", false, { hint: "Short steps are easier.", why: "A good step is one short job.", tag: "instructions.step" })]),
+      Q(mat("Match the sentence to its bossy verb.", [["Cut the apple.", "cut"], ["Add the sugar.", "add"], ["Pour the milk.", "pour"]], { hint: "Find the first word.", why: "The bossy verb comes first in each step.", tag: "instructions.verb" }), "instructions", "apply", [
+        mat("Join each step to its bossy verb.", [["Mix the dough.", "mix"], ["Stir the soup.", "stir"], ["Spread the jam.", "spread"]], { hint: "Find the first word.", why: "The bossy verb comes first in each step.", tag: "instructions.verb" })]),
+      Q(mc("Sam says a story plan is a waste of time. Is he right?", "No, a plan helps the story make sense", ["Yes, good writers never plan", "Yes, a plan makes stories shorter"], { hint: "What is in the three boxes?", why: "A plan helps us put beginning, middle and end in order.", tag: "plan.reason" }), "plan", "reason", [
+        mc("Omar says you can write the middle first and skip the plan. Is he right?", "No, a plan shows what goes first, next and last", ["Yes, plans slow you down", "Yes, the end can be first"], { hint: "Think of the three boxes.", why: "A plan keeps the story in order.", tag: "plan.reason" })]),
+      Q(ms("Which two boxes are in a story plan? Pick two.", ["Middle", "End"], ["Index", "Table"], { hint: "Think of the three parts.", why: "A story plan has a beginning, a middle and an end.", tag: "plan.boxes" }), "plan", "apply", [
+        ms("Pick two parts of a story plan.", ["Beginning", "Middle"], ["Heading", "Label"], { hint: "Think of the three boxes.", why: "A story plan has a beginning, a middle and an end.", tag: "plan.boxes" })]),
+      Q(fill("Finish the sentences about a story plan.", "We meet the characters at the {b1}. The problem happens in the {b2}.", [["beginning", "end", "title"], ["middle", "beginning", "index"]], { hint: "Think of the three boxes.", why: "We meet characters at the beginning. The problem is in the middle.", tag: "plan.boxes" }), "plan", "apply", [
+        fill("Complete the sentences about the three boxes.", "The problem is solved at the {b1}. A plan has three {b2}.", [["end", "middle", "title"], ["boxes", "wheels", "wings"]], { hint: "Think of the three boxes.", why: "The problem is solved at the end. A plan has three boxes.", tag: "plan.boxes" })]),
+      Q(mc("Hamza says a proofreader only checks the title. Is he right?", "No, a proofreader checks every sentence for mistakes", ["Yes, only the title matters", "Yes, proofreaders never check capitals"], { hint: "Think of capitals and full stops.", why: "A proofreader checks all of the writing.", tag: "check.reason" }), "check", "reason", [
+        mc("Mira says there is no need to check writing after you finish. Is she right?", "No, checking finds mistakes we can fix", ["Yes, writing is always perfect", "Yes, checking makes it worse"], { hint: "What does a proofreader do?", why: "Checking helps us find and fix mistakes.", tag: "check.reason" })]),
+      Q(hot("Tap the sentence with the right capital and full stop.", [["1️⃣", "the dog ran.", 22, 50], ["2️⃣", "The dog ran.", 50, 50], ["3️⃣", "The dog ran", 78, 50]], ["The dog ran."], { labels: true, hint: "Start with a capital and end with a mark.", why: "A sentence starts with a capital letter and ends with a full stop.", tag: "check.punct" }), "check", "apply", [
+        hot("Tap the question that is written correctly.", [["1️⃣", "Where is my bag?", 22, 50], ["2️⃣", "where is my bag?", 50, 50], ["3️⃣", "Where is my bag.", 78, 50]], ["Where is my bag?"], { labels: true, hint: "A question needs a capital and a question mark.", why: "A question starts with a capital and ends with a question mark.", tag: "check.punct" })]),
+      Q(sld("Slide to show how many mistakes there are: the cat sat on the mat", { min: 0, max: 5 }, 2, 0, { hint: "Look at the start and the end.", why: "There is no capital letter and no full stop, so 2 mistakes.", tag: "check.punct" }), "check", "apply", [
+        sld("Slide to show how many mistakes there are: my friend lives in lahore", { min: 0, max: 5 }, 3, 0, { hint: "Look at the start, the name of the place and the end.", why: "Needs a capital for My, Lahore and a full stop, so 3 mistakes.", tag: "check.punct" })]),
+      Q(mc("What can you hear when you read aloud that you might miss when reading silently?", "A missing word", ["The page number", "The colour of the pencil"], { hint: "Think about how it sounds.", why: "Reading aloud helps us hear a missing word or a sentence that runs on.", tag: "aloud.hear" }), "aloud", "apply", [
+        mc("Which problem can reading aloud help you hear?", "A sentence that runs on and on", ["A missing picture", "A torn page"], { hint: "Think about pausing.", why: "We hear a run-on sentence when we pause at full stops.", tag: "aloud.hear" })]),
+      Q(mc("Zainab says we should read our writing fast so we finish sooner. Is she right?", "No, we read slowly and pause at each full stop", ["Yes, fast is always best", "Yes, we should skip the full stops"], { hint: "Think about reading like music.", why: "Reading slowly with pauses helps us hear mistakes.", tag: "aloud.reason" }), "aloud", "reason", [
+        mc("Ali says asking for feedback is rude. Is he right?", "No, kind ideas help us make writing even better", ["Yes, never ask anyone", "Yes, feedback means you wrote it badly"], { hint: "Think about sharing your writing.", why: "Feedback helps us improve our writing.", tag: "aloud.reason" })]),
     ],
   }),
 ];

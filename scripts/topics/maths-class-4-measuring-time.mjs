@@ -1,6 +1,9 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, PHOTO, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-4-measuring-time.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-4-measuring-time-d1-82e41637.png","alt":"A conversion strip: 1 km = 1,000 m, 1 m = 100 cm and 1 cm = 10 mm","caption":"Length conversions."};
+const COTEACH_B = {"type":"image","asset":"maths-class-4-measuring-time-d2-c4f51113.png","alt":"A rectangle with sides 8 cm and 5 cm with arrows round the edge for the perimeter","caption":"Perimeter = 8 + 5 + 8 + 5 = 26 cm."};
 // Class 4 (Fatima) Maths topic 4: Measuring and time. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const clock = (id, hour, minute, x = 50, y = 50, size = 3) => [id, { kind: "clock", hour, minute }, x, y, size];
@@ -8,12 +11,16 @@ const clock = (id, hour, minute, x = 50, y = 50, size = 3) => [id, { kind: "cloc
 const units = {
   id: "units", kind: "learn", title: "Length, mass and capacity",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Your family wants to use less water and energy this term. To do that, we need to measure carefully. How much water does a tap use? How long does a bus journey take? How big is a garden? Today you will measure length, weight and liquid. You will work out perimeter and area, and read the twenty-four hour clock. Let's measure!", PHOTO("maths-class-4-measuring-time-1-b669ba0e.jpg", "A wooden hourglass with blue sand standing on pebbles", "An hourglass measures a short amount of time.", "Photo by Aron Visuals on Unsplash")),
+    T("Today's big question: how can we measure our world, and our time, accurately?"),
     H("Stop 1: Length"),
     SAY("We measure how long something is in millimetres, centimetres, metres and kilometres. There are ten millimetres in one centimetre. There are one hundred centimetres in one metre. And there are one thousand metres in one kilometre. The words give us a clue. Kilo means one thousand. Centi means one hundred. Milli means one thousand. To change a big unit to a smaller one, we multiply.", T("10 mm = 1 cm. 100 cm = 1 m. 1,000 m = 1 km.", "To change to a smaller unit we **multiply**. To change to a bigger unit we **divide**.")),
     EXPP("From metres to centimetres",
       SS("Here is a metre stick. It is one metre long.", S("1 m", ["m", "📏", 50, 50, 3, "none", "1 metre"])),
       SS("A metre is a hundred centimetres. So two metres is two hundred centimetres.", S("2 m = 200 cm", ["m", "📏", 30, 50, 2, "none", "1 m"], ["n", "📏", 70, 50, 2, "pulse", "2 m = 200 cm"])),
       SS("To change metres to centimetres, multiply by one hundred. To change centimetres to metres, divide by one hundred. Two hundred and fifty centimetres is two metres and fifty centimetres.", S("250 cm = 2 m 50 cm", ["m", "📏", 50, 40, 3, "none", "250 cm"], ["a", "➗", 50, 78, 2, "pulse", "250 ÷ 100 = 2.5 m"]))),
+    SAY("One kilometre is one thousand metres. One metre is one hundred centimetres. One centimetre is ten millimetres.", COTEACH_A),
     CHK(num("How many centimetres are in 3 metres?", 300, { hint: "Multiply by 100.", why: "3 × 100 = 300 cm.", tag: "measure.length" })),
     H("Stop 2: Mass and capacity"),
     SAY("We measure how heavy something is, its mass, in grams and kilograms. A kilogram is one thousand grams. And we measure how much a container holds, its capacity, in millilitres and litres. A litre is one thousand millilitres. Look at the scales. Two kilograms is two thousand grams.", T("**Mass** is how heavy something is: 1 kg = 1,000 g.", "**Capacity** is how much a container holds: 1 litre = 1,000 ml.")),
@@ -23,7 +30,7 @@ const units = {
       SS("Half a litre is five hundred millilitres. Half a kilogram is five hundred grams.", S("½ l = 500 ml, ½ kg = 500 g", ["w", "🍶", 30, 50, 2, "none", "500 ml"], ["r", "🍚", 70, 50, 2, "none", "500 g"]))),
     CHK(mc("Which is the heaviest?", "2 kg", ["1,500 g", "900 g"], { hint: "Change them all to grams.", why: "2 kg = 2,000 g, which is more than 1,500 g and 900 g.", tag: "measure.mass" })),
     SAY("Remember. Multiply to go to a smaller unit and divide to go to a bigger one. One kilo or one kilometre is one thousand.", SUM("10 mm = 1 cm, 100 cm = 1 m, 1,000 m = 1 km", "1 kg = 1,000 g and 1 l = 1,000 ml", "Multiply for smaller units, divide for bigger")),
-    GLOSS({ multiply: "Make bigger by repeated adding, like 3 × 100.", divide: "Share into equal parts, like 300 ÷ 100.", mass: "How heavy something is.", capacity: "How much a container holds.", kilometre: "One thousand metres." }),
+    GLOSS({ measure: "To find out how big, heavy or long something is.", multiply: "Make bigger by repeated adding, like 3 × 100.", divide: "Share into equal parts, like 300 ÷ 100.", mass: "How heavy something is.", capacity: "How much a container holds.", kilometre: "One thousand metres." }),
   ],
   mini: [
     num("How many millimetres are in 4 cm?", 40, { hint: "10 mm in 1 cm.", why: "4 × 10 = 40 mm." }),
@@ -42,6 +49,7 @@ const area = {
       SS("Start with the long side, six metres.", S("6 m", ["g", "🌳", 50, 50, 3, "none", "garden"], ["a", "👣", 50, 15, 2, "pulse", "6 m"])),
       SS("Then the short side, four metres.", S("6 + 4", ["g", "🌳", 50, 50, 3, "none", "garden"], ["a", "👣", 50, 15, 2, "none", "6 m"], ["b", "👣", 85, 50, 2, "pulse", "4 m"])),
       SS("Then six metres back and four metres home. Six, four, six, four makes twenty metres.", S("6 + 4 + 6 + 4 = 20 m", ["g", "🌳", 50, 50, 3, "none", "garden"], ["a", "👣", 50, 15, 2, "none", "6"], ["b", "👣", 85, 50, 2, "none", "4"], ["c", "👣", 50, 85, 2, "none", "6"], ["d", "👣", 15, 50, 2, "pulse", "4"]))),
+    SAY("Walk round the edge to find the perimeter. Add all four sides: eight, five, eight and five.", COTEACH_B),
     CHK(num("A rectangle is 9 cm long and 5 cm wide. What is its perimeter?", 28, { hint: "Add all four sides.", why: "9 + 5 + 9 + 5 = 28 cm.", tag: "measure.perimeter" })),
     H("Stop 2: Area"),
     SAY("Area is the amount of flat space inside a shape. We measure it by counting squares. A rectangle that is four squares long and three squares wide has three rows of four. Three fours are twelve. So the area is twelve square centimetres. For rectangles, multiply the length by the width.", T("**Area** is the space inside a shape, counted in squares. Rectangle: length × width.", "4 × 3 = 12 square cm.")),
@@ -79,7 +87,7 @@ const time = {
       SS("The train leaves at nine forty.", S("09:40", clock("c", 9, 40))),
       SS("First count on to ten o'clock. That is twenty minutes.", S("+20 minutes → 10:00", clock("c", 10, 0))),
       SS("Then count on to twelve o'clock. That is two whole hours, one hundred and twenty minutes.", S("+2 hours → 12:00", clock("c", 12, 0))),
-      SS("Finally ten more minutes to twelve ten. Twenty, plus one hundred and twenty, plus ten, makes one hundred and fifty minutes: two and a half hours.", S("+10 minutes → 12:10. Total 150 minutes", clock("c", 12, 10)))),
+      SS("Finally ten more minutes to twelve ten. Twenty, plus one hundred and twenty, plus ten, makes one hundred and fifty minutes.", S("+10 minutes → 12:10. Total 150 minutes", clock("c", 12, 10)))),
     CHK(num("A film starts at 14:15 and finishes at 15:45. How many minutes long is it?", 90, { hint: "14:15 to 15:15 is 60 minutes.", why: "60 + 30 = 90 minutes.", tag: "time.interval" })),
     H("Stop 3: Brain break"),
     SAY("Brain break time. Watch the order, then copy it.", BRAIN("remember_order", "Clock lights", "Watch, then copy.", ["🕐", "🕑", "🕒", "🕓"])),
@@ -98,7 +106,7 @@ const real = {
   id: "real_world", kind: "use", title: "Measuring our water",
   blocks: [
     H("Stop 1: How much water?"),
-    SAY("Your family project this term is about using less water and energy. First, we measure. If a tap fills a four litre bucket in one minute, then in five minutes it would fill twenty litres. Let's work out how a dripping tap wastes water. One drip a second might look tiny, but a drop is about a twentieth of a millilitre. Over a day, it adds up to a lot.", T("Project: how can our family use less water and energy?", "Measure first, then plan. 4 litres each minute for 5 minutes is 20 litres.")),
+    SAY("Your family project this term is about using less water and energy. First, we measure. A tap fills a four litre bucket in one minute. In five minutes it fills twenty litres. Let's work out how a dripping tap wastes water. One drip a second might look tiny, but a drop is about a twentieth of a millilitre. Over a day, it adds up to a lot.", T("Project: how can our family use less water and energy?", "Measure first, then plan. 4 litres each minute for 5 minutes is 20 litres.")),
     IMG("🚰", "A tap that runs 4 litres every minute."),
     CHK(num("A tap runs 6 litres every minute. How many litres in 5 minutes?", 30, { hint: "6 × 5.", why: "6 × 5 = 30 litres.", tag: "measure.real_life" })),
     H("Stop 2: Recipe and timetable"),
@@ -138,6 +146,24 @@ const ALTS = [
   [num("A tap drips 40 ml every minute. How many litres is wasted in 50 minutes?", 2, { hint: "40 × 50 = 2,000 ml.", why: "2,000 ml = 2 litres.", tag: "measure.real_life" }), num("A dripping tap wastes 20 ml every minute. How many litres is wasted in 50 minutes?", 1, { hint: "20 × 50 = 1,000 ml.", why: "1,000 ml = 1 litre.", tag: "measure.real_life" })],
 ];
 
+const clip = {
+  title: "Ali measures his desk", backdrop: "classroom", caption: "Ali measures his desk, works out the perimeter and checks the bus timetable.",
+  scenes: [
+    { caption: "Ali and his desk.", say: "This is Ali. He wants to measure his classroom desk.",
+      items: [{ id: "a", emoji: "👦", label: "Ali", x: 22, y: 56, size: 3, anim: "bounce", enter: "walk_right" }, { id: "d", emoji: "🪑", label: "desk", x: 72, y: 48, size: 3, enter: "pop" }] },
+    { caption: "Length: 8 cm.", say: "The desk is eight centimetres long and five centimetres wide.",
+      items: [{ id: "r", prop: { kind: "fraction_bar", parts: 8, shaded: 8 }, label: "8 cm", x: 50, y: 46, size: 3, enter: "grow" }] },
+    { caption: "Around the edge.", say: "Perimeter is the distance all the way around. Eight, five, eight, five.",
+      items: [{ id: "p", emoji: "📐", label: "8 + 5 + 8 + 5", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "26 cm.", say: "Eight plus five plus eight plus five makes twenty-six centimetres.",
+      items: [{ id: "a", emoji: "👦", label: "Ali", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "s", emoji: "✅", label: "26 cm", x: 70, y: 40, size: 3, effect: "sparkle" }] },
+    { caption: "Bus at 09:40.", say: "The bus leaves at twenty to ten in the morning. That is nine forty.",
+      items: [{ id: "c", emoji: "🚌", label: "09:40", x: 50, y: 46, size: 3, enter: "slide_left" }] },
+    { caption: "Shukriya, Ali!", say: "Measuring and telling time help us plan our day. Shukriya, Ali!",
+      items: [{ id: "a", emoji: "👦", label: "Ali", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "r", emoji: "🎉", label: "Measure!", x: 70, y: 40, size: 2, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-4-measuring-time", subject: "maths", cls: 4, topic: 4, title: "Measuring and Time",
@@ -157,13 +183,9 @@ export const topics = [
       mc("Which fraction equals 1/2?", "2/4", ["1/4", "2/3"], { hint: "Multiply top and bottom by 2.", why: "1/2 = 2/4." }),
       num("What is 8 × 9?", 72, { hint: "Count in nines.", why: "8 × 9 = 72." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Your family wants to use less water and energy this term. To do that, we need to measure carefully. How much water does a tap use? How long does a bus journey take? How big is a garden? Today you will learn to measure length, weight and liquid, work out perimeter and area, and read the twenty-four hour clock. Let's measure!", T("Today's big question: how can we measure our world, and our time, accurately?")),
-      IMG("📏", "Rulers, scales, jugs and clocks: tools for measuring."),
-      GLOSS({ measure: "To find out how big, heavy or long something is." }),
-    ],
+    intro: [],
     subs: [units, area, time, real],
+    clip,
     quiz: [
       { q: mc("How many centimetres are in 1 metre?", "100", ["10", "1,000"], { hint: "Think of a metre ruler.", why: "100 cm = 1 m.", tag: "measure.length" }), sub: "units", depth: "recall" },
       { q: num("How many grams are in 3 kg?", 3000, { hint: "1 kg = 1,000 g.", why: "3 × 1,000 = 3,000 g.", tag: "measure.mass" }), sub: "units", depth: "recall" },
@@ -180,6 +202,36 @@ export const topics = [
       { q: num("A train leaves at 09:40 and arrives at 12:10. How many minutes is the journey?", 150, { hint: "09:40 to 10:00 is 20 minutes.", why: "20 + 120 + 10 = 150 minutes.", tag: "time.interval" }), sub: "time", depth: "apply" },
       { q: mc("Sara says 2 litres is less than 500 ml because 2 is less than 500. Is she right?", "No, 2 litres is 2,000 ml, which is more than 500 ml", ["Yes, 2 is less than 500", "No, they are the same"], { hint: "Change to the same unit.", why: "2 l = 2,000 ml.", tag: "measure.units_reason" }), sub: "units", depth: "reason" },
       { q: num("A dripping tap wastes 50 ml every minute. How many litres is wasted in 60 minutes?", 3, { hint: "50 × 60 = 3,000 ml.", why: "3,000 ml = 3 litres.", tag: "measure.real_life" }), sub: "real_world", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      { q: tf("1 metre is 1,000 millimetres.", true, { hint: "1 m = 100 cm, and 1 cm = 10 mm.", why: "100 × 10 = 1,000 mm.", tag: "measure.units" }), sub: "units", depth: "recall",
+        alts: [tf("1 kilogram is 100 grams.", false, { hint: "Kilo means one thousand.", why: "1 kg = 1,000 g.", tag: "measure.units" })] },
+      { q: fill("Change 470 cm.", "470 cm = {b1} m and {b2} cm.", [["4", "47", "470"], ["70", "7", "47"]], { hint: "100 cm in 1 m.", why: "470 cm = 4 m 70 cm.", tag: "measure.convert" }), sub: "units", depth: "apply",
+        alts: [fill("Change 605 cm.", "605 cm = {b1} m and {b2} cm.", [["6", "60", "605"], ["5", "50", "60"]], { hint: "100 cm in 1 m.", why: "605 cm = 6 m 5 cm.", tag: "measure.convert" })] },
+      { q: ms("Which are the same as 4 kg? Pick two.", ["4,000 g", "2,000 g + 2,000 g"], ["400 g", "40 g"], { hint: "1 kg = 1,000 g.", why: "4 kg = 4,000 g.", tag: "measure.convert" }), sub: "units", depth: "apply",
+        alts: [ms("Which are the same as 6 litres? Pick two.", ["6,000 ml", "3,000 ml + 3,000 ml"], ["600 ml", "60 ml"], { hint: "1 l = 1,000 ml.", why: "6 l = 6,000 ml.", tag: "measure.convert" })] },
+      { q: ord("Put these masses in order, lightest first.", ["750 g", "900 g", "1 kg", "1.2 kg"], { hint: "Change all to grams.", why: "750 g, 900 g, 1,000 g, 1,200 g.", tag: "measure.order" }), sub: "units", depth: "apply",
+        alts: [ord("Sort these lengths from the longest.", ["2 m", "1,800 mm", "150 cm", "90 cm"], { hint: "Change all to centimetres.", why: "200 cm, 180 cm, 150 cm, 90 cm.", tag: "measure.order" })] },
+      { q: sld("Slide to show the length of a pencil in centimetres.", { min: 0, max: 30, step: 1 }, 18, 1, { hint: "About the length of your hand.", why: "A pencil is about 18 cm long.", tag: "measure.estimate" }), sub: "units", depth: "apply",
+        alts: [sld("Slide to show the height of a table in centimetres.", { min: 0, max: 150, step: 5 }, 75, 5, { hint: "About as high as your hip.", why: "A table is about 75 cm high.", tag: "measure.estimate" })] },
+      { q: mat("Match each 24-hour time to its 12-hour time.", [["13:00", "1:00 pm"], ["07:45", "7:45 am"], ["20:30", "8:30 pm"]], { hint: "After midday, take away 12.", why: "13 − 12 = 1, and 20 − 12 = 8.", tag: "time.24hour" }), sub: "time", depth: "apply",
+        alts: [mat("Join each 24-hour time to its 12-hour time.", [["16:10", "4:10 pm"], ["00:25", "12:25 am"], ["11:50", "11:50 am"]], { hint: "After midday, take away 12.", why: "16 − 12 = 4. Times before 1 am are 12 am.", tag: "time.24hour" })] },
+      { q: hot("Tap the rectangle with an area of 15 squares.", [["🟦", "A: 3 by 6", 22, 50], ["🟦", "B: 3 by 5", 50, 50], ["🟦", "C: 4 by 4", 78, 50]], ["B: 3 by 5"], { labels: true, hint: "Multiply the sides.", why: "3 × 5 = 15.", tag: "measure.area" }), sub: "perimeter_area", depth: "apply",
+        alts: [hot("Tap the rectangle with an area of 16 squares.", [["🟦", "A: 4 by 5", 22, 50], ["🟦", "B: 2 by 8", 50, 50], ["🟦", "C: 3 by 6", 78, 50]], ["B: 2 by 8"], { labels: true, hint: "Multiply the sides.", why: "2 × 8 = 16.", tag: "measure.area" })] },
+      { q: mc("Hamza says a 6 cm by 1 cm rectangle has a perimeter of 6 because 6 × 1 = 6. Is he right?", "No, 6 × 1 is the area. The perimeter is 6 + 1 + 6 + 1 = 14 cm", ["Yes, the perimeter is 6", "No, the perimeter is 7 cm"], { hint: "Perimeter is all the way around.", why: "6 × 1 = 6 is the area. Adding all four sides gives 14 cm.", tag: "measure.perimeter_area" }), sub: "perimeter_area", depth: "reason",
+        alts: [mc("Ben says a 3 m by 3 m square has a perimeter of 9 because 3 + 3 + 3 = 9. Is he right?", "No, he missed one side. The perimeter is 12 m", ["Yes, 9 m is right", "No, the perimeter is 6 m"], { hint: "A square has four sides.", why: "3 + 3 + 3 + 3 = 12 m.", tag: "measure.perimeter" })] },
+      { q: mc("Lina says 2 hours is 200 minutes because 2 × 100 = 200. Is she right?", "No. An hour has 60 minutes, so 2 hours is 120 minutes", ["Yes, 2 × 100 is 200", "No, it is 150 minutes"], { hint: "How many minutes are in one hour?", why: "1 hour = 60 minutes, so 2 hours = 120 minutes.", tag: "time.interval_reason" }), sub: "time", depth: "reason",
+        alts: [mc("Omar says 3 hours is 180 minutes because 3 × 60 = 180. Is he right?", "Yes. An hour has 60 minutes, so 3 hours is 180 minutes", ["No, 3 hours is 300 minutes", "No, 3 hours is 130 minutes"], { hint: "How many minutes are in one hour?", why: "3 × 60 = 180 minutes.", tag: "time.interval_reason" })] },
+      { q: mc("Ali says 12:30 pm is 24:30 because you add 12 to every pm time. Is he right?", "No. Noon to 12:59 pm stays as 12, so 12:30 pm is 12:30", ["Yes, add 12 to every pm time", "No, it is 00:30"], { hint: "Is 12:30 pm before or after midday?", why: "12:30 pm is just after midday, so the hour stays 12.", tag: "time.24hour" }), sub: "time", depth: "reason",
+        alts: [mc("Aisha says 12:15 pm is 24:15 because she adds 12. Is she right?", "No. 12:15 pm stays as 12:15 because it is still noon", ["Yes, it is 24:15", "No, it is 00:15"], { hint: "Is 12:15 pm before or after midday?", why: "It is just after midday, so the hour stays 12.", tag: "time.24hour" })] },
+      { q: mc("Zain says 500 ml is more than 1 litre because 500 is bigger than 1. Is he right?", "No, 1 litre is 1,000 ml, which is more than 500 ml", ["Yes, 500 is bigger than 1", "No, they are the same"], { hint: "Change to the same unit.", why: "1 l = 1,000 ml, so 1 litre is more than 500 ml.", tag: "measure.units_reason" }), sub: "units", depth: "reason",
+        alts: [mc("Mia says 4 m is shorter than 350 cm because 4 is smaller than 350. Is she right?", "No, 4 m is 400 cm, which is longer than 350 cm", ["Yes, 4 is smaller than 350", "No, they are the same"], { hint: "Change to the same unit.", why: "4 m = 400 cm.", tag: "measure.units_reason" })] },
+      { q: mc("Layla says a 4 by 4 square has an area of 8 because 4 + 4 = 8. Is she right?", "No, the area is 4 × 4 = 16 square cm", ["Yes, 8 is the area", "No, the area is 12"], { hint: "Area is length times width.", why: "Area is length × width, so 4 × 4 = 16 square cm.", tag: "measure.perimeter_area" }), sub: "perimeter_area", depth: "reason",
+        alts: [mc("Sam says a 2 by 7 rectangle has an area of 14 because 2 × 7 = 14. Is he right?", "Yes. Area is length times width, so 2 × 7 = 14", ["No, the area is 9", "No, the area is 18"], { hint: "Area is length times width.", why: "2 × 7 = 14 square units.", tag: "measure.perimeter_area" })] },
+      { q: num("A tap runs 8 litres a minute. How many litres does it run in 4 minutes?", 32, { hint: "8 × 4.", why: "8 × 4 = 32 litres.", tag: "measure.real_life" }), sub: "real_world", depth: "apply",
+        alts: [num("A tap runs 3 litres a minute. How many litres in 9 minutes?", 27, { hint: "3 × 9.", why: "3 × 9 = 27 litres.", tag: "measure.real_life" })] },
+      { q: num("How many minutes from 07:50 to 09:10?", 80, { hint: "07:50 to 08:00 is 10 minutes.", why: "10 + 70 = 80 minutes.", tag: "time.interval" }), sub: "time", depth: "apply",
+        alts: [num("How many minutes from 13:25 to 14:40?", 75, { hint: "13:25 to 14:00 is 35 minutes.", why: "35 + 40 = 75 minutes.", tag: "time.interval" })] },
+      { q: num("A rectangle is 12 m long and 5 m wide. What is its perimeter in metres?", 34, { hint: "12 + 5 + 12 + 5.", why: "12 + 5 + 12 + 5 = 34 m.", tag: "measure.perimeter" }), sub: "perimeter_area", depth: "apply",
+        alts: [num("A rectangle is 9 m long and 2 m wide. What is its perimeter?", 22, { hint: "9 + 2 + 9 + 2.", why: "9 + 2 + 9 + 2 = 22 m.", tag: "measure.perimeter" })] },
+    ].map((x, i) => ({ alts: ALTS[i], ...x })),
   }),
 ];

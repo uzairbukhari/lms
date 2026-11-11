@@ -1,0 +1,2961 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-time-five-minutes",
+  "subject": "maths",
+  "title": "Telling the Time to Five Minutes",
+  "summary": "Read and write the time to five minutes, past and to the hour, on an analogue clock.",
+  "age_band": "7-8",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 11: Telling the time to five minutes",
+  "learning_objectives": [
+   "Count in fives round the clock",
+   "Tell the time five minutes past and to",
+   "Compare lengths of time"
+  ],
+  "tags": [
+   "topic",
+   "topic-11"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 11
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 time",
+    "text": "Tell and write the time to five minutes, including quarter past/to the hour, and draw the hands on a clock face; know the number of minutes in an hour and hours in a day"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Mt.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Mt.02"
+   }
+  ],
+  "success_criteria": [
+   "I can count in fives round the clock",
+   "I can read times like 10 past 7 and 10 to 4",
+   "I can say which time takes longer"
+  ],
+  "real_life": "Knowing when the school bus comes, when lessons start and how long a break lasts.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What comes next: 5, 10, 15, ...?",
+    "hint": "Add 5.",
+    "explanation": "15 + 5 = 20.",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "How many minutes in half an hour?",
+    "hint": "Half of 60.",
+    "explanation": "30 + 30 = 60.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "The clock shows o'clock when the long hand is on the 12.",
+    "hint": "Long hand straight up.",
+    "explanation": "Minute hand on 12 means o'clock.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "minutes",
+   "kind": "learn",
+   "title": "Minutes and hours",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara and the school clock",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-time-five-minutes-2-e7f528bb.jpg",
+     "alt": "A small round alarm clock with numbers 1 to 12 on a dark table",
+     "caption": "An alarm clock with a long and a short hand.",
+     "credit": "Photo by Suhas Hanjar on Unsplash",
+     "say": "Meet Zara. She has a big wall clock in her classroom. The clock tells her when to learn and when to play. Let's learn to read it."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Minutes and hours",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **minute** is a short time. 60 minutes make 1 **hour**.\n\n24 hours make 1 day and night.",
+     "say": "A minute is a short time. An hour is longer. There are sixty minutes in one hour. There are twenty-four hours in one whole day."
+    },
+    {
+     "type": "explainer",
+     "title": "Count the minutes",
+     "scenes": [
+      {
+       "caption": "Minute hand: one trip = 60 minutes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕛",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "12"
+        }
+       ],
+       "say": "The long hand is the minute hand. It goes round the clock in one hour."
+      },
+      {
+       "caption": "1 = 5, 2 = 10, 3 = 15.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕒",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3 = 15 minutes"
+        }
+       ],
+       "say": "It stops at each number. Each number is five minutes. Count with me: five, ten, fifteen."
+      },
+      {
+       "caption": "6 = 30, 12 = 60.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕡",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "6 = 30 minutes"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "60 minutes = 1 hour"
+        }
+       ],
+       "say": "At the six, it is thirty minutes. All the way round is sixty!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-time-five-minutes-d1-dbb57a9b.png",
+     "alt": "A clock face with the five-minute numbers 5 to 60 outside the hour numbers",
+     "caption": "Count in fives round the clock.",
+     "say": "The big numbers count in fives. The minute hand points at them."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many minutes are in 1 hour?",
+      "hint": "Once round the clock.",
+      "explanation": "There are 60 minutes in 1 hour.",
+      "skill_tag": "time5.minutes_hour",
+      "answer": {
+       "value": 60,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Counting in fives",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "The short **hour hand** shows the hour.\n\nThe long **minute hand** shows the minutes. Count in fives.",
+     "say": "The short hand is the hour hand. It tells us the hour. The long hand tells us the minutes. Count in fives to read it."
+    },
+    {
+     "type": "explainer",
+     "title": "Count in fives",
+     "scenes": [
+      {
+       "caption": "12 = o'clock.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕐",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "1 o'clock"
+        }
+       ],
+       "say": "Start at the twelve. Zero minutes. That is o'clock."
+      },
+      {
+       "caption": "1 = 5 past, 2 = 10 past.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕐",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5 past 1"
+        }
+       ],
+       "say": "Move to the one. Five minutes past. Move to the two. Ten minutes past."
+      },
+      {
+       "caption": "3 = 15, 6 = 30.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕜",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "half past 1"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Count in fives"
+        }
+       ],
+       "say": "At the three it is fifteen. At the six it is thirty. That is half past."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Count in fives: 5, 10, 15, what comes next?",
+      "hint": "Add 5 more.",
+      "explanation": "15 + 5 = 20.",
+      "skill_tag": "time5.count_fives",
+      "answer": {
+       "value": 20,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara follows the minute hand",
+     "asset": "clip-maths-class-1-time-five-minutes-9b5acf16.mp4",
+     "poster": "clip-maths-class-1-time-five-minutes-9b5acf16.webp",
+     "seconds": 63,
+     "transcript": "It is five o'clock. Zara wakes up for Fajr. The minute hand points to the twelve. That is o'clock. It hops round in fives. Five, ten, fifteen. Later it is half past seven. The bus is here! Now the hand is on the ten. It is ten to eight. Two more hops. Eight o'clock. School starts! At quarter past three, school ends. Sixty minutes in an hour. Twenty-four hours in a day. Well done, Zara!",
+     "caption": "Zara counts the clock in fives through her day."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "60 minutes = 1 hour",
+      "24 hours = 1 day",
+      "Each number on the clock is 5 more minutes"
+     ],
+     "say": "Remember. Sixty minutes in an hour. Twenty-four hours in a day. Count round the clock in fives."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "minute",
+       "meaning": "A short time. There are 60 in an hour."
+      },
+      {
+       "term": "hour",
+       "meaning": "A longer time. 60 minutes."
+      },
+      {
+       "term": "hour hand",
+       "meaning": "The short hand. It shows the hour."
+      },
+      {
+       "term": "minute hand",
+       "meaning": "The long hand. It shows the minutes."
+      },
+      {
+       "term": "day",
+       "meaning": "All 24 hours, day and night."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many hours are in a day and night?",
+     "hint": "Morning to morning.",
+     "explanation": "There are 24 hours in a day.",
+     "answer": {
+      "value": 24,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which hand is the long one?",
+     "hint": "Long for minutes.",
+     "explanation": "The long hand is the minute hand.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The hour hand"
+      },
+      {
+       "id": "b",
+       "text": "The wheel"
+      },
+      {
+       "id": "c",
+       "text": "The minute hand"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "The minute hand is on the 3. How many minutes past is it?",
+     "hint": "3 × 5.",
+     "explanation": "3 fives make 15.",
+     "answer": {
+      "value": 15,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "There are 60 minutes in an hour.",
+     "hint": "Once round.",
+     "explanation": "60 minutes make 1 hour.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "past",
+   "kind": "try",
+   "title": "Minutes past",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: 5, 10, 20 and 25 past",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Past** means minutes after the hour, up to half past.\n\n10 past 7 is 7:10.",
+     "say": "The first half of the hour uses the word past. The hand has gone past the hour. Zara's bus comes at ten past seven."
+    },
+    {
+     "type": "explainer",
+     "title": "10 past 7",
+     "scenes": [
+      {
+       "caption": "Hour hand just past 7.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕖",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "7 o'clock"
+        }
+       ],
+       "say": "The hour hand is just after the seven."
+      },
+      {
+       "caption": "2 = 10 minutes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕖",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "minute hand on 2"
+        }
+       ],
+       "say": "The minute hand is on the two. Two fives make ten minutes."
+      },
+      {
+       "caption": "10 past 7 = 7:10.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕖",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "7:10"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "10 past 7"
+        }
+       ],
+       "say": "Ten minutes past seven. We write it as seven ten."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-time-five-minutes-d2-c928dc2d.png",
+     "alt": "Two clocks showing ten past four and ten to four with the minute hands highlighted",
+     "caption": "Ten past 4 and ten to 4.",
+     "say": "Ten past four and ten to four. The minute hands are in orange."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "The minute hand is on the 5. How many minutes past is it?",
+      "hint": "5 fives.",
+      "explanation": "5 × 5 = 25.",
+      "skill_tag": "time5.read_past",
+      "answer": {
+       "value": 25,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Set a clock",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "20 past 4 is 4:20.\n\nHour hand just after 4, minute hand on 4.",
+     "say": "Now set the clock. For twenty past four, put the minute hand on the four. Then the hour hand sits just after four."
+    },
+    {
+     "type": "explainer",
+     "title": "20 past 4",
+     "scenes": [
+      {
+       "caption": "4 fives = 20.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕓",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "4 = 20 minutes"
+        }
+       ],
+       "say": "Twenty minutes. Count in fives: five, ten, fifteen, twenty."
+      },
+      {
+       "caption": "Hour hand just past 4.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕓",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "20 past 4"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4:20"
+        }
+       ],
+       "say": "Put the long hand on the four. The short hand moves a little past the four."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Make a paper clock",
+     "materials": [
+      "A paper plate",
+      "Two paper strips for the hands"
+     ],
+     "instructions": [
+      "Write 1 to 12 round the plate.",
+      "Make a long minute hand and a short hour hand.",
+      "Show 5 past 3.",
+      "Now show 20 past 3."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is the time when the minute hand is on 2 and the hour hand is just past 6?",
+      "hint": "Hour hand first, then count the minutes.",
+      "explanation": "2 is 10 minutes. The hour is 6. So 10 past 6.",
+      "skill_tag": "time5.read_time",
+      "options": [
+       {
+        "id": "a",
+        "text": "2 past 6"
+       },
+       {
+        "id": "b",
+        "text": "10 past 6"
+       },
+       {
+        "id": "c",
+        "text": "10 past 2"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Number on the clock times 5 = minutes",
+      "Past means after the hour",
+      "The hour hand sits just past the hour"
+     ],
+     "say": "Remember. Minute hand on the number times five. Past means after the hour. Hour hand sits just after the hour."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "past",
+       "meaning": "After the hour."
+      },
+      {
+       "term": "o'clock",
+       "meaning": "The minute hand is on the 12."
+      },
+      {
+       "term": "minutes",
+       "meaning": "Short units of time."
+      },
+      {
+       "term": "digital",
+       "meaning": "Time written like 7:10."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "The minute hand is on the 1. How many minutes past?",
+     "hint": "1 five.",
+     "explanation": "1 × 5 = 5.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "The minute hand is on the 4. How many minutes past?",
+     "hint": "4 fives.",
+     "explanation": "4 × 5 = 20.",
+     "answer": {
+      "value": 20,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which time is the same as 7:10?",
+     "hint": "The first number is the hour.",
+     "explanation": "7:10 is 10 minutes past 7.",
+     "options": [
+      {
+       "id": "a",
+       "text": "10 to 7"
+      },
+      {
+       "id": "b",
+       "text": "10 past 7"
+      },
+      {
+       "id": "c",
+       "text": "7 past 10"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "At 5 past 3, the hour hand is just after the 3.",
+     "hint": "A little past 3.",
+     "explanation": "It is just after 3 o'clock.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "to",
+   "kind": "play",
+   "title": "Minutes to",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: 5, 10, 20 and 25 to",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**To** means minutes before the next hour.\n\n10 to 4 is 3:50.",
+     "say": "After half past, the minute hand goes up the right side. Now we count how many minutes are left to the next hour. We say to."
+    },
+    {
+     "type": "explainer",
+     "title": "10 to 4",
+     "scenes": [
+      {
+       "caption": "10 on the clock = 50 minutes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕒",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "3:50"
+        }
+       ],
+       "say": "The minute hand is on the ten. That is fifty minutes past three."
+      },
+      {
+       "caption": "10 minutes left.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕒",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "10 left"
+        }
+       ],
+       "say": "How far to the twelve? Two fives. Ten minutes left!"
+      },
+      {
+       "caption": "10 to 4 = 3:50.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕓",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "10 to 4"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "10 to 4"
+        }
+       ],
+       "say": "So it is ten to four. The next hour is four."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "The minute hand is on the 11. How many minutes to the next hour?",
+      "hint": "One step from the 12.",
+      "explanation": "11 is 55 minutes, so 5 minutes to the hour.",
+      "skill_tag": "time5.read_to",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: What time will it be?",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "Past is before half past. To is after half past.\n\n10 to 9 plus 10 minutes is 9 o'clock.",
+     "say": "Race time! It is ten to nine. What time will it be in ten minutes? Hop on the minute hand to the twelve."
+    },
+    {
+     "type": "explainer",
+     "title": "10 to 9, then 9 o'clock",
+     "scenes": [
+      {
+       "caption": "8:50.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕗",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "10 to 9"
+        }
+       ],
+       "say": "Ten to nine. The minute hand is on the ten."
+      },
+      {
+       "caption": "+ 10 minutes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕘",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "9 o'clock"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "9:00"
+        }
+       ],
+       "say": "Hop two fives. Five, then ten. The hand is on the twelve!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Clock match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🕐",
+      "🕑",
+      "🕒",
+      "🕓",
+      "🕔",
+      "🕕"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "It is 5 to 6. What time will it be in 5 minutes?",
+      "hint": "5 to 6 is 5:55.",
+      "explanation": "5 minutes more reaches 6 o'clock.",
+      "skill_tag": "time5.next_time",
+      "options": [
+       {
+        "id": "a",
+        "text": "half past 5"
+       },
+       {
+        "id": "b",
+        "text": "6 o'clock"
+       },
+       {
+        "id": "c",
+        "text": "5 past 6"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Past: up to half past",
+      "To: minutes left to the next hour",
+      "10 to 4 is 3:50"
+     ],
+     "say": "Remember. Past is after the hour. To is before the next hour. Use the next hour for to."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "to",
+       "meaning": "Minutes before the next hour."
+      },
+      {
+       "term": "past",
+       "meaning": "After the hour."
+      },
+      {
+       "term": "half past",
+       "meaning": "30 minutes after the hour."
+      },
+      {
+       "term": "next hour",
+       "meaning": "The hour that comes after."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "The minute hand is on the 10. How many minutes to the hour?",
+     "hint": "10 is 50, so 10 more.",
+     "explanation": "60 - 50 = 10.",
+     "answer": {
+      "value": 10,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which time is the same as 4:55?",
+     "hint": "5 minutes left to 5 o'clock.",
+     "explanation": "4:55 is 5 minutes to 5.",
+     "options": [
+      {
+       "id": "a",
+       "text": "5 past 5"
+      },
+      {
+       "id": "b",
+       "text": "5 to 5"
+      },
+      {
+       "id": "c",
+       "text": "5 past 4"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "It is 20 to 3. The next hour is 3 o'clock.",
+     "hint": "To means the next hour.",
+     "explanation": "20 to 3 is 2:40 and 3 comes next.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is half of 60 minutes?",
+     "hint": "Two equal parts.",
+     "explanation": "30 + 30 = 60.",
+     "answer": {
+      "value": 30,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "day",
+   "kind": "use",
+   "title": "My day timetable",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Zara's school day",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "A **quarter hour** is 15 minutes. A **half hour** is 30 minutes.\n\nTimes of the day go in order.",
+     "say": "Zara wakes for Fajr at five o'clock. The bus comes at half past seven. School starts at eight. Home time is quarter past three."
+    },
+    {
+     "type": "explainer",
+     "title": "Zara's day",
+     "scenes": [
+      {
+       "caption": "5:00 Fajr.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🌅",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "5:00"
+        },
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Five o'clock. Zara wakes up for Fajr."
+      },
+      {
+       "caption": "7:30 Bus.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🚌",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "7:30"
+        },
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Half past seven. The bus comes."
+      },
+      {
+       "caption": "3:15 Home time.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🏠",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "3:15"
+        },
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "Day in order"
+        }
+       ],
+       "say": "Quarter past three. School is over. Time to go home!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which time is earlier in the day: 7:30 or 3:15 in the afternoon?",
+      "hint": "Morning comes first.",
+      "explanation": "Morning comes before the afternoon.",
+      "skill_tag": "time5.sequence",
+      "options": [
+       {
+        "id": "a",
+        "text": "3:15 in the afternoon"
+       },
+       {
+        "id": "b",
+        "text": "7:30 in the morning"
+       },
+       {
+        "id": "c",
+        "text": "They are the same time"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: How long is it?",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "An **interval** is the time between two times.\n\n9:00 to 10:00 is 1 hour.",
+     "say": "How long is a lesson? Maths starts at nine and ends at ten. One hour passes. We call the time between two times an interval."
+    },
+    {
+     "type": "explainer",
+     "title": "How long is Maths?",
+     "scenes": [
+      {
+       "caption": "9:00 start.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕘",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "start 9:00"
+        }
+       ],
+       "say": "Maths starts at nine o'clock."
+      },
+      {
+       "caption": "10:00 end.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "end 10:00"
+        }
+       ],
+       "say": "It ends at ten o'clock. The minute hand went round once."
+      },
+      {
+       "caption": "1 hour = 60 minutes.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "1 hour"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1 hour"
+        }
+       ],
+       "say": "One hour! Sixty minutes in the lesson."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "reveal",
+     "prompt": "Which is longer: half an hour or 45 minutes? Have a think first.",
+     "answer_markdown": "45 minutes. Half an hour is only 30 minutes."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Zara's lesson starts at 2 o'clock and lasts 1 hour. At what hour does it end?",
+      "hint": "Add 1 hour.",
+      "explanation": "2 o'clock plus 1 hour is 3 o'clock.",
+      "skill_tag": "time5.one_hour_later",
+      "answer": {
+       "value": 3,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Morning comes before afternoon",
+      "Quarter hour = 15 minutes",
+      "Half hour = 30 minutes"
+     ],
+     "say": "Remember. Put the day in order. Compare how long things take. Use quarter hour and half hour."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "quarter hour",
+       "meaning": "15 minutes."
+      },
+      {
+       "term": "half hour",
+       "meaning": "30 minutes."
+      },
+      {
+       "term": "interval",
+       "meaning": "The time between two times."
+      },
+      {
+       "term": "Fajr",
+       "meaning": "The first prayer, before sunrise."
+      },
+      {
+       "term": "timetable",
+       "meaning": "A list of what happens and when."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A quarter of an hour is how many minutes?",
+     "hint": "60 split into 4.",
+     "explanation": "4 × 15 = 60.",
+     "answer": {
+      "value": 15,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is longer?",
+     "hint": "An hour is 60 minutes.",
+     "explanation": "60 minutes is more than 10 minutes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "10 minutes"
+      },
+      {
+       "id": "b",
+       "text": "1 hour"
+      },
+      {
+       "id": "c",
+       "text": "They are the same"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Fajr is early in the morning.",
+     "hint": "Before sunrise.",
+     "explanation": "Fajr comes before sunrise.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "School starts at 8:00 and breaks at 10:00. How many hours is that?",
+     "hint": "8 to 9 to 10.",
+     "explanation": "That is 2 hours.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "A film lasts 1 hour. How many minutes is that?",
+    "hint": "Once round the clock.",
+    "explanation": "1 hour is 60 minutes.",
+    "skill_tag": "time5.minutes_hour",
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "minutes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "number",
+    "prompt": "How many hours are there from one midnight to the next?",
+    "hint": "That is one whole day.",
+    "explanation": "There are 24 hours in a day.",
+    "skill_tag": "time5.hours_day",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    },
+    "sub_lesson": "minutes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "fill_blank",
+    "prompt": "Count in fives round the clock.",
+    "hint": "Add 5 each time.",
+    "explanation": "5, 10, 15, 20, 25.",
+    "skill_tag": "time5.count_fives",
+    "points": 2,
+    "text": "5, 10, {b1}, 20, {b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "12"
+       },
+       {
+        "id": "b",
+        "text": "14"
+       },
+       {
+        "id": "c",
+        "text": "15"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "30"
+       },
+       {
+        "id": "b",
+        "text": "25"
+       },
+       {
+        "id": "c",
+        "text": "24"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "minutes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "Sam says the minute hand on the 9 means 9 minutes past. Is he right?",
+    "hint": "Each number is 5 more minutes.",
+    "explanation": "9 × 5 = 45, so the hand on 9 means 45 minutes.",
+    "skill_tag": "time5.reason_hand_number",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it means 90 minutes"
+     },
+     {
+      "id": "b",
+      "text": "No. The 9 means 9 fives, which is 45 minutes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 9 minutes"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "The minute hand points to the 6. How many minutes past the hour?",
+    "hint": "6 fives.",
+    "explanation": "6 × 5 = 30.",
+    "skill_tag": "time5.minute_hand",
+    "options": [
+     {
+      "id": "a",
+      "text": "6"
+     },
+     {
+      "id": "b",
+      "text": "30"
+     },
+     {
+      "id": "c",
+      "text": "60"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Omar says a day is only the time we are awake. Is he right?",
+    "hint": "Does the clock stop when you sleep?",
+    "explanation": "The clock keeps going all night. A whole day is 24 hours.",
+    "skill_tag": "time5.reason_day",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a day is about 12 hours"
+     },
+     {
+      "id": "b",
+      "text": "No, a day is 60 hours"
+     },
+     {
+      "id": "c",
+      "text": "No. A day is 24 hours, including the night"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two are parts of the day? Pick two.",
+    "hint": "Think of the sun and the moon.",
+    "explanation": "Morning and evening are parts of a day. Minute and hour are units of time.",
+    "skill_tag": "time5.parts_of_day",
+    "options": [
+     {
+      "id": "a",
+      "text": "evening"
+     },
+     {
+      "id": "b",
+      "text": "minute"
+     },
+     {
+      "id": "c",
+      "text": "hour"
+     },
+     {
+      "id": "d",
+      "text": "morning"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "true_false",
+    "prompt": "The short hand on a clock shows the hours.",
+    "hint": "Short hand, hour hand.",
+    "explanation": "The short hand is the hour hand.",
+    "skill_tag": "time5.hands",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "minutes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "slider",
+    "prompt": "Slide to how many minutes past when the minute hand is on the 2.",
+    "hint": "2 fives.",
+    "explanation": "2 × 5 = 10 minutes.",
+    "skill_tag": "time5.read_past",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "It is 5 past 3. Where is the minute hand?",
+    "hint": "How many fives in 5?",
+    "explanation": "5 minutes is 1 five, so the hand is on the 1.",
+    "skill_tag": "time5.set_hands",
+    "options": [
+     {
+      "id": "a",
+      "text": "On the 3"
+     },
+     {
+      "id": "b",
+      "text": "On the 1"
+     },
+     {
+      "id": "c",
+      "text": "On the 5"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "match",
+    "prompt": "Match each time to its words.",
+    "hint": "The number after the colon is the minutes.",
+    "explanation": "3:05 is 5 past 3, 3:10 is 10 past 3 and 3:25 is 25 past 3.",
+    "skill_tag": "time5.digital_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3:05"
+     },
+     {
+      "id": "l2",
+      "text": "3:10"
+     },
+     {
+      "id": "l3",
+      "text": "3:25"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "10 past 3"
+     },
+     {
+      "id": "r1",
+      "text": "5 past 3"
+     },
+     {
+      "id": "r3",
+      "text": "25 past 3"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Mira says 20 past is where the minute hand points to the 2. Is she right?",
+    "hint": "Each number is 5 minutes.",
+    "explanation": "20 minutes is 4 fives, so the hand points to the 4.",
+    "skill_tag": "time5.reason_twenty_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it points to the 5"
+     },
+     {
+      "id": "b",
+      "text": "No. The minute hand points to the 4"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 2 means 20"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "past",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows 10 past 6.",
+    "hint": "10 minutes is the number 2.",
+    "explanation": "10 past 6 has the long hand on 2 and the short hand just past 6.",
+    "skill_tag": "time5.tap_clock",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕕",
+       "label": "long hand on 2, short hand past 6",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕙",
+       "label": "long hand on 10, short hand near 6",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕖",
+       "label": "long hand on 2, short hand past 7",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "The minute hand is on the 5. Slide to how many minutes past.",
+    "hint": "5 fives.",
+    "explanation": "5 × 5 = 25 minutes.",
+    "skill_tag": "time5.five_jumps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these times in order, earliest first.",
+    "hint": "More minutes means later.",
+    "explanation": "5, 10, 20, 25 minutes past 2 go up in order.",
+    "skill_tag": "time5.order_times",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "20 past 2"
+     },
+     {
+      "id": "i4",
+      "text": "25 past 2"
+     },
+     {
+      "id": "i2",
+      "text": "10 past 2"
+     },
+     {
+      "id": "i1",
+      "text": "5 past 2"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Hamza says half past 4 and 5 past 4 are the same time. Is he right?",
+    "hint": "How many minutes is each?",
+    "explanation": "Half past 4 is 4:30. 5 past 4 is 4:05.",
+    "skill_tag": "time5.reason_half_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both are past 4"
+     },
+     {
+      "id": "b",
+      "text": "No. Half past is 30 minutes and 5 past is only 5 minutes"
+     },
+     {
+      "id": "c",
+      "text": "No, 5 past 4 is later"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "past",
+    "depth": "reason"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "The minute hand is on the 10. How many minutes to the next hour?",
+    "hint": "10 is 50 minutes. How far to 60?",
+    "explanation": "60 - 50 = 10 minutes to the hour.",
+    "skill_tag": "time5.minutes_to",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "to",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 10 to 4 and 10 past 4 are the same time. Is she right?",
+    "hint": "Write each as digits.",
+    "explanation": "10 past 4 is 4:10. 10 to 4 is ten minutes before 4, which is 3:50.",
+    "skill_tag": "time5.reason_to_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both have 10"
+     },
+     {
+      "id": "b",
+      "text": "No. 10 past 4 is 4:10 and 10 to 4 is 3:50"
+     },
+     {
+      "id": "c",
+      "text": "No, 10 to 4 is 4:50"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "to",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "match",
+    "prompt": "Match each clock time to its words.",
+    "hint": "Count how many minutes to the next hour.",
+    "explanation": "3:50 is 10 to 4, 3:55 is 5 to 4 and 3:35 is 25 to 4.",
+    "skill_tag": "time5.to_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3:50"
+     },
+     {
+      "id": "l2",
+      "text": "3:55"
+     },
+     {
+      "id": "l3",
+      "text": "3:35"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "25 to 4"
+     },
+     {
+      "id": "r1",
+      "text": "10 to 4"
+     },
+     {
+      "id": "r2",
+      "text": "5 to 4"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "to",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Ali says 5 to 6 is after 6 o'clock. Is he right?",
+    "hint": "To means before the hour.",
+    "explanation": "5 to 6 is five minutes before 6, so 5:55.",
+    "skill_tag": "time5.reason_five_to",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 5 to 6 is 6:05"
+     },
+     {
+      "id": "b",
+      "text": "No, 5 to 6 is 6:55"
+     },
+     {
+      "id": "c",
+      "text": "No. 5 to 6 is 5:55, which is before 6"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "to",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multi_select",
+    "prompt": "Which two mean 5:15? Pick two.",
+    "hint": "A quarter hour is 15 minutes.",
+    "explanation": "Quarter past 5 and 15 minutes past 5 are both 5:15.",
+    "skill_tag": "time5.quarter",
+    "options": [
+     {
+      "id": "a",
+      "text": "quarter to 5"
+     },
+     {
+      "id": "b",
+      "text": "5 minutes to 5"
+     },
+     {
+      "id": "c",
+      "text": "15 minutes past 5"
+     },
+     {
+      "id": "d",
+      "text": "quarter past 5"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "to",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put Zara's day in order, earliest first.",
+    "hint": "Morning, then afternoon.",
+    "explanation": "Times go 5:00, 7:30, 12:30 and then 3:15 in the afternoon.",
+    "skill_tag": "time5.order_day",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Bus to school at 7:30"
+     },
+     {
+      "id": "i4",
+      "text": "Home at 3:15"
+     },
+     {
+      "id": "i3",
+      "text": "Lunch at 12:30"
+     },
+     {
+      "id": "i1",
+      "text": "Wake up for Fajr at 5:00"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "to",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "fill_blank",
+    "prompt": "Complete the times.",
+    "hint": "5 to 4 is before 4 o'clock.",
+    "explanation": "5 to 4 is 3:55 and 5 past 4 is 4:05.",
+    "skill_tag": "time5.to_digits",
+    "points": 2,
+    "text": "5 to 4 is {b1}:55. 5 past 4 is 4:{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "15"
+       },
+       {
+        "id": "b",
+        "text": "05"
+       },
+       {
+        "id": "c",
+        "text": "50"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "to",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "true_false",
+    "prompt": "A quarter of an hour is 15 minutes.",
+    "hint": "60 split into 4 equal parts.",
+    "explanation": "4 × 15 = 60, so a quarter hour is 15 minutes.",
+    "skill_tag": "time5.quarter_hour",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "day",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Which takes longer: a 20 minute walk or a 10 minute bus ride?",
+    "hint": "Compare the minutes.",
+    "explanation": "20 minutes is more than 10 minutes.",
+    "skill_tag": "time5.compare_time",
+    "options": [
+     {
+      "id": "a",
+      "text": "They take the same time"
+     },
+     {
+      "id": "b",
+      "text": "The 20 minute walk"
+     },
+     {
+      "id": "c",
+      "text": "The 10 minute bus ride"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "day",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Hamza says half an hour is longer than 45 minutes. Is he right?",
+    "hint": "Turn half an hour into minutes.",
+    "explanation": "Half an hour is 30 minutes. 30 is less than 45.",
+    "skill_tag": "time5.reason_interval",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. Half an hour is 30 minutes, which is shorter than 45"
+     },
+     {
+      "id": "c",
+      "text": "Yes, half is bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "day",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "Zara's lesson starts at 9 o'clock and lasts 1 hour. At what hour does it end?",
+    "hint": "Add 1 hour.",
+    "explanation": "9 o'clock plus 1 hour is 10 o'clock.",
+    "skill_tag": "time5.one_hour_later",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "day",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Zainab says 60 minutes past 3 is a time we say. Is she right?",
+    "hint": "How many minutes in an hour?",
+    "explanation": "60 minutes make 1 hour, so 3 o'clock plus 1 hour is 4 o'clock.",
+    "skill_tag": "time5.reason_sixty",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, we say 60 past 3"
+     },
+     {
+      "id": "b",
+      "text": "No, we say half past 3"
+     },
+     {
+      "id": "c",
+      "text": "No. 60 minutes is 1 hour, so we say 4 o'clock"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "day",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "hotspot",
+    "prompt": "Tap the lesson that starts first.",
+    "hint": "Look for the earliest time.",
+    "explanation": "9:00 in the morning is before 10:30 and 1:15.",
+    "skill_tag": "time5.timetable",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📖",
+       "label": "Maths 9:00",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎨",
+       "label": "Art 10:30",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⚽",
+       "label": "PE 1:15",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "day",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "number",
+    "prompt": "School ends at 3:00. Zara gets home 25 minutes later. How many minutes past 3 is that?",
+    "hint": "Add 25 minutes to 3:00.",
+    "explanation": "25 minutes after 3:00 is 25 past 3.",
+    "skill_tag": "time5.story",
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "day",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "A swimming lesson is 1 whole hour. How many minutes is that?",
+    "hint": "Once round the clock.",
+    "explanation": "1 hour is 60 minutes.",
+    "skill_tag": "time5.minutes_hour",
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "minutes",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "number",
+    "prompt": "How many hours are in 1 whole day and night?",
+    "hint": "Count the full day.",
+    "explanation": "There are 24 hours in a day.",
+    "skill_tag": "time5.hours_day",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    },
+    "sub_lesson": "minutes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "fill_blank",
+    "prompt": "Keep counting in fives.",
+    "hint": "Add 5 each time.",
+    "explanation": "10, 15, 20, 25, 30.",
+    "skill_tag": "time5.count_fives",
+    "points": 2,
+    "text": "10, 15, {b1}, 25, {b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "18"
+       },
+       {
+        "id": "b",
+        "text": "22"
+       },
+       {
+        "id": "c",
+        "text": "20"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "28"
+       },
+       {
+        "id": "b",
+        "text": "30"
+       },
+       {
+        "id": "c",
+        "text": "35"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "minutes",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multiple_choice",
+    "prompt": "Ben says the minute hand on the 4 means 4 minutes past. Is he right?",
+    "hint": "Each number is 5 more minutes.",
+    "explanation": "4 × 5 = 20, so the hand on 4 means 20 minutes.",
+    "skill_tag": "time5.reason_hand_number",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 minutes"
+     },
+     {
+      "id": "b",
+      "text": "No, it means 40 minutes"
+     },
+     {
+      "id": "c",
+      "text": "No. The 4 means 4 fives, which is 20 minutes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "reason",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "The minute hand points to the 3. How many minutes past the hour?",
+    "hint": "3 fives.",
+    "explanation": "3 × 5 = 15.",
+    "skill_tag": "time5.minute_hand",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "15"
+     },
+     {
+      "id": "c",
+      "text": "30"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a day is only from sunrise to sunset. Is he right?",
+    "hint": "Does the clock stop at sunset?",
+    "explanation": "The clock keeps going after sunset. A whole day is 24 hours.",
+    "skill_tag": "time5.reason_day",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, a day is 100 hours"
+     },
+     {
+      "id": "b",
+      "text": "No. A day is 24 hours, including the night"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a day is about 10 hours"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Which two are parts of the day? Choose two.",
+    "hint": "Think of the sun and the moon.",
+    "explanation": "Afternoon and night are parts of a day. A clock and a hand are things.",
+    "skill_tag": "time5.parts_of_day",
+    "options": [
+     {
+      "id": "a",
+      "text": "night"
+     },
+     {
+      "id": "b",
+      "text": "hand"
+     },
+     {
+      "id": "c",
+      "text": "clock"
+     },
+     {
+      "id": "d",
+      "text": "afternoon"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "minutes",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "true_false",
+    "prompt": "The long hand on a clock shows the hours.",
+    "hint": "Long hand shows minutes.",
+    "explanation": "The long hand is the minute hand.",
+    "skill_tag": "time5.hands",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "minutes",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "slider",
+    "prompt": "Slide to how many minutes past when the minute hand is on the 4.",
+    "hint": "4 fives.",
+    "explanation": "4 × 5 = 20 minutes.",
+    "skill_tag": "time5.read_past",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "It is 25 past 7. Where is the minute hand?",
+    "hint": "How many fives in 25?",
+    "explanation": "25 minutes is 5 fives, so the hand is on the 5.",
+    "skill_tag": "time5.set_hands",
+    "options": [
+     {
+      "id": "a",
+      "text": "On the 25"
+     },
+     {
+      "id": "b",
+      "text": "On the 7"
+     },
+     {
+      "id": "c",
+      "text": "On the 5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "match",
+    "prompt": "Join each time to its words.",
+    "hint": "The number after the colon is the minutes.",
+    "explanation": "8:05 is 5 past 8, 8:20 is 20 past 8 and 8:25 is 25 past 8.",
+    "skill_tag": "time5.digital_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "8:05"
+     },
+     {
+      "id": "l2",
+      "text": "8:20"
+     },
+     {
+      "id": "l3",
+      "text": "8:25"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "25 past 8"
+     },
+     {
+      "id": "r1",
+      "text": "5 past 8"
+     },
+     {
+      "id": "r2",
+      "text": "20 past 8"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 25 past is where the minute hand points to the 4. Is he right?",
+    "hint": "Each number is 5 minutes.",
+    "explanation": "25 minutes is 5 fives, so the hand points to the 5.",
+    "skill_tag": "time5.reason_twenty_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it points to the 6"
+     },
+     {
+      "id": "b",
+      "text": "No. The minute hand points to the 5"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 4 means 25"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "past",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "hotspot",
+    "prompt": "Tap the clock that shows 20 past 4.",
+    "hint": "20 minutes is the number 4.",
+    "explanation": "20 past 4 has the long hand on 4 and the short hand just past 4.",
+    "skill_tag": "time5.tap_clock",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🕓",
+       "label": "long hand on 4, short hand past 4",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🕓",
+       "label": "long hand on 2, short hand past 4",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🕔",
+       "label": "long hand on 4, short hand past 5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "The minute hand is on the 3. Slide to how many minutes past.",
+    "hint": "3 fives.",
+    "explanation": "3 × 5 = 15 minutes.",
+    "skill_tag": "time5.five_jumps",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 60
+    },
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Order these times, earliest first.",
+    "hint": "More minutes means later.",
+    "explanation": "5, 15, 20, 25 minutes past 9 go up in order.",
+    "skill_tag": "time5.order_times",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "20 past 9"
+     },
+     {
+      "id": "i4",
+      "text": "25 past 9"
+     },
+     {
+      "id": "i2",
+      "text": "15 past 9"
+     },
+     {
+      "id": "i1",
+      "text": "5 past 9"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "past",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Ben says half past 5 and 20 past 5 are the same time. Is he right?",
+    "hint": "How many minutes is each?",
+    "explanation": "Half past 5 is 5:30. 20 past 5 is 5:20.",
+    "skill_tag": "time5.reason_half_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both are past 5"
+     },
+     {
+      "id": "b",
+      "text": "No, 20 past 5 is later"
+     },
+     {
+      "id": "c",
+      "text": "No. Half past is 30 minutes and 20 past is only 20 minutes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "past",
+    "depth": "reason",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "The minute hand is on the 11. How many minutes are left to the next hour?",
+    "hint": "11 is 55 minutes. How far to 60?",
+    "explanation": "60 - 55 = 5 minutes to the hour.",
+    "skill_tag": "time5.minutes_to",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "to",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 5 to 7 and 5 past 7 are the same time. Is he right?",
+    "hint": "Write each as digits.",
+    "explanation": "5 past 7 is 7:05. 5 to 7 is five minutes before 7, which is 6:55.",
+    "skill_tag": "time5.reason_to_past",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 5 to 7 is 7:55"
+     },
+     {
+      "id": "b",
+      "text": "No. 5 past 7 is 7:05 and 5 to 7 is 6:55"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both have 5"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "to",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "match",
+    "prompt": "Join each clock time to its words.",
+    "hint": "Count how many minutes to the next hour.",
+    "explanation": "8:40 is 20 to 9, 8:50 is 10 to 9 and 8:55 is 5 to 9.",
+    "skill_tag": "time5.to_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "8:40"
+     },
+     {
+      "id": "l2",
+      "text": "8:50"
+     },
+     {
+      "id": "l3",
+      "text": "8:55"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "10 to 9"
+     },
+     {
+      "id": "r3",
+      "text": "5 to 9"
+     },
+     {
+      "id": "r1",
+      "text": "20 to 9"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "to",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Mina says 10 to 8 is after 8 o'clock. Is she right?",
+    "hint": "To means before the hour.",
+    "explanation": "10 to 8 is ten minutes before 8, so 7:50.",
+    "skill_tag": "time5.reason_five_to",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 10 to 8 is 8:50"
+     },
+     {
+      "id": "b",
+      "text": "No. 10 to 8 is 7:50, which is before 8"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 10 to 8 is 8:10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "to",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multi_select",
+    "prompt": "Which two mean 7:45? Pick two.",
+    "hint": "45 minutes is 15 minutes to the next hour.",
+    "explanation": "Quarter to 8 and 15 minutes to 8 are both 7:45.",
+    "skill_tag": "time5.quarter",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 minutes to 8"
+     },
+     {
+      "id": "b",
+      "text": "quarter past 7"
+     },
+     {
+      "id": "c",
+      "text": "quarter past 8"
+     },
+     {
+      "id": "d",
+      "text": "quarter to 8"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "to",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Put Hana's day in order, earliest first.",
+    "hint": "Morning, then afternoon.",
+    "explanation": "Times go 7:00, 10:30 and then 1:00 and 5:00 in the afternoon.",
+    "skill_tag": "time5.order_day",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Playtime at 10:30"
+     },
+     {
+      "id": "i3",
+      "text": "Reading at 1:00"
+     },
+     {
+      "id": "i4",
+      "text": "Tea at 5:00"
+     },
+     {
+      "id": "i1",
+      "text": "Breakfast at 7:00"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "to",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "fill_blank",
+    "prompt": "Finish the times.",
+    "hint": "10 to 8 is before 8 o'clock.",
+    "explanation": "10 to 8 is 7:50 and 10 past 8 is 8:10.",
+    "skill_tag": "time5.to_digits",
+    "points": 2,
+    "text": "10 to 8 is {b1}:50. 10 past 8 is 8:{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "9"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "05"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "50"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "to",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "true_false",
+    "prompt": "Half an hour is 20 minutes.",
+    "hint": "Half of 60.",
+    "explanation": "Half of 60 is 30, so half an hour is 30 minutes.",
+    "skill_tag": "time5.half_hour",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "day",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Which takes longer: a 45 minute lesson or a 15 minute break?",
+    "hint": "Compare the minutes.",
+    "explanation": "45 minutes is more than 15 minutes.",
+    "skill_tag": "time5.compare_time",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 15 minute break"
+     },
+     {
+      "id": "b",
+      "text": "They take the same time"
+     },
+     {
+      "id": "c",
+      "text": "The 45 minute lesson"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "day",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a quarter of an hour is longer than 20 minutes. Is he right?",
+    "hint": "Turn a quarter hour into minutes.",
+    "explanation": "A quarter of an hour is 15 minutes. 15 is less than 20.",
+    "skill_tag": "time5.reason_interval",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a quarter is bigger"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No. A quarter hour is 15 minutes, which is shorter than 20"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "day",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "Football starts at 4 o'clock and lasts 1 hour. At what hour does it end?",
+    "hint": "Add 1 hour.",
+    "explanation": "4 o'clock plus 1 hour is 5 o'clock.",
+    "skill_tag": "time5.one_hour_later",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "day",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 60 minutes past 5 is a time we say. Is he right?",
+    "hint": "How many minutes in an hour?",
+    "explanation": "60 minutes make 1 hour, so 5 o'clock plus 1 hour is 6 o'clock.",
+    "skill_tag": "time5.reason_sixty",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, we say 60 past 5"
+     },
+     {
+      "id": "b",
+      "text": "No, we say half past 5"
+     },
+     {
+      "id": "c",
+      "text": "No. 60 minutes is 1 hour, so we say 6 o'clock"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "day",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "hotspot",
+    "prompt": "Tap the lesson that starts last.",
+    "hint": "Look for the latest time.",
+    "explanation": "2:00 in the afternoon is after 8:45 and 9:30.",
+    "skill_tag": "time5.timetable",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📚",
+       "label": "Reading 8:45",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔬",
+       "label": "Science 9:30",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎵",
+       "label": "Music 2:00",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "day",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "number",
+    "prompt": "The bus leaves at 4:00 and arrives at 4:40. How many minutes to 5 o'clock is that?",
+    "hint": "4:40 is how far from 5:00?",
+    "explanation": "60 - 40 = 20, so it arrives at 20 to 5.",
+    "skill_tag": "time5.story",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "day",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

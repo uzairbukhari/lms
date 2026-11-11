@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, num, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, num, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic lessons for Zainab (Class 1, age 7). Standards from docs/CURRICULUM_V2.md section 3 (NC Year 2, Cambridge Stage 2).
@@ -10,9 +10,15 @@ const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain
    Topic 1: Sentences and grammar
    --------------------------------------------------------------------------------------------- */
 
+const PENCIL = "english-class-1-sentences-1-cea467fd.jpg";
+const WRITING = "english-class-1-sentences-2-b966b845.jpg";
+
 const describe = {
   id: "describe", kind: "learn", title: "Describing words, plurals and verbs",
   blocks: [
+    H("Welcome back, word explorer!"),
+    SAY("Today we explore sentences. How can we make them clear and exciting?", T("Today's big question: how can we make our sentences clear and exciting?")),
+    SAY("Sentence builders choose words and marks with care. Let us find out how.", PHOTO(PENCIL, "A hand holding a yellow pencil above a lined spiral notebook", "Writers choose their words and marks with care.", "Photo by Thought Catalog on Unsplash")),
     H("Stop 1: Describing words"),
     SAY("Look at these two dogs. Both of them are dogs. But they are not the same! One is big and one is small. Big and small are describing words. A describing word tells us more about a thing. It helps us see the picture in our head. A big dog. A small dog. A fluffy dog. Let's watch the describing words appear.", T("A **describing word** tells us more about a thing.", "A big dog. A small dog. Big and small describe the dog.")),
     EXPP("Big dog, small dog",
@@ -63,6 +69,7 @@ const joining = {
     CHK(mc("Pick the best word: I like tea ___ I do not like coffee.", "but", ["and", "because"], { hint: "Are the two ideas different?", why: "Liking tea and not liking coffee are different, so we use but.", tag: "joining.but" })),
     CHK(mc("Pick the best word: We stayed inside ___ it was raining.", "because", ["but", "and"], { hint: "Which part tells us why?", why: "The rain is the reason we stayed in, so we use because.", tag: "joining.because" })),
     H("Stop 2: Make your own"),
+    SAY("Saying your sentences out loud first makes them easier to write.", PHOTO(WRITING, "A child's hand writing in an exercise book with a red pencil", "Every sentence starts with a capital letter and ends with a mark.", "Photo by eleni koureas on Unsplash")),
     SAY("Now it is your turn to build. Say a sentence out loud with and. Then one with but. Then one with because. Saying them first makes writing them much easier. A grown-up can help you write them down.", ACT("Join the sentences", ["Paper and a pencil", "A grown-up to read with you"], ["Finish this sentence three ways: I like ...", "Use and. For example: I like cake and ice cream.", "Use but. For example: I like cake but I do not like jelly.", "Use because. For example: I like cake because it is sweet."])),
     SAY("Do you have it? Here are three friends doing the same job, one with each joining word.", IMG("🧩", "And, but and because join two ideas into one sentence.")),
     SAY("Here is a question to think about. Can you finish this one: I was happy because ...? Have a think, then tap to see one idea.", REVEAL("Finish it: I was happy because ...", "Lots of endings work! For example: I was happy because it was my birthday.")),
@@ -129,6 +136,28 @@ const capitals = {
   ],
 };
 
+const clip = {
+  title: "Sam the sentence builder", backdrop: "classroom", caption: "Sam builds sentences with word blocks.",
+  scenes: [
+    { caption: "Meet Sam.", say: "I am Sam. I build sentences with word blocks.",
+      items: [{ id: "s", emoji: "🧒", label: "Sam", x: 30, y: 58, size: 3, enter: "pop" }, { id: "b", emoji: "🧱", x: 72, y: 62, size: 2 }] },
+    { caption: "A describing word.", say: "A big dog is better than just a dog.",
+      items: [{ id: "d", emoji: "🐕", label: "big dog", x: 50, y: 58, size: 3, anim: "grow" }] },
+    { caption: "Joining.", say: "I like tea and milk. I like tea but not coffee.",
+      items: [{ id: "t", emoji: "🍵", x: 30, y: 62, size: 2 }, { id: "m", emoji: "🥛", x: 55, y: 62, size: 2 }, { id: "c", emoji: "☕", x: 80, y: 62, size: 2 }] },
+    { caption: "Because.", say: "I took my umbrella because it was raining.",
+      items: [{ id: "u", emoji: "☂️", x: 35, y: 58, size: 3 }, { id: "r", emoji: "🌧️", x: 72, y: 36, size: 3, anim: "float" }] },
+    { caption: "Three kinds.", say: "A statement tells. A question asks. An exclamation shouts!",
+      items: [{ id: "a", emoji: "🔴", x: 25, y: 60, size: 2 }, { id: "b", emoji: "❓", x: 50, y: 60, size: 2 }, { id: "c", emoji: "❗", x: 75, y: 60, size: 2, anim: "pulse" }] },
+    { caption: "Capitals.", say: "Zainab and Lahore both need a big first letter.",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3 }, { id: "l", emoji: "🕌", x: 70, y: 58, size: 3 }] },
+    { caption: "A list.", say: "I packed an apple, a banana and a sandwich.",
+      items: [{ id: "a", emoji: "🍎", x: 25, y: 60, size: 2 }, { id: "b", emoji: "🍌", x: 50, y: 60, size: 2 }, { id: "s", emoji: "🥪", x: 75, y: 60, size: 2 }] },
+    { caption: "Well done!", say: "Now my sentence is clear and ready to read!",
+      items: [{ id: "s", emoji: "🧒", x: 50, y: 58, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "english-class-1-sentences", subject: "english", cls: 1, topic: 1, title: "Sentences and Grammar",
@@ -146,13 +175,9 @@ export const topics = [
       tf("A sentence is a group of words that makes sense.", true, { hint: "Does 'The cat sat' make sense?", why: "A sentence is a group of words that makes sense." }),
       mc("Which word rhymes with hat?", "mat", ["hen", "sun"], { hint: "Listen to the ending.", why: "Hat and mat both end in -at." }),
     ],
-    intro: [
-      H("Welcome back, word explorer!"),
-      SAY("Welcome back, word explorer! Today we have a big question. How can we make our sentences exciting and clear, so everyone enjoys reading them? We will learn how to describe things, join ideas, use the right marks, and talk about now and before. By the end, you will be a sentence builder. Let's go!", T("Today's big question: how can we make our sentences clear and exciting?", "We will learn to describe, join and punctuate.")),
-      IMG("✏️", "Sentence builders use words and marks to make writing clear."),
-      GLOSS({ sentence: "A group of words that makes sense on its own." }),
-    ],
+    intro: [],
     subs: [describe, joining, types, capitals],
+    clip,
     quiz: [
       Q(mc("Which word is the describing word in: The fluffy cat sat.", "fluffy", ["cat", "sat"], { hint: "Which word tells us what the cat is like?", why: "Fluffy tells us more about the cat.", tag: "describing.find" }), "describe", "recall", [
         mc("Which word is the describing word in: The tall giraffe ate.", "tall", ["giraffe", "ate"], { hint: "Which word tells us what the giraffe is like?", why: "Tall tells us more about the giraffe.", tag: "describing.find" }),
@@ -199,6 +224,37 @@ export const topics = [
       Q(mc("Zara says I am jumped is correct. Is she right?", "No, am goes with -ing: I am jumping", ["Yes, -ed always goes with am", "No, it should be jumps"], { hint: "Is it happening now or before?", why: "Am goes with -ing for now: I am jumping. -ed is for before: I jumped.", tag: "verbs.reason" }), "describe", "reason", [
         mc("Ben says Yesterday I playing is correct. Is he right?", "No, yesterday needs -ed: I played", ["Yes, -ing is always right", "No, it should be plays"], { hint: "Is yesterday now or before?", why: "Yesterday means before, so we use -ed: I played.", tag: "verbs.reason" }),
         mc("Nora says Right now I walked is correct. Is she right?", "No, right now needs -ing: I am walking", ["Yes, -ed means right now", "No, it should be walks"], { hint: "Right now means it is happening now.", why: "Right now needs -ing: I am walking.", tag: "verbs.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Which sentence joins these ideas well? Hana likes tea. She does not like coffee.", "Hana likes tea but she does not like coffee.", ["Hana likes tea because she does not like coffee.", "Hana likes tea and she does not like coffee because."], { hint: "The two ideas are different.", why: "Liking tea and not liking coffee are different ideas, so we join them with but.", tag: "joining.but" }), "joining", "apply", [
+        mc("Which sentence joins these ideas well? Ali is small. He is very strong.", "Ali is small but he is very strong.", ["Ali is small because he is very strong.", "Ali is small and but he is very strong."], { hint: "Small and strong pull in different directions.", why: "Small and strong are different ideas, so but joins them.", tag: "joining.but" })]),
+      Q(fill("Choose the joining words.", "Bilal has a bat {b1} a ball. He wants to play, {b2} it is raining.", [["and", "but", "because"], ["but", "and", "or"]], { hint: "One adds a thing. One shows a difference.", why: "And adds the ball. But shows the rain is a problem.", tag: "joining.choose" }), "joining", "apply", [
+        fill("Pick the joining words that fit.", "Amna can walk {b1} ride to school. She packed fruit {b2} a sandwich.", [["or", "but", "because"], ["and", "but", "or"]], { hint: "One is a choice. One adds more.", why: "Or shows a choice. And adds one more thing.", tag: "joining.choose" })]),
+      Q(mc("Layla says I like tea and is a full sentence. Is she right?", "No, it stops in the middle, so it is not finished", ["Yes, it has a capital letter", "Yes, any sentence with and is finished"], { hint: "Does the idea feel finished?", why: "After and we need another part, so the sentence is not finished.", tag: "joining.reason" }), "joining", "reason", [
+        mc("Hamza says We went to the shop because is a full sentence. Is he right?", "No, it needs the reason after because", ["Yes, because ends a sentence", "Yes, it has three words"], { hint: "What is the reason?", why: "Because needs a reason after it, so the sentence is not finished.", tag: "joining.reason" })]),
+      Q(sld("Slide to show how many commas are needed: I packed an apple a banana a sandwich and a pear.", { min: 0, max: 6 }, 2, 0, { hint: "Commas go between the things, and and joins the last two.", why: "Apple, banana, sandwich and pear needs 2 commas.", tag: "commas.list" }), "capitals_commas", "apply", [
+        sld("Slide to show how many commas are needed: We saw cows goats sheep hens and ducks.", { min: 0, max: 6 }, 3, 0, { hint: "Commas go between the things, and and joins the last two.", why: "Cows, goats, sheep, hens and ducks needs 3 commas.", tag: "commas.list" })]),
+      Q(st("Write the mark that ends this sentence: How tall that tree is", ["!", "exclamation mark"], { hint: "It shows a big feeling.", why: "A big feeling ends with an exclamation mark.", tag: "types.marks" }), "sentence_types", "apply", [
+        st("Write the mark that ends this sentence: Where is my other shoe", ["?", "question mark"], { hint: "It asks something.", why: "A sentence that asks ends with a question mark.", tag: "types.marks" })]),
+      Q(mc("Omar says a question can end with a full stop. Is he right?", "No, a question ends with a question mark", ["Yes, all sentences end with full stops", "Yes, questions have no mark"], { hint: "Which mark looks like a hook?", why: "A question needs a question mark.", tag: "types.reason" }), "sentence_types", "reason", [
+        mc("Aisha says an exclamation ends with a question mark. Is she right?", "No, it ends with an exclamation mark", ["Yes, exclamations ask things", "Yes, every sentence ends with a question mark"], { hint: "It shows a big feeling.", why: "An exclamation ends with an exclamation mark.", tag: "types.reason" })]),
+      Q(ord("Build a sentence from the cards.", ["Aisha", "packed", "a", "book", "and", "a", "pen."], { hint: "Start with the name.", why: "Aisha packed a book and a pen.", tag: "joining.order" }), "joining", "apply", [
+        ord("Arrange the cards into a sentence.", ["Hamza", "likes", "mangoes", "but", "not", "plums."], { hint: "Start with the name.", why: "Hamza likes mangoes but not plums.", tag: "joining.order" })]),
+      Q(mat("Match each sentence to its doing word.", [["The girl kicked the ball.", "kicked"], ["Birds sing at dawn.", "sing"], ["Dad cooks the rice.", "cooks"]], { hint: "Which word shows what someone does?", why: "Kicked, sing and cooks are the doing words.", tag: "verbs.find" }), "describe", "apply", [
+        mat("Pair each sentence with its verb.", [["The baby giggled loudly.", "giggled"], ["Fish swim in the pond.", "swim"], ["Mum reads a story.", "reads"]], { hint: "Which word shows what someone does?", why: "Giggled, swim and reads are the verbs.", tag: "verbs.find" })]),
+      Q(mc("Sam says only names need a capital letter. Is he right?", "No, every sentence starts with a capital too", ["Yes, only names get capitals", "Yes, capitals are only for days"], { hint: "Look at the first letter of a sentence.", why: "Every sentence starts with a capital letter, as well as names, places and days.", tag: "capitals.reason" }), "capitals_commas", "reason", [
+        mc("Zara says a sentence can start with a small letter. Is she right?", "No, every sentence starts with a capital letter", ["Yes, small letters are fine", "Yes, only the last word needs a capital"], { hint: "Think of the first word.", why: "Every sentence starts with a capital letter.", tag: "capitals.reason" })]),
+      Q(tf("We use because to give a reason.", true, { hint: "Because tells us why.", why: "Because gives the reason for something.", tag: "joining.because" }), "joining", "apply", [
+        tf("We use because to show two different ideas.", false, { hint: "Which joining word shows a difference?", why: "But shows a difference. Because gives a reason.", tag: "joining.because" })]),
+      Q(st("Write the plural of dish.", ["dishes"], { hint: "Dish ends in sh.", why: "Words ending in sh add es, so dish becomes dishes.", tag: "plural.es" }), "describe", "recall", [
+        st("Write the plural of bench.", ["benches"], { hint: "Bench ends in ch.", why: "Words ending in ch add es, so bench becomes benches.", tag: "plural.es" })]),
+      Q(ms("Pick the two describing words: The ripe yellow mango fell.", ["ripe", "yellow"], ["mango", "fell"], { hint: "Which words tell us what the mango is like?", why: "Ripe and yellow describe the mango.", tag: "describing.find" }), "describe", "apply", [
+        ms("Pick the two describing words: The crunchy green apple rolled.", ["crunchy", "green"], ["apple", "rolled"], { hint: "Which words tell us what the apple is like?", why: "Crunchy and green describe the apple.", tag: "describing.find" })]),
+      Q(hot("Tap the sentence with the right mark.", [["1️⃣", "Where is Hamza?", 22, 50], ["2️⃣", "Where is Hamza.", 50, 50], ["3️⃣", "Where is Hamza!", 78, 50]], ["Where is Hamza?"], { labels: true, hint: "Hamza is being asked about.", why: "A question needs a question mark.", tag: "types.marks" }), "sentence_types", "apply", [
+        hot("Tap the sentence that ends correctly.", [["1️⃣", "What a lovely kite?", 22, 50], ["2️⃣", "What a lovely kite.", 50, 50], ["3️⃣", "What a lovely kite!", 78, 50]], ["What a lovely kite!"], { labels: true, hint: "It shows a big feeling.", why: "An exclamation needs an exclamation mark.", tag: "types.marks" })]),
+      Q(mc("Aisha says a comma goes after every word in a list. Is she right?", "No, commas go between the things, and and joins the last two", ["Yes, put a comma after every word", "Yes, commas always go at the end"], { hint: "Look at the packed lunch list.", why: "Commas keep things apart, and and joins the last two.", tag: "commas.reason" }), "capitals_commas", "reason", [
+        mc("Ben says a list needs no commas at all. Is he right?", "No, commas keep the things in a list apart", ["Yes, lists never need commas", "Yes, commas only go in questions"], { hint: "How can we tell the things apart?", why: "Commas help the reader see where each thing ends.", tag: "commas.reason" })]),
+      Q(mc("Which words need a capital letter in: zainab went to lahore on monday?", "zainab, lahore and monday all need one", ["only zainab needs one", "only monday needs one"], { hint: "People, places and days all start with capitals.", why: "Names of people, places and days all start with a capital letter.", tag: "capitals.names" }), "capitals_commas", "apply", [
+        mc("Which words need a capital letter in: hamza visits karachi on friday?", "hamza, karachi and friday all need one", ["only karachi needs one", "none of them need one"], { hint: "People, places and days all start with capitals.", why: "Names of people, places and days all start with a capital letter.", tag: "capitals.names" })]),
     ],
   }),
 ];

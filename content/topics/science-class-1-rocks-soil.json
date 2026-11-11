@@ -1,0 +1,3064 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-rocks-soil",
+  "subject": "science",
+  "title": "Rocks and Soil",
+  "summary": "Rocks, pebbles and soil: what they look like, feel like and are used for.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 11: Rocks and soil",
+  "learning_objectives": [
+   "Describe rocks and soil",
+   "Say what rocks and soil are used for",
+   "Explain why soil matters for plants"
+  ],
+  "tags": [
+   "topic",
+   "topic-11"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 11
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y3 rocks and soils",
+    "text": "Compare and group together different kinds of rocks on the basis of their appearance and simple physical properties; recognise that soils are made from rocks and organic matter"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a rock is like",
+   "I can name some uses of rock and soil",
+   "I can say why plants need soil"
+  ],
+  "real_life": "Khewra rock salt in Pakistan, stone walls and slate roofs in Yorkshire, clay pots and mud houses, and sand dunes in Cholistan.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which one is a natural rock?",
+    "hint": "People did not make it.",
+    "explanation": "A pebble is a natural rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A brick"
+     },
+     {
+      "id": "b",
+      "text": "A pebble"
+     },
+     {
+      "id": "c",
+      "text": "A plastic toy"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Plants grow in soil.",
+    "hint": "Think about a garden.",
+    "explanation": "Plants grow in soil.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is sand made of?",
+    "hint": "Think about a beach.",
+    "explanation": "Sand is tiny pieces of rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tiny shells of plastic"
+     },
+     {
+      "id": "b",
+      "text": "Tiny bits of rock"
+     },
+     {
+      "id": "c",
+      "text": "Tiny seeds"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "rock",
+   "kind": "learn",
+   "title": "What is rock?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: what are rocks and soil?",
+     "say": "Today we look at rocks and soil. What are they, and what do we use them for?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-rocks-soil-1-4dd8c260.jpg",
+     "alt": "A close-up of many smooth grey, blue and orange pebbles on a beach",
+     "caption": "Pebbles are small, smooth rocks. The sea rubs them smooth over many years.",
+     "credit": "Photo by Jan Kraus on Unsplash",
+     "say": "These pebbles come from a beach. Look at their colours and shapes."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Natural rock"
+    },
+    {
+     "type": "text",
+     "markdown": "**Rock** is a natural material from the Earth.",
+     "say": "Rock is a hard material from the ground. It is natural, not made by people."
+    },
+    {
+     "type": "explainer",
+     "title": "Natural or made?",
+     "scenes": [
+      {
+       "caption": "Natural rock.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "⛰️",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A mountain is made of rock. People did not make it."
+      },
+      {
+       "caption": "Boulder and pebble.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🪨",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🪨",
+         "x": 72,
+         "y": 68,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A boulder is a very big rock. A pebble is a small one."
+      },
+      {
+       "caption": "Man-made.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🧱",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A brick is made by people. They bake clay in a hot oven."
+      }
+     ],
+     "backdrop": "mountain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which one is a natural rock?",
+      "hint": "Which one did people not make?",
+      "explanation": "A pebble is natural. Bricks and concrete are made by people.",
+      "skill_tag": "rock.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A brick"
+       },
+       {
+        "id": "b",
+        "text": "A pebble from a river"
+       },
+       {
+        "id": "c",
+        "text": "A concrete block"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Hard and soft"
+    },
+    {
+     "type": "text",
+     "markdown": "Some rocks are **hard** and some are **soft**.",
+     "say": "Rocks are not all the same. Granite is very hard. Chalk is soft."
+    },
+    {
+     "type": "explainer",
+     "title": "Different rocks",
+     "scenes": [
+      {
+       "caption": "Granite.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🪨",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Granite is hard. It is used for strong buildings and worktops."
+      },
+      {
+       "caption": "Chalk.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🖍️",
+         "x": 50,
+         "y": 62,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Chalk is soft. You can write on a board with it."
+      },
+      {
+       "caption": "Sand.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏖️",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Sand is tiny pieces of rock. Each grain was once part of a bigger rock."
+      }
+     ],
+     "backdrop": "mountain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Chalk is a soft rock.",
+      "hint": "Think about writing on a board.",
+      "explanation": "Chalk is a soft rock that rubs off easily.",
+      "skill_tag": "rock.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Pip the pebble",
+     "asset": "clip-science-class-1-rocks-soil-6c4df892.mp4",
+     "poster": "clip-science-class-1-rocks-soil-6c4df892.webp",
+     "seconds": 67,
+     "transcript": "I am Pip. I was once part of a huge mountain rock. Frost made a crack. A piece of me broke off. A stream carried me down. I bumped into other stones. The water rubbed my edges. I became round and smooth. I passed a field. The soil there was dark and crumbly. Many of my friends were crushed into tiny grains of sand. At last I reached the sea. Waves roll me back and forth. A child picks me up. I am a beautiful, smooth pebble.",
+     "caption": "A pebble tells how she travelled from a mountain to a beach."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Rock is natural, not man-made",
+      "Pebbles, boulders and sand are rock",
+      "Rocks can be hard or soft"
+     ],
+     "say": "Let us remember. Rock is natural. Some rocks are hard and some are soft."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "rock",
+       "meaning": "A hard natural material that comes from the Earth."
+      },
+      {
+       "term": "hard",
+       "meaning": "Not easy to scratch or break."
+      },
+      {
+       "term": "soft",
+       "meaning": "Easy to scratch or rub away."
+      },
+      {
+       "term": "pebble",
+       "meaning": "A small, smooth stone."
+      },
+      {
+       "term": "boulder",
+       "meaning": "A very big rock."
+      },
+      {
+       "term": "granite",
+       "meaning": "A very hard rock with sparkly grains."
+      },
+      {
+       "term": "chalk",
+       "meaning": "A soft white rock."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a pebble?",
+     "hint": "You find them on beaches.",
+     "explanation": "A pebble is a small, smooth stone.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kind of plant"
+      },
+      {
+       "id": "b",
+       "text": "A small smooth stone"
+      },
+      {
+       "id": "c",
+       "text": "A piece of plastic"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "People make bricks.",
+     "hint": "Clay is baked.",
+     "explanation": "Bricks are made from clay, so they are man-made.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which rock is soft?",
+     "hint": "You can write with it.",
+     "explanation": "Chalk is a soft rock.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A boulder"
+      },
+      {
+       "id": "b",
+       "text": "Chalk"
+      },
+      {
+       "id": "c",
+       "text": "Granite"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is sand made of?",
+     "hint": "Think about a beach.",
+     "explanation": "Sand is made of tiny pieces of rock.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tiny seeds"
+      },
+      {
+       "id": "b",
+       "text": "Tiny bits of rock"
+      },
+      {
+       "id": "c",
+       "text": "Tiny bits of plastic"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "detective",
+   "kind": "try",
+   "title": "Rock detectives",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Look and feel"
+    },
+    {
+     "type": "text",
+     "markdown": "A **rock detective** looks, feels and tests.",
+     "say": "Scientists look closely at rocks. They use their eyes and hands."
+    },
+    {
+     "type": "explainer",
+     "title": "Rock tests",
+     "scenes": [
+      {
+       "caption": "Look.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🔍",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 72,
+         "y": 64,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Look with a magnifier. You may see tiny grains and sparkles."
+      },
+      {
+       "caption": "Feel.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "✋",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 72,
+         "y": 64,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Feel the rock. Is it rough or smooth? Is it heavy or light?"
+      },
+      {
+       "caption": "Scratch.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 72,
+         "y": 64,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Scratch it with a coin. A soft rock leaves a scratch."
+      }
+     ],
+     "backdrop": "classroom"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which test tells you if a rock is hard or soft?",
+      "hint": "A coin helps.",
+      "explanation": "A soft rock gets scratched by a coin.",
+      "skill_tag": "detective.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Look at it"
+       },
+       {
+        "id": "b",
+        "text": "Scratch it"
+       },
+       {
+        "id": "c",
+        "text": "Weigh it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sorting rocks"
+    },
+    {
+     "type": "text",
+     "markdown": "Sorting helps us compare.",
+     "say": "Detectives sort rocks into groups. They can sort by colour or by feel."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-rocks-soil-3-e10c0f83.jpg",
+     "alt": "A shallow stream running between large grey boulders and smaller stones in a mountain valley",
+     "caption": "Water moves rocks along a stream. Over time it breaks them into smaller pieces.",
+     "credit": "Photo by christie greene on Unsplash",
+     "say": "This mountain stream is full of rocks. Some are big and some are small."
+    },
+    {
+     "type": "manipulative",
+     "title": "Rough or smooth?",
+     "goal": "Move each stone. Bumpy ones go in Rough. Sea-worn ones go in Smooth.",
+     "emoji": "🪨",
+     "count": 8,
+     "zones": [
+      "Rough",
+      "Smooth"
+     ],
+     "say": "Now sort the stones. Are they rough or smooth?"
+    },
+    {
+     "type": "activity",
+     "title": "Stone sort",
+     "materials": [
+      "Six stones from outside",
+      "A magnifier",
+      "Paper and pencil",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Look at each stone with the magnifier.",
+      "Sort the stones by colour or by how they feel.",
+      "Draw your groups and name each one."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "In a fair test we use the same coin for every rock.",
+      "hint": "A fair test changes only one thing.",
+      "explanation": "Using the same coin makes the test fair.",
+      "skill_tag": "detective.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Look closely with a magnifier",
+      "Feel for rough, smooth, heavy and light",
+      "A coin scratch test finds hard and soft"
+     ],
+     "say": "Let us remember. We look, feel and test rocks. We keep tests fair."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "rock detective",
+       "meaning": "A scientist who looks closely at rocks."
+      },
+      {
+       "term": "rough",
+       "meaning": "Bumpy, not smooth."
+      },
+      {
+       "term": "smooth",
+       "meaning": "Even, with no bumps."
+      },
+      {
+       "term": "magnifier",
+       "meaning": "A glass that makes small things look bigger."
+      },
+      {
+       "term": "scratch",
+       "meaning": "A thin mark made by rubbing something sharp."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where we change only one thing."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do you use to see tiny grains in a rock?",
+     "hint": "It makes things look bigger.",
+     "explanation": "A magnifier shows tiny grains.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A ruler"
+      },
+      {
+       "id": "b",
+       "text": "A magnifier"
+      },
+      {
+       "id": "c",
+       "text": "A drum"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A soft rock is scratched by a coin.",
+     "hint": "Soft things scratch easily.",
+     "explanation": "A coin leaves a scratch on a soft rock.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word describes a bumpy rock?",
+     "hint": "It does not feel even.",
+     "explanation": "A bumpy rock feels rough.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Liquid"
+      },
+      {
+       "id": "b",
+       "text": "Rough"
+      },
+      {
+       "id": "c",
+       "text": "Smooth"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "soil",
+   "kind": "play",
+   "title": "Soil and sand",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is soil made of?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Soil** is made of tiny rock pieces and rotted plants.",
+     "say": "Soil covers much of the ground. It is full of tiny bits of rock and old plants."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-rocks-soil-2-d0511079.jpg",
+     "alt": "A young nasturtium plant with round green leaves growing from dark soil",
+     "caption": "Soil gives a plant water and food, and holds its roots in place.",
+     "credit": "Photo by Elly M on Unsplash",
+     "say": "This little plant is growing in dark soil. Its roots are hidden below."
+    },
+    {
+     "type": "explainer",
+     "title": "What is in soil?",
+     "scenes": [
+      {
+       "caption": "Sand.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🏖️",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Sand is gritty and drains fast. Water runs straight through it."
+      },
+      {
+       "caption": "Clay.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🟤",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Clay is sticky when wet. It holds a lot of water."
+      },
+      {
+       "caption": "Humus.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🍂",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🪱",
+         "x": 72,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Humus is dark and crumbly. It comes from rotted leaves and roots."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is soil mostly made from?",
+      "hint": "Think about what is under a garden.",
+      "explanation": "Soil is bits of rock and rotted plants and animals.",
+      "skill_tag": "soil.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Plastic and glass"
+       },
+       {
+        "id": "b",
+        "text": "Tiny bits of rock and rotted plants"
+       },
+       {
+        "id": "c",
+        "text": "Only sand"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Soil in water"
+    },
+    {
+     "type": "text",
+     "markdown": "Soil **settles** into layers.",
+     "say": "Put soil in a jar of water. Shake it, then leave it still."
+    },
+    {
+     "type": "explainer",
+     "title": "Soil layers",
+     "scenes": [
+      {
+       "caption": "Stones.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🪨",
+         "x": 50,
+         "y": 76,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "The heavy stones sink first. They sit at the bottom."
+      },
+      {
+       "caption": "Sand then clay.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🏖️",
+         "x": 50,
+         "y": 70,
+         "size": 1,
+         "anim": "none"
+        }
+       ],
+       "say": "Sand settles on top of the stones. Then comes the clay."
+      },
+      {
+       "caption": "Floating bits.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🍂",
+         "x": 50,
+         "y": 44,
+         "size": 1,
+         "anim": "float"
+        }
+       ],
+       "say": "Bits of old plants float near the top. The water stays cloudy."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Soil layers",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🪨",
+      "🏖️",
+      "🟤",
+      "🍂"
+     ],
+     "say": "Warm up your memory. Watch the soil jar fill up, then copy the order."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the soil layers in order, from the bottom up.",
+      "hint": "Heavy things sink first.",
+      "explanation": "Stones sink first, then sand, then clay.",
+      "skill_tag": "soil.chk2",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Sand"
+       },
+       {
+        "id": "i1",
+        "text": "Stones"
+       },
+       {
+        "id": "i3",
+        "text": "Clay"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Soil is rock pieces and rotted plants",
+      "Sand, clay and humus are parts of soil",
+      "Soil settles into layers in water"
+     ],
+     "say": "Let us remember. Soil is rock pieces and rotted plants. It settles into layers."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "soil",
+       "meaning": "The top layer of the ground where plants grow."
+      },
+      {
+       "term": "sand",
+       "meaning": "Tiny grains of rock."
+      },
+      {
+       "term": "clay",
+       "meaning": "Sticky soil that holds water."
+      },
+      {
+       "term": "humus",
+       "meaning": "Dark, crumbly bits of rotted plants and animals."
+      },
+      {
+       "term": "settles",
+       "meaning": "Sinks slowly to the bottom and stays there."
+      },
+      {
+       "term": "layers",
+       "meaning": "Flat parts lying on top of each other."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part of soil is dark and crumbly?",
+     "hint": "It comes from rotted leaves.",
+     "explanation": "Humus is dark and crumbly.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Humus"
+      },
+      {
+       "id": "c",
+       "text": "Stones"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Water runs fast through sand.",
+     "hint": "Sand is gritty.",
+     "explanation": "Sand drains quickly.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which animal helps make soil healthy?",
+     "hint": "It tunnels.",
+     "explanation": "Worms mix the soil and pull leaves down.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fish"
+      },
+      {
+       "id": "b",
+       "text": "A worm"
+      },
+      {
+       "id": "c",
+       "text": "A bird"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uses",
+   "kind": "use",
+   "title": "Rocks and soil in life",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Using rock"
+    },
+    {
+     "type": "text",
+     "markdown": "Rock is **useful**.",
+     "say": "People have used rock for thousands of years. It is strong and lasts a long time."
+    },
+    {
+     "type": "text",
+     "markdown": "Khewra salt comes from rock under the ground.",
+     "say": "In Pakistan, workers mine rock salt at Khewra. It goes into our food."
+    },
+    {
+     "type": "text",
+     "markdown": "Stone walls and slate roofs last a long time.",
+     "say": "In Yorkshire, in the UK, farmers build walls from stone. Slate makes roofs."
+    },
+    {
+     "type": "explainer",
+     "title": "Rock at work",
+     "scenes": [
+      {
+       "caption": "Gravel path.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🪨",
+         "x": 30,
+         "y": 66,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🛤️",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Gravel makes a path. Small stones are packed hard."
+      },
+      {
+       "caption": "Slate and marble.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🏠",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Slate and marble make roofs and floors. They are strong."
+      },
+      {
+       "caption": "Cement.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🏗️",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Rock is ground up and used to make cement for buildings."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things made using rock.",
+      "hint": "Think about building.",
+      "explanation": "Walls and paths use rock.",
+      "skill_tag": "uses.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A gravel path"
+       },
+       {
+        "id": "b",
+        "text": "A wool jumper"
+       },
+       {
+        "id": "c",
+        "text": "A paper bag"
+       },
+       {
+        "id": "d",
+        "text": "A stone wall"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Growing food in soil"
+    },
+    {
+     "type": "text",
+     "markdown": "Plants need soil to grow.",
+     "say": "Farmers plant seeds in soil. Roots take in water and food from it."
+    },
+    {
+     "type": "text",
+     "markdown": "Good soil grows good crops.",
+     "say": "In Pakistan, wheat and sarson grow in fields of rich soil."
+    },
+    {
+     "type": "text",
+     "markdown": "Digging loosens the soil.",
+     "say": "Digging helps. Loose soil lets roots and water move down easily."
+    },
+    {
+     "type": "text",
+     "markdown": "Care for the soil.",
+     "say": "We look after soil. We add compost and never dump rubbish in it."
+    },
+    {
+     "type": "explainer",
+     "title": "Soil and crops",
+     "scenes": [
+      {
+       "caption": "Digging.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🧑‍🌾",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🟤",
+         "x": 70,
+         "y": 66,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A farmer digs the soil. It becomes loose and crumbly."
+      },
+      {
+       "caption": "Planting.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌱",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "grow"
+        }
+       ],
+       "say": "Seeds go in the soil. Roots grow down and leaves grow up."
+      },
+      {
+       "caption": "Crop.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🌾",
+         "x": 50,
+         "y": 56,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "The crop grows tall. Soil gave it water and food."
+      }
+     ],
+     "backdrop": "farm"
+    },
+    {
+     "type": "activity",
+     "title": "Soil jar",
+     "materials": [
+      "A clear jar",
+      "Garden soil",
+      "Water",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Fill the jar a third full of soil.",
+      "Add water, shake and leave it still.",
+      "Draw the layers you see after an hour."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Rock salt can come from under the ground in Pakistan.",
+      "hint": "Think of the Khewra mine.",
+      "explanation": "Rock salt is mined at Khewra in Pakistan.",
+      "skill_tag": "uses.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "We use rock for walls, roofs and paths",
+      "Plants get water and food from soil",
+      "We must look after soil"
+     ],
+     "say": "Let us remember. Rock builds things. Soil grows our food. We look after both."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "useful",
+       "meaning": "Helpful for a job."
+      },
+      {
+       "term": "gravel",
+       "meaning": "Small broken pieces of rock."
+      },
+      {
+       "term": "slate",
+       "meaning": "A grey rock that splits into flat sheets."
+      },
+      {
+       "term": "compost",
+       "meaning": "Rotted leaves and food scraps that feed the soil."
+      },
+      {
+       "term": "crop",
+       "meaning": "A plant that farmers grow for food."
+      },
+      {
+       "term": "cement",
+       "meaning": "A grey powder that sets hard when wet."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which rock makes a roof tile?",
+     "hint": "It splits into flat sheets.",
+     "explanation": "Slate makes roof tiles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Slate"
+      },
+      {
+       "id": "c",
+       "text": "Chalk"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Plants take water from soil.",
+     "hint": "Think about roots.",
+     "explanation": "Roots take in water from the soil.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should we add to soil to look after it?",
+     "hint": "It is rotted leaves.",
+     "explanation": "Compost feeds the soil.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plastic"
+      },
+      {
+       "id": "b",
+       "text": "Glass"
+      },
+      {
+       "id": "c",
+       "text": "Compost"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which of these is natural?",
+    "hint": "People did not make it.",
+    "explanation": "A boulder is natural. Bricks and concrete are man-made.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A clay brick"
+     },
+     {
+      "id": "b",
+      "text": "A boulder on a hill"
+     },
+     {
+      "id": "c",
+      "text": "A concrete path"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.natural_mc",
+    "sub_lesson": "rock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "match",
+    "prompt": "Match each thing to natural or man-made.",
+    "hint": "Who made it?",
+    "explanation": "Pebbles and boulders are natural. Bricks are made by people.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pebble"
+     },
+     {
+      "id": "l2",
+      "text": "Brick"
+     },
+     {
+      "id": "l3",
+      "text": "Mountain boulder"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Natural"
+     },
+     {
+      "id": "r1",
+      "text": "Natural"
+     },
+     {
+      "id": "r2",
+      "text": "Man-made"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.made_match",
+    "sub_lesson": "rock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says a brick is a rock. Is he right?",
+    "hint": "Where do bricks come from?",
+    "explanation": "Bricks are made by people, so they are not natural rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a brick is a natural rock"
+     },
+     {
+      "id": "b",
+      "text": "No, people make bricks from clay"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bricks grow in the ground"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.brick_rock",
+    "sub_lesson": "rock",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "short_text",
+    "prompt": "What do we call small smooth stones on a beach or in a river?",
+    "hint": "It starts with p.",
+    "explanation": "Small smooth stones are pebbles.",
+    "answer": {
+     "accepted": [
+      "pebbles",
+      "pebble"
+     ]
+    },
+    "skill_tag": "rocks.pebble_st",
+    "sub_lesson": "rock",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "multiple_choice",
+    "prompt": "Aisha says all rocks are hard. Is she right?",
+    "hint": "Think about writing on a board.",
+    "explanation": "Chalk is soft and rubs off.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every rock is very hard"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rocks never break"
+     },
+     {
+      "id": "c",
+      "text": "No, chalk is a soft rock"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.all_hard",
+    "sub_lesson": "rock",
+    "depth": "reason"
+   },
+   {
+    "ref": "q6",
+    "type": "true_false",
+    "prompt": "Chalk is one of the soft rocks.",
+    "hint": "You can write with it.",
+    "explanation": "Chalk is a soft rock.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.chalk_tf",
+    "sub_lesson": "rock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put these in order, from smallest to biggest.",
+    "hint": "Start with the tiniest.",
+    "explanation": "A grain of sand is smallest and a boulder is biggest.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Boulder"
+     },
+     {
+      "id": "i1",
+      "text": "Grain of sand"
+     },
+     {
+      "id": "i2",
+      "text": "Pebble"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "rocks.size_ord",
+    "sub_lesson": "rock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the natural rock.",
+    "hint": "People did not make it.",
+    "explanation": "A boulder is natural.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Boulder",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧱",
+       "label": "Brick",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏺",
+       "label": "Clay pot",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.natural_tap",
+    "sub_lesson": "rock",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each test to what it tells you.",
+    "hint": "Think about each test.",
+    "explanation": "A magnifier shows grains, fingers feel the surface and a coin tests hardness.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Look with a magnifier"
+     },
+     {
+      "id": "l2",
+      "text": "Feel with your fingers"
+     },
+     {
+      "id": "l3",
+      "text": "Scratch with a coin"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Rough or smooth"
+     },
+     {
+      "id": "r3",
+      "text": "Hard or soft"
+     },
+     {
+      "id": "r1",
+      "text": "Tiny grains"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.test_match",
+    "sub_lesson": "detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Omar says heavy rocks are hard. Is he right?",
+    "hint": "Weight and hardness are different.",
+    "explanation": "How heavy a rock is does not tell us how hard it is.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, light rocks are always soft"
+     },
+     {
+      "id": "b",
+      "text": "No, a heavy rock can still be soft"
+     },
+     {
+      "id": "c",
+      "text": "Yes, heavy always means hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.heavy_hard",
+    "sub_lesson": "detective",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "Which two words describe how a rock feels? Pick two.",
+    "hint": "Think about touching.",
+    "explanation": "Rough and smooth describe touch.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Smooth"
+     },
+     {
+      "id": "b",
+      "text": "Sweet"
+     },
+     {
+      "id": "c",
+      "text": "Loud"
+     },
+     {
+      "id": "d",
+      "text": "Rough"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.describe_ms",
+    "sub_lesson": "detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a scratch test.",
+    "hint": "Think about a coin on chalk.",
+    "explanation": "A coin scratches a soft rock but not a hard one.",
+    "points": 2,
+    "text": "A rock that a coin scratches is {b1}. A rock it cannot scratch is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hard"
+       },
+       {
+        "id": "b",
+        "text": "wet"
+       },
+       {
+        "id": "c",
+        "text": "soft"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "soft"
+       },
+       {
+        "id": "b",
+        "text": "hard"
+       },
+       {
+        "id": "c",
+        "text": "warm"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "rocks.coin_fill",
+    "sub_lesson": "detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Hamza says we should press harder on a soft rock in a scratch test. Is he right?",
+    "hint": "Think about a fair test.",
+    "explanation": "A fair test keeps everything the same.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, we change the coin each time"
+     },
+     {
+      "id": "b",
+      "text": "No, we use the same push for every rock"
+     },
+     {
+      "id": "c",
+      "text": "Yes, we press harder on soft rocks"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.press_harder",
+    "sub_lesson": "detective",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "Zainab sorts 12 stones. 5 are smooth. Slide to show how many are rough.",
+    "hint": "12 take away 5.",
+    "explanation": "12 - 5 = 7 stones.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15,
+     "unit": "stones"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.rough_sld",
+    "sub_lesson": "detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "short_text",
+    "prompt": "What do we call a person who looks closely and tests things to find out?",
+    "hint": "It starts with s.",
+    "explanation": "A scientist looks and tests.",
+    "answer": {
+     "accepted": [
+      "scientist",
+      "a scientist"
+     ]
+    },
+    "skill_tag": "rocks.tool_st",
+    "sub_lesson": "detective",
+    "depth": "recall"
+   },
+   {
+    "ref": "q16",
+    "type": "number",
+    "prompt": "A tray has 10 pebbles. 6 are grey. How many are not grey?",
+    "hint": "10 take away 6.",
+    "explanation": "10 - 6 = 4 pebbles.",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.pebble_num",
+    "sub_lesson": "detective",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Sana says soil is only tiny pieces of rock. Is she right?",
+    "hint": "Think about humus.",
+    "explanation": "Soil has rock pieces and rotted plants and animals.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil is only water"
+     },
+     {
+      "id": "b",
+      "text": "No, soil also has rotted plants and animals"
+     },
+     {
+      "id": "c",
+      "text": "Yes, soil is only rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.soil_only_rock",
+    "sub_lesson": "soil",
+    "depth": "reason"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Layla says soil is just dirt. Is she right?",
+    "hint": "Think about what grows in it.",
+    "explanation": "Soil feeds plants and shelters animals.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil is useless"
+     },
+     {
+      "id": "b",
+      "text": "No, soil is a home for worms and feeds plants"
+     },
+     {
+      "id": "c",
+      "text": "Yes, soil has nothing in it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.just_dirt",
+    "sub_lesson": "soil",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "order",
+    "prompt": "After shaking, the layers settle. Put them in order from the bottom.",
+    "hint": "Heavy things sink first.",
+    "explanation": "Stones, then sand, then clay, then water on top.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Sand"
+     },
+     {
+      "id": "i4",
+      "text": "Water"
+     },
+     {
+      "id": "i3",
+      "text": "Clay"
+     },
+     {
+      "id": "i1",
+      "text": "Stones"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "rocks.layers_ord",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Zainab says plants make soil from nothing. Is she right?",
+    "hint": "Think about what soil is made from.",
+    "explanation": "Soil takes a very long time to form.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil needs no rock"
+     },
+     {
+      "id": "b",
+      "text": "No, soil forms slowly from rock pieces and dead plants"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plants make soil overnight"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.make_soil",
+    "sub_lesson": "soil",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "hotspot",
+    "prompt": "Tap the soil that holds the most water.",
+    "hint": "It is sticky.",
+    "explanation": "Clay holds a lot of water.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏖️",
+       "label": "Sandy soil",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟤",
+       "label": "Clay soil",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Dry gravel",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "rocks.water_tap",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each part of soil to what it is like.",
+    "hint": "Think about each feel.",
+    "explanation": "Sand is gritty, clay is sticky and humus is dark and crumbly.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sand"
+     },
+     {
+      "id": "l2",
+      "text": "Clay"
+     },
+     {
+      "id": "l3",
+      "text": "Humus"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Sticky when wet"
+     },
+     {
+      "id": "r1",
+      "text": "Gritty and drains fast"
+     },
+     {
+      "id": "r3",
+      "text": "Dark and crumbly"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.part_match",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "true_false",
+    "prompt": "Worms help make soil healthy.",
+    "hint": "They pull leaves down.",
+    "explanation": "Worms mix soil and pull leaves down.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.worm_tf",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Mira says rock only comes from mountains. Is she right?",
+    "hint": "Think of pebbles.",
+    "explanation": "Rock is found almost everywhere.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only mountains have rock"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rock only grows on hills"
+     },
+     {
+      "id": "c",
+      "text": "No, there is rock under the ground, in rivers and on beaches"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.rock_mountains",
+    "sub_lesson": "uses",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two things are made using rock? Pick two.",
+    "hint": "Think about stone and paths.",
+    "explanation": "Marble and gravel are rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plastic cup"
+     },
+     {
+      "id": "b",
+      "text": "A cotton shirt"
+     },
+     {
+      "id": "c",
+      "text": "A gravel path"
+     },
+     {
+      "id": "d",
+      "text": "A marble floor"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "rocks.rock_made_ms",
+    "sub_lesson": "uses",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about plants.",
+    "hint": "Think about what plants need.",
+    "explanation": "Roots take water and food from soil.",
+    "points": 2,
+    "text": "Roots take {b1} and {b2} from the soil.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sand"
+       },
+       {
+        "id": "b",
+        "text": "water"
+       },
+       {
+        "id": "c",
+        "text": "paint"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "glass"
+       },
+       {
+        "id": "b",
+        "text": "plastic"
+       },
+       {
+        "id": "c",
+        "text": "food"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "rocks.plant_fill",
+    "sub_lesson": "uses",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "Slate is a rock that people use for roofs.",
+    "hint": "It splits into flat sheets.",
+    "explanation": "Slate makes roofs in the UK.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.slate_tf",
+    "sub_lesson": "uses",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "number",
+    "prompt": "A builder puts 6 stones in each row. She builds 3 rows. How many stones is that?",
+    "hint": "6 + 6 + 6.",
+    "explanation": "6 + 6 + 6 = 18 stones.",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.wall_num",
+    "sub_lesson": "uses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "short_text",
+    "prompt": "What do we call the dark crumbly ground where plants grow?",
+    "hint": "It starts with s.",
+    "explanation": "Plants grow in soil.",
+    "answer": {
+     "accepted": [
+      "soil"
+     ]
+    },
+    "skill_tag": "rocks.use_st",
+    "sub_lesson": "uses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "A garden bed needs 10 spades of soil. Hamza has dug 4. Slide to show how many are left.",
+    "hint": "10 take away 4.",
+    "explanation": "10 - 4 = 6 spades.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "spades"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.dig_sld",
+    "sub_lesson": "uses",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is man-made?",
+    "hint": "Someone baked it.",
+    "explanation": "People make bricks from clay.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A pebble on a beach"
+     },
+     {
+      "id": "b",
+      "text": "A clay brick"
+     },
+     {
+      "id": "c",
+      "text": "A boulder on a hill"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.natural_mc",
+    "sub_lesson": "rock",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "match",
+    "prompt": "Join each thing to natural or man-made.",
+    "hint": "Who made it?",
+    "explanation": "Slate is natural. Concrete and clay tiles are made by people.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Concrete"
+     },
+     {
+      "id": "l2",
+      "text": "Slate from a hillside"
+     },
+     {
+      "id": "l3",
+      "text": "Clay roof tile"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Natural"
+     },
+     {
+      "id": "r1",
+      "text": "Man-made"
+     },
+     {
+      "id": "r3",
+      "text": "Man-made"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.made_match",
+    "sub_lesson": "rock",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Ali says concrete is a rock. Is he right?",
+    "hint": "Who mixes concrete?",
+    "explanation": "Concrete is man-made, not natural rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, concrete is a natural rock"
+     },
+     {
+      "id": "b",
+      "text": "No, concrete is made by mixing cement, sand and water"
+     },
+     {
+      "id": "c",
+      "text": "Yes, concrete falls from the sky"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.brick_rock",
+    "sub_lesson": "rock",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "short_text",
+    "prompt": "What do we call the tiny grains on a beach or in a desert?",
+    "hint": "You can pour it.",
+    "explanation": "Tiny grains of rock are sand.",
+    "answer": {
+     "accepted": [
+      "sand"
+     ]
+    },
+    "skill_tag": "rocks.pebble_st",
+    "sub_lesson": "rock",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multiple_choice",
+    "prompt": "Hana says every rock is as hard as granite. Is she right?",
+    "hint": "Think about chalk.",
+    "explanation": "Some rocks, like chalk, are soft.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all rocks are hard"
+     },
+     {
+      "id": "b",
+      "text": "Yes, granite is the softest"
+     },
+     {
+      "id": "c",
+      "text": "No, some rocks are soft and crumble"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.all_hard",
+    "sub_lesson": "rock",
+    "depth": "reason",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "true_false",
+    "prompt": "Granite is a soft rock that crumbles in your hand.",
+    "hint": "Is granite strong?",
+    "explanation": "Granite is very hard.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.chalk_tf",
+    "sub_lesson": "rock",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Arrange these, from smallest to biggest.",
+    "hint": "Start with the smallest.",
+    "explanation": "A pebble is smallest and a mountain is biggest.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Mountain"
+     },
+     {
+      "id": "i1",
+      "text": "Pebble"
+     },
+     {
+      "id": "i2",
+      "text": "Boulder"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "rocks.size_ord",
+    "sub_lesson": "rock",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the thing made by people.",
+    "hint": "Someone baked it.",
+    "explanation": "A brick is man-made.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Boulder",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧱",
+       "label": "Brick",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⛰️",
+       "label": "Mountain",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "rocks.natural_tap",
+    "sub_lesson": "rock",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Join each question to the best test.",
+    "hint": "Think about each sense.",
+    "explanation": "We scratch to test hardness, feel for roughness and look for sparkles.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Is it hard?"
+     },
+     {
+      "id": "l2",
+      "text": "Is it rough?"
+     },
+     {
+      "id": "l3",
+      "text": "Does it have sparkles?"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Look closely"
+     },
+     {
+      "id": "r1",
+      "text": "Scratch it"
+     },
+     {
+      "id": "r2",
+      "text": "Feel it"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.test_match",
+    "sub_lesson": "detective",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a light rock must be soft. Is she right?",
+    "hint": "Test it with a scratch.",
+    "explanation": "Weight does not tell us hardness. We scratch to find out.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, light always means soft"
+     },
+     {
+      "id": "b",
+      "text": "Yes, light rocks are made of air"
+     },
+     {
+      "id": "c",
+      "text": "No, a light rock can still be hard"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.heavy_hard",
+    "sub_lesson": "detective",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multi_select",
+    "prompt": "Which two words can describe a rock? Pick two.",
+    "hint": "Think about looking and touching.",
+    "explanation": "Hard and shiny describe rocks.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shiny"
+     },
+     {
+      "id": "b",
+      "text": "Tasty"
+     },
+     {
+      "id": "c",
+      "text": "Noisy"
+     },
+     {
+      "id": "d",
+      "text": "Hard"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.describe_ms",
+    "sub_lesson": "detective",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about pebbles.",
+    "hint": "Think about waves.",
+    "explanation": "Waves rub pebbles smooth.",
+    "points": 2,
+    "text": "Pebbles on a beach are {b1} because the sea {b2} them.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sharp"
+       },
+       {
+        "id": "b",
+        "text": "sticky"
+       },
+       {
+        "id": "c",
+        "text": "smooth"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "freezes"
+       },
+       {
+        "id": "b",
+        "text": "rubs"
+       },
+       {
+        "id": "c",
+        "text": "paints"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "rocks.coin_fill",
+    "sub_lesson": "detective",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a fair test uses a different coin for every rock. Is she right?",
+    "hint": "Change only one thing.",
+    "explanation": "A fair test changes only the rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a new coin is fairer"
+     },
+     {
+      "id": "b",
+      "text": "Yes, coins do not matter"
+     },
+     {
+      "id": "c",
+      "text": "No, we use the same coin each time"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.press_harder",
+    "sub_lesson": "detective",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "Bilal sorts 15 stones. 6 are smooth. Slide to show how many are rough.",
+    "hint": "15 take away 6.",
+    "explanation": "15 - 6 = 9 stones.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 18,
+     "unit": "stones"
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.rough_sld",
+    "sub_lesson": "detective",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "short_text",
+    "prompt": "What tool makes small things look bigger?",
+    "hint": "It starts with m.",
+    "explanation": "A magnifier makes small things look bigger.",
+    "answer": {
+     "accepted": [
+      "magnifier",
+      "magnifying glass",
+      "a magnifying glass",
+      "hand lens"
+     ]
+    },
+    "skill_tag": "rocks.tool_st",
+    "sub_lesson": "detective",
+    "depth": "recall",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "number",
+    "prompt": "A tray has 9 pebbles. 4 are white. How many are not white?",
+    "hint": "9 take away 4.",
+    "explanation": "9 - 4 = 5 pebbles.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.pebble_num",
+    "sub_lesson": "detective",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Bilal says soil has no dead plants in it. Is he right?",
+    "hint": "Think about humus.",
+    "explanation": "Rotted plants are part of soil.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil never has plants in it"
+     },
+     {
+      "id": "b",
+      "text": "No, rotted plants make the dark humus in soil"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only sand is in soil"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.soil_only_rock",
+    "sub_lesson": "soil",
+    "depth": "reason",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says all soils are the same. Is he right?",
+    "hint": "Think about sand and clay.",
+    "explanation": "Soils differ in what they hold and how they drain.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every soil is the same"
+     },
+     {
+      "id": "b",
+      "text": "No, sandy soil drains fast and clay holds water"
+     },
+     {
+      "id": "c",
+      "text": "Yes, soil is always black"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.just_dirt",
+    "sub_lesson": "soil",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "order",
+    "prompt": "Put the soil jar layers in order, from the bottom up.",
+    "hint": "Light bits float.",
+    "explanation": "Sand is lowest, then clay and the light bits are on top.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Clay"
+     },
+     {
+      "id": "i3",
+      "text": "Floating bits of plants"
+     },
+     {
+      "id": "i1",
+      "text": "Sand"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "rocks.layers_ord",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Mira says soil is made in a day. Is she right?",
+    "hint": "Think about how slowly rock breaks.",
+    "explanation": "Soil forms very slowly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is quick"
+     },
+     {
+      "id": "b",
+      "text": "No, soil takes many years to form"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a single rainstorm makes it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.make_soil",
+    "sub_lesson": "soil",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "hotspot",
+    "prompt": "Tap the soil that lets water drain fastest.",
+    "hint": "It is gritty.",
+    "explanation": "Water runs quickly through sand.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏖️",
+       "label": "Sandy soil",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟤",
+       "label": "Clay soil",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍂",
+       "label": "Humus",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.water_tap",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Join each helper to its job.",
+    "hint": "Think about what each does.",
+    "explanation": "Worms mix, roots hold and leaves rot to make humus.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Worms"
+     },
+     {
+      "id": "l2",
+      "text": "Roots"
+     },
+     {
+      "id": "l3",
+      "text": "Dead leaves"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Hold the soil together"
+     },
+     {
+      "id": "r3",
+      "text": "Rot to make humus"
+     },
+     {
+      "id": "r1",
+      "text": "Mix the soil"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.part_match",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "true_false",
+    "prompt": "Soil is the same colour everywhere.",
+    "hint": "Think about different gardens.",
+    "explanation": "Soil can be dark, red, brown or pale.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.worm_tf",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Ali says sand is not a rock. Is he right?",
+    "hint": "Think about grains.",
+    "explanation": "Sand is made of tiny pieces of rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, sand is made of plastic"
+     },
+     {
+      "id": "b",
+      "text": "No, sand is tiny pieces of rock"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sand is a plant"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.rock_mountains",
+    "sub_lesson": "uses",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two use stone? Pick two.",
+    "hint": "Think about buildings.",
+    "explanation": "Walls and roofs can be made of stone.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A slate roof"
+     },
+     {
+      "id": "b",
+      "text": "A wooden spoon"
+     },
+     {
+      "id": "c",
+      "text": "A paper bag"
+     },
+     {
+      "id": "d",
+      "text": "A stone wall"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.rock_made_ms",
+    "sub_lesson": "uses",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about Pakistan.",
+    "hint": "Think of the salt mine.",
+    "explanation": "Rock salt is mined at Khewra in Pakistan.",
+    "points": 2,
+    "text": "Rock salt is mined at {b1} in {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Mars"
+       },
+       {
+        "id": "b",
+        "text": "Oxford"
+       },
+       {
+        "id": "c",
+        "text": "Khewra"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "Peru"
+       },
+       {
+        "id": "b",
+        "text": "Pakistan"
+       },
+       {
+        "id": "c",
+        "text": "Spain"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "rocks.plant_fill",
+    "sub_lesson": "uses",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "Slate roof tiles are made from plastic.",
+    "hint": "Slate is natural.",
+    "explanation": "Slate is a natural rock.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.slate_tf",
+    "sub_lesson": "uses",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "number",
+    "prompt": "A path has 4 stones in each row. There are 5 rows. How many stones is that?",
+    "hint": "4 + 4 + 4 + 4 + 4.",
+    "explanation": "5 rows of 4 make 20 stones.",
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.wall_num",
+    "sub_lesson": "uses",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "short_text",
+    "prompt": "What do we call small broken pieces of rock used to make paths?",
+    "hint": "It starts with g.",
+    "explanation": "Small broken rock is gravel.",
+    "answer": {
+     "accepted": [
+      "gravel"
+     ]
+    },
+    "skill_tag": "rocks.use_st",
+    "sub_lesson": "uses",
+    "depth": "recall",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "A flower bed needs 12 spades of soil. Aisha has dug 5. Slide to show how many are left.",
+    "hint": "12 take away 5.",
+    "explanation": "12 - 5 = 7 spades.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 14,
+     "unit": "spades"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.dig_sld",
+    "sub_lesson": "uses",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}
