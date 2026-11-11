@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import type { Actor } from "@lms/schema";
 import { Prop, propWidth } from "./props/Prop";
+import { AssetView, hasAsset } from "./assets";
 
 // The drawing of one actor (an emoji or a prop, its label and its effect). No sound and no timers except CountUp's
 // default ticker, so the clip renderer (tools/clips) can import it without pulling in the web app's audio code.
@@ -53,7 +54,9 @@ export function ActorView({ a, shown }: { a: { emoji?: string; prop?: Actor["pro
       <Effect kind={a.effect} />
       {a.prop
         ? <span className="block" style={{ width: `${propWidth(a.prop.kind, a.size)}cqw` }}><Prop spec={a.prop} /></span>
-        : <span className="actor-emoji leading-none" style={{ fontSize: EMOJI_SIZE[a.size] ?? EMOJI_SIZE[2] }}>{a.emoji}</span>}
+        : hasAsset(a.emoji)
+          ? <span className="block">{<AssetView emoji={a.emoji!} size={a.size} effect={a.effect} />}</span>
+          : <span className="actor-emoji leading-none" style={{ fontSize: EMOJI_SIZE[a.size] ?? EMOJI_SIZE[2] }}>{a.emoji}</span>}
       {a.label && <span className="actor-label">{a.effect === "count" && num !== null ? <CountUp to={num} run={shown} /> : a.label}</span>}
     </>
   );

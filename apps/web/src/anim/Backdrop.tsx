@@ -1,4 +1,5 @@
 import type { Backdrop as BackdropName } from "@lms/schema";
+import { BACKDROP_IMAGES } from "./assets/backdrops";
 
 // Drawn scenery for stages. Each is a few layered shapes in a 500 x 300 box that is cropped to fill the stage; the far
 // layer drifts slowly (clouds, birds, stars, bubbles) and everything else stays still so it never competes with the
@@ -74,6 +75,8 @@ function Scene({ name }: { name: BackdropName }) {
 
 /** A stage's scenery, filling its parent (which must be positioned). */
 export function Backdrop({ name }: { name: BackdropName }) {
+  const picture = BACKDROP_IMAGES[name];
+  if (picture) return <img className={`backdrop backdrop--${name} object-cover`} src={picture} alt="" draggable={false} aria-hidden="true" />;
   return (
     <svg className={`backdrop backdrop--${name}`} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <Scene name={name} />

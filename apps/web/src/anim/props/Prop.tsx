@@ -302,7 +302,7 @@ const DRAW: Record<PropSpec["kind"], (x: { p: PropSpec }) => React.JSX.Element> 
 /** Widths (in % of the stage) for sizes 1 to 3. Wide props get more room. */
 const WIDE = new Set(["number_line", "ten_frame", "base_ten", "fraction_bar", "sun_earth", "sorting_boxes", "venn", "balance"]);
 export function propWidth(kind: PropSpec["kind"], size: number): number {
-  const base = kind === "base_ten" ? [0, 40, 46, 80] : WIDE.has(kind) ? [0, 34, 52, 72] : [0, 18, 28, 40];
+  const base = kind === "base_ten" ? [0, 40, 46, 62] : WIDE.has(kind) ? [0, 34, 52, 72] : [0, 18, 28, 40];
   return base[size] ?? base[2]!;
 }
 
