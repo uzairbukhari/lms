@@ -302,7 +302,7 @@ character. Images: `/mnt/project-files/screens/student-home-v3/`; mock in `docs/
 - **B. Subject worlds.** Each subject is a planet on a dotted path with a progress ring; "You are here" on the
   current one; a dock at the bottom with Up next + Go, Today's cards and Brain teaser. More playful, less text.
 
-Recommendation: A. It answers "what do I do now?" in one tap and reads well in every theme.
+**Chosen 12 Nov: A.** It answers "what do I do now?" in one tap and reads well in every theme.
 
 The fixes above still apply to the subject map. All of this is layout and CSS in `apps/web/src/pages/StudentHome.tsx`, `SubjectPath.tsx` and `index.css`, and can
 ship as one small PR before the admin work.
