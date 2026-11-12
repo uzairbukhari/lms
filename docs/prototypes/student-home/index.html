@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student home</title>
+<style>
+@font-face { font-family: "Baloo 2"; font-weight: 600; src: url(baloo-2-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 700; src: url(baloo-2-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 800; src: url(baloo-2-latin-800-normal.woff2) format("woff2"); }
+:root, [data-theme="space"] {
+  --bg: #0f1535; --bg-image: radial-gradient(circle at 80% 10%, #2a2f7a 0%, #0f1535 55%, #090c24 100%);
+  --surface: #1c2557; --surface-border: #3b4896; --text: #fff; --text-muted: #c9d3ff; --accent: #ffd166; --accent-contrast: #0f1535;
+  --radius: 24px; --bw: 2px; --shadow: none; --track: #0f1535; --star: #ffd166; --hero: linear-gradient(135deg, #2b3592, #1c2557 70%);
+  --tint-maths: #ffb4c8; --tint-science: #7ee8d4; --tint-data-ai: #c4b5fd; --tint-gk: #93d8fb; --tint-english: #ffd9a0; --on-tint: #141a40;
+}
+[data-theme="candy"] {
+  --bg: #ffd6f0; --bg-image: linear-gradient(135deg, #ffd6f0 0%, #d9c8ff 100%);
+  --surface: #fff; --surface-border: #3a1466; --text: #3a1466; --text-muted: #5b2d91; --accent: #d61f7f; --accent-contrast: #fff;
+  --radius: 26px; --bw: 4px; --shadow: 0 8px 0 #3a1466; --track: #f3e8ff; --star: #ffc23d; --hero: linear-gradient(135deg, #fff, #ffe9f6);
+  --tint-maths: #ffb3d9; --tint-science: #9ff0dd; --tint-data-ai: #d4c1ff; --tint-gk: #ffe08a; --tint-english: #bfe3ff; --on-tint: #3a1466;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); background-image: var(--bg-image); color: var(--text); font-family: "Baloo 2", system-ui, sans-serif; overflow: hidden; }
+.app { height: 100%; display: grid; grid-template-rows: auto 1fr; gap: clamp(12px, 2vh, 20px); padding: clamp(14px, 2.4vh, 24px) clamp(16px, 2.6vw, 32px); }
+.card { background: var(--surface); border: var(--bw) solid var(--surface-border); border-radius: var(--radius); box-shadow: var(--shadow); }
+/* header */
+.top { display: flex; align-items: center; gap: 14px; }
+.ava { width: 56px; height: 56px; border-radius: 50%; background: var(--tint-maths); color: var(--on-tint); display: grid; place-items: center; font-weight: 800; font-size: 28px; overflow: hidden; border: 3px solid var(--accent); }
+.ava img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; transform: scale(1.7) translateY(18%); }
+.hi { font-weight: 800; font-size: 30px; line-height: 1; } .hi small { display: block; font-size: 16px; font-weight: 600; color: var(--text-muted); margin-top: 4px; }
+.pills { margin-left: auto; display: flex; gap: 10px; }
+.pill { display: flex; align-items: center; gap: 6px; padding: 6px 16px; min-height: 48px; border-radius: 99px; font-weight: 700; font-size: 18px; border: var(--bw) solid var(--surface-border); background: var(--surface); }
+.pill svg { width: 22px; height: 22px; }
+.me { background: var(--accent); color: var(--accent-contrast); border-color: transparent; }
+/* option A */
+.a-main { min-height: 0; display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr auto; gap: clamp(12px, 2vh, 20px); }
+.hero { grid-row: 1; position: relative; overflow: hidden; padding: clamp(18px, 3vh, 30px); display: flex; flex-direction: column; gap: 10px; background: var(--hero); }
+.eyebrow { font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); display: flex; gap: 8px; align-items: center; }
+.sic { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: var(--on-tint); flex: none; }
+.sic svg { width: 60%; height: 60%; }
+.hero h1 { margin: 0; font-size: clamp(34px, 5.2vh, 48px); line-height: 1.02; font-weight: 800; max-width: 62%; text-wrap: balance; }
+.part { font-size: 20px; font-weight: 700; color: var(--text-muted); max-width: 60%; }
+.dots { display: flex; gap: 8px; margin-top: 2px; } .dots i { width: 44px; height: 12px; border-radius: 99px; background: var(--track); border: 2px solid var(--surface-border); }
+.dots i.done { background: var(--accent); border-color: var(--accent); } .dots i.now { background: linear-gradient(90deg, var(--accent) 40%, var(--track) 40%); border-color: var(--accent); }
+.play { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; background: var(--accent); color: var(--accent-contrast); font-weight: 800; font-size: 28px; padding: 10px 36px 10px 26px; border-radius: 99px; min-height: 72px; box-shadow: 0 6px 0 rgba(0,0,0,.25); position: relative; z-index: 2; }
+.play svg { width: 30px; height: 30px; }
+.kid { position: absolute; right: -20px; bottom: -6px; height: 84%; max-height: 520px; pointer-events: none; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+.hero .part, .hero h1, .hero .dots, .hero .eyebrow { position: relative; z-index: 2; }
+.hero .part { max-width: 52%; }
+.hero .sub { font-size: 15px; font-weight: 600; color: var(--text-muted); position: relative; z-index: 2; }
+.daily { grid-column: 1; grid-row: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.dtile { padding: 12px 14px; display: flex; gap: 12px; align-items: center; min-height: 84px; }
+.dtile .ic { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; flex: none; color: var(--on-tint); }
+.dtile .ic svg { width: 30px; height: 30px; }
+.dtile { position: relative; } .dtile b { display: block; font-size: 19px; line-height: 1.1; } .dtile div > span { color: var(--text-muted); font-weight: 600; font-size: 15px; line-height: 1.2; display: block; }
+.dtile .badge { position: absolute; top: -10px; right: -8px; }
+.badge { margin-left: auto; background: var(--accent); color: var(--accent-contrast); font-weight: 800; border-radius: 99px; min-width: 32px; height: 32px; display: grid; place-items: center; padding: 0 8px; font-size: 16px; }
+.subjects { grid-column: 2; grid-row: 1 / span 2; padding: clamp(14px, 2.2vh, 22px); display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.subjects h2 { margin: 0 0 2px; font-size: 22px; font-weight: 800; }
+.srow { flex: 1; min-height: 64px; max-height: 110px; display: flex; align-items: center; gap: 14px; padding: 8px 12px 8px 8px; border-radius: 18px; background: rgba(255,255,255,.04); border: 2px solid var(--surface-border); }
+[data-theme="candy"] .srow { background: #fff7fc; }
+.ring { --p: 0; width: 62px; height: 62px; border-radius: 50%; flex: none; display: grid; place-items: center; background: conic-gradient(var(--accent) calc(var(--p) * 1%), var(--track) 0); }
+.ring .sic { width: 50px; height: 50px; }
+.st { flex: 1; min-width: 0; } .st small { display: block; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+.st b { display: block; font-size: 21px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st span { font-size: 15px; font-weight: 600; color: var(--text-muted); }
+.chev { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--track); flex: none; } .chev svg { width: 22px; height: 22px; }
+.srow.on { border-color: var(--accent); }
+/* option B */
+.b-main { min-height: 0; display: grid; grid-template-rows: 1fr auto; gap: clamp(12px, 2vh, 18px); }
+.worlds { position: relative; min-height: 0; }
+.worlds svg.orbit { position: absolute; inset: 0; width: 100%; height: 100%; }
+.planet { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; width: 190px; }
+.planet .ball { width: var(--s, 130px); height: var(--s, 130px); border-radius: 50%; display: grid; place-items: center; color: var(--on-tint); box-shadow: inset -14px -18px 0 rgba(0,0,0,.12), 0 0 0 6px rgba(255,255,255,.06); position: relative; }
+.planet .ball svg { width: 46%; height: 46%; }
+.planet .ball::after { content: ""; position: absolute; inset: -12px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--p) * 1%), rgba(255,255,255,.12) 0); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px)); mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px)); }
+.planet b { font-size: 22px; line-height: 1.05; margin-top: 10px; } .planet span { font-size: 15px; font-weight: 700; color: var(--text-muted); }
+.planet .flag { position: absolute; top: 18px; right: -42px; z-index: 3; background: var(--accent); color: var(--accent-contrast); font-weight: 800; font-size: 14px; border-radius: 99px; padding: 2px 10px; }
+.b-kid { position: absolute; height: 46%; filter: drop-shadow(0 10px 18px rgba(0,0,0,.4)); }
+.dock { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: stretch; }
+.next { display: flex; align-items: center; gap: 16px; padding: 12px 14px 12px 16px; }
+.next .ring { width: 70px; height: 70px; } .next .ring .sic { width: 56px; height: 56px; }
+.next .st b { font-size: 26px; } .next .play { margin: 0 0 0 auto; align-self: center; font-size: 24px; min-height: 64px; }
+.round { width: 128px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-weight: 700; font-size: 16px; text-align: center; line-height: 1.1; position: relative; }
+.round .ic { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: var(--on-tint); } .round .ic svg { width: 30px; height: 30px; }
+.round .badge { position: absolute; top: 8px; right: 10px; }
+/* portrait */
+@media (orientation: portrait) {
+  .a-main { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1.1fr) auto minmax(0, 1.4fr); }
+  .daily { grid-row: 2; } .subjects { grid-column: 1; grid-row: 3; }
+  .hero h1 { max-width: 64%; }
+  .pills .pill.hide-p { display: none; }
+  .dock { grid-template-columns: 1fr 1fr; } .dock .next { grid-column: 1 / -1; } .round { width: auto; flex-direction: row; gap: 12px; padding: 12px; }
+  .round .badge { position: static; }
+}
+</style></head>
+<body>
+<div class="app" id="app"></div>
+<script>
+const ICON = {
+  maths: '<path d="M7 3.5v6M4 6.5h6M14 6.5h6M4.5 14.5l5 5M9.5 14.5l-5 5M14 15.5h6M14 19h6" />',
+  science: '<path d="M9 3h6M10 3v6l-5.6 9.6A1.6 1.6 0 0 0 5.8 21h12.4a1.6 1.6 0 0 0 1.4-2.4L14 9V3M7.2 15h9.6" />',
+  "data-ai": '<rect x="5" y="8" width="14" height="11" rx="3" /><path d="M12 4v4M9.5 13h.01M14.5 13h.01M9.5 16.5h5M2.5 12.5v3M21.5 12.5v3" />',
+  gk: '<circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18" />',
+  english: '<path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19zM14 7l3 3M4 20.5h16" />',
+  star: '<path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z" fill="currentColor"/>',
+  coin: '<circle cx="12" cy="12" r="9" fill="currentColor"/><path d="M12 7v10M9.5 9.5h3.8a1.7 1.7 0 0 1 0 3.4h-2.6a1.7 1.7 0 0 0 0 3.4h3.8" stroke="#0f1535"/>',
+  flame: '<path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1.2 2.5 2 2.5 0-3-1-5 1-8z" fill="currentColor"/>',
+  play: '<path d="M7 4.5v15l12.5-7.5z" fill="currentColor" stroke="none"/>',
+  cards: '<rect x="3" y="6" width="12" height="15" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v13"/>',
+  puzzle: '<path d="M10 3h4v3a2 2 0 1 0 4 0V3h3v7h-3a2 2 0 1 0 0 4h3v7h-7v-3a2 2 0 1 0-4 0v3H3v-7h3a2 2 0 1 0 0-4H3V3z"/>',
+  map: '<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/>',
+  chev: '<path d="M9 5l7 7-7 7"/>',
+  me: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+};
+const svg = (n, sw = 2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
+const SUBJ = [
+  ["maths", "Maths", "Place Value to 100", 3, 25, "Part 2 of 4"],
+  ["science", "Science", "Animals and Us", 2, 8, "Start"],
+  ["gk", "General Knowledge", "Where in the World?", 1, 0, "Start"],
+  ["data-ai", "CS, Data & AI", "Algorithms and Robots", 2, 8, "Part 3 of 4"],
+  ["english", "English", "Sentences and Grammar", 1, 3, "Part 1 of 4"],
+];
+const tint = (s) => `var(--tint-${s === "gk" ? "gk" : s})`;
+const header = `<header class="top"><div class="ava"><img src="zainab-wave.webp" alt=""></div><div class="hi">Hi, Zainab!<small>3 days in a row. Keep it up!</small></div>
+<div class="pills"><span class="pill" style="color:var(--star)">${svg("star")}<span style="color:var(--text)">14</span></span><span class="pill hide-p" style="color:#f5b301">${svg("coin")}<span style="color:var(--text)">120</span></span><span class="pill hide-p" style="color:#ff8a4c">${svg("flame")}<span style="color:var(--text)">3</span></span><span class="pill me">${svg("me")} Me</span></div></header>`;
+function optionA() {
+  return header + `<main class="a-main">
+  <section class="hero card"><div class="eyebrow"><span class="sic" style="background:${tint("maths")}">${svg("maths", 2.4)}</span>Up next · Maths</div>
+    <h1>Place Value to 100</h1><div class="part">Part 2 of 4 · Try it: build the number</div>
+    <div class="dots" aria-label="Part 2 of 4"><i class="done"></i><i class="now"></i><i></i><i></i></div>
+    <span class="play">${svg("play")} Keep going</span><span class="sub">About 8 minutes</span>
+    <img class="kid" src="zainab-wave.webp" alt=""></section>
+  <div class="daily">
+    <div class="dtile card"><span class="ic" style="background:${tint("english")}">${svg("cards")}</span><div><b>Today's cards</b><span>3 words to practise</span></div><span class="badge">3</span></div>
+    <div class="dtile card"><span class="ic" style="background:${tint("data-ai")}">${svg("puzzle")}</span><div><b>Brain teaser</b><span>A new one today</span></div><span class="badge">1</span></div>
+    <div class="dtile card"><span class="ic" style="background:${tint("science")}">${svg("map")}</span><div><b>Journey map</b><span>2 topics to the next chest</span></div></div>
+  </div>
+  <section class="subjects card"><h2>My subjects</h2>
+    ${SUBJ.map(([s, n, t, k, p], i) => `<div class="srow ${i === 0 ? "on" : ""}"><span class="ring" style="--p:${p}"><span class="sic" style="background:${tint(s)}">${svg(s, 2.2)}</span></span><div class="st"><small>${n}</small><b>${t}</b><span>Topic ${k} of 12</span></div><span class="chev">${svg("chev", 2.6)}</span></div>`).join("")}
+  </section></main>`;
+}
+function optionB(portrait) {
+  const pos = portrait ? [[28, 18], [72, 30], [30, 50], [72, 64], [34, 84]] : [[12, 64], [31, 26], [52, 62], [72, 24], [89, 60]];
+  const sizes = [150, 126, 126, 126, 126];
+  const path = "M" + pos.map(([x, y]) => `${x * 10} ${y * 10}`).join(" L");
+  return header + `<main class="b-main"><section class="worlds">
+    <svg class="orbit" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><path d="${path}" fill="none" stroke="#3b4896" stroke-width="5" stroke-dasharray="2 16" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+    ${SUBJ.map(([s, n, t, k, p], i) => `<div class="planet" style="left:${pos[i][0]}%;top:${pos[i][1]}%;--s:${sizes[i]}px;--p:${p}">${i === 0 ? '<span class="flag">You are here</span>' : ""}<span class="ball" style="background:${tint(s)}">${svg(s, 2)}</span><b>${n}</b><span>Topic ${k} of 12 · ${p}%</span></div>`).join("")}
+    <img class="b-kid" src="zainab-cheer.webp" alt="" style="${portrait ? "right:0%;top:74%;height:26%" : "left:1%;top:0%;height:40%"}">
+  </section>
+  <div class="dock"><div class="next card"><span class="ring" style="--p:25"><span class="sic" style="background:${tint("maths")}">${svg("maths", 2.4)}</span></span><div class="st"><small>Up next · Maths</small><b>Place Value to 100</b><span>Part 2 of 4 · about 8 minutes</span></div><span class="play">${svg("play")} Go</span></div>
+    <div class="round card"><span class="ic" style="background:${tint("english")}">${svg("cards")}</span>Today's cards<span class="badge">3</span></div>
+    <div class="round card"><span class="ic" style="background:${tint("data-ai")}">${svg("puzzle")}</span>Brain teaser<span class="badge">1</span></div></div></main>`;
+}
+const [opt, theme] = (location.hash.slice(1) || "a-space").split("-");
+document.documentElement.dataset.theme = theme;
+document.getElementById("app").innerHTML = opt === "a" ? optionA() : optionB(innerHeight > innerWidth);
+</script></body></html>

@@ -289,7 +289,22 @@ Fixes, most important first:
    "Topic 1 of 12", at 16px; the bar already shows the parts.
 9. **Touch targets:** the Map/Cards toggle is about 44px tall; raise to 48px to match the other buttons.
 
-All of this is layout and CSS in `apps/web/src/pages/StudentHome.tsx`, `SubjectPath.tsx` and `index.css`, and can
+### 7.1 New student home (full redesign, two directions)
+
+Uzair asked (12 Nov) to redo the student first page completely. Both directions fit one screen on iPad landscape,
+iPad portrait and Surface with no scrolling (measured), use the existing theme tokens, and show the child's own
+character. Images: `/mnt/project-files/screens/student-home-v3/`; mock in `docs/prototypes/student-home/`.
+
+- **A. Up next first.** One big "Up next" card (subject, topic, part 2 of 4, one Keep going button, about 8 minutes)
+  with the child's character; three daily tiles (Today's cards, Brain teaser, Journey map); "My subjects" list with a
+  progress ring per subject, current topic name and "Topic 3 of 12". Stars, coins, streak and a "Me" menu (growth,
+  stickers, log out) in the header. Clearest for a 6 year old: one obvious thing to press.
+- **B. Subject worlds.** Each subject is a planet on a dotted path with a progress ring; "You are here" on the
+  current one; a dock at the bottom with Up next + Go, Today's cards and Brain teaser. More playful, less text.
+
+Recommendation: A. It answers "what do I do now?" in one tap and reads well in every theme.
+
+The fixes above still apply to the subject map. All of this is layout and CSS in `apps/web/src/pages/StudentHome.tsx`, `SubjectPath.tsx` and `index.css`, and can
 ship as one small PR before the admin work.
 
 ## 8. Open questions for Uzair
