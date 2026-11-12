@@ -7,6 +7,7 @@ import type { CardSummary } from "../lib/cards";
 import type { Rewards, TeaserState } from "../lib/rewards";
 import { Loader } from "../components/Loader";
 import type { SubjectPath } from "../lib/topic";
+import { HomeV3, type UpNext } from "./HomeV3";
 
 type Card = {
   id: string; title: string; subject: string; summary: string; minutes: number; semester: number | null; week: number | null; phase: string;
@@ -223,6 +224,7 @@ export function StudentHome() {
   const [picked, setPicked] = useState<string | null>(null);
   const [calOpen, setCalOpen] = useState(false);
   const [paths, setPaths] = useState<SubjectPath[]>([]);
+  const [upNext, setUpNext] = useState<UpNext>(null);
 
   useEffect(() => {
     api<Home>("/api/home").then(setHome).catch(() => setFailed(true));
@@ -231,7 +233,7 @@ export function StudentHome() {
     api<Rewards>("/api/rewards").then(setRewards).catch(() => undefined);
     api<TeaserState>("/api/teaser").then(setTeaser).catch(() => undefined);
     api<CardSummary>("/api/cards/summary").then(setCards).catch(() => undefined);
-    api<{ paths: SubjectPath[] }>("/api/paths").then((r) => setPaths(r.paths)).catch(() => undefined);
+    api<{ paths: SubjectPath[]; upNext?: UpNext }>("/api/paths").then((r) => { setPaths(r.paths); setUpNext(r.upNext ?? null); }).catch(() => undefined);
   }, []);
 
   if (!user) return null;
@@ -262,6 +264,11 @@ export function StudentHome() {
 
   // While the lessons load, show only a centred loader (no half-empty header or buttons).
   if (!home && !failed) return <Loader label="Loading your lessons…" fullScreen />;
+
+  // Children on mastery paths get the new one-screen home; weekly-calendar classes keep the old quest trail until they are moved.
+  if (paths.length > 0) {
+    return <HomeV3 user={user} logout={logout} paths={paths} upNext={upNext} stars={lessonsDone} points={points?.total ?? null} rewards={rewards} cards={cards} teaser={teaser} exams={exams} />;
+  }
 
   return (
     <main className="kh-main mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-8 sm:px-8">
