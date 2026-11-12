@@ -80,11 +80,13 @@ function GrandStop({ grand, allDone, x, y, dense }: { grand: GrandQuiz | null; a
         )}
         {state === "passed" && <span aria-hidden="true" className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full text-sm font-extrabold" style={{ background: "#161a40", color: "#ffd166" }}>✓</span>}
       </span>
+      <span className="absolute left-1/2 top-full mt-1 flex w-max -translate-x-1/2 flex-col items-center gap-1">
       <span className="max-w-[120px] text-center font-display text-base font-bold leading-tight">{label}</span>
       {grand && <span className="text-sm font-bold" style={{ color: lit ? "#ffd166" : undefined }}>{state === "locked" ? "Locked" : state === "ready" ? "Ready!" : `Passed · ${stars} ${stars === 1 ? "star" : "stars"}`}</span>}
+      </span>
     </>
   );
-  const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1";
+  const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center";
   const style = { left: `${x}%`, top: `${y}%`, opacity: lit ? 1 : 0.7 };
   if (grand && lit) return <Link to={`/exam/${grand.quizId}`} className={cls} style={style} aria-label={`Grand quiz: ${state === "passed" ? "passed" : "ready"}, ${grand.questionCount} questions`}>{body}</Link>;
   return <div className={cls} style={style} aria-label={`${label}${lit ? "" : " (locked)"}`}>{body}</div>;
@@ -128,11 +130,13 @@ function Trail({ path }: { path: SubjectPath }) {
             <span className={"relative flex items-center justify-center rounded-full font-display font-extrabold " + (here ? "m-pulse" : "m-float")} style={{ "--i": i, width: size, height: size, fontSize: dense ? (here ? 44 : 32) : here ? 54 : 40, background: locked ? "#171c4d" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", border: locked ? "3px dashed rgba(140,150,230,0.45)" : "5px solid #ffd166", } as CSSProperties}>
               {locked ? <Lock size={30} /> : i + 1}
             </span>
+            <span className="absolute left-1/2 top-full mt-1 flex w-max -translate-x-1/2 flex-col items-center gap-1">
             <span className={"text-center font-display font-bold leading-tight " + (dense ? "max-w-[110px] text-sm" : "max-w-[150px] text-base")} style={{ color: locked ? "var(--done-text)" : undefined }}>{shortTitle(t.title)}</span>
             {t.status === "done" && <span className="text-sm font-bold" style={{ color: "#ffd166" }}>{stars} {stars === 1 ? "star" : "stars"}</span>}
+            </span>
           </>
         );
-        const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1";
+        const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center";
         const style = { left: `${x}%`, top: `${y}%`, zIndex: here ? 2 : 1 };
         return locked
           ? <div key={t.lessonId} className={cls} style={style} aria-label={`Topic ${i + 1}: ${t.title} (locked)`}>{body}</div>
