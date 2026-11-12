@@ -32,6 +32,8 @@ export type LessonPayload = {
   progress: { status: string; lastBlock: number } | null;
   readOnly: boolean;
   preview?: boolean;
+  /** Set by the parent's preview of a topic lesson: its four parts. */
+  parts?: { id: string; kind: string; title: string }[];
 };
 
 const CALLOUT = {
@@ -46,7 +48,7 @@ const PartContext = createContext<PartCtx | null>(null);
 type PartPayload = { topicTitle: string; subject: string; sub: { id: string; kind: string; title: string }; blocks: Block[]; miniQuiz: CheckQuestion[]; readOnly: boolean };
 const KIND_LABEL: Record<string, string> = { learn: "Learn", try: "Try it", play: "Play", use: "Use it" };
 
-export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" }) {
+export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" | "adminPart" }) {
   const { id, subId } = useParams();
   const results = useRef(new Map<string, boolean>());
   /** Only the mini quiz questions count towards the part's score, not the checks inside the slides. */
@@ -56,14 +58,15 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" })
   const [error, setError] = useState<string | null>(null);
   const started = useRef(Date.now());
 
-  const back = mode === "preview" ? "/admin/lessons" : mode === "part" ? `/topic/${id}` : "/";
-  const assetUrl = (name: string) => (mode === "preview" ? `/api/admin/assets/file/${encodeURIComponent(name)}` : `/api/assets/${encodeURIComponent(name)}`);
+  const back = mode === "preview" ? "/admin/lessons" : mode === "adminPart" ? `/admin/lessons/${id}/preview` : mode === "part" ? `/topic/${id}` : "/";
+  const assetUrl = (name: string) => (mode === "preview" || mode === "adminPart" ? `/api/admin/assets/file/${encodeURIComponent(name)}` : `/api/assets/${encodeURIComponent(name)}`);
 
   useEffect(() => {
-    if (mode === "part") {
-      setNarrationEnabled(true);
+    if (mode === "part" || mode === "adminPart") {
+      // The parent's preview never uses the voice service (it costs AI usage); the children's lessons always do.
+      setNarrationEnabled(mode === "part");
       results.current.clear();
-      api<PartPayload>(`/api/lessons/${id}/parts/${subId}`)
+      api<PartPayload>(mode === "adminPart" ? `/api/admin/lessons/${id}/parts/${subId}` : `/api/lessons/${id}/parts/${subId}`)
         .then((p) => { miniPrompts.current = new Set(p.miniQuiz.map((q) => q.prompt)); return p; })
         .then((p) => setData({
           lesson: { id: id ?? "", title: p.sub.title, subject: p.subject, summary: `${KIND_LABEL[p.sub.kind] ?? "Part"} · ${p.topicTitle}`, minutes: 8, objectives: [], semester: null, week: null, phase: "current" },
@@ -106,6 +109,8 @@ export function LessonPlayer({ mode }: { mode: "student" | "preview" | "part" })
 
   if (error) return <Frame><p role="alert" className="text-2xl">{error}</p><Link className="btn" to={back}>← Back</Link></Frame>;
   if (!data) return <Loader label="Opening your lesson…" fullScreen />;
+  if (mode === "preview" && data.parts?.length) return <TopicPreviewIndex data={data} id={id ?? ""} />;
+  if (mode === "adminPart") return <PartContext.Provider value={part}><Deck data={data} mode="preview" lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} partOf={{ topicId: id ?? "", results: results.current, backTo: back }} /></PartContext.Provider>;
   if (mode === "part") return <PartContext.Provider value={part}><Deck data={data} mode="student" lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} partOf={{ topicId: id ?? "", results: results.current }} /></PartContext.Provider>;
   return <Deck data={data} mode={mode} lessonId={id ?? ""} back={back} assetUrl={assetUrl} save={save} />;
 }
@@ -126,6 +131,22 @@ function guideHere(slides: Slide[], i: number): boolean {
   return s.kind === "content" && (i === 1 || s.stop !== slides[i - 1]?.stop);
 }
 
+/** The parent's preview of a topic lesson: its slides live in four parts, so list them (each opens like a child's part, saving nothing). */
+function TopicPreviewIndex({ data, id }: { data: LessonPayload; id: string }) {
+  return (
+    <Frame>
+      <h1 className="text-4xl font-extrabold">{data.lesson.title}</h1>
+      <p className="text-xl">A topic lesson: {data.parts!.length} short parts, then a {data.quiz.questionCount}-question quiz (pass mark {data.quiz.passPercent}%). This is a preview, so nothing you do here is saved.</p>
+      <ol className="flex w-full flex-col gap-3">
+        {data.parts!.map((p) => (
+          <li key={p.id}><Link className="btn btn-primary !min-h-14 w-full !justify-start !px-6 text-xl" to={`/admin/lessons/${id}/preview/part/${p.id}`}>{KIND_LABEL[p.kind] ?? p.kind}: {p.title}</Link></li>
+        ))}
+      </ol>
+      <Link className="btn" to="/admin/lessons">← Back to lessons</Link>
+    </Frame>
+  );
+}
+
 function Frame({ children }: { children: ReactNode }) {
   return <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-start gap-6 px-4 py-8">{children}</main>;
 }
@@ -135,7 +156,7 @@ function Frame({ children }: { children: ReactNode }) {
 function Deck({ data, mode, lessonId, back, assetUrl, save, partOf }: {
   data: LessonPayload; mode: "student" | "preview"; lessonId: string; back: string; assetUrl: (n: string) => string; save: (slide: number, completed?: boolean) => void;
   /** Set when playing one sub-lesson of a topic: the end screen returns to the topic and shows the mini quiz score. */
-  partOf?: { topicId: string; results: Map<string, boolean> };
+  partOf?: { topicId: string; results: Map<string, boolean>; backTo?: string };
 }) {
   const { lesson } = data;
   const slides = useMemo(() => buildSlides(lesson, data.blocks), [lesson, data.blocks]);
@@ -425,7 +446,7 @@ function FitToScreen({ children }: { children: ReactNode }) {
 type ViewProps = {
   slide: Slide; lesson: LessonPayload["lesson"]; quiz: LessonPayload["quiz"]; mode: "student" | "preview"; lessonId: string;
   assetUrl: (n: string) => string; resumeAt: number; onGo: (n: number) => void; onLeave: () => void;
-  partOf?: { topicId: string; results: Map<string, boolean> };
+  partOf?: { topicId: string; results: Map<string, boolean>; backTo?: string };
 };
 
 // Type follows the shorter of width and height, so a short tablet screen gets smaller type instead of a taller slide.
@@ -513,7 +534,7 @@ function SlideView(p: ViewProps) {
             <>
               <p className={`${bodyCls} text-center`}>Mini quiz: {[...p.partOf.results.values()].filter(Boolean).length} of {p.quiz.questionCount} right first time.</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link className="btn btn-primary !min-h-16 !px-8 text-2xl" to={`/topic/${p.partOf.topicId}`} onClick={p.onLeave}>Back to the topic</Link>
+                <Link className="btn btn-primary !min-h-16 !px-8 text-2xl" to={p.partOf.backTo ?? `/topic/${p.partOf.topicId}`} onClick={p.onLeave}>Back to the topic</Link>
                 <button type="button" className="btn !min-h-16 !px-6 text-xl" onClick={() => p.onGo(0)}>Read again 🔁</button>
               </div>
             </>

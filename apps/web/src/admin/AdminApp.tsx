@@ -47,6 +47,7 @@ export function AdminApp() {
     <Routes>
       {/* The preview shows a lesson exactly as a child sees it, so it sits outside the admin shell and styling. */}
       <Route path="lessons/:id/preview" element={<LessonPlayer mode="preview" />} />
+      <Route path="lessons/:id/preview/part/:subId" element={<LessonPlayer mode="adminPart" />} />
       <Route path="*" element={
         <div className="admin-root">
           <FeedbackProvider>
