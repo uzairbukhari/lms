@@ -302,10 +302,12 @@ character. Images: `/mnt/project-files/screens/student-home-v3/`; mock in `docs/
 - **B. Subject worlds.** Each subject is a planet on a dotted path with a progress ring; "You are here" on the
   current one; a dock at the bottom with Up next + Go, Today's cards and Brain teaser. More playful, less text.
 
-**How the big card is chosen (decided 12 Nov):** no suggestion engine. The card is "Carry on" for whatever the child
-did last (the topic part she last opened, in any subject). On first login, or when that topic is finished, it reads
-"Pick a subject to start" and points at the list. All subjects in "My subjects" look the same (no highlighted row);
-the child can open any of them. The mock's highlighted Maths row is dropped.
+**How "Up next" is chosen (decided 12 Nov):**
+1. If the child left a topic part-way through (any subject), Up next is that topic ("Carry on").
+2. Otherwise Up next is the next open topic in the subject she has used least in the last 7 days, so subjects stay
+   balanced (ties: the subject with fewer topics passed).
+No parent pin. The highlighted row in "My subjects" is always the Up next subject; the child can still open any
+subject from the list. Worked out in the Worker (`/api/home`), never in the browser.
 
 **Chosen 12 Nov: A.** It answers "what do I do now?" in one tap and reads well in every theme.
 
