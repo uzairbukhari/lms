@@ -309,6 +309,16 @@ character. Images: `/mnt/project-files/screens/student-home-v3/`; mock in `docs/
 No parent pin. The highlighted row in "My subjects" is always the Up next subject; the child can still open any
 subject from the list. Worked out in the Worker (`/api/home`), never in the browser.
 
+**Home character animation (12 Nov).** The character in the Up next card plays short clips one after another
+(wave, read a book, magnifying glass; ~8 s each, 2.5 s still pause between), each starting and ending in the standing
+pose so the loop is seamless. Uzair made the clips in Google Flow (white background). Processing: crop letterbox,
+key out white (`colorkey=0xFFFFFF:0.10:0.08`), 540 px wide. Two formats, because iPad Safari cannot play WebM with
+transparency: a "stacked" H.264 MP4 (colour on top, alpha mask below, drawn to a canvas) for every browser, and VP9
+alpha WebM as a lighter option for the Windows app. Files: `/mnt/project-files/animations/home-character/` (to move
+to R2 under `characters/<kid>/`). For now every student gets Zainab's clips; per-child clips are added later by
+dropping new files with the same names. Calm mode and "reduce motion" show the still image; clips load after the
+page is ready and only play while the home page is visible.
+
 **Chosen 12 Nov: A.** It answers "what do I do now?" in one tap and reads well in every theme.
 
 The fixes above still apply to the subject map. All of this is layout and CSS in `apps/web/src/pages/StudentHome.tsx`, `SubjectPath.tsx` and `index.css`, and can
