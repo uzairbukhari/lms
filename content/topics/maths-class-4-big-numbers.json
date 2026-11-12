@@ -126,38 +126,29 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome, number explorer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do we read, write and compare really big numbers, like the height of K2 (8,611 m)?",
-   "say": "Welcome, number explorer! K2, the second highest mountain in the world, is in Pakistan. It is eight thousand, six hundred and eleven metres high. How do we read, write and compare numbers that big? Today you will become a big number expert. You will read numbers up to ten thousand, round them, add and take away, explore negative numbers, and spot patterns. Let's climb!"
-  },
-  {
-   "type": "image",
-   "emoji": "🏔️",
-   "alt": "K2 in Pakistan is 8,611 metres high.",
-   "caption": "K2 in Pakistan is 8,611 metres high."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "big numbers",
-     "meaning": "Numbers in the thousands, like 8,611."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "place_value",
    "kind": "learn",
    "title": "Place value to 10,000 and rounding",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, number explorer!"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-big-numbers-1-2f0988eb.jpg",
+     "alt": "Snow-covered Ama Dablam peak rising above a mountain range",
+     "caption": "Mountains are measured in metres, and the numbers are very big.",
+     "credit": "Photo by Rohit Tandon on Unsplash",
+     "say": "Welcome, number explorer! K2 is the second highest mountain in the world. It is in Pakistan, and it is eight thousand, six hundred and eleven metres high. How do we read, write and compare numbers that big? Today you will become a big number expert. You will read, round, add and take away big numbers. You will explore negative numbers and spot patterns. Let's climb!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we read, write and compare really big numbers, like the height of K2 (8,611 m)?"
+    },
     {
      "type": "heading",
      "text": "Stop 1: Thousands, hundreds, tens and ones"
@@ -307,6 +298,13 @@
      "backdrop": "plain"
     },
     {
+     "type": "image",
+     "asset": "maths-class-4-big-numbers-d1-2102dd39.png",
+     "alt": "A place value chart with columns Th, H, T, O showing 5,418",
+     "caption": "5,418 in a place value chart.",
+     "say": "Put each digit in its own box. Five thousand, four hundred and eighteen."
+    },
+    {
      "type": "check",
      "question": {
       "type": "multiple_choice",
@@ -387,6 +385,13 @@
      "caption": "372 is past the halfway mark of 350, so it rounds up to 400."
     },
     {
+     "type": "image",
+     "asset": "maths-class-4-big-numbers-d2-11adabe9.png",
+     "alt": "A number line from 4,000 to 5,000 with the midpoint 4,500 marked as the rounding boundary",
+     "caption": "4,500 and above rounds up.",
+     "say": "Halfway between four thousand and five thousand is four thousand five hundred. From there, we round up."
+    },
+    {
      "type": "check",
      "question": {
       "type": "number",
@@ -401,6 +406,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "K2 and the big numbers",
+     "asset": "clip-maths-class-4-big-numbers-b34a0529.mp4",
+     "poster": "clip-maths-class-4-big-numbers-b34a0529.webp",
+     "seconds": 53,
+     "transcript": "This is Ayesha. She is reading about K2, a mountain in Pakistan. K2 is eight thousand, six hundred and eleven metres high. Ben Nevis in Scotland is one thousand, three hundred and forty-five metres high. Ayesha splits each number into thousands, hundreds, tens and ones. How much higher is K2? Take the smaller number away from the bigger one. Take one thousand, three hundred and forty-five away from eight thousand, six hundred and eleven.",
+     "caption": "Ayesha reads a mountain height and finds the difference."
+    },
+    {
      "type": "summary",
      "points": [
       "Four places: thousands, hundreds, tens, ones",
@@ -412,6 +430,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "big numbers",
+       "meaning": "Numbers in the thousands, like 8,611."
+      },
       {
        "term": "thousands",
        "meaning": "Big groups of one thousand. In 4,372 there are 4 thousands."
@@ -1851,6 +1873,428 @@
     "depth": "reason"
    },
    {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two say 3,090 in words or sums? Pick two.",
+    "hint": "Ninety is 9 tens.",
+    "explanation": "3,090 is three thousand and ninety, or 3,000 + 90.",
+    "skill_tag": "bignumbers.words",
+    "options": [
+     {
+      "id": "a",
+      "text": "three thousand and nine"
+     },
+     {
+      "id": "b",
+      "text": "three thousand, nine hundred"
+     },
+     {
+      "id": "c",
+      "text": "3,000 + 90"
+     },
+     {
+      "id": "d",
+      "text": "three thousand and ninety"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "order",
+    "prompt": "Put these five numbers in order, smallest first.",
+    "hint": "Compare the hundreds and tens if the thousands match.",
+    "explanation": "4,005 is smallest and 4,520 is biggest. The ones with zeros sit in their right places.",
+    "skill_tag": "bignumbers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "4,052"
+     },
+     {
+      "id": "i5",
+      "text": "4,520"
+     },
+     {
+      "id": "i4",
+      "text": "4,500"
+     },
+     {
+      "id": "i1",
+      "text": "4,005"
+     },
+     {
+      "id": "i3",
+      "text": "4,250"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "number",
+    "prompt": "Round 7,951 to the nearest 10.",
+    "hint": "Look at the ones digit, 1.",
+    "explanation": "The ones digit is 1, which is less than 5, so round down to 7,950.",
+    "skill_tag": "bignumbers.round",
+    "answer": {
+     "value": 7950,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "match",
+    "prompt": "Pair each Roman numeral with its value.",
+    "hint": "C is 100, and X is 10.",
+    "explanation": "IX = 9, CX = 110, XXX = 30.",
+    "skill_tag": "bignumbers.roman",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "IX"
+     },
+     {
+      "id": "l2",
+      "text": "CX"
+     },
+     {
+      "id": "l3",
+      "text": "XXX"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "30"
+     },
+     {
+      "id": "r1",
+      "text": "9"
+     },
+     {
+      "id": "r2",
+      "text": "110"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "order",
+    "prompt": "Put these temperatures in order, coldest first.",
+    "hint": "The further below zero, the colder.",
+    "explanation": "−9°C is coldest, then −4°C, then 0°C, then 2°C.",
+    "skill_tag": "bignumbers.negative",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "−4°C"
+     },
+     {
+      "id": "i3",
+      "text": "0°C"
+     },
+     {
+      "id": "i4",
+      "text": "2°C"
+     },
+     {
+      "id": "i1",
+      "text": "−9°C"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "number",
+    "prompt": "It is 3°C in the morning. By night it has fallen by 6 degrees. What is the temperature at night?",
+    "hint": "Count back 3 to zero, then 3 more.",
+    "explanation": "3 − 3 = 0, then 0 − 3 = −3. So it is −3°C.",
+    "skill_tag": "bignumbers.negative",
+    "answer": {
+     "value": -3,
+     "tolerance": 0
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "Slide to show 4,500 on the line from 0 to 5,000.",
+    "hint": "Halfway is 2,500. Then go a bit more.",
+    "explanation": "4,500 is nine tenths of the way along 0 to 5,000.",
+    "skill_tag": "bignumbers.line",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 4500,
+     "tolerance": 100
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "fill_blank",
+    "prompt": "Pick the sign that makes it true.",
+    "hint": "Compare the hundreds, then the tens.",
+    "explanation": "3,708 has 0 tens and 3,780 has 8 tens, so 3,708 is smaller. Use <.",
+    "skill_tag": "bignumbers.compare",
+    "points": 1,
+    "text": "3,708 {b1} 3,780.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": ">"
+       },
+       {
+        "id": "b",
+        "text": "="
+       },
+       {
+        "id": "c",
+        "text": "<"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c"
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "hotspot",
+    "prompt": "Tap the number with 9 hundreds.",
+    "hint": "Look at the hundreds digit.",
+    "explanation": "6,920 has 9 hundreds. 6,290 has 2 hundreds and 6,029 has none.",
+    "skill_tag": "bignumbers.value",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "6,290",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "6,029",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "6,920",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "true_false",
+    "prompt": "The 9 in 4,921 is worth 90.",
+    "hint": "Which place is the 9 in?",
+    "explanation": "The 9 is in the hundreds place, so it is worth 900.",
+    "skill_tag": "bignumbers.value",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 5,010 is bigger than 5,100 because it has a 10 in it. Is she right?",
+    "hint": "Start from the thousands, then the hundreds.",
+    "explanation": "The thousands are the same. 5,100 has 1 hundred and 5,010 has 0 hundreds, so 5,100 is bigger.",
+    "skill_tag": "bignumbers.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. 5,100 has 1 hundred and 5,010 has none, so 5,100 is bigger"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 5,010 is bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Sam says 4,500 rounds to 4,000 to the nearest 1,000. Is he right?",
+    "hint": "Look at the digit just right of the thousands.",
+    "explanation": "The hundreds digit is 5 or more, so round up to 5,000.",
+    "skill_tag": "bignumbers.reason_round",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the 5 is on the right"
+     },
+     {
+      "id": "b",
+      "text": "No, it rounds to 4,600"
+     },
+     {
+      "id": "c",
+      "text": "No. The hundreds digit is 5, so 4,500 rounds up to 5,000"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Lena says 7,994 rounds to 8,000 to the nearest 10. Is she right?",
+    "hint": "Look at the ones digit.",
+    "explanation": "The ones digit is 4, so round down to 7,990.",
+    "skill_tag": "bignumbers.reason_round",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 7,994 is nearly 8,000"
+     },
+     {
+      "id": "b",
+      "text": "No, it rounds to 7,900"
+     },
+     {
+      "id": "c",
+      "text": "No. The ones digit is 4, so it rounds down to 7,990"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Ravi says the number after 3,699 is 3,600. Is he right?",
+    "hint": "What is one more than 3,699?",
+    "explanation": "3,699 + 1 = 3,700, not 3,600.",
+    "skill_tag": "bignumbers.reason_next",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 4,000"
+     },
+     {
+      "id": "b",
+      "text": "No. Add one to 3,699 and you get 3,700"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the 9 turns into 0"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Sara says −5°C is warmer than 0°C because 5 is a big number. Is she right?",
+    "hint": "Think about a thermometer.",
+    "explanation": "On a thermometer, 0°C is above −5°C, so 0°C is warmer.",
+    "skill_tag": "bignumbers.negative_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. 0°C is warmer than −5°C, because −5°C is below zero"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 5 is bigger than 0"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "reason"
+   },
+   {
     "ref": "q1a",
     "type": "multiple_choice",
     "prompt": "In the number 3,962, what does the 9 stand for?",
@@ -2681,6 +3125,443 @@
     "sub_lesson": "real_world",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two say 6,040 in words or sums? Pick two.",
+    "hint": "Forty is 4 tens.",
+    "explanation": "6,040 is six thousand and forty, or 6,000 + 40.",
+    "skill_tag": "bignumbers.words",
+    "options": [
+     {
+      "id": "a",
+      "text": "6,000 + 40"
+     },
+     {
+      "id": "b",
+      "text": "six thousand and four"
+     },
+     {
+      "id": "c",
+      "text": "six thousand, four hundred"
+     },
+     {
+      "id": "d",
+      "text": "six thousand and forty"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "order",
+    "prompt": "Put these five numbers in order, biggest first.",
+    "hint": "Start with the biggest hundreds.",
+    "explanation": "6,110 is biggest and 6,000 is smallest.",
+    "skill_tag": "bignumbers.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "6,100"
+     },
+     {
+      "id": "i5",
+      "text": "6,000"
+     },
+     {
+      "id": "i3",
+      "text": "6,010"
+     },
+     {
+      "id": "i1",
+      "text": "6,110"
+     },
+     {
+      "id": "i4",
+      "text": "6,001"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "number",
+    "prompt": "Round 4,086 to the nearest 10.",
+    "hint": "Look at the ones digit, 6.",
+    "explanation": "6 is 5 or more, so round up to 4,090.",
+    "skill_tag": "bignumbers.round",
+    "answer": {
+     "value": 4090,
+     "tolerance": 0
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "match",
+    "prompt": "Join each Roman numeral to its value.",
+    "hint": "Small before big takes away.",
+    "explanation": "VIII = 8, XC = 90, XL = 40.",
+    "skill_tag": "bignumbers.roman",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "VIII"
+     },
+     {
+      "id": "l2",
+      "text": "XC"
+     },
+     {
+      "id": "l3",
+      "text": "XL"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "90"
+     },
+     {
+      "id": "r1",
+      "text": "8"
+     },
+     {
+      "id": "r3",
+      "text": "40"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "order",
+    "prompt": "Put these temperatures in order, warmest first.",
+    "hint": "Warmest is the biggest number.",
+    "explanation": "5°C, then 0°C, then −1°C, then −6°C.",
+    "skill_tag": "bignumbers.negative",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "0°C"
+     },
+     {
+      "id": "i4",
+      "text": "−6°C"
+     },
+     {
+      "id": "i3",
+      "text": "−1°C"
+     },
+     {
+      "id": "i1",
+      "text": "5°C"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "number",
+    "prompt": "It is 2°C. It falls by 5 degrees. What is the temperature now?",
+    "hint": "Count back 2 to zero, then 3 more.",
+    "explanation": "2 − 2 = 0, then 0 − 3 = −3. So it is −3°C.",
+    "skill_tag": "bignumbers.negative",
+    "answer": {
+     "value": -3,
+     "tolerance": 0
+    },
+    "sub_lesson": "negatives",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "Slide to show 4,000 on the line from 0 to 5,000.",
+    "hint": "Four fifths of the way along.",
+    "explanation": "4,000 is four fifths of 5,000.",
+    "skill_tag": "bignumbers.line",
+    "range": {
+     "step": 100,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 4000,
+     "tolerance": 100
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "fill_blank",
+    "prompt": "Choose the right sign for this pair.",
+    "hint": "Compare the tens digits.",
+    "explanation": "5,630 has 3 tens and 5,603 has 0 tens, so 5,630 is bigger. Use >.",
+    "skill_tag": "bignumbers.compare",
+    "points": 1,
+    "text": "5,630 {b1} 5,603.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": ">"
+       },
+       {
+        "id": "b",
+        "text": "="
+       },
+       {
+        "id": "c",
+        "text": "<"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c"
+    },
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "hotspot",
+    "prompt": "Tap the number with 7 tens.",
+    "hint": "Look at the tens digit.",
+    "explanation": "4,570 has 7 tens. 4,705 has 0 tens and 4,750 has 5 tens.",
+    "skill_tag": "bignumbers.value",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "4,705",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "4,570",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "4,750",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "true_false",
+    "prompt": "The 6 in 3,628 is worth 60.",
+    "hint": "Which place is the 6 in?",
+    "explanation": "The 6 is in the tens place, so it is worth 60.",
+    "skill_tag": "bignumbers.value",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "place_value",
+    "depth": "recall",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 6,300 is bigger than 6,030. Is he right?",
+    "hint": "Compare the hundreds digits.",
+    "explanation": "6,300 has 3 hundreds and 6,030 has 0 hundreds, so Ben is right.",
+    "skill_tag": "bignumbers.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 6,030 is bigger"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "Yes. 6,300 has 3 hundreds and 6,030 has none, so it is bigger"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Hana says 2,470 rounds to 2,000 to the nearest 1,000. Is she right?",
+    "hint": "Look at the hundreds digit.",
+    "explanation": "4 is less than 5, so 2,470 rounds down to 2,000.",
+    "skill_tag": "bignumbers.reason_round",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it rounds up to 3,000"
+     },
+     {
+      "id": "b",
+      "text": "No, it rounds to 2,500"
+     },
+     {
+      "id": "c",
+      "text": "Yes. The hundreds digit is 4, so it rounds down to 2,000"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ravi says 3,426 rounds to 3,430 to the nearest 10. Is he right?",
+    "hint": "Look at the ones digit.",
+    "explanation": "6 is 5 or more, so round up to 3,430.",
+    "skill_tag": "bignumbers.reason_round",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it rounds to 3,420"
+     },
+     {
+      "id": "b",
+      "text": "No, it rounds to 3,500"
+     },
+     {
+      "id": "c",
+      "text": "Yes. The ones digit is 6, so it rounds up to 3,430"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Mia says the number after 5,199 is 5,200. Is she right?",
+    "hint": "What is one more than 5,199?",
+    "explanation": "5,199 + 1 = 5,200, so Mia is right.",
+    "skill_tag": "bignumbers.reason_next",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 6,000"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 5,190"
+     },
+     {
+      "id": "c",
+      "text": "Yes. Add one to 5,199 and you get 5,200"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "place_value",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Zain says −2°C is colder than −8°C. Is he right?",
+    "hint": "Which is further below zero?",
+    "explanation": "−8°C is further below zero than −2°C, so −8°C is colder.",
+    "skill_tag": "bignumbers.negative_reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. −8°C is further below zero, so it is colder"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 2 is smaller than 8 so it is colder"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "negatives",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

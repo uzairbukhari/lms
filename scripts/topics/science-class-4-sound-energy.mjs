@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 4: Sound and energy (Fatima, age 9). Enquiry type: pattern seeking.
 
+const RIPPLES = "science-class-4-sound-energy-1-4ee40f9b.jpg";
+const PIANO = "science-class-4-sound-energy-2-43a2c16c.jpg";
+const SOLAR = "science-class-4-sound-energy-3-29547582.jpg";
+
 const vibrate = {
   id: "vibrate", kind: "learn", title: "How sound is made and travels",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore sound and energy. How are sounds made, and where does energy go?", T("Today's big question: what is sound, and where does energy go?")),
+    SAY("Ripples spread out from a drop of water. Sound waves spread out in a similar way.", PHOTO(RIPPLES, "Ripples spreading out on a calm water surface", "Ripples spread out from a drop of water.", "Photo by Linus Nylund on Unsplash")),
     H("Stop 1: Sound is a vibration"),
     SAY("Every sound is made by something vibrating, which means moving quickly backwards and forwards. When you pluck a guitar string, you can see it blur as it vibrates. Your own voice comes from vocal cords in your throat vibrating. Put your fingers on your throat and hum. You can feel it! If the vibrating stops, the sound stops too.", T("Sound is made when something **vibrates**.", "When the vibration stops, the sound stops.")),
     EB("classroom", "A vibrating string",
@@ -21,7 +28,7 @@ const vibrate = {
       SS("In space there is a vacuum. There are no particles to carry the vibrations, so no sound reaches the listener.", S("In a vacuum, there is no sound.", ["b", "🔔", 20, 55, 3, "pulse"], ["x", "❌", 50, 55, 3, "none"], ["e", "👨‍🚀", 80, 55, 3, "none"]))),
     CHK(mc("Can sound travel through a vacuum?", "No", ["Yes, very fast", "Yes, but slowly"], { hint: "A vacuum has no particles.", why: "Sound needs particles to carry the vibrations, so it cannot travel through a vacuum." })),
     SAY("Remember. Sound is a vibration that travels as a wave through a medium.", SUM("Sound is made by vibrations", "Sound travels as waves through solids, liquids and gases", "Sound cannot travel through a vacuum")),
-    GLOSS({ vibrates: "Moves quickly backwards and forwards.", "sound waves": "The way sound vibrations travel outwards.", medium: "The material that sound travels through, such as air.", vacuum: "A space with no particles at all." }),
+    GLOSS({ ripples: "Small waves that spread out on water.", vibrates: "Moves quickly backwards and forwards.", "sound waves": "The way sound vibrations travel outwards.", medium: "The material that sound travels through, such as air.", vacuum: "A space with no particles at all." }),
   ],
   mini: [
     tf("Sound is made by vibrations.", true, { hint: "Think about the guitar.", why: "All sounds come from something vibrating." }),
@@ -35,13 +42,14 @@ const pitch = {
   id: "pitch", kind: "try", title: "Pitch and volume",
   blocks: [
     H("Stop 1: High and low sounds"),
+    SAY("Inside a piano, long thick strings sound low and short thin strings sound high.", PHOTO(PIANO, "The long strings inside a grand piano", "Piano strings vibrate to make sound.", "Photo by Ángel Martínez Martín on Unsplash")),
     SAY("Pitch means how high or low a sound is. A mouse squeaks with a high pitch. A lion roars with a low pitch. Fast vibrations make a high pitch, and slow vibrations make a low pitch. A short, thin, tight string vibrates fast, so it sounds high. A long, thick, loose string vibrates slowly, so it sounds low. Look at the strings.", T("**Pitch** is how high or low a sound is.", "Fast vibrations make a high pitch; slow vibrations make a low pitch.")),
     EB("classroom", "Pitch of strings",
       SS("This short, thin string vibrates fast. It makes a high-pitched sound.", S("Short and thin: high pitch.", ["a", "🎻", 30, 55, 3, "pulse"], ["h", "🐭", 75, 55, 2, "bounce"])),
       SS("This long, thick string vibrates slowly. It makes a low-pitched sound.", S("Long and thick: low pitch.", ["a", "🎸", 30, 55, 3, "none"], ["l", "🦁", 75, 55, 3, "none"]))),
     CHK(mc("A short, thin string vibrates fast. What sound does it make?", "A high-pitched sound", ["A low-pitched sound", "No sound"], { hint: "Think of the mouse.", why: "Fast vibrations make a high pitch." })),
     H("Stop 2: Loud and quiet"),
-    SAY("Volume means how loud or quiet a sound is. A big vibration makes a loud sound. A small vibration makes a quiet sound. As sound spreads out, it gets quieter, so the further you are from the sound, the quieter it seems. We measure loudness in decibels. A whisper is about thirty decibels. A very loud sound can hurt your ears, so we protect our hearing. Sort the sounds, then try making your own instrument.", MAN("Loud or quiet?", "Put loud sounds in Loud and quiet sounds in Quiet.", "🔊", 8, ["Loud", "Quiet"])),
+    SAY("Volume means how loud or quiet a sound is. A big vibration makes a loud sound. A small vibration makes a quiet sound. As sound spreads out, it gets quieter. The further you are, the quieter it seems. We measure loudness in decibels. A whisper is about thirty decibels. A very loud sound can hurt your ears, so we protect our hearing. Sort the sounds, then try making your own instrument.", MAN("Loud or quiet?", "Put loud sounds in Loud and quiet sounds in Quiet.", "🔊", 8, ["Loud", "Quiet"])),
     ACT("Rubber band guitar", ["An empty tissue box or tub", "Three rubber bands of different thickness", "A grown-up"], ["Stretch the rubber bands across the open box.", "Pluck each one. Which sounds highest and which sounds lowest? Which is thickest?", "Tighten one band and pluck it again. What happens to the pitch? Write down your pattern."]),
     CHK(mc("A drum is hit very hard. What happens to the volume?", "It gets louder", ["It gets quieter", "It stays the same"], { hint: "A big vibration.", why: "A harder hit makes a bigger vibration and a louder sound." })),
     SAY("Remember. Fast vibrations make high pitch. Big vibrations make loud sounds.", SUM("Pitch is how high or low a sound is", "Volume is how loud a sound is", "Sound gets quieter as you move away")),
@@ -58,14 +66,15 @@ const energy = {
   id: "energy", kind: "play", title: "Energy transfers",
   blocks: [
     H("Stop 1: Energy moves"),
-    SAY("Energy is what makes things happen. It makes things move, light up, make sound or get hot. Energy comes in different forms. Light energy, sound energy, heat energy, movement energy and electrical energy. The big idea is that energy can move from one place to another, or change from one form to another. It is never made from nothing and never used up. This is called a transfer. A radio changes electrical energy into sound energy, and some heat. A toaster changes electrical energy into heat.", T("**Energy** makes things happen. It can be **transferred**, which means moved or changed from one form to another.", "Energy is never used up. It just changes form.")),
+    SAY("Solar panels in the Sun change light energy into electrical energy.", PHOTO(SOLAR, "Rows of solar panels under a blue sky", "Solar panels change light energy into electrical energy.", "Photo by American Public Power Association on Unsplash")),
+    SAY("Energy is what makes things happen. It makes things move, light up, make sound or get hot. Energy comes in different forms. Light energy, sound energy, heat energy, movement energy and electrical energy. The big idea is that energy can move to another place, or change form. It is never made from nothing and never used up. This is called a transfer. A radio changes electrical energy into sound energy, and some heat. A toaster changes electrical energy into heat.", T("**Energy** makes things happen. It can be **transferred**, which means moved or changed from one form to another.", "Energy is never used up. It just changes form.")),
     EB("home", "Energy transfers",
       SS("A lamp changes electrical energy into light and some heat.", S("Lamp: electrical to light and heat.", ["a", "🔌", 15, 60, 2, "none"], ["b", "💡", 50, 55, 3, "pulse"], ["c", "🌡️", 85, 55, 2, "float"])),
       SS("A radio changes electrical energy into sound energy, and a little heat.", S("Radio: electrical to sound.", ["a", "🔌", 15, 60, 2, "none"], ["b", "📻", 50, 55, 3, "pulse"], ["c", "🔊", 85, 55, 2, "float"])),
       SS("When you clap, movement energy changes into sound energy.", S("Clapping: movement to sound.", ["a", "👏", 40, 55, 3, "bounce"], ["c", "🔊", 80, 55, 2, "float"]))),
     CHK(mc("A radio mainly changes electrical energy into which form?", "Sound", ["Light", "Movement"], { hint: "What does a radio do?", why: "A radio changes electrical energy into sound energy." })),
     H("Stop 2: Brain game"),
-    SAY("Warm up your memory with a game, then see if you can match each device to the energy change it makes.", BRAIN("memory_match", "Energy pairs", "Find the matching pairs.", ["💡", "📻", "🍞", "🚲"])),
+    SAY("Warm up your memory with a game. Then match each device to its energy change.", BRAIN("memory_match", "Energy pairs", "Find the matching pairs.", ["💡", "📻", "🍞", "🚲"])),
     CHK(mat("Match each device to its main energy change.", [["Toaster", "Electrical to heat"], ["Lamp", "Electrical to light"], ["Radio", "Electrical to sound"]], { hint: "What does each one do?", why: "Each device transfers electrical energy into a useful form." })),
     SAY("Remember. Energy is transferred between forms. It is never used up.", SUM("Energy makes things happen", "Energy changes from one form to another", "Energy is never used up")),
     GLOSS({ energy: "What makes things happen, like movement, light, heat and sound.", transferred: "Moved or changed from one form to another.", electrical: "To do with electricity.", forms: "The different kinds of energy." }),
@@ -85,7 +94,7 @@ const quiet = {
     SAY("Soft things like foam and sofas absorb sound. Hard walls and mountains bounce it back.", IMG("🧱 🛋️ 🧽 🏔️", "Foam and soft furnishings absorb sound. Mountains and hard walls can make echoes.")),
     CHK(mc("Which material would block sound best?", "Thick foam", ["Glass", "Bare brick"], { hint: "Soft and thick.", why: "Thick soft materials absorb sound vibrations." })),
     H("Stop 2: Protect your hearing"),
-    SAY("Very loud noises can damage our hearing for good. Headphones turned up loud, fireworks and heavy machinery can all hurt the tiny parts inside the ear. We should keep the volume down, move away from loud sounds, and wear ear protection if we need to. We should also respect others, and keep our noise low, especially near people who are praying, sleeping or studying.", ACT("A sound survey", ["Paper and pencil", "A grown-up"], ["Walk around your home or school. List five sounds.", "Rate each one: quiet, medium or loud.", "Which ones could harm your ears? What could you do to protect them?"])),
+    SAY("Very loud noises can damage our hearing for good. Headphones turned up loud, fireworks and heavy machinery can all hurt the tiny parts inside the ear. We should keep the volume down and move away from loud sounds. Wear ear protection if needed. We should also keep our noise low near people who are praying, sleeping or studying.", ACT("A sound survey", ["Paper and pencil", "A grown-up"], ["Walk around your home or school. List five sounds.", "Rate each one: quiet, medium or loud.", "Which ones could harm your ears? What could you do to protect them?"])),
     SAY("Loud headphones, fireworks and machines are all examples of sounds that can harm.", IMG("🎧 🎆 🛠️", "Loud headphones, fireworks and machines can harm hearing.")),
     CHK(tf("Very loud noises can damage your hearing.", true, { hint: "Think about fireworks.", why: "Loud noises can damage the tiny parts of the ear." })),
     SAY("Remember. Soft materials block sound. Loud noises can harm hearing, so protect your ears.", SUM("Soft, thick materials are the best sound insulators", "Loud noises can damage hearing", "Keep the volume down and be considerate")),
@@ -116,6 +125,28 @@ const ALTS = [
   [mc("Mia says sound needs nothing to travel through. Why is she wrong?", "Sound is a vibration that must pass through particles", ["Sound travels best in a vacuum", "Sound is made of light"], { hint: "Think about a medium.", why: "Sound travels as vibrations through particles of a medium." }), mc("Joe says energy is a kind of material, like wood. Why is he wrong?", "Energy is not a material; it is what makes things happen", ["Energy is heavy", "Energy is a solid"], { hint: "Think about what energy does.", why: "Energy is not a material. It makes things move, light up and make sound." })],
 ];
 
+const clip = {
+  title: "Fatima's music day", backdrop: "classroom", caption: "Follow sound and energy through a music lesson.",
+  scenes: [
+    { caption: "A plucked string.", say: "Fatima plucks a guitar string. It vibrates quickly backwards and forwards.",
+      items: [{ id: "g", emoji: "🎸", x: 45, y: 55, size: 3, anim: "pulse" }, { id: "v", emoji: "〰️", x: 78, y: 40, size: 2, anim: "float" }] },
+    { caption: "Sound travels.", say: "The vibrations travel through the air as sound waves to her friend's ear.",
+      items: [{ id: "g", emoji: "🎸", x: 20, y: 55, size: 3 }, { id: "w", emoji: "〰️", x: 50, y: 55, size: 2, anim: "float" }, { id: "e", emoji: "👂", x: 80, y: 55, size: 3 }] },
+    { caption: "No air, no sound.", say: "In space there is no air. A vacuum cannot carry sound.",
+      items: [{ id: "a", emoji: "👨‍🚀", x: 70, y: 50, size: 3 }, { id: "x", emoji: "🔇", x: 30, y: 50, size: 3 }] },
+    { caption: "High pitch.", say: "A short, thin string vibrates fast. It makes a high pitch.",
+      items: [{ id: "m", emoji: "🐭", label: "high pitch", x: 50, y: 55, size: 3, anim: "bounce" }] },
+    { caption: "Low pitch.", say: "A long, thick string vibrates slowly. It makes a low pitch.",
+      items: [{ id: "l", emoji: "🦁", label: "low pitch", x: 50, y: 55, size: 3, anim: "pulse" }] },
+    { caption: "Loud drum.", say: "A hard hit makes a big vibration. The sound is loud.",
+      items: [{ id: "d", emoji: "🥁", x: 40, y: 55, size: 3, anim: "bounce" }, { id: "s", emoji: "🔊", x: 75, y: 40, size: 3, effect: "sparkle" }] },
+    { caption: "Protect hearing.", say: "Very loud sounds can harm ears. Fatima keeps her headphones quiet.",
+      items: [{ id: "h", emoji: "🎧", x: 40, y: 55, size: 3 }, { id: "q", emoji: "🔉", label: "low volume", x: 72, y: 45, size: 2 }] },
+    { caption: "Energy changes.", say: "A radio changes electrical energy into sound. Energy is never used up.",
+      items: [{ id: "p", emoji: "🔌", x: 20, y: 58, size: 2 }, { id: "r", emoji: "📻", x: 50, y: 55, size: 3, anim: "pulse" }, { id: "o", emoji: "🔊", x: 80, y: 45, size: 2, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-sound-energy", subject: "science", cls: 4, topic: 4, title: "Sound and Energy",
@@ -130,13 +161,9 @@ export const topics = [
       tf("Water boils at 100 degrees Celsius.", true, { hint: "Top of the thermometer.", why: "Water boils at 100 °C." }),
       mc("What pumps blood around the body?", "The heart", ["The stomach", "The skull"], { hint: "It is a muscle.", why: "The heart pumps blood." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: what is sound, and where does energy go? By the end, you will explain how sounds are made and travel, change the pitch and volume of a sound, and follow energy as it changes form. Let's go!", T("Today's big question: what is sound?", "We will also follow energy as it moves.")),
-      IMG("🎸🔊🔔", "Sounds are all around us."),
-      GLOSS({ sound: "What we hear when something vibrates." }),
-    ],
+    intro: [],
     subs: [vibrate, pitch, energy, quiet],
+    clip,
     quiz: [
       Q("vibrate", "recall", "sound.made", mc("What must happen for a drum skin to make a sound?", "It must vibrate", ["It must be cold", "It must be still"], { hint: "Sounds come from vibrations.", why: "A drum skin must vibrate to make sound." }), ...ALTS[0]),
       Q("vibrate", "recall", "sound.vacuum", tf("Sound can travel through empty space.", false, { hint: "No particles.", why: "Sound cannot travel through a vacuum." }), ...ALTS[1]),
@@ -153,6 +180,37 @@ export const topics = [
       Q("quiet", "reason", "sound.reason_foam", mc("Why do recording studios use foam on the walls?", "Foam absorbs sound so there is no echo", ["Foam makes sound louder", "Foam makes sound travel faster"], { hint: "Soft materials absorb sound.", why: "Foam absorbs sound vibrations and stops echoes." }), ...ALTS[12]),
       Q("pitch", "reason", "sound.reason_pitch", mc("Zara's string sounds low. How could she make the pitch higher?", "Tighten the string or use a shorter, thinner one", ["Make it longer and thicker", "Pluck it more slowly"], { hint: "Fast vibrations.", why: "Shorter, thinner, tighter strings vibrate faster and sound higher." }), ...ALTS[13]),
       Q("vibrate", "reason", "sound.medium", mc("Ravi says light carries sound from a bell to our ears. Why is he wrong?", "Sound is carried by vibrating particles, such as in the air", ["Sound is carried by a vacuum", "Sound is carried by shadows"], { hint: "It needs a medium.", why: "Sound travels as vibrations through the particles of the air." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("vibrate", "recall", "sound.vib_ms", ms("Which two of these make sound by vibrating?", ["A plucked string", "A hit drum skin"], ["A stone on the ground", "A closed book"], { hint: "They move quickly to and fro.", why: "A string and a drum skin vibrate to make sound." }),
+        ms("Pick two things that vibrate to make a sound.", ["A ringing bell", "Your vocal cords"], ["A quiet pebble", "A still table"], { hint: "They move quickly.", why: "A bell and vocal cords vibrate to make sound." })),
+      Q("vibrate", "recall", "sound.fast_hot", hot("Tap the material that sound travels through fastest.", [["💨", "Air", 22, 50], ["💧", "Water", 50, 50], ["🔩", "Steel", 78, 50]], ["Steel"], { labels: true, hint: "Particles are closest.", why: "Sound travels fastest through solids such as steel." }),
+        hot("Tap the material that sound travels through most slowly.", [["💨", "Air", 22, 50], ["💧", "Water", 50, 50], ["🔩", "Steel", 78, 50]], ["Air"], { labels: true, hint: "Particles are furthest apart.", why: "Sound travels slowest through gases such as air." })),
+      Q("vibrate", "recall", "sound.water_tf", tf("Sound can travel through water.", true, { hint: "Liquids have particles.", why: "Sound can travel through solids, liquids and gases." }),
+        tf("Sound waves can be seen in the air.", false, { hint: "We use diagrams to show them.", why: "Sound waves are not visible in the air." })),
+      Q("pitch", "recall", "sound.loud_tf", tf("A louder sound has a smaller vibration.", false, { hint: "Think about hitting a drum hard.", why: "A bigger vibration makes a louder sound." }),
+        tf("Sound gets quieter as you move away from it.", true, { hint: "Sound spreads out.", why: "Sound spreads out and gets fainter with distance." })),
+      Q("pitch", "apply", "sound.volume_mat", mat("Match each sound to how loud it is.", [["Whisper", "Quiet"], ["Normal talking", "Medium"], ["Shout", "Loud"]], { hint: "Think about the volume.", why: "A whisper is quiet and a shout is loud." }),
+        mat("Match each place to its usual volume.", [["Library", "Quiet"], ["Classroom chatter", "Medium"], ["Fireworks", "Loud"]], { hint: "Think about the noise.", why: "Libraries are quiet and fireworks are loud." })),
+      Q("energy", "apply", "sound.device_fill", fill("Complete the sentences about devices.", "A toaster changes electrical energy into {b1}. A lamp changes it into {b2}.", [["heat", "sound", "movement"], ["light", "rock", "cold"]], { hint: "What does each one do?", why: "A toaster makes heat and a lamp makes light." }),
+        fill("Finish the sentences about machines.", "A radio changes electrical energy into {b1}. A fan changes it into {b2}.", [["sound", "heat", "light"], ["movement", "shadow", "ice"]], { hint: "What does each one do?", why: "A radio makes sound and a fan makes movement." })),
+      Q("pitch", "recall", "sound.units_st", st("What are the units for loudness called?", ["decibels", "decibel", "db"], { hint: "It starts with d.", why: "Loudness is measured in decibels." }),
+        st("What is the word for sound bouncing back off a hard surface?", ["echo"], { hint: "It starts with e.", why: "An echo is sound bouncing back off a hard surface." })),
+      Q("energy", "apply", "sound.other_num", num("A radio takes in 50 units of electrical energy. 30 units become sound. How many units become other forms such as heat?", 20, { hint: "50 minus 30.", why: "50 - 30 = 20 units." }),
+        num("A toy takes in 80 units of electrical energy. 55 units become movement. How many units become other forms?", 25, { hint: "80 minus 55.", why: "80 - 55 = 25 units." })),
+      Q("quiet", "apply", "sound.shout_sld", sld("A whisper is 30 dB. A shout is 60 dB louder. Slide to show the shout in decibels.", { min: 0, max: 140, unit: "dB" }, 90, 0, { hint: "30 plus 60.", why: "30 + 60 = 90 decibels." }),
+        sld("Normal talking is 60 dB. A rock concert is 50 dB louder. Slide to show the concert in decibels.", { min: 0, max: 140, unit: "dB" }, 110, 0, { hint: "60 plus 50.", why: "60 + 50 = 110 decibels." })),
+      Q("vibrate", "apply", "sound.voice_ord", ord("Put these in order for how you hear a friend speak.", ["Vocal cords vibrate", "Sound waves travel through air", "Your ear drum vibrates", "You hear the voice"], { hint: "Start in the throat.", why: "Vibrations travel from the throat to the ear." }),
+        ord("Put these in order for a string telephone.", ["Speak into the cup", "The cup vibrates", "The string carries the vibrations", "The other cup vibrates"], { hint: "Start with the speaker.", why: "Vibrations pass along the taut string to the other cup." })),
+      Q("energy", "recall", "sound.form_mc", mc("Which of these is a form of energy?", "Heat", ["Wood", "Cotton"], { hint: "Energy makes things happen.", why: "Heat is a form of energy." }),
+        mc("What happens to energy when a toy stops moving?", "It changes into other forms such as heat and sound", ["It is destroyed", "It goes back into the toy"], { hint: "Energy is never used up.", why: "Energy is transferred to other forms." })),
+      Q("pitch", "reason", "sound.reason_loud_pitch", mc("Hana says a louder sound always has a higher pitch. Why is she wrong?", "Volume is how loud a sound is, and pitch is how high or low", ["Loud sounds are always low", "Pitch means the distance"], { hint: "Two different ideas.", why: "Volume and pitch are different." }),
+        mc("Omar says a quiet sound must be low. Why is he wrong?", "A quiet sound can have a high pitch or a low pitch", ["Quiet sounds have no pitch", "Quiet sounds are always low"], { hint: "Pitch is not volume.", why: "Pitch and volume are separate." })),
+      Q("vibrate", "reason", "sound.reason_spread", mc("Aisha says sound travels only to the person who hears it. Why is she wrong?", "Sound waves spread out in all directions", ["Sound goes in a straight line", "Sound only goes upwards"], { hint: "Think of ripples.", why: "Sound waves spread out in all directions." }),
+        mc("Ali says you cannot hear a friend through a wall. Why is he wrong?", "Vibrations can travel through solids such as walls", ["Walls are not solid", "Sound cannot be heard"], { hint: "Sound travels in solids.", why: "Sound can travel through solid materials." })),
+      Q("quiet", "reason", "sound.reason_hard", mc("Hamza says a bare, hard room is the best place to stop noise. Why is he wrong?", "Hard surfaces bounce sound back, but soft materials absorb it", ["Hard surfaces absorb sound", "Rooms cannot stop noise"], { hint: "Think of an echo.", why: "Soft, thick materials absorb sound." }),
+        mc("Sana lines a box with metal foil to block sound. Why will it not work well?", "Metal is hard and bounces sound, while soft thick material absorbs it", ["Foil is too thin to vibrate", "Boxes cannot hold sound"], { hint: "Soft materials absorb.", why: "Soft, thick materials are better sound insulators." })),
+      Q("energy", "reason", "sound.reason_energy_gone", mc("Bilal says the energy in a torch disappears when the light goes out. Why is he wrong?", "It has changed into other forms such as light and heat", ["Energy is destroyed", "Energy goes back into the torch"], { hint: "Energy is transferred.", why: "Energy is never used up." }),
+        mc("Noor says a clap makes sound from nothing. Why is she wrong?", "The sound energy comes from movement energy", ["Sound needs no energy", "Sound comes from light"], { hint: "Think about your hands.", why: "Movement energy becomes sound energy." })),
     ],
   }),
 ];

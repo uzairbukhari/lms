@@ -1,0 +1,2966 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-money-bar-models",
+  "subject": "maths",
+  "title": "Money Problems and Bar Models",
+  "summary": "Add, subtract and find change with pounds and pence, using bar models to plan multi-step money problems.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 9: Money problems and bar models",
+  "learning_objectives": [
+   "Convert and write pounds and pence",
+   "Add and subtract money efficiently",
+   "Solve multi-step money problems, including change"
+  ],
+  "tags": [
+   "topic",
+   "topic-9"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 9
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 money",
+    "text": "Estimate, compare and calculate different measures, including money in pounds and pence"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.06"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.06"
+   }
+  ],
+  "success_criteria": [
+   "I can write money with a decimal point",
+   "I can add prices in columns and near a whole pound",
+   "I can draw a bar model to find change"
+  ],
+  "real_life": "Bake sales, school fairs, shop change and comparing prices at the market.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 45 + 38?",
+    "hint": "Add the tens, then the ones.",
+    "explanation": "40 + 30 = 70 and 5 + 8 = 13, so 83.",
+    "answer": {
+     "value": 83,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "How many pence are in one pound?",
+    "hint": "Think of a pound coin.",
+    "explanation": "One pound is 100 pence.",
+    "answer": {
+     "value": 100,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "0.5 is the same as 50 hundredths.",
+    "hint": "Five tenths.",
+    "explanation": "0.5 = 50/100.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "pounds_pence",
+   "kind": "learn",
+   "title": "Pounds and pence",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara's bake sale",
+     "backdrop": "town"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-money-bar-models-1-551d216f.jpg",
+     "alt": "A tall stack of coins on a wooden table",
+     "caption": "Coins stack up to make pounds, and pence are the small parts.",
+     "credit": "Photo by Matthew Lancaster on Unsplash",
+     "say": "Zara runs a bake sale at school. Every price has a pound sign and a decimal point. Let's learn how to write money properly. Money is a decimal, and there are two places after the point."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Pounds and pence",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**£2.40** means 2 pounds and 40 pence. There are 100 pence in a pound.\n\n£2.40 = 240p.",
+     "say": "A pound is one hundred pence. The number before the point is the pounds. The two numbers after the point are the pence. So £2.40 is two pounds and forty pence."
+    },
+    {
+     "type": "explainer",
+     "title": "£2.40 in coins",
+     "scenes": [
+      {
+       "caption": "£2",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "£2"
+        }
+       ],
+       "say": "Two pound coins. That is two pounds."
+      },
+      {
+       "caption": "£2 and 40p",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£2"
+        },
+        {
+         "id": "d",
+         "emoji": "🟡",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "40p"
+        }
+       ],
+       "say": "Four ten-pence coins. That is forty pence."
+      },
+      {
+       "caption": "£2.40 = 240p",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🪙",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "£2.40 = 240p"
+        }
+       ],
+       "say": "Together: £2.40, or 240 pence."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-money-bar-models-d1-1dd76969.png",
+     "alt": "A bar model of £10 split into £6.40 cost and £3.60 change",
+     "caption": "£10 − £6.40 = £3.60.",
+     "say": "Ten pounds take away six pounds forty. The change is three pounds sixty."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many pence are in £4.15?",
+      "hint": "A pound is 100 pence.",
+      "explanation": "£4 is 400p and 15p more is 415p.",
+      "skill_tag": "money.pence",
+      "answer": {
+       "value": 415,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write it properly",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Two digits after the point**: 6p is £0.06, and 60p is £0.60.\n\n£4.06 is four pounds and six pence.",
+     "say": "Always use the pound sign and a decimal point. Write four pounds and six pence as £4.06. Six pence is zero point zero six, so the zero holds the tenths place."
+    },
+    {
+     "type": "image",
+     "emoji": "💷",
+     "alt": "£4.06 is four pounds and six pence. £4.60 is four pounds and sixty pence.",
+     "caption": "£4.06 is four pounds and six pence. £4.60 is four pounds and sixty pence."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is four pounds and sixty pence?",
+      "hint": "Sixty pence is 0.60.",
+      "explanation": "£4.60 is four pounds and sixty pence.",
+      "skill_tag": "money.write",
+      "options": [
+       {
+        "id": "a",
+        "text": "£4.06"
+       },
+       {
+        "id": "b",
+        "text": "£4.60"
+       },
+       {
+        "id": "c",
+        "text": "£46.0"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The school fair till",
+     "asset": "clip-maths-class-4-money-bar-models-725e4dfc.mp4",
+     "poster": "clip-maths-class-4-money-bar-models-725e4dfc.webp",
+     "seconds": 61,
+     "transcript": "This is Hana at the school fair. She sells toys and keeps the money safe. A toy costs £3.40 and a ball costs £1.60. Let's add them. Three pounds forty plus one pound sixty makes exactly five pounds. The customer pays with a ten pound note. Count on from five pounds to ten. Draw a bar. The whole is ten pounds, and five pounds is the change. Ten pounds take away five pounds is five pounds of change. Shukriya, Hana!",
+     "caption": "A child at the school fair adds the toys, counts on to find the change and draws a bar model."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pounds before the point",
+      "Pence after the point, two places",
+      "A pound is 100 pence"
+     ],
+     "say": "Remember. Pounds come before the point. Pence come after it, in two places."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "240",
+       "meaning": "Two hundred and forty pence, the same as £2.40."
+      },
+      {
+       "term": "two digits after the point",
+       "meaning": "The two places after the decimal point hold the pence."
+      },
+      {
+       "term": "pounds and pence",
+       "meaning": "A pound is 100 pence. Money is written with a decimal point."
+      },
+      {
+       "term": "decimal",
+       "meaning": "A number with a point, like 2.40."
+      },
+      {
+       "term": "pence",
+       "meaning": "Small parts of a pound."
+      },
+      {
+       "term": "decimal point",
+       "meaning": "The dot between pounds and pence."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many pence are in £1.50?",
+     "hint": "A pound is 100 pence.",
+     "explanation": "£1 is 100p and 50p more makes 150p.",
+     "answer": {
+      "value": 150,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How do you write 7 pounds and 5 pence?",
+     "hint": "Five pence is 0.05.",
+     "explanation": "Five pence is written 05 after the point.",
+     "options": [
+      {
+       "id": "a",
+       "text": "£7.5"
+      },
+      {
+       "id": "b",
+       "text": "£7.05"
+      },
+      {
+       "id": "c",
+       "text": "£75"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "£5.10 means five pounds and ten pence.",
+     "hint": "Ten pence is 0.10.",
+     "explanation": "£5.10 is five pounds and ten pence.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these amounts in order, smallest first.",
+     "hint": "Compare the pounds, then the pence.",
+     "explanation": "90p, then £1.05, then £1.50.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "£1.05"
+      },
+      {
+       "id": "i3",
+       "text": "£1.50"
+      },
+      {
+       "id": "i1",
+       "text": "£0.90"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efficient_adding",
+   "kind": "try",
+   "title": "Adding prices efficiently",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Near a whole pound",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Near a whole**: £1.99 is just 1p short of £2.\n\n£1.99 + £1 = £2.99, and £2.99 + 1p = £3.00.",
+     "say": "Zara adds two prices. One cake costs £1.99 and a biscuit costs £1.01. Add the pound first. Then add the last penny."
+    },
+    {
+     "type": "explainer",
+     "title": "£1.99 + £1.01",
+     "scenes": [
+      {
+       "caption": "£1.99",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧁",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "£1.99"
+        }
+       ],
+       "say": "Start with the cake: £1.99."
+      },
+      {
+       "caption": "£1.99 + £1.00 = £2.99",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧁",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£1.99"
+        },
+        {
+         "id": "b",
+         "emoji": "🍪",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "£1.01"
+        }
+       ],
+       "say": "Add £1.00 to make £2.99. Now add the biscuit's pennies."
+      },
+      {
+       "caption": "£3.00",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧁",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "£1.99 + £1.01 = £3.00"
+        }
+       ],
+       "say": "£2.99 + 1p = £3.00. The total is £3.00."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-money-bar-models-d2-5a9dce08.png",
+     "alt": "A number line from £0 to £10 counting on from £7.25 in jumps of £0.75, £1 and £1",
+     "caption": "£7.25 + £2.75 = £10.",
+     "say": "Count on from seven pounds twenty-five. Count to eight pounds, then nine, then ten."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "fill_blank",
+      "prompt": "Add the prices: £2.35 + £1.40.",
+      "hint": "Add the pounds, then the pence.",
+      "explanation": "£2 + £1 = £3, and 35p + 40p = 75p.",
+      "skill_tag": "money.add",
+      "points": 2,
+      "text": "£2.35 + £1.40 = £{b1}.{b2}.",
+      "blanks": [
+       {
+        "id": "b1",
+        "options": [
+         {
+          "id": "a",
+          "text": "4"
+         },
+         {
+          "id": "b",
+          "text": "3"
+         },
+         {
+          "id": "c",
+          "text": "2"
+         }
+        ]
+       },
+       {
+        "id": "b2",
+        "options": [
+         {
+          "id": "a",
+          "text": "35"
+         },
+         {
+          "id": "b",
+          "text": "15"
+         },
+         {
+          "id": "c",
+          "text": "75"
+         }
+        ]
+       }
+      ],
+      "answer": {
+       "b1": "b",
+       "b2": "c"
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Line up the points",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Line up the decimal points** before you add.\n\n£4.20 + £2.45: 420p + 245p = 665p, so £6.65.",
+     "say": "When you add money in columns, line up the decimal points. Pounds go under pounds. Pence go under pence. Then add each column, just like any other column sum."
+    },
+    {
+     "type": "image",
+     "emoji": "🧮",
+     "alt": "£4.20 + £2.45 = £6.65, with the decimal points lined up.",
+     "caption": "£4.20 + £2.45 = £6.65, with the decimal points lined up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is £4.20 + £2.45?",
+      "hint": "Line up the points.",
+      "explanation": "20p + 45p = 65p, and £4 + £2 = £6. So £6.65.",
+      "skill_tag": "money.columns",
+      "answer": {
+       "value": 6.65,
+       "tolerance": 0.005
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Near a whole pound: add, then adjust",
+      "Line up the decimal points",
+      "Check the pence add to 100"
+     ],
+     "say": "Remember. Add near a whole pound first, or line up the points in columns."
+    },
+    {
+     "type": "activity",
+     "title": "Price tags",
+     "materials": [
+      "Paper price tags",
+      "Pencil"
+     ],
+     "instructions": [
+      "Write two prices in pounds and pence on tags.",
+      "Line up the decimal points on paper.",
+      "Add the pounds, then the pence.",
+      "Check by adding the pence to make a whole pound."
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "near a whole",
+       "meaning": "A number close to a whole pound, like £1.99, which is easy to adjust."
+      },
+      {
+       "term": "total",
+       "meaning": "All the prices added together."
+      },
+      {
+       "term": "column",
+       "meaning": "Numbers lined up one under another."
+      },
+      {
+       "term": "adjust",
+       "meaning": "Correct an answer after using an easy number."
+      },
+      {
+       "term": "decimal points",
+       "meaning": "Lined up when adding money."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is £2.50 + £1.50?",
+     "hint": "50p + 50p is £1.",
+     "explanation": "£2 + £1 + £1 = £4.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0.005
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is the total of £3.20 and £0.80?",
+     "hint": "20p + 80p = £1.",
+     "explanation": "£3 + £1 = £4.",
+     "options": [
+      {
+       "id": "a",
+       "text": "£4.20"
+      },
+      {
+       "id": "b",
+       "text": "£4.00"
+      },
+      {
+       "id": "c",
+       "text": "£3.00"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "£4.50 + £0.50 makes £5.",
+     "hint": "50p + 50p is £1.",
+     "explanation": "£4 + £1 = £5.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these totals in order, smallest first.",
+     "hint": "Compare the pounds, then the pence.",
+     "explanation": "£1.99, then £2.10, then £3.05.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "£1.99"
+      },
+      {
+       "id": "i1",
+       "text": "£2.10"
+      },
+      {
+       "id": "i3",
+       "text": "£3.05"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "change",
+   "kind": "play",
+   "title": "Change challenge",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Count on to find change",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Count on** from the price to the money paid to find the change.\n\n£3.70 to £5: 30p to £4, then £1 to £5. Change is £1.30.",
+     "say": "Hana buys a pen for £3.70 and pays with a £5 note. How much change should she get? Count on from the price to the money paid. Let's count on."
+    },
+    {
+     "type": "explainer",
+     "title": "£5 − £3.70 by counting on",
+     "scenes": [
+      {
+       "caption": "£3.70",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🖊️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "£3.70"
+        }
+       ],
+       "say": "Start at £3.70, the price of the pen."
+      },
+      {
+       "caption": "+30p → £4.00",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🖊️",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£3.70"
+        },
+        {
+         "id": "q",
+         "emoji": "➕",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "30p"
+        }
+       ],
+       "say": "Count on 30p to reach £4.00."
+      },
+      {
+       "caption": "Change £1.30",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🖊️",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "£5 − £3.70 = £1.30"
+        }
+       ],
+       "say": "Count on £1 to reach £5. Total change: 30p + £1 = £1.30."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A toy costs £6.20. Zara pays with £10. What is the change?",
+      "hint": "Count on from £6.20 to £10.",
+      "explanation": "80p to £7, then £3 to £10. Change £3.80.",
+      "skill_tag": "money.change",
+      "answer": {
+       "value": 3.8,
+       "tolerance": 0.005
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fewest coins",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "Pay with the **smallest note that covers the price**.\n\n£6.20 costs less than £10, but more than £5.",
+     "say": "Shops give change with the fewest coins and notes. For a £6.20 toy, pay with a £10 note, not a £5 note. Hana gets back £3.80 with the fewest notes and coins."
+    },
+    {
+     "type": "image",
+     "emoji": "💷",
+     "alt": "A £10 note covers a £6.20 toy. A £5 note does not.",
+     "caption": "A £10 note covers a £6.20 toy. A £5 note does not."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which note covers a £14.50 meal?",
+      "hint": "The note must be bigger than the price.",
+      "explanation": "£10 and £5 are less than £14.50, so use £20.",
+      "skill_tag": "money.note",
+      "options": [
+       {
+        "id": "a",
+        "text": "£5"
+       },
+       {
+        "id": "b",
+        "text": "£20"
+       },
+       {
+        "id": "c",
+        "text": "£10"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Coin pairs",
+     "goal": "Find the matching coins.",
+     "emojis": [
+      "🪙",
+      "💷",
+      "💰",
+      "🟡",
+      "🪙",
+      "💷"
+     ],
+     "say": "Brain break. Find the matching coins."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Count on to find change",
+      "Pay with a note bigger than the price",
+      "Fewest coins for change"
+     ],
+     "say": "Remember. Count on from the price to the money paid. Use the smallest note that covers the price."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "change",
+       "meaning": "The money given back when you pay more than the price."
+      },
+      {
+       "term": "count on",
+       "meaning": "Add on in steps until you reach the money paid."
+      },
+      {
+       "term": "note",
+       "meaning": "A paper money note."
+      },
+      {
+       "term": "price",
+       "meaning": "How much something costs."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A pen costs £1.40. You pay £2. What is the change?",
+     "hint": "Count on 60p to £2.",
+     "explanation": "£1.40 + 60p = £2, so the change is 60p.",
+     "answer": {
+      "value": 0.6,
+      "tolerance": 0.005
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A book costs £4.75. You pay £5. What is the change?",
+     "hint": "Count on from £4.75 to £5.",
+     "explanation": "£4.75 + 25p = £5.",
+     "options": [
+      {
+       "id": "a",
+       "text": "75p"
+      },
+      {
+       "id": "b",
+       "text": "25p"
+      },
+      {
+       "id": "c",
+       "text": "£1.25"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "You can count on from the price to the money paid to find change.",
+     "hint": "Count the steps.",
+     "explanation": "Counting on works for change.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A snack costs £2.30. You pay £3. What is the change in pence?",
+     "hint": "Count on 70p to £3.",
+     "explanation": "£2.30 + 70p = £3.",
+     "answer": {
+      "value": 70,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "bar_models",
+   "kind": "use",
+   "title": "Multi-step shopping and bar models",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Draw the bar",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **bar model** shows the whole and the parts: whole = part + part.\n\n£10 = £6.40 + the change, so the change is £3.60.",
+     "say": "Draw a bar for the money. The whole bar is the money paid. Split it into the prices. The missing part is the change. A bar model makes a money problem easy to see."
+    },
+    {
+     "type": "explainer",
+     "title": "£10 bar model",
+     "scenes": [
+      {
+       "caption": "£10",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "£10"
+        }
+       ],
+       "say": "The whole bar is £10."
+      },
+      {
+       "caption": "£6.40 + ?",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£6.40"
+        },
+        {
+         "id": "c",
+         "emoji": "🟩",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "?"
+        }
+       ],
+       "say": "Split it: a £6.40 item takes up most of the bar."
+      },
+      {
+       "caption": "£6.40 + £3.60 = £10",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🟦",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£6.40"
+        },
+        {
+         "id": "c",
+         "emoji": "🟩",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "£3.60"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "£10 − £6.40 = £3.60"
+        }
+       ],
+       "say": "The missing part is £3.60, the change."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A bar of £20 has a £12.25 part. What is the missing part?",
+      "hint": "Take the known part from the whole.",
+      "explanation": "£20 − £12.25 = £7.75.",
+      "skill_tag": "money.bar",
+      "answer": {
+       "value": 7.75,
+       "tolerance": 0.005
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Altogether can be a trap",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Altogether** means add the prices. **Change** means take the total away from the money paid.\n\nTwo items: £2.40 + £1.60 = £4. Change from £5 is £1.",
+     "say": "Careful: altogether does not always mean add. When you pay for two things, you add the prices. When you want the change, you take the total away from the money."
+    },
+    {
+     "type": "image",
+     "emoji": "🧾",
+     "alt": "Add the prices first, then find the change from the note.",
+     "caption": "Add the prices first, then find the change from the note."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara buys a £2.40 cake and a £1.60 juice and pays £5. What is the change?",
+      "hint": "Add the prices first.",
+      "explanation": "£2.40 + £1.60 = £4.00, and £5 − £4 = £1.",
+      "skill_tag": "money.two_step",
+      "options": [
+       {
+        "id": "a",
+        "text": "£2.00"
+       },
+       {
+        "id": "b",
+        "text": "£1.00"
+       },
+       {
+        "id": "c",
+        "text": "£3.00"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Draw a bar for the whole money",
+      "Add prices for the total",
+      "Take the total from the money for change"
+     ],
+     "say": "Remember. Use a bar model for money problems. Add the prices, then take the total away from the money paid."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "change",
+       "meaning": "The money given back when you pay more than the price."
+      },
+      {
+       "term": "bar model",
+       "meaning": "A drawing of the whole split into parts."
+      },
+      {
+       "term": "total",
+       "meaning": "All of it added together."
+      },
+      {
+       "term": "altogether",
+       "meaning": "All together, which usually means add."
+      },
+      {
+       "term": "whole",
+       "meaning": "The full amount."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A cup costs £1.20 and a plate costs £2.30. What is the total?",
+     "hint": "Add the pounds, then the pence.",
+     "explanation": "£1.20 + £2.30 = £3.50.",
+     "answer": {
+      "value": 3.5,
+      "tolerance": 0.005
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A bar of £10 has a £4.50 part. What is the other part?",
+     "hint": "Take the known part away.",
+     "explanation": "£10 − £4.50 = £5.50.",
+     "options": [
+      {
+       "id": "a",
+       "text": "£6.50"
+      },
+      {
+       "id": "b",
+       "text": "£4.50"
+      },
+      {
+       "id": "c",
+       "text": "£5.50"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "In a bar model, the whole is the parts added together.",
+     "hint": "Look at the bar.",
+     "explanation": "The whole is made from the parts.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "Two tickets cost £4.25 each. What is the total?",
+     "hint": "£4.25 + £4.25.",
+     "explanation": "£8.50.",
+     "answer": {
+      "value": 8.5,
+      "tolerance": 0.005
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "How many pence are in £2.40?",
+    "hint": "A pound is 100 pence.",
+    "explanation": "£2 is 200p and 40p more is 240p.",
+    "skill_tag": "money.pence",
+    "answer": {
+     "value": 240,
+     "tolerance": 0
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Ben says £4.6 means four pounds and six pence. Is he right?",
+    "hint": "Pence come after the point, in two places.",
+    "explanation": "Six pence is 0.06, so £4.06. £4.6 is sixty pence.",
+    "skill_tag": "money.reason_pence",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is £46"
+     },
+     {
+      "id": "b",
+      "text": "No. £4.6 means four pounds and sixty pence, so write £4.06 for six pence"
+     },
+     {
+      "id": "c",
+      "text": "Yes, four pounds and six pence"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "£3.40 means three pounds and forty pence.",
+    "hint": "Forty pence is 0.40.",
+    "explanation": "The two digits after the point are the pence.",
+    "skill_tag": "money.write",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Write the amount in pounds.",
+    "hint": "Seventy pence is 0.70.",
+    "explanation": "£4.70.",
+    "skill_tag": "money.write",
+    "points": 2,
+    "text": "Four pounds and seventy pence is £{b1}.{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "40"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "07"
+       },
+       {
+        "id": "b",
+        "text": "70"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two show the same amount as £1.50? Pick two.",
+    "hint": "A pound is 100 pence.",
+    "explanation": "£1.50 is 150p and one pound fifty pence.",
+    "skill_tag": "money.same",
+    "options": [
+     {
+      "id": "a",
+      "text": "one pound and fifty pence"
+     },
+     {
+      "id": "b",
+      "text": "£1.05"
+     },
+     {
+      "id": "c",
+      "text": "£15"
+     },
+     {
+      "id": "d",
+      "text": "150p"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Order these prices from cheapest.",
+    "hint": "Compare the pounds, then the pence.",
+    "explanation": "£1.05, £1.50, £2.04, £2.40.",
+    "skill_tag": "money.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "£2.04"
+     },
+     {
+      "id": "i4",
+      "text": "£2.40"
+     },
+     {
+      "id": "i2",
+      "text": "£1.50"
+     },
+     {
+      "id": "i1",
+      "text": "£1.05"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "A sticker costs 350p. Slide to show its price in pounds.",
+    "hint": "100p make £1.",
+    "explanation": "350p is £3.50.",
+    "skill_tag": "money.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 3.5,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each amount to its words.",
+    "hint": "Pounds first, then pence.",
+    "explanation": "£2.05, £5.50 and £1.20.",
+    "skill_tag": "money.words",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "£2.05"
+     },
+     {
+      "id": "l2",
+      "text": "£5.50"
+     },
+     {
+      "id": "l3",
+      "text": "£1.20"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "five pounds and fifty pence"
+     },
+     {
+      "id": "r1",
+      "text": "two pounds and five pence"
+     },
+     {
+      "id": "r3",
+      "text": "one pound and twenty pence"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "true_false",
+    "prompt": "£1.99 + £1.01 gives £3.00.",
+    "hint": "Add £1, then add 1p.",
+    "explanation": "£1.99 + £1.01 = £3.00.",
+    "skill_tag": "money.add",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says £3 and 40p is £3.04. Is she right?",
+    "hint": "Forty pence is 0.40.",
+    "explanation": "The pence 40 go in the two places after the point.",
+    "skill_tag": "money.reason_pence",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, £3.04"
+     },
+     {
+      "id": "b",
+      "text": "No, it is £3.44"
+     },
+     {
+      "id": "c",
+      "text": "No. 40p is 0.40, so the total is £3.40"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Add the prices.",
+    "hint": "Add the pounds, then the pence.",
+    "explanation": "£3 + £2 = £5, and 25p + 40p = 65p. So £5.65.",
+    "skill_tag": "money.add",
+    "points": 2,
+    "text": "£3.25 + £2.40 = £{b1}.{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "6"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "85"
+       },
+       {
+        "id": "b",
+        "text": "25"
+       },
+       {
+        "id": "c",
+        "text": "65"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "efficient_adding",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multi_select",
+    "prompt": "Which two totals are more than £10? Pick two.",
+    "hint": "Add each pair.",
+    "explanation": "£10.60 and £11.00 are more than £10.",
+    "skill_tag": "money.totals",
+    "options": [
+     {
+      "id": "a",
+      "text": "£9.99 + £1.01"
+     },
+     {
+      "id": "b",
+      "text": "£3.50 + £2.10"
+     },
+     {
+      "id": "c",
+      "text": "£4.99 + £2.00"
+     },
+     {
+      "id": "d",
+      "text": "£6.40 + £4.20"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Work out the totals, then order them smallest first.",
+    "hint": "Add each pair first.",
+    "explanation": "£1.98, £2.70, £3.00 and £3.10.",
+    "skill_tag": "money.totals",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "£1.50 + £1.50"
+     },
+     {
+      "id": "i4",
+      "text": "£1.00 + £2.10"
+     },
+     {
+      "id": "i2",
+      "text": "£2.20 + £0.50"
+     },
+     {
+      "id": "i1",
+      "text": "£0.99 + £0.99"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "Slide to show the total of £2.50 + £2.50 on the line from £0 to £10.",
+    "hint": "Two halves of £5 make £5.",
+    "explanation": "£2.50 + £2.50 = £5.00.",
+    "skill_tag": "money.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "efficient_adding",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "hotspot",
+    "prompt": "Tap the pair of prices that makes exactly £10.",
+    "hint": "Add the pounds, then the pence.",
+    "explanation": "£6.40 + £3.60 = £10.00. The others make £9.50.",
+    "skill_tag": "money.round",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛒",
+       "label": "£6.40 + £3.60",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛒",
+       "label": "£6.40 + £3.10",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛒",
+       "label": "£5.50 + £4.00",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "number",
+    "prompt": "Hana pays £5 for a £3.70 pen. How many pounds of change?",
+    "hint": "Count on from £3.70 to £5.",
+    "explanation": "£3.70 + 30p = £4, then + £1 = £5. Change £1.30.",
+    "skill_tag": "money.change",
+    "answer": {
+     "value": 1.3,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "change",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Mira says £5 minus £3.70 is £2.30. Is she right?",
+    "hint": "Count on to check.",
+    "explanation": "£3.70 + £1.30 = £5.00.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, £2.30"
+     },
+     {
+      "id": "b",
+      "text": "No. £3.70 + £1.30 = £5, so the change is £1.30"
+     },
+     {
+      "id": "c",
+      "text": "No, it is £1.70"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Layla says change is found by adding the price to the money given. Is she right?",
+    "hint": "Change is what is left over.",
+    "explanation": "Price + change = money given, so change = money given − price.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, add them"
+     },
+     {
+      "id": "b",
+      "text": "No, multiply them"
+     },
+     {
+      "id": "c",
+      "text": "No. You take the price away from the money given, or count on"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "hotspot",
+    "prompt": "Tap the note to pay for a £6.20 toy with the smallest note that covers it.",
+    "hint": "The note must be bigger than the price.",
+    "explanation": "£5 is not enough, so £10 is the smallest note that covers £6.20.",
+    "skill_tag": "money.note",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💷",
+       "label": "£10",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💷",
+       "label": "£5",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "💷",
+       "label": "£20",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "change",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each price to its change from £5.",
+    "hint": "Count on to £5.",
+    "explanation": "£1.80, £0.90 and £3.50.",
+    "skill_tag": "money.change",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "£3.20"
+     },
+     {
+      "id": "l2",
+      "text": "£4.10"
+     },
+     {
+      "id": "l3",
+      "text": "£1.50"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "£0.90"
+     },
+     {
+      "id": "r3",
+      "text": "£3.50"
+     },
+     {
+      "id": "r1",
+      "text": "£1.80"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "change",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Zara says £4.35 to £5 is 75p because 35 + 40 = 75. Is she right?",
+    "hint": "Count on to the next whole pound.",
+    "explanation": "£4.35 + 65p = £5.00.",
+    "skill_tag": "money.reason_count",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 75p"
+     },
+     {
+      "id": "b",
+      "text": "No, 55p"
+     },
+     {
+      "id": "c",
+      "text": "No. 35p + 65p makes £1, so the count-on is 65p"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "A toy costs £7.25 and you pay £10. What is the change?",
+    "hint": "Count on from £7.25 to £10.",
+    "explanation": "£7.25 + £2.75 = £10.",
+    "skill_tag": "money.change",
+    "options": [
+     {
+      "id": "a",
+      "text": "£3.25"
+     },
+     {
+      "id": "b",
+      "text": "£2.25"
+     },
+     {
+      "id": "c",
+      "text": "£2.75"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "change",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Hana says a £7.25 item paid with £10 gives £3.25 change because 10 − 7 = 3 and then add 25p. Is she right?",
+    "hint": "Take away the pence too.",
+    "explanation": "£7.25 + £2.75 = £10, so the change is £2.75.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, £3.25"
+     },
+     {
+      "id": "b",
+      "text": "No. 10 − 7 = 3, then take away 25p, which gives £2.75"
+     },
+     {
+      "id": "c",
+      "text": "No, £2.25"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "slider",
+    "prompt": "Slide to show the change from £10 for a £8.60 bag.",
+    "hint": "Count on from £8.60 to £10.",
+    "explanation": "£8.60 + £1.40 = £10.",
+    "skill_tag": "money.change",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 1.4,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "change",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "Ali buys a pen for £1.20, a book for £3.45 and a ruler for 85p. What is the total in pounds?",
+    "hint": "Add all three prices.",
+    "explanation": "£1.20 + £3.45 + 85p = £5.50.",
+    "skill_tag": "money.two_step",
+    "answer": {
+     "value": 5.5,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Omar says £1.05 is bigger than £1.50 because 105 is bigger than 50. Is he right?",
+    "hint": "Compare the pence.",
+    "explanation": "£1.50 has 50p. £1.05 has 5p.",
+    "skill_tag": "money.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 105 is bigger"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No. £1.50 is more than £1.05, because 50p is more than 5p"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "fill_blank",
+    "prompt": "Fill the missing part in the bar.",
+    "hint": "Take £4.25 from £10.",
+    "explanation": "£10 − £4.25 = £5.75.",
+    "skill_tag": "money.bar",
+    "points": 2,
+    "text": "£10 = £4.25 + £{b1}.{b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "75"
+       },
+       {
+        "id": "c",
+        "text": "25"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Ravi says a £10 bar split into £6.40 and £3.60 is correct because 6.40 + 3.60 = 10. Is he right?",
+    "hint": "Add the two parts.",
+    "explanation": "£6.40 + £3.60 = £10.00.",
+    "skill_tag": "money.reason_bar",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is £9.60"
+     },
+     {
+      "id": "b",
+      "text": "No, it is £10.60"
+     },
+     {
+      "id": "c",
+      "text": "Yes. £6.40 + £3.60 = £10.00"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "slider",
+    "prompt": "Slide to show the total for 3 items at £1.25 each.",
+    "hint": "Three times £1.25.",
+    "explanation": "£1.25 + £1.25 + £1.25 = £3.75.",
+    "skill_tag": "money.two_step",
+    "range": {
+     "step": 0.05,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 3.75,
+     "tolerance": 0.05
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "hotspot",
+    "prompt": "Tap the shop with the cheaper total for 2 pens.",
+    "hint": "Work out each total for 2.",
+    "explanation": "A is £4.80, B is £4.50, C is £5.20.",
+    "skill_tag": "money.compare",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏪",
+       "label": "Shop A: £2.40 each",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏪",
+       "label": "Shop B: £4.50 for 2",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏪",
+       "label": "Shop C: £2.60 each",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "How many pence are in £3.05?",
+    "hint": "A pound is 100 pence.",
+    "explanation": "£3 is 300p and 5p more is 305p.",
+    "skill_tag": "money.pence",
+    "answer": {
+     "value": 305,
+     "tolerance": 0
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Sana says £7.4 means seven pounds and four pence. Is she right?",
+    "hint": "Pence come after the point, in two places.",
+    "explanation": "Four pence is 0.04, so £7.04. £7.4 is forty pence.",
+    "skill_tag": "money.reason_pence",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, seven pounds and four pence"
+     },
+     {
+      "id": "b",
+      "text": "No. £7.4 means seven pounds and forty pence, so write £7.04 for four pence"
+     },
+     {
+      "id": "c",
+      "text": "No, it is £74"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "£3.04 means three pounds and forty pence.",
+    "hint": "Which digits are the pence?",
+    "explanation": "£3.04 is three pounds and four pence.",
+    "skill_tag": "money.write",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Write the amount for six pounds and five pence.",
+    "hint": "Five pence is 0.05.",
+    "explanation": "£6.05.",
+    "skill_tag": "money.write",
+    "points": 2,
+    "text": "Six pounds and five pence is £{b1}.{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "60"
+       },
+       {
+        "id": "b",
+        "text": "6"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "05"
+       },
+       {
+        "id": "c",
+        "text": "50"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Pick two amounts that equal £2.25.",
+    "hint": "Twenty-five pence is 0.25.",
+    "explanation": "£2.25 is 225p and two pounds twenty-five pence.",
+    "skill_tag": "money.same",
+    "options": [
+     {
+      "id": "a",
+      "text": "£2.52"
+     },
+     {
+      "id": "b",
+      "text": "£22.5"
+     },
+     {
+      "id": "c",
+      "text": "two pounds and twenty-five pence"
+     },
+     {
+      "id": "d",
+      "text": "225p"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Order these amounts from the biggest.",
+    "hint": "Compare the pounds first.",
+    "explanation": "£5.10, £4.95, £4.09, £1.99.",
+    "skill_tag": "money.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "£4.09"
+     },
+     {
+      "id": "i4",
+      "text": "£1.99"
+     },
+     {
+      "id": "i2",
+      "text": "£4.95"
+     },
+     {
+      "id": "i1",
+      "text": "£5.10"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "A pencil case costs 420p. Slide to show its price in pounds.",
+    "hint": "100p make £1.",
+    "explanation": "420p is £4.20.",
+    "skill_tag": "money.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 4.2,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each amount to its words.",
+    "hint": "Pounds first, then pence.",
+    "explanation": "£3.30, £8.08 and £6.60.",
+    "skill_tag": "money.words",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "£3.30"
+     },
+     {
+      "id": "l2",
+      "text": "£8.08"
+     },
+     {
+      "id": "l3",
+      "text": "£6.60"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "eight pounds and eight pence"
+     },
+     {
+      "id": "r1",
+      "text": "three pounds and thirty pence"
+     },
+     {
+      "id": "r3",
+      "text": "six pounds and sixty pence"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "pounds_pence",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "true_false",
+    "prompt": "£2.98 + £1.02 gives £3.90.",
+    "hint": "Add £1 to £2.98, then add 2p.",
+    "explanation": "£2.98 + £1.02 = £4.00.",
+    "skill_tag": "money.add",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Sam says £2 and 5p is £2.50. Is he right?",
+    "hint": "Five pence is 0.05.",
+    "explanation": "The 5 goes in the second place after the point.",
+    "skill_tag": "money.reason_pence",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, £2.50"
+     },
+     {
+      "id": "b",
+      "text": "No, it is £7"
+     },
+     {
+      "id": "c",
+      "text": "No. 5p is 0.05, so the total is £2.05"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Add the other prices.",
+    "hint": "Add the pounds, then the pence.",
+    "explanation": "£3 + £1 = £4, and 15p + 60p = 75p. So £4.75.",
+    "skill_tag": "money.add",
+    "points": 2,
+    "text": "£3.15 + £1.60 = £{b1}.{b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "45"
+       },
+       {
+        "id": "b",
+        "text": "75"
+       },
+       {
+        "id": "c",
+        "text": "55"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "efficient_adding",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multi_select",
+    "prompt": "Which two totals are less than £5? Pick two.",
+    "hint": "Add each pair.",
+    "explanation": "£4.48 and £4.25 are less than £5.",
+    "skill_tag": "money.totals",
+    "options": [
+     {
+      "id": "a",
+      "text": "£1.25 + £3.00"
+     },
+     {
+      "id": "b",
+      "text": "£4.10 + £1.20"
+     },
+     {
+      "id": "c",
+      "text": "£3.50 + £1.75"
+     },
+     {
+      "id": "d",
+      "text": "£2.49 + £1.99"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Work out the totals, then order them largest first.",
+    "hint": "Add each pair first.",
+    "explanation": "£3.50, £2.20, £2.10 and £1.50.",
+    "skill_tag": "money.totals",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "£2.00 + £0.20"
+     },
+     {
+      "id": "i4",
+      "text": "£0.75 + £0.75"
+     },
+     {
+      "id": "i3",
+      "text": "£1.05 + £1.05"
+     },
+     {
+      "id": "i1",
+      "text": "£3.40 + £0.10"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "Slide to show the total of £1.25 + £1.25 on the line from £0 to £10.",
+    "hint": "Double £1.25.",
+    "explanation": "£1.25 + £1.25 = £2.50.",
+    "skill_tag": "money.line",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 2.5,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "efficient_adding",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "hotspot",
+    "prompt": "Tap the pair of prices that makes exactly £5.",
+    "hint": "Add the pounds, then the pence.",
+    "explanation": "£2.75 + £2.25 = £5.00. The others make £5.25 and £4.80.",
+    "skill_tag": "money.round",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🛒",
+       "label": "£2.75 + £2.25",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🛒",
+       "label": "£2.75 + £2.50",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🛒",
+       "label": "£3.20 + £1.60",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "efficient_adding",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "number",
+    "prompt": "Zara pays £10 for a £6.45 book. How many pounds of change?",
+    "hint": "Count on from £6.45 to £10.",
+    "explanation": "55p to £7, then £3 to £10. Change £3.55.",
+    "skill_tag": "money.change",
+    "answer": {
+     "value": 3.55,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "change",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Hana says £10 minus £6.45 is £4.45. Is she right?",
+    "hint": "Count on to check.",
+    "explanation": "£6.45 + £3.55 = £10.00.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, £4.45"
+     },
+     {
+      "id": "b",
+      "text": "No. The change is £3.55, because £6.45 + £3.55 = £10"
+     },
+     {
+      "id": "c",
+      "text": "No, it is £3.45"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Dan says change is found by multiplying the price by the money given. Is he right?",
+    "hint": "Change is what is left over.",
+    "explanation": "Multiplying does not find what is left over.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, multiply them"
+     },
+     {
+      "id": "b",
+      "text": "No. Change is found by taking the price away from the money given"
+     },
+     {
+      "id": "c",
+      "text": "No, add them"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "hotspot",
+    "prompt": "Tap the note to pay for a £12.30 shirt with the smallest note that covers it.",
+    "hint": "The note must be bigger than the price.",
+    "explanation": "£10 is not enough, so £20 is the smallest note that covers £12.30.",
+    "skill_tag": "money.note",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💷",
+       "label": "£10",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💷",
+       "label": "£20",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "💷",
+       "label": "£5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "change",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Join each price to its change from £10.",
+    "hint": "Count on to £10.",
+    "explanation": "£4.00, £2.50 and £1.75.",
+    "skill_tag": "money.change",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "£6.00"
+     },
+     {
+      "id": "l2",
+      "text": "£7.50"
+     },
+     {
+      "id": "l3",
+      "text": "£8.25"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "£1.75"
+     },
+     {
+      "id": "r1",
+      "text": "£4.00"
+     },
+     {
+      "id": "r2",
+      "text": "£2.50"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "change",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Ben says £2.60 to £3 is 30p because he counts on 30p. Is he right?",
+    "hint": "How many pence make a whole pound?",
+    "explanation": "60p + 40p makes a whole pound.",
+    "skill_tag": "money.reason_count",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 50p"
+     },
+     {
+      "id": "b",
+      "text": "No. 60p + 40p makes £1, so the count-on is 40p"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 30p"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "A jacket costs £12.60 and you pay £20. What is the change?",
+    "hint": "Count on from £12.60 to £20.",
+    "explanation": "£12.60 + £7.40 = £20.",
+    "skill_tag": "money.change",
+    "options": [
+     {
+      "id": "a",
+      "text": "£8.40"
+     },
+     {
+      "id": "b",
+      "text": "£7.40"
+     },
+     {
+      "id": "c",
+      "text": "£7.60"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Sam says a £4.60 item paid with £5 gives 60p change. Is he right?",
+    "hint": "Count on from £4.60 to £5.",
+    "explanation": "£4.60 + 40p = £5.",
+    "skill_tag": "money.reason_change",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 60p"
+     },
+     {
+      "id": "b",
+      "text": "No. £5 − £4.60 = 40p, because 60p + 40p = £1"
+     },
+     {
+      "id": "c",
+      "text": "No, 50p"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "change",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "slider",
+    "prompt": "Slide to show the change from £20 for a £15.30 jacket.",
+    "hint": "Count on from £15.30 to £20.",
+    "explanation": "£15.30 + £4.70 = £20.",
+    "skill_tag": "money.change",
+    "range": {
+     "step": 0.1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 4.7,
+     "tolerance": 0.1
+    },
+    "sub_lesson": "change",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "Mina buys 2 cards at £1.50 each and a bag for £2.75. What is the total in pounds?",
+    "hint": "Add the cards, then the bag.",
+    "explanation": "£3.00 + £2.75 = £5.75.",
+    "skill_tag": "money.two_step",
+    "answer": {
+     "value": 5.75,
+     "tolerance": 0.005
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Zainab says £2.09 is more than £2.90 because 9 is bigger than 0. Is she right?",
+    "hint": "Compare the tenths first.",
+    "explanation": "90p is more than 9p.",
+    "skill_tag": "money.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 9 is bigger than 0"
+     },
+     {
+      "id": "b",
+      "text": "No. £2.90 is more than £2.09, because 90p is more than 9p"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "fill_blank",
+    "prompt": "Fill the missing part in the other bar.",
+    "hint": "Take £12.60 from £20.",
+    "explanation": "£20 − £12.60 = £7.40.",
+    "skill_tag": "money.bar",
+    "points": 2,
+    "text": "£20 = £12.60 + £{b1}.{b2}",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "60"
+       },
+       {
+        "id": "b",
+        "text": "40"
+       },
+       {
+        "id": "c",
+        "text": "20"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Lina says a £8 bar split into £5.25 and £2.85 is correct. Is she right?",
+    "hint": "Add the two parts.",
+    "explanation": "£5.25 + £2.85 = £8.10.",
+    "skill_tag": "money.reason_bar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they make £8"
+     },
+     {
+      "id": "b",
+      "text": "No, they make £7.90"
+     },
+     {
+      "id": "c",
+      "text": "No. The parts make £8.10, not £8"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "slider",
+    "prompt": "Slide to show the total for 2 items at £2.40 each.",
+    "hint": "Two times £2.40.",
+    "explanation": "£2.40 + £2.40 = £4.80.",
+    "skill_tag": "money.two_step",
+    "range": {
+     "step": 0.05,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 4.8,
+     "tolerance": 0.05
+    },
+    "sub_lesson": "bar_models",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "hotspot",
+    "prompt": "Tap the shop with the cheaper total for 3 books.",
+    "hint": "Work out each total for 3.",
+    "explanation": "A is £7.50, B is £6.90, C is £6.30.",
+    "skill_tag": "money.compare",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏪",
+       "label": "Shop A: £2.50 each",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏪",
+       "label": "Shop B: £6.90 for 3",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏪",
+       "label": "Shop C: £2.10 each",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "bar_models",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

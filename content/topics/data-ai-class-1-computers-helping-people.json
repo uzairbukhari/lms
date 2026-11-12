@@ -1,0 +1,3155 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-computers-helping-people",
+  "subject": "data-ai",
+  "title": "Computers That Help People",
+  "summary": "Spot information technology in school, shops and hospitals and say how it helps.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 9: Computers that help people",
+  "learning_objectives": [
+   "Name uses of IT beyond school",
+   "Explain why people use IT",
+   "Make safe, sensible choices with IT"
+  ],
+  "tags": [
+   "topic",
+   "topic-9"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 9
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 uses of IT",
+    "text": "Recognise common uses of information technology beyond school"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-IC-16",
+    "text": "Compare how people live and work before and after the adoption of computing technologies"
+   }
+  ],
+  "success_criteria": [
+   "I can say what IT is",
+   "I can name three places that use IT",
+   "I can say when to use IT and when to switch off"
+  ],
+  "real_life": "Scanning shopping, crossing at traffic lights and visiting a clinic.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What does a quiz need?",
+    "hint": "Think about the cat.",
+    "explanation": "A quiz has both.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only a question"
+     },
+     {
+      "id": "b",
+      "text": "A question and an answer"
+     },
+     {
+      "id": "c",
+      "text": "Only a screen"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a bug?",
+    "hint": "Not an insect.",
+    "explanation": "A bug is a mistake.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A flower"
+     },
+     {
+      "id": "b",
+      "text": "A sprite"
+     },
+     {
+      "id": "c",
+      "text": "A mistake in a program"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 8 + 2?",
+    "hint": "Count on from 8.",
+    "explanation": "8 + 2 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "what",
+   "kind": "learn",
+   "title": "What is IT?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, tech explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do computers help people?",
+     "say": "Today we spot computers that help people. Omar is going shopping with his mum."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-computers-helping-people-1-2a358416.jpg",
+     "alt": "A traffic light showing green with a camera on the pole beside it, against a blue sky",
+     "caption": "A traffic light is controlled by a computer.",
+     "credit": "Photo by Eliobed Suarez on Unsplash",
+     "say": "This traffic light is controlled by a computer. It helps cars and people stay safe."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: IT works with a computer"
+    },
+    {
+     "type": "text",
+     "markdown": "**Information technology** means using computers to work with information.",
+     "say": "IT stands for information technology. IT means using computers to work with information."
+    },
+    {
+     "type": "explainer",
+     "title": "IT is more than a desk computer",
+     "scenes": [
+      {
+       "caption": "Laptop and tablet.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💻",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A laptop is IT. So is a tablet. They help us read and write."
+      },
+      {
+       "caption": "A cash machine.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🏧",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "IT"
+        }
+       ],
+       "say": "A cash machine is IT. It counts money and gives it out."
+      },
+      {
+       "caption": "Tiny computers inside.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🧺",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "💻",
+         "x": 70,
+         "y": 40,
+         "size": 2,
+         "anim": "pulse",
+         "label": "inside"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "IT is everywhere"
+        }
+       ],
+       "say": "Many machines have a tiny computer inside. They are IT too."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does IT stand for?",
+      "hint": "It uses computers.",
+      "explanation": "IT means information technology.",
+      "skill_tag": "it.meaning",
+      "options": [
+       {
+        "id": "a",
+        "text": "Indoor toys"
+       },
+       {
+        "id": "b",
+        "text": "Instant tea"
+       },
+       {
+        "id": "c",
+        "text": "Information technology"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: IT in school"
+    },
+    {
+     "type": "text",
+     "markdown": "A school has **interactive** screens and tablets.",
+     "say": "School uses IT too. A smartboard shows lessons. Tablets help us learn."
+    },
+    {
+     "type": "explainer",
+     "title": "IT at school",
+     "scenes": [
+      {
+       "caption": "Smartboard.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🖥️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "smartboard"
+        }
+       ],
+       "say": "The teacher uses a smartboard. It shows pictures and videos."
+      },
+      {
+       "caption": "Tablets.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Children use tablets to read and draw."
+      },
+      {
+       "caption": "Records.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🗂️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "records"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "IT at school"
+        }
+       ],
+       "say": "The school office uses a computer to keep records."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is IT at school?",
+      "hint": "It is a computer screen.",
+      "explanation": "A smartboard is a computer screen.",
+      "skill_tag": "it.school",
+      "options": [
+       {
+        "id": "a",
+        "text": "A chalk stick"
+       },
+       {
+        "id": "b",
+        "text": "A smartboard"
+       },
+       {
+        "id": "c",
+        "text": "A skipping rope"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Omar at the supermarket",
+     "asset": "clip-data-ai-class-1-computers-helping-people-b63120a7.mp4",
+     "poster": "clip-data-ai-class-1-computers-helping-people-b63120a7.webp",
+     "seconds": 55,
+     "transcript": "Omar goes to the supermarket with his mum. The fruit scale shows the weight on a screen. A packet has a barcode. It is a pattern of lines. The scanner reads the barcode and finds the price. Mum pays with a card machine. It is quick. Outside, traffic lights keep the road safe. Omar's cousin's clinic uses a computer for health records. At home, the family switches off screens for dinner.",
+     "caption": "Omar follows his mum through a supermarket in Lahore and spots IT."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "IT means information technology",
+      "IT is in school, shops and on roads",
+      "Many machines have a tiny computer inside"
+     ],
+     "say": "Let us remember. IT means using computers to work with information. It is all around us."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "information technology",
+       "meaning": "Using computers to work with information."
+      },
+      {
+       "term": "interactive",
+       "meaning": "Something you can touch or use to make it respond."
+      },
+      {
+       "term": "smartboard",
+       "meaning": "A big touch screen used in a class."
+      },
+      {
+       "term": "records",
+       "meaning": "Information that is kept and saved."
+      },
+      {
+       "term": "computer",
+       "meaning": "A machine that follows instructions."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is IT?",
+     "hint": "It has a computer.",
+     "explanation": "A tablet is a computer.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A spoon"
+      },
+      {
+       "id": "b",
+       "text": "A tablet"
+      },
+      {
+       "id": "c",
+       "text": "A pencil"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "IT is only a computer on a desk.",
+     "hint": "Think about the cash machine.",
+     "explanation": "IT is in many places.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does interactive mean?",
+     "hint": "Think about a touch screen.",
+     "explanation": "An interactive screen responds to you.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is very old"
+      },
+      {
+       "id": "b",
+       "text": "It is very heavy"
+      },
+      {
+       "id": "c",
+       "text": "You can use it and it responds"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spotter",
+   "kind": "try",
+   "title": "IT spotter walk",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: IT in shops and barcodes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **barcode** is a pattern of lines that holds a number.",
+     "say": "In the supermarket, Omar spots a scanner. It reads a barcode on a packet."
+    },
+    {
+     "type": "explainer",
+     "title": "The checkout",
+     "scenes": [
+      {
+       "caption": "A barcode.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍪",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "barcode"
+        },
+        {
+         "id": "b",
+         "emoji": "▮▮▯▮▯▮",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A packet of biscuits has a barcode on the back."
+      },
+      {
+       "caption": "Scan.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📟",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "scan"
+        },
+        {
+         "id": "p",
+         "emoji": "🍪",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The scanner reads the lines. It finds the price."
+      },
+      {
+       "caption": "Price.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧾",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "price added"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "IT at the shop"
+        }
+       ],
+       "say": "The checkout shows the price and adds it to the bill."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Scan the shopping",
+     "goal": "Move the 5 items past the scanner one at a time.",
+     "emoji": "🛒",
+     "count": 5,
+     "zones": [
+      "Scanned",
+      "Waiting"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a barcode scanner read?",
+      "hint": "Look at the stripes.",
+      "explanation": "A scanner reads the pattern of lines.",
+      "skill_tag": "it.barcode",
+      "options": [
+       {
+        "id": "a",
+        "text": "The colour of the packet"
+       },
+       {
+        "id": "b",
+        "text": "The pattern of lines"
+       },
+       {
+        "id": "c",
+        "text": "The weight of the shopper"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: IT on the road and at the doctor"
+    },
+    {
+     "type": "text",
+     "markdown": "**Traffic lights** and hospital computers are IT.",
+     "say": "On the road, traffic lights are IT. At the doctor, computers keep health records safe."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-computers-helping-people-2-9d51802d.jpg",
+     "alt": "A traffic light at night with red, amber and green lights glowing",
+     "caption": "A traffic light at night. A computer controls the colours.",
+     "credit": "Photo by Tsvetoslav Hristov on Unsplash",
+     "say": "A computer changes the lights from red to green in order. Cars stop and go safely."
+    },
+    {
+     "type": "explainer",
+     "title": "More IT around us",
+     "scenes": [
+      {
+       "caption": "A record.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🏥",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🗂️",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A hospital receptionist types a patient's name. The record appears."
+      },
+      {
+       "caption": "A tablet at the clinic.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🧑‍⚕️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A doctor can see the record on a tablet and treat people better."
+      },
+      {
+       "caption": "IT helps everyone.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🚦",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🛒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🏥",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "IT is everywhere"
+        }
+       ],
+       "say": "Traffic lights, shops and clinics all use IT."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "IT spotter",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Walk to the shop, school or street with a grown-up.",
+      "Find five things that use IT.",
+      "Draw them and say how each one helps."
+     ],
+     "say": "Now you try. Be an IT spotter on your next walk with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Traffic lights are controlled by a computer.",
+      "hint": "Think about the changing colours.",
+      "explanation": "A computer changes the lights in order.",
+      "skill_tag": "it.traffic",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Barcodes hold numbers for scanners to read",
+      "Traffic lights use IT",
+      "Clinics use IT to keep records"
+     ],
+     "say": "Let us remember. IT is in shops, roads and clinics."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "barcode",
+       "meaning": "A pattern of lines that holds a number."
+      },
+      {
+       "term": "scanner",
+       "meaning": "A machine that reads a barcode."
+      },
+      {
+       "term": "traffic lights",
+       "meaning": "Lights that tell cars when to stop and go."
+      },
+      {
+       "term": "record",
+       "meaning": "Information that is saved."
+      },
+      {
+       "term": "receptionist",
+       "meaning": "A person who greets and helps visitors."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Where might you see a barcode?",
+     "hint": "Think about shopping.",
+     "explanation": "Packets have barcodes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "On a cloud"
+      },
+      {
+       "id": "b",
+       "text": "On a packet in a shop"
+      },
+      {
+       "id": "c",
+       "text": "On a pencil's tip"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A scanner reads a barcode.",
+     "hint": "That is its job.",
+     "explanation": "A scanner reads barcodes.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which uses IT on the road?",
+     "hint": "They change colour.",
+     "explanation": "Traffic lights use IT.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A kite"
+      },
+      {
+       "id": "b",
+       "text": "A rock"
+      },
+      {
+       "id": "c",
+       "text": "Traffic lights"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "helpful",
+   "kind": "play",
+   "title": "Helpful or not?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Sort IT jobs"
+    },
+    {
+     "type": "text",
+     "markdown": "IT can make jobs **safer**, easier and more accurate.",
+     "say": "IT helps in many ways. It can make jobs safer, easier, quicker and more accurate."
+    },
+    {
+     "type": "explainer",
+     "title": "How IT helps",
+     "scenes": [
+      {
+       "caption": "Easier.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "💳",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "easy"
+        }
+       ],
+       "say": "A card machine is quick. You do not need to count coins."
+      },
+      {
+       "caption": "Accurate.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📟",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "accurate"
+        }
+       ],
+       "say": "A scanner is accurate. It reads the number the same way each time."
+      },
+      {
+       "caption": "Safer.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🚦",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "safer"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "IT helps"
+        }
+       ],
+       "say": "Traffic lights keep us safe at busy roads."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is a way IT helps?",
+      "hint": "Think about traffic lights.",
+      "explanation": "IT can make jobs safer.",
+      "skill_tag": "it.benefit",
+      "options": [
+       {
+        "id": "a",
+        "text": "It makes homework vanish"
+       },
+       {
+        "id": "b",
+        "text": "It makes some jobs safer"
+       },
+       {
+        "id": "c",
+        "text": "It makes everyone tall"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then think about **benefits**.",
+     "say": "First a memory game. Then sort the benefits of IT."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "IT pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "💳",
+      "🚦",
+      "📟",
+      "🏥"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each IT tool to how it helps.",
+      "hint": "Think about each job.",
+      "explanation": "Each tool helps in a different way.",
+      "skill_tag": "it.match_benefit",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Traffic lights"
+       },
+       {
+        "id": "l2",
+        "text": "Barcode scanner"
+       },
+       {
+        "id": "l3",
+        "text": "Card machine"
+       }
+      ],
+      "right": [
+       {
+        "id": "r2",
+        "text": "Reads prices accurately"
+       },
+       {
+        "id": "r1",
+        "text": "Keep roads safe"
+       },
+       {
+        "id": "r3",
+        "text": "Makes paying easy"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "IT can make jobs safer and easier",
+      "IT can be more accurate",
+      "IT can make mistakes too"
+     ],
+     "say": "Let us remember. IT helps in many ways. But it is not always perfect."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "benefit",
+       "meaning": "A good thing that something gives you."
+      },
+      {
+       "term": "accurate",
+       "meaning": "Exactly right."
+      },
+      {
+       "term": "safer",
+       "meaning": "Less likely to cause harm."
+      },
+      {
+       "term": "easier",
+       "meaning": "Not so hard to do."
+      },
+      {
+       "term": "backup",
+       "meaning": "A plan for when something stops working."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a benefit of IT?",
+     "hint": "Think about the scanner.",
+     "explanation": "IT can be more accurate.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It makes rain"
+      },
+      {
+       "id": "b",
+       "text": "It grows trees"
+      },
+      {
+       "id": "c",
+       "text": "Jobs can be done more accurately"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "IT can only save time.",
+     "hint": "It can make things safer too.",
+     "explanation": "IT has many benefits.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should we have if IT stops working?",
+     "hint": "Think about the shop.",
+     "explanation": "A backup plan helps if IT stops.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing"
+      },
+      {
+       "id": "b",
+       "text": "A bigger screen"
+      },
+      {
+       "id": "c",
+       "text": "A backup plan"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "choices",
+   "kind": "use",
+   "title": "My IT choices",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pick IT for a job"
+    },
+    {
+     "type": "text",
+     "markdown": "Use IT when it **helps**. Think about the job first.",
+     "say": "Omar helps plan the family day. He picks IT only when it helps."
+    },
+    {
+     "type": "text",
+     "markdown": "Pick the right tool for the job.",
+     "say": "A map app helps find the shop. A calculator helps check the bill. A phone call can say hello."
+    },
+    {
+     "type": "explainer",
+     "title": "IT or a person?",
+     "scenes": [
+      {
+       "caption": "IT job.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🗺️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "📱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A map app helps find the shop. That is a job for IT."
+      },
+      {
+       "caption": "A person's job.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🤗",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "person"
+        }
+       ],
+       "say": "A hug or a smile needs a person. IT cannot do it."
+      },
+      {
+       "caption": "Pick the best.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🗺️",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🤗",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "choose well"
+        }
+       ],
+       "say": "Pick the best helper for each job."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "My IT choices",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "List five jobs in your day.",
+      "Mark which ones could use IT to help.",
+      "Mark which ones need a person."
+     ],
+     "say": "A good choice asks: does IT make this job better?"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which job is best done with a calculator?",
+      "hint": "Which job needs maths?",
+      "explanation": "A calculator is good for adding.",
+      "skill_tag": "it.choose",
+      "options": [
+       {
+        "id": "a",
+        "text": "Giving a hug"
+       },
+       {
+        "id": "b",
+        "text": "Adding up a long bill"
+       },
+       {
+        "id": "c",
+        "text": "Telling a bedtime story"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: When to switch off"
+    },
+    {
+     "type": "text",
+     "markdown": "Take **breaks** from screens. Ask a grown-up first.",
+     "say": "IT is useful, but we need breaks. Eyes get tired. Switch off at meal times and bedtime."
+    },
+    {
+     "type": "explainer",
+     "title": "Switch off",
+     "scenes": [
+      {
+       "caption": "Meal time.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🍽️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "p",
+         "emoji": "📵",
+         "x": 80,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "At meal time, the family switches off phones and talks."
+      },
+      {
+       "caption": "Bedtime.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🛏️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 80,
+         "y": 30,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "At bedtime, screens are off. Eyes and brains can rest."
+      },
+      {
+       "caption": "Use wisely.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🕰️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "switch off"
+        }
+       ],
+       "say": "Using IT wisely means knowing when to stop."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is wise to switch screens off at bedtime.",
+      "hint": "Eyes need rest.",
+      "explanation": "Screens off at bedtime helps us rest.",
+      "skill_tag": "it.switch_off",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Choose IT when it helps",
+      "Some jobs need people",
+      "Switch off for rest and family time"
+     ],
+     "say": "Let us remember. Pick IT when it helps. Switch off when we need a break."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "helps",
+       "meaning": "Makes something easier or better."
+      },
+      {
+       "term": "choice",
+       "meaning": "Picking one thing instead of another."
+      },
+      {
+       "term": "wisely",
+       "meaning": "In a sensible way."
+      },
+      {
+       "term": "breaks",
+       "meaning": "Rests from a screen."
+      },
+      {
+       "term": "calculator",
+       "meaning": "A tool that adds and subtracts numbers."
+      },
+      {
+       "term": "ask first",
+       "meaning": "Check with a grown-up before using IT."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which job needs a person, not IT?",
+     "hint": "Think about care.",
+     "explanation": "Hugs need people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Finding a map"
+      },
+      {
+       "id": "b",
+       "text": "A bedtime hug"
+      },
+      {
+       "id": "c",
+       "text": "Adding a bill"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should take breaks from screens.",
+     "hint": "Eyes need rest.",
+     "explanation": "Breaks keep us healthy.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should you ask before using IT?",
+     "hint": "Someone who looks after you.",
+     "explanation": "Ask a grown-up first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A stranger"
+      },
+      {
+       "id": "b",
+       "text": "Nobody"
+      },
+      {
+       "id": "c",
+       "text": "A grown-up"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is information technology, or IT?",
+    "hint": "It uses computers.",
+    "explanation": "IT is using computers to work with information.",
+    "skill_tag": "it.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cooking with a stove"
+     },
+     {
+      "id": "b",
+      "text": "Using computers to work with information"
+     },
+     {
+      "id": "c",
+      "text": "Making toys by hand"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A cash machine counts and gives out money using a computer.",
+    "hint": "It has a computer inside.",
+    "explanation": "A cash machine uses IT.",
+    "skill_tag": "it.inside",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "match",
+    "prompt": "Match each place to the IT you might find there.",
+    "hint": "Think about each place.",
+    "explanation": "Each place has IT that helps.",
+    "skill_tag": "it.match_place",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Classroom"
+     },
+     {
+      "id": "l2",
+      "text": "Supermarket"
+     },
+     {
+      "id": "l3",
+      "text": "Road"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Traffic lights"
+     },
+     {
+      "id": "r1",
+      "text": "Smartboard"
+     },
+     {
+      "id": "r2",
+      "text": "Barcode scanner"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "what",
+    "depth": "apply"
+   },
+   {
+    "ref": "q4",
+    "type": "hotspot",
+    "prompt": "Tap the IT in the shop.",
+    "hint": "It reads a barcode.",
+    "explanation": "A scanner is IT.",
+    "skill_tag": "it.tap_shop",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📟",
+       "label": "Barcode scanner",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧺",
+       "label": "Empty basket",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥕",
+       "label": "Carrots",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about IT.",
+    "hint": "Think about what IT does.",
+    "explanation": "IT is information technology.",
+    "skill_tag": "it.fill_meaning",
+    "points": 2,
+    "text": "IT stands for {b1} technology. Computers help us work with {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "indoor"
+       },
+       {
+        "id": "b",
+        "text": "instant"
+       },
+       {
+        "id": "c",
+        "text": "information"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stones"
+       },
+       {
+        "id": "b",
+        "text": "information"
+       },
+       {
+        "id": "c",
+        "text": "bricks"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "what",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says IT is only a computer on a desk. Is he right?",
+    "hint": "Think about the cash machine.",
+    "explanation": "IT is in many places, not just on a desk.",
+    "skill_tag": "it.reason_desk",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only desk computers"
+     },
+     {
+      "id": "b",
+      "text": "No. IT is in shops, roads, clinics and many machines"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only laptops"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Aisha says IT is only used in rich countries. Is she right?",
+    "hint": "Think about Omar in Lahore.",
+    "explanation": "IT is used all over the world.",
+    "skill_tag": "it.reason_countries",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only in rich countries"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only in cities of the UK"
+     },
+     {
+      "id": "c",
+      "text": "No. People use IT in many countries, including Pakistan and the UK"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "what",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "slider",
+    "prompt": "A classroom has 2 computers and 3 tablets. Slide to show how many devices.",
+    "hint": "2 + 3.",
+    "explanation": "2 + 3 = 5 devices.",
+    "skill_tag": "it.count_devices",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "what",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "What does a barcode help a shop do?",
+    "hint": "The scanner reads it.",
+    "explanation": "A barcode holds a number to find the price.",
+    "skill_tag": "it.barcode_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "Grow the food"
+     },
+     {
+      "id": "b",
+      "text": "Find the price of an item"
+     },
+     {
+      "id": "c",
+      "text": "Wash the floor"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "recall"
+   },
+   {
+    "ref": "q10",
+    "type": "multi_select",
+    "prompt": "Which two shop things use IT? Pick two.",
+    "hint": "They have computers inside.",
+    "explanation": "A scanner and a card machine are IT.",
+    "skill_tag": "it.shop_it",
+    "options": [
+     {
+      "id": "a",
+      "text": "A card machine"
+     },
+     {
+      "id": "b",
+      "text": "A shelf"
+     },
+     {
+      "id": "c",
+      "text": "A paper bag"
+     },
+     {
+      "id": "d",
+      "text": "A barcode scanner"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put the steps for scanning an item in order.",
+    "hint": "Pick up first.",
+    "explanation": "Pick up, scan, then see the price.",
+    "skill_tag": "it.scan_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Scan the barcode"
+     },
+     {
+      "id": "i3",
+      "text": "See the price on screen"
+     },
+     {
+      "id": "i1",
+      "text": "Pick up the packet"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "number",
+    "prompt": "Omar scans 3 tins and 5 packets. How many items does he scan in all?",
+    "hint": "Add 3 and 5.",
+    "explanation": "3 + 5 = 8 items.",
+    "skill_tag": "it.count_items",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "spotter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Omar says shops do not use IT. Is he right?",
+    "hint": "Think about the checkout.",
+    "explanation": "Shops use IT for pricing and payment.",
+    "skill_tag": "it.reason_shops",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shops use no IT"
+     },
+     {
+      "id": "b",
+      "text": "No. Shops use scanners, card machines and computers"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only banks do"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Sam says barcodes and QR codes are exactly the same. Is he right?",
+    "hint": "Look at their shapes.",
+    "explanation": "They look different and hold information in different ways.",
+    "skill_tag": "it.reason_codes",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, both are only on cars"
+     },
+     {
+      "id": "b",
+      "text": "No. A barcode is a row of lines. A QR code is a square pattern that can hold a link"
+     },
+     {
+      "id": "c",
+      "text": "Yes, identical"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "match",
+    "prompt": "Match each place to what it uses IT for.",
+    "hint": "Think about each place.",
+    "explanation": "Each place uses IT for its own job.",
+    "skill_tag": "it.match_job",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Traffic lights"
+     },
+     {
+      "id": "l2",
+      "text": "Clinic"
+     },
+     {
+      "id": "l3",
+      "text": "Checkout"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Keeping health records"
+     },
+     {
+      "id": "r1",
+      "text": "Telling cars when to go"
+     },
+     {
+      "id": "r3",
+      "text": "Reading barcodes"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "spotter",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "IT can make some jobs safer.",
+    "hint": "Think about traffic lights.",
+    "explanation": "Traffic lights make roads safer.",
+    "skill_tag": "it.safer",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "helpful",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Why is a barcode scanner more accurate than typing prices by hand?",
+    "hint": "Think about typing mistakes.",
+    "explanation": "A scanner reads the exact number each time.",
+    "skill_tag": "it.accurate",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is bigger"
+     },
+     {
+      "id": "b",
+      "text": "It reads the same number every time"
+     },
+     {
+      "id": "c",
+      "text": "It talks loudly"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "order",
+    "prompt": "Put these in order from the first to the last when you pay by card.",
+    "hint": "Scan first.",
+    "explanation": "Scan, bill, tap, receipt.",
+    "skill_tag": "it.pay_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "You tap your card"
+     },
+     {
+      "id": "i4",
+      "text": "You get a receipt"
+     },
+     {
+      "id": "i2",
+      "text": "The bill appears"
+     },
+     {
+      "id": "i1",
+      "text": "The items are scanned"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Aisha says IT is only useful for saving time. Is she right?",
+    "hint": "Think about traffic lights and scanners.",
+    "explanation": "IT has many benefits.",
+    "skill_tag": "it.reason_time",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only for time"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only for fun"
+     },
+     {
+      "id": "c",
+      "text": "No. IT can also make jobs safer and more accurate"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Layla says IT never makes mistakes. Is she right?",
+    "hint": "What if the power goes off?",
+    "explanation": "IT can fail or make mistakes.",
+    "skill_tag": "it.reason_perfect",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never wrong"
+     },
+     {
+      "id": "b",
+      "text": "No. IT can be wrong, so we need a backup plan"
+     },
+     {
+      "id": "c",
+      "text": "Yes, computers are perfect"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about benefits.",
+    "hint": "Think about what IT does well.",
+    "explanation": "IT can make jobs safer and more accurate.",
+    "skill_tag": "it.fill_benefits",
+    "points": 2,
+    "text": "IT can make jobs {b1} and more {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "silent"
+       },
+       {
+        "id": "b",
+        "text": "soggy"
+       },
+       {
+        "id": "c",
+        "text": "safer"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "sticky"
+       },
+       {
+        "id": "b",
+        "text": "accurate"
+       },
+       {
+        "id": "c",
+        "text": "hungry"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A clinic has 5 computers. 2 are being fixed. Slide to show how many are working.",
+    "hint": "5 take away 2.",
+    "explanation": "5 - 2 = 3 computers working.",
+    "skill_tag": "it.working",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "number",
+    "prompt": "A clinic has 6 computers. Each room has 2 of them. How many rooms are there?",
+    "hint": "6 shared into 2s.",
+    "explanation": "6 shared into groups of 2 makes 3 rooms.",
+    "skill_tag": "it.share_computers",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which job is best done with a map app?",
+    "hint": "Which job needs directions?",
+    "explanation": "A map app helps find the way.",
+    "skill_tag": "it.choose_map",
+    "options": [
+     {
+      "id": "a",
+      "text": "Giving a hug"
+     },
+     {
+      "id": "b",
+      "text": "Smelling a flower"
+     },
+     {
+      "id": "c",
+      "text": "Finding the way to a new shop"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are good times to switch off screens? Pick two.",
+    "hint": "Think about rest and family.",
+    "explanation": "Bedtime and meals are good times to rest from screens.",
+    "skill_tag": "it.switch_times",
+    "options": [
+     {
+      "id": "a",
+      "text": "During a family meal"
+     },
+     {
+      "id": "b",
+      "text": "While walking across a busy road"
+     },
+     {
+      "id": "c",
+      "text": "Never"
+     },
+     {
+      "id": "d",
+      "text": "At bedtime"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zainab says we must use IT for every job. Is she right?",
+    "hint": "Think about a hug.",
+    "explanation": "We choose IT only when it helps.",
+    "skill_tag": "it.reason_every",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always IT"
+     },
+     {
+      "id": "b",
+      "text": "Yes, never use people"
+     },
+     {
+      "id": "c",
+      "text": "No. Some jobs are better without IT"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "choices",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Omar says IT can replace all people. Is he right?",
+    "hint": "Think about a kind nurse.",
+    "explanation": "IT helps people but cannot replace care.",
+    "skill_tag": "it.reason_replace",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nurses are not needed"
+     },
+     {
+      "id": "b",
+      "text": "No. People care for others and make good choices"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all people"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "choices",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "hotspot",
+    "prompt": "Tap the job a person does best.",
+    "hint": "Think about care.",
+    "explanation": "A hug needs a person.",
+    "skill_tag": "it.person_job",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🤗",
+       "label": "Giving a hug",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "Adding big numbers",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🗺️",
+       "label": "Finding a route",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "What should you do before using a new device or app?",
+    "hint": "Someone who looks after you.",
+    "explanation": "Ask a grown-up first.",
+    "skill_tag": "it.ask_first",
+    "options": [
+     {
+      "id": "a",
+      "text": "Share your password"
+     },
+     {
+      "id": "b",
+      "text": "Download it at once"
+     },
+     {
+      "id": "c",
+      "text": "Ask a grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "choices",
+    "depth": "recall"
+   },
+   {
+    "ref": "q30",
+    "type": "true_false",
+    "prompt": "When IT stops working, a backup plan can still help.",
+    "hint": "Think about a power cut.",
+    "explanation": "A backup plan helps when IT stops.",
+    "skill_tag": "it.backup",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "choices",
+    "depth": "recall"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which describes IT?",
+    "hint": "It uses computers.",
+    "explanation": "IT uses computers to handle information.",
+    "skill_tag": "it.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only paper and pencils"
+     },
+     {
+      "id": "b",
+      "text": "Only farm tools"
+     },
+     {
+      "id": "c",
+      "text": "Computers and devices that handle information"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A wooden spoon uses a computer inside.",
+    "hint": "Does a spoon have a screen?",
+    "explanation": "A spoon has no computer.",
+    "skill_tag": "it.inside",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "match",
+    "prompt": "Join each place to its IT.",
+    "hint": "Think about each place.",
+    "explanation": "Each place uses IT.",
+    "skill_tag": "it.match_place",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Clinic"
+     },
+     {
+      "id": "l2",
+      "text": "Bank"
+     },
+     {
+      "id": "l3",
+      "text": "Playground"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Cash machine"
+     },
+     {
+      "id": "r3",
+      "text": "Fixed sensor sign"
+     },
+     {
+      "id": "r1",
+      "text": "Computer records"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "what",
+    "depth": "apply",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "hotspot",
+    "prompt": "Tap the IT in the school.",
+    "hint": "It is a computer screen.",
+    "explanation": "A smartboard is IT.",
+    "skill_tag": "it.tap_school",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🖥️",
+       "label": "Smartboard",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪑",
+       "label": "Chair",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "✏️",
+       "label": "Pencil",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about screens.",
+    "hint": "Think about a smartboard.",
+    "explanation": "Interactive screens respond to touch.",
+    "skill_tag": "it.fill_meaning",
+    "points": 2,
+    "text": "An {b1} screen responds when we touch it. A smartboard is a big {b2} screen.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wooden"
+       },
+       {
+        "id": "b",
+        "text": "silent"
+       },
+       {
+        "id": "c",
+        "text": "interactive"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "paper"
+       },
+       {
+        "id": "b",
+        "text": "mud"
+       },
+       {
+        "id": "c",
+        "text": "touch"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "what",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Mina says IT is only found at school. Is she right?",
+    "hint": "Think about the supermarket.",
+    "explanation": "IT is all around us.",
+    "skill_tag": "it.reason_desk",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only in offices"
+     },
+     {
+      "id": "b",
+      "text": "No. IT is also in shops, roads and homes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only at school"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Ben says Pakistan has no IT. Is he right?",
+    "hint": "Think about Omar in Lahore.",
+    "explanation": "IT is used in Pakistan.",
+    "skill_tag": "it.reason_countries",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only in cinemas"
+     },
+     {
+      "id": "b",
+      "text": "No. Shops, schools and roads in Pakistan use IT"
+     },
+     {
+      "id": "c",
+      "text": "Yes, none"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "what",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "slider",
+    "prompt": "A classroom has 3 computers and 4 tablets. Slide to show how many devices.",
+    "hint": "3 + 4.",
+    "explanation": "3 + 4 = 7 devices.",
+    "skill_tag": "it.count_devices",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "what",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Why do packets have barcodes?",
+    "hint": "The scanner reads it.",
+    "explanation": "Barcodes let scanners read items.",
+    "skill_tag": "it.barcode_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "So they float"
+     },
+     {
+      "id": "b",
+      "text": "So a scanner can read the item"
+     },
+     {
+      "id": "c",
+      "text": "So they look heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "recall",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multi_select",
+    "prompt": "Which two use IT at a checkout? Pick two.",
+    "hint": "They have computers inside.",
+    "explanation": "A scanner and a bill screen are IT.",
+    "skill_tag": "it.shop_it",
+    "options": [
+     {
+      "id": "a",
+      "text": "A screen showing the bill"
+     },
+     {
+      "id": "b",
+      "text": "A shopping list on paper"
+     },
+     {
+      "id": "c",
+      "text": "A trolley wheel"
+     },
+     {
+      "id": "d",
+      "text": "A scanner"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put these steps for paying in order.",
+    "hint": "Scan first.",
+    "explanation": "Scan, pay, then take the receipt.",
+    "skill_tag": "it.scan_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Tap the card"
+     },
+     {
+      "id": "i3",
+      "text": "Take the receipt"
+     },
+     {
+      "id": "i1",
+      "text": "Scan all the items"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "number",
+    "prompt": "Mum scans 6 apples and 4 pears. How many items is that in all?",
+    "hint": "Add 6 and 4.",
+    "explanation": "6 + 4 = 10 items.",
+    "skill_tag": "it.count_items",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "spotter",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a corner shop has no IT. Is she right?",
+    "hint": "Think about paying.",
+    "explanation": "Corner shops can use IT too.",
+    "skill_tag": "it.reason_shops",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, none at all"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only supermarkets"
+     },
+     {
+      "id": "c",
+      "text": "No. Many corner shops use card machines or phones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a QR code is just a long barcode. Is she right?",
+    "hint": "Look at their shapes.",
+    "explanation": "They are different kinds of code.",
+    "skill_tag": "it.reason_codes",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, same thing"
+     },
+     {
+      "id": "b",
+      "text": "No. A QR code is a square pattern and a barcode is lines"
+     },
+     {
+      "id": "c",
+      "text": "Yes, QR codes are bigger"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "spotter",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "match",
+    "prompt": "Pair each place with its IT job.",
+    "hint": "Think about each place.",
+    "explanation": "Each place uses IT for its own job.",
+    "skill_tag": "it.match_job",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "School office"
+     },
+     {
+      "id": "l2",
+      "text": "Bank machine"
+     },
+     {
+      "id": "l3",
+      "text": "Smartboard"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Giving out money"
+     },
+     {
+      "id": "r1",
+      "text": "Keeping records"
+     },
+     {
+      "id": "r3",
+      "text": "Showing lessons"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "spotter",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "IT can never help with safety.",
+    "hint": "Think about traffic lights.",
+    "explanation": "IT can help keep us safe.",
+    "skill_tag": "it.safer",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "helpful",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Why can a card machine be easier than counting coins?",
+    "hint": "Think about paying.",
+    "explanation": "A card machine saves counting.",
+    "skill_tag": "it.easier",
+    "options": [
+     {
+      "id": "a",
+      "text": "It makes coins bigger"
+     },
+     {
+      "id": "b",
+      "text": "It needs no card"
+     },
+     {
+      "id": "c",
+      "text": "You do not need to count each coin"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "order",
+    "prompt": "Put these steps for using a cash machine in order.",
+    "hint": "Card first.",
+    "explanation": "Card, number, amount, then money.",
+    "skill_tag": "it.pay_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Choose an amount"
+     },
+     {
+      "id": "i4",
+      "text": "Take your money"
+     },
+     {
+      "id": "i2",
+      "text": "Type your secret number"
+     },
+     {
+      "id": "i1",
+      "text": "Put in your card"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Zayd says the only benefit of IT is speed. Is he right?",
+    "hint": "Think about traffic lights and scanners.",
+    "explanation": "IT has many benefits.",
+    "skill_tag": "it.reason_time",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only prettiness"
+     },
+     {
+      "id": "b",
+      "text": "No. IT can be safer, easier and more accurate too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only speed"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Noor says a scanner always reads every barcode perfectly. Is she right?",
+    "hint": "What if the barcode is bent?",
+    "explanation": "IT can make mistakes.",
+    "skill_tag": "it.reason_perfect",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always perfect"
+     },
+     {
+      "id": "b",
+      "text": "No. Sometimes it misses and the cashier tries again"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it cannot fail"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpful",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about IT.",
+    "hint": "Think about the checkout.",
+    "explanation": "IT can be easier and quick.",
+    "skill_tag": "it.fill_benefits",
+    "points": 2,
+    "text": "A card machine makes paying {b1}. A scanner finds prices {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wetter"
+       },
+       {
+        "id": "b",
+        "text": "easier"
+       },
+       {
+        "id": "c",
+        "text": "taller"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "never"
+       },
+       {
+        "id": "b",
+        "text": "quickly"
+       },
+       {
+        "id": "c",
+        "text": "slowly"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A school has 7 computers. 3 are being fixed. Slide to show how many are working.",
+    "hint": "7 take away 3.",
+    "explanation": "7 - 3 = 4 computers working.",
+    "skill_tag": "it.working",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "number",
+    "prompt": "A school has 8 tablets. Each class gets 4. How many classes are there?",
+    "hint": "8 shared into 4s.",
+    "explanation": "8 shared into groups of 4 makes 2 classes.",
+    "skill_tag": "it.share_computers",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "helpful",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which job is a good one for a calculator?",
+    "hint": "Which job needs numbers?",
+    "explanation": "A calculator is good for sums.",
+    "skill_tag": "it.choose_calc",
+    "options": [
+     {
+      "id": "a",
+      "text": "Telling a bedtime story"
+     },
+     {
+      "id": "b",
+      "text": "Checking a long bill"
+     },
+     {
+      "id": "c",
+      "text": "Smiling at a friend"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two times suit a screen break? Pick two.",
+    "hint": "Think about your eyes.",
+    "explanation": "Breaks help tired eyes.",
+    "skill_tag": "it.switch_times",
+    "options": [
+     {
+      "id": "a",
+      "text": "When your eyes feel tired"
+     },
+     {
+      "id": "b",
+      "text": "Never"
+     },
+     {
+      "id": "c",
+      "text": "Only on Sundays"
+     },
+     {
+      "id": "d",
+      "text": "After homework"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Sam says we should use IT even to say good morning to someone next to us. Is he right?",
+    "hint": "Think about a smile.",
+    "explanation": "Some jobs are best done by people.",
+    "skill_tag": "it.reason_every",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always type it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, always call"
+     },
+     {
+      "id": "c",
+      "text": "No. A smile and a hello is better"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "choices",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a robot can be a teacher's only helper for ever. Is she right?",
+    "hint": "Think about a kind teacher.",
+    "explanation": "People do jobs that need care.",
+    "skill_tag": "it.reason_replace",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, teachers are not needed"
+     },
+     {
+      "id": "b",
+      "text": "No. Teachers care, listen and explain in ways machines cannot"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only robots"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "choices",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "hotspot",
+    "prompt": "Tap the job where IT helps most.",
+    "hint": "Think about numbers.",
+    "explanation": "IT is good at adding numbers.",
+    "skill_tag": "it.person_job",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🤗",
+       "label": "Giving a hug",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "Adding big numbers",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "😊",
+       "label": "Smiling at a friend",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "choices",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Who should check a new app before you use it?",
+    "hint": "Someone who looks after you.",
+    "explanation": "A grown-up should check first.",
+    "skill_tag": "it.ask_first",
+    "options": [
+     {
+      "id": "a",
+      "text": "A stranger online"
+     },
+     {
+      "id": "b",
+      "text": "Nobody"
+     },
+     {
+      "id": "c",
+      "text": "A grown-up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "choices",
+    "depth": "recall",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "true_false",
+    "prompt": "If IT stops working, nothing can be done.",
+    "hint": "Think about a power cut.",
+    "explanation": "A backup plan can help.",
+    "skill_tag": "it.backup",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "choices",
+    "depth": "recall",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

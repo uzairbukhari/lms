@@ -133,38 +133,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, young scientist!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do scientists sort living things?\n\nWe will classify, use keys and follow food chains.",
-   "say": "Welcome back, young scientist! Today's big question is: how do scientists sort the millions of living things on Earth? By the end, you will sort animals into groups, use a key, explain how animals suit their homes, and show how a food chain starts with a plant. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🐘🦋🌿🐟",
-   "alt": "Millions of kinds of living things share our planet.",
-   "caption": "Millions of kinds of living things share our planet."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "scientists",
-     "meaning": "People who study the natural world."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "groups",
    "kind": "learn",
    "title": "Vertebrates and invertebrates",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do scientists sort living things?\n\nWe will classify, use keys and follow food chains.",
+     "say": "Today we find out how scientists sort living things, and how food chains start with a plant."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-living-things-1-d08f517a.jpg",
+     "alt": "A coral reef with colourful fish and corals",
+     "caption": "A coral reef is home to many living things.",
+     "credit": "Photo by Oleksandr Sushko on Unsplash",
+     "say": "This coral reef is full of life. Fish, corals and sponges all live here. How could we sort them?"
+    },
     {
      "type": "heading",
      "text": "Stop 1: Animals with and without backbones"
@@ -299,6 +291,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Who eats whom?",
+     "asset": "clip-science-class-4-living-things-949611b0.mp4",
+     "poster": "clip-science-class-4-living-things-949611b0.webp",
+     "seconds": 83,
+     "transcript": "Fatima visits a wetland. She wants to sort the animals she sees. A heron has a backbone. A snail has none. One is a vertebrate, one is not. A key asks yes or no questions. Does it have feathers? Yes, so it is a bird. A camel has wide feet. They stop it sinking into sand. That is an adaptation. In a meadow, grass makes its own food from sunlight. It is the producer. A rabbit eats the grass. A fox hunts the rabbit. Arrows mean is eaten by. Take away the rabbits, and the fox goes hungry. Every link matters. Groups, keys, adaptations and food chains. Well done, young scientist!",
+     "caption": "Sort animals, then follow a food chain from grass to fox."
+    },
+    {
      "type": "summary",
      "points": [
       "Vertebrates have a backbone; invertebrates do not",
@@ -310,6 +315,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "scientists",
+       "meaning": "People who study the natural world."
+      },
       {
        "term": "vertebrates",
        "meaning": "Animals with a backbone."
@@ -725,9 +734,17 @@
      "text": "Stop 1: Suited to their habitat"
     },
     {
+     "type": "image",
+     "asset": "science-class-4-living-things-3-198d4242.jpg",
+     "alt": "A camel standing on desert sand under a blue sky",
+     "caption": "A camel is adapted to desert life.",
+     "credit": "Photo by Faseeh Fawaz on Unsplash",
+     "say": "This camel lives in the desert. Look at its long legs and its hump."
+    },
+    {
      "type": "text",
      "markdown": "An **adaptation** is a feature that helps a living thing survive in its **habitat**.\n\nA camel and a polar bear are adapted to very different homes.",
-     "say": "An adaptation is a feature that helps a living thing survive in its habitat. A camel has wide feet that do not sink in sand, long eyelashes to keep sand out, and a hump that stores fat for food. A polar bear has thick fur and a layer of fat to keep warm in the freezing Arctic. Look at these adaptations in action."
+     "say": "An adaptation is a feature that helps a living thing survive in its habitat. A camel has wide feet that do not sink in sand. Long eyelashes keep sand out. Its hump stores fat for food. A polar bear has thick fur and a layer of fat to keep warm in the freezing Arctic. Look at these adaptations in action."
     },
     {
      "type": "explainer",
@@ -1113,9 +1130,17 @@
      "text": "Stop 2: Producers, predators and prey"
     },
     {
+     "type": "image",
+     "asset": "science-class-4-living-things-2-66dc5b0c.jpg",
+     "alt": "A grey heron standing in shallow wetland water",
+     "caption": "A heron is a predator.",
+     "credit": "Photo by Amit Rai on Unsplash",
+     "say": "A heron wades in the wetland and hunts small animals. It is a predator in a wetland food chain."
+    },
+    {
      "type": "text",
      "markdown": "A **producer** makes its own food. A **predator** hunts **prey**.\n\nA **consumer** eats other living things.",
-     "say": "In a food chain, the plant is the producer, because it makes food. Animals that eat plants are called herbivores, and animals that eat other animals are carnivores. A predator hunts other animals. The animal it hunts is called its prey. In this chain, grass is eaten by a rabbit, the rabbit is prey, and the fox is the predator."
+     "say": "In a food chain, the plant is the producer, because it makes food. Animals that eat plants are called herbivores, and animals that eat other animals are carnivores. A predator hunts other animals. The animal it hunts is called its prey. In this chain, a rabbit eats grass. The rabbit is prey, and the fox is the predator."
     },
     {
      "type": "explainer",
@@ -1822,6 +1847,447 @@
      "b"
     ],
     "skill_tag": "living4.terms",
+    "sub_lesson": "chains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "match",
+    "prompt": "Sort these sea and pond animals into groups.",
+    "hint": "Look at the body, not the home.",
+    "explanation": "An eel is a fish, a whale is a mammal and a salamander is an amphibian.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Eel"
+     },
+     {
+      "id": "l2",
+      "text": "Whale"
+     },
+     {
+      "id": "l3",
+      "text": "Salamander"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Mammal"
+     },
+     {
+      "id": "r3",
+      "text": "Amphibian"
+     },
+     {
+      "id": "r1",
+      "text": "Fish"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "living4.group_three",
+    "sub_lesson": "groups",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "How many vertebrate groups are there if we count mammals, birds, reptiles, amphibians and fish?",
+    "hint": "Count the five names.",
+    "explanation": "There are 5 groups of vertebrates.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "living4.five_groups",
+    "sub_lesson": "groups",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Why is a spider not an insect?",
+    "hint": "Count the legs.",
+    "explanation": "Insects have six legs. Spiders have eight, so they are not insects.",
+    "options": [
+     {
+      "id": "a",
+      "text": "It has wings"
+     },
+     {
+      "id": "b",
+      "text": "It has eight legs, and insects have six"
+     },
+     {
+      "id": "c",
+      "text": "It has a backbone"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.spider",
+    "sub_lesson": "groups",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "fill_blank",
+    "prompt": "Finish this key question.",
+    "hint": "Birds have feathers.",
+    "explanation": "Feathers show a bird. Fur is a feature of mammals.",
+    "points": 2,
+    "text": "Does it have {b1}? If yes, it is a bird. If no, ask: does it have {b2}?",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "gills"
+       },
+       {
+        "id": "b",
+        "text": "feathers"
+       },
+       {
+        "id": "c",
+        "text": "scales"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wings"
+       },
+       {
+        "id": "b",
+        "text": "fur"
+       },
+       {
+        "id": "c",
+        "text": "petals"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "living4.complete_key",
+    "sub_lesson": "keys",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "order",
+    "prompt": "Put the steps of making a key in order.",
+    "hint": "Start with the group.",
+    "explanation": "You choose, ask, split and repeat.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write a yes or no question"
+     },
+     {
+      "id": "i4",
+      "text": "Repeat until each one is alone"
+     },
+     {
+      "id": "i3",
+      "text": "Split the group in two"
+     },
+     {
+      "id": "i1",
+      "text": "Choose the group of living things"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "living4.make_key",
+    "sub_lesson": "keys",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multi_select",
+    "prompt": "Which two are consumers? Pick two.",
+    "hint": "Consumers eat other living things.",
+    "explanation": "A rabbit and a fox eat other living things. Grass and trees make their own food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Grass"
+     },
+     {
+      "id": "b",
+      "text": "An oak tree"
+     },
+     {
+      "id": "c",
+      "text": "A fox"
+     },
+     {
+      "id": "d",
+      "text": "A rabbit"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "living4.consumer",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "A vulture eats animals that are already dead. What is it called?",
+    "hint": "It does not hunt.",
+    "explanation": "A scavenger feeds on dead animals. A predator hunts living ones.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A predator that hunts"
+     },
+     {
+      "id": "b",
+      "text": "A scavenger"
+     },
+     {
+      "id": "c",
+      "text": "A producer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.scavenger",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "true_false",
+    "prompt": "The energy in most food chains first comes from the Sun.",
+    "hint": "Plants use light.",
+    "explanation": "Plants capture light energy from the Sun to make food.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "living4.sun",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "slider",
+    "prompt": "A reef has 20 fish and 8 of them are predators. Slide to show how many are not predators.",
+    "hint": "20 minus 8.",
+    "explanation": "20 - 8 = 12 fish are not predators.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "fish"
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "living4.reef_count",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "hotspot",
+    "prompt": "Tap the adaptation that helps an owl hunt at night.",
+    "hint": "Seeing in the dark.",
+    "explanation": "Large eyes let an owl see in dim light.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "👁️",
+       "label": "Large eyes",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🦆",
+       "label": "Webbed feet",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🦵",
+       "label": "Wide flat feet",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "living4.owl",
+    "sub_lesson": "adapt",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a bat is a bird because it flies. Is she right?",
+    "hint": "Look at the body covering.",
+    "explanation": "Bats have fur and feed milk, so they are mammals.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, a bat is an insect"
+     },
+     {
+      "id": "b",
+      "text": "No. A bat has fur and feeds its young milk, so it is a mammal"
+     },
+     {
+      "id": "c",
+      "text": "Yes, anything that flies is a bird"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.bat",
+    "sub_lesson": "groups",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Sam says animals that live in water must all be fish. Is he right?",
+    "hint": "Group by features, not habitat.",
+    "explanation": "We classify by body features, not where the animal lives.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, only birds live in water"
+     },
+     {
+      "id": "b",
+      "text": "No. Whales and frogs live in or near water but are a mammal and an amphibian"
+     },
+     {
+      "id": "c",
+      "text": "Yes, water animals are fish"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.habitat_group",
+    "sub_lesson": "groups",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says the animal at the end of a food chain is the most important. Is he right?",
+    "hint": "What happens if the plant goes?",
+    "explanation": "Without the producer, nothing else in the chain has food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the top animal matters most"
+     },
+     {
+      "id": "b",
+      "text": "Yes, because it is biggest"
+     },
+     {
+      "id": "c",
+      "text": "No. Every living thing in the chain matters, and the chain starts with the producer"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "living4.top_animal",
+    "sub_lesson": "chains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Layla says the arrows in a food chain point to what is bigger. Is she right?",
+    "hint": "Grass → rabbit.",
+    "explanation": "Arrows show who is eaten by whom, and the energy flow.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, arrows point to bigger animals"
+     },
+     {
+      "id": "b",
+      "text": "No. An arrow means 'is eaten by', so it shows the way energy goes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, arrows point to older animals"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.arrow",
+    "sub_lesson": "chains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a plant starts a food chain because it is the smallest. Is she right?",
+    "hint": "What does a producer do?",
+    "explanation": "A plant is the producer because it makes its own food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it is smallest"
+     },
+     {
+      "id": "b",
+      "text": "No. It starts the chain because it makes its own food"
+     },
+     {
+      "id": "c",
+      "text": "Yes, because it cannot move"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.plant_first",
     "sub_lesson": "chains",
     "depth": "reason"
    },
@@ -2704,6 +3170,462 @@
     "sub_lesson": "chains",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "match",
+    "prompt": "Pair these animals with their groups.",
+    "hint": "Look at the body, not the home.",
+    "explanation": "A shark is a fish, a seal is a mammal and a newt is an amphibian.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Shark"
+     },
+     {
+      "id": "l2",
+      "text": "Seal"
+     },
+     {
+      "id": "l3",
+      "text": "Newt"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Mammal"
+     },
+     {
+      "id": "r1",
+      "text": "Fish"
+     },
+     {
+      "id": "r3",
+      "text": "Amphibian"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "living4.group_three",
+    "sub_lesson": "groups",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "A class sorts animals into the vertebrate groups. How many groups do they need in all?",
+    "hint": "Mammals, birds, reptiles, amphibians, fish.",
+    "explanation": "There are 5 vertebrate groups.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "living4.five_groups",
+    "sub_lesson": "groups",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Which animal is an insect?",
+    "hint": "Six legs.",
+    "explanation": "A beetle has six legs, so it is an insect.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A snail"
+     },
+     {
+      "id": "b",
+      "text": "A beetle"
+     },
+     {
+      "id": "c",
+      "text": "A spider"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.spider",
+    "sub_lesson": "groups",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "fill_blank",
+    "prompt": "Complete this second key question.",
+    "hint": "Fish have gills.",
+    "explanation": "Gills show a fish. Legs help split the rest.",
+    "points": 2,
+    "text": "Does it have {b1}? If yes, it is a fish. If no, ask: does it have {b2}?",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hair"
+       },
+       {
+        "id": "b",
+        "text": "gills"
+       },
+       {
+        "id": "c",
+        "text": "feathers"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fins only"
+       },
+       {
+        "id": "b",
+        "text": "roots"
+       },
+       {
+        "id": "c",
+        "text": "legs"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "living4.complete_key",
+    "sub_lesson": "keys",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "order",
+    "prompt": "Put the steps of using a key in order.",
+    "hint": "Look first.",
+    "explanation": "You look, read, follow and read the name.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Read the first question"
+     },
+     {
+      "id": "i4",
+      "text": "Read the name at the end"
+     },
+     {
+      "id": "i3",
+      "text": "Follow the yes or no branch"
+     },
+     {
+      "id": "i1",
+      "text": "Look at the animal"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "living4.make_key",
+    "sub_lesson": "keys",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multi_select",
+    "prompt": "Which two are consumers? Choose two.",
+    "hint": "They eat other living things.",
+    "explanation": "A frog and a heron eat other living things.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Pondweed"
+     },
+     {
+      "id": "b",
+      "text": "Seaweed"
+     },
+     {
+      "id": "c",
+      "text": "A heron"
+     },
+     {
+      "id": "d",
+      "text": "A frog"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "living4.consumer",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "A hyena sometimes eats leftovers from a kill. Which word fits that behaviour?",
+    "hint": "Leftovers.",
+    "explanation": "Eating leftovers from dead animals is scavenging.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Photosynthesis"
+     },
+     {
+      "id": "b",
+      "text": "Scavenging"
+     },
+     {
+      "id": "c",
+      "text": "Producing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.scavenger",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "true_false",
+    "prompt": "Food chains get their first energy from the soil.",
+    "hint": "Plants use light.",
+    "explanation": "The first energy comes from sunlight, which plants capture.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "living4.sun",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "slider",
+    "prompt": "A pond has 15 animals and 6 are predators. Slide to show how many are not predators.",
+    "hint": "15 minus 6.",
+    "explanation": "15 - 6 = 9 are not predators.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 15,
+     "unit": "animals"
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "skill_tag": "living4.reef_count",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "hotspot",
+    "prompt": "Tap the adaptation that helps a duck swim.",
+    "hint": "Paddles.",
+    "explanation": "Webbed feet push against water like paddles.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🦆",
+       "label": "Webbed feet",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "👁️",
+       "label": "Large eyes",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐪",
+       "label": "Hump",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "living4.owl",
+    "sub_lesson": "adapt",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a penguin is a fish because it swims. Is he right?",
+    "hint": "Look at the body covering.",
+    "explanation": "Penguins have feathers and lay eggs, so they are birds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, a penguin is a mammal"
+     },
+     {
+      "id": "b",
+      "text": "No. A penguin has feathers and lays eggs, so it is a bird"
+     },
+     {
+      "id": "c",
+      "text": "Yes, swimming means fish"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.bat",
+    "sub_lesson": "groups",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Mina says all animals that live on land are mammals. Is she right?",
+    "hint": "Group by features.",
+    "explanation": "Many kinds of animals live on land.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, only fish live on land"
+     },
+     {
+      "id": "b",
+      "text": "No. Birds, reptiles and insects live on land too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, land animals are mammals"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.habitat_group",
+    "sub_lesson": "groups",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ali says the smallest living thing in a chain is the least important. Is he right?",
+    "hint": "Follow the arrows.",
+    "explanation": "Every link supports the next one.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, small means unimportant"
+     },
+     {
+      "id": "b",
+      "text": "No. If it disappears, the animals that eat it lose their food"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only big animals count"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living4.top_animal",
+    "sub_lesson": "chains",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Omar says arrows in a food chain mean 'eats'. Is he right?",
+    "hint": "Grass → rabbit.",
+    "explanation": "The arrow starts at the food and points to the animal that eats it.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the arrow points to the food"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it shows who is stronger"
+     },
+     {
+      "id": "c",
+      "text": "No. The arrow points from the food to the eater: it means 'is eaten by'"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "living4.arrow",
+    "sub_lesson": "chains",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Ben says grass is first in a food chain because it grows slowly. Is he right?",
+    "hint": "What does a producer do?",
+    "explanation": "A producer makes its own food from sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it is slow"
+     },
+     {
+      "id": "b",
+      "text": "Yes, because it is green"
+     },
+     {
+      "id": "c",
+      "text": "No. Grass is first because it makes food using sunlight"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "living4.plant_first",
+    "sub_lesson": "chains",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

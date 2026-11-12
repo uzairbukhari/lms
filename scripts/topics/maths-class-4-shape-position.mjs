@@ -1,8 +1,12 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, PHOTO, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-4-shape-position.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-4-shape-position-d1-97608df6.png","alt":"Three triangles labelled acute, right and obtuse with their angle sizes","caption":"Acute, right and obtuse triangles."};
+const COTEACH_B = {"type":"image","asset":"maths-class-4-shape-position-d2-45f08db4.png","alt":"A shape and its reflected copy either side of a mirror line","caption":"A shape and its reflection."};
 // Class 4 (Fatima) Maths topic 5: Shape and position. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
+const BUTTER_PHOTO = "maths-class-4-shape-position-1-eb732bfa.jpg";
 const clock = (id, hour, minute, x = 50, y = 50, size = 3) => [id, { kind: "clock", hour, minute }, x, y, size];
 const AX = [["x1", "🔹", 35, 84, 1, "none", "1"], ["x2", "🔹", 50, 84, 1, "none", "2"], ["x3", "🔹", 65, 84, 1, "none", "3"], ["y1", "🔹", 12, 62, 1, "none", "1"], ["y2", "🔹", 12, 44, 1, "none", "2"]];
 const grid = (id, col, row, facing = "right", x = 50, y = 50, size = 3) => [id, { kind: "robot_grid", col, row, facing }, x, y, size];
@@ -10,6 +14,11 @@ const grid = (id, col, row, facing = "right", x = 50, y = 50, size = 3) => [id, 
 const angles = {
   id: "shapes_angles", kind: "learn", title: "Angles and polygons",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Have you ever looked closely at the tiles on a mosque wall? They are made from stars, squares and triangles that fit together perfectly. Mathematicians and artists planned them with angles and symmetry. Today you will name angles and polygons. You will find lines of symmetry and plot points on a grid. You will also fold nets into 3D shapes. Let's go!",
+      PHOTO(BUTTER_PHOTO, "A black, orange and white butterfly with its wings open, showing symmetry", "A butterfly's two wings match, like a mirror image.", "Photo by Fleur on Unsplash")),
+    T("Today's big question: how do shapes fit together to make beautiful patterns and buildings?"),
+    IMG("🕌", "Mosque tiles use shapes and symmetry."),
     H("Stop 1: Angles"),
     SAY("An angle is the amount of turn between two lines that meet at a point. We measure angles in degrees. Look at a clock. At three o'clock, the hands make a square corner. That is a right angle, exactly ninety degrees. An angle smaller than a right angle is acute. An angle bigger than a right angle, but smaller than a straight line, is obtuse. A straight line is one hundred and eighty degrees.", T("An **angle** is a turn. A **right angle** is 90°. **Acute** is smaller than 90°. **Obtuse** is bigger than 90° but smaller than 180°.", "A straight line is 180°.")),
     EXPP("Angles on a clock",
@@ -17,13 +26,14 @@ const angles = {
       SS("At three o'clock the hands make a square corner. That is a right angle, ninety degrees.", S("Right angle: 90°", clock("c", 3, 0))),
       SS("At four o'clock the hands open wider. That is an obtuse angle, one hundred and twenty degrees.", S("Obtuse: 120°", clock("c", 4, 0))),
       SS("At six o'clock the hands make a straight line. That is one hundred and eighty degrees.", S("Straight line: 180°", clock("c", 6, 0)))),
+    SAY("An acute angle is smaller than ninety degrees. A right angle is ninety. An obtuse angle is bigger.", COTEACH_A),
     CHK(mc("A clock shows two o'clock. What kind of angle do the hands make?", "Acute", ["Right", "Obtuse"], { hint: "Is it smaller or bigger than a square corner?", why: "At two o'clock the angle is 60°, smaller than a right angle, so it is acute.", tag: "shape.angles" })),
     H("Stop 2: Polygons"),
     SAY("A polygon is a flat shape with straight sides. We name polygons by how many sides they have. Three sides make a triangle. Four make a quadrilateral. Five make a pentagon. Six make a hexagon. Eight make an octagon. A square is a special quadrilateral: it has four equal sides and four right angles. A rectangle has four right angles and opposite sides equal. So every square is a rectangle, but not every rectangle is a square.", T("A **polygon** has straight sides. 3 triangle, 4 quadrilateral, 5 pentagon, 6 hexagon, 8 octagon.", "A square is a special rectangle with four equal sides.")),
     IMG("🔺⬛⬠⬡🛑", "Triangle, square, pentagon, hexagon and octagon."),
     CHK(num("How many sides does a heptagon have?", 7, { hint: "Hepta means seven.", why: "A heptagon has 7 sides.", tag: "shape.polygons" })),
     SAY("Remember. Angles are turns. Right is 90, acute is smaller and obtuse is bigger. Polygons are named by their sides.", SUM("Right angle 90°, acute smaller, obtuse bigger", "A straight line is 180°", "Polygons are named by their number of sides")),
-    GLOSS({ angle: "The amount of turn between two lines that meet.", "right angle": "A square corner, 90 degrees.", acute: "An angle smaller than a right angle.", obtuse: "An angle bigger than a right angle but smaller than a straight line.", polygon: "A flat shape with straight sides.", degrees: "The unit we use to measure angles." }),
+    GLOSS({ shapes: "Flat or solid forms with sides, corners and faces.", angle: "The amount of turn between two lines that meet.", "right angle": "A square corner, 90 degrees.", acute: "An angle smaller than a right angle.", obtuse: "An angle bigger than a right angle but smaller than a straight line.", polygon: "A flat shape with straight sides.", degrees: "The unit we use to measure angles." }),
   ],
   mini: [
     tf("A right angle is 90°.", true, { hint: "Think of a square corner.", why: "A right angle is 90 degrees." }),
@@ -42,6 +52,7 @@ const symmetry = {
       SS("Here is a butterfly with its wings open.", S("A butterfly", ["b", "🦋", 50, 50, 3, "none", "butterfly"])),
       SS("Draw a line down the middle. This is the line of symmetry.", S("The line of symmetry", ["b", "🦋", 50, 50, 3, "none"], ["l", "│", 50, 50, 3, "pulse"])),
       SS("Fold along the line and the left wing sits exactly on the right wing. They match, so the butterfly is symmetrical.", S("Both halves match", ["b", "🦋", 38, 50, 3, "none", "left"], ["m", "🦋", 62, 50, 3, "pulse", "right"]))),
+    SAY("Each point is the same distance from the mirror line as its reflection.", COTEACH_B),
     CHK(num("How many lines of symmetry does the letter H have?", 2, { hint: "Fold across and down.", why: "The letter H has 2 lines of symmetry.", tag: "shape.symmetry" })),
     SAY("Now try it with shapes. Here are twenty tiles. Make a symmetrical pattern, with the left matching the right.", MAN("Mirror pattern", "Place the tiles in the boxes so the left side is a mirror of the right side.", "🔷", 20, ["Left side", "Right side"])),
     H("Stop 2: Islamic star patterns"),
@@ -70,7 +81,7 @@ const coords = {
       SS("Then two squares up. We are at three, two.", S("then 2 up: (3, 2)", ["o", "🏁", 12, 80, 2, "none", "(0, 0)"], ...AX, ["p", "📍", 65, 44, 3, "pulse", "(3, 2)"]))),
     CHK(mc("Which point is 4 across and 1 up?", "(4, 1)", ["(1, 4)", "(4, 4)"], { hint: "Across first, then up.", why: "(4, 1) means 4 across and 1 up.", tag: "shape.coordinates" })),
     H("Stop 2: Mirror images"),
-    SAY("When we reflect a shape in a mirror line, every point is the same distance from the mirror, but on the other side. If the mirror is a vertical line, a point two squares to the left of the line ends up two squares to the right. The shape is the same size, just flipped.", T("A **reflection** is a mirror image. Each point is the same distance from the mirror line, on the other side.")),
+    SAY("When we reflect a shape, every point is the same distance from the mirror line. The point sits on the other side. If the mirror is vertical, a point two squares left ends up two squares right. The shape is the same size, just flipped.", T("A **reflection** is a mirror image. Each point is the same distance from the mirror line, on the other side.")),
     EXPP("Reflecting a point",
       SS("A star is two squares to the left of the mirror line.", S("2 left of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "🪞", 50, 50, 3, "none", "mirror"])),
       SS("Its reflection is two squares to the right. Same distance, other side.", S("2 right of the mirror", ["s", "⭐", 30, 50, 3, "none", "star"], ["m", "🪞", 50, 50, 3, "none", "mirror"], ["r", "⭐", 70, 50, 3, "pulse", "reflection"]))),
@@ -92,7 +103,7 @@ const solids = {
   id: "solids", kind: "use", title: "3D shapes and nets",
   blocks: [
     H("Stop 1: Faces, edges and vertices"),
-    SAY("3D shapes have faces, edges and vertices. A face is a flat surface. An edge is where two faces meet. A vertex is a corner. A cube has six faces, twelve edges and eight vertices. Many buildings use 3D shapes. A minaret is a cylinder, the dome of a mosque is a half sphere, and a pyramid has a square base.", T("**Faces** are flat surfaces, **edges** are where faces meet, and **vertices** are corners.", "A cube has 6 faces, 12 edges and 8 vertices.")),
+    SAY("3D shapes have faces, edges and vertices. A face is a flat surface. An edge is where two faces meet. A vertex is a corner. A cube has six faces, twelve edges and eight vertices. Many buildings use 3D shapes. A minaret is a cylinder. A mosque dome is a half sphere. A pyramid has a square base.", T("**Faces** are flat surfaces, **edges** are where faces meet, and **vertices** are corners.", "A cube has 6 faces, 12 edges and 8 vertices.")),
     IMG("🧊🥫🔺⚽", "Cube, cylinder, pyramid and sphere."),
     CHK(num("How many faces does a cube have?", 6, { hint: "Think of a dice.", why: "A cube has 6 square faces.", tag: "shape.solids" })),
     H("Stop 2: Nets"),
@@ -131,6 +142,24 @@ const ALTS = [
   [num("A cube has 8 vertices and a square-based pyramid has 5 vertices. How many vertices together?", 13, { hint: "Add them.", why: "8 + 5 = 13.", tag: "shape.solids_reason" }), num("A cylinder has 3 faces and a cube has 6 faces. How many faces together?", 9, { hint: "Add them.", why: "3 + 6 = 9.", tag: "shape.solids_reason" })],
 ];
 
+const clip = {
+  title: "Robo-Mina finds the treasure", backdrop: "classroom", caption: "Mina's robot moves across a grid to find the treasure.",
+  scenes: [
+    { caption: "Mina and her robot.", say: "This is Mina. Her robot starts at the corner of a grid.",
+      items: [{ id: "m", emoji: "👧", label: "Mina", x: 22, y: 56, size: 3, anim: "bounce", enter: "walk_right" }, { id: "r", emoji: "🤖", label: "robot", x: 72, y: 48, size: 3, enter: "pop" }] },
+    { caption: "Start at (0, 0).", say: "The robot starts at zero, zero, in the bottom left corner.",
+      items: [{ id: "o", emoji: "🏁", label: "(0, 0)", x: 20, y: 80, size: 2, effect: "glow" }] },
+    { caption: "Three across.", say: "First, the robot moves three squares across to the right.",
+      items: [{ id: "a", emoji: "➡️", label: "3 across", x: 50, y: 46, size: 3, enter: "slide_right" }] },
+    { caption: "Two up.", say: "Then it moves two squares up. Now it is at three, two.",
+      items: [{ id: "u", emoji: "⬆️", label: "2 up", x: 50, y: 46, size: 3, enter: "slide_left" }] },
+    { caption: "Treasure at (3, 2).", say: "The treasure is at three, two. The robot found it!",
+      items: [{ id: "t", emoji: "📍", label: "(3, 2)", x: 50, y: 40, size: 3, effect: "sparkle" }, { id: "r", emoji: "🤖", label: "robot", x: 60, y: 50, size: 2 }] },
+    { caption: "Shukriya, Mina!", say: "Across first, then up. Shukriya, Mina!",
+      items: [{ id: "m", emoji: "👧", label: "Mina", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "🎉", label: "Found it!", x: 70, y: 40, size: 2, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-4-shape-position", subject: "maths", cls: 4, topic: 5, title: "Shape and Position",
@@ -149,13 +178,9 @@ export const topics = [
       num("A rectangle is 6 cm by 4 cm. What is its area in square cm?", 24, { hint: "Length × width.", why: "6 × 4 = 24." }),
       mc("What is 3:00 pm in 24-hour time?", "15:00", ["13:00", "03:00"], { hint: "Add 12.", why: "3 + 12 = 15." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Have you ever looked closely at the tiles on a mosque wall? They are made from stars, squares and triangles that fit together perfectly. Mathematicians and artists planned them with angles and symmetry. Today you will learn how shapes work. You will name angles and polygons, find lines of symmetry, plot points on a grid, and fold nets into 3D shapes. Let's go!", T("Today's big question: how do shapes fit together to make beautiful patterns and buildings?")),
-      IMG("🕌", "Mosque tiles use shapes and symmetry."),
-      GLOSS({ shapes: "Flat or solid forms with sides, corners and faces." }),
-    ],
+    intro: [],
     subs: [angles, symmetry, coords, solids],
+    clip,
     quiz: [
       { q: mc("Which angle is smaller than a right angle?", "Acute", ["Obtuse", "Straight"], { hint: "A right angle is 90°.", why: "Acute angles are smaller than 90°.", tag: "shape.angles" }), sub: "shapes_angles", depth: "recall" },
       { q: num("How many sides does a hexagon have?", 6, { hint: "Hex means six.", why: "6 sides.", tag: "shape.polygons" }), sub: "shapes_angles", depth: "recall" },
@@ -172,6 +197,36 @@ export const topics = [
       { q: num("How many lines of symmetry does a square have?", 4, { hint: "Fold across, down and both corners.", why: "4 lines.", tag: "shape.symmetry" }), sub: "symmetry", depth: "apply" },
       { q: mc("Hana says a rectangle has 4 lines of symmetry. Is she right?", "No, a rectangle has 2 lines of symmetry; a square has 4", ["Yes, 4", "No, it has none"], { hint: "Fold across and down.", why: "A rectangle that is not a square has 2 lines.", tag: "shape.symmetry_reason" }), sub: "symmetry", depth: "reason" },
       { q: num("A cube has 6 faces and a square-based pyramid has 5 faces. How many faces together?", 11, { hint: "Add them.", why: "6 + 5 = 11.", tag: "shape.solids_reason" }), sub: "solids", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      { q: tf("A right angle is bigger than an acute angle.", true, { hint: "Acute is smaller than 90°.", why: "An acute angle is under 90°, and a right angle is 90°.", tag: "shape.angles" }), sub: "shapes_angles", depth: "recall",
+        alts: [tf("An obtuse angle is smaller than a right angle.", false, { hint: "Obtuse is bigger than 90°.", why: "An obtuse angle is more than 90°.", tag: "shape.angles" })] },
+      { q: fill("Finish the sentences about 7-sided shapes.", "A shape with 7 sides is a {b1}. A shape with 6 sides is a {b2}.", [["heptagon", "octagon", "pentagon"], ["hexagon", "heptagon", "octagon"]], { hint: "Hepta means seven. Hexa means six.", why: "A heptagon has 7 sides and a hexagon has 6.", tag: "shape.language" }), sub: "shapes_angles", depth: "apply",
+        alts: [fill("Finish the sentences about 10-sided shapes.", "A shape with 10 sides is a {b1}. A shape with 3 sides is a {b2}.", [["decagon", "nonagon", "octagon"], ["triangle", "square", "pentagon"]], { hint: "Deca means ten.", why: "A decagon has 10 sides and a triangle has 3.", tag: "shape.language" })] },
+      { q: ms("Which two shapes have 4 equal sides? Pick two.", ["Square", "Rhombus"], ["Rectangle", "Right-angled triangle"], { hint: "Check whether all four sides are the same length.", why: "A square and a rhombus both have four equal sides.", tag: "shape.properties" }), sub: "shapes_angles", depth: "apply",
+        alts: [ms("Pick the two shapes with exactly 3 sides.", ["Isosceles triangle", "Equilateral triangle"], ["Square", "Pentagon"], { hint: "Tri means three.", why: "Both triangles have 3 sides.", tag: "shape.polygons" })] },
+      { q: ord("Put these shapes in order, fewest sides first.", ["triangle", "quadrilateral", "pentagon", "octagon"], { hint: "Count the sides.", why: "3, 4, 5, then 8 sides.", tag: "shape.polygons" }), sub: "shapes_angles", depth: "apply",
+        alts: [ord("Put these angles in order, biggest first.", ["straight line", "obtuse angle", "right angle", "acute angle"], { hint: "Think about degrees.", why: "180°, then 120°, then 90°, then under 90°.", tag: "shape.angles" })] },
+      { q: sld("Slide to show an obtuse angle of 120 degrees.", { min: 0, max: 180, step: 5 }, 120, 0, { hint: "Bigger than 90, smaller than 180.", why: "120° is between 90° and 180°.", tag: "shape.angles" }), sub: "shapes_angles", depth: "apply",
+        alts: [sld("Slide to show an acute angle of 45 degrees.", { min: 0, max: 180, step: 5 }, 45, 0, { hint: "Smaller than 90°.", why: "45° is an acute angle.", tag: "shape.angles" })] },
+      { q: mat("Join each shape to its number of corners.", [["Square", "4"], ["Hexagon", "6"], ["Triangle", "3"]], { hint: "Corners are vertices.", why: "A square has 4 corners, a hexagon 6 and a triangle 3.", tag: "shape.polygons" }), sub: "shapes_angles", depth: "apply",
+        alts: [mat("Pair each shape with its number of sides.", [["Pentagon", "5"], ["Heptagon", "7"], ["Quadrilateral", "4"]], { hint: "Penta means five.", why: "A pentagon has 5, a heptagon 7 and a quadrilateral 4.", tag: "shape.polygons" })] },
+      { q: hot("Tap the star point at (2, 4).", [["⭐", "A: (4, 2)", 22, 50], ["⭐", "B: (2, 4)", 50, 50], ["⭐", "C: (2, 2)", 78, 50]], ["B: (2, 4)"], { labels: true, hint: "2 across, 4 up.", why: "(2, 4) is 2 across and 4 up.", tag: "shape.coordinates" }), sub: "coordinates", depth: "apply",
+        alts: [hot("Tap the star point at (6, 1).", [["⭐", "A: (1, 6)", 22, 50], ["⭐", "B: (6, 1)", 50, 50], ["⭐", "C: (6, 6)", 78, 50]], ["B: (6, 1)"], { labels: true, hint: "6 across, 1 up.", why: "(6, 1) is 6 across and 1 up.", tag: "shape.coordinates" })] },
+      { q: mc("Sara says (0, 4) is 4 across and 0 up. Is she right?", "No, (0, 4) is 0 across and 4 up", ["Yes, 4 across and 0 up", "No, it is 4 across and 4 up"], { hint: "The first number is across.", why: "The first number is across, so 0 across and 4 up.", tag: "shape.coordinates_reason" }), sub: "coordinates", depth: "reason",
+        alts: [mc("Nora says (5, 0) is 0 across and 5 up. Is she right?", "No, (5, 0) is 5 across and 0 up", ["Yes, 0 across and 5 up", "No, it is 5 across and 5 up"], { hint: "The first number is across.", why: "The first number is across, so 5 across and 0 up.", tag: "shape.coordinates_reason" })] },
+      { q: mc("Layla says a square has 2 lines of symmetry because it has 2 pairs of equal sides. Is she right?", "No, a square has 4 lines of symmetry", ["Yes, 2 pairs make 2 lines", "No, a square has 1 line"], { hint: "Fold across, down and both corners.", why: "A square has 4 lines: 2 across and down, and 2 on the corners.", tag: "shape.symmetry_reason" }), sub: "symmetry", depth: "reason",
+        alts: [mc("Hana says a regular hexagon has 3 lines of symmetry. Is she right?", "No, a regular hexagon has 6 lines of symmetry", ["Yes, 3 lines", "No, it has 1 line"], { hint: "One line through each pair of corners or sides.", why: "A regular hexagon has 6 lines.", tag: "shape.symmetry_reason" })] },
+      { q: mc("Omar says a parallelogram has a line of symmetry because it splits in half. Is he right?", "No. Folding a parallelogram does not make the two halves match", ["Yes, it splits in half", "No, it has 2 lines"], { hint: "Try folding it.", why: "Splitting in half is not enough. The two halves must match exactly when folded.", tag: "shape.symmetry_reason" }), sub: "symmetry", depth: "reason",
+        alts: [mc("Zara says a kite has a line of symmetry. Is she right?", "Yes, a kite folds along one diagonal so both halves match", ["No, a kite has no lines", "No, a kite has 4 lines"], { hint: "Try folding along the long diagonal.", why: "A kite folds along one diagonal so both halves match.", tag: "shape.symmetry_reason" })] },
+      { q: mc("Ben says a cube has 8 faces because it has 8 corners. Is he right?", "No. A cube has 6 faces, and 8 corners (vertices)", ["Yes, faces and corners are the same", "No, a cube has 12 faces"], { hint: "Faces are flat surfaces.", why: "8 is the number of vertices, not faces. A cube has 6 faces.", tag: "shape.solids_reason" }), sub: "solids", depth: "reason",
+        alts: [mc("Lina says a cuboid has 12 faces because it has 12 edges. Is she right?", "No. A cuboid has 6 faces and 12 edges", ["Yes, 12 faces", "No, it has 8 faces"], { hint: "Faces are flat surfaces, edges are where faces meet.", why: "12 is the number of edges, not faces.", tag: "shape.solids_reason" })] },
+      { q: mc("Mina says a row of 6 squares folds into a cube. Is she right?", "No. Six squares in a row wrap into a tube, not a cube", ["Yes, any 6 squares make a cube", "No, it folds into a pyramid"], { hint: "Picture folding the row round.", why: "A row of 6 squares wraps round into a tube with no lid, not a cube.", tag: "shape.nets_reason" }), sub: "solids", depth: "reason",
+        alts: [mc("Dan says a cross of 6 squares folds into a cube. Is he right?", "Yes, a cross of 6 squares is a cube net", ["No, it folds into a tube", "No, it does not fold"], { hint: "Think about the cube net from the lesson.", why: "A cross shape of 6 squares is a net of a cube.", tag: "shape.nets_reason" })] },
+      { q: num("How many sides does a nonagon have?", 9, { hint: "Nona means nine.", why: "A nonagon has 9 sides.", tag: "shape.polygons" }), sub: "shapes_angles", depth: "apply",
+        alts: [num("How many sides does a decagon have?", 10, { hint: "Deca means ten.", why: "A decagon has 10 sides.", tag: "shape.polygons" })] },
+      { q: num("How many faces does a triangular prism have?", 5, { hint: "2 triangles and 3 rectangles.", why: "2 + 3 = 5 faces.", tag: "shape.solids" }), sub: "solids", depth: "apply",
+        alts: [num("How many edges does a triangular prism have?", 9, { hint: "3 on top, 3 on the bottom and 3 up the sides.", why: "3 + 3 + 3 = 9 edges.", tag: "shape.solids" })] },
+      { q: num("How many lines of symmetry does a regular hexagon have?", 6, { hint: "One line through each pair of corners or sides.", why: "A regular hexagon has 6 lines.", tag: "shape.symmetry" }), sub: "symmetry", depth: "apply",
+        alts: [num("How many lines of symmetry does a regular octagon have?", 8, { hint: "Count the pairs.", why: "A regular octagon has 8 lines.", tag: "shape.symmetry" })] },
+    ].map((x, i) => ({ alts: ALTS[i], ...x })),
   }),
 ];

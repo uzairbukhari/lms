@@ -66,12 +66,11 @@ describe("topicLesson with a clip", () => {
       slug, subject: file.lesson.subject, cls: file.lesson.age_band === "7-8" ? 1 : 4, topic: file.lesson.curriculum.topic, title: file.lesson.title, summary: file.lesson.summary,
       unit: file.lesson.unit, difficulty: file.lesson.difficulty, objectives: file.lesson.learning_objectives, success_criteria: file.lesson.success_criteria, real_life: file.lesson.real_life,
       standards: file.lesson.standards, warm_up: file.lesson.warm_up, intro: file.blocks,
-      subs: file.sub_lessons.map((s: any) => ({ id: s.id, kind: s.kind, title: s.title, blocks: s.blocks, mini: s.mini_quiz })),
+      // Lessons are now built with their clip already in place, so take it (and its "Movie time" heading) out first: this test adds the clip itself.
+      subs: file.sub_lessons.map((s: any) => ({ id: s.id, kind: s.kind, title: s.title, blocks: s.blocks.filter((b: any, i: number, all: any[]) => b.type !== "clip" && !(b.type === "heading" && b.text === "Movie time" && all[i + 1]?.type === "clip")), mini: s.mini_quiz })),
       quiz: mains.map((m: any) => ({ q: strip(m), sub: m.sub_lesson, depth: m.depth, alts: file.quiz.questions.filter((v: any) => v.variant_of === m.ref).map(strip) })),
     };
-    // Without a clip the lesson is exactly what was built before.
-    expect(topicLesson(spec).sub_lessons.flatMap((s: any) => s.blocks).some((b: any) => b.type === "clip")).toBe(false);
-
+    // (Without a clip a lesson on the new standard is refused by the guideline audit, so only the with-clip build is checked here.)
     const withClip = topicLesson({ ...spec, clip: { ...sample, caption: "Watch Pip share a pizza." } });
     const parsed = parseLessonFile(withClip);
     if (!parsed.ok) throw new Error(JSON.stringify(parsed.issues));
@@ -88,7 +87,8 @@ describe("topicLesson with a clip", () => {
     expect(learn.blocks[at].seconds).toBeLessThanOrEqual(90);
     expect(learn.blocks[at].transcript).toContain("Pip the mouse");
     expect(CLIP_SPECS.get(slug)).toEqual(sample);
-    expect(withClip.sub_lessons.filter((s: any) => s.kind !== "learn")).toEqual(topicLesson(spec).sub_lessons.filter((s: any) => s.kind !== "learn"));
+    // The clip only touches the learn part: every other part is exactly what the spec says.
+    expect(withClip.sub_lessons.filter((s: any) => s.kind !== "learn").map((s: any) => s.blocks)).toEqual(spec.subs.filter((s: any) => s.kind !== "learn").map((s: any) => s.blocks));
   });
 
   it("refuses a clip spec that breaks the rules", async () => {

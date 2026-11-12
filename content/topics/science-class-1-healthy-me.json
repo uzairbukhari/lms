@@ -1,0 +1,3078 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-healthy-me",
+  "subject": "science",
+  "title": "Healthy Me",
+  "summary": "How food, exercise, sleep and washing keep our bodies healthy.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Healthy me",
+  "learning_objectives": [
+   "Name types of food and how much to eat",
+   "Explain why we need exercise and sleep",
+   "Wash hands properly and keep clean"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 animals incl. humans",
+    "text": "Describe the importance for humans of exercise, eating the right amounts of different types of food, and hygiene"
+   }
+  ],
+  "success_criteria": [
+   "I can name the four food groups",
+   "I know why exercise and sleep matter",
+   "I can wash my hands properly"
+  ],
+  "real_life": "Packing a school lunch with daal, roti and fruit chaat, and washing hands before meals.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the best drink?",
+    "hint": "It has nothing added.",
+    "explanation": "Water is the best drink.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Cola"
+     },
+     {
+      "id": "b",
+      "text": "Water"
+     },
+     {
+      "id": "c",
+      "text": "Sugary squash"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Fruit is good for us.",
+    "hint": "Think of apples.",
+    "explanation": "Fruit has vitamins.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What do we use to wash our hands?",
+    "hint": "At the sink.",
+    "explanation": "Soap and water wash hands.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand"
+     },
+     {
+      "id": "b",
+      "text": "Paper"
+     },
+     {
+      "id": "c",
+      "text": "Soap and water"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "food",
+   "kind": "learn",
+   "title": "Types of food",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we stay healthy?",
+     "say": "Today we find out how to stay healthy. What helps our bodies grow strong?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-healthy-me-1-bf0112bd.jpg",
+     "alt": "Red apples, strawberries, tomatoes, peppers and raspberries arranged around a white space",
+     "caption": "Red fruit and vegetables. A healthy plate has many colours.",
+     "credit": "Photo by Jakub Kapusnak on Unsplash",
+     "say": "Look at all these colours. Fruit and vegetables are part of a healthy diet."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Food groups"
+    },
+    {
+     "type": "text",
+     "markdown": "A **diet** is all the food we eat.",
+     "say": "Food comes in groups. Each group does a different job for our bodies."
+    },
+    {
+     "type": "explainer",
+     "title": "Four food groups",
+     "scenes": [
+      {
+       "caption": "Fruit and veg.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍎",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🥕",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Fruit and vegetables give us vitamins. They keep us healthy."
+      },
+      {
+       "caption": "Starchy food.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍞",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🍚",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Bread, rice and roti give us energy to run and play."
+      },
+      {
+       "caption": "Protein.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥚",
+         "x": 20,
+         "y": 60,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐟",
+         "x": 48,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🫘",
+         "x": 76,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Meat, fish, eggs and daal are protein. Protein helps us grow."
+      },
+      {
+       "caption": "Dairy.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥛",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧀",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Milk, yoghurt and cheese are dairy. They help make strong bones."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which food group gives us energy to run and play?",
+      "hint": "Think of roti.",
+      "explanation": "Bread, rice and roti give us energy.",
+      "skill_tag": "healthy.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sweets"
+       },
+       {
+        "id": "b",
+        "text": "Water"
+       },
+       {
+        "id": "c",
+        "text": "Bread, rice and roti"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sometimes foods"
+    },
+    {
+     "type": "text",
+     "markdown": "**Treats** are for sometimes, not every day.",
+     "say": "Sweets, crisps and fizzy drinks are treats. We eat them only sometimes."
+    },
+    {
+     "type": "text",
+     "markdown": "Water keeps our bodies working well.",
+     "say": "Water is the best drink. We drink some all through the day."
+    },
+    {
+     "type": "explainer",
+     "title": "Everyday and treat foods",
+     "scenes": [
+      {
+       "caption": "Healthy.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🍓",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Zainab eats fruit chaat after school. That is a healthy snack."
+      },
+      {
+       "caption": "A treat.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🍬",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "On Eid she enjoys a sweet treat. That is fine as a treat."
+      },
+      {
+       "caption": "Drinks.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 65,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Every day she drinks water or milk, not fizzy drinks."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Sweets are a treat to enjoy only sometimes.",
+      "hint": "Can we eat sweets all day?",
+      "explanation": "Sweets are for sometimes, not every day.",
+      "skill_tag": "healthy.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab fights the germs",
+     "asset": "clip-science-class-1-healthy-me-61e14300.mp4",
+     "poster": "clip-science-class-1-healthy-me-61e14300.webp",
+     "seconds": 69,
+     "transcript": "Zainab wants to stay healthy. She has a plan for each day. At lunch she eats a rainbow plate. It has fruit, roti and daal. She drinks water. Fizzy drinks are not for every day. After school she runs in the park. Her heart beats faster. Tiny germs sit on the door handle. Zainab cannot see them. She washes her hands with soap and water. The germs wash away! At night she brushes her teeth. Then she goes to sleep. Sleep helps her grow. Alhamdulillah, she feels well and strong!",
+     "caption": "Zainab uses soap bubbles and a rainbow plate to stay healthy."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Food has four groups: fruit and veg, starchy food, protein, dairy",
+      "Each group does a job for our bodies",
+      "Sweets and fizzy drinks are treats"
+     ],
+     "say": "Let us remember. Eat from all the food groups. Treats are for sometimes."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "diet",
+       "meaning": "All the food and drink we have."
+      },
+      {
+       "term": "treats",
+       "meaning": "Foods we eat only sometimes, such as sweets."
+      },
+      {
+       "term": "vitamins",
+       "meaning": "Things in food that keep our bodies healthy."
+      },
+      {
+       "term": "protein",
+       "meaning": "Food that helps us grow, such as fish, eggs and daal."
+      },
+      {
+       "term": "dairy",
+       "meaning": "Foods made from milk."
+      },
+      {
+       "term": "energy",
+       "meaning": "What our bodies use to move and work."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which one is a vegetable?",
+     "hint": "It grows in the ground.",
+     "explanation": "A carrot is a vegetable.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A mango"
+      },
+      {
+       "id": "b",
+       "text": "A biscuit"
+      },
+      {
+       "id": "c",
+       "text": "A carrot"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Daal is a protein food.",
+     "hint": "Think of lentils.",
+     "explanation": "Daal is a protein food.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the best drink?",
+     "hint": "It has nothing added.",
+     "explanation": "Water is the healthiest drink.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fizzy drink"
+      },
+      {
+       "id": "b",
+       "text": "Water"
+      },
+      {
+       "id": "c",
+       "text": "Sweet squash"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A rainbow plate has many colours.",
+     "hint": "Fruit and veg come in many colours.",
+     "explanation": "Different colours give different vitamins.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "amounts",
+   "kind": "try",
+   "title": "Different amounts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: More and less"
+    },
+    {
+     "type": "text",
+     "markdown": "Eat **lots** of fruit and veg. Eat a little sweet food.",
+     "say": "We do not eat the same amount of every food. We eat more of some."
+    },
+    {
+     "type": "explainer",
+     "title": "A healthy plate",
+     "scenes": [
+      {
+       "caption": "Biggest.",
+       "items": [
+        {
+         "id": "v",
+         "emoji": "🥗",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Half the plate is fruit and vegetables. These are the biggest part."
+      },
+      {
+       "caption": "Medium.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 30,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🫘",
+         "x": 70,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A quarter is starchy food, like rice or roti. A quarter is protein."
+      },
+      {
+       "caption": "Tiny.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🍬",
+         "x": 50,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Sweets, crisps and fats are only a tiny part, if any."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which should be the biggest part of a healthy plate?",
+      "hint": "Think of the rainbow plate.",
+      "explanation": "Fruit and vegetables should fill the biggest part.",
+      "skill_tag": "healthy.chk3",
+      "options": [
+       {
+        "id": "a",
+        "text": "Sweets"
+       },
+       {
+        "id": "b",
+        "text": "Fruit and vegetables"
+       },
+       {
+        "id": "c",
+        "text": "Crisps"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Pack a lunch box"
+    },
+    {
+     "type": "text",
+     "markdown": "A **lunch box** can have food from each group.",
+     "say": "Zainab packs her lunch box. She wants it healthy and tasty."
+    },
+    {
+     "type": "text",
+     "markdown": "Roti, chicken, apple, carrots and yoghurt.",
+     "say": "She picks roti with chicken, an apple, carrot sticks and a small yoghurt."
+    },
+    {
+     "type": "manipulative",
+     "title": "Lunch box choices",
+     "goal": "Move the foods. Healthy choices go in Pack it. Treats go in Sometimes.",
+     "emoji": "🍎",
+     "count": 8,
+     "zones": [
+      "Pack it",
+      "Sometimes"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "My lunch box",
+     "materials": [
+      "Paper and crayons",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Draw a lunch box with four spaces.",
+      "Fill one space from each food group.",
+      "Choose water to drink."
+     ],
+     "say": "Now you try. Plan a lunch box with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A lunch box can have food from each group.",
+      "hint": "Think of Zainab's lunch.",
+      "explanation": "A good lunch has food from each group.",
+      "skill_tag": "healthy.chk4",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Eat lots of fruit and vegetables",
+      "Eat some starchy food and protein",
+      "Eat only a little sugar and fat"
+     ],
+     "say": "Let us remember. Eat more fruit and veg and less sugar and fat."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "lots",
+       "meaning": "A large amount."
+      },
+      {
+       "term": "lunch box",
+       "meaning": "A box that holds food to eat at school."
+      },
+      {
+       "term": "sugar",
+       "meaning": "A sweet food ingredient that is in treats."
+      },
+      {
+       "term": "fat",
+       "meaning": "A part of food that gives energy. We need only a little."
+      },
+      {
+       "term": "plate",
+       "meaning": "A flat dish we eat from."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which should we eat only a little of?",
+     "hint": "Think of treats.",
+     "explanation": "Sweets are a treat.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Vegetables"
+      },
+      {
+       "id": "b",
+       "text": "Water"
+      },
+      {
+       "id": "c",
+       "text": "Sweets"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Half a healthy plate is fruit and vegetables.",
+     "hint": "It is the biggest part.",
+     "explanation": "Fruit and vegetables fill half the plate.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a healthy lunch box choice?",
+     "hint": "Think about vitamins.",
+     "explanation": "An apple is a healthy snack.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bar of chocolate"
+      },
+      {
+       "id": "b",
+       "text": "An apple"
+      },
+      {
+       "id": "c",
+       "text": "A fizzy drink"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "move",
+   "kind": "play",
+   "title": "Move and rest",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Exercise"
+    },
+    {
+     "type": "text",
+     "markdown": "**Exercise** keeps our bodies strong.",
+     "say": "Exercise means moving our bodies. Running, skipping and cricket are all exercise."
+    },
+    {
+     "type": "explainer",
+     "title": "Exercise and the heart",
+     "scenes": [
+      {
+       "caption": "Running.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "🏃",
+         "x": 40,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Zainab runs across the field. Her legs and arms work hard."
+      },
+      {
+       "caption": "A fast heart.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "❤️",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Her heart beats faster. It pumps blood to her muscles."
+      },
+      {
+       "caption": "Strong.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "💪",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Exercise makes the heart and muscles stronger. It helps us feel happy too."
+      }
+     ],
+     "backdrop": "meadow"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens to our heart when we run?",
+      "hint": "Feel your chest after running.",
+      "explanation": "The heart beats faster to pump blood to our muscles.",
+      "skill_tag": "healthy.chk5",
+      "options": [
+       {
+        "id": "a",
+        "text": "It gets smaller"
+       },
+       {
+        "id": "b",
+        "text": "It beats faster"
+       },
+       {
+        "id": "c",
+        "text": "It stops"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Rest and sleep"
+    },
+    {
+     "type": "text",
+     "markdown": "**Sleep** helps us grow and learn.",
+     "say": "Our bodies need rest. Sleep helps us grow and stay well."
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then answer.",
+     "say": "Play a memory game to warm up your brain. Then answer a question."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Healthy day",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🏃",
+      "🍎",
+      "🧼",
+      "😴"
+     ],
+     "say": "Watch the pictures light up, then copy them."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two things that help us stay healthy.",
+      "hint": "Think about a healthy day.",
+      "explanation": "Sleep and exercise both help us stay healthy.",
+      "skill_tag": "healthy.chk6",
+      "options": [
+       {
+        "id": "a",
+        "text": "Exercise"
+       },
+       {
+        "id": "b",
+        "text": "Late nights"
+       },
+       {
+        "id": "c",
+        "text": "Sitting all day"
+       },
+       {
+        "id": "d",
+        "text": "Sleep"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Exercise makes our heart and muscles strong",
+      "Our heart beats faster when we run",
+      "Sleep helps us grow and learn"
+     ],
+     "say": "Let us remember. Exercise makes our heart strong. Sleep helps us grow."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "exercise",
+       "meaning": "Moving your body to keep it strong."
+      },
+      {
+       "term": "heart",
+       "meaning": "The part of the body that pumps blood."
+      },
+      {
+       "term": "muscles",
+       "meaning": "Parts of the body that help us move."
+      },
+      {
+       "term": "sleep",
+       "meaning": "Resting with your eyes closed at night."
+      },
+      {
+       "term": "routine",
+       "meaning": "Things you do in the same order each day."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is exercise?",
+     "hint": "Which one makes you move?",
+     "explanation": "Skipping is exercise.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lying in bed"
+      },
+      {
+       "id": "b",
+       "text": "Skipping"
+      },
+      {
+       "id": "c",
+       "text": "Watching TV"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We need sleep to help us grow.",
+     "hint": "Think about bedtime.",
+     "explanation": "Sleep helps us grow and learn.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part of the body beats faster when we run?",
+     "hint": "Feel your chest.",
+     "explanation": "The heart beats faster when we run.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The hair"
+      },
+      {
+       "id": "b",
+       "text": "The heart"
+      },
+      {
+       "id": "c",
+       "text": "The nose"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "germs",
+   "kind": "use",
+   "title": "Germ busters",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Washing hands"
+    },
+    {
+     "type": "text",
+     "markdown": "**Germs** can make us ill. We cannot see them.",
+     "say": "Germs are tiny living things. They are too small for us to see."
+    },
+    {
+     "type": "text",
+     "markdown": "Soap and water wash germs away.",
+     "say": "Germs spread from hands to food and faces. Washing hands stops them spreading."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-healthy-me-2-b1863424.jpg",
+     "alt": "Hands covered in soap suds being washed under a running tap in a sink",
+     "caption": "Soap and running water wash germs away.",
+     "credit": "Photo by Mélissa Jeanty on Unsplash",
+     "say": "Soap lifts dirt and germs off our skin. Water rinses them away."
+    },
+    {
+     "type": "explainer",
+     "title": "Wash your hands",
+     "scenes": [
+      {
+       "caption": "Wet.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🚰",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "🙌",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "First, wet your hands under running water."
+      },
+      {
+       "caption": "Soap.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧼",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "🙌",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Rub soap on the front, back, thumbs and between your fingers."
+      },
+      {
+       "caption": "Scrub.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "⏱️",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "h",
+         "emoji": "🙌",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Scrub for about twenty seconds. Sing a short song to count."
+      },
+      {
+       "caption": "Rinse and dry.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "💧",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🙌",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Rinse off the soap. Dry with a clean towel."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the hand-washing steps in order.",
+      "hint": "Wet comes first.",
+      "explanation": "Wet, soap, rinse, then dry.",
+      "skill_tag": "healthy.chk7",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Rinse with water"
+       },
+       {
+        "id": "i4",
+        "text": "Dry your hands"
+       },
+       {
+        "id": "i2",
+        "text": "Rub in soap"
+       },
+       {
+        "id": "i1",
+        "text": "Wet your hands"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Clean habits"
+    },
+    {
+     "type": "text",
+     "markdown": "Cover coughs and sneezes with your elbow.",
+     "say": "We wash our hands before eating and after the toilet. We cough into our elbow."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-healthy-me-3-0afeb772.jpg",
+     "alt": "An orange toothbrush with a line of green toothpaste on a yellow background",
+     "caption": "Brushing twice a day keeps teeth clean.",
+     "credit": "Photo by Tosan Dudun on Unsplash",
+     "say": "We brush our teeth twice a day. Muslims also wash hands and face for wudu."
+    },
+    {
+     "type": "text",
+     "markdown": "Clean habits protect everyone.",
+     "say": "Clean habits keep us healthy and keep others healthy too."
+    },
+    {
+     "type": "explainer",
+     "title": "Healthy habits",
+     "scenes": [
+      {
+       "caption": "Lunch.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🍽️",
+         "x": 70,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zainab washes her hands before lunch every day."
+      },
+      {
+       "caption": "Elbow.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "🤧",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "She sneezes into her elbow, not into her hands."
+      },
+      {
+       "caption": "Teeth.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🪥",
+         "x": 35,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🦷",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "At night she brushes her teeth. They stay clean and strong."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "activity",
+     "title": "Germ buster poster",
+     "materials": [
+      "Paper and crayons",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Draw your hands with soap bubbles.",
+      "Write three times we wash our hands.",
+      "Put the poster near the sink."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Soap and water wash germs away.",
+      "hint": "Think about the sink.",
+      "explanation": "Soap lifts germs and water rinses them away.",
+      "skill_tag": "healthy.chk8",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Germs are tiny and can make us ill",
+      "Wash hands with soap and water",
+      "Cover coughs and brush teeth twice a day"
+     ],
+     "say": "Let us remember. Wash hands with soap. Cover coughs. Brush teeth twice a day."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "germs",
+       "meaning": "Tiny living things that can make us ill."
+      },
+      {
+       "term": "soap",
+       "meaning": "Something that helps wash away dirt and germs."
+      },
+      {
+       "term": "wudu",
+       "meaning": "The washing Muslims do before prayer."
+      },
+      {
+       "term": "elbow",
+       "meaning": "The bend in the middle of your arm."
+      },
+      {
+       "term": "rinse",
+       "meaning": "To wash soap away with water."
+      },
+      {
+       "term": "habit",
+       "meaning": "Something you do again and again."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we use to wash away germs?",
+     "hint": "Think of the sink.",
+     "explanation": "Soap and water wash germs away.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Juice"
+      },
+      {
+       "id": "b",
+       "text": "Soap and water"
+      },
+      {
+       "id": "c",
+       "text": "Sand"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We can see germs with our eyes.",
+     "hint": "Are they big?",
+     "explanation": "Germs are far too small to see.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where should we sneeze?",
+     "hint": "It stops germs spreading.",
+     "explanation": "Sneezing into an elbow stops germs spreading.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Into our hands"
+      },
+      {
+       "id": "b",
+       "text": "Into our elbow"
+      },
+      {
+       "id": "c",
+       "text": "At our friends"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "match",
+    "prompt": "Match each food to its group.",
+    "hint": "Think about the four groups.",
+    "explanation": "An apple is fruit, rice is starchy food and chicken is protein.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Apple"
+     },
+     {
+      "id": "l2",
+      "text": "Rice"
+     },
+     {
+      "id": "l3",
+      "text": "Chicken"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Starchy food"
+     },
+     {
+      "id": "r3",
+      "text": "Protein"
+     },
+     {
+      "id": "r1",
+      "text": "Fruit and veg"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "healthy.group_match",
+    "sub_lesson": "food",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which food group does daal belong to?",
+    "hint": "Daal is made of lentils.",
+    "explanation": "Daal is a protein food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fruit"
+     },
+     {
+      "id": "b",
+      "text": "Dairy"
+     },
+     {
+      "id": "c",
+      "text": "Protein"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.daal_group",
+    "sub_lesson": "food",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "Milk and yoghurt are dairy foods.",
+    "hint": "They both come from milk.",
+    "explanation": "Dairy foods are made from milk.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "healthy.dairy_tf",
+    "sub_lesson": "food",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "multiple_choice",
+    "prompt": "Zayn says a fizzy drink is a good snack every day. Is he right?",
+    "hint": "Think about sugar.",
+    "explanation": "Fizzy drinks have lots of sugar, so they are only for sometimes.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they give us vitamins"
+     },
+     {
+      "id": "b",
+      "text": "No, fizzy drinks are a treat. Water is better"
+     },
+     {
+      "id": "c",
+      "text": "Yes, fizzy drinks are healthy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.fizzy_snack",
+    "sub_lesson": "food",
+    "depth": "reason"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two foods come from plants? Pick two.",
+    "hint": "Think about what grows from the ground or on trees.",
+    "explanation": "Mangoes and spinach come from plants.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Spinach"
+     },
+     {
+      "id": "b",
+      "text": "An egg"
+     },
+     {
+      "id": "c",
+      "text": "Cheese"
+     },
+     {
+      "id": "d",
+      "text": "A mango"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "healthy.plants_ms",
+    "sub_lesson": "food",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a healthy plate.",
+    "hint": "Think about colour.",
+    "explanation": "A healthy plate has lots of fruit and vegetables in many colours.",
+    "points": 2,
+    "text": "We should eat lots of fruit and {b1}. A rainbow plate has many {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sweets"
+       },
+       {
+        "id": "b",
+        "text": "crisps"
+       },
+       {
+        "id": "c",
+        "text": "vegetables"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "chairs"
+       },
+       {
+        "id": "b",
+        "text": "colours"
+       },
+       {
+        "id": "c",
+        "text": "spoons"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "healthy.rainbow_fill",
+    "sub_lesson": "food",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Sam says sweets are fine to eat all day. Is he right?",
+    "hint": "Think about treats.",
+    "explanation": "Sweets are for sometimes in small amounts.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, sweets are healthy"
+     },
+     {
+      "id": "b",
+      "text": "No, sweets are a treat in small amounts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they give us vitamins"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.sweets_all_day",
+    "sub_lesson": "food",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the food that is a fruit.",
+    "hint": "It grows on a plant and is sweet.",
+    "explanation": "A banana is a fruit.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🥕",
+       "label": "Carrot",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍌",
+       "label": "Banana",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍞",
+       "label": "Bread",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "healthy.fruit_tap",
+    "sub_lesson": "food",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "Zainab's lunch box has 3 pieces of fruit and 2 vegetable sticks. How many pieces of fruit and veg is that?",
+    "hint": "3 + 2.",
+    "explanation": "3 + 2 = 5 pieces.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.lunch_count",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the meals of the day in order.",
+    "hint": "Breakfast comes first.",
+    "explanation": "We eat breakfast, a snack, lunch, then dinner.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "School snack"
+     },
+     {
+      "id": "i3",
+      "text": "Lunch"
+     },
+     {
+      "id": "i4",
+      "text": "Dinner"
+     },
+     {
+      "id": "i1",
+      "text": "Breakfast"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.day_order",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "Zainab eats 5 portions of fruit and veg each day. Slide to show how many portions in 2 days.",
+    "hint": "5 + 5.",
+    "explanation": "5 + 5 = 10 portions.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "portions"
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.portions_sld",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Omar says healthy means eating equal amounts of every food. Is he right?",
+    "hint": "Think about the plate.",
+    "explanation": "We eat lots of fruit and veg and only a little sugar.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, equal amounts of everything"
+     },
+     {
+      "id": "b",
+      "text": "Yes, no food is better than another"
+     },
+     {
+      "id": "c",
+      "text": "No, we eat more of some foods and less of others"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.equal_amounts",
+    "sub_lesson": "amounts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Layla says all fat is bad. Is she right?",
+    "hint": "Think about fish and nuts.",
+    "explanation": "We need a little fat, but not too much.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all fat is harmful"
+     },
+     {
+      "id": "b",
+      "text": "No, our bodies need a little fat, for example from fish and nuts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, fat is poison"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.all_fat",
+    "sub_lesson": "amounts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "match",
+    "prompt": "Match each food to how much we should eat.",
+    "hint": "Think about the plate.",
+    "explanation": "Eat lots of fruit and veg and drink water, but only a little sweet food.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Fruit and vegetables"
+     },
+     {
+      "id": "l2",
+      "text": "Sweets"
+     },
+     {
+      "id": "l3",
+      "text": "Water"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Lots through the day"
+     },
+     {
+      "id": "r1",
+      "text": "Lots"
+     },
+     {
+      "id": "r2",
+      "text": "A little"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "healthy.amount_match",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "number",
+    "prompt": "Hamza eats 2 apples and 3 bananas in a day. How many fruits is that?",
+    "hint": "2 + 3.",
+    "explanation": "2 + 3 = 5 fruits.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.fruit_count",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a balanced plate.",
+    "hint": "Think about the plate.",
+    "explanation": "A balanced plate is mostly vegetables, and sweets are for sometimes.",
+    "points": 2,
+    "text": "A balanced plate is mostly {b1}. We eat sweets only {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sweets"
+       },
+       {
+        "id": "b",
+        "text": "vegetables"
+       },
+       {
+        "id": "c",
+        "text": "crisps"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "twice a meal"
+       },
+       {
+        "id": "b",
+        "text": "sometimes"
+       },
+       {
+        "id": "c",
+        "text": "always"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "healthy.balance_fill",
+    "sub_lesson": "amounts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "slider",
+    "prompt": "Zainab runs for 20 minutes each day for 3 days. Slide to show the total minutes.",
+    "hint": "20 + 20 + 20.",
+    "explanation": "20 + 20 + 20 = 60 minutes.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100,
+     "unit": "minutes"
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.minutes_sld",
+    "sub_lesson": "move",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "true_false",
+    "prompt": "Our heart beats faster when we run.",
+    "hint": "Feel your chest after running.",
+    "explanation": "The heart pumps faster to give our muscles blood.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "healthy.heart_tf",
+    "sub_lesson": "move",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "short_text",
+    "prompt": "What part of the body pumps blood around us?",
+    "hint": "It beats in your chest.",
+    "explanation": "The heart pumps blood.",
+    "answer": {
+     "accepted": [
+      "heart",
+      "the heart"
+     ]
+    },
+    "skill_tag": "healthy.heart_st",
+    "sub_lesson": "move",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Aisha says only fit people are healthy. Is she right?",
+    "hint": "Think about the three habits.",
+    "explanation": "Healthy habits help everyone, not only fast runners.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, healthy means being very fast"
+     },
+     {
+      "id": "b",
+      "text": "No, everyone can be healthy by eating well, moving and resting"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only sports stars are healthy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.only_fit",
+    "sub_lesson": "move",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Ali says healthy people never get ill. Is he right?",
+    "hint": "Think about colds.",
+    "explanation": "Healthy habits help, but anyone can get ill.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, healthy people never get ill"
+     },
+     {
+      "id": "b",
+      "text": "No, anyone can get ill, but healthy habits help our bodies fight illness"
+     },
+     {
+      "id": "c",
+      "text": "Yes, illness only comes to lazy people"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.never_ill",
+    "sub_lesson": "move",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put a healthy day in order.",
+    "hint": "Waking up comes first.",
+    "explanation": "Wake, eat, play, then sleep.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Eat breakfast"
+     },
+     {
+      "id": "i4",
+      "text": "Go to sleep"
+     },
+     {
+      "id": "i3",
+      "text": "Play outside"
+     },
+     {
+      "id": "i1",
+      "text": "Wake up and wash"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.routine_order",
+    "sub_lesson": "move",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two help us rest well? Pick two.",
+    "hint": "Think about bedtime.",
+    "explanation": "A quiet bedtime and enough sleep help us rest.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Enough sleep"
+     },
+     {
+      "id": "b",
+      "text": "Playing games late"
+     },
+     {
+      "id": "c",
+      "text": "Loud music"
+     },
+     {
+      "id": "d",
+      "text": "A quiet bedtime"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "healthy.rest_ms",
+    "sub_lesson": "move",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of washing hands in order.",
+    "hint": "Wet comes first.",
+    "explanation": "Wet, soap, scrub, then rinse and dry.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Scrub for twenty seconds"
+     },
+     {
+      "id": "i4",
+      "text": "Rinse and dry"
+     },
+     {
+      "id": "i2",
+      "text": "Rub in soap"
+     },
+     {
+      "id": "i1",
+      "text": "Wet your hands"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.wash_order",
+    "sub_lesson": "germs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "When should we wash our hands?",
+    "hint": "Think about germs on hands.",
+    "explanation": "We wash before eating and after the toilet.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Never"
+     },
+     {
+      "id": "b",
+      "text": "Before eating and after the toilet"
+     },
+     {
+      "id": "c",
+      "text": "Only on Fridays"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.when_wash",
+    "sub_lesson": "germs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zainab says water alone washes germs off. Is she right?",
+    "hint": "Think about soap bubbles.",
+    "explanation": "Soap and rubbing remove germs better than water alone.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soap makes germs grow"
+     },
+     {
+      "id": "b",
+      "text": "No, soap helps lift germs and dirt away"
+     },
+     {
+      "id": "c",
+      "text": "Yes, water is enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.water_alone",
+    "sub_lesson": "germs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Hamza says you only need to wash your hands when they look dirty. Is he right?",
+    "hint": "Can you see germs?",
+    "explanation": "Germs are too small to see, so hands can look clean and still have germs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clean-looking hands are always clean"
+     },
+     {
+      "id": "b",
+      "text": "Yes, germs are big"
+     },
+     {
+      "id": "c",
+      "text": "No, germs are too small to see"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.look_dirty",
+    "sub_lesson": "germs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "short_text",
+    "prompt": "What do we call tiny living things that can make us ill?",
+    "hint": "It starts with a g.",
+    "explanation": "Tiny living things that make us ill are called germs.",
+    "answer": {
+     "accepted": [
+      "germs",
+      "germ"
+     ]
+    },
+    "skill_tag": "healthy.germs_st",
+    "sub_lesson": "germs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "hotspot",
+    "prompt": "Tap the thing that helps clean our teeth.",
+    "hint": "We use it every morning and night.",
+    "explanation": "A toothbrush cleans our teeth.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪥",
+       "label": "Toothbrush",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍬",
+       "label": "Sweets",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥤",
+       "label": "Fizzy drink",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "healthy.clean_tap",
+    "sub_lesson": "germs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "true_false",
+    "prompt": "Wudu is a good habit because it washes our hands and face.",
+    "hint": "Think about washing before prayer.",
+    "explanation": "Wudu keeps hands and face clean.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "healthy.wudu_tf",
+    "sub_lesson": "germs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "match",
+    "prompt": "Join each food to its group.",
+    "hint": "Think about the four groups.",
+    "explanation": "A carrot is a vegetable, roti is starchy food and yoghurt is dairy.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Carrot"
+     },
+     {
+      "id": "l2",
+      "text": "Roti"
+     },
+     {
+      "id": "l3",
+      "text": "Yoghurt"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Starchy food"
+     },
+     {
+      "id": "r1",
+      "text": "Fruit and veg"
+     },
+     {
+      "id": "r3",
+      "text": "Dairy"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "healthy.group_match",
+    "sub_lesson": "food",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which group does a boiled egg belong to?",
+    "hint": "Eggs help us grow.",
+    "explanation": "An egg is a protein food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Starchy food"
+     },
+     {
+      "id": "b",
+      "text": "Protein"
+     },
+     {
+      "id": "c",
+      "text": "Fruit and veg"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.daal_group",
+    "sub_lesson": "food",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "Rice is a dairy food.",
+    "hint": "Does rice come from milk?",
+    "explanation": "Rice is a starchy food, not dairy.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "healthy.dairy_tf",
+    "sub_lesson": "food",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "multiple_choice",
+    "prompt": "Hana says sweet squash is the best drink. Is she right?",
+    "hint": "Think about water.",
+    "explanation": "Water is the best drink for our bodies.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, squash has lots of vitamins"
+     },
+     {
+      "id": "b",
+      "text": "No, water is the best drink"
+     },
+     {
+      "id": "c",
+      "text": "Yes, squash is healthier than water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.fizzy_snack",
+    "sub_lesson": "food",
+    "depth": "reason",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two of these foods come from plants? Pick two.",
+    "hint": "Chapati is made from wheat.",
+    "explanation": "Carrots and wheat come from plants.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fish"
+     },
+     {
+      "id": "b",
+      "text": "Milk"
+     },
+     {
+      "id": "c",
+      "text": "Chapati"
+     },
+     {
+      "id": "d",
+      "text": "A carrot"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "healthy.plants_ms",
+    "sub_lesson": "food",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about protein.",
+    "hint": "Think about growing.",
+    "explanation": "Protein foods help our bodies grow.",
+    "points": 2,
+    "text": "Meat, fish, eggs and daal are {b1} foods. They help our bodies {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sticky"
+       },
+       {
+        "id": "b",
+        "text": "protein"
+       },
+       {
+        "id": "c",
+        "text": "fizzy"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "freeze"
+       },
+       {
+        "id": "b",
+        "text": "grow"
+       },
+       {
+        "id": "c",
+        "text": "shrink"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "healthy.rainbow_fill",
+    "sub_lesson": "food",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Ali says crisps are as healthy as an apple. Is he right?",
+    "hint": "Think about vitamins.",
+    "explanation": "Apples are healthy. Crisps are a treat.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "Yes, crisps have more vitamins"
+     },
+     {
+      "id": "c",
+      "text": "No, an apple has vitamins. Crisps are a treat"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.sweets_all_day",
+    "sub_lesson": "food",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the dairy food.",
+    "hint": "Dairy comes from milk.",
+    "explanation": "Milk is a dairy food.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🥛",
+       "label": "Milk",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍎",
+       "label": "Apple",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍚",
+       "label": "Rice",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "healthy.fruit_tap",
+    "sub_lesson": "food",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "Bilal's lunch box has 4 pieces of fruit and 3 vegetable sticks. How many pieces is that?",
+    "hint": "4 + 3.",
+    "explanation": "4 + 3 = 7 pieces.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.lunch_count",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put these in order through the day.",
+    "hint": "Waking up comes first.",
+    "explanation": "Wake up, then breakfast, then lunch, then supper.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Breakfast"
+     },
+     {
+      "id": "i3",
+      "text": "School lunch"
+     },
+     {
+      "id": "i4",
+      "text": "Supper"
+     },
+     {
+      "id": "i1",
+      "text": "Wake up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.day_order",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "Hamza eats 3 portions of fruit and veg each day. Slide to show how many portions in 3 days.",
+    "hint": "3 + 3 + 3.",
+    "explanation": "3 + 3 + 3 = 9 portions.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "portions"
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.portions_sld",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Layla says we should eat as many sweets as vegetables. Is she right?",
+    "hint": "Think about the plate.",
+    "explanation": "Vegetables should be a big part of the plate.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the same amount"
+     },
+     {
+      "id": "b",
+      "text": "Yes, sweets are vegetables"
+     },
+     {
+      "id": "c",
+      "text": "No, vegetables should fill much more of the plate"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.equal_amounts",
+    "sub_lesson": "amounts",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Mira says we should never eat any fat. Is she right?",
+    "hint": "Think about a balanced diet.",
+    "explanation": "Small amounts of fat are part of a healthy diet.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, fat turns into stone"
+     },
+     {
+      "id": "c",
+      "text": "No, small amounts help our bodies"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.all_fat",
+    "sub_lesson": "amounts",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "match",
+    "prompt": "Join each food to how much we should eat.",
+    "hint": "Think about the plate.",
+    "explanation": "Eat some starchy food and protein, but only a little sugary drink.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Rice and roti"
+     },
+     {
+      "id": "l2",
+      "text": "Fizzy drinks"
+     },
+     {
+      "id": "l3",
+      "text": "Daal and fish"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A little"
+     },
+     {
+      "id": "r3",
+      "text": "Some"
+     },
+     {
+      "id": "r1",
+      "text": "Some"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "healthy.amount_match",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "number",
+    "prompt": "Aisha eats 4 oranges and 2 pears. How many fruits is that?",
+    "hint": "4 + 2.",
+    "explanation": "4 + 2 = 6 fruits.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.fruit_count",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about drinks.",
+    "hint": "Think about drinks.",
+    "explanation": "Water is best and fizzy drinks are a treat.",
+    "points": 2,
+    "text": "The best drink is {b1}. Fizzy drinks are a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cola"
+       },
+       {
+        "id": "b",
+        "text": "squash"
+       },
+       {
+        "id": "c",
+        "text": "water"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "medicine"
+       },
+       {
+        "id": "b",
+        "text": "treat"
+       },
+       {
+        "id": "c",
+        "text": "must"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "healthy.balance_fill",
+    "sub_lesson": "amounts",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "slider",
+    "prompt": "Hamza runs for 10 minutes each day for 5 days. Slide to show the total minutes.",
+    "hint": "Count in tens.",
+    "explanation": "5 x 10 = 50 minutes.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100,
+     "unit": "minutes"
+    },
+    "answer": {
+     "value": 50,
+     "tolerance": 0
+    },
+    "skill_tag": "healthy.minutes_sld",
+    "sub_lesson": "move",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "true_false",
+    "prompt": "Our heart stops beating when we run.",
+    "hint": "Feel your chest after running.",
+    "explanation": "The heart never stops. It beats faster.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "healthy.heart_tf",
+    "sub_lesson": "move",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "short_text",
+    "prompt": "What do we need at night to help our bodies grow?",
+    "hint": "We do it in bed.",
+    "explanation": "Sleep helps us grow.",
+    "answer": {
+     "accepted": [
+      "sleep",
+      "rest"
+     ]
+    },
+    "skill_tag": "healthy.heart_st",
+    "sub_lesson": "move",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says exercise is only for sports stars. Is he right?",
+    "hint": "Think about the playground.",
+    "explanation": "Exercise helps every body.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only stars need it"
+     },
+     {
+      "id": "b",
+      "text": "No, everyone's body is stronger with exercise"
+     },
+     {
+      "id": "c",
+      "text": "Yes, children should not move"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.only_fit",
+    "sub_lesson": "move",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Nina says if you wash your hands you can never catch a cold. Is she right?",
+    "hint": "Think about germs.",
+    "explanation": "Washing hands helps, but it cannot stop every illness.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, soap stops all colds"
+     },
+     {
+      "id": "c",
+      "text": "No, handwashing helps a lot, but we can still catch colds"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.never_ill",
+    "sub_lesson": "move",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Arrange the day, morning to night.",
+    "hint": "Morning comes first.",
+    "explanation": "Morning routine first, bedtime last.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Go to school"
+     },
+     {
+      "id": "i3",
+      "text": "Run in the park"
+     },
+     {
+      "id": "i4",
+      "text": "Brush teeth and sleep"
+     },
+     {
+      "id": "i1",
+      "text": "Pray and wash"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.routine_order",
+    "sub_lesson": "move",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two help our heart stay strong? Pick two.",
+    "hint": "Think about moving.",
+    "explanation": "Running and skipping make the heart strong.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Lying down all day"
+     },
+     {
+      "id": "b",
+      "text": "Eating sweets"
+     },
+     {
+      "id": "c",
+      "text": "Skipping"
+     },
+     {
+      "id": "d",
+      "text": "Running"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "healthy.rest_ms",
+    "sub_lesson": "move",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps in order.",
+    "hint": "Turn on the tap first.",
+    "explanation": "Tap, soap, rub, then dry.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Rub all over"
+     },
+     {
+      "id": "i4",
+      "text": "Dry with a clean towel"
+     },
+     {
+      "id": "i2",
+      "text": "Add soap"
+     },
+     {
+      "id": "i1",
+      "text": "Turn on the tap"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "healthy.wash_order",
+    "sub_lesson": "germs",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Which is a good time to wash our hands?",
+    "hint": "Think about dirt.",
+    "explanation": "Hands pick up germs outside.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Only when they hurt"
+     },
+     {
+      "id": "b",
+      "text": "Never"
+     },
+     {
+      "id": "c",
+      "text": "After playing outside"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "healthy.when_wash",
+    "sub_lesson": "germs",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says rinsing for one second is enough. Is he right?",
+    "hint": "Think about scrubbing.",
+    "explanation": "We should scrub for about twenty seconds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, germs jump off at once"
+     },
+     {
+      "id": "b",
+      "text": "No, we should scrub with soap for about twenty seconds"
+     },
+     {
+      "id": "c",
+      "text": "Yes, one second is enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.water_alone",
+    "sub_lesson": "germs",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Sana says clean-looking hands have no germs. Is she right?",
+    "hint": "Can you see germs?",
+    "explanation": "Hands can look clean and still carry germs.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, germs only live on dirt"
+     },
+     {
+      "id": "b",
+      "text": "No, germs are far too tiny to see"
+     },
+     {
+      "id": "c",
+      "text": "Yes, no germs on clean hands"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "healthy.look_dirty",
+    "sub_lesson": "germs",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "short_text",
+    "prompt": "What word means tiny living things that spread illness?",
+    "hint": "It starts with a g.",
+    "explanation": "Germs are tiny and can make us ill.",
+    "answer": {
+     "accepted": [
+      "germs",
+      "germ"
+     ]
+    },
+    "skill_tag": "healthy.germs_st",
+    "sub_lesson": "germs",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "hotspot",
+    "prompt": "Tap what we use to wash away germs.",
+    "hint": "We use it at the sink.",
+    "explanation": "Soap washes germs away.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧼",
+       "label": "Soap",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍫",
+       "label": "Chocolate",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧃",
+       "label": "Juice",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "healthy.clean_tap",
+    "sub_lesson": "germs",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "true_false",
+    "prompt": "Brushing teeth once a month is enough.",
+    "hint": "Think about twice a day.",
+    "explanation": "We should brush our teeth twice a day.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "healthy.wudu_tf",
+    "sub_lesson": "germs",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

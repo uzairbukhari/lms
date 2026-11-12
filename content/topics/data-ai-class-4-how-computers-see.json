@@ -1,0 +1,3258 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-how-computers-see",
+  "subject": "data-ai",
+  "title": "How Computers See: Image AI",
+  "summary": "See how pictures become numbers, how image AI finds edges and features, why training data matters and how to use it wisely.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 7: How computers see",
+  "learning_objectives": [
+   "Explain that a computer stores a picture as numbers",
+   "Describe edges, features, training data, labels and confidence",
+   "Explain why image AI needs varied training and a human check"
+  ],
+  "tags": [
+   "topic",
+   "topic-7"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 7
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 1",
+    "text": "Perception: computers perceive the world using sensors, and image data are numbers"
+   },
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 3",
+    "text": "Learning: computers can learn from data, and training data affects results"
+   }
+  ],
+  "success_criteria": [
+   "I can say how a picture is stored as numbers",
+   "I can explain how training data and labels teach image AI",
+   "I know image AI can be wrong and needs a human check"
+  ],
+  "real_life": "Phone cameras that find faces to focus or sort photos into albums, and wildlife cameras that spot animals.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a pixel?",
+    "hint": "Think about zooming in.",
+    "explanation": "A pixel is one tiny square.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of camera"
+     },
+     {
+      "id": "b",
+      "text": "A picture frame"
+     },
+     {
+      "id": "c",
+      "text": "One tiny square of a picture"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does AI stand for?",
+    "hint": "It is made by people.",
+    "explanation": "AI is artificial intelligence.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Always inside"
+     },
+     {
+      "id": "b",
+      "text": "Audio input"
+     },
+     {
+      "id": "c",
+      "text": "Artificial intelligence"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 8 x 5?",
+    "hint": "5 eights.",
+    "explanation": "8 x 5 = 40.",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "numbers",
+   "kind": "learn",
+   "title": "Pictures are numbers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, picture detective!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does a computer see a picture?",
+     "say": "Today we find out how a computer sees a picture. Does it see what we see?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-how-computers-see-1-8d3858b7.jpg",
+     "alt": "A wall of soft pastel diamond-shaped tiles in green, blue, pink and yellow",
+     "caption": "Many small tiles make one pattern. Many pixels make one photo.",
+     "credit": "Photo by Andrew Ridley on Unsplash",
+     "say": "Many small tiles can make one big pattern. A picture on a screen is made of tiny squares too."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Every pixel is a number"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pixel** is stored as a number.",
+     "say": "Each tiny square in a digital picture is a pixel. A computer stores every pixel as a number."
+    },
+    {
+     "type": "text",
+     "markdown": "In **greyscale**, 0 is black and 255 is white.",
+     "say": "In a greyscale picture, the number 0 is black and 255 is white. Numbers in between are greys."
+    },
+    {
+     "type": "explainer",
+     "title": "From squares to numbers",
+     "scenes": [
+      {
+       "caption": "Nine squares.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "⬛",
+         "x": 30,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "⬜",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "i",
+         "emoji": "⬛",
+         "x": 70,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "j",
+         "emoji": "⬜",
+         "x": 40,
+         "y": 65,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "k",
+         "emoji": "⬛",
+         "x": 60,
+         "y": 65,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara looks at a tiny black and white picture made of nine squares."
+      },
+      {
+       "caption": "Numbers.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "0 ... 255"
+        }
+       ],
+       "say": "The computer turns each square into a number. Dark squares get small numbers."
+      },
+      {
+       "caption": "Colour.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔴",
+         "x": 28,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🟢",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔵",
+         "x": 72,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3 numbers"
+        }
+       ],
+       "say": "A colour pixel uses three numbers, one each for red, green and blue light."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A greyscale pixel has the number 255. How does it look?",
+      "hint": "255 is the top of the scale.",
+      "explanation": "255 is white and 0 is black.",
+      "skill_tag": "see.255",
+      "options": [
+       {
+        "id": "a",
+        "text": "Red"
+       },
+       {
+        "id": "b",
+        "text": "White"
+       },
+       {
+        "id": "c",
+        "text": "Black"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Numbers, not meaning"
+    },
+    {
+     "type": "text",
+     "markdown": "A computer starts with only numbers.",
+     "say": "A computer does not see a cat or a tree. It only has a grid of numbers."
+    },
+    {
+     "type": "text",
+     "markdown": "**Image AI** finds patterns in the numbers of a picture.",
+     "say": "Image AI is a program that finds patterns in those numbers. It matches patterns to names."
+    },
+    {
+     "type": "explainer",
+     "title": "Finding a pattern",
+     "scenes": [
+      {
+       "caption": "A pattern.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🔢",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "⭕",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ring"
+        }
+       ],
+       "say": "The grid has bright numbers in a ring shape and dark numbers inside."
+      },
+      {
+       "caption": "Match.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🔍",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🛞",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "wheel?"
+        }
+       ],
+       "say": "The program has seen many rings before. It matches this pattern to the name wheel."
+      },
+      {
+       "caption": "Not understanding.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "💻",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "pattern match"
+        }
+       ],
+       "say": "It is matching patterns. It does not understand a wheel like a person does."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does a computer have when it opens a photo?",
+      "hint": "Think about pixels.",
+      "explanation": "A computer stores a picture as numbers.",
+      "skill_tag": "see.grid",
+      "options": [
+       {
+        "id": "a",
+        "text": "A moving cartoon"
+       },
+       {
+        "id": "b",
+        "text": "A grid of numbers"
+       },
+       {
+        "id": "c",
+        "text": "A spoken story"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara trains a cat spotter",
+     "asset": "clip-data-ai-class-4-how-computers-see-2463f3d7.mp4",
+     "poster": "clip-data-ai-class-4-how-computers-see-2463f3d7.webp",
+     "seconds": 70,
+     "transcript": "Zara learns that a computer stores every pixel as a number. Zero is black and two hundred fifty-five is white. Greys are in between. The program finds edges, then shapes, then clues like pointed ears and whiskers. The class shows it many pictures with labels: cat or not cat. It spots grey cats on grass. It is ninety percent sure. Then they show a white cat indoors. The spotter says: not a cat. Zara realises it only saw grey cats. She adds white cats and other places. The spotter improves. A person still checks the unsure answers.",
+     "caption": "Zara's class trains a cat spotter and finds out why variety matters."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A digital picture is a grid of pixels",
+      "Each pixel is a number, or three numbers for colour",
+      "Image AI finds patterns in numbers. It does not understand like a person"
+     ],
+     "say": "Let us remember. Pictures are grids of numbers. Image AI finds patterns in them."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pixel",
+       "meaning": "One tiny square of a digital picture, stored as a number."
+      },
+      {
+       "term": "greyscale",
+       "meaning": "A picture made of shades from black to white."
+      },
+      {
+       "term": "image ai",
+       "meaning": "A program that finds patterns in the numbers of a picture."
+      },
+      {
+       "term": "grid",
+       "meaning": "Rows and columns of squares."
+      },
+      {
+       "term": "pattern",
+       "meaning": "Something that repeats or matches in a regular way."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which number stands for the brightest white in greyscale?",
+     "hint": "Top of the scale.",
+     "explanation": "255 is white.",
+     "options": [
+      {
+       "id": "a",
+       "text": "100"
+      },
+      {
+       "id": "b",
+       "text": "255"
+      },
+      {
+       "id": "c",
+       "text": "0"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A colour pixel can be stored as three numbers.",
+     "hint": "Red, green, blue.",
+     "explanation": "Three numbers mix to make a colour.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does image AI look for in a picture?",
+     "hint": "It only has numbers.",
+     "explanation": "Image AI matches patterns in numbers.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The photographer's name"
+      },
+      {
+       "id": "b",
+       "text": "Patterns in the numbers"
+      },
+      {
+       "id": "c",
+       "text": "Feelings in the photo"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Is a computer's view of a photo like ours?",
+     "hint": "Think about pixels.",
+     "explanation": "A computer starts from numbers, not meaning.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes, exactly the same"
+      },
+      {
+       "id": "b",
+       "text": "No, it only has numbers"
+      },
+      {
+       "id": "c",
+       "text": "Yes, but in black and white"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "features",
+   "kind": "try",
+   "title": "Edges and features",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Find the edges"
+    },
+    {
+     "type": "text",
+     "markdown": "An **edge** is where pixel numbers change sharply.",
+     "say": "Image AI looks for edges. An edge is where pixel numbers change sharply, like dark stripes beside pale fur."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-how-computers-see-2-c66fd311.jpg",
+     "alt": "A tabby and white cat sitting on green grass in front of dark leafy bushes, looking at the camera",
+     "caption": "Pointed ears, whiskers and stripes are clues for image AI.",
+     "credit": "Photo by Jorien Loman on Unsplash",
+     "say": "Zara's class uses this cat as an example. The stripes and the ear outlines are edges."
+    },
+    {
+     "type": "explainer",
+     "title": "Edges become shapes",
+     "scenes": [
+      {
+       "caption": "Edges.",
+       "items": [
+        {
+         "id": "e",
+         "emoji": "✏️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "g",
+         "emoji": "🐈",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A program finds edges where light and dark pixels meet."
+      },
+      {
+       "caption": "Shapes.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🔺",
+         "x": 28,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o",
+         "emoji": "⚪",
+         "x": 50,
+         "y": 45,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "〰️",
+         "x": 72,
+         "y": 45,
+         "size": 2,
+         "anim": "pulse",
+         "label": "whiskers"
+        }
+       ],
+       "say": "Edges join up into shapes, like triangle ears and round eyes."
+      },
+      {
+       "caption": "A face.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "shapes to clues"
+        }
+       ],
+       "say": "Shapes together make a bigger clue, such as a cat face."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where is an edge in a picture?",
+      "hint": "The numbers change sharply.",
+      "explanation": "An edge is a sharp change in pixel numbers.",
+      "skill_tag": "see.edge",
+      "options": [
+       {
+        "id": "a",
+        "text": "In the file name"
+       },
+       {
+        "id": "b",
+        "text": "Where light pixels meet dark pixels"
+       },
+       {
+        "id": "c",
+        "text": "In the middle of a flat colour"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Features add up"
+    },
+    {
+     "type": "text",
+     "markdown": "A **feature** is a clue the program can find in a picture.",
+     "say": "A feature is a clue the program can find. Pointed ears and whiskers are features of a cat."
+    },
+    {
+     "type": "text",
+     "markdown": "Many features together give a better answer.",
+     "say": "One feature is not enough. A fox has pointed ears too. The program adds up many features."
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the clues",
+     "goal": "Move the 6 clues into Cat clue or Not a cat clue.",
+     "emoji": "🐾",
+     "count": 6,
+     "zones": [
+      "Cat clue",
+      "Not a cat clue"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Clue chart",
+     "materials": [
+      "Paper and pens",
+      "A picture of an animal, or a grown-up to help"
+     ],
+     "instructions": [
+      "Draw the animal in the middle.",
+      "Write four features a program could find, such as ears or stripes.",
+      "Ask: could another animal share some of these features?"
+     ],
+     "say": "Now you try. Make a clue chart for an animal of your choice."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "One clue is always enough to name an animal.",
+      "hint": "Think about the fox.",
+      "explanation": "Many animals share some clues, so we need several.",
+      "skill_tag": "see.one_clue",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Edges are sharp changes in pixel numbers",
+      "Edges make shapes, and shapes give features",
+      "Several features together give a better answer"
+     ],
+     "say": "Let us remember. Edges make shapes, shapes make features, and features add up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "edge",
+       "meaning": "A place where pixel numbers change sharply."
+      },
+      {
+       "term": "feature",
+       "meaning": "A clue the program can find in a picture."
+      },
+      {
+       "term": "outline",
+       "meaning": "The line around the edge of a shape."
+      },
+      {
+       "term": "whiskers",
+       "meaning": "The long stiff hairs on a cat's face."
+      },
+      {
+       "term": "stripes",
+       "meaning": "Long bands of colour."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What can edges join up to make?",
+     "hint": "Ear outlines, for example.",
+     "explanation": "Edges join up into shapes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Smells"
+      },
+      {
+       "id": "b",
+       "text": "Shapes"
+      },
+      {
+       "id": "c",
+       "text": "Sounds"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Whiskers and pointed ears are features of a cat.",
+     "hint": "They are clues.",
+     "explanation": "They are clues a program can use.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do programs use several features together?",
+     "hint": "Think about the fox.",
+     "explanation": "More features give a better answer.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Because it is slower"
+      },
+      {
+       "id": "b",
+       "text": "Many animals share one clue"
+      },
+      {
+       "id": "c",
+       "text": "Because pictures are small"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "train",
+   "kind": "play",
+   "title": "Training and labels",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Train a cat spotter"
+    },
+    {
+     "type": "text",
+     "markdown": "**Training data** is the set of examples a program learns from.",
+     "say": "Zara's class trains a cat spotter. They show it many pictures. Each picture has a label."
+    },
+    {
+     "type": "text",
+     "markdown": "A **label** names what a picture shows.",
+     "say": "A label tells what a picture shows, such as cat or not cat. The program learns what cat pictures have in common."
+    },
+    {
+     "type": "explainer",
+     "title": "Training",
+     "scenes": [
+      {
+       "caption": "Examples.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 28,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "🐶",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🐟",
+         "x": 72,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🏷️",
+         "x": 50,
+         "y": 68,
+         "size": 2,
+         "anim": "pulse",
+         "label": "labels"
+        }
+       ],
+       "say": "Zara shows 40 pictures labelled cat and 60 labelled not cat."
+      },
+      {
+       "caption": "Learn.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🧠",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "model"
+        },
+        {
+         "id": "p",
+         "emoji": "🔢",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The program finds patterns that cat pictures share. What it learns is called a model."
+      },
+      {
+       "caption": "Test.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📷",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "92%",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "confidence"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "trained"
+        }
+       ],
+       "say": "Then it gets a new picture. It says: 92 percent sure this is a cat."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a label in training data?",
+      "hint": "It says cat or not cat.",
+      "explanation": "A label names what an example shows.",
+      "skill_tag": "see.label_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "The size of the picture"
+       },
+       {
+        "id": "b",
+        "text": "The name that says what a picture shows"
+       },
+       {
+        "id": "c",
+        "text": "The date it was taken"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Gaps in the training"
+    },
+    {
+     "type": "text",
+     "markdown": "**Confidence** is how sure the program is.",
+     "say": "Confidence shows how sure the program is. It can be high and still be wrong."
+    },
+    {
+     "type": "text",
+     "markdown": "A model learns only from what it is shown. Play the memory game.",
+     "say": "Zara's class used only grey cats on grass. Then they tried a white cat indoors. First a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Training words",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🏷️",
+      "📷",
+      "🧠",
+      "🐱"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the training picture that has the wrong label.",
+      "hint": "Does the label match the picture?",
+      "explanation": "A dog labelled cat teaches the wrong pattern.",
+      "skill_tag": "see.wrong_label_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🐱",
+         "label": "Cat labelled cat",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "🐶",
+         "label": "Dog labelled cat",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🐟",
+         "label": "Fish labelled fish",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h2"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Training data is labelled examples",
+      "A model learns patterns from them",
+      "Gaps or wrong labels lead to mistakes"
+     ],
+     "say": "Let us remember. A model is only as good as its training data and labels."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "training data",
+       "meaning": "The set of examples a program learns from."
+      },
+      {
+       "term": "label",
+       "meaning": "A name that says what an example shows."
+      },
+      {
+       "term": "model",
+       "meaning": "What the program has learned from the training data."
+      },
+      {
+       "term": "confidence",
+       "meaning": "How sure the program is, shown as a percent."
+      },
+      {
+       "term": "example",
+       "meaning": "One picture used for learning."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why did the cat spotter fail on the white cat?",
+     "hint": "Think about the training pictures.",
+     "explanation": "It had never been shown a white cat.",
+     "options": [
+      {
+       "id": "a",
+       "text": "White cats are not cats"
+      },
+      {
+       "id": "b",
+       "text": "It had only seen grey cats"
+      },
+      {
+       "id": "c",
+       "text": "The screen was too small"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A high confidence score proves the answer is right.",
+     "hint": "Sounding sure is not proof.",
+     "explanation": "A program can be sure and still wrong.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is the model?",
+     "hint": "It comes from training.",
+     "explanation": "The model is what the program learned.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The camera"
+      },
+      {
+       "id": "b",
+       "text": "What the program has learned"
+      },
+      {
+       "id": "c",
+       "text": "The photographer"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "limits",
+   "kind": "use",
+   "title": "Using image AI wisely",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Helpful uses"
+    },
+    {
+     "type": "text",
+     "markdown": "Image AI can **help** people when it is used carefully.",
+     "say": "Image AI can help people. It can sort ripe fruit from unripe fruit on a conveyor belt."
+    },
+    {
+     "type": "text",
+     "markdown": "It saves time on boring jobs.",
+     "say": "It can spot animals on a wildlife camera, so rangers do not need to look at every picture."
+    },
+    {
+     "type": "text",
+     "markdown": "Important results need a human check.",
+     "say": "It can read the postcode on a parcel. It can also help doctors look at scans, but a doctor still checks."
+    },
+    {
+     "type": "explainer",
+     "title": "Helpful, with a check",
+     "scenes": [
+      {
+       "caption": "Wildlife.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📷",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🦌",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A camera in a field takes thousands of pictures. Image AI picks out the ones with animals."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🧑‍🌾",
+         "x": 28,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "unsure"
+        }
+       ],
+       "say": "A ranger looks at the animal pictures and checks the unsure ones."
+      },
+      {
+       "caption": "Teamwork.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🤝",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "AI plus person"
+        }
+       ],
+       "say": "The program saves time. The person makes sure it is right."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of fixing a poor image AI in order.",
+      "hint": "Notice first.",
+      "explanation": "Notice, find the gap, add pictures, then test.",
+      "skill_tag": "see.fix_steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Find what is missing from the training pictures"
+       },
+       {
+        "id": "i3",
+        "text": "Add more varied labelled pictures"
+       },
+       {
+        "id": "i4",
+        "text": "Test it again"
+       },
+       {
+        "id": "i1",
+        "text": "Notice the mistakes"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fair and private"
+    },
+    {
+     "type": "text",
+     "markdown": "Ask **permission** before using pictures of people.",
+     "say": "Pictures of people are personal. We ask permission before using someone's picture to train a program."
+    },
+    {
+     "type": "text",
+     "markdown": "Test it on many kinds of pictures.",
+     "say": "A program must work well for everyone. If it only saw some kinds of pictures, it may fail for others."
+    },
+    {
+     "type": "explainer",
+     "title": "Fair and private",
+     "scenes": [
+      {
+       "caption": "Ask first.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🙋",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "permission"
+        }
+       ],
+       "say": "Zara's class wants more training pictures. They ask each family first."
+      },
+      {
+       "caption": "More variety.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🐈",
+         "x": 28,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐈‍⬛",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o",
+         "emoji": "🏠",
+         "x": 72,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "They add white cats, black cats and cats indoors. The spotter improves."
+      },
+      {
+       "caption": "Test again.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🧪",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "✅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "fair and checked"
+        }
+       ],
+       "say": "They test again and keep a person checking the results. That is wise."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan a fair test",
+     "materials": [
+      "Paper and pens",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Choose what the spotter finds, such as cats or leaves.",
+      "List five different kinds of test pictures it should see.",
+      "Write who will check the results."
+     ],
+     "say": "Now you try. Plan a fair test for a spotter with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We should ask permission before using pictures of people to train a program.",
+      "hint": "Pictures of people are personal.",
+      "explanation": "Permission respects people's privacy.",
+      "skill_tag": "see.permission_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Image AI can help with sorting and spotting",
+      "A person should check important results",
+      "Ask permission and test on many kinds of pictures"
+     ],
+     "say": "Let us remember. Image AI helps. People check. We keep pictures private and test fairly."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "help",
+       "meaning": "To make a job easier."
+      },
+      {
+       "term": "permission",
+       "meaning": "Being allowed to do something."
+      },
+      {
+       "term": "scan",
+       "meaning": "A medical picture of the inside of the body."
+      },
+      {
+       "term": "conveyor",
+       "meaning": "A moving belt that carries things along."
+      },
+      {
+       "term": "personal",
+       "meaning": "About a particular person."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a helpful use of image AI?",
+     "hint": "Think about boring jobs.",
+     "explanation": "Sorting fruit is a safe, helpful job.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Reading private diaries"
+      },
+      {
+       "id": "b",
+       "text": "Choosing who wins a prize"
+      },
+      {
+       "id": "c",
+       "text": "Sorting ripe fruit from unripe fruit"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A person should check important image AI results.",
+     "hint": "AI can be wrong.",
+     "explanation": "A human check keeps important results safe.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why add more kinds of pictures to the training data?",
+     "hint": "Think about the white cat.",
+     "explanation": "More variety helps the model cope.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make it slower"
+      },
+      {
+       "id": "b",
+       "text": "To change its name"
+      },
+      {
+       "id": "c",
+       "text": "So it works for more cases"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "How does a computer store a picture?",
+    "hint": "Think about pixels.",
+    "explanation": "A computer stores a picture as numbers.",
+    "skill_tag": "see.store",
+    "options": [
+     {
+      "id": "a",
+      "text": "As tiny drawings"
+     },
+     {
+      "id": "b",
+      "text": "As a grid of numbers"
+     },
+     {
+      "id": "c",
+      "text": "As a spoken story"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "In a greyscale picture, which number stands for black?",
+    "hint": "The bottom of the scale.",
+    "explanation": "0 is black and 255 is white.",
+    "skill_tag": "see.black",
+    "options": [
+     {
+      "id": "a",
+      "text": "255"
+     },
+     {
+      "id": "b",
+      "text": "0"
+     },
+     {
+      "id": "c",
+      "text": "1000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A computer sees a photo the way a person does, with meaning.",
+    "hint": "It starts with numbers.",
+    "explanation": "A computer has numbers, not meaning.",
+    "skill_tag": "see.meaning",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each term to its meaning.",
+    "hint": "Think about each term.",
+    "explanation": "Each term has its own meaning.",
+    "skill_tag": "see.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Pixel"
+     },
+     {
+      "id": "l2",
+      "text": "Greyscale"
+     },
+     {
+      "id": "l3",
+      "text": "Colour pixel"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Shades from black to white"
+     },
+     {
+      "id": "r1",
+      "text": "One tiny square of a picture"
+     },
+     {
+      "id": "r3",
+      "text": "Three numbers for red, green and blue"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "numbers",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the pixel that is darkest.",
+    "hint": "Small numbers are dark.",
+    "explanation": "12 is closest to 0, which is black.",
+    "skill_tag": "see.tap_dark",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "Number 12",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "Number 130",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "Number 240",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Zara says a computer looks at a photo and knows it is a cat straight away. Is she right?",
+    "hint": "Think about pixels.",
+    "explanation": "A computer matches patterns in numbers.",
+    "skill_tag": "see.reason_know",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, cats are easy to see"
+     },
+     {
+      "id": "b",
+      "text": "No. It only has numbers and must match patterns it has learned"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it understands pictures like a person"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A colour pixel is made from three numbers. Which colours do they stand for?",
+    "hint": "Think about screens.",
+    "explanation": "Screens mix red, green and blue light.",
+    "skill_tag": "see.rgb",
+    "options": [
+     {
+      "id": "a",
+      "text": "Black, white and grey"
+     },
+     {
+      "id": "b",
+      "text": "Red, green and blue"
+     },
+     {
+      "id": "c",
+      "text": "Yellow, pink and purple"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about pictures.",
+    "hint": "Think about the grid.",
+    "explanation": "A picture is a grid of numbers, and each square is a pixel.",
+    "skill_tag": "see.fill_grid",
+    "points": 2,
+    "text": "A picture is stored as a grid of {b1}. Each square is a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "noises"
+       },
+       {
+        "id": "b",
+        "text": "numbers"
+       },
+       {
+        "id": "c",
+        "text": "names"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "poster"
+       },
+       {
+        "id": "b",
+        "text": "pixel"
+       },
+       {
+        "id": "c",
+        "text": "pebble"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "numbers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps for a program spotting a cat in order.",
+    "hint": "Numbers first.",
+    "explanation": "Numbers, edges, compare, then answer.",
+    "skill_tag": "see.spot_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Look for edges and shapes"
+     },
+     {
+      "id": "i3",
+      "text": "Compare with patterns it has learned"
+     },
+     {
+      "id": "i4",
+      "text": "Give an answer"
+     },
+     {
+      "id": "i1",
+      "text": "Read the grid of numbers"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "features",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "What is an edge in a picture?",
+    "hint": "Think about light next to dark.",
+    "explanation": "An edge is a sharp change in numbers.",
+    "skill_tag": "see.edge_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "The frame around the screen"
+     },
+     {
+      "id": "b",
+      "text": "A cut in the photo"
+     },
+     {
+      "id": "c",
+      "text": "A place where pixel numbers change sharply"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "features",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about features.",
+    "hint": "Think about clues.",
+    "explanation": "A feature is a clue and programs use many.",
+    "skill_tag": "see.fill_features",
+    "points": 2,
+    "text": "A {b1} is a clue, such as pointed ears. Programs add up many {b2} to decide.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "fork"
+       },
+       {
+        "id": "b",
+        "text": "fence"
+       },
+       {
+        "id": "c",
+        "text": "feature"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "flags"
+       },
+       {
+        "id": "b",
+        "text": "features"
+       },
+       {
+        "id": "c",
+        "text": "forks"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "features",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Which clue best helps a program tell a cat from a bird?",
+    "hint": "Think about what differs.",
+    "explanation": "Whiskers and four legs set a cat apart.",
+    "skill_tag": "see.cat_vs_bird",
+    "options": [
+     {
+      "id": "a",
+      "text": "Being outside"
+     },
+     {
+      "id": "b",
+      "text": "Being in a photo"
+     },
+     {
+      "id": "c",
+      "text": "Whiskers and four legs"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "features",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A program checks 4 features on each of 5 pictures. Slide to show how many checks it makes.",
+    "hint": "5 groups of 4.",
+    "explanation": "5 x 4 = 20 checks.",
+    "skill_tag": "see.checks",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 20,
+     "tolerance": 0
+    },
+    "sub_lesson": "features",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "More than one feature usually gives a better answer than one alone.",
+    "hint": "Think about the fox.",
+    "explanation": "Several clues together are stronger.",
+    "skill_tag": "see.many_features",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "features",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says if a program finds pointed ears, the picture must be a cat. Is he right?",
+    "hint": "Think about the fox.",
+    "explanation": "Pointed ears alone do not prove a cat.",
+    "skill_tag": "see.reason_ears",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only cats have pointed ears"
+     },
+     {
+      "id": "b",
+      "text": "Yes, one clue is always enough"
+     },
+     {
+      "id": "c",
+      "text": "No. Foxes and other animals have pointed ears too, so more features are needed"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "features",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two are needed to train image AI? Pick two.",
+    "hint": "Think about learning.",
+    "explanation": "AI learns from labelled examples.",
+    "skill_tag": "see.train_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Labels saying what each shows"
+     },
+     {
+      "id": "b",
+      "text": "A paper map"
+     },
+     {
+      "id": "c",
+      "text": "A loud speaker"
+     },
+     {
+      "id": "d",
+      "text": "Many example pictures"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "train",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "Zara trains a spotter with 40 cat pictures and 60 not-cat pictures. How many pictures in all?",
+    "hint": "40 + 60.",
+    "explanation": "40 + 60 = 100 pictures.",
+    "skill_tag": "see.count_train",
+    "answer": {
+     "value": 100,
+     "tolerance": 0
+    },
+    "sub_lesson": "train",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "In image AI training, what does a label do?",
+    "hint": "Cat or not cat.",
+    "explanation": "A label names what a picture shows.",
+    "skill_tag": "see.label_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sets the size of the picture"
+     },
+     {
+      "id": "b",
+      "text": "Records the date it was taken"
+     },
+     {
+      "id": "c",
+      "text": "Says what a picture shows"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "train",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says a spotter trained only on grey cats will work well on every cat. Is he right?",
+    "hint": "Think about variety.",
+    "explanation": "It only learned what it was shown.",
+    "skill_tag": "see.reason_grey",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, grey cats cover everything"
+     },
+     {
+      "id": "b",
+      "text": "No. It may miss cats that look different, such as white ones"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a cat is a cat"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Nadia says an image AI knows when it is wrong. Is she right?",
+    "hint": "Think about confidence.",
+    "explanation": "High confidence is not proof.",
+    "skill_tag": "see.reason_conf",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it always knows"
+     },
+     {
+      "id": "b",
+      "text": "No. It gives an answer and a confidence, but can be wrong while sounding sure"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it feels bad"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says wrong labels in the training pictures do not matter. Is he right?",
+    "hint": "Think about what it learns from.",
+    "explanation": "It learns from labels.",
+    "skill_tag": "see.reason_labels",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it ignores labels"
+     },
+     {
+      "id": "b",
+      "text": "No. Wrong labels teach the program wrong patterns"
+     },
+     {
+      "id": "c",
+      "text": "Yes, labels are only decoration"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each part of training to its job.",
+    "hint": "Think about each part.",
+    "explanation": "Each part has its own job.",
+    "skill_tag": "see.part_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Training data"
+     },
+     {
+      "id": "l2",
+      "text": "Label"
+     },
+     {
+      "id": "l3",
+      "text": "Test picture"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Says what an example shows"
+     },
+     {
+      "id": "r1",
+      "text": "Examples the program learns from"
+     },
+     {
+      "id": "r3",
+      "text": "A new picture used to check the program"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "train",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the training picture with the wrong label.",
+    "hint": "Does the label fit?",
+    "explanation": "A dog labelled cat is wrong.",
+    "skill_tag": "see.tap_label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐱",
+       "label": "Cat labelled cat",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐶",
+       "label": "Dog labelled cat",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐟",
+       "label": "Fish labelled fish",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "train",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of testing a spotter in order.",
+    "hint": "Collect first.",
+    "explanation": "Collect, run, count, decide.",
+    "skill_tag": "see.test_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Run the model on them"
+     },
+     {
+      "id": "i4",
+      "text": "Decide if it is good enough"
+     },
+     {
+      "id": "i3",
+      "text": "Count the mistakes"
+     },
+     {
+      "id": "i1",
+      "text": "Collect new test pictures"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "limits",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are helpful uses of image AI? Pick two.",
+    "hint": "Think about safe, helpful jobs.",
+    "explanation": "These are safe, helpful jobs.",
+    "skill_tag": "see.uses_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Spotting animals on a wildlife camera"
+     },
+     {
+      "id": "b",
+      "text": "Spying on private rooms"
+     },
+     {
+      "id": "c",
+      "text": "Deciding who is guilty with no human check"
+     },
+     {
+      "id": "d",
+      "text": "Sorting ripe fruit from unripe fruit"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "limits",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says image AI can be trusted with big decisions on its own. Is she right?",
+    "hint": "Think about checking.",
+    "explanation": "Important results need a human check.",
+    "skill_tag": "see.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it never makes mistakes"
+     },
+     {
+      "id": "b",
+      "text": "Yes, people are always slower"
+     },
+     {
+      "id": "c",
+      "text": "No. A person should check important results"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says it is fine to train image AI on pictures of classmates without asking. Is she right?",
+    "hint": "Think about privacy.",
+    "explanation": "Pictures of people are personal.",
+    "skill_tag": "see.reason_permission",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, photos are free for all"
+     },
+     {
+      "id": "b",
+      "text": "Yes, classmates never mind"
+     },
+     {
+      "id": "c",
+      "text": "No. Ask permission, because pictures of people are personal"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hira says if an AI makes one mistake, it is useless. Is she right?",
+    "hint": "Think about testing.",
+    "explanation": "Mistakes help us improve the training.",
+    "skill_tag": "see.reason_useless",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one mistake ruins it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, AI never improves"
+     },
+     {
+      "id": "c",
+      "text": "No. It can still help, but we check it and improve it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "A spotter gets 45 out of 50 test pictures right. How many does it get wrong?",
+    "hint": "50 take away 45.",
+    "explanation": "50 - 45 = 5 wrong.",
+    "skill_tag": "see.wrong_count",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "limits",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "A spotter is right on 8 out of 10 test pictures. Slide to show the percent it gets right.",
+    "hint": "8 tenths.",
+    "explanation": "8 out of 10 is 80 percent.",
+    "skill_tag": "see.percent",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 80,
+     "tolerance": 0
+    },
+    "sub_lesson": "limits",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "In a computer, what is each pixel stored as?",
+    "hint": "Think about pixels.",
+    "explanation": "Each pixel is stored as numbers.",
+    "skill_tag": "see.store",
+    "options": [
+     {
+      "id": "a",
+      "text": "A word"
+     },
+     {
+      "id": "b",
+      "text": "A number, or a set of numbers"
+     },
+     {
+      "id": "c",
+      "text": "A tiny photograph"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which number shows the brightest white in greyscale?",
+    "hint": "The top of the scale.",
+    "explanation": "255 is white.",
+    "skill_tag": "see.black",
+    "options": [
+     {
+      "id": "a",
+      "text": "0"
+     },
+     {
+      "id": "b",
+      "text": "255"
+     },
+     {
+      "id": "c",
+      "text": "100"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A computer starts with only numbers when it looks at a picture.",
+    "hint": "It starts with numbers.",
+    "explanation": "It stores pixels as numbers.",
+    "skill_tag": "see.meaning",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each term with what it means.",
+    "hint": "Think about each term.",
+    "explanation": "Each term has its own meaning.",
+    "skill_tag": "see.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Image AI"
+     },
+     {
+      "id": "l2",
+      "text": "Label"
+     },
+     {
+      "id": "l3",
+      "text": "Number grid"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "How a computer stores a picture"
+     },
+     {
+      "id": "r1",
+      "text": "A program that finds patterns in pictures"
+     },
+     {
+      "id": "r2",
+      "text": "A name given to an example"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "numbers",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the pixel that is brightest.",
+    "hint": "Large numbers are bright.",
+    "explanation": "250 is closest to 255, which is white.",
+    "skill_tag": "see.tap_dark",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "Number 20",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "Number 100",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "Number 250",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a computer sees colours and shapes the way we do. Is he right?",
+    "hint": "Think about pixels.",
+    "explanation": "A computer starts from numbers.",
+    "skill_tag": "see.reason_know",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, but it sees them faster"
+     },
+     {
+      "id": "b",
+      "text": "No. It starts with numbers and finds patterns"
+     },
+     {
+      "id": "c",
+      "text": "Yes, exactly like us"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Screens mix light of which three colours to make each pixel?",
+    "hint": "Think about screens.",
+    "explanation": "Red, green and blue light mix to make colours.",
+    "skill_tag": "see.rgb",
+    "options": [
+     {
+      "id": "a",
+      "text": "Orange, brown and gold"
+     },
+     {
+      "id": "b",
+      "text": "Red, green and blue"
+     },
+     {
+      "id": "c",
+      "text": "Black, grey and silver"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "numbers",
+    "depth": "recall",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about greyscale.",
+    "hint": "Think about the ends of the scale.",
+    "explanation": "0 is black and 255 is white.",
+    "skill_tag": "see.fill_grid",
+    "points": 2,
+    "text": "In greyscale the number {b1} is black and {b2} is white.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "99"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "255"
+       },
+       {
+        "id": "c",
+        "text": "8"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "numbers",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these image AI steps in order.",
+    "hint": "Photo first.",
+    "explanation": "Photo, numbers, features, then label.",
+    "skill_tag": "see.spot_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Find features such as edges"
+     },
+     {
+      "id": "i4",
+      "text": "Choose a label"
+     },
+     {
+      "id": "i2",
+      "text": "Turn it into numbers"
+     },
+     {
+      "id": "i1",
+      "text": "Take a photo"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "features",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Where would a program find an edge?",
+    "hint": "Think about light next to dark.",
+    "explanation": "Edges are sharp changes.",
+    "skill_tag": "see.edge_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "In the middle of a flat colour"
+     },
+     {
+      "id": "b",
+      "text": "In the file name"
+     },
+     {
+      "id": "c",
+      "text": "Where a very dark area meets a very light area"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "features",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about clues.",
+    "hint": "Think about clues.",
+    "explanation": "Several features give a better answer.",
+    "skill_tag": "see.fill_features",
+    "points": 2,
+    "text": "Whiskers and ears are {b1} of a cat. A program usually needs {b2} than one.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "floors"
+       },
+       {
+        "id": "b",
+        "text": "features"
+       },
+       {
+        "id": "c",
+        "text": "flavours"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fewer"
+       },
+       {
+        "id": "b",
+        "text": "more"
+       },
+       {
+        "id": "c",
+        "text": "less"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "features",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Which clue helps a program tell a bicycle from a car?",
+    "hint": "Think about what differs.",
+    "explanation": "Two wheels set a bicycle apart.",
+    "skill_tag": "see.cat_vs_bird",
+    "options": [
+     {
+      "id": "a",
+      "text": "Being on a road"
+     },
+     {
+      "id": "b",
+      "text": "Two wheels"
+     },
+     {
+      "id": "c",
+      "text": "Being in a picture"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "features",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A program checks 3 features on each of 6 pictures. Slide to show how many checks it makes.",
+    "hint": "6 groups of 3.",
+    "explanation": "6 x 3 = 18 checks.",
+    "skill_tag": "see.checks",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "sub_lesson": "features",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "One feature, like being brown, is always enough to name an animal.",
+    "hint": "Many animals are brown.",
+    "explanation": "One clue is rarely enough.",
+    "skill_tag": "see.many_features",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "features",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Nina says a program that finds green must be looking at grass. Is she right?",
+    "hint": "Think about many green things.",
+    "explanation": "One clue is not enough.",
+    "skill_tag": "see.reason_ears",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, green means grass"
+     },
+     {
+      "id": "b",
+      "text": "No. Many things are green, so one clue is not enough"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only grass is green"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "features",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two help make a good training set? Pick two.",
+    "hint": "Think about variety and accuracy.",
+    "explanation": "Variety and correct labels help.",
+    "skill_tag": "see.train_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Correct labels"
+     },
+     {
+      "id": "b",
+      "text": "Only one kind of picture"
+     },
+     {
+      "id": "c",
+      "text": "Wrong labels on purpose"
+     },
+     {
+      "id": "d",
+      "text": "Pictures in different places and light"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "train",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "Idris trains a spotter with 30 leaf pictures and 45 not-leaf pictures. How many pictures in all?",
+    "hint": "30 + 45.",
+    "explanation": "30 + 45 = 75 pictures.",
+    "skill_tag": "see.count_train",
+    "answer": {
+     "value": 75,
+     "tolerance": 0
+    },
+    "sub_lesson": "train",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "A picture of a cat is marked cat. What is the word cat?",
+    "hint": "It names the picture.",
+    "explanation": "The word is the label.",
+    "skill_tag": "see.label_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "The edge"
+     },
+     {
+      "id": "b",
+      "text": "The label"
+     },
+     {
+      "id": "c",
+      "text": "The pixel"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a spotter trained only in sunshine will work well at night. Is she right?",
+    "hint": "Think about variety.",
+    "explanation": "It only learned what it was shown.",
+    "skill_tag": "see.reason_grey",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, light never matters"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it can see in the dark"
+     },
+     {
+      "id": "c",
+      "text": "No. It has not seen night pictures, so it may fail"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 99 percent confidence means the answer must be right. Is he right?",
+    "hint": "Think about confidence.",
+    "explanation": "High confidence is not proof.",
+    "skill_tag": "see.reason_conf",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, confidence is proof"
+     },
+     {
+      "id": "b",
+      "text": "No. High confidence can still be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 99 percent is always right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Layla says if some dog pictures are labelled cat, the AI will still learn well. Is she right?",
+    "hint": "Think about what it learns from.",
+    "explanation": "Wrong labels cause muddled patterns.",
+    "skill_tag": "see.reason_labels",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it fixes labels itself"
+     },
+     {
+      "id": "b",
+      "text": "No. It will learn muddled patterns"
+     },
+     {
+      "id": "c",
+      "text": "Yes, dogs and cats look the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "train",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "see.part_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Model"
+     },
+     {
+      "id": "l2",
+      "text": "Confidence"
+     },
+     {
+      "id": "l3",
+      "text": "Mistake"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "An answer that is not correct"
+     },
+     {
+      "id": "r1",
+      "text": "What the program has learned"
+     },
+     {
+      "id": "r2",
+      "text": "How sure the program is"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "train",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the label that is wrong.",
+    "hint": "Does the label fit?",
+    "explanation": "An apple labelled banana is wrong.",
+    "skill_tag": "see.tap_label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍎",
+       "label": "Apple labelled banana",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍌",
+       "label": "Banana labelled banana",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍊",
+       "label": "Orange labelled orange",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "train",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps of improving a spotter in order.",
+    "hint": "Spot the problem first.",
+    "explanation": "Spot, add, train, test.",
+    "skill_tag": "see.test_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add white cat pictures with labels"
+     },
+     {
+      "id": "i4",
+      "text": "Test it on new pictures"
+     },
+     {
+      "id": "i3",
+      "text": "Train it again"
+     },
+     {
+      "id": "i1",
+      "text": "Spot that it misses white cats"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "limits",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two are good ways to use image AI? Pick two.",
+    "hint": "Think about safe, helpful jobs.",
+    "explanation": "These are safe, helpful jobs.",
+    "skill_tag": "see.uses_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Watching people at home without asking"
+     },
+     {
+      "id": "b",
+      "text": "Choosing a punishment alone"
+     },
+     {
+      "id": "c",
+      "text": "Sorting holiday photos into albums"
+     },
+     {
+      "id": "d",
+      "text": "Reading postcodes on parcels"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "limits",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a doctor can skip checking when image AI reads a scan. Is he right?",
+    "hint": "Think about checking.",
+    "explanation": "Important results need a human check.",
+    "skill_tag": "see.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never check"
+     },
+     {
+      "id": "b",
+      "text": "No. The doctor must still check"
+     },
+     {
+      "id": "c",
+      "text": "Yes, AI is always right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Sana says a class can post photos of children to train a public AI. Is she right?",
+    "hint": "Think about privacy.",
+    "explanation": "Personal photos need permission.",
+    "skill_tag": "see.reason_permission",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, children are not private"
+     },
+     {
+      "id": "b",
+      "text": "No. Personal photos need permission and care"
+     },
+     {
+      "id": "c",
+      "text": "Yes, posting is harmless"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Omar says any mistake means we should never use image AI. Is he right?",
+    "hint": "Think about testing.",
+    "explanation": "We test and improve.",
+    "skill_tag": "see.reason_useless",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never use it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, mistakes cannot be fixed"
+     },
+     {
+      "id": "c",
+      "text": "No. We can use it carefully, with checks, and improve it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "limits",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "A spotter gets 36 out of 40 test pictures right. How many does it get wrong?",
+    "hint": "40 take away 36.",
+    "explanation": "40 - 36 = 4 wrong.",
+    "skill_tag": "see.wrong_count",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "limits",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "A spotter is right on 9 out of 10 test pictures. Slide to show the percent it gets right.",
+    "hint": "9 tenths.",
+    "explanation": "9 out of 10 is 90 percent.",
+    "skill_tag": "see.percent",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 90,
+     "tolerance": 0
+    },
+    "sub_lesson": "limits",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

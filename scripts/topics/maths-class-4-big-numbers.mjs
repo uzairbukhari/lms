@@ -1,12 +1,20 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-4-big-numbers.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-4-big-numbers-d1-2102dd39.png","alt":"A place value chart with columns Th, H, T, O showing 5,418","caption":"5,418 in a place value chart."};
+const COTEACH_B = {"type":"image","asset":"maths-class-4-big-numbers-d2-11adabe9.png","alt":"A number line from 4,000 to 5,000 with the midpoint 4,500 marked as the rounding boundary","caption":"4,500 and above rounds up."};
 // Class 4 (Fatima) Maths topic 1: Big numbers. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
+const BIG_PHOTO = "maths-class-4-big-numbers-1-2f0988eb.jpg";
 
 const placeValue = {
   id: "place_value", kind: "learn", title: "Place value to 10,000 and rounding",
   blocks: [
+    H("Welcome, number explorer!"),
+    SAY("Welcome, number explorer! K2 is the second highest mountain in the world. It is in Pakistan, and it is eight thousand, six hundred and eleven metres high. How do we read, write and compare numbers that big? Today you will become a big number expert. You will read, round, add and take away big numbers. You will explore negative numbers and spot patterns. Let's climb!",
+      PHOTO(BIG_PHOTO, "Snow-covered Ama Dablam peak rising above a mountain range", "Mountains are measured in metres, and the numbers are very big.", "Photo by Rohit Tandon on Unsplash")),
+    T("Today's big question: how do we read, write and compare really big numbers, like the height of K2 (8,611 m)?"),
     H("Stop 1: Thousands, hundreds, tens and ones"),
     SAY("Big numbers are not scary. They are built from four little parts, called places. From the right they are ones, tens, hundreds and thousands. Let's build the number four thousand, three hundred and seventy-two, one place at a time. Watch how the number grows.", T("A number up to 9,999 has four places: **thousands**, **hundreds**, **tens** and **ones**.", "Each place is ten times bigger than the one on its right.")),
     EXPP("Build 4,372",
@@ -14,6 +22,7 @@ const placeValue = {
       SS("Next, the hundreds. Three hundreds make three hundred.", S("3 hundreds = 300", ["th", "🟦", 20, 45, 3, "none", "4 thousands"], ["hu", "🟩", 40, 45, 3, "pulse", "3 hundreds"])),
       SS("Then seven tens, which is seventy, and two ones, which is two.", S("7 tens = 70 and 2 ones = 2", ["th", "🟦", 20, 45, 3, "none", "4 thousands"], ["hu", "🟩", 40, 45, 3, "none", "3 hundreds"], ["te", "🟨", 60, 45, 3, "pulse", "7 tens"], ["on", "🟥", 80, 45, 3, "pulse", "2 ones"])),
       SS("Put them all together and we get four thousand, three hundred and seventy-two. We write it 4,372, with a comma after the thousands.", S("4,000 + 300 + 70 + 2 = 4,372", ["th", "🟦", 20, 30, 2, "none", "4 thousands"], ["hu", "🟩", 40, 30, 2, "none", "3 hundreds"], ["te", "🟨", 60, 30, 2, "none", "7 tens"], ["on", "🟥", 80, 30, 2, "none", "2 ones"], ["n", "🔢", 50, 72, 3, "pulse", "4,372"]))),
+    SAY("Put each digit in its own box. Five thousand, four hundred and eighteen.", COTEACH_A),
     CHK(mc("In the number 2,764, what does the 7 stand for?", "700", ["7", "70"], { hint: "Which place is the 7 in?", why: "The 7 is in the hundreds place, so it is worth 700.", tag: "bignumbers.value" })),
     H("Stop 2: 10 more, 100 more, 1,000 more"),
     SAY("Here is a super power. To make a number ten more, only the tens digit changes. For one hundred more, only the hundreds digit changes. For one thousand more, only the thousands digit changes. The other digits stay still. Try with three thousand, two hundred and fifty. One thousand more is four thousand, two hundred and fifty.", T("To add 1,000 only the thousands digit changes: 3,250 becomes 4,250.", "10 more changes the tens digit and 100 more changes the hundreds digit.")),
@@ -22,9 +31,10 @@ const placeValue = {
     H("Stop 3: Rounding"),
     SAY("Rounding gives us a friendly number that is close. To round to the nearest hundred, look at the tens digit. Four or less, stay where you are. Five or more, go up to the next hundred. Look at three hundred and seventy-two on the number line. It sits between three hundred and four hundred. It is closer to four hundred, so it rounds up to four hundred.", T("To **round** to the nearest 100, look at the tens digit. 5 or more rounds up. 4 or less rounds down.", "372 is closer to 400, so it rounds to 400.")),
     NLINE("372 on the line from 300 to 400", 300, 400, [300, 350, 372, 400], "372 is past the halfway mark of 350, so it rounds up to 400.", 10),
+    SAY("Halfway between four thousand and five thousand is four thousand five hundred. From there, we round up.", COTEACH_B),
     CHK(num("Round 5,382 to the nearest 100.", 5400, { hint: "Look at the tens digit, 8.", why: "The tens digit 8 is 5 or more, so round up to 5,400.", tag: "bignumbers.round" })),
     SAY("Remember. Each place is ten times bigger than the place on its right. To round, look at the digit just to the right of the place you are rounding to.", SUM("Four places: thousands, hundreds, tens, ones", "10, 100 or 1,000 more changes one digit", "Round: 5 or more goes up, 4 or less stays")),
-    GLOSS({ thousands: "Big groups of one thousand. In 4,372 there are 4 thousands.", hundreds: "Groups of one hundred. In 4,372 there are 3 hundreds.", tens: "Groups of ten.", ones: "Single things.", round: "To change a number to a close, easier one, such as the nearest 100." }),
+    GLOSS({ "big numbers": "Numbers in the thousands, like 8,611.", thousands: "Big groups of one thousand. In 4,372 there are 4 thousands.", hundreds: "Groups of one hundred. In 4,372 there are 3 hundreds.", tens: "Groups of ten.", ones: "Single things.", round: "To change a number to a close, easier one, such as the nearest 100." }),
   ],
   mini: [
     mc("What is the value of the 7 in 7,260?", "7,000", ["700", "70"], { hint: "Which place is the 7 in?", why: "The 7 is in the thousands place, so it is worth 7,000." }),
@@ -138,6 +148,25 @@ const ALTS = [
   [num("Mount Everest is 8,849 m high. K2 is 8,611 m. How many metres higher is Everest?", 238, { hint: "Take the smaller from the bigger.", why: "8,849 − 8,611 = 238 m.", tag: "bignumbers.real_life" }), num("A plane flies at 9,500 m. A mountain is 4,260 m high. How many metres between them?", 5240, { hint: "Take the smaller from the bigger.", why: "9,500 − 4,260 = 5,240 m.", tag: "bignumbers.real_life" })],
 ];
 
+const clip = {
+  title: "K2 and the big numbers", backdrop: "plain", caption: "Ayesha reads a mountain height and finds the difference.",
+  scenes: [
+    { caption: "Ayesha and K2.", say: "This is Ayesha. She is reading about K2, a mountain in Pakistan.",
+      items: [{ id: "a", emoji: "👧", label: "Ayesha", x: 22, y: 56, size: 3, anim: "bounce", enter: "walk_right" }, { id: "k", emoji: "🏔️", label: "K2", x: 72, y: 40, size: 3, enter: "pop" }] },
+    { caption: "8,611 metres.", say: "K2 is eight thousand, six hundred and eleven metres high.",
+      items: [{ id: "k", emoji: "🏔️", label: "8,611 m", x: 50, y: 40, size: 3, effect: "glow" }] },
+    { caption: "Ben Nevis: 1,345 m.", say: "Ben Nevis in Scotland is one thousand, three hundred and forty-five metres high.",
+      items: [{ id: "b", emoji: "⛰️", label: "1,345 m", x: 50, y: 40, size: 3, enter: "slide_left" }] },
+    { caption: "Each digit has a place.", say: "Ayesha splits each number into thousands, hundreds, tens and ones.",
+      items: [{ id: "t", emoji: "🟦", label: "8 thousands", x: 30, y: 48, size: 2, enter: "grow" }, { id: "h", emoji: "🟩", label: "6 hundreds", x: 70, y: 48, size: 2, enter: "grow" }] },
+    { caption: "8,611 - 1,345.", say: "How much higher is K2? Take the smaller number away from the bigger one.",
+      camera: { zoom: 1.2, x: 50, y: 46 },
+      items: [{ id: "d", emoji: "📏", label: "8,611 - 1,345", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "7,266 m higher.", say: "Take one thousand, three hundred and forty-five away from eight thousand, six hundred and eleven.",
+      items: [{ id: "a", emoji: "👧", label: "Ayesha", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "r", emoji: "🎉", label: "7,266 m", x: 60, y: 40, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-4-big-numbers", subject: "maths", cls: 4, topic: 1, title: "Big Numbers",
@@ -157,13 +186,9 @@ export const topics = [
       num("What is 345 + 120?", 465, { hint: "Add the hundreds and tens.", why: "345 + 120 = 465." }),
       tf("The 5 in 5,000 is worth five thousand.", true, { hint: "Which place is the 5 in?", why: "The 5 is in the thousands place." }),
     ],
-    intro: [
-      H("Welcome, number explorer!"),
-      SAY("Welcome, number explorer! K2, the second highest mountain in the world, is in Pakistan. It is eight thousand, six hundred and eleven metres high. How do we read, write and compare numbers that big? Today you will become a big number expert. You will read numbers up to ten thousand, round them, add and take away, explore negative numbers, and spot patterns. Let's climb!", T("Today's big question: how do we read, write and compare really big numbers, like the height of K2 (8,611 m)?")),
-      IMG("🏔️", "K2 in Pakistan is 8,611 metres high."),
-      GLOSS({ "big numbers": "Numbers in the thousands, like 8,611." }),
-    ],
+    intro: [],
     subs: [placeValue, addSub, negatives, realWorld],
+    clip,
     quiz: [
       { q: mc("In the number 5,418, what does the 4 stand for?", "400", ["4", "40"], { hint: "Which place is the 4 in?", why: "The 4 is in the hundreds place, so it is worth 400.", tag: "bignumbers.value" }), sub: "place_value", depth: "recall" },
       { q: num("How many thousands are in 7,135?", 7, { hint: "Look at the left-hand digit.", why: "7,135 has 7 thousands.", tag: "bignumbers.thousands" }), sub: "place_value", depth: "recall" },
@@ -180,6 +205,36 @@ export const topics = [
       { q: num("What is 3,486 + 2,538?", 6024, { hint: "Start with the ones: 6 + 8.", why: "3,486 + 2,538 = 6,024.", tag: "bignumbers.add" }), sub: "add_sub", depth: "apply" },
       { q: mc("Hamza says 5,000 − 2,634 = 3,466. How can you check?", "Add 3,466 and 2,634: it should make 5,000", ["Subtract again the same way", "Add 5,000 and 2,634"], { hint: "Use the opposite operation.", why: "3,466 + 2,634 = 6,100, not 5,000, so Hamza is wrong. The answer is 2,366.", tag: "bignumbers.check" }), sub: "add_sub", depth: "reason" },
       { q: num("K2 is 8,611 m high. Ben Nevis is 1,345 m high. How many metres higher is K2?", 7266, { hint: "Take the smaller from the bigger.", why: "8,611 − 1,345 = 7,266 m.", tag: "bignumbers.real_life" }), sub: "real_world", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      { q: ms("Which two say 3,090 in words or sums? Pick two.", ["three thousand and ninety", "3,000 + 90"], ["three thousand and nine", "three thousand, nine hundred"], { hint: "Ninety is 9 tens.", why: "3,090 is three thousand and ninety, or 3,000 + 90.", tag: "bignumbers.words" }), sub: "place_value", depth: "recall",
+        alts: [ms("Which two say 6,040 in words or sums? Pick two.", ["six thousand and forty", "6,000 + 40"], ["six thousand and four", "six thousand, four hundred"], { hint: "Forty is 4 tens.", why: "6,040 is six thousand and forty, or 6,000 + 40.", tag: "bignumbers.words" })] },
+      { q: ord("Put these five numbers in order, smallest first.", ["4,005", "4,052", "4,250", "4,500", "4,520"], { hint: "Compare the hundreds and tens if the thousands match.", why: "4,005 is smallest and 4,520 is biggest. The ones with zeros sit in their right places.", tag: "bignumbers.order" }), sub: "place_value", depth: "apply",
+        alts: [ord("Put these five numbers in order, biggest first.", ["6,110", "6,100", "6,010", "6,001", "6,000"], { hint: "Start with the biggest hundreds.", why: "6,110 is biggest and 6,000 is smallest.", tag: "bignumbers.order" })] },
+      { q: num("Round 7,951 to the nearest 10.", 7950, { hint: "Look at the ones digit, 1.", why: "The ones digit is 1, which is less than 5, so round down to 7,950.", tag: "bignumbers.round" }), sub: "place_value", depth: "apply",
+        alts: [num("Round 4,086 to the nearest 10.", 4090, { hint: "Look at the ones digit, 6.", why: "6 is 5 or more, so round up to 4,090.", tag: "bignumbers.round" })] },
+      { q: mat("Pair each Roman numeral with its value.", [["IX", "9"], ["CX", "110"], ["XXX", "30"]], { hint: "C is 100, and X is 10.", why: "IX = 9, CX = 110, XXX = 30.", tag: "bignumbers.roman" }), sub: "negatives", depth: "apply",
+        alts: [mat("Join each Roman numeral to its value.", [["VIII", "8"], ["XC", "90"], ["XL", "40"]], { hint: "Small before big takes away.", why: "VIII = 8, XC = 90, XL = 40.", tag: "bignumbers.roman" })] },
+      { q: ord("Put these temperatures in order, coldest first.", ["−9°C", "−4°C", "0°C", "2°C"], { hint: "The further below zero, the colder.", why: "−9°C is coldest, then −4°C, then 0°C, then 2°C.", tag: "bignumbers.negative" }), sub: "negatives", depth: "apply",
+        alts: [ord("Put these temperatures in order, warmest first.", ["5°C", "0°C", "−1°C", "−6°C"], { hint: "Warmest is the biggest number.", why: "5°C, then 0°C, then −1°C, then −6°C.", tag: "bignumbers.negative" })] },
+      { q: num("It is 3°C in the morning. By night it has fallen by 6 degrees. What is the temperature at night?", -3, { hint: "Count back 3 to zero, then 3 more.", why: "3 − 3 = 0, then 0 − 3 = −3. So it is −3°C.", tag: "bignumbers.negative" }), sub: "negatives", depth: "apply",
+        alts: [num("It is 2°C. It falls by 5 degrees. What is the temperature now?", -3, { hint: "Count back 2 to zero, then 3 more.", why: "2 − 2 = 0, then 0 − 3 = −3. So it is −3°C.", tag: "bignumbers.negative" })] },
+      { q: sld("Slide to show 4,500 on the line from 0 to 5,000.", { min: 0, max: 5000, step: 100 }, 4500, 100, { hint: "Halfway is 2,500. Then go a bit more.", why: "4,500 is nine tenths of the way along 0 to 5,000.", tag: "bignumbers.line" }), sub: "place_value", depth: "apply",
+        alts: [sld("Slide to show 4,000 on the line from 0 to 5,000.", { min: 0, max: 5000, step: 100 }, 4000, 100, { hint: "Four fifths of the way along.", why: "4,000 is four fifths of 5,000.", tag: "bignumbers.line" })] },
+      { q: fill("Pick the sign that makes it true.", "3,708 {b1} 3,780.", [["<", ">", "="]], { hint: "Compare the hundreds, then the tens.", why: "3,708 has 0 tens and 3,780 has 8 tens, so 3,708 is smaller. Use <.", tag: "bignumbers.compare" }), sub: "place_value", depth: "apply",
+        alts: [fill("Choose the right sign for this pair.", "5,630 {b1} 5,603.", [["<", ">", "="]], { hint: "Compare the tens digits.", why: "5,630 has 3 tens and 5,603 has 0 tens, so 5,630 is bigger. Use >.", tag: "bignumbers.compare" })] },
+      { q: hot("Tap the number with 9 hundreds.", [["🔢", "6,290", 22, 50], ["🔢", "6,029", 50, 50], ["🔢", "6,920", 78, 50]], ["6,920"], { labels: true, hint: "Look at the hundreds digit.", why: "6,920 has 9 hundreds. 6,290 has 2 hundreds and 6,029 has none.", tag: "bignumbers.value" }), sub: "place_value", depth: "apply",
+        alts: [hot("Tap the number with 7 tens.", [["🔢", "4,705", 22, 50], ["🔢", "4,570", 50, 50], ["🔢", "4,750", 78, 50]], ["4,570"], { labels: true, hint: "Look at the tens digit.", why: "4,570 has 7 tens. 4,705 has 0 tens and 4,750 has 5 tens.", tag: "bignumbers.value" })] },
+      { q: tf("The 9 in 4,921 is worth 90.", false, { hint: "Which place is the 9 in?", why: "The 9 is in the hundreds place, so it is worth 900.", tag: "bignumbers.value" }), sub: "place_value", depth: "recall",
+        alts: [tf("The 6 in 3,628 is worth 60.", true, { hint: "Which place is the 6 in?", why: "The 6 is in the tens place, so it is worth 60.", tag: "bignumbers.value" })] },
+      { q: mc("Aisha says 5,010 is bigger than 5,100 because it has a 10 in it. Is she right?", "No. 5,100 has 1 hundred and 5,010 has none, so 5,100 is bigger", ["Yes, 5,010 is bigger", "No, they are the same"], { hint: "Start from the thousands, then the hundreds.", why: "The thousands are the same. 5,100 has 1 hundred and 5,010 has 0 hundreds, so 5,100 is bigger.", tag: "bignumbers.reason_compare" }), sub: "place_value", depth: "reason",
+        alts: [mc("Ben says 6,300 is bigger than 6,030. Is he right?", "Yes. 6,300 has 3 hundreds and 6,030 has none, so it is bigger", ["No, 6,030 is bigger", "No, they are the same"], { hint: "Compare the hundreds digits.", why: "6,300 has 3 hundreds and 6,030 has 0 hundreds, so Ben is right.", tag: "bignumbers.reason_compare" })] },
+      { q: mc("Sam says 4,500 rounds to 4,000 to the nearest 1,000. Is he right?", "No. The hundreds digit is 5, so 4,500 rounds up to 5,000", ["Yes, the 5 is on the right", "No, it rounds to 4,600"], { hint: "Look at the digit just right of the thousands.", why: "The hundreds digit is 5 or more, so round up to 5,000.", tag: "bignumbers.reason_round" }), sub: "place_value", depth: "reason",
+        alts: [mc("Hana says 2,470 rounds to 2,000 to the nearest 1,000. Is she right?", "Yes. The hundreds digit is 4, so it rounds down to 2,000", ["No, it rounds up to 3,000", "No, it rounds to 2,500"], { hint: "Look at the hundreds digit.", why: "4 is less than 5, so 2,470 rounds down to 2,000.", tag: "bignumbers.reason_round" })] },
+      { q: mc("Lena says 7,994 rounds to 8,000 to the nearest 10. Is she right?", "No. The ones digit is 4, so it rounds down to 7,990", ["Yes, 7,994 is nearly 8,000", "No, it rounds to 7,900"], { hint: "Look at the ones digit.", why: "The ones digit is 4, so round down to 7,990.", tag: "bignumbers.reason_round" }), sub: "place_value", depth: "reason",
+        alts: [mc("Ravi says 3,426 rounds to 3,430 to the nearest 10. Is he right?", "Yes. The ones digit is 6, so it rounds up to 3,430", ["No, it rounds to 3,420", "No, it rounds to 3,500"], { hint: "Look at the ones digit.", why: "6 is 5 or more, so round up to 3,430.", tag: "bignumbers.reason_round" })] },
+      { q: mc("Ravi says the number after 3,699 is 3,600. Is he right?", "No. Add one to 3,699 and you get 3,700", ["Yes, the 9 turns into 0", "No, it is 4,000"], { hint: "What is one more than 3,699?", why: "3,699 + 1 = 3,700, not 3,600.", tag: "bignumbers.reason_next" }), sub: "place_value", depth: "reason",
+        alts: [mc("Mia says the number after 5,199 is 5,200. Is she right?", "Yes. Add one to 5,199 and you get 5,200", ["No, it is 6,000", "No, it is 5,190"], { hint: "What is one more than 5,199?", why: "5,199 + 1 = 5,200, so Mia is right.", tag: "bignumbers.reason_next" })] },
+      { q: mc("Sara says −5°C is warmer than 0°C because 5 is a big number. Is she right?", "No. 0°C is warmer than −5°C, because −5°C is below zero", ["Yes, 5 is bigger than 0", "No, they are the same"], { hint: "Think about a thermometer.", why: "On a thermometer, 0°C is above −5°C, so 0°C is warmer.", tag: "bignumbers.negative_reason" }), sub: "negatives", depth: "reason",
+        alts: [mc("Zain says −2°C is colder than −8°C. Is he right?", "No. −8°C is further below zero, so it is colder", ["Yes, 2 is smaller than 8 so it is colder", "No, they are the same"], { hint: "Which is further below zero?", why: "−8°C is further below zero than −2°C, so −8°C is colder.", tag: "bignumbers.negative_reason" })] },
+    ].map((x, i) => ({ alts: ALTS[i], ...x })),
   }),
 ];

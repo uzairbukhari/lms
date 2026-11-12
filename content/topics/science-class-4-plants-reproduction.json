@@ -1,0 +1,3012 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-plants-reproduction",
+  "subject": "science",
+  "title": "Plants: Roots, Flowers and Seeds",
+  "summary": "What each plant part does and how flowering plants make new plants.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Plants: roots, flowers and seeds",
+  "learning_objectives": [
+   "Explain the jobs of roots, stems and leaves",
+   "Name the parts of a flower and describe pollination",
+   "Order the life cycle of a flowering plant"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 plants",
+    "text": "Describe the functions of the parts of flowering plants; investigate how water is transported in plants; explore the role of flowers in the life cycle"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bp.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Bp.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say what roots, stems and leaves do",
+   "I can explain pollination",
+   "I can describe how seeds spread"
+  ],
+  "real_life": "Watering plants, bees in the garden and seeds that fly in the wind.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What do plants need to make food?",
+    "hint": "From the Sun.",
+    "explanation": "Plants use light to make food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plastic"
+     },
+     {
+      "id": "b",
+      "text": "Sand"
+     },
+     {
+      "id": "c",
+      "text": "Light"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "All plants have roots.",
+    "hint": "Think of a tree.",
+    "explanation": "Most plants have roots.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a living thing?",
+    "hint": "It grows.",
+    "explanation": "A tree is alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A stone"
+     },
+     {
+      "id": "b",
+      "text": "A table"
+     },
+     {
+      "id": "c",
+      "text": "A tree"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "parts",
+   "kind": "learn",
+   "title": "Roots, stems and leaves",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today we explore how **plants** live and make seeds.",
+     "say": "Welcome, young scientist! Today we find out what each plant part does and how flowering plants make new plants."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-plants-reproduction-3-ba46f4fe.jpg",
+     "alt": "A bee flying near yellow flowers on a leafy stem",
+     "caption": "A flowering plant with stems, leaves and flowers.",
+     "credit": "Photo by Brad Huchteman on Unsplash",
+     "say": "These yellow flowers sit on a stem with leaves. Underground, the same plant has roots. Every part has a job."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Roots and stems"
+    },
+    {
+     "type": "text",
+     "markdown": "**Roots** anchor the plant and **absorb** water and nutrients.",
+     "say": "Roots grow in the soil. They hold the plant firmly in place, and they absorb water and nutrients."
+    },
+    {
+     "type": "text",
+     "markdown": "The **stem** supports the plant and carries water upwards.",
+     "say": "The stem holds the plant up. It also carries water and nutrients from the roots to the leaves and flowers."
+    },
+    {
+     "type": "explainer",
+     "title": "Roots and stem at work",
+     "scenes": [
+      {
+       "caption": "Roots absorb water.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🌱",
+         "x": 30,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 70,
+         "y": 70,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Water is in the soil. The roots absorb it, and they anchor the plant too."
+      },
+      {
+       "caption": "The stem carries water up.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🌿",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 50,
+         "y": 82,
+         "size": 2,
+         "anim": "float"
+        }
+       ],
+       "say": "The stem carries the water up to the leaves and flowers."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is the main job of the roots?",
+      "hint": "Underground jobs.",
+      "explanation": "Roots absorb water and nutrients, and anchor the plant.",
+      "options": [
+       {
+        "id": "a",
+        "text": "To make seeds"
+       },
+       {
+        "id": "b",
+        "text": "To take in water and hold the plant in the soil"
+       },
+       {
+        "id": "c",
+        "text": "To make food from sunlight"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Leaves make food"
+    },
+    {
+     "type": "text",
+     "markdown": "**Leaves** make food using sunlight, water and air.\n\nRoots only take in water and nutrients.",
+     "say": "Leaves make food for the plant. They use sunlight, water and air to do it. Plants do not eat the soil."
+    },
+    {
+     "type": "image",
+     "emoji": "🌿☀️💧",
+     "alt": "Leaves use sunlight and water to make food.",
+     "caption": "Leaves use sunlight and water to make food."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Plants make most of their food in their leaves.",
+      "hint": "Think about sunlight.",
+      "explanation": "Leaves make food using sunlight.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The bee and the mustard flower",
+     "asset": "clip-science-class-4-plants-reproduction-df3399e1.mp4",
+     "poster": "clip-science-class-4-plants-reproduction-df3399e1.webp",
+     "seconds": 64,
+     "transcript": "In a Punjab field, mustard flowers shine yellow in the morning sun. A bee buzzes in. She wants sweet nectar to drink. Yellow pollen sticks to her furry body as she drinks. She flies to another flower. Some pollen touches the sticky stigma. That is pollination. Now the flower can make seeds. Weeks later, the flower has made seeds in a pod. A sycamore seed spins away on its helicopter wing. It is dispersal! Far away, the seed germinates. A new plant begins!",
+     "caption": "A bee carries pollen and a seed takes flight."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Roots anchor and absorb water",
+      "Stems carry water to the leaves",
+      "Leaves make food using sunlight"
+     ],
+     "say": "Remember. Roots anchor and absorb. Stems support and carry. Leaves make food."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "plants",
+       "meaning": "Living things that make their own food, like trees and grass."
+      },
+      {
+       "term": "roots",
+       "meaning": "The part of a plant that grows in the soil."
+      },
+      {
+       "term": "absorb",
+       "meaning": "To soak up, like a sponge."
+      },
+      {
+       "term": "stem",
+       "meaning": "The part that holds the plant up."
+      },
+      {
+       "term": "leaves",
+       "meaning": "The flat green parts that make food."
+      },
+      {
+       "term": "nutrients",
+       "meaning": "Minerals that help plants grow healthy."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part holds a plant firmly in the ground?",
+     "hint": "Underground.",
+     "explanation": "Roots anchor the plant.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The seeds"
+      },
+      {
+       "id": "b",
+       "text": "The roots"
+      },
+      {
+       "id": "c",
+       "text": "The petals"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A stem carries water up to the leaves.",
+     "hint": "Water must travel up.",
+     "explanation": "The stem carries water and nutrients.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each part to its job.",
+     "hint": "Think about where each part is.",
+     "explanation": "Roots absorb, the stem carries and leaves make food.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Roots"
+      },
+      {
+       "id": "l2",
+       "text": "Stem"
+      },
+      {
+       "id": "l3",
+       "text": "Leaves"
+      }
+     ],
+     "right": [
+      {
+       "id": "r2",
+       "text": "Carries water up"
+      },
+      {
+       "id": "r1",
+       "text": "Absorb water"
+      },
+      {
+       "id": "r3",
+       "text": "Make food"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which of these does a plant NOT take in through its roots?",
+     "hint": "Light comes from above.",
+     "explanation": "Roots take in water and nutrients, not sunlight.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nutrients"
+      },
+      {
+       "id": "b",
+       "text": "Sunlight"
+      },
+      {
+       "id": "c",
+       "text": "Water"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "kind": "try",
+   "title": "Water on the move",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Celery in coloured water"
+    },
+    {
+     "type": "text",
+     "markdown": "Coloured water shows how water travels up a **stem**.",
+     "say": "Let's follow the water. A stick of celery stands in coloured water. After some hours, the colour rises up the stem."
+    },
+    {
+     "type": "explainer",
+     "title": "Celery experiment",
+     "scenes": [
+      {
+       "caption": "Start: celery in red water.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🥬",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🥤",
+         "x": 50,
+         "y": 80,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A celery stick stands in water with red food colouring."
+      },
+      {
+       "caption": "Later: colour in the leaves.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🥬",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "w",
+         "emoji": "🔴",
+         "x": 50,
+         "y": 80,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "After a day, the red colour has moved up the stem and into the leaves."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does the colour moving up the celery show?",
+      "hint": "Follow the colour.",
+      "explanation": "The colour marks the path of the water up the stem.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Roots make colour"
+       },
+       {
+        "id": "b",
+        "text": "Water travels up the stem"
+       },
+       {
+        "id": "c",
+        "text": "Leaves drink the colour first"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: A paper towel model"
+    },
+    {
+     "type": "text",
+     "markdown": "Roots **absorb** water over their surface, like a paper towel.",
+     "say": "Roots do not suck water like a straw. They absorb it, like a paper towel soaking up water from the edge."
+    },
+    {
+     "type": "manipulative",
+     "title": "Water the roots",
+     "goal": "Move the water drops to the root hairs, then to the stem.",
+     "emoji": "💧",
+     "count": 10,
+     "zones": [
+      "Soil",
+      "Plant"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Celery test",
+     "materials": [
+      "Celery sticks with leaves",
+      "Cups, water and food colouring",
+      "A ruler"
+     ],
+     "instructions": [
+      "Put one celery stick in plain water and one in red water.",
+      "Wait for several hours.",
+      "Measure how high the colour has gone.",
+      "Keep the amount of water the same each time for a fair test."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "In a fair test, you change only one thing.",
+      "hint": "Think about the colour.",
+      "explanation": "A fair test changes one thing and keeps the rest the same.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Roots absorb water",
+      "The stem carries water to the leaves",
+      "A fair test changes only one thing"
+     ],
+     "say": "Remember. Water travels from the soil, through the roots and stem, to the leaves."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "stem",
+       "meaning": "The part that carries water up."
+      },
+      {
+       "term": "absorb",
+       "meaning": "To soak up water."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing changes."
+      },
+      {
+       "term": "predict",
+       "meaning": "To say what you think will happen."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "order",
+     "prompt": "Put the celery test in order.",
+     "hint": "Set up first.",
+     "explanation": "You set up, wait, measure and record.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Wait"
+      },
+      {
+       "id": "i3",
+       "text": "Measure the colour"
+      },
+      {
+       "id": "i4",
+       "text": "Record the result"
+      },
+      {
+       "id": "i1",
+       "text": "Set up the celery"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do we use food colouring?",
+     "hint": "Make it visible.",
+     "explanation": "The colour lets us see the water's path.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make leaves bigger"
+      },
+      {
+       "id": "b",
+       "text": "To see where the water goes"
+      },
+      {
+       "id": "c",
+       "text": "To feed the plant"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The colour will reach the leaves straight away.",
+     "hint": "It takes time.",
+     "explanation": "Water moves slowly, so the colour takes hours.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should stay the same in a fair test?",
+     "hint": "Keep it fair.",
+     "explanation": "Only the thing you test should change.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing at all"
+      },
+      {
+       "id": "b",
+       "text": "The amount of water and the type of celery"
+      },
+      {
+       "id": "c",
+       "text": "The colour only"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "flower",
+   "kind": "play",
+   "title": "Flower power",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Parts of a flower"
+    },
+    {
+     "type": "text",
+     "markdown": "**Petals** attract insects.\n\nThe **stamen** makes pollen. The **carpel** makes seeds.",
+     "say": "A flower has petals, which attract insects. In the middle are the stamens and the carpel."
+    },
+    {
+     "type": "text",
+     "markdown": "The **anther** makes **pollen**.\n\nThe **stigma** catches pollen.",
+     "say": "The anther is part of the stamen. It makes pollen. The stigma is the sticky tip of the carpel. It catches pollen."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-plants-reproduction-1-430b870e.jpg",
+     "alt": "A bumblebee on a yellow flower",
+     "caption": "A bee carries pollen from flower to flower.",
+     "credit": "Photo by Celine Lityo on Unsplash",
+     "say": "This bee is visiting for nectar. Look at the pollen on its legs."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which part of the flower makes pollen?",
+      "hint": "Part of the stamen.",
+      "explanation": "The anther makes and holds pollen.",
+      "options": [
+       {
+        "id": "a",
+        "text": "The petal"
+       },
+       {
+        "id": "b",
+        "text": "The anther"
+       },
+       {
+        "id": "c",
+        "text": "The stigma"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Pollination"
+    },
+    {
+     "type": "text",
+     "markdown": "**Pollination** moves pollen from an anther to a stigma.",
+     "say": "Pollination is when pollen moves from an anther to a stigma. Insects and wind can carry pollen."
+    },
+    {
+     "type": "explainer",
+     "title": "A bee pollinates",
+     "scenes": [
+      {
+       "caption": "Pollen sticks to the bee.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🐝",
+         "x": 30,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "f",
+         "emoji": "🌼",
+         "x": 30,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A bee lands on a flower to drink nectar. Pollen sticks to its body."
+      },
+      {
+       "caption": "Pollen reaches the stigma.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🐝",
+         "x": 70,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 70,
+         "y": 70,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "It flies to another flower. Some pollen touches the stigma. That is pollination."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Flower match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🌼",
+      "🐝",
+      "🌸",
+      "🦋",
+      "🌻",
+      "🍃"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Wind can carry pollen between flowers.",
+      "hint": "Grasses use wind.",
+      "explanation": "Some plants are pollinated by wind.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Petals attract insects",
+      "The anther makes pollen",
+      "Pollination moves pollen to the stigma"
+     ],
+     "say": "Remember. Petals attract insects. Anthers make pollen. Pollination carries it to the stigma."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "petals",
+       "meaning": "The bright parts of a flower."
+      },
+      {
+       "term": "stamen",
+       "meaning": "The male part of a flower."
+      },
+      {
+       "term": "carpel",
+       "meaning": "The female part of a flower."
+      },
+      {
+       "term": "anther",
+       "meaning": "The part of the stamen that makes pollen."
+      },
+      {
+       "term": "pollen",
+       "meaning": "A fine powder that helps to make seeds."
+      },
+      {
+       "term": "stigma",
+       "meaning": "The sticky top of the carpel."
+      },
+      {
+       "term": "pollination",
+       "meaning": "Moving pollen from an anther to a stigma."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which part of a flower catches pollen?",
+     "hint": "It is sticky.",
+     "explanation": "The stigma catches pollen.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The petal"
+      },
+      {
+       "id": "b",
+       "text": "The root"
+      },
+      {
+       "id": "c",
+       "text": "The stigma"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Pollination happens inside the soil.",
+     "hint": "Flowers are above ground.",
+     "explanation": "Pollination happens in flowers.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do many flowers have a sweet smell?",
+     "hint": "Think of bees.",
+     "explanation": "Smell and colour attract pollinators.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To keep warm"
+      },
+      {
+       "id": "b",
+       "text": "To attract insects"
+      },
+      {
+       "id": "c",
+       "text": "To scare them"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each flower part to its job.",
+     "hint": "Think of the bee's visit.",
+     "explanation": "Each part has its own job.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Petals"
+      },
+      {
+       "id": "l2",
+       "text": "Anther"
+      },
+      {
+       "id": "l3",
+       "text": "Stigma"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Catches pollen"
+      },
+      {
+       "id": "r1",
+       "text": "Attract insects"
+      },
+      {
+       "id": "r2",
+       "text": "Makes pollen"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "seeds",
+   "kind": "use",
+   "title": "Seeds on the move",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Seed dispersal"
+    },
+    {
+     "type": "text",
+     "markdown": "**Seed dispersal** is how seeds spread away from the plant.",
+     "say": "After pollination, the flower makes seeds. Seeds must spread away from the parent plant, so they have space to grow."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-plants-reproduction-2-c323252a.jpg",
+     "alt": "Dandelion seeds with fluffy parachutes floating in the air",
+     "caption": "Dandelion seeds travel on the wind.",
+     "credit": "Photo by Hasan Almasi on Unsplash",
+     "say": "Dandelion seeds have tiny parachutes. The wind carries them far away. Sycamore seeds spin like helicopters."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How do dandelion seeds spread?",
+      "hint": "Parachutes.",
+      "explanation": "Dandelion seeds are carried by the wind.",
+      "options": [
+       {
+        "id": "a",
+        "text": "By swimming"
+       },
+       {
+        "id": "b",
+        "text": "On the wind"
+       },
+       {
+        "id": "c",
+        "text": "By pollination"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The life cycle"
+    },
+    {
+     "type": "text",
+     "markdown": "The **life cycle** of a flowering plant goes round and round.",
+     "say": "A seed germinates and grows into a seedling. The seedling becomes an adult plant, which flowers and makes new seeds."
+    },
+    {
+     "type": "explainer",
+     "title": "A bean's life cycle",
+     "scenes": [
+      {
+       "caption": "Seed to seedling.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🫘",
+         "x": 25,
+         "y": 65,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🌱",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A bean seed is planted in soil. It germinates and a root grows."
+      },
+      {
+       "caption": "Plant, flower, new seeds.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🪴",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🌸",
+         "x": 55,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🫘",
+         "x": 85,
+         "y": 65,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The seedling grows into a plant that flowers and makes new beans."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "reveal",
+     "prompt": "Why do seeds need to spread away from the parent plant? Have a think first.",
+     "answer_markdown": "So they do not crowd each other. They need space, light and water to grow."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the plant life cycle in order.",
+      "hint": "Start and end with seeds.",
+      "explanation": "A plant grows from a seed, flowers, and makes new seeds.",
+      "points": 2,
+      "items": [
+       {
+        "id": "i2",
+        "text": "Seedling"
+       },
+       {
+        "id": "i3",
+        "text": "Adult plant with flowers"
+       },
+       {
+        "id": "i4",
+        "text": "New seeds"
+       },
+       {
+        "id": "i1",
+        "text": "Seed"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Seeds spread by wind, water and animals",
+      "A seed germinates into a seedling",
+      "The life cycle goes round and round"
+     ],
+     "say": "Remember. Seeds spread by wind, water and animals. Then they germinate and the life cycle goes on."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "seed dispersal",
+       "meaning": "How seeds are spread away from the plant."
+      },
+      {
+       "term": "life cycle",
+       "meaning": "The stages of a living thing from start to start again."
+      },
+      {
+       "term": "germinate",
+       "meaning": "When a seed starts to grow."
+      },
+      {
+       "term": "seedling",
+       "meaning": "A young plant just starting to grow."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "A burr that sticks to your socks is dispersed by...",
+     "hint": "It catches on fur.",
+     "explanation": "Burrs stick to fur and clothes.",
+     "options": [
+      {
+       "id": "a",
+       "text": "wind"
+      },
+      {
+       "id": "b",
+       "text": "water"
+      },
+      {
+       "id": "c",
+       "text": "animals"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A coconut can be carried by water.",
+     "hint": "It floats.",
+     "explanation": "Coconuts float away on the sea.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does germinate mean?",
+     "hint": "A seed in the soil.",
+     "explanation": "Germinate means a seed starts to grow.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make pollen"
+      },
+      {
+       "id": "b",
+       "text": "To start to grow"
+      },
+      {
+       "id": "c",
+       "text": "To fall off"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do some fruits taste sweet?",
+     "hint": "Think of birds.",
+     "explanation": "Animals eat the fruit and drop seeds elsewhere.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To block sunlight"
+      },
+      {
+       "id": "b",
+       "text": "Animals eat them and spread the seeds"
+      },
+      {
+       "id": "c",
+       "text": "To keep leaves green"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "true_false",
+    "prompt": "Roots hold a plant firmly in the soil.",
+    "hint": "Think of a tree in the wind.",
+    "explanation": "Roots anchor the plant.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "plants.roots",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What is the main job of the stem?",
+    "hint": "Support and carry.",
+    "explanation": "The stem supports the plant and carries water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To make food from soil"
+     },
+     {
+      "id": "b",
+      "text": "To hold the plant up and carry water to the leaves"
+     },
+     {
+      "id": "c",
+      "text": "To make seeds"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.jobs",
+    "sub_lesson": "parts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says leaves drink the water that plants need. Is he right?",
+    "hint": "Where is the water?",
+    "explanation": "Roots absorb water from the soil. The stem carries it up.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, leaves drink the rain"
+     },
+     {
+      "id": "b",
+      "text": "No. Roots take in the water, and the stem carries it up to the leaves"
+     },
+     {
+      "id": "c",
+      "text": "Yes, water goes in through the flowers"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.leaves_water",
+    "sub_lesson": "parts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about roots.",
+    "hint": "Two jobs.",
+    "explanation": "Roots absorb water and anchor the plant.",
+    "points": 2,
+    "text": "Roots {b1} water and {b2} the plant in the soil.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "make"
+       },
+       {
+        "id": "b",
+        "text": "absorb"
+       },
+       {
+        "id": "c",
+        "text": "reflect"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "feed"
+       },
+       {
+        "id": "b",
+        "text": "paint"
+       },
+       {
+        "id": "c",
+        "text": "anchor"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_roots",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the part that takes in water from the soil.",
+    "hint": "Underground.",
+    "explanation": "Roots absorb water.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌱",
+       "label": "Roots",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍃",
+       "label": "Leaf",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌼",
+       "label": "Flower",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "plants.hotspot",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "A plant has 3 main roots. Each splits into 4 smaller roots. How many smaller roots are there?",
+    "hint": "3 times 4.",
+    "explanation": "3 x 4 = 12 smaller roots.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.root_count",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two things do plants need to grow? Pick two.",
+    "hint": "Think about the garden.",
+    "explanation": "Plants need water and light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Light"
+     },
+     {
+      "id": "b",
+      "text": "Plastic"
+     },
+     {
+      "id": "c",
+      "text": "Chocolate"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.needs",
+    "sub_lesson": "parts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Ali says plants take all their food from the soil. Is he right?",
+    "hint": "Where is food made?",
+    "explanation": "Leaves make food using sunlight. Soil gives water and nutrients.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil is plant food"
+     },
+     {
+      "id": "b",
+      "text": "No. Plants make their own food in their leaves. Roots take in water and nutrients"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plants eat soil"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.soil_food",
+    "sub_lesson": "parts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each plant part to its job.",
+    "hint": "Underground, middle, top.",
+    "explanation": "Roots absorb, the stem carries and leaves make food.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Roots"
+     },
+     {
+      "id": "l2",
+      "text": "Stem"
+     },
+     {
+      "id": "l3",
+      "text": "Leaves"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Carries water upwards"
+     },
+     {
+      "id": "r3",
+      "text": "Make food"
+     },
+     {
+      "id": "r1",
+      "text": "Absorb water and anchor"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.jobs_match",
+    "sub_lesson": "water",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says roots work like drinking straws, sucking water in through their tips only. Is she right?",
+    "hint": "Think of the paper towel.",
+    "explanation": "Roots absorb water across their whole surface.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only the tips take water"
+     },
+     {
+      "id": "b",
+      "text": "No. Roots absorb water over their surface, like a paper towel soaking it up"
+     },
+     {
+      "id": "c",
+      "text": "Yes, roots pump the water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.straws",
+    "sub_lesson": "water",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "Colour rises 2 cm each hour up a celery stem. Slide to show how high it is after 4 hours.",
+    "hint": "2 times 4.",
+    "explanation": "2 x 4 = 8 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.celery_rate",
+    "sub_lesson": "water",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Layla says a plant can stand up without roots, so roots are not needed. Is she right?",
+    "hint": "Anchor and absorb.",
+    "explanation": "Without roots the plant cannot stay up or get water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the stem can do it all"
+     },
+     {
+      "id": "b",
+      "text": "Yes, leaves can take in the water"
+     },
+     {
+      "id": "c",
+      "text": "No. Roots anchor the plant and take in water, so it would fall over and dry out"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.no_roots",
+    "sub_lesson": "water",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the journey of water in order.",
+    "hint": "Bottom to top.",
+    "explanation": "Water goes from the soil, into the roots, up the stem and to the leaves.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Absorbed by the roots"
+     },
+     {
+      "id": "i4",
+      "text": "Reaches the leaves"
+     },
+     {
+      "id": "i3",
+      "text": "Carried up the stem"
+     },
+     {
+      "id": "i1",
+      "text": "Water in the soil"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "plants.water_path",
+    "sub_lesson": "water",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "Water rises 6 cm up a stem in 2 hours. At the same rate, how far does it rise in 6 hours?",
+    "hint": "6 hours is 3 lots of 2.",
+    "explanation": "3 x 6 = 18 cm.",
+    "answer": {
+     "value": 18,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.rate_time",
+    "sub_lesson": "water",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about water.",
+    "hint": "From the roots to the top.",
+    "explanation": "Water goes up the stem to the leaves.",
+    "points": 2,
+    "text": "Water goes up the {b1} to the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "root"
+       },
+       {
+        "id": "b",
+        "text": "seed"
+       },
+       {
+        "id": "c",
+        "text": "stem"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "soil"
+       },
+       {
+        "id": "b",
+        "text": "pot"
+       },
+       {
+        "id": "c",
+        "text": "leaves"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_water",
+    "sub_lesson": "water",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "Coloured water in celery shows where water travels in the plant.",
+    "hint": "The colour follows the water.",
+    "explanation": "The colour marks the path of water.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "plants.fair_test",
+    "sub_lesson": "water",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "hotspot",
+    "prompt": "Tap the part of the flower that makes pollen.",
+    "hint": "Part of the stamen.",
+    "explanation": "The anther makes pollen.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌼",
+       "label": "Anther",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌸",
+       "label": "Petal",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌱",
+       "label": "Stem",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "plants.flower_hotspot",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Omar says flowers are only there to look nice. Is he right?",
+    "hint": "What do petals do for the plant?",
+    "explanation": "Flowers attract pollinators and make seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are just for decoration"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they are for people to pick"
+     },
+     {
+      "id": "c",
+      "text": "No. Bright petals attract insects, and flowers make seeds"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.flower_looks",
+    "sub_lesson": "flower",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Hamza says bees pollinate flowers to help them. Is he right?",
+    "hint": "What do bees want?",
+    "explanation": "Bees visit for food. Pollination is a by-product.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, bees plan to help flowers"
+     },
+     {
+      "id": "b",
+      "text": "No. Bees visit for nectar. Pollination happens as a side effect"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bees are paid by the flowers"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.bee_helps",
+    "sub_lesson": "flower",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each part of a flower to its job.",
+    "hint": "Think of the bee.",
+    "explanation": "Petals attract, anthers make pollen and the stigma catches it.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Petals"
+     },
+     {
+      "id": "l2",
+      "text": "Anther"
+     },
+     {
+      "id": "l3",
+      "text": "Stigma"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Catches pollen"
+     },
+     {
+      "id": "r1",
+      "text": "Attract insects"
+     },
+     {
+      "id": "r2",
+      "text": "Makes pollen"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.parts_match",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put the steps of insect pollination in order.",
+    "hint": "Visit, stick, travel, touch.",
+    "explanation": "The insect picks up pollen, travels, and leaves some on the stigma.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "It visits another flower"
+     },
+     {
+      "id": "i4",
+      "text": "Pollen touches the stigma"
+     },
+     {
+      "id": "i2",
+      "text": "Pollen sticks to its body"
+     },
+     {
+      "id": "i1",
+      "text": "An insect lands on a flower"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "plants.pollination_order",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A bee visits 12 flowers in 1 minute. Slide to show how many flowers it visits in 5 minutes at that rate.",
+    "hint": "12 times 5.",
+    "explanation": "12 x 5 = 60 flowers.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100,
+     "unit": "flowers"
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.bee_visits",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two clues suggest a flower is pollinated by insects? Pick two.",
+    "hint": "Think of what attracts insects.",
+    "explanation": "Bright petals and a sweet smell attract insects.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Small dull flowers"
+     },
+     {
+      "id": "b",
+      "text": "No smell"
+     },
+     {
+      "id": "c",
+      "text": "Sweet smell"
+     },
+     {
+      "id": "d",
+      "text": "Bright petals"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "plants.insect_flower",
+    "sub_lesson": "flower",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "A sycamore seed has a wing that spins. How is it dispersed?",
+    "hint": "Helicopter wings.",
+    "explanation": "The wing makes it spin and travel on the wind.",
+    "options": [
+     {
+      "id": "a",
+      "text": "By water"
+     },
+     {
+      "id": "b",
+      "text": "By animals"
+     },
+     {
+      "id": "c",
+      "text": "By wind"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.dispersal",
+    "sub_lesson": "seeds",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A plant makes 25 seeds. The wind carries away 10 and animals carry away 8. How many seeds are left?",
+    "hint": "Take away 10, then 8.",
+    "explanation": "25 - 10 - 8 = 7 seeds.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.seed_count",
+    "sub_lesson": "seeds",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zainab says pollen is a seed. Is she right?",
+    "hint": "What makes pollen?",
+    "explanation": "Pollen helps make seeds, but it is not a seed.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, pollen grows into a plant"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No. Pollen is a powder made by the anther. A seed forms after pollination"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.pollen_seed",
+    "sub_lesson": "seeds",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "A seed can grow into a new plant.",
+    "hint": "Think of a bean.",
+    "explanation": "A seed germinates and grows into a plant.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "plants.seed_grow",
+    "sub_lesson": "seeds",
+    "depth": "recall"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about the life cycle.",
+    "hint": "Young plant, then adult.",
+    "explanation": "A seed grows into a seedling and then an adult plant.",
+    "points": 2,
+    "text": "A seed germinates and grows into a {b1}, then into an adult {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "fruit"
+       },
+       {
+        "id": "b",
+        "text": "seedling"
+       },
+       {
+        "id": "c",
+        "text": "root"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stone"
+       },
+       {
+        "id": "b",
+        "text": "pond"
+       },
+       {
+        "id": "c",
+        "text": "plant"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_cycle",
+    "sub_lesson": "seeds",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Mira says pollination and seed dispersal are the same thing. Is she right?",
+    "hint": "Pollen or seed?",
+    "explanation": "Pollination moves pollen. Dispersal moves seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. Pollination moves pollen between flowers. Dispersal moves seeds away from the plant"
+     },
+     {
+      "id": "c",
+      "text": "No, dispersal comes before pollination"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.pollination_vs_dispersal",
+    "sub_lesson": "seeds",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two are ways seeds can be dispersed? Pick two.",
+    "hint": "Think of dandelions and burrs.",
+    "explanation": "Wind and animals spread seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Animals"
+     },
+     {
+      "id": "b",
+      "text": "Roots"
+     },
+     {
+      "id": "c",
+      "text": "Photosynthesis"
+     },
+     {
+      "id": "d",
+      "text": "Wind"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.dispersal_two",
+    "sub_lesson": "seeds",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "true_false",
+    "prompt": "Roots are where plants make food using sunlight.",
+    "hint": "Is there light underground?",
+    "explanation": "Leaves make food using sunlight. Roots are underground.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "plants.roots",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which part makes food using sunlight?",
+    "hint": "Green and flat.",
+    "explanation": "Leaves make food using sunlight.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The roots"
+     },
+     {
+      "id": "b",
+      "text": "The seeds"
+     },
+     {
+      "id": "c",
+      "text": "The leaves"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.jobs",
+    "sub_lesson": "parts",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Ben says flowers take in the water for the plant. Is he right?",
+    "hint": "Where is the water?",
+    "explanation": "Roots are the part that absorb water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, flowers drink the water"
+     },
+     {
+      "id": "b",
+      "text": "Yes, seeds drink the water"
+     },
+     {
+      "id": "c",
+      "text": "No. Roots take in the water"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.leaves_water",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about leaves.",
+    "hint": "What do leaves need?",
+    "explanation": "Leaves make food using sunlight.",
+    "points": 2,
+    "text": "Leaves make {b1} using {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "water"
+       },
+       {
+        "id": "b",
+        "text": "food"
+       },
+       {
+        "id": "c",
+        "text": "soil"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "rain"
+       },
+       {
+        "id": "b",
+        "text": "wind"
+       },
+       {
+        "id": "c",
+        "text": "sunlight"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_roots",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the part that makes food using sunlight.",
+    "hint": "Green and flat.",
+    "explanation": "Leaves make food.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌱",
+       "label": "Roots",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍃",
+       "label": "Leaf",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌼",
+       "label": "Flower",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "plants.hotspot",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "A plant has 2 main roots. Each splits into 5 smaller roots. How many smaller roots are there?",
+    "hint": "2 times 5.",
+    "explanation": "2 x 5 = 10 smaller roots.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.root_count",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Which two things help a plant grow well? Choose two.",
+    "hint": "Think about the garden.",
+    "explanation": "Plants need air and warmth.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Warmth"
+     },
+     {
+      "id": "b",
+      "text": "Sweets"
+     },
+     {
+      "id": "c",
+      "text": "Cold metal"
+     },
+     {
+      "id": "d",
+      "text": "Air"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.needs",
+    "sub_lesson": "parts",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Hana says plants eat the soil through their roots. Is she right?",
+    "hint": "Where is food made?",
+    "explanation": "Plants make their own food in leaves.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they eat the soil"
+     },
+     {
+      "id": "b",
+      "text": "No. Plants make their own food in the leaves"
+     },
+     {
+      "id": "c",
+      "text": "Yes, soil is their only food"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.soil_food",
+    "sub_lesson": "parts",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Link each plant part to its job.",
+    "hint": "Think about each part.",
+    "explanation": "Flowers make seeds, stems support and roots take in nutrients.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Flower"
+     },
+     {
+      "id": "l2",
+      "text": "Stem"
+     },
+     {
+      "id": "l3",
+      "text": "Roots"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Holds the plant up"
+     },
+     {
+      "id": "r3",
+      "text": "Take in nutrients"
+     },
+     {
+      "id": "r1",
+      "text": "Makes seeds"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.jobs_match",
+    "sub_lesson": "water",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Ben says roots only take in water at the very end. Is he right?",
+    "hint": "Think of the paper towel.",
+    "explanation": "Water is absorbed over the whole root surface.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, roots are hollow pipes"
+     },
+     {
+      "id": "b",
+      "text": "No. Water is absorbed along the roots, not just at the end"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only the end works"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.straws",
+    "sub_lesson": "water",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "Colour rises 3 cm each hour up a celery stem. Slide to show how high it is after 5 hours.",
+    "hint": "3 times 5.",
+    "explanation": "3 x 5 = 15 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.celery_rate",
+    "sub_lesson": "water",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Mina says a plant without roots can drink through its leaves. Is she right?",
+    "hint": "Anchor and absorb.",
+    "explanation": "Roots absorb water. A plant without them would wilt.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, leaves absorb the water"
+     },
+     {
+      "id": "b",
+      "text": "No. Roots are the part that absorb water, so it would dry out"
+     },
+     {
+      "id": "c",
+      "text": "Yes, flowers absorb the water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.no_roots",
+    "sub_lesson": "water",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put the celery investigation in order.",
+    "hint": "Set up, wait, look, record.",
+    "explanation": "Set up, wait, observe, then record.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Leave it for some hours"
+     },
+     {
+      "id": "i3",
+      "text": "Look for colour in the stem and leaves"
+     },
+     {
+      "id": "i4",
+      "text": "Record what you see"
+     },
+     {
+      "id": "i1",
+      "text": "Put celery in coloured water"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "plants.water_path",
+    "sub_lesson": "water",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "Water rises 4 cm up a stem in 2 hours. At the same rate, how far does it rise in 8 hours?",
+    "hint": "8 hours is 4 lots of 2.",
+    "explanation": "4 x 4 = 16 cm.",
+    "answer": {
+     "value": 16,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.rate_time",
+    "sub_lesson": "water",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about the celery test.",
+    "hint": "What does the colour show?",
+    "explanation": "The colour shows water moving up the stem.",
+    "points": 2,
+    "text": "The {b1} moves up the stem. This shows the stem carries {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "heat"
+       },
+       {
+        "id": "b",
+        "text": "colour"
+       },
+       {
+        "id": "c",
+        "text": "soil"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "light"
+       },
+       {
+        "id": "b",
+        "text": "seeds"
+       },
+       {
+        "id": "c",
+        "text": "water"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_water",
+    "sub_lesson": "water",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "In a fair celery test you should use different amounts of water in each cup.",
+    "hint": "Change one thing only.",
+    "explanation": "A fair test keeps the amount of water the same.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "plants.fair_test",
+    "sub_lesson": "water",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "hotspot",
+    "prompt": "Tap the sticky part that catches pollen.",
+    "hint": "Top of the carpel.",
+    "explanation": "The stigma catches pollen.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌼",
+       "label": "Stigma",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌸",
+       "label": "Petal",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍃",
+       "label": "Leaf",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "plants.flower_hotspot",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Mina says flowers smell sweet only for people. Is she right?",
+    "hint": "What do insects do?",
+    "explanation": "Smell attracts insects that carry pollen.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, smell does nothing"
+     },
+     {
+      "id": "b",
+      "text": "No. The smell attracts insects that pollinate them"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only for people"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.flower_looks",
+    "sub_lesson": "flower",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Ali says butterflies pollinate flowers on purpose to help them. Is he right?",
+    "hint": "What do butterflies want?",
+    "explanation": "They visit for nectar. Pollination is a side effect.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, butterflies plan to pollinate"
+     },
+     {
+      "id": "b",
+      "text": "Yes, butterflies need the flowers to survive"
+     },
+     {
+      "id": "c",
+      "text": "No. Butterflies come for nectar, and carry pollen by accident"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.bee_helps",
+    "sub_lesson": "flower",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Link each flower part to its job.",
+    "hint": "Think of the bee.",
+    "explanation": "Nectar feeds insects, the ovary makes seeds and the stamen is the male part.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Nectar"
+     },
+     {
+      "id": "l2",
+      "text": "Ovary"
+     },
+     {
+      "id": "l3",
+      "text": "Stamen"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Male part"
+     },
+     {
+      "id": "r1",
+      "text": "Food for insects"
+     },
+     {
+      "id": "r2",
+      "text": "Makes seeds"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "plants.parts_match",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Put the steps of wind pollination in order.",
+    "hint": "Make, blow, land, done.",
+    "explanation": "Pollen is made, carried by wind, lands, and pollination is complete.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The wind blows the pollen"
+     },
+     {
+      "id": "i4",
+      "text": "Pollination is complete"
+     },
+     {
+      "id": "i3",
+      "text": "Pollen lands on a stigma"
+     },
+     {
+      "id": "i1",
+      "text": "Pollen is made in the anther"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "plants.pollination_order",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A bee visits 8 flowers in 1 minute. Slide to show how many flowers it visits in 5 minutes at that rate.",
+    "hint": "8 times 5.",
+    "explanation": "8 x 5 = 40 flowers.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100,
+     "unit": "flowers"
+    },
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.bee_visits",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two clues suggest a flower is pollinated by wind? Pick two.",
+    "hint": "Wind does not need attracting.",
+    "explanation": "Wind-pollinated flowers are small and dull with no scent.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No scent"
+     },
+     {
+      "id": "b",
+      "text": "Sweet smell"
+     },
+     {
+      "id": "c",
+      "text": "Bright petals"
+     },
+     {
+      "id": "d",
+      "text": "Small dull flowers"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.insect_flower",
+    "sub_lesson": "flower",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "A burr sticks to a dog's fur. How is it dispersed?",
+    "hint": "Hooks on fur.",
+    "explanation": "Burrs hook onto fur and are carried away.",
+    "options": [
+     {
+      "id": "a",
+      "text": "By water"
+     },
+     {
+      "id": "b",
+      "text": "By animals"
+     },
+     {
+      "id": "c",
+      "text": "By wind"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.dispersal",
+    "sub_lesson": "seeds",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A plant makes 30 seeds. The wind carries away 12 and animals carry away 9. How many seeds are left?",
+    "hint": "Take away 12, then 9.",
+    "explanation": "30 - 12 - 9 = 9 seeds.",
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "skill_tag": "plants.seed_count",
+    "sub_lesson": "seeds",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ben says pollen grows straight into a new plant. Is he right?",
+    "hint": "What comes after pollination?",
+    "explanation": "After pollination a seed forms, and the seed grows.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, pollen is a baby plant"
+     },
+     {
+      "id": "b",
+      "text": "No. Pollen must reach a stigma first, then a seed forms"
+     },
+     {
+      "id": "c",
+      "text": "Yes, pollen is a root"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "plants.pollen_seed",
+    "sub_lesson": "seeds",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "Seeds spread away from the parent plant so they have to compete for the same space.",
+    "hint": "Why spread out?",
+    "explanation": "Spreading gives seeds more space to grow.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "plants.seed_grow",
+    "sub_lesson": "seeds",
+    "depth": "recall",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about seeds.",
+    "hint": "Why spread out?",
+    "explanation": "Seeds spread so they have space to grow.",
+    "points": 2,
+    "text": "Seeds are {b1} away from the parent plant so they have more {b2} to grow.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "glued"
+       },
+       {
+        "id": "b",
+        "text": "spread"
+       },
+       {
+        "id": "c",
+        "text": "buried"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "noise"
+       },
+       {
+        "id": "b",
+        "text": "cold"
+       },
+       {
+        "id": "c",
+        "text": "space"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "plants.fill_cycle",
+    "sub_lesson": "seeds",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Ali says seed dispersal means moving pollen to the stigma. Is he right?",
+    "hint": "Pollen or seed?",
+    "explanation": "Pollen to the stigma is pollination. Dispersal moves seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, dispersal moves pollen"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they mean the same"
+     },
+     {
+      "id": "c",
+      "text": "No. That is pollination. Dispersal moves seeds"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "plants.pollination_vs_dispersal",
+    "sub_lesson": "seeds",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two are ways seeds can be dispersed? Choose two.",
+    "hint": "Think of coconuts and berries.",
+    "explanation": "Water and animals spread seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "An animal eating a fruit"
+     },
+     {
+      "id": "b",
+      "text": "Leaves"
+     },
+     {
+      "id": "c",
+      "text": "Stem"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "plants.dispersal_two",
+    "sub_lesson": "seeds",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -1,0 +1,267 @@
+import { SAY, SS, H, T, PHOTO, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { topicLesson } from "../topic-kit.mjs";
+
+// Computer Science, Data & AI, Class 4 (Zara, age 9), topic 9: True or fake, checking what you find online.
+// Story thread: Zara gets a free-tablets message, pauses, checks it with four questions and tells her teacher.
+const SNOW = "data-ai-class-4-true-or-fake-online-1-e6350c21.jpg";
+const GREEN = "data-ai-class-4-true-or-fake-online-2-f74e0902.jpg";
+const OKM = (label) => ["ok", "✅", 50, 88, 2, "bounce", label];
+const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+
+// ---------------------------------------------------------------------------------------------- 1. learn
+const web = {
+  id: "web", kind: "learn", title: "Who makes the web?",
+  blocks: [
+    H("Welcome back, web detective!"),
+    SAY("Today we find out who makes the things we read online. Can we trust all of it?",
+      T("Today's big question: how do we tell what is true online?")),
+    SAY("This lake shows a mountain and its reflection. A reflection looks real but it is only a copy. Online things can fool us too.",
+      PHOTO(SNOW, "Snow-covered mountains and their mirror reflection on a calm blue-green frozen lake", "A reflection looks like the real mountain. Some things online look real but are copies.", "Photo by Tim Stief on Unsplash")),
+    H("Stop 1: People make the web"),
+    SAY("The web is a huge collection of pages that you visit using the internet. People make every page.",
+      T("The **web** is pages and sites that people publish.")),
+    SAY("Schools, shops, news teams and strangers all publish pages. Some are checked by experts. Many are not.",
+      T("Anyone with a device can publish on the web.")),
+    EXP("Who made this page?",
+      SS("A school makes a page about its trip to Hunza. Teachers check it.", S("School.", ["s", "🏫", 28, 50, 3], ["p", "📄", 72, 50, 3, "pulse", "checked"])),
+      SS("A shop makes a page to sell trainers. It wants you to buy.", S("Shop.", ["h", "🛒", 28, 50, 3], ["a", "📢", 72, 50, 3, "pulse", "advert"])),
+      SS("A stranger makes a page with a shocking claim. Nobody has checked it.", S("Stranger.", ["u", "🧑", 28, 55, 3], ["q", "❓", 72, 45, 3, "pulse", "unchecked"], OKM("who made it?")))),
+    CHK(mc("Why should we check what we read on the web?", "Because anyone can publish a page, true or not", ["Because web pages are always long", "Because pages cost money"], { hint: "Think about who publishes.", why: "Many pages are not checked by anyone.", tag: "fake.why_check_chk" })),
+    H("Stop 2: Every page has a purpose"),
+    SAY("A page may teach you, sell something, entertain you, or try to change your mind.",
+      T("Every page has a **purpose**. Ask why it was made.")),
+    EXP("Purposes",
+      SS("An encyclopedia page wants to inform. It gives facts and names its author.", S("Inform.", ["i", "📖", 50, 48, 3, "pulse", "inform"])),
+      SS("An advert wants to sell. It shows prices and a buy button.", S("Sell.", ["a", "📢", 28, 50, 3], ["b", "💳", 72, 50, 3, "pulse", "buy"])),
+      SS("A blog post gives an opinion. An opinion is what someone thinks, not always a fact.", S("Opinion.", ["o", "💬", 28, 50, 3], ["f", "📏", 72, 50, 3, "pulse", "fact"], OKM("fact or opinion")))),
+    CHK(mc("A website shows prices and a shopping basket. What is its main purpose?", "To sell things", ["To teach history", "To give a weather forecast"], { hint: "Think about the basket.", why: "Prices and baskets mean it wants to sell.", tag: "fake.purpose_chk" })),
+    SAY("Let us remember. People make the web. Every page has a purpose. We do not believe everything.",
+      SUM("People make the web, and anyone can publish", "Every page has a purpose: inform, sell, entertain or persuade", "We check pages instead of believing everything")),
+    GLOSS({ web: "Pages and sites that people publish for others to visit.", purpose: "The reason something was made.", publish: "To put something online for others to see.", advert: "A message paid for to sell something.", opinion: "What someone thinks, which may not be a fact.", fact: "Something that can be checked and is true.", reflection: "An image you see in still water or a mirror." }),
+  ],
+  mini: [
+    tf("The web is the same thing as the internet.", false, { hint: "One runs on the other.", why: "The web is a service that runs on the internet." }),
+    mc("Which is an opinion?", "Biryani is the best food ever", ["Water freezes at 0 degrees", "A week has seven days"], { hint: "It says what someone thinks.", why: "Best food is a matter of opinion." }),
+    mc("Which page is trying to inform?", "An encyclopedia page that names its author", ["A flashing buy-now banner", "A prize pop-up"], { hint: "Think about facts.", why: "An encyclopedia gives facts." }),
+    tf("An advert is made to sell something.", true, { hint: "Think about its purpose.", why: "Adverts want you to buy." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 2. try
+const check = {
+  id: "check", kind: "try", title: "Check it with four questions",
+  blocks: [
+    H("Stop 1: Who, why, proof, when"),
+    SAY("Zara asks four questions about a page. Who made it? Why did they make it? What proof is there? When was it written?",
+      T("Ask: **who**, why, proof and when?")),
+    EXP("Four questions",
+      SS("A page says K2 is about 8,611 metres high. Who made it? A mountain survey, named at the bottom.", S("Who.", ["w", "🧑‍🔬", 28, 50, 3], ["m", "🏔️", 72, 50, 3, "pulse", "K2"])),
+      SS("Why? To inform. What proof? A table of measurements. When? Written this year.", S("Why, proof, when.", ["p", "📊", 28, 50, 3, "pulse", "proof"], ["d", "📅", 72, 50, 3, "pulse", "this year"])),
+      SS("The page passes the four questions. Zara still checks one more source.", S("Passes.", ["c", "✅", 30, 50, 3, "bounce"], ["s", "🔍", 72, 50, 3, "pulse"], OKM("good signs")))),
+    MAN("Sort the signs", "Move the 6 signs into Trustworthy sign or Be careful.", "🔍", 6, ["Trustworthy sign", "Be careful"]),
+    CHK(mc("A page names its author and its date and links to a report. Which sign does this show?", "Good signs of a trustworthy page", ["A scam", "An advert"], { hint: "Think about the four questions.", why: "Named author, date and links are good signs.", tag: "fake.signs_chk" })),
+    H("Stop 2: Compare sources"),
+    SAY("Evidence is proof. When two or more trusted sources agree, a fact is stronger.",
+      T("**Evidence** is proof. Compare **sources** to be sure.")),
+    EXP("Three sources agree",
+      SS("Zara checks a news site, a museum site and her teacher.", S("Three sources.", ["n", "📰", 25, 50, 3], ["m", "🏛️", 50, 50, 3], ["t", "👩‍🏫", 75, 52, 3])),
+      SS("All three agree. Now she trusts the fact.", S("Agree.", ["a", "🤝", 40, 50, 3, "pulse"], ["c", "✅", 72, 50, 3, "bounce"], OKM("they agree")))),
+    SAY("Now you try. Pick a surprising claim with a grown-up and check it.",
+      ACT("Check a claim", ["A claim you saw online, with a grown-up", "Paper and pens"], ["Write the claim.", "Answer the four questions: who, why, proof, when.", "Find a second source. Do the two agree?"])),
+    CHK(tf("A fact is stronger when two trusted sources agree.", true, { hint: "Think about comparing.", why: "Agreement between trusted sources is a strong sign.", tag: "fake.agree_chk" })),
+    SAY("Let us remember. Ask four questions and compare sources.",
+      SUM("Ask who, why, proof and when", "Look for evidence", "Compare at least two trusted sources")),
+    GLOSS({ who: "The person or group that made the page.", evidence: "Proof that helps show something is true.", sources: "The places where information comes from.", trustworthy: "Deserving trust.", survey: "A careful study that collects facts.", claim: "A statement that something is true." }),
+  ],
+  mini: [
+    mc("Which question asks about the date?", "When was it written?", ["Who made it?", "Why was it made?"], { hint: "Think about time.", why: "When asks about the date." }),
+    tf("One unknown website is enough proof of a surprising claim.", false, { hint: "Compare sources.", why: "One unchecked source is not enough." }),
+    mc("What counts as evidence?", "A table of measurements from a survey", ["A loud headline", "A cute picture"], { hint: "It must prove something.", why: "Measurements are proof." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 3. play
+const fake = {
+  id: "fake", kind: "play", title: "Spot the fake",
+  blocks: [
+    H("Stop 1: Clues to a fake"),
+    SAY("A fake is made to look real so that people believe it. Clear water can show a perfect copy too.",
+      PHOTO(GREEN, "A clear green lake with snowy mountains and forest, and a faint reflection of the peaks in the water", "Reflections can fool the eye, just as fake posts can fool the mind.", "Photo by Adam Vradenburg on Unsplash")),
+    SAY("Fakes often shout. They use big words, scary news and a push to share quickly.",
+      T("A **fake** is made to look real so that people believe it.")),
+    EXP("Clues",
+      SS("A post says: SHOCKING! Share before they delete this! There is no author.", S("Shouting.", ["p", "📰", 28, 50, 3], ["a", "‼️", 72, 45, 3, "pulse", "no source"])),
+      SS("Another says: you won a free tablet! Click now! You never entered a prize draw.", S("Too good.", ["g", "🎁", 28, 50, 3], ["w", "⚠️", 72, 45, 3, "pulse", "never entered"])),
+      SS("Many likes do not prove anything. Popular is not the same as true.", S("Likes.", ["l", "👍", 30, 50, 3], ["x", "❌", 72, 45, 3, "pulse", "not proof"], OKM("clues")))),
+    CHK(mc("A post says: SHOCKING news, share in the next ten minutes! It has no author. What does this suggest?", "It may be fake", ["It is certainly true", "It is from a trusted expert"], { hint: "Think about pushing you.", why: "Pressure and no source are warning signs.", tag: "fake.shout_chk" })),
+    H("Stop 2: Scams"),
+    SAY("A scam is a trick to get your details or money. Free prizes you did not enter are a classic sign.",
+      T("A **scam** tricks you into clicking or giving details.")),
+    SAY("If you are unsure, do not click. Tell a grown-up. First, a memory game.",
+      T("Do not click. Tell a grown-up. Play the memory game.")),
+    BRAIN("memory_match", "Spot the clue", "Find the pairs.", ["🔍", "🎁", "📰", "🛡️"]),
+    CHK(hot("Which message has a warning sign of a scam? Tap it.", [["🎁", "Prize: send your password to claim", 22, 50], ["🏫", "Reminder: the class trip form is due", 50, 50], ["📚", "Your library book is ready", 78, 50]], ["Prize: send your password to claim"], { labels: true, hint: "Look for a prize and a request for a password.", why: "Nobody should ask for your password to give a prize.", tag: "fake.warning_chk" })),
+    SAY("Let us remember. Fakes shout, rush and offer prizes. Likes are not proof.",
+      SUM("Fakes look real and push you to share", "Scams use prizes and ask for details", "Likes and views do not prove something is true")),
+    GLOSS({ fake: "Made to look real so that people believe it.", scam: "A trick to get your details or money.", clue: "A small detail that helps you work something out.", popular: "Liked or used by many people.", urgent: "Needing quick action." }),
+  ],
+  mini: [
+    tf("A post with many likes must be true.", false, { hint: "Popular is not the same as true.", why: "Likes show popularity, not truth." }),
+    mc("What should you do with a message that offers a free prize you never entered?", "Not click, and tell a grown-up", ["Click quickly", "Share it with friends"], { hint: "Think about safety.", why: "It is probably a scam." }),
+    mc("Which is a warning sign of a fake?", "A shouting headline with no source", ["A named author", "A date and a trusted link"], { hint: "Look for pressure.", why: "Shouting without a source is a warning sign." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 4. use
+const share = {
+  id: "share", kind: "use", title: "Think before you share",
+  blocks: [
+    H("Stop 1: Pause and check"),
+    SAY("Before sharing, Zara pauses. She asks whether it is true, kind and her right to share.",
+      T("**Pause** before you share. Check first.")),
+    SAY("She checks the four questions. If a message says forward to ten friends, she is even more careful.",
+      T("Pressure to forward is a warning sign.")),
+    SAY("If it is a picture, she asks who made it. She asks permission and gives credit.",
+      T("Ask permission and give credit.")),
+    EXP("Zara pauses",
+      SS("A friend sends a message: free tablets, forward to ten friends. Zara pauses.", S("Pause.", ["z", "👧", 28, 55, 3], ["m", "📱", 72, 50, 3, "pulse", "forward!"])),
+      SS("She asks four questions. There is no author, no proof and a rush. It looks fake.", S("Check.", ["q", "🔍", 28, 50, 3, "pulse"], ["w", "⚠️", 72, 45, 3, "bounce", "fake?"])),
+      SS("She does not forward it. She tells her teacher. That keeps friends safe.", S("Do not share.", ["t", "👩‍🏫", 30, 52, 3], ["s", "🛡️", 72, 50, 3, "pulse"], OKM("stopped it")))),
+    CHK(ord("Put the steps of handling a suspicious post in order.", ["Stop and do not share it", "Check it using trusted sources", "Tell a trusted adult if it worries you", "Report it if it is harmful"], { hint: "Stop first.", why: "Stop, check, tell, then report.", tag: "fake.steps_chk" })),
+    H("Stop 2: Credit and report"),
+    SAY("Pictures, music and writing have owners. A fair person asks first and gives credit.",
+      T("The owner of a picture should get **credit**.")),
+    SAY("If something harmful appears, we tell a trusted adult. We can also use the report button with their help.",
+      T("**Report** harmful things with a grown-up's help.")),
+    EXP("Kind and careful",
+      SS("Zara wants to use a lovely photo for her poster. The photographer owns it.", S("Owned.", ["p", "📷", 28, 50, 3], ["c", "©️", 72, 50, 3, "pulse", "owner"])),
+      SS("She asks permission and writes a credit line. That is fair.", S("Credit.", ["t", "📝", 28, 50, 3, "pulse"], ["h", "🤝", 72, 50, 3])),
+      SS("A harmful post appears. Zara tells her teacher, who helps her report it.", S("Report.", ["r", "🚩", 28, 50, 3, "pulse", "report"], ["a", "👩‍🏫", 72, 52, 3], OKM("kind online")))),
+    SAY("Now you try. Write a class promise about sharing.",
+      ACT("Our sharing promise", ["Paper and pens", "Your class"], ["Write three promises, such as pause and check.", "Add one promise about asking permission and giving credit.", "Add who you will tell if something worries you."])),
+    CHK(tf("It is fair to give credit to the maker of a picture you use.", true, { hint: "Someone made it.", why: "Credit respects the maker.", tag: "fake.credit_chk" })),
+    SAY("Let us remember. Pause, check, credit and report. Tell a trusted adult.",
+      SUM("Pause and check before sharing", "Ask permission and give credit", "Report harmful things and tell a trusted adult")),
+    GLOSS({ pause: "To stop for a moment.", credit: "A note saying who made something.", report: "To tell someone in charge about a problem.", permission: "Being allowed to do something.", harmful: "Likely to hurt or upset someone.", forward: "To send on a message you received." }),
+  ],
+  mini: [
+    mc("What should Zara do with a chain message that says forward to ten friends?", "Pause, check and not forward it", ["Forward it to ten friends", "Reply with her password"], { hint: "Pressure is a warning sign.", why: "She should check, not forward." }),
+    tf("We can report harmful posts with a grown-up's help.", true, { hint: "Tell someone who can help.", why: "Reporting helps keep people safe." }),
+    mc("Who should you tell if something online worries you?", "A trusted adult", ["Nobody", "The sender"], { hint: "Someone who looks after you.", why: "A trusted adult can help." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara and the free tablets", backdrop: "home", caption: "Zara gets a message about free tablets and checks it before sharing.",
+  scenes: [
+    { caption: "A message.", say: "A friend sends Zara a message: free tablets, forward to ten friends!",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "m", emoji: "📱", label: "forward!", x: 72, y: 48, size: 3, enter: "pop" }] },
+    { caption: "Pause.", say: "Zara does not forward it. She pauses and thinks.",
+      items: [{ id: "p", emoji: "⏸️", x: 30, y: 50, size: 3, anim: "pulse" }, { id: "t", emoji: "🤔", x: 72, y: 45, size: 3 }] },
+    { caption: "Who?", say: "Who made it? There is no author and no website. That is a warning sign.",
+      items: [{ id: "q", emoji: "❓", label: "no author", x: 40, y: 50, size: 3 }, { id: "w", emoji: "⚠️", x: 75, y: 35, size: 3, anim: "pulse" }] },
+    { caption: "Why and proof.", say: "Why was it made? To make her click. There is no proof at all.",
+      items: [{ id: "c", emoji: "🖱️", label: "click!", x: 30, y: 50, size: 3 }, { id: "n", emoji: "🚫", label: "no proof", x: 72, y: 50, size: 3 }] },
+    { caption: "Compare.", say: "Zara searches. The tablet company says nothing about a giveaway.",
+      items: [{ id: "s", emoji: "🔎", x: 30, y: 50, size: 3, effect: "glow" }, { id: "c", emoji: "📄", label: "no giveaway", x: 72, y: 50, size: 3 }] },
+    { caption: "A scam.", say: "She decides it is a scam. It was made to trick people.",
+      items: [{ id: "g", emoji: "🎁", label: "scam", x: 40, y: 48, size: 3, anim: "pulse" }, { id: "x", emoji: "❌", x: 75, y: 40, size: 3 }] },
+    { caption: "Tell a grown-up.", say: "She tells her teacher, who helps her report the message.",
+      items: [{ id: "z", emoji: "👧", x: 28, y: 56, size: 3 }, { id: "t", emoji: "👩‍🏫", x: 70, y: 52, size: 3, effect: "hearts" }] },
+    { caption: "A promise.", say: "The class writes a sharing promise. Pause, check, credit and tell.",
+      items: [{ id: "r", emoji: "📜", label: "our promise", x: 50, y: 48, size: 3, enter: "grow", effect: "glow" }] },
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- quiz
+const quiz = [
+  // ----- web (q1-q8)
+  Q(mc("What is the World Wide Web?", "Pages and sites you can visit using the internet", ["The cables under the sea", "A type of computer"], { hint: "You visit it in a browser.", why: "The web is pages and sites on the internet.", tag: "fake.web_def" }), "web", "recall",
+    [mc("Which of these is part of the web?", "A website", ["A cable", "A battery"], { hint: "You visit it in a browser.", why: "A website is part of the web.", tag: "fake.web_def" })]),
+  Q(mc("Who can publish things on the web?", "Almost anyone with a device and internet", ["Only scientists", "Only teachers"], { hint: "Think about blogs.", why: "Almost anyone can publish.", tag: "fake.who_publish" }), "web", "recall",
+    [mc("Which statement about web pages is true?", "Anyone can publish, so quality varies", ["Experts check every page", "Only newspapers can publish"], { hint: "Think about blogs.", why: "Anyone can publish.", tag: "fake.who_publish" })]),
+  Q(tf("The internet and the web are exactly the same thing.", false, { hint: "One runs on the other.", why: "The web is one service on the internet.", tag: "fake.internet_web" }), "web", "recall",
+    [tf("The web is one service that runs on the internet.", true, { hint: "One runs on the other.", why: "The web runs on the internet.", tag: "fake.internet_web" })]),
+  Q(mat("Match each term to its meaning.", [["Author", "The person who made the page"], ["Source", "Where information comes from"], ["Date", "When the page was written"]], { hint: "Think about each term.", why: "Each term has its own meaning.", tag: "fake.term_match" }), "web", "apply",
+    [mat("Pair each word with its meaning.", [["Advert", "A message paid for to sell something"], ["Opinion", "What someone thinks"], ["Fact", "Something that can be checked and is true"]], { hint: "Think about each word.", why: "Each word has its own meaning.", tag: "fake.term_match" })]),
+  Q(hot("Tap the item that is an opinion.", [["💬", "Biryani is the tastiest food", 22, 50], ["📏", "K2 is about 8,611 metres high", 50, 50], ["🌡️", "Water boils at 100 degrees at sea level", 78, 50]], ["Biryani is the tastiest food"], { labels: true, hint: "It says what someone thinks.", why: "Tastiest is an opinion.", tag: "fake.tap_opinion" }), "web", "apply",
+    [hot("Tap the item that is a fact.", [["💬", "Cricket is the most fun sport", 22, 50], ["📅", "A week has seven days", 50, 50], ["🎨", "Blue is the nicest colour", 78, 50]], ["A week has seven days"], { labels: true, hint: "It can be checked.", why: "A week has seven days is a fact.", tag: "fake.tap_opinion" })]),
+  Q(mc("Idris says everything on the web is true because it is on the internet. Is he right?", "No. Anyone can publish, so we have to check", ["Yes, websites are checked", "Yes, the internet is a library of truth"], { hint: "Think about who publishes.", why: "Many pages are not checked.", tag: "fake.reason_true" }), "web", "reason",
+    [mc("Hana says if many websites show something it must be true. Is she right?", "No. Sites can copy the same mistake, so check the original source", ["Yes, many means true", "Yes, copying makes it correct"], { hint: "Think about copying.", why: "Copies can repeat a mistake.", tag: "fake.reason_true" })]),
+  Q(mc("Which kind of page is trying to sell you something?", "An advert", ["An encyclopedia entry", "A school timetable"], { hint: "Think about purpose.", why: "An advert wants you to buy.", tag: "fake.advert" }), "web", "apply",
+    [mc("A page says Buy now! Limited offer! What is its likely purpose?", "To sell something", ["To teach a lesson", "To give a weather forecast"], { hint: "Think about purpose.", why: "Buy now means selling.", tag: "fake.advert" })]),
+  Q(fill("Finish the sentences about the web.", "Anyone can {b1} on the web, so we must {b2} what we read.", [["publish", "pretend", "paint"], ["check", "ignore", "hide"]], { hint: "Think about who makes pages.", why: "Anyone can publish, so we check.", tag: "fake.fill_web" }), "web", "recall",
+    [fill("Complete the sentences about pages.", "The {b1} is the person who made a page. The {b2} is where the information comes from.", [["author", "audience", "anchor"], ["source", "sauce", "sofa"]], { hint: "Think about each word.", why: "Author made it and source is the origin.", tag: "fake.fill_web" })]),
+  // ----- check (q9-q15)
+  Q(ord("Put the steps of checking a web page in order.", ["Find out who made it", "Think about why they made it", "Look for proof or evidence", "Compare with another source"], { hint: "Who first.", why: "Who, why, proof, then compare.", tag: "fake.check_steps" }), "check", "apply",
+    [ord("Put these steps for a surprising claim in order.", ["Pause before believing it", "Search for the claim", "Check who says it", "Decide if it is likely true"], { hint: "Pause first.", why: "Pause, search, check, then decide.", tag: "fake.check_steps" })]),
+  Q(mc("What does evidence mean?", "Proof that helps show something is true", ["A web address", "A loud advert"], { hint: "Think about proof.", why: "Evidence is proof.", tag: "fake.evidence" }), "check", "recall",
+    [mc("A page states a claim and links to a measuring report. What is the report?", "Evidence", ["An advert", "A password"], { hint: "Think about proof.", why: "A measuring report is evidence.", tag: "fake.evidence" })]),
+  Q(fill("Finish the sentences about checking.", "A trustworthy page usually names its {b1} and its {b2}.", [["author", "anchor", "apple"], ["date", "dinner", "dragon"]], { hint: "Think about who and when.", why: "Author and date make a page easier to check.", tag: "fake.fill_check" }), "check", "recall",
+    [fill("Complete the sentences about proof.", "Facts are stronger when {b1} trusted sources {b2}.", [["two", "zero", "no"], ["agree", "disagree", "sleep"]], { hint: "Think about comparing.", why: "Two agreeing trusted sources are stronger.", tag: "fake.fill_check" })]),
+  Q(mc("A page says school is closing next week, but only one unknown site says so. What should you do?", "Check with the school or ask a grown-up", ["Share it at once", "Believe it"], { hint: "Think about checking.", why: "One unknown site is not enough.", tag: "fake.school_closing" }), "check", "apply",
+    [mc("A message says a shop gives free phones to anyone who clicks. What should you do?", "Not click, and tell a grown-up", ["Click at once", "Send it to friends"], { hint: "Think about checking.", why: "It may be a scam.", tag: "fake.school_closing" })]),
+  Q(sld("A group checks 4 sources for each of 3 claims. Slide to show the total sources checked.", { min: 0, max: 20 }, 12, 0, { hint: "3 groups of 4.", why: "3 x 4 = 12 sources.", tag: "fake.sources_count" }), "check", "apply",
+    [sld("A group checks 5 sources for each of 3 claims. Slide to show the total sources checked.", { min: 0, max: 20 }, 15, 0, { hint: "3 groups of 5.", why: "3 x 5 = 15 sources.", tag: "fake.sources_count" })]),
+  Q(tf("A page that names its author and date is easier to check.", true, { hint: "You can find out more.", why: "Named authors and dates can be checked.", tag: "fake.author_date" }), "check", "apply",
+    [tf("A page that hides who made it is just as easy to check.", false, { hint: "You cannot find out more.", why: "Hidden authors are harder to check.", tag: "fake.author_date" })]),
+  Q(mc("Zara says if a page looks professional with nice pictures, it must be trustworthy. Is she right?", "No. Looks can be copied, so check the author and evidence", ["Yes, nice design means true", "Yes, only experts make nice pages"], { hint: "Think about copying looks.", why: "Anyone can make a page look good.", tag: "fake.reason_looks" }), "check", "reason",
+    [mc("Hamza says a page with no spelling mistakes cannot be fake. Is he right?", "No. A fake can be well written", ["Yes, no mistakes means true", "Yes, fakes always have mistakes"], { hint: "Think about copying looks.", why: "Good writing does not prove truth.", tag: "fake.reason_looks" })]),
+  // ----- fake (q16-q23)
+  Q(ms("Which two are clues that a post may be fake? Pick two.", ["It shouts and says share quickly", "It has no source or author"], ["It names its author and date", "It links to a trusted report"], { hint: "Think about pressure and hiding.", why: "Pressure and no source are warning signs.", tag: "fake.clues_ms" }), "fake", "apply",
+    [ms("Which two clues suggest a message is a scam? Pick two.", ["It says you won a prize you never entered", "It asks for a password"], ["It is a reminder about a library book you borrowed", "It comes from your teacher on the school site"], { hint: "Think about prizes and passwords.", why: "Surprise prizes and password requests are scam clues.", tag: "fake.clues_ms" })]),
+  Q(num("Hira sees 12 posts. 5 are fake. How many are not fake?", 7, { hint: "12 take away 5.", why: "12 - 5 = 7 posts.", tag: "fake.count_posts" }), "fake", "apply",
+    [num("Idris sees 20 posts. 8 are fake. How many are not fake?", 12, { hint: "20 take away 8.", why: "20 - 8 = 12 posts.", tag: "fake.count_posts" })]),
+  Q(mc("A story is made up to trick people into clicking. What is it?", "A fake", ["A source", "A password"], { hint: "It looks real but is not.", why: "A fake is made to trick people.", tag: "fake.fake_def" }), "fake", "recall",
+    [mc("Someone shares a made-up story just to get clicks. What kind of story is it?", "A fake story", ["A true report", "A school timetable"], { hint: "It looks real but is not.", why: "It is made up to trick people.", tag: "fake.fake_def" })]),
+  Q(mc("Idris says if a post has lots of likes, it must be true. Is he right?", "No. Likes show it is popular, not that it is true", ["Yes, likes mean true", "Yes, only true posts get likes"], { hint: "Think about popular.", why: "Popular is not the same as true.", tag: "fake.reason_likes" }), "fake", "reason",
+    [mc("Nadia says a video with a million views must be accurate. Is she right?", "No. Views show popularity, not truth", ["Yes, views prove truth", "Yes, a million people cannot be wrong"], { hint: "Think about popular.", why: "Popular is not the same as true.", tag: "fake.reason_likes" })]),
+  Q(mc("Maryam says a fake is always easy to spot. Is she right?", "No. Some fakes look very real, so we check", ["Yes, fakes are obvious", "Yes, they always have spelling mistakes"], { hint: "Think about the reflection.", why: "Some fakes look very real.", tag: "fake.reason_easy" }), "fake", "reason",
+    [mc("Omar says only silly posts can be fake. Is he right?", "No. Serious-looking posts can be fake too", ["Yes, only silly ones", "Yes, serious ones are always true"], { hint: "Think about the reflection.", why: "Serious posts can be fake.", tag: "fake.reason_easy" })]),
+  Q(mc("Hamza says sharing a fake by mistake is harmless. Is he right?", "No. It can spread and upset people, so check first", ["Yes, mistakes never matter", "Yes, nobody reads shares"], { hint: "Think about spreading.", why: "Fakes can spread quickly.", tag: "fake.reason_harm" }), "fake", "reason",
+    [mc("Layla says it is fine to share something unchecked if it seems funny. Is she right?", "No. Check first, because jokes can still mislead", ["Yes, funny is always safe", "Yes, jokes are never fakes"], { hint: "Think about spreading.", why: "Jokes can still mislead.", tag: "fake.reason_harm" })]),
+  Q(mat("Match each clue to what it suggests.", [["Shocking headline with no source", "Maybe fake"], ["Named author and trusted links", "More reliable"], ["Prize you never entered", "Maybe a scam"]], { hint: "Think about each clue.", why: "Each clue points one way.", tag: "fake.clue_match" }), "fake", "apply",
+    [mat("Pair each action with its result.", [["Pause and check", "You avoid spreading a fake"], ["Share at once", "A fake may spread"], ["Tell a grown-up", "You get help"]], { hint: "Think about each action.", why: "Each action has its own result.", tag: "fake.clue_match" })]),
+  Q(hot("Tap the message that looks like a scam.", [["🎁", "You won a free tablet! Click now", 22, 50], ["📚", "Library book due Friday", 50, 50], ["🏫", "School trip form reminder", 78, 50]], ["You won a free tablet! Click now"], { labels: true, hint: "Look for a prize you never entered.", why: "Surprise prizes are scam clues.", tag: "fake.tap_scam" }), "fake", "apply",
+    [hot("Tap the post that looks fake.", [["📰", "SHOCKING: share before it is deleted!", 22, 50], ["🌦️", "Forecast from the weather service", 50, 50], ["📖", "Encyclopedia page with a named author", 78, 50]], ["SHOCKING: share before it is deleted!"], { labels: true, hint: "Look for pressure and no source.", why: "Pressure and no source are warning signs.", tag: "fake.tap_scam" })]),
+  // ----- share (q24-q30)
+  Q(ord("Put the steps of sharing a photo fairly in order.", ["Check you made it or may use it", "Ask anyone shown in it", "Add credit if needed", "Share it"], { hint: "Check first.", why: "Check, ask, credit, then share.", tag: "fake.photo_steps" }), "share", "apply",
+    [ord("Put these steps for a worrying message in order.", ["Do not reply", "Show a trusted adult", "Let them help you report it", "Keep the evidence safe"], { hint: "Do not reply first.", why: "Do not reply, show an adult, report, keep evidence.", tag: "fake.photo_steps" })]),
+  Q(ms("Which two are kind and careful ways to act online? Pick two.", ["Check before you share", "Ask before sharing someone else's picture"], ["Share first and check later", "Copy a picture and say you made it"], { hint: "Think about respect.", why: "Checking and asking are kind and careful.", tag: "fake.kind_ms" }), "share", "apply",
+    [ms("Which two should you do if you see something upsetting? Pick two.", ["Tell a trusted adult", "Use the report button with a grown-up"], ["Send it to your friends", "Reply angrily"], { hint: "Think about getting help.", why: "Tell an adult and report with help.", tag: "fake.kind_ms" })]),
+  Q(mc("Zara says reposting a picture without credit is fine because it is online. Is she right?", "No. The owner made it, so credit and permission matter", ["Yes, online means free", "Yes, nobody owns pictures"], { hint: "Think about the maker.", why: "Makers deserve credit.", tag: "fake.reason_credit" }), "share", "reason",
+    [mc("Ali says he can say a photo he found online is his own. Is he right?", "No. That is dishonest and unfair to the owner", ["Yes, finding it makes it his", "Yes, nobody can check"], { hint: "Think about the maker.", why: "It would be dishonest.", tag: "fake.reason_credit" })]),
+  Q(mc("Hana says it is not her job to report harmful posts. Is she right?", "No. Reporting helps keep everyone safe, with a grown-up's help", ["Yes, never report", "Yes, reports do nothing"], { hint: "Think about keeping others safe.", why: "Reporting helps keep people safe.", tag: "fake.reason_report" }), "share", "reason",
+    [mc("Sana says if she sees something harmful she should keep quiet. Is she right?", "No. She should tell a trusted adult", ["Yes, keep quiet", "Yes, it is nothing to do with her"], { hint: "Think about keeping others safe.", why: "Telling an adult helps.", tag: "fake.reason_report" })]),
+  Q(mc("Nadia says she must pass on every message from friends in case it is true. Is she right?", "No. Pause and check first, because chains can spread fakes", ["Yes, pass on everything", "Yes, friends are always right"], { hint: "Think about pausing.", why: "Chain messages can spread fakes.", tag: "fake.reason_chain" }), "share", "reason",
+    [mc("Idris says a message that says forward to ten friends must be important. Is he right?", "No. Pressure to forward is a warning sign", ["Yes, it must be important", "Yes, it is a friendly rule"], { hint: "Think about pausing.", why: "Pressure is a warning sign.", tag: "fake.reason_chain" })]),
+  Q(num("Zara checks 6 posts before sharing. She decides 2 are fake. How many does she share?", 4, { hint: "6 take away 2.", why: "6 - 2 = 4 posts.", tag: "fake.share_count" }), "share", "apply",
+    [num("Omar checks 9 posts before sharing. He decides 3 are fake. How many does he share?", 6, { hint: "9 take away 3.", why: "9 - 3 = 6 posts.", tag: "fake.share_count" })]),
+  Q(sld("Zara spends 5 minutes checking each of 4 claims. Slide to show the total minutes.", { min: 0, max: 30 }, 20, 0, { hint: "4 groups of 5.", why: "4 x 5 = 20 minutes.", tag: "fake.minutes" }), "share", "apply",
+    [sld("Maryam spends 3 minutes checking each of 6 claims. Slide to show the total minutes.", { min: 0, max: 30 }, 18, 0, { hint: "6 groups of 3.", why: "6 x 3 = 18 minutes.", tag: "fake.minutes" })]),
+];
+
+export const topics = [
+  topicLesson({
+    slug: "data-ai-class-4-true-or-fake-online", subject: "data-ai", cls: 4, topic: 9, title: "True or Fake? Checking What You Find Online",
+    summary: "Learn who makes the web, ask four questions to check a page, spot fakes and scams, and share and credit things responsibly.",
+    unit: "Topic 9: True or fake online", difficulty: 2,
+    objectives: ["Explain that anyone can publish on the web and every page has a purpose", "Check a page with who, why, proof and when, and compare sources", "Spot fakes and scams, and share, credit and report responsibly"],
+    success_criteria: ["I can say why we check what we read online", "I can ask four questions and compare two sources", "I pause before sharing, give credit and tell a trusted adult"],
+    real_life: "Deciding whether a forwarded message about free prizes or a surprising news story is true before sharing it with family.",
+    standards: [
+      { framework: "nc_england", code: "KS2 computing", text: "Use technology safely, respectfully and responsibly; be discerning in evaluating digital content" },
+      { framework: "nc_england", code: "KS2 online safety", text: "Recognise acceptable and unacceptable behaviour; identify a range of ways to report concerns about content" },
+    ],
+    warm_up: [
+      mc("What is the internet?", "A network that joins computers all over the world", ["A kind of screen", "A single website"], { hint: "Think about networks.", why: "The internet is a network of networks." }),
+      mc("What is a search engine for?", "Finding web pages", ["Playing music", "Fixing a router"], { hint: "You type keywords.", why: "A search engine finds pages." }),
+      num("What is 9 x 3?", 27, { hint: "3 nines.", why: "9 x 3 = 27." }),
+    ],
+    intro: [],
+    subs: [web, check, fake, share],
+    clip,
+    quiz,
+  }),
+];

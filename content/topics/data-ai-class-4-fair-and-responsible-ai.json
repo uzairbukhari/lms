@@ -1,0 +1,3250 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-fair-and-responsible-ai",
+  "subject": "data-ai",
+  "title": "Fair and Responsible AI",
+  "summary": "Find out how bias gets into AI, test for fairness, see why people stay responsible, and write a class pledge for fair and careful AI.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 12: Fair and responsible AI",
+  "learning_objectives": [
+   "Explain how unbalanced data and stereotypes can make AI biased",
+   "Plan a fair test that compares results for different groups",
+   "Explain that people stay responsible and write a class AI pledge"
+  ],
+  "tags": [
+   "topic",
+   "topic-12"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 12
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 5",
+    "text": "Societal impact: AI can impact the world in positive and negative ways, and fairness matters"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 online safety",
+    "text": "Use technology safely, respectfully and responsibly; recognise acceptable and unacceptable behaviour"
+   }
+  ],
+  "success_criteria": [
+   "I can say what bias and a stereotype are",
+   "I can plan a fair test and compare groups",
+   "I know people are responsible, and I can write a fair AI pledge"
+  ],
+  "real_life": "Noticing when a voice helper or a picture app works better for some people than others, and telling a trusted adult.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is training data?",
+    "hint": "Think about the cat spotter.",
+    "explanation": "Programs learn from examples.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A password"
+     },
+     {
+      "id": "b",
+      "text": "Examples a program learns from"
+     },
+     {
+      "id": "c",
+      "text": "The power cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does fair mean?",
+    "hint": "Think about a scale.",
+    "explanation": "Fair means treating people justly.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Being the fastest"
+     },
+     {
+      "id": "b",
+      "text": "Being the loudest"
+     },
+     {
+      "id": "c",
+      "text": "Treating people equally and justly"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 8 x 4?",
+    "hint": "4 eights.",
+    "explanation": "8 x 4 = 32.",
+    "answer": {
+     "value": 32,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "bias",
+   "kind": "learn",
+   "title": "Where unfairness comes from",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, fair-minded explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we make AI fair?",
+     "say": "Today we ask: can AI be unfair? And what can people do about it?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-fair-and-responsible-ai-1-b7d0e69f.jpg",
+     "alt": "An old black iron weighing scale holding a bowl of grain on a rustic wooden counter in a dim room",
+     "caption": "A scale should weigh everything in the same fair way. AI should treat people fairly too.",
+     "credit": "Photo by Kellen Riggin on Unsplash",
+     "say": "A fair scale weighs everything the same way. Zara's class wants AI that treats everyone fairly too."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Data can be unbalanced"
+    },
+    {
+     "type": "text",
+     "markdown": "**Bias** is an unfair leaning in how an AI works.",
+     "say": "AI learns from data. If the data leaves some people out, the AI may work badly for them. That unfairness is called bias."
+    },
+    {
+     "type": "explainer",
+     "title": "An unbalanced set",
+     "scenes": [
+      {
+       "caption": "One town.",
+       "items": [
+        {
+         "id": "v",
+         "emoji": "🎤",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🏘️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "one town"
+        }
+       ],
+       "say": "A class trains a voice reader with recordings from only one town."
+      },
+      {
+       "caption": "Gaps.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "✅",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "❓",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "others?"
+        }
+       ],
+       "say": "It understands that town's voices very well. It struggles with voices from other places."
+      },
+      {
+       "caption": "The cause.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🗂️",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "data gaps"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "data matters"
+        }
+       ],
+       "say": "The program did not choose to be unfair. Its training data had gaps."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A voice reader was trained with recordings from only one town. What may happen?",
+      "hint": "Think about what it learned from.",
+      "explanation": "Missing voices in the training data can cause bias.",
+      "skill_tag": "fair.gap_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "It will work perfectly for everyone"
+       },
+       {
+        "id": "b",
+        "text": "It will refuse to start"
+       },
+       {
+        "id": "c",
+        "text": "It may work worse for other voices"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Stereotypes"
+    },
+    {
+     "type": "text",
+     "markdown": "A **stereotype** is a fixed idea about a group of people.",
+     "say": "A stereotype is a fixed idea about a group. A story helper may copy stereotypes from the text it learned."
+    },
+    {
+     "type": "text",
+     "markdown": "Anyone can do any job.",
+     "say": "For example, it might always make the pilot a boy. That is unfair, because anyone can be a pilot."
+    },
+    {
+     "type": "explainer",
+     "title": "A copied stereotype",
+     "scenes": [
+      {
+       "caption": "Always a boy.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "👦",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "pilot"
+        }
+       ],
+       "say": "Zara asks a story helper for a story about a pilot. Every story has a boy pilot."
+      },
+      {
+       "caption": "Pattern.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "📚",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🔁",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "copied"
+        }
+       ],
+       "say": "The text it learned from often had boy pilots. It copied the pattern."
+      },
+      {
+       "caption": "Fix.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🔧",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 72,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "people can fix it"
+        }
+       ],
+       "say": "Zara changes her prompt and tells her teacher. People can notice and fix bias."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A program can be unfair because of the data it learned from.",
+      "hint": "Think about gaps and copied patterns.",
+      "explanation": "Unbalanced or unfair data can make an AI unfair.",
+      "skill_tag": "fair.data_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara's fair AI pledge",
+     "asset": "clip-data-ai-class-4-fair-and-responsible-ai-61425037.mp4",
+     "poster": "clip-data-ai-class-4-fair-and-responsible-ai-61425037.webp",
+     "seconds": 72,
+     "transcript": "Zara's class has a voice reader. It listens and turns speech into text. They test it with ten voices from group A and ten from group B. It understands eight voices in group A. Only five in group B. Its training recordings had too few voices like group B. That is bias. They add more recordings from group B. Then they train and test again. Now it understands seven of ten in group B. The gap is smaller. A teacher keeps checking. People stay responsible, not the program. The class writes a pledge: be fair, check, ask and tell.",
+     "caption": "Zara's class tests a voice reader for fairness and writes a pledge."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Bias is an unfair leaning in how an AI works",
+      "Unbalanced data or stereotypes can cause it",
+      "People can notice bias and fix it"
+     ],
+     "say": "Let us remember. Unbalanced data causes bias. AI can copy stereotypes. People can notice and fix it."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bias",
+       "meaning": "An unfair leaning in how an AI works."
+      },
+      {
+       "term": "stereotype",
+       "meaning": "A fixed idea about a group of people."
+      },
+      {
+       "term": "fair",
+       "meaning": "Treating people equally and justly."
+      },
+      {
+       "term": "training data",
+       "meaning": "The examples an AI learned from."
+      },
+      {
+       "term": "unbalanced",
+       "meaning": "With too much of one thing and too little of another."
+      },
+      {
+       "term": "accent",
+       "meaning": "A way of speaking that shows where you are from."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What causes bias in AI most often?",
+     "hint": "Think about what AI learns from.",
+     "explanation": "Data with gaps leads to bias.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Loud music"
+      },
+      {
+       "id": "b",
+       "text": "Unbalanced or unfair training data"
+      },
+      {
+       "id": "c",
+       "text": "A broken battery"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "An AI that learned from unfair examples can copy the unfairness.",
+     "hint": "Think about copied patterns.",
+     "explanation": "AI repeats patterns in its data.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a stereotype?",
+     "hint": "It is about groups.",
+     "explanation": "A stereotype is a fixed idea about a group.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fast program"
+      },
+      {
+       "id": "b",
+       "text": "A fixed idea about a group"
+      },
+      {
+       "id": "c",
+       "text": "A kind of camera"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who can notice and fix bias?",
+     "hint": "Think about Zara and her teacher.",
+     "explanation": "People can notice and fix bias.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nobody"
+      },
+      {
+       "id": "b",
+       "text": "Only the weather"
+      },
+      {
+       "id": "c",
+       "text": "People"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "test",
+   "kind": "try",
+   "title": "Testing for fairness",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A fair test"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fair test** uses examples from many kinds of people.",
+     "say": "To find bias, we test. A fair test uses examples from many kinds of people."
+    },
+    {
+     "type": "explainer",
+     "title": "Testing a voice reader",
+     "scenes": [
+      {
+       "caption": "Two groups.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🅰️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🅱️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara's class tests the voice reader with ten voices from group A and ten from group B."
+      },
+      {
+       "caption": "Results.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "8/10",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "5/10",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "It understands eight of ten voices in group A. It understands only five of ten in group B."
+      },
+      {
+       "caption": "A gap.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "📉",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "gap"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "the test found it"
+        }
+       ],
+       "say": "The gap is big. The test shows the reader may be unfair, so it needs fixing."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the test plans",
+     "goal": "Move the 6 plans into Fair test or Not a fair test.",
+     "emoji": "🧪",
+     "count": 6,
+     "zones": [
+      "Fair test",
+      "Not a fair test"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A reader works for 9 of 10 people in one group but only 4 of 10 in another. What does this suggest?",
+      "hint": "Compare the two results.",
+      "explanation": "A big gap between groups suggests bias.",
+      "skill_tag": "fair.gap_test_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "It is perfectly fair"
+       },
+       {
+        "id": "b",
+        "text": "The second group is wrong"
+       },
+       {
+        "id": "c",
+        "text": "It may be unfair and needs fixing"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fix and test again"
+    },
+    {
+     "type": "text",
+     "markdown": "Add missing examples. Train again. Test again.",
+     "say": "To fix it, they add more recordings from group B. Then they train again and test again."
+    },
+    {
+     "type": "text",
+     "markdown": "Compare results for each group.",
+     "say": "A high average can hide a problem. So we compare results for each group, not only the total."
+    },
+    {
+     "type": "explainer",
+     "title": "Fix and test again",
+     "scenes": [
+      {
+       "caption": "Add.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🎤",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🅱️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The class adds more recordings from group B and trains the reader again."
+      },
+      {
+       "caption": "Test.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🧪",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "7/10",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "They test again. Group B now scores seven out of ten. The gap is smaller."
+      },
+      {
+       "caption": "Keep checking.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔍",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "keep testing"
+        }
+       ],
+       "say": "They keep checking. Fairness is not finished after one fix."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan a fair test",
+     "materials": [
+      "Paper and pens",
+      "A partner"
+     ],
+     "instructions": [
+      "Pick an AI helper you know, such as a voice helper.",
+      "List five different kinds of people or voices to test.",
+      "Write how you will compare the results for each group."
+     ],
+     "say": "Now you try. Plan a fair test with a partner."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If an AI works well on average, it must work well for every group.",
+      "hint": "An average can hide gaps.",
+      "explanation": "A high average can hide poor results for one group.",
+      "skill_tag": "fair.average_chk",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A fair test uses examples from many kinds of people",
+      "Compare the results for each group",
+      "Add missing examples, train and test again"
+     ],
+     "say": "Let us remember. Test on many kinds of people, compare groups, fix and test again."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fair test",
+       "meaning": "A test that uses examples from many kinds of people."
+      },
+      {
+       "term": "compare",
+       "meaning": "To look at things to see how they differ."
+      },
+      {
+       "term": "average",
+       "meaning": "The middle or typical result."
+      },
+      {
+       "term": "gap",
+       "meaning": "A difference between two results."
+      },
+      {
+       "term": "group",
+       "meaning": "A set of people with something in common."
+      },
+      {
+       "term": "retrain",
+       "meaning": "To teach the program again."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Why test on many kinds of people?",
+     "hint": "Think about gaps.",
+     "explanation": "A varied test shows who is left out.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make it slower"
+      },
+      {
+       "id": "b",
+       "text": "To see if it is fair to everyone"
+      },
+      {
+       "id": "c",
+       "text": "To use more paper"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should compare results for each group, not only the total.",
+     "hint": "Averages can hide gaps.",
+     "explanation": "Group results show unfairness.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What fixes a gap found by a test?",
+     "hint": "Fix the data.",
+     "explanation": "Better data helps the model.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ignoring it"
+      },
+      {
+       "id": "b",
+       "text": "Turning off the lights"
+      },
+      {
+       "id": "c",
+       "text": "Adding missing examples and testing again"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "kind": "play",
+   "title": "People stay responsible",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Who is responsible?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-fair-and-responsible-ai-2-42318435.jpg",
+     "alt": "A red spiral slide with green railings in a playground beside a lawn, with trees behind and a blue play surface",
+     "caption": "A playground works well when people make safe rules for everyone. AI needs fair rules too.",
+     "credit": "Photo by Singkai Lee on Unsplash",
+     "say": "Playgrounds have rules so that everyone can play safely. AI needs rules too, made and followed by people."
+    },
+    {
+     "type": "text",
+     "markdown": "**Responsible** people check AI and fix its mistakes.",
+     "say": "An AI program cannot be responsible. The people who make it and use it are responsible."
+    },
+    {
+     "type": "explainer",
+     "title": "Who is in charge?",
+     "scenes": [
+      {
+       "caption": "A zero.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🧒",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "z",
+         "emoji": "0",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "zero?"
+        }
+       ],
+       "say": "An AI tool marks a quiz and gives Hamza zero. Hamza feels it is wrong."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 28,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🔧",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "His teacher checks. The tool misread his handwriting. She fixes the mark."
+      },
+      {
+       "caption": "In charge.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🤝",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "people responsible"
+        }
+       ],
+       "say": "People stay in charge. They check and take care of the results."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "An AI tool harms someone by mistake. Who should make sure it is fixed?",
+      "hint": "Think about who is in charge.",
+      "explanation": "People make and use the tool, so they are responsible.",
+      "skill_tag": "fair.who_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "Nobody"
+       },
+       {
+        "id": "b",
+        "text": "The people who make and use it"
+       },
+       {
+        "id": "c",
+        "text": "The AI program itself"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Privacy and openness"
+    },
+    {
+     "type": "text",
+     "markdown": "Ask permission. Keep **privacy**.",
+     "say": "Personal data needs care. We ask permission before using someone's photo or voice to teach an AI."
+    },
+    {
+     "type": "text",
+     "markdown": "Be open about using AI. Play the memory game.",
+     "say": "People should also be told when AI is used, so they can ask questions. First, a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Fair AI words",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🤝",
+      "🔒",
+      "🧪",
+      "⚖️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the action that respects privacy.",
+      "hint": "Think about asking first.",
+      "explanation": "Permission respects privacy.",
+      "skill_tag": "fair.privacy_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🙋",
+         "label": "Ask permission before using a photo",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "📷",
+         "label": "Take photos in secret",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "📤",
+         "label": "Upload everyone's pictures",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h1"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "People are responsible for AI, not the AI itself",
+      "Ask permission and keep privacy",
+      "Be open about when AI is used"
+     ],
+     "say": "Let us remember. People are responsible. We ask permission, keep privacy and are open about AI."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "responsible",
+       "meaning": "Having the duty to check and look after something."
+      },
+      {
+       "term": "privacy",
+       "meaning": "Keeping personal information safe."
+      },
+      {
+       "term": "permission",
+       "meaning": "Being allowed to do something."
+      },
+      {
+       "term": "consent",
+       "meaning": "Being asked and saying yes."
+      },
+      {
+       "term": "open",
+       "meaning": "Honest and clear about what is happening."
+      },
+      {
+       "term": "personal",
+       "meaning": "About a particular person."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "An AI program is responsible for its own mistakes.",
+     "hint": "Who made and uses it?",
+     "explanation": "People are responsible.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should we do before using someone's photo to teach an AI?",
+     "hint": "Think about privacy.",
+     "explanation": "We ask first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Delete it"
+      },
+      {
+       "id": "b",
+       "text": "Ask permission"
+      },
+      {
+       "id": "c",
+       "text": "Hide it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why tell people when AI is being used?",
+     "hint": "Think about being open.",
+     "explanation": "Openness helps trust and checking.",
+     "options": [
+      {
+       "id": "a",
+       "text": "So it can be louder"
+      },
+      {
+       "id": "b",
+       "text": "So they can ask questions and check it"
+      },
+      {
+       "id": "c",
+       "text": "So it uses less power"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pledge",
+   "kind": "use",
+   "title": "Our fair AI pledge",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Write a pledge"
+    },
+    {
+     "type": "text",
+     "markdown": "A **pledge** is a set of promises.",
+     "say": "Zara's class writes a pledge about AI. A pledge is a set of promises that guide how we act."
+    },
+    {
+     "type": "text",
+     "markdown": "Promise 1: be fair. Promise 2: check.",
+     "say": "Promise one: we will treat everyone fairly. Promise two: we will check what AI tells us."
+    },
+    {
+     "type": "text",
+     "markdown": "Promise 3: ask and keep privacy. Promise 4: tell.",
+     "say": "Promise three: we will ask permission and keep privacy. Promise four: we will tell a trusted adult about unfair results."
+    },
+    {
+     "type": "explainer",
+     "title": "The pledge",
+     "scenes": [
+      {
+       "caption": "Be fair.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "⚖️",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "fair"
+        }
+       ],
+       "say": "Be fair. Everyone deserves AI that works well for them."
+      },
+      {
+       "caption": "Check and ask.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🔍",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🙋",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Check and ask. We check AI results, and we ask before using anyone's data."
+      },
+      {
+       "caption": "Tell.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🗣️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "👩‍🏫",
+         "x": 72,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a pledge"
+        }
+       ],
+       "say": "Tell. If something seems unfair, we tell a trusted adult."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of making a class AI pledge in order.",
+      "hint": "Talk first.",
+      "explanation": "Discuss, write, share, then review.",
+      "skill_tag": "fair.pledge_steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Share them with the class"
+       },
+       {
+        "id": "i4",
+        "text": "Review them each term"
+       },
+       {
+        "id": "i2",
+        "text": "Write three or four promises"
+       },
+       {
+        "id": "i1",
+        "text": "Discuss what makes AI fair"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: AI for good"
+    },
+    {
+     "type": "text",
+     "markdown": "Used carefully, AI can help many people.",
+     "say": "AI can do good when people use it carefully. It can read text aloud for people who find reading hard."
+    },
+    {
+     "type": "text",
+     "markdown": "People and AI can work as a team.",
+     "say": "It can help scientists sort photos of animals, and help doctors look at scans while a person checks."
+    },
+    {
+     "type": "explainer",
+     "title": "Doing good",
+     "scenes": [
+      {
+       "caption": "Reading help.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "📖",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🔊",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A reading helper reads a story aloud for a classmate who finds reading hard."
+      },
+      {
+       "caption": "Wildlife.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🦌",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "✅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Scientists use image AI to sort wildlife photos, then check the unsure ones."
+      },
+      {
+       "caption": "Our goal.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🌍",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "fair AI for all"
+        }
+       ],
+       "say": "Good AI is fair, tested and checked by people. That is our goal."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Our class pledge",
+     "materials": [
+      "Paper and pens",
+      "Your class"
+     ],
+     "instructions": [
+      "Write three or four promises about fair and careful AI use.",
+      "Draw a symbol for each promise.",
+      "Say when you will review it, such as once each term."
+     ],
+     "say": "Now you try. Write your own class pledge."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "People should keep checking AI even when it usually works well.",
+      "hint": "Think about mistakes.",
+      "explanation": "Checks catch mistakes and unfairness.",
+      "skill_tag": "fair.keep_check_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Make a pledge: be fair, check, ask and tell",
+      "AI can do good when used carefully",
+      "People keep testing, checking and caring"
+     ],
+     "say": "Let us remember. Fair AI needs fair data, tests, responsible people and a clear pledge."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pledge",
+       "meaning": "A set of promises that guide how we act."
+      },
+      {
+       "term": "fair",
+       "meaning": "Treating people equally and justly."
+      },
+      {
+       "term": "review",
+       "meaning": "To look again and decide what to improve."
+      },
+      {
+       "term": "trusted adult",
+       "meaning": "A grown-up you know well and trust."
+      },
+      {
+       "term": "goal",
+       "meaning": "Something you want to achieve."
+      },
+      {
+       "term": "scan",
+       "meaning": "A medical picture of the inside of the body."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a pledge?",
+     "hint": "Think about promises.",
+     "explanation": "A pledge is a set of promises.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fast program"
+      },
+      {
+       "id": "b",
+       "text": "A set of promises"
+      },
+      {
+       "id": "c",
+       "text": "A kind of password"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A pledge can be reviewed and improved.",
+     "hint": "Needs change over time.",
+     "explanation": "We review pledges.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should you tell if AI seems unfair?",
+     "hint": "Someone who looks after you.",
+     "explanation": "A trusted adult can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nobody"
+      },
+      {
+       "id": "b",
+       "text": "A stranger"
+      },
+      {
+       "id": "c",
+       "text": "A trusted adult"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is bias in AI?",
+    "hint": "Think about fairness.",
+    "explanation": "Bias is an unfair leaning.",
+    "skill_tag": "fair.bias_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A fast processor"
+     },
+     {
+      "id": "b",
+      "text": "A type of password"
+     },
+     {
+      "id": "c",
+      "text": "An unfair leaning that makes results better for some people than others"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Where can AI bias come from?",
+    "hint": "Think about what it learned from.",
+    "explanation": "Bias often comes from data.",
+    "skill_tag": "fair.bias_source",
+    "options": [
+     {
+      "id": "a",
+      "text": "Too much electricity"
+     },
+     {
+      "id": "b",
+      "text": "A loud speaker"
+     },
+     {
+      "id": "c",
+      "text": "Unbalanced or unfair training data"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "An AI can only be unfair if it wants to be.",
+    "hint": "Think about data.",
+    "explanation": "AI can be unfair because of its data and design.",
+    "skill_tag": "fair.want",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each term to its meaning.",
+    "hint": "Think about each term.",
+    "explanation": "Each term has its own meaning.",
+    "skill_tag": "fair.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Bias"
+     },
+     {
+      "id": "l2",
+      "text": "Stereotype"
+     },
+     {
+      "id": "l3",
+      "text": "Fair"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A fixed idea about a group"
+     },
+     {
+      "id": "r1",
+      "text": "An unfair leaning"
+     },
+     {
+      "id": "r3",
+      "text": "Treating people equally"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bias",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the unbalanced training set.",
+    "hint": "Which one leaves people out?",
+    "explanation": "A set with only one kind is unbalanced.",
+    "skill_tag": "fair.tap_unbalanced",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📸",
+       "label": "Photos of only one kind of person",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📸",
+       "label": "Photos of many kinds of people",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔊",
+       "label": "Voices with many accents",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "bias",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Zara says computers cannot be unfair because they are machines. Is she right?",
+    "hint": "Think about where data comes from.",
+    "explanation": "Data from people can carry unfairness.",
+    "skill_tag": "fair.reason_machine",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, machines are always fair"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they have no data"
+     },
+     {
+      "id": "c",
+      "text": "No. They learn from human data that can be unbalanced or unfair"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bias",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "A story helper always makes the pilot a boy. What is this?",
+    "hint": "Anyone can be a pilot.",
+    "explanation": "It copied a fixed idea.",
+    "skill_tag": "fair.pilot",
+    "options": [
+     {
+      "id": "a",
+      "text": "A correct fact"
+     },
+     {
+      "id": "b",
+      "text": "A hardware fault"
+     },
+     {
+      "id": "c",
+      "text": "A stereotype copied from its training text"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bias",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about fairness.",
+    "hint": "Think about gaps.",
+    "explanation": "Data gaps create unfairness for some people.",
+    "skill_tag": "fair.fill_bias",
+    "points": 2,
+    "text": "Unfair training {b1} can make an AI work better for some {b2} than others.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "dates"
+       },
+       {
+        "id": "b",
+        "text": "drums"
+       },
+       {
+        "id": "c",
+        "text": "data"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "planets"
+       },
+       {
+        "id": "b",
+        "text": "people"
+       },
+       {
+        "id": "c",
+        "text": "pencils"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "bias",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps of a fairness test in order.",
+    "hint": "Collect first.",
+    "explanation": "Collect, run, compare, then fix.",
+    "skill_tag": "fair.test_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Run the AI on them"
+     },
+     {
+      "id": "i3",
+      "text": "Compare the results for each group"
+     },
+     {
+      "id": "i4",
+      "text": "Fix problems and test again"
+     },
+     {
+      "id": "i1",
+      "text": "Collect test examples from many kinds of people"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Why test an AI on many different kinds of people?",
+    "hint": "Think about gaps.",
+    "explanation": "A varied test shows who is left out.",
+    "skill_tag": "fair.why_test",
+    "options": [
+     {
+      "id": "a",
+      "text": "To use more electricity"
+     },
+     {
+      "id": "b",
+      "text": "To see if it works fairly for everyone"
+     },
+     {
+      "id": "c",
+      "text": "To make the test longer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "test",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about testing.",
+    "hint": "Think about comparing groups.",
+    "explanation": "Compare results by group.",
+    "skill_tag": "fair.fill_test",
+    "points": 2,
+    "text": "A fair test uses examples from many {b1}. Compare how well it works for each {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "parcels"
+       },
+       {
+        "id": "b",
+        "text": "people"
+       },
+       {
+        "id": "c",
+        "text": "pots"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "gate"
+       },
+       {
+        "id": "b",
+        "text": "group"
+       },
+       {
+        "id": "c",
+        "text": "grape"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "test",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "A face-unlock tool works for 9 of 10 people in one group but 5 of 10 in another. What does this suggest?",
+    "hint": "Compare the two results.",
+    "explanation": "A big gap suggests bias.",
+    "skill_tag": "fair.gap",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is perfectly fair"
+     },
+     {
+      "id": "b",
+      "text": "The groups are lying"
+     },
+     {
+      "id": "c",
+      "text": "It may be unfair and needs fixing"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A voice helper understands 8 of 10 people in group A but 5 of 10 in group B. Slide to show the gap, in people out of 10.",
+    "hint": "8 take away 5.",
+    "explanation": "8 - 5 = 3 people.",
+    "skill_tag": "fair.gap_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "If an AI is tested on only one kind of example, we cannot be sure it is fair for others.",
+    "hint": "Think about gaps.",
+    "explanation": "A narrow test cannot show fairness for others.",
+    "skill_tag": "fair.one_test",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says if the overall score is high, the AI must be fair to everyone. Is he right?",
+    "hint": "Think about the group B gap.",
+    "explanation": "Averages can hide gaps.",
+    "skill_tag": "fair.reason_average",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, high means fair"
+     },
+     {
+      "id": "b",
+      "text": "Yes, averages show everything"
+     },
+     {
+      "id": "c",
+      "text": "No. A high average can hide poor results for one group"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "test",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two are signs of responsible AI use? Pick two.",
+    "hint": "Think about checking and openness.",
+    "explanation": "Checks and openness are responsible.",
+    "skill_tag": "fair.resp_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nobody knows who made it"
+     },
+     {
+      "id": "b",
+      "text": "It collects private data secretly"
+     },
+     {
+      "id": "c",
+      "text": "People are told when AI is used"
+     },
+     {
+      "id": "d",
+      "text": "A person checks important results"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "people",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "A team checks 5 AI results each day for 6 days. How many results do they check in all?",
+    "hint": "6 groups of 5.",
+    "explanation": "6 x 5 = 30 results.",
+    "skill_tag": "fair.results_checked",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "people",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "If an AI makes a harmful mistake, who is responsible for fixing it?",
+    "hint": "Who is in charge?",
+    "explanation": "People are responsible.",
+    "skill_tag": "fair.who_fixes",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nobody"
+     },
+     {
+      "id": "b",
+      "text": "The people who make and use it"
+     },
+     {
+      "id": "c",
+      "text": "The AI itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says it is the AI's fault, not people's, if it treats someone unfairly. Is he right?",
+    "hint": "Think about who builds and uses it.",
+    "explanation": "People are responsible.",
+    "skill_tag": "fair.reason_blame",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only the AI is to blame"
+     },
+     {
+      "id": "b",
+      "text": "No. People choose the data and how it is used, so they are responsible"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody is responsible"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Maryam says people do not need to be told when AI makes a decision. Is she right?",
+    "hint": "Think about being open.",
+    "explanation": "Openness helps people check.",
+    "skill_tag": "fair.reason_open",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, keep it secret"
+     },
+     {
+      "id": "b",
+      "text": "Yes, secrecy is safer"
+     },
+     {
+      "id": "c",
+      "text": "No. People should know when AI is used so they can ask questions"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says it is fine for an AI to collect everyone's photos without asking. Is he right?",
+    "hint": "Think about privacy.",
+    "explanation": "Photos of people are personal.",
+    "skill_tag": "fair.reason_photos",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, photos are free"
+     },
+     {
+      "id": "b",
+      "text": "No. Personal data needs permission and care"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody cares"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each idea to its meaning.",
+    "hint": "Think about each idea.",
+    "explanation": "Each idea has its own meaning.",
+    "skill_tag": "fair.idea_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Privacy"
+     },
+     {
+      "id": "l2",
+      "text": "Consent"
+     },
+     {
+      "id": "l3",
+      "text": "Transparency"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Being open about how AI is used"
+     },
+     {
+      "id": "r1",
+      "text": "Keeping personal information safe"
+     },
+     {
+      "id": "r2",
+      "text": "Being asked and saying yes"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "people",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Which action respects people's privacy? Tap it.",
+    "hint": "Think about asking first.",
+    "explanation": "Permission respects privacy.",
+    "skill_tag": "fair.tap_private",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🙋",
+       "label": "Ask permission before using a photo",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📷",
+       "label": "Take photos secretly",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📤",
+       "label": "Upload everyone's pictures",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "people",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of creating a class AI pledge in order.",
+    "hint": "Talk first.",
+    "explanation": "Discuss, write, share, review.",
+    "skill_tag": "fair.pledge_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Write three promises"
+     },
+     {
+      "id": "i4",
+      "text": "Review them each term"
+     },
+     {
+      "id": "i3",
+      "text": "Share them with the class"
+     },
+     {
+      "id": "i1",
+      "text": "Discuss what makes AI fair"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two belong in a fair AI pledge? Pick two.",
+    "hint": "Think about care.",
+    "explanation": "Checking and asking are fair promises.",
+    "skill_tag": "fair.pledge_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "We will not use people's data without asking"
+     },
+     {
+      "id": "b",
+      "text": "We will hide mistakes"
+     },
+     {
+      "id": "c",
+      "text": "We will blame the computer"
+     },
+     {
+      "id": "d",
+      "text": "We will check AI results"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says AI will make every decision better than a person, so people can stop thinking. Is she right?",
+    "hint": "Think about being responsible.",
+    "explanation": "People stay responsible.",
+    "skill_tag": "fair.reason_think",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, thinking is optional"
+     },
+     {
+      "id": "b",
+      "text": "No. People must keep thinking, checking and caring"
+     },
+     {
+      "id": "c",
+      "text": "Yes, AI is always better"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says if she sees something unfair from AI, there is nothing she can do. Is she right?",
+    "hint": "Think about telling.",
+    "explanation": "Telling can lead to a fix.",
+    "skill_tag": "fair.reason_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nothing"
+     },
+     {
+      "id": "b",
+      "text": "Yes, AI cannot change"
+     },
+     {
+      "id": "c",
+      "text": "No. She can tell a trusted adult or the people who run it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a pledge is pointless because nobody can follow it. Is he right?",
+    "hint": "Think about the class pledge.",
+    "explanation": "Clear promises guide us.",
+    "skill_tag": "fair.reason_pledge",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, pledges never help"
+     },
+     {
+      "id": "b",
+      "text": "Yes, promises are silly"
+     },
+     {
+      "id": "c",
+      "text": "No. Clear promises help us act fairly and check ourselves"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "Zara's class writes 3 promises in each of 4 groups. How many promises in all?",
+    "hint": "4 groups of 3.",
+    "explanation": "4 x 3 = 12 promises.",
+    "skill_tag": "fair.promises",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "pledge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "A class reviews its pledge 3 times a year for 2 years. Slide to show the number of reviews.",
+    "hint": "2 groups of 3.",
+    "explanation": "2 x 3 = 6 reviews.",
+    "skill_tag": "fair.reviews",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "pledge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A helper works well for some voices but badly for others. What problem is this?",
+    "hint": "Think about fairness.",
+    "explanation": "Working unevenly for people is bias.",
+    "skill_tag": "fair.bias_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A slow internet"
+     },
+     {
+      "id": "b",
+      "text": "Bias"
+     },
+     {
+      "id": "c",
+      "text": "A flat battery"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which could cause bias?",
+    "hint": "Think about what it learned from.",
+    "explanation": "Missing people in data can cause bias.",
+    "skill_tag": "fair.bias_source",
+    "options": [
+     {
+      "id": "a",
+      "text": "Training data that leaves out many kinds of people"
+     },
+     {
+      "id": "b",
+      "text": "A bigger screen"
+     },
+     {
+      "id": "c",
+      "text": "A shorter cable"
+     }
+    ],
+    "answer": [
+     "a"
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "An AI can be unfair because of the data it learned from.",
+    "hint": "Think about data.",
+    "explanation": "Data can carry unfairness.",
+    "skill_tag": "fair.want",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "bias",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each word with its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "fair.term_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Training data"
+     },
+     {
+      "id": "l2",
+      "text": "Test"
+     },
+     {
+      "id": "l3",
+      "text": "Responsible"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Taking care of the results"
+     },
+     {
+      "id": "r1",
+      "text": "What the AI learned from"
+     },
+     {
+      "id": "r2",
+      "text": "Checking how well it works"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bias",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the data most likely to cause bias.",
+    "hint": "Which one leaves people out?",
+    "explanation": "Only one town leaves others out.",
+    "skill_tag": "fair.tap_unbalanced",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎤",
+       "label": "Voices from only one town",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎤",
+       "label": "Voices from many places",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎤",
+       "label": "Voices from many ages",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "bias",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Idris says a program that learns from unfair examples will still be fair. Is he right?",
+    "hint": "Think about where data comes from.",
+    "explanation": "It repeats patterns in its data.",
+    "skill_tag": "fair.reason_machine",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it fixes itself"
+     },
+     {
+      "id": "b",
+      "text": "No. It will copy the unfairness"
+     },
+     {
+      "id": "c",
+      "text": "Yes, examples do not matter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bias",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "A picture helper always draws nurses as women. What problem is this?",
+    "hint": "Anyone can be a nurse.",
+    "explanation": "It copies a fixed idea.",
+    "skill_tag": "fair.pilot",
+    "options": [
+     {
+      "id": "a",
+      "text": "A battery fault"
+     },
+     {
+      "id": "b",
+      "text": "A stereotype"
+     },
+     {
+      "id": "c",
+      "text": "A true rule"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bias",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about stereotypes.",
+    "hint": "Think about copied patterns.",
+    "explanation": "AI can copy stereotypes.",
+    "skill_tag": "fair.fill_bias",
+    "points": 2,
+    "text": "A {b1} is a fixed idea about a group. AI can {b2} it from its text.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stadium"
+       },
+       {
+        "id": "b",
+        "text": "stereotype"
+       },
+       {
+        "id": "c",
+        "text": "sandwich"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "cook"
+       },
+       {
+        "id": "b",
+        "text": "copy"
+       },
+       {
+        "id": "c",
+        "text": "carry"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bias",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these steps for fixing a biased helper in order.",
+    "hint": "Notice first.",
+    "explanation": "Notice, find, add, test.",
+    "skill_tag": "fair.test_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find what is missing from the training data"
+     },
+     {
+      "id": "i3",
+      "text": "Add more varied examples"
+     },
+     {
+      "id": "i4",
+      "text": "Test it again"
+     },
+     {
+      "id": "i1",
+      "text": "Notice it works worse for some people"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "A voice helper is tested with only one accent. What is the problem?",
+    "hint": "Think about gaps.",
+    "explanation": "A narrow test misses gaps.",
+    "skill_tag": "fair.why_test",
+    "options": [
+     {
+      "id": "a",
+      "text": "The test is too short"
+     },
+     {
+      "id": "b",
+      "text": "The test may miss unfairness for others"
+     },
+     {
+      "id": "c",
+      "text": "The helper is too loud"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "test",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about gaps.",
+    "hint": "Think about what a gap means.",
+    "explanation": "Big gaps suggest bias, so we fix it.",
+    "skill_tag": "fair.fill_test",
+    "points": 2,
+    "text": "If results differ a lot between groups, the AI may have {b1}. We should {b2} it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bridges"
+       },
+       {
+        "id": "b",
+        "text": "bias"
+       },
+       {
+        "id": "c",
+        "text": "bubbles"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fold"
+       },
+       {
+        "id": "b",
+        "text": "fry"
+       },
+       {
+        "id": "c",
+        "text": "fix"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "test",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A reading helper is right 90 percent of the time for one group and 60 percent for another. What does this suggest?",
+    "hint": "Compare the two results.",
+    "explanation": "A big gap suggests bias.",
+    "skill_tag": "fair.gap",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is fair"
+     },
+     {
+      "id": "b",
+      "text": "It may be biased"
+     },
+     {
+      "id": "c",
+      "text": "The second group did not try"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A helper understands 9 of 10 people in group A but 4 of 10 in group B. Slide to show the gap, in people out of 10.",
+    "hint": "9 take away 4.",
+    "explanation": "9 - 4 = 5 people.",
+    "skill_tag": "fair.gap_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "One good test proves an AI is fair for everyone.",
+    "hint": "Think about gaps.",
+    "explanation": "One test cannot prove fairness for all.",
+    "skill_tag": "fair.one_test",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Layla says we only need to test the largest group. Is she right?",
+    "hint": "Think about the group B gap.",
+    "explanation": "Smaller groups can be left out.",
+    "skill_tag": "fair.reason_average",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only the biggest matters"
+     },
+     {
+      "id": "b",
+      "text": "No. We must test smaller groups too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, small groups never differ"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "test",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two protect people's privacy? Pick two.",
+    "hint": "Think about care.",
+    "explanation": "Permission and limits protect privacy.",
+    "skill_tag": "fair.resp_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Collect only what you need"
+     },
+     {
+      "id": "b",
+      "text": "Share it publicly"
+     },
+     {
+      "id": "c",
+      "text": "Collect everything you can"
+     },
+     {
+      "id": "d",
+      "text": "Ask permission before using someone's data"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "people",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "A team checks 4 AI results each day for 7 days. How many results do they check in all?",
+    "hint": "7 groups of 4.",
+    "explanation": "7 x 4 = 28 results.",
+    "skill_tag": "fair.results_checked",
+    "answer": {
+     "value": 28,
+     "tolerance": 0
+    },
+    "sub_lesson": "people",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Who should answer for harm caused by an AI?",
+    "hint": "Who is in charge?",
+    "explanation": "People are responsible.",
+    "skill_tag": "fair.who_fixes",
+    "options": [
+     {
+      "id": "a",
+      "text": "The program alone"
+     },
+     {
+      "id": "b",
+      "text": "People, not the program"
+     },
+     {
+      "id": "c",
+      "text": "Only the weather"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Nadia says blaming the computer means nobody has to fix it. Is she right?",
+    "hint": "Think about who builds and uses it.",
+    "explanation": "People must fix problems.",
+    "skill_tag": "fair.reason_blame",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nobody must fix it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, computers fix themselves"
+     },
+     {
+      "id": "c",
+      "text": "No. People must still fix it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says AI use should be hidden. Is he right?",
+    "hint": "Think about being open.",
+    "explanation": "Openness helps checking.",
+    "skill_tag": "fair.reason_open",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nobody needs to know"
+     },
+     {
+      "id": "b",
+      "text": "No. Being open helps people trust and check it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, hide it"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a school can share children's photos with an AI company without asking parents. Is she right?",
+    "hint": "Think about privacy.",
+    "explanation": "Children's photos need permission.",
+    "skill_tag": "fair.reason_photos",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, schools can share anything"
+     },
+     {
+      "id": "b",
+      "text": "No. It needs permission"
+     },
+     {
+      "id": "c",
+      "text": "Yes, parents never mind"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "people",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each risk with a safeguard.",
+    "hint": "Think about each risk.",
+    "explanation": "Each risk has a safeguard.",
+    "skill_tag": "fair.idea_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Unfair results"
+     },
+     {
+      "id": "l2",
+      "text": "Wrong decisions"
+     },
+     {
+      "id": "l3",
+      "text": "Secret data use"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A human check"
+     },
+     {
+      "id": "r3",
+      "text": "Permission and openness"
+     },
+     {
+      "id": "r1",
+      "text": "Fairness tests"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "people",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the responsible choice.",
+    "hint": "Think about being open.",
+    "explanation": "Openness is responsible.",
+    "skill_tag": "fair.tap_private",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "👀",
+       "label": "Tell people AI is being used",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🤫",
+       "label": "Hide that AI made the decision",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔓",
+       "label": "Share children's data openly",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "people",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for using a new AI tool in order.",
+    "hint": "Ask first.",
+    "explanation": "Ask, check, use, tell.",
+    "skill_tag": "fair.pledge_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Use it and check the answers"
+     },
+     {
+      "id": "i4",
+      "text": "Tell someone if something seems unfair"
+     },
+     {
+      "id": "i2",
+      "text": "Check it is suitable for children"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a grown-up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two are good promises? Pick two.",
+    "hint": "Think about care.",
+    "explanation": "Telling and fairness are good promises.",
+    "skill_tag": "fair.pledge_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "We will copy others' work"
+     },
+     {
+      "id": "b",
+      "text": "We will keep secrets from teachers"
+     },
+     {
+      "id": "c",
+      "text": "We will treat everyone fairly"
+     },
+     {
+      "id": "d",
+      "text": "We will tell a trusted adult about unfair results"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Idris says people can stop being kind once AI is in charge. Is he right?",
+    "hint": "Think about being responsible.",
+    "explanation": "People stay responsible.",
+    "skill_tag": "fair.reason_think",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, kindness is optional"
+     },
+     {
+      "id": "b",
+      "text": "No. People stay responsible for fairness"
+     },
+     {
+      "id": "c",
+      "text": "Yes, AI is kind enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Hira says only adults can report unfair AI. Is she right?",
+    "hint": "Think about telling.",
+    "explanation": "Children can tell a trusted adult.",
+    "skill_tag": "fair.reason_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only adults"
+     },
+     {
+      "id": "b",
+      "text": "No. Children can tell a trusted adult, who can report it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, children cannot speak"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Sana says one pledge is enough forever with no review. Is she right?",
+    "hint": "Think about the class pledge.",
+    "explanation": "We review pledges.",
+    "skill_tag": "fair.reason_pledge",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nothing changes"
+     },
+     {
+      "id": "b",
+      "text": "No. We review it as AI and our needs change"
+     },
+     {
+      "id": "c",
+      "text": "Yes, never review"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pledge",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "Idris's class writes 5 promises in each of 3 groups. How many promises in all?",
+    "hint": "3 groups of 5.",
+    "explanation": "3 x 5 = 15 promises.",
+    "skill_tag": "fair.promises",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "pledge",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "A class reviews its pledge 4 times a year for 2 years. Slide to show the number of reviews.",
+    "hint": "2 groups of 4.",
+    "explanation": "2 x 4 = 8 reviews.",
+    "skill_tag": "fair.reviews",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "pledge",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

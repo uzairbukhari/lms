@@ -154,3 +154,21 @@ vite.config.ts.timestamp-*
 
 # Secrets
 .env.local
+
+# My video folder
+# everything inside my-video folder will be ignored
+my-video/
+
+# Claude Code local files (agent worktrees and personal settings)
+.claude/worktrees/
+.claude/settings.local.json
+
+# Source art sheets and reference images: the app uses only the cut-outs in
+# apps/web/src/anim/assets/characters/cut, assets/backgrounds/web and assets/kids
+apps/web/src/anim/assets/characters/*.jpg
+apps/web/src/anim/assets/sheets/
+apps/web/src/anim/assets/backgrounds/*.jpg
+apps/web/src/anim/assets/backdrops-reference/
+
+# Files downloaded for a quick look (never part of the app)
+content/media/inbox/

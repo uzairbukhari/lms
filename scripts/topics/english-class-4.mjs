@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, num, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, num, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic lessons for Fatima (Class 4, age 9). Standards from docs/CURRICULUM_V2.md section 3 (NC Year 4, Cambridge Stage 4).
@@ -9,9 +9,15 @@ const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain
    Topic 1: Grammar toolkit
    --------------------------------------------------------------------------------------------- */
 
+const STORM = "english-class-4-grammar-toolkit-1-4f95d512.jpg";
+const PENCIL = "english-class-4-grammar-toolkit-2-523b5ba4.jpg";
+
 const similes = {
   id: "similes", kind: "learn", title: "Similes and noun phrases",
   blocks: [
+    H("Welcome back, word detective!"),
+    SAY("Today we ask a big question. How do great writers make sentences that sound clear and exciting?", T("Today's big question: how do writers make sentences clear and exciting?")),
+    SAY("A storm is coming over this field. A good writer can describe it using similes, strong verbs and clear sentences.", PHOTO(STORM, "Dark storm clouds over a golden field with electricity pylons in the distance", "A storm gathers. Writers use similes and strong verbs to describe it.", "Photo by Abraham Sebastian on Unsplash")),
     H("Stop 1: Similes"),
     SAY("Good writers paint pictures with words. One powerful tool is the simile. A simile compares two different things using the word like or as. The moon was like a silver coin. The cheetah was as quick as lightning. The moon is not really a coin, and the cheetah is not lightning. But the comparison helps you picture it clearly. Watch the moon turn into a coin.", T("A **simile** compares two things using like or as.", "The moon was like a silver coin.", "The cheetah was as quick as lightning.")),
     EXPP("The moon and the coin",
@@ -44,7 +50,7 @@ const speech = {
     SAY("When someone speaks in a story, we show their exact words with speech marks. Speech marks look like tiny quotation marks, and they wrap around only the words that are said. Here is Mum calling. Come here, said Mum. The words Come here go inside the speech marks. Notice the comma. It sits inside, just before the closing speech marks.", T("**Speech marks** go around the exact words someone says.", "\"Come here,\" said Mum.", "The comma goes inside the speech marks.")),
     EXPP("Mum calls",
       SS("Mum is calling from the kitchen. These are her exact words: come here.", S("Mum says: come here.", ["m", "👩", 30, 55, 3, "grow", "Mum"], ["s", "💬", 62, 30, 3, "grow", "Come here"])),
-      SS("To write it, we wrap the spoken words in speech marks, add a comma inside, and then say who spoke. Come here, said Mum.", S("\"Come here,\" said Mum.", ["m", "👩", 30, 55, 3, "none", "said Mum"], ["s", "💬", 62, 30, 3, "pulse", "\"Come here,\""]))),
+      SS("To write it, we wrap the spoken words in speech marks and add a comma inside. Then we say who spoke. Come here, said Mum.", S("\"Come here,\" said Mum.", ["m", "👩", 30, 55, 3, "none", "said Mum"], ["s", "💬", 62, 30, 3, "pulse", "\"Come here,\""]))),
     CHK(mc("Which is punctuated correctly?", "\"I am hungry,\" said Sam.", ["\"I am hungry\" said Sam.", "I am hungry, said Sam."], { hint: "Speech marks go around the spoken words, with the comma inside.", why: "The spoken words are inside speech marks and the comma sits just before the closing marks.", tag: "speech.punct" })),
     H("Stop 2: Write your own"),
     SAY("It is your turn to write. Listen to a conversation at home, then write down two lines of what people say. Give each speaker a new line. Use speech marks, a comma, and the word said.", ACT("Catch some speech", ["Paper and a pencil"], ["Listen to a short chat at home or imagine one between two friends.", "Write what one person says inside speech marks, with a comma inside.", "Add who said it, for example said Hamza.", "Start a new line when a different person speaks."])),
@@ -77,6 +83,7 @@ const pronouns = {
   id: "pronouns", kind: "play", title: "Pronouns and fronted adverbials",
   blocks: [
     H("Stop 1: Pronouns"),
+    SAY("A sharp pencil is ready. Strong writers plan their grammar choices before they write.", PHOTO(PENCIL, "A sharpened wooden pencil lying on a blank spiral notebook", "A sharp pencil and a blank page. Good grammar makes writing clear.", "Photo by Kelly Sikkema on Unsplash")),
     SAY("Imagine writing Fatima picked up Fatima's book and Fatima opened Fatima's book. That sounds very odd, doesn't it? Pronouns save us from repeating nouns. Fatima becomes she. The book becomes it. The children become they. Pronouns are small words, but they make our writing smooth.", T("A **pronoun** takes the place of a noun: she, he, it, they, we.", "Fatima picked up the book. She opened it.")),
     EXPP("Swapping nouns for pronouns",
       SS("Fatima picked up the book. Then Fatima opened the book. Fatima and the book are repeated.", S("Fatima picked up the book. Fatima opened the book.", ["f", "👧", 30, 55, 3, "grow", "Fatima"], ["b", "📖", 70, 55, 3, "grow", "the book"])),
@@ -132,6 +139,28 @@ const tenses = {
   ],
 };
 
+const clip = {
+  title: "The storm over the field", backdrop: "sky", caption: "A storm rolls in over a field and shows grammar at work.",
+  scenes: [
+    { caption: "A calm day.", say: "At dawn, the field was golden and still.",
+      items: [{ id: "f", emoji: "🌾", x: 50, y: 62, size: 3 }, { id: "s", emoji: "☀️", x: 78, y: 22, size: 2 }] },
+    { caption: "A simile.", say: "The sky turned as dark as a bruise.",
+      items: [{ id: "c", emoji: "⛈️", x: 50, y: 30, size: 3, anim: "pulse" }] },
+    { caption: "Fronted adverbial.", say: "Suddenly, the wind began to howl.",
+      items: [{ id: "w", emoji: "💨", x: 50, y: 40, size: 3, anim: "float" }] },
+    { caption: "Speech.", say: "“Run to the barn,” shouted Hina.",
+      items: [{ id: "h", emoji: "👧", label: "Hina", x: 30, y: 58, size: 3 }, { id: "b", emoji: "🏚️", x: 75, y: 56, size: 3 }] },
+    { caption: "Pronouns.", say: "She grabbed her brother, and they ran together.",
+      items: [{ id: "h", emoji: "👧", x: 30, y: 58, size: 3 }, { id: "b", emoji: "👦", x: 65, y: 58, size: 3, enter: "walk_right" }] },
+    { caption: "Belonging.", say: "The farmer's gate rattled in the gale.",
+      items: [{ id: "g", emoji: "🚪", x: 50, y: 56, size: 3, anim: "bounce" }] },
+    { caption: "Tenses.", say: "They were running when the rain arrived.",
+      items: [{ id: "r", emoji: "🌧️", x: 50, y: 36, size: 3 }] },
+    { caption: "Calm again.", say: "After the storm, the field glowed again.",
+      items: [{ id: "f", emoji: "🌾", x: 40, y: 62, size: 3, effect: "glow" }, { id: "r", emoji: "🌈", x: 75, y: 36, size: 3 }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "english-class-4-grammar-toolkit", subject: "english", cls: 4, topic: 1, title: "Grammar Toolkit",
@@ -149,13 +178,9 @@ export const topics = [
       tf("A noun is a naming word.", true, { hint: "Think of cat, school, Lahore.", why: "A noun names a person, place or thing." }),
       mc("Which word is a verb?", "run", ["red", "table"], { hint: "A verb is a doing word.", why: "Run is something you do." }),
     ],
-    intro: [
-      H("Welcome back, word detective!"),
-      SAY("Welcome back, word detective! Today we have a big question. How do great writers make sentences that sound clear, smooth and exciting? The answer is a toolkit. Similes, speech marks, pronouns, apostrophes, connectives, and more. By the end, you will have every tool in your pocket. Let's go!", T("Today's big question: how do great writers make sentences clear, smooth and exciting?", "We will build a toolkit of grammar tools.")),
-      IMG("🧰", "A grammar toolkit helps us write well."),
-      GLOSS({ grammar: "The rules for how words fit together in sentences." }),
-    ],
+    intro: [],
     subs: [similes, speech, pronouns, tenses],
+    clip,
     quiz: [
       Q(mc("Pick the sentence that contains a simile.", "The moon was like a silver coin.", ["The moon was bright.", "The moon is far away."], { hint: "Look for like or as.", why: "It compares the moon to a coin using like.", tag: "simile.find" }), "similes", "recall", [
         mc("Spot the simile: which sentence has one?", "The wind howled as loudly as a wolf.", ["The wind howled all night.", "The wind was very cold."], { hint: "Look for as ... as or like.", why: "It compares the wind to a wolf using as ... as.", tag: "simile.find" }),
@@ -202,6 +227,37 @@ export const topics = [
       Q(mc("Why is The dogs are barking correct and The dogs is barking wrong?", "Dogs is plural, so it needs are", ["Dogs is singular, so it needs is", "Barking is a noun"], { hint: "Is it one dog or more?", why: "Plural subjects need are.", tag: "agreement.reason" }), "tenses_agreement", "reason", [
         mc("Why is The bird is singing correct and The bird are singing wrong?", "Bird is singular, so it needs is", ["Bird is plural, so it needs are", "Singing is a noun"], { hint: "Is it one bird or more?", why: "Singular subjects need is.", tag: "agreement.reason" }),
         mc("Why is The children are playing correct and The children is playing wrong?", "Children is plural, so it needs are", ["Children is singular, so it needs is", "Playing is a noun"], { hint: "Is it one child or more?", why: "Children is more than one, so it needs are.", tag: "agreement.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Which word completes the simile: as brave as a ___?", "lion", ["table", "pencil"], { hint: "Think of a famously brave animal.", why: "As brave as a lion is a common simile.", tag: "simile.complete" }), "similes", "recall", [
+        mc("Which word completes the simile: as slow as a ___?", "snail", ["cheetah", "rocket"], { hint: "Think of a very slow creature.", why: "As slow as a snail is a common simile.", tag: "simile.complete" })]),
+      Q(mc("Rizwan says ten similes in one paragraph make writing better. Is he right?", "No, too many similes crowd the writing, so choose the best one or two", ["Yes, more similes are always better", "Yes, every sentence needs a simile"], { hint: "Think about quality, not quantity.", why: "A few well-chosen similes work better than a crowd of them.", tag: "simile.reason" }), "similes", "reason", [
+        mc("Hina says every sentence should have a simile. Is she right?", "No, a simile works best when it is used carefully", ["Yes, every sentence", "Yes, similes replace verbs"], { hint: "Think about overuse.", why: "Too many similes weaken the writing.", tag: "simile.reason" })]),
+      Q(ms("Which two are expanded noun phrases about places? Pick two.", ["the tall white mosque with golden domes", "the busy market beside the old river"], ["the mosque", "the market"], { hint: "They add detail before and after the noun.", why: "Expanded noun phrases add detail.", tag: "nounphrase.expand" }), "similes", "apply", [
+        ms("Pick the two expanded noun phrases about places.", ["the quiet garden behind the school", "the narrow lane near the shop"], ["the garden", "the lane"], { hint: "They add detail.", why: "Expanded noun phrases add detail.", tag: "nounphrase.expand" })]),
+      Q(sld("Slide to show how many pronouns there are: I told her that they saw it.", { min: 0, max: 8 }, 4, 0, { hint: "Count I, her, they and it.", why: "There are 4 pronouns.", tag: "pronoun.count" }), "pronouns", "apply", [
+        sld("Slide to show how many pronouns there are: We gave them it.", { min: 0, max: 8 }, 3, 0, { hint: "Count we, them and it.", why: "There are 3 pronouns.", tag: "pronoun.count" })]),
+      Q(mat("Match each fronted adverbial to its type.", [["After lunch", "time"], ["Under the bridge", "place"], ["Slowly", "manner"]], { hint: "Think about when, where and how.", why: "After lunch is time, under the bridge is place, slowly is manner.", tag: "adverbial.type" }), "pronouns", "apply", [
+        mat("Pair each opener with its type.", [["Before dawn", "time"], ["In the garden", "place"], ["Quietly", "manner"]], { hint: "Think about when, where and how.", why: "Before dawn is time, in the garden is place, quietly is manner.", tag: "adverbial.type" })]),
+      Q(fill("Add the missing punctuation.", "After the rain{b1} we splashed in puddles{b2}", [[",", ".", "?"], [".", ",", ":"]], { hint: "A comma follows a fronted adverbial.", why: "A comma follows After the rain and a full stop ends the sentence.", tag: "comma.adverbial" }), "pronouns", "apply", [
+        fill("Insert the missing marks.", "Before the match{b1} the team practised hard{b2}", [[",", ".", "!"], [".", ",", ";"]], { hint: "A comma follows a fronted adverbial.", why: "A comma follows Before the match and a full stop ends the sentence.", tag: "comma.adverbial" })]),
+      Q(mc("Maryam says a comma always goes before because. Is she right?", "No, a comma follows a fronted clause, but usually not before because in the middle", ["Yes, always before because", "Yes, commas replace because"], { hint: "Think about where the because part sits.", why: "In Because it rained, we stayed in, the comma follows the opening clause. In We stayed in because it rained there is no comma.", tag: "comma.reason" }), "pronouns", "reason", [
+        mc("Idris says a comma is needed in We went home because it was late. Is he right?", "No, no comma is needed when because comes in the middle", ["Yes, a comma always goes before because", "Yes, commas must be added"], { hint: "Think about the order of the parts.", why: "A comma follows a fronted clause, not a because in the middle.", tag: "comma.reason" })]),
+      Q(mc("Which word joins two equal ideas?", "and", ["because", "although"], { hint: "It does not give a reason or a contrast.", why: "And is a co-ordinating word that joins equal ideas.", tag: "connective.type" }), "tenses_agreement", "recall", [
+        mc("Which word gives the reason?", "because", ["and", "but"], { hint: "It answers why.", why: "Because gives the reason.", tag: "connective.type" })]),
+      Q(ord("Put the words in order to make speech.", ["“Come", "here,”", "said", "Amna."], { hint: "Speech first, then the speaker.", why: "The spoken words come first, then said and the speaker.", tag: "speech.order" }), "speech", "apply", [
+        ord("Arrange the words to make speech.", ["Hamza", "asked,", "“Is", "it", "ready?”"], { hint: "The speaker comes first, then the speech.", why: "Hamza asked comes first, then the question in speech marks.", tag: "speech.order" })]),
+      Q(mc("Which shows that the bags belong to the girls (more than one girl)?", "the girls' bags", ["the girl's bags", "the girls bags"], { hint: "For a plural ending in s, add an apostrophe after the s.", why: "The girls' bags shows the bags belong to several girls.", tag: "apostrophe.plural" }), "speech", "apply", [
+        mc("Which shows that the toys belong to the children?", "the children's toys", ["the childrens toys", "the childrens' toys"], { hint: "Children is already plural, so add apostrophe s.", why: "Children is a plural that does not end in s, so we add 's.", tag: "apostrophe.plural" })]),
+      Q(tf("The verb in was walking shows something that was in progress in the past.", true, { hint: "Think about the past progressive.", why: "Was walking is the past progressive tense.", tag: "tense.progressive" }), "tenses_agreement", "apply", [
+        tf("I walk to school yesterday is a correct sentence.", false, { hint: "Yesterday needs the past.", why: "It should be I walked to school yesterday.", tag: "tense.progressive" })]),
+      Q(mc("Hamza says its and it's mean the same. Is he right?", "No, it's means it is, but its shows belonging", ["Yes, they are the same", "Yes, both mean it is"], { hint: "One has an apostrophe for a missing letter.", why: "It's is short for it is. Its shows that something belongs to it.", tag: "apostrophe.reason" }), "speech", "reason", [
+        mc("Mira says the dog wagged it's tail is correct. Is she right?", "No, it should be its tail, with no apostrophe", ["Yes, it's is right", "Yes, apostrophes always go before s"], { hint: "Does it mean it is?", why: "Its shows belonging, so there is no apostrophe.", tag: "apostrophe.reason" })]),
+      Q(mc("Zainab says It was late we went home is a correct sentence. Is she right?", "No, it is a run-on, so add a full stop, a comma with so, or a joining word", ["Yes, it is correct", "Yes, commas are not needed"], { hint: "Two full ideas are stuck together.", why: "Two sentences need a full stop or a joining word. It was late, so we went home is correct.", tag: "runon.reason" }), "tenses_agreement", "reason", [
+        mc("Ali says The sky was dark the storm came is correct. Is he right?", "No, it needs a full stop or a joining word between the ideas", ["Yes, it is correct", "Yes, run-ons are fine"], { hint: "Two full ideas are stuck together.", why: "Add a full stop, a semicolon or a joining word.", tag: "runon.reason" })]),
+      Q(st("Write a stronger verb than went to show anger: Ali ___ out of the room.", ["stormed", "stomped", "marched", "charged", "rushed", "stamped"], { hint: "Which verb has attitude?", why: "Stormed and stomped show anger more strongly than went.", tag: "verb.strong" }), "tenses_agreement", "apply", [
+        st("Write a quieter verb than went: The cat ___ across the roof.", ["crept", "tiptoed", "slunk", "prowled", "sneaked", "stalked"], { hint: "Which verb is soft and careful?", why: "Crept and tiptoed show careful, quiet movement.", tag: "verb.strong" })]),
+      Q(hot("Tap the fronted adverbial.", [["1️⃣", "After supper", 22, 50], ["2️⃣", "we ate", 50, 50], ["3️⃣", "rice", 78, 50]], ["After supper"], { labels: true, hint: "It opens the sentence and tells when.", why: "After supper is the fronted adverbial of time.", tag: "adverbial.find" }), "pronouns", "apply", [
+        hot("Tap the simile.", [["1️⃣", "as cold as ice", 22, 50], ["2️⃣", "a cold day", 50, 50], ["3️⃣", "it was cold", 78, 50]], ["as cold as ice"], { labels: true, hint: "It compares using as or like.", why: "As cold as ice compares using as.", tag: "simile.find" })]),
     ],
   }),
 ];

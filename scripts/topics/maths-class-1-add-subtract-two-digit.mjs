@@ -10,6 +10,11 @@ const TF = (id, value, x = 50, y = 44, size = 3, anim = "none", label) => [id, {
 const OK = (label) => ["ok", "✅", 50, 90, 2, "bounce", label];
 
 const PHOTO = "maths-class-1-add-subtract-two-digit-1-f3462c9c.jpg";
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-add-subtract-two-digit.json).
+const DG = (asset, alt, caption) => ({ type: "image", asset, alt, caption });
+const D_REGROUP = DG("maths-class-1-add-subtract-two-digit-d1-2f87b765.png", "Base ten blocks for 28 plus 15: 3 tens and 13 ones, with 10 ones swapped for a new ten rod, giving 4 tens and 3 ones", "28 + 15: ten ones swap for one new ten rod.");
+const D_HOPS = DG("maths-class-1-add-subtract-two-digit-d2-2ebfb2cc.png", "A number line from 20 to 50 with hops of +2 from 28 to 30, +10 to 40 and +3 to 43", "28 + 2 + 10 + 3 = 43.");
+const D_BAR = DG("maths-class-1-add-subtract-two-digit-d3-45f42363.png", "A bar model with a whole of 75 split into a known part of 36 and an unknown part marked with a question mark", "A bar model: 36 and a missing part make 75.");
 
 // ---------------------------------------------------------------------------------------------- 1. learn
 const tensOnes = {
@@ -61,6 +66,7 @@ const crossing = {
       SS("Eight and five make thirteen. That is one ten and three ones.", S("8 + 5 = 13.", TF("f1", 10, 27, 44, 1), TF("f2", 3, 73, 44, 1), ["e", "✅", 50, 90, 2, "bounce", "13 = 1 ten and 3 ones"])),
       SS("Now thirty and thirteen. Three tens and one more ten make four tens. Four tens and three ones is forty-three!", S("30 + 13 = 43.", PV("t", 4, 3, 50, 48, 3, "pulse"), OK("28 + 15 = 43")))),
     MAN("Make a tray of ten", "Zara has 8 mangoes. Her uncle gives her 5 more. Move 10 mangoes into the Tray of ten. How many are left over?", "🥭", 13, ["Loose mangoes", "Tray of ten"]),
+    SAY("Here is the picture. Three tens and thirteen ones. Ten ones swap for one new ten rod. Now we have four tens and three ones.", D_REGROUP),
     CHK(num("You add 7 + 6 and get 13. After you make a ten, how many ones are left?", 3, { hint: "13 is one ten and some ones.", why: "13 is 1 ten and 3 ones.", tag: "addsub2.cross_ones" })),
     HB("Stop 2: Split just one number", "classroom"),
     SAY("Here is a speedy way. Keep twenty-eight whole. Split only the fifteen. Split fifteen into two, ten and three. Hop two to reach thirty. Hop ten to forty. Hop three more.",
@@ -70,6 +76,7 @@ const crossing = {
       SS("Hop two. Twenty-eight and two make thirty. Thirty is a friendly ten!", S("28 + 2 = 30.", NL("f", 25, 45, 30, 50, 46, 3, "pulse"))),
       SS("Now hop one whole ten. Thirty to forty.", S("30 + 10 = 40.", NL("f", 25, 45, 40, 50, 46, 3, "pulse"))),
       SS("Last, hop three. Forty-one, forty-two, forty-three. The frog lands on forty-three. It is the same answer!", S("40 + 3 = 43.", NL("f", 25, 45, 43, 50, 46, 3, "pulse"), OK("28 + 15 = 43")))),
+    SAY("Here is the whole hop on one line. Two, then ten, then three. Twenty-eight lands on forty-three.", D_HOPS),
     ACT("Mango trays at home", ["Buttons, pasta shapes or paper circles", "A small bowl for the tray of ten"], ["Count out 36 buttons. How many full trays of ten can you make? How many are loose?", "Now add 17 more buttons.", "Fill up the loose ones to make another ten first.", "How many full trays now? How many loose? What is 36 + 17?"]),
     CHK(num("What is 19 + 14? Split only the 14.", 33, { hint: "19 + 1 makes 20. Then add the rest.", why: "14 is 1 and 13. 19 + 1 = 20 and 20 + 13 = 33.", tag: "addsub2.split_one" })),
     SAY("Remember. When the ones make more than nine, a new ten is born. Fill a ten first, or split just one number.", SUM("Ones more than 9 make a new ten", "Fill a ten first", "Or keep one number whole and split the other")),
@@ -135,6 +142,7 @@ const shop = {
     HB("Stop 2: The missing number story", "home"),
     SAY("Zara has twenty-four dates for iftar. Her uncle gives her some more. Now she has forty-one. How many did he give her? We do not know the number. That is the missing number. Count up from twenty-four to forty-one.",
       T("A **missing number** is a number we need to find.", "24 + ? = 41. Count up from 24 to 41.")),
+    SAY("Here is a bar model. The whole is seventy-five. One part is thirty-six. The other part is the question mark. Thirty-six and what make seventy-five?", D_BAR),
     EXPP("24 + ? = 41",
       SS("The frog starts on twenty-four. We want to land on forty-one.", S("Start at 24. Target 41.", NL("f", 24, 44, 24))),
       SS("Hop six to reach thirty. That is the first friendly ten.", S("24 + 6 = 30.", NL("f", 24, 44, 30, 50, 46, 3, "pulse"))),

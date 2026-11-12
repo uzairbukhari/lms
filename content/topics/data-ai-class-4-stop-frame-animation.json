@@ -1,0 +1,3272 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-stop-frame-animation",
+  "subject": "data-ai",
+  "title": "Stop-Frame Animation Studio",
+  "summary": "Plan a storyboard, take frames with tiny moves, keep the shots steady and review and share an animation fairly.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 11: Stop-frame animation studio",
+  "learning_objectives": [
+   "Explain how frames and frame rate make still pictures seem to move",
+   "Plan an animation with a storyboard and small moves",
+   "Keep frames consistent, then review, credit and share"
+  ],
+  "tags": [
+   "topic",
+   "topic-11"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 11
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing",
+    "text": "Select, use and combine a variety of software on digital devices to design and create digital content, including animation"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing creativity",
+    "text": "Evaluate digital content and use technology respectfully, crediting the work of others"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a frame and frame rate are",
+   "I can plan with a storyboard and work out frames needed",
+   "I can keep shots steady and review my animation"
+  ],
+  "real_life": "Making a short clay animation for Eid or Hunza, then sharing it with credits at a school film festival.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a pixel?",
+    "hint": "Think about zooming in.",
+    "explanation": "A pixel is one tiny square.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of camera"
+     },
+     {
+      "id": "b",
+      "text": "A picture frame"
+     },
+     {
+      "id": "c",
+      "text": "One tiny square of a picture"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does edit mean?",
+    "hint": "Think about changing a story.",
+    "explanation": "To edit is to change.",
+    "options": [
+     {
+      "id": "a",
+      "text": "To lose it"
+     },
+     {
+      "id": "b",
+      "text": "To change something"
+     },
+     {
+      "id": "c",
+      "text": "To print it"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 12 x 3?",
+    "hint": "3 twelves.",
+    "explanation": "12 x 3 = 36.",
+    "answer": {
+     "value": 36,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "frames",
+   "kind": "learn",
+   "title": "Frames make movement",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, animator!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do still pictures seem to move?",
+     "say": "Today we make a model move. How can still pictures look like real movement?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-stop-frame-animation-1-0bd8faff.jpg",
+     "alt": "Four black picture frames on a white wall, each holding a similar small photo of a coast, with tiny differences",
+     "caption": "Four almost-identical pictures. Animation is a long series like this, played very fast.",
+     "credit": "Photo by Andrea De Santis on Unsplash",
+     "say": "Zara and Hamza want to animate a clay apricot rolling across a table. Look at these four pictures. They are almost the same."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Frames"
+    },
+    {
+     "type": "text",
+     "markdown": "A **frame** is one single picture in an animation.",
+     "say": "In stop-frame animation, we take a photo, move the model a tiny bit, and take another photo. Each photo is a frame."
+    },
+    {
+     "type": "text",
+     "markdown": "Played fast, many still frames seem to move.",
+     "say": "When we play the frames fast, our brain joins them up. The model seems to move by itself."
+    },
+    {
+     "type": "explainer",
+     "title": "From stills to movement",
+     "scenes": [
+      {
+       "caption": "Frame 1.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "1️⃣",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Frame one: the clay apricot sits at the left of the table."
+      },
+      {
+       "caption": "Frames 2 and 3.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "3️⃣",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Frame two: the apricot is a tiny bit further right. Frame three: a little further."
+      },
+      {
+       "caption": "Playing.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 80,
+         "y": 55,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "p",
+         "emoji": "▶️",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "it seems to move"
+        }
+       ],
+       "say": "Played quickly, the apricot appears to roll across the table."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "An animation has 24 photos. What is each photo called?",
+      "hint": "One picture in the series.",
+      "explanation": "Each picture in an animation is a frame.",
+      "skill_tag": "anim.frame_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "A storyboard"
+       },
+       {
+        "id": "b",
+        "text": "A frame"
+       },
+       {
+        "id": "c",
+        "text": "A scene"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Frame rate"
+    },
+    {
+     "type": "text",
+     "markdown": "**Frame rate** is how many frames are shown each second.",
+     "say": "Frame rate is the number of frames shown each second. Many stop-frame films use about twelve frames a second."
+    },
+    {
+     "type": "explainer",
+     "title": "Counting frames",
+     "scenes": [
+      {
+       "caption": "One second.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "⏱️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "12",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "12 frames"
+        }
+       ],
+       "say": "At twelve frames a second, one second of film needs twelve photos."
+      },
+      {
+       "caption": "Five seconds.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "⏱️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "60",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "60 frames"
+        }
+       ],
+       "say": "Five seconds needs sixty photos. That is a lot of tiny moves."
+      },
+      {
+       "caption": "Patience.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🧘",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🎬",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "plan and patience"
+        }
+       ],
+       "say": "So animators plan carefully and work patiently."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Played quickly, a series of still pictures can seem to move.",
+      "hint": "Think about a flipbook.",
+      "explanation": "Quick playback of many frames gives the idea of movement.",
+      "skill_tag": "anim.flipbook_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara's rolling apricot",
+     "asset": "clip-data-ai-class-4-stop-frame-animation-8af26403.mp4",
+     "poster": "clip-data-ai-class-4-stop-frame-animation-8af26403.webp",
+     "seconds": 66,
+     "transcript": "Zara and Hamza want to animate a clay apricot. They draw a storyboard first. The camera sits on a tripod. The lamp stays in one place. Photo, tiny move, photo. Every photo is a frame. At twelve frames a second, five seconds needs sixty frames. They play it fast. The apricot seems to roll by itself. At frame forty, the picture jumps. The camera was bumped. They retake the frames. Now it is smooth. They add sound, credit the music, and share it with the class.",
+     "caption": "Zara and Hamza animate a clay apricot and fix a jump."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A frame is one picture in an animation",
+      "Played fast, many frames seem to move",
+      "Frame rate is the number of frames each second"
+     ],
+     "say": "Let us remember. Frames are photos with tiny changes. Played fast, they seem to move."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "frame",
+       "meaning": "One single picture in an animation."
+      },
+      {
+       "term": "frame rate",
+       "meaning": "How many frames are shown each second."
+      },
+      {
+       "term": "animation",
+       "meaning": "Pictures shown quickly so that things seem to move."
+      },
+      {
+       "term": "stop-frame",
+       "meaning": "Animation made by taking photos of a model moved a little each time."
+      },
+      {
+       "term": "model",
+       "meaning": "A small figure or object that is animated."
+      },
+      {
+       "term": "flipbook",
+       "meaning": "A small book of pictures that move when the pages flip."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "The model in a stop-frame animation moves by itself while we film.",
+     "hint": "We move it by hand.",
+     "explanation": "We move it a tiny bit between photos.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "How many frames does one second need at twelve frames a second?",
+     "hint": "That is what twelve frames a second means.",
+     "explanation": "12 frames a second means 12 photos for each second.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2"
+      },
+      {
+       "id": "b",
+       "text": "12"
+      },
+      {
+       "id": "c",
+       "text": "120"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do between two photos?",
+     "hint": "That makes the movement.",
+     "explanation": "A tiny move between photos creates motion.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Move the camera"
+      },
+      {
+       "id": "b",
+       "text": "Move the model a tiny bit"
+      },
+      {
+       "id": "c",
+       "text": "Switch the room light"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What joins the frames into movement?",
+     "hint": "Think about a flipbook.",
+     "explanation": "Quick playback makes the brain join the pictures.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The camera lens"
+      },
+      {
+       "id": "b",
+       "text": "Our brain, when they play quickly"
+      },
+      {
+       "id": "c",
+       "text": "The table"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "story",
+   "kind": "try",
+   "title": "Plan with a storyboard",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Storyboard"
+    },
+    {
+     "type": "text",
+     "markdown": "A **storyboard** is a set of drawn boxes that plans each scene.",
+     "say": "Zara and Hamza plan before they take any photos. They draw a storyboard."
+    },
+    {
+     "type": "explainer",
+     "title": "A storyboard",
+     "scenes": [
+      {
+       "caption": "Beginning.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "1️⃣",
+         "x": 50,
+         "y": 85,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Box one: the apricot sits at the edge of the table. This is the beginning."
+      },
+      {
+       "caption": "Middle.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 50,
+         "y": 55,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "k",
+         "emoji": "📕",
+         "x": 80,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "2️⃣",
+         "x": 50,
+         "y": 85,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "Box two: it rolls across the table and bumps a book. This is the middle."
+      },
+      {
+       "caption": "End.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "d",
+         "emoji": "🐦",
+         "x": 62,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a clear story"
+        }
+       ],
+       "say": "Box three: the apricot stops, and a happy clay bird lands on it. This is the end."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the planning jobs",
+     "goal": "Move the 6 jobs into Before filming or While filming.",
+     "emoji": "🎬",
+     "count": 6,
+     "zones": [
+      "Before filming",
+      "While filming"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara draws six boxes that show what happens in each scene. What is she making?",
+      "hint": "Boxes that plan scenes.",
+      "explanation": "A set of drawn scene boxes is a storyboard.",
+      "skill_tag": "anim.storyboard_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "A frame rate"
+       },
+       {
+        "id": "b",
+        "text": "A storyboard"
+       },
+       {
+        "id": "c",
+        "text": "A flipbook"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Small moves"
+    },
+    {
+     "type": "text",
+     "markdown": "Tiny moves look smooth. Big jumps look jerky.",
+     "say": "To make the apricot roll smoothly, they move it a tiny bit between photos. Big jumps look jerky."
+    },
+    {
+     "type": "text",
+     "markdown": "Plan how many frames you need.",
+     "say": "They count how many frames they need. Ten seconds at twelve frames a second is a hundred and twenty photos."
+    },
+    {
+     "type": "explainer",
+     "title": "Small and big moves",
+     "scenes": [
+      {
+       "caption": "Tiny.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "🍑",
+         "x": 55,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A tiny move each time: the apricot glides smoothly across the table."
+      },
+      {
+       "caption": "Big.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 15,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🍑",
+         "x": 85,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "tiny is smooth"
+        }
+       ],
+       "say": "A big jump each time: the apricot seems to teleport and looks jerky."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan an animation",
+     "materials": [
+      "Paper and pens",
+      "A small object to animate"
+     ],
+     "instructions": [
+      "Draw a storyboard with three boxes: beginning, middle and end.",
+      "Decide how many seconds each box will last.",
+      "Work out how many frames you need at twelve frames a second."
+     ],
+     "say": "Now you try. Plan a short animation with a partner."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Smaller moves between photos make an animation look smoother.",
+      "hint": "Think about the rolling apricot.",
+      "explanation": "Tiny moves look smooth.",
+      "skill_tag": "anim.small_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A storyboard plans beginning, middle and end",
+      "Tiny moves look smooth",
+      "Work out how many frames you need"
+     ],
+     "say": "Let us remember. Plan with a storyboard. Move the model in tiny steps."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "storyboard",
+       "meaning": "A set of drawn boxes that plans each scene of an animation."
+      },
+      {
+       "term": "scene",
+       "meaning": "One part of the story."
+      },
+      {
+       "term": "smooth",
+       "meaning": "Flowing without jumps."
+      },
+      {
+       "term": "jerky",
+       "meaning": "Moving in sudden jumps."
+      },
+      {
+       "term": "beginning",
+       "meaning": "The first part."
+      },
+      {
+       "term": "ending",
+       "meaning": "The last part."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a storyboard show?",
+     "hint": "It is drawn boxes.",
+     "explanation": "A storyboard shows scenes in order.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The camera's battery"
+      },
+      {
+       "id": "b",
+       "text": "The brightness of the lamp"
+      },
+      {
+       "id": "c",
+       "text": "The scenes in order"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Big jumps between frames look smooth.",
+     "hint": "Think about jerky.",
+     "explanation": "Big jumps look jerky.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "When should you draw the storyboard?",
+     "hint": "It is a plan.",
+     "explanation": "A plan comes first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "After the film is shown"
+      },
+      {
+       "id": "b",
+       "text": "Never"
+      },
+      {
+       "id": "c",
+       "text": "Before you take photos"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "steady",
+   "kind": "play",
+   "title": "Keep it steady",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Consistency"
+    },
+    {
+     "type": "text",
+     "markdown": "**Consistent** frames match each other in light, background and camera position.",
+     "say": "When the apricot rolls, the table, light and camera must stay the same. That is called being consistent."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-stop-frame-animation-2-fc72faa0.jpg",
+     "alt": "A box of bright modelling clay sticks in black, purple, blue, green, red, orange, white and yellow on a wooden table",
+     "caption": "Modelling clay is easy to shape and move in tiny steps.",
+     "credit": "Photo by Ksenia Pixelesse on Unsplash",
+     "say": "Zara and Hamza make their characters from modelling clay. Clay is easy to move in small steps."
+    },
+    {
+     "type": "explainer",
+     "title": "What must stay the same",
+     "scenes": [
+      {
+       "caption": "Camera.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📷",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "🦵",
+         "x": 72,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse",
+         "label": "tripod"
+        }
+       ],
+       "say": "The camera sits on a tripod. If it moves, the whole picture jumps."
+      },
+      {
+       "caption": "Light.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "f",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "flicker"
+        }
+       ],
+       "say": "The lamp stays on the same spot. Changing light makes the frames flicker."
+      },
+      {
+       "caption": "Hands out.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🖐️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "🚫",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "steady setup"
+        }
+       ],
+       "say": "Hands stay out of the picture. Only the model moves."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The camera is knocked sideways between two photos. What happens?",
+      "hint": "The whole view moves.",
+      "explanation": "A moved camera makes the frames jump.",
+      "skill_tag": "anim.jump_chk",
+      "options": [
+       {
+        "id": "a",
+        "text": "The model gets bigger"
+       },
+       {
+        "id": "b",
+        "text": "The picture jumps"
+       },
+       {
+        "id": "c",
+        "text": "The sound changes"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Onion skin"
+    },
+    {
+     "type": "text",
+     "markdown": "**Onion skin** shows a faint copy of the last frame.",
+     "say": "Many programs have an onion skin. It shows a faint copy of the last frame over the live view."
+    },
+    {
+     "type": "text",
+     "markdown": "Use onion skin to place the next move. Play the memory game.",
+     "say": "It helps Zara line up the next tiny move. First a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Studio tools",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "📷",
+      "💡",
+      "🎞️",
+      "🧸"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the thing that will cause a flicker.",
+      "hint": "Think about light.",
+      "explanation": "Changing light makes frames flicker.",
+      "skill_tag": "anim.flicker_chk",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "💡",
+         "label": "Lamp switched off and on",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "📚",
+         "label": "Camera on a stable book pile",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🍑",
+         "label": "Model moved a tiny bit",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h1"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Consistent frames keep the camera, light and background the same",
+      "A tripod stops the picture jumping",
+      "Onion skin helps line up the next move"
+     ],
+     "say": "Let us remember. Keep the camera, light and background the same. Use onion skin."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "consistent",
+       "meaning": "Staying the same from one frame to the next."
+      },
+      {
+       "term": "onion skin",
+       "meaning": "A faint copy of the last frame shown over the live view."
+      },
+      {
+       "term": "tripod",
+       "meaning": "A stand that holds a camera still."
+      },
+      {
+       "term": "flicker",
+       "meaning": "Quick unwanted changes in brightness."
+      },
+      {
+       "term": "clay",
+       "meaning": "A soft material you can shape."
+      },
+      {
+       "term": "background",
+       "meaning": "What is behind the model."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "true_false",
+     "prompt": "The lamp should stay in the same place for every photo.",
+     "hint": "Think about flicker.",
+     "explanation": "Steady light keeps frames consistent.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a tripod do?",
+     "hint": "Think about jumps.",
+     "explanation": "A tripod stops the camera moving.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Moves the model"
+      },
+      {
+       "id": "b",
+       "text": "Keeps the camera still"
+      },
+      {
+       "id": "c",
+       "text": "Adds sound"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does onion skin show?",
+     "hint": "It helps line up moves.",
+     "explanation": "It ghosts the previous frame.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The camera battery"
+      },
+      {
+       "id": "b",
+       "text": "A faint copy of the last frame"
+      },
+      {
+       "id": "c",
+       "text": "The final sound"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "review",
+   "kind": "use",
+   "title": "Review and share",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Review"
+    },
+    {
+     "type": "text",
+     "markdown": "To **review** is to look carefully and decide what to improve.",
+     "say": "Zara and Hamza finish taking photos. Now they play the animation back all the way through."
+    },
+    {
+     "type": "text",
+     "markdown": "Find the problem. Retake the frames.",
+     "say": "They spot a jump in frame forty. They retake those frames with the camera steady."
+    },
+    {
+     "type": "text",
+     "markdown": "Add sound, then play it again.",
+     "say": "They add a sound of rolling and a little bird song. Then they play it again."
+    },
+    {
+     "type": "explainer",
+     "title": "Review and fix",
+     "scenes": [
+      {
+       "caption": "Playback.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "▶️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "j",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "jump at 40"
+        }
+       ],
+       "say": "They play it back. The apricot jumps at frame forty."
+      },
+      {
+       "caption": "Fix.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🦵",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🔁",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "spin"
+        }
+       ],
+       "say": "The camera had been bumped. They fix the tripod and retake the frames."
+      },
+      {
+       "caption": "Better.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🔊",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "a",
+         "emoji": "🍑",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "improved"
+        }
+       ],
+       "say": "Now it is smooth. They add sound and enjoy their work."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of reviewing an animation in order.",
+      "hint": "Watch first.",
+      "explanation": "Watch, note, fix, then add sound.",
+      "skill_tag": "anim.review_steps_chk",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Fix those frames"
+       },
+       {
+        "id": "i4",
+        "text": "Add sound and play again"
+       },
+       {
+        "id": "i2",
+        "text": "Note what is jerky or unclear"
+       },
+       {
+        "id": "i1",
+        "text": "Play it all the way through"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Feedback and sharing"
+    },
+    {
+     "type": "text",
+     "markdown": "Give kind, clear feedback.",
+     "say": "Good feedback says one thing that worked and one idea to improve. It is kind and clear."
+    },
+    {
+     "type": "text",
+     "markdown": "Ask permission and give credit before sharing.",
+     "say": "Before sharing, they ask permission if people appear. They credit any music they borrow."
+    },
+    {
+     "type": "explainer",
+     "title": "Feedback and sharing",
+     "scenes": [
+      {
+       "caption": "Feedback.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🧑‍🤝‍🧑",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "💬",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "kind and clear"
+        }
+       ],
+       "say": "Another group watches. They say: your apricot rolls smoothly. Try a longer ending."
+      },
+      {
+       "caption": "Improve.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "📝",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "e",
+         "emoji": "🎬",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Zara and Hamza note the idea and decide to add a longer ending."
+      },
+      {
+       "caption": "Share.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "©️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🎉",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "shared fairly"
+        }
+       ],
+       "say": "They credit the free music and share the film with their class."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Review plan",
+     "materials": [
+      "Paper and pens",
+      "A partner"
+     ],
+     "instructions": [
+      "Write one thing you want to check, such as smooth moves.",
+      "Watch a partner's animation. Write one good thing and one idea.",
+      "Say how you will credit any music or pictures you use."
+     ],
+     "say": "Now you try. Plan how you will review your animation."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Before sharing an animation, we should credit music we did not make.",
+      "hint": "Think about owners.",
+      "explanation": "Makers deserve credit.",
+      "skill_tag": "anim.credit_chk",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Review by playing it through and noting problems",
+      "Give kind, clear feedback",
+      "Ask permission and credit others before sharing"
+     ],
+     "say": "Let us remember. Review, fix, add sound, give feedback and share fairly."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "review",
+       "meaning": "To look carefully and decide what to improve."
+      },
+      {
+       "term": "feedback",
+       "meaning": "Comments that help someone improve their work."
+      },
+      {
+       "term": "credit",
+       "meaning": "A note saying who made something."
+      },
+      {
+       "term": "permission",
+       "meaning": "Being allowed to do something."
+      },
+      {
+       "term": "retake",
+       "meaning": "To take photos again."
+      },
+      {
+       "term": "playback",
+       "meaning": "Watching the animation after it is made."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do after finishing the photos?",
+     "hint": "Think about checking.",
+     "explanation": "Reviewing finds problems.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hide it"
+      },
+      {
+       "id": "b",
+       "text": "Play it back and review"
+      },
+      {
+       "id": "c",
+       "text": "Delete it"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Good feedback names one good thing and one idea to improve.",
+     "hint": "Be kind and clear.",
+     "explanation": "That kind of feedback helps.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you ask before filming a classmate?",
+     "hint": "Be respectful.",
+     "explanation": "We ask before filming people.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A prize"
+      },
+      {
+       "id": "b",
+       "text": "A password"
+      },
+      {
+       "id": "c",
+       "text": "Permission"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a frame in an animation?",
+    "hint": "Think about the photos.",
+    "explanation": "A frame is one picture.",
+    "skill_tag": "anim.frame",
+    "options": [
+     {
+      "id": "a",
+      "text": "The sound track"
+     },
+     {
+      "id": "b",
+      "text": "The camera stand"
+     },
+     {
+      "id": "c",
+      "text": "One single picture in the series"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Why does a stop-frame animation seem to move?",
+    "hint": "Think about a flipbook.",
+    "explanation": "Quick playback of small changes gives movement.",
+    "skill_tag": "anim.why_move",
+    "options": [
+     {
+      "id": "a",
+      "text": "One picture is stretched"
+     },
+     {
+      "id": "b",
+      "text": "Many pictures with small changes are shown quickly"
+     },
+     {
+      "id": "c",
+      "text": "The camera moves by itself"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "Stop-frame animation uses a series of still pictures.",
+    "hint": "Photo, move, photo.",
+    "explanation": "It is a series of photos.",
+    "skill_tag": "anim.stills",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "anim.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Frame"
+     },
+     {
+      "id": "l2",
+      "text": "Frame rate"
+     },
+     {
+      "id": "l3",
+      "text": "Storyboard"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Frames shown each second"
+     },
+     {
+      "id": "r3",
+      "text": "A drawn plan of the scenes"
+     },
+     {
+      "id": "r1",
+      "text": "One picture in the animation"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "frames",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the item that holds the camera steady.",
+    "hint": "Think about jumps.",
+    "explanation": "A tripod holds the camera steady.",
+    "skill_tag": "anim.tap_tripod",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🦵",
+       "label": "Tripod",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧸",
+       "label": "Clay figure",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎞️",
+       "label": "Pile of frames",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Hamza says an animation has only one picture that moves. Is he right?",
+    "hint": "Think about frames.",
+    "explanation": "Animation is many still pictures.",
+    "skill_tag": "anim.reason_one",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one picture moves"
+     },
+     {
+      "id": "b",
+      "text": "Yes, the camera draws it"
+     },
+     {
+      "id": "c",
+      "text": "No. It is many still pictures shown quickly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "frames",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "number",
+    "prompt": "An animation runs at 12 frames each second. How many frames does 5 seconds need?",
+    "hint": "5 groups of 12.",
+    "explanation": "5 x 12 = 60 frames.",
+    "skill_tag": "anim.fps_calc",
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "frames",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about animation.",
+    "hint": "Think about a flipbook.",
+    "explanation": "Frames shown quickly give movement.",
+    "skill_tag": "anim.fill_frames",
+    "points": 2,
+    "text": "An animation is a series of {b1} shown {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "fences"
+       },
+       {
+        "id": "b",
+        "text": "flags"
+       },
+       {
+        "id": "c",
+        "text": "frames"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "secretly"
+       },
+       {
+        "id": "b",
+        "text": "quickly"
+       },
+       {
+        "id": "c",
+        "text": "rarely"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "frames",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "order",
+    "prompt": "Put the steps of making a stop-frame animation in order.",
+    "hint": "Plan first.",
+    "explanation": "Plan, set up, shoot, then review.",
+    "skill_tag": "anim.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Set up the camera and scene"
+     },
+     {
+      "id": "i3",
+      "text": "Take a photo, move the model a little, repeat"
+     },
+     {
+      "id": "i4",
+      "text": "Play it back and improve it"
+     },
+     {
+      "id": "i1",
+      "text": "Plan with a storyboard"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "What is a storyboard?",
+    "hint": "Think about planning.",
+    "explanation": "A storyboard plans scenes.",
+    "skill_tag": "anim.storyboard",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of camera"
+     },
+     {
+      "id": "b",
+      "text": "A set of drawn boxes that plan the scenes"
+     },
+     {
+      "id": "c",
+      "text": "A board you stand on"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about planning.",
+    "hint": "Think about the story.",
+    "explanation": "It shows the beginning, middle and end.",
+    "skill_tag": "anim.fill_plan",
+    "points": 2,
+    "text": "A storyboard shows the {b1}, middle and end. Each box shows one {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "bicycle"
+       },
+       {
+        "id": "b",
+        "text": "beginning"
+       },
+       {
+        "id": "c",
+        "text": "bucket"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "spoon"
+       },
+       {
+        "id": "b",
+        "text": "scene"
+       },
+       {
+        "id": "c",
+        "text": "sock"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Zara wants her clay apricot to roll. How far should she move it between photos?",
+    "hint": "Think about smooth.",
+    "explanation": "Tiny moves look smooth.",
+    "skill_tag": "anim.how_far",
+    "options": [
+     {
+      "id": "a",
+      "text": "Not at all"
+     },
+     {
+      "id": "b",
+      "text": "A tiny bit each time"
+     },
+     {
+      "id": "c",
+      "text": "Right across the table"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "An animation needs 10 seconds at 12 frames a second. Slide to show how many frames to take.",
+    "hint": "10 groups of 12.",
+    "explanation": "10 x 12 = 120 frames.",
+    "skill_tag": "anim.frames_needed",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 150
+    },
+    "answer": {
+     "value": 120,
+     "tolerance": 0
+    },
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "A storyboard helps you plan before you take photos.",
+    "hint": "Plan first.",
+    "explanation": "A storyboard is a plan.",
+    "skill_tag": "anim.plan_first",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says planning with a storyboard wastes time. Is he right?",
+    "hint": "Think about retaking photos.",
+    "explanation": "A plan saves time.",
+    "skill_tag": "anim.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never plan"
+     },
+     {
+      "id": "b",
+      "text": "Yes, storyboards slow cameras"
+     },
+     {
+      "id": "c",
+      "text": "No. It helps avoid mistakes and keeps the story clear"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two help keep frames consistent? Pick two.",
+    "hint": "Think about what must stay the same.",
+    "explanation": "Camera and light must stay the same.",
+    "skill_tag": "anim.consistent_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Move the camera every shot"
+     },
+     {
+      "id": "b",
+      "text": "Switch lights on and off"
+     },
+     {
+      "id": "c",
+      "text": "Use the same light for every photo"
+     },
+     {
+      "id": "d",
+      "text": "Keep the camera still on a tripod"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "steady",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "A shot needs 36 frames. Zara has taken 24. How many more does she need?",
+    "hint": "36 take away 24.",
+    "explanation": "36 - 24 = 12 frames.",
+    "skill_tag": "anim.frames_left",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "steady",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "What does onion skin do in animation software?",
+    "hint": "Think about ghosts.",
+    "explanation": "It ghosts the last frame.",
+    "skill_tag": "anim.onion",
+    "options": [
+     {
+      "id": "a",
+      "text": "Peels the model"
+     },
+     {
+      "id": "b",
+      "text": "Adds sound"
+     },
+     {
+      "id": "c",
+      "text": "Shows a faint copy of the last frame to help line up the next move"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "steady",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says it does not matter if the camera moves between frames. Is he right?",
+    "hint": "Think about a tripod.",
+    "explanation": "A moved camera causes jumps.",
+    "skill_tag": "anim.reason_camera",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, cameras can move anywhere"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody notices"
+     },
+     {
+      "id": "c",
+      "text": "No. A moved camera makes the picture jump"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Maryam says changing the lamp between photos is fine. Is she right?",
+    "hint": "Think about the lamp.",
+    "explanation": "Light changes cause flicker.",
+    "skill_tag": "anim.reason_light",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, light does not show"
+     },
+     {
+      "id": "b",
+      "text": "No. Changing light makes the frames flicker"
+     },
+     {
+      "id": "c",
+      "text": "Yes, flicker looks good"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says bigger moves finish the animation faster, so they are better. Is he right?",
+    "hint": "Think about the rolling apricot.",
+    "explanation": "Smooth movement needs small moves.",
+    "skill_tag": "anim.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nobody sees"
+     },
+     {
+      "id": "b",
+      "text": "No. Big moves look jerky. Small moves look smooth"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bigger is better"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each problem to its fix.",
+    "hint": "Think about each problem.",
+    "explanation": "Each problem has a fix.",
+    "skill_tag": "anim.fix_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "The picture jumps"
+     },
+     {
+      "id": "l2",
+      "text": "The light flickers"
+     },
+     {
+      "id": "l3",
+      "text": "The movement looks jerky"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Use the same lamp in the same place"
+     },
+     {
+      "id": "r3",
+      "text": "Make smaller moves"
+     },
+     {
+      "id": "r1",
+      "text": "Fix the camera on a tripod"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "steady",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap what will cause a jump between frames.",
+    "hint": "Think about the whole view.",
+    "explanation": "A moved camera causes jumps.",
+    "skill_tag": "anim.tap_jump",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📷",
+       "label": "Camera knocked sideways",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💡",
+       "label": "Same lamp as before",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍑",
+       "label": "Tiny move of the model",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "steady",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of improving an animation in order.",
+    "hint": "Watch first.",
+    "explanation": "Watch, note, fix, then add sound.",
+    "skill_tag": "anim.improve_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Fix those frames"
+     },
+     {
+      "id": "i4",
+      "text": "Add sound and play again"
+     },
+     {
+      "id": "i2",
+      "text": "Note what is jerky or unclear"
+     },
+     {
+      "id": "i1",
+      "text": "Play it all the way through"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "review",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are helpful ways to give feedback? Pick two.",
+    "hint": "Be kind and clear.",
+    "explanation": "Praise and one idea help.",
+    "skill_tag": "anim.feedback_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Say it is rubbish"
+     },
+     {
+      "id": "b",
+      "text": "Say nothing at all"
+     },
+     {
+      "id": "c",
+      "text": "Suggest one thing to improve"
+     },
+     {
+      "id": "d",
+      "text": "Say what worked well"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "review",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says an animation is finished once the last photo is taken. Is she right?",
+    "hint": "Think about the jump at frame forty.",
+    "explanation": "Review improves the film.",
+    "skill_tag": "anim.reason_finished",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, review is cheating"
+     },
+     {
+      "id": "b",
+      "text": "No. We still review, fix and add sound"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nothing else to do"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says she can put a classmate in the film without asking. Is she right?",
+    "hint": "Think about permission.",
+    "explanation": "We ask before filming people.",
+    "skill_tag": "anim.reason_permission",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, filming is always allowed"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody minds"
+     },
+     {
+      "id": "c",
+      "text": "No. Ask permission before filming or sharing anyone"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says if the animation is not perfect, it is a failure. Is he right?",
+    "hint": "Think about retaking frames.",
+    "explanation": "Mistakes help us learn.",
+    "skill_tag": "anim.reason_perfect",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, mistakes are shameful"
+     },
+     {
+      "id": "b",
+      "text": "No. Mistakes help us learn and improve"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only perfect counts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "A reviewed animation has 120 frames. 18 need fixing. How many are fine?",
+    "hint": "120 take away 18.",
+    "explanation": "120 - 18 = 102 frames.",
+    "skill_tag": "anim.fine_frames",
+    "answer": {
+     "value": 102,
+     "tolerance": 0
+    },
+    "sub_lesson": "review",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "Zara reviews 4 scenes. Each takes 6 minutes. Slide to show the total minutes.",
+    "hint": "4 groups of 6.",
+    "explanation": "4 x 6 = 24 minutes.",
+    "skill_tag": "anim.review_minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    },
+    "sub_lesson": "review",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "An animation is made of many pictures. What is each picture called?",
+    "hint": "Think about the photos.",
+    "explanation": "Each picture is a frame.",
+    "skill_tag": "anim.frame",
+    "options": [
+     {
+      "id": "a",
+      "text": "A storyboard"
+     },
+     {
+      "id": "b",
+      "text": "A frame"
+     },
+     {
+      "id": "c",
+      "text": "A tripod"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "What makes a flipbook seem to move?",
+    "hint": "Think about frames.",
+    "explanation": "Small changes shown fast give movement.",
+    "skill_tag": "anim.why_move",
+    "options": [
+     {
+      "id": "a",
+      "text": "The paper being heavy"
+     },
+     {
+      "id": "b",
+      "text": "Pages with small changes flipped quickly"
+     },
+     {
+      "id": "c",
+      "text": "A hidden motor"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "Stop-frame animation is filmed in one smooth take with nothing paused.",
+    "hint": "Photo, move, photo.",
+    "explanation": "It is built from separate photos.",
+    "skill_tag": "anim.stills",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each item with its job.",
+    "hint": "Think about each item.",
+    "explanation": "Each item has its own job.",
+    "skill_tag": "anim.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tripod"
+     },
+     {
+      "id": "l2",
+      "text": "Playback"
+     },
+     {
+      "id": "l3",
+      "text": "Sound effect"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Watching the animation"
+     },
+     {
+      "id": "r3",
+      "text": "A noise added to the animation"
+     },
+     {
+      "id": "r1",
+      "text": "Holds the camera steady"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "frames",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that stays still while the model moves.",
+    "hint": "Think about jumps.",
+    "explanation": "The camera must stay still.",
+    "skill_tag": "anim.tap_tripod",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📷",
+       "label": "Camera on a stand",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍑",
+       "label": "Clay apricot",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🖐️",
+       "label": "Moving hand",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "frames",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Layla says the characters really move in each photo. Is she right?",
+    "hint": "Think about frames.",
+    "explanation": "Each photo is a still picture.",
+    "skill_tag": "anim.reason_one",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they walk by themselves"
+     },
+     {
+      "id": "b",
+      "text": "No. They are still in each photo, and quick playback makes them seem to move"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they move in each photo"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "frames",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "number",
+    "prompt": "An animation runs at 10 frames each second. How many frames does 4 seconds need?",
+    "hint": "4 groups of 10.",
+    "explanation": "4 x 10 = 40 frames.",
+    "skill_tag": "anim.fps_calc",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "frames",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about frame rate.",
+    "hint": "Think about frames per second.",
+    "explanation": "Frame rate is frames each second.",
+    "skill_tag": "anim.fill_frames",
+    "points": 2,
+    "text": "Frame {b1} is the number of frames shown each {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "road"
+       },
+       {
+        "id": "b",
+        "text": "rate"
+       },
+       {
+        "id": "c",
+        "text": "rain"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "school"
+       },
+       {
+        "id": "b",
+        "text": "second"
+       },
+       {
+        "id": "c",
+        "text": "summer"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "frames",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "order",
+    "prompt": "Put these steps for one move in order.",
+    "hint": "Check first.",
+    "explanation": "Check, move, photo, look.",
+    "skill_tag": "anim.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Take a photo"
+     },
+     {
+      "id": "i4",
+      "text": "Look at the next frame"
+     },
+     {
+      "id": "i2",
+      "text": "Move it a tiny bit"
+     },
+     {
+      "id": "i1",
+      "text": "Check the model's position"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Hamza draws boxes showing what happens in each scene. What is he making?",
+    "hint": "Think about planning.",
+    "explanation": "Scene boxes make a storyboard.",
+    "skill_tag": "anim.storyboard",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tripod"
+     },
+     {
+      "id": "b",
+      "text": "A frame rate"
+     },
+     {
+      "id": "c",
+      "text": "A storyboard"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about moves.",
+    "hint": "Think about the rolling apricot.",
+    "explanation": "Small moves are smooth.",
+    "skill_tag": "anim.fill_plan",
+    "points": 2,
+    "text": "Small moves make {b1} animation. Big jumps make it {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sticky"
+       },
+       {
+        "id": "b",
+        "text": "square"
+       },
+       {
+        "id": "c",
+        "text": "smooth"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "silky"
+       },
+       {
+        "id": "b",
+        "text": "sleepy"
+       },
+       {
+        "id": "c",
+        "text": "jerky"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "How should a model move between frames for a smooth walk?",
+    "hint": "Think about smooth.",
+    "explanation": "Small steps look smooth.",
+    "skill_tag": "anim.how_far",
+    "options": [
+     {
+      "id": "a",
+      "text": "In one big jump"
+     },
+     {
+      "id": "b",
+      "text": "By standing still"
+     },
+     {
+      "id": "c",
+      "text": "In very small steps"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "An animation needs 8 seconds at 10 frames a second. Slide to show how many frames to take.",
+    "hint": "8 groups of 10.",
+    "explanation": "8 x 10 = 80 frames.",
+    "skill_tag": "anim.frames_needed",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 150
+    },
+    "answer": {
+     "value": 80,
+     "tolerance": 0
+    },
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "You should never plan an animation before taking photos.",
+    "hint": "Plan first.",
+    "explanation": "A plan comes first.",
+    "skill_tag": "anim.plan_first",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Nadia says you can add the story after taking every photo. Is she right?",
+    "hint": "Think about retaking photos.",
+    "explanation": "A plan keeps photos on track.",
+    "skill_tag": "anim.reason_plan",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, story comes last"
+     },
+     {
+      "id": "b",
+      "text": "No. Plan first so the photos fit the story"
+     },
+     {
+      "id": "c",
+      "text": "Yes, photos tell themselves"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two help the animation look smooth? Pick two.",
+    "hint": "Think about what must stay the same.",
+    "explanation": "Tiny moves and clean frames help.",
+    "skill_tag": "anim.consistent_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Make big jumps"
+     },
+     {
+      "id": "b",
+      "text": "Change the background often"
+     },
+     {
+      "id": "c",
+      "text": "Keep fingers out of the picture"
+     },
+     {
+      "id": "d",
+      "text": "Make very small moves"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "steady",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "A shot needs 50 frames. Hamza has taken 35. How many more does he need?",
+    "hint": "50 take away 35.",
+    "explanation": "50 - 35 = 15 frames.",
+    "skill_tag": "anim.frames_left",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "steady",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "A faint ghost of the last frame helps you place the model. What is this feature called?",
+    "hint": "Think about ghosts.",
+    "explanation": "It is called onion skin.",
+    "skill_tag": "anim.onion",
+    "options": [
+     {
+      "id": "a",
+      "text": "Storyboard"
+     },
+     {
+      "id": "b",
+      "text": "Onion skin"
+     },
+     {
+      "id": "c",
+      "text": "Playback"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hira says she can lean on the table between photos. Is she right?",
+    "hint": "Think about a tripod.",
+    "explanation": "Shaking makes frames jump.",
+    "skill_tag": "anim.reason_camera",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, leaning is a tool"
+     },
+     {
+      "id": "b",
+      "text": "No. It can shake the camera and shift the scene"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tables never shake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says shadows from his hand do not matter. Is he right?",
+    "hint": "Think about the lamp.",
+    "explanation": "Shadows show up in frames.",
+    "skill_tag": "anim.reason_light",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shadows help"
+     },
+     {
+      "id": "b",
+      "text": "No. Shadows can flicker across frames"
+     },
+     {
+      "id": "c",
+      "text": "Yes, shadows do not show"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Layla says using fewer frames always looks just as smooth. Is she right?",
+    "hint": "Think about frame rate.",
+    "explanation": "Fewer frames look jerkier.",
+    "skill_tag": "anim.reason_big",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always smooth"
+     },
+     {
+      "id": "b",
+      "text": "No. Fewer frames can look jerky"
+     },
+     {
+      "id": "c",
+      "text": "Yes, frames do not matter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "steady",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each tool with its job.",
+    "hint": "Think about each tool.",
+    "explanation": "Each tool has a job.",
+    "skill_tag": "anim.fix_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Tripod"
+     },
+     {
+      "id": "l2",
+      "text": "Lamp"
+     },
+     {
+      "id": "l3",
+      "text": "Onion skin"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Gives steady light"
+     },
+     {
+      "id": "r3",
+      "text": "Shows the last frame faintly"
+     },
+     {
+      "id": "r1",
+      "text": "Keeps the camera still"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "steady",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that will make the frames flicker.",
+    "hint": "Think about light.",
+    "explanation": "A moved lamp changes the light.",
+    "skill_tag": "anim.tap_jump",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📚",
+       "label": "Camera on a stable book pile",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💡",
+       "label": "Lamp moved between photos",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍑",
+       "label": "Model moved a little",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "steady",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for sharing in order.",
+    "hint": "Check first.",
+    "explanation": "Check, ask, credit, then share.",
+    "skill_tag": "anim.improve_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Ask permission if people appear"
+     },
+     {
+      "id": "i3",
+      "text": "Add credits"
+     },
+     {
+      "id": "i4",
+      "text": "Share it safely"
+     },
+     {
+      "id": "i1",
+      "text": "Check it tells the story"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "review",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two are kind feedback? Pick two.",
+    "hint": "Be kind and clear.",
+    "explanation": "Kind feedback helps.",
+    "skill_tag": "anim.feedback_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Offer a clear idea to improve"
+     },
+     {
+      "id": "b",
+      "text": "Ignore the work"
+     },
+     {
+      "id": "c",
+      "text": "Laugh at the mistakes"
+     },
+     {
+      "id": "d",
+      "text": "Praise one clear strength"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "review",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Idris says playing it back is a waste of time. Is he right?",
+    "hint": "Think about the jump at frame forty.",
+    "explanation": "Playback shows problems.",
+    "skill_tag": "anim.reason_finished",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never play it back"
+     },
+     {
+      "id": "b",
+      "text": "Yes, playback hides mistakes"
+     },
+     {
+      "id": "c",
+      "text": "No. Playback shows jumps and mistakes"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Hira says she can use any song in her animation without credit. Is she right?",
+    "hint": "Think about owners.",
+    "explanation": "Makers deserve credit.",
+    "skill_tag": "anim.reason_permission",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all songs are free"
+     },
+     {
+      "id": "b",
+      "text": "Yes, credit is only for pictures"
+     },
+     {
+      "id": "c",
+      "text": "No. Music has an owner, so ask or use free music and credit it"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Sana says only experts can make good animations. Is she right?",
+    "hint": "Think about planning.",
+    "explanation": "Anyone can improve with practice.",
+    "skill_tag": "anim.reason_perfect",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only experts"
+     },
+     {
+      "id": "b",
+      "text": "No. Careful planning and practice help anyone"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is magic"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "review",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "A reviewed animation has 90 frames. 12 need fixing. How many are fine?",
+    "hint": "90 take away 12.",
+    "explanation": "90 - 12 = 78 frames.",
+    "skill_tag": "anim.fine_frames",
+    "answer": {
+     "value": 78,
+     "tolerance": 0
+    },
+    "sub_lesson": "review",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "Hamza reviews 5 scenes. Each takes 5 minutes. Slide to show the total minutes.",
+    "hint": "5 groups of 5.",
+    "explanation": "5 x 5 = 25 minutes.",
+    "skill_tag": "anim.review_minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 30
+    },
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "review",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

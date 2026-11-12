@@ -1,0 +1,2967 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-column-methods",
+  "subject": "maths",
+  "title": "Column Methods and Checking",
+  "summary": "Add and subtract 4-digit numbers in columns, with exchange and carrying, then estimate and check your answer.",
+  "age_band": "9-10",
+  "difficulty": 3,
+  "estimated_minutes": 60,
+  "unit": "Topic 6: Column methods and checking",
+  "learning_objectives": [
+   "Add and subtract 4-digit numbers in columns, with exchange",
+   "Estimate and check answers using the inverse",
+   "Choose a quick method for a sum"
+  ],
+  "tags": [
+   "topic",
+   "topic-6"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 6
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 add/sub",
+    "text": "Add and subtract numbers with up to four digits using formal written methods of columnar addition and subtraction"
+   },
+   {
+    "framework": "nc_england",
+    "code": "Y4 estimate",
+    "text": "Estimate and use inverse operations to check answers to a calculation"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nc.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ni.02"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Np.01"
+   }
+  ],
+  "success_criteria": [
+   "I can line up columns and carry or exchange",
+   "I can estimate before I calculate",
+   "I can check an answer by adding back"
+  ],
+  "real_life": "Adding the heights of hills, counting mangoes in two months, and working out how many are left in a shop.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 3 + 4 + 5?",
+    "hint": "Add them in order.",
+    "explanation": "3 + 4 = 7, then 7 + 5 = 12.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 60 + 70?",
+    "hint": "6 tens and 7 tens.",
+    "explanation": "13 tens is 130.",
+    "answer": {
+     "value": 130,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "1,000 is ten hundreds.",
+    "hint": "How many hundreds fit into a thousand?",
+    "explanation": "10 hundreds make 1,000.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "column_add",
+   "kind": "learn",
+   "title": "Column addition",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Ayesha and Ali go hill walking",
+     "backdrop": "home"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-column-methods-1-885dc3f4.jpg",
+     "alt": "A snowy mountain peak under a starry night sky",
+     "caption": "Mountain heights are big numbers, so we use columns to add them.",
+     "credit": "Photo by Daniel Leone on Unsplash",
+     "say": "Ayesha and Ali climb three hills near Murree. Each hill has a height in metres. To find the total height, we add. Big numbers are easier in columns. Let's write them neatly and add."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Line up the columns",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Column addition**: line up the place values, then add one column at a time, starting with the ones.\n\n2,345 + 1,432 = 3,777.",
+     "say": "First, line up the digits. Thousands go under thousands, hundreds under hundreds, and so on. Always start adding from the ones on the right. Here are two hills: 2,345 metres and 1,432 metres."
+    },
+    {
+     "type": "explainer",
+     "title": "2,345 + 1,432 in columns",
+     "scenes": [
+      {
+       "caption": "Columns lined up.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "2,345 + 1,432"
+        }
+       ],
+       "say": "Line up the ones under the ones. The thousands, hundreds and tens line up too."
+      },
+      {
+       "caption": "Add each column.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "2,345 + 1,432"
+        },
+        {
+         "id": "b",
+         "emoji": "🟩",
+         "x": 50,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "7 7 7 3"
+        }
+       ],
+       "say": "Ones: 5 + 2 = 7. Tens: 4 + 3 = 7. Hundreds: 3 + 4 = 7. Thousands: 2 + 1 = 3."
+      },
+      {
+       "caption": "3,777",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🎉",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "bounce",
+         "label": "3,777"
+        }
+       ],
+       "say": "Put the digits together: three thousand, seven hundred and seventy-seven."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-column-methods-d1-8315f39f.png",
+     "alt": "One thousand square exchanged for ten hundred squares, so 1 thousand = 10 hundreds",
+     "caption": "1 thousand = 10 hundreds.",
+     "say": "One thousand can be exchanged for ten hundreds. The value stays the same."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 3,120 + 2,455?",
+      "hint": "Ones, then tens, then hundreds, then thousands.",
+      "explanation": "0 + 5 = 5, 2 + 5 = 7, 1 + 4 = 5, 3 + 2 = 5. So 5,575.",
+      "skill_tag": "colmethod.add",
+      "answer": {
+       "value": 5575,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Carry the ten",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "When a column makes **10 or more**, write the ones digit and **carry** the tens to the next column.\n\n8 + 7 = 15: write 5, carry 1.",
+     "say": "Sometimes a column makes ten or more. Then we carry. Write the ones digit, and carry the tens digit to the next column. Look at 2,468 plus 1,357. Eight plus seven is fifteen. Write five and carry one ten."
+    },
+    {
+     "type": "explainer",
+     "title": "2,468 + 1,357 with a carry",
+     "scenes": [
+      {
+       "caption": "Ones: 5, carry 1",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ones: 5"
+        }
+       ],
+       "say": "Ones: 8 + 7 = 15. Write 5, carry 1 ten."
+      },
+      {
+       "caption": "Tens: 2, carry 1",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "2,468 + 1,357"
+        },
+        {
+         "id": "t",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "tens: 2"
+        }
+       ],
+       "say": "Tens: 6 + 5 + 1 = 12. Write 2, carry 1 hundred."
+      },
+      {
+       "caption": "3,825",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "🎉",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "bounce",
+         "label": "2,468 + 1,357 = 3,825"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3,825"
+        }
+       ],
+       "say": "Hundreds: 4 + 3 + 1 = 8. Thousands: 2 + 1 = 3."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 1,486 + 2,327?",
+      "hint": "6 + 7 is 13, so carry 1 ten.",
+      "explanation": "Ones 3, tens 1 + 8 + 2 = 11 so 1 carry, hundreds 4 + 3 + 1 = 8. So 3,813.",
+      "skill_tag": "colmethod.carry",
+      "answer": {
+       "value": 3813,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Ayesha and Ali add the hills",
+     "asset": "clip-maths-class-4-column-methods-8a86aea8.mp4",
+     "poster": "clip-maths-class-4-column-methods-8a86aea8.webp",
+     "seconds": 57,
+     "transcript": "Ayesha and Ali climb three hills near Murree. They want the total height. The first hill is 2,345 metres. The second is 1,432 metres. Line up the digits in columns. Start with the ones on the right. Four plus three is seven. Three plus four is seven. No carrying is needed. The total is three thousand, seven hundred and seventy-seven metres. Check the answer by taking one hill away. You should get the second hill back.",
+     "caption": "Ayesha and Ali add three hill heights in columns and check the answer."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Line up the place values",
+      "Start with the ones on the right",
+      "Carry when a column makes 10 or more"
+     ],
+     "say": "Remember. Line up the columns, start with the ones, and carry when a column makes ten or more."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "10 or more",
+       "meaning": "A ten or more. A column that makes this must carry."
+      },
+      {
+       "term": "column addition",
+       "meaning": "Adding numbers written one under another in columns."
+      },
+      {
+       "term": "carry",
+       "meaning": "Moving a ten (or hundred) to the next column to the left."
+      },
+      {
+       "term": "place value",
+       "meaning": "What each digit is worth, like 3 in 3,000 is three thousand."
+      },
+      {
+       "term": "total",
+       "meaning": "The answer when you add."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 2,130 + 1,250?",
+     "hint": "Add the hundreds, then the tens.",
+     "explanation": "2,130 + 1,250 = 3,380.",
+     "answer": {
+      "value": 3380,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "In 1,675 + 2,458, which column do you start with?",
+     "hint": "Start on the right.",
+     "explanation": "Always start with the ones on the right.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The thousands"
+      },
+      {
+       "id": "b",
+       "text": "The ones"
+      },
+      {
+       "id": "c",
+       "text": "The tens"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "13 tens is the same as 1 hundred and 3 tens.",
+     "hint": "10 tens make 1 hundred.",
+     "explanation": "10 tens make 1 hundred, so 13 tens is 1 hundred and 3 tens.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 4,500 + 1,800?",
+     "hint": "45 hundreds + 18 hundreds.",
+     "explanation": "63 hundreds = 6,300.",
+     "answer": {
+      "value": 6300,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "column_sub",
+   "kind": "try",
+   "title": "Column subtraction",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Exchange a ten",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "When you cannot take away, **exchange**: take one from the next column and make ten in this one.\n\n4,305 − 1,278 = 3,027.",
+     "say": "Now take away in columns. Look at 4,305 take away 1,278. We cannot take 8 from 5. So we exchange one ten for ten ones. Now we have 15 ones. Fifteen take away eight is seven."
+    },
+    {
+     "type": "explainer",
+     "title": "4,305 − 1,278",
+     "scenes": [
+      {
+       "caption": "Ones: 5 is too small",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "4,305 − 1,278"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5 < 8"
+        }
+       ],
+       "say": "Start with the ones. 5 is smaller than 8. There are no tens to swap, so first swap 1 hundred for 10 tens."
+      },
+      {
+       "caption": "Ones: 15 − 8 = 7. Tens: 9 − 7 = 2",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none",
+         "label": "4,305 − 1,278"
+        },
+        {
+         "id": "t",
+         "emoji": "🟨",
+         "x": 60,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "9 − 7 = 2"
+        }
+       ],
+       "say": "Now swap 1 ten for 10 ones. We have 15 ones. Fifteen take away eight is seven. Tens: 9 − 7 = 2."
+      },
+      {
+       "caption": "3,027",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4,305 − 1,278 = 3,027"
+        }
+       ],
+       "say": "Hundreds: 2 − 2 = 0. Thousands: 4 − 1 = 3. The answer is 3,027."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-column-methods-d2-97cf4ce6.png",
+     "alt": "A column subtraction of 4,305 minus 1,278 with the exchange shown: hundreds 2, tens 9, ones 15, giving 3,027",
+     "caption": "4,305 − 1,278 = 3,027.",
+     "say": "Exchange from the hundreds, then the tens. Now the ones are fifteen, the tens are nine and the hundreds are two."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 7,130 − 4,265?",
+      "hint": "Exchange a ten for ones first.",
+      "explanation": "Exchange in the tens and the ones, then 7,130 − 4,265 = 2,865.",
+      "skill_tag": "colmethod.sub",
+      "answer": {
+       "value": 2865,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Zeros in the middle",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "When there are **zeros**, exchange from the nearest column that is not zero.\n\n4,006: take 1 thousand, make 10 hundreds, then 10 tens, then 10 ones.",
+     "say": "Zeros are tricky! Try 4,006 take away 1,238. The tens column has a zero. We cannot exchange from zero. So we go to the thousands first, and pass the zeros along."
+    },
+    {
+     "type": "explainer",
+     "title": "4,006 − 1,238 over the zeros",
+     "scenes": [
+      {
+       "caption": "3 thousands, 10 hundreds, 0 tens, 6 ones",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "none",
+         "label": "4,006 − 1,238"
+        }
+       ],
+       "say": "Exchange 1 thousand for 10 hundreds. Now we have 3 thousands and 10 hundreds."
+      },
+      {
+       "caption": "Ones: 16 − 8 = 8",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "o",
+         "emoji": "🟥",
+         "x": 80,
+         "y": 65,
+         "size": 3,
+         "anim": "pulse",
+         "label": "16 − 8 = 8"
+        }
+       ],
+       "say": "Exchange 1 hundred for 10 tens, then 1 ten for 10 ones. Now 16 ones take away 8 is 8."
+      },
+      {
+       "caption": "2,768",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 30,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4,006 − 1,238 = 2,768"
+        }
+       ],
+       "say": "Tens: 9 − 3 = 6. Hundreds: 9 − 2 = 7. Thousands: 3 − 1 = 2. The answer is 2,768."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "To check 4,305 − 1,278 = 3,027, add 1,278 and 3,027.",
+      "hint": "Subtraction and addition are opposites.",
+      "explanation": "3,027 + 1,278 = 4,305, so the answer is right.",
+      "skill_tag": "colmethod.check",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Exchange a ten when a digit is too small",
+      "Zeros: go to the nearest non-zero column",
+      "Check by adding back"
+     ],
+     "say": "Remember. Exchange when you cannot take away. Zeros pass the exchange along to the left."
+    },
+    {
+     "type": "activity",
+     "title": "Exchange with counters",
+     "materials": [
+      "Ten counters or 10 straws",
+      "A small bowl"
+     ],
+     "instructions": [
+      "Make 4,006 with counters: 4 thousands, 0 hundreds, 0 tens, 6 ones.",
+      "Swap 1 thousand for 10 hundreds. Count them.",
+      "Keep swapping until you can take away 1,238.",
+      "Write down your answer and check it."
+     ]
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "exchange",
+       "meaning": "Swapping one from the next column for ten in this column."
+      },
+      {
+       "term": "subtract",
+       "meaning": "To take away."
+      },
+      {
+       "term": "zero",
+       "meaning": "A place with nothing in it, like the 0 in 4,006."
+      },
+      {
+       "term": "check",
+       "meaning": "Test an answer by doing the opposite sum."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 3,000 − 1,250?",
+     "hint": "Exchange from the thousands.",
+     "explanation": "3,000 − 1,250 = 1,750.",
+     "answer": {
+      "value": 1750,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do you exchange in 4,006 − 1,238?",
+     "hint": "Look for the nearest non-zero digit.",
+     "explanation": "Zeros cannot give a ten, so you exchange from the thousands.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Zero is bigger than 1"
+      },
+      {
+       "id": "b",
+       "text": "You must always add"
+      },
+      {
+       "id": "c",
+       "text": "The zeros are in the way, so you go to the thousands"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A check for 2,000 − 750 = 1,250 is 1,250 + 750 = 2,000.",
+     "hint": "Add back.",
+     "explanation": "1,250 + 750 = 2,000.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these steps for 503 − 268 in order.",
+     "hint": "Start on the right.",
+     "explanation": "Exchange, exchange, then subtract the columns.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "Subtract the ones: 13 − 8 = 5"
+      },
+      {
+       "id": "i4",
+       "text": "Subtract the tens and hundreds"
+      },
+      {
+       "id": "i2",
+       "text": "Exchange 1 ten for 10 ones"
+      },
+      {
+       "id": "i1",
+       "text": "Exchange 1 hundred for 10 tens"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shortcuts",
+   "kind": "play",
+   "title": "Clever shortcuts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Adjust near a hundred",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Adjust**: use a near round number, then correct by the difference.\n\n456 − 199 = 456 − 200 + 1 = 257.",
+     "say": "Here is a shortcut. 456 take away 199 is close to 456 take away 200. Take away two hundreds, then add one back, because 199 is one less than 200. Smart and quick!"
+    },
+    {
+     "type": "explainer",
+     "title": "456 − 199",
+     "scenes": [
+      {
+       "caption": "456 − 200 = 256",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "456 − 199"
+        }
+       ],
+       "say": "Take away 200. That is 456 − 200 = 256."
+      },
+      {
+       "caption": "256 + 1 = 257",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "➕",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "pulse",
+         "label": "+1"
+        }
+       ],
+       "say": "But we took away one too many. Add 1 back."
+      },
+      {
+       "caption": "257",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "456 − 199 = 257"
+        }
+       ],
+       "say": "So 456 − 199 = 257. Check: 257 + 199 = 456."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "What is 812 − 399?",
+      "hint": "Take away 400, then add back 1.",
+      "explanation": "812 − 400 = 412, and 412 + 1 = 413.",
+      "skill_tag": "colmethod.adjust",
+      "answer": {
+       "value": 413,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Add a near number",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "For a sum near a round number, add the round number and adjust.\n\n3,400 + 1,998 = 3,400 + 2,000 − 2 = 5,398.",
+     "say": "You can use the same trick for adding. 3,400 plus 1,998 is close to 3,400 plus 2,000. Add two thousand, then take away two."
+    },
+    {
+     "type": "explainer",
+     "title": "3,400 + 1,998",
+     "scenes": [
+      {
+       "caption": "5,400",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "none",
+         "label": "3,400 + 1,998"
+        }
+       ],
+       "say": "Add 2,000. 3,400 + 2,000 = 5,400."
+      },
+      {
+       "caption": "5,400 − 2 = 5,398",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "➖",
+         "x": 50,
+         "y": 70,
+         "size": 3,
+         "anim": "pulse",
+         "label": "−2"
+        }
+       ],
+       "say": "We added two too many. Take away 2."
+      },
+      {
+       "caption": "5,398",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🔢",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3,400 + 1,998 = 5,398"
+        }
+       ],
+       "say": "The answer is 5,398."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is the quick way to do 2,999 + 1,004?",
+      "hint": "Is 2,999 close to a round number?",
+      "explanation": "2,999 is 1 less than 3,000, so 3,000 + 1,004 − 1 = 4,003.",
+      "skill_tag": "colmethod.adjust",
+      "options": [
+       {
+        "id": "a",
+        "text": "Add 2,000 + 1,004 = 3,004, then add 9"
+       },
+       {
+        "id": "b",
+        "text": "Do the ones first, then the tens"
+       },
+       {
+        "id": "c",
+        "text": "Add 3,000 + 1,004 = 4,004, then take away 1 to get 4,003"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Sum pairs",
+     "goal": "Find the matching sums.",
+     "emojis": [
+      "➕",
+      "➖",
+      "🔢",
+      "✅",
+      "🧮",
+      "🎯"
+     ],
+     "say": "Brain break. Find the pairs."
+    },
+    {
+     "type": "activity",
+     "title": "Shortcut at home",
+     "materials": [
+      "Pencil and paper",
+      "A friend"
+     ],
+     "instructions": [
+      "Pick a number near 500, like 497.",
+      "Your friend picks a number from 100 to 300.",
+      "Use the near-500 trick to find the answer.",
+      "Check by adding back."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Use a near round number",
+      "Adjust by the difference",
+      "Check with the opposite sum"
+     ],
+     "say": "Remember. Use a near round number, then adjust. Check with the opposite sum."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "adjust",
+       "meaning": "Correct an answer after using a nearby round number."
+      },
+      {
+       "term": "round number",
+       "meaning": "A number like 100, 200 or 1,000."
+      },
+      {
+       "term": "estimate",
+       "meaning": "A close answer found by rounding."
+      },
+      {
+       "term": "compensate",
+       "meaning": "Balance one change with an opposite change."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "What is 456 − 99?",
+     "hint": "Take away 100, then add 1.",
+     "explanation": "456 − 100 = 356, and 356 + 1 = 357.",
+     "answer": {
+      "value": 357,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 2,500 + 1,999?",
+     "hint": "Add 2,000, then take away 1.",
+     "explanation": "4,500 − 1 = 4,499.",
+     "answer": {
+      "value": 4499,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "348 − 199 is the same as 348 − 200 + 1.",
+     "hint": "199 is one less than 200.",
+     "explanation": "Taking away 200 takes one too many, so add 1.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A quick check for 5,000 − 2,999 is...",
+     "hint": "Use the opposite.",
+     "explanation": "2,999 + 2,001 = 5,000.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Subtract 2,999 from 2,999"
+      },
+      {
+       "id": "b",
+       "text": "Add 2,999 and 2,001 to make 5,000"
+      },
+      {
+       "id": "c",
+       "text": "Add 5,000 and 2,999"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "use_big",
+   "kind": "use",
+   "title": "Problems with big numbers",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Mangoes in two months",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "**Total** means add. 2,486 + 1,375 = 3,861.\n\nCheck: 3,861 − 1,375 = 2,486.",
+     "say": "Uncle Bilal sells mangoes in Lahore. In January he sells 2,486 mangoes. In February he sells 1,375. How many in total? Total means add. Use columns."
+    },
+    {
+     "type": "explainer",
+     "title": "Mangoes in two months",
+     "scenes": [
+      {
+       "caption": "2,486",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "2,486"
+        }
+       ],
+       "say": "January: 2,486 mangoes."
+      },
+      {
+       "caption": "1,375",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "2,486"
+        },
+        {
+         "id": "b",
+         "emoji": "🥭",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "1,375"
+        }
+       ],
+       "say": "February: 1,375 mangoes."
+      },
+      {
+       "caption": "3,861",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🎉",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "3,861"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "2,486 + 1,375 = 3,861"
+        }
+       ],
+       "say": "Together: 3,861 mangoes."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Hana's shop has 6,400 bags. It sells 2,150. How many are left?",
+      "hint": "Sold means take away.",
+      "explanation": "6,400 − 2,150 = 4,250.",
+      "skill_tag": "colmethod.word",
+      "answer": {
+       "value": 4250,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Two steps",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "Solve a two-step problem one step at a time: add first, then take away.\n\n3,250 + 1,480 = 4,730. Then 4,730 − 980 = 3,750.",
+     "say": "Zara has 3,250 stickers. She gets 1,480 more. Then she gives 980 away. First add, then take away. Work step by step."
+    },
+    {
+     "type": "image",
+     "emoji": "🧮",
+     "alt": "Add first, then take away: one step at a time.",
+     "caption": "Add first, then take away: one step at a time."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Zara has 3,250 stickers, gets 1,480 more and gives 980 away. How many now?",
+      "hint": "Add first, then take away.",
+      "explanation": "3,250 + 1,480 = 4,730 and 4,730 − 980 = 3,750.",
+      "skill_tag": "colmethod.two_step",
+      "answer": {
+       "value": 3750,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Columns keep the place values lined up",
+      "Two steps: do one step at a time",
+      "Check with the opposite"
+     ],
+     "say": "Remember. Use columns for big numbers, and check with the opposite sum."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "total",
+       "meaning": "The answer when you add."
+      },
+      {
+       "term": "two-step problem",
+       "meaning": "A problem with two operations, done in order."
+      },
+      {
+       "term": "check",
+       "meaning": "Test an answer with the opposite operation."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A shop has 4,100 pens. It sells 1,250. How many are left?",
+     "hint": "Column subtraction.",
+     "explanation": "4,100 − 1,250 = 2,850.",
+     "answer": {
+      "value": 2850,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "Ali has 2,350 stickers and gets 1,725 more. How many now?",
+     "hint": "Add in columns.",
+     "explanation": "2,350 + 1,725 = 4,075.",
+     "answer": {
+      "value": 4075,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "If 3,500 − 1,800 = 1,700, then 1,700 + 1,800 = 3,500.",
+     "hint": "Check with the opposite.",
+     "explanation": "1,700 + 1,800 = 3,500.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is a good check for 6,000 − 3,455 = 2,545?",
+     "hint": "Use the opposite.",
+     "explanation": "2,545 + 3,455 = 6,000.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2,545 − 3,455"
+      },
+      {
+       "id": "b",
+       "text": "2,545 + 3,455 should make 6,000"
+      },
+      {
+       "id": "c",
+       "text": "6,000 + 3,455"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "What is 2,345 + 1,432?",
+    "hint": "Start with the ones: 5 + 2.",
+    "explanation": "5 + 2 = 7, 4 + 3 = 7, 3 + 4 = 7, 2 + 1 = 3. So 3,777.",
+    "skill_tag": "colmethod.add",
+    "answer": {
+     "value": 3777,
+     "tolerance": 0
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Sam says when the ones add to 13, you write 13 and carry nothing. Is he right?",
+    "hint": "Only one digit goes in each column.",
+    "explanation": "13 is 1 ten and 3 ones. Write 3, carry 1 ten.",
+    "skill_tag": "colmethod.reason_carry",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, carry 1 hundred"
+     },
+     {
+      "id": "b",
+      "text": "No. Write 3 in the ones and carry 1 ten"
+     },
+     {
+      "id": "c",
+      "text": "Yes, write 13"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "reason"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "When the tens add to 13, you write 3 in the tens and carry 1 into the hundreds.",
+    "hint": "13 is one hundred and three tens?",
+    "explanation": "13 tens is 1 hundred and 3 tens. So write 3 and carry 1.",
+    "skill_tag": "colmethod.carry",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "column_add",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the column addition.",
+    "hint": "8 + 7 makes more than 10.",
+    "explanation": "8 + 7 = 15. Write 5 and carry 1.",
+    "skill_tag": "colmethod.carry",
+    "points": 2,
+    "text": "In 2,468 + 1,357, the ones are 8 + 7 = {b1}. Write {b2} and carry 1.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "15"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "0"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two sums need a carry in the tens column? Pick two.",
+    "hint": "Add the tens digits. Is the answer ten or more?",
+    "explanation": "6 + 5 = 11 and 4 + 7 = 11, so both carry.",
+    "skill_tag": "colmethod.carry",
+    "options": [
+     {
+      "id": "a",
+      "text": "12 + 34"
+     },
+     {
+      "id": "b",
+      "text": "21 + 13"
+     },
+     {
+      "id": "c",
+      "text": "46 + 75"
+     },
+     {
+      "id": "d",
+      "text": "67 + 58"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the steps for 1,745 + 1,186 in order.",
+    "hint": "Start with the ones.",
+    "explanation": "Ones first, then tens, then hundreds, then thousands.",
+    "skill_tag": "colmethod.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Add the hundreds: 7 + 1 + 1 = 9"
+     },
+     {
+      "id": "i4",
+      "text": "Add the thousands: 1 + 1 = 2"
+     },
+     {
+      "id": "i2",
+      "text": "Add the tens: 4 + 8 + 1 = 13, write 3, carry 1"
+     },
+     {
+      "id": "i1",
+      "text": "Add the ones: 5 + 6 = 11, write 1, carry 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Round to the nearest thousand to estimate 2,468 + 1,357. Slide to show your estimate.",
+    "hint": "Round 2,468 to 2,000 and 1,357 to 1,000.",
+    "explanation": "2,000 + 1,000 = 3,000.",
+    "skill_tag": "colmethod.estimate",
+    "range": {
+     "step": 500,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 3000,
+     "tolerance": 100
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each sum to its estimate.",
+    "hint": "Round each number to the nearest thousand.",
+    "explanation": "2,000 + 1,000 = 3,000; 5,000 + 2,000 = 7,000; 3,000 + 2,000 = 5,000.",
+    "skill_tag": "colmethod.estimate",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "2,468 + 1,357"
+     },
+     {
+      "id": "l2",
+      "text": "4,712 + 2,390"
+     },
+     {
+      "id": "l3",
+      "text": "3,470 + 1,920"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "5,000"
+     },
+     {
+      "id": "r1",
+      "text": "3,000"
+     },
+     {
+      "id": "r2",
+      "text": "7,000"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "What is 4,305 − 1,278?",
+    "hint": "Exchange a ten for ones first.",
+    "explanation": "4,305 − 1,278 = 3,027.",
+    "skill_tag": "colmethod.sub",
+    "answer": {
+     "value": 3027,
+     "tolerance": 0
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Layla says 4,006 − 1,238 needs no exchange because the zero is not a problem. Is she right?",
+    "hint": "Can you take 3 tens from 0 tens?",
+    "explanation": "You cannot take from zero. You go to the thousands first.",
+    "skill_tag": "colmethod.reason_zero",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, zeros are not a problem"
+     },
+     {
+      "id": "b",
+      "text": "No, you should add 1,238"
+     },
+     {
+      "id": "c",
+      "text": "No. The zero means you must exchange from the thousands first"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "To check 4,305 − 1,278 = 3,027, add 3,027 and 1,278.",
+    "hint": "Subtraction and addition are opposites.",
+    "explanation": "3,027 + 1,278 = 4,305.",
+    "skill_tag": "colmethod.check",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Finish the take-away.",
+    "hint": "15 − 8 is 7.",
+    "explanation": "5 + 10 = 15, and 15 − 8 = 7.",
+    "skill_tag": "colmethod.sub",
+    "points": 2,
+    "text": "In 745 − 268, the ones are 5 − 8, so you exchange 1 ten to make {b1} ones. The ones digit of the answer is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "15"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "7"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two take-aways need an exchange in the ones column? Pick two.",
+    "hint": "Can you take the ones digit from the ones digit?",
+    "explanation": "2 is smaller than 7, and 0 is smaller than 8, so both exchange.",
+    "skill_tag": "colmethod.sub",
+    "options": [
+     {
+      "id": "a",
+      "text": "540 − 58"
+     },
+     {
+      "id": "b",
+      "text": "85 − 32"
+     },
+     {
+      "id": "c",
+      "text": "96 − 40"
+     },
+     {
+      "id": "d",
+      "text": "62 − 17"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Put the steps for 603 − 285 in order.",
+    "hint": "Start with the ones.",
+    "explanation": "Exchange where needed, then subtract each column. The answer is 318.",
+    "skill_tag": "colmethod.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Subtract the ones: 13 − 5 = 8"
+     },
+     {
+      "id": "i5",
+      "text": "Subtract the hundreds: 5 − 2 = 3"
+     },
+     {
+      "id": "i2",
+      "text": "Exchange 1 ten for 10 ones"
+     },
+     {
+      "id": "i1",
+      "text": "Exchange 1 hundred for 10 tens"
+     },
+     {
+      "id": "i4",
+      "text": "Subtract the tens: 9 − 8 = 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "slider",
+    "prompt": "Estimate 5,138 − 2,862 by rounding to the nearest thousand. Slide to show your estimate.",
+    "hint": "Round 5,138 to 5,000 and 2,862 to 3,000.",
+    "explanation": "5,000 − 3,000 = 2,000.",
+    "skill_tag": "colmethod.sub",
+    "range": {
+     "step": 500,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 2000,
+     "tolerance": 100
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the take-away with a zero in the tens place.",
+    "hint": "Look at the tens digit.",
+    "explanation": "5,206 has 0 in the tens place. The others do not.",
+    "skill_tag": "colmethod.zero",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧮",
+       "label": "5,206 − 1,437",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "5,638 − 1,437",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧮",
+       "label": "5,683 − 1,437",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "What is 456 − 199?",
+    "hint": "Take away 200, then add 1.",
+    "explanation": "456 − 200 = 256, then + 1 = 257.",
+    "skill_tag": "colmethod.adjust",
+    "answer": {
+     "value": 257,
+     "tolerance": 0
+    },
+    "sub_lesson": "shortcuts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Zain says 3,400 + 1,998 is easiest as 3,400 + 2,000 − 2. Is he right?",
+    "hint": "Is 1,998 close to 2,000?",
+    "explanation": "5,400 − 2 = 5,398, which is the right answer.",
+    "skill_tag": "colmethod.reason_adjust",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 5,300"
+     },
+     {
+      "id": "b",
+      "text": "Yes. 3,400 + 2,000 = 5,400, and 5,400 − 2 = 5,398"
+     },
+     {
+      "id": "c",
+      "text": "No, add 1,998 to 3,400 only"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "456 − 199 is the same as 456 − 200 + 1.",
+    "hint": "199 is one less than 200.",
+    "explanation": "Taking away 200 takes one too many, so add 1 back.",
+    "skill_tag": "colmethod.adjust",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "hotspot",
+    "prompt": "Tap the sum that is easiest to work out in your head.",
+    "hint": "Is one number close to a round number?",
+    "explanation": "2,999 is 1 less than 3,000, so it is easy to adjust.",
+    "skill_tag": "colmethod.choose",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "➕",
+       "label": "2,999 + 1,004",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "➕",
+       "label": "2,347 + 1,684",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "➕",
+       "label": "5,412 + 2,938",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "match",
+    "prompt": "Match each sum to its quick answer.",
+    "hint": "Use the near round numbers.",
+    "explanation": "199 + 300 = 499; 4,998 + 2 = 5,000; 3,999 + 1 = 4,000.",
+    "skill_tag": "colmethod.choose",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "199 + 300"
+     },
+     {
+      "id": "l2",
+      "text": "4,998 + 2"
+     },
+     {
+      "id": "l3",
+      "text": "3,999 + 1"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "4,000"
+     },
+     {
+      "id": "r1",
+      "text": "499"
+     },
+     {
+      "id": "r2",
+      "text": "5,000"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "shortcuts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Layla says 456 − 199 = 257 is wrong because you cannot add 1 at the end. Is she right?",
+    "hint": "Did you take away too much?",
+    "explanation": "The adjustment is needed, so 257 is right.",
+    "skill_tag": "colmethod.reason_adjust",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, add nothing at the end"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 256"
+     },
+     {
+      "id": "c",
+      "text": "No. 456 − 200 = 256 is one too many, so add 1 back to get 257"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two are good ways to estimate 4,812 + 2,396? Pick two.",
+    "hint": "Round each number to a close, easy value.",
+    "explanation": "4,800 + 2,400 = 7,200 and 5,000 + 2,000 = 7,000 are both close to 7,208.",
+    "skill_tag": "colmethod.estimate",
+    "options": [
+     {
+      "id": "a",
+      "text": "5,000 + 2,000"
+     },
+     {
+      "id": "b",
+      "text": "4,000 + 1,000"
+     },
+     {
+      "id": "c",
+      "text": "7,000 + 3,000"
+     },
+     {
+      "id": "d",
+      "text": "4,800 + 2,400"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Hana says the answer to 4,812 + 2,396 is about 9,000. Is she right?",
+    "hint": "Round each number to the nearest thousand.",
+    "explanation": "5,000 + 2,000 = 7,000, so the answer is about 7,000, not 9,000.",
+    "skill_tag": "colmethod.reason_estimate",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, about 6,000"
+     },
+     {
+      "id": "b",
+      "text": "No. Rounding gives 5,000 + 2,000, which is about 7,000"
+     },
+     {
+      "id": "c",
+      "text": "Yes, about 9,000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "Uncle Bilal sells 2,486 mangoes in January and 1,375 in February. How many in total?",
+    "hint": "Total means add.",
+    "explanation": "2,486 + 1,375 = 3,861.",
+    "skill_tag": "colmethod.word",
+    "answer": {
+     "value": 3861,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "number",
+    "prompt": "Hana's shop had 5,200 pencils. It sold 1,845. How many are left?",
+    "hint": "Sold means take away.",
+    "explanation": "5,200 − 1,845 = 3,355.",
+    "skill_tag": "colmethod.word",
+    "answer": {
+     "value": 3355,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "number",
+    "prompt": "Zara has 3,250 stickers. She gets 1,480 more, then gives 980 away. How many now?",
+    "hint": "Add first, then take away.",
+    "explanation": "3,250 + 1,480 = 4,730, then 4,730 − 980 = 3,750.",
+    "skill_tag": "colmethod.two_step",
+    "answer": {
+     "value": 3750,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Omar says 6,000 − 2,345 = 3,755 because he takes 2,000 and then 245 from 4,000. Is he right?",
+    "hint": "Check with the opposite sum.",
+    "explanation": "3,655 + 2,345 = 6,000, so 3,755 is wrong.",
+    "skill_tag": "colmethod.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 3,555"
+     },
+     {
+      "id": "b",
+      "text": "No. He should take away 345 from 4,000, which gives 3,655"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 3,755 is right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Zainab says 4,305 − 1,278 = 3,137 because she did 5 − 8 = 3 in the ones. Is she right?",
+    "hint": "You cannot take 8 from 5.",
+    "explanation": "Exchange a ten, then 15 − 8 = 7. The answer is 3,027.",
+    "skill_tag": "colmethod.reason_exchange",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 5 − 8 is 3"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 3,127"
+     },
+     {
+      "id": "c",
+      "text": "No. You must exchange a ten first, so the ones are 15 − 8 = 7"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Ali says that you can line up the digits from the left and it works just as well. Is he right?",
+    "hint": "Which digits must match up?",
+    "explanation": "Place values must line up, or the sum is wrong.",
+    "skill_tag": "colmethod.reason_align",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, lining up from the left is fine"
+     },
+     {
+      "id": "b",
+      "text": "No. Line up the ones under the ones, so the columns match"
+     },
+     {
+      "id": "c",
+      "text": "No, line up the thousands only"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "What is 3,215 + 2,164?",
+    "hint": "Start with the ones: 5 + 4.",
+    "explanation": "9, 7, 3 and 5 make 5,379.",
+    "skill_tag": "colmethod.add",
+    "answer": {
+     "value": 5379,
+     "tolerance": 0
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Ella says when the tens add to 12, you write 12 in the tens. Is she right?",
+    "hint": "Only one digit goes in each column.",
+    "explanation": "12 tens is 1 hundred and 2 tens. Write 2 and carry 1 hundred.",
+    "skill_tag": "colmethod.reason_carry",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, write 12"
+     },
+     {
+      "id": "b",
+      "text": "No. Write 2 in the tens and carry 1 hundred"
+     },
+     {
+      "id": "c",
+      "text": "No, carry 1 thousand"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "reason",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "When the ones add to 15, you write 5 and carry 2 tens.",
+    "hint": "How many tens is 15 ones?",
+    "explanation": "15 ones is 1 ten and 5 ones, so carry 1 ten.",
+    "skill_tag": "colmethod.carry",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "column_add",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Finish the sum about the tens.",
+    "hint": "Add the carried 1 too.",
+    "explanation": "6 + 5 + 1 = 12. Write 2 and carry 1.",
+    "skill_tag": "colmethod.carry",
+    "points": 2,
+    "text": "In 2,468 + 1,357, the tens are 6 + 5 + 1 = {b1}. Write {b2} and carry 1.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "2"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "0"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Which two sums need a carry in the ones column? Pick two.",
+    "hint": "Add the ones digits.",
+    "explanation": "8 + 7 = 15 and 9 + 6 = 15, so both carry.",
+    "skill_tag": "colmethod.carry",
+    "options": [
+     {
+      "id": "a",
+      "text": "29 + 66"
+     },
+     {
+      "id": "b",
+      "text": "21 + 13"
+     },
+     {
+      "id": "c",
+      "text": "40 + 32"
+     },
+     {
+      "id": "d",
+      "text": "38 + 47"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Put the steps for 2,358 + 1,276 in order.",
+    "hint": "Start with the ones.",
+    "explanation": "Ones first, then tens, then hundreds, then thousands.",
+    "skill_tag": "colmethod.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Add the tens: 5 + 7 + 1 = 13, write 3, carry 1"
+     },
+     {
+      "id": "i3",
+      "text": "Add the hundreds: 3 + 2 + 1 = 6"
+     },
+     {
+      "id": "i4",
+      "text": "Add the thousands: 2 + 1 = 3"
+     },
+     {
+      "id": "i1",
+      "text": "Add the ones: 8 + 6 = 14, write 4, carry 1"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Round to the nearest thousand to estimate 3,470 + 1,420. Slide to show your estimate.",
+    "hint": "Round 3,470 to 3,000 and 1,420 to 1,000.",
+    "explanation": "3,000 + 1,000 = 4,000.",
+    "skill_tag": "colmethod.estimate",
+    "range": {
+     "step": 500,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 4000,
+     "tolerance": 100
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Pair each sum with its estimate.",
+    "hint": "Round to the nearest thousand.",
+    "explanation": "1,000 + 4,000 = 5,000; 6,000 + 2,000 = 8,000; 3,000 + 1,000 = 4,000.",
+    "skill_tag": "colmethod.estimate",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "1,240 + 3,910"
+     },
+     {
+      "id": "l2",
+      "text": "6,480 + 1,530"
+     },
+     {
+      "id": "l3",
+      "text": "2,703 + 1,298"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "4,000"
+     },
+     {
+      "id": "r1",
+      "text": "5,000"
+     },
+     {
+      "id": "r2",
+      "text": "8,000"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "column_add",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "What is 5,140 − 2,365?",
+    "hint": "Exchange a ten for ones.",
+    "explanation": "5,140 − 2,365 = 2,775.",
+    "skill_tag": "colmethod.sub",
+    "answer": {
+     "value": 2775,
+     "tolerance": 0
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 3,007 − 1,249 needs no exchange in the tens. Is he right?",
+    "hint": "Can you take 4 tens from 0 tens?",
+    "explanation": "You cannot take from 0 tens. Exchange from the thousands, then the hundreds.",
+    "skill_tag": "colmethod.reason_zero",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, zeros are not a problem"
+     },
+     {
+      "id": "b",
+      "text": "No, the answer is 2,758"
+     },
+     {
+      "id": "c",
+      "text": "No. The tens are 0 take 4, so you must exchange from the thousands first"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "true_false",
+    "prompt": "To check 4,305 − 1,278, add 1,278 and 4,305.",
+    "hint": "Add back the number you took away.",
+    "explanation": "The check is the answer plus the number taken away.",
+    "skill_tag": "colmethod.check",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Complete the take-away about 632 − 275.",
+    "hint": "2 + 10 = 12.",
+    "explanation": "12 − 5 = 7.",
+    "skill_tag": "colmethod.sub",
+    "points": 2,
+    "text": "The ones are 2 − 5, so you exchange 1 ten to make {b1} ones. The ones digit of the answer is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "7"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Which two take-aways need an exchange in the tens column? Pick two.",
+    "hint": "Look at the tens digits.",
+    "explanation": "5 tens is fewer than 7 tens, and 0 tens is fewer than 6 tens, so both exchange.",
+    "skill_tag": "colmethod.sub",
+    "options": [
+     {
+      "id": "a",
+      "text": "94 − 31"
+     },
+     {
+      "id": "b",
+      "text": "86 − 52"
+     },
+     {
+      "id": "c",
+      "text": "405 − 60"
+     },
+     {
+      "id": "d",
+      "text": "352 − 78"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Put the steps for 500 − 268 in order.",
+    "hint": "Start with the ones.",
+    "explanation": "The answer is 232.",
+    "skill_tag": "colmethod.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i5",
+      "text": "Subtract the hundreds: 4 − 2 = 2"
+     },
+     {
+      "id": "i4",
+      "text": "Subtract the tens: 9 − 6 = 3"
+     },
+     {
+      "id": "i3",
+      "text": "Subtract the ones: 10 − 8 = 2"
+     },
+     {
+      "id": "i1",
+      "text": "Exchange 1 hundred for 10 tens"
+     },
+     {
+      "id": "i2",
+      "text": "Exchange 1 ten for 10 ones"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4",
+     "i5"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "slider",
+    "prompt": "Estimate 7,420 − 3,890 by rounding to the nearest thousand. Slide to show your estimate.",
+    "hint": "Round 7,420 to 7,000 and 3,890 to 4,000.",
+    "explanation": "7,000 − 4,000 = 3,000.",
+    "skill_tag": "colmethod.sub",
+    "range": {
+     "step": 500,
+     "min": 0,
+     "max": 5000
+    },
+    "answer": {
+     "value": 3000,
+     "tolerance": 100
+    },
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the take-away with a zero in the hundreds place.",
+    "hint": "Look at the hundreds digit.",
+    "explanation": "4,071 has 0 in the hundreds place.",
+    "skill_tag": "colmethod.zero",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧮",
+       "label": "4,371 − 1,235",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧮",
+       "label": "4,071 − 1,235",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧮",
+       "label": "4,317 − 1,235",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "column_sub",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "What is 723 − 298?",
+    "hint": "Take away 300, then add 2.",
+    "explanation": "723 − 300 = 423, then + 2 = 425.",
+    "skill_tag": "colmethod.adjust",
+    "answer": {
+     "value": 425,
+     "tolerance": 0
+    },
+    "sub_lesson": "shortcuts",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 5,600 + 1,998 is easiest as 5,600 + 2,000 − 2. Is he right?",
+    "hint": "Is 1,998 close to 2,000?",
+    "explanation": "7,600 − 2 = 7,598, which is the right answer.",
+    "skill_tag": "colmethod.reason_adjust",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, add 1,998 to 5,600 only"
+     },
+     {
+      "id": "b",
+      "text": "Yes. 5,600 + 2,000 = 7,600, and 7,600 − 2 = 7,598"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 7,500"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "348 − 199 is the same as 348 − 200 − 1.",
+    "hint": "199 is one less than 200.",
+    "explanation": "You took away one too many, so add 1, not take away 1.",
+    "skill_tag": "colmethod.adjust",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "hotspot",
+    "prompt": "Tap the sum that is nearest to a round number.",
+    "hint": "Look for numbers close to round numbers.",
+    "explanation": "3,995 is near 4,000, so the answer is easy to adjust.",
+    "skill_tag": "colmethod.choose",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "➕",
+       "label": "3,995 + 1,002",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "➕",
+       "label": "3,123 + 2,456",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "➕",
+       "label": "4,678 + 1,234",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "match",
+    "prompt": "Join each sum to its quick answer.",
+    "hint": "Use the near round numbers.",
+    "explanation": "299 + 200 = 499; 2,999 + 1 = 3,000; 5,998 + 2 = 6,000.",
+    "skill_tag": "colmethod.choose",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "299 + 200"
+     },
+     {
+      "id": "l2",
+      "text": "2,999 + 1"
+     },
+     {
+      "id": "l3",
+      "text": "5,998 + 2"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "3,000"
+     },
+     {
+      "id": "r3",
+      "text": "6,000"
+     },
+     {
+      "id": "r1",
+      "text": "499"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "shortcuts",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Sam says 723 − 298 = 425 is wrong because you cannot add 2 at the end. Is he right?",
+    "hint": "Did you take away too much?",
+    "explanation": "The adjustment is needed, so 425 is right.",
+    "skill_tag": "colmethod.reason_adjust",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the answer is 423"
+     },
+     {
+      "id": "b",
+      "text": "No. 723 − 300 = 423 takes away 2 too many, so add 2 to get 425"
+     },
+     {
+      "id": "c",
+      "text": "Yes, add nothing at the end"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two are good ways to estimate 3,118 + 1,905? Pick two.",
+    "hint": "Round to close, easy values.",
+    "explanation": "3,100 + 1,900 = 5,000 and 3,000 + 2,000 = 5,000. Both are close to 5,023.",
+    "skill_tag": "colmethod.estimate",
+    "options": [
+     {
+      "id": "a",
+      "text": "3,000 + 1,000"
+     },
+     {
+      "id": "b",
+      "text": "5,000 + 5,000"
+     },
+     {
+      "id": "c",
+      "text": "3,000 + 2,000"
+     },
+     {
+      "id": "d",
+      "text": "3,100 + 1,900"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Ravi says the answer to 3,118 + 1,905 is about 8,000. Is he right?",
+    "hint": "Round each number to the nearest thousand.",
+    "explanation": "3,000 + 2,000 = 5,000, so the answer is about 5,000.",
+    "skill_tag": "colmethod.reason_estimate",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, about 8,000"
+     },
+     {
+      "id": "b",
+      "text": "No. Rounding gives 3,000 + 2,000, which is about 5,000"
+     },
+     {
+      "id": "c",
+      "text": "No, about 4,000"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "shortcuts",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A shop has 3,240 apples in May and 1,118 more in June. How many in total?",
+    "hint": "Total means add.",
+    "explanation": "3,240 + 1,118 = 4,358.",
+    "skill_tag": "colmethod.word",
+    "answer": {
+     "value": 4358,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "number",
+    "prompt": "A tank holds 4,000 litres. 1,675 litres are used. How many litres are left?",
+    "hint": "Take away the used litres.",
+    "explanation": "4,000 − 1,675 = 2,325.",
+    "skill_tag": "colmethod.word",
+    "answer": {
+     "value": 2325,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "number",
+    "prompt": "Omar has 2,400 marbles. He wins 1,350, then loses 900. How many now?",
+    "hint": "Add first, then take away.",
+    "explanation": "2,400 + 1,350 = 3,750, then 3,750 − 900 = 2,850.",
+    "skill_tag": "colmethod.two_step",
+    "answer": {
+     "value": 2850,
+     "tolerance": 0
+    },
+    "sub_lesson": "use_big",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Mira says 7,000 − 1,800 = 5,300 because she takes 1,000 and then 800. Is she right?",
+    "hint": "Check with the opposite sum.",
+    "explanation": "7,000 − 1,000 = 6,000, and 6,000 − 800 = 5,200, so 5,300 is wrong.",
+    "skill_tag": "colmethod.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 5,300 is right"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 5,100"
+     },
+     {
+      "id": "c",
+      "text": "No. 6,000 − 800 = 5,200, and 5,200 + 1,800 = 7,000"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 2,504 − 1,236 = 1,332 because he did 6 − 4 = 2 in the ones. Is he right?",
+    "hint": "Check with the opposite sum: 1,268 + 1,236.",
+    "explanation": "1,268 + 1,236 = 2,504, so the answer is 1,268.",
+    "skill_tag": "colmethod.reason_exchange",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the answer is 1,278"
+     },
+     {
+      "id": "b",
+      "text": "No. You cannot take 6 from 4, so you must exchange. The answer is 1,268"
+     },
+     {
+      "id": "c",
+      "text": "Yes, you can swap the digits to subtract"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Nora says you can line up 1,234 and 56 by their first digits. Is she right?",
+    "hint": "Which column does the 6 belong to?",
+    "explanation": "The ones go under the ones, so 6 sits under 4.",
+    "skill_tag": "colmethod.reason_align",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 56 must go in the thousands"
+     },
+     {
+      "id": "b",
+      "text": "No. Line up the ones under the ones, so 56 sits under 34"
+     },
+     {
+      "id": "c",
+      "text": "Yes, lining up the first digit is fine"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "use_big",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

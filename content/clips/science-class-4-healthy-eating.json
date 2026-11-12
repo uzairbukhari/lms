@@ -1,0 +1,163 @@
+{
+ "title": "The canteen robot",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "A canteen robot.",
+   "say": "A school canteen robot wants to build a plate. It has lots of food.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "label": "robot",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "t",
+     "emoji": "🍽️",
+     "x": 72,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Sweets first!",
+   "say": "The robot piles on sweets. Is that a good plate? Not really.",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🍬",
+     "label": "too many sweets",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "Big vegetables.",
+   "say": "Now it adds lots of fruit and vegetables. They fill a big part of the plate.",
+   "items": [
+    {
+     "id": "v",
+     "emoji": "🥦",
+     "label": "fruit and veg",
+     "x": 35,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "f",
+     "emoji": "🍎",
+     "x": 65,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Starchy food.",
+   "say": "Next, roti and rice. They give energy to learn and play.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🫓",
+     "label": "starchy food",
+     "x": 35,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "c",
+     "emoji": "🍚",
+     "x": 65,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Protein and dairy.",
+   "say": "A smaller share of daal, eggs and yoghurt helps muscles grow.",
+   "items": [
+    {
+     "id": "d",
+     "emoji": "🍲",
+     "label": "protein",
+     "x": 35,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "y",
+     "emoji": "🥛",
+     "label": "dairy",
+     "x": 65,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A tiny treat.",
+   "say": "And one small treat. A little bit is fine.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🍪",
+     "label": "small treat",
+     "x": 50,
+     "y": 46,
+     "size": 2,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Water to drink.",
+   "say": "The robot adds a glass of water. Our bodies need water every day.",
+   "items": [
+    {
+     "id": "w",
+     "emoji": "💧",
+     "label": "water",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "A balanced plate!",
+   "say": "A balanced plate. Big bread, big vegetables, small sweets. Well done, robot!",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "p",
+     "emoji": "🍽️",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

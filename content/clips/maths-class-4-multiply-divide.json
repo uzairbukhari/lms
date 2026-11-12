@@ -1,0 +1,141 @@
+{
+ "title": "Eggs in a tray",
+ "backdrop": "kitchen",
+ "scenes": [
+  {
+   "caption": "Aisha and the eggs.",
+   "say": "This is Aisha. She is packing eggs for the Eid party.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👧",
+     "label": "Aisha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "e",
+     "emoji": "🥚",
+     "label": "12 eggs",
+     "x": 72,
+     "y": 40,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Rows of four.",
+   "say": "Four eggs in a row. Three rows make an array of twelve.",
+   "items": [
+    {
+     "id": "r1",
+     "emoji": "🥚🥚🥚🥚",
+     "label": "row 1",
+     "x": 50,
+     "y": 30,
+     "size": 2,
+     "enter": "slide_left"
+    },
+    {
+     "id": "r2",
+     "emoji": "🥚🥚🥚🥚",
+     "label": "row 2",
+     "x": 50,
+     "y": 48,
+     "size": 2,
+     "enter": "slide_right"
+    },
+    {
+     "id": "r3",
+     "emoji": "🥚🥚🥚🥚",
+     "label": "row 3",
+     "x": 50,
+     "y": 66,
+     "size": 2,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "3 × 4 = 12.",
+   "say": "Three times four is twelve. Four times three is twelve too.",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "✖️",
+     "label": "3 × 4 = 12",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Boxes of six.",
+   "say": "Now Aisha packs eight boxes, with six eggs in each box.",
+   "items": [
+    {
+     "id": "b",
+     "emoji": "📦",
+     "label": "8 × 6",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Two eggs are left.",
+   "say": "There are 50 eggs. Eight boxes hold 48. Two eggs are left over.",
+   "items": [
+    {
+     "id": "b2",
+     "emoji": "📦",
+     "label": "48 in boxes",
+     "x": 30,
+     "y": 46,
+     "size": 2
+    },
+    {
+     "id": "l",
+     "emoji": "🥚",
+     "label": "2 left",
+     "x": 72,
+     "y": 40,
+     "size": 2,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "50 ÷ 6 = 8 remainder 2.",
+   "say": "Fifty shared into boxes of six is eight boxes, with two left over. Shukriya, Aisha!",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "👧",
+     "label": "Aisha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "r",
+     "emoji": "🎉",
+     "label": "8 r 2",
+     "x": 60,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  }
+ ]
+}

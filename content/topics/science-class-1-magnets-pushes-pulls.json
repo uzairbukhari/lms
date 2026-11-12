@@ -1,0 +1,2968 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-1-magnets-pushes-pulls",
+  "subject": "science",
+  "title": "Pushes, Pulls and Magnets",
+  "summary": "Pushes and pulls are forces, and magnets pull on some metals.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 10: Pushes, pulls and magnets",
+  "learning_objectives": [
+   "Say that pushes and pulls are forces",
+   "Test what a magnet picks up",
+   "Show that magnets attract and repel"
+  ],
+  "tags": [
+   "topic",
+   "topic-10"
+  ],
+  "curriculum": {
+   "course": "science-class-1-topics",
+   "semester": 1,
+   "topic": 10
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y3 forces and magnets",
+    "text": "Compare how things move; notice that some forces need contact and magnetic forces act at a distance; observe how magnets attract or repel and attract some materials and not others"
+   }
+  ],
+  "success_criteria": [
+   "I can say if an action is a push or a pull",
+   "I can test what a magnet picks up",
+   "I can say when magnets attract and repel"
+  ],
+  "real_life": "Fridge magnets, a swing in the park, toy cars, and steel spoons and foil in the kitchen.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "You throw a ball. Is that a push or a pull?",
+    "hint": "The ball moves away.",
+    "explanation": "Throwing pushes the ball away.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A pull"
+     },
+     {
+      "id": "b",
+      "text": "A twist"
+     },
+     {
+      "id": "c",
+      "text": "A push"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "A push or a pull is a force.",
+    "hint": "It is a science word.",
+    "explanation": "Pushes and pulls are forces.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which one sticks to a magnet?",
+    "hint": "Think about metal.",
+    "explanation": "A magnet pulls on iron.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plastic cup"
+     },
+     {
+      "id": "b",
+      "text": "An iron nail"
+     },
+     {
+      "id": "c",
+      "text": "A wooden pencil"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "pushpull",
+   "kind": "learn",
+   "title": "Pushes and pulls",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: what makes things move?",
+     "say": "Today we find out what makes things move. What is a push, and what is a pull?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-magnets-pushes-pulls-1-522e7dfe.jpg",
+     "alt": "An empty wooden swing with a pink seat hanging in a garden",
+     "caption": "To start a swing you push it or pull it back. That is a force.",
+     "credit": "Photo by Markus Spiske on Unsplash",
+     "say": "This swing is waiting. What would you do to make it move?"
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Pushes and pulls"
+    },
+    {
+     "type": "text",
+     "markdown": "A **push** moves things away. A **pull** brings things closer.",
+     "say": "A push moves something away from you. A pull brings something towards you."
+    },
+    {
+     "type": "explainer",
+     "title": "Push or pull?",
+     "scenes": [
+      {
+       "caption": "A push.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 25,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "⚽",
+         "x": 68,
+         "y": 66,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "You kick a football. Your foot pushes the ball away."
+      },
+      {
+       "caption": "A pull.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🗄️",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "✋",
+         "x": 72,
+         "y": 58,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "You open a drawer. You pull the handle towards you."
+      },
+      {
+       "caption": "A push.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🚪",
+         "x": 45,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "✋",
+         "x": 75,
+         "y": 58,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "You close a door. Your hand pushes it shut."
+      }
+     ],
+     "backdrop": "home"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "You kick a football. Is that a push or a pull?",
+      "hint": "Which way does the ball go?",
+      "explanation": "Your foot pushes the ball away from you.",
+      "skill_tag": "pushpull.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A pull"
+       },
+       {
+        "id": "b",
+        "text": "Neither"
+       },
+       {
+        "id": "c",
+        "text": "A push"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Forces"
+    },
+    {
+     "type": "text",
+     "markdown": "A **force** is a push or a pull.",
+     "say": "Pushes and pulls are both forces. A force can start, stop or change a movement."
+    },
+    {
+     "type": "explainer",
+     "title": "Forces at play",
+     "scenes": [
+      {
+       "caption": "Push strength.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🚗",
+         "x": 30,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 68,
+         "y": 62,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A big push sends a toy car far. A small push sends it a short way."
+      },
+      {
+       "caption": "A swing.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🎠",
+         "x": 50,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A swing needs a pull back and a push forward. Then it swings."
+      },
+      {
+       "caption": "Stopping.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🧤",
+         "x": 30,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "⚽",
+         "x": 70,
+         "y": 62,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A goalkeeper uses a force to stop the ball. Forces can stop things."
+      }
+     ],
+     "backdrop": "town"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A bigger push sends a toy car farther.",
+      "hint": "Think about pushing hard and gently.",
+      "explanation": "The bigger the push, the farther the car goes.",
+      "skill_tag": "pushpull.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Max the magnet robot",
+     "asset": "clip-science-class-1-magnets-pushes-pulls-e30af279.mp4",
+     "poster": "clip-science-class-1-magnets-pushes-pulls-e30af279.webp",
+     "seconds": 69,
+     "transcript": "I am Max the robot. I love magnets and I love tests. I hold my magnet near a steel paperclip. Click! It sticks. An iron nail jumps to my magnet. Iron is magnetic. Foil is shiny, but nothing happens. It stays behind. My wooden pencil does not stick either. Wood is not magnetic. I hide the clip under paper. My magnet still pulls it. My two magnets push apart. Like poles repel each other. I sort my things. Magnetic ones go left. The rest stay right!",
+     "caption": "A magnet-loving robot tests things in a toy room."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A push moves things away",
+      "A pull brings things closer",
+      "A bigger force can move things farther"
+     ],
+     "say": "Let us remember. Pushes and pulls are forces. They make things move, stop or change."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "push",
+       "meaning": "A force that moves something away from you."
+      },
+      {
+       "term": "pull",
+       "meaning": "A force that brings something towards you."
+      },
+      {
+       "term": "force",
+       "meaning": "A push or a pull."
+      },
+      {
+       "term": "swing",
+       "meaning": "A seat that moves backwards and forwards on ropes."
+      },
+      {
+       "term": "goalkeeper",
+       "meaning": "The player who stops the ball going into the goal."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "You open a drawer by its handle. What do you use?",
+     "hint": "The drawer comes towards you.",
+     "explanation": "You pull the drawer towards you.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A push"
+      },
+      {
+       "id": "b",
+       "text": "A pull"
+      },
+      {
+       "id": "c",
+       "text": "A twist"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A push can make a ball go faster.",
+     "hint": "Think about a kick.",
+     "explanation": "A push gives a ball speed.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call a push or a pull?",
+     "hint": "It is a science word.",
+     "explanation": "A push or pull is called a force.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A colour"
+      },
+      {
+       "id": "b",
+       "text": "A force"
+      },
+      {
+       "id": "c",
+       "text": "A shape"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which bigger force sends a toy car farther?",
+     "hint": "Think of kicking hard.",
+     "explanation": "A big push gives the car more speed.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A tiny tap"
+      },
+      {
+       "id": "b",
+       "text": "No push at all"
+      },
+      {
+       "id": "c",
+       "text": "A big push"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "test",
+   "kind": "try",
+   "title": "Magnet test",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What sticks?"
+    },
+    {
+     "type": "text",
+     "markdown": "A **magnet** pulls on some metals. Things it pulls are **magnetic**.",
+     "say": "A magnet pulls on some things. We test things to find out which ones."
+    },
+    {
+     "type": "explainer",
+     "title": "Magnet test",
+     "scenes": [
+      {
+       "caption": "Magnetic.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🔩",
+         "x": 35,
+         "y": 62,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Hold the magnet near an iron nail. The nail jumps to the magnet."
+      },
+      {
+       "caption": "Not magnetic.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "✏️",
+         "x": 35,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Try a wooden pencil. Nothing happens. Wood is not magnetic."
+      },
+      {
+       "caption": "Foil.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🪙",
+         "x": 35,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Try aluminium foil. It is a shiny metal, but it is not magnetic."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Which two does a magnet pick up? Pick two.",
+      "hint": "Think about iron and steel.",
+      "explanation": "Iron and steel are magnetic.",
+      "skill_tag": "test.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A wooden pencil"
+       },
+       {
+        "id": "b",
+        "text": "A plastic comb"
+       },
+       {
+        "id": "c",
+        "text": "A steel pin"
+       },
+       {
+        "id": "d",
+        "text": "An iron nail"
+       }
+      ],
+      "answer": [
+       "d",
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Testing carefully"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-magnets-pushes-pulls-2-5da93dc6.jpg",
+     "alt": "Two steel safety pins standing on a stack of yellow sticky notes",
+     "caption": "Steel pins are made from iron, so a magnet pulls them. Test before you decide.",
+     "credit": "Photo by Jamaica Cabahug on Unsplash",
+     "say": "These steel safety pins are small. A magnet will pull on them."
+    },
+    {
+     "type": "text",
+     "markdown": "A magnet works through thin paper.",
+     "say": "A magnet can pull through thin paper. The force still reaches the metal."
+    },
+    {
+     "type": "manipulative",
+     "title": "Magnetic or not?",
+     "goal": "Move each item. Things a magnet picks up go in Magnetic. The rest go in Not magnetic.",
+     "emoji": "🔩",
+     "count": 8,
+     "zones": [
+      "Magnetic",
+      "Not magnetic"
+     ],
+     "say": "Now sort the things. Which are magnetic, and which are not?"
+    },
+    {
+     "type": "activity",
+     "title": "Magnet hunt",
+     "materials": [
+      "A magnet",
+      "Things from around the house",
+      "Paper and pencil",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Guess if each thing is magnetic. Write your guess.",
+      "Test each thing with the magnet.",
+      "Make a table. Did your guess match the test?"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "All shiny things stick to a magnet.",
+      "hint": "Think about aluminium foil.",
+      "explanation": "Foil is shiny but it is not magnetic. Only some metals are.",
+      "skill_tag": "test.chk2",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A magnet picks up iron and steel",
+      "Wood and plastic are not magnetic",
+      "Test things, do not just guess"
+     ],
+     "say": "Let us remember. Magnets pull on iron and steel. They do not pull on most other things."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "magnet",
+       "meaning": "An object that pulls on some metals."
+      },
+      {
+       "term": "magnetic",
+       "meaning": "Pulled by a magnet."
+      },
+      {
+       "term": "iron",
+       "meaning": "A hard grey metal that magnets pull."
+      },
+      {
+       "term": "steel",
+       "meaning": "A strong metal made mostly from iron."
+      },
+      {
+       "term": "aluminium",
+       "meaning": "A light silver metal that magnets do not pull."
+      },
+      {
+       "term": "predict",
+       "meaning": "To say what you think will happen."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which material is magnetic?",
+     "hint": "Think about a nail.",
+     "explanation": "A magnet pulls on iron.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wood"
+      },
+      {
+       "id": "b",
+       "text": "Iron"
+      },
+      {
+       "id": "c",
+       "text": "Plastic"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A magnet can pull a steel pin through thin paper.",
+     "hint": "The force reaches through.",
+     "explanation": "Magnetic force works through thin paper.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do before you test an object?",
+     "hint": "Make a guess first.",
+     "explanation": "We predict first, then test to check.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Throw it away"
+      },
+      {
+       "id": "b",
+       "text": "Paint it"
+      },
+      {
+       "id": "c",
+       "text": "Predict what will happen"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "poles",
+   "kind": "play",
+   "title": "Attract or repel",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Two magnets"
+    },
+    {
+     "type": "text",
+     "markdown": "The ends of a magnet are called **poles**.",
+     "say": "Every magnet has two ends. They are called poles. One is north and one is south."
+    },
+    {
+     "type": "explainer",
+     "title": "Two magnets meet",
+     "scenes": [
+      {
+       "caption": "Attract.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧲",
+         "x": 30,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧲",
+         "x": 70,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A north pole and a south pole pull together. They attract."
+      },
+      {
+       "caption": "Repel.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧲",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧲",
+         "x": 75,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Two north poles push apart. They repel each other."
+      },
+      {
+       "caption": "Like poles.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🧲",
+         "x": 25,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🧲",
+         "x": 75,
+         "y": 60,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Two south poles also repel. Like poles push apart."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What happens when a north pole meets a south pole?",
+      "hint": "Opposite poles are friends.",
+      "explanation": "A north pole and a south pole attract.",
+      "skill_tag": "poles.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "They repel"
+       },
+       {
+        "id": "b",
+        "text": "Nothing"
+       },
+       {
+        "id": "c",
+        "text": "They attract"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the game, then answer a question.",
+     "say": "Warm up your memory. Watch the magnets light up, then copy them."
+    },
+    {
+     "type": "brain_game",
+     "game": "remember_order",
+     "title": "Magnet march",
+     "goal": "Watch the order, then copy it. It gets longer each time!",
+     "emojis": [
+      "🧲",
+      "🔩",
+      "📎",
+      "🧲"
+     ],
+     "say": "Watch the order closely. Then copy it."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Two north poles push each other away.",
+      "hint": "Same poles repel.",
+      "explanation": "Like poles repel, so two norths push apart.",
+      "skill_tag": "poles.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Opposite poles attract",
+      "Like poles repel",
+      "Magnetic force works without touching"
+     ],
+     "say": "Let us remember. Magnets attract or repel. The force works without touching."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "pole",
+       "meaning": "One of the two ends of a magnet."
+      },
+      {
+       "term": "poles",
+       "meaning": "The two ends of a magnet, north and south."
+      },
+      {
+       "term": "attract",
+       "meaning": "To pull towards."
+      },
+      {
+       "term": "repel",
+       "meaning": "To push away."
+      },
+      {
+       "term": "north",
+       "meaning": "One end of a magnet."
+      },
+      {
+       "term": "south",
+       "meaning": "The other end of a magnet."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we call the ends of a magnet?",
+     "hint": "North and south.",
+     "explanation": "The ends of a magnet are poles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wheels"
+      },
+      {
+       "id": "b",
+       "text": "Poles"
+      },
+      {
+       "id": "c",
+       "text": "Legs"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Two south poles attract each other.",
+     "hint": "Same poles repel.",
+     "explanation": "Two south poles repel.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which word means push away?",
+     "hint": "It starts with r.",
+     "explanation": "Repel means push away.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Attract"
+      },
+      {
+       "id": "b",
+       "text": "Repel"
+      },
+      {
+       "id": "c",
+       "text": "Carry"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "kind": "use",
+   "title": "Magnets at work",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Magnets help us"
+    },
+    {
+     "type": "text",
+     "markdown": "Magnets are **useful**.",
+     "say": "Magnets do useful jobs every day. Many fridge doors close with a magnet inside."
+    },
+    {
+     "type": "text",
+     "markdown": "Toys can use magnets.",
+     "say": "Some toys use magnets to join together. Magnets hold train carriages in a line."
+    },
+    {
+     "type": "text",
+     "markdown": "A big magnet lifts steel cans.",
+     "say": "In Pakistan and the UK, recycling centres use big magnets too."
+    },
+    {
+     "type": "explainer",
+     "title": "Magnets at home",
+     "scenes": [
+      {
+       "caption": "Fridge door.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🧊",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 75,
+         "y": 58,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A magnet in the fridge door pulls the door shut."
+      },
+      {
+       "caption": "Holding.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🥫",
+         "x": 40,
+         "y": 62,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🧲",
+         "x": 75,
+         "y": 58,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A magnet holds a steel tin lid in place. It will not slide."
+      },
+      {
+       "caption": "Fishing game.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🎣",
+         "x": 40,
+         "y": 58,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🐟",
+         "x": 75,
+         "y": 64,
+         "size": 2,
+         "anim": "bounce"
+        }
+       ],
+       "say": "A magnetic game has little fish. A magnet on a rod catches them."
+      }
+     ],
+     "backdrop": "kitchen"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multi_select",
+      "prompt": "Pick two places where magnets are used.",
+      "hint": "Think about the kitchen and toy box.",
+      "explanation": "Fridge doors and magnetic toys use magnets.",
+      "skill_tag": "work.chk1",
+      "options": [
+       {
+        "id": "a",
+        "text": "A magnetic toy"
+       },
+       {
+        "id": "b",
+        "text": "A pillow"
+       },
+       {
+        "id": "c",
+        "text": "A wooden spoon"
+       },
+       {
+        "id": "d",
+        "text": "A fridge door"
+       }
+      ],
+      "answer": [
+       "d",
+       "a"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Sort and be safe"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-magnets-pushes-pulls-3-209fe097.jpg",
+     "alt": "Many steel screws, bolts and washers standing on a white surface",
+     "caption": "Screws, bolts and nuts are often made of steel, so a magnet lifts them.",
+     "credit": "Photo by Roberto Sorin on Unsplash",
+     "say": "A magnet can sort rubbish. It lifts steel and leaves the rest."
+    },
+    {
+     "type": "text",
+     "markdown": "Use magnets with **care**.",
+     "say": "Keep strong magnets away from phones and tablets. They can be damaged."
+    },
+    {
+     "type": "text",
+     "markdown": "Small magnets are not toys for little ones.",
+     "say": "Never put a magnet in your mouth. Small magnets are dangerous to swallow."
+    },
+    {
+     "type": "activity",
+     "title": "Design a magnet game",
+     "materials": [
+      "A magnet",
+      "Paper and pencil",
+      "Paper clips",
+      "A grown-up to help"
+     ],
+     "instructions": [
+      "Draw a fishing game with paper fish.",
+      "Add a steel paperclip to each fish.",
+      "Tie a magnet to a string and go fishing."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Strong magnets should be kept away from phones and tablets.",
+      "hint": "Think about safe use.",
+      "explanation": "A strong magnet can harm a phone or tablet.",
+      "skill_tag": "work.chk2",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Magnets hold fridge doors shut",
+      "A magnet can sort steel from rubbish",
+      "Keep magnets away from screens and young children"
+     ],
+     "say": "Let us remember. Magnets hold things and sort things. Use them with care."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "useful",
+       "meaning": "Helpful for a job."
+      },
+      {
+       "term": "care",
+       "meaning": "Being careful and safe."
+      },
+      {
+       "term": "recycling",
+       "meaning": "Sorting used things so they can be made into something new."
+      },
+      {
+       "term": "tablet",
+       "meaning": "A flat computer with a touch screen."
+      },
+      {
+       "term": "magnetic game",
+       "meaning": "A game where a magnet lifts steel pieces."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What can a recycling magnet lift?",
+     "hint": "It picks up steel.",
+     "explanation": "A magnet lifts steel and iron.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glass jars"
+      },
+      {
+       "id": "b",
+       "text": "Paper bags"
+      },
+      {
+       "id": "c",
+       "text": "Steel cans"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A fridge magnet will stick to a plastic door.",
+     "hint": "Plastic is not magnetic.",
+     "explanation": "A magnet needs steel or iron to stick to.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Where should strong magnets be kept away from?",
+     "hint": "Think about safety.",
+     "explanation": "Strong magnets can damage phones.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A pencil"
+      },
+      {
+       "id": "b",
+       "text": "A wooden toy"
+      },
+      {
+       "id": "c",
+       "text": "A phone"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "You open a cupboard by its handle. Is that a push or a pull?",
+    "hint": "The cupboard moves towards you.",
+    "explanation": "You pull the cupboard door towards you.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Neither one"
+     },
+     {
+      "id": "b",
+      "text": "A pull"
+     },
+     {
+      "id": "c",
+      "text": "A push"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.door_mc",
+    "sub_lesson": "pushpull",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "match",
+    "prompt": "Match each action to push or pull.",
+    "hint": "Away or towards you?",
+    "explanation": "Kicking and closing a door are pushes. Opening a drawer is a pull.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Kicking a ball"
+     },
+     {
+      "id": "l2",
+      "text": "Opening a drawer"
+     },
+     {
+      "id": "l3",
+      "text": "Closing a door"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Push"
+     },
+     {
+      "id": "r1",
+      "text": "Push"
+     },
+     {
+      "id": "r2",
+      "text": "Pull"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.action_match",
+    "sub_lesson": "pushpull",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a kick is not a push. Is she right?",
+    "hint": "Which way does the ball go?",
+    "explanation": "A kick is a push because the ball moves away.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a kick is a pull"
+     },
+     {
+      "id": "b",
+      "text": "No, a kick pushes the ball away"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a kick is not a force"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.kick_push",
+    "sub_lesson": "pushpull",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "short_text",
+    "prompt": "A push and a pull both have the same science name. What is it?",
+    "hint": "It starts with f.",
+    "explanation": "A push or a pull is a force.",
+    "answer": {
+     "accepted": [
+      "force",
+      "a force"
+     ]
+    },
+    "skill_tag": "magnets.force_st",
+    "sub_lesson": "pushpull",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "number",
+    "prompt": "Zainab pushes a toy car 5 metres, then 3 more metres. How many metres is that in all?",
+    "hint": "5 + 3.",
+    "explanation": "5 + 3 = 8 metres.",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.trolley_num",
+    "sub_lesson": "pushpull",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says a small push and a big push send a car the same distance. Is he right?",
+    "hint": "Think about a gentle tap.",
+    "explanation": "A bigger force makes the car go farther.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a small push goes farther"
+     },
+     {
+      "id": "b",
+      "text": "No, a bigger push sends it farther"
+     },
+     {
+      "id": "c",
+      "text": "Yes, size makes no difference"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.bigger_push",
+    "sub_lesson": "pushpull",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "order",
+    "prompt": "Put the swing movements in order.",
+    "hint": "You pull before you let go.",
+    "explanation": "We pull the swing back, let go and it moves forward.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Let go"
+     },
+     {
+      "id": "i1",
+      "text": "Pull the swing back"
+     },
+     {
+      "id": "i3",
+      "text": "The swing moves forward"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "magnets.swing_ord",
+    "sub_lesson": "pushpull",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "hotspot",
+    "prompt": "Tap the thing you pull to open.",
+    "hint": "You grab the handle.",
+    "explanation": "You pull a drawer handle to open it.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🗄️",
+       "label": "Drawer",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⚽",
+       "label": "Football",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔔",
+       "label": "Doorbell",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "magnets.pull_tap",
+    "sub_lesson": "pushpull",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each thing to magnetic or not magnetic.",
+    "hint": "Only iron and steel are magnetic.",
+    "explanation": "An iron nail is magnetic. Wood and plastic are not.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Iron nail"
+     },
+     {
+      "id": "l2",
+      "text": "Wooden spoon"
+     },
+     {
+      "id": "l3",
+      "text": "Plastic ruler"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Not magnetic"
+     },
+     {
+      "id": "r1",
+      "text": "Magnetic"
+     },
+     {
+      "id": "r3",
+      "text": "Not magnetic"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.material_match",
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Sam says all metals stick to magnets. Is he right?",
+    "hint": "Think about foil.",
+    "explanation": "Only some metals, such as iron and steel, are magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every metal is magnetic"
+     },
+     {
+      "id": "b",
+      "text": "No, aluminium foil does not stick"
+     },
+     {
+      "id": "c",
+      "text": "Yes, magnets pick up everything"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.all_metals",
+    "sub_lesson": "test",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "multi_select",
+    "prompt": "Which two things is a magnet able to pick up? Pick two.",
+    "hint": "Look for steel and iron.",
+    "explanation": "Steel and iron are magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rubber band"
+     },
+     {
+      "id": "b",
+      "text": "A glass jar"
+     },
+     {
+      "id": "c",
+      "text": "An iron bolt"
+     },
+     {
+      "id": "d",
+      "text": "A steel pin"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "magnets.magnetic_ms",
+    "sub_lesson": "test",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "A magnet picks up a plastic cup.",
+    "hint": "Is plastic magnetic?",
+    "explanation": "Plastic is not magnetic.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "magnets.plastic_tf",
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about magnets.",
+    "hint": "Think about what is magnetic.",
+    "explanation": "Magnets pick up iron and steel. They do not pick up plastic.",
+    "points": 2,
+    "text": "A magnet picks up things made of {b1} or steel. It does not pick up {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wood"
+       },
+       {
+        "id": "b",
+        "text": "paper"
+       },
+       {
+        "id": "c",
+        "text": "iron"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "pins"
+       },
+       {
+        "id": "b",
+        "text": "plastic"
+       },
+       {
+        "id": "c",
+        "text": "nails"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "magnets.magnet_fill",
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "short_text",
+    "prompt": "What word describes things that a magnet can pick up?",
+    "hint": "It sounds like magnet.",
+    "explanation": "Things a magnet picks up are magnetic.",
+    "answer": {
+     "accepted": [
+      "magnetic"
+     ]
+    },
+    "skill_tag": "magnets.metal_st",
+    "sub_lesson": "test",
+    "depth": "recall"
+   },
+   {
+    "ref": "q15",
+    "type": "slider",
+    "prompt": "Zainab tests 10 things. 4 are magnetic. Slide to show how many are not magnetic.",
+    "hint": "10 take away 4.",
+    "explanation": "10 - 4 = 6 things.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "things"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.test_sld",
+    "sub_lesson": "test",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a thin sheet of paper stops magnetic force. Is she right?",
+    "hint": "Remember the test.",
+    "explanation": "Magnetic force works through thin paper.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, paper always blocks it"
+     },
+     {
+      "id": "b",
+      "text": "Yes, magnets only work in the dark"
+     },
+     {
+      "id": "c",
+      "text": "No, a magnet still pulls through thin paper"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "magnets.paper_stop",
+    "sub_lesson": "test",
+    "depth": "reason"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each pair of poles to what happens.",
+    "hint": "Opposites attract.",
+    "explanation": "Opposite poles attract. Like poles repel.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "North and south"
+     },
+     {
+      "id": "l2",
+      "text": "Two norths"
+     },
+     {
+      "id": "l3",
+      "text": "Two souths"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Repel"
+     },
+     {
+      "id": "r1",
+      "text": "Attract"
+     },
+     {
+      "id": "r2",
+      "text": "Repel"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.pole_match",
+    "sub_lesson": "poles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Mira says two magnets always stick together. Is she right?",
+    "hint": "Think about two north poles.",
+    "explanation": "Two like poles repel.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they cannot repel"
+     },
+     {
+      "id": "b",
+      "text": "No, two like poles push apart"
+     },
+     {
+      "id": "c",
+      "text": "Yes, magnets always attract"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.always_stick",
+    "sub_lesson": "poles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Layla says magnets must touch to work. Is she right?",
+    "hint": "Remember the paper test.",
+    "explanation": "Magnetic force works without touching.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they only work underwater"
+     },
+     {
+      "id": "b",
+      "text": "No, a magnet can pull from a distance"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they must touch"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.must_touch",
+    "sub_lesson": "poles",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "true_false",
+    "prompt": "When two north poles meet, they repel.",
+    "hint": "Like poles repel.",
+    "explanation": "Two norths repel.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "magnets.north_tf",
+    "sub_lesson": "poles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "short_text",
+    "prompt": "What word means a magnet pulls something towards it?",
+    "hint": "It starts with a.",
+    "explanation": "Attract means pull towards.",
+    "answer": {
+     "accepted": [
+      "attract",
+      "attracts"
+     ]
+    },
+    "skill_tag": "magnets.attract_st",
+    "sub_lesson": "poles",
+    "depth": "recall"
+   },
+   {
+    "ref": "q22",
+    "type": "hotspot",
+    "prompt": "Tap the pair that will repel.",
+    "hint": "Like poles repel.",
+    "explanation": "Two north poles repel.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧲🧲",
+       "label": "North and north",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧲",
+       "label": "North and south",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪵",
+       "label": "Magnet and wood",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "magnets.repel_tap",
+    "sub_lesson": "poles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "slider",
+    "prompt": "A magnet picks up 9 clips at its end and 3 in the middle. Slide to show how many more it picks up at the end.",
+    "hint": "9 take away 3.",
+    "explanation": "9 - 3 = 6 more clips at the end.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "clips"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.strong_sld",
+    "sub_lesson": "poles",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Omar says a bigger magnet is always stronger. Is he right?",
+    "hint": "Think about a small strong magnet.",
+    "explanation": "Size does not decide strength by itself.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, small magnets never work"
+     },
+     {
+      "id": "b",
+      "text": "No, the metal and shape matter too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, big always means strong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.bigger_magnet",
+    "sub_lesson": "work",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two things use magnets? Pick two.",
+    "hint": "Think about the kitchen and toys.",
+    "explanation": "Fridge doors and some toys use magnets.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A magnetic toy"
+     },
+     {
+      "id": "b",
+      "text": "A pillow"
+     },
+     {
+      "id": "c",
+      "text": "A wooden spoon"
+     },
+     {
+      "id": "d",
+      "text": "A fridge door"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "magnets.used_ms",
+    "sub_lesson": "work",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about recycling.",
+    "hint": "Think about what is magnetic.",
+    "explanation": "A magnet lifts steel cans and leaves aluminium foil.",
+    "points": 2,
+    "text": "A recycling magnet lifts {b1} but leaves {b2} behind.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "glass jars"
+       },
+       {
+        "id": "b",
+        "text": "steel cans"
+       },
+       {
+        "id": "c",
+        "text": "paper bags"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "iron nails"
+       },
+       {
+        "id": "b",
+        "text": "aluminium foil"
+       },
+       {
+        "id": "c",
+        "text": "steel tins"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "magnets.recycle_fill",
+    "sub_lesson": "work",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a strong magnet is fine next to a phone. Is he right?",
+    "hint": "Think about safe use.",
+    "explanation": "Strong magnets can damage phones and tablets.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nothing can harm a phone"
+     },
+     {
+      "id": "b",
+      "text": "No, it can damage the phone"
+     },
+     {
+      "id": "c",
+      "text": "Yes, phones love magnets"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.phone_safe",
+    "sub_lesson": "work",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "short_text",
+    "prompt": "What do we call the ends of a magnet, where the pull is strongest?",
+    "hint": "North and south.",
+    "explanation": "The ends of a magnet are the poles.",
+    "answer": {
+     "accepted": [
+      "poles",
+      "pole",
+      "the poles"
+     ]
+    },
+    "skill_tag": "magnets.pole_st",
+    "sub_lesson": "work",
+    "depth": "recall"
+   },
+   {
+    "ref": "q29",
+    "type": "order",
+    "prompt": "Fix the problem: steel pins have spilled. Put the steps in order.",
+    "hint": "Get the tool first.",
+    "explanation": "We get a magnet, hold it over the pins and lift them.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Lift the pins away"
+     },
+     {
+      "id": "i1",
+      "text": "Get a magnet"
+     },
+     {
+      "id": "i2",
+      "text": "Hold it over the pins"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "magnets.fix_ord",
+    "sub_lesson": "work",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "number",
+    "prompt": "A magnetic game has 12 steel fish. Aisha catches 5. How many fish are left?",
+    "hint": "12 take away 5.",
+    "explanation": "12 - 5 = 7 fish.",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.fish_num",
+    "sub_lesson": "work",
+    "depth": "recall"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "A cricket bat hits a ball away. Is that a push or a pull?",
+    "hint": "Which way does the ball go?",
+    "explanation": "The bat pushes the ball away from the batter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A pull"
+     },
+     {
+      "id": "b",
+      "text": "A push"
+     },
+     {
+      "id": "c",
+      "text": "Neither one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.door_mc",
+    "sub_lesson": "pushpull",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "match",
+    "prompt": "Join each job to push or pull.",
+    "hint": "Away or towards you?",
+    "explanation": "Throwing and pressing are pushes. Pulling a wagon is a pull.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Throwing a ball"
+     },
+     {
+      "id": "l2",
+      "text": "Pulling a wagon"
+     },
+     {
+      "id": "l3",
+      "text": "Pressing a button"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Pull"
+     },
+     {
+      "id": "r3",
+      "text": "Push"
+     },
+     {
+      "id": "r1",
+      "text": "Push"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.action_match",
+    "sub_lesson": "pushpull",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Mira says throwing is not a force. Is she right?",
+    "hint": "What starts the ball moving?",
+    "explanation": "Throwing pushes the ball, so it uses a force.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only pulling is a force"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a ball moves by itself"
+     },
+     {
+      "id": "c",
+      "text": "No, a throw is a push, so it is a force"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "magnets.kick_push",
+    "sub_lesson": "pushpull",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "short_text",
+    "prompt": "What kind of force do you use to close a door?",
+    "hint": "Your hand moves the door away.",
+    "explanation": "You push a door to close it.",
+    "answer": {
+     "accepted": [
+      "push",
+      "a push"
+     ]
+    },
+    "skill_tag": "magnets.force_st",
+    "sub_lesson": "pushpull",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "number",
+    "prompt": "Bilal pulls a wagon 6 metres, then 4 more metres. How many metres is that in all?",
+    "hint": "6 + 4.",
+    "explanation": "6 + 4 = 10 metres.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.trolley_num",
+    "sub_lesson": "pushpull",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a bigger pull makes a trolley move faster. Is she right?",
+    "hint": "Think about pulling hard.",
+    "explanation": "A bigger pull makes the trolley go faster.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, pulls do nothing"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a bigger force gives more speed"
+     },
+     {
+      "id": "c",
+      "text": "No, a bigger pull slows it down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.bigger_push",
+    "sub_lesson": "pushpull",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "order",
+    "prompt": "Order the push strengths from smallest to biggest.",
+    "hint": "Start with the gentlest.",
+    "explanation": "A tap is smallest and a hard kick is biggest.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "A hand push"
+     },
+     {
+      "id": "i1",
+      "text": "A finger tap"
+     },
+     {
+      "id": "i3",
+      "text": "A hard kick"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "magnets.swing_ord",
+    "sub_lesson": "pushpull",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "hotspot",
+    "prompt": "Tap the thing you can pull along on wheels.",
+    "hint": "It has a handle and wheels.",
+    "explanation": "You pull a suitcase along on its wheels.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧳",
+       "label": "Suitcase",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏀",
+       "label": "Basketball",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🥫",
+       "label": "Tin",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "magnets.pull_tap",
+    "sub_lesson": "pushpull",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Join each thing to magnetic or not magnetic.",
+    "hint": "Only iron and steel are magnetic.",
+    "explanation": "A steel paperclip is magnetic. Foil and glass are not.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Steel paperclip"
+     },
+     {
+      "id": "l2",
+      "text": "Aluminium foil"
+     },
+     {
+      "id": "l3",
+      "text": "Glass marble"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Not magnetic"
+     },
+     {
+      "id": "r1",
+      "text": "Magnetic"
+     },
+     {
+      "id": "r3",
+      "text": "Not magnetic"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.material_match",
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Hamza says all shiny things are magnetic. Is he right?",
+    "hint": "Look at a shiny wrapper.",
+    "explanation": "Shiny does not mean magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, shiny always means magnetic"
+     },
+     {
+      "id": "b",
+      "text": "No, shiny foil and shiny plastic are not magnetic"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only dull things are magnetic"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.all_metals",
+    "sub_lesson": "test",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "multi_select",
+    "prompt": "Which two would stick to a magnet? Pick two.",
+    "hint": "Look for steel and iron.",
+    "explanation": "Steel and iron are magnetic.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A paper cup"
+     },
+     {
+      "id": "b",
+      "text": "A wooden block"
+     },
+     {
+      "id": "c",
+      "text": "An iron nail"
+     },
+     {
+      "id": "d",
+      "text": "A steel screw"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "magnets.magnetic_ms",
+    "sub_lesson": "test",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "A magnet picks up a steel paperclip.",
+    "hint": "Is steel magnetic?",
+    "explanation": "Steel is magnetic.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "magnets.plastic_tf",
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a test.",
+    "hint": "Think about a fair test.",
+    "explanation": "We predict first, then use a magnet to test.",
+    "points": 2,
+    "text": "We {b1} what will happen. Then we use a {b2} to check.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "forget"
+       },
+       {
+        "id": "b",
+        "text": "predict"
+       },
+       {
+        "id": "c",
+        "text": "hide"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ruler"
+       },
+       {
+        "id": "b",
+        "text": "magnet"
+       },
+       {
+        "id": "c",
+        "text": "spoon"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "magnets.magnet_fill",
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "short_text",
+    "prompt": "Which metal are most nails made from? Answer iron or steel.",
+    "hint": "It is strong and grey.",
+    "explanation": "Most nails are made from iron or steel.",
+    "answer": {
+     "accepted": [
+      "iron",
+      "steel",
+      "iron or steel"
+     ]
+    },
+    "skill_tag": "magnets.metal_st",
+    "sub_lesson": "test",
+    "depth": "recall",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "slider",
+    "prompt": "Hamza tests 12 things. 5 are magnetic. Slide to show how many are not magnetic.",
+    "hint": "12 take away 5.",
+    "explanation": "12 - 5 = 7 things.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 14,
+     "unit": "things"
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.test_sld",
+    "sub_lesson": "test",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Mira says a magnet cannot work through a thin card. Is she right?",
+    "hint": "Remember the paper test.",
+    "explanation": "A magnet can pull a clip through thin card.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a magnet must touch the clip"
+     },
+     {
+      "id": "b",
+      "text": "No, the force passes through thin card"
+     },
+     {
+      "id": "c",
+      "text": "Yes, card blocks every force"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.paper_stop",
+    "sub_lesson": "test",
+    "depth": "reason",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Join each pair to what happens.",
+    "hint": "Like or unlike?",
+    "explanation": "Like poles repel, unlike poles attract and wood is not magnetic.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Like poles"
+     },
+     {
+      "id": "l2",
+      "text": "Unlike poles"
+     },
+     {
+      "id": "l3",
+      "text": "Magnet and wood"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Nothing happens"
+     },
+     {
+      "id": "r1",
+      "text": "Repel"
+     },
+     {
+      "id": "r2",
+      "text": "Attract"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "magnets.pole_match",
+    "sub_lesson": "poles",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Bilal says two north poles pull on each other. Is he right?",
+    "hint": "Like poles repel.",
+    "explanation": "Two north poles repel.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they attract strongly"
+     },
+     {
+      "id": "b",
+      "text": "No, they push each other away"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they stick for ever"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.always_stick",
+    "sub_lesson": "poles",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a magnet can pull a clip without touching it. Is she right?",
+    "hint": "Think about the clip jumping.",
+    "explanation": "A magnet pulls things from a distance.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, only batteries can do that"
+     },
+     {
+      "id": "b",
+      "text": "Yes, the force works at a distance"
+     },
+     {
+      "id": "c",
+      "text": "No, it must touch first"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "magnets.must_touch",
+    "sub_lesson": "poles",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "true_false",
+    "prompt": "A north pole and a south pole push each other away.",
+    "hint": "Opposites attract.",
+    "explanation": "A north and a south attract.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "magnets.north_tf",
+    "sub_lesson": "poles",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "short_text",
+    "prompt": "What word means a magnet pushes something away?",
+    "hint": "It starts with r.",
+    "explanation": "Repel means push away.",
+    "answer": {
+     "accepted": [
+      "repel",
+      "repels"
+     ]
+    },
+    "skill_tag": "magnets.attract_st",
+    "sub_lesson": "poles",
+    "depth": "recall",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "hotspot",
+    "prompt": "Tap the pair that will attract.",
+    "hint": "Opposites attract.",
+    "explanation": "A north and a south pole attract.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🧲🧲",
+       "label": "North and north",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧲",
+       "label": "North and south",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪵",
+       "label": "Magnet and wood",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "magnets.repel_tap",
+    "sub_lesson": "poles",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "slider",
+    "prompt": "A magnet picks up 8 clips at its end and 5 in the middle. Slide to show how many more it picks up at the end.",
+    "hint": "8 take away 5.",
+    "explanation": "8 - 5 = 3 more clips at the end.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "clips"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.strong_sld",
+    "sub_lesson": "poles",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a force can only pull. Is he right?",
+    "hint": "Think about a kick.",
+    "explanation": "A force can be a push or a pull.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a force only pulls"
+     },
+     {
+      "id": "b",
+      "text": "Yes, pushes are not forces"
+     },
+     {
+      "id": "c",
+      "text": "No, a force can push too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "magnets.bigger_magnet",
+    "sub_lesson": "work",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two use a magnet to hold something? Pick two.",
+    "hint": "Think about holding things shut.",
+    "explanation": "Catches and fridge magnets use magnets.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A fridge magnet"
+     },
+     {
+      "id": "b",
+      "text": "A rubber duck"
+     },
+     {
+      "id": "c",
+      "text": "A paper cup"
+     },
+     {
+      "id": "d",
+      "text": "A cupboard catch"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "magnets.used_ms",
+    "sub_lesson": "work",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a cupboard catch.",
+    "hint": "The door must be magnetic.",
+    "explanation": "The catch pulls on the steel in the door.",
+    "points": 2,
+    "text": "A magnetic catch keeps a {b1} door shut because the door has {b2} in it.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "glass"
+       },
+       {
+        "id": "b",
+        "text": "cupboard"
+       },
+       {
+        "id": "c",
+        "text": "water"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wood"
+       },
+       {
+        "id": "b",
+        "text": "foam"
+       },
+       {
+        "id": "c",
+        "text": "steel"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "magnets.recycle_fill",
+    "sub_lesson": "work",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Layla says it is safe to swallow a small magnet. Is she right?",
+    "hint": "Think about safe use.",
+    "explanation": "Small magnets are dangerous to swallow. Tell a grown-up.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is harmless"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it makes you strong"
+     },
+     {
+      "id": "c",
+      "text": "No, swallowing a magnet is dangerous"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "magnets.phone_safe",
+    "sub_lesson": "work",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "short_text",
+    "prompt": "What do we call a push or a pull that works without touching?",
+    "hint": "It has a magnet in the name.",
+    "explanation": "A magnet's pull is magnetic force.",
+    "answer": {
+     "accepted": [
+      "magnetic force",
+      "magnetism",
+      "magnetic"
+     ]
+    },
+    "skill_tag": "magnets.pole_st",
+    "sub_lesson": "work",
+    "depth": "recall",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "order",
+    "prompt": "Make a magnetic fishing game. Put the steps in order.",
+    "hint": "Prepare the fish first.",
+    "explanation": "We add clips, tie the magnet and then go fishing.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Dip the magnet to catch fish"
+     },
+     {
+      "id": "i1",
+      "text": "Add a clip to each paper fish"
+     },
+     {
+      "id": "i2",
+      "text": "Tie a magnet to a string"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "magnets.fix_ord",
+    "sub_lesson": "work",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "number",
+    "prompt": "A magnetic game has 9 steel fish. Hamza catches 4. How many fish are left?",
+    "hint": "9 take away 4.",
+    "explanation": "9 - 4 = 5 fish.",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "skill_tag": "magnets.fish_num",
+    "sub_lesson": "work",
+    "depth": "recall",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

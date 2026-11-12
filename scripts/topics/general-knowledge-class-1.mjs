@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, WARN, REVEAL, ACT, BRAIN, SUM, CHK, TABLE, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, WARN, REVEAL, ACT, BRAIN, SUM, CHK, TABLE, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // General Knowledge, Class 1 (Zainab, age 7). Topic lessons in format 3.0. Standards come from docs/CURRICULUM_V2.md.
@@ -12,23 +12,29 @@ const P = (id, x, y, label, emoji = "📍", size = 2, anim = "none") => [id, emo
 // Topic 1: Where in the world?
 // ====================================================================================================
 
+const GLOBE = "general-knowledge-class-1-where-in-the-world-1-90bf6f5c.jpg";
+const COAST = "general-knowledge-class-1-where-in-the-world-2-2d18c116.jpg";
+const WAVES = "general-knowledge-class-1-where-in-the-world-3-8cc95f28.jpg";
 const maps = {
   id: "maps", kind: "learn", title: "Maps and directions",
   blocks: [
+    H("Welcome, world explorer!"),
+    SAY("Today we have a big question. Where in the world are we?", T("Today's big question: where in the world are we?")),
+    SAY("This globe is a model of the Earth. We can spin it and find our country.", PHOTO(GLOBE, "A small old-style globe on a leather-topped desk in front of a red armchair", "A globe is a model of the whole Earth.", "Photo by Zetta Bytes on Unsplash")),
     H("Stop 1: What is a map?"),
-    SAY("Imagine you are a bird flying high above your school. What would you see? You would see the roof of the school, the playground and the road. A map is a picture like that. It shows a place as if we are looking down from above. A map uses little pictures for things like a mosque, a shop and a park. A box called a key tells us what each little picture means.", T("A **map** is a picture of a place seen from above.", "A **key** tells us what each little picture on the map means.")),
+    SAY("Imagine you are a bird flying high above your school. What would you see? You would see the roof of the school, the playground and the road. A map is a picture like that. It shows a place as if we are looking down from above. A map uses little pictures for a mosque, a shop and a park. A box called a key tells us what each picture means.", T("A **map** is a picture of a place seen from above.", "A **key** tells us what each little picture on the map means.")),
     MAP("A map of our street",
       SS("Here is a bird flying high above our street. What can it see from up there?", S("A bird looks down from above.", ["b", "🦅", 50, 18, 3, "float"])),
       SS("Now we draw what the bird sees. Here is the school, the mosque, the shop and the park. The bird's view is turned into a map.", S("The map shows the school, mosque, shop and park.", P("s", 25, 30, "School", "🏫", 3), P("m", 72, 30, "Mosque", "🕌", 3), P("sh", 25, 72, "Shop", "🏪", 3), P("p", 72, 72, "Park", "🌳", 3))),
-      SS("The little pictures are the key. The key tells us a school is this picture and a park is that picture. With a map and a key, we can find our way!", S("The key tells us what each picture means.", P("s", 25, 30, "School", "🏫", 3), P("m", 72, 30, "Mosque", "🕌", 3), P("sh", 25, 72, "Shop", "🏪", 3), P("p", 72, 72, "Park", "🌳", 3, "pulse"), ["k", "🔑", 50, 58, 2, "bounce", "Key"]))),
+      SS("The little pictures are the key. The key tells us which picture is a school and which is a park. With a map and a key, we can find our way!", S("The key tells us what each picture means.", P("s", 25, 30, "School", "🏫", 3), P("m", 72, 30, "Mosque", "🕌", 3), P("sh", 25, 72, "Shop", "🏪", 3), P("p", 72, 72, "Park", "🌳", 3, "pulse"), ["k", "🔑", 50, 58, 2, "bounce", "Key"]))),
     CHK(mc("What does a map show us?", "A place seen from above", ["A song", "A story about a bird"], { hint: "Think of the bird looking down.", why: "A map shows a place as if we are looking down from above." })),
     H("Stop 2: North, east, south and west"),
-    SAY("Maps use special words for directions. There are four main ones: north, east, south and west. A compass is a tool that shows us which way is north. Here is a trick to remember the order: Never Eat Soggy Waffles. North, East, South, West, going round like a clock. And here is a helpful fact. The Sun rises in the east in the morning, and it sets in the west in the evening.", T("There are four main directions: **north**, **east**, **south** and **west**.", "A **compass** shows us which way is north.", "The Sun rises in the east and sets in the west.")),
+    SAY("Maps use special words for directions. There are four main ones: north, east, south and west. A compass is a tool that shows us which way is north. Here is a trick to remember the order: Never Eat Soggy Waffles. North, East, South, West, going round like a clock. And here is a helpful fact. The Sun rises in the east in the morning. It sets in the west in the evening.", T("There are four main directions: **north**, **east**, **south** and **west**.", "A **compass** shows us which way is north.", "The Sun rises in the east and sets in the west.")),
     MAP("The four directions",
       SS("This is a compass. It helps us find our way.", S("A compass shows directions.", ["c", "🧭", 50, 50, 3, "spin"])),
       SS("North is at the top of the map. Like the top of a mountain, we say up north.", S("North is at the top.", ["c", "🧭", 50, 50, 3], P("n", 50, 14, "North", "⬆️", 2, "pulse"))),
       SS("East is to the right, where the Sun comes up in the morning.", S("East is on the right.", ["c", "🧭", 50, 50, 3], P("n", 50, 14, "North", "⬆️"), P("e", 84, 50, "East", "➡️", 2, "pulse"), ["su", "🌅", 84, 28, 2, "float"])),
-      SS("South is at the bottom, and west is on the left, where the Sun goes down in the evening. Never Eat Soggy Waffles: North, East, South, West.", S("South is at the bottom, west is on the left.", ["c", "🧭", 50, 50, 3], P("n", 50, 14, "North", "⬆️"), P("e", 84, 50, "East", "➡️"), P("s", 50, 86, "South", "⬇️", 2, "pulse"), P("w", 16, 50, "West", "⬅️", 2, "pulse")))),
+      SS("South is at the bottom. West is on the left, where the Sun goes down. Never Eat Soggy Waffles: North, East, South, West.", S("South is at the bottom, west is on the left.", ["c", "🧭", 50, 50, 3], P("n", 50, 14, "North", "⬆️"), P("e", 84, 50, "East", "➡️"), P("s", 50, 86, "South", "⬇️", 2, "pulse"), P("w", 16, 50, "West", "⬅️", 2, "pulse")))),
     CHK(tf("The Sun rises in the east.", true, { hint: "Where is the Sun when you wake up?", why: "The Sun rises in the east and sets in the west." })),
     CHK(mc("Which direction is at the top of a map?", "North", ["South", "West"], { hint: "Think of the top of the compass.", why: "North is at the top of a map." })),
     SAY("Let us remember. A map shows a place from above. A key explains the pictures. And there are four directions: north, east, south and west.", SUM("A map shows a place from above", "A key tells us what the pictures mean", "The four directions are north, east, south and west")),
@@ -53,7 +59,7 @@ const pakistan = {
       SS("Islamabad is our capital city, in the north. Karachi is a big port city by the sea. Lahore is a famous city in Punjab.", S("Islamabad is the capital. Karachi and Lahore are big cities.", P("k", 72, 16, "Mountains", "🏔️", 3), P("sea", 80, 86, "Arabian Sea", "🌊", 3), P("i", 48, 40, "Islamabad", "⭐", 2, "pulse"), P("l", 78, 55, "Lahore", "🏙️", 2), P("kar", 36, 76, "Karachi", "🚢", 2)))),
     CHK(mc("What is the capital city of Pakistan?", "Islamabad", ["Lahore", "Karachi"], { hint: "It is the city in the north where the leaders work.", why: "Islamabad is the capital of Pakistan." })),
     H("Stop 2: Mountains, rivers and our flag"),
-    SAY("Pakistan has amazing places. The Indus is a very long river. It starts in the high mountains and flows all the way south to the sea. And K2 is one of the tallest mountains in the whole world! Our flag is green and white. It has a crescent and a star. The green shows the Muslim majority, and the white stripe shows people of other faiths.", T("The **Indus** is a very long river that flows to the sea.", "**K2** is the second tallest mountain in the world.", "Pakistan's flag is green and white, with a crescent and a star.")),
+    SAY("Pakistan has amazing places. The Indus is a very long river. It starts in the high mountains and flows south to the sea. And K2 is one of the tallest mountains in the whole world! Our flag is green and white. It has a crescent and a star. The green shows the Muslim majority. The white stripe shows people of other faiths.", T("The **Indus** is a very long river that flows to the sea.", "**K2** is the second tallest mountain in the world.", "Pakistan's flag is green and white, with a crescent and a star.")),
     MAP("The Indus river's journey",
       SS("High in the mountains, snow melts into water. Here is where the river begins.", S("The river begins in the mountains.", P("m", 50, 15, "K2 and the mountains", "🏔️", 3), ["w", "💧", 50, 32, 2, "bounce"])),
       SS("The water flows down, past farms and towns. The Indus brings water to the farmers' fields.", S("The river flows past farms and towns.", P("m", 50, 15, "K2 and the mountains", "🏔️", 3), ["w", "💧", 50, 56, 2, "bounce"], P("f", 22, 56, "Farm", "🌾", 2))),
@@ -75,19 +81,20 @@ const uk = {
   id: "uk", kind: "play", title: "The United Kingdom",
   blocks: [
     H("Stop 1: Four nations"),
-    SAY("Now let us visit another country, far away from Pakistan. It is called the United Kingdom, or the UK. The UK is made of four parts, called nations. They are England, Scotland, Wales and Northern Ireland. The capital city of the UK is London. Each nation has its own capital too: Edinburgh in Scotland, Cardiff in Wales and Belfast in Northern Ireland.", T("The **United Kingdom** is made of four nations: England, Scotland, Wales and Northern Ireland.", "The capital city of the UK is **London**.")),
+    SAY("The UK has seas all around it. Waves like these reach its coasts.", PHOTO(WAVES, "An aerial view of white ocean waves rolling onto a golden sandy beach", "Waves roll in from the sea.", "Photo by Lorin Both on Unsplash")),
+    SAY("Now let us visit another country, far away from Pakistan. It is called the United Kingdom, or the UK. The UK is made of four parts, called nations. They are England, Scotland, Wales and Northern Ireland. The capital city of the UK is London. Each nation has its own capital too. Edinburgh is in Scotland, Cardiff is in Wales and Belfast is in Northern Ireland.", T("The **United Kingdom** is made of four nations: England, Scotland, Wales and Northern Ireland.", "The capital city of the UK is **London**.")),
     MAP("The four nations",
       SS("Here is the United Kingdom. It is a group of islands in the north-west of Europe.", S("The UK is a group of islands.", P("sea", 85, 85, "Sea", "🌊", 3))),
       SS("In the north is Scotland. Its special animal is the unicorn! In the south is England. Its flower is the rose.", S("Scotland is in the north, England is in the south.", P("sc", 50, 20, "Scotland", "🦄", 3, "pulse"), P("en", 58, 62, "England", "🌹", 3, "pulse"), P("sea", 85, 85, "Sea", "🌊", 3))),
       SS("To the west is Wales. Its special animal is the red dragon! And across the sea is Northern Ireland.", S("Wales is in the west. Northern Ireland is across the sea.", P("sc", 50, 20, "Scotland", "🦄", 3), P("en", 58, 62, "England", "🌹", 3), P("wa", 30, 60, "Wales", "🐉", 3, "pulse"), P("ni", 14, 34, "Northern Ireland", "☘️", 3, "pulse"), P("sea", 85, 85, "Sea", "🌊", 3)))),
     CHK(mc("How many nations are in the United Kingdom?", "4", ["3", "7"], { hint: "England, Scotland, Wales and Northern Ireland.", why: "The UK has four nations." })),
     H("Stop 2: The UK and Pakistan"),
-    SAY("How far is the UK from Pakistan? Quite far! A plane takes about nine hours to fly from Pakistan to London. The UK is in the continent of Europe, and Pakistan is in Asia. The UK is also often cooler and rainier than Pakistan, so people carry umbrellas and wear warm coats!", T("The UK is in Europe. Pakistan is in Asia.", "A plane takes about nine hours to fly from Pakistan to London.")),
+    SAY("How far is the UK from Pakistan? Quite far! A plane takes about nine hours to fly from Pakistan to London. The UK is in the continent of Europe, and Pakistan is in Asia. The UK is often cooler and rainier than Pakistan. People carry umbrellas and wear warm coats!", T("The UK is in Europe. Pakistan is in Asia.", "A plane takes about nine hours to fly from Pakistan to London.")),
     IMG("✈️", "A plane flies from Pakistan to the UK in about nine hours."),
     FACT("The UK is often rainy, so people carry an umbrella. Some Pakistani families live in the UK, and many love cricket in both places!"),
     CHK(tf("The UK is in the continent of Asia.", false, { hint: "Pakistan is in Asia. Where is the UK?", why: "The UK is in Europe." })),
     H("Stop 3: Brain game"),
-    SAY("Time for a brain break! Find the matching pairs. You will see a unicorn, a dragon, a rose, a shamrock, a mosque and a mountain.", T("Turn over two cards at a time. Can you find all the pairs?")),
+    SAY("Time for a brain break! Find the matching pairs. You will see a unicorn, a dragon and a rose. You will also see a shamrock, a mosque and a mountain.", T("Turn over two cards at a time. Can you find all the pairs?")),
     BRAIN("memory_match", "Pairs from Pakistan and the UK", "Turn over two cards and find the pairs.", ["🦄", "🐉", "🌹", "☘️", "🕌", "🏔️"]),
     SAY("Let us remember. The UK has four nations, and London is its capital. The UK is in Europe.", SUM("The UK has four nations", "London is the capital of the UK", "The UK is in Europe, a long flight from Pakistan")),
     GLOSS({ "United Kingdom": "A country made of four nations: England, Scotland, Wales and Northern Ireland.", London: "The capital city of the United Kingdom.", nations: "The four parts that make up the UK." }),
@@ -107,11 +114,12 @@ const continents = {
     SAY("Now let us zoom out and look at the whole Earth. The land on Earth is split into seven huge areas called continents. They are Asia, Africa, North America, South America, Antarctica, Europe and Australia. Pakistan is in Asia. The United Kingdom is in Europe.", T("The land on Earth is split into seven **continents**.", "Pakistan is in **Asia**. The UK is in **Europe**.")),
     MAP("The seven continents",
       SS("This is our home, planet Earth. It is a big ball, turning slowly.", S("Planet Earth.", ["g", { kind: "globe" }, 50, 50, 3, "none"])),
-      SS("The land is split into seven continents. Each has a special animal. A panda for Asia, a lion for Africa, a bison for North America, a llama for South America, a penguin for Antarctica, a castle for Europe, and a kangaroo for Australia.", S("Seven continents, seven pictures.", P("as", 70, 25, "Asia", "🐼", 2), P("af", 50, 50, "Africa", "🦁", 2), P("na", 20, 25, "North America", "🦬", 2), P("sa", 28, 70, "South America", "🦙", 2), P("an", 50, 90, "Antarctica", "🐧", 2), P("eu", 50, 12, "Europe", "🏰", 2), P("au", 82, 72, "Australia", "🦘", 2))),
+      SS("The land is split into seven continents. Each has a special animal. A panda is for Asia. A lion is for Africa. A bison is for North America. A llama is for South America. A penguin is for Antarctica. A castle is for Europe. A kangaroo is for Australia.", S("Seven continents, seven pictures.", P("as", 70, 25, "Asia", "🐼", 2), P("af", 50, 50, "Africa", "🦁", 2), P("na", 20, 25, "North America", "🦬", 2), P("sa", 28, 70, "South America", "🦙", 2), P("an", 50, 90, "Antarctica", "🐧", 2), P("eu", 50, 12, "Europe", "🏰", 2), P("au", 82, 72, "Australia", "🦘", 2))),
       SS("Look at Asia. This is where we live. Pakistan is in Asia, with lots of other countries.", S("Pakistan is in Asia.", P("as", 70, 25, "Asia", "🐼", 3, "pulse"), P("pk", 60, 45, "Pakistan", "📍", 2, "bounce")))),
     CHK(mc("Which continent is Pakistan in?", "Asia", ["Africa", "Europe"], { hint: "It has a panda.", why: "Pakistan is in the continent of Asia." })),
     CHK(tf("There are seven continents.", true, { hint: "Count the animals: panda, lion, bison, llama, penguin, castle, kangaroo.", why: "There are seven continents." })),
     H("Stop 2: Five oceans"),
+    SAY("Look at the ocean from above. Waves roll onto the land at the coast.", PHOTO(COAST, "An aerial view of turquoise ocean waves meeting a long sandy beach", "The ocean meets the land at the coast.", "Photo by Jan Bachor on Unsplash")),
     SAY("Most of our planet is covered with water. The big areas of salty water are called oceans. There are five: the Pacific, the Atlantic, the Indian, the Southern and the Arctic. The Pacific Ocean is the biggest. Pakistan's coast is on the Arabian Sea, which is part of the Indian Ocean.", T("There are five **oceans**: Pacific, Atlantic, Indian, Southern and Arctic.", "The Pacific is the biggest ocean.")),
     IMG("🌊", "Oceans cover most of our planet."),
     CHK(mc("Which is the biggest ocean?", "The Pacific Ocean", ["The Arctic Ocean", "The Indian Ocean"], { hint: "It is the biggest of the five.", why: "The Pacific is the biggest ocean." })),
@@ -149,6 +157,28 @@ const ALTS1 = [
   [mc("Sam says England and the UK mean exactly the same. Who is right?", "England is one of four nations inside the UK", ["They are the same", "England is bigger than the UK"], { hint: "How many nations are in the UK?", why: "England is one of the four nations in the UK.", tag: "uk.reason" }), mc("Hana says Wales is a part of the UK. Is she right?", "Yes, Wales is one of the four nations of the UK", ["No, Wales is in Asia", "No, Wales is in Pakistan"], { hint: "Think of the red dragon.", why: "Wales is one of the four UK nations.", tag: "uk.reason" })],
 ];
 
+const clipT1 = {
+  title: "Zainab's journey to the UK", backdrop: "map", caption: "Zainab follows a flight from Pakistan to the United Kingdom.",
+  scenes: [
+    { caption: "A globe.", say: "Zainab spins a globe and finds Pakistan.",
+      items: [{ id: "g", emoji: "🌍", x: 50, y: 52, size: 3, anim: "pulse" }] },
+    { caption: "Pakistan.", say: "Pakistan is a country in the continent of Asia.",
+      items: [{ id: "p", emoji: "📍", label: "Pakistan", x: 62, y: 46, size: 2 }, { id: "a", emoji: "🌏", x: 30, y: 52, size: 3 }] },
+    { caption: "The coast.", say: "Our coast is on the Arabian Sea.",
+      items: [{ id: "s", emoji: "🌊", x: 50, y: 56, size: 3, anim: "float" }] },
+    { caption: "A flight.", say: "She wants to fly to the UK to see her cousin.",
+      items: [{ id: "f", emoji: "✈️", x: 30, y: 44, size: 3, enter: "walk_right" }] },
+    { caption: "Europe.", say: "The UK is in the continent of Europe.",
+      items: [{ id: "u", emoji: "📍", label: "UK", x: 40, y: 38, size: 2 }, { id: "e", emoji: "🌍", x: 70, y: 52, size: 3 }] },
+    { caption: "Four nations.", say: "The UK has four nations, with four capital cities.",
+      items: [{ id: "c", emoji: "🏰", x: 50, y: 54, size: 3 }] },
+    { caption: "A compass.", say: "She checks her compass. North is up, and south is down.",
+      items: [{ id: "n", emoji: "🧭", x: 50, y: 52, size: 3, anim: "pulse" }] },
+    { caption: "Home and away.", say: "Zainab knows where she lives in the world.",
+      items: [{ id: "w", emoji: "🌎", x: 50, y: 52, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 const t1 = topicLesson({
   slug: "general-knowledge-class-1-where-in-the-world", subject: "general-knowledge", cls: 1, topic: 1, title: "Where in the World?",
   summary: "Maps and directions, our country Pakistan, the United Kingdom, and the continents and oceans of our planet.",
@@ -166,13 +196,9 @@ const t1 = topicLesson({
     mc("What is the name of the planet we live on?", "Earth", ["Mars", "The Sun"], { hint: "It is our home.", why: "We live on planet Earth." }),
     tf("The Sun gives us light and heat.", true, { hint: "Think of a sunny day.", why: "The Sun gives us light and heat." }),
   ],
-  intro: [
-    H("Welcome, world explorer!"),
-    SAY("Welcome, world explorer! Today we have a big question. Where in the world are we, and what is out there? We will learn to read a map, visit Pakistan and the United Kingdom, and zoom out to see the whole Earth. This is a game, not a test. Let's go!", T("Today's big question: where in the world are we?", "We will use maps to find out.")),
-    IMG("🗺️", "A map helps us find places in the world."),
-    GLOSS({ world: "All of the Earth and everything on it." }),
-  ],
+  intro: [],
   subs: [maps, pakistan, uk, continents],
+  clip: clipT1,
   quiz: [
     { q: mc("What do we call a picture of a place drawn as if we are looking from above?", "A map", ["A story", "A song"], { hint: "It shows places from above.", why: "A map shows a place from above.", tag: "maps.what" }), sub: "maps", depth: "recall" },
     { q: tf("The Sun rises in the west.", false, { hint: "Where does it come up in the morning?", why: "The Sun rises in the east.", tag: "maps.sun" }), sub: "maps", depth: "recall" },
@@ -189,23 +215,45 @@ const t1 = topicLesson({
     { q: mc("Aisha flies from Pakistan to the UK. Which continents does she travel between?", "Asia and Europe", ["Africa and Asia", "Europe and Antarctica"], { hint: "Pakistan is in Asia.", why: "She flies from Asia to Europe.", tag: "continents.reason" }), sub: "continents", depth: "reason" },
     { q: mc("Zayd says Pakistan is a continent. Is he right?", "No, Pakistan is a country in the continent of Asia", ["Yes, it is a continent", "No, it is an ocean"], { hint: "There are seven continents.", why: "Pakistan is a country inside Asia.", tag: "continents.reason" }), sub: "continents", depth: "reason" },
     { q: mc("Fatima says Scotland and the UK are the same thing. Who is right?", "Scotland is one of four nations inside the UK", ["They are exactly the same", "Scotland is bigger than the UK"], { hint: "How many nations are in the UK?", why: "Scotland is one of the four nations of the UK.", tag: "uk.reason" }), sub: "uk", depth: "reason" },
-  ].map((x, i) => ({ ...x, alts: ALTS1[i] })),
+    // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+    { q: tf("A compass has a needle that points north.", true, { hint: "It helps us find directions.", why: "A compass needle points north.", tag: "maps.tool" }), sub: "maps", depth: "recall", alts: [tf("A ruler shows us which way is north.", false, { hint: "Which tool has a needle?", why: "A compass shows north, not a ruler.", tag: "maps.tool" })] },
+    { q: mc("Hina says a map is a photograph. Is she right?", "No, a map is a drawing that shows a place from above", ["Yes, a map is always a photograph", "Yes, a map is a story"], { hint: "Think about how we draw a map.", why: "A map is a drawing of a place seen from above.", tag: "maps.reason" }), sub: "maps", depth: "reason", alts: [mc("Bilal says a map must show every single tree. Is he right?", "No, a map shows only the useful things, and the key explains them", ["Yes, every tree must be drawn", "Yes, maps never use pictures"], { hint: "Think about the key.", why: "A map shows what is useful and uses a key for the symbols.", tag: "maps.reason" })] },
+    { q: sld("Slide to show how many main directions a compass rose shows.", { min: 0, max: 8 }, 4, 0, { hint: "North, east, south and west.", why: "A compass rose shows four main directions.", tag: "maps.rose" }), sub: "maps", depth: "apply", alts: [sld("Slide to show how many nations are in the UK.", { min: 0, max: 8 }, 4, 0, { hint: "England, Scotland, Wales and Northern Ireland.", why: "The UK has four nations.", tag: "uk.count" })] },
+    { q: fill("Complete the sentence about the Indus River.", "The Indus flows from the mountains in the {b1} down to the {b2} Sea.", [["north", "south", "west"], ["Arabian", "Red", "Black"]], { hint: "It ends at Pakistan's coast.", why: "The Indus flows from the north to the Arabian Sea.", tag: "pakistan.indus" }), sub: "pakistan", depth: "apply", alts: [fill("Complete the sentence about Pakistan's neighbours.", "India lies to the {b1} of Pakistan, and Iran lies to the {b2}.", [["east", "west", "north"], ["west", "east", "south"]], { hint: "Think about the map of Asia.", why: "India is to the east and Iran is to the west.", tag: "pakistan.neighbours" })] },
+    { q: mc("Which mountain in Pakistan is the second highest in the world?", "K2", ["Ben Nevis", "Snowdon"], { hint: "It is in the Karakoram mountains.", why: "K2 is in Pakistan and is the second highest mountain in the world.", tag: "pakistan.k2" }), sub: "pakistan", depth: "recall", alts: [mc("Which city is the capital of the province of Punjab?", "Lahore", ["Karachi", "Quetta"], { hint: "It is a famous old city.", why: "Lahore is the capital of Punjab.", tag: "pakistan.lahore" })] },
+    { q: mc("Rabia says Islamabad is the biggest city in Pakistan. Is she right?", "No, Karachi is the biggest city, and Islamabad is the capital", ["Yes, Islamabad is the biggest city", "Yes, it is bigger than every other place"], { hint: "A capital city is not always the biggest.", why: "Islamabad is the capital. Karachi has more people.", tag: "pakistan.reason" }), sub: "pakistan", depth: "reason", alts: [mc("Waleed says Lahore is the capital of Pakistan. Is he right?", "No, Islamabad is the capital of Pakistan", ["Yes, Lahore is the capital", "Yes, Karachi is the capital"], { hint: "The capital is in the north.", why: "Islamabad is the capital of Pakistan.", tag: "pakistan.reason" })] },
+    { q: mc("Which sea lies between England and France?", "The English Channel", ["The Red Sea", "The Black Sea"], { hint: "Its name has a nation in it.", why: "The English Channel lies between England and France.", tag: "uk.seas" }), sub: "uk", depth: "apply", alts: [mc("Which sea lies between Great Britain and Ireland?", "The Irish Sea", ["The Arabian Sea", "The Red Sea"], { hint: "Its name has a country in it.", why: "The Irish Sea lies between Great Britain and Ireland.", tag: "uk.seas" })] },
+    { q: mc("Sami says the UK and Pakistan are in the same continent. Is he right?", "No, the UK is in Europe and Pakistan is in Asia", ["Yes, both are in Asia", "Yes, both are in Europe"], { hint: "Aisha flies between two continents.", why: "The UK is in Europe and Pakistan is in Asia.", tag: "uk.reason" }), sub: "uk", depth: "reason", alts: [mc("Omar says if he flies from Karachi to London he stays in Asia. Is he right?", "No, he flies from Asia to Europe", ["Yes, he stays in Asia", "Yes, he flies to Africa"], { hint: "Think about where London is.", why: "London is in Europe, so he crosses into a new continent.", tag: "uk.reason" })] },
+    { q: ms("Which two are nations of the UK? Pick two.", ["Wales", "Scotland"], ["France", "Pakistan"], { hint: "Think of the dragon and the thistle.", why: "Wales and Scotland are nations of the UK.", tag: "uk.nations" }), sub: "uk", depth: "apply", alts: [ms("Which two are capital cities in the UK? Pick two.", ["Cardiff", "Edinburgh"], ["Lahore", "Karachi"], { hint: "Think of Wales and Scotland.", why: "Cardiff and Edinburgh are UK capitals.", tag: "uk.capitals" })] },
+    { q: ord("Put the oceans in order, biggest first.", ["Pacific", "Atlantic", "Indian", "Arctic"], { hint: "The Pacific is the biggest of all.", why: "The Pacific is biggest, then the Atlantic, then the Indian, then the Arctic.", tag: "continents.oceans" }), sub: "continents", depth: "apply", alts: [ord("Put the continents in order, biggest first.", ["Asia", "Africa", "North America", "South America"], { hint: "Asia is the biggest of all.", why: "Asia is biggest, then Africa, then North America, then South America.", tag: "continents.size" })] },
+    { q: st("Pakistan's coast is on the Arabian Sea. Which ocean is it part of? It starts with I.", ["indian", "indian ocean", "the indian ocean"], { hint: "It is named after a country near Pakistan.", why: "The Arabian Sea is part of the Indian Ocean.", tag: "continents.indian" }), sub: "continents", depth: "recall", alts: [st("Which is the biggest ocean? It starts with P.", ["pacific", "pacific ocean", "the pacific ocean"], { hint: "It covers a third of the Earth.", why: "The Pacific is the biggest ocean.", tag: "continents.pacific" })] },
+    { q: mc("Idris says there are only three oceans. Is he right?", "No, there are five oceans", ["Yes, there are three", "Yes, there are twelve"], { hint: "Pacific, Atlantic, Indian, Southern and Arctic.", why: "The world has five oceans.", tag: "continents.reason" }), sub: "continents", depth: "reason", alts: [mc("Amna says the Pacific is the smallest ocean. Is she right?", "No, the Pacific is the biggest ocean", ["Yes, it is the smallest", "Yes, it is a sea, not an ocean"], { hint: "Think about the largest water on Earth.", why: "The Pacific is the biggest ocean.", tag: "continents.reason" })] },
+    { q: hot("Tap the continent where Egypt is.", [["🌍", "Africa", 22, 50], ["🌏", "Asia", 50, 50], ["🌎", "South America", 78, 50]], ["Africa"], { labels: true, hint: "The Nile flows there.", why: "Egypt is in Africa.", tag: "continents.egypt" }), sub: "continents", depth: "apply", alts: [hot("Tap the continent where Brazil is.", [["🌎", "South America", 22, 50], ["🌍", "Europe", 50, 50], ["🌏", "Asia", 78, 50]], ["South America"], { labels: true, hint: "It is across the Atlantic.", why: "Brazil is in South America.", tag: "continents.brazil" })] },
+    { q: mat("Match each country to its continent.", [["Pakistan", "Asia"], ["The UK", "Europe"], ["Egypt", "Africa"], ["Brazil", "South America"]], { hint: "Think about where each one is on the map.", why: "Each country is in its own continent.", tag: "continents.match" }), sub: "continents", depth: "apply", alts: [mat("Join each country to its continent.", [["Japan", "Asia"], ["France", "Europe"], ["Kenya", "Africa"], ["Canada", "North America"]], { hint: "Think about where each one is on the map.", why: "Each country is in its own continent.", tag: "continents.match" })] },
+    { q: mc("Layla says the Sun rises in the north. Is she right?", "No, the Sun rises in the east", ["Yes, it rises in the north", "Yes, it rises in the south"], { hint: "Remember Never Eat Soggy Waffles.", why: "The Sun rises in the east and sets in the west.", tag: "maps.reason" }), sub: "maps", depth: "reason", alts: [mc("Tariq says the Sun sets in the east. Is he right?", "No, the Sun sets in the west", ["Yes, it sets in the east", "Yes, it sets in the north"], { hint: "It rises in the opposite direction.", why: "The Sun rises in the east and sets in the west.", tag: "maps.reason" })] },
+  ].map((x, i) => ({ ...x, alts: x.alts ?? ALTS1[i] })),
 });
 
 // ====================================================================================================
 // Topic 2: Earth and sky
 // ====================================================================================================
 
+const CRESCENT = "general-knowledge-class-1-earth-and-sky-1-1f2ec649.jpg";
+const SUNSET = "general-knowledge-class-1-earth-and-sky-2-24564fbf.jpg";
+const MOONDARK = "general-knowledge-class-1-earth-and-sky-3-6d773875.jpg";
 const sun = {
   id: "sun", kind: "learn", title: "The Sun and the planets",
   blocks: [
+    H("Welcome, sky watcher!"),
+    SAY("Today we have a big question. What is in the sky?", T("Today's big question: what is in the sky, and why do we have day and night?")),
+    SAY("A thin crescent Moon shines after sunset. We will learn about it today.", PHOTO(CRESCENT, "A thin white crescent Moon in a dark blue sky above the silhouette of mountains at dusk", "A thin crescent Moon after sunset.", "Photo by Nic Y-C on Unsplash")),
     H("Stop 1: Our star, the Sun"),
     SAY("Look up in the daytime and you will see the Sun. The Sun is a star. It is a giant, glowing ball of hot gas. It is much, much bigger than the Earth. The Sun gives us light and warmth. Without it, Earth would be dark and freezing. But remember, never look straight at the Sun, because it can hurt your eyes.", T("The **Sun** is a **star**. It gives us light and heat.", "The Sun is much bigger than the Earth.")),
     IMG("☀️", "The Sun is a star that gives us light and heat."),
     WARN("Never look straight at the Sun. It can hurt your eyes."),
     CHK(mc("What is the Sun?", "A star", ["A planet", "A cloud"], { hint: "It shines on its own.", why: "The Sun is a star." })),
     H("Stop 2: The eight planets"),
-    SAY("Our Earth is a planet. A planet is a big round ball that goes around a star. Our Sun has eight planets going around it. In order from the Sun they are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Earth is the third planet from the Sun. Jupiter is the biggest planet.", T("A **planet** is a big ball that goes around a star.", "There are **eight** planets that go around the Sun.", "Earth is the third planet from the Sun.")),
+    SAY("Our Earth is a planet. A planet is a big round ball that goes around a star. Our Sun has eight planets going around it. In order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Earth is the third planet from the Sun. Jupiter is the biggest planet.", T("A **planet** is a big ball that goes around a star.", "There are **eight** planets that go around the Sun.", "Earth is the third planet from the Sun.")),
     SKY("The planets in order",
       SS("In the middle is the Sun. All the planets travel around it.", S("The Sun is in the middle.", ["sun", "☀️", 14, 50, 3, "pulse"])),
       SS("Close to the Sun are four small rocky planets. Mercury, Venus, Earth and Mars. Earth is our home.", S("The four planets closest to the Sun.", ["sun", "☀️", 14, 50, 3], P("me", 28, 50, "Mercury", "⚫", 1), P("ve", 40, 50, "Venus", "🟠", 1), P("ea", 52, 50, "Earth", "🌍", 2, "pulse"), P("ma", 64, 50, "Mars", "🔴", 1))),
@@ -228,7 +276,7 @@ const daynight = {
   id: "daynight", kind: "try", title: "Day and night",
   blocks: [
     H("Stop 1: Why do we have day and night?"),
-    SAY("Why is it light in the day and dark at night? The Earth is always spinning, like a top. It takes about twenty-four hours, one whole day, to spin all the way round. The side of the Earth facing the Sun has daytime. The side turned away from the Sun has night time. As Earth spins, our side moves into the light, and then back into the dark.", T("The Earth **spins** round once every 24 hours.", "The side facing the Sun has **day**. The side turned away has **night**.")),
+    SAY("Why is it light in the day and dark at night? The Earth is always spinning, like a top. It takes about twenty-four hours, one whole day, to spin all the way round. The side of the Earth facing the Sun has daytime. The side turned away from the Sun has night time. As Earth spins, our side moves into the light. Then it moves back into the dark.", T("The Earth **spins** round once every 24 hours.", "The side facing the Sun has **day**. The side turned away has **night**.")),
     SKY("Earth spins",
       SS("Here is the Earth, with the Sun on the left. Watch it spin slowly. This is morning, and our side is just coming into the light.", S("Morning: our side meets the light.", ["se", { kind: "sun_earth", value: 6 }, 50, 50, 3, "none"])),
       SS("Now it is noon. Our side faces the Sun. It is the middle of the day!", S("Noon: our side faces the Sun.", ["se", { kind: "sun_earth", value: 12 }, 50, 50, 3, "none"])),
@@ -236,11 +284,12 @@ const daynight = {
       SS("Now it is the middle of the night. Our side is facing away from the Sun. Everything is dark. By morning, the Earth will have spun round again.", S("Night: our side faces away from the Sun.", ["se", { kind: "sun_earth", value: 24 }, 50, 50, 3, "none"]))),
     CHK(mc("What makes day and night?", "The Earth spinning", ["The Sun going out", "The Moon covering the Sun"], { hint: "Think of a spinning top.", why: "Day and night happen because the Earth spins." })),
     H("Stop 2: The Sun's journey across the sky"),
+    SAY("The Sun is low in the sky here. It lights the grass gold.", PHOTO(SUNSET, "Golden sunlight shining low over a green grassy hillside", "The Sun low in the sky lights the grass gold.", "Photo by Sara Kurfeß on Unsplash")),
     SAY("Here is something to notice. In the morning, the Sun rises in the east. At lunchtime, it is high in the sky. Then in the evening, it sets in the west. Of course, it is really the Earth that is spinning. Shadows change too. In the morning and evening your shadow is long. At noon, when the Sun is high, it is short.", T("The Sun **rises** in the east and **sets** in the west.", "Your shadow is long in the morning and evening, and short at noon.")),
     IMG("🌅", "The Sun rises in the east in the morning and sets in the west in the evening."),
     ACT("Torch and ball day and night", ["A torch", "A ball or an orange", "A sticker", "A dark room"], ["Stick the sticker on the ball. The sticker is you!", "Shine the torch on the ball. That torch is the Sun.", "Slowly turn the ball. Is it day or night at your sticker?", "Turn until your sticker moves out of the light. That is night time!"]),
     CHK(tf("Your shadow is short at noon.", true, { hint: "The Sun is high in the sky at noon.", why: "When the Sun is high, shadows are short." })),
-    SAY("Let us remember. The Earth spins. When our side faces the Sun it is day, and when it faces away it is night.", SUM("The Earth spins once every 24 hours", "The side facing the Sun has day", "The side facing away has night", "The Sun rises in the east and sets in the west")),
+    SAY("Let us remember. The Earth spins. When our side faces the Sun it is day. When it faces away it is night.", SUM("The Earth spins once every 24 hours", "The side facing the Sun has day", "The side facing away has night", "The Sun rises in the east and sets in the west")),
     GLOSS({ spins: "Turns round and round.", day: "The time when our side of the Earth faces the Sun.", night: "The time when our side of the Earth faces away from the Sun.", rises: "Comes up. The Sun rises in the east.", sets: "Goes down. The Sun sets in the west." }),
   ],
   mini: [
@@ -255,15 +304,16 @@ const moon = {
   id: "moon", kind: "play", title: "The Moon's shapes",
   blocks: [
     H("Stop 1: Our Moon"),
+    SAY("Look at the Moon in a dark sky. It shines with the Sun's light.", PHOTO(MOONDARK, "A thin crescent Moon in a black night sky full of tiny stars", "The Moon at night, shining with the Sun's light.", "Photo by Klim Musalimov on Unsplash")),
     SAY("At night we can often see the Moon. The Moon is not a star, and it is not a planet. It is a giant ball of rock that travels around the Earth. The Moon does not make its own light. It looks bright because it bounces back light from the Sun, like a mirror.", T("The **Moon** is a ball of rock that goes around the Earth.", "The Moon does not make its own light. It reflects light from the Sun.")),
     SKY("The Moon shines",
       SS("Here is the Sun, the Earth and the Moon. The Moon travels around the Earth.", S("The Moon goes around the Earth.", ["su", "☀️", 12, 50, 3, "pulse"], ["ea", "🌍", 55, 50, 3], ["mo", "🌕", 80, 30, 1, "float"])),
-      SS("The Sun lights up one half of the Moon, like a torch lighting a ball. That is why the Moon seems to shine.", S("The Sun lights half of the Moon.", ["su", "☀️", 12, 50, 3, "pulse"], ["ea", "🌍", 55, 50, 3], ["mo", "🌓", 80, 30, 1], ["ar", "➡️", 40, 40, 1, "float"]))),
+      SS("The Sun lights one half of the Moon, like a torch lighting a ball. That is why the Moon seems to shine.", S("The Sun lights half of the Moon.", ["su", "☀️", 12, 50, 3, "pulse"], ["ea", "🌍", 55, 50, 3], ["mo", "🌓", 80, 30, 1], ["ar", "➡️", 40, 40, 1, "float"]))),
     CHK(tf("The Moon makes its own light.", false, { hint: "It reflects light from the Sun.", why: "The Moon reflects the light of the Sun." })),
     H("Stop 2: The Moon changes shape"),
-    SAY("Have you ever noticed that the Moon looks different on different nights? Some nights it is a thin curve, called a crescent. Some nights it is half. Some nights it is a big full circle, called a full moon. And on one night it is dark and we cannot see it at all, called a new moon. The Moon goes through all its shapes in about one month.", T("The Moon looks different shapes: **new moon**, **crescent**, half moon and **full moon**.", "It goes through all its shapes in about one month.")),
+    SAY("Have you ever noticed that the Moon looks different on different nights? Some nights it is a thin curve, called a crescent. Some nights it is half. Some nights it is a big full circle, called a full moon. On one night it is dark and we cannot see it. This is called a new moon. The Moon goes through all its shapes in about one month.", T("The Moon looks different shapes: **new moon**, **crescent**, half moon and **full moon**.", "It goes through all its shapes in about one month.")),
     SKY("The shapes of the Moon",
-      SS("It starts as a new moon. The Moon is there, but we cannot see it because its lit side faces away from us.", S("New moon: we cannot see it.", ["m", "🌑", 50, 50, 3, "none", "New moon"])),
+      SS("It starts as a new moon. The Moon is there, but we cannot see it. Its lit side faces away from us.", S("New moon: we cannot see it.", ["m", "🌑", 50, 50, 3, "none", "New moon"])),
       SS("A few days later we see a thin curve of light. This is a crescent moon. It is getting bigger.", S("A crescent moon.", ["m", "🌒", 50, 50, 3, "grow", "Crescent"])),
       SS("A week later it is half lit, like a half moon.", S("A half moon.", ["m", "🌓", 50, 50, 3, "none", "Half moon"])),
       SS("Soon it is a big bright circle. This is a full moon!", S("A full moon.", ["m", "🌕", 50, 50, 3, "pulse", "Full moon"])),
@@ -287,16 +337,16 @@ const months = {
   id: "months", kind: "use", title: "The Islamic months",
   blocks: [
     H("Stop 1: A calendar that follows the Moon"),
-    SAY("Muslims use a special calendar called the Islamic calendar. It follows the Moon. It has twelve months. Each month has twenty-nine or thirty days. A new month starts when the new crescent moon is seen in the sky. That is why people look at the sky when a month is about to end.", T("The **Islamic calendar** follows the Moon and has twelve months.", "A new month starts when the new **crescent** moon is seen.")),
+    SAY("Muslims use a special calendar called the Islamic calendar. It follows the Moon. It has twelve months. Each month has twenty-nine or thirty days. A new month starts when the new crescent moon is seen in the sky. That is why people look at the sky at the end of a month.", T("The **Islamic calendar** follows the Moon and has twelve months.", "A new month starts when the new **crescent** moon is seen.")),
     IMG("🌙", "A new month begins when the new crescent moon is seen."),
     CHK(num_mc2("How many months are in the Islamic calendar?", "12", ["7", "30"], "There are twelve Islamic months.")),
     H("Stop 2: The twelve months"),
-    SAY("Here are the twelve Islamic months in order. The first month is Muharram. The ninth month is Ramadan, the month of fasting. The tenth month is Shawwal. Eid ul-Fitr is on the first day of Shawwal. The twelfth month is Dhul Hijjah, when the Hajj happens, and Eid ul-Adha is in this month.", T("**Muharram** is the first month. **Ramadan** is the ninth month.", "Eid ul-Fitr is at the start of Shawwal. Eid ul-Adha is in Dhul Hijjah, the twelfth month.")),
+    SAY("Here are the twelve Islamic months in order. The first month is Muharram. The ninth month is Ramadan, the month of fasting. The tenth month is Shawwal. Eid ul-Fitr is on the first day of Shawwal. The twelfth month is Dhul Hijjah, when the Hajj happens. Eid ul-Adha is in this month.", T("**Muharram** is the first month. **Ramadan** is the ninth month.", "Eid ul-Fitr is at the start of Shawwal. Eid ul-Adha is in Dhul Hijjah, the twelfth month.")),
     SAY("Here are the first six months. Muharram, Safar, Rabi al-Awwal, Rabi al-Thani, Jumada al-Awwal and Jumada al-Thani.", TABLE("The Islamic months, 1 to 6", [["Muharram", 1], ["Safar", 2], ["Rabi al-Awwal", 3], ["Rabi al-Thani", 4], ["Jumada al-Awwal", 5], ["Jumada al-Thani", 6]], "The first six months in order.")),
     SAY("And the last six. Rajab, Shaban, Ramadan, Shawwal, Dhul Qadah and Dhul Hijjah.", TABLE("The Islamic months, 7 to 12", [["Rajab", 7], ["Shaban", 8], ["Ramadan", 9], ["Shawwal", 10], ["Dhul Qadah", 11], ["Dhul Hijjah", 12]], "The last six months in order. Ramadan is month 9.")),
     CHK(mc("Which is the first Islamic month?", "Muharram", ["Ramadan", "Shawwal"], { hint: "It starts the Islamic year.", why: "Muharram is the first month." })),
     H("Stop 3: Why we look for the crescent"),
-    SAY("Why do families go outside to look for the new crescent? Because it tells us a new month is starting. At the end of Shaban, people look for the new crescent to see if Ramadan has begun. And at the end of Ramadan, they look for the new crescent to see if it is Eid! Let us think about it.", T("People look for the new crescent to know when a month begins.")),
+    SAY("Why do families go outside to look for the new crescent? Because it tells us a new month is starting. At the end of Shaban, people look for the new crescent. It shows if Ramadan has begun. At the end of Ramadan, they look for the crescent again. Is it Eid? Let us think about it.", T("People look for the new crescent to know when a month begins.")),
     IMG("🌒", "A new crescent moon shows that a new month is beginning."),
     REVEAL("Why do people look for the new crescent moon at the end of a month?", "Because the new crescent moon shows that a **new Islamic month** is about to begin."),
     SAY("Let us remember. The Islamic calendar follows the Moon. It has twelve months. Ramadan is the ninth month.", SUM("The Islamic calendar follows the Moon", "It has twelve months of 29 or 30 days", "A new month begins when the new crescent is seen", "Ramadan is the ninth month")),
@@ -318,7 +368,7 @@ const ALTS2 = [
   [ord("Order these planets, starting with the one closest to the Sun.", ["Venus", "Earth", "Mars", "Jupiter"], { hint: "Earth is third.", why: "Venus, Earth, Mars, Jupiter, going outwards.", tag: "sun.order" }), ord("Order these planets from nearest to the Sun.", ["Mercury", "Venus", "Earth", "Mars"], { hint: "Mercury is the closest.", why: "Mercury, Venus, Earth, Mars.", tag: "sun.order" })],
   [tf("Night happens on the side of Earth facing away from the Sun.", true, { hint: "That side is dark.", why: "The side facing away from the Sun has night.", tag: "daynight.what" }), tf("It is day on the side of Earth turned away from the Sun.", false, { hint: "That side is dark.", why: "The side turned away has night.", tag: "daynight.what" })],
   [mc("Why do we have night time?", "Our side of the Earth turns away from the Sun", ["The Sun goes out", "A cloud covers the Sun"], { hint: "Think of the spinning Earth.", why: "Our side turns away from the Sun.", tag: "daynight.why" }), mc("What spins round to give us day and night?", "The Earth", ["The Sun", "The Moon"], { hint: "It spins like a top.", why: "The Earth spins.", tag: "daynight.why" })],
-  [hot("Tap the picture that shows night time.", [["🌅", "Sunrise", 22, 50], ["🌌", "Dark sky with stars", 50, 50], ["🌞", "Bright midday Sun", 78, 50]], ["Dark sky with stars"], { labels: true, hint: "It is dark.", why: "Stars in a dark sky mean night.", tag: "daynight.pic" }), hot("Tap the picture that shows daytime.", [["🌞", "Bright Sun in the sky", 22, 50], ["🌙", "Crescent moon at night", 50, 50], ["⭐", "Stars twinkling", 78, 50]], ["Bright Sun in the sky"], { labels: true, hint: "The Sun is up.", why: "A bright Sun means day.", tag: "daynight.pic" })],
+  [hot("Tap the picture that shows night time.", [["🌅", "Sunrise", 22, 50], ["🌌", "Dark sky with stars", 50, 50], ["🌞", "Bright midday Sun", 78, 50]], ["Dark sky with stars"], { labels: true, hint: "It is dark.", why: "Stars in a dark sky mean night.", tag: "daynight.pic" }), hot("Tap the picture of a bright sunny day.", [["🌞", "Bright Sun in the sky", 22, 50], ["🌙", "Crescent moon at night", 50, 50], ["⭐", "Stars twinkling", 78, 50]], ["Bright Sun in the sky"], { labels: true, hint: "The Sun is up.", why: "A bright Sun means day.", tag: "daynight.pic" })],
   [st("In which direction does the Sun set? Write one word.", ["west", "the west"], { hint: "Opposite to east.", why: "The Sun sets in the west.", tag: "daynight.east" }), st("From which direction does the Sun come up in the morning? Write one word.", ["east", "the east"], { hint: "Never Eat Soggy Waffles.", why: "The Sun rises in the east.", tag: "daynight.east" })],
   [mc("Why can we see the Moon shine in the night sky?", "It reflects light from the Sun", ["It is a very big star", "It makes its own light"], { hint: "Think of a mirror.", why: "The Moon reflects the Sun's light.", tag: "moon.light" }), mc("Where does the light of the Moon come from?", "From the Sun", ["From the Earth", "From the planets"], { hint: "The Moon is like a mirror.", why: "The Moon reflects sunlight.", tag: "moon.light" })],
   [ord("Put the Moon shapes in order, from a thin crescent to full.", ["Crescent", "Half moon", "Bright round moon", "Full moon"], { hint: "It gets bigger each night.", why: "The Moon grows from a crescent to full.", tag: "moon.order" }), ord("Order the Moon shapes from the dark moon to a half moon.", ["New moon", "Thin crescent", "Fat crescent", "Half moon"], { hint: "It gets bigger each night.", why: "The Moon grows from new to half.", tag: "moon.order" })],
@@ -328,6 +378,28 @@ const ALTS2 = [
   [mc("Layla says day and night happen because the Sun goes around the Earth. Is she right?", "No, day and night happen because the Earth spins", ["Yes, the Sun goes around the Earth", "No, the Moon makes night"], { hint: "Think of the torch and ball.", why: "The Earth spins, so our side moves into the light and out of it.", tag: "daynight.reason" }), mc("Sami says it is night because the Sun stops shining. Is he right?", "No, our side of the Earth has turned away from the Sun", ["Yes, the Sun stops shining", "No, the Moon has switched it off"], { hint: "Think of the torch and ball.", why: "The Sun still shines. Our side turned away.", tag: "daynight.reason" })],
   [mc("Why do people look for the new crescent at the end of an Islamic month?", "It shows that a new month is starting", ["It makes the Sun rise", "It changes day into night"], { hint: "Remember the Islamic calendar.", why: "The new crescent shows a new month is starting.", tag: "months.reason" }), mc("Why do families look for the crescent at the end of Ramadan?", "To find out whether the next month, Shawwal, has begun", ["To find out the time", "To measure the Moon"], { hint: "Eid is the first day of Shawwal.", why: "The crescent tells us whether the new month has begun.", tag: "months.reason" })],
 ];
+
+const clipT2 = {
+  title: "Zainab watches the sky", backdrop: "sky", caption: "Zainab watches the Sun and Moon move through one day and night.",
+  scenes: [
+    { caption: "Sunrise.", say: "Zainab sees the Sun rise in the east.",
+      items: [{ id: "s", emoji: "🌅", x: 70, y: 40, size: 3, anim: "float" }, { id: "z", emoji: "👧", label: "Zainab", x: 28, y: 62, size: 3 }] },
+    { caption: "A star.", say: "The Sun is a star. It gives us light and heat.",
+      items: [{ id: "s", emoji: "☀️", x: 50, y: 40, size: 3, anim: "pulse" }] },
+    { caption: "Earth spins.", say: "Earth spins slowly. That is why we have day and night.",
+      items: [{ id: "e", emoji: "🌍", x: 50, y: 52, size: 3, anim: "spin" }] },
+    { caption: "Sunset.", say: "In the evening the Sun sets in the west.",
+      items: [{ id: "s", emoji: "🌇", x: 30, y: 44, size: 3 }] },
+    { caption: "Night.", say: "Now our side of Earth faces away from the Sun.",
+      items: [{ id: "n", emoji: "🌙", x: 50, y: 34, size: 3, anim: "float" }] },
+    { caption: "The Moon.", say: "The Moon does not make light. It reflects the Sun's light.",
+      items: [{ id: "m", emoji: "🌕", x: 50, y: 38, size: 3, anim: "pulse" }] },
+    { caption: "A crescent.", say: "Her family looks for the new crescent at the end of the month.",
+      items: [{ id: "c", emoji: "🌒", x: 50, y: 36, size: 3, anim: "grow" }] },
+    { caption: "A new month.", say: "The crescent shows that a new Islamic month has begun.",
+      items: [{ id: "k", emoji: "✨", x: 50, y: 40, size: 3, effect: "sparkle" }] },
+  ],
+};
 
 const t2 = topicLesson({
   slug: "general-knowledge-class-1-earth-and-sky", subject: "general-knowledge", cls: 1, topic: 2, title: "Earth and Sky",
@@ -346,13 +418,9 @@ const t2 = topicLesson({
     mc("How many continents are there?", "7", ["5", "10"], { hint: "Panda, lion, bison, llama, penguin, castle, kangaroo.", why: "There are seven continents." }),
     mc("In which continent is Pakistan?", "Asia", ["Europe", "Africa"], { hint: "It has a panda.", why: "Pakistan is in Asia." }),
   ],
-  intro: [
-    H("Welcome, sky watcher!"),
-    SAY("Welcome, sky watcher! Today we have a big question. What is up there in the sky, and why do we have day and night? We will meet the Sun, the planets and the Moon, and learn how the Moon helps Muslims know when a new month begins. This is a game, not a test. Let's go!", T("Today's big question: what is in the sky, and why do we have day and night?", "We will meet the Sun, the planets and the Moon.")),
-    IMG("🌌", "The Sun, planets and Moon are all in the sky."),
-    GLOSS({ sky: "Everything we see above us when we look up." }),
-  ],
+  intro: [],
   subs: [sun, daynight, moon, months],
+  clip: clipT2,
   quiz: [
     { q: mc("What kind of thing is the Sun?", "A star", ["A planet", "A moon"], { hint: "It shines on its own.", why: "The Sun is a star.", tag: "sun.what" }), sub: "sun", depth: "recall" },
     { q: sld("Slide to show how many planets go around the Sun.", { min: 0, max: 12 }, 8, 0, { hint: "Mercury to Neptune.", why: "There are eight planets.", tag: "sun.count" }), sub: "sun", depth: "recall" },
@@ -369,7 +437,23 @@ const t2 = topicLesson({
     { q: mat("Match each month to its place in the year.", [["Muharram", "1st month"], ["Ramadan", "9th month"], ["Shawwal", "10th month"], ["Dhul Hijjah", "12th month"]], { hint: "Use the table of months.", why: "Muharram is first, Ramadan ninth, Shawwal tenth and Dhul Hijjah twelfth.", tag: "months.order" }), sub: "months", depth: "apply" },
     { q: mc("Aisha says we have day and night because the Sun goes around the Earth. Is she right?", "No, we have day and night because the Earth spins", ["Yes, the Sun goes around us", "No, the Moon switches the Sun off"], { hint: "Think of the torch and ball.", why: "The Earth spins, so our side moves in and out of the light.", tag: "daynight.reason" }), sub: "daynight", depth: "reason" },
     { q: mc("Why do Muslims look for the new crescent moon at the end of a month?", "It shows that a new Islamic month is starting", ["It makes the Sun rise", "It turns day into night"], { hint: "Remember the Islamic calendar.", why: "The new crescent shows a new month is starting.", tag: "months.reason" }), sub: "months", depth: "reason" },
-  ].map((x, i) => ({ ...x, alts: ALTS2[i] })),
+    // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+    { q: sld("Slide to show how many planets are nearer to the Sun than Earth.", { min: 0, max: 8 }, 2, 0, { hint: "Mercury and Venus come first.", why: "Mercury and Venus are nearer to the Sun than Earth.", tag: "sun.near" }), sub: "sun", depth: "apply", alts: [sld("Slide to show how many planets are further from the Sun than Earth.", { min: 0, max: 8 }, 5, 0, { hint: "There are eight planets, and Earth is the third.", why: "Five planets lie beyond Earth.", tag: "sun.far" })] },
+    { q: mc("Sami says the Sun looks small because it is small. Is he right?", "No, the Sun is huge, but it is very far away", ["Yes, the Sun is a small star", "Yes, it is smaller than the Moon"], { hint: "Think about things that are far away.", why: "The Sun looks small because it is so far away.", tag: "sun.reason" }), sub: "sun", depth: "reason", alts: [mc("Yusuf says stars look tiny because they are tiny. Is he right?", "No, stars look tiny because they are very far away", ["Yes, all stars are tiny", "Yes, stars are smaller than planets"], { hint: "Think about a far-away light.", why: "Stars are huge but very far away.", tag: "sun.reason" })] },
+    { q: tf("Mars is the planet that we live on.", false, { hint: "Our home planet has a different name.", why: "We live on Earth, not Mars.", tag: "sun.earth" }), sub: "sun", depth: "recall", alts: [tf("Earth is the third planet from the Sun.", true, { hint: "Mercury and Venus come first.", why: "Earth is the third planet from the Sun.", tag: "sun.earth" })] },
+    { q: st("Write the name of the star in the middle of our solar system. It starts with S.", ["sun", "the sun"], { hint: "It gives us light and heat.", why: "The Sun is the star at the centre of our solar system.", tag: "sun.star" }), sub: "sun", depth: "recall", alts: [st("Write the name of the planet we live on. It starts with E.", ["earth", "the earth"], { hint: "It is our home.", why: "We live on planet Earth.", tag: "sun.home" })] },
+    { q: hot("Tap the picture that shows daytime.", [["☀️", "Bright sunny sky", 22, 50], ["🌙", "Moon and stars", 50, 50], ["🌧️", "Dark rain cloud", 78, 50]], ["Bright sunny sky"], { labels: true, hint: "The Sun is up.", why: "In the daytime we face the Sun.", tag: "daynight.day" }), sub: "daynight", depth: "apply", alts: [hot("Tap what gives light to the Earth in the daytime.", [["☀️", "The Sun", 22, 50], ["🌙", "The Moon", 50, 50], ["💡", "A lamp", 78, 50]], ["The Sun"], { labels: true, hint: "It is a star.", why: "The Sun gives light in the daytime.", tag: "daynight.light" })] },
+    { q: mc("Hamza says the Sun disappears at night. Is he right?", "No, the Sun is still there, but our side of Earth faces away from it", ["Yes, the Sun goes out at night", "Yes, the Moon eats the Sun"], { hint: "Think of the torch and the ball.", why: "The Sun keeps shining. Our side has turned away.", tag: "daynight.reason" }), sub: "daynight", depth: "reason", alts: [mc("Zara says it is night everywhere on Earth at the same time. Is she right?", "No, when it is night here it is day on the other side", ["Yes, it is night everywhere", "Yes, day only happens in summer"], { hint: "Only half of Earth faces the Sun.", why: "Half of Earth is in daylight while the other half is in night.", tag: "daynight.reason" })] },
+    { q: fill("Fill in the gaps about the spinning Earth.", "The Earth {b1} once every day, so we have day and {b2}.", [["spins", "jumps", "melts"], ["night", "winter", "summer"]], { hint: "Think of the globe turning.", why: "The Earth spins once a day, which gives us day and night.", tag: "daynight.spin" }), sub: "daynight", depth: "apply", alts: [fill("Fill in the gaps about the Sun in the sky.", "In the morning the Sun {b1} in the east, and in the evening it {b2} in the west.", [["rises", "sets", "sleeps"], ["sets", "rises", "grows"]], { hint: "Never Eat Soggy Waffles.", why: "The Sun rises in the east and sets in the west.", tag: "daynight.rise" })] },
+    { q: ord("Put the parts of the day in order, starting at sunrise.", ["Sunrise", "Noon", "Sunset", "Midnight"], { hint: "The day starts when the Sun comes up.", why: "The order is sunrise, noon, sunset, midnight.", tag: "daynight.order" }), sub: "daynight", depth: "apply", alts: [ord("Put these in order, starting at midnight.", ["Midnight", "Sunrise", "Noon", "Sunset"], { hint: "Midnight is in the dark.", why: "After midnight comes sunrise, then noon, then sunset.", tag: "daynight.order" })] },
+    { q: ms("Which two can we see in the night sky? Pick two.", ["The Moon", "Stars"], ["A rainbow", "A cloud of kites"], { hint: "Think about looking up at night.", why: "The Moon and stars shine in the night sky.", tag: "moon.night" }), sub: "moon", depth: "apply", alts: [ms("Which two are in our solar system? Pick two.", ["Earth", "Mars"], ["London", "A rainbow"], { hint: "They go around the Sun.", why: "Earth and Mars are planets in our solar system.", tag: "moon.solar" })] },
+    { q: mc("Ali says the Moon is a planet like Earth. Is he right?", "No, the Moon goes around the Earth and is not a planet", ["Yes, the Moon is a planet", "Yes, the Moon is a star"], { hint: "Which one does the Moon go around?", why: "The Moon goes around the Earth. It is not a planet.", tag: "moon.reason" }), sub: "moon", depth: "reason", alts: [mc("Hira says the Moon stays the same shape every night. Is she right?", "No, the Moon seems to change shape through the month", ["Yes, it never changes", "Yes, it is always a circle"], { hint: "Think about the crescent and the full Moon.", why: "We see different parts of the lit Moon through the month.", tag: "moon.reason" })] },
+    { q: mat("Match each Moon picture to its name.", [["🌑", "new moon"], ["🌒", "crescent"], ["🌓", "half moon"], ["🌕", "full moon"]], { hint: "Think about how much is lit.", why: "Each picture shows a different Moon shape.", tag: "moon.shapes" }), sub: "moon", depth: "apply", alts: [mat("Match each sky object to what it does.", [["The Sun", "gives us light and heat"], ["The Moon", "reflects the Sun's light"], ["Earth", "is the planet we live on"], ["A planet", "goes around the Sun"]], { hint: "Think about what each one is.", why: "Each object has its own job in the sky.", tag: "moon.jobs" })] },
+    { q: mc("Maryam says an Islamic month always has 31 days. Is she right?", "No, an Islamic month has 29 or 30 days", ["Yes, always 31 days", "Yes, always 28 days"], { hint: "It follows the Moon.", why: "An Islamic month lasts 29 or 30 days.", tag: "months.reason" }), sub: "months", depth: "reason", alts: [mc("Idris says the Islamic calendar follows the Sun. Is he right?", "No, the Islamic calendar follows the Moon", ["Yes, it follows the Sun", "Yes, it follows the stars"], { hint: "People look for the new crescent.", why: "The Islamic months follow the Moon.", tag: "months.reason" })] },
+    { q: st("Write the name of the month when Muslims fast. It starts with R.", ["ramadan", "ramadhan", "ramzan"], { hint: "It comes before Eid ul-Fitr.", why: "Muslims fast in the month of Ramadan.", tag: "months.ramadan" }), sub: "months", depth: "recall", alts: [st("Write the name of the month that comes after Ramadan. It starts with S.", ["shawwal", "shawal"], { hint: "Eid ul-Fitr is on its first day.", why: "Shawwal comes after Ramadan.", tag: "months.shawwal" })] },
+    { q: tf("A new Islamic month starts when the new crescent is seen.", true, { hint: "People look at the sky.", why: "The new crescent shows that a new month has begun.", tag: "months.crescent" }), sub: "months", depth: "apply", alts: [tf("An Islamic year has ten months.", false, { hint: "Count Muharram to Dhul Hijjah.", why: "An Islamic year has twelve months.", tag: "months.twelve" })] },
+    { q: mc("About how long does the Moon take to go through all its shapes?", "About one month", ["About one day", "About one year"], { hint: "It matches an Islamic month.", why: "The Moon takes about a month to go through all its shapes.", tag: "months.cycle" }), sub: "months", depth: "recall", alts: [mc("How many months are in an Islamic year?", "Twelve", ["Seven", "Twenty"], { hint: "It is the same number as the Sun calendar.", why: "An Islamic year has twelve months.", tag: "months.count" })] },
+  ].map((x, i) => ({ ...x, alts: x.alts ?? ALTS2[i] })),
 });
 
 export const topics = [t1, t2];

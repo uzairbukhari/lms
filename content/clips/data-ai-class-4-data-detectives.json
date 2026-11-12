@@ -1,0 +1,177 @@
+{
+ "title": "Fatima's weather study",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "A question.",
+   "say": "Fatima asks: how does the temperature change during the day?",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "👧",
+     "label": "Fatima",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "t",
+     "emoji": "🌡️",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "A data logger.",
+   "say": "A data logger takes a reading every ten minutes. That is six readings an hour.",
+   "items": [
+    {
+     "id": "l",
+     "emoji": "📟",
+     "label": "logger",
+     "x": 35,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    },
+    {
+     "id": "t",
+     "emoji": "🌡️",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A table.",
+   "say": "The readings go into a table. Each row is one reading.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🗒️",
+     "label": "table",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "A line graph.",
+   "say": "She draws a line graph. It rises to a peak at three o'clock.",
+   "items": [
+    {
+     "id": "g",
+     "emoji": "📈",
+     "label": "peak at 3pm",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Averages.",
+   "say": "She finds the mean, the mode and the median of the readings.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "➗",
+     "label": "mean",
+     "x": 25,
+     "y": 50,
+     "size": 2
+    },
+    {
+     "id": "o",
+     "emoji": "🔁",
+     "label": "mode",
+     "x": 50,
+     "y": 50,
+     "size": 2
+    },
+    {
+     "id": "d",
+     "emoji": "🎯",
+     "label": "median",
+     "x": 75,
+     "y": 50,
+     "size": 2
+    }
+   ]
+  },
+  {
+   "caption": "A tricky chart.",
+   "say": "A friend's chart starts at fifty. Small differences look huge.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "📊",
+     "label": "starts at 50",
+     "x": 40,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "w",
+     "emoji": "⚠️",
+     "x": 75,
+     "y": 35,
+     "size": 2,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "An honest chart.",
+   "say": "Fatima redraws it from zero. Now it tells the truth.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "📊",
+     "label": "starts at 0",
+     "x": 40,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    },
+    {
+     "id": "t",
+     "emoji": "✅",
+     "x": 75,
+     "y": 40,
+     "size": 3,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "A careful prediction.",
+   "say": "She predicts tomorrow's peak. A prediction is a careful guess, not a fact.",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3
+    },
+    {
+     "id": "p",
+     "emoji": "🤔",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  }
+ ]
+}

@@ -1,26 +1,32 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 1 (Zainab, age 7), topic 4: Smart machines (AI).
 // Standards: AI4K12 Big Ideas 1 (perception), 3 (learning) and 5 (societal impact), ages 5 to 7 (docs/CURRICULUM_V2.md).
 const o = (hint, why, tag) => ({ hint, why, tag });
 
+const CATDOG = "data-ai-class-1-smart-machines-1-e85558a2.jpg";
+const SOFA = "data-ai-class-1-smart-machines-2-7c801029.jpg";
+
 const whatIsAI = {
   id: "what_is_ai", kind: "learn", title: "What is AI?",
   blocks: [
+    H("Welcome back, AI explorer!"),
+    SAY("Today we meet smart machines. How do they see, hear and learn?", T("Today's big question: how do smart machines work?")),
+    SAY("You can tell a cat from a dog. A machine has to learn how.", PHOTO(CATDOG, "A tabby cat and a black and white puppy lying on grass", "A cat and a dog. Can a machine tell them apart?", "Photo by Andrew S on Unsplash")),
     H("Stop 1: Smart machines"),
     SAY("Some machines seem clever. A phone can answer a question. A map app can find the way home. We call this kind of clever computer program artificial intelligence, or AI. Artificial means made by people. Intelligence means being able to learn and work things out. But AI is not alive. It is a computer program that people made.", T("**AI** is a computer program that can do things that seem clever.", "AI is **made by people**. It is not alive.")),
     IMG("🤖🧠", "AI is a clever computer program made by people."),
     CHK(mc("Who makes AI?", "People", ["Rabbits", "Clouds"], o("It is a computer program.", "People write the programs that make AI.", "ai.what"))),
     H("Stop 2: AI is all around"),
-    SAY("AI is in places you might not expect. A voice helper on a phone, a camera that finds faces, and a game that plays against you all use it. But a toaster, a bicycle and a spade are not AI. Let us see the difference.", T("Some machines use **AI**: voice helpers, smart cameras and game opponents.", "A toaster or a spade is not AI.")),
+    SAY("AI is in places you might not expect. A voice helper, a face-finding camera and a game opponent all use it. But a toaster, a bicycle and a spade are not AI. Let us see the difference.", T("Some machines use **AI**: voice helpers, smart cameras and game opponents.", "A toaster or a spade is not AI.")),
     EXP("AI or not AI?",
       SS("A voice helper listens and answers. This uses AI.", S("Voice helper: AI.", ["a", "📱", 25, 55, 3, "bounce", "AI"])),
       SS("A smart camera picks out faces in a photo. This uses AI too.", S("Smart camera: AI.", ["a", "📱", 20, 55, 3, "none", "AI"], ["b", "📷", 50, 55, 3, "bounce", "AI"])),
       SS("A spade just digs. A spade is not AI.", S("Spade: not AI.", ["a", "📱", 15, 55, 2, "none", "AI"], ["b", "📷", 38, 55, 2, "none", "AI"], ["c", "⛏️", 70, 55, 3, "pulse", "Not AI"]))),
     CHK(mc("Which of these uses AI?", "A voice helper", ["A spade", "A pencil"], o("Does it listen and answer?", "A voice helper uses AI to understand you.", "ai.what"))),
     SAY("Let us remember. AI is a clever computer program made by people. It is not alive.", SUM("AI is a clever program made by people", "AI is not alive")),
-    GLOSS({ AI: "A computer program that can do things that seem clever.", "artificial intelligence": "Another name for AI.", "made by people": "Created by humans, not alive.", program: "Instructions that tell a computer what to do." }),
+    GLOSS({ machine: "A thing that does a job, often with a computer.", sensor: "A part that picks up light, sound or touch.", AI: "A computer program that can do things that seem clever.", "artificial intelligence": "Another name for AI.", "made by people": "Created by humans, not alive.", program: "Instructions that tell a computer what to do." }),
   ],
   mini: [
     tf("AI is a living creature.", false, o("It is a program.", "AI is a computer program, not alive.")),
@@ -34,7 +40,7 @@ const seeHear = {
   id: "see_hear", kind: "try", title: "How machines see and hear",
   blocks: [
     H("Stop 1: Machines that see"),
-    SAY("A camera is like an eye for a machine. It takes a picture. But a picture is just a lot of tiny dots of colour. The computer has to work out what the dots show. When it sees round dots that look like a face, it can say, that is a face. Machines learn to spot things from lots and lots of pictures. This is called perception.", T("A machine can **see** with a **camera**. It looks for patterns in the dots of a picture.")),
+    SAY("A camera is like an eye for a machine. It takes a picture. But a picture is just a lot of tiny dots of colour. The computer has to work out what the dots show. Round dots that look like a face tell it: that is a face. Machines learn to spot things from lots and lots of pictures. This is called perception.", T("A machine can **see** with a **camera**. It looks for patterns in the dots of a picture.")),
     EXP("A camera spots a cat",
       SS("The camera takes a picture of a cat.", S("The camera takes a picture.", ["cam", "📷", 20, 55, 3, "bounce"], ["cat", "🐱", 70, 55, 3])),
       SS("The computer looks for patterns in the dots: pointy ears, whiskers, a round face.", S("It looks for patterns: ears, whiskers, a face.", ["cam", "📷", 20, 55, 3], ["cat", "🐱", 70, 55, 3, "pulse"], ["q", "🔍", 45, 30, 2, "bounce"])),
@@ -59,6 +65,7 @@ const teach = {
   id: "teach", kind: "play", title: "Teaching a computer with examples",
   blocks: [
     H("Stop 1: Learning from examples"),
+    SAY("Each photo is an example. A label says cat or dog.", PHOTO(SOFA, "A grey cat on a sofa with a fluffy dog behind it", "Each photo is an example. A label says cat or dog.", "Photo by Tran Mau Tri Tam on Unsplash")),
     SAY("How does a machine learn what a cat looks like? We show it lots of examples. Here are cats and here are dogs. We label each one, which means we say what it is. After many examples, the machine starts to spot the difference. The more good examples, the better it learns. This is called training.", T("To **train** a machine, we show it many **examples** with **labels**.")),
     EXP("Train the machine",
       SS("We show the machine a picture of a cat and say: cat.", S("Example 1: cat.", ["c1", "🐱", 25, 50, 3, "bounce", "cat"])),
@@ -121,6 +128,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Zainab teaches a machine", backdrop: "classroom", caption: "Zainab teaches a machine to tell cats from dogs.",
+  scenes: [
+    { caption: "A smart machine.", say: "This machine is a computer program. People made it. It is not alive.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "r", emoji: "🤖", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Eyes and ears.", say: "A camera is its eye. A microphone is its ear.",
+      items: [{ id: "c", emoji: "📷", label: "eye", x: 28, y: 50, size: 3 }, { id: "m", emoji: "🎤", label: "ear", x: 72, y: 50, size: 3 }] },
+    { caption: "Examples.", say: "Zainab shows it a cat. She says the label: cat.",
+      items: [{ id: "c", emoji: "🐱", label: "cat", x: 50, y: 48, size: 3, enter: "grow" }] },
+    { caption: "More examples.", say: "She shows many more, cats and dogs. Each has a label.",
+      items: [{ id: "a", emoji: "🐱", label: "cat", x: 25, y: 50, size: 2 }, { id: "b", emoji: "🐶", label: "dog", x: 50, y: 50, size: 2 }, { id: "c", emoji: "🐈", label: "cat", x: 75, y: 50, size: 2 }] },
+    { caption: "Learning.", say: "The machine looks for patterns. It starts to spot the difference.",
+      items: [{ id: "b", emoji: "🧠", x: 50, y: 45, size: 3, anim: "pulse" }, { id: "s", emoji: "🔍", x: 78, y: 40, size: 2, effect: "sparkle" }] },
+    { caption: "A new picture.", say: "Now a new picture. The machine says dog, and it is right!",
+      items: [{ id: "d", emoji: "🐕", x: 35, y: 50, size: 3 }, { id: "t", emoji: "✅", label: "dog", x: 72, y: 45, size: 3, anim: "bounce" }] },
+    { caption: "A mistake.", say: "Sometimes it gets one wrong. AI can make mistakes.",
+      items: [{ id: "q", emoji: "❓", x: 50, y: 40, size: 3, anim: "float" }] },
+    { caption: "Ask a grown-up.", say: "So Zainab asks a grown-up to check important answers.",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3 }, { id: "m", emoji: "👩", x: 70, y: 52, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-1-smart-machines", subject: "data-ai", cls: 1, topic: 4, title: "Smart Machines",
@@ -139,13 +169,9 @@ export const topics = [
       tf("We should tell a grown-up if something online worries us.", true, o("Who can help?", "A grown-up can help.")),
       num("What is 3 + 4?", 7, o("Count on from 3.", "3 and 4 make 7.")),
     ],
-    intro: [
-      H("Welcome, AI explorer!"),
-      SAY("Welcome, AI explorer! Today's big question: how do smart machines work? We will find out how they see, how they hear, and how they learn. We will also find out what they cannot do. Let's go!", T("Today's big question: how do smart machines work?", "We will see how machines learn and what they cannot do.")),
-      IMG("🤖", "Smart machines learn from examples."),
-      GLOSS({ machine: "A thing that does a job, often with a computer." }),
-    ],
+    intro: [],
     subs: [whatIsAI, seeHear, teach, useAI],
+    clip,
     quiz: [
       qd(mc("Who creates the computer programs that make AI work?", "People", ["Clouds", "Frogs"], o("Not alive.", "People write AI programs.", "ai.what")), "what_is_ai", "recall"),
       qd(tf("A phone voice helper uses AI.", true, o("It listens and answers.", "A voice helper uses AI.", "ai.what")), "what_is_ai", "recall"),
@@ -162,6 +188,37 @@ export const topics = [
       qd(tf("AI is a living animal.", false, o("It is a program.", "AI is a computer program.", "ai.what")), "what_is_ai", "recall"),
       qd(mc("Lina says a label tells a machine what an example is. Is she right?", "Yes, a label names an example", ["No, it is a game", "No, it is a snack"], o("Like a name tag.", "A label names the example.", "ai.reason")), "teach", "reason"),
       qd(ord("Put these in the order a machine learns.", ["See an example", "Get a label", "Learn the pattern"], o("What comes first?", "See, label, then learn.", "ai.learning")), "teach", "reason"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(fill("Finish the sentences about senses.", "A {b1} is like an eye for a machine, and a {b2} is like an ear.", [["camera", "spade", "cup"], ["microphone", "pencil", "shoe"]], o("Think about eyes and ears.", "A camera sees and a microphone hears.", "ai.perception")), "see_hear", "apply",
+        [fill("Complete the sentences about mistakes.", "A machine finds {b1} in pictures. It can still make a {b2}.", [["patterns", "pillows", "pears"], ["mistake", "lunch", "hat"]], o("Nothing is perfect.", "Machines look for patterns and can still make mistakes.", "ai.perception"))]),
+      qa(ms("Which two might use AI? Pick two.", ["A voice helper", "A robot vacuum"], ["A wooden spoon", "A bicycle"], o("Which have a computer inside?", "A voice helper and a robot vacuum use programs.", "ai.what")), "what_is_ai", "apply",
+        [ms("Which two use a camera to see? Pick two.", ["A phone face finder", "A smart doorbell"], ["A paper plate", "A shoe"], o("Which have cameras?", "A phone face finder and a smart doorbell use cameras.", "ai.perception"))]),
+      qa(mat("Match each sense to a machine part.", [["Seeing", "Camera"], ["Hearing", "Microphone"], ["Touching", "Touch sensor"]], o("Think about what each part does.", "Each part helps a machine sense the world.", "ai.perception")), "see_hear", "apply",
+        [mat("Match each word to its meaning.", [["Mistake", "Something wrong"], ["Example", "One case that shows"], ["Label", "A name for an example"]], o("Think back to the stops.", "Each word has its own meaning.", "ai.vocab"))]),
+      qa(sld("A machine needs 20 examples to learn a fruit. It has seen 12. Slide to show how many more it needs.", { min: 0, max: 20 }, 8, 0, o("20 take away 12.", "20 - 12 = 8 more examples.", "ai.learning")), "teach", "apply",
+        [sld("A machine needs 15 examples to learn a bird. It has seen 9. Slide to show how many more it needs.", { min: 0, max: 20 }, 6, 0, o("15 take away 9.", "15 - 9 = 6 more examples.", "ai.learning"))]),
+      qa(hot("Tap the part that hears for a machine.", [["🎤", "Microphone", 22, 50], ["📷", "Camera", 50, 50], ["🔋", "Battery", 78, 50]], ["Microphone"], { labels: true, ...o("It is like an ear.", "A microphone hears for a machine.", "ai.perception") }), "see_hear", "recall",
+        [hot("Tap the part that sees for a machine.", [["🎤", "Microphone", 22, 50], ["📷", "Camera", 50, 50], ["🔋", "Battery", 78, 50]], ["Camera"], { labels: true, ...o("It is like an eye.", "A camera sees for a machine.", "ai.perception") })]),
+      qa(num("A machine learns from 9 apple pictures and 6 mango pictures. How many pictures is that?", 15, o("Add 9 and 6.", "9 + 6 = 15.", "ai.learning")), "teach", "apply",
+        [num("A machine learns from 12 plum pictures and 6 grape pictures. How many pictures is that?", 18, o("Add 12 and 6.", "12 + 6 = 18.", "ai.learning"))]),
+      qa(ord("Put the steps in order for teaching a machine about fruit.", ["Show many fruit pictures", "Add a label to each", "Test it with a new picture"], o("What first?", "Show, label, then test.", "ai.learning")), "teach", "apply",
+        [ord("Put these in order for checking an AI answer.", ["Hear the answer", "Ask a grown-up", "Check in a book"], o("What first?", "Hear it, ask, then check.", "ai.safe"))]),
+      qa(mc("Hana says her smart speaker is alive. Is she right?", "No. It is a computer program made by people", ["Yes, it is a pet", "Yes, it eats"], o("Is it a living thing?", "A smart speaker runs a program. It is not alive.", "ai.reason")), "what_is_ai", "reason",
+        [mc("Omar says his toy robot is alive because it moves. Is he right?", "No. It follows a program people wrote", ["Yes, it moves like a pet", "Yes, it is hungry"], o("Does it need food and sleep?", "A toy robot follows a program. It is not alive.", "ai.reason"))]),
+      qa(mc("Sam says if a picture looks real, it must be real. Is he right?", "No. A picture can be made by a computer, so ask a grown-up", ["Yes, pictures never lie", "Yes, if it is clear"], o("Can computers make pictures?", "Pictures can be changed or made up.", "ai.reason")), "cannot_do", "reason",
+        [mc("Aisha says a photo on a screen is always true. Is she right?", "No. Photos can be changed or made by computers", ["Yes, screens only show true things", "Yes, if it is colourful"], o("Can computers make pictures?", "Photos can be changed or made up.", "ai.reason"))]),
+      qa(mc("Zainab shows a machine only 2 cat pictures. Omar says it now knows every cat. Is he right?", "No. It needs many different examples", ["Yes, 2 is plenty", "Yes, cats all look the same"], o("Do all cats look alike?", "A machine learns better from many different examples.", "ai.reason")), "teach", "reason",
+        [mc("Layla says one picture is enough to teach a machine. Is she right?", "No. It needs many examples to learn well", ["Yes, one is enough", "Yes, if it is big"], o("Think about practice.", "More examples help a machine learn.", "ai.reason"))]),
+      qa(mc("Ben says a camera sees like a person. Is he right?", "No. It records dots of colour and looks for patterns", ["Yes, it understands everything", "Yes, it feels what it sees"], o("What is a picture made of?", "A camera records dots of colour. A program looks for patterns.", "ai.reason")), "see_hear", "reason",
+        [mc("Mina says a microphone understands words like a friend. Is she right?", "No. It listens for patterns in sound and can make mistakes", ["Yes, it understands feelings", "Yes, it never gets it wrong"], o("Does a microphone have feelings?", "It listens for patterns and can get words wrong.", "ai.reason"))]),
+      qa(mc("Who made the AI in a voice helper?", "People who wrote the program", ["The helper itself", "The clouds"], o("Who writes programs?", "People write the programs for AI.", "ai.what")), "what_is_ai", "recall",
+        [mc("Where does an AI get its clever skills?", "From people and many examples", ["From magic", "From sleeping"], o("Think about training.", "People write programs and give examples.", "ai.what"))]),
+      qa(mc("A voice helper gives an answer that seems wrong. What should you do?", "Ask a grown-up to check", ["Believe it", "Tell it your address"], o("AI can make mistakes.", "Check answers that seem wrong with a grown-up.", "ai.safe")), "cannot_do", "apply",
+        [mc("An AI gave a strange answer. What is the best next step?", "Check with a book or a grown-up", ["Trust it more", "Ignore everyone"], o("AI can make mistakes.", "Check strange answers.", "ai.safe"))]),
+      qa(mc("We show a machine pictures that say cat or not cat. What are these pictures called?", "Examples", ["Snacks", "Bugs"], o("They teach the machine.", "Pictures that teach a machine are examples.", "ai.learning")), "teach", "recall",
+        [mc("What do we call the word that says what a picture shows?", "A label", ["A snack", "A bug"], o("Like a name tag.", "A label names what a picture shows.", "ai.learning"))]),
+      qa(tf("A smart speaker can feel happy or sad.", false, o("Is it alive?", "A speaker is a program. It cannot feel.", "ai.limits")), "cannot_do", "recall",
+        [tf("A computer program can be wrong.", true, o("Nothing is perfect.", "Programs can make mistakes.", "ai.limits"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

@@ -1,0 +1,129 @@
+{
+ "title": "Ayesha and Ali add the hills",
+ "backdrop": "plain",
+ "scenes": [
+  {
+   "caption": "Ayesha and Ali.",
+   "say": "Ayesha and Ali climb three hills near Murree. They want the total height.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🧒",
+     "label": "Ayesha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "l",
+     "emoji": "🧑",
+     "label": "Ali",
+     "x": 78,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_left"
+    }
+   ]
+  },
+  {
+   "caption": "Three heights.",
+   "say": "The first hill is 2,345 metres. The second is 1,432 metres.",
+   "items": [
+    {
+     "id": "h1",
+     "emoji": "⛰️",
+     "label": "2,345 m",
+     "x": 30,
+     "y": 46,
+     "size": 2,
+     "enter": "slide_right"
+    },
+    {
+     "id": "h2",
+     "emoji": "🏔️",
+     "label": "1,432 m",
+     "x": 70,
+     "y": 46,
+     "size": 2,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "Line up the columns.",
+   "say": "Line up the digits in columns. Start with the ones on the right.",
+   "items": [
+    {
+     "id": "c",
+     "emoji": "🔢",
+     "label": "5 + 2 = 7",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Tens and hundreds.",
+   "say": "Four plus three is seven. Three plus four is seven. No carrying is needed.",
+   "items": [
+    {
+     "id": "k",
+     "emoji": "🟥",
+     "label": "4 + 3 = 7",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "3,777 metres in total.",
+   "say": "The total is three thousand, seven hundred and seventy-seven metres.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🎉",
+     "label": "3,777 m",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Check by adding back.",
+   "say": "Check the answer by taking one hill away. You should get the second hill back.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🧒",
+     "label": "Ayesha",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "ok",
+     "emoji": "✅",
+     "label": "checked",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

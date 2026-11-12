@@ -1,9 +1,10 @@
 import "./generated/app.css";
 import "./clip.css";
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame } from "remotion";
-import { buildClipTimeline, sceneIndexAt, type ClipSpec } from "@lms/schema";
+import { buildClipTimeline, CLIP_VOICE_RATE, sceneIndexAt, type ClipSpec } from "@lms/schema";
 import { pickBackdrop } from "../../../apps/web/src/anim/Backdrop";
 import { ClipStage } from "./ClipStage";
+import { AssetView, hasAsset } from "../../../apps/web/src/anim/assets";
 
 export const WIDTH = 1280;
 export const HEIGHT = 768;
@@ -22,7 +23,9 @@ export const timelineOf = (props: ClipProps) => buildClipTimeline(props.spec, { 
 function TitleCard({ title, emoji, end }: { title: string; emoji: string[]; end?: boolean }) {
   return (
     <AbsoluteFill className="clip-card">
-      <div className="clip-card-emoji">{emoji.join(" ")}</div>
+      <div className="clip-card-emoji" style={{ display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 28, containerType: "inline-size", width: WIDTH }}>
+        {emoji.map((e) => (hasAsset(e) ? <AssetView key={e} emoji={e} size={1} /> : <span key={e}>{e}</span>))}
+      </div>
       <div className="clip-card-title">{end ? "The end" : title}</div>
       <div className="clip-card-sub">{end ? title : "A little story"}</div>
     </AbsoluteFill>
@@ -43,7 +46,7 @@ export function ClipFromScenes(props: ClipProps) {
   const ms = (f: number) => (f / FPS) * 1000;
   const stepStartMs = t.scenes.map((s) => ms(s.startFrame - t.titleFrames));
   const scene = t.scenes[step]!;
-  const spoken = scene.sentences.find((s) => frame >= s.startFrame && frame < s.startFrame + s.frames) ?? (frame >= scene.startFrame + scene.frames - 1 ? scene.sentences[scene.sentences.length - 1] : scene.sentences[0]);
+  const spoken = [...scene.sentences].reverse().find((s) => frame >= s.startFrame) ?? scene.sentences[0];
   const backdrop = spec.backdrop ?? pickBackdrop([spec.title, ...spec.scenes.flatMap((s) => [s.caption, ...s.items.map((i) => i.emoji ?? i.label ?? "")])].join(" "), spec.subject);
 
   return (
@@ -62,7 +65,7 @@ export function ClipFromScenes(props: ClipProps) {
         if (!timing) return null;
         return (
           <Sequence key={`${i}-${j}`} from={timing.startFrame} durationInFrames={timing.frames}>
-            <Audio src={staticFile(s.file)} />
+            <Audio src={staticFile(s.file)} playbackRate={CLIP_VOICE_RATE} />
           </Sequence>
         );
       }))}

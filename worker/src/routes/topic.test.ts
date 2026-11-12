@@ -132,7 +132,7 @@ describe("the pilot topic lesson", () => {
     const d = await json(await call(`/api/lessons/${r.lesson.lessonId}`, { cookie }));
     expect(d.topic.subLessons.map((s: any) => s.kind)).toEqual(["learn", "try", "play", "use"]);
     expect(d.topic.warmUp).toHaveLength(3);
-    expect(d.quiz.questionCount).toBe(15);
+    expect(d.quiz.questionCount).toBe(30); // place-value is upgraded to the 30-question standard
     const part = await json(await call(`/api/lessons/${r.lesson.lessonId}/parts/compare`, { cookie }));
     expect(part.miniQuiz.length).toBeGreaterThanOrEqual(3);
   });

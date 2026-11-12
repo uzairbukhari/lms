@@ -1,0 +1,174 @@
+{
+ "title": "Zara and the orange stall",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "The orange stall.",
+   "say": "Zara helps at an orange stall. Today she counts the oranges.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "o",
+     "emoji": "🍊",
+     "x": 72,
+     "y": 40,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "38 oranges.",
+   "say": "There are thirty-eight oranges. Then seven more arrive.",
+   "items": [
+    {
+     "id": "a",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 3,
+      "ones": 8
+     },
+     "label": "38",
+     "x": 30,
+     "y": 48,
+     "size": 2,
+     "enter": "slide_right"
+    },
+    {
+     "id": "b",
+     "emoji": "🍊🍊🍊🍊🍊🍊🍊",
+     "label": "+ 7",
+     "x": 72,
+     "y": 48,
+     "size": 2,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "Start at 38.",
+   "say": "Zara starts on thirty-eight. She hops on a number line.",
+   "items": [
+    {
+     "id": "n",
+     "prop": {
+      "kind": "number_line",
+      "from": 30,
+      "to": 50,
+      "value": 38
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Hop 2 to 40.",
+   "say": "Hop two to forty. Forty is a friendly ten!",
+   "items": [
+    {
+     "id": "n",
+     "prop": {
+      "kind": "number_line",
+      "from": 30,
+      "to": 50,
+      "value": 40
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Hop 5 more.",
+   "say": "Seven take away two leaves five. Hop five more.",
+   "items": [
+    {
+     "id": "n",
+     "prop": {
+      "kind": "number_line",
+      "from": 30,
+      "to": 50,
+      "value": 45
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "38 + 7 = 45.",
+   "say": "Forty-five oranges! She made a ten first.",
+   "items": [
+    {
+     "id": "a",
+     "prop": {
+      "kind": "base_ten",
+      "tens": 4,
+      "ones": 5
+     },
+     "label": "45",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Sell 6: 45 - 6.",
+   "say": "A shopper buys six. Hop back five to forty. Then one more.",
+   "items": [
+    {
+     "id": "n",
+     "prop": {
+      "kind": "number_line",
+      "from": 30,
+      "to": 50,
+      "value": 39
+     },
+     "x": 50,
+     "y": 46,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "39 left!",
+   "say": "Thirty-nine left. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "o",
+     "emoji": "🍊",
+     "label": "39",
+     "x": 72,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

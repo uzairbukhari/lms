@@ -1,0 +1,2972 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-mixed-numbers",
+  "subject": "maths",
+  "title": "Mixed Numbers and Improper Fractions",
+  "summary": "Fractions bigger than one: mixed numbers, improper fractions, converting both ways and adding within a whole.",
+  "age_band": "9-10",
+  "difficulty": 3,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Mixed numbers and improper fractions",
+  "learning_objectives": [
+   "Name and write mixed numbers",
+   "Convert between improper fractions and mixed numbers",
+   "Add and subtract fractions with the same bottom number"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 fractions",
+    "text": "Count up and down in hundredths; recognise and write fractions greater than 1; add and subtract fractions with the same denominator"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.03"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.04"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.05"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Nf.06"
+   }
+  ],
+  "success_criteria": [
+   "I can write a mixed number from a picture",
+   "I can change an improper fraction to a mixed number and back",
+   "I can add fractions with the same bottom number"
+  ],
+  "real_life": "Sharing naan and pizza, measuring rice and milk in a recipe, and counting slices at a party.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 4 × 3?",
+    "hint": "Count in threes.",
+    "explanation": "4 × 3 = 12.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is 1/2 of 10?",
+    "hint": "Share 10 into two.",
+    "explanation": "10 ÷ 2 = 5.",
+    "options": [
+     {
+      "id": "a",
+      "text": "2"
+     },
+     {
+      "id": "b",
+      "text": "20"
+     },
+     {
+      "id": "c",
+      "text": "5"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "3/4 is less than one whole.",
+    "hint": "Four quarters make a whole.",
+    "explanation": "3 quarters is less than 4 quarters.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "more_than_one",
+   "kind": "learn",
+   "title": "More than one whole",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Ayesha and the naan",
+     "backdrop": "home"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-mixed-numbers-1-c806412c.jpg",
+     "alt": "Slices of pepperoni pizza on an orange background",
+     "caption": "A pizza cut into slices shows fractions bigger than one whole.",
+     "credit": "Photo by Tamas Pap on Unsplash",
+     "say": "It is Eid lunch. Ayesha's family has pizza and naan. Some pieces are bigger than one whole. We can write them in two ways. Let's find out how."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Quarters make a whole",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **mixed number** has a whole part and a fraction part: 1 3/4.\n\n7 quarters = 1 whole and 3 quarters = 1 3/4.",
+     "say": "Cut a naan into quarters. Four quarters make one whole naan. Now take seven quarters. That is one whole naan and three quarters left over. We write it as a mixed number: one and three quarters, or 1 3/4."
+    },
+    {
+     "type": "explainer",
+     "title": "7 quarters is 1 3/4",
+     "scenes": [
+      {
+       "caption": "4 quarters = 1 whole",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🫓",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "4/4 = 1"
+        }
+       ],
+       "say": "Here is one whole naan, cut into four quarters. All four are shaded."
+      },
+      {
+       "caption": "7 quarters",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🫓",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "4/4"
+        },
+        {
+         "id": "m",
+         "emoji": "🫓",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "3/4"
+        }
+       ],
+       "say": "Add three more quarters. That is seven quarters in all."
+      },
+      {
+       "caption": "1 3/4",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "🫓",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "1 whole"
+        },
+        {
+         "id": "m",
+         "emoji": "🫓",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3/4"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "7/4 = 1 3/4"
+        }
+       ],
+       "say": "One whole and three quarters. We write it 1 3/4."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-mixed-numbers-d1-073da85e.png",
+     "alt": "Two pizza diagrams: one whole pizza and three quarters, labelled 1 3/4",
+     "caption": "7/4 = 1 3/4.",
+     "say": "Seven quarters make one whole pizza and three quarters. We write one and three quarters."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How many quarters make one whole?",
+      "hint": "Think about four equal pieces.",
+      "explanation": "Four quarters make one whole.",
+      "skill_tag": "mixed.whole",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "8"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Write it and read it",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "Say **the whole, then and, then the fraction**: 2 1/2 is two and a half.\n\n3 1/3 is three and one third.",
+     "say": "Read a mixed number in words. Two and one half is 2 1/2. Say the whole first, then 'and', then the fraction. Mind the small words: one and one half, not one one-half."
+    },
+    {
+     "type": "image",
+     "emoji": "🥖",
+     "alt": "Two whole naans and one half naan make 2 1/2.",
+     "caption": "Two whole naans and one half naan make 2 1/2."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "How do you read 2 1/2?",
+      "hint": "Whole first, then the fraction.",
+      "explanation": "2 1/2 is two wholes and a half.",
+      "skill_tag": "mixed.read",
+      "options": [
+       {
+        "id": "a",
+        "text": "Two halves"
+       },
+       {
+        "id": "b",
+        "text": "Twenty-one halves"
+       },
+       {
+        "id": "c",
+        "text": "Two and a half"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The naan that is more than one",
+     "asset": "clip-maths-class-4-mixed-numbers-809ef789.mp4",
+     "poster": "clip-maths-class-4-mixed-numbers-809ef789.webp",
+     "seconds": 47,
+     "transcript": "This is Uncle Hamid. He bakes naan for the Eid lunch in Karachi. He cuts one naan into four equal quarters. Each piece is one quarter. Now he has seven quarters. That is more than one whole naan. One whole naan and three quarters. We write it as one and three quarters. Seven quarters is one and three quarters. Shukriya, Uncle Hamid!",
+     "caption": "A baker cuts naan into quarters and turns seven quarters into a mixed number."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "4 quarters make 1 whole",
+      "A mixed number has a whole part and a fraction part",
+      "Say the whole, then and, then the fraction"
+     ],
+     "say": "Remember. Four quarters make a whole. A mixed number is a whole and a fraction."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "mixed number",
+       "meaning": "A whole number and a fraction, like 1 3/4."
+      },
+      {
+       "term": "whole",
+       "meaning": "A full one, like one whole naan."
+      },
+      {
+       "term": "quarters",
+       "meaning": "Four equal parts of one whole."
+      },
+      {
+       "term": "improper fraction",
+       "meaning": "A fraction bigger than one whole, like 7/4."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many eighths make one whole?",
+     "hint": "Count the equal pieces.",
+     "explanation": "Eight eighths make one whole.",
+     "answer": {
+      "value": 8,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 2 and 1 quarter?",
+     "hint": "The whole is 2.",
+     "explanation": "Two wholes and one quarter is 2 1/4.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 4/1"
+      },
+      {
+       "id": "b",
+       "text": "2 1/4"
+      },
+      {
+       "id": "c",
+       "text": "1 2/4"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "1 2/3 has a whole part of 1.",
+     "hint": "Look at the number before the fraction.",
+     "explanation": "The whole part is 1.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order, smallest first.",
+     "hint": "Compare the wholes, then the fractions.",
+     "explanation": "1 1/4, 1 1/2, 1 3/4, 2.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "1 3/4"
+      },
+      {
+       "id": "i4",
+       "text": "1 1/2"
+      },
+      {
+       "id": "i3",
+       "text": "2"
+      },
+      {
+       "id": "i1",
+       "text": "1 1/4"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "converting",
+   "kind": "try",
+   "title": "Improper to mixed, and back",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Group the quarters",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "To change **improper to mixed**: group by the bottom number. Count the wholes, then the leftover.\n\n13/4: 13 ÷ 4 = 3 remainder 1, so 3 1/4.",
+     "say": "Here is a big fraction: 13 quarters. Group them in fours. Each group of four is one whole. How many full groups are there? Three groups make 12 quarters. One quarter is left over. So 13/4 = 3 1/4."
+    },
+    {
+     "type": "explainer",
+     "title": "13/4 grouped in fours",
+     "scenes": [
+      {
+       "caption": "13 quarters",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "13/4"
+        }
+       ],
+       "say": "Thirteen quarters in a row."
+      },
+      {
+       "caption": "3 wholes",
+       "items": [
+        {
+         "id": "g1",
+         "emoji": "🟦",
+         "x": 25,
+         "y": 40,
+         "size": 2,
+         "anim": "none",
+         "label": "4"
+        },
+        {
+         "id": "g2",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 40,
+         "size": 2,
+         "anim": "none",
+         "label": "4"
+        },
+        {
+         "id": "g3",
+         "emoji": "🟦",
+         "x": 75,
+         "y": 40,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4"
+        }
+       ],
+       "say": "Make groups of four. Each group is one whole. Three full groups."
+      },
+      {
+       "caption": "13/4 = 3 1/4",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🟦",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "13/4"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "13/4 = 3 1/4"
+        }
+       ],
+       "say": "One quarter is left over. So 13/4 is 3 wholes and 1 quarter."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-mixed-numbers-d2-bfce9b9c.png",
+     "alt": "A number line from 0 to 3 in quarters with 1 1/4 and 2 3/4 marked",
+     "caption": "Mixed numbers on a number line.",
+     "say": "Find one and a quarter and two and three quarters on the number line."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many whole ones are in 17/4?",
+      "hint": "Count full groups of four.",
+      "explanation": "Four groups of four make 16, and 1 quarter is left. So 17/4 = 4 1/4.",
+      "skill_tag": "mixed.convert",
+      "answer": {
+       "value": 4,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Mixed back to improper",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "To change **mixed to improper**: multiply the whole by the bottom, then add the top.\n\n2 3/4 = (2 × 4 + 3)/4 = 11/4.",
+     "say": "Now go back. Two and three quarters is 2 3/4. Each whole has four quarters. Two wholes are eight quarters. Add the three more quarters. Eight add three makes eleven. So 2 3/4 = 11/4."
+    },
+    {
+     "type": "image",
+     "emoji": "🧮",
+     "alt": "2 × 4 = 8, then 8 + 3 = 11. So 2 3/4 = 11/4.",
+     "caption": "2 × 4 = 8, then 8 + 3 = 11. So 2 3/4 = 11/4."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "fill_blank",
+      "prompt": "Convert 3 1/4 to an improper fraction.",
+      "hint": "3 × 4 + 1.",
+      "explanation": "3 × 4 = 12, and 12 + 1 = 13.",
+      "skill_tag": "mixed.convert",
+      "points": 1,
+      "text": "3 1/4 = {b1}/4.",
+      "blanks": [
+       {
+        "id": "b1",
+        "options": [
+         {
+          "id": "a",
+          "text": "12"
+         },
+         {
+          "id": "b",
+          "text": "14"
+         },
+         {
+          "id": "c",
+          "text": "13"
+         }
+        ]
+       }
+      ],
+      "answer": {
+       "b1": "c"
+      }
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Quarter strips",
+     "materials": [
+      "Paper strips cut into 4 equal parts",
+      "Pencil"
+     ],
+     "instructions": [
+      "Colour 13 quarters across three strips of four, and one spare.",
+      "Count the full strips. That is the whole part.",
+      "Count the spare quarters. That is the fraction part.",
+      "Write the answer as a mixed number."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Improper to mixed: group by the bottom",
+      "Mixed to improper: whole × bottom + top",
+      "The bottom number stays the same"
+     ],
+     "say": "Remember. Improper to mixed: group and count. Mixed to improper: whole times bottom, then add the top."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "improper to mixed",
+       "meaning": "Changing a fraction bigger than one into a whole and a fraction."
+      },
+      {
+       "term": "mixed to improper",
+       "meaning": "Changing a mixed number into one fraction."
+      },
+      {
+       "term": "improper fraction",
+       "meaning": "A fraction where the top number is bigger than the bottom, like 13/4."
+      },
+      {
+       "term": "group",
+       "meaning": "Put things into equal sets."
+      },
+      {
+       "term": "convert",
+       "meaning": "Change a number into another form with the same value."
+      },
+      {
+       "term": "remainder",
+       "meaning": "What is left over."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "How many wholes are in 9/4?",
+     "hint": "Two groups of four.",
+     "explanation": "9/4 = 2 1/4.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 3 1/2 as a fraction over 2?",
+     "hint": "3 × 2 + 1.",
+     "explanation": "3 × 2 = 6, and 6 + 1 = 7.",
+     "options": [
+      {
+       "id": "a",
+       "text": "3/2"
+      },
+      {
+       "id": "b",
+       "text": "7/2"
+      },
+      {
+       "id": "c",
+       "text": "5/2"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "9/5 is the same as 1 4/5.",
+     "hint": "Five fifths make one whole.",
+     "explanation": "5 fifths are 1 whole, and 4 fifths are left.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multi_select",
+     "prompt": "Pick the two whole-and-fraction numbers.",
+     "hint": "A whole number and a fraction together.",
+     "explanation": "1 2/3 and 2 1/5 have a whole part and a fraction part.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 1/5"
+      },
+      {
+       "id": "b",
+       "text": "5/2"
+      },
+      {
+       "id": "c",
+       "text": "7/4"
+      },
+      {
+       "id": "d",
+       "text": "1 2/3"
+      }
+     ],
+     "answer": [
+      "d",
+      "a"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fractions_line",
+   "kind": "play",
+   "title": "Fractions on the number line",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: The 0 to 2 line",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "On a number line, **1 1/4** sits one quarter past 1.\n\nCount the quarters: 1, 1 1/4, 1 1/2, 1 3/4, 2.",
+     "say": "Let's put mixed numbers on a number line. The line goes from 0 to 2. Halfway is one. Quarters sit between each whole. One and one quarter sits just after 1."
+    },
+    {
+     "type": "explainer",
+     "title": "Quarters from 1 to 2",
+     "scenes": [
+      {
+       "caption": "1",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "📏",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "1"
+        }
+       ],
+       "say": "Start at 1. Each step is one quarter."
+      },
+      {
+       "caption": "1 1/4, 1 1/2, 1 3/4",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "📏",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "1"
+        },
+        {
+         "id": "m",
+         "emoji": "📍",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "1 3/4"
+        }
+       ],
+       "say": "One step: 1 1/4. Two steps: 1 1/2. Three steps: 1 3/4."
+      },
+      {
+       "caption": "2 = 8/4",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "📏",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1 3/4 is just before 2"
+        }
+       ],
+       "say": "One more step reaches 2 wholes, which is 8 quarters."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which mixed number is closer to 2?",
+      "hint": "How far is each from 2?",
+      "explanation": "1 4/5 is only one fifth away from 2. 1 1/5 is four fifths away.",
+      "skill_tag": "mixed.line",
+      "options": [
+       {
+        "id": "a",
+        "text": "1 2/5"
+       },
+       {
+        "id": "b",
+        "text": "1 4/5"
+       },
+       {
+        "id": "c",
+        "text": "1 1/5"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Bigger or smaller?",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Compare the wholes first**, then the fractions.\n\n1 3/5 < 1 4/5.",
+     "say": "Compare mixed numbers. Look at the whole first. Then the fraction. One and three fifths is smaller than one and four fifths. Three fifths is less than four fifths."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "1 4/5 is bigger than 1 2/5.",
+      "hint": "Compare the fractions.",
+      "explanation": "Four fifths is more than two fifths, so 1 4/5 is bigger.",
+      "skill_tag": "mixed.compare",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Quarter pairs",
+     "goal": "Find the matching fractions.",
+     "emojis": [
+      "🫓",
+      "🍕",
+      "🥖",
+      "🥧",
+      "🍞",
+      "🥯"
+     ],
+     "say": "Brain break. Match the pairs."
+    },
+    {
+     "type": "activity",
+     "title": "Number line at home",
+     "materials": [
+      "Paper strip",
+      "Pencil and ruler"
+     ],
+     "instructions": [
+      "Draw a line from 0 to 2.",
+      "Mark halves, then quarters.",
+      "Write 1 3/4 at the right place.",
+      "Check: how far is it from 2?"
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Compare the wholes first",
+      "Count equal steps on the line",
+      "Four quarters make one whole"
+     ],
+     "say": "Remember. The whole comes first. Between two wholes, count the quarters or fifths."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "1 1/4",
+       "meaning": "One whole and one quarter."
+      },
+      {
+       "term": "number line",
+       "meaning": "A line with numbers in order, like a ruler."
+      },
+      {
+       "term": "between",
+       "meaning": "In the middle of two numbers."
+      },
+      {
+       "term": "compare",
+       "meaning": "Look at how two numbers are different."
+      },
+      {
+       "term": "is bigger than",
+       "meaning": "Has a greater value."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is halfway between 1 and 2?",
+     "hint": "Halfway is two quarters.",
+     "explanation": "1 1/2 is halfway.",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 1/2"
+      },
+      {
+       "id": "b",
+       "text": "1 1/2"
+      },
+      {
+       "id": "c",
+       "text": "1 1/4"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many quarters is 2 wholes?",
+     "hint": "Four quarters per whole.",
+     "explanation": "2 × 4 = 8.",
+     "answer": {
+      "value": 8,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "1 1/4 is smaller than 1 1/2.",
+     "hint": "One quarter is less than two quarters.",
+     "explanation": "1 1/4 is one quarter after 1.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these in order, smallest first.",
+     "hint": "Compare the wholes first.",
+     "explanation": "1 1/3, 1 2/3, 2, 2 1/3.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "1 2/3"
+      },
+      {
+       "id": "i4",
+       "text": "1 1/3"
+      },
+      {
+       "id": "i3",
+       "text": "2"
+      },
+      {
+       "id": "i1",
+       "text": "2 1/3"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recipes",
+   "kind": "use",
+   "title": "Recipes and pizzas",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Rice for the biryani",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "Two and a half cups take away one and a half cups: 2 1/2 − 1 1/2 = 1.\n\nSubtract the wholes and the fractions.",
+     "say": "Ayesha's mum makes rice for lunch. The recipe needs two and a half cups of rice. She uses one and a half cups for the first pot. How much rice is left for the second pot?"
+    },
+    {
+     "type": "explainer",
+     "title": "2 1/2 cups of rice",
+     "scenes": [
+      {
+       "caption": "2 1/2 cups",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🥣",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "2 1/2"
+        }
+       ],
+       "say": "Two whole cups, and half a cup."
+      },
+      {
+       "caption": "2 1/2 − 1 1/2",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🥣",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "2 1/2"
+        },
+        {
+         "id": "t",
+         "emoji": "➖",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "1 1/2"
+        }
+       ],
+       "say": "Take away one whole cup and one half cup."
+      },
+      {
+       "caption": "1",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🥣",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "2 1/2 − 1 1/2 = 1"
+        }
+       ],
+       "say": "One whole cup is left."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A pizza is cut into 8 slices. Ali eats 3 slices and Sam eats 4. How many eighths are eaten?",
+      "hint": "Add the tops. Keep the bottom.",
+      "explanation": "3 + 4 = 7, so 7/8 is eaten.",
+      "skill_tag": "mixed.add",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Adding within a whole",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Same bottom number**: add the tops and keep the bottom. 3/8 + 4/8 = 7/8.\n\nDo not add the bottoms.",
+     "say": "Add 3/8 and 4/8. The bottoms are the same, so just add the tops. Three eighths and four eighths make seven eighths. The bottom number stays eight."
+    },
+    {
+     "type": "explainer",
+     "title": "3/8 + 4/8",
+     "scenes": [
+      {
+       "caption": "3/8",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍕",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "3/8"
+        }
+       ],
+       "say": "Three eighths of a pizza."
+      },
+      {
+       "caption": "3/8 + 4/8",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍕",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "3/8"
+        },
+        {
+         "id": "q",
+         "emoji": "🍕",
+         "x": 70,
+         "y": 50,
+         "size": 2,
+         "anim": "pulse",
+         "label": "4/8"
+        }
+       ],
+       "say": "Add four more eighths. Seven eighths in all."
+      },
+      {
+       "caption": "7/8",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🍕",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "3/8 + 4/8 = 7/8"
+        }
+       ],
+       "say": "Seven eighths. The pizza is still cut into eight."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Zara adds 7/8 and 3/8 and gets 10/8. What is 10/8 as a mixed number?",
+      "hint": "Eight eighths make one whole.",
+      "explanation": "10/8 = 8/8 + 2/8 = 1 2/8.",
+      "skill_tag": "mixed.convert_add",
+      "options": [
+       {
+        "id": "a",
+        "text": "1 3/8"
+       },
+       {
+        "id": "b",
+        "text": "1 2/8"
+       },
+       {
+        "id": "c",
+        "text": "2 2/8"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Pizza or naan at home",
+     "materials": [
+      "Paper circles",
+      "Pencil"
+     ],
+     "instructions": [
+      "Cut a circle into 8 slices.",
+      "Colour 5 slices. What fraction is coloured?",
+      "Add 4 more slices. How many slices now?",
+      "Write the answer as a mixed number if it is more than 1 whole."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Same bottom: add the tops",
+      "Keep the bottom number",
+      "Over one whole: write a mixed number"
+     ],
+     "say": "Remember. Same bottom: add the tops. More than one whole: write a mixed number."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "same bottom number",
+       "meaning": "Fractions with the same bottom number, so the pieces are the same size."
+      },
+      {
+       "term": "recipe",
+       "meaning": "Instructions and amounts for cooking."
+      },
+      {
+       "term": "same denominator",
+       "meaning": "Fractions with the same bottom number."
+      },
+      {
+       "term": "slice",
+       "meaning": "One piece of a whole pizza or naan."
+      },
+      {
+       "term": "mixed number",
+       "meaning": "A whole number and a fraction."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Two cups of flour plus one and a half cups. What is the total in cups?",
+     "hint": "Add the wholes, then the halves.",
+     "explanation": "2 + 1 1/2 = 3 1/2, which is 3.5.",
+     "answer": {
+      "value": 3.5,
+      "tolerance": 0.05
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "What is 2/6 + 3/6 in sixths?",
+     "hint": "Add the tops.",
+     "explanation": "2 + 3 = 5, so 5/6.",
+     "answer": {
+      "value": 5,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is 5/9 + 2/9?",
+     "hint": "Add the tops only.",
+     "explanation": "5 + 2 = 7 and the bottom stays 9.",
+     "options": [
+      {
+       "id": "a",
+       "text": "7/18"
+      },
+      {
+       "id": "b",
+       "text": "7/9"
+      },
+      {
+       "id": "c",
+       "text": "10/9"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A pizza of 8 slices with 5 eaten has 3/8 left.",
+     "hint": "8 take away 5.",
+     "explanation": "8 − 5 = 3, so 3/8 is left.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "How many quarters are in 1 whole?",
+    "hint": "Four equal pieces make a whole.",
+    "explanation": "Four quarters make one whole.",
+    "skill_tag": "mixed.whole",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which is 1 and 3 quarters written as a mixed number?",
+    "hint": "The whole part comes first.",
+    "explanation": "One whole and three quarters is 1 3/4.",
+    "skill_tag": "mixed.write",
+    "options": [
+     {
+      "id": "a",
+      "text": "13/4"
+     },
+     {
+      "id": "b",
+      "text": "1 3/4"
+     },
+     {
+      "id": "c",
+      "text": "3/4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "7/4 is the same as 1 3/4.",
+    "hint": "Four quarters make one whole.",
+    "explanation": "Seven quarters is one whole and three quarters.",
+    "skill_tag": "mixed.write",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the mixed number.",
+    "hint": "Four quarters are one whole.",
+    "explanation": "5/4 is 1 whole and 1 quarter.",
+    "skill_tag": "mixed.write",
+    "points": 2,
+    "text": "5/4 = {b1} and {b2}/4.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "1"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two are mixed numbers? Pick two.",
+    "hint": "A mixed number has a whole part and a fraction.",
+    "explanation": "2 1/3 and 1 3/5 have a whole part and a fraction.",
+    "skill_tag": "mixed.mixed",
+    "options": [
+     {
+      "id": "a",
+      "text": "1 3/5"
+     },
+     {
+      "id": "b",
+      "text": "7/2"
+     },
+     {
+      "id": "c",
+      "text": "5/3"
+     },
+     {
+      "id": "d",
+      "text": "2 1/3"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Order these mixed numbers, smallest first.",
+    "hint": "Compare the wholes, then the fractions.",
+    "explanation": "1 1/4, then 1 1/2, then 1 3/4, then 2.",
+    "skill_tag": "mixed.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "1 3/4"
+     },
+     {
+      "id": "i4",
+      "text": "2"
+     },
+     {
+      "id": "i2",
+      "text": "1 1/2"
+     },
+     {
+      "id": "i1",
+      "text": "1 1/4"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "Slide to show 1 1/2 on the line from 0 to 2.",
+    "hint": "Halfway between 1 and 2.",
+    "explanation": "1 1/2 is halfway between 1 and 2.",
+    "skill_tag": "mixed.line",
+    "range": {
+     "step": 0.25,
+     "min": 0,
+     "max": 2
+    },
+    "answer": {
+     "value": 1.5,
+     "tolerance": 0.25
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each word to its mixed number.",
+    "hint": "Whole first, then the fraction.",
+    "explanation": "Two and a half is 2 1/2, one and one third is 1 1/3, three and one quarter is 3 1/4.",
+    "skill_tag": "mixed.read",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "two and a half"
+     },
+     {
+      "id": "l2",
+      "text": "one and one third"
+     },
+     {
+      "id": "l3",
+      "text": "three and one quarter"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "1 1/3"
+     },
+     {
+      "id": "r3",
+      "text": "3 1/4"
+     },
+     {
+      "id": "r1",
+      "text": "2 1/2"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "How many whole ones are in 11/4?",
+    "hint": "Count full groups of four.",
+    "explanation": "Two groups of four make 8, so 11/4 = 2 3/4.",
+    "skill_tag": "mixed.convert",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 13/4 = 2 5/4. Is she right?",
+    "hint": "Can the fraction part be bigger than one?",
+    "explanation": "The fraction part must be less than one whole, so 13/4 = 3 1/4.",
+    "skill_tag": "mixed.reason_convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 2 1/4"
+     },
+     {
+      "id": "b",
+      "text": "No. 5/4 is more than one whole, so 13/4 = 3 1/4"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 2 5/4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "converting",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "13/5 is the same as 2 3/5.",
+    "hint": "Five fifths make one whole.",
+    "explanation": "10 fifths are 2 wholes, and 3 fifths are left.",
+    "skill_tag": "mixed.convert",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "converting",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Convert 2 3/4 to an improper fraction.",
+    "hint": "2 × 4 + 3.",
+    "explanation": "2 × 4 = 8, and 8 + 3 = 11.",
+    "skill_tag": "mixed.convert",
+    "points": 1,
+    "text": "2 3/4 = {b1}/4.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "12"
+       },
+       {
+        "id": "b",
+        "text": "11"
+       },
+       {
+        "id": "c",
+        "text": "8"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two are improper fractions? Pick two.",
+    "hint": "The top is bigger than the bottom.",
+    "explanation": "9/4 and 7/3 have a top bigger than the bottom.",
+    "skill_tag": "mixed.improper",
+    "options": [
+     {
+      "id": "a",
+      "text": "2 1/4"
+     },
+     {
+      "id": "b",
+      "text": "1 3/4"
+     },
+     {
+      "id": "c",
+      "text": "7/3"
+     },
+     {
+      "id": "d",
+      "text": "9/4"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Order these from the smallest value.",
+    "hint": "Change each to a mixed number first.",
+    "explanation": "3/2 is 1 1/2 and 7/4 is 1 3/4. So the order is 1 3/8, 1 1/2, 1 3/4, 2 1/4.",
+    "skill_tag": "mixed.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "7/4"
+     },
+     {
+      "id": "i4",
+      "text": "2 1/4"
+     },
+     {
+      "id": "i2",
+      "text": "3/2"
+     },
+     {
+      "id": "i1",
+      "text": "1 3/8"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows 2 1/2 shaded.",
+    "hint": "Two wholes and a half.",
+    "explanation": "2 wholes and 1 half is 2 1/2.",
+    "skill_tag": "mixed.picture",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍕",
+       "label": "A: 3 halves shaded",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍕",
+       "label": "B: 2 wholes and 1 half",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍕",
+       "label": "C: 2 quarters",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the fraction equal to 3 1/2.",
+    "hint": "3 × 2 + 1.",
+    "explanation": "3 × 2 = 6, and 6 + 1 = 7, so 3 1/2 = 7/2.",
+    "skill_tag": "mixed.convert",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "7/2",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "3/2",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "5/3",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Which mixed number is between 1 and 2 and closer to 2?",
+    "hint": "How far is each from 2?",
+    "explanation": "1 4/5 is closer to 2 than 1 1/5 or 1 2/5.",
+    "skill_tag": "mixed.line",
+    "options": [
+     {
+      "id": "a",
+      "text": "1 1/5"
+     },
+     {
+      "id": "b",
+      "text": "1 2/5"
+     },
+     {
+      "id": "c",
+      "text": "1 4/5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multi_select",
+    "prompt": "Which two are bigger than 1 3/5? Pick two.",
+    "hint": "Compare the wholes, then the fractions.",
+    "explanation": "1 4/5 and 2 are both bigger than 1 3/5.",
+    "skill_tag": "mixed.compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "2"
+     },
+     {
+      "id": "b",
+      "text": "1 2/5"
+     },
+     {
+      "id": "c",
+      "text": "1 1/5"
+     },
+     {
+      "id": "d",
+      "text": "1 4/5"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "true_false",
+    "prompt": "1 2/5 is bigger than 1 3/5.",
+    "hint": "Compare the fractions.",
+    "explanation": "Two fifths is less than three fifths.",
+    "skill_tag": "mixed.compare",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each fraction to its place on the line.",
+    "hint": "Change each to a mixed number.",
+    "explanation": "4/4 = 1, 5/2 = 2 1/2, 7/4 = 1 3/4.",
+    "skill_tag": "mixed.line",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "4/4"
+     },
+     {
+      "id": "l2",
+      "text": "5/2"
+     },
+     {
+      "id": "l3",
+      "text": "7/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "1 3/4"
+     },
+     {
+      "id": "r1",
+      "text": "1"
+     },
+     {
+      "id": "r2",
+      "text": "2 1/2"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "fractions_line",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Layla says 4/4 is written as 1, but it is not a whole, so it cannot be 1. Is she right?",
+    "hint": "How many quarters make a whole?",
+    "explanation": "Four quarters make one whole, so 4/4 = 1.",
+    "skill_tag": "mixed.reason_whole",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4/4 is not a whole"
+     },
+     {
+      "id": "b",
+      "text": "No, 4/4 is 2"
+     },
+     {
+      "id": "c",
+      "text": "No. 4/4 is four quarters, which is one whole"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "number",
+    "prompt": "How many halves are in 2 1/2?",
+    "hint": "Two wholes have 4 halves, and 1 more half.",
+    "explanation": "4 + 1 = 5 halves.",
+    "skill_tag": "mixed.convert",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "fractions_line",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Omar says 1 1/4 means one and four. Is he right?",
+    "hint": "What is the fraction part?",
+    "explanation": "The fraction part is 1/4, and the whole part is 1.",
+    "skill_tag": "mixed.reason_read",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one and four"
+     },
+     {
+      "id": "b",
+      "text": "No. 1 1/4 means one whole and one quarter"
+     },
+     {
+      "id": "c",
+      "text": "No, it means 1/4 only"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 1 3/5 is bigger than 1 4/5 because 3 is smaller than 4. Is he right?",
+    "hint": "Compare the fraction parts.",
+    "explanation": "4 fifths is more than 3 fifths, so 1 4/5 is bigger.",
+    "skill_tag": "mixed.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3 is smaller so 1 3/5 is bigger"
+     },
+     {
+      "id": "b",
+      "text": "No, they are equal"
+     },
+     {
+      "id": "c",
+      "text": "No. 1 4/5 is bigger, because 4 fifths is more than 3 fifths"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "Ali has 2 1/2 cups of rice. He uses 1 1/2 cups. How many cups are left?",
+    "hint": "Take away the wholes, then the halves.",
+    "explanation": "2 − 1 = 1 and 1/2 − 1/2 = 0, so 1 cup is left.",
+    "skill_tag": "mixed.subtract",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "recipes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "slider",
+    "prompt": "Slide to show 2 1/2 on the line from 0 to 3.",
+    "hint": "Halfway between 2 and 3.",
+    "explanation": "2 1/2 is halfway between 2 and 3.",
+    "skill_tag": "mixed.line",
+    "range": {
+     "step": 0.5,
+     "min": 0,
+     "max": 3
+    },
+    "answer": {
+     "value": 2.5,
+     "tolerance": 0.5
+    },
+    "sub_lesson": "recipes",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Zara adds 7/8 and 3/8 and gets 10/8. Is she right?",
+    "hint": "Eight eighths make a whole.",
+    "explanation": "10/8 = 1 2/8 = 1 1/4, so the total is correct.",
+    "skill_tag": "mixed.add",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 10/16"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 1/8"
+     },
+     {
+      "id": "c",
+      "text": "Yes. 10/8 = 8/8 + 2/8, which is 1 2/8, or 1 1/4"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says 3/8 + 4/8 = 7/16 because he adds the bottom numbers too. Is he right?",
+    "hint": "Does the bottom number change when the pieces are the same size?",
+    "explanation": "The pieces stay eighths, so the answer is 7/8.",
+    "skill_tag": "mixed.reason_add",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 12/8"
+     },
+     {
+      "id": "b",
+      "text": "No. Add the tops only and keep the bottom: 3/8 + 4/8 = 7/8"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 7/16"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Sara says 2 1/2 cups is the same as 5 cups. Is she right?",
+    "hint": "Half a cup is less than one cup.",
+    "explanation": "Two cups and half a cup is less than 3 cups.",
+    "skill_tag": "mixed.reason_value",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 2 1/2 cups is 25 cups"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 1/2 cups is two and a half cups, not 5 cups"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 5 cups"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Ali says 1 3/4 pizzas is 7 quarters. Is he right?",
+    "hint": "Four quarters make one whole.",
+    "explanation": "4 + 3 = 7 quarters.",
+    "skill_tag": "mixed.reason_convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 4 quarters"
+     },
+     {
+      "id": "b",
+      "text": "Yes. 1 whole is 4 quarters, and 3 more quarters makes 7 quarters"
+     },
+     {
+      "id": "c",
+      "text": "No, 1 3/4 is 13 quarters"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "How many eighths are in 1 whole?",
+    "hint": "Eight equal pieces make a whole.",
+    "explanation": "Eight eighths make one whole.",
+    "skill_tag": "mixed.whole",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which is 2 and 1 half written as a mixed number?",
+    "hint": "The whole part comes first.",
+    "explanation": "Two wholes and one half is 2 1/2.",
+    "skill_tag": "mixed.write",
+    "options": [
+     {
+      "id": "a",
+      "text": "2/1"
+     },
+     {
+      "id": "b",
+      "text": "2 1/2"
+     },
+     {
+      "id": "c",
+      "text": "21/2"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "5/4 is the same as 2 1/4.",
+    "hint": "Four quarters make one whole.",
+    "explanation": "5/4 is 1 1/4, not 2 1/4.",
+    "skill_tag": "mixed.write",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the mixed number about 9 quarters.",
+    "hint": "Two groups of four.",
+    "explanation": "9/4 is 2 wholes and 1 quarter.",
+    "skill_tag": "mixed.write",
+    "points": 2,
+    "text": "9/4 = {b1} and {b2}/4.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "2"
+       },
+       {
+        "id": "b",
+        "text": "0"
+       },
+       {
+        "id": "c",
+        "text": "1"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Pick the two mixed numbers from this list.",
+    "hint": "A mixed number has a whole part and a fraction.",
+    "explanation": "3 1/4 and 2 2/5 are mixed numbers.",
+    "skill_tag": "mixed.mixed",
+    "options": [
+     {
+      "id": "a",
+      "text": "2 2/5"
+     },
+     {
+      "id": "b",
+      "text": "9/4"
+     },
+     {
+      "id": "c",
+      "text": "8/3"
+     },
+     {
+      "id": "d",
+      "text": "3 1/4"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Put these in order, biggest first.",
+    "hint": "Compare the wholes, then the fractions.",
+    "explanation": "2 3/4, then 2 1/4, then 2, then 1 1/2.",
+    "skill_tag": "mixed.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "2 1/4"
+     },
+     {
+      "id": "i4",
+      "text": "1 1/2"
+     },
+     {
+      "id": "i3",
+      "text": "2"
+     },
+     {
+      "id": "i1",
+      "text": "2 3/4"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "Slide to show 1 3/4 on the line from 0 to 2.",
+    "hint": "Three quarters past 1.",
+    "explanation": "1 3/4 is three quarters past 1.",
+    "skill_tag": "mixed.line",
+    "range": {
+     "step": 0.25,
+     "min": 0,
+     "max": 2
+    },
+    "answer": {
+     "value": 1.75,
+     "tolerance": 0.25
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each word to its mixed number.",
+    "hint": "Whole first, then the fraction.",
+    "explanation": "Four and three fifths is 4 3/5, and so on.",
+    "skill_tag": "mixed.read",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "four and three fifths"
+     },
+     {
+      "id": "l2",
+      "text": "one and one eighth"
+     },
+     {
+      "id": "l3",
+      "text": "two and two thirds"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "1 1/8"
+     },
+     {
+      "id": "r3",
+      "text": "2 2/3"
+     },
+     {
+      "id": "r1",
+      "text": "4 3/5"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "more_than_one",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "How many whole ones are in 11/5?",
+    "hint": "Count full groups of five.",
+    "explanation": "Two groups of five make 10, so 11/5 = 2 1/5.",
+    "skill_tag": "mixed.convert",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Sam says 11/5 = 1 6/5. Is he right?",
+    "hint": "Can the fraction part be bigger than one?",
+    "explanation": "The fraction part must be less than one whole, so 11/5 = 2 1/5.",
+    "skill_tag": "mixed.reason_convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 1 6/5"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 1 5/5"
+     },
+     {
+      "id": "c",
+      "text": "No. 6/5 is more than one whole, so 11/5 = 2 1/5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "converting",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "true_false",
+    "prompt": "11/4 is the same as 2 1/4.",
+    "hint": "Two wholes are 8 quarters.",
+    "explanation": "11/4 = 2 3/4, not 2 1/4.",
+    "skill_tag": "mixed.convert",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "converting",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Convert 3 1/3 to an improper fraction.",
+    "hint": "3 × 3 + 1.",
+    "explanation": "3 × 3 = 9, and 9 + 1 = 10.",
+    "skill_tag": "mixed.convert",
+    "points": 1,
+    "text": "3 1/3 = {b1}/3.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "9"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Pick the two improper fractions from this list.",
+    "hint": "The top is bigger than the bottom.",
+    "explanation": "11/5 and 8/3 are improper.",
+    "skill_tag": "mixed.improper",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 2/5"
+     },
+     {
+      "id": "b",
+      "text": "1 1/2"
+     },
+     {
+      "id": "c",
+      "text": "8/3"
+     },
+     {
+      "id": "d",
+      "text": "11/5"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Sort these from the biggest value.",
+    "hint": "Change each to a mixed number first.",
+    "explanation": "5/2 is 2 1/2 and 9/5 is 1 4/5. So the order is 2 1/2, 2 1/3, 2, 1 4/5.",
+    "skill_tag": "mixed.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "2"
+     },
+     {
+      "id": "i4",
+      "text": "9/5"
+     },
+     {
+      "id": "i2",
+      "text": "2 1/3"
+     },
+     {
+      "id": "i1",
+      "text": "5/2"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows 1 1/4 shaded.",
+    "hint": "One whole and a quarter.",
+    "explanation": "1 whole and 1 quarter is 1 1/4.",
+    "skill_tag": "mixed.picture",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍕",
+       "label": "A: 3 quarters",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🍕",
+       "label": "B: 1 whole and 1 quarter",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🍕",
+       "label": "C: 1 half",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the fraction equal to 2 1/5.",
+    "hint": "2 × 5 + 1.",
+    "explanation": "2 × 5 = 10, and 10 + 1 = 11, so 2 1/5 = 11/5.",
+    "skill_tag": "mixed.convert",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "11/5",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "7/5",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "2/5",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "converting",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Which mixed number is between 3 and 4 and closer to 3?",
+    "hint": "How far is each from 3?",
+    "explanation": "3 1/5 is closest to 3.",
+    "skill_tag": "mixed.line",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 4/5"
+     },
+     {
+      "id": "b",
+      "text": "3 1/5"
+     },
+     {
+      "id": "c",
+      "text": "3 3/5"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multi_select",
+    "prompt": "Which two are bigger than 2 1/3? Pick two.",
+    "hint": "Compare the wholes, then the fractions.",
+    "explanation": "2 2/3 and 3 are both bigger than 2 1/3.",
+    "skill_tag": "mixed.compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "3"
+     },
+     {
+      "id": "b",
+      "text": "2 1/3"
+     },
+     {
+      "id": "c",
+      "text": "2 1/4"
+     },
+     {
+      "id": "d",
+      "text": "2 2/3"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "true_false",
+    "prompt": "2 4/5 is bigger than 2 3/5.",
+    "hint": "Compare the fractions.",
+    "explanation": "Four fifths is more than three fifths.",
+    "skill_tag": "mixed.compare",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Join each fraction to its mixed number.",
+    "hint": "Change each to a mixed number.",
+    "explanation": "6/4 = 1 2/4, 9/2 = 4 1/2, 5/4 = 1 1/4.",
+    "skill_tag": "mixed.line",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "6/4"
+     },
+     {
+      "id": "l2",
+      "text": "9/2"
+     },
+     {
+      "id": "l3",
+      "text": "5/4"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "1 1/4"
+     },
+     {
+      "id": "r1",
+      "text": "1 2/4"
+     },
+     {
+      "id": "r2",
+      "text": "4 1/2"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "fractions_line",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Mira says 3/3 is less than 1 because the top and bottom are the same. Is she right?",
+    "hint": "Three thirds make a whole.",
+    "explanation": "3/3 = 1.",
+    "skill_tag": "mixed.reason_whole",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3/3 is less than 1"
+     },
+     {
+      "id": "b",
+      "text": "No, 3/3 is 3"
+     },
+     {
+      "id": "c",
+      "text": "No. 3/3 is three thirds, which is one whole"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "number",
+    "prompt": "How many thirds are in 3 1/3?",
+    "hint": "Three wholes have 9 thirds, and 1 more third.",
+    "explanation": "9 + 1 = 10 thirds.",
+    "skill_tag": "mixed.convert",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "fractions_line",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Zara says 2 3/5 means two and five. Is she right?",
+    "hint": "What is the fraction part?",
+    "explanation": "The fraction part is 3/5.",
+    "skill_tag": "mixed.reason_read",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 2/5"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 3/5 means two wholes and three fifths"
+     },
+     {
+      "id": "c",
+      "text": "Yes, two and five"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Ali says 2 1/4 is bigger than 2 3/4 because 1 is bigger than 3. Is he right?",
+    "hint": "Compare the fraction parts.",
+    "explanation": "3 quarters is more than 1 quarter.",
+    "skill_tag": "mixed.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are equal"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 3/4 is bigger, because 3 quarters is more than 1 quarter"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 1 is bigger than 3"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "fractions_line",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "Sana has 3 1/4 litres of milk. She uses 1 1/4 litres. How many litres are left?",
+    "hint": "Take away the wholes and the quarters.",
+    "explanation": "3 − 1 = 2 and 1/4 − 1/4 = 0, so 2 litres.",
+    "skill_tag": "mixed.subtract",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "recipes",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "slider",
+    "prompt": "Slide to show 1 1/2 on the line from 0 to 3.",
+    "hint": "Halfway between 1 and 2.",
+    "explanation": "1 1/2 is halfway between 1 and 2.",
+    "skill_tag": "mixed.line",
+    "range": {
+     "step": 0.5,
+     "min": 0,
+     "max": 3
+    },
+    "answer": {
+     "value": 1.5,
+     "tolerance": 0.5
+    },
+    "sub_lesson": "recipes",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Mina says 4/6 + 5/6 = 9/6, which is 1 3/6. Is she right?",
+    "hint": "Six sixths make a whole.",
+    "explanation": "9/6 = 1 3/6.",
+    "skill_tag": "mixed.add",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 9/12"
+     },
+     {
+      "id": "b",
+      "text": "Yes. 9/6 = 6/6 + 3/6, which is 1 3/6"
+     },
+     {
+      "id": "c",
+      "text": "No, it is 1 4/6"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Nora says 2/5 + 1/5 = 3/10 because she adds the bottoms. Is she right?",
+    "hint": "Keep the bottom number.",
+    "explanation": "The fifths stay fifths, so the answer is 3/5.",
+    "skill_tag": "mixed.reason_add",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 3/10"
+     },
+     {
+      "id": "b",
+      "text": "No. Add the tops only: 2/5 + 1/5 = 3/5"
+     },
+     {
+      "id": "c",
+      "text": "No, 2/10"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Lina says 3 1/4 litres is the same as 4 litres. Is she right?",
+    "hint": "A quarter is less than one whole.",
+    "explanation": "3 and a quarter is less than 4.",
+    "skill_tag": "mixed.reason_value",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 31/4 litres"
+     },
+     {
+      "id": "b",
+      "text": "No. 3 1/4 litres is 3 litres and a quarter, not 4 litres"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 4 litres"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Omar says 2 1/2 pizzas is 5 halves. Is he right?",
+    "hint": "Two wholes have 4 halves.",
+    "explanation": "4 + 1 = 5 halves.",
+    "skill_tag": "mixed.reason_convert",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 2 halves"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 25 halves"
+     },
+     {
+      "id": "c",
+      "text": "Yes. 2 wholes are 4 halves, and 1 more half makes 5 halves"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "recipes",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

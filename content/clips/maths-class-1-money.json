@@ -1,0 +1,176 @@
+{
+ "title": "Zainab goes to the corner shop",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "Zainab has 50p.",
+   "say": "Zainab has a fifty pence coin. She goes to the corner shop.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zainab",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "c",
+     "prop": {
+      "kind": "coin",
+      "highlight": "50p"
+     },
+     "x": 72,
+     "y": 44,
+     "size": 2,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "A drink costs 35p.",
+   "say": "A drink costs thirty-five pence. She wants it!",
+   "items": [
+    {
+     "id": "d",
+     "emoji": "🥤",
+     "label": "35p",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Pay with 50p.",
+   "say": "She hands over her fifty pence coin.",
+   "items": [
+    {
+     "id": "c",
+     "prop": {
+      "kind": "coin",
+      "highlight": "50p"
+     },
+     "x": 30,
+     "y": 44,
+     "size": 2,
+     "enter": "slide_right"
+    },
+    {
+     "id": "d",
+     "emoji": "🥤",
+     "label": "35p",
+     "x": 72,
+     "y": 44,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Count on to 40.",
+   "say": "Count on from thirty-five. Five more makes forty.",
+   "items": [
+    {
+     "id": "a",
+     "prop": {
+      "kind": "coin",
+      "highlight": "5p"
+     },
+     "x": 50,
+     "y": 44,
+     "size": 2,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Count on to 50.",
+   "say": "Ten more makes fifty. Five and ten is fifteen.",
+   "items": [
+    {
+     "id": "a",
+     "prop": {
+      "kind": "coin",
+      "highlight": "5p"
+     },
+     "x": 35,
+     "y": 44,
+     "size": 2
+    },
+    {
+     "id": "b",
+     "prop": {
+      "kind": "coin",
+      "highlight": "10p"
+     },
+     "x": 65,
+     "y": 44,
+     "size": 2,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "15p change.",
+   "say": "The shopkeeper gives her fifteen pence change.",
+   "items": [
+    {
+     "id": "k",
+     "emoji": "🧑‍🍳",
+     "label": "Shopkeeper",
+     "x": 72,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 28,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "label": "15p change"
+    }
+   ]
+  },
+  {
+   "caption": "50p - 35p = 15p.",
+   "say": "Fifty take away thirty-five is fifteen. Both ways agree!",
+   "items": [
+    {
+     "id": "e",
+     "emoji": "✅",
+     "label": "50 - 35 = 15",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya!",
+   "say": "Shukriya, shopkeeper! Zainab saves her change in the piggy bank.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 28,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "p",
+     "emoji": "🐷",
+     "x": 72,
+     "y": 44,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

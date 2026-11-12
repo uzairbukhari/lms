@@ -104,38 +104,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, young scientist!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how does the weather change through the year?\n\nWe will look for patterns.",
-   "say": "Welcome back, young scientist! Today's big question is: how does the weather change through the year? By the end, you will put the seasons in order, read a thermometer, and look for patterns in a weather chart. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "☀️🌧️❄️🍂",
-   "alt": "Sun, rain, snow and autumn leaves.",
-   "caption": "Sun, rain, snow and autumn leaves."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "weather",
-     "meaning": "What it is like outside today."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "seasons",
    "kind": "learn",
    "title": "The four seasons",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does the weather change through the year?",
+     "say": "Today we explore the seasons and the weather. How does the year change?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-seasons-weather-1-7600d823.jpg",
+     "alt": "Red, orange and yellow autumn leaves on a branch against a soft sky",
+     "caption": "Leaves turn red, orange and gold in autumn.",
+     "credit": "Photo by Aaron Burden on Unsplash",
+     "say": "These leaves are turning red and gold. That is a sign of autumn."
+    },
     {
      "type": "heading",
      "text": "Stop 1: Four seasons in the UK"
@@ -287,9 +279,17 @@
      "text": "Stop 2: Seasons in Pakistan"
     },
     {
+     "type": "image",
+     "asset": "science-class-1-seasons-weather-3-6c2c5c45.jpg",
+     "alt": "Heavy rain falling over green fields and tall trees under a grey sky",
+     "caption": "Monsoon rain falls over green fields in summer.",
+     "credit": "Photo by Mr Cool Hitman on Unsplash",
+     "say": "This is monsoon rain. It falls in summer in Pakistan and makes the fields green."
+    },
+    {
      "type": "text",
      "markdown": "Pakistan has hot summers, a rainy **monsoon**, mild autumns and cool winters.\n\nDifferent places have different weather in the same season.",
-     "say": "In Pakistan the seasons look different. Summer is very hot, and in many places the monsoon brings heavy rain in July and August. Autumn is mild. Winter is cool and sometimes it snows in the north, on the mountains. Then spring brings blossom, like almond flowers. So the same year has different weather in different countries."
+     "say": "In Pakistan the seasons look different. Summer is very hot. In many places the monsoon brings heavy rain in July and August. Autumn is mild. Winter is cool and sometimes it snows in the north, on the mountains. Then spring brings blossom, like almond flowers. So the same year has different weather in different countries."
     },
     {
      "type": "image",
@@ -322,6 +322,19 @@
        "c"
       ]
      }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's year",
+     "asset": "clip-science-class-1-seasons-weather-f30b1cdf.mp4",
+     "poster": "clip-science-class-1-seasons-weather-f30b1cdf.webp",
+     "seconds": 71,
+     "transcript": "In spring, blossom opens and lambs skip in the fields. In summer it is hot and the days are long. She wears a sun hat. In July the monsoon arrives. Heavy rain fills the streets. In autumn, leaves turn red and gold and fall to the ground. In winter it is cold. The northern mountains are covered in snow. Winter days are short. The sun sets early and the nights are long. A thermometer shows how hot or cold it is. Today it reads ten degrees. Zainab dresses for the weather. SubhanAllah, every season has its gifts!",
+     "caption": "Zainab watches the seasons change from Lahore to the hills."
     },
     {
      "type": "summary",
@@ -443,6 +456,14 @@
     {
      "type": "heading",
      "text": "Stop 1: Kinds of weather"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-seasons-weather-2-c0cc2d96.jpg",
+     "alt": "Blades of grass covered in white frost in the golden light of a winter morning",
+     "caption": "Frost makes grass white and icy on cold winter mornings.",
+     "credit": "Photo by Michael Held on Unsplash",
+     "say": "Frost forms when the air is very cold. It makes grass white and icy."
     },
     {
      "type": "text",
@@ -637,7 +658,7 @@
       }
      ],
      "backdrop": "home",
-     "say": "A thermometer measures how hot or cold it is. The number on it is called the temperature. We measure it in degrees. The red line goes up when it is warm and goes down when it is cold. Look at what happens on a hot day."
+     "say": "A thermometer measures how hot or cold it is. The number on it is called the temperature. We measure it in degrees. The red line goes up when it is warm. It goes down when it is cold. Look at what happens on a hot day."
     },
     {
      "type": "text",
@@ -973,7 +994,7 @@
     {
      "type": "text",
      "markdown": "We choose clothes to suit the **weather**.\n\nWarm clothes for cold days, light clothes for hot days.",
-     "say": "We choose clothes to suit the season and the weather. In winter we wear a coat, a scarf and gloves. In hot summer we wear light clothes and a sun hat. On rainy days we need a raincoat and boots. In Ramadan or at Eid, we wear special clothes too, but we still dress for the weather. Look at three outfits."
+     "say": "We choose clothes to suit the season and the weather. In winter we wear a coat, a scarf and gloves. In hot summer we wear light clothes and a sun hat. On rainy days we need a raincoat and boots. In Ramadan or at Eid, we wear special clothes too. We still dress for the weather. Look at three outfits."
     },
     {
      "type": "image",
@@ -1573,6 +1594,436 @@
      "b"
     ],
     "skill_tag": "weather.safety",
+    "sub_lesson": "prepare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "Conkers fall from horse chestnut trees in autumn.",
+    "hint": "Think about falling leaves.",
+    "explanation": "Conkers ripen and fall in autumn.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "seasons.conkers",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Zainab sees new buds and baby lambs. Which season is it?",
+    "hint": "Think about new life.",
+    "explanation": "Buds and lambs are signs of spring.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Winter"
+     },
+     {
+      "id": "b",
+      "text": "Spring"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.spring_signs",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "match",
+    "prompt": "Match each weather to what it brings.",
+    "hint": "What can we see?",
+    "explanation": "Rain makes puddles, frost makes icy grass and wind moves leaves.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Rain"
+     },
+     {
+      "id": "l2",
+      "text": "Frost"
+     },
+     {
+      "id": "l3",
+      "text": "Wind"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Moving leaves"
+     },
+     {
+      "id": "r1",
+      "text": "Puddles"
+     },
+     {
+      "id": "r2",
+      "text": "Icy grass"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "weather.weather_match",
+    "sub_lesson": "weather",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "multi_select",
+    "prompt": "Which two tools measure the weather? Pick two.",
+    "hint": "One shows hot or cold. One shows rain.",
+    "explanation": "A thermometer measures temperature and a rain gauge measures rain.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A rain gauge"
+     },
+     {
+      "id": "b",
+      "text": "A ruler"
+     },
+     {
+      "id": "c",
+      "text": "A torch"
+     },
+     {
+      "id": "d",
+      "text": "A thermometer"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "weather.tools_ms",
+    "sub_lesson": "weather",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Hamza says a windy day is no good for anything. Is he right?",
+    "hint": "Think about kites.",
+    "explanation": "Wind is useful for kites and drying washing.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, wind stops everything"
+     },
+     {
+      "id": "b",
+      "text": "No, wind helps us fly kites and dry washing"
+     },
+     {
+      "id": "c",
+      "text": "Yes, wind is always bad"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.wind_use",
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put these signs of the year in order, from spring to winter.",
+    "hint": "Spring comes first.",
+    "explanation": "Blossom is spring, hot sun is summer, falling leaves are autumn and frost is winter.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Hot sun"
+     },
+     {
+      "id": "i3",
+      "text": "Falling leaves"
+     },
+     {
+      "id": "i4",
+      "text": "Frost"
+     },
+     {
+      "id": "i1",
+      "text": "Blossom"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "seasons.year_order",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Zainab wears a woolly hat, gloves and boots. What is the weather like?",
+    "hint": "Think about warm clothes.",
+    "explanation": "We wear hats, gloves and boots when it is cold.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hot"
+     },
+     {
+      "id": "b",
+      "text": "Cold"
+     },
+     {
+      "id": "c",
+      "text": "Very hot"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.clothes_clue",
+    "sub_lesson": "prepare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "slider",
+    "prompt": "A winter day has 8 hours of daylight and a summer day has 14. Slide to show how many more hours there are in summer.",
+    "hint": "14 take away 8.",
+    "explanation": "14 - 8 = 6 more hours.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "hours"
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "seasons.daylight_gap",
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "short_text",
+    "prompt": "What do we call the season that comes after winter?",
+    "hint": "It starts with s and has new buds.",
+    "explanation": "Spring comes after winter.",
+    "answer": {
+     "accepted": [
+      "spring",
+      "springtime"
+     ]
+    },
+    "skill_tag": "seasons.after_winter",
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about daylight.",
+    "hint": "Think about when it gets dark.",
+    "explanation": "Winter days are short and the nights are long.",
+    "points": 2,
+    "text": "In winter the days are {b1} and the nights are {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "long"
+       },
+       {
+        "id": "b",
+        "text": "short"
+       },
+       {
+        "id": "c",
+        "text": "hot"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "green"
+       },
+       {
+        "id": "b",
+        "text": "long"
+       },
+       {
+        "id": "c",
+        "text": "short"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "seasons.daylight_fill",
+    "sub_lesson": "diary",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "number",
+    "prompt": "A year has 4 seasons of 3 months each. How many months is that?",
+    "hint": "4 groups of 3.",
+    "explanation": "3 + 3 + 3 + 3 = 12 months.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "seasons.months_num",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "hotspot",
+    "prompt": "Tap the picture that shows the monsoon.",
+    "hint": "It is the wet summer season.",
+    "explanation": "The monsoon brings heavy rain.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌧️",
+       "label": "Heavy rain",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "❄️",
+       "label": "Snow",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏜️",
+       "label": "Dry sand",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "seasons.pakistan_tap",
+    "sub_lesson": "seasons",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Zainab says summer has no rain. Is she right?",
+    "hint": "Think about July and August.",
+    "explanation": "The monsoon brings heavy rain in summer.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, summer is always dry"
+     },
+     {
+      "id": "b",
+      "text": "No, in Pakistan the monsoon brings heavy rain in summer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, rain only falls in winter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.summer_rain",
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Sam says days are longer in winter. Is he right?",
+    "hint": "Think about the sun setting early.",
+    "explanation": "Winter has the shortest days.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, winter days are longest"
+     },
+     {
+      "id": "b",
+      "text": "Yes, days never change"
+     },
+     {
+      "id": "c",
+      "text": "No, winter days are shorter"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "seasons.daylight_longer",
+    "sub_lesson": "diary",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Omar says you cannot get sunburnt on a cloudy day. Is he right?",
+    "hint": "Think about sun safety.",
+    "explanation": "We can burn even when it is cloudy, so we use shade, a hat and sun cream.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only hot days burn"
+     },
+     {
+      "id": "b",
+      "text": "No, harmful sun rays can still reach us through cloud"
+     },
+     {
+      "id": "c",
+      "text": "Yes, clouds block all the sun"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.cloud_burn",
     "sub_lesson": "prepare",
     "depth": "reason"
    },
@@ -2464,6 +2915,451 @@
     "sub_lesson": "prepare",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "Conkers fall from trees in spring.",
+    "hint": "Think about new buds.",
+    "explanation": "Spring is for buds and blossom. Conkers fall in autumn.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "seasons.conkers",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Blossom appears and birds build nests. Which season is it?",
+    "hint": "Think about new life.",
+    "explanation": "Blossom and nests are signs of spring.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Winter"
+     },
+     {
+      "id": "b",
+      "text": "Spring"
+     },
+     {
+      "id": "c",
+      "text": "Autumn"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.spring_signs",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "match",
+    "prompt": "Join each weather to what it brings.",
+    "hint": "What can we see?",
+    "explanation": "Snow covers the ground, sun makes shadows and fog hides things far away.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Snow"
+     },
+     {
+      "id": "l2",
+      "text": "Sun"
+     },
+     {
+      "id": "l3",
+      "text": "Fog"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Hard to see far"
+     },
+     {
+      "id": "r1",
+      "text": "White ground"
+     },
+     {
+      "id": "r2",
+      "text": "Shadows"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "weather.weather_match",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multi_select",
+    "prompt": "Which two things tell us about the weather? Pick two.",
+    "hint": "Think about wind and temperature.",
+    "explanation": "A wind sock shows the wind and a thermometer shows the temperature.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A calculator"
+     },
+     {
+      "id": "b",
+      "text": "A pencil"
+     },
+     {
+      "id": "c",
+      "text": "A thermometer"
+     },
+     {
+      "id": "d",
+      "text": "A wind sock"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "weather.tools_ms",
+    "sub_lesson": "weather",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Layla says rain is no good for anything. Is she right?",
+    "hint": "Think about the garden.",
+    "explanation": "Plants and rivers need rain.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rain is always bad"
+     },
+     {
+      "id": "b",
+      "text": "No, rain helps plants grow and fills rivers"
+     },
+     {
+      "id": "c",
+      "text": "Yes, plants hate water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "weather.wind_use",
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Arrange these signs of the year, from spring to winter.",
+    "hint": "Spring comes first.",
+    "explanation": "Lambs are spring, beach days are summer, conkers are autumn and snow is winter.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Beach days"
+     },
+     {
+      "id": "i4",
+      "text": "Snow"
+     },
+     {
+      "id": "i3",
+      "text": "Conkers"
+     },
+     {
+      "id": "i1",
+      "text": "New lambs"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "seasons.year_order",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Hamza wears sandals and a sun hat. What is the weather like?",
+    "hint": "Think about light clothes.",
+    "explanation": "Sandals and a sun hat suit hot, sunny weather.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Freezing"
+     },
+     {
+      "id": "b",
+      "text": "Hot and sunny"
+     },
+     {
+      "id": "c",
+      "text": "Cold and snowy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.clothes_clue",
+    "sub_lesson": "prepare",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "slider",
+    "prompt": "A winter day has 7 hours of daylight and a summer day has 16. Slide to show how many more hours there are in summer.",
+    "hint": "16 take away 7.",
+    "explanation": "16 - 7 = 9 more hours.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12,
+     "unit": "hours"
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 0
+    },
+    "skill_tag": "seasons.daylight_gap",
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "short_text",
+    "prompt": "What do we call the season that comes after spring?",
+    "hint": "It starts with s and is hot.",
+    "explanation": "Summer comes after spring.",
+    "answer": {
+     "accepted": [
+      "summer",
+      "summertime"
+     ]
+    },
+    "skill_tag": "seasons.after_winter",
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about summer.",
+    "hint": "Think about long light evenings.",
+    "explanation": "Summer days are long and the sun is high in the sky.",
+    "points": 2,
+    "text": "In summer the days are {b1} and the sun is {b2} in the sky.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "short"
+       },
+       {
+        "id": "b",
+        "text": "frosty"
+       },
+       {
+        "id": "c",
+        "text": "long"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hiding"
+       },
+       {
+        "id": "b",
+        "text": "high"
+       },
+       {
+        "id": "c",
+        "text": "frozen"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "seasons.daylight_fill",
+    "sub_lesson": "diary",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "number",
+    "prompt": "Spring and summer each have 3 months. How many months is that?",
+    "hint": "3 + 3.",
+    "explanation": "3 + 3 = 6 months.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "seasons.months_num",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "hotspot",
+    "prompt": "Tap the sign of winter in the mountains of northern Pakistan.",
+    "hint": "Think of Murree or Hunza.",
+    "explanation": "Snow falls on the northern mountains in winter.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❄️",
+       "label": "Snow on mountains",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🌴",
+       "label": "Palm trees",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "☀️",
+       "label": "Hot sun",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "seasons.pakistan_tap",
+    "sub_lesson": "seasons",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says it never rains in the UK in summer. Is she right?",
+    "hint": "Think about a summer shower.",
+    "explanation": "It can rain in any season.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rain only falls in winter"
+     },
+     {
+      "id": "b",
+      "text": "No, the UK can have showers in summer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, summer is always dry in the UK"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.summer_rain",
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Mira says the sun rises at the same time all year. Is she right?",
+    "hint": "Think about dark winter mornings.",
+    "explanation": "Sunrise changes through the year.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it never rises in winter"
+     },
+     {
+      "id": "b",
+      "text": "No, it rises later in winter and earlier in summer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it always rises at six"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "seasons.daylight_longer",
+    "sub_lesson": "diary",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Hira says a sun hat is only needed when it is hot. Is she right?",
+    "hint": "Think about the sun's rays.",
+    "explanation": "Bright sun can burn skin even on cooler days.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, heat is the only danger"
+     },
+     {
+      "id": "b",
+      "text": "Yes, hats are only for winter"
+     },
+     {
+      "id": "c",
+      "text": "No, bright sun can burn even when it is not hot"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "seasons.cloud_burn",
+    "sub_lesson": "prepare",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

@@ -1,0 +1,123 @@
+{
+ "title": "Robo-Mina finds the treasure",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "Mina and her robot.",
+   "say": "This is Mina. Her robot starts at the corner of a grid.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "👧",
+     "label": "Mina",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "label": "robot",
+     "x": 72,
+     "y": 48,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Start at (0, 0).",
+   "say": "The robot starts at zero, zero, in the bottom left corner.",
+   "items": [
+    {
+     "id": "o",
+     "emoji": "🏁",
+     "label": "(0, 0)",
+     "x": 20,
+     "y": 80,
+     "size": 2,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Three across.",
+   "say": "First, the robot moves three squares across to the right.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "➡️",
+     "label": "3 across",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_right"
+    }
+   ]
+  },
+  {
+   "caption": "Two up.",
+   "say": "Then it moves two squares up. Now it is at three, two.",
+   "items": [
+    {
+     "id": "u",
+     "emoji": "⬆️",
+     "label": "2 up",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "slide_left"
+    }
+   ]
+  },
+  {
+   "caption": "Treasure at (3, 2).",
+   "say": "The treasure is at three, two. The robot found it!",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "📍",
+     "label": "(3, 2)",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "effect": "sparkle"
+    },
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "label": "robot",
+     "x": 60,
+     "y": 50,
+     "size": 2
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Mina!",
+   "say": "Across first, then up. Shukriya, Mina!",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "👧",
+     "label": "Mina",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "h",
+     "emoji": "🎉",
+     "label": "Found it!",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

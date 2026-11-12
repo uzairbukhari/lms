@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 4 (Fatima, age 9), topic 4: Networks and safety.
 // Standards: NC KS2 networks and e-safety, CSTA 1B networks and the internet (docs/CURRICULUM_V2.md).
 const o = (hint, why, tag) => ({ hint, why, tag });
 
+const CABLES = "data-ai-class-4-networks-safety-1-73c31d3d.jpg";
+const FIBRE = "data-ai-class-4-networks-safety-2-f46c6c8e.jpg";
+
 const internet = {
   id: "internet", kind: "learn", title: "How the internet works",
   blocks: [
+    H("Welcome back, network explorer!"),
+    SAY("Today we follow a message across the internet. How do we stay safe on it?", T("Today's big question: how does the internet work, and how do we stay safe?")),
+    SAY("These cables plug into a network switch. Switches connect the computers in a school network.", PHOTO(CABLES, "Rows of blue network cables plugged into a network switch with glowing lights", "Cables link a network switch to many computers.", "Photo by Scott Rodgerson on Unsplash")),
     H("Stop 1: Computers that connect"),
     SAY("A network is a group of computers connected so they can share information. The internet is the biggest network in the world. It joins millions of networks together. When you open a website, your device asks a server. A server is a powerful computer that stores websites and sends them to you. The messages travel along cables, through wireless signals, and through routers that point them the right way.", T("A **network** connects computers so they can share. The **internet** joins millions of networks.", "A **server** stores a website. A **router** points messages the right way.")),
     EXP("Opening a website",
@@ -16,6 +22,7 @@ const internet = {
       SS("A server far away stores the website. It sends the page back to you, and the page appears on your screen.", S("The server sends the page back.", ["t", "📱", 15, 55, 3], ["r", "📡", 40, 55, 2], ["s", "🖥️", 85, 55, 3, "bounce", "Server"], ["b", "⬅️", 62, 55, 2, "bounce"]))),
     CHK(mc("What does a server do?", "Stores websites and sends them to us", ["Types the words for us", "Charges our battery"], o("Think about a library of websites.", "A server stores websites and sends them to us.", "net.server"))),
     H("Stop 2: Packets"),
+    SAY("Some cables carry data as flashes of light. Packets can travel through fibres like these.", PHOTO(FIBRE, "A bundle of glowing optical fibres in the dark", "Optical fibres carry data as flashes of light.", "Photo by Denny Müller on Unsplash")),
     SAY("Big messages do not travel in one piece. They are split into tiny packets. Each packet has a label saying where it is going and which number it is. Packets can take different routes. At the end, the computer puts them back in order, like a jigsaw. If one packet is lost, only that one needs to be sent again.", T("Messages are split into **packets**. Each packet has an address and a number.", "At the end they are put back in order.")),
     EXP("A message in packets",
       SS("Here is a message: HELLO FRIEND.", S("The message.", ["m", "✉️", 50, 50, 3, "bounce", "HELLO FRIEND"])),
@@ -23,7 +30,7 @@ const internet = {
       SS("They travel by different routes, then are put back in order at the other end. The message arrives safely.", S("They are put back in order.", ["p1", "📦", 25, 70, 2, "none", "1"], ["p2", "📦", 50, 40, 2, "none", "2"], ["p3", "📦", 75, 70, 2, "none", "3"], ["ok", "✅", 50, 15, 3, "bounce"]))),
     CHK(mc("Why is a message split into packets?", "Small packets can travel different routes and be put back together", ["To make it slower on purpose", "To hide it from the router"], o("Think about a jigsaw.", "Packets are small and are put back in order.", "net.packets"))),
     SAY("Let us remember. A network connects computers. A server stores websites. Messages travel as packets.", SUM("A network connects computers", "A server stores websites", "Messages are split into numbered packets")),
-    GLOSS({ network: "A group of connected computers.", internet: "The biggest network, joining millions of networks.", server: "A powerful computer that stores websites.", router: "A device that points messages the right way.", packets: "Small pieces a message is split into." }),
+    GLOSS({ "network switch": "A device that links computers in a network and sends data to the right one.", "internet address": "A number that tells data where to go.", network: "A group of connected computers.", internet: "The biggest network, joining millions of networks.", server: "A powerful computer that stores websites.", router: "A device that points messages the right way.", packets: "Small pieces a message is split into." }),
   ],
   mini: [
     mc("What is the internet?", "A huge network of networks", ["A single computer", "A game"], o("Many connected.", "The internet joins millions of networks.")),
@@ -37,7 +44,7 @@ const passwords = {
   id: "passwords", kind: "try", title: "Strong passwords",
   blocks: [
     H("Stop 1: Why passwords matter"),
-    SAY("A password is a secret key that protects your accounts. A weak password is easy to guess, like 1234 or your name. A strong password is long, has a mix of letters, numbers and symbols, and is not about you. A great trick is to join three random words, like blue elephant pizza, and add a number and a symbol. It is easy for you to remember but very hard for others to guess.", T("A **strong password** is long and mixed, and is not easy to guess.", "Never share a **password** except with your parent.")),
+    SAY("A password is a secret key that protects your accounts. A weak password is easy to guess, like 1234 or your name. A strong password is long, has a mix of letters, numbers and symbols, and is not about you. A great trick is to join three random words, like blue elephant pizza. Then add a number and a symbol. It is easy for you to remember but very hard for others to guess.", T("A **strong password** is long and mixed, and is not easy to guess.", "Never share a **password** except with your parent.")),
     EXP("Weak and strong",
       SS("Here is a weak password. It is short and easy to guess.", S("Weak: 1234", ["w", "🔓", 30, 50, 3, "none", "1234"])),
       SS("Here is a stronger one. It joins random words and adds a number and a symbol.", S("Strong: BlueElephantPizza7!", ["w", "🔓", 15, 50, 2, "none", "1234"], ["s", "🔐", 65, 50, 3, "bounce", "BlueElephantPizza7!"])),
@@ -62,7 +69,7 @@ const phish = {
   id: "safe_game", kind: "play", title: "Spot the risk",
   blocks: [
     H("Stop 1: Tricky messages"),
-    SAY("Some messages online are tricks. A scam message might say you won a prize, or ask you to click a link and type your password. This is called phishing, like fishing for your details. Clues are strange spelling, a rush to act now, and an offer that is too good to be true. The safe move is to not click, not reply, and tell a grown-up.", T("**Phishing** messages try to trick you into sharing private details.", "Do not click, do not reply. Tell a grown-up.")),
+    SAY("Some messages online are tricks. A scam message might say you won a prize. It may ask you to click a link and type your password. This is called phishing, like fishing for your details. Clues are strange spelling and a rush to act now. Another clue is an offer too good to be true. The safe move is to not click, not reply, and tell a grown-up.", T("**Phishing** messages try to trick you into sharing private details.", "Do not click, do not reply. Tell a grown-up.")),
     IMG("🎣✉️", "A tricky message is like bait on a hook."),
     SAY("Spot the warning signs: a prize, a link and a request for your password.", IMG("🚩✉️", "Warning signs in a message.")),
     CHK(mc("A message says: you won a phone, click here and enter your password. What should you do?", "Do not click, and tell a grown-up", ["Click quickly", "Reply with your password"], o("Too good to be true.", "It is a trick. Do not click and tell a grown-up.", "net.phishing"))),
@@ -88,7 +95,7 @@ const footprint = {
     IMG("👣💻", "Everything we post leaves a footprint."),
     CHK(mc("What is a digital footprint?", "The trail of things you leave online", ["The size of your shoe", "A broken screen"], o("Think of footprints.", "It is the trail we leave online.", "net.footprint"))),
     H("Stop 2: Being kind and responsible online"),
-    SAY("Be as kind online as you are in person. Do not post unkind comments. Do not share other people's photos without asking. If someone is unkind, or you see something upsetting, tell a grown-up, save the evidence and do not reply with anger. Every one of us can make the internet a kinder place.", T("Be **kind** online. Tell a grown-up if something upsets you.")),
+    SAY("Be as kind online as you are in person. Do not post unkind comments. Do not share other people's photos without asking. If someone is unkind, or you see something upsetting, tell a grown-up. Save the evidence and do not reply with anger. Every one of us can make the internet a kinder place.", T("Be **kind** online. Tell a grown-up if something upsets you.")),
     SAY("Kind words and asking before sharing make the internet a nicer place.", IMG("💬🤝", "Be kind and ask before sharing.")),
     SAY("Here is a task to try with your family.", ACT("Our family online rules", ["Paper and pencil", "Your family"], ["Talk with your family about how you use the internet.", "Write three rules, such as: ask before sharing a photo.", "Put them somewhere everyone can see."])),
     REVEAL("Can you completely delete something you posted?", "Not always. Others may have copied or saved it, so think before you post."),
@@ -122,6 +129,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Fatima follows a message", backdrop: "home", caption: "Fatima follows a message across the internet and spots a trick.",
+  scenes: [
+    { caption: "A message.", say: "Fatima sends a message to her cousin in Lahore. It is split into packets.",
+      items: [{ id: "f", emoji: "👧", label: "Fatima", x: 22, y: 56, size: 3, enter: "walk_right" }, { id: "p", emoji: "📦", label: "packets", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Numbered packets.", say: "Each packet has an address and a number. They travel by different routes.",
+      items: [{ id: "a", emoji: "📦", label: "1", x: 25, y: 35, size: 2, anim: "bounce" }, { id: "b", emoji: "📦", label: "2", x: 50, y: 55, size: 2, anim: "bounce" }, { id: "c", emoji: "📦", label: "3", x: 75, y: 35, size: 2, anim: "bounce" }] },
+    { caption: "Switch and router.", say: "A switch and a router send each packet the right way.",
+      items: [{ id: "s", emoji: "🔀", label: "switch", x: 30, y: 50, size: 3, anim: "pulse" }, { id: "r", emoji: "📡", label: "router", x: 72, y: 50, size: 3, anim: "pulse" }] },
+    { caption: "Put back together.", say: "At the other end the packets are put back in order. The message arrives.",
+      items: [{ id: "m", emoji: "✉️", label: "HELLO", x: 50, y: 48, size: 3, effect: "sparkle" }] },
+    { caption: "A strong password.", say: "She uses a long mixed password and keeps it secret.",
+      items: [{ id: "k", emoji: "🔐", label: "Moon-Tiger-Cloud9!", x: 50, y: 48, size: 3, effect: "glow" }] },
+    { caption: "A scam!", say: "A message says: win a phone, click now! That is a phishing clue.",
+      items: [{ id: "m", emoji: "🎣", label: "click now!", x: 40, y: 50, size: 3 }, { id: "w", emoji: "⚠️", x: 75, y: 35, size: 3, anim: "pulse" }] },
+    { caption: "Tell a grown-up.", say: "Fatima does not click. She tells her teacher straight away.",
+      items: [{ id: "f", emoji: "👧", x: 28, y: 56, size: 3 }, { id: "t", emoji: "👩‍🏫", x: 70, y: 52, size: 3, effect: "hearts" }] },
+    { caption: "Digital footprint.", say: "She thinks before posting. Everything online leaves a footprint.",
+      items: [{ id: "d", emoji: "👣", x: 40, y: 55, size: 3 }, { id: "p", emoji: "🤔", x: 75, y: 40, size: 3, anim: "pulse" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-4-networks-safety", subject: "data-ai", cls: 4, topic: 4, title: "Networks and Staying Safe",
@@ -140,13 +170,9 @@ export const topics = [
       mc("What does a label tell a machine?", "What an example is", ["How fast it is", "What colour it is"], o("The right answer.", "A label is the right answer.")),
       num("What is 9 x 7?", 63, o("9 sevens.", "9 x 7 = 63.")),
     ],
-    intro: [
-      H("Welcome, network explorer!"),
-      SAY("Welcome, network explorer! Today's big question: how does the internet work, and how do we stay safe on it? We will follow a message across the network, make a strong password and learn to spot tricky messages. Let's go!", T("Today's big question: how does the internet work, and how do we stay safe on it?", "We will follow a message and learn safe habits.")),
-      IMG("🌐", "The internet connects the whole world."),
-      GLOSS({ explorer: "Someone who finds out new things." }),
-    ],
+    intro: [],
     subs: [internet, passwords, phish, footprint],
+    clip,
     quiz: [
       qd(mc("What do we call a powerful computer that stores websites?", "A server", ["A router", "A tablet"], o("It serves pages.", "A server stores websites.", "net.server")), "internet", "recall"),
       qd(mc("What does a router do with messages?", "Points them the right way", ["Stores them", "Makes passwords"], o("Like a signpost.", "A router directs traffic.", "net.router")), "internet", "recall"),
@@ -163,6 +189,37 @@ export const topics = [
       qd(tf("We should ask before posting a photo of a friend.", true, o("Permission matters.", "Always ask first.", "net.footprint")), "footprint", "recall"),
       qd(mc("Nadia says a deleted post is gone forever. Is she right?", "No, others may have saved it", ["Yes, always", "Only on Fridays"], o("Think about copies.", "Others can copy posts.", "net.reason")), "footprint", "reason"),
       qd(ord("Put the steps of loading a web page in order.", ["You tap a link", "A request reaches a server", "The page is sent back to you"], o("Tap first.", "Tap, request, then reply.", "net.process")), "internet", "reason"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(mc("What does a network switch do?", "It connects devices on a network and sends data to the right one", ["It stores websites", "It makes passwords"], o("Think about a junction.", "A switch links devices and directs data between them.", "net.switch")), "internet", "recall",
+        [mc("Which device links the computers in a school network so they can share files?", "A network switch", ["A keyboard", "A printer"], o("Think about a junction.", "A switch links devices and directs data.", "net.switch"))]),
+      qa(mc("What does the header of a packet hold?", "The address and the packet number", ["The password", "A photo of the sender"], o("Think about delivery.", "The header says where it goes and which piece it is.", "net.header")), "internet", "recall",
+        [mc("Why does each packet carry a number?", "So the pieces can be put back in order", ["So it can be louder", "So it can hide"], o("Think about a jigsaw.", "Numbers let the pieces be put back in order.", "net.header"))]),
+      qa(mc("Rizwan says every computer in the school is linked directly to every other computer. Is he right?", "No. Devices connect through switches and routers", ["Yes, every one links to every other", "Yes, there are no switches"], o("Think about the cupboard of cables.", "A switch connects many devices, so they do not each link to all the others.", "net.reason_direct")), "internet", "reason",
+        [mc("Hana says in a network each device has a cable to every other device. Is she right?", "No. A switch lets many devices share connections", ["Yes, every pair has a cable", "Yes, switches do not exist"], o("Think about the cupboard of cables.", "A switch avoids needing a cable between every pair.", "net.reason_direct"))]),
+      qa(ord("Put these steps of loading a web page in order.", ["You type a web address", "Your device asks a server", "The server sends back packets", "Your device puts them together and shows the page"], o("Type first.", "Type, ask, send, then put together.", "net.page_steps")), "internet", "apply",
+        [ord("Put these steps for sending a message in order.", ["The message is split into packets", "Packets travel along different routes", "Packets arrive at the other device", "They are put back in order"], o("Split first.", "Split, travel, arrive, then reorder.", "net.page_steps"))]),
+      qa(mc("What is an internet address, or IP address, for?", "It identifies a device so data can be sent to the right place", ["It makes the screen brighter", "It saves passwords"], o("Think about post.", "An address says where data should go.", "net.ip")), "internet", "recall",
+        [mc("Why does every device on the internet need an address?", "So data knows where to go", ["So it can charge faster", "So it can play music"], o("Think about post.", "An address says where data should go.", "net.ip"))]),
+      qa(mc("Idris says the internet and the World Wide Web are the same thing. Is he right?", "No. The web is websites and pages. The internet is the network that carries them", ["Yes, they are identical", "Yes, the web is the cables"], o("Think about roads and shops.", "The internet is the network. The web is a service that runs on it.", "net.reason_web")), "internet", "reason",
+        [mc("Layla says email is part of the web, so the internet is only the web. Is she right?", "No. The internet carries email, the web and much more", ["Yes, only the web", "Yes, email is the web"], o("Think about roads and shops.", "The internet carries many services.", "net.reason_web"))]),
+      qa(ms("Which two are true about Wi-Fi? Pick two.", ["It sends data by radio waves", "It needs a password to be secure"], ["It needs no router", "It is always faster than a cable"], o("Think about wireless.", "Wi-Fi uses radio waves and should be protected.", "net.wifi")), "internet", "apply",
+        [ms("Which two are true about wired connections? Pick two.", ["They use cables", "They are often steadier than Wi-Fi"], ["They send data by radio", "They never need a router"], o("Think about cables.", "Wired links use cables and can be steadier.", "net.wired"))]),
+      qa(num("A message is sent as 10 packets. 2 are lost and sent again. How many packets are sent in all?", 12, o("10 plus the 2 resent.", "10 + 2 = 12 packets.", "net.resend")), "internet", "apply",
+        [num("A message is sent as 8 packets. 3 are lost and sent again. How many packets are sent in all?", 11, o("8 plus the 3 resent.", "8 + 3 = 11 packets.", "net.resend"))]),
+      qa(mat("Match each password to how strong it is.", [["1234", "Weak"], ["Moon-Tiger-Cloud9!", "Strong"], ["Your name and birth year", "Weak"]], o("Long, mixed and not about you.", "Short or personal passwords are weak.", "net.strength")), "passwords", "apply",
+        [mat("Pair each password with its strength.", [["password", "Weak"], ["Teapot-Cricket-Rain7?", "Strong"], ["qwerty", "Weak"]], o("Long, mixed and not about you.", "Common words are weak.", "net.strength"))]),
+      qa(hot("Tap the phishing clue.", [["⚠️", "Act now or lose your account!", 22, 50], ["✉️", "A photo from your cousin", 50, 50], ["📚", "A library reminder with your name", 78, 50]], ["Act now or lose your account!"], { labels: true, ...o("Look for pressure.", "A rush to act is a phishing clue.", "net.phish_clue") }), "safe_game", "apply",
+        [hot("Tap the clue that suggests a scam.", [["🎁", "Win a free phone, click here!", 22, 50], ["📅", "A school trip reminder", 50, 50], ["🔒", "A message from your parent", 78, 50]], ["Win a free phone, click here!"], { labels: true, ...o("Too good to be true.", "A free prize is a scam clue.", "net.phish_clue") })]),
+      qa(mc("What is two-step login?", "Proving who you are in two ways, such as a password and a code", ["Typing your password twice", "Logging in twice a day"], o("Think about two checks.", "It uses two different proofs.", "net.two_step")), "passwords", "recall",
+        [mc("Why does a two-step login help if someone steals your password?", "They still need the second proof, such as a code", ["The password becomes longer", "The site deletes your account"], o("Think about two checks.", "A thief needs both steps.", "net.two_step"))]),
+      qa(sld("A file of 12 MB is sent in packets of 2 MB each. Slide to show how many packets are needed.", { min: 0, max: 12 }, 6, 0, o("12 divided by 2.", "12 / 2 = 6 packets.", "net.packet_count")), "internet", "apply",
+        [sld("A file of 15 MB is sent in packets of 3 MB each. Slide to show how many packets are needed.", { min: 0, max: 12 }, 5, 0, o("15 divided by 3.", "15 / 3 = 5 packets.", "net.packet_count"))]),
+      qa(mc("Hira says software updates are a waste of time. Is she right?", "No. Updates fix security holes and bugs", ["Yes, updates do nothing", "Yes, updates only change colours"], o("Think about locks.", "Updates repair weaknesses attackers could use.", "net.reason_updates")), "passwords", "reason",
+        [mc("Zayd says if a device works, it never needs an update. Is he right?", "No. It may still have security holes that updates fix", ["Yes, never update", "Yes, updates break things"], o("Think about locks.", "Updates repair weaknesses.", "net.reason_updates"))]),
+      qa(mc("Faisal says only his friends can see his posts, so nobody else matters. Is he right?", "No. Friends can copy or share a post, and sites may store it", ["Yes, nobody else can ever see", "Yes, friends never share"], o("Think about copies.", "A post can be copied and shared.", "net.reason_footprint")), "footprint", "reason",
+        [mc("Maryam says a private chat can never be copied. Is she right?", "No. A friend can screenshot or forward it", ["Yes, never copied", "Yes, chats vanish at once"], o("Think about copies.", "Anything shared can be copied.", "net.reason_footprint"))]),
+      qa(fill("Finish the sentences about sharing.", "Before sharing a photo of someone else, ask their {b1}. Think about who could {b2} it later.", [["permission", "picture", "price"], ["see", "eat", "hug"]], o("Think about consent.", "We ask permission, and think about who can see.", "net.fill_share")), "footprint", "apply",
+        [fill("Complete the sentences about two-step login.", "A two-step login needs a password and a {b1} code. A stolen password alone is not {b2}.", [["one-time", "funny", "sleepy"], ["enough", "tasty", "round"]], o("Think about two checks.", "A thief needs the code too.", "net.fill_share"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

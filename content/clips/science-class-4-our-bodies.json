@@ -1,0 +1,165 @@
+{
+ "title": "A day inside Fatima's body",
+ "backdrop": "lab",
+ "scenes": [
+  {
+   "caption": "Fatima eats.",
+   "say": "Fatima bites an apple. Her sharp front teeth cut it.",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "👧",
+     "label": "Fatima",
+     "x": 28,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "a",
+     "emoji": "🍎",
+     "x": 70,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Chew and swallow.",
+   "say": "Her flat back teeth grind the food. Saliva makes it soft to swallow.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🦷",
+     "label": "molars grind",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "The stomach.",
+   "say": "The food slides down the oesophagus. The stomach churns it with acid.",
+   "items": [
+    {
+     "id": "b",
+     "prop": {
+      "kind": "body",
+      "highlight": "stomach"
+     },
+     "x": 50,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Nutrients go in.",
+   "say": "In the small intestine, nutrients pass into the blood. Waste goes on.",
+   "items": [
+    {
+     "id": "b",
+     "prop": {
+      "kind": "body",
+      "highlight": "stomach"
+     },
+     "x": 50,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "n",
+     "emoji": "✨",
+     "label": "nutrients",
+     "x": 80,
+     "y": 30,
+     "size": 2,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Time to jump.",
+   "say": "Fatima jumps rope. Her muscles pull her bones, and they work in pairs.",
+   "items": [
+    {
+     "id": "m",
+     "prop": {
+      "kind": "body",
+      "highlight": "muscles"
+     },
+     "label": "muscles in pairs",
+     "x": 50,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "A fast heart.",
+   "say": "Her heart beats faster. It pumps more oxygen to her working muscles.",
+   "items": [
+    {
+     "id": "h",
+     "prop": {
+      "kind": "body",
+      "highlight": "heart"
+     },
+     "label": "faster pulse",
+     "x": 50,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "Clean teeth.",
+   "say": "At night she brushes her teeth. That stops sugar turning into acid.",
+   "items": [
+    {
+     "id": "b",
+     "emoji": "🪥",
+     "x": 40,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "t",
+     "emoji": "🦷",
+     "x": 65,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "A healthy body.",
+   "say": "Bones, muscles, teeth and a heart all work together. Well done, Fatima!",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "h",
+     "emoji": "❤️",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

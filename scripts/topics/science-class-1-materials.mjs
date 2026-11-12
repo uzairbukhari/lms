@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 1, topic 4: Materials (Zainab, age 7). Enquiry type: comparative test.
 
+const SPOON = "science-class-1-materials-1-284039a6.jpg";
+const GLASS = "science-class-1-materials-2-aa651927.jpg";
+const BOOTS = "science-class-1-materials-3-db310bfc.jpg";
+
 const names = {
   id: "names", kind: "learn", title: "Materials and their properties",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore materials. What are things made of, and why does it matter?", T("Today's big question: why do we choose different materials?")),
+    SAY("This spoon is an object. It is made of wood.", PHOTO(SPOON, "A wooden spoon holding white flakes on a plain white surface", "A spoon is an object. This one is made of wood.", "Photo by Joanna Kosinska on Unsplash")),
     H("Stop 1: What is it made of?"),
     SAY("Everything around us is made of something. A spoon might be made of metal. A cup might be made of glass or plastic. A chair might be made of wood. The stuff something is made from is called a material. Look at five materials and the things we make with them.", T("A **material** is what something is made from.", "Wood, metal, plastic, glass and **fabric** are all materials.")),
     EB("kitchen", "Five materials",
@@ -17,6 +24,7 @@ const names = {
       SS("Fabric is soft and bendy. Clothes and curtains are made of fabric.", S("Fabric: a shirt and socks.", ["a", "👕", 30, 58, 3, "none"], ["b", "🧦", 70, 62, 2, "bounce"]))),
     CHK(mc("Which material is a spoon usually made of?", "Metal", ["Glass", "Fabric"], { hint: "It is hard and shiny.", why: "Spoons are usually made of metal." })),
     H("Stop 2: Describing materials"),
+    SAY("Glass is transparent. We can see right through this glass.", PHOTO(GLASS, "A clear empty drinking glass with a reflection on a white surface", "Glass is transparent. We can see through it.", "Photo by engin akyurt on Unsplash")),
     SAY("We can describe a material by its properties. A property tells us what a material is like. Is it hard or soft? Is it rough or smooth? Is it see-through, which we call transparent? Or can you not see through it, which is called opaque? Let's look at a window and a wall.", T("A **property** tells us what a material is like: hard, soft, rough, smooth.", "**Transparent** means you can see through it. **Opaque** means you cannot.")),
     IMG("🪟 🧱", "A glass window is transparent. A brick wall is opaque."),
     CHK(mc("Glass is see-through. Which word describes it?", "Transparent", ["Opaque", "Rough"], { hint: "You can look through it.", why: "A see-through material is transparent." })),
@@ -42,7 +50,7 @@ const forces = {
       SS("A cloth is twisted round and round. That is twisting.", S("Twist: a cloth.", ["a", "🌀", 50, 60, 3, "spin"]))),
     CHK(mc("What do we do to a rubber band to make it longer?", "Stretch it", ["Squash it", "Twist it"], { hint: "Pull both ends.", why: "Pulling a rubber band makes it stretch." })),
     H("Stop 2: Testing materials"),
-    SAY("Let's test some materials. We will squash each one and see if it changes. Put the materials that can be squashed in one box and the materials that cannot in the other. Then try it at home.", MAN("Squash test", "Put things you can squash in Squashy. Put things you cannot in Hard.", "🧽", 8, ["Squashy", "Hard"])),
+    SAY("Let's test some materials. We will squash each one and see if it changes. Put materials you can squash in one box. Put the others in the other box. Then try it at home.", MAN("Squash test", "Put things you can squash in Squashy. Put things you cannot in Hard.", "🧽", 8, ["Squashy", "Hard"])),
     ACT("A squash and stretch test", ["A sponge", "A rubber band", "A wooden spoon", "A grown-up"], ["Squash each object gently. Does it change shape?", "Stretch the rubber band. What happens when you let go?", "Write down which objects were squashy, stretchy or hard."]),
     CHK(ms("Pick two things that you can squash.", ["Sponge", "Play dough"], ["Stone", "Metal spoon"], { hint: "Which ones are soft?", why: "Sponges and play dough can be squashed." })),
     SAY("Remember. Some materials squash, bend, twist and stretch. Others stay hard.", SUM("We can squash, bend, twist and stretch some materials", "Some materials spring back and some do not")),
@@ -59,6 +67,7 @@ const jobs = {
   id: "jobs", kind: "play", title: "The right material for the job",
   blocks: [
     H("Stop 1: Choosing materials"),
+    SAY("Rubber is waterproof and bendy. That makes it a good choice for boots.", PHOTO(BOOTS, "A pair of muddy yellow rubber boots standing in a rain puddle", "Rubber boots keep our feet dry in the rain.", "Photo by Joe Lee on Unsplash")),
     SAY("We choose a material because of its properties. Windows are glass because we want to see through them. Raincoats are plastic because water cannot get through. Saucepans are metal because metal does not burn easily. A pillow is soft fabric because we want it comfy. Let's pick the right material for four jobs.", T("We pick a material for its **properties**. A raincoat must keep out water.", "A good material is **waterproof**, strong or soft depending on the job.")),
     EB("home", "Right material, right job",
       SS("An umbrella must keep us dry. So it is made of waterproof plastic or fabric.", S("Umbrella: waterproof.", ["a", "☂️", 50, 60, 3, "bounce"], ["r", "🌧️", 50, 20, 2, "float"])),
@@ -89,7 +98,7 @@ const changes = {
       SS("Now put the water in the freezer. It freezes back into ice!", S("The water freezes.", ["i", "🧊", 50, 55, 3, "grow"], ["f", "❄️", 20, 25, 2, "float"]))),
     CHK(mc("What happens to ice when it gets warm?", "It melts", ["It freezes", "It turns to wood"], { hint: "Think of an ice lolly in the sun.", why: "Warmth makes ice melt into water." })),
     H("Stop 2: Rocks, quarries and mines"),
-    SAY("Rocks are natural materials from the ground. People dig them from places called quarries and mines. Stone from quarries is used for building and roads. Marble from the mountains of Pakistan and Italy is used for beautiful buildings, and the Badshahi Mosque uses red sandstone. Look at some rocks.", T("**Rocks** are hard natural materials from the ground.", "A **quarry** is a place where stone is dug out.")),
+    SAY("Rocks are natural materials from the ground. People dig them from places called quarries and mines. Stone from quarries is used for building and roads. Marble from the mountains of Pakistan and Italy is used for beautiful buildings. The Badshahi Mosque uses red sandstone. Look at some rocks.", T("**Rocks** are hard natural materials from the ground.", "A **quarry** is a place where stone is dug out.")),
     IMG("🪨 ⛰️ 🕌", "Rock, a mountain and a mosque built with stone."),
     CHK(tf("Stone from a quarry can be used to build things.", true, { hint: "Think of walls and roads.", why: "Quarry stone is used for building walls, roads and mosques." })),
     SAY("Remember. Ice melts and water freezes. Rocks are natural materials that people dig from quarries.", SUM("Heat melts ice; cold freezes water", "Rocks are natural materials from the ground", "Quarries are where stone is dug out")),
@@ -120,6 +129,28 @@ const ALTS = [
   [mc("Ali says a quarry is where fish live. What is a quarry?", "A place where stone is dug out", ["A kind of plant", "A kind of animal"], { hint: "Think of rocks.", why: "A quarry is where stone is dug from the ground." }), mc("Hana says rocks are made in a factory. Is she right?", "No, rocks are natural and come from the ground", ["Yes, rocks are made of plastic", "Yes, rocks are made of fabric"], { hint: "Are rocks natural or made?", why: "Rocks are natural materials from the ground." })],
 ];
 
+const clip = {
+  title: "Zainab's rainy day", backdrop: "home", caption: "Zainab chooses the right materials for a wet day.",
+  scenes: [
+    { caption: "Rain!", say: "It is raining hard. Zainab needs the right things to wear.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3, enter: "walk_right" }, { id: "r", emoji: "🌧️", x: 72, y: 30, size: 3, anim: "float" }] },
+    { caption: "Rubber boots.", say: "Her boots are rubber. Rubber is waterproof, so her feet stay dry.",
+      items: [{ id: "b", emoji: "🥾", label: "rubber", x: 50, y: 60, size: 3, effect: "glow" }] },
+    { caption: "A plastic coat.", say: "Her raincoat is plastic. It is bendy and keeps the rain out.",
+      items: [{ id: "c", emoji: "🧥", label: "waterproof", x: 50, y: 56, size: 3, effect: "sparkle" }] },
+    { caption: "A paper hat?", say: "Hamza wears a paper hat. It goes soggy! Paper is not waterproof.",
+      items: [{ id: "h", emoji: "📄", label: "soggy paper", x: 40, y: 58, size: 3 }, { id: "w", emoji: "💧", x: 72, y: 40, size: 2, anim: "bounce" }] },
+    { caption: "See-through glass.", say: "At home, a glass window lets in light. We can see through it.",
+      items: [{ id: "g", emoji: "🪟", label: "transparent", x: 50, y: 52, size: 3 }] },
+    { caption: "Soft and hard.", say: "A woolly jumper is soft. A wooden spoon is hard.",
+      items: [{ id: "j", emoji: "🧶", label: "soft", x: 30, y: 58, size: 3 }, { id: "s", emoji: "🥄", label: "hard", x: 72, y: 58, size: 3 }] },
+    { caption: "Squash and stretch.", say: "She squashes a sponge and stretches a rubber band.",
+      items: [{ id: "a", emoji: "🧽", x: 30, y: 58, size: 3, anim: "pulse" }, { id: "b", emoji: "🎀", x: 72, y: 56, size: 3, anim: "grow" }] },
+    { caption: "Warm and dry.", say: "Alhamdulillah, Zainab is warm and dry. The right material for the job!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3, anim: "bounce" }, { id: "h", emoji: "☀️", x: 70, y: 30, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-1-materials", subject: "science", cls: 1, topic: 4, title: "Materials",
@@ -134,13 +165,9 @@ export const topics = [
       mc("Which part of a plant drinks water from the soil?", "Roots", ["Flower", "Leaves"], { hint: "They grow underground.", why: "Roots drink water." }),
       tf("A dog is a mammal.", true, { hint: "Does it have fur?", why: "A dog has fur and feeds its puppies milk." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: why do we use different materials for different things? By the end, you will name materials, describe how they feel, squash and stretch them, and pick the best material for a job. Let's go!", T("Today's big question: why do we use different materials?", "We will test them and choose.")),
-      IMG("🪵🥄🧴🪟", "Wood, metal, plastic and glass."),
-      GLOSS({ materials: "What things are made from, like wood or metal." }),
-    ],
+    intro: [],
     subs: [names, forces, jobs, changes],
+    clip,
     quiz: [
       Q("names", "recall", "materials.names", mc("Which of these is made of glass?", "A drinking glass", ["A pencil", "A spoon"], { hint: "It is see-through.", why: "A drinking glass is made of glass." }), ...ALTS[0]),
       Q("names", "recall", "materials.facts", tf("A spoon is usually made of metal.", true, { hint: "Is a spoon hard and shiny?", why: "Spoons are usually made of metal." }), ...ALTS[1]),
@@ -157,6 +184,37 @@ export const topics = [
       Q("jobs", "reason", "materials.reason", mc("Why are cooking pots not made of paper?", "Paper would burn", ["Paper is too heavy", "Paper is too shiny"], { hint: "Think about heat.", why: "Paper burns, but metal can be heated safely." }), ...ALTS[12]),
       Q("changes", "reason", "materials.predict", mc("Zara leaves an ice cream in the sun. What will happen?", "It will melt", ["It will freeze harder", "It will turn into glass"], { hint: "Warm things melt ice.", why: "Heat from the sun melts ice cream." }), ...ALTS[13]),
       Q("changes", "reason", "materials.rocks", mc("Omar says a quarry is a place to grow plants. Why is he wrong?", "A quarry is a place where stone is dug out", ["A quarry is a kind of animal", "A quarry is a kind of fabric"], { hint: "Think of rocks.", why: "A quarry is where stone is dug from the ground." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("names", "apply", "materials.object_vs", tf("A wooden spoon is an object. Wood is the material it is made from.", true, { hint: "The object is the thing. The material is what it is made from.", why: "The spoon is the object and wood is the material." }),
+        tf("A spoon is a material and metal is an object.", false, { hint: "Which one is the thing you hold?", why: "A spoon is an object. Metal is the material." })),
+      Q("names", "apply", "materials.property_match", mat("Match each object to the property that helps it.", [["Raincoat", "Waterproof"], ["Window", "See-through"], ["Pillow", "Soft"]], { hint: "Think about what each object has to do.", why: "A raincoat is waterproof, a window is see-through and a pillow is soft." }),
+        mat("Join each object to the property that helps it.", [["Boots", "Waterproof"], ["Glass jar", "Transparent"], ["Cushion", "Soft"]], { hint: "Think about what each object has to do.", why: "Boots keep out water, a jar lets us see inside and a cushion is soft." })),
+      Q("jobs", "apply", "materials.boots", mc("Zainab needs boots for a wet day. Which material keeps her feet dry?", "Rubber", ["Paper", "Wool"], { hint: "Which one does not let water in?", why: "Rubber is waterproof, so it keeps feet dry." }),
+        mc("Which material is best for a bicycle tyre?", "Rubber", ["Glass", "Wood"], { hint: "It must bend and grip.", why: "Rubber is bendy and grips the road." })),
+      Q("forces", "apply", "materials.test_order", ord("Put the steps of a waterproof test in order.", ["Pour a little water on the material", "Watch what happens", "Feel if the material is wet", "Decide if it is waterproof"], { hint: "Pour first.", why: "Pour, watch, feel, then decide." }),
+        ord("Put the steps of a squash test in order.", ["Pick a material", "Squash it gently", "Let go and watch", "Write what happened"], { hint: "Pick first.", why: "Pick, squash, let go, then write." })),
+      Q("forces", "apply", "materials.waterproof_ms", ms("Which two materials are waterproof? Pick two.", ["Rubber", "Plastic"], ["Paper", "Cotton cloth"], { hint: "Which ones keep water out?", why: "Rubber and plastic keep water out." }),
+        ms("Which two materials would keep the rain out? Pick two.", ["A plastic sheet", "Rubber"], ["A paper towel", "Cotton wool"], { hint: "Which ones keep water out?", why: "A plastic sheet and rubber keep rain out." })),
+      Q("forces", "apply", "materials.actions_fill", fill("Finish the sentences about changing shape.", "To make a rubber band longer we {b1} it. To push a sponge flat we {b2} it.", [["stretch", "twist", "freeze"], ["squash", "stretch", "melt"]], { hint: "Think about pulling and pushing.", why: "We stretch a band to make it longer and squash a sponge to make it flat." }),
+        fill("Complete the sentences about changing shape.", "To make a sponge smaller we {b1} it. To make a ruler curved we {b2} it.", [["squash", "stretch", "freeze"], ["bend", "lift", "melt"]], { hint: "Think about pushing and curving.", why: "We squash a sponge to make it smaller and bend a ruler to make it curved." })),
+      Q("forces", "apply", "materials.dough", mc("Zainab pulls play dough long. It stays long. What does that show?", "Not every stretchy material springs back", ["Dough is hard", "Dough is waterproof"], { hint: "Compare it with a rubber band.", why: "A rubber band springs back, but dough stays stretched." }),
+        mc("An elastic band goes back to its shape after stretching. How is it different from dough?", "It springs back and dough does not", ["It is waterproof", "It is made of wood"], { hint: "What happens when you let go?", why: "Elastic springs back, but dough stays stretched." })),
+      Q("names", "apply", "materials.rough_tap", hot("Tap the one that feels rough.", [["🧱", "Brick wall", 22, 50], ["🪟", "Window glass", 50, 50], ["🧸", "Soft teddy", 78, 50]], ["Brick wall"], { labels: true, hint: "Which one is bumpy?", why: "A brick wall feels rough and bumpy." }),
+        hot("Tap the one that feels smooth.", [["🪨", "Rough rock", 22, 50], ["🥣", "Glass bowl", 50, 50], ["🧱", "Brick", 78, 50]], ["Glass bowl"], { labels: true, hint: "Which one has no bumps?", why: "A glass bowl feels smooth." })),
+      Q("names", "apply", "materials.natural", mc("Which of these is a natural material?", "Wool from a sheep", ["Plastic", "A glass bottle"], { hint: "Which one comes from an animal?", why: "Wool comes from sheep. Plastic and glass are made by people." }),
+        mc("Which of these comes from nature?", "Wood from a tree", ["A plastic toy", "A rubber tyre"], { hint: "Which one grows?", why: "Wood comes from a tree. A plastic toy is made in a factory." })),
+      Q("forces", "apply", "materials.absorb_st", st("What word means a material soaks up water, like a sponge?", ["absorbent", "absorbs", "it absorbs", "absorb"], { hint: "It starts with an a.", why: "A sponge is absorbent. It soaks up water." }),
+        st("What word describes a material that feels bumpy and not smooth?", ["rough", "bumpy"], { hint: "It starts with an r.", why: "A rough material feels bumpy." })),
+      Q("jobs", "apply", "materials.spoon_count", sld("A box holds 3 metal spoons and 5 wooden spoons. Slide to show how many spoons.", { min: 0, max: 12, unit: "spoons" }, 8, 0, { hint: "3 + 5.", why: "3 + 5 = 8 spoons." }),
+        sld("A box holds 4 metal spoons and 6 wooden spoons. Slide to show how many spoons.", { min: 0, max: 12, unit: "spoons" }, 10, 0, { hint: "4 + 6.", why: "4 + 6 = 10 spoons." })),
+      Q("changes", "reason", "materials.plastic_bendy", mc("Hana says all plastic is bendy. Is she right?", "No, some plastic is hard and stiff", ["Yes, all plastic bends", "Yes, plastic is always soft"], { hint: "Think of a plastic bucket.", why: "Plastic can be bendy or stiff. A bucket is hard." }),
+        mc("Omar says plastic is always soft. Is he right?", "No, a plastic bucket is hard", ["Yes, plastic is a sponge", "Yes, plastic cannot be hard"], { hint: "Think of a plastic chair.", why: "Plastic can be soft or hard." })),
+      Q("changes", "reason", "materials.brick_rock", mc("Sam says a brick wall is made of rock. Is he right?", "No, bricks are made by people from clay", ["Yes, a brick is a rock", "Yes, bricks grow in the ground"], { hint: "Where do bricks come from?", why: "Rock is natural. Bricks are made from clay by people." }),
+        mc("Layla says a concrete path is a natural rock. Is she right?", "No, concrete is made by people", ["Yes, concrete grows", "Yes, it is cut from a mountain"], { hint: "Is concrete found in nature?", why: "Concrete is a man-made material." })),
+      Q("jobs", "reason", "materials.glass_ball", mc("Aisha says glass is the best material for a football because it is shiny. Is she right?", "No, glass would smash. Rubber is better", ["Yes, shiny things bounce", "Yes, glass is bendy"], { hint: "What happens when glass is dropped?", why: "A football needs a bendy, bouncy material, not glass." }),
+        mc("Omar says a paper umbrella is best for heavy rain. Is he right?", "No, paper goes soggy. Plastic or tight cloth is better", ["Yes, paper is waterproof", "Yes, paper is stiff"], { hint: "What happens to paper in the rain?", why: "Paper goes soggy in rain, so it makes a poor umbrella." })),
+      Q("names", "reason", "materials.soft_smooth", mc("Hamza says all soft things are smooth. Is he right?", "No, a woolly jumper is soft but bumpy", ["Yes, soft and smooth mean the same", "Yes, a jumper is hard"], { hint: "Think about wool.", why: "Soft and smooth are different. Wool is soft but not smooth." }),
+        mc("Zainab says all smooth things are soft. Is she right?", "No, a glass window is smooth but hard", ["Yes, smooth things squash", "Yes, glass is soft"], { hint: "Think about glass.", why: "Smooth and soft are different. Glass is smooth but hard." })),
     ],
   }),
 ];

@@ -1,0 +1,2790 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-4-charts-tables-graphs",
+  "subject": "maths",
+  "title": "Charts, Tables and Graphs",
+  "summary": "Read and draw bar charts, pictograms and tables, and answer one- and two-step questions about data.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 11: Charts, tables and graphs",
+  "learning_objectives": [
+   "Read scales on bar charts and keys on pictograms",
+   "Solve one- and two-step questions using data",
+   "Build a chart from a table"
+  ],
+  "tags": [
+   "topic",
+   "topic-11"
+  ],
+  "curriculum": {
+   "course": "maths-class-4-topics",
+   "semester": 1,
+   "topic": 11
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 statistics",
+    "text": "Interpret and present discrete and continuous data using appropriate graphical methods, including bar charts and time graphs"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ds.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Ds.02"
+   }
+  ],
+  "success_criteria": [
+   "I can read a scale and a key",
+   "I can turn tallies into a table and a chart",
+   "I can answer a question about data and write a conclusion"
+  ],
+  "real_life": "Class votes, weather and rainfall tables, and school surveys.",
+  "warm_up": [
+   {
+    "type": "number",
+    "prompt": "What is 8 + 7?",
+    "hint": "Make a ten first.",
+    "explanation": "8 + 2 = 10 and 5 more is 15.",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 × 4?",
+    "hint": "Count in fours.",
+    "explanation": "6 × 4 = 24.",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A bar chart uses bars to show values.",
+    "hint": "Think of a bar chart.",
+    "explanation": "Bars show the values.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "bar_reading",
+   "kind": "learn",
+   "title": "Reading a bar chart",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara's class picks a picnic fruit",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-charts-tables-graphs-1-59eb6b5b.jpg",
+     "alt": "A white bowl of lemons and bananas on a table",
+     "caption": "A bowl of fruit: the class votes for their favourite.",
+     "credit": "Photo by Martin de Arriba on Unsplash",
+     "say": "Zara's class is planning a picnic. Everyone votes for their favourite fruit. The votes go on a chart so we can see the results at a glance. Let's learn how to read one."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: The scale goes up in steps",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "The **scale** tells you what each step is worth.\n\nA scale going up in 2s: 0, 2, 4, 6, 8, 10.",
+     "say": "A bar chart has a scale up the side. The scale tells us how much each step is worth. If the scale goes up in twos, each line adds two. Count the steps to read a bar."
+    },
+    {
+     "type": "explainer",
+     "title": "Reading the scale in 2s",
+     "scenes": [
+      {
+       "caption": "0, 2, 4",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📊",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "0 2 4"
+        }
+       ],
+       "say": "The bottom of the scale is zero. The next line is two."
+      },
+      {
+       "caption": "8 votes",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📊",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "0 2 4"
+        },
+        {
+         "id": "b",
+         "emoji": "🍌",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "8 votes"
+        }
+       ],
+       "say": "A bar reaches the fourth line. That is eight votes."
+      },
+      {
+       "caption": "4 lines × 2 = 8",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📊",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4 lines × 2 = 8"
+        }
+       ],
+       "say": "Each line is worth two, so four lines is eight."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-charts-tables-graphs-d1-9509dd0c.png",
+     "alt": "A bar chart with a scale in 2s from 0 to 10 and labelled bars for cat, dog, fish and rabbit",
+     "caption": "A bar chart with a scale in twos.",
+     "say": "Check the scale. It goes up in twos. Each bar shows its number."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A bar reaches the fifth line on a scale that goes up in 2s. How many votes?",
+      "hint": "Five lines, each worth two.",
+      "explanation": "5 × 2 = 10.",
+      "skill_tag": "charts.scale",
+      "answer": {
+       "value": 10,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Pictograms and their key",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **key** says what one picture means: 1 picture = 4 children.\n\n3 pictures = 3 × 4 = 12 children.",
+     "say": "A pictogram uses pictures. The key tells you what one picture stands for. If one picture is four children, then three pictures are twelve children."
+    },
+    {
+     "type": "image",
+     "emoji": "🍌",
+     "alt": "Each banana picture stands for four children.",
+     "caption": "Each banana picture stands for four children."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "On a pictogram, one picture = 4. How many children do two pictures show?",
+      "hint": "Two lots of four.",
+      "explanation": "2 × 4 = 8.",
+      "skill_tag": "charts.key",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "8"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The class votes for fruit",
+     "asset": "clip-maths-class-4-charts-tables-graphs-07578262.mp4",
+     "poster": "clip-maths-class-4-charts-tables-graphs-07578262.webp",
+     "seconds": 52,
+     "transcript": "This is Zara's class. Everyone votes for their favourite picnic fruit. Zara writes tally marks. Four lines and a slash make five. The tallies go into a table. Apple has eight votes. Mango has five. Zara notices the scale on the chart goes up in twos. Eight votes is four lines on a scale that goes up in twos. Charts help us see the answer quickly. Shukriya, Zara!",
+     "caption": "A class votes for picnic fruit, builds a bar chart from tallies and spots the scale."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read the scale: what is each step worth?",
+      "Read the key: what is one picture?",
+      "Count the steps or pictures"
+     ],
+     "say": "Remember. Read the scale. Read the key. Count the steps or pictures."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bar chart",
+       "meaning": "A chart with bars whose length shows the value."
+      },
+      {
+       "term": "pictogram",
+       "meaning": "A chart that uses pictures to show amounts."
+      },
+      {
+       "term": "key",
+       "meaning": "Says what one picture stands for."
+      },
+      {
+       "term": "scale",
+       "meaning": "The numbers that show how much each step is worth."
+      },
+      {
+       "term": "title",
+       "meaning": "The name of the chart. It says what the chart is about."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "On a scale that goes up in 5s, a bar reaches the third line. What is its value?",
+     "hint": "Three lines of five.",
+     "explanation": "3 × 5 = 15.",
+     "answer": {
+      "value": 15,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a key tell you on a pictogram?",
+     "hint": "Look at the bottom of the chart.",
+     "explanation": "The key says what one picture is worth.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The total"
+      },
+      {
+       "id": "b",
+       "text": "What one picture stands for"
+      },
+      {
+       "id": "c",
+       "text": "The title"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A bar chart can start its scale at zero.",
+     "hint": "Look at the scale.",
+     "explanation": "Many scales start at zero.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these steps in order, first first.",
+     "hint": "Start with the scale.",
+     "explanation": "Scale, then key, then count.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "Read the key"
+      },
+      {
+       "id": "i1",
+       "text": "Read the scale"
+      },
+      {
+       "id": "i3",
+       "text": "Count the bars"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "make_chart",
+   "kind": "try",
+   "title": "Make your own chart",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Tally to table",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **tally** groups marks in fives: |||| with a slash is 5.\n\nTurn tallies into a table: apple 8, mango 5.",
+     "say": "First collect the votes with tally marks. Four lines and a slash make five. Then count the tallies and write them in a table. A table has rows and columns, so it is easy to read."
+    },
+    {
+     "type": "explainer",
+     "title": "From tallies to a table",
+     "scenes": [
+      {
+       "caption": "apple: 8",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🍎",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "apple"
+        }
+       ],
+       "say": "Apple: four lines and a slash is five, plus three more. That is eight."
+      },
+      {
+       "caption": "mango: 5",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🍎",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "apple 8"
+        },
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "mango 5"
+        }
+       ],
+       "say": "Mango: one tally group of five."
+      },
+      {
+       "caption": "table",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🍎",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "apple 8, mango 5"
+        }
+       ],
+       "say": "Write both in a table. Apple 8, mango 5."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-4-charts-tables-graphs-d2-92be0ef2.png",
+     "alt": "A pictogram with a key where one picture stands for 4 children and three pictures shown for 12",
+     "caption": "3 pictures × 4 = 12 children.",
+     "say": "In a pictogram, the key tells us the value. Here one picture means four children."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Tally: four lines and a slash, then two more. What is the total?",
+      "hint": "Five, then two more.",
+      "explanation": "5 + 2 = 7.",
+      "skill_tag": "charts.tally",
+      "answer": {
+       "value": 7,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Choose a scale",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "Pick a **scale** that fits the biggest value.\n\nA scale of 0, 5, 10, 15, 20 fits values up to 20.",
+     "say": "Choose a scale that fits your data. If the biggest number is 20, a scale in 5s from 0 to 20 works well. Draw each bar to match its value on the scale."
+    },
+    {
+     "type": "image",
+     "emoji": "📏",
+     "alt": "A bar for 15 reaches the third line of a scale in 5s.",
+     "caption": "A bar for 15 reaches the third line of a scale in 5s."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which scale fits values up to 20?",
+      "hint": "The scale must reach the biggest value.",
+      "explanation": "0 to 20 in 5s fits values up to 20.",
+      "skill_tag": "charts.scale_choice",
+      "options": [
+       {
+        "id": "a",
+        "text": "0, 2, 4, 6"
+       },
+       {
+        "id": "b",
+        "text": "0, 5, 10, 15, 20"
+       },
+       {
+        "id": "c",
+        "text": "0, 50, 100"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "activity",
+     "title": "Survey and tally",
+     "materials": [
+      "Paper",
+      "Pencil"
+     ],
+     "instructions": [
+      "Ask five friends their favourite fruit.",
+      "Make a tally mark for each answer.",
+      "Count the tallies in fives.",
+      "Draw a bar for each fruit on a scale."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Tallies in fives",
+      "Choose a scale that fits the data",
+      "Label the axes and write a title"
+     ],
+     "say": "Remember. Tallies become a table. A table becomes a bar chart with a scale."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "scale",
+       "meaning": "The numbers that show how much each step is worth."
+      },
+      {
+       "term": "tally",
+       "meaning": "Marks counted in fives, like four lines and a slash."
+      },
+      {
+       "term": "table",
+       "meaning": "Information in rows and columns."
+      },
+      {
+       "term": "axis",
+       "meaning": "A line with labels, like the side of a bar chart."
+      },
+      {
+       "term": "data",
+       "meaning": "Information we collect, like votes."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A tally shows five lines and a slash, then four more. What is the total?",
+     "hint": "Five plus four.",
+     "explanation": "5 + 4 = 9.",
+     "answer": {
+      "value": 9,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A table can be turned into a bar chart.",
+     "hint": "Use the numbers in the table.",
+     "explanation": "Yes, the table gives the values for the bars.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which chart uses pictures?",
+     "hint": "Think of the key.",
+     "explanation": "A pictogram uses pictures and a key.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A table"
+      },
+      {
+       "id": "b",
+       "text": "A pictogram"
+      },
+      {
+       "id": "c",
+       "text": "A bar chart"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "order",
+     "prompt": "Put these tallies in order, smallest first.",
+     "hint": "Compare the numbers.",
+     "explanation": "3, 7, 9.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i2",
+       "text": "3"
+      },
+      {
+       "id": "i3",
+       "text": "9"
+      },
+      {
+       "id": "i1",
+       "text": "7"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "data_detective",
+   "kind": "play",
+   "title": "Data detective",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Totals in a table",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "To find a **total**, add all the numbers in the row.\n\nMon 12 + Tue 9 + Wed 14 = 35.",
+     "say": "A table can have totals. Add the numbers in a row to find the total for that row. Each row is one day or one class. Let's be a data detective and add each row."
+    },
+    {
+     "type": "explainer",
+     "title": "Weekly votes in a table",
+     "scenes": [
+      {
+       "caption": "Mon: 12",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🗓️",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "Mon 12"
+        }
+       ],
+       "say": "Monday has 12 votes."
+      },
+      {
+       "caption": "12 + 9 + 14",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🗓️",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "Mon 12"
+        },
+        {
+         "id": "q",
+         "emoji": "➕",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "9 and 14"
+        }
+       ],
+       "say": "Add Tuesday's 9 and Wednesday's 14."
+      },
+      {
+       "caption": "35",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🗓️",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "12 + 9 + 14 = 35"
+        }
+       ],
+       "say": "The total is 35 votes."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A table has rows of 7, 11 and 6. What is the total?",
+      "hint": "Add the three numbers.",
+      "explanation": "7 + 11 + 6 = 24.",
+      "skill_tag": "charts.total",
+      "answer": {
+       "value": 24,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Reading a line graph",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "The **change** is the end value take away the start value.\n\n18 − 12 = 6 degrees.",
+     "say": "A line graph shows change over time. Read the start point and the end point, then find the change. From 12 degrees to 18 degrees is a rise of six degrees."
+    },
+    {
+     "type": "image",
+     "emoji": "🌡️",
+     "alt": "A temperature line that rises from 12 to 18 degrees.",
+     "caption": "A temperature line that rises from 12 to 18 degrees."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The temperature falls from 30 degrees to 25 degrees. How much did it fall?",
+      "hint": "Take the smaller from the bigger.",
+      "explanation": "30 − 25 = 5.",
+      "skill_tag": "charts.change",
+      "options": [
+       {
+        "id": "a",
+        "text": "55 degrees"
+       },
+       {
+        "id": "b",
+        "text": "25 degrees"
+       },
+       {
+        "id": "c",
+        "text": "5 degrees"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Chart pairs",
+     "goal": "Find the matching charts.",
+     "emojis": [
+      "📊",
+      "📈",
+      "🔢",
+      "🍌",
+      "🍎",
+      "🥭"
+     ],
+     "say": "Brain break. Find the matching charts."
+    },
+    {
+     "type": "activity",
+     "title": "Data at home",
+     "materials": [
+      "Paper and a pencil",
+      "A week of temperatures or a family survey"
+     ],
+     "instructions": [
+      "Write the numbers in a table, one row for each day.",
+      "Add each row to find the totals.",
+      "Find the biggest and smallest number.",
+      "Write one sentence about what you found."
+     ]
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Total: add the row",
+      "Change: end take away start",
+      "Check the answer by adding back"
+     ],
+     "say": "Remember. Add a row for a total. Take the start from the end to find the change."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "total",
+       "meaning": "The answer when you add all the numbers in a row."
+      },
+      {
+       "term": "line graph",
+       "meaning": "A graph with points joined by a line, to show change over time."
+      },
+      {
+       "term": "change",
+       "meaning": "How much a value has gone up or down."
+      },
+      {
+       "term": "start value",
+       "meaning": "The first number in the data."
+      },
+      {
+       "term": "end value",
+       "meaning": "The last number in the data."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A row has 5, 8 and 6. What is the total?",
+     "hint": "Add the three numbers.",
+     "explanation": "5 + 8 + 6 = 19.",
+     "answer": {
+      "value": 19,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A line graph goes from 4 degrees to 10 degrees. What is the change?",
+     "hint": "End take away start.",
+     "explanation": "10 − 4 = 6.",
+     "options": [
+      {
+       "id": "a",
+       "text": "4 degrees"
+      },
+      {
+       "id": "b",
+       "text": "6 degrees"
+      },
+      {
+       "id": "c",
+       "text": "14 degrees"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "The change between 8 and 3 is 11.",
+     "hint": "Take the smaller from the bigger.",
+     "explanation": "8 − 3 = 5.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 9 + 9 + 4?",
+     "hint": "Two nines and a four.",
+     "explanation": "18 + 4 = 22.",
+     "answer": {
+      "value": 22,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "questions",
+   "kind": "use",
+   "title": "Questions from data",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Whole-class questions",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**In all** means add. 14 + 9 = 23 children.\n\nCheck: 23 − 9 = 14.",
+     "say": "The class voted. Fourteen children chose mango and nine chose apple. How many children voted in all? Look for words like in all, and add. Then check your answer."
+    },
+    {
+     "type": "explainer",
+     "title": "How many voted in all?",
+     "scenes": [
+      {
+       "caption": "mango 14",
+       "items": [
+        {
+         "id": "v",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "mango 14"
+        }
+       ],
+       "say": "Fourteen children chose mango."
+      },
+      {
+       "caption": "mango 14",
+       "items": [
+        {
+         "id": "v",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🍎",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "apple 9"
+        }
+       ],
+       "say": "Nine children chose apple."
+      },
+      {
+       "caption": "23",
+       "items": [
+        {
+         "id": "v",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "14 + 9 = 23"
+        }
+       ],
+       "say": "Together, 23 children voted."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Eleven children chose lemon and eight chose kiwi. How many in all?",
+      "hint": "Add them.",
+      "explanation": "11 + 8 = 19.",
+      "skill_tag": "charts.in_all",
+      "answer": {
+       "value": 19,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Choose the right chart",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Line graph**: change over time. **Bar chart**: compare groups.\n\nPick the chart that matches your question.",
+     "say": "Different charts suit different jobs. A line graph shows how a value changes through the day. A bar chart compares groups. Choose the chart that fits the question."
+    },
+    {
+     "type": "image",
+     "emoji": "📈",
+     "alt": "A line graph suits change over time.",
+     "caption": "A line graph suits change over time."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "A line graph is good for showing how the temperature changes through the day.",
+      "hint": "Think of change over time.",
+      "explanation": "A line graph shows change over time.",
+      "skill_tag": "charts.suit",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read the scale and the key",
+      "Choose the chart that suits the question",
+      "Write a conclusion in words"
+     ],
+     "say": "Remember. Read the scale. Choose the chart that suits the question. Write a conclusion in words."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bar chart",
+       "meaning": "A chart with bars whose length shows the value."
+      },
+      {
+       "term": "line graph",
+       "meaning": "A graph with points joined by a line, to show change over time."
+      },
+      {
+       "term": "conclusion",
+       "meaning": "A sentence that says what the data shows."
+      },
+      {
+       "term": "compare",
+       "meaning": "Look at two things side by side."
+      },
+      {
+       "term": "in all",
+       "meaning": "All together, which usually means add."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "Four classes each have 25 children. How many children in all?",
+     "hint": "Four times 25.",
+     "explanation": "4 × 25 = 100.",
+     "answer": {
+      "value": 100,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which chart compares favourite fruits?",
+     "hint": "Groups side by side.",
+     "explanation": "A bar chart compares groups.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A timer"
+      },
+      {
+       "id": "b",
+       "text": "A bar chart"
+      },
+      {
+       "id": "c",
+       "text": "A line graph"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A conclusion should say what the chart shows, in words.",
+     "hint": "Say it in a sentence.",
+     "explanation": "A conclusion is a sentence about the data.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "What is 3 × 15?",
+     "hint": "Three fifteens.",
+     "explanation": "3 × 15 = 45.",
+     "answer": {
+      "value": 45,
+      "tolerance": 0
+     }
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "number",
+    "prompt": "On a bar chart, each square is 2 cats. A bar has 5 squares. How many cats?",
+    "hint": "Five lots of two.",
+    "explanation": "5 × 2 = 10 cats.",
+    "skill_tag": "charts.scale",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does the title on a chart tell you?",
+    "hint": "Read the top of the chart.",
+    "explanation": "The title says what the chart shows.",
+    "skill_tag": "charts.title",
+    "options": [
+     {
+      "id": "a",
+      "text": "The scale"
+     },
+     {
+      "id": "b",
+      "text": "What the chart is about"
+     },
+     {
+      "id": "c",
+      "text": "The colour"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "On a pictogram, half a picture can show half of the key value.",
+    "hint": "Half of the key value.",
+    "explanation": "If one picture is 4, half is 2.",
+    "skill_tag": "charts.key",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Fill in the key.",
+    "hint": "3 × 4.",
+    "explanation": "1 picture = 4, so 3 pictures = 12.",
+    "skill_tag": "charts.key",
+    "points": 2,
+    "text": "The key says 1 picture = {b1}. A row with 3 pictures shows {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "4"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "3"
+       },
+       {
+        "id": "b",
+        "text": "12"
+       },
+       {
+        "id": "c",
+        "text": "4"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "multi_select",
+    "prompt": "Which two are things a chart needs? Pick two.",
+    "hint": "Think about what a reader needs.",
+    "explanation": "A title and axis labels help a reader.",
+    "skill_tag": "charts.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "Secret code"
+     },
+     {
+      "id": "b",
+      "text": "Extra doodle"
+     },
+     {
+      "id": "c",
+      "text": "Axis labels"
+     },
+     {
+      "id": "d",
+      "text": "Title"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "order",
+    "prompt": "Put the steps for making a bar chart in order.",
+    "hint": "Start with the scale.",
+    "explanation": "Scale, bars, labels, title.",
+    "skill_tag": "charts.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Label the axes"
+     },
+     {
+      "id": "i4",
+      "text": "Write the title"
+     },
+     {
+      "id": "i2",
+      "text": "Draw the bars"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a scale"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "slider",
+    "prompt": "A bar chart scale goes up in 2s. A bar reaches the 7th line. Slide to show its value.",
+    "hint": "Seven lines, each worth two.",
+    "explanation": "7 × 2 = 14.",
+    "skill_tag": "charts.scale_line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 14,
+     "tolerance": 1
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "match",
+    "prompt": "Match each chart word to its meaning.",
+    "hint": "Think about what each word does.",
+    "explanation": "Scale, key and title each have one job.",
+    "skill_tag": "charts.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Scale"
+     },
+     {
+      "id": "l2",
+      "text": "Key"
+     },
+     {
+      "id": "l3",
+      "text": "Title"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "what one picture means"
+     },
+     {
+      "id": "r1",
+      "text": "numbers along the side"
+     },
+     {
+      "id": "r3",
+      "text": "what the chart is about"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A tally shows four lines and a slash, then three more. What is the total?",
+    "hint": "Five plus three.",
+    "explanation": "5 + 3 = 8.",
+    "skill_tag": "charts.tally",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "make_chart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a taller bar always means a bigger category, even when the scale is different. Is she right?",
+    "hint": "Read the scale first.",
+    "explanation": "A bar's height only means something on its own scale.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, taller is always bigger"
+     },
+     {
+      "id": "b",
+      "text": "No, bars are always the same height"
+     },
+     {
+      "id": "c",
+      "text": "No. The scale matters, so check the numbers on the side"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "true_false",
+    "prompt": "You can make a bar chart from a tally table.",
+    "hint": "Use the numbers in the table.",
+    "explanation": "The table gives the bar values.",
+    "skill_tag": "charts.table",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "fill_blank",
+    "prompt": "Fill in the table total.",
+    "hint": "Add the two numbers.",
+    "explanation": "5 + 3 = 8.",
+    "skill_tag": "charts.total",
+    "points": 1,
+    "text": "Apples 5 and bananas 3 make {b1} altogether.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "9"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "8"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c"
+    },
+    "sub_lesson": "make_chart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multi_select",
+    "prompt": "Which two are sensible scales for a bar chart? Pick two.",
+    "hint": "A scale must go up in equal steps.",
+    "explanation": "2s and 5s go up in equal steps.",
+    "skill_tag": "charts.scale_choice",
+    "options": [
+     {
+      "id": "a",
+      "text": "Counting in 5s"
+     },
+     {
+      "id": "b",
+      "text": "Jumps of 1 on a big number"
+     },
+     {
+      "id": "c",
+      "text": "Mixed up numbers"
+     },
+     {
+      "id": "d",
+      "text": "Counting in 2s"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "order",
+    "prompt": "Order these tallies from the smallest value.",
+    "hint": "Compare the numbers.",
+    "explanation": "4, 7, 9, 12.",
+    "skill_tag": "charts.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "7"
+     },
+     {
+      "id": "i4",
+      "text": "12"
+     },
+     {
+      "id": "i3",
+      "text": "9"
+     },
+     {
+      "id": "i1",
+      "text": "4"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hana draws the scale 0, 5, 10, 15, 20 for values up to 20. Is she right?",
+    "hint": "Does the scale reach the biggest value?",
+    "explanation": "The scale reaches 20 in equal steps.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the scale must go up in 1s"
+     },
+     {
+      "id": "b",
+      "text": "Yes. Equal steps of 5 reach 20, the biggest value"
+     },
+     {
+      "id": "c",
+      "text": "No, the scale must end at 100"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "hotspot",
+    "prompt": "Tap the chart that suits comparing favourite fruit.",
+    "hint": "Groups side by side.",
+    "explanation": "A bar chart compares groups.",
+    "skill_tag": "charts.suit",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📊",
+       "label": "Bar chart",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📈",
+       "label": "Line graph",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "Tally",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "Mon 7, Tue 11, Wed 6. What is the total?",
+    "hint": "Add the three numbers.",
+    "explanation": "7 + 11 + 6 = 24.",
+    "skill_tag": "charts.total",
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "On a line graph, the temperature at 9 am is 12 degrees and at noon it is 18 degrees. How much did it rise?",
+    "hint": "End take away start.",
+    "explanation": "18 − 12 = 6.",
+    "skill_tag": "charts.change",
+    "options": [
+     {
+      "id": "a",
+      "text": "12 degrees"
+     },
+     {
+      "id": "b",
+      "text": "30 degrees"
+     },
+     {
+      "id": "c",
+      "text": "6 degrees"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "hotspot",
+    "prompt": "Tap the biggest bar: 6 cats, 9 dogs, 4 birds.",
+    "hint": "Which value is largest?",
+    "explanation": "9 is the biggest number.",
+    "skill_tag": "charts.biggest",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📊",
+       "label": "Cats 6",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📊",
+       "label": "Dogs 9",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📊",
+       "label": "Birds 4",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Omar says the total of a table is always the same as the tallest bar. Is he right?",
+    "hint": "What does a total do?",
+    "explanation": "A total adds every bar together.",
+    "skill_tag": "charts.reason_total",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, the total is always smaller"
+     },
+     {
+      "id": "b",
+      "text": "No. The total adds all the bars, so it can be bigger than the tallest"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Lina says the difference between 12 and 7 is 19 because 12 + 7 = 19. Is she right?",
+    "hint": "Difference means take away.",
+    "explanation": "12 − 7 = 5.",
+    "skill_tag": "charts.reason_difference",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 19"
+     },
+     {
+      "id": "b",
+      "text": "No, 7"
+     },
+     {
+      "id": "c",
+      "text": "No. The difference is 12 − 7 = 5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "Slide to show the difference between 15 and 6 on the scale from 0 to 20.",
+    "hint": "15 take away 6.",
+    "explanation": "15 − 6 = 9.",
+    "skill_tag": "charts.difference",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 1
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "match",
+    "prompt": "Match each table row to its total.",
+    "hint": "Add each row.",
+    "explanation": "12, 9 and 14.",
+    "skill_tag": "charts.total",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "3 + 4 + 5"
+     },
+     {
+      "id": "l2",
+      "text": "6 + 2 + 1"
+     },
+     {
+      "id": "l3",
+      "text": "7 + 7"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "14"
+     },
+     {
+      "id": "r1",
+      "text": "12"
+     },
+     {
+      "id": "r2",
+      "text": "9"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Hana says a chart where 1 square = 5 can show 3 squares as 3 people. Is she right?",
+    "hint": "Each square is worth 5.",
+    "explanation": "3 × 5 = 15.",
+    "skill_tag": "charts.reason_key",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 8 people"
+     },
+     {
+      "id": "b",
+      "text": "No. 3 squares means 3 × 5 = 15 people"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 3 people"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "Sixteen children chose mango and nine chose apple. How many children voted in all?",
+    "hint": "In all means add.",
+    "explanation": "16 + 9 = 25.",
+    "skill_tag": "charts.in_all",
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "questions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Which chart suits showing how the temperature changes through the day?",
+    "hint": "Change over time.",
+    "explanation": "A line graph shows change over time.",
+    "skill_tag": "charts.suit",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A line graph"
+     },
+     {
+      "id": "c",
+      "text": "A pictogram"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Mira says the weather for two cities can be compared on one line graph. Is she right?",
+    "hint": "Can two lines share one scale?",
+    "explanation": "Two lines on the same scale can be compared.",
+    "skill_tag": "charts.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, a line graph can only show one city"
+     },
+     {
+      "id": "b",
+      "text": "No, line graphs are for bars"
+     },
+     {
+      "id": "c",
+      "text": "Yes, both lines can share the same scale"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "number",
+    "prompt": "Five classes have 24 children each. How many children in total?",
+    "hint": "Five times 24.",
+    "explanation": "5 × 24 = 120.",
+    "skill_tag": "charts.two_step",
+    "answer": {
+     "value": 120,
+     "tolerance": 0
+    },
+    "sub_lesson": "questions",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Layla says a bar chart with a scale of 2s has bars that go up in 1s. Is she right?",
+    "hint": "Count the steps.",
+    "explanation": "Each step on a scale of 2s adds 2.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, up in 1s"
+     },
+     {
+      "id": "b",
+      "text": "No. A scale of 2s means each step adds 2"
+     },
+     {
+      "id": "c",
+      "text": "No, up in 5s"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Nora says a bar of 12 on a chart from 0 to 20 is halfway. Is she right?",
+    "hint": "Halfway between 0 and 20.",
+    "explanation": "Halfway is 10, so 12 is more than halfway.",
+    "skill_tag": "charts.reason_halfway",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 12 is a quarter"
+     },
+     {
+      "id": "b",
+      "text": "No. Halfway on 0 to 20 is 10, so 12 is past halfway"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 12 is halfway"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason"
+   },
+   {
+    "ref": "q1a",
+    "type": "number",
+    "prompt": "On a bar chart, each square is 5 apples. A bar has 3 squares. How many apples?",
+    "hint": "Three lots of five.",
+    "explanation": "3 × 5 = 15 apples.",
+    "skill_tag": "charts.scale",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which part of a chart says what the chart is about?",
+    "hint": "Read the top of the chart.",
+    "explanation": "The title says what the chart shows.",
+    "skill_tag": "charts.title",
+    "options": [
+     {
+      "id": "a",
+      "text": "The scale"
+     },
+     {
+      "id": "b",
+      "text": "The title"
+     },
+     {
+      "id": "c",
+      "text": "The key"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "If one picture is 10, half a picture shows 10.",
+    "hint": "Half of 10.",
+    "explanation": "Half of 10 is 5.",
+    "skill_tag": "charts.key",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Fill in the other key.",
+    "hint": "6 × 5.",
+    "explanation": "1 picture = 5, so 6 pictures = 30.",
+    "skill_tag": "charts.key",
+    "points": 2,
+    "text": "The key says 1 picture = {b1}. A row with 6 pictures shows {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "30"
+       },
+       {
+        "id": "b",
+        "text": "5"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "5"
+       },
+       {
+        "id": "b",
+        "text": "30"
+       },
+       {
+        "id": "c",
+        "text": "6"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "multi_select",
+    "prompt": "Pick two things that help a reader.",
+    "hint": "Think about what a reader needs.",
+    "explanation": "A key and a scale help a reader.",
+    "skill_tag": "charts.parts",
+    "options": [
+     {
+      "id": "a",
+      "text": "Scale"
+     },
+     {
+      "id": "b",
+      "text": "Stamp"
+     },
+     {
+      "id": "c",
+      "text": "Doodle"
+     },
+     {
+      "id": "d",
+      "text": "Key"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "order",
+    "prompt": "Put these steps for a tally table in order.",
+    "hint": "Start with the marks.",
+    "explanation": "Count, table, chart, check.",
+    "skill_tag": "charts.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Make the table"
+     },
+     {
+      "id": "i3",
+      "text": "Draw the chart"
+     },
+     {
+      "id": "i4",
+      "text": "Check the total"
+     },
+     {
+      "id": "i1",
+      "text": "Count the tallies"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "slider",
+    "prompt": "A bar chart scale goes up in 3s. A bar reaches the 3rd line. Slide to show its value.",
+    "hint": "Three lines, each worth three.",
+    "explanation": "3 × 3 = 9.",
+    "skill_tag": "charts.scale_line",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 9,
+     "tolerance": 1
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "match",
+    "prompt": "Join each word to its meaning.",
+    "hint": "Think about what each word means.",
+    "explanation": "Axis, tally and table.",
+    "skill_tag": "charts.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Axis"
+     },
+     {
+      "id": "l2",
+      "text": "Tally"
+     },
+     {
+      "id": "l3",
+      "text": "Table"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "marks counted in fives"
+     },
+     {
+      "id": "r1",
+      "text": "a line with labels"
+     },
+     {
+      "id": "r3",
+      "text": "rows and columns of data"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bar_reading",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A tally shows two groups of four lines and a slash, then two more. What is the total?",
+    "hint": "Five, five, then two.",
+    "explanation": "5 + 5 + 2 = 12.",
+    "skill_tag": "charts.tally",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "make_chart",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Sam says bars for 4 and 8 on the same scale are the same height. Is he right?",
+    "hint": "Count the steps on the scale.",
+    "explanation": "8 is four steps and 4 is two steps.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, same height"
+     },
+     {
+      "id": "b",
+      "text": "No. 8 is twice as tall as 4 on the same scale"
+     },
+     {
+      "id": "c",
+      "text": "No, 8 is shorter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "true_false",
+    "prompt": "A pictogram must have bars.",
+    "hint": "A pictogram uses pictures.",
+    "explanation": "A pictogram uses pictures, not bars.",
+    "skill_tag": "charts.table",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "fill_blank",
+    "prompt": "Fill in the other table total.",
+    "hint": "Add the two numbers.",
+    "explanation": "6 + 7 = 13.",
+    "skill_tag": "charts.total",
+    "points": 1,
+    "text": "Peaches 6 and plums 7 make {b1} altogether.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "14"
+       },
+       {
+        "id": "b",
+        "text": "13"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "make_chart",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multi_select",
+    "prompt": "Pick two sensible scales for a chart from 0 to 50.",
+    "hint": "Equal steps that reach 50.",
+    "explanation": "Equal steps of 10 or 25 reach 50.",
+    "skill_tag": "charts.scale_choice",
+    "options": [
+     {
+      "id": "a",
+      "text": "0, 25, 50"
+     },
+     {
+      "id": "b",
+      "text": "0, 7, 14"
+     },
+     {
+      "id": "c",
+      "text": "0, 3, 9, 27"
+     },
+     {
+      "id": "d",
+      "text": "0, 10, 20, 30, 40, 50"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "order",
+    "prompt": "Sort these tally totals, smallest first.",
+    "hint": "Compare the numbers.",
+    "explanation": "2, 6, 10, 13.",
+    "skill_tag": "charts.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "6"
+     },
+     {
+      "id": "i4",
+      "text": "13"
+     },
+     {
+      "id": "i3",
+      "text": "10"
+     },
+     {
+      "id": "i1",
+      "text": "2"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Ben draws a scale of 0, 50, 100 for values up to 20. Is he right?",
+    "hint": "Can you read 12 on that scale?",
+    "explanation": "The scale is too coarse for values up to 20.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is fine"
+     },
+     {
+      "id": "b",
+      "text": "No. The steps are too big, so the values cannot be read well"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 100 is bigger than 20"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "hotspot",
+    "prompt": "Tap the chart that suits showing temperature through the day.",
+    "hint": "Change over time.",
+    "explanation": "A line graph shows change over time.",
+    "skill_tag": "charts.suit",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📈",
+       "label": "Line graph",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🟦",
+       "label": "Pictogram",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "Tally",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "make_chart",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "Mon 9, Tue 4, Wed 12. What is the total?",
+    "hint": "Add the three numbers.",
+    "explanation": "9 + 4 + 12 = 25.",
+    "skill_tag": "charts.total",
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "The temperature falls from 20 degrees to 15 degrees. How much did it fall?",
+    "hint": "End take away start.",
+    "explanation": "20 − 15 = 5.",
+    "skill_tag": "charts.change",
+    "options": [
+     {
+      "id": "a",
+      "text": "15 degrees"
+     },
+     {
+      "id": "b",
+      "text": "5 degrees"
+     },
+     {
+      "id": "c",
+      "text": "35 degrees"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "hotspot",
+    "prompt": "Tap the smallest bar: 6 cats, 9 dogs, 4 birds.",
+    "hint": "Which value is smallest?",
+    "explanation": "4 is the smallest number.",
+    "skill_tag": "charts.biggest",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📊",
+       "label": "Cats 6",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📊",
+       "label": "Dogs 9",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "📊",
+       "label": "Birds 4",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Zainab says the total of bars 9 and 4 is the same as the tallest bar, 9. Is she right?",
+    "hint": "A total adds every bar.",
+    "explanation": "9 + 4 = 13.",
+    "skill_tag": "charts.reason_total",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 9"
+     },
+     {
+      "id": "b",
+      "text": "No, the total is 5"
+     },
+     {
+      "id": "c",
+      "text": "No. 9 + 4 = 13, which is more than the tallest bar"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Dan says the difference between 20 and 8 is 28. Is he right?",
+    "hint": "Difference means take away.",
+    "explanation": "20 − 8 = 12.",
+    "skill_tag": "charts.reason_difference",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 28"
+     },
+     {
+      "id": "b",
+      "text": "No, 14"
+     },
+     {
+      "id": "c",
+      "text": "No. 20 − 8 = 12"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "Slide to show the difference between 18 and 5 on the scale from 0 to 20.",
+    "hint": "18 take away 5.",
+    "explanation": "18 − 5 = 13.",
+    "skill_tag": "charts.difference",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 13,
+     "tolerance": 1
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "match",
+    "prompt": "Join each row to its total.",
+    "hint": "Add each row.",
+    "explanation": "17, 15 and 7.",
+    "skill_tag": "charts.total",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "8 + 9"
+     },
+     {
+      "id": "l2",
+      "text": "5 + 5 + 5"
+     },
+     {
+      "id": "l3",
+      "text": "1 + 6"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "7"
+     },
+     {
+      "id": "r1",
+      "text": "17"
+     },
+     {
+      "id": "r2",
+      "text": "15"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "data_detective",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a key of 1 picture = 4 means 2 pictures = 6. Is he right?",
+    "hint": "Two lots of four.",
+    "explanation": "2 × 4 = 8.",
+    "skill_tag": "charts.reason_key",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 2"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 pictures = 2 × 4 = 8"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 6"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "data_detective",
+    "depth": "reason",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "Twelve children chose lemon and seven chose kiwi. How many voted in all?",
+    "hint": "In all means add.",
+    "explanation": "12 + 7 = 19.",
+    "skill_tag": "charts.in_all",
+    "answer": {
+     "value": 19,
+     "tolerance": 0
+    },
+    "sub_lesson": "questions",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Which chart suits showing how a school's rainfall changes across the year?",
+    "hint": "Change over time.",
+    "explanation": "A line graph shows change over the year.",
+    "skill_tag": "charts.suit",
+    "options": [
+     {
+      "id": "a",
+      "text": "A tally"
+     },
+     {
+      "id": "b",
+      "text": "A line graph"
+     },
+     {
+      "id": "c",
+      "text": "A pictogram"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ali says two lines on one graph must use different scales to be compared. Is he right?",
+    "hint": "Can you compare lines on different scales?",
+    "explanation": "A shared scale makes lines easy to compare.",
+    "skill_tag": "charts.reason_compare",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, line graphs cannot show two lines"
+     },
+     {
+      "id": "b",
+      "text": "No. To compare, both lines should share the same scale"
+     },
+     {
+      "id": "c",
+      "text": "Yes, different scales are best"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "number",
+    "prompt": "Four classes have 18 children each. How many children in total?",
+    "hint": "Four times 18.",
+    "explanation": "4 × 18 = 72.",
+    "skill_tag": "charts.two_step",
+    "answer": {
+     "value": 72,
+     "tolerance": 0
+    },
+    "sub_lesson": "questions",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Zain says a scale of 5s goes 5, 10, 15. Is he right?",
+    "hint": "Each step adds the same amount.",
+    "explanation": "5, 10, 15 each add 5.",
+    "skill_tag": "charts.reason_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 6, 12, 18"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 1, 2, 3"
+     },
+     {
+      "id": "c",
+      "text": "Yes. Each step adds 5"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Ali says a bar of 5 on a chart from 0 to 20 is a quarter. Is he right?",
+    "hint": "A quarter of 20.",
+    "explanation": "20 ÷ 4 = 5.",
+    "skill_tag": "charts.reason_halfway",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, it is 10"
+     },
+     {
+      "id": "b",
+      "text": "Yes. A quarter of 20 is 5"
+     },
+     {
+      "id": "c",
+      "text": "No, it is halfway"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "questions",
+    "depth": "reason",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

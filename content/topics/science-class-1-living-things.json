@@ -117,38 +117,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, young scientist!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how can we tell what is alive?\n\nWe will meet animals in their homes.",
-   "say": "Welcome back, young scientist! Today's big question is: how can we tell what is alive? And where do animals live? By the end, you will sort living things from things that are not, match animals to their homes, and build a food chain. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🐸🌳🐟🐪",
-   "alt": "Animals live in different places.",
-   "caption": "Animals live in different places."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "alive",
-     "meaning": "Living. Able to move, feed, grow and have babies."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "alive",
    "kind": "learn",
    "title": "Alive, dead or never alive",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how can we tell what is alive?",
+     "say": "Today we find living things and their homes. How can we tell what is alive?"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-living-things-1-c057b707.jpg",
+     "alt": "Green reeds and round lily pads floating on dark pond water",
+     "caption": "A pond is a habitat for frogs, fish and plants.",
+     "credit": "Photo by Nick Fewings on Unsplash",
+     "say": "This pond is a habitat. Frogs, fish and plants all live here."
+    },
     {
      "type": "heading",
      "text": "Stop 1: What makes something alive?"
@@ -284,6 +276,14 @@
      "text": "Stop 2: Dead and never alive"
     },
     {
+     "type": "image",
+     "asset": "science-class-1-living-things-2-2bff4595.jpg",
+     "alt": "Dry brown leaves and pine cones lying on the woodland floor",
+     "caption": "These dry leaves were alive once. They are dead.",
+     "credit": "Photo by Annie Spratt on Unsplash",
+     "say": "These dry leaves fell from trees. They were alive once, so they are dead."
+    },
+    {
      "type": "text",
      "markdown": "Some things are **dead**: they were alive once, like a leaf or a bone.\n\nSome things are **never alive**: a stone or a spoon.",
      "say": "Some things were alive once, but are not any more. We say they are dead. A fallen leaf, a bone and a log were all alive once. Other things were never alive at all. A stone, a spoon and a toy never ate, grew or had babies. Look at the two groups."
@@ -325,6 +325,19 @@
        "c"
       ]
      }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's pond walk",
+     "asset": "clip-science-class-1-living-things-d625de94.mp4",
+     "poster": "clip-science-class-1-living-things-d625de94.webp",
+     "seconds": 71,
+     "transcript": "Zainab walks to the pond with her big brother. What is alive here? A frog sits on a leaf. It breathes, it hops and it eats. A dry leaf lies on the path. It was alive once, so it is dead. A pebble sits by the water. It was never alive. The pond is a habitat. Fish and ducks find food and shelter here. Pond plants feed a tadpole. A fish eats the tadpole. Every animal needs food, water, air and shelter to stay alive. Zainab spots living things everywhere. SubhanAllah, what a busy pond!",
+     "caption": "Zainab finds living, dead and never alive things beside a pond."
     },
     {
      "type": "summary",
@@ -629,7 +642,7 @@
       "Water",
       "Land"
      ],
-     "say": "Now it is your turn to be a nature detective. Here are lots of animals. Drag the water animals into the Water box, and the land animals into the Land box. Think about where each one likes to live."
+     "say": "Now it is your turn to be a nature detective. Here are lots of animals. Drag water animals into the Water box. Drag land animals into the Land box. Think about where each one likes to live."
     },
     {
      "type": "activity",
@@ -814,6 +827,14 @@
     {
      "type": "heading",
      "text": "Stop 1: Food, water, air and shelter"
+    },
+    {
+     "type": "image",
+     "asset": "science-class-1-living-things-3-cd437b9c.jpg",
+     "alt": "A brown rabbit sitting in short green grass",
+     "caption": "A rabbit eats grass. The grass gives it food.",
+     "credit": "Photo by Kedar Gadge on Unsplash",
+     "say": "This rabbit sits in grass. Grass is its food and its shelter."
     },
     {
      "type": "text",
@@ -1807,6 +1828,472 @@
     "depth": "reason"
    },
    {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "A pebble and an empty snail shell lie on the beach. Which one was once alive?",
+    "hint": "Which one was made by an animal?",
+    "explanation": "A snail grew its shell. A pebble was never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The pebble"
+     },
+     {
+      "id": "b",
+      "text": "The snail shell"
+     },
+     {
+      "id": "c",
+      "text": "Both of them"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.stone_shell",
+    "sub_lesson": "alive",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "true_false",
+    "prompt": "A sunflower is alive even though it does not walk.",
+    "hint": "Plants grow and turn to the light.",
+    "explanation": "Plants grow and need water, so they are alive.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "living.sunflower",
+    "sub_lesson": "alive",
+    "depth": "recall"
+   },
+   {
+    "ref": "q18",
+    "type": "match",
+    "prompt": "Match each animal to its home.",
+    "hint": "Where does each one find food and shelter?",
+    "explanation": "Frogs live by ponds, squirrels in woods and lizards in deserts.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Frog"
+     },
+     {
+      "id": "l2",
+      "text": "Squirrel"
+     },
+     {
+      "id": "l3",
+      "text": "Lizard"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Desert"
+     },
+     {
+      "id": "r1",
+      "text": "Pond"
+     },
+     {
+      "id": "r2",
+      "text": "Wood"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "habitats.three_homes",
+    "sub_lesson": "habitats",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "multi_select",
+    "prompt": "Which two things does a sheep need every day? Pick two.",
+    "hint": "What keeps animals alive?",
+    "explanation": "A sheep needs food, water, air and shelter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Shelter"
+     },
+     {
+      "id": "b",
+      "text": "A bicycle"
+     },
+     {
+      "id": "c",
+      "text": "A pencil"
+     },
+     {
+      "id": "d",
+      "text": "Food"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "needs.sheep",
+    "sub_lesson": "needs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Hamza says if all the grass dies, the rabbits will be fine. Is he right?",
+    "hint": "What do rabbits eat?",
+    "explanation": "Rabbits eat grass. Without it they go hungry.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they would eat stones"
+     },
+     {
+      "id": "b",
+      "text": "No, the rabbits would have no food"
+     },
+     {
+      "id": "c",
+      "text": "Yes, rabbits do not eat"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "chains.grass_gone",
+    "sub_lesson": "chains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put this chain in order. Which comes first, second and third?",
+    "hint": "The plant comes first.",
+    "explanation": "The caterpillar eats the cabbage, then the sparrow eats the caterpillar.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Caterpillar"
+     },
+     {
+      "id": "i1",
+      "text": "Cabbage"
+     },
+     {
+      "id": "i3",
+      "text": "Sparrow"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "chains.order_cabbage",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "A food chain is grass, rabbit, fox and eagle. Slide to show how many animals are in it.",
+    "hint": "Grass is a plant.",
+    "explanation": "The rabbit, fox and eagle are three animals.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6,
+     "unit": "animals"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "chains.count_four",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "In a food chain, an arrow goes from a mouse to an owl. What does it mean?",
+    "hint": "The arrow points to the eater.",
+    "explanation": "The arrow points to the animal that does the eating.",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are friends"
+     },
+     {
+      "id": "b",
+      "text": "The mouse is food for the owl"
+     },
+     {
+      "id": "c",
+      "text": "The owl is food for the mouse"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "chains.arrow",
+    "sub_lesson": "chains",
+    "depth": "recall"
+   },
+   {
+    "ref": "q24",
+    "type": "match",
+    "prompt": "Match each animal to what it eats.",
+    "hint": "Think about its teeth and beak.",
+    "explanation": "Cows eat grass, lions eat meat and parrots eat seeds and fruit.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Cow"
+     },
+     {
+      "id": "l2",
+      "text": "Lion"
+     },
+     {
+      "id": "l3",
+      "text": "Parrot"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Meat"
+     },
+     {
+      "id": "r1",
+      "text": "Grass"
+     },
+     {
+      "id": "r3",
+      "text": "Seeds and fruit"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "chains.eats_what",
+    "sub_lesson": "chains",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "hotspot",
+    "prompt": "Tap the best home for a goldfish.",
+    "hint": "Goldfish need water.",
+    "explanation": "A fish tank has the water a goldfish needs.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪴",
+       "label": "Flower pot",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🫧",
+       "label": "Fish tank",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🌵",
+       "label": "Cactus",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "skill_tag": "habitats.fish_home",
+    "sub_lesson": "habitats",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a camel.",
+    "hint": "Think about a dry place.",
+    "explanation": "A camel copes without water, so a hot desert suits it.",
+    "points": 2,
+    "text": "A camel can go a long time without {b1}. That helps it live in a hot {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "stones"
+       },
+       {
+        "id": "b",
+        "text": "water"
+       },
+       {
+        "id": "c",
+        "text": "music"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "fridge"
+       },
+       {
+        "id": "b",
+        "text": "desert"
+       },
+       {
+        "id": "c",
+        "text": "pond"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "habitats.camel_why",
+    "sub_lesson": "habitats",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Which one is the odd one out? A cat, a tree and a toy car.",
+    "hint": "Which one was never alive?",
+    "explanation": "A cat and a tree are alive. A toy car was never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The cat"
+     },
+     {
+      "id": "b",
+      "text": "The toy car"
+     },
+     {
+      "id": "c",
+      "text": "The tree"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.odd_one",
+    "sub_lesson": "alive",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a log was never alive. Is she right?",
+    "hint": "Where does a log come from?",
+    "explanation": "A log was part of a living tree, so it is dead, not never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a log is a stone"
+     },
+     {
+      "id": "b",
+      "text": "No, a log came from a tree that was alive"
+     },
+     {
+      "id": "c",
+      "text": "Yes, wood is never alive"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.log",
+    "sub_lesson": "alive",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Omar says all animals eat meat. Is he right?",
+    "hint": "Think of cows and goats.",
+    "explanation": "Cows, goats and rabbits eat plants, not meat.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plants are meat"
+     },
+     {
+      "id": "b",
+      "text": "No, many animals eat only plants"
+     },
+     {
+      "id": "c",
+      "text": "Yes, every animal eats meat"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "chains.meat",
+    "sub_lesson": "chains",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Sam says a toy robot is alive because it moves. Is he right?",
+    "hint": "Does a robot grow or have babies?",
+    "explanation": "A toy robot was never alive. It does not grow or need food.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it eats batteries"
+     },
+     {
+      "id": "b",
+      "text": "No, it only moves when it is switched on"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it moves so it is alive"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.robot",
+    "sub_lesson": "alive",
+    "depth": "reason"
+   },
+   {
     "ref": "q1a",
     "type": "multiple_choice",
     "prompt": "Which of these is a living thing?",
@@ -2686,6 +3173,487 @@
     "sub_lesson": "needs",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "A marble and a dry crab shell lie in the sand. Which one was once alive?",
+    "hint": "Which one came from an animal?",
+    "explanation": "A crab grew its shell. A marble was never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The marble"
+     },
+     {
+      "id": "b",
+      "text": "The crab shell"
+     },
+     {
+      "id": "c",
+      "text": "Neither of them"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.stone_shell",
+    "sub_lesson": "alive",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "true_false",
+    "prompt": "A tree is not alive because it stays in one place.",
+    "hint": "Does a tree grow?",
+    "explanation": "A tree grows and makes seeds, so it is alive.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "living.sunflower",
+    "sub_lesson": "alive",
+    "depth": "recall",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "match",
+    "prompt": "Join each animal to where it lives.",
+    "hint": "Think about where each one is safe.",
+    "explanation": "Each animal lives where it finds what it needs.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Goldfish"
+     },
+     {
+      "id": "l2",
+      "text": "Mole"
+     },
+     {
+      "id": "l3",
+      "text": "Monkey"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Under the soil"
+     },
+     {
+      "id": "r1",
+      "text": "Water tank"
+     },
+     {
+      "id": "r3",
+      "text": "Tall trees"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "habitats.three_homes",
+    "sub_lesson": "habitats",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multi_select",
+    "prompt": "Which two things does a hen need? Pick two.",
+    "hint": "Think of a farm yard.",
+    "explanation": "A hen needs water and shelter, as well as food and air.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Paint"
+     },
+     {
+      "id": "b",
+      "text": "Pocket money"
+     },
+     {
+      "id": "c",
+      "text": "A safe place to sleep"
+     },
+     {
+      "id": "d",
+      "text": "Water"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "needs.sheep",
+    "sub_lesson": "needs",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Layla says if the pond plants die, the tadpoles will be fine. Is she right?",
+    "hint": "What do tadpoles eat?",
+    "explanation": "Tadpoles eat pond plants. Without them they go hungry.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they would eat sand"
+     },
+     {
+      "id": "b",
+      "text": "No, the tadpoles would have less to eat"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tadpoles eat nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "chains.grass_gone",
+    "sub_lesson": "chains",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Order this chain from the plant to the last animal.",
+    "hint": "Start with the plant.",
+    "explanation": "The mouse eats the wheat, then the cat eats the mouse.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Mouse"
+     },
+     {
+      "id": "i1",
+      "text": "Wheat"
+     },
+     {
+      "id": "i3",
+      "text": "Cat"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "skill_tag": "chains.order_cabbage",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "A food chain is cabbage, caterpillar, sparrow and hawk. Slide to show how many animals are in it.",
+    "hint": "A cabbage is a plant.",
+    "explanation": "The caterpillar, sparrow and hawk are three animals.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6,
+     "unit": "animals"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "chains.count_four",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "An arrow goes from seeds to a bird. What does it mean?",
+    "hint": "The arrow points to the eater.",
+    "explanation": "The bird eats the seeds.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The bird is food for the seeds"
+     },
+     {
+      "id": "b",
+      "text": "The bird is a plant"
+     },
+     {
+      "id": "c",
+      "text": "The seeds are food for the bird"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "chains.arrow",
+    "sub_lesson": "chains",
+    "depth": "recall",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "match",
+    "prompt": "Join each animal to its food.",
+    "hint": "Think about what each one finds.",
+    "explanation": "Goats eat leaves, eagles hunt animals and squirrels eat nuts.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Goat"
+     },
+     {
+      "id": "l2",
+      "text": "Eagle"
+     },
+     {
+      "id": "l3",
+      "text": "Squirrel"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Nuts"
+     },
+     {
+      "id": "r1",
+      "text": "Leaves"
+     },
+     {
+      "id": "r2",
+      "text": "Small animals"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "chains.eats_what",
+    "sub_lesson": "chains",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "hotspot",
+    "prompt": "Tap the best home for a frog.",
+    "hint": "Frogs need water.",
+    "explanation": "A pond gives a frog water and shelter.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌵",
+       "label": "Dry sand",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏜️",
+       "label": "Hot desert",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪷",
+       "label": "Pond",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "skill_tag": "habitats.fish_home",
+    "sub_lesson": "habitats",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about a duck.",
+    "hint": "Think about its feet.",
+    "explanation": "A duck swims on a pond.",
+    "points": 2,
+    "text": "A duck can {b1} on a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "dig"
+       },
+       {
+        "id": "b",
+        "text": "swim"
+       },
+       {
+        "id": "c",
+        "text": "sing"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "roof"
+       },
+       {
+        "id": "b",
+        "text": "shelf"
+       },
+       {
+        "id": "c",
+        "text": "pond"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "habitats.camel_why",
+    "sub_lesson": "habitats",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Which one is the odd one out? A spoon, a fish and a worm.",
+    "hint": "Which one never grew?",
+    "explanation": "A fish and a worm are alive. A spoon was never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "The fish"
+     },
+     {
+      "id": "b",
+      "text": "The worm"
+     },
+     {
+      "id": "c",
+      "text": "The spoon"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "living.odd_one",
+    "sub_lesson": "alive",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Mira says a dry leaf was never alive. Is she right?",
+    "hint": "Where did the leaf grow?",
+    "explanation": "A leaf grew on a living tree, so it is dead, not never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, leaves are plastic"
+     },
+     {
+      "id": "b",
+      "text": "No, it grew on a tree that was alive"
+     },
+     {
+      "id": "c",
+      "text": "Yes, leaves cannot grow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.log",
+    "sub_lesson": "alive",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Aisha says rabbits eat other animals. Is she right?",
+    "hint": "What is in the rabbit's food bowl?",
+    "explanation": "Rabbits eat grass and vegetables.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rabbits hunt"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they eat fish"
+     },
+     {
+      "id": "c",
+      "text": "No, rabbits eat plants"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "chains.meat",
+    "sub_lesson": "chains",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Nina says a clock is alive because it ticks. Is she right?",
+    "hint": "Does a clock eat or grow?",
+    "explanation": "A clock is made in a factory and was never alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it needs food"
+     },
+     {
+      "id": "b",
+      "text": "No, it was made and never grew or ate"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it has a heartbeat"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "living.robot",
+    "sub_lesson": "alive",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

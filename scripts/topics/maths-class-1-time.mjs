@@ -1,17 +1,29 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-measure-time.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-1-measure-time-d1-83fecf93.png","alt":"A ruler from 0 to 10 cm with a pencil starting at 0 and ending at 7 cm","caption":"The pencil is 7 cm long."};
+const COTEACH_B = {"type":"image","asset":"maths-class-1-measure-time-d2-858053e3.png","alt":"Two clocks showing quarter past 3 and quarter to 4","caption":"Quarter past 3 and quarter to 4."};
 // Class 1 Maths topic 7: measuring and time (format 3.0). Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const CL = (id, hour, minute, x = 50, y = 44, size = 3, anim = "none") => [id, { kind: "clock", hour, minute }, x, y, size, anim];
 const TH = (id, value, x = 50, y = 46, size = 1, anim = "none") => [id, { kind: "thermometer", value, from: -10, to: 50 }, x, y, size, anim];
 
+const N = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const PENCILS = "maths-class-1-measure-time-1-e05db8fc.jpg";
+
 const measure = {
   id: "measure", kind: "learn", title: "Length, mass, capacity and temperature",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Today we measure and tell the time. How long is your pencil? How heavy is your bag? What is the time now?",
+      T("Today we learn how to **measure** and how to tell the time.")),
+    SAY("Look at these pencils. Some are tall and some are short. How could we measure them? We need a ruler!",
+      PHOTO(PENCILS, "A row of colouring pencils of different lengths", "Pencils of different lengths.", "Photo by Jess Bailey on Unsplash")),
     H("Stop 1: Measuring things"),
     SAY("We measure things to say how big, how heavy or how much. Length tells us how long or tall something is, and we use a ruler. Mass tells us how heavy something is, and we use scales. Capacity tells us how much a container holds, and we use a measuring jug. Each one has its own tool.", T("**Length** is how long. **Mass** is how heavy. **Capacity** is how much a container holds.", "We use a ruler, scales and a measuring jug.")),
     IMG("📏", "A ruler measures length. Scales measure mass. A jug measures capacity."),
+    SAY("Line the pencil up at zero. Its end is at seven centimetres.", COTEACH_A),
     CHK(mc("Which tool measures how heavy something is?", "Scales", ["A ruler", "A measuring jug"], { hint: "Heavy is about mass.", why: "Scales measure mass.", tag: "measure.tools" })),
     SAY("In school we often use centimetres for length. A pencil is about fifteen centimetres long. We use grams and kilograms for mass. A big bag of rice is one kilogram. And millilitres and litres for capacity. A bottle of water holds about one litre.", T("Length: centimetres. Mass: grams and kilograms. Capacity: millilitres and litres.")),
     CHK(mc("A pencil is about 15...", "centimetres", ["kilograms", "litres"], { hint: "Which unit is for length?", why: "Length is measured in centimetres.", tag: "measure.units" })),
@@ -21,9 +33,10 @@ const measure = {
       SS("A cold winter morning. The thermometer shows five degrees.", S("5 degrees: cold.", TH("t", 5))),
       SS("A warm spring day. Twenty degrees.", S("20 degrees: warm.", TH("t", 20, 50, 46, 1, "pulse"))),
       SS("A hot summer day. Forty degrees. The red line has gone way up!", S("40 degrees: very hot.", TH("t", 40, 50, 46, 1, "pulse")))),
+    SAY("Quarter past three, and quarter to four. Watch where the hour hand sits.", COTEACH_B),
     CHK(mc("Which temperature is the hottest?", "40 degrees", ["5 degrees", "20 degrees"], { hint: "Higher means hotter.", why: "40 is the highest, so it is the hottest.", tag: "measure.temperature" })),
-    SAY("Remember. Length is how long, mass is how heavy, capacity is how much it holds, and temperature is how hot or cold. Each one has its own tool.", SUM("Length, mass, capacity and temperature", "Ruler, scales, jug and thermometer")),
-    GLOSS({ length: "How long or tall something is.", mass: "How heavy something is.", capacity: "How much a container holds.", temperature: "How hot or cold something is.", thermometer: "A tool that measures temperature.", centimetres: "Small units for length.", kilograms: "Units for heavy things.", litres: "Units for how much a container holds.", ruler: "A tool for measuring length.", scales: "A tool for measuring mass." }),
+    SAY("Remember. Length is how long. Mass is how heavy. Capacity is how much it holds. Temperature is how hot or cold.", SUM("Length, mass, capacity and temperature", "Ruler, scales, jug and thermometer")),
+    GLOSS({ measure: "To find out how big, heavy, long or hot something is.", length: "How long or tall something is.", mass: "How heavy something is.", capacity: "How much a container holds.", temperature: "How hot or cold something is.", thermometer: "A tool that measures temperature.", centimetres: "Small units for length.", kilograms: "Units for heavy things.", litres: "Units for how much a container holds.", ruler: "A tool for measuring length.", scales: "A tool for measuring mass." }),
   ],
   mini: [
     mc("Which tool measures length?", "A ruler", ["Scales", "A jug"], { hint: "Length is how long.", why: "A ruler measures length." }),
@@ -37,7 +50,7 @@ const oclock = {
   id: "oclock", kind: "try", title: "O'clock and half past",
   blocks: [
     H("Stop 1: O'clock"),
-    SAY("A clock has two hands. The short hand is the hour hand. The long hand is the minute hand. When the long hand points straight up to the twelve, it is an o'clock time. The short hand tells us which hour. Here the short hand points to three. So it is three o'clock.", T("The short hand shows the **hour**. When the long hand points to 12, it is **o'clock**.", "Long hand on 12, short hand on 3: three o'clock.")),
+    SAY("A clock has two hands. The short hand is the hour hand. The long hand is the minute hand. The long hand points straight up to the twelve. That is an o'clock time. The short hand tells us which hour. Here the short hand points to three. So it is three o'clock.", T("The short hand shows the **hour**. When the long hand points to 12, it is **o'clock**.", "Long hand on 12, short hand on 3: three o'clock.")),
     EXPP("Three o'clock",
       SS("The long hand points straight up at twelve. That means o'clock.", S("Long hand on 12: o'clock.", CL("c", 3, 0))),
       SS("The short hand points to three. So the time is three o'clock.", S("It is 3 o'clock.", CL("c", 3, 0, 50, 44, 3, "pulse"), ["s", "✅", 50, 90, 2, "bounce", "3 o'clock"]))),
@@ -97,7 +110,7 @@ const calendar = {
     H("Stop 2: Using a calendar"),
     SAY("Let us use a calendar. Find today's date. What day of the week is it? How many days until the weekend? Count the days on the calendar. If today is Wednesday, Thursday is one, Friday is two, Saturday is three. Three days until Saturday. Calendars help us plan for birthdays, trips and Eid.", T("Count days on the calendar to find out how long until an event.", "Wednesday to Saturday is 3 days.")),
     SAY("Count the days on the calendar, like Wednesday to Saturday.", IMG("🗓️", "Counting days on a calendar.")),
-    SAY("Now make a calendar for your family. Write the seven days across the top, find today, and count the days to a birthday.", ACT("Make a family calendar", ["A piece of paper or a printed calendar", "Coloured pens"], ["Write the 7 days of the week across the top.", "Find today and circle it.", "Write down one family birthday or event.", "Count how many days until it."])),
+    SAY("Now make a calendar for your family. Write the seven days across the top. Find today. Count the days to a birthday.", ACT("Make a family calendar", ["A piece of paper or a printed calendar", "Coloured pens"], ["Write the 7 days of the week across the top.", "Find today and circle it.", "Write down one family birthday or event.", "Count how many days until it."])),
     CHK(mc("Today is Monday. What day is it in 3 days?", "Thursday", ["Wednesday", "Friday"], { hint: "Count on: Tuesday, Wednesday, Thursday.", why: "Monday plus 3 days is Thursday.", tag: "calendar.days" })),
     SAY("Remember. There are seven days in a week and twelve months in a year. Use a calendar to count days and plan.", SUM("7 days in a week", "12 months in a year", "Use a calendar to count days")),
     GLOSS({ calendar: "A chart that shows the days, weeks and months of the year.", week: "Seven days.", year: "Twelve months.", month: "A part of a year, about four weeks.", date: "The day, month and year." }),
@@ -107,6 +120,29 @@ const calendar = {
     mc("Which day comes after Friday?", "Saturday", ["Thursday", "Sunday"], { hint: "Think of the weekend.", why: "Saturday comes after Friday." }),
     mc("Today is Tuesday. What day is tomorrow?", "Wednesday", ["Monday", "Thursday"], { hint: "Tomorrow is the next day.", why: "Wednesday comes after Tuesday." }),
     tf("There are 10 days in a week.", false, { hint: "Monday to Sunday.", why: "There are 7 days in a week." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara's measuring morning", backdrop: "classroom", caption: "Zara measures a pencil, the weather and the time.",
+  scenes: [
+    { caption: "A pencil and a ruler.", say: "Zara has a new pencil. She wants to measure it.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "p", emoji: "✏️", x: 72, y: 40, size: 3, enter: "pop" }] },
+    { caption: "Start at zero.", say: "She lines the pencil up with the zero on the ruler.",
+      items: [{ id: "r", emoji: "📏", label: "start at 0", x: 50, y: 46, size: 3, enter: "grow" }] },
+    { caption: "15 cm long.", say: "The end of the pencil is at fifteen. It is fifteen centimetres long!",
+      items: [{ id: "r", emoji: "📏", label: "15 cm", x: 50, y: 46, size: 3, effect: "sparkle" }] },
+    { caption: "How hot is it?", say: "Now the weather. Zara reads the thermometer. It says thirty degrees.",
+      items: [{ id: "t", prop: { kind: "thermometer", value: 30, from: -10, to: 50 }, label: "30 degrees", x: 50, y: 46, size: 1, enter: "grow" }] },
+    { caption: "Quarter past 8.", say: "School starts soon. The long hand is on the three. It is quarter past eight.",
+      items: [{ id: "c", prop: { kind: "clock", hour: 8, minute: 15 }, label: "quarter past 8", x: 50, y: 44, size: 3, enter: "pop" }] },
+    { caption: "Half past 8.", say: "Fifteen minutes later, the long hand is on the six. It is half past eight.",
+      items: [{ id: "c", prop: { kind: "clock", hour: 8, minute: 30 }, label: "half past 8", x: 50, y: 44, size: 3, effect: "glow" }] },
+    { caption: "Quarter to 9.", say: "At quarter to nine, the long hand is on the nine. The bell rings!",
+      items: [{ id: "c", prop: { kind: "clock", hour: 8, minute: 45 }, label: "quarter to 9", x: 50, y: 44, size: 3, effect: "sparkle" }] },
+    { caption: "Shukriya, Zara!", say: "Rulers, thermometers and clocks. Shukriya, Zara!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "b", emoji: "🔔", x: 70, y: 40, size: 3, effect: "hearts" }] },
   ],
 };
 
@@ -127,13 +163,9 @@ export const topics = [
       num("What is half of 60?", 30, { hint: "Share 60 between 2.", why: "Half of 60 is 30." }),
       tf("A quarter is one of four equal parts.", true, { hint: "Quarter means four.", why: "A quarter is 1 of 4 equal parts." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Today we measure and tell the time. How long is your pencil? How heavy is your bag? And what is the time right now? By the end you will know which tool to pick, read a clock, and use a calendar.", T("Today we learn how to measure and how to tell the time.")),
-      IMG("⏰", "Measuring and telling the time."),
-      GLOSS({ measure: "To find out how big, heavy, long or hot something is." }),
-    ],
+    intro: [],
     subs: [measure, oclock, quarter, calendar],
+    clip,
     quiz: [
       { q: mc("Which tool would you use to measure how long a book is?", "A ruler", ["Scales", "A thermometer"], { hint: "Length is how long.", why: "A ruler measures length.", tag: "measure.tools" }), sub: "measure", depth: "recall", alts: [mc("Which tool would you use to find out how heavy an apple is?", "Scales", ["A ruler", "A thermometer"], { hint: "Heavy is about mass.", why: "Scales measure mass.", tag: "measure.tools" }), mc("Which tool would you use to find out how hot soup is?", "A thermometer", ["A ruler", "Scales"], { hint: "Hot or cold is temperature.", why: "A thermometer measures temperature.", tag: "measure.tools" })] },
       { q: mc("Which unit is best for the length of a pencil?", "Centimetres", ["Kilograms", "Litres"], { hint: "Length units.", why: "Length is measured in centimetres.", tag: "measure.units" }), sub: "measure", depth: "recall", alts: [mc("Which unit is best for how much water is in a bucket?", "Litres", ["Centimetres", "Kilograms"], { hint: "Capacity units.", why: "Capacity is measured in litres.", tag: "measure.units" }), mc("Which unit is best for the mass of a bag of rice?", "Kilograms", ["Centimetres", "Litres"], { hint: "Mass units.", why: "Mass is measured in kilograms.", tag: "measure.units" })] },
@@ -150,6 +182,37 @@ export const topics = [
       { q: mc("Why does the thermometer's red line rise on a hot day?", "A higher temperature makes the red line go higher", ["Because it is heavier", "Because it is longer"], { hint: "Think about hot and cold.", why: "The hotter it is, the higher the red line goes.", tag: "measure.reason" }), sub: "measure", depth: "reason", alts: [mc("Why is a 30 degree day hotter than a 10 degree day?", "30 is a higher number, so it is warmer", ["30 is a smaller number", "Because 10 is bigger"], { hint: "Higher means hotter.", why: "A bigger temperature number means hotter.", tag: "measure.reason" }), mc("Why do we use a thermometer, not a ruler, to check if a drink is hot?", "A thermometer measures temperature, a ruler measures length", ["A ruler is heavier", "A thermometer is longer"], { hint: "What does each tool measure?", why: "A thermometer measures temperature and a ruler measures length.", tag: "measure.reason" })] },
       { q: mc("Aisha says 15 minutes after 3 is quarter to 4. Is she right?", "No. 15 minutes after 3 is quarter past 3", ["Yes, it is quarter to 4", "No, it is half past 3"], { hint: "A quarter of the way round from 12.", why: "15 minutes after 3 is quarter past 3.", tag: "time.reason" }), sub: "quarter", depth: "reason", alts: [mc("Zain says 45 minutes after 6 is quarter past 7. Is he right?", "No. 45 minutes after 6 is quarter to 7", ["Yes, it is quarter past 7", "No, it is half past 6"], { hint: "Three quarters of the way round.", why: "45 minutes after 6 is quarter to 7.", tag: "time.reason" }), mc("Layla says 30 minutes after 2 is quarter past 2. Is she right?", "No. 30 minutes after 2 is half past 2", ["Yes, it is quarter past 2", "No, it is quarter to 3"], { hint: "Half way round.", why: "30 minutes after 2 is half past 2.", tag: "time.reason" })] },
       { q: num("It is Monday. Mira's birthday is on Friday. How many days until her birthday?", 4, { hint: "Count on from Monday: Tuesday is 1.", why: "Tuesday, Wednesday, Thursday, Friday. That is 4 days.", tag: "calendar.reason" }), sub: "calendar", depth: "reason", alts: [num("It is Tuesday. Omar's trip is on Saturday. How many days until the trip?", 4, { hint: "Count on from Tuesday: Wednesday is 1.", why: "Wednesday, Thursday, Friday, Saturday. That is 4 days.", tag: "calendar.reason" }), num("It is Wednesday. Sara has swimming on Sunday. How many days until swimming?", 4, { hint: "Count on from Wednesday: Thursday is 1.", why: "Thursday, Friday, Saturday, Sunday. That is 4 days.", tag: "calendar.reason" })] },
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      N(tf("A metre is longer than a centimetre.", true, { hint: "A metre is about as high as a door handle.", why: "A metre is much longer. There are 100 centimetres in a metre.", tag: "measure.metre_cm" }), "measure", "recall",
+        [tf("A centimetre is longer than a metre.", false, { hint: "A centimetre is about a thumbnail wide.", why: "A metre is much longer than a centimetre.", tag: "measure.metre_cm" })]),
+      N(fill("Choose the unit.", "A door is about 2 {b1} tall. A pencil is about 15 {b2} long.", [["metres", "centimetres", "litres"], ["centimetres", "metres", "kilograms"]], { hint: "Big things use metres, small things centimetres.", why: "A door is about 2 metres and a pencil about 15 centimetres.", tag: "measure.units" }), "measure", "apply",
+        [fill("Pick the units.", "A bus is about 10 {b1} long. A finger is about 1 {b2} wide.", [["metres", "centimetres", "litres"], ["centimetres", "metres", "kilograms"]], { hint: "Big things use metres, small things centimetres.", why: "A bus is about 10 metres and a finger about 1 centimetre.", tag: "measure.units" })]),
+      N(ms("Which two things are best measured in metres? Pick two.", ["The length of a classroom", "The height of a tree"], ["The length of a rubber", "The width of a coin"], { hint: "Think of big things.", why: "A classroom and a tree are big, so metres suit them.", tag: "measure.units" }), "measure", "apply",
+        [ms("Which two things are best measured in metres? Choose two.", ["A football pitch", "A bus"], ["A bean", "A button"], { hint: "Think of big things.", why: "A pitch and a bus are big, so metres suit them.", tag: "measure.units" })]),
+      N(ord("Put these lengths in order, shortest first.", ["5 cm", "20 cm", "1 metre", "10 metres"], { hint: "1 metre is 100 cm.", why: "5 cm, 20 cm, 1 metre (100 cm) and 10 metres go up in order.", tag: "measure.order_length" }), "measure", "apply",
+        [ord("Order these lengths, shortest first.", ["2 cm", "30 cm", "2 metres", "50 metres"], { hint: "1 metre is 100 cm.", why: "2 cm, 30 cm, 2 metres and 50 metres go up in order.", tag: "measure.order_length" })]),
+      N(mat("Match each clock time to what we say.", [["5:15", "quarter past 5"], ["8:45", "quarter to 9"], ["2:30", "half past 2"]], { hint: "15 is a quarter past. 45 is a quarter to.", why: "5:15 is quarter past 5, 8:45 is quarter to 9 and 2:30 is half past 2.", tag: "time.digital_match" }), "quarter", "apply",
+        [mat("Match each clock time to its words.", [["7:15", "quarter past 7"], ["11:45", "quarter to 12"], ["4:30", "half past 4"]], { hint: "15 is a quarter past. 45 is a quarter to.", why: "7:15 is quarter past 7, 11:45 is quarter to 12 and 4:30 is half past 4.", tag: "time.digital_match" })]),
+      N(hot("Tap the clock that shows quarter past 5.", [["🕔", "A: 5 o'clock", 22, 50], ["🕠", "B: half past 5", 50, 50], ["🕔", "C: quarter past 5", 78, 50]], ["C: quarter past 5"], { labels: true, hint: "Long hand on 3, short hand just past 5.", why: "Quarter past 5 is 5:15.", tag: "time.quarter" }), "quarter", "apply",
+        [hot("Tap the clock that shows quarter to 8.", [["🕖", "A: quarter to 8", 22, 50], ["🕗", "B: quarter past 8", 50, 50], ["🕗", "C: 8 o'clock", 78, 50]], ["A: quarter to 8"], { labels: true, hint: "Long hand on 9, short hand just before 8.", why: "Quarter to 8 is 7:45.", tag: "time.quarter" })]),
+      N(sld("A thermometer scale goes from 0 to 40. The red line is halfway. Slide to the temperature.", { min: 0, max: 40 }, 20, 0, { hint: "Half of 40.", why: "Halfway between 0 and 40 is 20 degrees.", tag: "measure.read_scale" }), "measure", "apply",
+        [sld("A thermometer scale goes from 0 to 100. The red line is halfway. Slide to the temperature.", { min: 0, max: 100 }, 50, 0, { hint: "Half of 100.", why: "Halfway between 0 and 100 is 50 degrees.", tag: "measure.read_scale" })]),
+      N(num("It is 18 degrees at breakfast. At lunch it is 9 degrees warmer. What is the temperature at lunch?", 27, { hint: "Add 9 to 18.", why: "18 + 9 = 27 degrees.", tag: "measure.temperature" }), "measure", "apply",
+        [num("It is 12 degrees in the morning. By afternoon it is 8 degrees warmer. What is the temperature in the afternoon?", 20, { hint: "Add 8 to 12.", why: "12 + 8 = 20 degrees.", tag: "measure.temperature" })]),
+      N(mc("What time is 15 minutes after 5 o'clock?", "Quarter past 5", ["Quarter to 5", "Half past 5"], { hint: "A quarter of an hour is 15 minutes.", why: "15 minutes after 5 o'clock is quarter past 5.", tag: "time.quarter" }), "quarter", "apply",
+        [mc("What time is 15 minutes before 8 o'clock?", "Quarter to 8", ["Quarter past 8", "Half past 7"], { hint: "A quarter of an hour is 15 minutes.", why: "15 minutes before 8 o'clock is quarter to 8.", tag: "time.quarter" })]),
+      N(mc("Which day comes just before Wednesday?", "Tuesday", ["Thursday", "Monday"], { hint: "Before means the day earlier.", why: "Tuesday comes just before Wednesday.", tag: "calendar.days" }), "calendar", "apply",
+        [mc("Which day comes just after Saturday?", "Sunday", ["Friday", "Monday"], { hint: "After means the next day.", why: "Sunday comes just after Saturday.", tag: "calendar.days" })]),
+      N(mc("Which month comes after March?", "April", ["February", "May"], { hint: "January, February, March ...", why: "April comes after March.", tag: "calendar.months" }), "calendar", "apply",
+        [mc("Which month comes after July?", "August", ["June", "September"], { hint: "June, July ...", why: "August comes after July.", tag: "calendar.months" })]),
+      N(mc("Layla measures a pencil from the 1 on a ruler. The end is at 8. She says it is 8 cm long. Is she right?", "No. It starts at 1, so it is 7 cm long", ["Yes, it is 8 cm", "No, it is 9 cm"], { hint: "Start counting from where the pencil starts.", why: "From 1 to 8 is 7 cm. A pencil should start at 0 to read the end number.", tag: "measure.reason_ruler" }), "measure", "reason",
+        [mc("Ben measures a pencil from the 2 on a ruler. The end is at 9. He says it is 9 cm long. Is he right?", "No. It starts at 2, so it is 7 cm long", ["Yes, it is 9 cm", "No, it is 11 cm"], { hint: "Start counting from where the pencil starts.", why: "From 2 to 9 is 7 cm. A pencil should start at 0 to read the end number.", tag: "measure.reason_ruler" })]),
+      N(mc("Sam says it is 7 o'clock when the short hand is on 7 and the long hand is on 6. Is he right?", "No. The long hand on 6 means half past, so it is half past 7", ["Yes, the short hand is on 7", "No, it is 6 o'clock"], { hint: "Which number is the long hand on?", why: "The long hand on 6 means half past. So it is half past 7.", tag: "time.reason" }), "oclock", "reason",
+        [mc("Ben says it is 4 o'clock when the short hand is near 4 and the long hand is on 6. Is he right?", "No. The long hand on 6 means half past, so it is half past 4", ["Yes, the short hand is near 4", "No, it is 6 o'clock"], { hint: "Which number is the long hand on?", why: "The long hand on 6 means half past. So it is half past 4.", tag: "time.reason" })]),
+      N(mc("Omar says thermometer A is hotter because its red line is higher up the page. A reads 10 degrees and B reads 30 degrees. Is he right?", "No. Read the numbers. B reads 30 degrees, so B is hotter", ["Yes, the higher line is hotter", "No, they are the same"], { hint: "What do the numbers say?", why: "The temperature is the number on the scale. 30 is more than 10, so B is hotter.", tag: "measure.reason_thermometer" }), "measure", "reason",
+        [mc("Mina says thermometer A is hotter because its red line is higher up the page. A reads 5 degrees and B reads 35 degrees. Is she right?", "No. Read the numbers. B reads 35 degrees, so B is hotter", ["Yes, the higher line is hotter", "No, they are the same"], { hint: "What do the numbers say?", why: "The temperature is the number on the scale. 35 is more than 5, so B is hotter.", tag: "measure.reason_thermometer" })]),
+      N(mc("Ben says at quarter to 8 the short hand is exactly on the 8. Is he right?", "No. It is not 8 yet, so the short hand is just before the 8", ["Yes, it is exactly on the 8", "No, it is on the 7"], { hint: "Is it 8 o'clock yet?", why: "Quarter to 8 is 7:45. The short hand has not reached 8 yet.", tag: "time.reason_hour_hand" }), "quarter", "reason",
+        [mc("Mia says at quarter to 5 the short hand is exactly on the 4. Is she right?", "No. It is nearly 5, so the short hand is just before the 5", ["Yes, it is exactly on the 4", "No, it is on the 3"], { hint: "Is it 5 o'clock yet?", why: "Quarter to 5 is 4:45. The short hand is almost at 5.", tag: "time.reason_hour_hand" })]),
     ],
   }),
 ];

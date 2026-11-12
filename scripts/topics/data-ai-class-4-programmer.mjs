@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 4 (Fatima, age 9), topic 1: Thinking like a programmer.
@@ -6,9 +6,15 @@ import { topicLesson } from "../topic-kit.mjs";
 const o = (hint, why, tag) => ({ hint, why, tag });
 const RG = (id, col, row, facing, anim = "none") => [id, { kind: "robot_grid", col, row, facing }, 50, 50, 3, anim];
 
+const PUZZLE = "data-ai-class-4-thinking-like-a-programmer-1-4ef8ce11.jpg";
+const SPIRAL = "data-ai-class-4-thinking-like-a-programmer-2-ce564075.jpg";
+
 const decompose = {
   id: "decompose", kind: "learn", title: "Breaking problems down and flowcharts",
   blocks: [
+    H("Welcome back, young programmer!"),
+    SAY("Today we think like a programmer. How do we solve a big problem in small steps?", T("Today's big question: how do programmers solve big problems?")),
+    SAY("A jigsaw has many small pieces. Programmers solve big problems by fitting small parts together.", PHOTO(PUZZLE, "A blue jigsaw puzzle with one piece missing", "Small pieces make a big picture.", "Photo by Tanja Tepavac on Unsplash")),
     H("Stop 1: Decomposition"),
     SAY("Big problems can feel scary. Programmers have a trick: they break a big problem into small parts that are easier to solve. This is called decomposition. Imagine we want to make a birthday card app. That is big! But we can split it: draw the picture, write the message, choose the colours, and share it. Each small part is simple to build.", T("**Decomposition** means breaking a big problem into small parts.", "Each part is easier to solve, and together they solve the whole problem.")),
     EXP("Splitting a big problem",
@@ -24,7 +30,7 @@ const decompose = {
       SS("If yes, we cross. If no, we wait and look again. The arrow loops back to the question.", S("Yes: cross. No: wait and look again.", ["q", "❓", 50, 50, 2, "pulse", "Clear?"], ["y", "🚶", 80, 50, 3, "bounce", "Yes: cross"], ["n", "⏳", 20, 50, 3, "bounce", "No: wait"]))),
     CHK(mc("In a flowchart, what does a diamond ask?", "A yes or no question", ["A colour", "A song"], o("There are two ways out.", "A diamond is a question with yes and no.", "prog.flowchart"))),
     SAY("Let us remember. Break big problems into parts. Draw an algorithm as a flowchart.", SUM("Decomposition breaks a big problem into parts", "A flowchart shows an algorithm as boxes and arrows")),
-    GLOSS({ decomposition: "Breaking a big problem into smaller parts.", flowchart: "A picture of an algorithm with boxes and arrows.", algorithm: "A list of clear steps in the right order.", problem: "Something we need to solve." }),
+    GLOSS({ procedure: "A named set of steps that can be used again.", decomposition: "Breaking a big problem into smaller parts.", flowchart: "A picture of an algorithm with boxes and arrows.", algorithm: "A list of clear steps in the right order.", problem: "Something we need to solve." }),
   ],
   mini: [
     mc("Why do programmers break problems into parts?", "Small parts are easier to solve", ["It uses more paper", "It is slower"], o("Think about a big jigsaw.", "Small parts are easier to solve.")),
@@ -38,6 +44,7 @@ const loopsIf = {
   id: "loops_if", kind: "try", title: "Loops and decisions",
   blocks: [
     H("Stop 1: Loops"),
+    SAY("A spiral staircase repeats the same step again and again. A loop repeats steps in a program.", PHOTO(SPIRAL, "A spiral staircase seen from above", "A spiral repeats the same step again and again, like a loop.", "Photo by Jean-Luc Benazet on Unsplash")),
     SAY("A loop repeats a set of steps. To draw a square we could write: forward, turn, forward, turn, forward, turn, forward, turn. That is eight steps. With a loop we just write: repeat four times, forward then turn. Same square, much shorter. Loops save time and avoid mistakes. Watch the robot drive round a square using a loop.", T("A **loop** repeats steps. Repeat 4 times: forward, turn.", "Loops make programs shorter.")),
     EXP("A loop draws a square",
       SS("The robot starts here and faces right. Repeat four times: forward, turn.", S("Loop 1 begins.", RG("r", 0, 0, "right"))),
@@ -96,7 +103,7 @@ const debugUse = {
       SS("But the star is at the bottom right corner, which is four across and four down. The robot is not there! The program needs one more forward across and two more down. We found the bugs.", S("The robot is short of the star. Bugs found!", RG("r", 3, 2, "down", "pulse"), ["bug", "🐛", 80, 20, 2, "bounce"]))),
     CHK(mc("A program should move the robot 4 squares, but it only moves 3. What is the best way to find the bug?", "Trace it step by step", ["Delete the whole program", "Guess and hope"], o("Follow it like the computer.", "Tracing shows exactly where the mistake is.", "prog.debug"))),
     H("Stop 2: Design your own"),
-    SAY("Now design a program of your own. Choose a game idea, like a dice game. Break it into parts, draw a flowchart, decide what variables you need, and use a loop and a decision. Test it with a friend. If it goes wrong, debug it.", T("Design a program: decompose it, draw a flowchart, use a variable, then test and debug.")),
+    SAY("Now design a program of your own. Choose a game idea, like a dice game. Break it into parts and draw a flowchart. Decide what variables you need, and use a loop and a decision. Test it with a friend. If it goes wrong, debug it.", T("Design a program: decompose it, draw a flowchart, use a variable, then test and debug.")),
     IMG("🎲🧩", "Plan the parts, then test and debug."),
     ACT("My dice game plan", ["Paper and pencil", "A dice and a friend"], ["Write your game idea in one sentence.", "Break it into three parts.", "Draw a flowchart with one question diamond.", "Name one variable, such as score.", "Test it with a friend and fix any bug."]),
     REVEAL("Why is testing important even if the plan looks perfect?", "A plan can hide small mistakes. Testing shows them so we can debug."),
@@ -130,6 +137,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Fatima's dice game", backdrop: "classroom", caption: "Fatima plans a dice game, traces it and finds a bug.",
+  scenes: [
+    { caption: "A big problem.", say: "Fatima wants to make a dice game. It feels like a very big problem.",
+      items: [{ id: "f", emoji: "👧", label: "Fatima", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "d", emoji: "🎲", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Break it down.", say: "She breaks it into small parts. This is called decomposition.",
+      items: [{ id: "a", emoji: "🎲", label: "roll", x: 25, y: 50, size: 2 }, { id: "b", emoji: "🔢", label: "score", x: 50, y: 50, size: 2 }, { id: "c", emoji: "🏆", label: "win", x: 75, y: 50, size: 2 }] },
+    { caption: "A flowchart.", say: "She draws a flowchart. A diamond asks whether the roll is a six.",
+      items: [{ id: "q", emoji: "🔶", label: "six?", x: 50, y: 48, size: 3, anim: "pulse" }] },
+    { caption: "A loop.", say: "A loop repeats the roll three times. Fatima does not copy the steps.",
+      items: [{ id: "l", emoji: "🔁", label: "repeat 3", x: 40, y: 48, size: 3, anim: "spin" }, { id: "d", emoji: "🎲", x: 75, y: 50, size: 3 }] },
+    { caption: "A variable.", say: "A variable called score remembers the points. It starts at zero.",
+      items: [{ id: "v", emoji: "📦", label: "score: 0", x: 50, y: 52, size: 3 }] },
+    { caption: "A bug!", say: "She runs it. The score stays at zero. There is a bug.",
+      items: [{ id: "v", emoji: "📦", label: "score: 0", x: 40, y: 52, size: 3 }, { id: "b", emoji: "🐛", x: 75, y: 35, size: 2, anim: "bounce" }] },
+    { caption: "Trace it.", say: "She traces it step by step. She forgot to add one to the score.",
+      items: [{ id: "t", emoji: "🔍", x: 35, y: 50, size: 3, effect: "sparkle" }, { id: "p", emoji: "➕", label: "score + 1", x: 72, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Fixed.", say: "She adds the line and tests again. Now the score goes up.",
+      items: [{ id: "v", emoji: "📦", label: "score: 3", x: 40, y: 52, size: 3, anim: "bounce" }, { id: "f", emoji: "🎉", x: 75, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-4-thinking-like-a-programmer", subject: "data-ai", cls: 4, topic: 1, title: "Thinking Like a Programmer",
@@ -149,13 +179,9 @@ export const topics = [
       mc("What is the middle number in 3, 5, 9?", "5", ["3", "9"], o("It is in the middle.", "5 is in the middle.")),
       num("What is 6 x 4?", 24, o("Count in fours.", "6 x 4 = 24.")),
     ],
-    intro: [
-      H("Welcome, young programmer!"),
-      SAY("Welcome, young programmer! Today's big question: how do programmers solve big problems? They break them down, plan with flowcharts, repeat with loops, decide with if and else, remember with variables, and fix bugs. By the end you will think like a programmer. Let's go!", T("Today's big question: how do programmers solve big problems?", "We will learn the tools programmers use every day.")),
-      IMG("💻🧩", "Programmers solve problems one small step at a time."),
-      GLOSS({ programmer: "A person who writes instructions for a computer." }),
-    ],
+    intro: [],
     subs: [decompose, loopsIf, variables, debugUse],
+    clip,
     quiz: [
       qd(mc("A programmer splits a big game into small jobs. What is this called?", "Decomposition", ["Debugging", "Looping"], o("Breaking apart.", "Splitting a problem is decomposition.", "prog.decompose")), "decompose", "recall"),
       qd(mc("Which shape in a flowchart asks a yes or no question?", "A diamond", ["A star", "A heart"], o("Two ways out.", "A diamond holds a question.", "prog.flowchart")), "decompose", "recall"),
@@ -172,6 +198,37 @@ export const topics = [
       qd(tf("A flowchart can only be used for computer programs.", false, o("Any steps in order.", "People use flowcharts for all kinds of steps.", "prog.flowchart")), "decompose", "recall"),
       qd(mc("Ahmed says testing is a waste of time if the plan looks perfect. Is he right?", "No, testing can reveal hidden bugs", ["Yes, never test", "Only for games"], o("Plans can hide bugs.", "Testing shows hidden bugs.", "prog.reason")), "debug", "reason"),
       qd(ord("Put these programming jobs in order.", ["Break the problem into parts", "Write the steps", "Test and debug"], o("Plan first.", "Decompose, write, then test.", "prog.process")), "debug", "apply"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(num("Trace the program: repeat 4 times: move 3 steps. How many steps does the sprite move in all?", 12, o("Four lots of three.", "4 x 3 = 12 steps.", "prog.trace_loop")), "loops_if", "apply",
+        [num("Trace the program: repeat 5 times: move 2 steps. How many steps does the sprite move in all?", 10, o("Five lots of two.", "5 x 2 = 10 steps.", "prog.trace_loop"))]),
+      qa(mc("A robot draws a triangle with a loop. How many times should the loop repeat?", "3 times", ["4 times", "6 times"], o("A triangle has three sides.", "One pass for each of the three sides.", "prog.shapes_loop")), "loops_if", "apply",
+        [mc("A robot draws a pentagon with a loop. How many times should the loop repeat?", "5 times", ["3 times", "6 times"], o("A pentagon has five sides.", "One pass for each of the five sides.", "prog.shapes_loop"))]),
+      qa(mat("Match each programming word to its meaning.", [["Procedure", "A named set of steps you can use again"], ["Trace", "Follow a program step by step"], ["Value", "What a variable stores"]], o("Think about each word.", "Each word has its own meaning.", "prog.vocab2")), "debug", "recall",
+        [mat("Pair each word with what it means.", [["Condition", "A question that is true or false"], ["Repeat", "Do the steps again"], ["Debug", "Find and fix a mistake"]], o("Think about each word.", "Each word has its own meaning.", "prog.vocab2"))]),
+      qa(mc("Idris says a loop that repeats 20 times always draws a big shape. Is he right?", "No. How big it is depends on the length of each side, not just how many repeats", ["Yes, more repeats is always bigger", "Yes, 20 is always the biggest"], o("Think about what controls the size.", "The size comes from the side length. The repeat count sets how many sides.", "prog.reason_big")), "loops_if", "reason",
+        [mc("Zara says repeating more times always makes a shape larger. Is she right?", "No. More repeats can draw more sides, but each side's length sets the size", ["Yes, always larger", "Yes, repeats set the size"], o("Think about what controls the size.", "The side length controls the size.", "prog.reason_big"))]),
+      qa(mc("Maryam says changing the repeat value from 3 to 6 changes nothing about the loop. Is she right?", "No. The loop will run twice as many times", ["Yes, nothing changes", "No, it runs half as many times"], o("Trace both versions.", "Changing the value changes how many times the loop runs.", "prog.reason_value")), "loops_if", "reason",
+        [mc("Hamza says changing a loop's value from 2 to 8 does not matter. Is he right?", "No. The loop will run four times as often", ["Yes, it does not matter", "No, it runs half as often"], o("Trace both versions.", "A new value changes how many repeats happen.", "prog.reason_value"))]),
+      qa(sld("A program says: repeat 3 times: (repeat 4 times: step). Slide to show the total number of steps.", { min: 0, max: 20 }, 12, 0, o("Three lots of four.", "3 x 4 = 12 steps.", "prog.nested")), "loops_if", "apply",
+        [sld("A program says: repeat 2 times: (repeat 5 times: step). Slide to show the total number of steps.", { min: 0, max: 20 }, 10, 0, o("Two lots of five.", "2 x 5 = 10 steps.", "prog.nested"))]),
+      qa(ms("Which two things does a count-controlled loop need? Pick two.", ["A number of repeats", "Steps to repeat"], ["A flowchart diamond", "A dice"], o("Think about repeat 4 times: forward.", "A loop needs how many times and what to repeat.", "prog.loop_parts")), "loops_if", "apply",
+        [ms("Which two are part of a decision? Pick two.", ["A condition", "An else branch"], ["A loop counter", "A sprite"], o("Think about if and else.", "A decision has a condition and an else branch.", "prog.decision_parts"))]),
+      qa(ord("Put these debugging steps in order.", ["Run the program and watch", "Spot where it goes wrong", "Change one thing", "Run it again"], o("Watch first.", "Run, spot, change one thing, then run again.", "prog.debug_steps")), "debug", "apply",
+        [ord("Put these steps for fixing a score bug in order.", ["See the score is wrong", "Trace each step", "Fix the line that is wrong", "Test again"], o("See the problem first.", "See, trace, fix, then test.", "prog.debug_steps"))]),
+      qa(fill("Complete the sentences about loops and variables.", "A loop {b1} its steps. A {b2} changes as the program runs.", [["repeats", "hides", "deletes"], ["variable", "bug", "flowchart"]], o("Think about the jobs.", "A loop repeats and a variable can change.", "prog.vocab3")), "variables", "recall",
+        [fill("Finish the sentences about procedures.", "A procedure is a {b1} set of steps. We give it a {b2} so we can use it again.", [["named", "hidden", "broken"], ["name", "bug", "colour"]], o("Think about reuse.", "A procedure has a name so we can use it again.", "prog.vocab3"))]),
+      qa(mc("A loop says: repeat until the score reaches 10. The score never changes. What is the problem?", "The loop never ends", ["The loop ends too early", "The loop draws a square"], o("What would stop the loop?", "If the score never changes, the loop cannot finish.", "prog.infinite")), "debug", "apply",
+        [mc("A program waits until a button is pressed. Nobody can press it. What happens?", "It waits for ever", ["It finishes at once", "It draws a circle"], o("What would end the wait?", "Nothing ends the wait, so it never finishes.", "prog.infinite"))]),
+      qa(mc("Hana says a procedure can only ever be used once. Is she right?", "No. A procedure is named so it can be used again and again", ["Yes, only once", "Yes, procedures are deleted after use"], o("Why give it a name?", "A name lets us call the same steps again.", "prog.reason_procedure")), "debug", "reason",
+        [mc("Ali says writing the same steps again is better than a procedure. Is he right?", "No. A procedure saves time and avoids mistakes", ["Yes, copying is better", "Yes, procedures are slower"], o("Why give it a name?", "A procedure avoids repeating the same steps.", "prog.reason_procedure"))]),
+      qa(hot("This program should draw a square. Tap the line with the bug.", [["▫️", "repeat 4 times", 22, 50], ["▫️", "forward 10", 50, 50], ["▫️", "turn 45 degrees", 78, 50]], ["turn 45 degrees"], { labels: true, ...o("A square turns a quarter turn.", "A square needs a 90 degree turn.", "prog.bug_line") }), "debug", "apply",
+        [hot("This program should draw a triangle. Tap the line with the bug.", [["▫️", "repeat 3 times", 22, 50], ["▫️", "forward 10", 50, 50], ["▫️", "turn 90 degrees", 78, 50]], ["turn 90 degrees"], { labels: true, ...o("A triangle turns 120 degrees.", "A triangle needs a 120 degree turn.", "prog.bug_line") })]),
+      qa(tf("If it is sunny, we go out. It is raining. We go out.", false, o("Is the condition true?", "It is not sunny, so we do not go out.", "prog.if_sunny")), "loops_if", "apply",
+        [tf("If the score is more than 10, show well done. The score is 12. The program shows well done.", true, o("Is the condition true?", "12 is more than 10, so it shows well done.", "prog.if_sunny"))]),
+      qa(mc("Ali says a variable called score will always show the right score even if you forget to add 1. Is he right?", "No. The variable only changes when the program changes it", ["Yes, it updates by itself", "Yes, variables are magic"], o("Who changes the value?", "A variable only changes when the program changes it.", "prog.reason_score")), "variables", "reason",
+        [mc("Nina says the score fixes itself if the program forgets to add points. Is she right?", "No. The program must add the points", ["Yes, it fixes itself", "Yes, computers guess"], o("Who changes the value?", "The program must change the variable.", "prog.reason_score"))]),
+      qa(num("Score starts at 0 and adds 2 each round. What is score after 3 rounds?", 6, o("Add 2 three times.", "2 + 2 + 2 = 6.", "prog.score_rounds")), "variables", "apply",
+        [num("Score starts at 0 and adds 5 each round. What is score after 4 rounds?", 20, o("Add 5 four times.", "5 + 5 + 5 + 5 = 20.", "prog.score_rounds"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

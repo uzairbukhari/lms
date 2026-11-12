@@ -106,38 +106,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, number explorer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how can we read big numbers like 47 and 83 quickly?\n\nWe will use tens and ones to find out.",
-   "say": "Welcome back, number explorer! Today we have a big question. How can we read big numbers, like forty-seven and eighty-three, quickly? The secret is tens and ones. By the end, you will be able to tell what any number up to one hundred is made of, find it on a number line, and say which of two numbers is bigger. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "🔢",
-   "alt": "Tens and ones make every number to 100.",
-   "caption": "Tens and ones make every number to 100."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "tens and ones",
-     "meaning": "The two parts of a number up to 100."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "tens_ones",
    "kind": "learn",
    "title": "Tens and ones",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, number explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how can we read big numbers like 47 and 83 quickly?\n\nWe will use **tens and ones** to find out.",
+     "say": "Welcome back, number explorer! Today's big question: how can we read big numbers quickly? The secret is tens and ones. Let's go!"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-place-value-1-34a08dde.jpg",
+     "alt": "Bundles of thin bamboo strips tied with purple string",
+     "caption": "Bundles of sticks help us count in tens.",
+     "credit": "Photo by Bernd Dittrich on Unsplash",
+     "say": "Look at these bundles. Each bundle ties many sticks together. A bundle of ten is a ten!"
+    },
     {
      "type": "heading",
      "text": "Stop 1: Two-digit numbers"
@@ -207,6 +199,13 @@
       }
      ],
      "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-place-value-d1-56172ada.png",
+     "alt": "A place value chart showing 47 as 4 tens and 7 ones",
+     "caption": "47 = 4 tens and 7 ones.",
+     "say": "Forty-seven has four tens and seven ones."
     },
     {
      "type": "check",
@@ -308,6 +307,19 @@
      }
     },
     {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab ties the sticks in tens",
+     "asset": "clip-maths-class-1-place-value-b15e488e.mp4",
+     "poster": "clip-maths-class-1-place-value-b15e488e.webp",
+     "seconds": 65,
+     "transcript": "This is Zainab. Today she tidies the class sticks. She ties ten sticks in one bundle. One bundle is one ten. She makes four bundles. Ten, twenty, thirty, forty! Seven sticks are left over. They are seven ones. Forty and seven make forty-seven. The four is the tens digit. Now swap the digits. Seventy-four has seven tens. It is much bigger! More tens means a bigger number. Seventy-four is bigger than forty-seven. Tens first, then ones. Well done, Zainab!",
+     "caption": "Zainab makes 47 from tens and ones."
+    },
+    {
      "type": "summary",
      "points": [
       "A two-digit number is tens and ones",
@@ -318,6 +330,10 @@
     {
      "type": "glossary",
      "terms": [
+      {
+       "term": "tens and ones",
+       "meaning": "The two parts of a number up to 100."
+      },
       {
        "term": "tens",
        "meaning": "Groups of ten. In 34 there are 3 tens."
@@ -456,7 +472,7 @@
       100
      ],
      "caption": "Every jump of ten along the number line: 10, 20, 30 and on to 100.",
-     "say": "Here is the number line. Look at the jumps of ten as we go along from zero to one hundred."
+     "say": "Here is the number line. Look at the jumps of ten from zero to one hundred."
     },
     {
      "type": "explainer",
@@ -554,6 +570,13 @@
       }
      ],
      "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-place-value-d2-0bd9fcaa.png",
+     "alt": "Base ten blocks showing 63 as 6 tens rods and 3 ones cubes",
+     "caption": "63 = 6 tens and 3 ones.",
+     "say": "Sixty-three is six tens rods and three ones cubes."
     },
     {
      "type": "check",
@@ -840,7 +863,7 @@
     {
      "type": "text",
      "markdown": "A **number line** shows numbers in order. Numbers get bigger as you go right.",
-     "say": "A number line is like a ruler for numbers. The numbers sit in order, small ones on the left and big ones on the right. As you move to the right, the numbers get bigger. Let's use it to find a number."
+     "say": "A number line is like a ruler for numbers. The numbers sit in order. Small ones are on the left. Big ones are on the right. As you move to the right, the numbers get bigger. Let's use it to find a number."
     },
     {
      "type": "chart",
@@ -1833,6 +1856,415 @@
     "depth": "reason"
    },
    {
+    "ref": "q16",
+    "type": "number",
+    "prompt": "Zara ties sticks in bundles of ten. She has 3 bundles and 4 loose sticks. How many sticks in all?",
+    "hint": "3 tens and 4 ones.",
+    "explanation": "30 + 4 = 34 sticks.",
+    "skill_tag": "placevalue.count_tens",
+    "answer": {
+     "value": 34,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "multi_select",
+    "prompt": "Which two ways build 56 from tens rods and ones? Pick two.",
+    "hint": "56 has 5 tens and 6 ones.",
+    "explanation": "56 is 5 tens and 6 ones, or 50 + 6.",
+    "skill_tag": "placevalue.build",
+    "options": [
+     {
+      "id": "a",
+      "text": "50 + 6"
+     },
+     {
+      "id": "b",
+      "text": "6 tens and 5 ones"
+     },
+     {
+      "id": "c",
+      "text": "5 + 6"
+     },
+     {
+      "id": "d",
+      "text": "5 tens and 6 ones"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "number",
+    "prompt": "What is 10 more than 38?",
+    "hint": "Add one more ten.",
+    "explanation": "38 has 3 tens. One more ten makes 4 tens, so 48.",
+    "skill_tag": "placevalue.ten_more",
+    "answer": {
+     "value": 48,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "match",
+    "prompt": "Match each number to the number that is 10 less.",
+    "hint": "Take away one ten. The ones stay.",
+    "explanation": "71 - 10 = 61, 45 - 10 = 35 and 90 - 10 = 80.",
+    "skill_tag": "placevalue.ten_less",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "71"
+     },
+     {
+      "id": "l2",
+      "text": "45"
+     },
+     {
+      "id": "l3",
+      "text": "90"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "35"
+     },
+     {
+      "id": "r1",
+      "text": "61"
+     },
+     {
+      "id": "r3",
+      "text": "80"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Which is another way to split 72?",
+    "hint": "Break one ten into 10 ones.",
+    "explanation": "6 tens is 60 and 12 ones is 12, and 60 + 12 = 72.",
+    "skill_tag": "placevalue.partition_two_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "2 tens and 7 ones"
+     },
+     {
+      "id": "b",
+      "text": "6 tens and 12 ones"
+     },
+     {
+      "id": "c",
+      "text": "7 tens and 12 ones"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Which one does NOT show 45?",
+    "hint": "Work out each one.",
+    "explanation": "3 tens and 5 ones is 35. The others are 45.",
+    "skill_tag": "placevalue.representations",
+    "options": [
+     {
+      "id": "a",
+      "text": "4 tens and 5 ones"
+     },
+     {
+      "id": "b",
+      "text": "40 + 5"
+     },
+     {
+      "id": "c",
+      "text": "3 tens and 5 ones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "order",
+    "prompt": "Put these numbers in order, biggest first.",
+    "hint": "Look at the tens first.",
+    "explanation": "76 has the most tens, then 67, 48 and 39.",
+    "skill_tag": "compare.order_desc",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "67"
+     },
+     {
+      "id": "i3",
+      "text": "48"
+     },
+     {
+      "id": "i4",
+      "text": "39"
+     },
+     {
+      "id": "i1",
+      "text": "76"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "true_false",
+    "prompt": "57 is greater than 75.",
+    "hint": "Compare the tens.",
+    "explanation": "75 has 7 tens and 57 has 5 tens, so 75 is greater.",
+    "skill_tag": "compare.signs",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "slider",
+    "prompt": "A number line shows 30, 40, 50 and then a gap. Slide to the missing label.",
+    "hint": "Count on in tens.",
+    "explanation": "30, 40, 50, 60. The missing label is 60.",
+    "skill_tag": "numberline.missing",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 60,
+     "tolerance": 0
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "fill_blank",
+    "prompt": "Solve the riddle.",
+    "hint": "Tens first, then ones.",
+    "explanation": "6 tens and 3 ones make 63.",
+    "skill_tag": "placevalue.riddle",
+    "points": 1,
+    "text": "I have 6 tens and 3 ones. I am {b1}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "36"
+       },
+       {
+        "id": "b",
+        "text": "63"
+       },
+       {
+        "id": "c",
+        "text": "9"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "hotspot",
+    "prompt": "Tap the number in the same column as 24 on a hundred square.",
+    "hint": "Going down a column, the tens go up by 1.",
+    "explanation": "24 and 34 have the same ones digit, so they are in the same column.",
+    "skill_tag": "placevalue.hundred_square",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "34",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "25",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "42",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Aisha says 45 is made of 4 ones and 5 tens. Is she right?",
+    "hint": "The left digit is the tens.",
+    "explanation": "The 4 is on the left, so it is 4 tens. The 5 is 5 ones.",
+    "skill_tag": "placevalue.reason_digits",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 4 ones and 5 tens"
+     },
+     {
+      "id": "b",
+      "text": "No. 45 is made of 4 tens and 5 ones"
+     },
+     {
+      "id": "c",
+      "text": "No, 45 is 45 tens"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Sam says 91 is smaller than 19 because 91 ends in 1. Is he right?",
+    "hint": "Compare the tens first.",
+    "explanation": "9 tens is much more than 1 ten, so 91 is bigger than 19.",
+    "skill_tag": "compare.reason_tens",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, ending in 1 is smaller"
+     },
+     {
+      "id": "b",
+      "text": "No. 91 has 9 tens and 19 has only 1 ten, so 91 is bigger"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Layla says the ten just before 45 is 30. Is she right?",
+    "hint": "How many tens are in 45?",
+    "explanation": "45 is past 40 and not yet 50, so the ten before it is 40.",
+    "skill_tag": "numberline.reason_before",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is 30"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 50"
+     },
+     {
+      "id": "c",
+      "text": "No. 45 is 4 tens and 5 ones, so the ten before it is 40"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multiple_choice",
+    "prompt": "Ben says 54 is just 5 and 4, so it is 5 + 4. Is he right?",
+    "hint": "What does the 5 mean in 54?",
+    "explanation": "The 5 is 5 tens, which is 50. So 54 = 50 + 4.",
+    "skill_tag": "placevalue.reason_partition",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, 54 is 5 + 40"
+     },
+     {
+      "id": "b",
+      "text": "No. 54 is 50 + 4, because the 5 means 5 tens"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 54 = 5 + 4"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason"
+   },
+   {
     "ref": "q1a",
     "type": "multiple_choice",
     "prompt": "In the number 83, how many tens are there?",
@@ -2689,6 +3121,430 @@
     "sub_lesson": "compare",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "number",
+    "prompt": "Hana has 5 bundles of ten beads and 2 loose beads. How many beads in all?",
+    "hint": "5 tens and 2 ones.",
+    "explanation": "50 + 2 = 52 beads.",
+    "skill_tag": "placevalue.count_tens",
+    "answer": {
+     "value": 52,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multi_select",
+    "prompt": "Which two ways build 74 from tens rods and ones? Pick two.",
+    "hint": "74 has 7 tens and 4 ones.",
+    "explanation": "74 is 7 tens and 4 ones, or 70 + 4.",
+    "skill_tag": "placevalue.build",
+    "options": [
+     {
+      "id": "a",
+      "text": "70 + 4"
+     },
+     {
+      "id": "b",
+      "text": "7 + 4"
+     },
+     {
+      "id": "c",
+      "text": "4 tens and 7 ones"
+     },
+     {
+      "id": "d",
+      "text": "7 tens and 4 ones"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "number",
+    "prompt": "What is 10 more than 54?",
+    "hint": "Add one more ten.",
+    "explanation": "54 has 5 tens. One more ten makes 6 tens, so 64.",
+    "skill_tag": "placevalue.ten_more",
+    "answer": {
+     "value": 64,
+     "tolerance": 0
+    },
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "match",
+    "prompt": "Join each number to the number that is 10 less.",
+    "hint": "Take away one ten. The ones stay.",
+    "explanation": "53 - 10 = 43, 28 - 10 = 18 and 64 - 10 = 54.",
+    "skill_tag": "placevalue.ten_less",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "53"
+     },
+     {
+      "id": "l2",
+      "text": "28"
+     },
+     {
+      "id": "l3",
+      "text": "64"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "54"
+     },
+     {
+      "id": "r1",
+      "text": "43"
+     },
+     {
+      "id": "r2",
+      "text": "18"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Which is another way to split 53?",
+    "hint": "Break one ten into 10 ones.",
+    "explanation": "4 tens is 40 and 13 ones is 13, and 40 + 13 = 53.",
+    "skill_tag": "placevalue.partition_two_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "3 tens and 5 ones"
+     },
+     {
+      "id": "b",
+      "text": "4 tens and 13 ones"
+     },
+     {
+      "id": "c",
+      "text": "5 tens and 13 ones"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "partition",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Which one does NOT show 62?",
+    "hint": "Work out each one.",
+    "explanation": "5 tens and 2 ones is 52. The others are 62.",
+    "skill_tag": "placevalue.representations",
+    "options": [
+     {
+      "id": "a",
+      "text": "6 tens and 2 ones"
+     },
+     {
+      "id": "b",
+      "text": "60 + 2"
+     },
+     {
+      "id": "c",
+      "text": "5 tens and 2 ones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "order",
+    "prompt": "Arrange these from the biggest to the smallest.",
+    "hint": "Look at the tens first.",
+    "explanation": "81 has the most tens, then 65, 56 and 18.",
+    "skill_tag": "compare.order_desc",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "56"
+     },
+     {
+      "id": "i4",
+      "text": "18"
+     },
+     {
+      "id": "i2",
+      "text": "65"
+     },
+     {
+      "id": "i1",
+      "text": "81"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "true_false",
+    "prompt": "90 is greater than 19.",
+    "hint": "Compare the tens.",
+    "explanation": "90 has 9 tens and 19 has 1 ten, so 90 is greater.",
+    "skill_tag": "compare.signs",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "compare",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "slider",
+    "prompt": "A number line shows 70, 80 and then a gap. Slide to the missing label.",
+    "hint": "Count on in tens.",
+    "explanation": "70, 80, 90. The missing label is 90.",
+    "skill_tag": "numberline.missing",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 100
+    },
+    "answer": {
+     "value": 90,
+     "tolerance": 0
+    },
+    "sub_lesson": "numberline",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "fill_blank",
+    "prompt": "Guess the number.",
+    "hint": "Tens first, then ones.",
+    "explanation": "2 tens and 8 ones make 28.",
+    "skill_tag": "placevalue.riddle",
+    "points": 1,
+    "text": "I have 2 tens and 8 ones. I am {b1}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "82"
+       },
+       {
+        "id": "b",
+        "text": "28"
+       },
+       {
+        "id": "c",
+        "text": "10"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "tens_ones",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "hotspot",
+    "prompt": "Tap the number in the same column as 17 on a hundred square.",
+    "hint": "Going down a column, the tens go up by 1.",
+    "explanation": "17 and 27 have the same ones digit, so they are in the same column.",
+    "skill_tag": "placevalue.hundred_square",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔢",
+       "label": "18",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔢",
+       "label": "27",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔢",
+       "label": "71",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 62 is made of 6 ones and 2 tens. Is he right?",
+    "hint": "The left digit is the tens.",
+    "explanation": "The 6 is on the left, so it is 6 tens. The 2 is 2 ones.",
+    "skill_tag": "placevalue.reason_digits",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 6 ones and 2 tens"
+     },
+     {
+      "id": "b",
+      "text": "No, 62 is 62 tens"
+     },
+     {
+      "id": "c",
+      "text": "No. 62 is made of 6 tens and 2 ones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Mina says 82 is smaller than 28 because 82 ends in 2. Is she right?",
+    "hint": "Compare the tens first.",
+    "explanation": "8 tens is much more than 2 tens, so 82 is bigger than 28.",
+    "skill_tag": "compare.reason_tens",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, ending in 2 is smaller"
+     },
+     {
+      "id": "b",
+      "text": "No. 82 has 8 tens and 28 has only 2 tens, so 82 is bigger"
+     },
+     {
+      "id": "c",
+      "text": "No, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "compare",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Ben says the ten just before 72 is 60. Is he right?",
+    "hint": "How many tens are in 72?",
+    "explanation": "72 is past 70 and not yet 80, so the ten before it is 70.",
+    "skill_tag": "numberline.reason_before",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is 60"
+     },
+     {
+      "id": "b",
+      "text": "No, it is 80"
+     },
+     {
+      "id": "c",
+      "text": "No. 72 is 7 tens and 2 ones, so the ten before it is 70"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "numberline",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multiple_choice",
+    "prompt": "Mina says 36 is just 3 and 6, so it is 3 + 6. Is she right?",
+    "hint": "What does the 3 mean in 36?",
+    "explanation": "The 3 is 3 tens, which is 30. So 36 = 30 + 6.",
+    "skill_tag": "placevalue.reason_partition",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 36 = 3 + 6"
+     },
+     {
+      "id": "b",
+      "text": "No. 36 is 30 + 6, because the 3 means 3 tens"
+     },
+     {
+      "id": "c",
+      "text": "No, 36 is 3 + 60"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "tens_ones",
+    "depth": "reason",
+    "variant_of": "q30"
    }
   ]
  }

@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, TABLE, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, TABLE, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 1, topic 5: Seasons and weather (Zainab, age 7). Enquiry type: pattern seeking.
 
+const AUTUMN = "science-class-1-seasons-weather-1-7600d823.jpg";
+const FROST = "science-class-1-seasons-weather-2-c0cc2d96.jpg";
+const MONSOON = "science-class-1-seasons-weather-3-6c2c5c45.jpg";
+
 const seasons = {
   id: "seasons", kind: "learn", title: "The four seasons",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore the seasons and the weather. How does the year change?", T("Today's big question: how does the weather change through the year?")),
+    SAY("These leaves are turning red and gold. That is a sign of autumn.", PHOTO(AUTUMN, "Red, orange and yellow autumn leaves on a branch against a soft sky", "Leaves turn red, orange and gold in autumn.", "Photo by Aaron Burden on Unsplash")),
     H("Stop 1: Four seasons in the UK"),
     SAY("A year is split into seasons. In the UK there are four. Spring is when new leaves and flowers grow, and baby animals are born. Summer is warm and sunny, with long days. Autumn is when leaves turn red and brown and fall. Winter is cold, with short days and sometimes snow. Then spring comes again. It is a circle that goes round and round.", T("The UK has four **seasons**: spring, summer, autumn and winter.", "They come round in the same order every year.")),
     EB("meadow", "Four seasons of a tree",
@@ -16,7 +23,8 @@ const seasons = {
       SS("In winter, the branches are bare. It is cold and it may snow.", S("Winter: cold and bare.", ["t", "🌲", 50, 58, 3, "none"], ["w", "❄️", 25, 30, 2, "float"], ["w2", "❄️", 75, 25, 2, "float"]))),
     CHK(ord("Put the seasons in order, starting with spring.", ["Spring", "Summer", "Autumn", "Winter"], { hint: "Spring, then the sunny one.", why: "The order is spring, summer, autumn and winter." })),
     H("Stop 2: Seasons in Pakistan"),
-    SAY("In Pakistan the seasons look different. Summer is very hot, and in many places the monsoon brings heavy rain in July and August. Autumn is mild. Winter is cool and sometimes it snows in the north, on the mountains. Then spring brings blossom, like almond flowers. So the same year has different weather in different countries.", T("Pakistan has hot summers, a rainy **monsoon**, mild autumns and cool winters.", "Different places have different weather in the same season.")),
+    SAY("This is monsoon rain. It falls in summer in Pakistan and makes the fields green.", PHOTO(MONSOON, "Heavy rain falling over green fields and tall trees under a grey sky", "Monsoon rain falls over green fields in summer.", "Photo by Mr Cool Hitman on Unsplash")),
+    SAY("In Pakistan the seasons look different. Summer is very hot. In many places the monsoon brings heavy rain in July and August. Autumn is mild. Winter is cool and sometimes it snows in the north, on the mountains. Then spring brings blossom, like almond flowers. So the same year has different weather in different countries.", T("Pakistan has hot summers, a rainy **monsoon**, mild autumns and cool winters.", "Different places have different weather in the same season.")),
     IMG("🌧️ 🏔️ 🌸", "Monsoon rain, snowy mountains and spring blossom."),
     CHK(mc("When does the monsoon bring heavy rain to Pakistan?", "Summer", ["Winter", "Spring"], { hint: "It comes with the heat.", why: "The monsoon rains come in summer." })),
     SAY("Let us remember. A year has four seasons. They come in the same order. Places have different weather.", SUM("The four seasons are spring, summer, autumn and winter", "They come in the same order every year", "Weather can be different in different countries")),
@@ -34,6 +42,7 @@ const weather = {
   id: "weather", kind: "try", title: "Measuring the weather",
   blocks: [
     H("Stop 1: Kinds of weather"),
+    SAY("Frost forms when the air is very cold. It makes grass white and icy.", PHOTO(FROST, "Blades of grass covered in white frost in the golden light of a winter morning", "Frost makes grass white and icy on cold winter mornings.", "Photo by Michael Held on Unsplash")),
     SAY("The weather is what it is like outside today. It can be sunny, rainy, windy, cloudy, snowy or foggy. It changes from day to day. Look at four kinds of weather.", T("**Weather** is what it is like outside: sunny, rainy, windy or cloudy.", "It can change every day.")),
     EB("sky", "Kinds of weather",
       SS("A sunny day. The sun is bright and the sky is blue.", S("Sunny.", ["a", "☀️", 50, 35, 3, "pulse"])),
@@ -42,7 +51,7 @@ const weather = {
       SS("A snowy day. Cold white snow falls from the sky.", S("Snowy.", ["a", "☃️", 50, 58, 3, "bounce"], ["s", "❄️", 25, 25, 2, "float"], ["s2", "❄️", 75, 25, 2, "float"]))),
     CHK(mc("Which kind of weather has raindrops falling?", "Rainy", ["Sunny", "Windy"], { hint: "Look at the clouds.", why: "Rainy weather has raindrops." })),
     H("Stop 2: How hot is it?"),
-    SAY("A thermometer measures how hot or cold it is. The number on it is called the temperature. We measure it in degrees. The red line goes up when it is warm and goes down when it is cold. Look at what happens on a hot day.", EB("home", "A thermometer", SS("On a cold winter day, the thermometer shows a low number.", S("Cold: 5 degrees.", ["t", { kind: "thermometer", value: 5, from: -10, to: 50 }, 50, 52, 3, "none"])), SS("On a warm spring day, the number goes up.", S("Warm: 20 degrees.", ["t", { kind: "thermometer", value: 20, from: -10, to: 50 }, 50, 52, 3, "none"])), SS("On a very hot summer day in Lahore, it is even higher.", S("Hot: 40 degrees.", ["t", { kind: "thermometer", value: 40, from: -10, to: 50 }, 50, 52, 3, "none"])))),
+    SAY("A thermometer measures how hot or cold it is. The number on it is called the temperature. We measure it in degrees. The red line goes up when it is warm. It goes down when it is cold. Look at what happens on a hot day.", EB("home", "A thermometer", SS("On a cold winter day, the thermometer shows a low number.", S("Cold: 5 degrees.", ["t", { kind: "thermometer", value: 5, from: -10, to: 50 }, 50, 52, 3, "none"])), SS("On a warm spring day, the number goes up.", S("Warm: 20 degrees.", ["t", { kind: "thermometer", value: 20, from: -10, to: 50 }, 50, 52, 3, "none"])), SS("On a very hot summer day in Lahore, it is even higher.", S("Hot: 40 degrees.", ["t", { kind: "thermometer", value: 40, from: -10, to: 50 }, 50, 52, 3, "none"])))),
     SAY("Words in bold: a thermometer measures temperature.", T("A **thermometer** measures the **temperature**.", "A high number means it is hot. A low number means it is cold.")),
     CHK(mc("What does a thermometer measure?", "How hot or cold it is", ["How windy it is", "How wet it is"], { hint: "It shows the temperature.", why: "A thermometer measures temperature." })),
     ACT("Weather diary", ["Paper and pencil", "A grown-up"], ["Look out of the window every day for a week.", "Draw the weather and write the day.", "At the end, count how many days were sunny, rainy and cloudy."]),
@@ -81,7 +90,7 @@ const prepare = {
   id: "prepare", kind: "use", title: "Dressing for the weather",
   blocks: [
     H("Stop 1: What shall I wear?"),
-    SAY("We choose clothes to suit the season and the weather. In winter we wear a coat, a scarf and gloves. In hot summer we wear light clothes and a sun hat. On rainy days we need a raincoat and boots. In Ramadan or at Eid, we wear special clothes too, but we still dress for the weather. Look at three outfits.", T("We choose clothes to suit the **weather**.", "Warm clothes for cold days, light clothes for hot days.")),
+    SAY("We choose clothes to suit the season and the weather. In winter we wear a coat, a scarf and gloves. In hot summer we wear light clothes and a sun hat. On rainy days we need a raincoat and boots. In Ramadan or at Eid, we wear special clothes too. We still dress for the weather. Look at three outfits.", T("We choose clothes to suit the **weather**.", "Warm clothes for cold days, light clothes for hot days.")),
     SAY("Winter clothes: a coat, a scarf and gloves.", IMG("🧥 🧣 🧤", "Winter clothes: a coat, a scarf and gloves.")),
     SAY("Summer clothes: a sun hat, shorts and sunglasses.", IMG("👒 🩳 🕶️", "Summer clothes: a sun hat, shorts and sunglasses.")),
     CHK(mc("What should you wear on a very hot day?", "Light clothes and a sun hat", ["A big coat", "A scarf and gloves"], { hint: "Keep cool.", why: "Light clothes and a hat keep us cool." })),
@@ -116,6 +125,28 @@ const ALTS = [
   [mc("Hana says all places have the same weather at the same time. Why is she wrong?", "Different places can have different weather", ["It is always sunny everywhere", "Weather never changes"], { hint: "Think of Pakistan and the UK.", why: "Weather is different in different places." }), mc("Nina says it snows everywhere in winter. Why is she wrong?", "Many places, like Karachi, never get snow", ["Snow is hot", "Winter has no weather"], { hint: "Think of warm places.", why: "Only cold places get snow." })],
 ];
 
+const clip = {
+  title: "Zainab's year", backdrop: "meadow", caption: "Zainab watches the seasons change from Lahore to the hills.",
+  scenes: [
+    { caption: "Spring.", say: "In spring, blossom opens and lambs skip in the fields.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 58, size: 3, enter: "walk_right" }, { id: "b", emoji: "🌸", x: 72, y: 45, size: 3, effect: "sparkle" }] },
+    { caption: "Summer.", say: "In summer it is hot and the days are long. She wears a sun hat.",
+      items: [{ id: "s", emoji: "☀️", x: 70, y: 25, size: 3, anim: "pulse" }, { id: "h", emoji: "👒", x: 35, y: 58, size: 3 }] },
+    { caption: "Monsoon.", say: "In July the monsoon arrives. Heavy rain fills the streets.",
+      items: [{ id: "r", emoji: "🌧️", label: "monsoon", x: 50, y: 32, size: 3, anim: "float" }, { id: "u", emoji: "☔", x: 50, y: 62, size: 3 }] },
+    { caption: "Autumn.", say: "In autumn, leaves turn red and gold and fall to the ground.",
+      items: [{ id: "l", emoji: "🍂", x: 35, y: 50, size: 3, anim: "float" }, { id: "t", emoji: "🍁", x: 70, y: 55, size: 3 }] },
+    { caption: "Winter.", say: "In winter it is cold. The northern mountains are covered in snow.",
+      items: [{ id: "m", emoji: "🏔️", label: "snow", x: 50, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Daylight.", say: "Winter days are short. The sun sets early and the nights are long.",
+      items: [{ id: "n", emoji: "🌙", x: 70, y: 28, size: 3, anim: "float" }, { id: "z", emoji: "👧", x: 30, y: 58, size: 3 }] },
+    { caption: "Thermometer.", say: "A thermometer shows how hot or cold it is. Today it reads ten degrees.",
+      items: [{ id: "t", emoji: "🌡️", label: "10 degrees", x: 50, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Dress for it.", say: "Zainab dresses for the weather. SubhanAllah, every season has its gifts!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 58, size: 3, anim: "bounce" }, { id: "h", emoji: "🧣", x: 70, y: 55, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-1-seasons-weather", subject: "science", cls: 1, topic: 5, title: "Seasons and Weather",
@@ -130,13 +161,9 @@ export const topics = [
       mc("What does a plant need to grow?", "Water and light", ["Sweets", "Toys"], { hint: "Think of the cress.", why: "Plants need water and light." }),
       tf("Ice melts when it gets warm.", true, { hint: "Think of an ice lolly.", why: "Warmth melts ice." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how does the weather change through the year? By the end, you will put the seasons in order, read a thermometer, and look for patterns in a weather chart. Let's go!", T("Today's big question: how does the weather change through the year?", "We will look for patterns.")),
-      IMG("☀️🌧️❄️🍂", "Sun, rain, snow and autumn leaves."),
-      GLOSS({ weather: "What it is like outside today." }),
-    ],
+    intro: [],
     subs: [seasons, weather, diary, prepare],
+    clip,
     quiz: [
       Q("seasons", "recall", "weather.order", mc("Which season comes straight after summer?", "Autumn", ["Spring", "Winter"], { hint: "Leaves turn orange.", why: "Autumn comes after summer." }), ...ALTS[0]),
       Q("seasons", "recall", "weather.facts", tf("Winter is the coldest season in the UK.", true, { hint: "Think of snow.", why: "Winter is the coldest season." }), ...ALTS[1]),
@@ -155,6 +182,37 @@ export const topics = [
       Q("prepare", "reason", "weather.safety", mc("Layla wants to stare at the sun to watch it. Why is that a bad idea?", "It can hurt her eyes", ["It will make her cold", "It will make her taller"], { hint: "The sun is very bright.", why: "Looking at the sun can hurt your eyes." }),
         mc("Sam wants to play outside at midday with no hat or water. Why is that a bad idea?", "He could get too hot and sunburnt", ["He will get too cold", "He will turn into a plant"], { hint: "Think about strong sun.", why: "Strong sun can burn skin and make us too hot." }),
         mc("Nina wants to wear a big coat on a very hot day. Why is that a bad idea?", "She would get too hot", ["She would get too cold", "The coat would melt"], { hint: "Which clothes suit hot weather?", why: "Light clothes keep us cool on hot days." })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("seasons", "apply", "seasons.conkers", tf("Conkers fall from horse chestnut trees in autumn.", true, { hint: "Think about falling leaves.", why: "Conkers ripen and fall in autumn." }),
+        tf("Conkers fall from trees in spring.", false, { hint: "Think about new buds.", why: "Spring is for buds and blossom. Conkers fall in autumn." })),
+      Q("seasons", "apply", "seasons.spring_signs", mc("Zainab sees new buds and baby lambs. Which season is it?", "Spring", ["Autumn", "Winter"], { hint: "Think about new life.", why: "Buds and lambs are signs of spring." }),
+        mc("Blossom appears and birds build nests. Which season is it?", "Spring", ["Winter", "Autumn"], { hint: "Think about new life.", why: "Blossom and nests are signs of spring." })),
+      Q("weather", "apply", "weather.weather_match", mat("Match each weather to what it brings.", [["Rain", "Puddles"], ["Frost", "Icy grass"], ["Wind", "Moving leaves"]], { hint: "What can we see?", why: "Rain makes puddles, frost makes icy grass and wind moves leaves." }),
+        mat("Join each weather to what it brings.", [["Snow", "White ground"], ["Sun", "Shadows"], ["Fog", "Hard to see far"]], { hint: "What can we see?", why: "Snow covers the ground, sun makes shadows and fog hides things far away." })),
+      Q("weather", "apply", "weather.tools_ms", ms("Which two tools measure the weather? Pick two.", ["A thermometer", "A rain gauge"], ["A torch", "A ruler"], { hint: "One shows hot or cold. One shows rain.", why: "A thermometer measures temperature and a rain gauge measures rain." }),
+        ms("Which two things tell us about the weather? Pick two.", ["A wind sock", "A thermometer"], ["A calculator", "A pencil"], { hint: "Think about wind and temperature.", why: "A wind sock shows the wind and a thermometer shows the temperature." })),
+      Q("diary", "reason", "weather.wind_use", mc("Hamza says a windy day is no good for anything. Is he right?", "No, wind helps us fly kites and dry washing", ["Yes, wind is always bad", "Yes, wind stops everything"], { hint: "Think about kites.", why: "Wind is useful for kites and drying washing." }),
+        mc("Layla says rain is no good for anything. Is she right?", "No, rain helps plants grow and fills rivers", ["Yes, rain is always bad", "Yes, plants hate water"], { hint: "Think about the garden.", why: "Plants and rivers need rain." })),
+      Q("seasons", "apply", "seasons.year_order", ord("Put these signs of the year in order, from spring to winter.", ["Blossom", "Hot sun", "Falling leaves", "Frost"], { hint: "Spring comes first.", why: "Blossom is spring, hot sun is summer, falling leaves are autumn and frost is winter." }),
+        ord("Arrange these signs of the year, from spring to winter.", ["New lambs", "Beach days", "Conkers", "Snow"], { hint: "Spring comes first.", why: "Lambs are spring, beach days are summer, conkers are autumn and snow is winter." })),
+      Q("prepare", "apply", "seasons.clothes_clue", mc("Zainab wears a woolly hat, gloves and boots. What is the weather like?", "Cold", ["Hot", "Very hot"], { hint: "Think about warm clothes.", why: "We wear hats, gloves and boots when it is cold." }),
+        mc("Hamza wears sandals and a sun hat. What is the weather like?", "Hot and sunny", ["Cold and snowy", "Freezing"], { hint: "Think about light clothes.", why: "Sandals and a sun hat suit hot, sunny weather." })),
+      Q("diary", "apply", "seasons.daylight_gap", sld("A winter day has 8 hours of daylight and a summer day has 14. Slide to show how many more hours there are in summer.", { min: 0, max: 12, unit: "hours" }, 6, 0, { hint: "14 take away 8.", why: "14 - 8 = 6 more hours." }),
+        sld("A winter day has 7 hours of daylight and a summer day has 16. Slide to show how many more hours there are in summer.", { min: 0, max: 12, unit: "hours" }, 9, 0, { hint: "16 take away 7.", why: "16 - 7 = 9 more hours." })),
+      Q("diary", "apply", "seasons.after_winter", st("What do we call the season that comes after winter?", ["spring", "springtime"], { hint: "It starts with s and has new buds.", why: "Spring comes after winter." }),
+        st("What do we call the season that comes after spring?", ["summer", "summertime"], { hint: "It starts with s and is hot.", why: "Summer comes after spring." })),
+      Q("diary", "apply", "seasons.daylight_fill", fill("Finish the sentences about daylight.", "In winter the days are {b1} and the nights are {b2}.", [["short", "long", "hot"], ["long", "short", "green"]], { hint: "Think about when it gets dark.", why: "Winter days are short and the nights are long." }),
+        fill("Finish the sentences about summer.", "In summer the days are {b1} and the sun is {b2} in the sky.", [["long", "short", "frosty"], ["high", "hiding", "frozen"]], { hint: "Think about long light evenings.", why: "Summer days are long and the sun is high in the sky." })),
+      Q("seasons", "apply", "seasons.months_num", num("A year has 4 seasons of 3 months each. How many months is that?", 12, { hint: "4 groups of 3.", why: "3 + 3 + 3 + 3 = 12 months." }),
+        num("Spring and summer each have 3 months. How many months is that?", 6, { hint: "3 + 3.", why: "3 + 3 = 6 months." })),
+      Q("seasons", "apply", "seasons.pakistan_tap", hot("Tap the picture that shows the monsoon.", [["🌧️", "Heavy rain", 22, 50], ["❄️", "Snow", 50, 50], ["🏜️", "Dry sand", 78, 50]], ["Heavy rain"], { labels: true, hint: "It is the wet summer season.", why: "The monsoon brings heavy rain." }),
+        hot("Tap the sign of winter in the mountains of northern Pakistan.", [["❄️", "Snow on mountains", 22, 50], ["🌴", "Palm trees", 50, 50], ["☀️", "Hot sun", 78, 50]], ["Snow on mountains"], { labels: true, hint: "Think of Murree or Hunza.", why: "Snow falls on the northern mountains in winter." })),
+      Q("diary", "reason", "seasons.summer_rain", mc("Zainab says summer has no rain. Is she right?", "No, in Pakistan the monsoon brings heavy rain in summer", ["Yes, summer is always dry", "Yes, rain only falls in winter"], { hint: "Think about July and August.", why: "The monsoon brings heavy rain in summer." }),
+        mc("Aisha says it never rains in the UK in summer. Is she right?", "No, the UK can have showers in summer", ["Yes, summer is always dry in the UK", "Yes, rain only falls in winter"], { hint: "Think about a summer shower.", why: "It can rain in any season." })),
+      Q("diary", "reason", "seasons.daylight_longer", mc("Sam says days are longer in winter. Is he right?", "No, winter days are shorter", ["Yes, winter days are longest", "Yes, days never change"], { hint: "Think about the sun setting early.", why: "Winter has the shortest days." }),
+        mc("Mira says the sun rises at the same time all year. Is she right?", "No, it rises later in winter and earlier in summer", ["Yes, it always rises at six", "Yes, it never rises in winter"], { hint: "Think about dark winter mornings.", why: "Sunrise changes through the year." })),
+      Q("prepare", "reason", "seasons.cloud_burn", mc("Omar says you cannot get sunburnt on a cloudy day. Is he right?", "No, harmful sun rays can still reach us through cloud", ["Yes, clouds block all the sun", "Yes, only hot days burn"], { hint: "Think about sun safety.", why: "We can burn even when it is cloudy, so we use shade, a hat and sun cream." }),
+        mc("Hira says a sun hat is only needed when it is hot. Is she right?", "No, bright sun can burn even when it is not hot", ["Yes, heat is the only danger", "Yes, hats are only for winter"], { hint: "Think about the sun's rays.", why: "Bright sun can burn skin even on cooler days." })),
     ],
   }),
 ];

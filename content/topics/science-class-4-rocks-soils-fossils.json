@@ -1,0 +1,2995 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "science-class-4-rocks-soils-fossils",
+  "subject": "science",
+  "title": "Rocks, Fossils and Soils",
+  "summary": "Types of rock, how they wear away, how fossils form and what soil is made of.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 9: Rocks, fossils and soils",
+  "learning_objectives": [
+   "Group rocks by their properties",
+   "Explain weathering, erosion and fossil formation",
+   "Describe what soil is made of"
+  ],
+  "tags": [
+   "topic",
+   "topic-9"
+  ],
+  "curriculum": {
+   "course": "science-class-4-topics",
+   "semester": 1,
+   "topic": 9
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y4 rocks",
+    "text": "Compare and group rocks based on appearance and physical properties; describe how fossils are formed; recognise that soils are made from rocks and organic matter"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Es.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "4Es.02"
+   }
+  ],
+  "success_criteria": [
+   "I can tell natural rock from human-made materials",
+   "I can explain how a fossil forms",
+   "I can say what soil is made of"
+  ],
+  "real_life": "Spotting rocks on a walk, finding fossils on a beach and caring for garden soil.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is a living thing?",
+    "hint": "It grows.",
+    "explanation": "A tree is alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A stone"
+     },
+     {
+      "id": "b",
+      "text": "A table"
+     },
+     {
+      "id": "c",
+      "text": "A tree"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "true_false",
+    "prompt": "Rocks are natural materials.",
+    "hint": "They come from the ground.",
+    "explanation": "Rock is natural.",
+    "answer": [
+     true
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "Which material is hard?",
+    "hint": "Think of a worktop.",
+    "explanation": "Granite is hard.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Wool"
+     },
+     {
+      "id": "b",
+      "text": "Granite"
+     },
+     {
+      "id": "c",
+      "text": "Cotton"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "know",
+   "kind": "learn",
+   "title": "Know your rocks",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome, young scientist!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today we explore **rocks**, fossils and soil.",
+     "say": "Welcome, young scientist! Today we sort rocks, find out how fossils form, and look at what soil is made of."
+    },
+    {
+     "type": "image",
+     "emoji": "🪨🦴🌱",
+     "alt": "Rocks, fossils and soil.",
+     "caption": "Rocks, fossils and soil."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Rock or not rock?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Rock** is a natural material found in the Earth.",
+     "say": "Rock is a natural material found in the Earth. People dig it from the ground in quarries."
+    },
+    {
+     "type": "text",
+     "markdown": "Brick, concrete and tarmac are **human-made**.",
+     "say": "Brick, concrete and tarmac are not rock. People make them in factories. Rocks such as granite, chalk, slate, marble and sandstone are all natural."
+    },
+    {
+     "type": "explainer",
+     "title": "Natural or human-made?",
+     "scenes": [
+      {
+       "caption": "Natural rocks.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🪨",
+         "x": 25,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "⛰️",
+         "x": 55,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🪨",
+         "x": 80,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Granite, chalk and slate come from the ground. They are natural rocks."
+      },
+      {
+       "caption": "Human-made materials.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "🧱",
+         "x": 30,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "🛣️",
+         "x": 70,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Brick and tarmac are made by people. They are not rocks."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which of these is a natural rock?",
+      "hint": "Which comes from the ground?",
+      "explanation": "Slate is a natural rock. Brick and concrete are made by people.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Concrete"
+       },
+       {
+        "id": "b",
+        "text": "Slate"
+       },
+       {
+        "id": "c",
+        "text": "Brick"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Properties of rocks"
+    },
+    {
+     "type": "text",
+     "markdown": "A **hard** rock is difficult to scratch.",
+     "say": "We describe rocks by their properties. Some are hard and some are soft. A hard rock does not scratch easily."
+    },
+    {
+     "type": "text",
+     "markdown": "A **permeable** rock lets water soak in.\n\nAn **impermeable** rock does not.",
+     "say": "Some rocks are permeable. They let water soak into them. Impermeable rocks do not."
+    },
+    {
+     "type": "image",
+     "emoji": "🪨💧",
+     "alt": "Permeable rocks let water soak in.",
+     "caption": "Permeable rocks let water soak in."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Granite is a hard rock that water does not soak into easily.",
+      "hint": "Think of a granite worktop.",
+      "explanation": "Granite is hard and impermeable.",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "A shell in the cliff",
+     "asset": "clip-science-class-4-rocks-soils-fossils-0e5798be.mp4",
+     "poster": "clip-science-class-4-rocks-soils-fossils-0e5798be.webp",
+     "seconds": 75,
+     "transcript": "Millions of years ago, a shelled animal lives in a warm sea. It dies and sinks to the sea floor. Mud and sand cover it. Layer on layer builds up. Over a long time, the layers turn to rock. The shell leaves a fossil in the rock. It stays there for millions of years. Wind, rain and frost weather the cliff. The rock crumbles into pieces. A river carries bits away. They mix with humus to make soil. A girl finds the fossil in the cliff, just like Mary Anning did. Now the fossil sits in a museum. It tells us about life long ago.",
+     "caption": "A fossil shell tells its journey from sea creature to museum."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Rock is a natural material",
+      "Brick and tarmac are human-made",
+      "Rocks can be hard or soft, permeable or not"
+     ],
+     "say": "Remember. Rock is natural. Brick and tarmac are not. We describe rocks by hardness and permeability."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "rocks",
+       "meaning": "Natural solid materials found in the Earth."
+      },
+      {
+       "term": "rock",
+       "meaning": "A natural material found in the Earth."
+      },
+      {
+       "term": "human-made",
+       "meaning": "Made by people, not found in nature."
+      },
+      {
+       "term": "hard",
+       "meaning": "Difficult to scratch."
+      },
+      {
+       "term": "permeable",
+       "meaning": "Lets water soak in."
+      },
+      {
+       "term": "impermeable",
+       "meaning": "Does not let water soak in."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Where do people dig rock from?",
+     "hint": "A big hole in the ground.",
+     "explanation": "Rock is dug from quarries.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A factory"
+      },
+      {
+       "id": "b",
+       "text": "A shop"
+      },
+      {
+       "id": "c",
+       "text": "A quarry"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Tarmac is a natural rock.",
+     "hint": "Who makes it?",
+     "explanation": "Tarmac is made by people.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "match",
+     "prompt": "Match each rock to a use.",
+     "hint": "Think of strong or smooth rocks.",
+     "explanation": "Slate is used on roofs, marble for statues and granite for worktops.",
+     "points": 2,
+     "left": [
+      {
+       "id": "l1",
+       "text": "Slate"
+      },
+      {
+       "id": "l2",
+       "text": "Marble"
+      },
+      {
+       "id": "l3",
+       "text": "Granite"
+      }
+     ],
+     "right": [
+      {
+       "id": "r3",
+       "text": "Worktops"
+      },
+      {
+       "id": "r1",
+       "text": "Roof tiles"
+      },
+      {
+       "id": "r2",
+       "text": "Statues"
+      }
+     ],
+     "answer": {
+      "l1": "r1",
+      "l2": "r2",
+      "l3": "r3"
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A rock soaks up water quickly. It is...",
+     "hint": "Water gets in.",
+     "explanation": "Permeable rocks let water soak in.",
+     "options": [
+      {
+       "id": "a",
+       "text": "impermeable"
+      },
+      {
+       "id": "b",
+       "text": "permeable"
+      },
+      {
+       "id": "c",
+       "text": "human-made"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tests",
+   "kind": "try",
+   "title": "Rock tests",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Hardness scratch test"
+    },
+    {
+     "type": "text",
+     "markdown": "The **scratch test** shows which rock is harder.",
+     "say": "To test hardness, scratch one rock with another. The rock that leaves a scratch on the other is harder."
+    },
+    {
+     "type": "explainer",
+     "title": "The scratch test",
+     "scenes": [
+      {
+       "caption": "Chalk scratches easily.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "⚪",
+         "x": 35,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "☝️",
+         "x": 65,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A scientist scratches chalk with a fingernail. Chalk is soft, so it leaves a mark."
+      },
+      {
+       "caption": "Granite is hard.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🪨",
+         "x": 35,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "☝️",
+         "x": 65,
+         "y": 45,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Granite does not scratch with a fingernail. Granite is hard."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A rock leaves a scratch on another rock. What does this tell us?",
+      "hint": "The scratcher is harder.",
+      "explanation": "The harder rock scratches the softer one.",
+      "options": [
+       {
+        "id": "a",
+        "text": "It is heavier"
+       },
+       {
+        "id": "b",
+        "text": "It is warmer"
+       },
+       {
+        "id": "c",
+        "text": "It is harder than the other rock"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Water drip test"
+    },
+    {
+     "type": "text",
+     "markdown": "Keep the number of drops the same for a **fair test**.",
+     "say": "To test permeability, drip the same number of drops on each rock. Watch which rock soaks up water fastest."
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the rocks",
+     "goal": "Sort the rocks into permeable and impermeable.",
+     "emoji": "🪨",
+     "count": 8,
+     "zones": [
+      "Permeable",
+      "Impermeable"
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Drip test",
+     "materials": [
+      "Small pieces of rock such as chalk, granite and sandstone",
+      "A pipette or spoon and water",
+      "A tray"
+     ],
+     "instructions": [
+      "Put each rock on a tray.",
+      "Drip 5 drops on each rock.",
+      "Watch how fast the water soaks in.",
+      "Record which rocks are permeable."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Why should you use the same number of drops on each rock?",
+      "hint": "Change only one thing.",
+      "explanation": "Using the same drops keeps the test fair.",
+      "options": [
+       {
+        "id": "a",
+        "text": "To make it faster"
+       },
+       {
+        "id": "b",
+        "text": "To make it a fair test"
+       },
+       {
+        "id": "c",
+        "text": "To make the rocks wet"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Scratch test shows hardness",
+      "Drip test shows permeability",
+      "Keep a test fair"
+     ],
+     "say": "Remember. The scratch test shows hardness. The drip test shows permeability. Keep the test fair."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "scratch test",
+       "meaning": "A test to see which rock is harder."
+      },
+      {
+       "term": "fair test",
+       "meaning": "A test where only one thing changes."
+      },
+      {
+       "term": "pipette",
+       "meaning": "A small tube for dripping liquid."
+      },
+      {
+       "term": "predict",
+       "meaning": "To say what you think will happen."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "order",
+     "prompt": "Put the drip test in order.",
+     "hint": "Set up first.",
+     "explanation": "You choose, test, observe and record.",
+     "points": 2,
+     "items": [
+      {
+       "id": "i3",
+       "text": "Watch it soak in"
+      },
+      {
+       "id": "i4",
+       "text": "Record the result"
+      },
+      {
+       "id": "i2",
+       "text": "Drip water on it"
+      },
+      {
+       "id": "i1",
+       "text": "Choose a rock"
+      }
+     ],
+     "answer": [
+      "i1",
+      "i2",
+      "i3",
+      "i4"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Chalk is harder than granite.",
+     "hint": "Which is easier to scratch?",
+     "explanation": "Granite is harder than chalk.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which rock would soak up the most water?",
+     "hint": "It is a soft rock.",
+     "explanation": "Chalk is permeable.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Granite"
+      },
+      {
+       "id": "b",
+       "text": "Slate"
+      },
+      {
+       "id": "c",
+       "text": "Chalk"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why do we record results in a table?",
+     "hint": "Think of organising.",
+     "explanation": "A table helps us compare results.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To make rocks harder"
+      },
+      {
+       "id": "b",
+       "text": "To compare them easily"
+      },
+      {
+       "id": "c",
+       "text": "To dry them"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fossils",
+   "kind": "play",
+   "title": "Time travel with fossils",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How fossils form"
+    },
+    {
+     "type": "text",
+     "markdown": "A **fossil** is the remains or imprint of a living thing in rock.",
+     "say": "A fossil is the remains or imprint of a living thing, preserved in rock. Fossils tell us about life from long ago."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-rocks-soils-fossils-1-decc4cdc.jpg",
+     "alt": "Fossils of ancient animals pressed into grey rock",
+     "caption": "Trilobite fossils in rock.",
+     "credit": "Photo by Wes Warren on Unsplash",
+     "say": "These fossils are ancient sea animals called trilobites. They were buried in mud, and over millions of years the mud turned to rock."
+    },
+    {
+     "type": "explainer",
+     "title": "How a fossil forms",
+     "scenes": [
+      {
+       "caption": "Buried in sediment.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐚",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🟫",
+         "x": 50,
+         "y": 80,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A sea creature dies and sinks to the sea floor. Mud and sand called sediment cover it."
+      },
+      {
+       "caption": "Pressed into rock.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🪨",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "f",
+         "emoji": "🐚",
+         "x": 50,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Over a very long time, the layers press down and turn to rock. The shell leaves a fossil."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What covers a dead sea creature when it begins to form a fossil?",
+      "hint": "It settles in layers.",
+      "explanation": "Sediment buries the creature.",
+      "options": [
+       {
+        "id": "a",
+        "text": "Leaves"
+       },
+       {
+        "id": "b",
+        "text": "Snow"
+       },
+       {
+        "id": "c",
+        "text": "Mud and sand called sediment"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Fossil match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🐚",
+      "🦴",
+      "🍃",
+      "🪨",
+      "🦕",
+      "🐟"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Mary Anning"
+    },
+    {
+     "type": "text",
+     "markdown": "**Mary Anning** found fossils on the Dorset coast.",
+     "say": "Mary Anning lived in Lyme Regis in Dorset, about two hundred years ago. As a girl, she found huge fossils in the cliffs."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-rocks-soils-fossils-2-ff0e7f62.jpg",
+     "alt": "Spiral ammonite fossils in grey rock beside sand",
+     "caption": "Ammonite fossils in rock.",
+     "credit": "Photo by Ashleigh Joy Photography on Unsplash",
+     "say": "This rock holds ammonite fossils, ancient spiral-shelled sea animals. Fossils are rare, because most living things rot away."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Every living thing that dies becomes a fossil.",
+      "hint": "Fossils are rare.",
+      "explanation": "Most living things rot away. Fossils form only in special conditions.",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A fossil is the remains or imprint of a living thing",
+      "Sediment buries the remains",
+      "Fossils are rare"
+     ],
+     "say": "Remember. Fossils form when living things are buried and turn to rock. Any living thing can become a fossil."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fossil",
+       "meaning": "The remains or imprint of a living thing in rock."
+      },
+      {
+       "term": "sediment",
+       "meaning": "Mud and sand that settle in layers."
+      },
+      {
+       "term": "imprint",
+       "meaning": "A mark pressed into a surface."
+      },
+      {
+       "term": "decay",
+       "meaning": "To break down and rot."
+      },
+      {
+       "term": "Mary Anning",
+       "meaning": "A fossil hunter from Lyme Regis in England."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which can become a fossil?",
+     "hint": "It was once alive.",
+     "explanation": "Only living things can become fossils.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plastic toy"
+      },
+      {
+       "id": "b",
+       "text": "A shell"
+      },
+      {
+       "id": "c",
+       "text": "A brick"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Fossils help us learn about the past.",
+     "hint": "They show ancient life.",
+     "explanation": "Fossils show what lived long ago.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Fossils usually form in...",
+     "hint": "Mud turns to rock.",
+     "explanation": "Fossils form in rock made from sediment.",
+     "options": [
+      {
+       "id": "a",
+       "text": "a puddle"
+      },
+      {
+       "id": "b",
+       "text": "sedimentary rock"
+      },
+      {
+       "id": "c",
+       "text": "a plastic bag"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "A museum has 3 boxes with 6 fossils in each. How many fossils is that?",
+     "hint": "3 times 6.",
+     "explanation": "3 x 6 = 18 fossils.",
+     "answer": {
+      "value": 18,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "soil",
+   "kind": "use",
+   "title": "Soil and the land",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: What is soil?"
+    },
+    {
+     "type": "text",
+     "markdown": "**Soil** is made of rock pieces, **humus**, water and air.",
+     "say": "Soil is made of tiny pieces of rock, humus, water and air. Humus is rotted dead plants and animals."
+    },
+    {
+     "type": "image",
+     "asset": "science-class-4-rocks-soils-fossils-3-33b9efa4.jpg",
+     "alt": "Hands pressing dark garden soil around tiny green seedlings",
+     "caption": "Soil is full of rock pieces and humus.",
+     "credit": "Photo by Sandie Clarke on Unsplash",
+     "say": "Soil takes a very long time to form. Sandy soil has big grains and drains fast. Clay soil has tiny grains and holds water."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is humus?",
+      "hint": "Think of leaves rotting.",
+      "explanation": "Humus is decayed plant and animal matter.",
+      "options": [
+       {
+        "id": "a",
+        "text": "A kind of rock"
+       },
+       {
+        "id": "b",
+        "text": "A kind of clay"
+       },
+       {
+        "id": "c",
+        "text": "Rotted dead plants and animals in soil"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Weathering and erosion"
+    },
+    {
+     "type": "text",
+     "markdown": "**Weathering** breaks rock into smaller pieces.",
+     "say": "Weathering breaks rock into smaller pieces. Rain, wind, ice and plant roots can all do this."
+    },
+    {
+     "type": "text",
+     "markdown": "**Erosion** carries broken pieces away.",
+     "say": "Erosion carries those pieces away. Rivers carry silt that makes rich farmland, such as along the Indus."
+    },
+    {
+     "type": "explainer",
+     "title": "Weathering then erosion",
+     "scenes": [
+      {
+       "caption": "Weathering breaks rock.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🪨",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "🌧️",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Rain and frost break a rock into small pieces. That is weathering."
+      },
+      {
+       "caption": "Erosion carries pieces away.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🌊",
+         "x": 40,
+         "y": 55,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "🪨",
+         "x": 75,
+         "y": 60,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "A river carries the pieces downstream. That is erosion."
+      }
+     ],
+     "backdrop": "lab"
+    },
+    {
+     "type": "reveal",
+     "prompt": "How could farmers protect soil from being washed away? Have a think first.",
+     "answer_markdown": "Plant trees and grass, cover bare ground, and use terraces. Roots hold the soil in place."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A river carries soil away from a hillside. This is...",
+      "hint": "Carried away.",
+      "explanation": "Erosion moves broken pieces away.",
+      "options": [
+       {
+        "id": "a",
+        "text": "weathering"
+       },
+       {
+        "id": "b",
+        "text": "erosion"
+       },
+       {
+        "id": "c",
+        "text": "a fossil"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Soil is rock pieces, humus, water and air",
+      "Weathering breaks rock down",
+      "Erosion carries pieces away"
+     ],
+     "say": "Remember. Soil is rock pieces and humus. Weathering breaks rock. Erosion carries it away. We must protect soil."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "soil",
+       "meaning": "A mixture of rock pieces, humus, water and air."
+      },
+      {
+       "term": "humus",
+       "meaning": "Rotted dead plants and animals in soil."
+      },
+      {
+       "term": "weathering",
+       "meaning": "Breaking rock into smaller pieces."
+      },
+      {
+       "term": "erosion",
+       "meaning": "Carrying broken pieces away."
+      },
+      {
+       "term": "silt",
+       "meaning": "Very fine soil carried by water."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which soil holds the most water?",
+     "hint": "Tiny grains.",
+     "explanation": "Clay has tiny grains and holds water.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sand"
+      },
+      {
+       "id": "b",
+       "text": "Clay"
+      },
+      {
+       "id": "c",
+       "text": "Gravel"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Plant roots can help weather rocks.",
+     "hint": "They grow into cracks.",
+     "explanation": "Roots can split rock.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What helps keep soil in place?",
+     "hint": "Think of grass.",
+     "explanation": "Roots hold soil.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bare ground"
+      },
+      {
+       "id": "b",
+       "text": "Plant roots"
+      },
+      {
+       "id": "c",
+       "text": "Heavy rain"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Soil is important because...",
+     "hint": "Think of farms.",
+     "explanation": "Plants need soil to grow.",
+     "options": [
+      {
+       "id": "a",
+       "text": "it is a fossil"
+      },
+      {
+       "id": "b",
+       "text": "it makes rocks"
+      },
+      {
+       "id": "c",
+       "text": "plants grow in it"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "true_false",
+    "prompt": "Brick is a type of rock.",
+    "hint": "Who makes bricks?",
+    "explanation": "Bricks are made by people. They are not natural rock.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.brick",
+    "sub_lesson": "know",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which one of these is a natural rock dug from the ground?",
+    "hint": "Which comes from the ground?",
+    "explanation": "Chalk is a natural rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tarmac"
+     },
+     {
+      "id": "b",
+      "text": "Chalk"
+     },
+     {
+      "id": "c",
+      "text": "Concrete"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.natural",
+    "sub_lesson": "know",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says the tarmac on the road is a type of rock. Is he right?",
+    "hint": "Is it natural?",
+    "explanation": "Tarmac is a human-made material.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it comes from the ground"
+     },
+     {
+      "id": "b",
+      "text": "No. Tarmac is made by people from stones and tar, so it is not natural rock"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is just crushed rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.tarmac",
+    "sub_lesson": "know",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about rocks.",
+    "hint": "Think about scratching.",
+    "explanation": "Chalk is soft and granite is hard.",
+    "points": 2,
+    "text": "Chalk is a {b1} rock. Granite is a {b2} rock.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "wet"
+       },
+       {
+        "id": "b",
+        "text": "soft"
+       },
+       {
+        "id": "c",
+        "text": "hard"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "soft"
+       },
+       {
+        "id": "b",
+        "text": "liquid"
+       },
+       {
+        "id": "c",
+        "text": "hard"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "rocks.fill_hardness",
+    "sub_lesson": "know",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the rock used for roof tiles.",
+    "hint": "It splits into thin sheets.",
+    "explanation": "Slate is used for roofs.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Slate",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪨",
+       "label": "Chalk",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Sandstone",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.use_hot",
+    "sub_lesson": "know",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "number",
+    "prompt": "A rock collection has 4 granite, 3 chalk and 5 slate rocks. How many rocks is that?",
+    "hint": "Add them up.",
+    "explanation": "4 + 3 + 5 = 12.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.count",
+    "sub_lesson": "know",
+    "depth": "apply"
+   },
+   {
+    "ref": "q7",
+    "type": "multi_select",
+    "prompt": "Which two are natural rocks? Pick two.",
+    "hint": "From the ground.",
+    "explanation": "Granite and limestone are natural rocks.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Limestone"
+     },
+     {
+      "id": "b",
+      "text": "Concrete"
+     },
+     {
+      "id": "c",
+      "text": "Brick"
+     },
+     {
+      "id": "d",
+      "text": "Granite"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.natural_two",
+    "sub_lesson": "know",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "multiple_choice",
+    "prompt": "Aisha says all rocks are hard. Is she right?",
+    "hint": "Try scratching chalk.",
+    "explanation": "Chalk is a soft rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rocks are always hard"
+     },
+     {
+      "id": "b",
+      "text": "Yes, soft things are not rocks"
+     },
+     {
+      "id": "c",
+      "text": "No. Chalk is soft enough to scratch with a fingernail"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.all_hard",
+    "sub_lesson": "know",
+    "depth": "reason"
+   },
+   {
+    "ref": "q9",
+    "type": "match",
+    "prompt": "Match each rock to its property.",
+    "hint": "Think of each rock.",
+    "explanation": "Chalk is soft, granite hard and slate splits into layers.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Chalk"
+     },
+     {
+      "id": "l2",
+      "text": "Granite"
+     },
+     {
+      "id": "l3",
+      "text": "Slate"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Splits into layers"
+     },
+     {
+      "id": "r1",
+      "text": "Soft"
+     },
+     {
+      "id": "r2",
+      "text": "Hard"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.match_props",
+    "sub_lesson": "tests",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Layla says heavier rocks are always harder. Is she right?",
+    "hint": "How do we test hardness?",
+    "explanation": "Hardness is shown by the scratch test.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, light rocks are soft"
+     },
+     {
+      "id": "b",
+      "text": "No. Hardness is tested by scratching, not by weighing"
+     },
+     {
+      "id": "c",
+      "text": "Yes, heavy means hard"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.heavy_hard",
+    "sub_lesson": "tests",
+    "depth": "reason"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "On a scale from 1 to 5, chalk scores 1 and granite scores 4. Slide to show how many steps harder granite is.",
+    "hint": "4 minus 1.",
+    "explanation": "4 - 1 = 3 steps.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "steps"
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.hard_scale",
+    "sub_lesson": "tests",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Ali says all soils drain water at the same speed. Is he right?",
+    "hint": "Think of grain size.",
+    "explanation": "Sand has big gaps so water drains fast. Clay holds water.",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, but only because of the weather"
+     },
+     {
+      "id": "b",
+      "text": "No. Sandy soil drains fast and clay soil drains slowly"
+     },
+     {
+      "id": "c",
+      "text": "Yes, all soils drain alike"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.soil_drain",
+    "sub_lesson": "tests",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "order",
+    "prompt": "Put the steps of a water drip test in order.",
+    "hint": "Set up, test, watch, record.",
+    "explanation": "Choose, drip, observe and record.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Drip 5 drops of water on it"
+     },
+     {
+      "id": "i3",
+      "text": "Watch how fast the water soaks in"
+     },
+     {
+      "id": "i4",
+      "text": "Record the result"
+     },
+     {
+      "id": "i1",
+      "text": "Choose a rock"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "rocks.drip_order",
+    "sub_lesson": "tests",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "number",
+    "prompt": "In a drip test, 10 drops are put on sandstone and 4 stay on top. How many drops soaked in?",
+    "hint": "10 minus 4.",
+    "explanation": "10 - 4 = 6 drops.",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.drip_result",
+    "sub_lesson": "tests",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about fair tests.",
+    "hint": "Change only one thing.",
+    "explanation": "The amount of water stays the same in a fair test.",
+    "points": 2,
+    "text": "In a fair test, the {b1} of water stays the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "name"
+       },
+       {
+        "id": "b",
+        "text": "amount"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "different"
+       },
+       {
+        "id": "b",
+        "text": "same"
+       },
+       {
+        "id": "c",
+        "text": "hot"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "skill_tag": "rocks.fair_fill",
+    "sub_lesson": "tests",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "Slate is a good rock for roofs because water cannot soak through it.",
+    "hint": "Think of roof tiles.",
+    "explanation": "Slate is impermeable, so it keeps rain out.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.slate_roof",
+    "sub_lesson": "tests",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "hotspot",
+    "prompt": "Tap the fossil.",
+    "hint": "It was once alive.",
+    "explanation": "A shell imprint in rock is a fossil.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐚",
+       "label": "A shell imprint in rock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪙",
+       "label": "An old coin",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "A brick",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.fossil_hot",
+    "sub_lesson": "fossils",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Zainab says only dinosaurs become fossils. Is she right?",
+    "hint": "Think of shells.",
+    "explanation": "Many kinds of living things can form fossils.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only dinosaurs"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only huge animals"
+     },
+     {
+      "id": "c",
+      "text": "No. Shells, fish, leaves and many other living things can become fossils"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.only_dinos",
+    "sub_lesson": "fossils",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Hamza says an old coin is a fossil because it is very old. Is he right?",
+    "hint": "Was it alive?",
+    "explanation": "Fossils come from living things.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, metal can fossilise"
+     },
+     {
+      "id": "b",
+      "text": "No. A fossil is the remains or imprint of a living thing. A coin was never alive"
+     },
+     {
+      "id": "c",
+      "text": "Yes, old things are fossils"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.old_coin",
+    "sub_lesson": "fossils",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think of the fossil story.",
+    "explanation": "These are the key words for fossils.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Fossil"
+     },
+     {
+      "id": "l2",
+      "text": "Sediment"
+     },
+     {
+      "id": "l3",
+      "text": "Imprint"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Mud or sand that settles in layers"
+     },
+     {
+      "id": "r3",
+      "text": "A mark pressed into a surface"
+     },
+     {
+      "id": "r1",
+      "text": "Remains or imprint of a living thing in rock"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.words_match",
+    "sub_lesson": "fossils",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put the steps of fossil formation in order.",
+    "hint": "Dies, buried, rock, found.",
+    "explanation": "A fossil forms in this order.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "It is buried in mud and sand"
+     },
+     {
+      "id": "i4",
+      "text": "The fossil is found millions of years later"
+     },
+     {
+      "id": "i3",
+      "text": "The layers press down and turn to rock"
+     },
+     {
+      "id": "i1",
+      "text": "A sea creature dies"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "rocks.fossil_order",
+    "sub_lesson": "fossils",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "slider",
+    "prompt": "Layers of mud build up 2 cm every 100 years. Slide to show how thick they are after 500 years.",
+    "hint": "500 years is 5 lots of 100.",
+    "explanation": "5 x 2 = 10 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.layers",
+    "sub_lesson": "fossils",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multi_select",
+    "prompt": "Which two living things could become fossils? Pick two.",
+    "hint": "Once alive.",
+    "explanation": "Shells and leaves were once living things.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A leaf"
+     },
+     {
+      "id": "b",
+      "text": "A glass bottle"
+     },
+     {
+      "id": "c",
+      "text": "A plastic cup"
+     },
+     {
+      "id": "d",
+      "text": "A shell"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.can_fossil",
+    "sub_lesson": "fossils",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which part of soil is made from rotted dead plants and animals?",
+    "hint": "Dead and decayed.",
+    "explanation": "Humus is decayed plant and animal matter.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand"
+     },
+     {
+      "id": "b",
+      "text": "Humus"
+     },
+     {
+      "id": "c",
+      "text": "Clay"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.humus",
+    "sub_lesson": "soil",
+    "depth": "recall"
+   },
+   {
+    "ref": "q25",
+    "type": "number",
+    "prompt": "A jar of soil has layers 5 cm of sand, 3 cm of silt and 2 cm of clay. How tall is the soil in the jar?",
+    "hint": "Add the layers.",
+    "explanation": "5 + 3 + 2 = 10 cm.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.soil_jar",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Omar says weathering and erosion mean the same thing. Is he right?",
+    "hint": "Break or carry?",
+    "explanation": "Weathering breaks rock. Erosion moves the pieces.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. Weathering breaks rock into pieces. Erosion carries the pieces away"
+     },
+     {
+      "id": "c",
+      "text": "No, erosion happens first, then weathering"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.weather_erosion",
+    "sub_lesson": "soil",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "true_false",
+    "prompt": "Weathering breaks rock into smaller pieces.",
+    "hint": "Rain, wind and ice.",
+    "explanation": "Weathering breaks rock down.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.weathering_tf",
+    "sub_lesson": "soil",
+    "depth": "recall"
+   },
+   {
+    "ref": "q28",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about soil.",
+    "hint": "Four parts.",
+    "explanation": "Soil contains rock pieces, humus, water and air.",
+    "points": 2,
+    "text": "Soil is made of rock pieces, {b1}, water and {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "glass"
+       },
+       {
+        "id": "b",
+        "text": "plastic"
+       },
+       {
+        "id": "c",
+        "text": "humus"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "paint"
+       },
+       {
+        "id": "b",
+        "text": "metal"
+       },
+       {
+        "id": "c",
+        "text": "air"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "skill_tag": "rocks.soil_fill",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Mira says soil is just dirt that the Earth always had. Is she right?",
+    "hint": "How is soil made?",
+    "explanation": "Soil takes a very long time to form from rock and humus.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, soil has always been there"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it is just sand"
+     },
+     {
+      "id": "c",
+      "text": "No. Soil forms over a very long time from weathered rock and rotted plants and animals"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.just_dirt",
+    "sub_lesson": "soil",
+    "depth": "reason"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two help protect soil from erosion? Pick two.",
+    "hint": "Roots hold soil.",
+    "explanation": "Trees and grass roots hold the soil together.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Removing all plants"
+     },
+     {
+      "id": "b",
+      "text": "Leaving bare fields"
+     },
+     {
+      "id": "c",
+      "text": "Growing grass"
+     },
+     {
+      "id": "d",
+      "text": "Planting trees"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "skill_tag": "rocks.protect_soil",
+    "sub_lesson": "soil",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "true_false",
+    "prompt": "Granite is a natural rock.",
+    "hint": "Is it dug from the ground?",
+    "explanation": "Granite is a natural rock.",
+    "answer": [
+     true
+    ],
+    "skill_tag": "rocks.brick",
+    "sub_lesson": "know",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which of these is made by people, not found as rock?",
+    "hint": "Factory made.",
+    "explanation": "Concrete is made by people.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Granite"
+     },
+     {
+      "id": "b",
+      "text": "Sandstone"
+     },
+     {
+      "id": "c",
+      "text": "Concrete"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.natural",
+    "sub_lesson": "know",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Mina says concrete is a kind of rock. Is she right?",
+    "hint": "Is it natural?",
+    "explanation": "Concrete is human-made.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is natural"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it is dug from a quarry"
+     },
+     {
+      "id": "c",
+      "text": "No. Concrete is made by people from cement, sand and stones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.tarmac",
+    "sub_lesson": "know",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about soil rocks.",
+    "hint": "Where does rock come from?",
+    "explanation": "Rock is a natural material from the Earth.",
+    "points": 2,
+    "text": "Rock is a {b1} material found in the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "soft"
+       },
+       {
+        "id": "b",
+        "text": "natural"
+       },
+       {
+        "id": "c",
+        "text": "made"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shop"
+       },
+       {
+        "id": "b",
+        "text": "factory"
+       },
+       {
+        "id": "c",
+        "text": "Earth"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "rocks.fill_hardness",
+    "sub_lesson": "know",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the rock often used for statues.",
+    "hint": "Smooth and hard.",
+    "explanation": "Marble is used for statues.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪨",
+       "label": "Marble",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🪨",
+       "label": "Chalk",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🪨",
+       "label": "Slate",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.use_hot",
+    "sub_lesson": "know",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "number",
+    "prompt": "A rock collection has 6 marble, 2 chalk and 3 slate rocks. How many rocks is that?",
+    "hint": "Add them up.",
+    "explanation": "6 + 2 + 3 = 11.",
+    "answer": {
+     "value": 11,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.count",
+    "sub_lesson": "know",
+    "depth": "apply",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multi_select",
+    "prompt": "Which two are human-made? Pick two.",
+    "hint": "Made in factories.",
+    "explanation": "Brick and tarmac are made by people.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Tarmac"
+     },
+     {
+      "id": "b",
+      "text": "Slate"
+     },
+     {
+      "id": "c",
+      "text": "Marble"
+     },
+     {
+      "id": "d",
+      "text": "Brick"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.natural_two",
+    "sub_lesson": "know",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "multiple_choice",
+    "prompt": "Ben says all rocks are heavy. Is he right?",
+    "hint": "Think of pumice.",
+    "explanation": "Some rocks are light.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all rocks are heavy"
+     },
+     {
+      "id": "b",
+      "text": "Yes, rocks always sink"
+     },
+     {
+      "id": "c",
+      "text": "No. Some rocks, like pumice, are light and can even float"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.all_hard",
+    "sub_lesson": "know",
+    "depth": "reason",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "match",
+    "prompt": "Link each rock to its property.",
+    "hint": "Think of each rock.",
+    "explanation": "Sandstone is permeable, granite impermeable and marble hard and smooth.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Sandstone"
+     },
+     {
+      "id": "l2",
+      "text": "Granite"
+     },
+     {
+      "id": "l3",
+      "text": "Marble"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Impermeable"
+     },
+     {
+      "id": "r3",
+      "text": "Hard and smooth"
+     },
+     {
+      "id": "r1",
+      "text": "Permeable"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.match_props",
+    "sub_lesson": "tests",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Mira says bigger rocks are harder than small ones. Is she right?",
+    "hint": "How do we test hardness?",
+    "explanation": "Hardness depends on the type of rock.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, big means hard"
+     },
+     {
+      "id": "b",
+      "text": "Yes, small rocks are soft"
+     },
+     {
+      "id": "c",
+      "text": "No. Hardness depends on the rock, not its size"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.heavy_hard",
+    "sub_lesson": "tests",
+    "depth": "reason",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "On a scale from 1 to 5, chalk scores 1 and granite scores 5. Slide to show how many steps harder granite is.",
+    "hint": "5 minus 1.",
+    "explanation": "5 - 1 = 4 steps.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5,
+     "unit": "steps"
+    },
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.hard_scale",
+    "sub_lesson": "tests",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Hana says water drains through clay as fast as through sand. Is she right?",
+    "hint": "Think of grain size.",
+    "explanation": "Clay holds water longer than sand.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clay and sand are the same"
+     },
+     {
+      "id": "b",
+      "text": "No, clay drains faster"
+     },
+     {
+      "id": "c",
+      "text": "No. Clay has tiny grains, so water drains much more slowly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.soil_drain",
+    "sub_lesson": "tests",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "order",
+    "prompt": "Put the steps of a scratch test in order.",
+    "hint": "Pick, scratch, look, decide.",
+    "explanation": "Pick, scratch, observe and decide.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Look for scratch marks"
+     },
+     {
+      "id": "i4",
+      "text": "Decide which is harder"
+     },
+     {
+      "id": "i2",
+      "text": "Scratch one with the other"
+     },
+     {
+      "id": "i1",
+      "text": "Pick two rocks"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "rocks.drip_order",
+    "sub_lesson": "tests",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "number",
+    "prompt": "In a drip test, 10 drops are put on granite and 9 stay on top. How many drops soaked in?",
+    "hint": "10 minus 9.",
+    "explanation": "10 - 9 = 1 drop.",
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.drip_result",
+    "sub_lesson": "tests",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about permeable rocks.",
+    "hint": "In or not in.",
+    "explanation": "Permeable rocks let water in. Impermeable rocks do not.",
+    "points": 2,
+    "text": "A rock that lets water soak in is {b1}. A rock that does not is {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "impermeable"
+       },
+       {
+        "id": "b",
+        "text": "hard"
+       },
+       {
+        "id": "c",
+        "text": "permeable"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "permeable"
+       },
+       {
+        "id": "b",
+        "text": "impermeable"
+       },
+       {
+        "id": "c",
+        "text": "soft"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "skill_tag": "rocks.fair_fill",
+    "sub_lesson": "tests",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "Chalk is a good rock for roofs because it is hard and waterproof.",
+    "hint": "Is chalk hard?",
+    "explanation": "Chalk is soft and permeable, so it is not good for roofs.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.slate_roof",
+    "sub_lesson": "tests",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "hotspot",
+    "prompt": "Tap the thing that is a fossil.",
+    "hint": "It was once alive.",
+    "explanation": "A leaf imprint in rock is a fossil.",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🍃",
+       "label": "A fern leaf imprint in rock",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🏺",
+       "label": "A clay pot",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔩",
+       "label": "An old nail",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "skill_tag": "rocks.fossil_hot",
+    "sub_lesson": "fossils",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Ben says only big animals become fossils. Is he right?",
+    "hint": "Think of leaves.",
+    "explanation": "Plants and small animals can form fossils too.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only big animals"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only animals with bones"
+     },
+     {
+      "id": "c",
+      "text": "No. Tiny shells and leaves can become fossils too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "skill_tag": "rocks.only_dinos",
+    "sub_lesson": "fossils",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Mina says an old glass bottle is a fossil. Is she right?",
+    "hint": "Was it alive?",
+    "explanation": "Only the remains or imprints of living things are fossils.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is very old"
+     },
+     {
+      "id": "b",
+      "text": "No. A bottle was never alive, so it cannot be a fossil"
+     },
+     {
+      "id": "c",
+      "text": "Yes, glass is a rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.old_coin",
+    "sub_lesson": "fossils",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Link each word to its meaning.",
+    "hint": "Think of the fossil story.",
+    "explanation": "Decay is rotting, pressure is a push and an ammonite is an ancient sea animal.",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Decay"
+     },
+     {
+      "id": "l2",
+      "text": "Pressure"
+     },
+     {
+      "id": "l3",
+      "text": "Ammonite"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A force pressing on something"
+     },
+     {
+      "id": "r1",
+      "text": "To break down and rot"
+     },
+     {
+      "id": "r3",
+      "text": "An ancient spiral-shelled sea animal"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "skill_tag": "rocks.words_match",
+    "sub_lesson": "fossils",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Put the steps of a fossil hunt in order.",
+    "hint": "Walk, spot, dig, show.",
+    "explanation": "These are the steps of a fossil hunt.",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Spot something in the rock"
+     },
+     {
+      "id": "i3",
+      "text": "Dig it out with care"
+     },
+     {
+      "id": "i4",
+      "text": "Show it to a scientist"
+     },
+     {
+      "id": "i1",
+      "text": "Walk along the beach"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "skill_tag": "rocks.fossil_order",
+    "sub_lesson": "fossils",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "slider",
+    "prompt": "Layers of mud build up 3 cm every 100 years. Slide to show how thick they are after 400 years.",
+    "hint": "400 years is 4 lots of 100.",
+    "explanation": "4 x 3 = 12 cm.",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20,
+     "unit": "cm"
+    },
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.layers",
+    "sub_lesson": "fossils",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multi_select",
+    "prompt": "Which two living things could become fossils? Choose two.",
+    "hint": "Once alive.",
+    "explanation": "Fish and ferns were once alive.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A fern"
+     },
+     {
+      "id": "b",
+      "text": "A coin"
+     },
+     {
+      "id": "c",
+      "text": "A brick"
+     },
+     {
+      "id": "d",
+      "text": "A fish"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.can_fossil",
+    "sub_lesson": "fossils",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which soil has the tiniest grains and holds the most water?",
+    "hint": "Tiny grains.",
+    "explanation": "Clay has the tiniest grains.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sand"
+     },
+     {
+      "id": "b",
+      "text": "Clay"
+     },
+     {
+      "id": "c",
+      "text": "Gravel"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.humus",
+    "sub_lesson": "soil",
+    "depth": "recall",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "number",
+    "prompt": "A jar of soil has layers 6 cm of sand, 4 cm of silt and 3 cm of clay. How tall is the soil in the jar?",
+    "hint": "Add the layers.",
+    "explanation": "6 + 4 + 3 = 13 cm.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    },
+    "skill_tag": "rocks.soil_jar",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Hana says erosion breaks rock down where it stands. Is she right?",
+    "hint": "Break or carry?",
+    "explanation": "Weathering breaks rock. Erosion carries it.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, erosion breaks rock"
+     },
+     {
+      "id": "b",
+      "text": "No. That is weathering. Erosion carries pieces away"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they mean the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.weather_erosion",
+    "sub_lesson": "soil",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "true_false",
+    "prompt": "Erosion means rock is broken down where it stands.",
+    "hint": "Is it carried or broken?",
+    "explanation": "Erosion carries pieces away. Weathering breaks them.",
+    "answer": [
+     false
+    ],
+    "skill_tag": "rocks.weathering_tf",
+    "sub_lesson": "soil",
+    "depth": "recall",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentence about rivers.",
+    "hint": "Carrying away.",
+    "explanation": "Erosion carries soil away. Trees protect it.",
+    "points": 2,
+    "text": "Rivers carry soil away. This is called {b1}. Planting trees helps {b2} soil.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "fossils"
+       },
+       {
+        "id": "b",
+        "text": "erosion"
+       },
+       {
+        "id": "c",
+        "text": "weathering"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "spoil"
+       },
+       {
+        "id": "b",
+        "text": "melt"
+       },
+       {
+        "id": "c",
+        "text": "protect"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "skill_tag": "rocks.soil_fill",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Ben says soil is just crushed sand. Is he right?",
+    "hint": "What else is in soil?",
+    "explanation": "Soil is a mix of rock pieces, humus, water and air.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it is just sand"
+     },
+     {
+      "id": "b",
+      "text": "No. Soil also has humus, water, air and living things"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is just rock"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "skill_tag": "rocks.just_dirt",
+    "sub_lesson": "soil",
+    "depth": "reason",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two help protect soil from erosion? Choose two.",
+    "hint": "Hold the soil in place.",
+    "explanation": "Plants and terraces slow erosion.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Building terraces on hills"
+     },
+     {
+      "id": "b",
+      "text": "Burning crops"
+     },
+     {
+      "id": "c",
+      "text": "Digging up roots"
+     },
+     {
+      "id": "d",
+      "text": "Covering soil with plants"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "skill_tag": "rocks.protect_soil",
+    "sub_lesson": "soil",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

@@ -10,14 +10,18 @@ import { sentences } from "./sentences";
 export const CLIP_MAX_SCENES = 24;
 /** Narration pace used to estimate how long a clip runs before the real audio exists. */
 export const CLIP_WORDS_PER_SECOND = 2.3;
-/** A short pause after each scene. */
-export const CLIP_SCENE_GAP_SECONDS = 0.5;
+/** How fast the recorded voice is played: a little slower than natural, so a child can follow every word. 1 = as recorded. */
+export const CLIP_VOICE_RATE = 0.9;
+/** A pause between two sentences of the same scene, to let the child look at the picture and think. */
+export const CLIP_SENTENCE_GAP_SECONDS = 0.8;
+/** A long pause after each scene, with the finished picture still on screen. */
+export const CLIP_SCENE_GAP_SECONDS = 2;
 /** The title card and the end card. */
 export const CLIP_CARD_SECONDS = 1.5;
 /** Hard limit for the whole video (matches the clip block's `seconds` maximum). */
 export const CLIP_MAX_SECONDS = 90;
 /** Aim for this range. Outside it the clip is allowed but `clipWarnings` says so. */
-export const CLIP_TARGET_SECONDS = [45, 75] as const;
+export const CLIP_TARGET_SECONDS = [45, 85] as const;
 /** At least this share of scenes must have a `say` script, so the clip is really narrated. */
 export const CLIP_MIN_SAY_SHARE = 0.8;
 export const CLIP_FPS = 24;
@@ -76,13 +80,13 @@ export function clipSentences(spec: Pick<ClipSpec, "scenes">): string[] {
   return [...new Set(spec.scenes.flatMap(sceneSentences))];
 }
 
-const estimateSentenceSeconds = (sentence: string) => Math.max(0.6, words(sentence) / CLIP_WORDS_PER_SECOND);
+const estimateSentenceSeconds = (sentence: string) => Math.max(0.6, words(sentence) / (CLIP_WORDS_PER_SECOND * CLIP_VOICE_RATE));
 
-/** About how long the finished video runs: narration at 2.3 words a second, 0.5 s after each scene, plus the two cards. */
+/** About how long the finished video runs: narration at the slowed pace, a pause between sentences and a long one after each scene, plus the two cards. */
 export function estimateClipSeconds(spec: Pick<ClipSpec, "scenes">): number {
   const body = spec.scenes.reduce((n, s) => {
     const parts = sceneSentences(s);
-    const talk = parts.length ? parts.reduce((t, p) => t + estimateSentenceSeconds(p), 0) : sceneDwellSeconds(s.caption);
+    const talk = parts.length ? parts.reduce((t, p) => t + estimateSentenceSeconds(p), 0) + (parts.length - 1) * CLIP_SENTENCE_GAP_SECONDS : sceneDwellSeconds(s.caption);
     return n + talk + CLIP_SCENE_GAP_SECONDS;
   }, 0);
   return body + 2 * CLIP_CARD_SECONDS;
@@ -146,9 +150,11 @@ export function buildClipTimeline(spec: Pick<ClipSpec, "scenes">, opts: { fps?: 
     if (parts.length) {
       const measured = opts.durations?.[i];
       timings = parts.map((text, j) => {
-        const frames = f(measured?.[j] ?? estimateSentenceSeconds(text));
+        // The recorded sentence is played at CLIP_VOICE_RATE, so it lasts longer than its file.
+        const frames = f(measured?.[j] !== undefined ? measured[j]! / CLIP_VOICE_RATE : estimateSentenceSeconds(text));
         const t = { text, startFrame: cursor, frames };
         cursor += frames;
+        if (j < parts.length - 1) cursor += f(CLIP_SENTENCE_GAP_SECONDS);
         return t;
       });
     } else {

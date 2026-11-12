@@ -140,38 +140,30 @@
    }
   ]
  },
- "blocks": [
-  {
-   "type": "heading",
-   "text": "Welcome back, story explorer!"
-  },
-  {
-   "type": "text",
-   "markdown": "Today's big question: how do stories and poems work?\n\nWe will read, predict, rhyme and write.",
-   "say": "Welcome back, story explorer! Today's big question: how do stories and poems work, and how can we make our own? We will hear an old tale, guess what happens next, play with rhymes, and write four lines. Let's go!"
-  },
-  {
-   "type": "image",
-   "emoji": "📚",
-   "alt": "Stories and poems are full of surprises.",
-   "caption": "Stories and poems are full of surprises."
-  },
-  {
-   "type": "glossary",
-   "terms": [
-    {
-     "term": "story",
-     "meaning": "A tale about characters and what happens to them."
-    }
-   ]
-  }
- ],
+ "blocks": [],
  "sub_lessons": [
   {
    "id": "story",
    "kind": "learn",
    "title": "A folk tale: beginning, middle and end",
    "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, story explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do stories and poems work?",
+     "say": "Today we read a tale, guess what happens next and play with rhyme. Can we write a poem too?"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-1-stories-poems-1-41a34ac3.jpg",
+     "alt": "A grey and black house crow standing on a pale ledge",
+     "caption": "A house crow, like the clever crow in the tale.",
+     "credit": "Photo by doorkeepers on Unsplash",
+     "say": "This house crow lives in Pakistan and many other places. Crows are clever birds."
+    },
     {
      "type": "heading",
      "text": "Stop 1: The three parts of a story"
@@ -331,6 +323,19 @@
        "b"
       ]
      }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The clever crow",
+     "asset": "clip-english-class-1-stories-poems-8a9b58cb.mp4",
+     "poster": "clip-english-class-1-stories-poems-8a9b58cb.webp",
+     "seconds": 70,
+     "transcript": "I am Kaki the crow. It is a very hot day. I am so thirsty. I spot a jug with a little water. My beak cannot reach the water. What can I do? A clue! There are pebbles on the ground. I predict they will help. I drop in pebbles, one by one. Plop, plop, plop! The water rises up to the top. My idea works! Here is my rhyme. A crow so wise, found a prize! I drink and I am happy. A clever idea solved my problem!",
+     "caption": "A crow tells her own story and shows how to predict and rhyme."
     },
     {
      "type": "summary",
@@ -765,6 +770,14 @@
     {
      "type": "heading",
      "text": "Stop 2: Rhythm and a brain game"
+    },
+    {
+     "type": "image",
+     "asset": "english-class-1-stories-poems-2-cce8a984.jpg",
+     "alt": "A black crow standing in orange autumn grass",
+     "caption": "Crows are clever birds. They solve problems in real life too.",
+     "credit": "Photo by Sonny Mauricio on Unsplash",
+     "say": "Crows really are clever. They can solve puzzles, just like the crow in our tale."
     },
     {
      "type": "text",
@@ -1631,6 +1644,447 @@
     ],
     "sub_lesson": "poem",
     "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Why does the crow drop pebbles into the jug?",
+    "hint": "What happens to the water level?",
+    "explanation": "The pebbles take up room, so the water rises.",
+    "skill_tag": "story.middle",
+    "options": [
+     {
+      "id": "a",
+      "text": "To scare the water away"
+     },
+     {
+      "id": "b",
+      "text": "To make the water rise to the top"
+     },
+     {
+      "id": "c",
+      "text": "To break the jug"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "order",
+    "prompt": "Put the events of The Thirsty Crow in order.",
+    "hint": "Start with the jug.",
+    "explanation": "The crow finds the jug, drops in pebbles, the water rises and he drinks.",
+    "skill_tag": "story.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "He drops in pebbles"
+     },
+     {
+      "id": "i3",
+      "text": "The water rises"
+     },
+     {
+      "id": "i4",
+      "text": "The crow drinks"
+     },
+     {
+      "id": "i1",
+      "text": "The crow finds a jug"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Sam says all folk tales have a wicked stepmother. Is he right?",
+    "hint": "Think about the crow.",
+    "explanation": "Folk tales have many kinds of characters, including animals.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, folk tales never have animals"
+     },
+     {
+      "id": "b",
+      "text": "No, many folk tales are about animals, like The Thirsty Crow"
+     },
+     {
+      "id": "c",
+      "text": "Yes, every folk tale has one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "match",
+    "prompt": "Match each part of The Thirsty Crow to what happens.",
+    "hint": "Think about the three parts.",
+    "explanation": "We meet the crow, he solves the problem, then he drinks.",
+    "skill_tag": "story.parts",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Beginning"
+     },
+     {
+      "id": "l2",
+      "text": "Middle"
+     },
+     {
+      "id": "l3",
+      "text": "End"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "The crow drinks"
+     },
+     {
+      "id": "r1",
+      "text": "We meet the thirsty crow"
+     },
+     {
+      "id": "r2",
+      "text": "He drops in pebbles"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "story",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Aisha says night and kite cannot rhyme because they are spelled differently. Is she right?",
+    "hint": "Say them out loud.",
+    "explanation": "Rhyme depends on sound, not spelling.",
+    "skill_tag": "rhyme.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they start with different letters"
+     },
+     {
+      "id": "b",
+      "text": "No, rhyming words end with the same sound, even if the spelling differs"
+     },
+     {
+      "id": "c",
+      "text": "Yes, rhyming words must be spelled the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "short_text",
+    "prompt": "What do we call the beat of a poem?",
+    "hint": "You can clap it.",
+    "explanation": "The beat of a poem is called rhythm.",
+    "skill_tag": "rhyme.rhythm",
+    "answer": {
+     "accepted": [
+      "rhythm"
+     ]
+    },
+    "sub_lesson": "rhyme",
+    "depth": "recall"
+   },
+   {
+    "ref": "q22",
+    "type": "hotspot",
+    "prompt": "Tap the word that rhymes with night.",
+    "hint": "Listen to the ending.",
+    "explanation": "Night and kite both end in ite.",
+    "skill_tag": "rhyme.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🪁",
+       "label": "kite",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐈",
+       "label": "cat",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐖",
+       "label": "pig",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "fill_blank",
+    "prompt": "Complete the rhyme.",
+    "hint": "Find words that sound like cat.",
+    "explanation": "Mat and hat rhyme with cat.",
+    "skill_tag": "rhyme.find",
+    "points": 2,
+    "text": "The cat sat on a {b1}. It wore a funny {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "dog"
+       },
+       {
+        "id": "b",
+        "text": "mat"
+       },
+       {
+        "id": "c",
+        "text": "sun"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "cup"
+       },
+       {
+        "id": "b",
+        "text": "hat"
+       },
+       {
+        "id": "c",
+        "text": "pen"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "slider",
+    "prompt": "Clap the beat of Twinkle, twinkle, little star. Slide to show how many claps there are.",
+    "hint": "Twin-kle, twin-kle, lit-tle star.",
+    "explanation": "Twin-kle (2), twin-kle (2), lit-tle (2) and star (1) make 7 beats.",
+    "skill_tag": "rhyme.rhythm",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Hamza fills a bucket with water and picks up a sponge. What will he probably do next?",
+    "hint": "What are buckets and sponges for?",
+    "explanation": "A bucket and sponge are clues that he will wash something.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "Plant a tree"
+     },
+     {
+      "id": "b",
+      "text": "Wash the car"
+     },
+     {
+      "id": "c",
+      "text": "Go to sleep"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Omar says a prediction is wrong if the story ends differently. Is he right?",
+    "hint": "Is it a guess?",
+    "explanation": "A prediction is a clever guess. Stories can surprise us.",
+    "skill_tag": "predict.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, predictions must always be right"
+     },
+     {
+      "id": "b",
+      "text": "No, a prediction is a clever guess, so it can be wrong and still clever"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a wrong prediction is a mistake"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Which title fits a poem about a snail?",
+    "hint": "What is a snail like?",
+    "explanation": "Slow Snail is about a snail.",
+    "skill_tag": "poem.topic",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fast Car"
+     },
+     {
+      "id": "b",
+      "text": "Hot Soup"
+     },
+     {
+      "id": "c",
+      "text": "Slow Snail"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Mira says folk tales like The Thirsty Crow teach us nothing. Is she right?",
+    "hint": "What did the crow show us?",
+    "explanation": "People retell folk tales to share lessons.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, tales are only for noise"
+     },
+     {
+      "id": "b",
+      "text": "No, they pass on lessons, like how a clever idea solves a problem"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tales are never retold"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "true_false",
+    "prompt": "A poem can rhyme and have a beat you can clap.",
+    "hint": "Think about the poems we clapped.",
+    "explanation": "Many poems have rhyme and rhythm.",
+    "skill_tag": "rhyme.rhythm",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Pick the two clues that a storm is coming.",
+    "hint": "What do we see before a storm?",
+    "explanation": "Dark clouds and strong wind are clues.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "A strong wind"
+     },
+     {
+      "id": "b",
+      "text": "A blue sky"
+     },
+     {
+      "id": "c",
+      "text": "A calm lake"
+     },
+     {
+      "id": "d",
+      "text": "Dark clouds"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply"
    },
    {
     "ref": "q1a",
@@ -2607,6 +3061,441 @@
     "sub_lesson": "poem",
     "depth": "reason",
     "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "How does the crow get the water up to his beak?",
+    "hint": "Think about his clever idea.",
+    "explanation": "The pebbles raise the water so the crow can drink.",
+    "skill_tag": "story.middle",
+    "options": [
+     {
+      "id": "a",
+      "text": "By tipping the jug over"
+     },
+     {
+      "id": "b",
+      "text": "By dropping pebbles into the jug"
+     },
+     {
+      "id": "c",
+      "text": "By asking a friend"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "order",
+    "prompt": "Put these events in order.",
+    "hint": "Start with the sunny sky.",
+    "explanation": "The sky is sunny, then dark clouds come, then it rains.",
+    "skill_tag": "story.order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Dark clouds come"
+     },
+     {
+      "id": "i1",
+      "text": "The sky is sunny"
+     },
+     {
+      "id": "i3",
+      "text": "It rains"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "story",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a folk tale must be about a king. Is she right?",
+    "hint": "Who is the main character in The Thirsty Crow?",
+    "explanation": "Folk tales can be about any characters.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, every folk tale has a king"
+     },
+     {
+      "id": "b",
+      "text": "No, a folk tale can be about a crow or any other character"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only kings can be in tales"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "match",
+    "prompt": "Match each part of this tale to what happens.",
+    "hint": "Think about the three parts.",
+    "explanation": "We meet the characters, the problem happens, then it is solved.",
+    "skill_tag": "story.parts",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Beginning"
+     },
+     {
+      "id": "l2",
+      "text": "Middle"
+     },
+     {
+      "id": "l3",
+      "text": "End"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "They race and the hare naps"
+     },
+     {
+      "id": "r1",
+      "text": "A hare laughs at a slow tortoise"
+     },
+     {
+      "id": "r3",
+      "text": "The tortoise wins"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "story",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Omar says say and weigh cannot rhyme because their spellings are different. Is he right?",
+    "hint": "Say them out loud.",
+    "explanation": "Say and weigh rhyme because they sound alike.",
+    "skill_tag": "rhyme.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, rhymes must look the same"
+     },
+     {
+      "id": "b",
+      "text": "Yes, weigh is a different word"
+     },
+     {
+      "id": "c",
+      "text": "No, they end with the same sound, ay"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "short_text",
+    "prompt": "What do we call words that end with the same sound?",
+    "hint": "Cat and hat do it.",
+    "explanation": "Words that end with the same sound rhyme.",
+    "skill_tag": "rhyme.find",
+    "answer": {
+     "accepted": [
+      "rhyme",
+      "rhymes",
+      "rhyming words"
+     ]
+    },
+    "sub_lesson": "rhyme",
+    "depth": "recall",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "hotspot",
+    "prompt": "Tap the word that rhymes with bee.",
+    "hint": "Listen to the ending.",
+    "explanation": "Bee and tree both end in ee.",
+    "skill_tag": "rhyme.find",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🌳",
+       "label": "tree",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐕",
+       "label": "dog",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "☀️",
+       "label": "sun",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "fill_blank",
+    "prompt": "Finish the rhyme.",
+    "hint": "Which word rhymes with bee and me?",
+    "explanation": "Tree rhymes with bee and me.",
+    "skill_tag": "rhyme.find",
+    "points": 1,
+    "text": "I see a bee up in the {b1}. It is buzzing next to me.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sun"
+       },
+       {
+        "id": "b",
+        "text": "tree"
+       },
+       {
+        "id": "c",
+        "text": "pen"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b"
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "slider",
+    "prompt": "Clap the beat of Humpty Dumpty sat on a wall. Slide to show how many claps there are.",
+    "hint": "Hump-ty Dump-ty sat on a wall.",
+    "explanation": "Hump-ty (2), Dump-ty (2), sat, on, a and wall make 8 beats.",
+    "skill_tag": "rhyme.rhythm",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Nadia puts on her boots and takes an umbrella. What will probably happen next?",
+    "hint": "What are boots and umbrellas for?",
+    "explanation": "Boots and an umbrella are clues that it is raining.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "She will go swimming"
+     },
+     {
+      "id": "b",
+      "text": "She will go out in the rain"
+     },
+     {
+      "id": "c",
+      "text": "She will have a nap"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Zainab says we should not use clues to predict. Is she right?",
+    "hint": "What do detectives use?",
+    "explanation": "Clues help us make a clever prediction.",
+    "skill_tag": "predict.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clues are no use"
+     },
+     {
+      "id": "b",
+      "text": "No, clues help us make a good guess"
+     },
+     {
+      "id": "c",
+      "text": "Yes, predictions need no thinking"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "predict",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Which title fits a poem about a windy day?",
+    "hint": "What is wind like?",
+    "explanation": "Wild Wind is about the wind.",
+    "skill_tag": "poem.topic",
+    "options": [
+     {
+      "id": "a",
+      "text": "Little Spoon"
+     },
+     {
+      "id": "b",
+      "text": "Wild Wind"
+     },
+     {
+      "id": "c",
+      "text": "Sleepy Pillow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "poem",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ali says people stopped telling old tales long ago. Is he right?",
+    "hint": "Who tells you bedtime stories?",
+    "explanation": "Families still retell old tales.",
+    "skill_tag": "story.reason",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nobody tells them now"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they are lost for ever"
+     },
+     {
+      "id": "c",
+      "text": "No, families still retell them, in Pakistan and in the UK"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "story",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "true_false",
+    "prompt": "A poem must always have exactly ten lines.",
+    "hint": "Our poem had four.",
+    "explanation": "A poem can have any number of lines.",
+    "skill_tag": "poem.plan",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "rhyme",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Pick the two clues that it will rain.",
+    "hint": "What do we see and smell before rain?",
+    "explanation": "Grey clouds and a damp smell are clues of rain.",
+    "skill_tag": "predict.clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "A damp smell in the air"
+     },
+     {
+      "id": "b",
+      "text": "A bright sun"
+     },
+     {
+      "id": "c",
+      "text": "Dry dusty ground"
+     },
+     {
+      "id": "d",
+      "text": "Grey clouds"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "predict",
+    "depth": "apply",
+    "variant_of": "q30"
    }
   ]
  }

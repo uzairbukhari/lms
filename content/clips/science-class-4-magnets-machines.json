@@ -1,0 +1,189 @@
+{
+ "title": "The rescue magnet",
+ "backdrop": "town",
+ "scenes": [
+  {
+   "caption": "A lost key.",
+   "say": "Hamza drops his steel key down a drain. How can he get it back?",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👦",
+     "label": "Hamza",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "k",
+     "emoji": "🔑",
+     "x": 72,
+     "y": 70,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "The magnet.",
+   "say": "He ties a magnet to a string. Steel is magnetic, so the magnet attracts it.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "🧲",
+     "label": "magnet",
+     "x": 50,
+     "y": 30,
+     "size": 3,
+     "path": "arc"
+    },
+    {
+     "id": "k",
+     "emoji": "🔑",
+     "x": 50,
+     "y": 70,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Key rescued.",
+   "say": "The key jumps up and sticks to the magnet. Magnetic force acts without touching.",
+   "items": [
+    {
+     "id": "m",
+     "emoji": "🧲",
+     "x": 50,
+     "y": 40,
+     "size": 3
+    },
+    {
+     "id": "k",
+     "emoji": "🔑",
+     "x": 50,
+     "y": 56,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "A heavy rock.",
+   "say": "Next, a big rock blocks the path. It is far too heavy to lift.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🪨",
+     "label": "heavy load",
+     "x": 30,
+     "y": 55,
+     "size": 3,
+     "enter": "pop"
+    },
+    {
+     "id": "h",
+     "emoji": "👦",
+     "x": 72,
+     "y": 56,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A lever.",
+   "say": "He puts a long bar on a block, the pivot. Pushing down lifts the rock.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🪨",
+     "x": 25,
+     "y": 35,
+     "size": 3
+    },
+    {
+     "id": "p",
+     "emoji": "🔺",
+     "label": "pivot",
+     "x": 45,
+     "y": 72,
+     "size": 2
+    },
+    {
+     "id": "b",
+     "emoji": "➖",
+     "x": 55,
+     "y": 58,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A pulley.",
+   "say": "At the well, a pulley raises the bucket. The rope runs over a wheel.",
+   "items": [
+    {
+     "id": "w",
+     "emoji": "🛞",
+     "label": "pulley",
+     "x": 50,
+     "y": 25,
+     "size": 3
+    },
+    {
+     "id": "b",
+     "emoji": "🪣",
+     "x": 50,
+     "y": 65,
+     "size": 3,
+     "path": "arc"
+    }
+   ]
+  },
+  {
+   "caption": "Gears turn.",
+   "say": "On his bicycle, gears turn in opposite directions to help him up the hill.",
+   "items": [
+    {
+     "id": "g",
+     "emoji": "⚙️",
+     "x": 38,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    },
+    {
+     "id": "h",
+     "emoji": "⚙️",
+     "x": 62,
+     "y": 50,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "Simple machines.",
+   "say": "Magnets, levers, pulleys and gears make life easier. No engines needed!",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👦",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "m",
+     "emoji": "🧲",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,9 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-multiply-share.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-1-multiply-share-d1-c1e40e63.png","alt":"An array of 3 rows of 4 counters with 4 + 4 + 4 = 12","caption":"3 rows of 4 make 12."};
+const COTEACH_B = {"type":"image","asset":"maths-class-1-multiply-share-d2-22305d01.png","alt":"A bar model with 20 shared into 5 equal parts of 4","caption":"20 shared into 5 equal parts."};
 // Class 1 Maths topic 5: multiplying and sharing (format 3.0). Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 // A grid of items: `rows` rows of `cols`, ids prefix-r-c. Evenly spaced in the middle of the stage.
@@ -10,15 +13,24 @@ const GRID = (prefix, emoji, rows, cols, size = 2) => {
   return out;
 };
 
+const N = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const EGGS = "maths-class-1-multiply-share-1-57bd5659.jpg";
+
 const groups = {
   id: "groups", kind: "learn", title: "Equal groups and arrays",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Today we learn two big ideas. Multiplying adds equal groups quickly. Dividing shares things fairly. We also sort odd and even numbers.",
+      T("Today we multiply, share equally and sort odd and even numbers.")),
+    SAY("Look at these eggs in neat rows. Count the rows. Count the eggs in one row. That is an array!",
+      PHOTO(EGGS, "Brown eggs sitting in neat rows in a cardboard tray", "Eggs in rows make an array.", "Photo by Erol Ahmed on Unsplash")),
     H("Stop 1: Equal groups"),
     SAY("Multiplying is a quick way to add the same number again and again. Look at three plates, with two cakes on each. Two and two and two is six. We can write that as three groups of two. That is three times two, and the answer is six. Equal groups means every group has the same number.", T("**Multiplying** is adding **equal groups**.", "3 groups of 2 is 2 + 2 + 2 = 6. We write 3 x 2 = 6.")),
     EXPP("3 groups of 2",
       SS("Here is the first plate with two cakes.", S("1 group of 2.", ["a1", "🧁", 18, 36, 2], ["a2", "🧁", 26, 36, 2])),
       SS("A second plate, with two more cakes. Two and two make four.", S("2 groups of 2 is 4.", ["a1", "🧁", 18, 36, 2], ["a2", "🧁", 26, 36, 2], ["b1", "🧁", 46, 36, 2], ["b2", "🧁", 54, 36, 2])),
       SS("And a third plate. Two, four, six. Three groups of two make six. Three times two is six!", S("3 groups of 2 is 6. 3 x 2 = 6.", ["a1", "🧁", 18, 36, 2], ["a2", "🧁", 26, 36, 2], ["b1", "🧁", 46, 36, 2], ["b2", "🧁", 54, 36, 2], ["c1", "🧁", 74, 36, 2], ["c2", "🧁", 82, 36, 2], ["s", "✅", 50, 86, 2, "bounce", "3 x 2 = 6"]))),
+    SAY("Three rows of four counters. Four plus four plus four makes twelve.", COTEACH_A),
     CHK(num("What is 4 groups of 2?", 8, { hint: "2 + 2 + 2 + 2.", why: "4 groups of 2 is 8.", tag: "multiply.groups" })),
     H("Stop 2: Arrays"),
     SAY("An array is a neat grid of rows and columns. Here are two rows of five stars. Each row has five. Two rows of five make ten. We can also read it the other way, five columns of two. Two times five and five times two are both ten. You can multiply in any order and the answer stays the same.", T("An **array** is a grid of equal rows and columns.", "2 rows of 5 is 10. 2 x 5 = 5 x 2 = 10.")),
@@ -27,7 +39,7 @@ const groups = {
       SS("Add a second row of five. Two rows of five make ten stars.", S("2 rows of 5 is 10.", ...GRID("s", "⭐", 2, 5), ["t", "✅", 50, 88, 2, "bounce", "2 x 5 = 10"]))),
     CHK(mc("A grid has 3 rows of 4. How many in all?", "12", ["7", "10"], { hint: "4 + 4 + 4.", why: "3 rows of 4 is 12.", tag: "multiply.arrays" })),
     SAY("Remember. Multiplying is adding equal groups. An array shows the groups in rows and columns. The order does not change the answer.", SUM("Multiplying is adding equal groups", "An array shows groups in rows and columns", "The order does not change the answer")),
-    GLOSS({ multiply: "Add the same number many times.", "equal groups": "Groups that all have the same number.", array: "A grid of rows and columns.", row: "A line going across.", column: "A line going down." }),
+    GLOSS({ "multiplying and sharing": "Adding equal groups and splitting things fairly.", multiply: "Add the same number many times.", "equal groups": "Groups that all have the same number.", array: "A grid of rows and columns.", row: "A line going across.", column: "A line going down." }),
   ],
   mini: [
     num("What is 2 + 2 + 2 + 2 + 2?", 10, { hint: "5 groups of 2.", why: "5 groups of 2 is 10." }),
@@ -46,6 +58,7 @@ const tables = {
     EXPP("Count in 5s on the number line",
       SS("Start at zero.", S("Start at 0.", ["f", { kind: "number_line", from: 0, to: 50, value: 0 }, 50, 46, 3])),
       SS("Five. Ten. Fifteen. Twenty. Every hop is five.", S("0, 5, 10, 15, 20.", ["f", { kind: "number_line", from: 0, to: 50, value: 20 }, 50, 46, 3, "pulse"]))),
+    SAY("Twenty shared into five equal parts. Each part is four.", COTEACH_B),
     CHK(num("Count in fives: 5, 10, 15, ... What comes next?", 20, { hint: "Add 5.", why: "15 + 5 = 20.", tag: "multiply.tables" })),
     H("Stop 2: Make the groups"),
     SAY("Now make the groups yourself. Take twenty apples. Put them in groups of five, or groups of two. How many groups can you make? Try with real things at home too, like pasta or beads.", T("Make groups of 2, 5 or 10 and count how many groups you get.")),
@@ -98,7 +111,7 @@ const oddEven = {
       SS("Seven shoes make three pairs and one left over. The lonely shoe means seven is odd.", S("7 is odd.", ["a", "👟", 12, 44, 2], ["b", "👟", 22, 44, 2], ["c", "👟", 36, 44, 2], ["d", "👟", 46, 44, 2], ["e", "👟", 60, 44, 2], ["f", "👟", 70, 44, 2], ["g", "👟", 88, 44, 2, "bounce", "odd one"]))),
     CHK(mc("Which number is even?", "14", ["13", "15"], { hint: "Does it end in 0, 2, 4, 6 or 8?", why: "14 ends in 4, so it is even.", tag: "multiply.odd_even" })),
     H("Stop 2: Odd or even detectives"),
-    SAY("Time to be a detective. Is nineteen odd or even? It ends in nine, so it is odd. What about thirty-two? It ends in two, so it is even. You can check any number, even a big one, just by looking at the last digit. Let's try some more.", T("Look at the last digit to check if a big number is odd or even.", "32 is even. 19 is odd.")),
+    SAY("Time to be a detective. Is nineteen odd or even? It ends in nine, so it is odd. What about thirty-two? It ends in two, so it is even. You can check any number. Just look at the last digit. Let's try some more.", T("Look at the last digit to check if a big number is odd or even.", "32 is even. 19 is odd.")),
     IMG("🔎", "Look at the last digit to tell odd from even."),
     REVEAL("Is 100 odd or even? Have a think first.", "Even. It ends in 0, so it splits into pairs with none left over."),
     CHK(mc("Which number is odd?", "27", ["26", "30"], { hint: "Look at the last digit.", why: "27 ends in 7, so it is odd.", tag: "multiply.odd_even" })),
@@ -110,6 +123,29 @@ const oddEven = {
     mc("Which number is odd?", "15", ["12", "20"], { hint: "Look at the last digit.", why: "15 ends in 5, so it is odd." }),
     tf("Every number ending in 0 is even.", true, { hint: "10, 20, 30.", why: "Numbers ending in 0 split into pairs." }),
     num("What is the next even number after 12?", 14, { hint: "Add 2.", why: "12 + 2 = 14." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara packs the eggs", backdrop: "home", caption: "Zara packs eggs in rows and shares them fairly.",
+  scenes: [
+    { caption: "Zara and a tray of eggs.", say: "Zara helps her aunty pack eggs. There are twelve eggs.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "e", emoji: "🥚", label: "12 eggs", x: 72, y: 40, size: 3, enter: "pop" }] },
+    { caption: "3 rows of 4.", say: "She lays them in three rows. Each row has four eggs.",
+      items: [{ id: "a", emoji: "🥚🥚🥚🥚", x: 50, y: 28, size: 2, enter: "slide_right" }, { id: "b", emoji: "🥚🥚🥚🥚", x: 50, y: 46, size: 2, enter: "slide_right" }, { id: "c", emoji: "🥚🥚🥚🥚", x: 50, y: 64, size: 2, enter: "slide_right" }] },
+    { caption: "3 x 4 = 12.", say: "Four and four and four make twelve. Three times four is twelve!",
+      items: [{ id: "a", emoji: "🥚🥚🥚🥚", x: 50, y: 28, size: 2 }, { id: "b", emoji: "🥚🥚🥚🥚", x: 50, y: 46, size: 2 }, { id: "c", emoji: "🥚🥚🥚🥚", x: 50, y: 64, size: 2, effect: "sparkle" }, { id: "t", emoji: "✅", label: "3 x 4 = 12", x: 85, y: 46, size: 2, anim: "bounce" }] },
+    { caption: "Turn it round: 4 x 3.", say: "Turn the tray. Now there are four rows of three. Still twelve!",
+      items: [{ id: "a", emoji: "🥚🥚🥚", x: 50, y: 24, size: 2 }, { id: "b", emoji: "🥚🥚🥚", x: 50, y: 38, size: 2 }, { id: "c", emoji: "🥚🥚🥚", x: 50, y: 52, size: 2 }, { id: "d", emoji: "🥚🥚🥚", x: 50, y: 66, size: 2, effect: "glow" }] },
+    { caption: "Share 12 between 3.", say: "Three cousins want some eggs. Share them fairly, one at a time.",
+      items: [{ id: "k1", emoji: "🧒", x: 22, y: 36, size: 2 }, { id: "k2", emoji: "🧒", x: 50, y: 36, size: 2 }, { id: "k3", emoji: "🧒", x: 78, y: 36, size: 2 }, { id: "p", emoji: "🥚", label: "12", x: 50, y: 72, size: 3, anim: "bounce" }] },
+    { caption: "4 each.", say: "Each cousin gets four eggs. Twelve divided by three is four.",
+      items: [{ id: "k1", emoji: "🧒", x: 22, y: 36, size: 2 }, { id: "k2", emoji: "🧒", x: 50, y: 36, size: 2 }, { id: "k3", emoji: "🧒", x: 78, y: 36, size: 2 }, { id: "a", emoji: "🥚🥚🥚🥚", label: "4", x: 22, y: 70, size: 2, effect: "sparkle" }, { id: "b", emoji: "🥚🥚🥚🥚", label: "4", x: 50, y: 70, size: 2, effect: "sparkle" }, { id: "c", emoji: "🥚🥚🥚🥚", label: "4", x: 78, y: 70, size: 2, effect: "sparkle" }] },
+    { caption: "Odd one out.", say: "One more egg arrives. Thirteen is odd. One egg has no partner!",
+      items: [{ id: "o", emoji: "🥚", label: "13: odd", x: 50, y: 46, size: 3, anim: "bounce" }] },
+    { caption: "Shukriya, Zara!", say: "Equal groups, arrays and fair shares. Shukriya, Zara!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "🥚", x: 70, y: 40, size: 3, effect: "hearts" }] },
   ],
 };
 
@@ -131,13 +167,9 @@ export const topics = [
       num("What is 10 + 10 + 10?", 30, { hint: "3 tens.", why: "10 + 10 + 10 = 30." }),
       tf("12 is bigger than 21.", false, { hint: "Compare the tens.", why: "21 has 2 tens, so it is bigger." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Today we learn two big ideas. Multiplying, a speedy way to add equal groups. And dividing, which is sharing things fairly. You will also find out how to tell odd numbers from even numbers just by looking.", T("Today we multiply, share equally and sort odd and even numbers.")),
-      IMG("✖️", "Multiplying and sharing."),
-      GLOSS({ "multiplying and sharing": "Adding equal groups and splitting things fairly." }),
-    ],
+    intro: [],
     subs: [groups, tables, sharing, oddEven],
+    clip,
     quiz: [
       { q: num("What is 4 groups of 5?", 20, { hint: "5 + 5 + 5 + 5.", why: "4 groups of 5 is 20.", tag: "multiply.groups" }), sub: "groups", depth: "recall", alts: [num("What is 3 groups of 4?", 12, { hint: "4 + 4 + 4.", why: "3 groups of 4 is 12.", tag: "multiply.groups" }), num("What is 5 groups of 2?", 10, { hint: "2 + 2 + 2 + 2 + 2.", why: "5 groups of 2 is 10.", tag: "multiply.groups" })] },
       { q: tf("3 x 2 means 3 groups of 2.", true, { hint: "Read it as groups.", why: "3 x 2 is 3 groups of 2.", tag: "multiply.groups" }), sub: "groups", depth: "recall", alts: [tf("4 x 5 means 4 groups of 5.", true, { hint: "Read it as groups.", why: "4 x 5 is 4 groups of 5.", tag: "multiply.groups" }), tf("2 x 3 means 2 groups of 5.", false, { hint: "Read it as groups.", why: "2 x 3 is 2 groups of 3.", tag: "multiply.groups" })] },
@@ -154,6 +186,37 @@ export const topics = [
       { q: mc("Amir says 3 x 5 = 8. Is he right?", "No. 3 x 5 means 5 + 5 + 5, which is 15", ["Yes, 3 + 5 = 8", "No, it is 12"], { hint: "x means groups, not plus.", why: "3 groups of 5 is 15, not 8.", tag: "multiply.reason" }), sub: "groups", depth: "reason", alts: [mc("Hana says 4 x 2 = 6. Is she right?", "No. 4 x 2 means 2 + 2 + 2 + 2, which is 8", ["Yes, 4 + 2 = 6", "No, it is 10"], { hint: "x means groups, not plus.", why: "4 groups of 2 is 8, not 6.", tag: "multiply.reason" }), mc("Zain says 2 x 10 = 12. Is he right?", "No. 2 x 10 means 10 + 10, which is 20", ["Yes, 2 + 10 = 12", "No, it is 30"], { hint: "x means groups, not plus.", why: "2 groups of 10 is 20, not 12.", tag: "multiply.reason" })] },
       { q: mc("Sara has 9 sweets and shares them between 2 friends. Why can she not share them equally?", "9 is odd, so there is one left over", ["9 is too small", "9 is even"], { hint: "Is 9 odd or even?", why: "9 is odd. It cannot be split into two equal groups.", tag: "multiply.reason" }), sub: "odd_even", depth: "reason", alts: [mc("Omar has 11 stickers and shares them between 2 friends. Why can he not share them equally?", "11 is odd, so there is one left over", ["11 is too small", "11 is even"], { hint: "Is 11 odd or even?", why: "11 is odd. It cannot be split into two equal groups.", tag: "multiply.reason" }), mc("Mia has 15 beads and shares them between 2 friends. Why can she not share them equally?", "15 is odd, so there is one left over", ["15 is too small", "15 is even"], { hint: "Is 15 odd or even?", why: "15 is odd. It cannot be split into two equal groups.", tag: "multiply.reason" })] },
       { q: num("A box holds 5 pencils. How many pencils are in 6 boxes?", 30, { hint: "Count in fives six times.", why: "6 x 5 = 30 pencils.", tag: "multiply.word_problem" }), sub: "tables", depth: "reason", alts: [num("A bag holds 10 marbles. How many marbles are in 4 bags?", 40, { hint: "Count in tens four times.", why: "4 x 10 = 40 marbles.", tag: "multiply.word_problem" }), num("A plate holds 2 cakes. How many cakes are on 7 plates?", 14, { hint: "Count in twos seven times.", why: "7 x 2 = 14 cakes.", tag: "multiply.word_problem" })] },
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      N(num("Zara has 5 plates with 2 mangoes on each. How many mangoes is that?", 10, { hint: "2 + 2 + 2 + 2 + 2.", why: "5 groups of 2 make 10 mangoes.", tag: "multiply.groups" }), "groups", "apply",
+        [num("Hana has 3 trays with 5 samosas on each. How many samosas is that?", 15, { hint: "5 + 5 + 5.", why: "3 groups of 5 make 15 samosas.", tag: "multiply.groups" })]),
+      N(num("What is 6 x 2?", 12, { hint: "Count in twos six times.", why: "2, 4, 6, 8, 10, 12. So 6 x 2 = 12.", tag: "multiply.tables" }), "tables", "apply",
+        [num("What is 9 x 2?", 18, { hint: "Count in twos nine times.", why: "9 x 2 = 18.", tag: "multiply.tables" })]),
+      N(fill("Fill the gaps in the fives pattern.", "{b1}, 15, 20, {b2}, 30", [["10", "5", "12"], ["25", "24", "26"]], { hint: "Count in fives.", why: "10, 15, 20, 25, 30.", tag: "multiply.skip_count" }), "tables", "apply",
+        [fill("Fill the gaps in the twos pattern.", "{b1}, 4, 6, {b2}, 10", [["2", "1", "3"], ["8", "7", "9"]], { hint: "Count in twos.", why: "2, 4, 6, 8, 10.", tag: "multiply.skip_count" })]),
+      N(mc("A grid has 2 rows of 6. Which sum matches?", "2 x 6 = 12", ["2 + 6 = 8", "6 x 6 = 36"], { hint: "Rows times the number in each row.", why: "2 rows of 6 is 2 x 6 = 12.", tag: "multiply.array_equation" }), "groups", "apply",
+        [mc("A grid has 3 rows of 5. Which sum matches?", "3 x 5 = 15", ["3 + 5 = 8", "5 x 5 = 25"], { hint: "Rows times the number in each row.", why: "3 rows of 5 is 3 x 5 = 15.", tag: "multiply.array_equation" })]),
+      N(num("Share 20 sweets equally between 4 children. How many does each child get?", 5, { hint: "4 groups of what make 20?", why: "20 ÷ 4 = 5.", tag: "multiply.sharing" }), "sharing", "apply",
+        [num("Share 18 dates equally between 3 children. How many does each child get?", 6, { hint: "3 groups of what make 18?", why: "18 ÷ 3 = 6.", tag: "multiply.sharing" })]),
+      N(ms("Which two numbers are even? Pick two.", ["18", "24"], ["17", "25"], { hint: "Look at the last digit.", why: "18 and 24 end in 8 and 4, so they are even.", tag: "multiply.odd_even" }), "odd_even", "apply",
+        [ms("Which two numbers are even? Choose two.", ["30", "46"], ["31", "49"], { hint: "Look at the last digit.", why: "30 and 46 end in 0 and 6, so they are even.", tag: "multiply.odd_even" })]),
+      N(tf("Double 6 is the same as 2 x 6.", true, { hint: "Double means two groups.", why: "Double 6 is 6 + 6 = 12, and 2 x 6 = 12.", tag: "multiply.double" }), "groups", "apply",
+        [tf("Double 5 is the same as 5 x 5.", false, { hint: "Double means two groups.", why: "Double 5 is 10, but 5 x 5 is 25. Double 5 is 2 x 5.", tag: "multiply.double" })]),
+      N(hot("Tap the number that is in the 5 times table.", [["🔢", "35", 22, 50], ["🔢", "36", 50, 50], ["🔢", "38", 78, 50]], ["35"], { labels: true, hint: "Fives end in 5 or 0.", why: "35 ends in 5, so it is in the 5 times table.", tag: "multiply.tables" }), "tables", "apply",
+        [hot("Tap the number that is in the 10 times table.", [["🔢", "65", 22, 50], ["🔢", "60", 50, 50], ["🔢", "61", 78, 50]], ["60"], { labels: true, hint: "Tens end in 0.", why: "60 ends in 0, so it is in the 10 times table.", tag: "multiply.tables" })]),
+      N(sld("Slide to the missing number: 4 x ? = 20.", { min: 0, max: 10 }, 5, 0, { hint: "Count in fives to 20.", why: "4 x 5 = 20.", tag: "multiply.missing" }), "tables", "apply",
+        [sld("Slide to the missing number: 7 x ? = 14.", { min: 0, max: 10 }, 2, 0, { hint: "Count in twos to 14.", why: "7 x 2 = 14.", tag: "multiply.missing" })]),
+      N(ord("Order these answers from the smallest.", ["3 x 2", "2 x 5", "7 x 2", "5 x 5"], { hint: "Work out each answer.", why: "The answers are 6, 10, 14 and 25.", tag: "multiply.tables" }), "tables", "apply",
+        [ord("Sort these answers, smallest first.", ["2 x 2", "3 x 5", "2 x 10", "4 x 10"], { hint: "Work out each answer.", why: "The answers are 4, 15, 20 and 40.", tag: "multiply.tables" })]),
+      N(mat("Link each groups story to its sum.", [["3 plates of 2", "3 x 2"], ["2 bags of 5", "2 x 5"], ["4 boxes of 10", "4 x 10"]], { hint: "The first number is how many groups.", why: "3 plates of 2 is 3 x 2, 2 bags of 5 is 2 x 5 and 4 boxes of 10 is 4 x 10.", tag: "multiply.story_sum" }), "groups", "apply",
+        [mat("Link each story to its sum.", [["5 cups of 2", "5 x 2"], ["3 packs of 10", "3 x 10"], ["2 trays of 4", "2 x 4"]], { hint: "The first number is how many groups.", why: "5 cups of 2 is 5 x 2, 3 packs of 10 is 3 x 10 and 2 trays of 4 is 2 x 4.", tag: "multiply.story_sum" })]),
+      N(mc("Hamza says 4 x 2 and 2 x 4 give different answers. Is he right?", "No. Both make 8, because we can multiply in any order", ["Yes, 4 x 2 = 8 and 2 x 4 = 6", "Yes, the bigger number first is bigger"], { hint: "Think of an array turned on its side.", why: "4 groups of 2 and 2 groups of 4 are both 8.", tag: "multiply.reason_order" }), "groups", "reason",
+        [mc("Ali says 3 x 5 and 5 x 3 give different answers. Is he right?", "No. Both make 15, because we can multiply in any order", ["Yes, 3 x 5 = 15 and 5 x 3 = 8", "Yes, the bigger number first is bigger"], { hint: "Think of an array turned on its side.", why: "3 groups of 5 and 5 groups of 3 are both 15.", tag: "multiply.reason_order" })]),
+      N(mc("Aisha says 15 is an even number. Is she right?", "No. 15 is odd. It ends in 5, so one is left over", ["Yes, because it ends in 5", "Yes, because it is more than 10"], { hint: "Look at the last digit.", why: "Even numbers end in 0, 2, 4, 6 or 8. 15 ends in 5, so it is odd.", tag: "multiply.reason_odd" }), "odd_even", "reason",
+        [mc("Ben says 21 is an even number. Is he right?", "No. 21 is odd. It ends in 1, so one is left over", ["Yes, because it ends in 1", "Yes, because it is more than 20"], { hint: "Look at the last digit.", why: "Even numbers end in 0, 2, 4, 6 or 8. 21 ends in 1, so it is odd.", tag: "multiply.reason_odd" })]),
+      N(mc("Layla shares 12 sweets between 3 children and says each child gets 3. Is she right?", "No. Each child gets 4, because 3 x 4 = 12", ["Yes, each child gets 3", "No, each child gets 9"], { hint: "How many children? How many each?", why: "3 children each get 4: 3 x 4 = 12. She used the number of children.", tag: "multiply.reason_share" }), "sharing", "reason",
+        [mc("Ben shares 20 sweets between 4 children and says each child gets 4. Is he right?", "No. Each child gets 5, because 4 x 5 = 20", ["Yes, each child gets 4", "No, each child gets 16"], { hint: "How many children? How many each?", why: "4 children each get 5: 4 x 5 = 20. He used the number of children.", tag: "multiply.reason_share" })]),
+      N(mc("Sam says 36 is in the 5 times table because it is close to 35. Is he right?", "No. Fives end in 5 or 0, so 36 is not in the 5 times table", ["Yes, 36 is close to 35", "Yes, it ends in 6"], { hint: "Count in fives.", why: "5, 10, ... 35, 40. 36 is not on the list.", tag: "multiply.reason_tables" }), "tables", "reason",
+        [mc("Mia says 42 is in the 10 times table because it is close to 40. Is she right?", "No. Tens end in 0, so 42 is not in the 10 times table", ["Yes, 42 is close to 40", "Yes, it ends in 2"], { hint: "Count in tens.", why: "10, 20, 30, 40, 50. 42 is not on the list.", tag: "multiply.reason_tables" })]),
     ],
   }),
 ];

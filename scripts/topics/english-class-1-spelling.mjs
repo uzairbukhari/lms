@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, ROW, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 2 for Zainab (Class 1): Spelling patterns. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 2, Cambridge Stage 2).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const BLOCKS = "english-class-1-spelling-patterns-1-56d69082.jpg";
+const ABC = "english-class-1-spelling-patterns-2-5708590f.jpg";
+
 const vowels = {
   id: "vowels", kind: "learn", title: "Vowel teams and split vowels",
   blocks: [
+    H("Welcome back, word explorer!"),
+    SAY("Today we look at spelling patterns. How do letters work together to make words?", T("Today's big question: how do letters work together to make words?")),
+    SAY("These blocks hold the letters of the alphabet. Words are built from them.", PHOTO(BLOCKS, "A pile of old wooden alphabet blocks with painted letters", "Letters make words, and words follow spelling patterns.", "Photo by Susan Holt Simpson on Unsplash")),
     H("Stop 1: Vowel teams"),
     SAY("Some sounds are spelled with two letters that work together as a team. In rain, the letters a and i make one long sound, ay. In tree, e and e make the sound ee. In boat, o and a make the sound oh. We call these vowel teams. Watch them work.", T("A **vowel team** is two letters that work together to make one sound.", "ai in rain, ee in tree, oa in boat.")),
     EXPP("Three vowel teams",
@@ -17,7 +23,7 @@ const vowels = {
     CHK(mc("Which word has the vowel team ee?", "feet", ["fat", "fit"], { hint: "Look for two e letters.", why: "Feet has ee together.", tag: "vowelteam.ee" })),
     CHK(mc("Which word has the vowel team oa?", "coat", ["cat", "cut"], { hint: "Look for o and a side by side.", why: "Coat has oa together.", tag: "vowelteam.oa" })),
     H("Stop 2: Split vowels"),
-    SAY("Here is a magic trick. Look at the word cap. Now add an e at the end. Cape! The e is silent, but it changes the a so it says its own name. The vowel and the e are split apart, with a letter in the middle. We write this a-e. Kite is i-e. Home is o-e.", T("A **split vowel** has a silent e that makes the first vowel say its name: a-e in cake, i-e in kite, o-e in home.")),
+    SAY("Here is a magic trick. Look at the word cap. Now add an e at the end. Cape! The e is silent. It changes the a so it says its own name. The vowel and the e are split apart, with a letter in the middle. We write this a-e. Kite is i-e. Home is o-e.", T("A **split vowel** has a silent e that makes the first vowel say its name: a-e in cake, i-e in kite, o-e in home.")),
     EXPP("The magic e",
       SS("Cap. A short a. Like a hat.", S("cap", ["c", "🧢", 50, 50, 3, "none", "cap"])),
       SS("Add a magic e at the end. Now it is cape. The a says its name!", S("cape", ["c", "🦸", 50, 50, 3, "grow", "cape"], ["e", "✨", 80, 25, 2, "float", "magic e"]))),
@@ -36,7 +42,7 @@ const affixes = {
   id: "affixes", kind: "try", title: "Prefixes and suffixes",
   blocks: [
     H("Stop 1: Changing words"),
-    SAY("We can change a word by adding a bit to the front or the back. A bit at the front is a prefix. Un means not. Happy becomes unhappy, not happy. A bit at the back is a suffix. Ful means full of. Help becomes helpful, full of help. Let's see them change the words.", T("A **prefix** goes at the front: un + happy = unhappy.", "A **suffix** goes at the back: help + ful = helpful.")),
+    SAY("We can change a word by adding a bit to the front or back. A bit at the front is a prefix. Un means not. Happy becomes unhappy, not happy. A bit at the back is a suffix. Ful means full of. Help becomes helpful, full of help. Let's see them change the words.", T("A **prefix** goes at the front: un + happy = unhappy.", "A **suffix** goes at the back: help + ful = helpful.")),
     EXPP("Adding bits to words",
       SS("Happy. A smiling face.", S("happy", ["h", "😀", 50, 50, 3, "none", "happy"])),
       SS("Add un at the front. Now it is unhappy, which means not happy.", S("unhappy", ["h", "😢", 50, 50, 3, "grow", "unhappy"])),
@@ -44,7 +50,7 @@ const affixes = {
     CHK(mc("Add un to kind. What is the new word?", "unkind", ["kindun", "unkindful"], { hint: "Put un at the front.", why: "Un goes at the front: unkind.", tag: "prefix.un" })),
     CHK(mc("Add ful to care. What is the new word?", "careful", ["fulcare", "uncare"], { hint: "Put ful at the back.", why: "Ful goes at the back: careful.", tag: "suffix.ful" })),
     H("Stop 2: Build words"),
-    SAY("Now be a word builder. Take some word cards and add un to the front, or ful to the back. Say each new word out loud, and tell a grown-up what it means.", ACT("Word builder", ["Paper cut into small cards", "A pencil"], ["Write these on cards: happy, kind, help, care, tidy.", "Make new words with un at the front: unhappy, unkind, untidy.", "Make new words with ful at the back: helpful, careful.", "Read each new word to a grown-up and say what it means."])),
+    SAY("Now be a word builder. Take some word cards. Add un to the front, or ful to the back. Say each new word out loud, and tell a grown-up what it means.", ACT("Word builder", ["Paper cut into small cards", "A pencil"], ["Write these on cards: happy, kind, help, care, tidy.", "Make new words with un at the front: unhappy, unkind, untidy.", "Make new words with ful at the back: helpful, careful.", "Read each new word to a grown-up and say what it means."])),
     SAY("Here are the word builders, ready to work.", IMG("🔧", "Prefixes go at the front, suffixes go at the back.")),
     SAY("Let us remember. A prefix goes at the front. A suffix goes at the back.", SUM("A prefix goes at the front: un + happy", "A suffix goes at the back: help + ful")),
     GLOSS({ prefix: "A bit added to the front of a word, like un.", suffix: "A bit added to the back of a word, like ful.", opposite: "A word that means something completely different, like happy and sad." }),
@@ -83,6 +89,7 @@ const alphabet = {
   id: "alphabet", kind: "use", title: "Alphabetical order and dictionaries",
   blocks: [
     H("Stop 1: The alphabet"),
+    SAY("These letters are not in order yet. We put them in ABC order.", PHOTO(ABC, "Stacked wooden alphabet blocks showing the letters M, S, X, J, D, A, K, Z and P", "The alphabet has twenty-six letters in a special order.", "Photo by Susan Holt Simpson on Unsplash")),
     SAY("The alphabet has twenty-six letters, in a special order. A, b, c, d, and on to z. Putting words in this order is called alphabetical order. We look at the first letter. Ant comes before bus, because a comes before b.", T("**Alphabetical order** means ABC order. Ant comes before bus because a comes before b.")),
     EXPP("ABC order",
       SS("First, ant. It starts with a.", S("ant", ["a", "🐜", 25, 50, 3, "grow", "ant"])),
@@ -90,9 +97,9 @@ const alphabet = {
       SS("Then cat, starting with c. Ant, bus, cat is in alphabetical order.", S("ant, bus, cat", ["a", "🐜", 25, 50, 3, "none", "ant"], ["b", "🚌", 50, 50, 3, "none", "bus"], ["c", "🐈", 75, 50, 3, "grow", "cat"]))),
     CHK(mc("Which word comes first in ABC order?", "dog", ["fox", "hen"], { hint: "Which letter comes earliest?", why: "D comes before f and h.", tag: "alphabet.first" })),
     H("Stop 2: Using a dictionary"),
-    SAY("A dictionary is a book full of words in alphabetical order, with their meanings. To find a word, look at its first letter, then flick to that part of the book. Try finding the word moon. It is under m.", T("A **dictionary** lists words in alphabetical order with their meanings.")),
+    SAY("A dictionary is a book full of words in alphabetical order, with their meanings. To find a word, look at its first letter. Then flick to that part of the book. Try finding the word moon. It is under m.", T("A **dictionary** lists words in alphabetical order with their meanings.")),
     SAY("A dictionary with words ready to find.", IMG("📚", "A dictionary lists words in alphabetical order.")),
-    SAY("Try it for real. Ask a grown-up for a dictionary or use a picture book with a word list. Pick three words and look them up.", ACT("Dictionary detective", ["A dictionary or a word list", "Paper and a pencil"], ["Choose three words.", "Put them in alphabetical order.", "Find each one in the dictionary.", "Read the meaning to a grown-up."])),
+    SAY("Try it for real. Ask a grown-up for a dictionary. Or use a picture book with a word list. Pick three words and look them up.", ACT("Dictionary detective", ["A dictionary or a word list", "Paper and a pencil"], ["Choose three words.", "Put them in alphabetical order.", "Find each one in the dictionary.", "Read the meaning to a grown-up."])),
     CHK(mc("Where would you find the word sun in a dictionary?", "under s", ["under m", "under t"], { hint: "Look at the first letter.", why: "Sun starts with s, so it is under s.", tag: "alphabet.dictionary" })),
     SAY("Let us remember. Alphabetical order is ABC order. A dictionary uses it to help us find words.", SUM("Alphabetical order is ABC order", "A dictionary lists words in alphabetical order")),
     GLOSS({ alphabet: "All the letters in order, from a to z.", dictionary: "A book that lists words in ABC order and tells us what they mean." }),
@@ -101,6 +108,28 @@ const alphabet = {
     mc("Which word comes last in ABC order?", "pig", ["cow", "goat"], { hint: "Which letter comes latest?", why: "P comes after c and g.", tag: "alphabet.first" }),
     tf("In the alphabet, c comes before b.", false, { hint: "Say a, b, c.", why: "B comes before c.", tag: "alphabet.order" }),
     mc("Where would you find the word frog in a dictionary?", "under f", ["under g", "under r"], { hint: "Look at the first letter.", why: "Frog starts with f.", tag: "alphabet.dictionary" }),
+  ],
+};
+
+const clip = {
+  title: "Zainab and the word blocks", backdrop: "classroom", caption: "Zainab plays with spelling blocks and finds spelling patterns.",
+  scenes: [
+    { caption: "The blocks.", say: "Zainab finds a box of old word blocks.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 30, y: 58, size: 3, enter: "walk_right" }, { id: "b", emoji: "🧱", x: 72, y: 62, size: 3 }] },
+    { caption: "Vowel teams.", say: "Rain, tree and boat all have a vowel team.",
+      items: [{ id: "r", emoji: "🌧️", x: 25, y: 56, size: 2 }, { id: "t", emoji: "🌳", x: 50, y: 56, size: 2 }, { id: "b", emoji: "⛵", x: 75, y: 56, size: 2 }] },
+    { caption: "The magic e.", say: "Add a magic e and cap becomes cape.",
+      items: [{ id: "c", emoji: "🧢", x: 30, y: 60, size: 3 }, { id: "e", emoji: "✨", x: 70, y: 40, size: 2, anim: "float" }] },
+    { caption: "Prefix.", say: "Un goes at the front. Happy becomes unhappy.",
+      items: [{ id: "h", emoji: "😀", x: 30, y: 58, size: 3 }, { id: "u", emoji: "😢", x: 72, y: 58, size: 3, enter: "pop" }] },
+    { caption: "Suffix.", say: "Ful goes at the back. Help becomes helpful.",
+      items: [{ id: "h", emoji: "🤝", x: 50, y: 58, size: 3, anim: "grow" }] },
+    { caption: "Homophones.", say: "Pair and pear sound the same. One is fruit!",
+      items: [{ id: "p", emoji: "🍐", x: 30, y: 58, size: 3 }, { id: "s", emoji: "🧦", x: 72, y: 62, size: 2 }] },
+    { caption: "Short form.", say: "Do not shrinks to don't. The apostrophe holds the gap.",
+      items: [{ id: "s", emoji: "✂️", x: 50, y: 58, size: 3, anim: "pulse" }] },
+    { caption: "ABC.", say: "Ant, bus, cat. Zainab puts the blocks in ABC order.",
+      items: [{ id: "a", emoji: "🐜", x: 25, y: 60, size: 2 }, { id: "b", emoji: "🚌", x: 50, y: 60, size: 2 }, { id: "c", emoji: "🐈", x: 75, y: 60, size: 2, effect: "sparkle" }] },
   ],
 };
 
@@ -121,13 +150,9 @@ export const topics = [
       tf("The plural of cat is cats.", true, { hint: "Most words add s.", why: "Cat adds s to make cats." }),
       mc("Which word is a describing word?", "big", ["run", "dog"], { hint: "It tells us what a thing is like.", why: "Big describes a thing." }),
     ],
-    intro: [
-      H("Welcome back, spelling star!"),
-      SAY("Welcome back, spelling star! Today's big question: how can spelling patterns help us spell lots of new words? Words follow patterns, just like songs have tunes. Once you spot the pattern, you can spell hundreds of words. Let's go!", T("Today's big question: how can patterns help us spell lots of new words?", "We will spot patterns, build words and find words in order.")),
-      IMG("🔤", "Spelling patterns help us spell new words."),
-      GLOSS({ pattern: "Something that repeats in the same way." }),
-    ],
+    intro: [],
     subs: [vowels, affixes, homophones, alphabet],
+    clip,
     quiz: [
       Q(mc("Which word has the ai vowel team?", "rain", ["ran", "run"], { hint: "Look for a and i together.", why: "Rain has ai.", tag: "vowelteam.ai" }), "vowels", "recall", [
         mc("Pick the word with the oa vowel team.", "boat", ["bat", "bet"], { hint: "Look for o and a together.", why: "Boat has oa.", tag: "vowelteam.oa" }),
@@ -174,6 +199,37 @@ export const topics = [
       Q(mc("Why do dictionary words go in alphabetical order?", "So we can find a word quickly", ["So the long words come first", "So the pictures fit"], { hint: "Think about finding a word.", why: "ABC order helps us find a word fast.", tag: "alphabet.reason" }), "alphabet", "reason", [
         mc("Why do we look at the first letter first in a dictionary?", "Words are sorted by their first letter", ["Words are sorted by length", "Words are sorted by colour"], { hint: "How is the dictionary sorted?", why: "Words are sorted by first letter, then the next.", tag: "alphabet.reason" }),
         mc("Why does bat come before bus in a dictionary?", "a comes before u in the alphabet", ["bat is shorter", "bus is a vehicle"], { hint: "Both start with b. Look at the second letter.", why: "The second letters decide: a comes before u.", tag: "alphabet.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(fill("Pick the vowel teams.", "The word s{b1}l has the sound ay. The word f{b2}t has the sound ee.", [["ai", "ee", "oa"], ["ee", "ai", "oa"]], { hint: "Say each word slowly.", why: "Sail has ai and feet has ee.", tag: "vowelteam.fill" }), "vowels", "apply", [
+        fill("Choose the vowel teams that finish the words.", "The word c{b1}t keeps you warm. The word gr{b2}n is a colour.", [["oa", "ai", "ee"], ["ee", "oa", "ai"]], { hint: "Say each word slowly.", why: "Coat has oa and green has ee.", tag: "vowelteam.fill" })]),
+      Q(sld("Slide to show how many vowel letters (a, e, i, o, u) are in the word sail.", { min: 0, max: 6 }, 2, 0, { hint: "Look for a and i.", why: "Sail has two vowel letters, a and i.", tag: "vowel.count" }), "vowels", "apply", [
+        sld("Slide to show how many vowel letters (a, e, i, o, u) are in the word cheese.", { min: 0, max: 6 }, 3, 0, { hint: "Look for the e letters.", why: "Cheese has three vowel letters, all e.", tag: "vowel.count" })]),
+      Q(mc("Sam says the e in cake makes no difference because it is silent. Is he right?", "No, the silent e makes the a say its name", ["Yes, a silent e does nothing", "Yes, the e is said out loud"], { hint: "Compare cap and cape.", why: "A silent e changes cap to cape, so the a says its name.", tag: "splitvowel.reason" }), "vowels", "reason", [
+        mc("Mira says kit and kite have the same vowel sound. Is she right?", "No, the silent e in kite makes the i say its name", ["Yes, they sound the same", "Yes, kit has a silent e too"], { hint: "Say both words.", why: "The silent e changes kit to kite and the i says its name.", tag: "splitvowel.reason" })]),
+      Q(hot("Tap the picture whose word has a split vowel.", [["🪁", "kite", 22, 50], ["🐖", "pig", 50, 50], ["🐕", "dog", 78, 50]], ["kite"], { labels: true, hint: "Look for a silent e at the end.", why: "Kite has i-e with a silent e.", tag: "splitvowel.find" }), "vowels", "apply", [
+        hot("Tap the word that has the vowel team oa.", [["🐐", "goat", 22, 50], ["🐈", "cat", 50, 50], ["🐖", "pig", 78, 50]], ["goat"], { labels: true, hint: "Look for o and a side by side.", why: "Goat has the vowel team oa.", tag: "vowelteam.oa" })]),
+      Q(tf("Unkind means not kind.", true, { hint: "Un means not.", why: "The prefix un means not.", tag: "prefix.un" }), "affixes", "apply", [
+        tf("Careful means not careful.", false, { hint: "Ful means full of.", why: "Careful means full of care.", tag: "suffix.ful" })]),
+      Q(st("Add ful to help. Write the new word.", ["helpful"], { hint: "Put ful at the back.", why: "Help plus ful makes helpful.", tag: "suffix.ful" }), "affixes", "recall", [
+        st("Add ful to thank. Write the new word.", ["thankful"], { hint: "Put ful at the back.", why: "Thank plus ful makes thankful.", tag: "suffix.ful" })]),
+      Q(mc("Aisha says un means full of. Is she right?", "No, un means not and ful means full of", ["Yes, un means full of", "Yes, un and ful mean the same"], { hint: "Think of unhappy.", why: "Un means not. Ful means full of.", tag: "affix.reason" }), "affixes", "reason", [
+        mc("Omar says a suffix goes at the front of a word. Is he right?", "No, a suffix goes at the back", ["Yes, suffixes go at the front", "Yes, suffixes go in the middle"], { hint: "Think of helpful.", why: "A suffix goes at the back of a word.", tag: "affix.reason" })]),
+      Q(mat("Match each new word to what it means.", [["unhappy", "not happy"], ["helpful", "full of help"], ["untidy", "not tidy"]], { hint: "Un means not. Ful means full of.", why: "Un means not and ful means full of.", tag: "affix.meaning" }), "affixes", "apply", [
+        mat("Link each word to its meaning.", [["unkind", "not kind"], ["careful", "full of care"], ["unfair", "not fair"]], { hint: "Un means not. Ful means full of.", why: "Un means not and ful means full of.", tag: "affix.meaning" })]),
+      Q(mc("Choose the right word: Aisha ate a juicy ___.", "pear", ["pair", "pare"], { hint: "Which one is a fruit?", why: "A pear is a fruit.", tag: "homophone.pick" }), "homophones", "apply", [
+        mc("Choose the right word: The dog wagged its ___.", "tail", ["tale", "tial"], { hint: "Which one belongs to a dog?", why: "A tail is the end of an animal.", tag: "homophone.pick" })]),
+      Q(fill("Pick the right spellings.", "A {b1} of socks lives in my drawer. A ripe {b2} is on the table.", [["pair", "pear", "pare"], ["pear", "pair", "pare"]], { hint: "Which is two things and which is a fruit?", why: "A pair is two things. A pear is a fruit.", tag: "homophone.pick" }), "homophones", "apply", [
+        fill("Choose the right spellings.", "The {b1} is shining. My {b2} is called Hamza.", [["sun", "son", "sin"], ["son", "sun", "sin"]], { hint: "Which is in the sky and which is a boy?", why: "The sun shines. A son is a boy child.", tag: "homophone.pick" })]),
+      Q(mc("Zainab writes do'nt for do not. Is she right?", "No, the apostrophe goes where the o is missing: don't", ["Yes, the apostrophe goes before the n", "Yes, do'nt is the right spelling"], { hint: "Which letter has gone?", why: "Don't is do not with the o missing, so the apostrophe sits where the o was.", tag: "homophone.reason" }), "homophones", "reason", [
+        mc("Ali writes is'nt for is not. Is he right?", "No, the apostrophe goes where the o is missing: isn't", ["Yes, is'nt is correct", "Yes, the apostrophe goes after the s"], { hint: "Which letter has gone?", why: "Isn't is is not with the o missing.", tag: "homophone.reason" })]),
+      Q(mat("Match each short form to its long form.", [["can't", "can not"], ["don't", "do not"], ["isn't", "is not"]], { hint: "Which letter is missing?", why: "The apostrophe shows a missing letter.", tag: "apostrophe.short" }), "homophones", "apply", [
+        mat("Join each short form to its long form.", [["didn't", "did not"], ["hasn't", "has not"], ["doesn't", "does not"]], { hint: "Which letter is missing?", why: "The apostrophe shows a missing letter.", tag: "apostrophe.short" })]),
+      Q(ms("Which two words sound the same as each other? Pick two.", ["tail", "tale"], ["tall", "tell"], { hint: "Say them out loud.", why: "Tail and tale are homophones.", tag: "homophone.def" }), "homophones", "apply", [
+        ms("Pick the two words that sound the same.", ["sun", "son"], ["sin", "sad"], { hint: "Say them out loud.", why: "Sun and son are homophones.", tag: "homophone.def" })]),
+      Q(ord("Order these words using their second letters.", ["bat", "bed", "bus"], { hint: "All start with b. Look at a, e, u.", why: "Bat, bed, bus follow a, e, u.", tag: "alphabet.order" }), "alphabet", "apply", [
+        ord("Arrange these words using their second letters.", ["cap", "cow", "cup"], { hint: "All start with c. Look at a, o, u.", why: "Cap, cow, cup follow a, o, u.", tag: "alphabet.order" })]),
+      Q(mc("Layla says zoo comes before ant in a dictionary because it is shorter. Is she right?", "No, a comes before z, so ant comes first", ["Yes, short words come first", "Yes, z comes before a"], { hint: "Look at the first letters.", why: "A comes before z. Length does not matter.", tag: "alphabet.reason" }), "alphabet", "reason", [
+        mc("Sam says a dictionary lists words by how long they are. Is he right?", "No, it lists them in alphabetical order", ["Yes, the shortest word is first", "Yes, the longest word is first"], { hint: "Think of ABC.", why: "A dictionary uses alphabetical order.", tag: "alphabet.reason" })]),
     ],
   }),
 ];

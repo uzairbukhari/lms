@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 1 (Zainab, age 7), topic 3: Computers and staying safe.
 // Standards: NC KS1 uses of IT and e-safety, CSTA 1A computing systems, networks and impacts, CAM 2Pe.01 (docs/CURRICULUM_V2.md).
 const o = (hint, why, tag) => ({ hint, why, tag });
 
+const LOCK = "data-ai-class-1-computers-safety-1-a38b89b8.jpg";
+const SOCKET = "data-ai-class-1-computers-safety-2-6afe4bdc.jpg";
+
 const inOut = {
   id: "in_out", kind: "learn", title: "Inside a computer: in and out",
   blocks: [
+    H("Welcome back, computer explorer!"),
+    SAY("Today we learn how computers work and how to stay safe.", T("Today's big question: how do we use computers safely?")),
+    SAY("A padlock keeps things safe. A password does the same job for us.", PHOTO(LOCK, "A combination padlock resting on a computer keyboard", "A padlock keeps things safe, like a password.", "Photo by Sasun Bughdaryan on Unsplash")),
     H("Stop 1: How we talk to a computer"),
     SAY("A computer is a machine that follows instructions. But how do we tell it what to do? We use things called inputs. A keyboard is an input. A mouse is an input. A touch screen is an input too. We put information in. The computer thinks, and then it gives us an answer. That answer is called an output.", T("An **input** is how we tell a computer something.", "An **output** is how the computer tells us something.")),
     EXP("In, think, out",
@@ -20,7 +26,7 @@ const inOut = {
     IMG("📱💻🖥️🚗", "A phone, a laptop, a desktop and a car all use computers."),
     CHK(tf("A screen is an output because it shows us information.", true, o("Does it show or tell us?", "A screen shows us things, so it is an output.", "cs.in_out"))),
     SAY("Let us remember. Inputs tell the computer. Outputs tell us. Computers come in many shapes.", SUM("An input tells the computer something", "An output tells us something", "Computers come in many shapes")),
-    GLOSS({ input: "How we put information into a computer.", output: "How a computer gives us information.", tablet: "A flat touch-screen computer.", laptop: "A small computer you can carry.", computer: "A machine that follows instructions." }),
+    GLOSS({ trusted: "Someone you know well who looks after you.", input: "How we put information into a computer.", output: "How a computer gives us information.", tablet: "A flat touch-screen computer.", laptop: "A small computer you can carry.", computer: "A machine that follows instructions." }),
   ],
   mini: [
     mc("Which is an output?", "A speaker", ["A mouse", "A keyboard"], o("Does it give us something?", "A speaker plays sound to us.")),
@@ -42,6 +48,7 @@ const useWell = {
     SAY("Let us be device detectives at home.", ACT("Device detectives", ["A grown-up", "Paper and pencil"], ["Look around your home for things with a screen or buttons.", "Write down three inputs and three outputs.", "Show your list to a grown-up."])),
     CHK(mc("A printer puts words on paper. It is an...", "Output", ["Input", "Insect"], o("Does it give us something?", "A printer gives us something, so it is an output.", "cs.in_out"))),
     H("Stop 2: Using devices well and being safe with electricity"),
+    SAY("This is a wall socket. Never touch it. Ask a grown-up.", PHOTO(SOCKET, "A white wall socket on a blue wall", "A wall socket. Never touch it. Ask a grown-up.", "Photo by Gleb Paniotov on Unsplash")),
     SAY("Devices are fun, but we should use them well. Take breaks, sit up straight and keep the screen at a good distance. Remember to keep your eyes healthy. And electricity is powerful. Never put fingers or things into plug sockets. Never touch plugs with wet hands. Always ask a grown-up to help with plugs and cables.", T("Use devices well: take **breaks**.", "Be safe with **electricity**: never touch sockets and ask a grown-up.")),
     IMG("🔌⚠️", "Never poke things in a plug socket. Ask a grown-up."),
     CHK(tf("It is safe to put a finger in a plug socket.", false, o("Electricity is powerful.", "Never touch sockets. Ask a grown-up.", "cs.electricity"))),
@@ -85,7 +92,7 @@ const kindOnline = {
     IMG("🔑🔒", "A password is like a secret key. Keep it private."),
     CHK(mc("Which is private information we should NOT share online?", "Our home address", ["Our favourite colour", "A funny joke"], o("Think about where you live.", "Addresses and passwords are private.", "cs.private"))),
     H("Stop 2: Being kind online"),
-    SAY("Being kind online is just like being kind in real life. We say please and thank you. We write friendly messages. If someone is unkind, or something online makes you feel worried, you should tell a grown-up straight away. You will not be in trouble.", T("Be **kind** online. If something worries you, **tell a grown-up**.")),
+    SAY("Being kind online is just like being kind in real life. We say please and thank you. We write friendly messages. If someone is unkind, tell a grown-up straight away. Do the same if you feel worried. You will not be in trouble.", T("Be **kind** online. If something worries you, **tell a grown-up**.")),
     SAY("Kind messages make people smile, online and in real life.", IMG("💬❤️", "Kind messages make people smile.")),
     SAY("Time to think about a kind message.", ACT("Kind message card", ["Paper and crayons"], ["Draw a card with a kind message for a friend.", "Ask a grown-up to help you send it.", "How did your friend feel?"])),
     REVEAL("What should you do if someone online is unkind to you?", "Tell a grown-up straight away. It is not your fault."),
@@ -119,6 +126,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Zainab stays safe", backdrop: "home", caption: "Zainab uses the tablet safely and kindly.",
+  scenes: [
+    { caption: "A tablet.", say: "Zainab uses the family tablet. A touch screen is input and output.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "t", emoji: "📱", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Input and output.", say: "The keyboard is an input. The speaker is an output.",
+      items: [{ id: "k", emoji: "⌨️", label: "input", x: 28, y: 50, size: 3 }, { id: "s", emoji: "🔊", label: "output", x: 72, y: 50, size: 3, anim: "pulse" }] },
+    { caption: "A break.", say: "After twenty minutes, Zainab takes a break. Her eyes need a rest.",
+      items: [{ id: "c", emoji: "⏰", label: "20 minutes", x: 35, y: 48, size: 3 }, { id: "e", emoji: "👀", x: 70, y: 48, size: 3, effect: "sparkle" }] },
+    { caption: "A password.", say: "Her password is a secret key. Only Mum knows it.",
+      items: [{ id: "k", emoji: "🔑", label: "password", x: 35, y: 48, size: 3, effect: "glow" }, { id: "m", emoji: "👩", label: "Mum", x: 72, y: 52, size: 3 }] },
+    { caption: "A stranger.", say: "A stranger in a game asks where she lives. She does not answer.",
+      items: [{ id: "q", emoji: "❓", x: 35, y: 45, size: 3, anim: "float" }, { id: "n", emoji: "🚫", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Tell a grown-up.", say: "She tells Mum straight away. Telling is always right.",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3 }, { id: "m", emoji: "👩", x: 70, y: 52, size: 3, effect: "hearts" }] },
+    { caption: "A kind message.", say: "Then she sends Nani a kind message with Mum's help.",
+      items: [{ id: "m", emoji: "💬", x: 35, y: 45, size: 3, enter: "slide_right" }, { id: "h", emoji: "❤️", x: 72, y: 45, size: 3, anim: "bounce" }] },
+    { caption: "Plugs.", say: "Plugs are for grown-ups. Zainab never touches sockets.",
+      items: [{ id: "p", emoji: "🔌", x: 35, y: 50, size: 3 }, { id: "n", emoji: "🚫", x: 72, y: 50, size: 3 }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-1-computers-safety", subject: "data-ai", cls: 1, topic: 3, title: "Computers and Staying Safe",
@@ -139,13 +169,9 @@ export const topics = [
       mc("Which graph uses a picture for every vote?", "A pictogram", ["A tally", "A table"], o("Pictures.", "A pictogram uses pictures.")),
       num("What is 10 - 4?", 6, o("Count back from 10.", "10 take away 4 is 6.")),
     ],
-    intro: [
-      H("Welcome, computer explorer!"),
-      SAY("Welcome, computer explorer! Today's big question: how do we use computers and stay safe? We will find out how computers take in information and give it out, and how to be careful and kind online. Let's go!", T("Today's big question: how do we use computers and stay safe?", "We will learn about inputs, outputs and online safety.")),
-      IMG("💻", "Computers help us, and we help ourselves by staying safe."),
-      GLOSS({ safe: "Not likely to hurt you." }),
-    ],
+    intro: [],
     subs: [inOut, useWell, play, kindOnline],
+    clip,
     quiz: [
       qd(mc("Which one of these lets us tell a computer something?", "A touch pad", ["A speaker", "A printer"], o("We tell the computer with it.", "A touch pad is an input.", "cs.in_out")), "in_out", "recall"),
       qd(mc("Which one shows us words and pictures from the computer?", "A screen", ["A mouse", "A microphone"], o("It is an output.", "A screen is an output.", "cs.in_out")), "in_out", "recall"),
@@ -162,6 +188,37 @@ export const topics = [
       qd(tf("It is fine to tell a stranger online where you live.", false, o("Is an address private?", "Never share your address.", "cs.private")), "online", "recall"),
       qd(mc("Hana says if something online worries her she should hide it. Is she right?", "No, she should tell a grown-up", ["Yes, hide it", "Yes, post about it"], o("Who can help?", "A grown-up can help her.", "cs.reason")), "online", "reason"),
       qd(ord("Put these in the right order for sending a kind message.", ["Think of something kind", "Write the message", "Ask a grown-up to help send it"], o("What comes first?", "Think, write, then send with a grown-up.", "cs.kind")), "online", "reason"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(fill("Complete the sentences about passwords.", "A {b1} is a secret code. We never {b2} it with friends.", [["password", "apple", "table"], ["share", "eat", "paint"]], o("Think about secret keys.", "A password is secret, so we do not share it.", "cs.private")), "online", "apply",
+        [fill("Finish the sentences about passwords.", "Only tell your password to a {b1}. Never tell a {b2}.", [["parent", "stranger", "bus"], ["stranger", "bus", "chair"]], o("Who looks after you?", "Only a parent should know your password.", "cs.private"))]),
+      qa(ms("Which two are private? Pick two.", ["Our password", "Our home address"], ["Our favourite colour", "A funny joke"], o("Think about what only family should know.", "Passwords and addresses are private.", "cs.private")), "online", "apply",
+        [ms("Which two should we keep private online? Pick two.", ["Our full name", "Our school name"], ["Our favourite fruit", "Our favourite game"], o("Think about who could find you.", "Full names and school names are private.", "cs.private"))]),
+      qa(mat("Match each online rule to its reason.", [["Keep passwords private", "Only you can get in"], ["Tell a grown-up if worried", "They can help"], ["Be kind online", "Unkind words hurt"]], o("Why do we have the rule?", "Each rule keeps us safe or kind.", "cs.rules")), "online", "apply",
+        [mat("Match each rule to its reason.", [["Take screen breaks", "It rests your eyes"], ["Ask before downloading", "A grown-up checks it is safe"], ["Dry hands near plugs", "Water and electricity are dangerous"]], o("Why do we have the rule?", "Each rule keeps us safe.", "cs.rules"))]),
+      qa(sld("Aisha takes a break after every 20 minutes. She plays for 40 minutes. Slide to show how many breaks she takes.", { min: 0, max: 6 }, 2, 0, o("40 is two lots of 20.", "40 minutes is 2 lots of 20, so 2 breaks.", "cs.devices")), "use_well", "apply",
+        [sld("Zayd takes a break after every 20 minutes. He plays for 60 minutes. Slide to show how many breaks he takes.", { min: 0, max: 6 }, 3, 0, o("60 is three lots of 20.", "60 minutes is 3 lots of 20, so 3 breaks.", "cs.devices"))]),
+      qa(hot("Tap the thing that is private.", [["🏠", "Home address", 22, 50], ["🌈", "Favourite colour", 50, 50], ["⚽", "Favourite game", 78, 50]], ["Home address"], { labels: true, ...o("Where you live.", "An address is private.", "cs.private") }), "online", "apply",
+        [hot("Tap the thing that keeps an account safe.", [["🔑", "Password", 22, 50], ["🖍️", "Crayon", 50, 50], ["🍎", "Apple", 78, 50]], ["Password"], { labels: true, ...o("A secret key.", "A password keeps an account safe.", "cs.private") })]),
+      qa(num("A family shares one tablet. Each of 3 children gets 15 minutes. How many minutes is that in all?", 45, o("Add 15 three times.", "15 + 15 + 15 = 45 minutes.", "cs.devices")), "use_well", "apply",
+        [num("A family shares one tablet. Each of 4 children gets 10 minutes. How many minutes is that in all?", 40, o("Add 10 four times.", "10 + 10 + 10 + 10 = 40 minutes.", "cs.devices"))]),
+      qa(ord("Put these in order when a screen scares you.", ["Stop and put the device down", "Go to a grown-up", "Tell them what you saw"], o("What first?", "Stop, go to a grown-up, then tell them.", "cs.kind")), "online", "apply",
+        [ord("Put these in order when a stranger messages you.", ["Do not answer", "Tell a grown-up", "Let them help you"], o("What first?", "Do not answer, tell a grown-up, then let them help.", "cs.kind"))]),
+      qa(mc("Layla shares her password with a kind friend. Is that okay?", "No. A password is private, even from kind friends", ["Yes, friends are safe", "Yes, if they promise"], o("Who can know your password?", "Only a parent should know your password.", "cs.reason")), "online", "reason",
+        [mc("Omar gives his password to a classmate so they can play. Is that okay?", "No. A password is private, even from classmates", ["Yes, they are in his class", "Yes, if it is just once"], o("Who can know your password?", "Only a parent should know your password.", "cs.reason"))]),
+      qa(mc("In a game, a kind player asks for Sam's real name. Should Sam tell them?", "No. Even a kind stranger can be unsafe, so tell a grown-up", ["Yes, kind people are safe", "Yes, names are not private"], o("Can we be sure who they are?", "We cannot know who a stranger online really is.", "cs.reason")), "online", "reason",
+        [mc("A friendly stranger online asks Aisha which school she goes to. Should she tell?", "No. She should not answer and should tell a grown-up", ["Yes, they seem nice", "Yes, schools are not private"], o("Can we be sure who they are?", "We cannot know who a stranger online really is.", "cs.reason"))]),
+      qa(mc("Hamza says home rules for devices are not needed. Why do families have them?", "They help everyone stay safe and take breaks", ["They stop all fun", "They are not useful"], o("Rules help us.", "Home rules keep us safe and healthy.", "cs.reason")), "use_well", "reason",
+        [mc("Zara says she can download anything without asking. Why is that wrong?", "Some downloads are not safe, so a grown-up should check", ["All downloads are safe", "Asking is silly"], o("Who can check?", "A grown-up can check that a download is safe.", "cs.reason"))]),
+      qa(mc("Nora says all websites are safe because they are on a screen. Is she right?", "No. Some are not safe, so ask a grown-up", ["Yes, screens are safe", "Yes, if they are colourful"], o("Can everything online be trusted?", "Not every website is safe.", "cs.reason")), "online", "reason",
+        [mc("Ben says every message online is true. Is he right?", "No. Some are not true, so check with a grown-up", ["Yes, all are true", "Yes, if it is long"], o("Can everything online be trusted?", "Not every message is true.", "cs.reason"))]),
+      qa(mc("Which is a good way to keep a tablet safe?", "Keep drinks away from it", ["Put it in the bath", "Leave it on the floor"], o("Water and devices do not mix.", "Spills can damage a device.", "cs.devices")), "use_well", "apply",
+        [mc("Which is a good way to look after a charging cable?", "Wind it loosely and keep it tidy", ["Bend it hard", "Chew it"], o("Be gentle with cables.", "A tidy cable lasts longer and is safer.", "cs.electricity"))]),
+      qa(tf("All websites are safe to visit.", false, o("Not everything online is safe.", "Some websites are not safe, so ask a grown-up.", "cs.safety")), "online", "recall",
+        [tf("A trusted adult can help us if we see something scary online.", true, o("Who can help?", "A trusted adult can help.", "cs.safety"))]),
+      qa(mc("A screen shows something that scares you. Who should you tell?", "A trusted adult", ["Nobody", "A stranger online"], o("Who looks after you?", "Tell a trusted adult.", "cs.safety")), "online", "apply",
+        [mc("Who is a trusted adult?", "A parent or a teacher", ["A stranger online", "A pop-up message"], o("Who looks after you?", "Parents and teachers are trusted adults.", "cs.safety"))]),
+      qa(mc("Which message is kind?", "Well done on your game!", ["You are bad at this", "Give me your password"], o("Be kind.", "Kind messages are friendly.", "cs.kind")), "online", "recall",
+        [mc("Which is a kind thing to write?", "Thank you for helping me", ["Nobody likes you", "Tell me your address"], o("Be kind.", "Thanking someone is kind.", "cs.kind"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

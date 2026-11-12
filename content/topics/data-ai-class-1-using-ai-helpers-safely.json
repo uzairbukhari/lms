@@ -1,0 +1,3211 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-using-ai-helpers-safely",
+  "subject": "data-ai",
+  "title": "Using AI Helpers Safely",
+  "summary": "Use voice and picture helpers with a grown-up, check what they say and keep private things private.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 12: Using AI helpers safely",
+  "learning_objectives": [
+   "Say what an AI helper can and cannot do",
+   "Keep private information private",
+   "Ask a trusted adult to check answers"
+  ],
+  "tags": [
+   "topic",
+   "topic-12"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 12
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 5",
+    "text": "Societal impact: AI can impact the world in positive and negative ways"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS1 online safety",
+    "text": "Use technology safely and respectfully, keeping personal information private; identify where to go for help"
+   }
+  ],
+  "success_criteria": [
+   "I can say what an AI helper is",
+   "I can keep private things private",
+   "I know to check answers and tell a trusted adult"
+  ],
+  "real_life": "Asking a voice helper for prayer times or the date of Eid, then checking with family.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a sensor?",
+    "hint": "It notices light, sound or movement.",
+    "explanation": "A sensor notices things.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cable"
+     },
+     {
+      "id": "b",
+      "text": "A part that notices something"
+     },
+     {
+      "id": "c",
+      "text": "A kind of cake"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What does IT stand for?",
+    "hint": "Computers.",
+    "explanation": "IT is information technology.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Indoor toys"
+     },
+     {
+      "id": "b",
+      "text": "Instant tea"
+     },
+     {
+      "id": "c",
+      "text": "Information technology"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 6 + 7?",
+    "hint": "Count on from 6.",
+    "explanation": "6 + 7 = 13.",
+    "answer": {
+     "value": 13,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "helpers",
+   "kind": "learn",
+   "title": "Helpers that talk",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, safe explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we use AI helpers safely?",
+     "say": "Today we meet AI helpers. Sam wants to ask his family's voice helper a question."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-using-ai-helpers-safely-2-1c3ddabc.jpg",
+     "alt": "A thin crescent moon in a dark purple evening sky with tree branches",
+     "caption": "A thin crescent moon. People watch for it to mark a new month.",
+     "credit": "Photo by Rob Wicks on Unsplash",
+     "say": "Sam wants to know the day of Eid. The new crescent moon helps people decide."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Voice helpers use AI"
+    },
+    {
+     "type": "text",
+     "markdown": "An **AI helper** is a program that can talk or answer questions.",
+     "say": "A voice helper listens and answers. It uses AI, which is a computer program made by people."
+    },
+    {
+     "type": "explainer",
+     "title": "A voice helper",
+     "scenes": [
+      {
+       "caption": "Listen.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Sam asks a question. The helper listens with a microphone."
+      },
+      {
+       "caption": "Find.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "💻",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "i",
+         "emoji": "📚",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The program finds an answer from lots of information."
+      },
+      {
+       "caption": "Answer.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🔊",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "a",
+         "emoji": "🤖",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "program"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a program"
+        }
+       ],
+       "say": "It speaks the answer. It sounds clever. But it is only a program."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is a voice helper?",
+      "hint": "It uses AI.",
+      "explanation": "A voice helper is a program made by people.",
+      "skill_tag": "helper.meaning",
+      "options": [
+       {
+        "id": "a",
+        "text": "A pet that talks"
+       },
+       {
+        "id": "b",
+        "text": "A real person inside"
+       },
+       {
+        "id": "c",
+        "text": "A program that listens and answers"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: They can be wrong"
+    },
+    {
+     "type": "text",
+     "markdown": "A helper can be **wrong**. Check important answers.",
+     "say": "A helper sounds sure. But it can be wrong. Sam asks when Eid falls. It says it is unsure."
+    },
+    {
+     "type": "explainer",
+     "title": "The unsure helper",
+     "scenes": [
+      {
+       "caption": "Not sure.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🔊",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "not sure"
+        }
+       ],
+       "say": "Sam asks: what day is Eid? The helper says, I am not sure."
+      },
+      {
+       "caption": "The moon.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Eid depends on the moon. A helper might not know the latest news."
+      },
+      {
+       "caption": "Check.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👨",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "c",
+         "emoji": "📅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "check it"
+        }
+       ],
+       "say": "So Sam checks with Abbu and the calendar. That is wise."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "An AI helper is always right.",
+      "hint": "Think about the unsure helper.",
+      "explanation": "A helper can be wrong or unsure.",
+      "skill_tag": "helper.wrong",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Sam asks about Eid",
+     "asset": "clip-data-ai-class-1-using-ai-helpers-safely-465f89b9.mp4",
+     "poster": "clip-data-ai-class-1-using-ai-helpers-safely-465f89b9.webp",
+     "seconds": 64,
+     "transcript": "Sam wants to know the day of Eid. He asks the voice helper. The helper says it is not sure. Eid depends on the moon. So Sam asks Abbu. Abbu listens carefully. They check the calendar and the news about the moon. Sam never tells the helper his address. That is private. Sam sees a picture of a cow with five legs. It looks odd. He tells Abbu. Abbu says, good checking, Sam. At home they put up their three AI rules.",
+     "caption": "Sam asks a voice helper when Eid falls and checks with Abbu."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "An AI helper is a program made by people",
+      "It can be wrong or unsure",
+      "Check important answers with a grown-up"
+     ],
+     "say": "Let us remember. An AI helper is a program. It can be wrong. Check important things."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "AI helper",
+       "meaning": "A program that can talk or answer questions."
+      },
+      {
+       "term": "wrong",
+       "meaning": "Not correct."
+      },
+      {
+       "term": "unsure",
+       "meaning": "Not sure."
+      },
+      {
+       "term": "program",
+       "meaning": "Instructions a computer follows."
+      },
+      {
+       "term": "microphone",
+       "meaning": "A part that hears sound."
+      },
+      {
+       "term": "calendar",
+       "meaning": "A chart that shows the days of the year."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Who made the AI in a voice helper?",
+     "hint": "It is a program.",
+     "explanation": "People write programs.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Birds"
+      },
+      {
+       "id": "b",
+       "text": "People"
+      },
+      {
+       "id": "c",
+       "text": "Clouds"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A helper can sound sure and still be wrong.",
+     "hint": "Sounding sure is not proof.",
+     "explanation": "A helper can be wrong.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should Sam do when the helper is unsure?",
+     "hint": "Ask someone who knows.",
+     "explanation": "Checking helps.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ignore it"
+      },
+      {
+       "id": "b",
+       "text": "Check with a grown-up or a calendar"
+      },
+      {
+       "id": "c",
+       "text": "Guess"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a microphone do?",
+     "hint": "It listens.",
+     "explanation": "A microphone hears sound.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Takes photos"
+      },
+      {
+       "id": "b",
+       "text": "Plays music"
+      },
+      {
+       "id": "c",
+       "text": "Hears sound"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "askcheck",
+   "kind": "try",
+   "title": "Ask and check",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Ask a question together"
+    },
+    {
+     "type": "text",
+     "markdown": "Ask safe questions with a **grown-up** beside you.",
+     "say": "Sam asks with Abbu beside him. A safe question is about facts, like how far away the Moon is."
+    },
+    {
+     "type": "explainer",
+     "title": "Safe and unsafe questions",
+     "scenes": [
+      {
+       "caption": "Safe.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "✅",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "q",
+         "emoji": "📅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A safe question: how many days are in a week?"
+      },
+      {
+       "caption": "Unsafe.",
+       "items": [
+        {
+         "id": "u",
+         "emoji": "🚫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "a",
+         "emoji": "🏠",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "An unsafe thing to say: our home address or a password."
+      },
+      {
+       "caption": "Private.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🔒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "private"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "keep private"
+        }
+       ],
+       "say": "Keep private things private, even when it feels friendly."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the questions",
+     "goal": "Move the 6 questions into Safe or Not safe.",
+     "emoji": "❓",
+     "count": 6,
+     "zones": [
+      "Safe to ask",
+      "Not safe"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is a safe thing to ask a helper?",
+      "hint": "Not private.",
+      "explanation": "A fact question keeps private things private.",
+      "skill_tag": "helper.safe_q",
+      "options": [
+       {
+        "id": "a",
+        "text": "What is our home address?"
+       },
+       {
+        "id": "b",
+        "text": "What is my password?"
+       },
+       {
+        "id": "c",
+        "text": "How many legs does a spider have?"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Check with a book or adult"
+    },
+    {
+     "type": "text",
+     "markdown": "**Check** an answer with a book or a trusted adult.",
+     "say": "After the helper answers, Sam checks. He looks in a book. He asks Abbu."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-using-ai-helpers-safely-1-adb161ec.jpg",
+     "alt": "An open book with its pages fanned out against a plain background",
+     "caption": "Checking in a book is a good way to be sure.",
+     "credit": "Photo by Olga Tutunaru on Unsplash",
+     "say": "A book is one way to check. A grown-up can help too."
+    },
+    {
+     "type": "explainer",
+     "title": "Check it",
+     "scenes": [
+      {
+       "caption": "The answer.",
+       "items": [
+        {
+         "id": "h",
+         "emoji": "🔊",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🕷️",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The helper says: a spider has eight legs."
+      },
+      {
+       "caption": "Book.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "📖",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "✅",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "Sam checks in a book. It says eight legs too."
+      },
+      {
+       "caption": "Sure.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "checked"
+        }
+       ],
+       "say": "Now Sam is sure. Checking helps us trust good answers."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Ask and check",
+     "materials": [
+      "A voice helper or app, with a grown-up",
+      "A book"
+     ],
+     "instructions": [
+      "Ask a safe question together, like how many days are in a week.",
+      "Look up the answer in a book too.",
+      "Did they match? Tell a grown-up."
+     ],
+     "say": "Now you try. Ask a grown-up to help you ask and check."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "It is a good idea to check important answers.",
+      "hint": "Helpers can be wrong.",
+      "explanation": "Checking helps us be sure.",
+      "skill_tag": "helper.check",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Ask safe questions with a grown-up",
+      "Never share private things",
+      "Check answers in a book or with an adult"
+     ],
+     "say": "Let us remember. Ask safe questions with a grown-up. Check the answers."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "check",
+       "meaning": "To make sure something is right."
+      },
+      {
+       "term": "private",
+       "meaning": "Only for you and your family."
+      },
+      {
+       "term": "grown_up",
+       "meaning": "An adult who looks after you."
+      },
+      {
+       "term": "trusted adult",
+       "meaning": "A grown-up you know well and trust."
+      },
+      {
+       "term": "fact",
+       "meaning": "Something that is true."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is private?",
+     "hint": "Where you live.",
+     "explanation": "An address is private.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The colour blue"
+      },
+      {
+       "id": "b",
+       "text": "Our home address"
+      },
+      {
+       "id": "c",
+       "text": "The days of the week"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A book can help check an answer.",
+     "hint": "Look it up.",
+     "explanation": "A book is a good check.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who should be with you when you use a voice helper?",
+     "hint": "Someone who looks after you.",
+     "explanation": "A grown-up should be nearby.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nobody"
+      },
+      {
+       "id": "b",
+       "text": "A grown-up"
+      },
+      {
+       "id": "c",
+       "text": "A stranger"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "real",
+   "kind": "play",
+   "title": "Real or fake?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Spot a made-up picture"
+    },
+    {
+     "type": "text",
+     "markdown": "A picture can look **real** and still be made up.",
+     "say": "A picture can look real but be made up. A computer can make pictures that never happened."
+    },
+    {
+     "type": "explainer",
+     "title": "Clues in a picture",
+     "scenes": [
+      {
+       "caption": "Odd clue.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐄",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "five legs?"
+        }
+       ],
+       "say": "This picture shows a cow with five legs. That is odd."
+      },
+      {
+       "caption": "Check the facts.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐄",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Cows have four legs. The picture may be made up."
+      },
+      {
+       "caption": "Ask.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "👩",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 70,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "ask a grown-up"
+        }
+       ],
+       "say": "We ask a grown-up if we are not sure."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A picture shows a cow with five legs. What could that mean?",
+      "hint": "Think about real cows.",
+      "explanation": "Odd details can show a picture is made up.",
+      "skill_tag": "helper.fake_clue",
+      "options": [
+       {
+        "id": "a",
+        "text": "Cows grow extra legs"
+       },
+       {
+        "id": "b",
+        "text": "It must be real"
+       },
+       {
+        "id": "c",
+        "text": "The picture may be made up"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Why people trick us"
+    },
+    {
+     "type": "text",
+     "markdown": "Some people **trick** others online. Ask a grown-up.",
+     "say": "Some people make fake pictures to trick us. They may want us to click, or to believe something that is not true."
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then spot a picture that cannot be real.",
+     "say": "First a memory game. Then spot the odd one that cannot be real."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Real or fake pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔍",
+      "🙋",
+      "📖",
+      "🔒"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the one that cannot be real.",
+      "hint": "Which animal is a story?",
+      "explanation": "Unicorns are made up.",
+      "skill_tag": "helper.cannot_real",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "🐘",
+         "label": "Elephant",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "🦄",
+         "label": "Unicorn",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🐎",
+         "label": "Horse",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h2"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pictures can be made up",
+      "Odd details can be clues",
+      "Ask a trusted adult if you are unsure"
+     ],
+     "say": "Let us remember. A picture that looks real can still be fake. Ask a grown-up."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "fake",
+       "meaning": "Made up to look real when it is not."
+      },
+      {
+       "term": "trick",
+       "meaning": "To make someone believe something that is not true."
+      },
+      {
+       "term": "clue",
+       "meaning": "A small detail that helps you work something out."
+      },
+      {
+       "term": "real",
+       "meaning": "Truly there, not made up."
+      },
+      {
+       "term": "online",
+       "meaning": "Using the internet."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a fake picture?",
+     "hint": "Made up.",
+     "explanation": "A fake looks real but is not.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A picture of a real place"
+      },
+      {
+       "id": "b",
+       "text": "One made up to look real"
+      },
+      {
+       "id": "c",
+       "text": "A drawing you made"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Some pictures online are made up.",
+     "hint": "Computers can make pictures.",
+     "explanation": "Not every picture is real.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do if a picture seems odd?",
+     "hint": "Someone you trust.",
+     "explanation": "A grown-up can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Believe it"
+      },
+      {
+       "id": "b",
+       "text": "Ask a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Share it quickly"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "kind": "use",
+   "title": "Our family AI rules",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Write three rules"
+    },
+    {
+     "type": "text",
+     "markdown": "A family can write **rules** for AI helpers.",
+     "say": "Sam's family writes AI rules. A rule keeps everyone safe. They write three."
+    },
+    {
+     "type": "text",
+     "markdown": "Rule 1: ask first.",
+     "say": "Rule one: ask a grown-up before using a helper."
+    },
+    {
+     "type": "text",
+     "markdown": "Rule 2: keep private things private.",
+     "say": "Rule two: never share private things like our name, address or password."
+    },
+    {
+     "type": "explainer",
+     "title": "Three family rules",
+     "scenes": [
+      {
+       "caption": "Rule 1.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🙋",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ask first"
+        }
+       ],
+       "say": "Rule one is a hand up. Ask a grown-up first."
+      },
+      {
+       "caption": "Rule 2.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔒",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "private"
+        }
+       ],
+       "say": "Rule two is a padlock. Keep private things private."
+      },
+      {
+       "caption": "Rule 3.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔍",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "check"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "three rules"
+        }
+       ],
+       "say": "Rule three is a magnifier. Check important answers."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Our family rules",
+     "materials": [
+      "Paper and crayons",
+      "Your family"
+     ],
+     "instructions": [
+      "Write three rules for using AI helpers.",
+      "Draw a picture for each rule.",
+      "Put your rules where everyone can see them."
+     ],
+     "say": "Rule three: check important answers. Tell a grown-up if something worries us."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each rule to its reason.",
+      "hint": "Why do we have each rule?",
+      "explanation": "Each rule has a good reason.",
+      "skill_tag": "helper.rule_reason",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Ask a grown-up first"
+       },
+       {
+        "id": "l2",
+        "text": "Keep private things private"
+       },
+       {
+        "id": "l3",
+        "text": "Check answers"
+       }
+      ],
+      "right": [
+       {
+        "id": "r3",
+        "text": "Helpers can be wrong"
+       },
+       {
+        "id": "r1",
+        "text": "They keep us safe"
+       },
+       {
+        "id": "r2",
+        "text": "Strangers could misuse them"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Who to tell"
+    },
+    {
+     "type": "text",
+     "markdown": "**Stop** and tell a trusted adult.",
+     "say": "If something online scares or confuses us, we stop and tell a trusted adult. We are not in trouble."
+    },
+    {
+     "type": "explainer",
+     "title": "Tell someone",
+     "scenes": [
+      {
+       "caption": "Worried.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "m",
+         "emoji": "📱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A message on the screen makes Sam feel worried."
+      },
+      {
+       "caption": "Stop.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "📱",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "👨",
+         "x": 70,
+         "y": 52,
+         "size": 3,
+         "anim": "bounce"
+        }
+       ],
+       "say": "He puts the device down and finds Abbu."
+      },
+      {
+       "caption": "Tell.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "👨",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🧒",
+         "x": 70,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "telling is right"
+        }
+       ],
+       "say": "Abbu listens and helps. Telling was the right thing."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We should tell a trusted adult if something online worries us.",
+      "hint": "Who can help?",
+      "explanation": "A trusted adult can help.",
+      "skill_tag": "helper.tell",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Write family rules for AI helpers",
+      "Ask first, keep private, check answers",
+      "Stop and tell a trusted adult"
+     ],
+     "say": "Let us remember. Rules keep us safe. Always tell a trusted adult."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "stop",
+       "meaning": "To pause what you are doing."
+      },
+      {
+       "term": "rule",
+       "meaning": "A sentence that says how we should act."
+      },
+      {
+       "term": "worried",
+       "meaning": "Feeling that something may not be right."
+      },
+      {
+       "term": "trusted adult",
+       "meaning": "A grown-up you know well and trust."
+      },
+      {
+       "term": "safe",
+       "meaning": "Not likely to be hurt."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a family rule for AI helpers?",
+     "hint": "Think about safety.",
+     "explanation": "Asking first keeps us safe.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Share your password"
+      },
+      {
+       "id": "b",
+       "text": "Ask a grown-up first"
+      },
+      {
+       "id": "c",
+       "text": "Never tell anyone"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We are in trouble if we tell an adult we are worried.",
+     "hint": "Telling is good.",
+     "explanation": "We are never in trouble for telling.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who is a trusted adult?",
+     "hint": "Someone who looks after you.",
+     "explanation": "Parents and teachers are trusted.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A stranger online"
+      },
+      {
+       "id": "b",
+       "text": "A pop-up message"
+      },
+      {
+       "id": "c",
+       "text": "A parent or teacher"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is an AI helper?",
+    "hint": "It is made by people.",
+    "explanation": "An AI helper is a computer program.",
+    "skill_tag": "helper.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A person hiding in the speaker"
+     },
+     {
+      "id": "b",
+      "text": "A computer program that can talk or answer questions"
+     },
+     {
+      "id": "c",
+      "text": "A living pet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "Which is an example of a voice helper?",
+    "hint": "It listens and answers.",
+    "explanation": "A voice helper listens and answers.",
+    "skill_tag": "helper.example",
+    "options": [
+     {
+      "id": "a",
+      "text": "A wooden spoon"
+     },
+     {
+      "id": "b",
+      "text": "A speaker that answers when you ask a question"
+     },
+     {
+      "id": "c",
+      "text": "A paper plane"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "An AI helper can be wrong.",
+    "hint": "Think about the unsure helper.",
+    "explanation": "A helper can make mistakes.",
+    "skill_tag": "helper.wrong",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each thing to private or fine to share.",
+    "hint": "Think about what only family should know.",
+    "explanation": "Addresses and passwords are private.",
+    "skill_tag": "helper.private_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Home address"
+     },
+     {
+      "id": "l2",
+      "text": "Favourite colour"
+     },
+     {
+      "id": "l3",
+      "text": "Password"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Fine to share"
+     },
+     {
+      "id": "r3",
+      "text": "Keep private"
+     },
+     {
+      "id": "r1",
+      "text": "Keep private"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "helpers",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the part that listens.",
+    "hint": "It hears.",
+    "explanation": "A microphone listens.",
+    "skill_tag": "helper.tap_mic",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎤",
+       "label": "Microphone",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔊",
+       "label": "Speaker",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔋",
+       "label": "Battery",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says if an AI helper sounds sure, it must be right. Is he right?",
+    "hint": "Think about checking.",
+    "explanation": "Sounding sure is not proof.",
+    "skill_tag": "helper.reason_sure",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, helpers know everything"
+     },
+     {
+      "id": "b",
+      "text": "No. A helper can sound sure and still be wrong"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sounding sure means right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Sam says an AI helper can feel sad. Is he right?",
+    "hint": "Is it alive?",
+    "explanation": "AI does not feel.",
+    "skill_tag": "helper.reason_feel",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it cries"
+     },
+     {
+      "id": "b",
+      "text": "No. It is a program. It does not have feelings"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it feels sad"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about safety.",
+    "hint": "Think about private things.",
+    "explanation": "Addresses and passwords are private.",
+    "skill_tag": "helper.fill_private",
+    "points": 2,
+    "text": "Never share your {b1} or your {b2} with a helper.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "colour"
+       },
+       {
+        "id": "b",
+        "text": "address"
+       },
+       {
+        "id": "c",
+        "text": "age in years"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "lunch"
+       },
+       {
+        "id": "b",
+        "text": "password"
+       },
+       {
+        "id": "c",
+        "text": "shoe"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "helpers",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Which is a safe question for a helper?",
+    "hint": "Not private.",
+    "explanation": "A fact question is safe.",
+    "skill_tag": "helper.safe_question",
+    "options": [
+     {
+      "id": "a",
+      "text": "What is my password?"
+     },
+     {
+      "id": "b",
+      "text": "How many days are in a week?"
+     },
+     {
+      "id": "c",
+      "text": "What is our home address?"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multi_select",
+    "prompt": "Which two should you never tell a helper? Pick two.",
+    "hint": "Think about private things.",
+    "explanation": "Addresses and passwords are private.",
+    "skill_tag": "helper.never_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "Your password"
+     },
+     {
+      "id": "b",
+      "text": "Your favourite fruit"
+     },
+     {
+      "id": "c",
+      "text": "A fact you learned"
+     },
+     {
+      "id": "d",
+      "text": "Your home address"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "order",
+    "prompt": "Put the steps in order.",
+    "hint": "Ask first.",
+    "explanation": "Ask, hear, then check.",
+    "skill_tag": "helper.ask_check_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Hear the answer"
+     },
+     {
+      "id": "i1",
+      "text": "Ask a question with a grown-up"
+     },
+     {
+      "id": "i3",
+      "text": "Check it in a book"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "slider",
+    "prompt": "Sam checks an answer in 1 book and asks 1 grown-up. Slide to show how many ways he checked.",
+    "hint": "1 + 1.",
+    "explanation": "1 + 1 = 2 ways.",
+    "skill_tag": "helper.ways_checked",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "askcheck",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Aisha says she does not need to check AI answers. Is she right?",
+    "hint": "Think about the unsure helper.",
+    "explanation": "Checking keeps us right.",
+    "skill_tag": "helper.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never check"
+     },
+     {
+      "id": "b",
+      "text": "No. Helpers can be wrong, so important answers need checking"
+     },
+     {
+      "id": "c",
+      "text": "Yes, helpers are always right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Aisha says a nice voice helper is her friend who keeps secrets. Is she right?",
+    "hint": "Is it a person?",
+    "explanation": "A helper is a program, not a friend who keeps secrets.",
+    "skill_tag": "helper.reason_friend",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it keeps secrets"
+     },
+     {
+      "id": "b",
+      "text": "No. A helper is a program. Secrets should be told to trusted adults"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it is her best friend"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "multi_select",
+    "prompt": "Which two ways can you check an AI answer? Pick two.",
+    "hint": "Use another source.",
+    "explanation": "A grown-up and a book are good checks.",
+    "skill_tag": "helper.check_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "Look in a book"
+     },
+     {
+      "id": "b",
+      "text": "Ask the helper again only"
+     },
+     {
+      "id": "c",
+      "text": "Believe it at once"
+     },
+     {
+      "id": "d",
+      "text": "Ask a grown-up"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "true_false",
+    "prompt": "A fake picture can look real.",
+    "hint": "Computers can make pictures.",
+    "explanation": "Fakes can look real.",
+    "skill_tag": "helper.fake_real",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "real",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "A picture shows a dog with three tails. What does that clue tell you?",
+    "hint": "Count the tails dogs have.",
+    "explanation": "Odd details can show a made-up picture.",
+    "skill_tag": "helper.odd_clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "Dogs have three tails"
+     },
+     {
+      "id": "b",
+      "text": "It is certainly real"
+     },
+     {
+      "id": "c",
+      "text": "It may be made up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "real",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "number",
+    "prompt": "Hana checks 3 pictures. 1 is real. How many pictures might be made up?",
+    "hint": "3 take away 1.",
+    "explanation": "3 - 1 = 2 pictures.",
+    "skill_tag": "helper.count_pictures",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "real",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "hotspot",
+    "prompt": "Tap the picture that cannot be real.",
+    "hint": "Which one is only in stories?",
+    "explanation": "Dragons are made up.",
+    "skill_tag": "helper.tap_fake",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐘",
+       "label": "Elephant",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🐉",
+       "label": "Dragon",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐎",
+       "label": "Horse",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "real",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Omar says a picture that looks real is real. Is he right?",
+    "hint": "Think about the five-legged cow.",
+    "explanation": "Fakes can look real.",
+    "skill_tag": "helper.reason_real",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, looks decide"
+     },
+     {
+      "id": "b",
+      "text": "Yes, pictures never lie"
+     },
+     {
+      "id": "c",
+      "text": "No. A picture can look real and still be made up"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "real",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Zainab says only strangers can be tricky online. Is she right?",
+    "hint": "Think about why people trick.",
+    "explanation": "Anyone online might try to trick us.",
+    "skill_tag": "helper.reason_strangers",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only strangers"
+     },
+     {
+      "id": "b",
+      "text": "No. Someone who seems friendly can trick us too"
+     },
+     {
+      "id": "c",
+      "text": "Yes, friends never trick"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Why might someone make a fake picture?",
+    "hint": "Think about why people trick.",
+    "explanation": "Some fakes are made to trick.",
+    "skill_tag": "helper.why_trick",
+    "options": [
+     {
+      "id": "a",
+      "text": "To help them see better"
+     },
+     {
+      "id": "b",
+      "text": "To trick people into believing something untrue"
+     },
+     {
+      "id": "c",
+      "text": "To save the planet"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real",
+    "depth": "recall"
+   },
+   {
+    "ref": "q23",
+    "type": "order",
+    "prompt": "Put the steps in order if something online scares you.",
+    "hint": "Stop first.",
+    "explanation": "Stop, find an adult, then tell.",
+    "skill_tag": "helper.scared_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Find a trusted adult"
+     },
+     {
+      "id": "i1",
+      "text": "Stop and put the device down"
+     },
+     {
+      "id": "i3",
+      "text": "Tell them what you saw"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "real",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "match",
+    "prompt": "Match each family rule to its reason.",
+    "hint": "Why do we have each rule?",
+    "explanation": "Each rule has a good reason.",
+    "skill_tag": "helper.rule_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Ask a grown-up first"
+     },
+     {
+      "id": "l2",
+      "text": "Keep private things private"
+     },
+     {
+      "id": "l3",
+      "text": "Check important answers"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Strangers could misuse them"
+     },
+     {
+      "id": "r3",
+      "text": "Helpers can be wrong"
+     },
+     {
+      "id": "r1",
+      "text": "A grown-up can check it is safe"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "rules",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multiple_choice",
+    "prompt": "Who should you tell if something online worries you?",
+    "hint": "Someone who looks after you.",
+    "explanation": "A trusted adult can help.",
+    "skill_tag": "helper.who_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nobody"
+     },
+     {
+      "id": "b",
+      "text": "A trusted adult"
+     },
+     {
+      "id": "c",
+      "text": "A stranger online"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rules",
+    "depth": "recall"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Layla says she can tell her address to a helper. Is she right?",
+    "hint": "Think about private things.",
+    "explanation": "Addresses are private.",
+    "skill_tag": "helper.reason_address",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, addresses are not private"
+     },
+     {
+      "id": "b",
+      "text": "No. An address is private and should not be shared"
+     },
+     {
+      "id": "c",
+      "text": "Yes, helpers are safe"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rules",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Omar says rules for helpers are not needed at home. Is he right?",
+    "hint": "Think about the family rules.",
+    "explanation": "Rules keep us safe.",
+    "skill_tag": "helper.reason_rules",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, no rules needed"
+     },
+     {
+      "id": "b",
+      "text": "No. Rules keep everyone safe"
+     },
+     {
+      "id": "c",
+      "text": "Yes, helpers make rules"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "rules",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "slider",
+    "prompt": "A family has 3 rules for each of 2 helpers. Slide to show how many rules that is.",
+    "hint": "3 + 3.",
+    "explanation": "2 helpers with 3 rules each is 6 rules.",
+    "skill_tag": "helper.rules_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "rules",
+    "depth": "apply"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "Sam spends 10 minutes asking safe questions and 5 minutes checking answers. How many minutes in all?",
+    "hint": "10 + 5.",
+    "explanation": "10 + 5 = 15 minutes.",
+    "skill_tag": "helper.minutes",
+    "answer": {
+     "value": 15,
+     "tolerance": 0
+    },
+    "sub_lesson": "rules",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about family rules.",
+    "hint": "Think about the three rules.",
+    "explanation": "We ask first and check answers.",
+    "skill_tag": "helper.fill_rules",
+    "points": 2,
+    "text": "Our family rule is to {b1} before using a helper and to {b2} important answers.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "shout"
+       },
+       {
+        "id": "b",
+        "text": "ask first"
+       },
+       {
+        "id": "c",
+        "text": "hide"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "ignore"
+       },
+       {
+        "id": "b",
+        "text": "lose"
+       },
+       {
+        "id": "c",
+        "text": "check"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "rules",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which describes an AI helper?",
+    "hint": "It is made by people.",
+    "explanation": "An AI helper is a program.",
+    "skill_tag": "helper.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A magic friend"
+     },
+     {
+      "id": "b",
+      "text": "A program made by people to answer questions"
+     },
+     {
+      "id": "c",
+      "text": "A hidden person"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which could be a voice helper?",
+    "hint": "It listens and answers.",
+    "explanation": "A phone can run a voice helper.",
+    "skill_tag": "helper.example",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bucket"
+     },
+     {
+      "id": "b",
+      "text": "A kite"
+     },
+     {
+      "id": "c",
+      "text": "A phone that answers spoken questions"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "An AI helper can never be wrong.",
+    "hint": "Think about the unsure helper.",
+    "explanation": "A helper can make mistakes.",
+    "skill_tag": "helper.wrong",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Sort each thing as private or fine to share.",
+    "hint": "Think about what only family should know.",
+    "explanation": "School names and phone numbers are private.",
+    "skill_tag": "helper.private_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "School name"
+     },
+     {
+      "id": "l2",
+      "text": "Favourite fruit"
+     },
+     {
+      "id": "l3",
+      "text": "Phone number"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Fine to share"
+     },
+     {
+      "id": "r3",
+      "text": "Keep private"
+     },
+     {
+      "id": "r1",
+      "text": "Keep private"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "helpers",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the part that speaks.",
+    "hint": "It plays sound.",
+    "explanation": "A speaker plays sound.",
+    "skill_tag": "helper.tap_speaker",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🎤",
+       "label": "Microphone",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🔊",
+       "label": "Speaker",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔋",
+       "label": "Battery",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Mina says a loud, clear voice means the answer is true. Is she right?",
+    "hint": "Think about checking.",
+    "explanation": "Sounding clear is not proof.",
+    "skill_tag": "helper.reason_sure",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clear means true"
+     },
+     {
+      "id": "b",
+      "text": "No. A clear voice can still give a wrong answer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, loud means true"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Hana says the helper is lonely when switched off. Is she right?",
+    "hint": "Is it alive?",
+    "explanation": "AI does not feel.",
+    "skill_tag": "helper.reason_feel",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it misses her"
+     },
+     {
+      "id": "b",
+      "text": "No. A program has no feelings"
+     },
+     {
+      "id": "c",
+      "text": "Yes, lonely"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "helpers",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about helpers.",
+    "hint": "Think about what it is.",
+    "explanation": "An AI helper is a program and can be wrong.",
+    "skill_tag": "helper.fill_private",
+    "points": 2,
+    "text": "An AI helper is a {b1}. It can be {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "person"
+       },
+       {
+        "id": "b",
+        "text": "program"
+       },
+       {
+        "id": "c",
+        "text": "pet"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "hungry"
+       },
+       {
+        "id": "b",
+        "text": "wrong"
+       },
+       {
+        "id": "c",
+        "text": "alive"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "helpers",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Which is a safe question to ask a helper?",
+    "hint": "Not private.",
+    "explanation": "A fact question is safe.",
+    "skill_tag": "helper.safe_question",
+    "options": [
+     {
+      "id": "a",
+      "text": "Where do I live?"
+     },
+     {
+      "id": "b",
+      "text": "What is the family password?"
+     },
+     {
+      "id": "c",
+      "text": "How tall is a giraffe?"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multi_select",
+    "prompt": "Which two should stay private? Pick two.",
+    "hint": "Think about private things.",
+    "explanation": "Phone numbers and full names are private.",
+    "skill_tag": "helper.never_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "Your favourite animal"
+     },
+     {
+      "id": "b",
+      "text": "A joke"
+     },
+     {
+      "id": "c",
+      "text": "Your full name"
+     },
+     {
+      "id": "d",
+      "text": "Your phone number"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "order",
+    "prompt": "Put the steps in order for checking an answer.",
+    "hint": "Answer first.",
+    "explanation": "Answer, ask, then decide.",
+    "skill_tag": "helper.ask_check_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "You decide if it is right"
+     },
+     {
+      "id": "i1",
+      "text": "The helper gives an answer"
+     },
+     {
+      "id": "i2",
+      "text": "You ask a grown-up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "slider",
+    "prompt": "Aisha checks in 2 books and asks 1 grown-up. Slide to show how many ways she checked.",
+    "hint": "2 + 1.",
+    "explanation": "2 + 1 = 3 ways.",
+    "skill_tag": "helper.ways_checked",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 5
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "askcheck",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Omar says checking an answer is a waste of time. Is he right?",
+    "hint": "Think about the unsure helper.",
+    "explanation": "Checking finds mistakes.",
+    "skill_tag": "helper.reason_check",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a waste"
+     },
+     {
+      "id": "b",
+      "text": "No. Checking helps us find mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, helpers are never wrong"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Ben says he can tell the helper a secret he does not want anyone to know. Is he right?",
+    "hint": "Who can truly help?",
+    "explanation": "A trusted adult is the right person to tell.",
+    "skill_tag": "helper.reason_friend",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, helpers keep secrets"
+     },
+     {
+      "id": "b",
+      "text": "Yes, nobody else can hear"
+     },
+     {
+      "id": "c",
+      "text": "No. He should tell a trusted adult instead"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multi_select",
+    "prompt": "Which two help you check an answer? Pick two.",
+    "hint": "Use trusted sources.",
+    "explanation": "Teachers and trusted websites help.",
+    "skill_tag": "helper.check_ways",
+    "options": [
+     {
+      "id": "a",
+      "text": "A trusted website a grown-up picks"
+     },
+     {
+      "id": "b",
+      "text": "A pop-up advert"
+     },
+     {
+      "id": "c",
+      "text": "A stranger's message"
+     },
+     {
+      "id": "d",
+      "text": "A teacher"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "askcheck",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "true_false",
+    "prompt": "A fake picture always looks fake.",
+    "hint": "Some look very real.",
+    "explanation": "Fakes can look real.",
+    "skill_tag": "helper.fake_real",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "real",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "A photo shows a bird with four wings. What does that clue tell you?",
+    "hint": "Count the wings birds have.",
+    "explanation": "Odd details can show a made-up picture.",
+    "skill_tag": "helper.odd_clue",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is certainly real"
+     },
+     {
+      "id": "b",
+      "text": "It may be made up"
+     },
+     {
+      "id": "c",
+      "text": "Birds have four wings"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "number",
+    "prompt": "Sam checks 5 pictures. 2 are real. How many might be made up?",
+    "hint": "5 take away 2.",
+    "explanation": "5 - 2 = 3 pictures.",
+    "skill_tag": "helper.count_pictures",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "real",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "hotspot",
+    "prompt": "Tap the picture of something made up.",
+    "hint": "Which one is only in stories?",
+    "explanation": "Fairies are made up.",
+    "skill_tag": "helper.tap_fake",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🐄",
+       "label": "Cow",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🧚",
+       "label": "Fairy",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🐟",
+       "label": "Fish",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "real",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a clear photo cannot be fake. Is she right?",
+    "hint": "Think about the five-legged cow.",
+    "explanation": "Fakes can be clear.",
+    "skill_tag": "helper.reason_real",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, clear means true"
+     },
+     {
+      "id": "b",
+      "text": "Yes, fakes are always blurry"
+     },
+     {
+      "id": "c",
+      "text": "No. Clear photos can be made up by computers"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "real",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Ben says only people he does not know can make fake pictures. Is he right?",
+    "hint": "Think about why people trick.",
+    "explanation": "Anyone can share a fake.",
+    "skill_tag": "helper.reason_strangers",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only strangers"
+     },
+     {
+      "id": "b",
+      "text": "No. Anyone can make or share a fake"
+     },
+     {
+      "id": "c",
+      "text": "Yes, friends never do"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "real",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Why do some people share fake pictures?",
+    "hint": "Think about why people trick.",
+    "explanation": "Some fakes are made to trick.",
+    "skill_tag": "helper.why_trick",
+    "options": [
+     {
+      "id": "a",
+      "text": "They are being kind"
+     },
+     {
+      "id": "b",
+      "text": "They are teaching maths"
+     },
+     {
+      "id": "c",
+      "text": "They want people to believe something that is not true"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "real",
+    "depth": "recall",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "order",
+    "prompt": "Put these steps in order if a message worries you.",
+    "hint": "Do not reply first.",
+    "explanation": "Do not reply, show a grown-up, then let them help.",
+    "skill_tag": "helper.scared_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Let them help"
+     },
+     {
+      "id": "i1",
+      "text": "Do not reply"
+     },
+     {
+      "id": "i2",
+      "text": "Show a grown-up"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "real",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "match",
+    "prompt": "Pair each rule with its reason.",
+    "hint": "Why do we have each rule?",
+    "explanation": "Each rule has a good reason.",
+    "skill_tag": "helper.rule_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Take screen breaks"
+     },
+     {
+      "id": "l2",
+      "text": "Tell a trusted adult if worried"
+     },
+     {
+      "id": "l3",
+      "text": "Be kind online"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "Kind words help others"
+     },
+     {
+      "id": "r1",
+      "text": "Eyes and minds need rest"
+     },
+     {
+      "id": "r2",
+      "text": "They can help"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "rules",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multiple_choice",
+    "prompt": "Who is best to tell if a message scares you?",
+    "hint": "Someone who looks after you.",
+    "explanation": "Parents and teachers help.",
+    "skill_tag": "helper.who_tell",
+    "options": [
+     {
+      "id": "a",
+      "text": "The sender"
+     },
+     {
+      "id": "b",
+      "text": "A pop-up"
+     },
+     {
+      "id": "c",
+      "text": "A parent or teacher"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rules",
+    "depth": "recall",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Sana says it is fine to give a helper her school name. Is she right?",
+    "hint": "Think about private things.",
+    "explanation": "School names are private.",
+    "skill_tag": "helper.reason_address",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, fine"
+     },
+     {
+      "id": "b",
+      "text": "Yes, helpers need to know"
+     },
+     {
+      "id": "c",
+      "text": "No. It is private and should not be shared"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rules",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ben says families do not need AI rules. Is he right?",
+    "hint": "Think about the family rules.",
+    "explanation": "Rules keep us safe.",
+    "skill_tag": "helper.reason_rules",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, no rules"
+     },
+     {
+      "id": "b",
+      "text": "Yes, helpers write them"
+     },
+     {
+      "id": "c",
+      "text": "No. Rules help families stay safe"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "rules",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "slider",
+    "prompt": "A family has 2 rules for each of 4 devices. Slide to show how many rules that is.",
+    "hint": "2 + 2 + 2 + 2.",
+    "explanation": "4 devices with 2 rules each is 8 rules.",
+    "skill_tag": "helper.rules_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "rules",
+    "depth": "apply",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "Aisha spends 20 minutes asking and 10 minutes checking. How many minutes in all?",
+    "hint": "20 + 10.",
+    "explanation": "20 + 10 = 30 minutes.",
+    "skill_tag": "helper.minutes",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "rules",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about telling.",
+    "hint": "Think about telling.",
+    "explanation": "We stop and tell a trusted adult.",
+    "skill_tag": "helper.fill_rules",
+    "points": 2,
+    "text": "If something worries you, {b1} and tell a {b2} adult.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hide"
+       },
+       {
+        "id": "b",
+        "text": "stop"
+       },
+       {
+        "id": "c",
+        "text": "run"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "stranger"
+       },
+       {
+        "id": "b",
+        "text": "silent"
+       },
+       {
+        "id": "c",
+        "text": "trusted"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "rules",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

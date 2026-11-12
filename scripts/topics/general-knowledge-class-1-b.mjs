@@ -1,4 +1,4 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // General Knowledge, Class 1 (Zainab, age 7), topics 3 and 4. Standards come from docs/CURRICULUM_V2.md.
@@ -11,21 +11,28 @@ const P = (id, x, y, label, emoji, size = 2, anim = "none") => [id, emoji, x, y,
 // Topic 3: How people live
 // ====================================================================================================
 
+const VILLAGE = "general-knowledge-class-1-how-people-live-1-01da49e9.jpg";
+const TOWN = "general-knowledge-class-1-how-people-live-2-e0a3e6f3.jpg";
+const BIKE = "general-knowledge-class-1-how-people-live-3-c0031692.jpg";
 const homes = {
   id: "homes", kind: "learn", title: "Homes around the world",
   blocks: [
+    H("Welcome, little explorer!"),
+    SAY("Today we ask a big question. How do people live?", T("Today's big question: how do people live, now and long ago?")),
+    SAY("This is a village seen from high above. We can see roofs, roads and gardens.", PHOTO(VILLAGE, "An aerial view looking straight down on houses, roads and terraced fields in a village", "A village seen from above. We can see roofs, roads and gardens.", "Photo by Cosmin Andrei Buzamat on Unsplash")),
     H("Stop 1: Many kinds of homes"),
     SAY("Where do you live? Your home is the place where you sleep, eat and feel safe. But homes are not all the same! Some families live in houses made of bricks. Some live in flats, high up in a tall building. Some people, who move from place to place, live in tents. And in many villages, families live in homes made of mud bricks. Every one of these is a home.", T("A **home** is a place where we live and feel safe.", "Homes can be houses, **flats**, **tents** or mud-brick homes.")),
     SCENE("Four kinds of homes", "town",
       SS("Here is a house made of bricks. Many families in towns and cities live in houses like this.", S("A brick house.", P("h", 50, 50, "House", "🏠", 3))),
       SS("Here are flats. Many families live in one tall building, each family in its own flat.", S("Flats in a tall building.", P("h", 20, 50, "House", "🏠", 2), P("f", 50, 50, "Flats", "🏢", 3))),
-      SS("Here is a tent. People who move from place to place, with their animals, can pack up their tent and take it with them.", S("A tent can be moved.", P("h", 15, 50, "House", "🏠", 2), P("f", 38, 50, "Flats", "🏢", 2), P("t", 66, 50, "Tent", "⛺", 3))),
-      SS("And here is a mud-brick home, in a village. Mud and straw are free and everywhere, and they keep the home cool in summer.", S("A mud-brick home.", P("h", 12, 50, "House", "🏠", 2), P("f", 33, 50, "Flats", "🏢", 2), P("t", 57, 50, "Tent", "⛺", 2), P("m", 82, 50, "Mud-brick home", "🛖", 2)))),
+      SS("Here is a tent. People who move from place to place can pack up their tent. They take it with them.", S("A tent can be moved.", P("h", 15, 50, "House", "🏠", 2), P("f", 38, 50, "Flats", "🏢", 2), P("t", 66, 50, "Tent", "⛺", 3))),
+      SS("And here is a mud-brick home, in a village. Mud and straw are free and everywhere. They keep the home cool in summer.", S("A mud-brick home.", P("h", 12, 50, "House", "🏠", 2), P("f", 33, 50, "Flats", "🏢", 2), P("t", 57, 50, "Tent", "⛺", 2), P("m", 82, 50, "Mud-brick home", "🛖", 2)))),
     CHK(mc("Which kind of home can be packed up and carried away?", "A tent", ["A flat", "A brick house"], { hint: "Think of people who move from place to place.", why: "A tent can be packed up and taken with you." })),
     H("Stop 2: Homes and the weather"),
-    SAY("Why do homes look different in different places? Because of the weather, and because of what is nearby. In a snowy place, a house often has a steep roof, so the heavy snow slides off. In a very hot place, a home has thick walls and shady spaces to keep the heat out. A home keeps us warm, cool, dry and safe, whatever the weather.", T("People build homes to suit the **weather** and what is nearby.", "A steep roof lets snow slide off. Thick walls keep a home cool.")),
+    SAY("These homes are close together in a town. Look at the roofs.", PHOTO(TOWN, "Many white buildings with orange roofs packed together below a green hillside", "Homes close together in a town.", "Photo by Andrii Butko on Unsplash")),
+    SAY("Why do homes look different in different places? Because of the weather, and because of what is nearby. In a snowy place, a house often has a steep roof. The heavy snow slides off. In a very hot place, a home has thick walls and shady spaces. They keep the heat out. A home keeps us warm, cool, dry and safe, whatever the weather.", T("People build homes to suit the **weather** and what is nearby.", "A steep roof lets snow slide off. Thick walls keep a home cool.")),
     SCENE("Homes and weather", "plain",
-      SS("In a snowy place the roof is steep. Watch the snow slide off and fall to the ground, so the roof does not get too heavy.", S("Snowy place: a steep roof.", P("a", 50, 62, "Snowy place", "🏠", 3), ["s", "❄️", 50, 14, 2, "float"])),
+      SS("In a snowy place the roof is steep. Watch the snow slide off and fall to the ground. The roof does not get too heavy.", S("Snowy place: a steep roof.", P("a", 50, 62, "Snowy place", "🏠", 3), ["s", "❄️", 50, 14, 2, "float"])),
       SS("In a hot place the walls are thick and the windows are small. This keeps the home cool inside.", S("Hot place: thick walls keep it cool.", P("b", 50, 62, "Hot place", "🛖", 3), ["su", "☀️", 50, 14, 2, "pulse"]))),
     CHK(tf("Thick walls can help keep a home cool in hot weather.", true, { hint: "Think about the hot place.", why: "Thick walls keep the heat out." })),
     SAY("Let us remember. Homes can be houses, flats, tents or mud-brick homes. People build homes to suit the weather.", SUM("A home is a place where we live and feel safe", "Homes can be houses, flats, tents or mud-brick homes", "People build homes to suit the weather")),
@@ -43,7 +50,7 @@ const farm = {
   id: "farm", kind: "try", title: "From farm to plate",
   blocks: [
     H("Stop 1: From seed to wheat"),
-    SAY("Have you ever wondered where your roti comes from? It starts on a farm! A farmer plants wheat seeds in a field. The sun shines and the rain falls, and the seeds grow into tall golden wheat. When the wheat is ready, the farmer cuts it. That is called the harvest.", T("A **farmer** grows food in a **field**.", "When the wheat is ready, the farmer cuts it. This is the **harvest**.")),
+    SAY("Have you ever wondered where your roti comes from? It starts on a farm! A farmer plants wheat seeds in a field. The sun shines and the rain falls. The seeds grow into tall golden wheat. When the wheat is ready, the farmer cuts it. That is called the harvest.", T("A **farmer** grows food in a **field**.", "When the wheat is ready, the farmer cuts it. This is the **harvest**.")),
     SCENE("Seed to wheat", "farm",
       SS("First, the farmer plants a tiny seed in the field.", S("A seed is planted.", P("s", 50, 70, "Seed", "🌱", 2, "grow"), P("f", 20, 30, "Farmer", "🧑‍🌾", 2))),
       SS("The sun shines, the rain falls, and the seed grows into golden wheat.", S("The seed grows into wheat.", P("s", 50, 70, "Wheat", "🌾", 3, "grow"), P("f", 20, 30, "Farmer", "🧑‍🌾", 2), ["su", "☀️", 82, 18, 2, "pulse"])),
@@ -72,11 +79,12 @@ const transport = {
   id: "transport", kind: "play", title: "Transport then and now",
   blocks: [
     H("Stop 1: Travelling long ago"),
-    SAY("How do you get to school? Maybe by car, by bus or on foot. Long ago, there were no cars. People walked, or rode on camels and horses, or sat in carts pulled by animals. Then trains came, with big engines and long carriages. Later came cars, and then aeroplanes that fly across the sky.", T("Long ago, people travelled on foot or rode **camels** and horses.", "Then came trains and cars, and now aeroplanes. Ways of travelling are called **transport**.")),
+    SAY("This old bicycle has seen many journeys. Bicycles are still used today.", PHOTO(BIKE, "An old black bicycle leaning against a weathered wall in a sunny lane", "An old bicycle. Many families used bicycles long ago, and some still do.", "Photo by Zoshua Colah on Unsplash")),
+    SAY("How do you get to school? Maybe by car, by bus or on foot. Long ago, there were no cars. People walked, or rode on camels and horses. Others sat in carts pulled by animals. Then trains came, with big engines and long carriages. Later came cars, and then aeroplanes that fly across the sky.", T("Long ago, people travelled on foot or rode **camels** and horses.", "Then came trains and cars, and now aeroplanes. Ways of travelling are called **transport**.")),
     SCENE("Transport through time", "plain",
       SS("Long ago, people travelled by camel. A camel can carry heavy things across the desert.", S("Long ago: camels.", P("a", 50, 55, "Long ago", "🐪", 3))),
       SS("Then trains were built. A train can carry lots of people and things very far.", S("Then: trains.", P("a", 20, 55, "Long ago", "🐪", 2), P("b", 62, 55, "Then", "🚂", 3))),
-      SS("After that came cars and buses, and today we also fly in aeroplanes, so a very long journey takes only a few hours!", S("Today: cars and aeroplanes.", P("a", 12, 55, "Long ago", "🐪", 2), P("b", 38, 55, "Then", "🚂", 2), P("c", 62, 55, "Now", "🚗", 2), P("d", 86, 55, "Today", "✈️", 2, "float")))),
+      SS("After that came cars and buses. Today we also fly in aeroplanes. A very long journey takes only a few hours!", S("Today: cars and aeroplanes.", P("a", 12, 55, "Long ago", "🐪", 2), P("b", 38, 55, "Then", "🚂", 2), P("c", 62, 55, "Now", "🚗", 2), P("d", 86, 55, "Today", "✈️", 2, "float")))),
     CHK(mc("Which is the fastest way to travel a very long way?", "An aeroplane", ["A camel", "A bicycle"], { hint: "It flies through the sky.", why: "An aeroplane is the fastest for long journeys." })),
     CHK(tf("Camels were used for travel before aeroplanes were invented.", true, { hint: "Which is older?", why: "People rode camels long before aeroplanes." })),
     H("Stop 2: Brain game"),
@@ -102,7 +110,7 @@ const then = {
     SAY("Now it is your turn to think. What would you like to ask your grandparent? Have a think, then tap to see some ideas.", REVEAL("What could you ask a grandparent about when they were small?", "You could ask: How did you get to school? What games did you play? What food did you eat? Did you have a mobile phone?")),
     CHK(tf("Grandparents can tell us what life was like long ago.", true, { hint: "They remember when they were young.", why: "Older people remember, and their stories teach us about the past." })),
     H("Stop 2: What has changed?"),
-    SAY("Lots of things have changed. When your grandparents were small, many families had only one telephone in the house, with a wire. Some had no television. Today we can talk to someone far away on a mobile phone, using a picture on a screen! Some things have not changed at all. Families still share meals, and children still love to play.", T("Many things have **changed**. A telephone used to have a wire. Today we carry mobile phones.", "Some things stay the same: families share meals and children play.")),
+    SAY("Lots of things have changed. When your grandparents were small, many families had only one telephone. It had a wire. Some had no television. Today we can talk to someone far away on a mobile phone. We can even see them on a screen! Some things have not changed at all. Families still share meals, and children still love to play.", T("Many things have **changed**. A telephone used to have a wire. Today we carry mobile phones.", "Some things stay the same: families share meals and children play.")),
     SAY("Look at these two telephones. One has a wire, and one fits in your pocket. That is how much things have changed!", IMG("📞📱", "A telephone with a wire long ago, and a mobile phone today.")),
     CHK(mc("Which is newer?", "A mobile phone", ["A telephone with a wire", "A letter by post"], { hint: "You can carry it in your pocket.", why: "Mobile phones are newer than wired telephones." })),
     SAY("Let us remember. Older people remember life long ago. Many things have changed, but some stay the same.", SUM("Older people remember life long ago", "Many things have changed", "Some things stay the same")),
@@ -136,6 +144,28 @@ const ALTS3 = [
 const FARMORD = [ord("Order the steps from the field to the roti.", ["Wheat is planted", "Wheat is harvested", "Mill makes flour", "Roti is cooked"], { hint: "Start in the field.", why: "Plant, harvest, mill, cook.", tag: "farm.order" }), ord("Put the steps of making a roti in order.", ["Mix flour and water", "Roll the dough flat", "Cook it on the tawa", "Eat it"], { hint: "Start with the dough.", why: "Mix, roll, cook, eat.", tag: "farm.order" })];
 const A3 = [0, 1, 2, 3, 4, 5, -1, 8, 9, 6, 7, 10, 11, 12, 13].map((i) => (i < 0 ? FARMORD : ALTS3[i]));
 
+const clipT3 = {
+  title: "Zainab asks about the past", backdrop: "town", caption: "Zainab asks her grandmother how homes and travel were different long ago.",
+  scenes: [
+    { caption: "A village.", say: "Zainab looks at a photograph of a village from above.",
+      items: [{ id: "v", emoji: "🏘️", x: 50, y: 54, size: 3 }] },
+    { caption: "Different homes.", say: "She sees houses, flats and a tent.",
+      items: [{ id: "h", emoji: "🏠", x: 30, y: 58, size: 3 }, { id: "f", emoji: "🏢", x: 55, y: 54, size: 3 }, { id: "t", emoji: "⛺", x: 80, y: 60, size: 3 }] },
+    { caption: "Grandma.", say: "Grandma remembers a mud-brick home from long ago.",
+      items: [{ id: "g", emoji: "👵", label: "Grandma", x: 30, y: 58, size: 3 }, { id: "m", emoji: "🛖", x: 72, y: 58, size: 3 }] },
+    { caption: "Then and now.", say: "She walked to school. Now Zainab rides a bus.",
+      items: [{ id: "w", emoji: "🚶", x: 28, y: 60, size: 3 }, { id: "b", emoji: "🚌", x: 72, y: 58, size: 3, enter: "walk_left" }] },
+    { caption: "Old bicycle.", say: "Grandpa once had an old bicycle like this one.",
+      items: [{ id: "c", emoji: "🚲", x: 50, y: 56, size: 3, anim: "bounce" }] },
+    { caption: "A roti.", say: "A farmer, a miller and a cook all help make roti.",
+      items: [{ id: "f", emoji: "🌾", x: 25, y: 58, size: 3 }, { id: "r", emoji: "🫓", x: 75, y: 58, size: 3, anim: "pulse" }] },
+    { caption: "A question.", say: "Zainab asks one more question about long ago.",
+      items: [{ id: "q", emoji: "❓", x: 50, y: 50, size: 3, anim: "pulse" }] },
+    { caption: "Learning.", say: "Older people can tell us how life used to be.",
+      items: [{ id: "l", emoji: "💡", x: 50, y: 52, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 const t3 = topicLesson({
   slug: "general-knowledge-class-1-how-people-live", subject: "general-knowledge", cls: 1, topic: 3, title: "How People Live",
   summary: "Homes around the world, how food gets from the farm to our plate, and how travel and daily life have changed.",
@@ -153,13 +183,9 @@ const t3 = topicLesson({
     mc("What is the capital city of Pakistan?", "Islamabad", ["Karachi", "London"], { hint: "It is in the north.", why: "Islamabad is the capital." }),
     tf("The Earth spins round once every 24 hours.", true, { hint: "That is one day.", why: "One spin takes about 24 hours." }),
   ],
-  intro: [
-    H("Welcome, people watcher!"),
-    SAY("Welcome, people watcher! Today's big question is: how do people live, and how has life changed? We will look at homes around the world, follow a roti all the way from the farm, and find out how people travelled long ago. This is a game, not a test. Let's go!", T("Today's big question: how do people live, and how has life changed?", "We will visit homes, farms and the past.")),
-    IMG("🏘️", "Homes around the world look different."),
-    GLOSS({ people: "All the men, women and children in the world." }),
-  ],
+  intro: [],
   subs: [homes, farm, transport, then],
+  clip: clipT3,
   quiz: [
     { q: mc("Fatima says every home is a house. Is she right?", "No, homes can be flats, tents and other places", ["Yes, every home is a house", "No, only tents are homes"], { hint: "Think of the four kinds of home.", why: "There are houses, flats, tents and mud-brick homes.", tag: "homes.kinds" }), sub: "homes", depth: "reason" },
     { q: sld("Slide to show how many kinds of home we met in the lesson.", { min: 0, max: 12 }, 4, 0, { hint: "House, flat, tent and mud-brick home.", why: "We met four kinds of home.", tag: "homes.count" }), sub: "homes", depth: "recall" },
@@ -176,16 +202,38 @@ const t3 = topicLesson({
     { q: tf("Older relatives remember what life was like when they were young.", true, { hint: "They remember.", why: "Older people remember the past.", tag: "then.memory" }), sub: "then", depth: "recall" },
     { q: mc("Ali's grandpa had no mobile phone when he was young. What does this tell us?", "Life was different long ago", ["Mobile phones are old", "Grandpas do not like phones"], { hint: "Compare then and now.", why: "Things have changed since long ago.", tag: "then.reason" }), sub: "then", depth: "reason" },
     { q: ord("Put these in order, oldest way to travel first.", ["Walking", "Horse cart", "Train", "Aeroplane"], { hint: "The newest is last.", why: "Walking, horse cart, train, aeroplane.", tag: "then.order" }), sub: "then", depth: "apply" },
-  ].map((x, i) => ({ ...x, alts: A3[i] })),
+    // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+    { q: sld("A block of flats has 3 floors with 2 flats on each floor. Slide to show how many flats there are.", { min: 0, max: 12 }, 6, 0, { hint: "Count 2, 4, 6.", why: "3 floors with 2 flats each is 6 flats.", tag: "homes.flats" }), sub: "homes", depth: "apply", alts: [sld("A block of flats has 4 floors with 2 flats on each floor. Slide to show how many flats there are.", { min: 0, max: 12 }, 8, 0, { hint: "Count 2, 4, 6, 8.", why: "4 floors with 2 flats each is 8 flats.", tag: "homes.flats" })] },
+    { q: mc("Hira says all roofs look alike from above. Is she right?", "No, roofs can have different shapes and colours", ["Yes, every roof looks the same", "Yes, roofs are always round"], { hint: "Think about the photograph of a village from above.", why: "From above we can see roofs of many shapes and colours.", tag: "homes.reason" }), sub: "homes", depth: "reason", alts: [mc("Imran says an aerial photograph shows the front doors of houses. Is he right?", "No, it shows the tops of the houses, such as the roofs", ["Yes, it shows every front door", "Yes, it shows inside the rooms"], { hint: "An aerial photograph is taken from high above.", why: "From above we see roofs, roads and gardens, not doors.", tag: "homes.reason" })] },
+    { q: mat("Match each home to where it might be found.", [["Tall block of flats", "a big city"], ["Farmhouse", "the countryside"], ["Houseboat", "a river or lake"], ["Tent", "a camp that moves"]], { hint: "Think about where each one fits.", why: "Different homes suit different places.", tag: "homes.places" }), sub: "homes", depth: "apply", alts: [mat("Join each home to the place that suits it.", [["Mud-brick house", "a hot, dry village"], ["Flat", "a busy town"], ["House on stilts", "a place with floods"], ["Houseboat", "a river"]], { hint: "Think about the weather and land.", why: "Each home suits its place.", tag: "homes.places" })] },
+    { q: mc("Which home is best in a place where floods often happen?", "A house on stilts", ["A house dug into sand", "A paper tent"], { hint: "Think about keeping the floor dry.", why: "A house on stilts stays above the water.", tag: "homes.flood" }), sub: "homes", depth: "apply", alts: [mc("Which roof is best for a place with lots of rain?", "A sloping roof", ["A flat paper roof", "A roof with holes"], { hint: "Think about where the rain runs.", why: "A sloping roof lets the rain run off.", tag: "homes.rain" })] },
+    { q: fill("Fill in the gaps about bread.", "A baker uses {b1} to make bread. The bread is sold in a {b2}.", [["flour", "stones", "paint"], ["shop", "river", "tree"]], { hint: "Think of the roti journey.", why: "A baker uses flour, and bread is sold in a shop.", tag: "farm.baker" }), sub: "farm", depth: "apply", alts: [fill("Fill in the gaps about the market.", "A farmer sells vegetables at the {b1}. People pay with {b2}.", [["market", "moon", "sea"], ["money", "leaves", "sand"]], { hint: "Think about a busy market.", why: "A farmer sells at the market, and people pay with money.", tag: "farm.market" })] },
+    { q: mc("Sami says food just appears in the shop. Is he right?", "No, many people work to grow, carry and sell food", ["Yes, food grows in the shop", "Yes, shops make all the food alone"], { hint: "Think about the journey of a roti.", why: "Farmers, millers, drivers and shopkeepers all help.", tag: "farm.reason" }), sub: "farm", depth: "reason", alts: [mc("Hamza says only the farmer is needed to make roti. Is he right?", "No, the miller and the cook are needed too", ["Yes, only the farmer", "Yes, roti makes itself"], { hint: "Wheat must become flour first.", why: "The farmer, miller and cook all help.", tag: "farm.reason" })] },
+    { q: st("Write the name of the person who grows wheat. It starts with F.", ["farmer", "a farmer", "the farmer"], { hint: "They work in the field.", why: "A farmer grows wheat.", tag: "farm.farmer" }), sub: "farm", depth: "recall", alts: [st("Write the name of the place where wheat is ground into flour. It starts with M.", ["mill", "a mill", "the mill"], { hint: "It has big grinding stones or machines.", why: "Wheat is ground into flour at the mill.", tag: "farm.mill" })] },
+    { q: hot("Tap the transport that has two wheels and pedals.", [["🚲", "Bicycle", 22, 50], ["🚌", "Bus", 50, 50], ["🚂", "Train", 78, 50]], ["Bicycle"], { labels: true, hint: "You push it with your feet.", why: "A bicycle has two wheels and pedals.", tag: "transport.bike" }), sub: "transport", depth: "recall", alts: [hot("Tap the transport that runs on rails.", [["🚂", "Train", 22, 50], ["🚲", "Bicycle", 50, 50], ["🛵", "Scooter", 78, 50]], ["Train"], { labels: true, hint: "It follows a track.", why: "A train runs on rails.", tag: "transport.train" })] },
+    { q: ms("Which two do not need fuel? Pick two.", ["A bicycle", "Walking"], ["A car", "A bus"], { hint: "You move them with your own legs.", why: "A bicycle and walking need your own energy, not fuel.", tag: "transport.fuel" }), sub: "transport", depth: "apply", alts: [ms("Which two use an engine? Pick two.", ["A bus", "A motorbike"], ["A bicycle", "A camel"], { hint: "They run on fuel.", why: "A bus and a motorbike have engines.", tag: "transport.engine" })] },
+    { q: mc("Anwar says a camel is faster than an aeroplane. Is he right?", "No, an aeroplane is much faster", ["Yes, a camel is faster", "Yes, they travel at the same speed"], { hint: "Think about a very long journey.", why: "An aeroplane flies far faster than a camel walks.", tag: "transport.reason" }), sub: "transport", depth: "reason", alts: [mc("Bilal says people always travelled by car. Is he right?", "No, long ago people walked or rode animals", ["Yes, cars are very old", "Yes, there were no other ways"], { hint: "Think about camels and horse carts.", why: "Cars are new. Long ago people used animals and walked.", tag: "transport.reason" })] },
+    { q: sld("Ali is 7 and his grandpa is 67. Slide to show how many years older Grandpa is.", { min: 0, max: 100 }, 60, 0, { hint: "Take 7 away from 67.", why: "67 take away 7 is 60.", tag: "then.age" }), sub: "then", depth: "apply", alts: [sld("Ali is 7 and his grandma is 57. Slide to show how many years older Grandma is.", { min: 0, max: 100 }, 50, 0, { hint: "Take 7 away from 57.", why: "57 take away 7 is 50.", tag: "then.age" })] },
+    { q: mc("Zara says nothing has changed since her grandmother was little. Is she right?", "No, phones, cars and many other things are different now", ["Yes, everything is the same", "Yes, nothing is new"], { hint: "Compare then and now.", why: "Many things have changed in a lifetime.", tag: "then.reason" }), sub: "then", depth: "reason", alts: [mc("Omar says old photos show us nothing about the past. Is he right?", "No, old photos show how people lived", ["Yes, they show nothing", "Yes, they are only pictures of the sky"], { hint: "Think about clothes and buildings.", why: "Old photos give clues about the past.", tag: "then.reason" })] },
+    { q: mc("Which question can we ask a grown-up about the past?", "What was your school like when you were little?", ["What is the weather tomorrow?", "How many stars are there?"], { hint: "It is about long ago.", why: "A grown-up can tell us how school used to be.", tag: "then.ask" }), sub: "then", depth: "apply", alts: [mc("Which is a good question about long ago?", "How did you travel to school as a child?", ["What will you eat tomorrow?", "How tall is the Moon?"], { hint: "It asks about their past.", why: "It asks about life long ago.", tag: "then.ask" })] },
+    { q: mc("Which of these does a farmer grow?", "Wheat", ["Plastic", "Bricks"], { hint: "It becomes flour.", why: "A farmer grows wheat.", tag: "farm.grow" }), sub: "farm", depth: "recall", alts: [mc("Which of these is made at a mill?", "Flour", ["Rice", "Milk"], { hint: "It is ground from wheat.", why: "Flour is made at the mill.", tag: "farm.flour" })] },
+    { q: mc("Farhan says asking grown-ups is no good for finding out about the past. Is he right?", "No, grown-ups remember and can tell us", ["Yes, they never remember", "Yes, only books are useful"], { hint: "Think about your grandparents.", why: "Older people remember the past and can tell us.", tag: "then.reason" }), sub: "then", depth: "reason", alts: [mc("Mina says old things in a museum cannot tell us about the past. Is she right?", "No, they show how people lived long ago", ["Yes, they tell us nothing", "Yes, they are only for decoration"], { hint: "Think about old tools and toys.", why: "Old things are clues about the past.", tag: "then.reason" })] },
+  ].map((x, i) => ({ ...x, alts: x.alts ?? A3[i] })),
 });
 
 // ====================================================================================================
 // Topic 4: Caring for our world
 // ====================================================================================================
 
+const SPARROWS = "general-knowledge-class-1-caring-for-our-world-1-9521290a.jpg";
+const SPROUT = "general-knowledge-class-1-caring-for-our-world-2-1d64271a.jpg";
+const BINS = "general-knowledge-class-1-caring-for-our-world-3-4efa6994.jpg";
 const animals = {
   id: "animals", kind: "learn", title: "Animals in danger",
   blocks: [
+    H("Welcome, kind friend!"),
+    SAY("Today we ask a big question. How can we care for our world?", T("Today's big question: how can we care for animals, nature and each other?")),
+    SAY("Two sparrows visit a feeder. Caring for animals is a kind thing to do.", PHOTO(SPARROWS, "Two small brown and grey sparrows perched on a hanging bird feeder full of seed", "Two sparrows at a bird feeder. Feeding birds is a kind act.", "Photo by Damien Campbell on Unsplash")),
     H("Stop 1: What is endangered?"),
     SAY("Some animals are in danger of disappearing for ever. We say they are endangered, because there are very few left. Why does this happen? Often, because their home is cut down, built over or made dirty. An animal's home is called its habitat. If the habitat goes, the animals have nowhere to live.", T("An animal is **endangered** when there are very few left.", "An animal's home is called its **habitat**. Animals are in danger when their habitat is lost.")),
     SCENE("A habitat shrinks", "forest",
@@ -194,7 +242,7 @@ const animals = {
       SS("Soon the habitat is gone, and the animals have nowhere to live. That is why we must look after nature.", S("The habitat is gone.", P("c", 25, 25, "Building", "🏗️", 2), P("s", 60, 55, "No home", "😟", 2)))),
     CHK(mc("What does it mean when an animal is endangered?", "There are very few left", ["It is very big", "It lives in a zoo"], { hint: "It could disappear for ever.", why: "Endangered animals are at risk of disappearing." })),
     H("Stop 2: Animals of Pakistan"),
-    SAY("Pakistan has wonderful wild animals. The snow leopard lives high in the northern mountains. The Indus river dolphin swims in the Indus river, and it is one of the rarest dolphins in the world. And the markhor, a mountain goat with twisty horns, is Pakistan's national animal. People are working hard to protect them.", T("The snow leopard lives in the northern mountains.", "The Indus river dolphin lives in the **Indus** river. The markhor is Pakistan's national animal.")),
+    SAY("Pakistan has wonderful wild animals. The snow leopard lives high in the northern mountains. The Indus river dolphin swims in the Indus river. It is one of the rarest dolphins in the world. And the markhor, a mountain goat with twisty horns, is Pakistan's national animal. People are working hard to protect them.", T("The snow leopard lives in the northern mountains.", "The Indus river dolphin lives in the **Indus** river. The markhor is Pakistan's national animal.")),
     IMG("🐆🐬🐐", "A snow leopard, an Indus river dolphin and a markhor are animals of Pakistan that need our help."),
     CHK(tf("The snow leopard lives in a hot desert.", false, { hint: "Think of the word snow.", why: "Snow leopards live in cold mountains." })),
     H("Stop 3: How can we help?"),
@@ -216,13 +264,15 @@ const nature = {
   id: "nature", kind: "try", title: "Protecting nature",
   blocks: [
     H("Stop 1: Reduce, reuse, recycle"),
-    SAY("There are three magic words to help our world. Reduce means use less. Reuse means use something again, instead of throwing it away. And recycle means turn old things into new things. Let us follow a plastic bottle. It goes into the recycling bin, then to a factory, where it is melted and made into something new.", T("**Reduce** means use less. **Reuse** means use again.", "**Recycle** means make old things into new things.")),
+    SAY("These coloured bins help us sort our rubbish. Look at the four colours.", PHOTO(BINS, "Four coloured bins, yellow, blue, red and green, standing in a row by a grey wall", "Coloured bins help us sort our rubbish and recycling.", "Photo by Pawel Czerwinski on Unsplash")),
+    SAY("There are three magic words to help our world. Reduce means use less. Reuse means use something again, instead of throwing it away. And recycle means turn old things into new things. Let us follow a plastic bottle. It goes into the recycling bin. Then it goes to a factory, where it is made into something new.", T("**Reduce** means use less. **Reuse** means use again.", "**Recycle** means make old things into new things.")),
     SCENE("A bottle is recycled", "town",
       SS("We finish our drink. Instead of dropping the bottle, we put it in the recycling bin.", S("The bottle goes in the recycling bin.", P("b", 25, 55, "Bottle", "🧴", 2), P("r", 70, 55, "Recycling bin", "♻️", 3))),
       SS("A lorry takes it to a factory.", S("A lorry takes it away.", P("l", 30, 55, "Lorry", "🚚", 3, "bounce"), P("f", 75, 55, "Factory", "🏭", 3))),
-      SS("At the factory the bottle is melted and made into something new, like a toy or a new bottle. That is recycling!", S("It becomes something new.", P("f", 25, 55, "Factory", "🏭", 2), P("n", 70, 55, "Something new", "🧸", 3, "pulse")))),
+      SS("At the factory the bottle is melted. It is made into something new, like a toy. That is recycling!", S("It becomes something new.", P("f", 25, 55, "Factory", "🏭", 2), P("n", 70, 55, "Something new", "🧸", 3, "pulse")))),
     CHK(mc("What does recycle mean?", "Make old things into new things", ["Throw things in the sea", "Buy more things"], { hint: "Think of the bottle's journey.", why: "To recycle is to turn old things into new things." })),
     H("Stop 2: Little things at home"),
+    SAY("A tiny seedling grows in the soil. Planting seeds helps nature.", PHOTO(SPROUT, "A tiny green seedling with small leaves growing out of dark soil", "A tiny seedling grows in soil. We can plant seeds to help nature.", "Photo by Elly M on Unsplash")),
     SAY("There are lots of small ways to help. Turn off the tap while you brush your teeth, to save water. Switch off the light when you leave a room, to save energy. Put litter in a bin. And use both sides of the paper. If everyone does little things, it adds up to a big change!", T("Saving water and **energy** helps our world.", "Put litter in a bin and use both sides of paper.")),
     IMG("💧💡🗑️", "Turning off taps and lights and using a bin all help our world."),
     ACT("Be a litter detective", ["A grown-up helper", "A bag", "Gloves"], ["Walk round your garden or street with a grown-up.", "Wearing gloves, pick up the litter you can see. Never touch glass or sharp things.", "Sort it: what could be recycled, and what must go in the bin?", "Count the pieces. How can we make less litter?"]),
@@ -242,14 +292,14 @@ const eid = {
   id: "eid", kind: "play", title: "Eid and celebrations",
   blocks: [
     H("Stop 1: Eid ul-Fitr"),
-    SAY("A celebration is a special day when families are happy together. One of the happiest celebrations for Muslims is Eid ul-Fitr. It comes right after the month of Ramadan. On Eid, families wear their best clothes, pray the Eid prayer at the masjid, eat special food, visit each other, and children often get gifts. And people share with others who may have less.", T("**Eid ul-Fitr** comes after Ramadan.", "Families pray, wear new clothes, share food and visit each other.")),
+    SAY("A celebration is a special day when families are happy together. One of the happiest celebrations for Muslims is Eid ul-Fitr. It comes right after the month of Ramadan. On Eid, families wear their best clothes. They pray the Eid prayer at the masjid. They eat special food and visit each other. Children often get gifts. And people share with others who may have less.", T("**Eid ul-Fitr** comes after Ramadan.", "Families pray, wear new clothes, share food and visit each other.")),
     SCENE("Eid morning", "town",
       SS("Eid morning! Families walk to the masjid to pray together.", S("Families go to the masjid.", P("m", 50, 40, "Masjid", "🕌", 3), P("f", 25, 70, "Family", "👨‍👩‍👧", 2, "bounce"))),
       SS("After the prayer, families visit each other. They hug and say Eid Mubarak, which means have a blessed Eid.", S("Families visit each other.", P("m", 50, 30, "Masjid", "🕌", 2), P("f", 22, 70, "Family", "👨‍👩‍👧", 2), P("g", 70, 70, "Friends", "🧑‍🤝‍🧑", 2, "bounce"), ["h", "💛", 50, 70, 1, "pulse"])),
-      SS("There is delicious food, sweets and gifts to share with neighbours and people who need help.", S("Food and gifts to share.", P("s", 25, 55, "Sweets", "🍬", 2), P("gi", 50, 55, "Gifts", "🎁", 2), P("fo", 75, 55, "Food", "🍲", 2)))),
+      SS("There is delicious food, sweets and gifts. We share them with neighbours and people who need help.", S("Food and gifts to share.", P("s", 25, 55, "Sweets", "🍬", 2), P("gi", 50, 55, "Gifts", "🎁", 2), P("fo", 75, 55, "Food", "🍲", 2)))),
     CHK(mc("When does Eid ul-Fitr come?", "After Ramadan", ["Before Ramadan", "In the summer holidays"], { hint: "Ramadan is the month of fasting.", why: "Eid ul-Fitr comes after Ramadan." })),
     H("Stop 2: Other special days"),
-    SAY("There is a second Eid too, called Eid ul-Adha. It comes in the month of Dhul Hijjah, and families share food with relatives, neighbours and people in need. In Pakistan we also celebrate Independence Day on the fourteenth of August, with flags and green and white everywhere. Other families celebrate other special days, like Christmas or Diwali. We respect everyone's celebrations and are kind to all.", T("**Eid ul-Adha** comes in Dhul Hijjah. Families share food with others.", "Independence Day in Pakistan is on 14 August.", "We respect everyone's special days.")),
+    SAY("There is a second Eid too, called Eid ul-Adha. It comes in the month of Dhul Hijjah. Families share food with relatives, neighbours and people in need. In Pakistan we also celebrate Independence Day on the fourteenth of August. There are flags, green and white everywhere. Other families celebrate other special days, like Christmas or Diwali. We respect everyone's celebrations and are kind to all.", T("**Eid ul-Adha** comes in Dhul Hijjah. Families share food with others.", "Independence Day in Pakistan is on 14 August.", "We respect everyone's special days.")),
     IMG("🇵🇰🎆", "Pakistan celebrates Independence Day on 14 August with flags and fireworks."),
     CHK(mc("When is Independence Day in Pakistan?", "14 August", ["1 January", "31 December"], { hint: "It is in the summer.", why: "Independence Day is on 14 August." })),
     H("Stop 3: Brain game"),
@@ -270,7 +320,7 @@ const kind = {
   id: "kind", kind: "use", title: "Kindness",
   blocks: [
     H("Stop 1: What is kindness?"),
-    SAY("Being kind is the most important thing of all. Kindness means caring about how other people feel, and helping them. We can be kind by sharing, by saying please and thank you, by helping someone who is stuck, and by including a child who is alone. Look at what happens in this story.", T("**Kindness** means caring about how other people feel.", "We can share, help and include others.")),
+    SAY("Being kind is the most important thing of all. Kindness means caring about how other people feel, and helping them. We can be kind by sharing and by saying please and thank you. We can help someone who is stuck. We can include a child who is alone. Look at what happens in this story.", T("**Kindness** means caring about how other people feel.", "We can share, help and include others.")),
     SCENE("A kind friend", "classroom",
       SS("Sara sits alone at lunch. She looks a little sad.", S("Sara sits alone.", P("s", 30, 60, "Sara", "🧒", 3))),
       SS("Her classmate Aisha notices. She walks over and says, may I sit with you?", S("Aisha walks over.", P("s", 30, 60, "Sara", "🧒", 3), P("a", 75, 60, "Aisha", "👧", 3, "bounce"))),
@@ -310,6 +360,28 @@ const ALTS4 = [
   [mc("Why is planting trees a good idea?", "Trees give animals homes and clean the air", ["Trees make more litter", "Trees stop the Sun"], { hint: "Think about habitat.", why: "Trees give animals homes and clean the air.", tag: "animals.reason" }), mc("Why do forests matter to animals?", "They are the animals' homes", ["They are for parking", "They stop rain"], { hint: "Think about habitat.", why: "Forests are habitats.", tag: "animals.reason" })],
 ];
 
+const clipT4 = {
+  title: "Zainab cares for her world", backdrop: "meadow", caption: "Zainab feeds the birds, plants a seed and learns to recycle.",
+  scenes: [
+    { caption: "Birds.", say: "Zainab hangs a feeder in the garden for the birds.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 28, y: 60, size: 3 }, { id: "b", emoji: "🐦", x: 72, y: 40, size: 3, anim: "float" }] },
+    { caption: "A seed.", say: "She plants a seed in the soil and gives it water.",
+      items: [{ id: "s", emoji: "🌱", x: 50, y: 58, size: 3, anim: "grow" }] },
+    { caption: "Endangered.", say: "She learns that some animals are in danger.",
+      items: [{ id: "d", emoji: "🐬", x: 50, y: 52, size: 3, anim: "float" }] },
+    { caption: "Recycling.", say: "At home she puts her bottle in the recycling bin.",
+      items: [{ id: "r", emoji: "♻️", x: 50, y: 54, size: 3, anim: "pulse" }] },
+    { caption: "Water.", say: "She turns off the tap while she brushes her teeth.",
+      items: [{ id: "w", emoji: "🚰", x: 50, y: 54, size: 3 }] },
+    { caption: "Eid.", say: "At Eid she shares food with her neighbours.",
+      items: [{ id: "e", emoji: "🌙", x: 30, y: 40, size: 3 }, { id: "f", emoji: "🍲", x: 70, y: 58, size: 3 }] },
+    { caption: "Kindness.", say: "Zainab asks a new girl to sit with her.",
+      items: [{ id: "k", emoji: "🤝", x: 50, y: 54, size: 3, anim: "bounce" }] },
+    { caption: "Small things.", say: "Small kind acts add up to a big help.",
+      items: [{ id: "h", emoji: "💚", x: 50, y: 52, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 const t4 = topicLesson({
   slug: "general-knowledge-class-1-caring-for-our-world", subject: "general-knowledge", cls: 1, topic: 4, title: "Caring for Our World",
   summary: "Animals in danger, protecting nature, Eid and other celebrations, and being kind.",
@@ -329,13 +401,9 @@ const t4 = topicLesson({
     mc("Which month comes just before Eid ul-Fitr?", "Ramadan", ["Muharram", "Rajab"], { hint: "The month of fasting.", why: "Ramadan comes before Eid ul-Fitr." }),
     tf("A home keeps us safe, warm and dry.", true, { hint: "Think about what homes do.", why: "That is the job of a home." }),
   ],
-  intro: [
-    H("Welcome, world helper!"),
-    SAY("Welcome, world helper! Today's big question is: how can we take care of our world and each other? We will meet animals that need help, learn how to reduce, reuse and recycle, enjoy Eid, and talk about kindness. This is a game, not a test. Let's go!", T("Today's big question: how can we care for our world and each other?", "We will help animals, nature and people.")),
-    IMG("🌍💚", "We all share one planet and we can look after it."),
-    GLOSS({ planet: "A big ball in space, like Earth." }),
-  ],
+  intro: [],
   subs: [animals, nature, eid, kind],
+  clip: clipT4,
   quiz: [
     { q: mc("What does endangered mean?", "There are very few left, and they could disappear", ["The animal is very big", "The animal lives in a zoo"], { hint: "There could be none left.", why: "Endangered means very few are left.", tag: "animals.endangered" }), sub: "animals", depth: "recall" },
     { q: tf("The Indus river dolphin lives in a river in Pakistan.", true, { hint: "Think of the Indus.", why: "It lives in the Indus river.", tag: "animals.pakistan" }), sub: "animals", depth: "recall" },
@@ -352,7 +420,23 @@ const t4 = topicLesson({
     { q: mc("Sara sees a new girl sitting alone at lunch. What is a kind thing to do?", "Invite her to sit with you", ["Walk past her", "Take her lunch"], { hint: "Think about Sara and Aisha.", why: "Including her is kind.", tag: "kind.reason" }), sub: "kind", depth: "reason" },
     { q: mc("Why should we switch off the light when we leave a room?", "It saves energy and helps look after our world", ["It makes the room warmer", "It wakes the neighbours"], { hint: "Think about energy.", why: "Switching off saves energy.", tag: "nature.reason" }), sub: "nature", depth: "reason" },
     { q: mc("Why is it a good idea to plant trees?", "Trees give animals homes and clean the air", ["Trees make litter", "Trees stop the Sun"], { hint: "Think about habitat.", why: "Trees give animals homes and clean the air.", tag: "animals.reason" }), sub: "animals", depth: "reason" },
-  ].map((x, i) => ({ ...x, alts: ALTS4[i] })),
+    // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+    { q: ord("Put the steps for planting a seed in order.", ["Make a small hole", "Put the seed in", "Cover it with soil", "Give it water"], { hint: "Start by digging.", why: "Dig a hole, put the seed in, cover it, then water it.", tag: "nature.seed" }), sub: "nature", depth: "apply", alts: [ord("Put the steps for feeding wild birds in order.", ["Fill the feeder with seeds", "Hang it up outside", "Stand back and wait", "Watch the birds visit"], { hint: "Fill it first.", why: "Fill it, hang it up, wait, then watch.", tag: "nature.birds" })] },
+    { q: mc("Hina says only big animals can be endangered. Is she right?", "No, small animals and birds can be endangered too", ["Yes, only big animals", "Yes, only animals in the sea"], { hint: "Think about the river dolphin and small birds.", why: "Any animal can be in danger if it loses its home.", tag: "animals.reason" }), sub: "animals", depth: "reason", alts: [mc("Rashid says endangered means an animal has already gone for ever. Is he right?", "No, endangered means it could disappear if we do not help", ["Yes, it has already gone", "Yes, it is a baby animal"], { hint: "Think about the word danger.", why: "Endangered animals are still here but are in danger.", tag: "animals.reason" })] },
+    { q: mat("Match each animal to its home.", [["Indus river dolphin", "the Indus river"], ["Snow leopard", "high snowy mountains"], ["Green turtle", "the sea shore"], ["Camel", "the desert"]], { hint: "Think about where each one lives.", why: "Each animal has its own home.", tag: "animals.homes" }), sub: "animals", depth: "apply", alts: [mat("Join each animal to its home.", [["Fish", "water"], ["Bird", "a nest in a tree"], ["Bee", "a hive"], ["Rabbit", "a burrow"]], { hint: "Think about where each one lives.", why: "Each animal has its own home.", tag: "animals.homes" })] },
+    { q: hot("Tap the animal that lives in water.", [["🐬", "Dolphin", 22, 50], ["🐘", "Elephant", 50, 50], ["🦁", "Lion", 78, 50]], ["Dolphin"], { labels: true, hint: "It swims.", why: "A dolphin lives in water.", tag: "animals.water" }), sub: "animals", depth: "recall", alts: [hot("Tap the animal that lives in the desert.", [["🐪", "Camel", 22, 50], ["🐟", "Fish", 50, 50], ["🐧", "Penguin", 78, 50]], ["Camel"], { labels: true, hint: "It has a hump.", why: "A camel lives in the desert.", tag: "animals.desert" })] },
+    { q: st("Write the word for turning old fruit peel into food for the soil. It starts with C.", ["compost", "composting"], { hint: "It is what a garden heap does.", why: "Fruit peel can be turned into compost.", tag: "nature.compost" }), sub: "nature", depth: "recall", alts: [st("Write the word that means keeping something safe from harm. It starts with P.", ["protect", "to protect"], { hint: "We do this for nature.", why: "To protect means to keep safe.", tag: "nature.protect" })] },
+    { q: mc("Zayd says one small action cannot help the world. Is he right?", "No, many small actions add up", ["Yes, only big actions help", "Yes, small actions never matter"], { hint: "Think about everyone picking up litter.", why: "When many people do small things, they add up to a big help.", tag: "nature.reason" }), sub: "nature", depth: "reason", alts: [mc("Layla says dropping one wrapper does not matter. Is she right?", "No, many wrappers together become a lot of litter", ["Yes, one wrapper is nothing", "Yes, litter is good for the ground"], { hint: "Think about how many pupils there are.", why: "Lots of wrappers make lots of litter.", tag: "nature.reason" })] },
+    { q: fill("Fill in the gaps about the three Rs.", "We can reduce, {b1} and {b2}.", [["reuse", "rubbish", "run"], ["recycle", "waste", "break"]], { hint: "Reduce, reuse, recycle.", why: "The three Rs are reduce, reuse and recycle.", tag: "nature.rs" }), sub: "nature", depth: "recall", alts: [fill("Fill in the gaps about saving water.", "We turn off the {b1} while we brush our {b2}.", [["tap", "light", "door"], ["teeth", "hair", "shoes"]], { hint: "Think about the sink.", why: "We turn off the tap while brushing our teeth.", tag: "nature.water" })] },
+    { q: sld("A park has 10 pieces of litter. Pupils pick up 4. Slide to show how many are left.", { min: 0, max: 12 }, 6, 0, { hint: "Take 4 away from 10.", why: "10 take away 4 leaves 6.", tag: "nature.litter" }), sub: "nature", depth: "apply", alts: [sld("A playground has 12 pieces of litter. Pupils pick up 5. Slide to show how many are left.", { min: 0, max: 12 }, 7, 0, { hint: "Take 5 away from 12.", why: "12 take away 5 leaves 7.", tag: "nature.litter" })] },
+    { q: ms("Which two do many families do at Eid? Pick two.", ["Share food with neighbours", "Wear new clothes"], ["Stay alone all day", "Forget to say thank you"], { hint: "Think about how families celebrate.", why: "Families share food and often wear new clothes at Eid.", tag: "eid.do" }), sub: "eid", depth: "apply", alts: [ms("Which two are special days for Muslims? Pick two.", ["Eid ul-Fitr", "Eid ul-Adha"], ["A rainy Tuesday", "A busy Monday"], { hint: "They are called Eid.", why: "Eid ul-Fitr and Eid ul-Adha are special days.", tag: "eid.days" })] },
+    { q: mc("Imran says Eid is only about getting gifts. Is he right?", "No, Eid is also about thanks, prayer, family and sharing", ["Yes, it is only about gifts", "Yes, it is only about food"], { hint: "Think about everything families do together.", why: "Eid is about giving thanks and being with family.", tag: "eid.reason" }), sub: "eid", depth: "reason", alts: [mc("Sana says only rich people can be kind at Eid. Is she right?", "No, anyone can share a smile or some food", ["Yes, only rich people", "Yes, only adults"], { hint: "Think about small kind acts.", why: "Everyone can be kind.", tag: "eid.reason" })] },
+    { q: mat("Match each word to its meaning.", [["Ramadan", "a month of fasting"], ["Eid ul-Fitr", "a happy day after Ramadan"], ["Friday", "a day for Jumu'ah prayer"], ["Zakat", "giving to people in need"]], { hint: "Think about each one.", why: "Each word has its own meaning.", tag: "eid.words" }), sub: "eid", depth: "apply", alts: [mat("Join each word to its meaning.", [["Sadaqah", "a kind gift"], ["Fasting", "not eating from dawn to sunset"], ["Eid", "a day of celebration"], ["Charity", "helping people in need"]], { hint: "Think about each one.", why: "Each word has its own meaning.", tag: "eid.words" })] },
+    { q: mc("Maryam says you must be rich to be kind. Is she right?", "No, kindness can be a smile, sharing or helping", ["Yes, only rich people can be kind", "Yes, kindness costs a lot"], { hint: "Think about kind things that cost nothing.", why: "Anyone can be kind.", tag: "kind.reason" }), sub: "kind", depth: "reason", alts: [mc("Tahir says small kindnesses do not matter. Is he right?", "No, small kindnesses make a big difference", ["Yes, they do not matter", "Yes, only big gifts matter"], { hint: "Think about a friendly smile.", why: "Small kind acts can make someone's day.", tag: "kind.reason" })] },
+    { q: mc("Which is a kind thing to do at lunch?", "Share your seat with someone", ["Push in front of the queue", "Take someone's food"], { hint: "Think about helping others feel welcome.", why: "Sharing a seat is kind.", tag: "kind.lunch" }), sub: "kind", depth: "apply", alts: [mc("Which is a kind thing to do for a neighbour who is ill?", "Take them some food", ["Make a lot of noise", "Ignore them"], { hint: "Think about helping.", why: "Taking food is kind and helpful.", tag: "kind.neighbour" })] },
+    { q: mc("What should we do with our litter?", "Put it in a bin", ["Drop it on the ground", "Hide it under a bench"], { hint: "Think about keeping places clean.", why: "Litter belongs in a bin.", tag: "nature.litterbin" }), sub: "nature", depth: "recall", alts: [mc("What should we do with an empty plastic bottle?", "Put it in the recycling bin", ["Throw it in a river", "Bury it in the garden"], { hint: "Think about recycling.", why: "A plastic bottle can be recycled.", tag: "nature.bottle" })] },
+    { q: mc("Hamza says looking after nature is only for grown-ups. Is he right?", "No, children can plant seeds and pick up litter", ["Yes, only grown-ups can help", "Yes, children are too small"], { hint: "Think about what you can do at school.", why: "Everyone can help nature.", tag: "kind.reason" }), sub: "kind", depth: "reason", alts: [mc("Zara says a pet does not need care every day. Is she right?", "No, a pet needs food, water and love every day", ["Yes, pets look after themselves", "Yes, only once a week"], { hint: "Think about a cat or a bird.", why: "Pets need daily care.", tag: "kind.reason" })] },
+  ].map((x, i) => ({ ...x, alts: x.alts ?? ALTS4[i] })),
 });
 
 export const topics = [t3, t4];

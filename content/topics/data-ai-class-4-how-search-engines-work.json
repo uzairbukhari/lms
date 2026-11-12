@@ -1,0 +1,3289 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-4-how-search-engines-work",
+  "subject": "data-ai",
+  "title": "Search Engines: How Computers Find Answers",
+  "summary": "See how crawlers and an index power a search engine, choose good keywords, understand ranking and adverts, and check what you find.",
+  "age_band": "9-10",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 6: How search engines work",
+  "learning_objectives": [
+   "Explain how a crawler and an index help a search engine find pages",
+   "Choose and improve keywords",
+   "Understand ranking and adverts, and check sources safely"
+  ],
+  "tags": [
+   "topic",
+   "topic-6"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-4-topics",
+   "semester": 1,
+   "topic": 6
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS2 computing",
+    "text": "Understand computer networks including the internet; use search technologies effectively, appreciate how results are selected and ranked, and be discerning in evaluating digital content"
+   },
+   {
+    "framework": "nc_england",
+    "code": "KS2 online safety",
+    "text": "Use technology safely, respectfully and responsibly; identify a range of ways to report concerns"
+   }
+  ],
+  "success_criteria": [
+   "I can say what a crawler and an index do",
+   "I can choose clear keywords and fix a search",
+   "I know that top results and adverts are not proof, and I check sources"
+  ],
+  "real_life": "Searching for facts about mountains, rivers or a school project, then checking more than one trusted source.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is the internet?",
+    "hint": "Think about networks.",
+    "explanation": "The internet is a network of networks.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A kind of screen"
+     },
+     {
+      "id": "b",
+      "text": "A network that joins computers all over the world"
+     },
+     {
+      "id": "c",
+      "text": "A single website"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a website?",
+    "hint": "You visit it in a browser.",
+    "explanation": "A website is a group of linked pages.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A type of cable"
+     },
+     {
+      "id": "b",
+      "text": "A group of web pages"
+     },
+     {
+      "id": "c",
+      "text": "A computer chip"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 5 x 6?",
+    "hint": "5 sixes.",
+    "explanation": "5 x 6 = 30.",
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "web",
+   "kind": "learn",
+   "title": "Crawlers and the index",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, web explorer!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how does a search engine find answers?",
+     "say": "Today we find out how a search engine finds answers. How can it search so quickly?"
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-how-search-engines-work-1-c58012ea.jpg",
+     "alt": "A brass magnifying glass with a red handle lying on a polished wooden table beside an antique lamp base",
+     "caption": "A magnifying glass helps us find small things. A search engine helps us find web pages.",
+     "credit": "Photo by Alexandr Popadin on Unsplash",
+     "say": "Zara wants to know how high the mountain K2 is. A magnifying glass helps us find small things."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Pages and links"
+    },
+    {
+     "type": "text",
+     "markdown": "The web is pages joined by **links**.",
+     "say": "The web is millions of pages joined together. A page can have links that open other pages."
+    },
+    {
+     "type": "text",
+     "markdown": "A **crawler** is a program that visits pages by following links.",
+     "say": "A search engine uses a program called a crawler. It visits a page, then follows every link on it."
+    },
+    {
+     "type": "explainer",
+     "title": "A crawler at work",
+     "scenes": [
+      {
+       "caption": "Start.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "📄",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🔗",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "3 links"
+        }
+       ],
+       "say": "The crawler starts on one page. It spots three links."
+      },
+      {
+       "caption": "Follow.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🕷️",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "p",
+         "emoji": "📄",
+         "x": 55,
+         "y": 38,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "📄",
+         "x": 55,
+         "y": 65,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "r",
+         "emoji": "📄",
+         "x": 80,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        }
+       ],
+       "say": "It follows each link to a new page. Then it follows the links on those pages."
+      },
+      {
+       "caption": "Explore.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "🌐",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "many pages"
+        }
+       ],
+       "say": "Page by page, the crawler explores more and more of the web."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A program visits a page, then follows its links to find more pages. What kind of program is it?",
+      "hint": "It crawls from page to page.",
+      "explanation": "A crawler follows links to find pages.",
+      "skill_tag": "search.crawler",
+      "options": [
+       {
+        "id": "a",
+        "text": "A printer"
+       },
+       {
+        "id": "b",
+        "text": "A crawler"
+       },
+       {
+        "id": "c",
+        "text": "A password"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The index"
+    },
+    {
+     "type": "text",
+     "markdown": "An **index** is a giant list of the words and pages the crawler found.",
+     "say": "The crawler saves what it finds in a giant list. That list is called the index."
+    },
+    {
+     "type": "text",
+     "markdown": "An index helps us find things fast.",
+     "say": "A book has an index at the back too. It helps you find a topic without reading every page."
+    },
+    {
+     "type": "explainer",
+     "title": "Searching the index",
+     "scenes": [
+      {
+       "caption": "Type.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🔎",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "K2 height"
+        }
+       ],
+       "say": "Zara types K2 height into the search box."
+      },
+      {
+       "caption": "Look up.",
+       "items": [
+        {
+         "id": "i",
+         "emoji": "🗂️",
+         "x": 35,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "index"
+        },
+        {
+         "id": "f",
+         "emoji": "⚡",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "bounce",
+         "label": "fast"
+        }
+       ],
+       "say": "The search engine does not visit the whole web again. It looks in its index."
+      },
+      {
+       "caption": "Results.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "📋",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "results"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "quick"
+        }
+       ],
+       "say": "It lists pages that match her words. This takes a fraction of a second."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Where does a search engine look when you press search?",
+      "hint": "The crawler built something earlier.",
+      "explanation": "It looks in the index its crawler built.",
+      "skill_tag": "search.where",
+      "options": [
+       {
+        "id": "a",
+        "text": "In your computer's memory"
+       },
+       {
+        "id": "b",
+        "text": "In your teacher's folder"
+       },
+       {
+        "id": "c",
+        "text": "In its index of saved pages"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zara searches for K2",
+     "asset": "clip-data-ai-class-4-how-search-engines-work-3634dceb.mp4",
+     "poster": "clip-data-ai-class-4-how-search-engines-work-3634dceb.webp",
+     "seconds": 74,
+     "transcript": "Zara wonders how high the mountain K2 is. She opens a search engine. She types the important words only: K2 height metres. Long before, a crawler followed links from page to page and filled an index. The search engine looks in its index. A ranked list of results appears. The first result says Ad. A company paid for it, so Zara skips it. She opens a mountain survey page. It names the writer and the date. A second trusted page gives the same height. The sources agree. She used safe search and never typed her address. She tells her teacher the answer.",
+     "caption": "Zara searches for how high K2 is and checks her sources."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "The web is pages joined by links",
+      "A crawler follows links and collects pages",
+      "The index is a giant list that makes searches fast"
+     ],
+     "say": "Let us remember. Crawlers follow links and fill an index. Searches look in the index."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "links",
+       "meaning": "Parts of a page that open another page when you click."
+      },
+      {
+       "term": "crawler",
+       "meaning": "A program that visits pages by following links."
+      },
+      {
+       "term": "index",
+       "meaning": "A giant list of the words and pages the crawler found."
+      },
+      {
+       "term": "search engine",
+       "meaning": "A tool that finds web pages that match your words."
+      },
+      {
+       "term": "page",
+       "meaning": "One document on the web."
+      },
+      {
+       "term": "results",
+       "meaning": "The pages a search engine suggests."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What joins one web page to another?",
+     "hint": "You click it.",
+     "explanation": "A link opens another page.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A battery"
+      },
+      {
+       "id": "b",
+       "text": "A link"
+      },
+      {
+       "id": "c",
+       "text": "A screen"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A crawler follows links to find new pages.",
+     "hint": "Think about the name.",
+     "explanation": "That is what a crawler does.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Why does a book have an index at the back?",
+     "hint": "Think about finding things fast.",
+     "explanation": "An index helps you find a topic quickly.",
+     "options": [
+      {
+       "id": "a",
+       "text": "To show the author's photo"
+      },
+      {
+       "id": "b",
+       "text": "To find a topic without reading every page"
+      },
+      {
+       "id": "c",
+       "text": "To make the book heavier"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What is saved in a search engine's index?",
+     "hint": "It comes from the crawler.",
+     "explanation": "The index records what the crawler found on pages.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Photos of your room"
+      },
+      {
+       "id": "b",
+       "text": "Words and the pages they were found on"
+      },
+      {
+       "id": "c",
+       "text": "Your passwords"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "search",
+   "kind": "try",
+   "title": "Searching well",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Choose keywords"
+    },
+    {
+     "type": "text",
+     "markdown": "**Keywords** are the important words you type to search.",
+     "say": "Zara wants K2's height. She picks the important words. These are called keywords."
+    },
+    {
+     "type": "explainer",
+     "title": "Good and poor searches",
+     "scenes": [
+      {
+       "caption": "Vague.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "too vague"
+        }
+       ],
+       "say": "Zara tries a search: tell me about that big thing. It is too vague."
+      },
+      {
+       "caption": "Clear.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "⌨️",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🏔️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "K2 height"
+        }
+       ],
+       "say": "Now she types K2 height metres. Every word is useful."
+      },
+      {
+       "caption": "Better.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "🎯",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "clear keywords"
+        }
+       ],
+       "say": "Clear keywords help the search engine find the pages you really want."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Sort the searches",
+     "goal": "Move the 6 searches into Clear keywords or Too vague.",
+     "emoji": "🔎",
+     "count": 6,
+     "zones": [
+      "Clear keywords",
+      "Too vague"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which search would best find how long the River Indus is?",
+      "hint": "Use the important words.",
+      "explanation": "Clear keywords give better results.",
+      "skill_tag": "search.best_words",
+      "options": [
+       {
+        "id": "a",
+        "text": "water long thing"
+       },
+       {
+        "id": "b",
+        "text": "tell me stuff please"
+       },
+       {
+        "id": "c",
+        "text": "length of River Indus"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Improve a search"
+    },
+    {
+     "type": "text",
+     "markdown": "Check spelling and try **different** words.",
+     "say": "If the results are wrong, change your words. Check your spelling. Add a word to be clearer."
+    },
+    {
+     "type": "explainer",
+     "title": "Fix a search",
+     "scenes": [
+      {
+       "caption": "Mixed.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🚗",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐆",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Zara searches for jaguar and sees cars and animals."
+      },
+      {
+       "caption": "Add a word.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐆",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "animal"
+        }
+       ],
+       "say": "She adds one word: jaguar animal. Now she sees only animals."
+      },
+      {
+       "caption": "Try again.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🔄",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "spin"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "try again"
+        }
+       ],
+       "say": "Changing a search is not a failure. It is how good searchers work."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Improve a search",
+     "materials": [
+      "A device with safe search, and a grown-up",
+      "A question about school work"
+     ],
+     "instructions": [
+      "Write the question you want answered.",
+      "Pick the keywords and try the search.",
+      "Change one word and compare the results."
+     ],
+     "say": "Now you try. Use a safe search with a grown-up beside you."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "If a search gives odd results, you can try different keywords.",
+      "hint": "Searching is a trial.",
+      "explanation": "Changing words often improves results.",
+      "skill_tag": "search.retry",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Choose the important words",
+      "Check spelling and add clear words",
+      "Try again when results are not right"
+     ],
+     "say": "Let us remember. Choose keywords, check spelling and adjust your search."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "keywords",
+       "meaning": "The important words you type to search."
+      },
+      {
+       "term": "different",
+       "meaning": "Not the same."
+      },
+      {
+       "term": "vague",
+       "meaning": "Not clear or exact."
+      },
+      {
+       "term": "spelling",
+       "meaning": "The right letters in a word."
+      },
+      {
+       "term": "safe search",
+       "meaning": "A setting that hides unsuitable results."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which search is clearer?",
+     "hint": "Use important words.",
+     "explanation": "Specific keywords work better.",
+     "options": [
+      {
+       "id": "a",
+       "text": "mountains maybe"
+      },
+      {
+       "id": "b",
+       "text": "highest mountains in Pakistan"
+      },
+      {
+       "id": "c",
+       "text": "tell me some stuff"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Adding a clear word can make results more exact.",
+     "hint": "Think about jaguar animal.",
+     "explanation": "An extra word narrows the results.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should Zara check if her results look strange?",
+     "hint": "Look at what she typed.",
+     "explanation": "A spelling mistake can change the results.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her shoes"
+      },
+      {
+       "id": "b",
+       "text": "Her spelling"
+      },
+      {
+       "id": "c",
+       "text": "The weather"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ranking",
+   "kind": "play",
+   "title": "Ranking and adverts",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: How results are ranked"
+    },
+    {
+     "type": "text",
+     "markdown": "**Ranking** is the order of results, with the likeliest matches first.",
+     "say": "A search can find thousands of pages. The search engine puts them in an order. That order is a ranking."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-4-how-search-engines-work-2-711784e1.jpg",
+     "alt": "A red, yellow and blue winners podium numbered 1, 2 and 3 on grass beside a running track",
+     "caption": "A podium ranks winners. A search engine ranks pages.",
+     "credit": "Photo by Suoerix on Unsplash",
+     "say": "At a race, a podium shows who came first, second and third. Search results are ranked in a similar way."
+    },
+    {
+     "type": "explainer",
+     "title": "Ranking clues",
+     "scenes": [
+      {
+       "caption": "Match.",
+       "items": [
+        {
+         "id": "k",
+         "emoji": "🔤",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "p",
+         "emoji": "📄",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The engine checks if the page matches the words Zara typed."
+      },
+      {
+       "caption": "Links.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📄",
+         "x": 30,
+         "y": 40,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "📄",
+         "x": 30,
+         "y": 65,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "⭐",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "popular"
+        }
+       ],
+       "say": "It checks if many other pages link to it. Links can show a page is useful."
+      },
+      {
+       "caption": "Many clues.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧩",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "ranked"
+        }
+       ],
+       "say": "It also looks at how new the page is. Many clues together decide the ranking."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which is one clue a search engine can use to rank a page?",
+      "hint": "Think about useful pages.",
+      "explanation": "Links from other pages can be a ranking clue.",
+      "skill_tag": "search.rank_clue",
+      "options": [
+       {
+        "id": "a",
+        "text": "The size of the writer's shoes"
+       },
+       {
+        "id": "b",
+        "text": "How many other pages link to it"
+       },
+       {
+        "id": "c",
+        "text": "The colour of the page"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Adverts and influence"
+    },
+    {
+     "type": "text",
+     "markdown": "An **advert** is paid for. It is not chosen as the best answer.",
+     "say": "Some results are adverts. A company pays for them to appear. They should be labelled Ad or Sponsored."
+    },
+    {
+     "type": "text",
+     "markdown": "Page owners can try to influence the ranking. Play the memory game.",
+     "say": "Companies can also improve their own pages so they are easier to find. First a memory game."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Search words",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "🔎",
+      "🔗",
+      "🏆",
+      "📢"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "hotspot",
+      "prompt": "Tap the result that is an advert.",
+      "hint": "Look for the Ad label.",
+      "explanation": "Adverts are labelled Ad or Sponsored.",
+      "skill_tag": "search.tap_ad",
+      "scene": {
+       "items": [
+        {
+         "id": "h1",
+         "emoji": "📢",
+         "label": "Ad: Big sale on trainers",
+         "x": 22,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h2",
+         "emoji": "📖",
+         "label": "Encyclopedia page about K2",
+         "x": 50,
+         "y": 50,
+         "size": 3
+        },
+        {
+         "id": "h3",
+         "emoji": "🏫",
+         "label": "School science page",
+         "x": 78,
+         "y": 50,
+         "size": 3
+        }
+       ],
+       "show_labels": true
+      },
+      "answer": [
+       "h1"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Results are ranked using many clues",
+      "Adverts are paid for and should be labelled",
+      "Top of the list does not mean the most true"
+     ],
+     "say": "Let us remember. Ranking uses clues. Adverts are paid for. First place does not prove a page is true."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "ranking",
+       "meaning": "The order of search results, likeliest matches first."
+      },
+      {
+       "term": "advert",
+       "meaning": "A message that someone paid to show."
+      },
+      {
+       "term": "sponsored",
+       "meaning": "Paid for by a company."
+      },
+      {
+       "term": "clue",
+       "meaning": "A small detail that helps you work something out."
+      },
+      {
+       "term": "influence",
+       "meaning": "To change how something turns out."
+      },
+      {
+       "term": "popular",
+       "meaning": "Liked or used by many people."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does ranking decide?",
+     "hint": "First, second, third.",
+     "explanation": "Ranking sets the order of results.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The colour of the page"
+      },
+      {
+       "id": "b",
+       "text": "The speed of your device"
+      },
+      {
+       "id": "c",
+       "text": "The order of the results"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A page can be first in the list and still be wrong.",
+     "hint": "Ranking uses clues, not proof.",
+     "explanation": "First place is not proof of truth.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does the label Sponsored tell you?",
+     "hint": "Think about money.",
+     "explanation": "Sponsored results are paid for.",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is the most true result"
+      },
+      {
+       "id": "b",
+       "text": "It is not allowed"
+      },
+      {
+       "id": "c",
+       "text": "A company paid to show it"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "judge",
+   "kind": "use",
+   "title": "Judge and stay safe",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Check the source"
+    },
+    {
+     "type": "text",
+     "markdown": "Check the **source**: who made the page?",
+     "say": "Zara finds two pages about K2. They give slightly different heights. She needs to decide which to trust."
+    },
+    {
+     "type": "text",
+     "markdown": "Look at who made the page.",
+     "say": "First, she checks who wrote it. A museum or a mountain survey is easier to trust than a stranger."
+    },
+    {
+     "type": "text",
+     "markdown": "Check the date. Compare sources.",
+     "say": "Second, she checks the date. Third, she compares a second source. Good facts usually agree."
+    },
+    {
+     "type": "explainer",
+     "title": "Zara checks",
+     "scenes": [
+      {
+       "caption": "Page one.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "📄",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "named writer"
+        },
+        {
+         "id": "d",
+         "emoji": "📅",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Page one is from a mountain survey. It names the writer and the date."
+      },
+      {
+       "caption": "Page two.",
+       "items": [
+        {
+         "id": "b",
+         "emoji": "📄",
+         "x": 28,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "⚠️",
+         "x": 72,
+         "y": 45,
+         "size": 3,
+         "anim": "pulse",
+         "label": "no writer"
+        }
+       ],
+       "say": "Page two has no writer and lots of flashing adverts."
+      },
+      {
+       "caption": "Agree.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "✅",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "e",
+         "emoji": "🤝",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "sources agree"
+        }
+       ],
+       "say": "A third trusted page agrees with page one. Zara trusts that answer."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the steps of checking a search result in order.",
+      "hint": "Check the page, then compare.",
+      "explanation": "Check the maker and date, compare, then decide.",
+      "skill_tag": "search.check_steps",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Compare with a second source"
+       },
+       {
+        "id": "i4",
+        "text": "Decide whether to trust it"
+       },
+       {
+        "id": "i2",
+        "text": "Check the date"
+       },
+       {
+        "id": "i1",
+        "text": "Look at who made the page"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Search safely"
+    },
+    {
+     "type": "text",
+     "markdown": "Use **safe search**, and tell a grown-up if something upsets you.",
+     "say": "Safe search hides many unsuitable results. It does not check facts, so we still check sources."
+    },
+    {
+     "type": "text",
+     "markdown": "Keep private things private when you search.",
+     "say": "Zara never types her address or school into a search box. Private things stay private."
+    },
+    {
+     "type": "explainer",
+     "title": "Safe habits",
+     "scenes": [
+      {
+       "caption": "Turn on.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 28,
+         "y": 55,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "s",
+         "emoji": "🛡️",
+         "x": 72,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "safe search"
+        }
+       ],
+       "say": "Zara turns on safe search before she starts."
+      },
+      {
+       "caption": "Close and tell.",
+       "items": [
+        {
+         "id": "x",
+         "emoji": "❌",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 72,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A strange page appears. She closes it and tells her teacher."
+      },
+      {
+       "caption": "Private.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🔒",
+         "x": 50,
+         "y": 48,
+         "size": 3,
+         "anim": "pulse",
+         "label": "private"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "stay safe"
+        }
+       ],
+       "say": "She never shares private details. Good searchers stay safe."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Search safely plan",
+     "materials": [
+      "Paper and pens",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Write a question you want answered.",
+      "List two places you could check the answer.",
+      "Write one private thing you will never type into a search box."
+     ],
+     "say": "Now you try. Make a plan for finding a fact safely."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Safe search proves that every fact in the results is true.",
+      "hint": "What does it filter?",
+      "explanation": "Safe search hides unsuitable content. It does not check facts.",
+      "skill_tag": "search.safe_not_true",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Check who made the page and the date",
+      "Compare at least two good sources",
+      "Use safe search and keep private things private"
+     ],
+     "say": "Let us remember. Check the source, compare, and keep private things private."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "source",
+       "meaning": "Where information comes from."
+      },
+      {
+       "term": "safe search",
+       "meaning": "A setting that hides unsuitable results."
+      },
+      {
+       "term": "compare",
+       "meaning": "To look at things together to see how they match."
+      },
+      {
+       "term": "trust",
+       "meaning": "To believe something is reliable."
+      },
+      {
+       "term": "private",
+       "meaning": "Only for you and your family."
+      },
+      {
+       "term": "survey",
+       "meaning": "A careful study that collects facts."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which source is easiest to trust for a fact about mountains?",
+     "hint": "Think about named experts.",
+     "explanation": "A named, expert source is easier to trust.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A flashing advert"
+      },
+      {
+       "id": "b",
+       "text": "A mountain survey that names its writer"
+      },
+      {
+       "id": "c",
+       "text": "A page with no writer"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Zara should type her home address into a search box to get better results.",
+     "hint": "Is it private?",
+     "explanation": "Addresses are private and should not be typed.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What should you do if a search result upsets you?",
+     "hint": "Tell someone you trust.",
+     "explanation": "A trusted adult can help.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Share it"
+      },
+      {
+       "id": "b",
+       "text": "Close it and tell a grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Search for more"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a search engine?",
+    "hint": "It finds pages.",
+    "explanation": "A search engine finds pages that match your words.",
+    "skill_tag": "search.def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A type of web cable"
+     },
+     {
+      "id": "b",
+      "text": "A kind of keyboard"
+     },
+     {
+      "id": "c",
+      "text": "A program that helps you find web pages"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does a web crawler do?",
+    "hint": "Think about links.",
+    "explanation": "A crawler follows links to collect pages.",
+    "skill_tag": "search.crawler_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "Fixes broken computers"
+     },
+     {
+      "id": "b",
+      "text": "Prints web pages"
+     },
+     {
+      "id": "c",
+      "text": "Follows links from page to page to collect information"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A search engine searches the whole live web from scratch each time you press search.",
+    "hint": "Think about the index.",
+    "explanation": "It looks in its index, which the crawler built earlier.",
+    "skill_tag": "search.live",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think about each word.",
+    "explanation": "Each word has its own job.",
+    "skill_tag": "search.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Crawler"
+     },
+     {
+      "id": "l2",
+      "text": "Index"
+     },
+     {
+      "id": "l3",
+      "text": "Keyword"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A huge list of what pages contain"
+     },
+     {
+      "id": "r3",
+      "text": "An important word you type to search"
+     },
+     {
+      "id": "r1",
+      "text": "Visits pages by following links"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "web",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap what a crawler follows to reach new pages.",
+    "hint": "It joins pages.",
+    "explanation": "A crawler follows links.",
+    "skill_tag": "search.tap_link",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔗",
+       "label": "A link",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎨",
+       "label": "The page colour",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔊",
+       "label": "A sound effect",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Idris says a search engine knows every page on the internet. Is he right?",
+    "hint": "Think about the crawler.",
+    "explanation": "A search engine knows only the pages it has found.",
+    "skill_tag": "search.reason_all",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it knows everything"
+     },
+     {
+      "id": "b",
+      "text": "No. It only knows pages its crawlers have found and saved"
+     },
+     {
+      "id": "c",
+      "text": "Yes, every page is added instantly"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Why does a search engine build an index?",
+    "hint": "Think about a book index.",
+    "explanation": "An index makes searching fast.",
+    "skill_tag": "search.why_index",
+    "options": [
+     {
+      "id": "a",
+      "text": "So pages can be deleted"
+     },
+     {
+      "id": "b",
+      "text": "So the screen stays bright"
+     },
+     {
+      "id": "c",
+      "text": "So it can find matching pages quickly"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about how search works.",
+    "hint": "Think about the two parts.",
+    "explanation": "A crawler fills the index.",
+    "skill_tag": "search.fill_web",
+    "points": 2,
+    "text": "A {b1} follows links from page to page. It adds what it finds to the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cable"
+       },
+       {
+        "id": "b",
+        "text": "crawler"
+       },
+       {
+        "id": "c",
+        "text": "carpet"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "iron"
+       },
+       {
+        "id": "b",
+        "text": "index"
+       },
+       {
+        "id": "c",
+        "text": "icon"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "web",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "Which search words are best to find how tall K2 is?",
+    "hint": "Use the important words.",
+    "explanation": "Clear keywords give better results.",
+    "skill_tag": "search.keywords_k2",
+    "options": [
+     {
+      "id": "a",
+      "text": "tall"
+     },
+     {
+      "id": "b",
+      "text": "my homework help me now please how"
+     },
+     {
+      "id": "c",
+      "text": "height of K2 mountain"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the steps of searching in order.",
+    "hint": "Think first.",
+    "explanation": "Decide, search, read, then check.",
+    "skill_tag": "search.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Type keywords in the search box"
+     },
+     {
+      "id": "i3",
+      "text": "Read the results carefully"
+     },
+     {
+      "id": "i4",
+      "text": "Open a page and check it"
+     },
+     {
+      "id": "i1",
+      "text": "Decide what you want to find"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about keywords.",
+    "hint": "Think about clear words.",
+    "explanation": "Clear keywords usually give better results.",
+    "skill_tag": "search.fill_keywords",
+    "points": 2,
+    "text": "A {b1} is an important word in your search. Fewer, clear words often give {b2} results.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "keyboard"
+       },
+       {
+        "id": "b",
+        "text": "keyword"
+       },
+       {
+        "id": "c",
+        "text": "key ring"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "wetter"
+       },
+       {
+        "id": "b",
+        "text": "louder"
+       },
+       {
+        "id": "c",
+        "text": "better"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "c"
+    },
+    "sub_lesson": "search",
+    "depth": "recall"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Zara types jaguar and sees cars and animals. What could she do?",
+    "hint": "Make it clearer.",
+    "explanation": "An extra word narrows the results.",
+    "skill_tag": "search.jaguar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Give up"
+     },
+     {
+      "id": "b",
+      "text": "Add a word such as animal to be clearer"
+     },
+     {
+      "id": "c",
+      "text": "Type it five times"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A search shows 10 results per page. Zara reads 3 pages. Slide to show how many results she sees.",
+    "hint": "3 groups of 10.",
+    "explanation": "3 x 10 = 30 results.",
+    "skill_tag": "search.results_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 30,
+     "tolerance": 0
+    },
+    "sub_lesson": "search",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "true_false",
+    "prompt": "Spelling mistakes in a search can change the results you get.",
+    "hint": "The words matter.",
+    "explanation": "A different spelling can match different pages.",
+    "skill_tag": "search.spelling",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "search",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Hamza says typing more and more words always gives better results. Is he right?",
+    "hint": "Think about clear keywords.",
+    "explanation": "A few clear keywords are often best.",
+    "skill_tag": "search.reason_words",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always more words"
+     },
+     {
+      "id": "b",
+      "text": "Yes, a long sentence is always best"
+     },
+     {
+      "id": "c",
+      "text": "No. Too many words can confuse the search, so choose the key ones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "search",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two can affect how high a page ranks? Pick two.",
+    "hint": "Think about useful pages.",
+    "explanation": "Matching words and links are ranking clues.",
+    "skill_tag": "search.rank_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "How many other pages link to it"
+     },
+     {
+      "id": "b",
+      "text": "How old the writer is"
+     },
+     {
+      "id": "c",
+      "text": "The colour of the page"
+     },
+     {
+      "id": "d",
+      "text": "How well it matches your keywords"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "number",
+    "prompt": "A search gives 50 results. Zara reads only the top 10. How many does she skip?",
+    "hint": "50 take away 10.",
+    "explanation": "50 - 10 = 40 results.",
+    "skill_tag": "search.skip",
+    "answer": {
+     "value": 40,
+     "tolerance": 0
+    },
+    "sub_lesson": "ranking",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "What does the word Ad or Sponsored beside a result mean?",
+    "hint": "Think about money.",
+    "explanation": "Adverts are paid for.",
+    "skill_tag": "search.ad_meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "It is a safe page"
+     },
+     {
+      "id": "b",
+      "text": "Someone paid to have it shown"
+     },
+     {
+      "id": "c",
+      "text": "It is the most true page"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Idris says the top result is always the most truthful page. Is he right?",
+    "hint": "Think about ranking clues.",
+    "explanation": "First place does not prove truth.",
+    "skill_tag": "search.reason_top",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, search engines check every fact"
+     },
+     {
+      "id": "b",
+      "text": "No. Ranking uses clues, which are not proof that a page is true"
+     },
+     {
+      "id": "c",
+      "text": "Yes, top means true"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Nadia says a company cannot change where its page appears. Is she right?",
+    "hint": "Think about adverts.",
+    "explanation": "Page owners can influence results.",
+    "skill_tag": "search.reason_influence",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only search engines can decide"
+     },
+     {
+      "id": "b",
+      "text": "No. Companies can pay for adverts or improve their pages to rank higher"
+     },
+     {
+      "id": "c",
+      "text": "Yes, ranking cannot be influenced"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Hamza says every search engine gives exactly the same results for the same words. Is he right?",
+    "hint": "Think about ranking clues.",
+    "explanation": "Each engine uses its own ranking.",
+    "skill_tag": "search.reason_same",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, all are identical"
+     },
+     {
+      "id": "b",
+      "text": "No. Different search engines rank pages in different ways"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the web decides alone"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "match",
+    "prompt": "Match each item to what it is.",
+    "hint": "Think about who chose it.",
+    "explanation": "Each item has a different origin or job.",
+    "skill_tag": "search.item_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Ad"
+     },
+     {
+      "id": "l2",
+      "text": "Ranked result"
+     },
+     {
+      "id": "l3",
+      "text": "Link on a page"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Placed by the search engine's clues"
+     },
+     {
+      "id": "r3",
+      "text": "Joins to another page"
+     },
+     {
+      "id": "r1",
+      "text": "Paid for by a company"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "ranking",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "hotspot",
+    "prompt": "Tap the paid-for result in this list.",
+    "hint": "Look for the label.",
+    "explanation": "The Ad label shows it is paid for.",
+    "skill_tag": "search.tap_label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📢",
+       "label": "Ad: Big shoe sale today",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📚",
+       "label": "Library page about rivers",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🏫",
+       "label": "Museum page about mountains",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps of checking a page in order.",
+    "hint": "Check first, decide last.",
+    "explanation": "Check the maker, the date, compare, then decide.",
+    "skill_tag": "search.trust_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Check the date"
+     },
+     {
+      "id": "i4",
+      "text": "Decide whether to trust it"
+     },
+     {
+      "id": "i3",
+      "text": "Compare with a second source"
+     },
+     {
+      "id": "i1",
+      "text": "Look at who made the page"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "judge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two are signs of a trustworthy page? Pick two.",
+    "hint": "Think about checking.",
+    "explanation": "A named writer and agreeing sources show trust.",
+    "skill_tag": "search.trust_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "It agrees with other trusted sources"
+     },
+     {
+      "id": "b",
+      "text": "It asks for your password"
+     },
+     {
+      "id": "c",
+      "text": "It has flashing adverts everywhere"
+     },
+     {
+      "id": "d",
+      "text": "It names who wrote it"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "judge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Zara says one website is enough to be sure a fact is true. Is she right?",
+    "hint": "Think about comparing.",
+    "explanation": "Sources that agree make a fact more reliable.",
+    "skill_tag": "search.reason_two",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one is always enough"
+     },
+     {
+      "id": "b",
+      "text": "No. Check at least two good sources"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the first result is perfect"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Maryam says it is fine to type her full name and school into any search box. Is she right?",
+    "hint": "Think about private things.",
+    "explanation": "Names and schools are private details.",
+    "skill_tag": "search.reason_private",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, search boxes are private friends"
+     },
+     {
+      "id": "b",
+      "text": "No. Keep personal details private when you search"
+     },
+     {
+      "id": "c",
+      "text": "Yes, everyone knows these things"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hira says safe search means every result will be perfectly true. Is she right?",
+    "hint": "Think about what it filters.",
+    "explanation": "It hides unsuitable content only.",
+    "skill_tag": "search.reason_safe",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, nothing wrong can appear"
+     },
+     {
+      "id": "b",
+      "text": "No. Safe search hides unsuitable content but does not check facts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, safe search proves facts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "Zara checks 3 sources for each of 4 facts. How many sources does she check in all?",
+    "hint": "4 groups of 3.",
+    "explanation": "4 x 3 = 12 sources.",
+    "skill_tag": "search.sources",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "judge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "slider",
+    "prompt": "A group searches for 25 minutes and checks sources for 10 more. Slide to show the total minutes.",
+    "hint": "25 + 10.",
+    "explanation": "25 + 10 = 35 minutes.",
+    "skill_tag": "search.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 35,
+     "tolerance": 0
+    },
+    "sub_lesson": "judge",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which best describes a search engine?",
+    "hint": "It finds pages.",
+    "explanation": "A search engine finds matching pages.",
+    "skill_tag": "search.def",
+    "options": [
+     {
+      "id": "a",
+      "text": "A part inside a router"
+     },
+     {
+      "id": "b",
+      "text": "A tool that finds pages that match your words"
+     },
+     {
+      "id": "c",
+      "text": "A machine that makes websites"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which part of a search engine visits pages by following links?",
+    "hint": "It crawls.",
+    "explanation": "The crawler follows links.",
+    "skill_tag": "search.crawler_def",
+    "options": [
+     {
+      "id": "a",
+      "text": "The screen"
+     },
+     {
+      "id": "b",
+      "text": "The crawler"
+     },
+     {
+      "id": "c",
+      "text": "The password"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A search engine looks through its stored index when you search.",
+    "hint": "Think about the index.",
+    "explanation": "Searches look in the stored index.",
+    "skill_tag": "search.live",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Pair each item with its job.",
+    "hint": "Think about each item.",
+    "explanation": "Each item does its own job.",
+    "skill_tag": "search.word_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Link"
+     },
+     {
+      "id": "l2",
+      "text": "Search box"
+     },
+     {
+      "id": "l3",
+      "text": "Result"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Where you type your words"
+     },
+     {
+      "id": "r3",
+      "text": "A page the search engine suggests"
+     },
+     {
+      "id": "r1",
+      "text": "Connects one page to another"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "web",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap what joins one web page to another.",
+    "hint": "You click it.",
+    "explanation": "Links join pages.",
+    "skill_tag": "search.tap_link",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🔗",
+       "label": "A link",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🖼️",
+       "label": "A picture frame",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⏰",
+       "label": "A clock",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a brand new page shows in results the second it is made. Is she right?",
+    "hint": "Think about the crawler.",
+    "explanation": "New pages must be found first.",
+    "skill_tag": "search.reason_all",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always instantly"
+     },
+     {
+      "id": "b",
+      "text": "No. A crawler has to find it and add it to the index first, which takes time"
+     },
+     {
+      "id": "c",
+      "text": "Yes, search engines never wait"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "web",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Why do search engines build their index in advance?",
+    "hint": "Think about speed.",
+    "explanation": "A ready index makes searches fast.",
+    "skill_tag": "search.why_index",
+    "options": [
+     {
+      "id": "a",
+      "text": "So nobody can add pages"
+     },
+     {
+      "id": "b",
+      "text": "So pages cost money"
+     },
+     {
+      "id": "c",
+      "text": "So answers come back in a fraction of a second"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "web",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about the web.",
+    "hint": "Think about pages and searches.",
+    "explanation": "Links join pages, and words are matched.",
+    "skill_tag": "search.fill_web",
+    "points": 2,
+    "text": "Pages joined by {b1} make the web. A search engine matches your {b2} to pages.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "lakes"
+       },
+       {
+        "id": "b",
+        "text": "leaves"
+       },
+       {
+        "id": "c",
+        "text": "links"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shoes"
+       },
+       {
+        "id": "b",
+        "text": "words"
+       },
+       {
+        "id": "c",
+        "text": "clocks"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "web",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "Which search finds the length of the River Indus best?",
+    "hint": "Use the important words.",
+    "explanation": "Clear keywords give better results.",
+    "skill_tag": "search.keywords_k2",
+    "options": [
+     {
+      "id": "a",
+      "text": "river thing big"
+     },
+     {
+      "id": "b",
+      "text": "River Indus length"
+     },
+     {
+      "id": "c",
+      "text": "water"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put these steps for a school project in order.",
+    "hint": "Question first.",
+    "explanation": "Question, search, compare, then write.",
+    "skill_tag": "search.steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Compare two or three sources"
+     },
+     {
+      "id": "i4",
+      "text": "Write what you learned in your own words"
+     },
+     {
+      "id": "i2",
+      "text": "Search with keywords"
+     },
+     {
+      "id": "i1",
+      "text": "Choose your question"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about checking.",
+    "hint": "Think about fixing a search.",
+    "explanation": "Change the words and check spelling.",
+    "skill_tag": "search.fill_keywords",
+    "points": 2,
+    "text": "If results look wrong, try different {b1} or check your {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sandals"
+       },
+       {
+        "id": "b",
+        "text": "crayons"
+       },
+       {
+        "id": "c",
+        "text": "keywords"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shadow"
+       },
+       {
+        "id": "b",
+        "text": "spelling"
+       },
+       {
+        "id": "c",
+        "text": "weather"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "search",
+    "depth": "recall",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "A search for bat shows cricket and animals. What helps?",
+    "hint": "Make it clearer.",
+    "explanation": "An extra word narrows the results.",
+    "skill_tag": "search.jaguar",
+    "options": [
+     {
+      "id": "a",
+      "text": "Press search harder"
+     },
+     {
+      "id": "b",
+      "text": "Add a clear extra keyword"
+     },
+     {
+      "id": "c",
+      "text": "Close the computer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "search",
+    "depth": "apply",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A search shows 12 results per page. Idris reads 2 pages. Slide to show how many results he sees.",
+    "hint": "2 groups of 12.",
+    "explanation": "2 x 12 = 24 results.",
+    "skill_tag": "search.results_count",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 24,
+     "tolerance": 0
+    },
+    "sub_lesson": "search",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "true_false",
+    "prompt": "A perfectly spelled search always shows only true facts.",
+    "hint": "Spelling is not truth.",
+    "explanation": "Good spelling does not make results true.",
+    "skill_tag": "search.spelling",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "search",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Layla says a very long search must beat three clear keywords. Is she right?",
+    "hint": "Think about clear keywords.",
+    "explanation": "A few clear keywords are often best.",
+    "skill_tag": "search.reason_words",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, long is always better"
+     },
+     {
+      "id": "b",
+      "text": "No. A few clear keywords often work better"
+     },
+     {
+      "id": "c",
+      "text": "Yes, keywords do nothing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "search",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two are clues a search engine may use to rank pages? Pick two.",
+    "hint": "Think about useful pages.",
+    "explanation": "Freshness and matching words are clues.",
+    "skill_tag": "search.rank_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Whether the words match the search"
+     },
+     {
+      "id": "b",
+      "text": "The font used"
+     },
+     {
+      "id": "c",
+      "text": "The writer's favourite food"
+     },
+     {
+      "id": "d",
+      "text": "Whether the page is up to date"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "number",
+    "prompt": "A search gives 120 results. Idris reads only the top 20. How many does he skip?",
+    "hint": "120 take away 20.",
+    "explanation": "120 - 20 = 100 results.",
+    "skill_tag": "search.skip",
+    "answer": {
+     "value": 100,
+     "tolerance": 0
+    },
+    "sub_lesson": "ranking",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "A result at the top says Sponsored. What does that tell you?",
+    "hint": "Think about money.",
+    "explanation": "Sponsored results are paid for.",
+    "skill_tag": "search.ad_meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "It was made by the search engine"
+     },
+     {
+      "id": "b",
+      "text": "A company paid for it to appear"
+     },
+     {
+      "id": "c",
+      "text": "It is the best answer"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Hira says a page in first place must be right. Is she right?",
+    "hint": "Think about ranking clues.",
+    "explanation": "Ranking is not proof.",
+    "skill_tag": "search.reason_top",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, first is always right"
+     },
+     {
+      "id": "b",
+      "text": "Yes, errors are never ranked"
+     },
+     {
+      "id": "c",
+      "text": "No. Being first does not prove a page is correct"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Sana says nobody can make their page easier to find. Is she right?",
+    "hint": "Think about adverts.",
+    "explanation": "Page owners can influence results.",
+    "skill_tag": "search.reason_influence",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, pages cannot change"
+     },
+     {
+      "id": "b",
+      "text": "No. Owners can improve their pages, and some pay for adverts"
+     },
+     {
+      "id": "c",
+      "text": "Yes, nobody can"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Omar says two people searching the same words will always see the same list. Is he right?",
+    "hint": "Think about settings.",
+    "explanation": "Settings can change the list.",
+    "skill_tag": "search.reason_same",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, searches cannot change"
+     },
+     {
+      "id": "b",
+      "text": "No. Place, language or other settings can change results"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always identical"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "match",
+    "prompt": "Pair each clue with what it suggests.",
+    "hint": "Think about each clue.",
+    "explanation": "Each clue suggests something about the page.",
+    "skill_tag": "search.item_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Many links to the page"
+     },
+     {
+      "id": "l2",
+      "text": "Written years ago"
+     },
+     {
+      "id": "l3",
+      "text": "Matches your words"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "It may be out of date"
+     },
+     {
+      "id": "r3",
+      "text": "It is relevant"
+     },
+     {
+      "id": "r1",
+      "text": "Other sites find it useful"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "ranking",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "hotspot",
+    "prompt": "Tap the result marked as sponsored.",
+    "hint": "Look for the label.",
+    "explanation": "Sponsored means paid for.",
+    "skill_tag": "search.tap_label",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "💰",
+       "label": "Sponsored: Best phone deals",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "📚",
+       "label": "Library page about birds",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧪",
+       "label": "Museum page about science",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "ranking",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these safe-searching steps in order.",
+    "hint": "Tell an adult first.",
+    "explanation": "Tell, turn on safe search, choose, and close if upset.",
+    "skill_tag": "search.trust_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Choose a trusted result"
+     },
+     {
+      "id": "i4",
+      "text": "Close the page and tell an adult if it upsets you"
+     },
+     {
+      "id": "i2",
+      "text": "Turn on safe search"
+     },
+     {
+      "id": "i1",
+      "text": "Tell a grown-up what you want to find"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "judge",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two should you check before using a page? Pick two.",
+    "hint": "Think about checking.",
+    "explanation": "Date and maker are good things to check.",
+    "skill_tag": "search.trust_ms",
+    "options": [
+     {
+      "id": "a",
+      "text": "Who made it"
+     },
+     {
+      "id": "b",
+      "text": "What colour its title is"
+     },
+     {
+      "id": "c",
+      "text": "How many pictures it has"
+     },
+     {
+      "id": "d",
+      "text": "The date it was written"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "judge",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Ali says if he finds a fact on one page he need not check anything else. Is he right?",
+    "hint": "Think about comparing.",
+    "explanation": "Comparing sources helps.",
+    "skill_tag": "search.reason_two",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, checking is cheating"
+     },
+     {
+      "id": "b",
+      "text": "No. Comparing sources shows if the fact is reliable"
+     },
+     {
+      "id": "c",
+      "text": "Yes, one page is enough"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Omar says he should type his home address to get better results. Is he right?",
+    "hint": "Think about private things.",
+    "explanation": "Addresses are private.",
+    "skill_tag": "search.reason_private",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, an address helps"
+     },
+     {
+      "id": "b",
+      "text": "Yes, every website needs it"
+     },
+     {
+      "id": "c",
+      "text": "No. Never type your address. Keep it private"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Zayn says with safe search on, he can stop checking sources. Is he right?",
+    "hint": "Think about what it filters.",
+    "explanation": "Safe search does not check facts.",
+    "skill_tag": "search.reason_safe",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never check"
+     },
+     {
+      "id": "b",
+      "text": "No. A filter hides some content but you still check sources"
+     },
+     {
+      "id": "c",
+      "text": "Yes, safe search checks facts"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "judge",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "Idris checks 2 sources for each of 5 facts. How many sources does he check in all?",
+    "hint": "5 groups of 2.",
+    "explanation": "5 x 2 = 10 sources.",
+    "skill_tag": "search.sources",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "judge",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "slider",
+    "prompt": "Maryam searches for 15 minutes and checks sources for 10 more. Slide to show the total minutes.",
+    "hint": "15 + 10.",
+    "explanation": "15 + 10 = 25 minutes.",
+    "skill_tag": "search.minutes",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 40
+    },
+    "answer": {
+     "value": 25,
+     "tolerance": 0
+    },
+    "sub_lesson": "judge",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

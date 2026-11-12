@@ -1,0 +1,3076 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-build-a-quiz-program",
+  "subject": "data-ai",
+  "title": "Build a Quiz Program",
+  "summary": "Predict, build and improve a short program that asks and answers a quiz question.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 8: Build a quiz program",
+  "learning_objectives": [
+   "Predict what a sequence does",
+   "Build a program with several sprites",
+   "Judge and improve a program"
+  ],
+  "tags": [
+   "topic",
+   "topic-8"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 8
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "KS1 algorithms",
+    "text": "Create and debug simple programs; use logical reasoning to predict the behaviour of simple programs"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-AP-14",
+    "text": "Debug errors in an algorithm or program"
+   }
+  ],
+  "success_criteria": [
+   "I can predict the outcome of a sequence",
+   "I can build a quiz with two sprites",
+   "I can find a bug and improve my program"
+  ],
+  "real_life": "Making a quiz for the family about Eid, flags or buses.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a sprite?",
+    "hint": "Think about the cat.",
+    "explanation": "A sprite is a character.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A keyboard"
+     },
+     {
+      "id": "b",
+      "text": "A character a program can move"
+     },
+     {
+      "id": "c",
+      "text": "A cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a bug?",
+    "hint": "Not an insect.",
+    "explanation": "A bug is a mistake.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A new sprite"
+     },
+     {
+      "id": "b",
+      "text": "A flower"
+     },
+     {
+      "id": "c",
+      "text": "A mistake in a program"
+     }
+    ],
+    "answer": [
+     "c"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 7 + 3?",
+    "hint": "Count on from 7.",
+    "explanation": "7 + 3 = 10.",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "outcomes",
+   "kind": "learn",
+   "title": "Sequences have outcomes",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, young coder!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do we build and improve a program?",
+     "say": "Today we build a quiz program. Zainab wants to ask a question about a flag."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-build-a-quiz-program-1-21b22782.jpg",
+     "alt": "The green and white flag of Pakistan with a crescent and star, flying in front of mountains",
+     "caption": "The flag of Pakistan. Zainab's quiz is about its colours.",
+     "credit": "Photo by Burhan Ahmad on Unsplash",
+     "say": "This is the flag of Pakistan. Zainab's quiz asks about the colours of this flag."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Read, then predict"
+    },
+    {
+     "type": "text",
+     "markdown": "A **sequence** is steps in order. The **outcome** is what happens when it runs.",
+     "say": "A program is a sequence of blocks. When it runs, something happens. That is the outcome."
+    },
+    {
+     "type": "explainer",
+     "title": "Predict the outcome",
+     "scenes": [
+      {
+       "caption": "Read the blocks.",
+       "items": [
+        {
+         "id": "b1",
+         "emoji": "🟦",
+         "x": 25,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "ask"
+        },
+        {
+         "id": "b2",
+         "emoji": "🟨",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "wait"
+        },
+        {
+         "id": "b3",
+         "emoji": "🟩",
+         "x": 75,
+         "y": 50,
+         "size": 2,
+         "anim": "none",
+         "label": "answer"
+        }
+       ],
+       "say": "Zainab reads the blocks. Ask a question. Wait. Say the answer."
+      },
+      {
+       "caption": "Predict.",
+       "items": [
+        {
+         "id": "q",
+         "emoji": "🤔",
+         "x": 50,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "prediction"
+        }
+       ],
+       "say": "She predicts: the sprite will ask, then wait, then answer."
+      },
+      {
+       "caption": "Run and check.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🐱",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "same as prediction"
+        }
+       ],
+       "say": "She runs it. The outcome matches her prediction."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What is an outcome?",
+      "hint": "It comes after you press run.",
+      "explanation": "The outcome is what the program does.",
+      "skill_tag": "quiz.outcome",
+      "options": [
+       {
+        "id": "a",
+        "text": "A new sprite"
+       },
+       {
+        "id": "b",
+        "text": "What happens when a program runs"
+       },
+       {
+        "id": "c",
+        "text": "A kind of block"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Same result, different blocks"
+    },
+    {
+     "type": "text",
+     "markdown": "Different blocks can give the same **outcome**.",
+     "say": "Two programs can have the same outcome. One uses a loop. One uses extra blocks. Both reach the answer."
+    },
+    {
+     "type": "explainer",
+     "title": "Two ways, one outcome",
+     "scenes": [
+      {
+       "caption": "Program A.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🟩",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "one block"
+        }
+       ],
+       "say": "Program A has one block that says the flag is green and white."
+      },
+      {
+       "caption": "Program B.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🟩",
+         "x": 35,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "green"
+        },
+        {
+         "id": "w",
+         "emoji": "⬜",
+         "x": 65,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "white"
+        }
+       ],
+       "say": "Program B has two blocks. One says green. One says white."
+      },
+      {
+       "caption": "Same outcome.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "🟩",
+         "x": 40,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "same outcome"
+        }
+       ],
+       "say": "Both programs tell us the same thing. There is more than one way."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "Two different programs can have the same outcome.",
+      "hint": "Think about A and B.",
+      "explanation": "Different blocks can reach the same outcome.",
+      "skill_tag": "quiz.same_outcome",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's flag quiz",
+     "asset": "clip-data-ai-class-1-build-a-quiz-program-c68bbe6f.mp4",
+     "poster": "clip-data-ai-class-1-build-a-quiz-program-c68bbe6f.webp",
+     "seconds": 56,
+     "transcript": "Zainab wants to make a quiz about the flag of Pakistan. First she draws a design. Two sprites will talk. She predicts: ask, wait, answer. That is the outcome. She runs it. The teacher asks the question. No answer comes. There is a bug. She adds a say block to the answer sprite. Now the cat says, Green and white! Zainab shares the quiz and asks for kind feedback.",
+     "caption": "Zainab builds a flag quiz, finds a bug and fixes it."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "An outcome is what happens when a program runs",
+      "Predict before you run",
+      "Different programs can have the same outcome"
+     ],
+     "say": "Let us remember. Read, predict, then run. There can be more than one way."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "sequence",
+       "meaning": "Steps in a set order."
+      },
+      {
+       "term": "outcome",
+       "meaning": "What happens when a program runs."
+      },
+      {
+       "term": "prediction",
+       "meaning": "A guess about what will happen."
+      },
+      {
+       "term": "program",
+       "meaning": "Blocks that tell a computer what to do."
+      },
+      {
+       "term": "quiz",
+       "meaning": "Questions with answers."
+      },
+      {
+       "term": "sprite",
+       "meaning": "A character a program can move."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we do before we run a program?",
+     "hint": "Make a guess first.",
+     "explanation": "We predict first, then run.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Delete it"
+      },
+      {
+       "id": "b",
+       "text": "Predict what will happen"
+      },
+      {
+       "id": "c",
+       "text": "Switch it off"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A sequence is steps in a set order.",
+     "hint": "One after another.",
+     "explanation": "A sequence runs in order.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "What does outcome mean?",
+     "hint": "It comes after running.",
+     "explanation": "The outcome is what happens.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The colour of the screen"
+      },
+      {
+       "id": "b",
+       "text": "What the program does"
+      },
+      {
+       "id": "c",
+       "text": "The name of a sprite"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "twosprite",
+   "kind": "try",
+   "title": "Build a two-sprite quiz",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A question sprite"
+    },
+    {
+     "type": "text",
+     "markdown": "A **question sprite** asks the question.",
+     "say": "Zainab makes a teacher sprite. It asks, What colours are on the flag of Pakistan?"
+    },
+    {
+     "type": "explainer",
+     "title": "The teacher sprite",
+     "scenes": [
+      {
+       "caption": "Ask.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "teacher"
+        },
+        {
+         "id": "b",
+         "emoji": "💬",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "question"
+        }
+       ],
+       "say": "The teacher sprite appears. A block makes it say the question."
+      },
+      {
+       "caption": "Wait.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "w",
+         "emoji": "⏳",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "wait"
+        }
+       ],
+       "say": "A wait block makes it pause. The program waits for an answer."
+      },
+      {
+       "caption": "Over to the answer sprite.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "answer sprite"
+        }
+       ],
+       "say": "Now the answer sprite can speak."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Build the quiz",
+     "goal": "Put the 4 blocks into the quiz program in order.",
+     "emoji": "🟦",
+     "count": 4,
+     "zones": [
+      "In the program",
+      "Waiting"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does the question sprite do?",
+      "hint": "It speaks first.",
+      "explanation": "The question sprite asks.",
+      "skill_tag": "quiz.question",
+      "options": [
+       {
+        "id": "a",
+        "text": "Turns off the quiz"
+       },
+       {
+        "id": "b",
+        "text": "Asks the question"
+       },
+       {
+        "id": "c",
+        "text": "Gives the answer"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: An answer sprite"
+    },
+    {
+     "type": "text",
+     "markdown": "An **answer sprite** gives the answer.",
+     "say": "A second sprite is the answer sprite. It waits, then says, Green and white."
+    },
+    {
+     "type": "explainer",
+     "title": "The answer sprite",
+     "scenes": [
+      {
+       "caption": "Wait for the question.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "The answer sprite waits for the question to finish."
+      },
+      {
+       "caption": "Answer.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "💬",
+         "x": 50,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse",
+         "label": "green and white"
+        }
+       ],
+       "say": "Then it says, Green and white. The sprites take turns."
+      },
+      {
+       "caption": "A two-sprite quiz.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a quiz"
+        }
+       ],
+       "say": "Two sprites talking in order makes a quiz."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Build a quiz",
+     "materials": [
+      "A tablet with a blocks coding app",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Add two sprites. Give each some blocks.",
+      "Make the first one ask a question.",
+      "Make the second one answer. Run it and check."
+     ],
+     "say": "Now you try. Ask a grown-up to open a blocks program on a tablet."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "The answer sprite speaks after the question.",
+      "hint": "They take turns.",
+      "explanation": "The answer comes after the question.",
+      "skill_tag": "quiz.order",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A question sprite asks",
+      "An answer sprite replies",
+      "They take turns in order"
+     ],
+     "say": "Let us remember. A quiz needs a question and an answer. Sprites take turns."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "question sprite",
+       "meaning": "The sprite that asks the question."
+      },
+      {
+       "term": "answer sprite",
+       "meaning": "The sprite that gives the answer."
+      },
+      {
+       "term": "wait",
+       "meaning": "A block that makes the program pause."
+      },
+      {
+       "term": "turns",
+       "meaning": "Going one after another."
+      },
+      {
+       "term": "sprites",
+       "meaning": "Characters a program can move."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "How many sprites are in our quiz?",
+     "hint": "A question and an answer.",
+     "explanation": "A question sprite and an answer sprite.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ten"
+      },
+      {
+       "id": "b",
+       "text": "Two"
+      },
+      {
+       "id": "c",
+       "text": "One"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Both sprites speak at exactly the same moment.",
+     "hint": "They take turns.",
+     "explanation": "They speak in order.",
+     "answer": [
+      false
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which block makes a sprite pause?",
+     "hint": "Think about stopping.",
+     "explanation": "Wait makes the program pause.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Grow"
+      },
+      {
+       "id": "b",
+       "text": "Turn"
+      },
+      {
+       "id": "c",
+       "text": "Wait"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bugs",
+   "kind": "play",
+   "title": "Bug or feature?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Find the bug"
+    },
+    {
+     "type": "text",
+     "markdown": "A **bug** is a mistake in a program.",
+     "say": "Zainab runs her quiz. The teacher asks the question. But the answer never appears."
+    },
+    {
+     "type": "explainer",
+     "title": "A missing answer",
+     "scenes": [
+      {
+       "caption": "No answer.",
+       "items": [
+        {
+         "id": "t",
+         "emoji": "👩‍🏫",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "q",
+         "emoji": "❓",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse",
+         "label": "silence"
+        }
+       ],
+       "say": "She runs the quiz. The teacher asks. Nothing answers."
+      },
+      {
+       "caption": "Missing block.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🐛",
+         "x": 75,
+         "y": 30,
+         "size": 2,
+         "anim": "bounce",
+         "label": "bug"
+        }
+       ],
+       "say": "She looks at the answer sprite. It has no say block."
+      },
+      {
+       "caption": "Fixed.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🐱",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "bug fixed"
+        }
+       ],
+       "say": "She adds the say block. Now the quiz works."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "The answer sprite does not speak. What could be missing?",
+      "hint": "It has no words.",
+      "explanation": "Without a say block, it cannot speak.",
+      "skill_tag": "quiz.missing_block",
+      "options": [
+       {
+        "id": "a",
+        "text": "A new background"
+       },
+       {
+        "id": "b",
+        "text": "A second screen"
+       },
+       {
+        "id": "c",
+        "text": "A say block"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Fix and run again"
+    },
+    {
+     "type": "text",
+     "markdown": "**Test** after each fix.",
+     "say": "Fix one thing at a time. Then run it again. Checking helps us find more bugs."
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then check the order.",
+     "say": "First a memory game. Then spot the wrong order."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Quiz pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "❓",
+      "💬",
+      "🐛",
+      "✅"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "The quiz is muddled. Put the blocks in the right order.",
+      "hint": "Ask, wait, answer.",
+      "explanation": "A quiz asks, waits and then answers.",
+      "skill_tag": "quiz.fix_order",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Say the answer"
+       },
+       {
+        "id": "i1",
+        "text": "Ask the question"
+       },
+       {
+        "id": "i2",
+        "text": "Wait"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A bug is a mistake in a program",
+      "Fix one thing at a time",
+      "Test again after a fix"
+     ],
+     "say": "Let us remember. Bugs are mistakes. Fix, then test again."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "bug",
+       "meaning": "A mistake in a program."
+      },
+      {
+       "term": "test",
+       "meaning": "Run it to see if it works."
+      },
+      {
+       "term": "fix",
+       "meaning": "To make something right."
+      },
+      {
+       "term": "muddled",
+       "meaning": "In the wrong order."
+      },
+      {
+       "term": "feature",
+       "meaning": "Something a program does on purpose."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What is a bug?",
+     "hint": "Not an insect.",
+     "explanation": "A bug is a mistake.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A new sprite"
+      },
+      {
+       "id": "b",
+       "text": "A kind of sound"
+      },
+      {
+       "id": "c",
+       "text": "A mistake in a program"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "We should test again after we fix a bug.",
+     "hint": "Did the fix work?",
+     "explanation": "Testing checks the fix.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A quiz asks, then answers, then waits. What is wrong?",
+     "hint": "Think about the sequence.",
+     "explanation": "The blocks are in the wrong order.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The tablet"
+      },
+      {
+       "id": "b",
+       "text": "The order of the blocks"
+      },
+      {
+       "id": "c",
+       "text": "The sprite colour"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "kind": "use",
+   "title": "Design your own quiz",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Draw the design"
+    },
+    {
+     "type": "text",
+     "markdown": "**Design** first. Draw the sprites and what they say.",
+     "say": "Zainab wants a quiz about Eid. First she draws a design on paper."
+    },
+    {
+     "type": "text",
+     "markdown": "A design is a plan.",
+     "say": "She draws a question sprite and an answer sprite. She writes what each will say."
+    },
+    {
+     "type": "activity",
+     "title": "Design a quiz",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Draw two sprites. Write the question for the first.",
+      "Write the answer for the second.",
+      "Draw the order the blocks will go in."
+     ],
+     "say": "A design helps her remember what to build. It also helps a friend understand."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-build-a-quiz-program-2-bf3bbd99.jpg",
+     "alt": "A single yellow hot air balloon high in a clear blue sky",
+     "caption": "A balloon to celebrate a finished quiz.",
+     "credit": "Photo by Waldemar Brandt on Unsplash",
+     "say": "She checks the design with her mum. Then she is ready to build."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "order",
+      "prompt": "Put the quiz-making steps in order.",
+      "hint": "Design comes first.",
+      "explanation": "Design, build, test, then improve.",
+      "skill_tag": "quiz.make_order",
+      "points": 2,
+      "items": [
+       {
+        "id": "i3",
+        "text": "Test the quiz"
+       },
+       {
+        "id": "i4",
+        "text": "Improve it"
+       },
+       {
+        "id": "i2",
+        "text": "Build the blocks"
+       },
+       {
+        "id": "i1",
+        "text": "Draw a design"
+       }
+      ],
+      "answer": [
+       "i1",
+       "i2",
+       "i3",
+       "i4"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Evaluate and improve"
+    },
+    {
+     "type": "text",
+     "markdown": "**Evaluate** means to check how good something is.",
+     "say": "A friend tries the quiz. They say the answer is too quick. Zainab adds a wait block."
+    },
+    {
+     "type": "explainer",
+     "title": "Evaluate and improve",
+     "scenes": [
+      {
+       "caption": "A friend plays.",
+       "items": [
+        {
+         "id": "f",
+         "emoji": "🧒",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "q",
+         "emoji": "💬",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A friend plays the quiz. They find it fun but too fast."
+      },
+      {
+       "caption": "Add a wait.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "⏳",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "wait"
+        }
+       ],
+       "say": "Zainab adds a wait block so the answer appears later."
+      },
+      {
+       "caption": "Better.",
+       "items": [
+        {
+         "id": "z",
+         "emoji": "👧",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "improved"
+        }
+       ],
+       "say": "The quiz is better now. She shares it with kind words."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "What does evaluate mean?",
+      "hint": "Think about a friend trying it.",
+      "explanation": "To evaluate is to check how good it is.",
+      "skill_tag": "quiz.evaluate",
+      "options": [
+       {
+        "id": "a",
+        "text": "To delete it"
+       },
+       {
+        "id": "b",
+        "text": "To check how good something is"
+       },
+       {
+        "id": "c",
+        "text": "To paint it"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Design before building",
+      "Test with a friend",
+      "Evaluate and improve"
+     ],
+     "say": "Let us remember. Design, build, test and improve with a friend."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "design",
+       "meaning": "A plan for what you will build."
+      },
+      {
+       "term": "evaluate",
+       "meaning": "To check how good something is."
+      },
+      {
+       "term": "improve",
+       "meaning": "To make something better."
+      },
+      {
+       "term": "feedback",
+       "meaning": "Kind comments to help someone."
+      },
+      {
+       "term": "share",
+       "meaning": "To show your work to others."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What comes first when making a quiz?",
+     "hint": "Plan before building.",
+     "explanation": "A design comes first.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bug"
+      },
+      {
+       "id": "b",
+       "text": "A trophy"
+      },
+      {
+       "id": "c",
+       "text": "A design"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A friend's feedback can help you improve.",
+     "hint": "Listen kindly.",
+     "explanation": "Feedback helps improvement.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is kind feedback?",
+     "hint": "Be helpful.",
+     "explanation": "Kind feedback is helpful.",
+     "options": [
+      {
+       "id": "a",
+       "text": "That is bad"
+      },
+      {
+       "id": "b",
+       "text": "I like it. Maybe add a sound"
+      },
+      {
+       "id": "c",
+       "text": "Do it again"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What do we call what happens when a program runs?",
+    "hint": "It is the result.",
+    "explanation": "The outcome is what the program does.",
+    "skill_tag": "quiz.outcome",
+    "options": [
+     {
+      "id": "a",
+      "text": "The background"
+     },
+     {
+      "id": "b",
+      "text": "The outcome"
+     },
+     {
+      "id": "c",
+      "text": "The cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What is a prediction?",
+    "hint": "We make it before running.",
+    "explanation": "A prediction is a guess before running.",
+    "skill_tag": "quiz.predict",
+    "options": [
+     {
+      "id": "a",
+      "text": "A mistake"
+     },
+     {
+      "id": "b",
+      "text": "A guess about what a program will do"
+     },
+     {
+      "id": "c",
+      "text": "A background"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A sequence is a list of steps in a set order.",
+    "hint": "Think about the quiz blocks.",
+    "explanation": "A sequence runs in order.",
+    "skill_tag": "quiz.sequence",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match each word to its meaning.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "quiz.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Outcome"
+     },
+     {
+      "id": "l2",
+      "text": "Prediction"
+     },
+     {
+      "id": "l3",
+      "text": "Sequence"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A guess before running"
+     },
+     {
+      "id": "r3",
+      "text": "Steps in order"
+     },
+     {
+      "id": "r1",
+      "text": "What happens when it runs"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the start block.",
+    "hint": "It comes first.",
+    "explanation": "A start block begins the program.",
+    "skill_tag": "quiz.start",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏁",
+       "label": "Start block",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💬",
+       "label": "Say block",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔊",
+       "label": "Sound block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says there is only one set of blocks that can make the quiz work. Is he right?",
+    "hint": "Think about programs A and B.",
+    "explanation": "More than one program can reach the same outcome.",
+    "skill_tag": "quiz.reason_one_way",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only one way"
+     },
+     {
+      "id": "b",
+      "text": "No. Different blocks can give the same outcome"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the first idea is always the only one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Aisha says there is no need to predict. She just runs the program. Is she right?",
+    "hint": "What if the outcome differs from your guess?",
+    "explanation": "Predicting helps us notice bugs.",
+    "skill_tag": "quiz.reason_predict",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, predicting is useless"
+     },
+     {
+      "id": "b",
+      "text": "No. Predicting helps us spot mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, running is slower than guessing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about programs.",
+    "hint": "Think about the stops.",
+    "explanation": "A sequence is steps in order. The outcome is what happens.",
+    "skill_tag": "quiz.vocab_fill",
+    "points": 2,
+    "text": "A {b1} is a set of steps in order. What it does is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sprite"
+       },
+       {
+        "id": "b",
+        "text": "cable"
+       },
+       {
+        "id": "c",
+        "text": "sequence"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "bug"
+       },
+       {
+        "id": "b",
+        "text": "screen"
+       },
+       {
+        "id": "c",
+        "text": "outcome"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "c"
+    },
+    "sub_lesson": "outcomes",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "multiple_choice",
+    "prompt": "The blocks say: ask the question, wait, then say Green and white. What is the last thing said?",
+    "hint": "Read in order.",
+    "explanation": "The last block says Green and white.",
+    "skill_tag": "quiz.read_blocks",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing"
+     },
+     {
+      "id": "b",
+      "text": "Green and white"
+     },
+     {
+      "id": "c",
+      "text": "The question"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put these quiz blocks in order.",
+    "hint": "Question first.",
+    "explanation": "Ask, wait, then say well done.",
+    "skill_tag": "quiz.block_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Wait for the answer"
+     },
+     {
+      "id": "i1",
+      "text": "Ask the question"
+     },
+     {
+      "id": "i3",
+      "text": "Say well done"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "number",
+    "prompt": "A quiz has 3 questions. Each question needs 2 blocks. How many blocks is that in all?",
+    "hint": "2 + 2 + 2.",
+    "explanation": "3 questions of 2 blocks make 6 blocks.",
+    "skill_tag": "quiz.count_blocks",
+    "answer": {
+     "value": 6,
+     "tolerance": 0
+    },
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "Two sprites can take turns talking in one program.",
+    "hint": "Think about teacher and answer.",
+    "explanation": "Sprites can take turns.",
+    "skill_tag": "quiz.two_sprites",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "slider",
+    "prompt": "A quiz has 5 questions. Sam has answered 3. Slide to show how many are left.",
+    "hint": "5 take away 3.",
+    "explanation": "5 - 3 = 2 questions left.",
+    "skill_tag": "quiz.questions_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Which block would add a sound to the quiz?",
+    "hint": "Think about noise.",
+    "explanation": "A sound block plays a noise.",
+    "skill_tag": "quiz.sound",
+    "options": [
+     {
+      "id": "a",
+      "text": "A wait block"
+     },
+     {
+      "id": "b",
+      "text": "A grow block"
+     },
+     {
+      "id": "c",
+      "text": "A play sound block"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "multiple_choice",
+    "prompt": "Aisha says two sprites cannot talk to each other. Is she right?",
+    "hint": "Think about the teacher and the cat.",
+    "explanation": "Sprites can take turns talking.",
+    "skill_tag": "quiz.reason_talk",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only one can speak ever"
+     },
+     {
+      "id": "b",
+      "text": "No. They can take turns using blocks"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sprites never talk"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "reason"
+   },
+   {
+    "ref": "q16",
+    "type": "multi_select",
+    "prompt": "Which two could be sprites in a quiz? Pick two.",
+    "hint": "Think about characters.",
+    "explanation": "A teacher and an answer sprite are characters.",
+    "skill_tag": "quiz.sprite_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "A plug"
+     },
+     {
+      "id": "b",
+      "text": "A keyboard key"
+     },
+     {
+      "id": "c",
+      "text": "An answer sprite"
+     },
+     {
+      "id": "d",
+      "text": "A teacher sprite"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply"
+   },
+   {
+    "ref": "q17",
+    "type": "match",
+    "prompt": "Match each problem to its fix.",
+    "hint": "Think about each bug.",
+    "explanation": "Each fix matches the bug.",
+    "skill_tag": "quiz.bug_fix",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "No answer appears"
+     },
+     {
+      "id": "l2",
+      "text": "Answer comes too early"
+     },
+     {
+      "id": "l3",
+      "text": "Sprite faces the wrong way"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a wait block"
+     },
+     {
+      "id": "r3",
+      "text": "Change the turn block"
+     },
+     {
+      "id": "r1",
+      "text": "Add a say block"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bugs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "true_false",
+    "prompt": "The first try at a program always works perfectly.",
+    "hint": "Think about the missing say block.",
+    "explanation": "Programs often have bugs on the first try.",
+    "skill_tag": "quiz.first_try",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "The quiz asks a question but never shows the answer. What is missing?",
+    "hint": "Think about the answer sprite.",
+    "explanation": "The answer sprite needs a block to say the answer.",
+    "skill_tag": "quiz.answer_missing",
+    "options": [
+     {
+      "id": "a",
+      "text": "A new tablet"
+     },
+     {
+      "id": "b",
+      "text": "A second teacher"
+     },
+     {
+      "id": "c",
+      "text": "An answer block"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a bug means she is bad at coding. Is she right?",
+    "hint": "Think about the quiz she fixed.",
+    "explanation": "Bugs are normal. We learn by fixing them.",
+    "skill_tag": "quiz.reason_bug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, good coders never have bugs"
+     },
+     {
+      "id": "b",
+      "text": "No. Every coder makes bugs and fixes them"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bugs mean you are bad"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about bugs.",
+    "hint": "Try it, then repair.",
+    "explanation": "We test to find bugs and fix them.",
+    "skill_tag": "quiz.test_fill",
+    "points": 2,
+    "text": "We {b1} a program to find bugs. Then we {b2} them.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "hide"
+       },
+       {
+        "id": "b",
+        "text": "test"
+       },
+       {
+        "id": "c",
+        "text": "paint"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "grow"
+       },
+       {
+        "id": "b",
+        "text": "fix"
+       },
+       {
+        "id": "c",
+        "text": "eat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "bugs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "hotspot",
+    "prompt": "Tap the extra block that does not belong in the quiz.",
+    "hint": "Which is not part of the quiz?",
+    "explanation": "Dancing is not part of a quiz about a flag.",
+    "skill_tag": "quiz.extra_block",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "Ask the question",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💃",
+       "label": "Dance on the table",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "💬",
+       "label": "Say the answer",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply"
+   },
+   {
+    "ref": "q23",
+    "type": "multiple_choice",
+    "prompt": "Sam says testing once finds every bug at the same time. Is he right?",
+    "hint": "Think about the next run.",
+    "explanation": "We test again because fixes can reveal new bugs.",
+    "skill_tag": "quiz.reason_test_all",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one test finds all"
+     },
+     {
+      "id": "b",
+      "text": "No. Fixing one bug can show another"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bugs always appear together"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason"
+   },
+   {
+    "ref": "q24",
+    "type": "order",
+    "prompt": "Put the steps for making a quiz in order.",
+    "hint": "Design first.",
+    "explanation": "Design, build, test, then improve.",
+    "skill_tag": "quiz.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Build the quiz"
+     },
+     {
+      "id": "i4",
+      "text": "Improve it"
+     },
+     {
+      "id": "i3",
+      "text": "Test it with a friend"
+     },
+     {
+      "id": "i1",
+      "text": "Draw a design"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "mine",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "slider",
+    "prompt": "A quiz plan has 4 sprites. 3 are built. Slide to show how many are left to build.",
+    "hint": "4 take away 3.",
+    "explanation": "4 - 3 = 1 sprite left.",
+    "skill_tag": "quiz.sprites_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 6
+    },
+    "answer": {
+     "value": 1,
+     "tolerance": 0
+    },
+    "sub_lesson": "mine",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "multiple_choice",
+    "prompt": "Omar says a design is a waste of time. Is he right?",
+    "hint": "Think about the paper plan.",
+    "explanation": "A design saves time and shows what to build.",
+    "skill_tag": "quiz.reason_design",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never design"
+     },
+     {
+      "id": "b",
+      "text": "No. A design helps you know what to build"
+     },
+     {
+      "id": "c",
+      "text": "Yes, designs are slow"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Layla says more blocks always mean a better program. Is she right?",
+    "hint": "Think about programs A and B.",
+    "explanation": "Better programs are clear, not just longer.",
+    "skill_tag": "quiz.reason_more",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, more is always better"
+     },
+     {
+      "id": "b",
+      "text": "No. A good program uses the blocks it needs"
+     },
+     {
+      "id": "c",
+      "text": "Yes, a long program is always best"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Omar says a quiz needs no answer sprite. Is he right?",
+    "hint": "Think about the cat.",
+    "explanation": "A quiz needs an answer as well as a question.",
+    "skill_tag": "quiz.reason_answer",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, answers appear by magic"
+     },
+     {
+      "id": "b",
+      "text": "No. Something must give the answer"
+     },
+     {
+      "id": "c",
+      "text": "Yes, quizzes only ask"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "number",
+    "prompt": "A quiz has 2 sprites and 5 blocks on each. How many blocks is that in all?",
+    "hint": "5 + 5.",
+    "explanation": "2 sprites with 5 blocks each make 10 blocks.",
+    "skill_tag": "quiz.blocks_total",
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "mine",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two questions help you evaluate a program? Pick two.",
+    "hint": "Think about checking quality.",
+    "explanation": "Asking if it worked and what to improve helps evaluate.",
+    "skill_tag": "quiz.evaluate_qs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Who has the biggest tablet?"
+     },
+     {
+      "id": "b",
+      "text": "What colour is the table?"
+     },
+     {
+      "id": "c",
+      "text": "What could be better?"
+     },
+     {
+      "id": "d",
+      "text": "Did it work?"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "mine",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "What do we call the result of running a program?",
+    "hint": "It is the result.",
+    "explanation": "The outcome is the result of running a program.",
+    "skill_tag": "quiz.outcome",
+    "options": [
+     {
+      "id": "a",
+      "text": "The keyboard"
+     },
+     {
+      "id": "b",
+      "text": "The outcome"
+     },
+     {
+      "id": "c",
+      "text": "The battery"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "When do we make a prediction?",
+    "hint": "It is a guess.",
+    "explanation": "We predict before we run.",
+    "skill_tag": "quiz.predict",
+    "options": [
+     {
+      "id": "a",
+      "text": "After we delete it"
+     },
+     {
+      "id": "b",
+      "text": "Before we run the program"
+     },
+     {
+      "id": "c",
+      "text": "While it is switched off for ever"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A sequence runs all its steps in a random order.",
+    "hint": "Think about the quiz blocks.",
+    "explanation": "A sequence runs in a set order.",
+    "skill_tag": "quiz.sequence",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Join each word to what it means.",
+    "hint": "Think back to the stops.",
+    "explanation": "Each word has its own meaning.",
+    "skill_tag": "quiz.vocab",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Bug"
+     },
+     {
+      "id": "l2",
+      "text": "Design"
+     },
+     {
+      "id": "l3",
+      "text": "Test"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A plan before building"
+     },
+     {
+      "id": "r1",
+      "text": "A mistake in a program"
+     },
+     {
+      "id": "r3",
+      "text": "Running to check it works"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the block that makes a sprite speak.",
+    "hint": "It shows words.",
+    "explanation": "A say block makes a sprite speak.",
+    "skill_tag": "quiz.say",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🏁",
+       "label": "Start block",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💬",
+       "label": "Say block",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "⏳",
+       "label": "Wait block",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Ben says there is only one way to build a quiz about Eid. Is he right?",
+    "hint": "Think about programs A and B.",
+    "explanation": "There can be many ways to get the same result.",
+    "skill_tag": "quiz.reason_one_way",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only Zainab's"
+     },
+     {
+      "id": "b",
+      "text": "No. There are many ways to build it"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only one"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Mina says predicting is a waste of time. Is she right?",
+    "hint": "What if the outcome differs from your guess?",
+    "explanation": "Predicting helps us notice bugs.",
+    "skill_tag": "quiz.reason_predict",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always"
+     },
+     {
+      "id": "b",
+      "text": "Yes, bugs fix themselves"
+     },
+     {
+      "id": "c",
+      "text": "No. A prediction helps us find bugs"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "outcomes",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about a prediction.",
+    "hint": "Guess then try.",
+    "explanation": "We predict, then run.",
+    "skill_tag": "quiz.vocab_fill",
+    "points": 2,
+    "text": "A {b1} is a guess before running. Then we {b2} the program.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "cable"
+       },
+       {
+        "id": "b",
+        "text": "prediction"
+       },
+       {
+        "id": "c",
+        "text": "bug"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "paint"
+       },
+       {
+        "id": "b",
+        "text": "run"
+       },
+       {
+        "id": "c",
+        "text": "eat"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "outcomes",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "multiple_choice",
+    "prompt": "The blocks say: say hello, wait, then say goodbye. What is the last thing said?",
+    "hint": "Read in order.",
+    "explanation": "The last block says goodbye.",
+    "skill_tag": "quiz.read_blocks",
+    "options": [
+     {
+      "id": "a",
+      "text": "Nothing"
+     },
+     {
+      "id": "b",
+      "text": "Goodbye"
+     },
+     {
+      "id": "c",
+      "text": "Hello"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put these blocks in order for a quiz about a bus.",
+    "hint": "Question first.",
+    "explanation": "Ask, wait, then answer.",
+    "skill_tag": "quiz.block_order",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Say red"
+     },
+     {
+      "id": "i1",
+      "text": "Ask what colour the bus is"
+     },
+     {
+      "id": "i2",
+      "text": "Wait"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "number",
+    "prompt": "A quiz has 4 questions. Each question needs 2 blocks. How many blocks is that in all?",
+    "hint": "2 + 2 + 2 + 2.",
+    "explanation": "4 questions of 2 blocks make 8 blocks.",
+    "skill_tag": "quiz.count_blocks",
+    "answer": {
+     "value": 8,
+     "tolerance": 0
+    },
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "A program can only ever have one sprite.",
+    "hint": "Think about teacher and answer.",
+    "explanation": "A program can have many sprites.",
+    "skill_tag": "quiz.two_sprites",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "slider",
+    "prompt": "A quiz has 6 questions. Aisha has answered 4. Slide to show how many are left.",
+    "hint": "6 take away 4.",
+    "explanation": "6 - 4 = 2 questions left.",
+    "skill_tag": "quiz.questions_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Which block makes the quiz pause for a moment?",
+    "hint": "Think about stopping.",
+    "explanation": "A wait block pauses the program.",
+    "skill_tag": "quiz.wait",
+    "options": [
+     {
+      "id": "a",
+      "text": "A grow block"
+     },
+     {
+      "id": "b",
+      "text": "A sound block"
+     },
+     {
+      "id": "c",
+      "text": "A wait block"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "multiple_choice",
+    "prompt": "Omar says a sprite cannot answer another sprite. Is he right?",
+    "hint": "Think about the teacher and the cat.",
+    "explanation": "Blocks can make sprites reply to each other.",
+    "skill_tag": "quiz.reason_talk",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only the teacher speaks"
+     },
+     {
+      "id": "c",
+      "text": "No. Blocks let sprites answer each other"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "reason",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multi_select",
+    "prompt": "Which two sprites could play a flag quiz? Pick two.",
+    "hint": "Think about characters.",
+    "explanation": "A question sprite and an answer sprite are characters.",
+    "skill_tag": "quiz.sprite_pick",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cat answer sprite"
+     },
+     {
+      "id": "b",
+      "text": "A power cable"
+     },
+     {
+      "id": "c",
+      "text": "A mouse pad"
+     },
+     {
+      "id": "d",
+      "text": "A question sprite"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "twosprite",
+    "depth": "apply",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "match",
+    "prompt": "Pair each bug with its fix.",
+    "hint": "Think about each bug.",
+    "explanation": "Each fix matches the bug.",
+    "skill_tag": "quiz.bug_fix",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "No sound plays"
+     },
+     {
+      "id": "l2",
+      "text": "Quiz never starts"
+     },
+     {
+      "id": "l3",
+      "text": "Sprite too small"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Add a start block"
+     },
+     {
+      "id": "r1",
+      "text": "Add a sound block"
+     },
+     {
+      "id": "r3",
+      "text": "Add a grow block"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "bugs",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "true_false",
+    "prompt": "Running a program again helps us find bugs.",
+    "hint": "Think about testing.",
+    "explanation": "Running and testing helps us find bugs.",
+    "skill_tag": "quiz.first_try",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "bugs",
+    "depth": "recall",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "The quiz shows the answer but never asks the question. What is missing?",
+    "hint": "Think about the teacher sprite.",
+    "explanation": "The question sprite needs a block to ask.",
+    "skill_tag": "quiz.question_missing",
+    "options": [
+     {
+      "id": "a",
+      "text": "A new tablet"
+     },
+     {
+      "id": "b",
+      "text": "A second answer"
+     },
+     {
+      "id": "c",
+      "text": "A question block"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Hana says finding a bug means her program is useless. Is she right?",
+    "hint": "Think about the quiz she fixed.",
+    "explanation": "A bug is fixed and the program improves.",
+    "skill_tag": "quiz.reason_bug",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, delete it"
+     },
+     {
+      "id": "b",
+      "text": "No. She can fix the bug and the program works"
+     },
+     {
+      "id": "c",
+      "text": "Yes, useless"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about checking.",
+    "hint": "Did the fix work?",
+    "explanation": "We run it again after a fix.",
+    "skill_tag": "quiz.test_fill",
+    "points": 2,
+    "text": "After a fix, we {b1} the program {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "sing"
+       },
+       {
+        "id": "b",
+        "text": "hide"
+       },
+       {
+        "id": "c",
+        "text": "run"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "never"
+       },
+       {
+        "id": "b",
+        "text": "again"
+       },
+       {
+        "id": "c",
+        "text": "blue"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "bugs",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "hotspot",
+    "prompt": "Tap the block that does not help the quiz.",
+    "hint": "Which is not part of the quiz?",
+    "explanation": "Popping a balloon is not part of the quiz.",
+    "skill_tag": "quiz.extra_block",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "❓",
+       "label": "Ask the question",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "⏳",
+       "label": "Wait",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎈",
+       "label": "Pop a balloon",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "apply",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "multiple_choice",
+    "prompt": "Layla says one test finds every bug. Is she right?",
+    "hint": "Think about the next run.",
+    "explanation": "New bugs can appear after fixes.",
+    "skill_tag": "quiz.reason_test_all",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, one is always enough"
+     },
+     {
+      "id": "b",
+      "text": "No. We test again after each fix"
+     },
+     {
+      "id": "c",
+      "text": "Yes, bugs show once"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "bugs",
+    "depth": "reason",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "order",
+    "prompt": "Put these steps for an Eid quiz in order.",
+    "hint": "Plan first.",
+    "explanation": "Plan, build, try, then change.",
+    "skill_tag": "quiz.make_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Try it out"
+     },
+     {
+      "id": "i4",
+      "text": "Make changes"
+     },
+     {
+      "id": "i2",
+      "text": "Snap the blocks together"
+     },
+     {
+      "id": "i1",
+      "text": "Plan the questions"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "mine",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "slider",
+    "prompt": "A quiz plan has 6 sprites. 4 are built. Slide to show how many are left to build.",
+    "hint": "6 take away 4.",
+    "explanation": "6 - 4 = 2 sprites left.",
+    "skill_tag": "quiz.sprites_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 8
+    },
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "mine",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "multiple_choice",
+    "prompt": "Sana says she can build a quiz without any plan. Is she right?",
+    "hint": "Think about the paper plan.",
+    "explanation": "A design makes building easier.",
+    "skill_tag": "quiz.reason_design",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, plans are always useless"
+     },
+     {
+      "id": "b",
+      "text": "No, nobody can build without a plan ever"
+     },
+     {
+      "id": "c",
+      "text": "She can try, but a plan makes it easier"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ravi says the longest program must be the best. Is he right?",
+    "hint": "Think about programs A and B.",
+    "explanation": "Length does not make a program better.",
+    "skill_tag": "quiz.reason_more",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, short ones never work"
+     },
+     {
+      "id": "b",
+      "text": "No. A short program can work just as well"
+     },
+     {
+      "id": "c",
+      "text": "Yes, longest wins"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a quiz with only questions is complete. Is she right?",
+    "hint": "Think about the cat.",
+    "explanation": "A quiz needs an answer as well.",
+    "skill_tag": "quiz.reason_answer",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, answers are optional"
+     },
+     {
+      "id": "b",
+      "text": "No. It also needs answers"
+     },
+     {
+      "id": "c",
+      "text": "Yes, only questions matter"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "mine",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "number",
+    "prompt": "A quiz has 3 sprites and 4 blocks on each. How many blocks is that in all?",
+    "hint": "4 + 4 + 4.",
+    "explanation": "3 sprites with 4 blocks each make 12 blocks.",
+    "skill_tag": "quiz.blocks_total",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    },
+    "sub_lesson": "mine",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two things help you improve a quiz? Pick two.",
+    "hint": "Think about the friend.",
+    "explanation": "Feedback and testing improve a quiz.",
+    "skill_tag": "quiz.evaluate_qs",
+    "options": [
+     {
+      "id": "a",
+      "text": "Hiding it"
+     },
+     {
+      "id": "b",
+      "text": "Deleting all the blocks"
+     },
+     {
+      "id": "c",
+      "text": "Testing it again"
+     },
+     {
+      "id": "d",
+      "text": "Kind feedback"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "mine",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

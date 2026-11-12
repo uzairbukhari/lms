@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 1: Living things (Fatima, age 9). Enquiry type: identifying and classifying.
 
+const REEF = "science-class-4-living-things-1-d08f517a.jpg";
+const HERON = "science-class-4-living-things-2-66dc5b0c.jpg";
+const CAMEL = "science-class-4-living-things-3-198d4242.jpg";
+
 const groups = {
   id: "groups", kind: "learn", title: "Vertebrates and invertebrates",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we find out how scientists sort living things, and how food chains start with a plant.", T("Today's big question: how do scientists sort living things?", "We will classify, use keys and follow food chains.")),
+    SAY("This coral reef is full of life. Fish, corals and sponges all live here. How could we sort them?", PHOTO(REEF, "A coral reef with colourful fish and corals", "A coral reef is home to many living things.", "Photo by Oleksandr Sushko on Unsplash")),
     H("Stop 1: Animals with and without backbones"),
     SAY("Scientists sort living things into groups. This is called classification. The first big split is about the backbone. Vertebrates have a backbone inside their body. Humans, fish, birds, reptiles, amphibians and mammals are all vertebrates. Invertebrates have no backbone at all. Insects, spiders, worms and snails are invertebrates. Over nine in ten animals on Earth are invertebrates!", T("**Vertebrates** have a backbone. **Invertebrates** do not.", "Sorting living things into groups is called **classification**.")),
     EB("meadow", "Two big animal groups",
@@ -19,7 +26,7 @@ const groups = {
     IMG("🐘 🦅 🐊 🐸 🐟", "A mammal, a bird, a reptile, an amphibian and a fish."),
     CHK(mc("A shark has gills and fins and lives in the sea. Which group is it in?", "Fish", ["Mammals", "Reptiles"], { hint: "Gills and fins.", why: "A shark is a fish. A whale is a mammal, but a shark is a fish." })),
     SAY("Remember. Vertebrates have a backbone and invertebrates do not. Vertebrates are in five groups.", SUM("Vertebrates have a backbone; invertebrates do not", "Vertebrates are mammals, birds, reptiles, amphibians and fish", "Classification means sorting into groups")),
-    GLOSS({ vertebrates: "Animals with a backbone.", invertebrates: "Animals with no backbone, like insects and snails.", classification: "Sorting living things into groups by what they have in common.", mammals: "Vertebrates with hair that feed their young milk.", birds: "Vertebrates with feathers that lay eggs." }),
+    GLOSS({ scientists: "People who study the natural world.", vertebrates: "Animals with a backbone.", invertebrates: "Animals with no backbone, like insects and snails.", classification: "Sorting living things into groups by what they have in common.", mammals: "Vertebrates with hair that feed their young milk.", birds: "Vertebrates with feathers that lay eggs." }),
   ],
   mini: [
     mc("Which of these is a vertebrate?", "A sparrow", ["A spider", "A worm"], { hint: "It has a backbone.", why: "A sparrow is a bird, and birds have backbones." }),
@@ -57,7 +64,8 @@ const adapt = {
   id: "adapt", kind: "play", title: "Adaptations",
   blocks: [
     H("Stop 1: Suited to their habitat"),
-    SAY("An adaptation is a feature that helps a living thing survive in its habitat. A camel has wide feet that do not sink in sand, long eyelashes to keep sand out, and a hump that stores fat for food. A polar bear has thick fur and a layer of fat to keep warm in the freezing Arctic. Look at these adaptations in action.", T("An **adaptation** is a feature that helps a living thing survive in its **habitat**.", "A camel and a polar bear are adapted to very different homes.")),
+    SAY("This camel lives in the desert. Look at its long legs and its hump.", PHOTO(CAMEL, "A camel standing on desert sand under a blue sky", "A camel is adapted to desert life.", "Photo by Faseeh Fawaz on Unsplash")),
+    SAY("An adaptation is a feature that helps a living thing survive in its habitat. A camel has wide feet that do not sink in sand. Long eyelashes keep sand out. Its hump stores fat for food. A polar bear has thick fur and a layer of fat to keep warm in the freezing Arctic. Look at these adaptations in action.", T("An **adaptation** is a feature that helps a living thing survive in its **habitat**.", "A camel and a polar bear are adapted to very different homes.")),
     EB("desert", "Adapted to survive",
       SS("A camel's wide, flat feet spread its weight so it does not sink into sand. Its hump stores fat, which it can use as energy when food is scarce.", S("The camel is adapted to the desert.", ["c", "🐪", 50, 58, 3, "none"], ["s", "☀️", 80, 20, 2, "pulse"])),
       SS("A polar bear has thick white fur and a fat layer. They keep it warm, and the white colour helps it hide in the snow.", S("The polar bear is adapted to the Arctic.", ["p", "🐻‍❄️", 50, 58, 3, "none"], ["w", "❄️", 20, 25, 2, "float"], ["w2", "❄️", 80, 30, 2, "float"]))),
@@ -86,7 +94,8 @@ const chains = {
       SS("The plant makes sugar for energy, and releases oxygen into the air.", S("Sugar is made and oxygen comes out.", ["p", "🌿", 50, 58, 3, "pulse"], ["o", "🫧", 80, 25, 2, "float"], ["g", "🍬", 25, 40, 2, "bounce"]))),
     CHK(mc("What do plants release when they make food?", "Oxygen", ["Smoke", "Sugar only"], { hint: "Animals breathe it in.", why: "Plants give out oxygen when they make food." })),
     H("Stop 2: Producers, predators and prey"),
-    SAY("In a food chain, the plant is the producer, because it makes food. Animals that eat plants are called herbivores, and animals that eat other animals are carnivores. A predator hunts other animals. The animal it hunts is called its prey. In this chain, grass is eaten by a rabbit, the rabbit is prey, and the fox is the predator.", T("A **producer** makes its own food. A **predator** hunts **prey**.", "A **consumer** eats other living things.")),
+    SAY("A heron wades in the wetland and hunts small animals. It is a predator in a wetland food chain.", PHOTO(HERON, "A grey heron standing in shallow wetland water", "A heron is a predator.", "Photo by Amit Rai on Unsplash")),
+    SAY("In a food chain, the plant is the producer, because it makes food. Animals that eat plants are called herbivores, and animals that eat other animals are carnivores. A predator hunts other animals. The animal it hunts is called its prey. In this chain, a rabbit eats grass. The rabbit is prey, and the fox is the predator.", T("A **producer** makes its own food. A **predator** hunts **prey**.", "A **consumer** eats other living things.")),
     EB("meadow", "A food chain",
       SS("The grass is the producer. It makes its own food from sunlight.", S("Producer: grass.", ["g", "🌱", 15, 70, 3, "grow"], ["s", "☀️", 20, 15, 2, "pulse"])),
       SS("The rabbit eats the grass. It is a consumer, and a herbivore.", S("Rabbit: consumer (herbivore).", ["g", "🌱", 15, 70, 2, "none"], ["a1", "➡️", 33, 70, 2, "none"], ["r", "🐇", 52, 66, 3, "bounce"])),
@@ -121,6 +130,28 @@ const ALTS = [
   [mc("Tom says the fox is the producer in leaf → caterpillar → robin. Why is he wrong?", "The leaf makes its own food, so the leaf is the producer", ["A fox is not a predator", "The robin makes food from light"], { hint: "Which one is the plant?", why: "A leaf (a plant) makes its own food, so it is the producer." }), mc("Ruby says the seal is the producer in seaweed → small fish → seal. Why is she wrong?", "Seaweed makes its own food, so seaweed is the producer", ["Seals eat sunlight", "Small fish are producers"], { hint: "Which one is the plant-like organism?", why: "Seaweed makes its own food, so it is the producer." })],
 ];
 
+const clip = {
+  title: "Who eats whom?", backdrop: "meadow", caption: "Sort animals, then follow a food chain from grass to fox.",
+  scenes: [
+    { caption: "Sorting animals.", say: "Fatima visits a wetland. She wants to sort the animals she sees.",
+      items: [{ id: "f", emoji: "👧", label: "Fatima", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "h", emoji: "🦩", x: 72, y: 45, size: 3, enter: "pop" }] },
+    { caption: "Backbone or not?", say: "A heron has a backbone. A snail has none. One is a vertebrate, one is not.",
+      items: [{ id: "a", emoji: "🦩", label: "vertebrate", x: 30, y: 50, size: 3 }, { id: "b", emoji: "🐌", label: "invertebrate", x: 70, y: 56, size: 3 }] },
+    { caption: "A yes or no key.", say: "A key asks yes or no questions. Does it have feathers? Yes, so it is a bird.",
+      items: [{ id: "k", emoji: "❓", label: "feathers?", x: 35, y: 46, size: 3, anim: "pulse" }, { id: "b", emoji: "🐦", label: "bird", x: 70, y: 50, size: 3, effect: "sparkle" }] },
+    { caption: "A desert helper.", say: "A camel has wide feet. They stop it sinking into sand. That is an adaptation.",
+      items: [{ id: "c", emoji: "🐪", label: "wide feet", x: 50, y: 52, size: 3, effect: "glow" }] },
+    { caption: "Grass makes food.", say: "In a meadow, grass makes its own food from sunlight. It is the producer.",
+      items: [{ id: "g", emoji: "🌱", label: "producer", x: 30, y: 62, size: 3 }, { id: "s", emoji: "☀️", x: 30, y: 20, size: 3, effect: "glow" }] },
+    { caption: "A food chain.", say: "A rabbit eats the grass. A fox hunts the rabbit. Arrows mean is eaten by.",
+      items: [{ id: "g", emoji: "🌱", x: 15, y: 60, size: 2 }, { id: "a1", emoji: "➡️", x: 33, y: 60, size: 2 }, { id: "r", emoji: "🐇", x: 52, y: 58, size: 3 }, { id: "a2", emoji: "➡️", x: 70, y: 60, size: 2 }, { id: "x", emoji: "🦊", label: "predator", x: 86, y: 56, size: 3, effect: "sparkle" }] },
+    { caption: "Every link matters.", say: "Take away the rabbits, and the fox goes hungry. Every link matters.",
+      items: [{ id: "x", emoji: "🦊", label: "hungry", x: 50, y: 54, size: 3, anim: "bounce" }] },
+    { caption: "Well done!", say: "Groups, keys, adaptations and food chains. Well done, young scientist!",
+      items: [{ id: "f", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "🌿", x: 70, y: 44, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-living-things", subject: "science", cls: 4, topic: 1, title: "Living Things",
@@ -135,13 +166,9 @@ export const topics = [
       tf("Plants need light and water to grow.", true, { hint: "Think of the cress.", why: "Plants need light and water." }),
       mc("What is a habitat?", "The place where a living thing lives", ["A kind of food", "A kind of plant"], { hint: "It is a home.", why: "A habitat is where a living thing lives." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how do scientists sort the millions of living things on Earth? By the end, you will sort animals into groups, use a key, explain how animals suit their homes, and show how a food chain starts with a plant. Let's go!", T("Today's big question: how do scientists sort living things?", "We will classify, use keys and follow food chains.")),
-      IMG("🐘🦋🌿🐟", "Millions of kinds of living things share our planet."),
-      GLOSS({ scientists: "People who study the natural world." }),
-    ],
+    intro: [],
     subs: [groups, keys, adapt, chains],
+    clip,
     quiz: [
       Q("groups", "recall", "living4.vertebrates", mc("Which of these animals is a vertebrate?", "A pigeon", ["A slug", "A beetle"], { hint: "It has a backbone.", why: "A pigeon is a bird, and birds have a backbone." }), ...ALTS[0]),
       Q("groups", "recall", "living4.facts", tf("A butterfly is a vertebrate.", false, { hint: "Does it have a backbone?", why: "A butterfly is an insect, so it is an invertebrate." }), ...ALTS[1]),
@@ -160,6 +187,37 @@ export const topics = [
       Q("adapt", "reason", "living4.reason_adapt", mc("Why do desert animals like camels have wide, flat feet?", "So they do not sink into the sand", ["So they can swim", "So they can fly"], { hint: "Think about walking on sand.", why: "Wide feet spread the weight over the sand." }), ...ALTS[12]),
       Q("chains", "reason", "living4.reason_plants", mc("A student says plants take their food from the soil. What is the correct idea?", "Plants make their own food in their leaves using light", ["Plants eat soil", "Plants take sugar from animals"], { hint: "Think about photosynthesis.", why: "Plants make food in their leaves using light, water and carbon dioxide." }), ...ALTS[13]),
       Q("chains", "reason", "living4.terms", mc("Sam says the rabbit is the producer in grass → rabbit → fox. Why is he wrong?", "The grass makes its own food, so the grass is the producer", ["A rabbit hunts the fox", "The fox makes food from light"], { hint: "Which one is the plant?", why: "Grass makes its own food, so it is the producer." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("groups", "apply", "living4.group_three", mat("Sort these sea and pond animals into groups.", [["Eel", "Fish"], ["Whale", "Mammal"], ["Salamander", "Amphibian"]], { hint: "Look at the body, not the home.", why: "An eel is a fish, a whale is a mammal and a salamander is an amphibian." }),
+        mat("Pair these animals with their groups.", [["Shark", "Fish"], ["Seal", "Mammal"], ["Newt", "Amphibian"]], { hint: "Look at the body, not the home.", why: "A shark is a fish, a seal is a mammal and a newt is an amphibian." })),
+      Q("groups", "apply", "living4.five_groups", num("How many vertebrate groups are there if we count mammals, birds, reptiles, amphibians and fish?", 5, { hint: "Count the five names.", why: "There are 5 groups of vertebrates." }),
+        num("A class sorts animals into the vertebrate groups. How many groups do they need in all?", 5, { hint: "Mammals, birds, reptiles, amphibians, fish.", why: "There are 5 vertebrate groups." })),
+      Q("groups", "apply", "living4.spider", mc("Why is a spider not an insect?", "It has eight legs, and insects have six", ["It has wings", "It has a backbone"], { hint: "Count the legs.", why: "Insects have six legs. Spiders have eight, so they are not insects." }),
+        mc("Which animal is an insect?", "A beetle", ["A spider", "A snail"], { hint: "Six legs.", why: "A beetle has six legs, so it is an insect." })),
+      Q("keys", "apply", "living4.complete_key", fill("Finish this key question.", "Does it have {b1}? If yes, it is a bird. If no, ask: does it have {b2}?", [["feathers", "scales", "gills"], ["fur", "wings", "petals"]], { hint: "Birds have feathers.", why: "Feathers show a bird. Fur is a feature of mammals." }),
+        fill("Complete this second key question.", "Does it have {b1}? If yes, it is a fish. If no, ask: does it have {b2}?", [["gills", "feathers", "hair"], ["legs", "fins only", "roots"]], { hint: "Fish have gills.", why: "Gills show a fish. Legs help split the rest." })),
+      Q("keys", "apply", "living4.make_key", ord("Put the steps of making a key in order.", ["Choose the group of living things", "Write a yes or no question", "Split the group in two", "Repeat until each one is alone"], { hint: "Start with the group.", why: "You choose, ask, split and repeat." }),
+        ord("Put the steps of using a key in order.", ["Look at the animal", "Read the first question", "Follow the yes or no branch", "Read the name at the end"], { hint: "Look first.", why: "You look, read, follow and read the name." })),
+      Q("chains", "apply", "living4.consumer", ms("Which two are consumers? Pick two.", ["A rabbit", "A fox"], ["Grass", "An oak tree"], { hint: "Consumers eat other living things.", why: "A rabbit and a fox eat other living things. Grass and trees make their own food." }),
+        ms("Which two are consumers? Choose two.", ["A frog", "A heron"], ["Pondweed", "Seaweed"], { hint: "They eat other living things.", why: "A frog and a heron eat other living things." })),
+      Q("chains", "apply", "living4.scavenger", mc("A vulture eats animals that are already dead. What is it called?", "A scavenger", ["A producer", "A predator that hunts"], { hint: "It does not hunt.", why: "A scavenger feeds on dead animals. A predator hunts living ones." }),
+        mc("A hyena sometimes eats leftovers from a kill. Which word fits that behaviour?", "Scavenging", ["Photosynthesis", "Producing"], { hint: "Leftovers.", why: "Eating leftovers from dead animals is scavenging." })),
+      Q("chains", "apply", "living4.sun", tf("The energy in most food chains first comes from the Sun.", true, { hint: "Plants use light.", why: "Plants capture light energy from the Sun to make food." }),
+        tf("Food chains get their first energy from the soil.", false, { hint: "Plants use light.", why: "The first energy comes from sunlight, which plants capture." })),
+      Q("chains", "apply", "living4.reef_count", sld("A reef has 20 fish and 8 of them are predators. Slide to show how many are not predators.", { min: 0, max: 20, unit: "fish" }, 12, 0, { hint: "20 minus 8.", why: "20 - 8 = 12 fish are not predators." }),
+        sld("A pond has 15 animals and 6 are predators. Slide to show how many are not predators.", { min: 0, max: 15, unit: "animals" }, 9, 0, { hint: "15 minus 6.", why: "15 - 6 = 9 are not predators." })),
+      Q("adapt", "apply", "living4.owl", hot("Tap the adaptation that helps an owl hunt at night.", [["👁️", "Large eyes", 22, 50], ["🦆", "Webbed feet", 50, 50], ["🦵", "Wide flat feet", 78, 50]], ["Large eyes"], { labels: true, hint: "Seeing in the dark.", why: "Large eyes let an owl see in dim light." }),
+        hot("Tap the adaptation that helps a duck swim.", [["🦆", "Webbed feet", 22, 50], ["👁️", "Large eyes", 50, 50], ["🐪", "Hump", 78, 50]], ["Webbed feet"], { labels: true, hint: "Paddles.", why: "Webbed feet push against water like paddles." })),
+      Q("groups", "reason", "living4.bat", mc("Aisha says a bat is a bird because it flies. Is she right?", "No. A bat has fur and feeds its young milk, so it is a mammal", ["Yes, anything that flies is a bird", "No, a bat is an insect"], { hint: "Look at the body covering.", why: "Bats have fur and feed milk, so they are mammals." }),
+        mc("Ben says a penguin is a fish because it swims. Is he right?", "No. A penguin has feathers and lays eggs, so it is a bird", ["Yes, swimming means fish", "No, a penguin is a mammal"], { hint: "Look at the body covering.", why: "Penguins have feathers and lay eggs, so they are birds." })),
+      Q("groups", "reason", "living4.habitat_group", mc("Sam says animals that live in water must all be fish. Is he right?", "No. Whales and frogs live in or near water but are a mammal and an amphibian", ["Yes, water animals are fish", "No, only birds live in water"], { hint: "Group by features, not habitat.", why: "We classify by body features, not where the animal lives." }),
+        mc("Mina says all animals that live on land are mammals. Is she right?", "No. Birds, reptiles and insects live on land too", ["Yes, land animals are mammals", "No, only fish live on land"], { hint: "Group by features.", why: "Many kinds of animals live on land." })),
+      Q("chains", "reason", "living4.top_animal", mc("Hamza says the animal at the end of a food chain is the most important. Is he right?", "No. Every living thing in the chain matters, and the chain starts with the producer", ["Yes, the top animal matters most", "Yes, because it is biggest"], { hint: "What happens if the plant goes?", why: "Without the producer, nothing else in the chain has food." }),
+        mc("Ali says the smallest living thing in a chain is the least important. Is he right?", "No. If it disappears, the animals that eat it lose their food", ["Yes, small means unimportant", "Yes, only big animals count"], { hint: "Follow the arrows.", why: "Every link supports the next one." })),
+      Q("chains", "reason", "living4.arrow", mc("Layla says the arrows in a food chain point to what is bigger. Is she right?", "No. An arrow means 'is eaten by', so it shows the way energy goes", ["Yes, arrows point to bigger animals", "Yes, arrows point to older animals"], { hint: "Grass → rabbit.", why: "Arrows show who is eaten by whom, and the energy flow." }),
+        mc("Omar says arrows in a food chain mean 'eats'. Is he right?", "No. The arrow points from the food to the eater: it means 'is eaten by'", ["Yes, the arrow points to the food", "Yes, it shows who is stronger"], { hint: "Grass → rabbit.", why: "The arrow starts at the food and points to the animal that eats it." })),
+      Q("chains", "reason", "living4.plant_first", mc("Zainab says a plant starts a food chain because it is the smallest. Is she right?", "No. It starts the chain because it makes its own food", ["Yes, because it is smallest", "Yes, because it cannot move"], { hint: "What does a producer do?", why: "A plant is the producer because it makes its own food." }),
+        mc("Ben says grass is first in a food chain because it grows slowly. Is he right?", "No. Grass is first because it makes food using sunlight", ["Yes, because it is slow", "Yes, because it is green"], { hint: "What does a producer do?", why: "A producer makes its own food from sunlight." })),
     ],
   }),
 ];

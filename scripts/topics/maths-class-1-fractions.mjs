@@ -1,16 +1,28 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, FRAC, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, PHOTO, REVEAL, ACT, MAN, BRAIN, SUM, CHK, FRAC, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-1-fractions.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-1-fractions-d1-f1c96342.png","alt":"A fraction bar showing 1/2 above two quarters, showing that 1/2 = 2/4","caption":"1/2 = 2/4."};
+const COTEACH_B = {"type":"image","asset":"maths-class-1-fractions-d2-7caa69b5.png","alt":"Two circles split into three parts, one with equal parts and one with unequal parts","caption":"Thirds must be equal parts."};
 // Class 1 Maths topic 6: fractions (format 3.0). Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const PZ = (id, parts, shaded, x = 50, y = 44, size = 3, anim = "none") => [id, { kind: "fraction_pizza", parts, shaded }, x, y, size, anim];
 
+const N = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const APPLE = "maths-class-1-fractions-1-87623ee7.jpg";
+
 const equal = {
   id: "equal", kind: "learn", title: "Equal parts and halves",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Today we cut things into equal parts. You will meet halves, quarters and thirds. These are fractions. We use them to share fairly.",
+      T("Today we learn about fractions: halves, quarters and thirds.")),
+    SAY("Look at this apple. It is cut into four slices. Are the slices all the same size? Have a look!",
+      PHOTO(APPLE, "A red apple cut into four slices of different sizes", "An apple cut into four slices.", "Photo by Nikolai Chernichenko on Unsplash")),
     H("Stop 1: Equal parts"),
     SAY("A fraction is part of a whole. A whole is the complete thing, like a whole pizza. Fractions only work when the pieces are equal. Equal means exactly the same size. Look at these two cuts of pizza. In the first, the pieces are all the same size. In the second, one piece is huge and one is tiny. Only the first one is fair, so only the first one shows fractions.", T("A **fraction** is part of a **whole**. The parts must be **equal**.", "Equal parts are exactly the same size.")),
     IMG("🍕", "A pizza cut into equal parts shares fairly."),
+    SAY("Look at the two bars. One half is the same size as two quarters.", COTEACH_A),
     CHK(mc("Which pizza is shared fairly?", "All the pieces are the same size", ["One piece is much bigger", "One piece is tiny"], { hint: "What does equal mean?", why: "Equal parts are all the same size.", tag: "fractions.equal" })),
     H("Stop 2: Halves"),
     SAY("When we cut something into two equal parts, each part is a half. Two halves make one whole. We write a half like this: one over two. Look at the pizza. Two equal parts, and one is coloured. One of two equal parts is one half.", T("Two equal parts make **halves**. Each part is 1/2 of the whole.", "Two halves make one whole.")),
@@ -19,7 +31,7 @@ const equal = {
       SS("Cut it into two equal parts. One part is coloured. One of two equal parts is one half.", S("1 of 2 equal parts is 1/2.", PZ("p", 2, 1, 50, 44, 3, "pulse"), ["s", "✅", 50, 90, 2, "bounce", "1/2"]))),
     CHK(num("A cake is cut into 2 equal parts. How many parts make a whole cake?", 2, { hint: "Two halves make one whole.", why: "2 halves make 1 whole.", tag: "fractions.halves" })),
     SAY("Remember. A fraction is part of a whole. The parts must be equal. Two equal parts are halves.", SUM("A fraction is a part of a whole", "The parts must be equal", "Two equal parts are halves")),
-    GLOSS({ fraction: "A part of a whole.", whole: "The complete thing.", equal: "Exactly the same size.", half: "One of two equal parts.", halves: "More than one half." }),
+    GLOSS({ fractions: "Equal parts of a whole.", fraction: "A part of a whole.", whole: "The complete thing.", equal: "Exactly the same size.", half: "One of two equal parts.", halves: "More than one half." }),
   ],
   mini: [
     mc("How many equal parts does a half come from?", "2", ["1", "4"], { hint: "Half means two parts.", why: "A half is one of 2 equal parts." }),
@@ -33,12 +45,13 @@ const quarters = {
   id: "quarters", kind: "try", title: "Quarters and thirds",
   blocks: [
     H("Stop 1: Quarters"),
-    SAY("Now cut each half in half again. That makes four equal parts. Each one is a quarter. We write a quarter as one over four. Look at the pizza. Four equal parts, and one coloured. Two quarters make a half. Four quarters make a whole. Fold a piece of paper in half and in half again, and you can see quarters yourself!", T("Four equal parts make **quarters**. Each part is 1/4 of the whole.", "2 quarters make a half. 4 quarters make a whole.")),
+    SAY("Now cut each half in half again. That makes four equal parts. Each one is a quarter. We write a quarter as one over four. Look at the pizza. Four equal parts, and one coloured. Two quarters make a half. Four quarters make a whole. Fold a paper in half, then in half again. You can see quarters yourself!", T("Four equal parts make **quarters**. Each part is 1/4 of the whole.", "2 quarters make a half. 4 quarters make a whole.")),
     EXPP("Quarters of a pizza",
       SS("Here is one quarter. One of four equal parts.", S("1 of 4 equal parts is 1/4.", PZ("p", 4, 1))),
       SS("Two quarters. That is the same as one half.", S("2 quarters make a half.", PZ("p", 4, 2, 50, 44, 3, "pulse"))),
       SS("All four quarters make the whole pizza.", S("4 quarters make a whole.", PZ("p", 4, 4, 50, 44, 3, "pulse"), ["s", "✅", 50, 90, 2, "bounce", "4/4 = 1 whole"]))),
     ACT("Fold a paper quarter", ["A square of paper", "Colouring pencils"], ["Fold the paper in half. Open it. How many parts? Colour one half.", "Fold the paper in half again, and again the other way.", "Open it up. How many equal parts? Those are quarters.", "Colour one quarter. Colour two quarters. What fraction is that?"]),
+    SAY("These circles are both split in three. Only one has equal parts. Equal parts are fair.", COTEACH_B),
     CHK(mc("How many quarters make a whole?", "4", ["2", "3"], { hint: "Four equal parts.", why: "4 quarters make 1 whole.", tag: "fractions.quarters" })),
     H("Stop 2: Thirds"),
     SAY("Cut a whole into three equal parts. Each part is a third. We write a third as one over three. A bar can show it too. Three equal parts, one coloured. One third. Three thirds make a whole.", T("Three equal parts make **thirds**. Each part is 1/3.", "3 thirds make a whole.")),
@@ -67,7 +80,7 @@ const amounts = {
     SAY("Flip the cards and find the matching pairs.", BRAIN("memory_match", "Half match", "Find the matching pairs of cards.", ["🍕", "🍰", "🍪", "🍩", "🥧", "🍫"])),
     CHK(num("What is half of 10?", 5, { hint: "Share 10 into 2 equal groups.", why: "Half of 10 is 5.", tag: "fractions.half_of" })),
     H("Stop 2: A quarter of a number"),
-    SAY("A quarter means one of four equal groups. To find a quarter, share into four equal groups. A quarter of twelve. Share twelve between four. Three in each group. A quarter of twelve is three. Halve it twice is a good trick: half of twelve is six, and half of six is three.", T("To find a **quarter**, share into 4 equal groups.", "A quarter of 12 is 3. Or halve it twice: 12 → 6 → 3.")),
+    SAY("A quarter means one of four equal groups. To find a quarter, share into four equal groups. A quarter of twelve. Share twelve between four. Three in each group. A quarter of twelve is three. Here is a trick. Halve it twice. Half of twelve is six. Half of six is three.", T("To find a **quarter**, share into 4 equal groups.", "A quarter of 12 is 3. Or halve it twice: 12 → 6 → 3.")),
     IMG("🍪", "A quarter of 12 biscuits is 3."),
     REVEAL("What is a quarter of 20? Have a think first.", "5. Share 20 between 4 gives 5 each. Or half of 20 is 10, and half of 10 is 5."),
     CHK(mc("What is a quarter of 8?", "2", ["4", "1"], { hint: "Halve 8, then halve again.", why: "Half of 8 is 4. Half of 4 is 2.", tag: "fractions.quarter_of" })),
@@ -107,6 +120,29 @@ const use = {
   ],
 };
 
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara cuts the roti fairly", backdrop: "home", caption: "Zara learns halves and quarters from one roti.",
+  scenes: [
+    { caption: "One whole roti.", say: "Zara has one whole roti. She wants to share it fairly.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "p", prop: { kind: "fraction_pizza", parts: 1, shaded: 1 }, label: "1 whole", x: 72, y: 44, size: 3, enter: "pop" }] },
+    { caption: "Cut in 2 equal parts.", say: "First she cuts it in two. Both parts are the same size.",
+      items: [{ id: "p", prop: { kind: "fraction_pizza", parts: 2, shaded: 1 }, label: "1/2", x: 50, y: 44, size: 3, effect: "sparkle" }] },
+    { caption: "Two halves = 1 whole.", say: "Each part is one half. Two halves make a whole.",
+      items: [{ id: "p", prop: { kind: "fraction_pizza", parts: 2, shaded: 2 }, label: "2 halves", x: 50, y: 44, size: 3, effect: "glow" }] },
+    { caption: "Cut again: quarters.", say: "Now she cuts each half again. That makes four equal parts.",
+      items: [{ id: "p", prop: { kind: "fraction_pizza", parts: 4, shaded: 1 }, label: "1/4", x: 50, y: 44, size: 3, effect: "sparkle" }] },
+    { caption: "2 quarters = 1 half.", say: "Two quarters cover the same space as one half!",
+      items: [{ id: "p", prop: { kind: "fraction_pizza", parts: 4, shaded: 2 }, label: "2/4 = 1/2", x: 50, y: 44, size: 3, effect: "glow" }] },
+    { caption: "A quarter of 12.", say: "Zara has twelve dates. She shares them into four equal groups.",
+      items: [{ id: "d", emoji: "🌴", label: "12 dates", x: 50, y: 40, size: 3, anim: "bounce" }] },
+    { caption: "3 in each group.", say: "Three dates in each group. A quarter of twelve is three!",
+      items: [{ id: "a", emoji: "🌴🌴🌴", label: "3", x: 20, y: 46, size: 2 }, { id: "b", emoji: "🌴🌴🌴", label: "3", x: 40, y: 46, size: 2 }, { id: "c", emoji: "🌴🌴🌴", label: "3", x: 60, y: 46, size: 2 }, { id: "e", emoji: "🌴🌴🌴", label: "3", x: 80, y: 46, size: 2, effect: "sparkle" }] },
+    { caption: "Shukriya, Zara!", say: "Equal parts make fair shares. Shukriya, Zara!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "❤️", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-1-fractions", subject: "maths", cls: 1, topic: 6, title: "Fractions",
@@ -125,13 +161,9 @@ export const topics = [
       num("What is 10 - 5?", 5, { hint: "Half of 10.", why: "10 - 5 = 5." }),
       tf("Even numbers can be split into pairs.", true, { hint: "Think of shoes.", why: "Even numbers make pairs with none left over." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Today we cut things into equal parts. You will meet halves, quarters and thirds. These are fractions, and we use them whenever we share a pizza, a cake or a bar of chocolate fairly.", T("Today we learn about fractions: halves, quarters and thirds.")),
-      IMG("🍕", "Fractions are equal parts of a whole."),
-      GLOSS({ fractions: "Equal parts of a whole." }),
-    ],
+    intro: [],
     subs: [equal, quarters, amounts, use],
+    clip,
     quiz: [
       { q: mc("Which shape is split into equal parts?", "A circle cut into 2 same-size parts", ["A circle with one big and one tiny part", "A square with parts of different sizes"], { hint: "Equal means the same size.", why: "Fractions need equal parts.", tag: "fractions.equal" }), sub: "equal", depth: "recall", alts: [mc("Which pizza is cut fairly?", "4 slices that are all the same size", ["3 big slices and 1 tiny slice", "2 slices of different sizes"], { hint: "Equal means the same size.", why: "Fractions need equal parts.", tag: "fractions.equal" }), mc("Which sandwich is cut into halves?", "2 parts that are exactly the same size", ["2 parts, one much bigger", "3 equal parts"], { hint: "A half is one of 2 equal parts.", why: "Halves are 2 equal parts.", tag: "fractions.equal" })] },
       { q: num("A pizza is cut into halves. How many halves make the whole pizza?", 2, { hint: "Two equal parts.", why: "2 halves make 1 whole.", tag: "fractions.halves" }), sub: "equal", depth: "recall", alts: [num("A chocolate bar is cut in halves. How many pieces is that?", 2, { hint: "Two equal parts.", why: "Halves means 2 pieces.", tag: "fractions.halves" }), num("How many halves are in one whole apple?", 2, { hint: "Two equal parts.", why: "2 halves make 1 whole.", tag: "fractions.halves" })] },
@@ -148,6 +180,37 @@ export const topics = [
       { q: mc("Why must the parts be equal to make halves?", "If the parts are not the same size, nobody gets a fair half", ["Because halves are always red", "Because halves have to be small"], { hint: "Think about sharing a pizza fairly.", why: "Halves must be equal parts, or the sharing is not fair.", tag: "fractions.reason" }), sub: "equal", depth: "reason", alts: [mc("Why must the parts be equal to make quarters?", "If the parts are not the same size, they are not fair quarters", ["Because quarters are always round", "Because quarters have to be big"], { hint: "Think about sharing a cake fairly.", why: "Quarters must be equal parts.", tag: "fractions.reason" }), mc("Why must the parts be equal to make thirds?", "If the parts are not the same size, they are not fair thirds", ["Because thirds are always small", "Because thirds are always red"], { hint: "Think about sharing a chocolate bar fairly.", why: "Thirds must be equal parts.", tag: "fractions.reason" })] },
       { q: mc("Aisha cuts a cake into 4 equal parts and eats 2. Her brother cuts a cake of the same size into 2 equal parts and eats 1. Who ate more cake?", "They ate the same amount", ["Aisha ate more", "Her brother ate more"], { hint: "2 quarters is the same as 1 half.", why: "2 quarters equal 1 half, so they ate the same.", tag: "fractions.reason" }), sub: "use", depth: "reason", alts: [mc("Hana cuts a pizza into 4 equal parts and eats 2. Her sister cuts a pizza of the same size into 2 equal parts and eats 1. Who ate more pizza?", "They ate the same amount", ["Hana ate more", "Her sister ate more"], { hint: "2 quarters is the same as 1 half.", why: "2 quarters equal 1 half, so they ate the same.", tag: "fractions.reason" }), mc("Zain cuts a loaf into 4 equal slices and eats 2. His mum cuts a loaf of the same size into 2 equal slices and eats 1. Who ate more bread?", "They ate the same amount", ["Zain ate more", "His mum ate more"], { hint: "2 quarters is the same as 1 half.", why: "2 quarters equal 1 half, so they ate the same.", tag: "fractions.reason" })] },
       { q: mc("Layla says half of 10 is 4 because 4 + 4 = 8, and 8 is nearly 10. Is she right?", "No. Half of 10 is 5, because 5 + 5 = 10", ["Yes, half of 10 is 4", "No, half of 10 is 6"], { hint: "Half means two equal groups that make the whole.", why: "Two equal groups of 5 make 10, so half of 10 is 5.", tag: "fractions.reason" }), sub: "amounts", depth: "reason", alts: [mc("Omar says half of 12 is 5 because 5 + 5 = 10. Is he right?", "No. Half of 12 is 6, because 6 + 6 = 12", ["Yes, half of 12 is 5", "No, half of 12 is 7"], { hint: "Half means two equal groups that make the whole.", why: "Two equal groups of 6 make 12, so half of 12 is 6.", tag: "fractions.reason" }), mc("Mina says half of 14 is 6 because 6 + 6 = 12. Is she right?", "No. Half of 14 is 7, because 7 + 7 = 14", ["Yes, half of 14 is 6", "No, half of 14 is 8"], { hint: "Half means two equal groups that make the whole.", why: "Two equal groups of 7 make 14, so half of 14 is 7.", tag: "fractions.reason" })] },
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      N(hot("Tap the shape with one third shaded.", [["🟦", "A: 1 of 3 equal parts", 22, 50], ["🟦", "B: 1 of 2 equal parts", 50, 50], ["🟦", "C: 1 of 4 equal parts", 78, 50]], ["A: 1 of 3 equal parts"], { labels: true, hint: "A third is 1 of 3 equal parts.", why: "Shape A has 1 of 3 equal parts shaded.", tag: "fractions.thirds" }), "quarters", "apply",
+        [hot("Tap the bar with one quarter shaded.", [["🟦", "A: 1 of 3 equal parts", 22, 50], ["🟦", "B: 1 of 2 equal parts", 50, 50], ["🟦", "C: 1 of 4 equal parts", 78, 50]], ["C: 1 of 4 equal parts"], { labels: true, hint: "A quarter is 1 of 4 equal parts.", why: "Bar C has 1 of 4 equal parts shaded.", tag: "fractions.quarters" })]),
+      N(tf("Three quarters of a pizza is 3 of 4 equal parts.", true, { hint: "Quarters come in fours.", why: "3 quarters is 3 of the 4 equal parts.", tag: "fractions.three_quarters" }), "quarters", "apply",
+        [tf("Two thirds of a cake is 2 of 4 equal parts.", false, { hint: "Thirds come in threes.", why: "Two thirds is 2 of 3 equal parts.", tag: "fractions.three_quarters" })]),
+      N(fill("Count the quarters.", "1 quarter + 1 quarter = {b1} quarters = 1 {b2}", [["2", "3", "4"], ["half", "whole", "third"]], { hint: "Two quarters make a half.", why: "2 quarters make 1 half.", tag: "fractions.equivalent" }), "quarters", "apply",
+        [fill("Count the thirds.", "1 third + 1 third + 1 third = {b1} thirds = 1 {b2}", [["3", "2", "4"], ["whole", "half", "quarter"]], { hint: "Three thirds make the whole.", why: "3 thirds make 1 whole.", tag: "fractions.equivalent" })]),
+      N(ms("Which two show a whole? Pick two.", ["3 thirds", "4 quarters"], ["3 quarters", "2 thirds"], { hint: "All the equal parts together.", why: "3 thirds and 4 quarters each make a whole.", tag: "fractions.whole" }), "quarters", "apply",
+        [ms("Which two show a whole? Choose two.", ["2 halves", "3 thirds"], ["1 half", "2 quarters"], { hint: "All the equal parts together.", why: "2 halves and 3 thirds each make a whole.", tag: "fractions.whole" })]),
+      N(ord("Put these in order, smallest part first.", ["Eighth", "Quarter", "Third", "Half"], { hint: "More parts means smaller parts.", why: "An eighth is smallest, then a quarter, a third and a half.", tag: "fractions.compare" }), "quarters", "apply",
+        [ord("Order these, smallest part first.", ["Tenth", "Fifth", "Quarter", "Half"], { hint: "More parts means smaller parts.", why: "A tenth is smallest, then a fifth, a quarter and a half.", tag: "fractions.compare" })]),
+      N(mat("Match each picture story to its fraction.", [["Pizza cut in 2, 1 eaten", "1/2"], ["Cake cut in 4, 1 eaten", "1/4"], ["Bar cut in 3, 1 eaten", "1/3"]], { hint: "The bottom number is how many equal parts.", why: "1 of 2 is 1/2, 1 of 4 is 1/4 and 1 of 3 is 1/3.", tag: "fractions.notation" }), "equal", "apply",
+        [mat("Match each story to its fraction.", [["Roti cut in 4, 1 eaten", "1/4"], ["Apple cut in 2, 1 eaten", "1/2"], ["Cake cut in 3, 1 eaten", "1/3"]], { hint: "The bottom number is how many equal parts.", why: "1 of 4 is 1/4, 1 of 2 is 1/2 and 1 of 3 is 1/3.", tag: "fractions.notation" })]),
+      N(sld("Slide to show a quarter of 8.", { min: 0, max: 10 }, 2, 0, { hint: "Halve 8, then halve again.", why: "8, 4, 2. A quarter of 8 is 2.", tag: "fractions.quarter_of" }), "amounts", "apply",
+        [sld("Slide to show a quarter of 20.", { min: 0, max: 10 }, 5, 0, { hint: "Halve 20, then halve again.", why: "20, 10, 5. A quarter of 20 is 5.", tag: "fractions.quarter_of" })]),
+      N(num("What is half of 14?", 7, { hint: "Share 14 into 2 equal groups.", why: "7 + 7 = 14, so half of 14 is 7.", tag: "fractions.half_of" }), "amounts", "apply",
+        [num("What is half of 18?", 9, { hint: "Share 18 into 2 equal groups.", why: "9 + 9 = 18, so half of 18 is 9.", tag: "fractions.half_of" })]),
+      N(mc("What is a third of 6?", "2", ["3", "1"], { hint: "Share 6 into 3 equal groups.", why: "3 groups of 2 make 6, so a third of 6 is 2.", tag: "fractions.third_of" }), "amounts", "apply",
+        [mc("What is a third of 15?", "5", ["3", "10"], { hint: "Share 15 into 3 equal groups.", why: "3 groups of 5 make 15, so a third of 15 is 5.", tag: "fractions.third_of" })]),
+      N(mc("Zara cuts a roti into 4 equal pieces and eats 1. What fraction of the roti is left?", "3/4", ["1/4", "1/2"], { hint: "How many of the 4 pieces are left?", why: "4 pieces and 1 eaten leaves 3 of the 4, which is 3/4.", tag: "fractions.real_life" }), "use", "apply",
+        [mc("Hana cuts a pizza into 3 equal slices and eats 1. What fraction of the pizza is left?", "2/3", ["1/3", "1/2"], { hint: "How many of the 3 slices are left?", why: "3 slices and 1 eaten leaves 2 of the 3, which is 2/3.", tag: "fractions.real_life" })]),
+      N(num("Share 8 sweets equally between 4 friends. What is one quarter of 8?", 2, { hint: "Share 8 into 4 equal groups.", why: "8 ÷ 4 = 2, so one quarter of 8 is 2.", tag: "fractions.share_quarter" }), "amounts", "apply",
+        [num("Share 20 stickers equally between 4 friends. What is one quarter of 20?", 5, { hint: "Share 20 into 4 equal groups.", why: "20 ÷ 4 = 5, so one quarter of 20 is 5.", tag: "fractions.share_quarter" })]),
+      N(mc("Omar says 1/3 is bigger than 1/2 because 3 is bigger than 2. Is he right?", "No. A half is bigger, because 2 parts are bigger than 3 parts", ["Yes, 3 is bigger than 2", "Yes, they are the same size"], { hint: "More parts means each part is smaller.", why: "Sharing into 3 makes smaller parts than sharing into 2, so 1/2 is bigger.", tag: "fractions.reason_compare" }), "use", "reason",
+        [mc("Hana says 1/4 is bigger than 1/3 because 4 is bigger than 3. Is she right?", "No. A third is bigger, because 3 parts are bigger than 4 parts", ["Yes, 4 is bigger than 3", "Yes, they are the same size"], { hint: "More parts means each part is smaller.", why: "Sharing into 4 makes smaller parts than sharing into 3, so 1/3 is bigger.", tag: "fractions.reason_compare" })]),
+      N(mc("Mira says 2/4 is equal to a half. Is she right?", "Yes. 2 quarters make the same amount as 1 half", ["No, 2/4 is bigger because 4 is bigger", "No, 2/4 is smaller"], { hint: "Fold a paper in half, then in half again.", why: "2 of 4 equal parts cover half of the whole, so 2/4 = 1/2.", tag: "fractions.reason_equivalent" }), "quarters", "reason",
+        [mc("Ali says 3/6 is equal to a half. Is he right?", "Yes. 3 of 6 equal parts is half of the whole", ["No, 3/6 is bigger because 6 is bigger", "No, 3/6 is smaller"], { hint: "Half of 6 is 3.", why: "3 of 6 equal parts is half of the whole, so 3/6 = 1/2.", tag: "fractions.reason_equivalent" })]),
+      N(mc("Ben says any line down the middle of a shape makes two halves. Is he right?", "No. The two parts must be the same size", ["Yes, any line in the middle works", "No, you must cut in four"], { hint: "Halves must be equal.", why: "Halves are 2 equal parts. A line down the middle may leave unequal parts.", tag: "fractions.reason_equal" }), "equal", "reason",
+        [mc("Mina says cutting a pizza into 2 pieces always makes halves. Is she right?", "No. The two pieces must be the same size", ["Yes, 2 pieces are always halves", "No, you must cut in three"], { hint: "Halves must be equal.", why: "Halves are 2 equal parts. Two pieces of different sizes are not halves.", tag: "fractions.reason_equal" })]),
+      N(mc("Hana says a quarter of 12 is 4 because a quarter means 4 things. Is she right?", "No. A quarter means 1 of 4 equal groups, so it is 3", ["Yes, a quarter is always 4", "No, it is 6"], { hint: "Share 12 into 4 equal groups.", why: "12 ÷ 4 = 3. The 4 is how many groups, not how many things.", tag: "fractions.reason_quarter_of" }), "amounts", "reason",
+        [mc("Zain says a quarter of 20 is 4 because a quarter means 4 things. Is he right?", "No. A quarter means 1 of 4 equal groups, so it is 5", ["Yes, a quarter is always 4", "No, it is 10"], { hint: "Share 20 into 4 equal groups.", why: "20 ÷ 4 = 5. The 4 is how many groups, not how many things.", tag: "fractions.reason_quarter_of" })]),
     ],
   }),
 ];

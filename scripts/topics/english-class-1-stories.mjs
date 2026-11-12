@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, REVEAL, mc, ms, tf, st, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, REVEAL, mc, ms, tf, st, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // English topic 3 for Zainab (Class 1): Stories and poems. Standards from docs/CURRICULUM_V2.md section 3 (NC Year 2 reading, Cambridge Stage 2).
 const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 
+const CROW = "english-class-1-stories-poems-1-41a34ac3.jpg";
+const RAVEN = "english-class-1-stories-poems-2-cce8a984.jpg";
+
 const story = {
   id: "story", kind: "learn", title: "A folk tale: beginning, middle and end",
   blocks: [
+    H("Welcome back, story explorer!"),
+    SAY("Today we read a tale, guess what happens next and play with rhyme. Can we write a poem too?", T("Today's big question: how do stories and poems work?")),
+    SAY("This house crow lives in Pakistan and many other places. Crows are clever birds.", PHOTO(CROW, "A grey and black house crow standing on a pale ledge", "A house crow, like the clever crow in the tale.", "Photo by doorkeepers on Unsplash")),
     H("Stop 1: The three parts of a story"),
     SAY("Every story has three parts. The beginning is where we meet the characters and the place. The middle is where the problem happens and the characters try to fix it. The end is where the problem is solved. Think of a sandwich: bread, filling, bread. Let's hear an old tale, The Thirsty Crow, and spot the three parts.", T("Every story has a **beginning**, a **middle** and an **end**.", "Beginning: meet the characters. Middle: the problem. End: it is solved.")),
     EXPP("The Thirsty Crow",
@@ -61,6 +67,7 @@ const rhyme = {
       SS("And here is a hat. Cat and hat end with the same sound, at. They rhyme!", S("cat and hat rhyme", ["c", "🐈", 30, 50, 3, "none", "cat"], ["h", "🎩", 70, 50, 3, "grow", "hat"], ["e", "✨", 50, 20, 2, "float", "rhyme"]))),
     CHK(mc("Which word rhymes with moon?", "spoon", ["moth", "map"], { hint: "Listen to the ending.", why: "Moon and spoon both end in oon.", tag: "rhyme.find" })),
     H("Stop 2: Rhythm and a brain game"),
+    SAY("Crows really are clever. They can solve puzzles, just like the crow in our tale.", PHOTO(RAVEN, "A black crow standing in orange autumn grass", "Crows are clever birds. They solve problems in real life too.", "Photo by Sonny Mauricio on Unsplash")),
     SAY("A poem also has rhythm, which is its beat. Clap along as you say it: Twinkle, twinkle, little star. Each clap is one beat. Then play the memory game and listen out for the beat.", T("**Rhythm** is the beat of a poem. Clap along to feel it.")),
     BRAIN("memory_match", "Rhyme pairs", "Find the matching pairs.", ["🐈", "🎩", "🌙", "🥄", "🐝", "🌳"]),
     CHK(mc("What is rhythm in a poem?", "the beat you can clap", ["a picture", "the title"], { hint: "Think about clapping along.", why: "Rhythm is the beat of a poem.", tag: "rhyme.rhythm" })),
@@ -98,6 +105,28 @@ const poem = {
   ],
 };
 
+const clip = {
+  title: "The clever crow", backdrop: "meadow", caption: "A crow tells her own story and shows how to predict and rhyme.",
+  scenes: [
+    { caption: "Hot day.", say: "I am Kaki the crow. It is a very hot day.",
+      items: [{ id: "c", emoji: "🐦‍⬛", label: "Kaki", x: 35, y: 58, size: 3, enter: "pop" }, { id: "s", emoji: "☀️", x: 78, y: 22, size: 3, anim: "pulse" }] },
+    { caption: "A jug.", say: "I am so thirsty. I spot a jug with a little water.",
+      items: [{ id: "c", emoji: "🐦‍⬛", x: 28, y: 58, size: 3 }, { id: "j", emoji: "🏺", x: 72, y: 58, size: 3, anim: "grow" }] },
+    { caption: "The problem.", say: "My beak cannot reach the water. What can I do?",
+      items: [{ id: "c", emoji: "🐦‍⬛", x: 30, y: 52, size: 3, anim: "bounce" }, { id: "j", emoji: "🏺", x: 72, y: 58, size: 3 }, { id: "q", emoji: "❓", x: 50, y: 25, size: 2 }] },
+    { caption: "A clue.", say: "A clue! There are pebbles on the ground. I predict they will help.",
+      items: [{ id: "p", emoji: "🪨", x: 30, y: 66, size: 3 }, { id: "c", emoji: "🐦‍⬛", x: 70, y: 58, size: 3 }] },
+    { caption: "Pebbles.", say: "I drop in pebbles, one by one. Plop, plop, plop!",
+      items: [{ id: "j", emoji: "🏺", x: 55, y: 58, size: 3 }, { id: "p", emoji: "🪨", x: 55, y: 20, size: 2, anim: "bounce" }] },
+    { caption: "Water rises.", say: "The water rises up to the top. My idea works!",
+      items: [{ id: "j", emoji: "🏺", x: 50, y: 58, size: 3 }, { id: "w", emoji: "💧", x: 50, y: 30, size: 2, anim: "float" }] },
+    { caption: "A rhyme.", say: "Here is my rhyme. A crow so wise, found a prize!",
+      items: [{ id: "c", emoji: "🐦‍⬛", x: 30, y: 56, size: 3 }, { id: "m", emoji: "🎵", x: 72, y: 40, size: 2, anim: "float" }] },
+    { caption: "The end.", say: "I drink and I am happy. A clever idea solved my problem!",
+      items: [{ id: "c", emoji: "🐦‍⬛", x: 40, y: 58, size: 3, effect: "sparkle" }, { id: "j", emoji: "🏺", x: 72, y: 58, size: 3 }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "english-class-1-stories-poems", subject: "english", cls: 1, topic: 3, title: "Stories and Poems",
@@ -115,13 +144,9 @@ export const topics = [
       tf("A sentence starts with a capital letter.", true, { hint: "Look at the first letter.", why: "Every sentence starts with a capital letter." }),
       mc("Which word is a describing word?", "big", ["run", "dog"], { hint: "It tells us what a thing is like.", why: "Big describes a thing." }),
     ],
-    intro: [
-      H("Welcome back, story explorer!"),
-      SAY("Welcome back, story explorer! Today's big question: how do stories and poems work, and how can we make our own? We will hear an old tale, guess what happens next, play with rhymes, and write four lines. Let's go!", T("Today's big question: how do stories and poems work?", "We will read, predict, rhyme and write.")),
-      IMG("📚", "Stories and poems are full of surprises."),
-      GLOSS({ story: "A tale about characters and what happens to them." }),
-    ],
+    intro: [],
     subs: [story, predict, rhyme, poem],
+    clip,
     quiz: [
       Q(mc("Why does a story need a beginning, a middle and an end?", "So it makes sense from start to finish", ["So it is very long", "So it has more pictures"], { hint: "Think about how a story flows.", why: "The three parts make a story easy to follow.", tag: "story.reason" }), "story", "reason", [
         mc("Why does a story have a problem in the middle?", "It gives the characters something to solve", ["It makes the pictures bigger", "It is the title"], { hint: "What do characters have to do?", why: "The problem gives the story something to happen.", tag: "story.reason" }),
@@ -168,6 +193,37 @@ export const topics = [
       Q(mc("Why do poets read poems aloud when checking them?", "To hear whether the rhythm and rhymes sound right", ["To make them longer", "To hide mistakes"], { hint: "What can we hear?", why: "Reading aloud helps us hear the beat and rhymes.", tag: "poem.reason" }), "poem", "reason", [
         mc("Why do we plan a story before writing it?", "So it has a clear beginning, middle and end", ["So it uses more paper", "So the pictures are bigger"], { hint: "What does planning give us?", why: "A plan helps the story make sense.", tag: "poem.reason" }),
         mc("Why do we think of rhyming words before writing a poem?", "So the lines can end with matching sounds", ["So the poem is longer", "So the title is bigger"], { hint: "What do rhymes need?", why: "Rhymes need words that end with matching sounds.", tag: "poem.reason" })]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q(mc("Why does the crow drop pebbles into the jug?", "To make the water rise to the top", ["To break the jug", "To scare the water away"], { hint: "What happens to the water level?", why: "The pebbles take up room, so the water rises.", tag: "story.middle" }), "story", "apply", [
+        mc("How does the crow get the water up to his beak?", "By dropping pebbles into the jug", ["By tipping the jug over", "By asking a friend"], { hint: "Think about his clever idea.", why: "The pebbles raise the water so the crow can drink.", tag: "story.middle" })]),
+      Q(ord("Put the events of The Thirsty Crow in order.", ["The crow finds a jug", "He drops in pebbles", "The water rises", "The crow drinks"], { hint: "Start with the jug.", why: "The crow finds the jug, drops in pebbles, the water rises and he drinks.", tag: "story.order" }), "story", "apply", [
+        ord("Put these events in order.", ["The sky is sunny", "Dark clouds come", "It rains"], { hint: "Start with the sunny sky.", why: "The sky is sunny, then dark clouds come, then it rains.", tag: "story.order" })]),
+      Q(mc("Sam says all folk tales have a wicked stepmother. Is he right?", "No, many folk tales are about animals, like The Thirsty Crow", ["Yes, every folk tale has one", "Yes, folk tales never have animals"], { hint: "Think about the crow.", why: "Folk tales have many kinds of characters, including animals.", tag: "story.reason" }), "story", "reason", [
+        mc("Layla says a folk tale must be about a king. Is she right?", "No, a folk tale can be about a crow or any other character", ["Yes, every folk tale has a king", "Yes, only kings can be in tales"], { hint: "Who is the main character in The Thirsty Crow?", why: "Folk tales can be about any characters.", tag: "story.reason" })]),
+      Q(mat("Match each part of The Thirsty Crow to what happens.", [["Beginning", "We meet the thirsty crow"], ["Middle", "He drops in pebbles"], ["End", "The crow drinks"]], { hint: "Think about the three parts.", why: "We meet the crow, he solves the problem, then he drinks.", tag: "story.parts" }), "story", "recall", [
+        mat("Match each part of this tale to what happens.", [["Beginning", "A hare laughs at a slow tortoise"], ["Middle", "They race and the hare naps"], ["End", "The tortoise wins"]], { hint: "Think about the three parts.", why: "We meet the characters, the problem happens, then it is solved.", tag: "story.parts" })]),
+      Q(mc("Aisha says night and kite cannot rhyme because they are spelled differently. Is she right?", "No, rhyming words end with the same sound, even if the spelling differs", ["Yes, rhyming words must be spelled the same", "Yes, they start with different letters"], { hint: "Say them out loud.", why: "Rhyme depends on sound, not spelling.", tag: "rhyme.reason" }), "rhyme", "reason", [
+        mc("Omar says say and weigh cannot rhyme because their spellings are different. Is he right?", "No, they end with the same sound, ay", ["Yes, rhymes must look the same", "Yes, weigh is a different word"], { hint: "Say them out loud.", why: "Say and weigh rhyme because they sound alike.", tag: "rhyme.reason" })]),
+      Q(st("What do we call the beat of a poem?", ["rhythm"], { hint: "You can clap it.", why: "The beat of a poem is called rhythm.", tag: "rhyme.rhythm" }), "rhyme", "recall", [
+        st("What do we call words that end with the same sound?", ["rhyme", "rhymes", "rhyming words"], { hint: "Cat and hat do it.", why: "Words that end with the same sound rhyme.", tag: "rhyme.find" })]),
+      Q(hot("Tap the word that rhymes with night.", [["🪁", "kite", 22, 50], ["🐈", "cat", 50, 50], ["🐖", "pig", 78, 50]], ["kite"], { labels: true, hint: "Listen to the ending.", why: "Night and kite both end in ite.", tag: "rhyme.find" }), "rhyme", "apply", [
+        hot("Tap the word that rhymes with bee.", [["🌳", "tree", 22, 50], ["🐕", "dog", 50, 50], ["☀️", "sun", 78, 50]], ["tree"], { labels: true, hint: "Listen to the ending.", why: "Bee and tree both end in ee.", tag: "rhyme.find" })]),
+      Q(fill("Complete the rhyme.", "The cat sat on a {b1}. It wore a funny {b2}.", [["mat", "sun", "dog"], ["hat", "cup", "pen"]], { hint: "Find words that sound like cat.", why: "Mat and hat rhyme with cat.", tag: "rhyme.find" }), "rhyme", "apply", [
+        fill("Finish the rhyme.", "I see a bee up in the {b1}. It is buzzing next to me.", [["tree", "pen", "sun"]], { hint: "Which word rhymes with bee and me?", why: "Tree rhymes with bee and me.", tag: "rhyme.find" })]),
+      Q(sld("Clap the beat of Twinkle, twinkle, little star. Slide to show how many claps there are.", { min: 0, max: 10 }, 7, 0, { hint: "Twin-kle, twin-kle, lit-tle star.", why: "Twin-kle (2), twin-kle (2), lit-tle (2) and star (1) make 7 beats.", tag: "rhyme.rhythm" }), "rhyme", "apply", [
+        sld("Clap the beat of Humpty Dumpty sat on a wall. Slide to show how many claps there are.", { min: 0, max: 10 }, 8, 0, { hint: "Hump-ty Dump-ty sat on a wall.", why: "Hump-ty (2), Dump-ty (2), sat, on, a and wall make 8 beats.", tag: "rhyme.rhythm" })]),
+      Q(mc("Hamza fills a bucket with water and picks up a sponge. What will he probably do next?", "Wash the car", ["Go to sleep", "Plant a tree"], { hint: "What are buckets and sponges for?", why: "A bucket and sponge are clues that he will wash something.", tag: "predict.clue" }), "predict", "apply", [
+        mc("Nadia puts on her boots and takes an umbrella. What will probably happen next?", "She will go out in the rain", ["She will go swimming", "She will have a nap"], { hint: "What are boots and umbrellas for?", why: "Boots and an umbrella are clues that it is raining.", tag: "predict.clue" })]),
+      Q(mc("Omar says a prediction is wrong if the story ends differently. Is he right?", "No, a prediction is a clever guess, so it can be wrong and still clever", ["Yes, a wrong prediction is a mistake", "Yes, predictions must always be right"], { hint: "Is it a guess?", why: "A prediction is a clever guess. Stories can surprise us.", tag: "predict.reason" }), "predict", "reason", [
+        mc("Zainab says we should not use clues to predict. Is she right?", "No, clues help us make a good guess", ["Yes, clues are no use", "Yes, predictions need no thinking"], { hint: "What do detectives use?", why: "Clues help us make a clever prediction.", tag: "predict.reason" })]),
+      Q(mc("Which title fits a poem about a snail?", "Slow Snail", ["Fast Car", "Hot Soup"], { hint: "What is a snail like?", why: "Slow Snail is about a snail.", tag: "poem.topic" }), "poem", "apply", [
+        mc("Which title fits a poem about a windy day?", "Wild Wind", ["Sleepy Pillow", "Little Spoon"], { hint: "What is wind like?", why: "Wild Wind is about the wind.", tag: "poem.topic" })]),
+      Q(mc("Mira says folk tales like The Thirsty Crow teach us nothing. Is she right?", "No, they pass on lessons, like how a clever idea solves a problem", ["Yes, tales are only for noise", "Yes, tales are never retold"], { hint: "What did the crow show us?", why: "People retell folk tales to share lessons.", tag: "story.reason" }), "story", "reason", [
+        mc("Ali says people stopped telling old tales long ago. Is he right?", "No, families still retell them, in Pakistan and in the UK", ["Yes, nobody tells them now", "Yes, they are lost for ever"], { hint: "Who tells you bedtime stories?", why: "Families still retell old tales.", tag: "story.reason" })]),
+      Q(tf("A poem can rhyme and have a beat you can clap.", true, { hint: "Think about the poems we clapped.", why: "Many poems have rhyme and rhythm.", tag: "rhyme.rhythm" }), "rhyme", "apply", [
+        tf("A poem must always have exactly ten lines.", false, { hint: "Our poem had four.", why: "A poem can have any number of lines.", tag: "poem.plan" })]),
+      Q(ms("Pick the two clues that a storm is coming.", ["Dark clouds", "A strong wind"], ["A blue sky", "A calm lake"], { hint: "What do we see before a storm?", why: "Dark clouds and strong wind are clues.", tag: "predict.clue" }), "predict", "apply", [
+        ms("Pick the two clues that it will rain.", ["Grey clouds", "A damp smell in the air"], ["A bright sun", "Dry dusty ground"], { hint: "What do we see and smell before rain?", why: "Grey clouds and a damp smell are clues of rain.", tag: "predict.clue" })]),
     ],
   }),
 ];

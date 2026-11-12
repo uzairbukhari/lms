@@ -1,0 +1,3157 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "maths-class-1-capacity-mass",
+  "subject": "maths",
+  "title": "Capacity, Mass and Volume",
+  "summary": "Measure how much a container holds and how heavy things are, using litres, millilitres, grams and kilograms.",
+  "age_band": "7-8",
+  "difficulty": 2,
+  "estimated_minutes": 60,
+  "unit": "Topic 12: Capacity, mass and volume",
+  "learning_objectives": [
+   "Measure and compare capacity",
+   "Measure and compare mass",
+   "Read scales and choose the right unit"
+  ],
+  "tags": [
+   "topic",
+   "topic-12"
+  ],
+  "curriculum": {
+   "course": "maths-class-1-topics",
+   "semester": 1,
+   "topic": 12
+  },
+  "standards": [
+   {
+    "framework": "nc_england",
+    "code": "Y2 measure",
+    "text": "Choose and use appropriate standard units to estimate and measure mass (kg/g) and capacity (litres/ml) to the nearest appropriate unit, using scales and measuring vessels; compare and order"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Mm.01"
+   },
+   {
+    "framework": "cambridge",
+    "code": "2Mm.02"
+   }
+  ],
+  "success_criteria": [
+   "I can say how much a container holds in litres or millilitres",
+   "I can say how heavy something is in grams or kilograms",
+   "I can read a scale and choose a sensible unit"
+  ],
+  "real_life": "Pouring lemonade, buying a bag of rice at the shop, or baking with Aunty Noor.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "Which is bigger?",
+    "hint": "Think about the sizes.",
+    "explanation": "A bucket is the biggest.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A cup"
+     },
+     {
+      "id": "b",
+      "text": "A bucket"
+     },
+     {
+      "id": "c",
+      "text": "A spoon"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 500 + 500?",
+    "hint": "5 hundreds and 5 hundreds.",
+    "explanation": "500 + 500 = 1000.",
+    "answer": {
+     "value": 1000,
+     "tolerance": 0
+    }
+   },
+   {
+    "type": "true_false",
+    "prompt": "A feather is lighter than a brick.",
+    "hint": "Which one would you lift easily?",
+    "explanation": "A feather is very light.",
+    "answer": [
+     true
+    ]
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "hold",
+   "kind": "learn",
+   "title": "How much does it hold?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Zara in Aunty Noor's kitchen",
+     "backdrop": "home"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-capacity-mass-2-520c3b53.jpg",
+     "alt": "A clear glass measuring cup with millilitre marks up its side",
+     "caption": "A measuring cup with marks for millilitres.",
+     "credit": "Photo by Steve A Johnson on Unsplash",
+     "say": "Meet Zara. She helps Aunty Noor in the kitchen. They pour, they weigh and they bake. Look at this measuring cup. Today we measure how much things hold."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: Capacity and volume",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Capacity** is how much a container can hold.\n\n**Volume** is how much is inside it now.",
+     "say": "A jug can hold water. How much it can hold is its capacity. How much water is in it now is its volume."
+    },
+    {
+     "type": "explainer",
+     "title": "Capacity and volume",
+     "scenes": [
+      {
+       "caption": "Capacity: 1 litre.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "capacity 1 litre"
+        }
+       ],
+       "say": "Here is an empty jug. It can hold one litre. That is its capacity."
+      },
+      {
+       "caption": "Volume: half a litre.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "half full"
+        },
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "500 ml"
+        }
+       ],
+       "say": "Pour in some water. The jug is half full."
+      },
+      {
+       "caption": "Capacity same, volume changes.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "capacity stays 1 litre"
+        }
+       ],
+       "say": "The capacity stays the same. Only the volume changes!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which word means how much a jug can hold?",
+      "hint": "It is the most it can hold.",
+      "explanation": "Capacity is how much a container can hold.",
+      "skill_tag": "capmass.capacity",
+      "options": [
+       {
+        "id": "a",
+        "text": "volume of water now"
+       },
+       {
+        "id": "b",
+        "text": "weight"
+       },
+       {
+        "id": "c",
+        "text": "capacity"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Litres and millilitres",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "A **litre** is about a big carton of juice.\n\nA **millilitre** is a tiny amount, about a drop. 1 litre = 1000 millilitres.",
+     "say": "We measure capacity in litres. A big juice carton holds one litre. A tiny drop is one millilitre. One litre is one thousand millilitres."
+    },
+    {
+     "type": "explainer",
+     "title": "Litres and millilitres",
+     "scenes": [
+      {
+       "caption": "1 litre.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧃",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "1 litre"
+        }
+       ],
+       "say": "A big carton holds one litre. It is for drinks."
+      },
+      {
+       "caption": "A spoon: millilitres.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "🥄",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5 ml"
+        }
+       ],
+       "say": "A spoon holds a few millilitres. That is for medicine."
+      },
+      {
+       "caption": "500 ml + 500 ml = 1 litre.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🧃",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1 litre = 1000 ml"
+        }
+       ],
+       "say": "Half a litre is five hundred millilitres."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-capacity-mass-d1-e323b9f3.png",
+     "alt": "A measuring jug marked from 0 to 1 litre with the 500 ml mark labelled and the water at 700 ml",
+     "caption": "The water is at 700 ml.",
+     "say": "Look at this jug. It goes up to one litre. Half way is five hundred millilitres. The water is at seven hundred."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many millilitres make 1 litre?",
+      "hint": "A thousand.",
+      "explanation": "1 litre is 1000 millilitres.",
+      "skill_tag": "capmass.litre_ml",
+      "answer": {
+       "value": 1000,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "The tall jug and the wide jug",
+     "asset": "clip-maths-class-1-capacity-mass-55487204.mp4",
+     "poster": "clip-maths-class-1-capacity-mass-55487204.webp",
+     "seconds": 66,
+     "transcript": "Baker Imran has a small shop. Today he makes milk bread. First he weighs the flour. One kilogram is one thousand grams. The heavier side goes down. When they match, it is just right. Now the milk. Imran has a tall jug and a wide jug. Which one holds more? It looks like the tall one! Imran pours the tall jug into the wide jug. It fits exactly! Both jugs hold one litre. Shape can fool our eyes. Always measure. Shukriya, Imran!",
+     "caption": "A baker finds out the tall jug does not hold more."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Capacity: the most it can hold",
+      "Volume: how much is in it now",
+      "1 litre = 1000 millilitres"
+     ],
+     "say": "Remember. Capacity is what it can hold. Volume is what is in it. Litres for big, millilitres for small."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "capacity",
+       "meaning": "How much a container can hold."
+      },
+      {
+       "term": "volume",
+       "meaning": "How much is inside it now."
+      },
+      {
+       "term": "litre",
+       "meaning": "A big unit for liquid."
+      },
+      {
+       "term": "millilitre",
+       "meaning": "A tiny unit for liquid. 1000 make a litre."
+      },
+      {
+       "term": "container",
+       "meaning": "Something that holds things, like a jug."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which unit is best for a spoon of medicine?",
+     "hint": "A spoon is small.",
+     "explanation": "A tiny amount is measured in millilitres.",
+     "options": [
+      {
+       "id": "a",
+       "text": "litres"
+      },
+      {
+       "id": "b",
+       "text": "millilitres"
+      },
+      {
+       "id": "c",
+       "text": "kilograms"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "A full jug holds 1 litre. After pouring half out, what changes?",
+     "hint": "What is inside now?",
+     "explanation": "The volume changes. The capacity is still 1 litre.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The capacity"
+      },
+      {
+       "id": "b",
+       "text": "The volume"
+      },
+      {
+       "id": "c",
+       "text": "Nothing"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "How many millilitres are in half a litre?",
+     "hint": "Half of 1000.",
+     "explanation": "500 + 500 = 1000.",
+     "answer": {
+      "value": 500,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "true_false",
+     "prompt": "A bucket holds more than a teaspoon.",
+     "hint": "Think of the sizes.",
+     "explanation": "A bucket is much bigger.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pour",
+   "kind": "try",
+   "title": "Pour and compare",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pour a cup into a jug",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "To **compare** is to see which is more or less.\n\n4 cups of 250 ml fill a 1 litre jug.",
+     "say": "Zara fills a cup. She pours it into a jug. How many cups fill the jug? Let's count the pours."
+    },
+    {
+     "type": "explainer",
+     "title": "Cups into a jug",
+     "scenes": [
+      {
+       "caption": "1 cup = 250 ml.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🥛",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "250 ml"
+        },
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "One cup holds two hundred and fifty millilitres."
+      },
+      {
+       "caption": "4 cups.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "🥛🥛🥛🥛",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "full"
+        }
+       ],
+       "say": "Pour one, two, three, four cups. The jug is full!"
+      },
+      {
+       "caption": "4 × 250 ml = 1000 ml.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "4 cups = 1 litre"
+        }
+       ],
+       "say": "Four cups make one litre. Now we can compare!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "manipulative",
+     "title": "Pour the juice",
+     "goal": "Fill 1 litre of juice into the jug by moving 10 little cups. Move all of them into the jug.",
+     "emoji": "🥤",
+     "count": 10,
+     "zones": [
+      "Cups",
+      "Jug"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A jug holds 1 litre. A glass holds 100 millilitres. How many glasses fill the jug?",
+      "hint": "How many hundreds in 1000?",
+      "explanation": "10 glasses of 100 ml make 1000 ml.",
+      "skill_tag": "capmass.cups_fill",
+      "answer": {
+       "value": 10,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Estimate then check",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "To **estimate** is to make a sensible guess.\n\nThen measure to check your estimate.",
+     "say": "Before you pour, guess. A guess is an estimate. Then pour and check. A tall jug is not always bigger. Always check!"
+    },
+    {
+     "type": "explainer",
+     "title": "A tall jug and a wide jug",
+     "scenes": [
+      {
+       "caption": "Two jugs.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥛",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "tall"
+        },
+        {
+         "id": "b",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "wide"
+        }
+       ],
+       "say": "One jug is tall and thin. One is short and wide."
+      },
+      {
+       "caption": "Same capacity.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥛",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "b",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Pour water from the tall one into the wide one. It fits exactly!"
+      },
+      {
+       "caption": "Both = 1 litre.",
+       "items": [
+        {
+         "id": "a",
+         "emoji": "🥛",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "tall is not always more"
+        }
+       ],
+       "say": "Both hold one litre. A tall shape can fool your eyes!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "activity",
+     "title": "Pour at home",
+     "materials": [
+      "A cup",
+      "A jug or bowl",
+      "Water"
+     ],
+     "instructions": [
+      "Guess how many cups fill the jug.",
+      "Pour one cup at a time and count.",
+      "Was your guess close?",
+      "Try a different jug and compare."
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which holds more: 1 litre or 750 millilitres?",
+      "hint": "1 litre is 1000 ml.",
+      "explanation": "1000 is more than 750.",
+      "skill_tag": "capmass.compare_cap",
+      "options": [
+       {
+        "id": "a",
+        "text": "750 millilitres"
+       },
+       {
+        "id": "b",
+        "text": "1 litre"
+       },
+       {
+        "id": "c",
+        "text": "They hold the same"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Pour and count the cups",
+      "Estimate first, then check",
+      "Tall does not mean bigger"
+     ],
+     "say": "Remember. Pour and count. Estimate first. Do not trust a tall shape."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "compare",
+       "meaning": "To see which is more or less."
+      },
+      {
+       "term": "estimate",
+       "meaning": "A sensible guess."
+      },
+      {
+       "term": "pour",
+       "meaning": "To tip a liquid from one container to another."
+      },
+      {
+       "term": "jug",
+       "meaning": "A container with a handle for liquids."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A cup holds 200 millilitres. How many cups make 400 millilitres?",
+     "hint": "200 + 200.",
+     "explanation": "2 cups make 400 ml.",
+     "answer": {
+      "value": 2,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is more: 3 litres or 300 millilitres?",
+     "hint": "3 litres is 3000 ml.",
+     "explanation": "3000 ml is more than 300 ml.",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same"
+      },
+      {
+       "id": "b",
+       "text": "3 litres"
+      },
+      {
+       "id": "c",
+       "text": "300 millilitres"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "An estimate is a sensible guess.",
+     "hint": "Guess then check.",
+     "explanation": "You estimate first and measure after.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "2 half-litre bottles fill how many litres?",
+     "hint": "500 + 500.",
+     "explanation": "That is 1000 ml, or 1 litre.",
+     "answer": {
+      "value": 1,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "heavy",
+   "kind": "play",
+   "title": "Heavy or light?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Balance scales",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "**Mass** is how heavy something is.\n\nOn a **balance**, the heavier side goes down.",
+     "say": "Now we weigh things. How heavy something is, is its mass. A balance has two pans. The heavier side goes down."
+    },
+    {
+     "type": "explainer",
+     "title": "Balance scales",
+     "scenes": [
+      {
+       "caption": "Mango and grape.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🍇",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "b",
+         "emoji": "⚖️",
+         "x": 50,
+         "y": 66,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A mango on one side. A grape on the other."
+      },
+      {
+       "caption": "Mango is heavier.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 56,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "g",
+         "emoji": "🍇",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "heavier goes down"
+        }
+       ],
+       "say": "The mango side goes down. It is heavier!"
+      },
+      {
+       "caption": "Grape is lighter.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🥭",
+         "x": 30,
+         "y": 56,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "g",
+         "emoji": "🍇",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "lighter goes up"
+        }
+       ],
+       "say": "The grape side goes up. It is lighter."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "image",
+     "asset": "maths-class-1-capacity-mass-d2-1a45a32a.png",
+     "alt": "Balance scales with a rice bag in one pan and a 1 kg weight in the other, the rice side tipping down because it is heavier",
+     "caption": "The heavier side goes down.",
+     "say": "Look at these scales. The rice bag is in one pan. A one kilogram weight is in the other. The heavier side goes down."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "On a balance, which side goes down?",
+      "hint": "Heavy pulls down.",
+      "explanation": "The heavier side goes down.",
+      "skill_tag": "capmass.balance",
+      "options": [
+       {
+        "id": "a",
+        "text": "The lighter side"
+       },
+       {
+        "id": "b",
+        "text": "The heavier side"
+       },
+       {
+        "id": "c",
+        "text": "The left side"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Grams and kilograms",
+     "backdrop": "classroom"
+    },
+    {
+     "type": "text",
+     "markdown": "A **gram** is tiny, about a raisin.\n\nA **kilogram** is big, about a bunch of bananas. 1 kg = 1000 g.",
+     "say": "We measure mass in grams and kilograms. A raisin is about one gram. A bunch of bananas is about one kilogram. One kilogram is one thousand grams."
+    },
+    {
+     "type": "explainer",
+     "title": "Grams and kilograms",
+     "scenes": [
+      {
+       "caption": "About 1 gram.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍇",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "1 g"
+        }
+       ],
+       "say": "A raisin is one gram. A paper clip is one gram too."
+      },
+      {
+       "caption": "1 kilogram.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "1 kg"
+        }
+       ],
+       "say": "A bag of rice is one kilogram. It is much heavier!"
+      },
+      {
+       "caption": "1000 g = 1 kg.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1 kg = 1000 g"
+        }
+       ],
+       "say": "One thousand grams make one kilogram."
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Kitchen match",
+     "goal": "Find the matching pairs.",
+     "emojis": [
+      "🥭",
+      "🍚",
+      "🥛",
+      "🍋",
+      "🥕",
+      "🍞"
+     ],
+     "say": "Flip the cards and find the matching pairs. A little brain break!"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "How many grams are in 1 kilogram?",
+      "hint": "A thousand.",
+      "explanation": "1 kg is 1000 g.",
+      "skill_tag": "capmass.kg_g",
+      "answer": {
+       "value": 1000,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Heavier side goes down",
+      "Grams are small, kilograms are big",
+      "Big does not mean heavy"
+     ],
+     "say": "Remember. Mass is how heavy. Grams are small. Kilograms are big. Big things are not always heavy."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "mass",
+       "meaning": "How heavy something is."
+      },
+      {
+       "term": "balance",
+       "meaning": "Scales with two pans."
+      },
+      {
+       "term": "gram",
+       "meaning": "A tiny unit of mass."
+      },
+      {
+       "term": "kilogram",
+       "meaning": "A big unit of mass. 1000 grams."
+      },
+      {
+       "term": "scale",
+       "meaning": "A tool with numbers to read."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is lighter?",
+     "hint": "Which floats?",
+     "explanation": "A feather is very light.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A brick"
+      },
+      {
+       "id": "b",
+       "text": "A feather"
+      },
+      {
+       "id": "c",
+       "text": "A bag of rice"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which unit is best for a bag of rice?",
+     "hint": "It is big.",
+     "explanation": "A bag of rice is measured in kilograms.",
+     "options": [
+      {
+       "id": "a",
+       "text": "grams"
+      },
+      {
+       "id": "b",
+       "text": "kilograms"
+      },
+      {
+       "id": "c",
+       "text": "millilitres"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A raisin is about 1 gram.",
+     "hint": "It is tiny.",
+     "explanation": "A raisin is about 1 gram.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "number",
+     "prompt": "2 kilograms is how many grams?",
+     "hint": "2 × 1000.",
+     "explanation": "2 kg is 2000 g.",
+     "answer": {
+      "value": 2000,
+      "tolerance": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "kitchen",
+   "kind": "use",
+   "title": "Kitchen and market",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: A bag of rice",
+     "backdrop": "town"
+    },
+    {
+     "type": "text",
+     "markdown": "A **scale** has numbers to read.\n\nRead where the needle or water stops.",
+     "say": "At the shop in Lahore, Zara buys a bag of rice. It says five kilograms. The needle on the scale shows how heavy it is."
+    },
+    {
+     "type": "explainer",
+     "title": "Read the scale",
+     "scenes": [
+      {
+       "caption": "0 to 10 kg.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⚖️",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "0 to 10 kg"
+        }
+       ],
+       "say": "The scale goes from zero to ten kilograms."
+      },
+      {
+       "caption": "Halfway = 5.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "⚖️",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse",
+         "label": "5 kg"
+        }
+       ],
+       "say": "The needle is halfway. Halfway between zero and ten is five."
+      },
+      {
+       "caption": "5 kg of rice.",
+       "items": [
+        {
+         "id": "r",
+         "emoji": "🍚",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "5 kg"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "5 kg"
+        }
+       ],
+       "say": "The rice is five kilograms. Read the needle, not the bag!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "Zara buys 2 kg of rice and 3 kg of flour. How many kilograms in all?",
+      "hint": "Add the two masses.",
+      "explanation": "2 + 3 = 5 kilograms.",
+      "skill_tag": "capmass.combine",
+      "answer": {
+       "value": 5,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: The lemonade jug",
+     "backdrop": "home"
+    },
+    {
+     "type": "text",
+     "markdown": "**Altogether** means add the amounts.\n\n250 ml + 750 ml = 1000 ml, or 1 litre.",
+     "say": "Aunty Noor makes lemonade. She uses two hundred and fifty millilitres of lemon juice. She adds seven hundred and fifty millilitres of water."
+    },
+    {
+     "type": "explainer",
+     "title": "Lemonade",
+     "scenes": [
+      {
+       "caption": "250 ml.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "🍋",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "250 ml"
+        },
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "Pour in the lemon juice. Two hundred fifty millilitres."
+      },
+      {
+       "caption": "+ 750 ml.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 30,
+         "y": 46,
+         "size": 3,
+         "anim": "none",
+         "label": "750 ml"
+        },
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 70,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Now add water. Seven hundred fifty millilitres."
+      },
+      {
+       "caption": "1000 ml = 1 litre.",
+       "items": [
+        {
+         "id": "j",
+         "emoji": "🫙",
+         "x": 50,
+         "y": 46,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 90,
+         "size": 2,
+         "anim": "bounce",
+         "label": "1 litre"
+        }
+       ],
+       "say": "That makes one thousand millilitres. A full litre jug!"
+      }
+     ],
+     "backdrop": "plain"
+    },
+    {
+     "type": "reveal",
+     "prompt": "Which is heavier: a kilogram of feathers or a kilogram of rice? Have a think first.",
+     "answer_markdown": "They are the same. Both are one kilogram. The feathers just take up more space."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "number",
+      "prompt": "A jug has 600 millilitres of water. Zara adds 400 millilitres. How many millilitres now?",
+      "hint": "600 + 400.",
+      "explanation": "600 + 400 = 1000 millilitres.",
+      "skill_tag": "capmass.word_cap",
+      "answer": {
+       "value": 1000,
+       "tolerance": 0
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Read the scale carefully",
+      "Add amounts with the same unit",
+      "Pick the right unit for the job"
+     ],
+     "say": "Remember. Read the scale where the needle stops. Add amounts with the same unit. Choose a sensible container."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "scale",
+       "meaning": "A tool with numbers to read."
+      },
+      {
+       "term": "altogether",
+       "meaning": "In all, so we add."
+      },
+      {
+       "term": "recipe",
+       "meaning": "Instructions for making food."
+      },
+      {
+       "term": "needle",
+       "meaning": "The pointer on a dial."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "number",
+     "prompt": "A recipe uses 300 ml of milk and 200 ml of water. How many millilitres altogether?",
+     "hint": "Add them.",
+     "explanation": "300 + 200 = 500 ml.",
+     "answer": {
+      "value": 500,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "number",
+     "prompt": "A bag of sugar is 1 kg. How many bags make 4 kg?",
+     "hint": "1 + 1 + 1 + 1.",
+     "explanation": "4 bags of 1 kg make 4 kg.",
+     "answer": {
+      "value": 4,
+      "tolerance": 0
+     }
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which unit is best for a big bucket of water?",
+     "hint": "It is a lot of liquid.",
+     "explanation": "A bucket holds many litres.",
+     "options": [
+      {
+       "id": "a",
+       "text": "grams"
+      },
+      {
+       "id": "b",
+       "text": "litres"
+      },
+      {
+       "id": "c",
+       "text": "millilitres"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "500 g is half a kilogram.",
+     "hint": "Half of 1000.",
+     "explanation": "500 + 500 = 1000 g.",
+     "answer": [
+      true
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "Which word means how much liquid a jug can hold when it is full?",
+    "hint": "It is the most it can hold.",
+    "explanation": "Capacity is how much a container can hold.",
+    "skill_tag": "capmass.capacity",
+    "options": [
+     {
+      "id": "a",
+      "text": "mass"
+     },
+     {
+      "id": "b",
+      "text": "height"
+     },
+     {
+      "id": "c",
+      "text": "capacity"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "hold",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "true_false",
+    "prompt": "A teaspoon of medicine is measured in millilitres.",
+    "hint": "It is a very small amount.",
+    "explanation": "Tiny amounts of liquid use millilitres.",
+    "skill_tag": "capmass.unit_sense",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "hold",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "multiple_choice",
+    "prompt": "Sam says the tall bottle must hold more than the short wide bottle. Is he right?",
+    "hint": "Think of the tall jug and wide jug.",
+    "explanation": "Height alone does not tell capacity. A short wide bottle can hold the same.",
+    "skill_tag": "capmass.reason_tall",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it is thinner"
+     },
+     {
+      "id": "b",
+      "text": "No. You must measure, because a tall bottle can hold the same or less"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tall always holds more"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hold",
+    "depth": "reason"
+   },
+   {
+    "ref": "q4",
+    "type": "slider",
+    "prompt": "Slide to how many millilitres are in 1 litre.",
+    "hint": "A thousand.",
+    "explanation": "1 litre is 1000 millilitres.",
+    "skill_tag": "capmass.litre_ml",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 2000
+    },
+    "answer": {
+     "value": 1000,
+     "tolerance": 0
+    },
+    "sub_lesson": "hold",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the jug that is half full.",
+    "hint": "Not empty, not full.",
+    "explanation": "Half full is in the middle.",
+    "skill_tag": "capmass.full_half",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🫙",
+       "label": "empty",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🫙",
+       "label": "half full",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫙",
+       "label": "full",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "hold",
+    "depth": "apply"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Ali says volume and capacity always mean the same thing. Is he right?",
+    "hint": "A half full jug has a volume and a capacity.",
+    "explanation": "Capacity is the most a container holds. Volume is the amount inside it now.",
+    "skill_tag": "capmass.reason_vol_cap",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, volume is always bigger"
+     },
+     {
+      "id": "b",
+      "text": "No. Capacity is the most a container can hold. Volume is how much is in it now"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they are the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hold",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "match",
+    "prompt": "Match each container to what it can hold.",
+    "hint": "Teaspoon is tiny, carton is large.",
+    "explanation": "A teaspoon is about 5 ml, a big carton is 1 litre and a small glass is about 200 ml.",
+    "skill_tag": "capmass.object_unit",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Teaspoon"
+     },
+     {
+      "id": "l2",
+      "text": "Large juice carton"
+     },
+     {
+      "id": "l3",
+      "text": "Small glass"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "200 millilitres"
+     },
+     {
+      "id": "r1",
+      "text": "5 millilitres"
+     },
+     {
+      "id": "r2",
+      "text": "1 litre"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "hold",
+    "depth": "apply"
+   },
+   {
+    "ref": "q8",
+    "type": "order",
+    "prompt": "Put these in order of what they can hold, smallest first.",
+    "hint": "Think of how much water each holds.",
+    "explanation": "A teaspoon holds least, then a mug, a jug and a bucket holds most.",
+    "skill_tag": "capmass.order_cap",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Jug"
+     },
+     {
+      "id": "i4",
+      "text": "Bucket"
+     },
+     {
+      "id": "i2",
+      "text": "Mug"
+     },
+     {
+      "id": "i1",
+      "text": "Teaspoon"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "hold",
+    "depth": "apply"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A jug holds 1 litre. A cup holds 250 millilitres. How many cups fill the jug?",
+    "hint": "Count up in 250s to 1000.",
+    "explanation": "250, 500, 750, 1000 is 4 cups.",
+    "skill_tag": "capmass.cups_fill",
+    "answer": {
+     "value": 4,
+     "tolerance": 0
+    },
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "multiple_choice",
+    "prompt": "Which holds more: a 2 litre bottle or a 500 millilitre bottle?",
+    "hint": "2 litres is 2000 ml.",
+    "explanation": "2000 ml is more than 500 ml.",
+    "skill_tag": "capmass.compare_cap",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 500 millilitre bottle"
+     },
+     {
+      "id": "b",
+      "text": "The 2 litre bottle"
+     },
+     {
+      "id": "c",
+      "text": "They hold the same"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "fill_blank",
+    "prompt": "Complete the measures.",
+    "hint": "Half of 1000.",
+    "explanation": "1 litre is 1000 ml and half is 500 ml.",
+    "skill_tag": "capmass.litre_ml",
+    "points": 2,
+    "text": "1 litre is {b1} millilitres. Half a litre is {b2} millilitres.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "100"
+       },
+       {
+        "id": "b",
+        "text": "10"
+       },
+       {
+        "id": "c",
+        "text": "1000"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "50"
+       },
+       {
+        "id": "b",
+        "text": "500"
+       },
+       {
+        "id": "c",
+        "text": "250"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "multiple_choice",
+    "prompt": "Layla says 1 litre of juice and 1 litre of water have different capacities. Is she right?",
+    "hint": "A litre is a fixed amount.",
+    "explanation": "A litre is always the same amount of liquid, whatever the liquid is.",
+    "skill_tag": "capmass.reason_same_litre",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, juice is bigger"
+     },
+     {
+      "id": "b",
+      "text": "Yes, water is bigger"
+     },
+     {
+      "id": "c",
+      "text": "No. A litre is a litre. Both are the same amount"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pour",
+    "depth": "reason"
+   },
+   {
+    "ref": "q13",
+    "type": "hotspot",
+    "prompt": "Tap the jug that has water at 500 millilitres.",
+    "hint": "500 is half of 1000.",
+    "explanation": "500 ml is halfway up a 1 litre jug.",
+    "skill_tag": "capmass.tap_level",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🫗",
+       "label": "level at 250 ml",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🫗",
+       "label": "level at 500 ml",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫗",
+       "label": "level at 750 ml",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q14",
+    "type": "slider",
+    "prompt": "The jug scale goes up in 100s. The water is at the 7th mark. Slide to the reading.",
+    "hint": "7 marks of 100.",
+    "explanation": "7 × 100 = 700 millilitres.",
+    "skill_tag": "capmass.scale_marks",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 1000
+    },
+    "answer": {
+     "value": 700,
+     "tolerance": 0
+    },
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q15",
+    "type": "order",
+    "prompt": "Put these amounts in order, smallest first.",
+    "hint": "1 litre is 1000 ml.",
+    "explanation": "200 is less than 500, and 1 litre is 1000 ml.",
+    "skill_tag": "capmass.order_vol",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "500 ml"
+     },
+     {
+      "id": "i3",
+      "text": "1 litre"
+     },
+     {
+      "id": "i1",
+      "text": "200 ml"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Mira says a spoon of medicine is measured in litres. Is she right?",
+    "hint": "Is a spoon big or small?",
+    "explanation": "Tiny amounts are measured in millilitres. Litres are for bigger amounts.",
+    "skill_tag": "capmass.reason_unit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always litres"
+     },
+     {
+      "id": "b",
+      "text": "No. A spoon holds a tiny amount, so we use millilitres"
+     },
+     {
+      "id": "c",
+      "text": "No, we use kilograms"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pour",
+    "depth": "reason"
+   },
+   {
+    "ref": "q17",
+    "type": "multiple_choice",
+    "prompt": "Which is heavier: a laptop or a raisin?",
+    "hint": "One is about 1 kg, one about 1 g.",
+    "explanation": "A laptop is about 1 kg. A raisin is about 1 g.",
+    "skill_tag": "capmass.heavier",
+    "options": [
+     {
+      "id": "a",
+      "text": "A raisin"
+     },
+     {
+      "id": "b",
+      "text": "A laptop"
+     },
+     {
+      "id": "c",
+      "text": "They have the same mass"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "multiple_choice",
+    "prompt": "Aisha says the bigger box is always heavier. Is she right?",
+    "hint": "Think of feathers and stones.",
+    "explanation": "Size does not tell mass. Light things can take up lots of space.",
+    "skill_tag": "capmass.reason_big_heavy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, big is always heavy"
+     },
+     {
+      "id": "b",
+      "text": "Yes, because it is wider"
+     },
+     {
+      "id": "c",
+      "text": "No. A big box of feathers can be lighter than a small box of stones"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason"
+   },
+   {
+    "ref": "q19",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a balance leans down on the lighter side. Is she right?",
+    "hint": "Heavy pulls down.",
+    "explanation": "The heavier side goes down and the lighter side goes up.",
+    "skill_tag": "capmass.reason_balance",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the lighter side goes down"
+     },
+     {
+      "id": "b",
+      "text": "No, it stays flat"
+     },
+     {
+      "id": "c",
+      "text": "No. The heavier side goes down"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason"
+   },
+   {
+    "ref": "q20",
+    "type": "match",
+    "prompt": "Match each thing to its mass.",
+    "hint": "Small things are in grams.",
+    "explanation": "A paper clip is about 1 g, bananas about 1 kg and an apple about 150 g.",
+    "skill_tag": "capmass.mass_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Paper clip"
+     },
+     {
+      "id": "l2",
+      "text": "Bunch of bananas"
+     },
+     {
+      "id": "l3",
+      "text": "Apple"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "about 1 kilogram"
+     },
+     {
+      "id": "r1",
+      "text": "about 1 gram"
+     },
+     {
+      "id": "r3",
+      "text": "about 150 grams"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "heavy",
+    "depth": "apply"
+   },
+   {
+    "ref": "q21",
+    "type": "order",
+    "prompt": "Put these in order of mass, lightest first.",
+    "hint": "Think about lifting each one.",
+    "explanation": "A paper clip is lightest, then a mango, a bag of rice and a bicycle is heaviest.",
+    "skill_tag": "capmass.order_mass",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "Bag of rice"
+     },
+     {
+      "id": "i4",
+      "text": "Bicycle"
+     },
+     {
+      "id": "i2",
+      "text": "Mango"
+     },
+     {
+      "id": "i1",
+      "text": "Paper clip"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "apply"
+   },
+   {
+    "ref": "q22",
+    "type": "multiple_choice",
+    "prompt": "Omar says 2 kilograms is lighter than 500 grams. Is he right?",
+    "hint": "Change kilograms to grams.",
+    "explanation": "2 kg is 2000 g. 2000 is more than 500.",
+    "skill_tag": "capmass.reason_kg_g",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "b",
+      "text": "No. 2 kilograms is 2000 grams, which is more than 500 grams"
+     },
+     {
+      "id": "c",
+      "text": "Yes, 2 is less than 500"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason"
+   },
+   {
+    "ref": "q23",
+    "type": "slider",
+    "prompt": "The needle is halfway between 0 and 10 kilograms. Slide to the reading.",
+    "hint": "Half of 10.",
+    "explanation": "Halfway between 0 and 10 is 5 kg.",
+    "skill_tag": "capmass.dial",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "heavy",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "number",
+    "prompt": "A lemonade recipe uses 250 millilitres of lemon juice and 750 millilitres of water. How many millilitres is that in all?",
+    "hint": "Add 250 and 750.",
+    "explanation": "250 + 750 = 1000 millilitres, which is 1 litre.",
+    "skill_tag": "capmass.recipe",
+    "answer": {
+     "value": 1000,
+     "tolerance": 0
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "fill_blank",
+    "prompt": "Add the masses.",
+    "hint": "Add, then take away.",
+    "explanation": "2 + 3 = 5 and 5 - 3 = 2.",
+    "skill_tag": "capmass.combine",
+    "points": 2,
+    "text": "2 kg + 3 kg = {b1} kg, so 5 kg - 3 kg = {b2} kg.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "6"
+       },
+       {
+        "id": "b",
+        "text": "1"
+       },
+       {
+        "id": "c",
+        "text": "5"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "8"
+       },
+       {
+        "id": "b",
+        "text": "2"
+       },
+       {
+        "id": "c",
+        "text": "3"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "number",
+    "prompt": "A bag of atta is 5 kilograms. A bag of rice is 2 kilograms. How many kilograms heavier is the atta?",
+    "hint": "Take away 2 from 5.",
+    "explanation": "5 - 2 = 3, so the atta is 3 kg heavier.",
+    "skill_tag": "capmass.difference",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multi_select",
+    "prompt": "Which two containers are best for 5 litres of water? Pick two.",
+    "hint": "5 litres is a lot.",
+    "explanation": "A bucket and a bath hold lots of water. A teaspoon and an egg cup are too small.",
+    "skill_tag": "capmass.choose_container",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bath"
+     },
+     {
+      "id": "b",
+      "text": "An egg cup"
+     },
+     {
+      "id": "c",
+      "text": "A teaspoon"
+     },
+     {
+      "id": "d",
+      "text": "A bucket"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Hamza says to read a jug you look at the number at the top of the jug, not where the water reaches. Is he right?",
+    "hint": "Where does the water stop?",
+    "explanation": "The reading is where the water level reaches on the scale.",
+    "skill_tag": "capmass.reason_read_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always read the top number"
+     },
+     {
+      "id": "b",
+      "text": "No. You read the number where the top of the water reaches"
+     },
+     {
+      "id": "c",
+      "text": "No, read the bottom number"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "true_false",
+    "prompt": "1 kilogram is the same as 1000 grams.",
+    "hint": "A thousand.",
+    "explanation": "1 kg is 1000 g.",
+    "skill_tag": "capmass.kg_g",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "recall"
+   },
+   {
+    "ref": "q30",
+    "type": "multi_select",
+    "prompt": "Which two things are best measured in kilograms? Pick two.",
+    "hint": "Kilograms are for heavier things.",
+    "explanation": "Rice and bananas are about a kilogram. A raisin and a paper clip are about a gram.",
+    "skill_tag": "capmass.choose_unit",
+    "options": [
+     {
+      "id": "a",
+      "text": "A raisin"
+     },
+     {
+      "id": "b",
+      "text": "A paper clip"
+     },
+     {
+      "id": "c",
+      "text": "A bunch of bananas"
+     },
+     {
+      "id": "d",
+      "text": "A bag of rice"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which word means the most a bucket can hold?",
+    "hint": "It is the most it can hold.",
+    "explanation": "Capacity is how much a container can hold.",
+    "skill_tag": "capmass.capacity",
+    "options": [
+     {
+      "id": "a",
+      "text": "width"
+     },
+     {
+      "id": "b",
+      "text": "capacity"
+     },
+     {
+      "id": "c",
+      "text": "mass"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hold",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "true_false",
+    "prompt": "A bath of water is best measured in millilitres.",
+    "hint": "A bath holds a lot.",
+    "explanation": "A bath holds lots of water, so litres are better.",
+    "skill_tag": "capmass.unit_sense",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "hold",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "multiple_choice",
+    "prompt": "Mina says the tall glass must hold more than the wide bowl. Is she right?",
+    "hint": "Think of a wide bowl.",
+    "explanation": "Height alone does not tell capacity. A wide bowl often holds more.",
+    "skill_tag": "capmass.reason_tall",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it is higher"
+     },
+     {
+      "id": "b",
+      "text": "No. You must measure, because a tall glass can hold less"
+     },
+     {
+      "id": "c",
+      "text": "Yes, tall always holds more"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hold",
+    "depth": "reason",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "slider",
+    "prompt": "Slide to how many millilitres are in half a litre.",
+    "hint": "Half of 1000.",
+    "explanation": "Half of 1000 is 500 millilitres.",
+    "skill_tag": "capmass.litre_ml",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 2000
+    },
+    "answer": {
+     "value": 500,
+     "tolerance": 0
+    },
+    "sub_lesson": "hold",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the jug that is full.",
+    "hint": "Water to the top.",
+    "explanation": "Full means it holds as much as it can.",
+    "skill_tag": "capmass.full_half",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🫙",
+       "label": "empty",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🫙",
+       "label": "half full",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫙",
+       "label": "full",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h3"
+    ],
+    "sub_lesson": "hold",
+    "depth": "apply",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Ben says the capacity of a 1 litre jug changes when you pour some out. Is he right?",
+    "hint": "Is the jug itself different?",
+    "explanation": "The jug is the same, so its capacity is the same. The volume in it changes.",
+    "skill_tag": "capmass.reason_vol_cap",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the capacity goes up"
+     },
+     {
+      "id": "b",
+      "text": "No. The capacity stays 1 litre. Only the volume changes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the capacity goes down"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hold",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "match",
+    "prompt": "Join each container to what it can hold.",
+    "hint": "Think small to large.",
+    "explanation": "A raindrop is about 1 ml, a big bottle is 2 litres and a small cup is about 100 ml.",
+    "skill_tag": "capmass.object_unit",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Raindrop"
+     },
+     {
+      "id": "l2",
+      "text": "Big water bottle"
+     },
+     {
+      "id": "l3",
+      "text": "Small cup"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "100 millilitres"
+     },
+     {
+      "id": "r1",
+      "text": "1 millilitre"
+     },
+     {
+      "id": "r2",
+      "text": "2 litres"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "hold",
+    "depth": "apply",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "order",
+    "prompt": "Order these by what they can hold, smallest first.",
+    "hint": "Think of how much water each holds.",
+    "explanation": "A spoon holds least, then a cup, a bottle and a bath holds most.",
+    "skill_tag": "capmass.order_cap",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Cup"
+     },
+     {
+      "id": "i4",
+      "text": "Bath"
+     },
+     {
+      "id": "i3",
+      "text": "Water bottle"
+     },
+     {
+      "id": "i1",
+      "text": "Spoon"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "hold",
+    "depth": "apply",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A big jug holds 1 litre. A small glass holds 200 millilitres. How many glasses fill it?",
+    "hint": "Count up in 200s to 1000.",
+    "explanation": "200, 400, 600, 800, 1000 is 5 glasses.",
+    "skill_tag": "capmass.cups_fill",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "multiple_choice",
+    "prompt": "Which holds more: a 1 litre jug or a 750 millilitre jug?",
+    "hint": "1 litre is 1000 ml.",
+    "explanation": "1000 ml is more than 750 ml.",
+    "skill_tag": "capmass.compare_cap",
+    "options": [
+     {
+      "id": "a",
+      "text": "The 750 millilitre jug"
+     },
+     {
+      "id": "b",
+      "text": "They hold the same"
+     },
+     {
+      "id": "c",
+      "text": "The 1 litre jug"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "fill_blank",
+    "prompt": "Finish the measures.",
+    "hint": "A quarter of 1000.",
+    "explanation": "2 litres is 2000 ml and a quarter litre is 250 ml.",
+    "skill_tag": "capmass.litre_ml2",
+    "points": 2,
+    "text": "2 litres is {b1} millilitres. A quarter of a litre is {b2} millilitres.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "200"
+       },
+       {
+        "id": "b",
+        "text": "1000"
+       },
+       {
+        "id": "c",
+        "text": "2000"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "25"
+       },
+       {
+        "id": "b",
+        "text": "250"
+       },
+       {
+        "id": "c",
+        "text": "400"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 1 litre of milk is more liquid than 1 litre of water. Is he right?",
+    "hint": "A litre is a fixed amount.",
+    "explanation": "A litre is always the same amount of liquid, whatever the liquid is.",
+    "skill_tag": "capmass.reason_same_litre",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, milk is bigger"
+     },
+     {
+      "id": "b",
+      "text": "Yes, water is bigger"
+     },
+     {
+      "id": "c",
+      "text": "No. A litre is a litre. Both are the same amount"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "pour",
+    "depth": "reason",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "hotspot",
+    "prompt": "Tap the jug that has water at 250 millilitres.",
+    "hint": "250 is a quarter of 1000.",
+    "explanation": "250 ml is one quarter of the way up a 1 litre jug.",
+    "skill_tag": "capmass.tap_level",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "🫗",
+       "label": "level at 250 ml",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🫗",
+       "label": "level at 500 ml",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🫗",
+       "label": "level at 750 ml",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "slider",
+    "prompt": "The jug scale goes up in 100s. The water is at the 4th mark. Slide to the reading.",
+    "hint": "4 marks of 100.",
+    "explanation": "4 × 100 = 400 millilitres.",
+    "skill_tag": "capmass.scale_marks",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 1000
+    },
+    "answer": {
+     "value": 400,
+     "tolerance": 0
+    },
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "order",
+    "prompt": "Order these amounts, smallest first.",
+    "hint": "2 litres is 2000 ml.",
+    "explanation": "100 is less than 750, and 2 litres is 2000 ml.",
+    "skill_tag": "capmass.order_vol",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "2 litres"
+     },
+     {
+      "id": "i1",
+      "text": "100 ml"
+     },
+     {
+      "id": "i2",
+      "text": "750 ml"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "pour",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a bucket of water is best measured in millilitres. Is he right?",
+    "hint": "Is a bucket big or small?",
+    "explanation": "Big amounts are measured in litres. Millilitres are for tiny amounts.",
+    "skill_tag": "capmass.reason_unit",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, always millilitres"
+     },
+     {
+      "id": "b",
+      "text": "No. A bucket holds a lot, so we use litres"
+     },
+     {
+      "id": "c",
+      "text": "No, we use grams"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "pour",
+    "depth": "reason",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multiple_choice",
+    "prompt": "Which is lighter: a paper clip or a bunch of bananas?",
+    "hint": "One is about 1 g, one about 1 kg.",
+    "explanation": "A paper clip is about 1 g. A bunch of bananas is about 1 kg.",
+    "skill_tag": "capmass.heavier",
+    "options": [
+     {
+      "id": "a",
+      "text": "They have the same mass"
+     },
+     {
+      "id": "b",
+      "text": "A paper clip"
+     },
+     {
+      "id": "c",
+      "text": "A bunch of bananas"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "multiple_choice",
+    "prompt": "Ben says the bigger balloon is heavier than a small stone. Is he right?",
+    "hint": "Which one would you carry more easily?",
+    "explanation": "A balloon is big but very light. A stone is small but heavier.",
+    "skill_tag": "capmass.reason_big_heavy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, because it floats"
+     },
+     {
+      "id": "b",
+      "text": "No. A big balloon is full of air, so it is lighter than the stone"
+     },
+     {
+      "id": "c",
+      "text": "Yes, big is always heavy"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "multiple_choice",
+    "prompt": "Ben says the higher side of a balance is the heavier side. Is he right?",
+    "hint": "Which way does heavy go?",
+    "explanation": "The heavier side goes down. The higher side is the lighter one.",
+    "skill_tag": "capmass.reason_balance",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, the high side is heavier"
+     },
+     {
+      "id": "b",
+      "text": "No. The heavier side goes down, so the higher side is lighter"
+     },
+     {
+      "id": "c",
+      "text": "No, both sides are equal"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "match",
+    "prompt": "Join each thing to its mass.",
+    "hint": "Small things are in grams.",
+    "explanation": "A raisin is about 1 g, a bag of sugar 1 kg and an orange about 200 g.",
+    "skill_tag": "capmass.mass_match",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Raisin"
+     },
+     {
+      "id": "l2",
+      "text": "Bag of sugar"
+     },
+     {
+      "id": "l3",
+      "text": "Orange"
+     }
+    ],
+    "right": [
+     {
+      "id": "r3",
+      "text": "about 200 grams"
+     },
+     {
+      "id": "r1",
+      "text": "about 1 gram"
+     },
+     {
+      "id": "r2",
+      "text": "about 1 kilogram"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "heavy",
+    "depth": "apply",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "order",
+    "prompt": "Order these by mass, lightest first.",
+    "hint": "Think about lifting each one.",
+    "explanation": "A feather is lightest, then an orange, a bag of flour and a sofa is heaviest.",
+    "skill_tag": "capmass.order_mass",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Orange"
+     },
+     {
+      "id": "i4",
+      "text": "Sofa"
+     },
+     {
+      "id": "i3",
+      "text": "Bag of flour"
+     },
+     {
+      "id": "i1",
+      "text": "Feather"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3",
+     "i4"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "apply",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "multiple_choice",
+    "prompt": "Ben says 1 kilogram is lighter than 800 grams. Is he right?",
+    "hint": "Change kilograms to grams.",
+    "explanation": "1 kg is 1000 g. 1000 is more than 800.",
+    "skill_tag": "capmass.reason_kg_g",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, 1 is less than 800"
+     },
+     {
+      "id": "b",
+      "text": "No, they are the same"
+     },
+     {
+      "id": "c",
+      "text": "No. 1 kilogram is 1000 grams, which is more than 800 grams"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "heavy",
+    "depth": "reason",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "slider",
+    "prompt": "The needle is halfway between 0 and 20 kilograms. Slide to the reading.",
+    "hint": "Half of 20.",
+    "explanation": "Halfway between 0 and 20 is 10 kg.",
+    "skill_tag": "capmass.dial",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 20
+    },
+    "answer": {
+     "value": 10,
+     "tolerance": 0
+    },
+    "sub_lesson": "heavy",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "number",
+    "prompt": "A drink uses 200 millilitres of syrup and 800 millilitres of water. How many millilitres is that in all?",
+    "hint": "Add 200 and 800.",
+    "explanation": "200 + 800 = 1000 millilitres, which is 1 litre.",
+    "skill_tag": "capmass.recipe",
+    "answer": {
+     "value": 1000,
+     "tolerance": 0
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "fill_blank",
+    "prompt": "Work out the masses.",
+    "hint": "Add, then take away.",
+    "explanation": "4 + 3 = 7 and 7 - 4 = 3.",
+    "skill_tag": "capmass.combine",
+    "points": 2,
+    "text": "4 kg + 3 kg = {b1} kg, so 7 kg - 4 kg = {b2} kg.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "1"
+       },
+       {
+        "id": "b",
+        "text": "7"
+       },
+       {
+        "id": "c",
+        "text": "12"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "4"
+       },
+       {
+        "id": "b",
+        "text": "3"
+       },
+       {
+        "id": "c",
+        "text": "11"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "number",
+    "prompt": "A sack of flour is 9 kilograms. A sack of sugar is 4 kilograms. How many kilograms heavier is the flour?",
+    "hint": "Take away 4 from 9.",
+    "explanation": "9 - 4 = 5, so the flour is 5 kg heavier.",
+    "skill_tag": "capmass.difference",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "kitchen",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multi_select",
+    "prompt": "Which two containers are best for 5 millilitres of syrup? Pick two.",
+    "hint": "5 millilitres is tiny.",
+    "explanation": "A teaspoon and a small spoon hold tiny amounts. A bucket and a bath are far too big.",
+    "skill_tag": "capmass.choose_container",
+    "options": [
+     {
+      "id": "a",
+      "text": "A bucket"
+     },
+     {
+      "id": "b",
+      "text": "A bath"
+     },
+     {
+      "id": "c",
+      "text": "A small spoon"
+     },
+     {
+      "id": "d",
+      "text": "A teaspoon"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "apply",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Ben says to read a jug you look at the number at the bottom, not where the water reaches. Is he right?",
+    "hint": "Where does the water stop?",
+    "explanation": "The reading is where the water level reaches on the scale.",
+    "skill_tag": "capmass.reason_read_scale",
+    "options": [
+     {
+      "id": "a",
+      "text": "No, read the top number of the jug"
+     },
+     {
+      "id": "b",
+      "text": "No. You read the number where the top of the water reaches"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always read the bottom number"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "true_false",
+    "prompt": "1 litre is the same as 100 millilitres.",
+    "hint": "A thousand.",
+    "explanation": "1 litre is 1000 millilitres, not 100.",
+    "skill_tag": "capmass.litre_ml",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "recall",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "multi_select",
+    "prompt": "Which two things are best measured in litres? Pick two.",
+    "hint": "Litres are for larger amounts.",
+    "explanation": "A bucket and a juice carton hold litres. A teaspoon and a raindrop hold millilitres.",
+    "skill_tag": "capmass.choose_unit",
+    "options": [
+     {
+      "id": "a",
+      "text": "A large juice carton"
+     },
+     {
+      "id": "b",
+      "text": "A raindrop"
+     },
+     {
+      "id": "c",
+      "text": "A teaspoon of honey"
+     },
+     {
+      "id": "d",
+      "text": "A bucket of water"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "kitchen",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

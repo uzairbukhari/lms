@@ -18,7 +18,7 @@ describe("ExplainerStage", () => {
     expect(a).toContain('aria-label="Start"');
     expect(a).toContain("left:20%");
     expect(b).toContain("left:80%");
-    expect(b).toContain("🍕");
+    expect(b).toContain("pizza.webp"); // the pizza emoji is drawn as the painted pizza (anim/assets)
     expect(a.match(/exit-fade/g)).toHaveLength(1); // not here yet: drawn hidden
     expect(b).not.toContain("exit-fade");
     expect(a).toContain("transition-[left,top]");

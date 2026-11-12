@@ -1,13 +1,19 @@
-import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, TALLY, PICTO, BAR, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, REVEAL, ACT, BRAIN, SUM, CHK, S, EXP, GLOSS, TALLY, PICTO, BAR, TABLE, mc, ms, tf, num, ord, mat, fill, hot, sld, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
 // Computer Science, Data & AI, Class 1 (Zainab, age 7), topic 2: Data detectives.
 // Standards: NC Y2 statistics, CSTA 1A data and analysis, PK M-01-E, CAM 2Ss.01-2Ss.03, 2Sp.01, 2Sp.02 (docs/CURRICULUM_V2.md).
 const o = (hint, why, tag) => ({ hint, why, tag });
 
+const TILES = "data-ai-class-1-data-detectives-1-551d0e10.jpg";
+const FRUIT = "data-ai-class-1-data-detectives-2-b27e7ba0.jpg";
+
 const sorting = {
   id: "sorting", kind: "learn", title: "Sorting and tally marks",
   blocks: [
+    H("Welcome back, data detective!"),
+    SAY("Today we find answers by sorting and counting.", T("Today's big question: how can counting answer a question?")),
+    SAY("These blocks come in many colours. Colour is one attribute we can sort by.", PHOTO(TILES, "Wooden blocks in many colours laid in rows", "Blocks can be sorted by colour.", "Photo by Michael Dziedzic on Unsplash")),
     H("Stop 1: Sorting into groups"),
     SAY("Detectives look for clues, and clues are called data. Data is information we collect. The first job of a data detective is to sort. We put things that are alike into the same group. Here are a bird, a fish, an eagle and a goldfish. Birds fly. Fish swim. Let us sort them into two boxes.", T("**Data** is information we collect.", "To **sort** is to put things that are alike into the same **group**.")),
     EXP("Sort the animals",
@@ -20,7 +26,7 @@ const sorting = {
     TALLY("Favourite pets", [["Cats", 5], ["Dogs", 3], ["Fish", 2]], "Each stroke is one vote. Five is a bundle."),
     CHK(num("Cats got 5 tally marks. Dogs got 3. How many votes did cats get?", 5, o("Count the strokes.", "5 strokes means 5 votes.", "data.tally"))),
     SAY("Let us remember. We sort things into groups, and we count them with tally marks.", SUM("Sorting puts alike things in a group", "A tally mark is one stroke for each vote")),
-    GLOSS({ data: "Information we collect.", sort: "To put things that are alike together.", group: "Things that belong together.", tally: "Strokes we make to count, with every fifth stroke across the four." }),
+    GLOSS({ attribute: "Something that describes a thing, like its colour or size.", compare: "To look at two things and say how they differ.", data: "Information we collect.", sort: "To put things that are alike together.", group: "Things that belong together.", tally: "Strokes we make to count, with every fifth stroke across the four." }),
   ],
   mini: [
     mc("What do we call information that we collect?", "Data", ["A bug", "A loop"], o("Detectives collect it.", "Information we collect is data.")),
@@ -34,6 +40,7 @@ const picto = {
   id: "pictograms", kind: "try", title: "Pictograms and block graphs",
   blocks: [
     H("Stop 1: Pictures that count"),
+    SAY("A fruit basket is good for counting. How many of each kind?", PHOTO(FRUIT, "A basket of bananas, apples and an orange", "A fruit basket is full of data to count.", "Photo by Ray Shrewsberry on Unsplash")),
     SAY("A pictogram uses pictures to show data. Each picture stands for one vote. The longer the row of pictures, the more votes. Look at our class's favourite fruit. Which row is the longest?", T("A **pictogram** uses pictures to show **data**. Each picture is one vote.")),
     SAY("Count the pictures in each row. Mango has the longest row.", PICTO("Favourite fruit", [["Mango", 6, "🥭"], ["Apple", 4, "🍎"], ["Banana", 3, "🍌"], ["Orange", 2, "🍊"]], 1, "Each picture is one child's vote. Mango has the most.")),
     CHK(mc("In the fruit pictogram, which fruit has the most pictures?", "Mango", ["Orange", "Banana"], o("Find the longest row.", "Mango has 6 pictures, the most.", "data.pictogram"))),
@@ -85,7 +92,7 @@ const useData = {
     CHK(mc("Which game was chosen by the most children?", "Cricket", ["Skipping", "Tag"], o("Find the biggest number.", "Cricket has 9, the biggest number.", "data.read"))),
     H("Stop 2: Ask and answer"),
     SAY("A good detective asks a question first. What would you like to find out? Maybe your family's favourite colour, or what pets your cousins have. Then collect data, tally it, and draw a pictogram. Finally share what you found.", T("A good **detective** asks a question, collects data, makes a graph and shares what they found.")),
-    SAY("Ask a question, collect the data, tally it, draw a graph and share what you found.", IMG("🔍📊", "Ask, collect, tally, graph, share.")),
+    SAY("Ask a question, collect data and tally it. Then draw a graph and share.", IMG("🔍📊", "Ask, collect, tally, graph, share.")),
     SAY("Time to be a data detective at home.", ACT("My own survey", ["Pencil and paper", "Five family members or friends"], ["Choose a question, such as: what is your favourite fruit?", "Ask five people and make a tally.", "Draw a pictogram.", "Which has the most votes? Tell your family."])),
     REVEAL("What do you think would happen if you asked ten people instead of five?", "You would get more data, so the answer would be more reliable."),
     CHK(num("Tag had 7 votes and skipping had 4. How many more votes did tag get?", 3, o("Take 4 away from 7.", "7 - 4 = 3.", "data.compare"))),
@@ -118,6 +125,29 @@ const ALTS = [
 ];
 
 const qd = (q, sub, depth) => ({ q, sub, depth });
+const qa = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+const clip = {
+  title: "Zainab's block survey", backdrop: "classroom", caption: "Zainab sorts, counts and makes a pictogram.",
+  scenes: [
+    { caption: "Lots of blocks.", say: "Zainab has a pile of coloured blocks. She wants to find out something.",
+      items: [{ id: "z", emoji: "👧", label: "Zainab", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "b", emoji: "🧱", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Sort by colour.", say: "First she sorts them. Colour is one attribute of a block.",
+      items: [{ id: "r", emoji: "🟥", x: 25, y: 50, size: 3 }, { id: "b", emoji: "🟦", x: 50, y: 50, size: 3 }, { id: "y", emoji: "🟨", x: 75, y: 50, size: 3 }] },
+    { caption: "Tally.", say: "She makes tally marks. Four strokes, then one across makes five.",
+      items: [{ id: "t", emoji: "✍️", label: "tally", x: 50, y: 48, size: 3, effect: "sparkle" }] },
+    { caption: "Count.", say: "Red has two bundles of five. That is ten red blocks.",
+      items: [{ id: "r", emoji: "🟥", label: "10", x: 50, y: 48, size: 3, anim: "pulse" }] },
+    { caption: "A pictogram.", say: "Now she draws a pictogram. Each picture is one block.",
+      items: [{ id: "p", emoji: "📊", x: 50, y: 48, size: 3, enter: "grow" }] },
+    { caption: "Read it.", say: "The longest row has the most. Red has the most blocks.",
+      items: [{ id: "r", emoji: "🟥", label: "most", x: 40, y: 50, size: 3 }, { id: "s", emoji: "🔍", x: 72, y: 45, size: 3, effect: "glow" }] },
+    { caption: "Compare.", say: "Red has ten and blue has six. Red has four more.",
+      items: [{ id: "r", emoji: "🟥", label: "10", x: 30, y: 50, size: 3 }, { id: "b", emoji: "🟦", label: "6", x: 70, y: 50, size: 3 }] },
+    { caption: "Detective done!", say: "Zainab found her answer. Counting clues is detective work!",
+      items: [{ id: "z", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "🌟", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "data-ai-class-1-data-detectives", subject: "data-ai", cls: 1, topic: 2, title: "Data Detectives",
@@ -138,13 +168,9 @@ export const topics = [
       mc("A mistake in instructions is called a...", "Bug", ["Loop", "Pattern"], o("Not a real insect.", "A mistake is a bug.")),
       num("What is 6 + 4?", 10, o("Count on from 6.", "6 and 4 make 10.")),
     ],
-    intro: [
-      H("Welcome, data detective!"),
-      SAY("Welcome, data detective! Today's big question: how can we find answers by counting? Detectives collect clues, sort them, count them and draw them. By the end you will make a tally, read a pictogram, and answer questions from a graph. Let's go!", T("Today's big question: how can we find answers by counting clues?", "We will sort, tally and make graphs.")),
-      IMG("🔍", "Data detectives collect clues and count them."),
-      GLOSS({ clues: "Pieces of information that help us find out." }),
-    ],
+    intro: [],
     subs: [sorting, picto, chance, useData],
+    clip,
     quiz: [
       qd(mc("Which animal goes in the fly group?", "🦅", ["🐟", "🐠"], o("Which has wings?", "The eagle flies.", "data.sorting")), "sorting", "recall"),
       qd(mc("What do we do when we put things that are alike together?", "Sort them", ["Lose them", "Break them"], o("Think about boxes.", "We sort them into groups.", "data.sorting")), "sorting", "recall"),
@@ -161,6 +187,37 @@ export const topics = [
       qd(tf("The most votes is the biggest number.", true, o("Fewest is small.", "The fewest votes is the smallest number.", "data.read")), "use_data", "recall"),
       qd(mc("Hamza says a longer row on a pictogram has fewer votes. Is he right?", "No, a longer row has more votes", ["Yes", "Only for tally"], o("Long means more.", "A longer row means more votes.", "data.reason")), "pictograms", "reason"),
       qd(ord("Put the detective steps in order.", ["Ask a question", "Collect the data", "Make a graph"], o("What comes first?", "Ask, collect, then graph.", "data.process")), "use_data", "reason"),
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      qa(fill("Finish the sentences about attributes.", "An {b1} tells us about a thing, like its colour or {b2}.", [["attribute", "apple", "answer"], ["size", "bug", "loop"]], o("Think about how we describe things.", "An attribute tells us about a thing, such as its colour or size.", "data.attribute")), "sorting", "apply",
+        [fill("Complete the sentences about comparing.", "We {b1} data to find out which has the {b2} votes.", [["compare", "hide", "lose"], ["most", "blue", "soft"]], o("Think about picking a winner.", "We compare data to find the most votes.", "data.compare"))]),
+      qa(ms("Which two are attributes of a red ball? Pick two.", ["Red", "Round"], ["Sleepy", "Loud"], o("Look at the ball.", "A red ball is red and round.", "data.attribute")), "sorting", "apply",
+        [ms("Which two are attributes of a mango? Pick two.", ["Yellow", "Sweet"], ["Barking", "Fast"], o("Think about a mango.", "A mango can be yellow and sweet.", "data.attribute"))]),
+      qa(mat("Match each thing to one of its attributes.", [["Banana", "Yellow"], ["Ball", "Round"], ["Brick", "Hard"]], o("Think about each thing.", "Each attribute describes the thing.", "data.attribute")), "sorting", "apply",
+        [mat("Join each thing to one of its attributes.", [["Ice cube", "Cold"], ["Feather", "Light"], ["Rock", "Heavy"]], o("Think about each thing.", "Each attribute describes the thing.", "data.attribute"))]),
+      qa(sld("A tally has two bundles of five and 3 strokes. Slide to show the votes.", { min: 0, max: 20 }, 13, 0, o("Count in fives: 5, 10, then 3 more.", "5 + 5 + 3 = 13 votes.", "data.tally")), "sorting", "apply",
+        [sld("A tally has three bundles of five and 2 strokes. Slide to show the votes.", { min: 0, max: 20 }, 17, 0, o("Count in fives: 5, 10, 15, then 2 more.", "15 + 2 = 17 votes.", "data.tally"))]),
+      qa(hot("Tap the yes or no question that splits a group.", [["❓", "Is it red?", 22, 50], ["❓", "What is your name?", 50, 50], ["❓", "Tell me a story", 78, 50]], ["Is it red?"], { labels: true, ...o("Which one can be answered yes or no?", "Is it red? has a yes or no answer, so it splits the group.", "data.sorting") }), "sorting", "apply",
+        [hot("Tap the question we can answer with a tally.", [["❓", "Which pet do you like best?", 22, 50], ["❓", "Why is the sky blue?", 50, 50], ["❓", "Sing a song", 78, 50]], ["Which pet do you like best?"], { labels: true, ...o("Which one gives votes to count?", "Children can vote for a pet, so we can tally.", "data.tally") })]),
+      qa(tf("To find the total of all the votes, we add every row.", true, o("Total means all together.", "The total is every row added up.", "data.compare")), "pictograms", "recall",
+        [tf("To find the total votes, we only look at the tallest row.", false, o("Total means all together.", "The total needs every row added.", "data.compare"))]),
+      qa(ord("Put the steps for making a graph in order.", ["Count each group", "Draw the pictures or blocks", "Add a title"], o("What first?", "Count, draw, then add a title.", "data.process")), "pictograms", "apply",
+        [ord("Put these in order for a class vote.", ["Ask the question", "Each child votes", "Count the tally", "Say which won"], o("What first?", "Ask, vote, count, then say who won.", "data.process"))]),
+      qa(mc("Zain puts colour and size in one pictogram row. Is that a clear chart?", "No. One chart should show one attribute at a time", ["Yes, more is always better", "Yes, pictograms need two"], o("One chart, one attribute.", "Mixing attributes makes the chart confusing.", "data.reason")), "pictograms", "reason",
+        [mc("Mina sorts by shape and colour in the same chart. Is that clear?", "No. Choose one attribute for each chart", ["Yes, it is clearer", "Yes, charts need two"], o("One chart, one attribute.", "Mixing attributes makes a chart confusing.", "data.reason"))]),
+      qa(mc("A pictogram key says one picture means 2 votes. There are 4 pictures. Sam says 4 votes. Is he right?", "No. 4 pictures mean 8 votes", ["Yes, 4 votes", "No, 2 votes"], o("Read the key first.", "4 pictures of 2 votes each make 8 votes.", "data.reason")), "pictograms", "reason",
+        [mc("The key says one picture means 2 votes. There are 3 pictures. Aisha says 3 votes. Is she right?", "No. 3 pictures mean 6 votes", ["Yes, 3 votes", "No, 2 votes"], o("Read the key first.", "3 pictures of 2 votes each make 6 votes.", "data.reason"))]),
+      qa(mc("Omar says we should count the votes before choosing a game. Why is that a good idea?", "The data shows which game most children like", ["Counting is quicker than playing", "Data is always wrong"], o("What does the data tell us?", "Comparing data helps us make a fair choice.", "data.reason")), "use_data", "reason",
+        [mc("Layla says she can guess the favourite pet without asking. Why is asking better?", "Asking shows what everyone really chose", ["Guessing is always right", "Asking is a waste of time"], o("What does the data tell us?", "Data shows real choices, not guesses.", "data.reason"))]),
+      qa(mc("Sara counts a tally of one bundle of five and 2 strokes as 8. Is she right?", "No. 5 and 2 make 7", ["Yes, 8", "No, it is 6"], o("Count in fives, then add.", "5 + 2 = 7, not 8.", "data.reason")), "sorting", "reason",
+        [mc("Ben counts two bundles of five and 1 stroke as 12. Is he right?", "No. 10 and 1 make 11", ["Yes, 12", "No, it is 10"], o("Count in fives, then add.", "10 + 1 = 11, not 12.", "data.reason"))]),
+      qa(num("A pictogram shows 7 cats and 3 fish. How many more cats than fish?", 4, o("Take 3 away from 7.", "7 - 3 = 4 more cats.", "data.compare")), "pictograms", "apply",
+        [num("A pictogram shows 8 dogs and 5 rabbits. How many more dogs than rabbits?", 3, o("Take 5 away from 8.", "8 - 5 = 3 more dogs.", "data.compare"))]),
+      qa(mc("Which chart helps us see which pet is the most popular?", "A block graph", ["A drawing of a house", "A story"], o("Think about tall stacks.", "The tallest stack of a block graph shows the most popular.", "data.pictogram")), "pictograms", "apply",
+        [mc("Which helps us count votes as children give them?", "A tally chart", ["A pillow", "A block graph"], o("Think about one stroke for each vote.", "A tally chart records each vote as it comes.", "data.tally"))]),
+      qa(mc("Votes: tag 7, skipping 4, hide and seek 5. Which game has the fewest votes?", "Skipping", ["Tag", "Hide and seek"], o("Find the smallest number.", "4 is the smallest, so skipping has the fewest.", "data.read")), "use_data", "apply",
+        [mc("Votes: cats 6, dogs 3, fish 8. Which pet has the fewest votes?", "Dogs", ["Cats", "Fish"], o("Find the smallest number.", "3 is the smallest, so dogs have the fewest.", "data.read"))]),
+      qa(mc("Which word names an attribute of a mango?", "Sweet", ["Tuesday", "Quickly"], o("An attribute describes a thing.", "Sweet describes a mango.", "data.attribute")), "sorting", "recall",
+        [mc("Which is an attribute of a football?", "Round", ["Monday", "Slowly"], o("An attribute describes a thing.", "Round describes a football.", "data.attribute"))]),
+    ].map((x, i) => (x.alts ? x : { ...x, alts: ALTS[i] })),
   }),
 ];

@@ -1,12 +1,19 @@
-import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, S, GLOSS, BAR, mc, ms, tf, num, ord, mat, fill, hot, sld, st, PHOTO } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 import { EB, Q, NC, PK, CAM } from "./_science-kit.mjs";
 
 // Science Class 4, topic 2: Our bodies (Fatima, age 9). Enquiry type: research using sources.
 
+const SKEL = "science-class-4-our-bodies-1-fc5a1d13.jpg";
+const TEETH = "science-class-4-our-bodies-2-476eeda4.jpg";
+const RIBS = "science-class-4-our-bodies-3-e5256c14.jpg";
+
 const skeleton = {
   id: "skeleton", kind: "learn", title: "Skeleton and muscles",
   blocks: [
+    H("Welcome back, young scientist!"),
+    SAY("Today we explore how your body works. Bones, muscles, teeth, food and the heart all have jobs.", T("Today's big question: how does your body work?")),
+    SAY("This model shows a skeleton. Under your skin, bones hold you up and protect your soft organs.", PHOTO(SKEL, "A model skeleton with its hand under its chin", "A model of the human skeleton.", "Photo by Mathew Schwartz on Unsplash")),
     H("Stop 1: Your skeleton"),
     SAY("Under your skin is a framework of bones called your skeleton. An adult has 206 bones. The skeleton does three jobs. It supports your body so you can stand up. It protects soft organs. Your skull protects your brain, and your ribs protect your heart and lungs. And it helps you move, together with your muscles. Look at the bones inside the body.", T("The **skeleton** supports, protects and helps us move.", "The skull protects the brain. The ribs protect the heart and lungs.")),
     EB("lab", "The skeleton",
@@ -14,13 +21,14 @@ const skeleton = {
       SS("The skull is a hard box that protects the soft brain. The ribs make a cage around the heart and lungs.", S("Bones protect soft organs.", ["b", { kind: "body", highlight: "bones" }, 50, 52, 3, "pulse"]))),
     CHK(mc("Which bones protect your heart and lungs?", "The ribs", ["The skull", "The toes"], { hint: "They form a cage.", why: "The ribs make a cage around the heart and lungs." })),
     H("Stop 2: Muscles move your bones"),
+    SAY("Look at the rib cage. It is a bone cage that protects the heart and lungs.", PHOTO(RIBS, "A model of a spine and rib cage on a grey background", "The rib cage protects the heart and lungs.", "Photo by Nino Liverani on Unsplash")),
     SAY("Bones cannot move on their own. Muscles move them. A muscle can only pull, never push, so muscles work in pairs. To bend your arm, the biceps muscle on top gets shorter and pulls. To straighten it, the triceps underneath pulls the other way. Tendons join muscles to bones, and joints, like your elbow, let the bones bend.", T("**Muscles** pull on bones to make them move. They work in pairs.", "A **joint**, like the elbow, is where two bones meet and can bend.")),
     EB("lab", "Muscles in pairs",
       SS("To bend the arm, the biceps on top pulls and gets shorter. The triceps relaxes.", S("Biceps pulls: the arm bends.", ["m", { kind: "body", highlight: "muscles" }, 50, 52, 3, "pulse"])),
       SS("To straighten the arm, the triceps pulls and the biceps relaxes. A muscle can only pull, so it needs a partner.", S("Triceps pulls: the arm straightens.", ["m", { kind: "body", highlight: "muscles" }, 50, 52, 3, "none"]))),
     CHK(mc("What can a muscle do?", "Only pull", ["Only push", "Push and pull"], { hint: "That is why they work in pairs.", why: "Muscles can only pull, so they work in pairs to move bones in two directions." })),
     SAY("Remember. The skeleton supports, protects and helps movement. Muscles pull bones, in pairs.", SUM("The skeleton supports, protects and helps us move", "Muscles pull on bones and work in pairs", "Joints are where bones meet")),
-    GLOSS({ skeleton: "All the bones in the body.", muscles: "Parts of the body that pull to make bones move.", joint: "A place where two bones meet, such as the elbow.", tendon: "A strong cord that joins a muscle to a bone." }),
+    GLOSS({ body: "All the parts that make up a person.", skeleton: "All the bones in the body.", muscles: "Parts of the body that pull to make bones move.", joint: "A place where two bones meet, such as the elbow.", tendon: "A strong cord that joins a muscle to a bone." }),
   ],
   mini: [
     num("How many bones does an adult have?", 206, { hint: "A little more than 200.", why: "An adult has 206 bones." }),
@@ -58,6 +66,7 @@ const teeth = {
   id: "teeth", kind: "play", title: "Teeth and caring for them",
   blocks: [
     H("Stop 1: Three kinds of teeth"),
+    SAY("This model shows the roots of teeth inside the jaw. Each tooth has a shape that suits its job.", PHOTO(TEETH, "A model of teeth showing the roots in the jaw", "A model of teeth and gums.", "Photo by Jonathan Borba on Unsplash")),
     SAY("You have different teeth for different jobs. Incisors at the front are sharp and cut food, like biting an apple. Canines are pointed and tear food. Molars at the back are flat and grind food. Children have twenty milk teeth, and adults have thirty-two. Look at the three kinds.", T("**Incisors** cut, **canines** tear and **molars** grind.", "Adults have 32 teeth.")),
     SAY("Here they are: the cutting teeth, the pointed teeth and the grinding teeth.", IMG("🦷✂️ 🦷🔺 🦷⚙️", "Incisors cut, canines tear and molars grind.")),
     CHK(mc("Which teeth grind food?", "Molars", ["Incisors", "Canines"], { hint: "They are flat and at the back.", why: "Molars are flat and grind food." })),
@@ -118,6 +127,28 @@ const ALTS = [
   [mc("What carries oxygen to your muscles?", "Blood", ["Bones", "Saliva"], { hint: "The heart pumps it.", why: "Blood carries oxygen." }), mc("Why does your heart beat faster during exercise?", "Muscles need more oxygen", ["Your teeth are growing", "You are hungry"], { hint: "Think about muscles.", why: "More oxygen is needed, so the heart pumps faster." })],
 ];
 
+const clip = {
+  title: "A day inside Fatima's body", backdrop: "lab", caption: "Follow a snack and a jump through Fatima's body.",
+  scenes: [
+    { caption: "Fatima eats.", say: "Fatima bites an apple. Her sharp front teeth cut it.",
+      items: [{ id: "f", emoji: "👧", label: "Fatima", x: 28, y: 56, size: 3, enter: "walk_right" }, { id: "a", emoji: "🍎", x: 70, y: 46, size: 3, enter: "pop" }] },
+    { caption: "Chew and swallow.", say: "Her flat back teeth grind the food. Saliva makes it soft to swallow.",
+      items: [{ id: "t", emoji: "🦷", label: "molars grind", x: 50, y: 46, size: 3, effect: "sparkle" }] },
+    { caption: "The stomach.", say: "The food slides down the oesophagus. The stomach churns it with acid.",
+      items: [{ id: "b", prop: { kind: "body", highlight: "stomach" }, x: 50, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Nutrients go in.", say: "In the small intestine, nutrients pass into the blood. Waste goes on.",
+      items: [{ id: "b", prop: { kind: "body", highlight: "stomach" }, x: 50, y: 50, size: 3 }, { id: "n", emoji: "✨", label: "nutrients", x: 80, y: 30, size: 2, effect: "sparkle" }] },
+    { caption: "Time to jump.", say: "Fatima jumps rope. Her muscles pull her bones, and they work in pairs.",
+      items: [{ id: "m", prop: { kind: "body", highlight: "muscles" }, label: "muscles in pairs", x: 50, y: 50, size: 3, effect: "glow" }] },
+    { caption: "A fast heart.", say: "Her heart beats faster. It pumps more oxygen to her working muscles.",
+      items: [{ id: "h", prop: { kind: "body", highlight: "heart" }, label: "faster pulse", x: 50, y: 50, size: 3, anim: "pulse" }] },
+    { caption: "Clean teeth.", say: "At night she brushes her teeth. That stops sugar turning into acid.",
+      items: [{ id: "b", emoji: "🪥", x: 40, y: 50, size: 3 }, { id: "t", emoji: "🦷", x: 65, y: 50, size: 3, effect: "sparkle" }] },
+    { caption: "A healthy body.", say: "Bones, muscles, teeth and a heart all work together. Well done, Fatima!",
+      items: [{ id: "f", emoji: "👧", x: 30, y: 56, size: 3, anim: "bounce" }, { id: "h", emoji: "❤️", x: 70, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "science-class-4-our-bodies", subject: "science", cls: 4, topic: 2, title: "Our Bodies",
@@ -132,13 +163,9 @@ export const topics = [
       mc("What do plants make using light?", "Food", ["Bones", "Teeth"], { hint: "Photosynthesis.", why: "Plants make food by photosynthesis." }),
       tf("A habitat is where a living thing lives.", true, { hint: "A home.", why: "A habitat is where something lives." }),
     ],
-    intro: [
-      H("Welcome back, young scientist!"),
-      SAY("Welcome back, young scientist! Today's big question is: how does your body work? By the end, you will explain how bones and muscles move you, how food is digested, why we look after our teeth, and how the heart and germs affect your health. Let's go!", T("Today's big question: how does your body work?", "We will look inside the body.")),
-      IMG("🦴💪🦷❤️", "Bones, muscles, teeth and a heart."),
-      GLOSS({ body: "All the parts that make up a person." }),
-    ],
+    intro: [],
     subs: [skeleton, digestion, teeth, heart],
+    clip,
     quiz: [
       Q("skeleton", "recall", "bodies.protect", mc("Which part of the body protects the brain?", "The skull", ["The ribs", "The elbow"], { hint: "A hard box.", why: "The skull protects the brain." }), ...ALTS[0]),
       Q("skeleton", "recall", "bodies.muscles", tf("Muscles can only pull on bones.", true, { hint: "That is why they work in pairs.", why: "Muscles can only pull." }), ...ALTS[1]),
@@ -157,6 +184,37 @@ export const topics = [
       Q("teeth", "reason", "bodies.reason_teeth", mc("Why is it a good idea to brush after eating sweets?", "To remove sugar that bacteria turn into acid", ["To make sugar grow", "To make teeth softer"], { hint: "Think about acid.", why: "Brushing removes sugar and plaque, so there is less acid." }), ...ALTS[12]),
       Q("heart", "reason", "bodies.reason_germs", mc("Hamza says germs are not real because he cannot see them. Why is he wrong?", "Germs are too small to see, but can still spread", ["Germs are big", "Germs are not real"], { hint: "How big are germs?", why: "Germs are tiny, so we cannot see them, but they still spread." }), ...ALTS[13]),
       Q("heart", "reason", "bodies.reason_exercise", mc("Why does your heart rate go up during a race?", "Your muscles need more oxygen", ["You are growing", "You are hungry"], { hint: "Think about the blood.", why: "Muscles need more oxygen, so the heart pumps faster." }), ...ALTS[14]),
+      // ----- upgrade: 15 new mains (q16-q30), 1 variant each
+      Q("skeleton", "apply", "bodies.hand_bones", num("Each hand has 27 bones. How many bones are in two hands?", 54, { hint: "27 + 27.", why: "27 + 27 = 54 bones." }),
+        num("Each foot has 26 bones. How many bones are in two feet?", 52, { hint: "26 + 26.", why: "26 + 26 = 52 bones." })),
+      Q("skeleton", "apply", "bodies.skull_hot", hot("Tap the bone box that protects the brain.", [["💀", "Skull", 22, 50], ["🦴", "Thigh bone", 50, 50], ["🫁", "Rib cage", 78, 50]], ["Skull"], { labels: true, hint: "It is in your head.", why: "The skull protects the brain." }),
+        hot("Tap the cage that protects the lungs.", [["💀", "Skull", 22, 50], ["🦴", "Thigh bone", 50, 50], ["🫁", "Rib cage", 78, 50]], ["Rib cage"], { labels: true, hint: "It is in your chest.", why: "The rib cage protects the lungs." })),
+      Q("skeleton", "apply", "bodies.ribs_ms", ms("Which two organs does the rib cage protect? Pick two.", ["The heart", "The lungs"], ["The stomach", "The brain"], { hint: "In the chest.", why: "The ribs protect the heart and lungs." }),
+        ms("Which two organs sit inside the rib cage? Choose two.", ["The lungs", "The heart"], ["The brain", "The tongue"], { hint: "In the chest.", why: "The heart and lungs are inside the rib cage." })),
+      Q("skeleton", "apply", "bodies.pairs_tf", tf("The biceps and triceps work as a pair.", true, { hint: "One bends, one straightens.", why: "They pull in opposite directions." }),
+        tf("One muscle alone can bend and straighten your arm.", false, { hint: "A muscle only pulls.", why: "Muscles work in pairs because each one can only pull." })),
+      Q("teeth", "apply", "bodies.tooth_match", mat("Join each tooth shape to what it does.", [["Flat and wide", "Grinds food"], ["Sharp and thin", "Cuts food"], ["Pointed", "Tears food"]], { hint: "Shape fits job.", why: "Molars grind, incisors cut and canines tear." }),
+        mat("Link each tooth to where it is in the mouth.", [["Incisors", "At the front"], ["Canines", "Beside the incisors"], ["Molars", "At the back"]], { hint: "Think of biting.", why: "Incisors are at the front and molars at the back." })),
+      Q("digestion", "apply", "bodies.saliva", fill("Complete the sentence about saliva.", "Saliva helps to {b1} food so it is easy to {b2}.", [["soften", "harden", "freeze"], ["swallow", "grow", "throw"]], { hint: "It is wet.", why: "Saliva softens food so it is easy to swallow." }),
+        fill("Complete the sentence about the stomach.", "The stomach {b1} food with {b2}.", [["churns", "freezes", "grows"], ["acid", "paint", "sand"]], { hint: "Mixing.", why: "The stomach churns food with acid." })),
+      Q("heart", "apply", "bodies.beats_slider", sld("A resting heart beats 70 times a minute. Slide to show the beats in 2 minutes.", { min: 0, max: 300, unit: "beats" }, 140, 0, { hint: "70 times 2.", why: "70 x 2 = 140 beats." }),
+        sld("A resting heart beats 80 times a minute. Slide to show the beats in 2 minutes.", { min: 0, max: 300, unit: "beats" }, 160, 0, { hint: "80 times 2.", why: "80 x 2 = 160 beats." })),
+      Q("digestion", "apply", "bodies.order_late", ord("Put the later part of the journey in order.", ["Stomach", "Small intestine", "Large intestine", "Waste leaves the body"], { hint: "Follow the food.", why: "Food goes to the small intestine, then the large intestine, then leaves as waste." }),
+        ord("Put these jobs of digestion in order.", ["Chewing in the mouth", "Churning in the stomach", "Absorbing nutrients", "Waste leaves the body"], { hint: "Mouth first.", why: "Chew, churn, absorb, then waste leaves." })),
+      Q("heart", "apply", "bodies.heart_muscle", tf("The heart is a muscle.", true, { hint: "It pumps.", why: "The heart is a muscle that pumps blood." }),
+        tf("The heart is a bone that holds the body up.", false, { hint: "It pumps.", why: "The heart is a muscle, not a bone." })),
+      Q("heart", "apply", "bodies.vessels", mc("What are the tubes that carry blood around the body called?", "Blood vessels", ["Tendons", "Joints"], { hint: "Think of tubes.", why: "Blood travels in blood vessels." }),
+        mc("What joins a muscle to a bone?", "A tendon", ["A blood vessel", "A tooth"], { hint: "A strong cord.", why: "Tendons join muscles to bones." })),
+      Q("heart", "apply", "bodies.pulse_gap", num("A pulse is 70 at rest and 110 after running. How many more beats is that?", 40, { hint: "110 minus 70.", why: "110 - 70 = 40 more beats." }),
+        num("A pulse is 65 at rest and 105 after running. How many more beats is that?", 40, { hint: "105 minus 65.", why: "105 - 65 = 40 more beats." })),
+      Q("skeleton", "reason", "bodies.push_pull", mc("Sam says muscles can both pull and push. Is he right?", "No. Muscles can only pull, so they work in pairs", ["Yes, they push to straighten", "Yes, they push bones apart"], { hint: "Think of biceps and triceps.", why: "A muscle only pulls. The partner muscle pulls back." }),
+        mc("Mira says the triceps pushes the arm straight. Is she right?", "No. The triceps pulls to straighten the arm", ["Yes, it pushes", "No, the bone does it alone"], { hint: "Muscles only pull.", why: "The triceps pulls the arm straight." })),
+      Q("teeth", "reason", "bodies.all_teeth", mc("Layla says all teeth do the same job. Is she right?", "No. Incisors cut, canines tear and molars grind", ["Yes, all teeth just chew", "Yes, they are all flat"], { hint: "Look at the shapes.", why: "Different teeth have different shapes and jobs." }),
+        mc("Hana says front teeth can grind food as well as back teeth. Is she right?", "No. Front teeth cut. The flat back teeth grind", ["Yes, all teeth grind", "Yes, but only when old"], { hint: "Which are flat?", why: "Molars are flat and grind. Incisors cut." })),
+      Q("skeleton", "reason", "bodies.bones_break", mc("Ali says bones can never break. Is he right?", "No. Bones can break, but they can also heal", ["Yes, they are too hard", "Yes, because they are alive"], { hint: "Think of an X-ray.", why: "Bones can break, and they heal over time." }),
+        mc("Ben says a broken bone can never mend. Is he right?", "No. Bones are living and can heal if looked after", ["Yes, never", "Yes, only young bones mend"], { hint: "Think of a plaster cast.", why: "Broken bones heal, often in a cast." })),
+      Q("digestion", "reason", "bodies.used_food", mc("Noor says the body uses all the food we eat. Is she right?", "No. Nutrients are absorbed, and the waste leaves the body", ["Yes, nothing is wasted", "Yes, waste stays inside"], { hint: "Think of the large intestine.", why: "The body absorbs nutrients and passes out waste." }),
+        mc("Omar says food stays in the stomach for ever. Is he right?", "No. It moves on through the intestines and leaves as waste", ["Yes, it stays", "Yes, it turns into bone"], { hint: "It is a journey.", why: "Food travels through the whole digestive system." })),
     ],
   }),
 ];

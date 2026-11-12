@@ -1,0 +1,173 @@
+{
+ "title": "Zainab and the robot",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "Meet the robot.",
+   "say": "Zainab has a toy robot. It only follows exact steps.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zainab",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Forward!",
+   "say": "She says forward, forward. The robot moves two squares.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 55,
+     "y": 50,
+     "size": 3,
+     "enter": "slide_right"
+    },
+    {
+     "id": "a",
+     "emoji": "➡️",
+     "x": 25,
+     "y": 50,
+     "size": 2
+    }
+   ]
+  },
+  {
+   "caption": "Turn.",
+   "say": "Then turn. The robot now faces the star.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 40,
+     "y": 50,
+     "size": 3,
+     "anim": "spin"
+    },
+    {
+     "id": "s",
+     "emoji": "⭐",
+     "x": 75,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A bug!",
+   "say": "Oh no! The robot stops short. One forward is missing.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 40,
+     "y": 50,
+     "size": 3
+    },
+    {
+     "id": "b",
+     "emoji": "🐛",
+     "label": "bug",
+     "x": 62,
+     "y": 35,
+     "size": 2,
+     "anim": "bounce"
+    },
+    {
+     "id": "s",
+     "emoji": "⭐",
+     "x": 80,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "Debug it.",
+   "say": "Zainab adds one more forward. That is called debugging.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 25,
+     "y": 56,
+     "size": 3
+    },
+    {
+     "id": "f",
+     "emoji": "➕",
+     "label": "forward",
+     "x": 65,
+     "y": 45,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "A loop.",
+   "say": "Now she uses a loop. Repeat forward four times.",
+   "items": [
+    {
+     "id": "l",
+     "emoji": "🔁",
+     "label": "repeat 4",
+     "x": 50,
+     "y": 45,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "The star!",
+   "say": "The robot reaches the star. Clear steps in order worked.",
+   "items": [
+    {
+     "id": "r",
+     "emoji": "🤖",
+     "x": 40,
+     "y": 50,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "s",
+     "emoji": "⭐",
+     "x": 75,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Sandwich steps.",
+   "say": "Zainab uses steps to make a sandwich too. Order matters!",
+   "items": [
+    {
+     "id": "s",
+     "emoji": "🥪",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

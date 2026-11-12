@@ -1,0 +1,268 @@
+import { SAY, SS, H, T, PHOTO, ACT, MAN, BRAIN, SUM, CHK, S, EXP, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { topicLesson } from "../topic-kit.mjs";
+
+// Computer Science, Data & AI, Class 4 (Zara, age 9), topic 5: Photo editing, changing pictures and telling the truth.
+// Story thread: Zara edits a family photo from Hunza, recolours the sky, and learns to say she edited it.
+const ROAD = "data-ai-class-4-photo-editing-and-truth-1-ab271d55.jpg";
+const ROSE = "data-ai-class-4-photo-editing-and-truth-2-baa38349.jpg";
+const OKM = (label) => ["ok", "✅", 50, 88, 2, "bounce", label];
+const Q = (q, sub, depth, alts) => ({ q, sub, depth, alts });
+
+// ---------------------------------------------------------------------------------------------- 1. learn
+const images = {
+  id: "images", kind: "learn", title: "How images change",
+  blocks: [
+    H("Welcome back, photo detective!"),
+    SAY("Today we find out how pictures are made and changed. Can we always trust what a photo shows?",
+      T("Today's big question: how do we edit pictures, and how do we stay honest?")),
+    SAY("Zara found this mountain photo. Zoom in far enough and the picture turns into tiny squares.",
+      PHOTO(ROAD, "A dirt road leading toward snow-capped mountains under a deep blue sky, with a tree on the right", "A mountain road. Every part of a digital photo is made of tiny squares.", "Photo by Vinu T on Unsplash")),
+    H("Stop 1: Pixels"),
+    SAY("A digital picture is a grid of tiny coloured squares. Each square is called a pixel.",
+      T("A **pixel** is one tiny square of colour in a digital picture.")),
+    EXP("Zooming in",
+      SS("Zara zooms in on the blue sky. She sees a few big squares.", S("Zoom.", ["z", "🔍", 28, 50, 3, "pulse"], ["s", "🟦", 72, 50, 3])),
+      SS("Each pixel has just one colour. Together, thousands of pixels make a smooth picture.", S("Many squares.", ["g", "🟦", 30, 40, 2], ["h", "🟩", 50, 40, 2], ["i", "🟨", 70, 40, 2], ["j", "🟫", 50, 65, 2, "pulse"])),
+      SS("A photo with more pixels can show finer detail. A photo with few pixels looks blocky.", S("Detail.", ["m", "🖼️", 35, 50, 3], ["d", "✨", 72, 45, 3, "pulse", "more detail"], OKM("more pixels")))),
+    CHK(mc("Zara zooms right in on a photo until she sees single coloured squares. What are they?", "Pixels", ["Pages", "Pieces of glass"], { hint: "A picture is built from them.", why: "A digital picture is a grid of pixels.", tag: "photo.pixel" })),
+    H("Stop 2: Crop and resize"),
+    SAY("Zara wants only the mountains. She can cut away the sky and the road. That is cropping.",
+      T("To **crop** is to cut away the edges of a picture.")),
+    SAY("She can also make the whole picture bigger or smaller. That is called resizing it.",
+      T("To **resize** is to make a picture bigger or smaller.")),
+    EXP("Crop and resize",
+      SS("Zara drags a frame around the mountains. Everything outside the frame is cut away.", S("Crop.", ["f", "🖼️", 30, 50, 3, "pulse", "frame"], ["m", "🏔️", 72, 50, 3])),
+      SS("Now she makes the cropped picture smaller. It fits on a postcard.", S("Smaller.", ["b", "🏔️", 30, 50, 3], ["s", "🏔️", 72, 50, 2, "pulse", "smaller"])),
+      SS("If she stretches a small picture very big, the pixels get blocky and blurry.", S("Too big.", ["x", "🏔️", 50, 48, 3, "pulse", "blurry"], OKM("careful stretching")))),
+    CHK(tf("Cropping a photo adds new parts around its edges.", false, { hint: "Which way does a crop go?", why: "A crop cuts parts away. It does not add anything.", tag: "photo.crop_adds" })),
+    SAY("Let us remember. Pictures are made of pixels. We can crop and resize them.",
+      SUM("A digital picture is a grid of pixels", "Crop cuts away edges", "Resize changes the size, and a big stretch can look blurry")),
+    GLOSS({ pixel: "One tiny square of colour in a digital picture.", crop: "To cut away the edges of a picture.", resize: "To make a picture bigger or smaller.", "digital picture": "A picture stored as numbers on a computer.", detail: "The small parts you can see in a picture.", blurry: "Not clear or sharp." }),
+  ],
+  mini: [
+    mc("Which photo shows more fine detail?", "The one with more pixels", ["The one with fewer pixels", "The one with a frame"], { hint: "Think about the squares.", why: "More pixels means finer detail." }),
+    tf("A very small picture stretched to poster size can look blurry.", true, { hint: "The pixels get stretched.", why: "Stretching spreads the pixels out so it looks blocky." }),
+    mc("Which action cuts away the edges of a photo?", "Crop", ["Recolour", "Print"], { hint: "Think of a frame.", why: "To crop is to cut away the edges." }),
+    mc("What is each tiny square in a digital picture called?", "A pixel", ["A page", "A pebble"], { hint: "It has one colour.", why: "Each square of colour is a pixel." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 2. try
+const recolour = {
+  id: "recolour", kind: "try", title: "Recolour and clone",
+  blocks: [
+    H("Stop 1: Recolour and filters"),
+    SAY("Zara's pink flower photo looks cool and blue-green. She can recolour it so it looks warmer.",
+      PHOTO(ROSE, "A pink camellia flower with water droplets surrounded by dark green leaves and a wire fence", "A pink flower with raindrops. Editing can make the colours warmer, cooler or brighter.", "Photo by Laura Gilbert on Unsplash")),
+    SAY("To recolour is to change the colours in a picture. A filter changes many colours at once.",
+      T("To **recolour** is to change colours. A **filter** changes the whole look in one go.")),
+    EXP("Recolour a flower",
+      SS("Zara sees that the flower looks a little dull and cold.", S("Dull.", ["f", "🌸", 30, 50, 3], ["c", "🥶", 72, 50, 3, "pulse", "cold"])),
+      SS("She makes the colours warmer. The pink glows and the leaves look golden.", S("Warmer.", ["f", "🌸", 30, 50, 3, "pulse"], ["w", "🌞", 72, 40, 3, "float", "warm"])),
+      SS("The flower is the same. Only the colours changed. A filter can do this in one click.", S("Same flower.", ["f", "🌸", 50, 48, 3, "pulse"], OKM("only colours")))),
+    CHK(mc("Zara paints the grey sky in her photo bright orange. What is this?", "Recolouring", ["Cropping", "Printing"], { hint: "Colours change.", why: "Changing colours is recolouring.", tag: "photo.recolour" })),
+    H("Stop 2: Clone and save a copy"),
+    SAY("The clone tool copies one part of a picture onto another place. Zara uses it to hide a bin.",
+      T("The **clone** tool copies one part of a picture and pastes it somewhere else.")),
+    SAY("She always saves a copy first. The **original** stays safe, so she can start again.",
+      T("Keep the **original** safe. Edit a copy.")),
+    EXP("Clone it away",
+      SS("Zara's photo has a bin on the grass. She copies a patch of clean grass.", S("Copy.", ["b", "🗑️", 30, 50, 3], ["g", "🌿", 72, 50, 3, "pulse"])),
+      SS("She pastes the grass over the bin. The bin seems to vanish.", S("Paste.", ["g", "🌿", 30, 50, 3, "pulse"], ["b", "🗑️", 72, 50, 2, "float", "hidden"])),
+      SS("Her edit is saved as a new file. The original photo is untouched.", S("Two files.", ["o", "📁", 30, 50, 3], ["n", "📁", 72, 50, 3, "pulse", "copy"], OKM("keep the original")))),
+    MAN("Sort the edits", "Move the 6 edits into Only improves the look or Changes the story.", "🖌️", 6, ["Only improves the look", "Changes the story"]),
+    SAY("Now you try. Ask a grown-up to help you edit one of your own photos.",
+      ACT("Edit a copy", ["A photo you took", "A photo editing app or website, with a grown-up"], ["Save a copy of your photo first.", "Crop it, then try one recolour or filter.", "Compare it with the original. Did the edit help or change the story?"])),
+    CHK(tf("The clone tool copies part of a picture to another place.", true, { hint: "Copy and paste.", why: "Cloning copies one part and pastes it elsewhere.", tag: "photo.clone" })),
+    SAY("Let us remember. We can recolour, filter and clone. We always edit a copy.",
+      SUM("Recolour and filters change how colours look", "Clone copies one part to another place", "Edit a copy and keep the original")),
+    GLOSS({ recolour: "To change the colours in a picture.", filter: "A ready-made edit that changes the whole look of a picture.", clone: "To copy part of a picture and paste it somewhere else.", original: "The first, unchanged version of a picture.", edit: "To change something.", warm: "Having more yellow and orange." }),
+  ],
+  mini: [
+    mc("Zara keeps her original photo and edits a copy. Why?", "She can go back and compare", ["Copies are always smaller", "Originals cannot be seen"], { hint: "Think about going back.", why: "A copy lets her start again and compare." }),
+    tf("A filter changes the whole look of a picture in one click.", true, { hint: "It is ready-made.", why: "A filter changes many colours at once." }),
+    mc("Which tool can hide a bin by copying clean grass over it?", "Clone", ["Crop", "Resize"], { hint: "It copies and pastes.", why: "The clone tool copies one part to another place." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 3. play
+const edited = {
+  id: "edited", kind: "play", title: "Edited or not?",
+  blocks: [
+    H("Stop 1: Clues in a picture"),
+    SAY("Many pictures online have been edited. Some edits are small. Some change what really happened.",
+      T("A picture can be **edited** and still look real.")),
+    EXP("Spot the clues",
+      SS("A photo shows a boy with a shadow pointing left. The tree shadow points right.", S("Shadows.", ["b", "🧒", 28, 55, 3], ["t", "🌳", 72, 50, 3, "pulse", "different shadow"])),
+      SS("Zara sees a fuzzy glowing line around one person. Something was pasted in.", S("Fuzzy edge.", ["p", "🧍", 50, 50, 3, "pulse", "glow line"])),
+      SS("Two clouds look exactly the same, side by side. That may be cloning.", S("Twin clouds.", ["a", "☁️", 30, 40, 3], ["b", "☁️", 70, 40, 3], OKM("copied?")))),
+    CHK(mc("Zara sees one person with a fuzzy glowing outline in a photo. What might that mean?", "That person may have been pasted in", ["The camera is broken", "The photo is very old"], { hint: "Think about cut and paste.", why: "A rough, glowing outline can show a pasted-in object.", tag: "photo.clue_outline" })),
+    H("Stop 2: Is it evidence?"),
+    SAY("A photo can be used as evidence, but only if we know where it came from. Ask who took it.",
+      T("A photo is only good **evidence** if we trust where it came from.")),
+    SAY("First a memory game. Then tap the detail that looks edited.",
+      T("Play the memory game. Then find the edited detail.")),
+    BRAIN("memory_match", "Edit tools and clues", "Find the pairs.", ["✂️", "🎨", "🔍", "🖼️"]),
+    CHK(hot("Tap the detail in this photo that looks edited.", [["🏔️", "Mountains in the distance", 22, 50], ["🎈", "Balloon with a hard glowing edge", 50, 50], ["🌳", "A tree with a soft shadow", 78, 50]], ["Balloon with a hard glowing edge"], { labels: true, hint: "Look for a sharp, glowing outline.", why: "A hard glowing edge suggests something was pasted in.", tag: "photo.tap_edit" })),
+    SAY("Let us remember. Edited pictures can look real. Check clues and ask where a picture came from.",
+      SUM("Edited pictures can look real", "Clues: odd shadows, glowing edges, copied parts", "Ask who made the picture and where it came from")),
+    GLOSS({ edited: "Changed using a program after it was taken.", evidence: "Something that helps show what is true.", clue: "A small detail that helps you work something out.", shadow: "A dark shape made when light is blocked.", pasted: "Copied from one place and put in another." }),
+  ],
+  mini: [
+    mc("Which is a clue that a photo might be edited?", "Two shadows that point different ways", ["A date on the file", "A colour photo"], { hint: "One sun, one direction.", why: "Shadows from one sun should point the same way." }),
+    tf("A photo that looks real cannot be edited.", false, { hint: "Good edits are hard to see.", why: "Edited pictures can look completely real." }),
+    mc("What should you ask about a photo used as evidence?", "Where did it come from?", ["How big is the file?", "What is the filename?"], { hint: "Think about trust.", why: "We trust a photo more if we know its source." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- 4. use
+const poster = {
+  id: "poster", kind: "use", title: "Make an honest poster",
+  blocks: [
+    H("Stop 1: Choose and edit honestly"),
+    SAY("Zara makes a poster about her Hunza trip. She picks a photo and thinks about the rules.",
+      T("An honest poster tells the truth about its pictures.")),
+    SAY("She only uses photos she has permission to use. Her own photos are the easiest choice.",
+      T("Use your own photos or ask **permission** first.")),
+    SAY("She crops and brightens her photo lightly. Small fixes do not change the story.",
+      T("Small fixes are fine. Do not mislead.")),
+    EXP("Zara's honest edit",
+      SS("Zara picks a photo she took herself in Hunza. She has full permission.", S("Her photo.", ["z", "👧", 28, 55, 3], ["p", "📷", 72, 50, 3, "pulse", "her own photo"])),
+      SS("She crops to the valley and makes it a little brighter. The scene is still true.", S("Light edits.", ["c", "✂️", 28, 50, 3], ["b", "🔆", 72, 50, 3, "pulse", "brighter"])),
+      SS("She does not add a rainbow that was never there. That would mislead people.", S("No fake rainbow.", ["r", "🌈", 50, 45, 3, "pulse", "never there"], OKM("honest")))),
+    SAY("Now you try. Plan a poster with a grown-up and check each picture.",
+      ACT("Plan an honest poster", ["Paper and pens", "Two or three photos you may use"], ["Choose photos you took or have permission to use.", "Write a caption that says what each picture shows.", "Note any edits, such as cropped or brightened."])),
+    CHK(ord("Put the steps of making an honest poster in order.", ["Pick a photo you have permission to use", "Edit it lightly", "Add a caption saying what you changed", "Credit the photographer"], { hint: "Permission comes first.", why: "Choose legally, edit lightly, say what changed, then credit.", tag: "photo.poster_steps" })),
+    H("Stop 2: Credit and copyright"),
+    SAY("Every picture has a maker who owns it. That ownership is called copyright. We credit the maker.",
+      T("**Copyright** means the maker owns the picture. Give **credit** when you use it.")),
+    EXP("Credit the maker",
+      SS("Zara finds a lovely photo online. The photographer owns it.", S("Owned.", ["p", "📷", 30, 50, 3], ["c", "©️", 72, 50, 3, "pulse", "copyright"])),
+      SS("She checks if she is allowed to use it. She asks for permission when needed.", S("Check.", ["z", "👧", 30, 52, 3], ["q", "❓", 72, 45, 3, "pulse", "may I?"])),
+      SS("On her poster she writes the maker's name and where the photo came from.", S("Credit.", ["t", "📝", 50, 50, 3, "pulse", "photo by"], OKM("credit given")))),
+    CHK(tf("An honest poster says when a picture has been edited.", true, { hint: "Think about being truthful.", why: "Saying what you changed keeps a poster honest.", tag: "photo.say_edited" })),
+    SAY("Let us remember. Use pictures fairly, edit lightly and say what you changed.",
+      SUM("Use your own photos or ask permission", "Light edits are fine, misleading edits are not", "Credit the maker and say when you edited")),
+    GLOSS({ permission: "Being allowed to do something.", copyright: "The rule that says the maker owns their work.", credit: "A note saying who made something.", honest: "Telling the truth.", mislead: "To make someone believe something that is not true.", poster: "A large printed page with pictures and words." }),
+  ],
+  mini: [
+    mc("What is the easiest kind of photo to use on a poster?", "One you took yourself", ["Any photo from a search", "A photo from a stranger"], { hint: "You own it.", why: "Your own photos need no one else's permission." }),
+    tf("A credit line says who made a picture.", true, { hint: "Think of a name label.", why: "A credit names the maker." }),
+    mc("Zara adds a rainbow that was never there. Is that honest?", "No, it misleads people", ["Yes, rainbows are pretty", "Yes, nobody checks"], { hint: "Was it really there?", why: "Adding things that were not there misleads people." }),
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- clip
+const clip = {
+  title: "Zara edits a Hunza photo", backdrop: "home", caption: "Zara edits a family photo from Hunza and learns to say what she changed.",
+  scenes: [
+    { caption: "A photo.", say: "Zara has a photo from her family trip to Hunza. The sky looks grey.",
+      items: [{ id: "z", emoji: "👧", label: "Zara", x: 25, y: 56, size: 3, enter: "walk_right" }, { id: "p", emoji: "🏔️", x: 72, y: 50, size: 3, enter: "pop" }] },
+    { caption: "Tiny squares.", say: "She zooms in. The picture is made of tiny coloured squares called pixels.",
+      items: [{ id: "g", emoji: "🔍", x: 28, y: 50, size: 3, anim: "pulse" }, { id: "s", emoji: "🟦", label: "pixels", x: 72, y: 50, size: 3 }] },
+    { caption: "Crop.", say: "She crops away the grey road. Now the mountains fill the picture.",
+      items: [{ id: "c", emoji: "✂️", x: 30, y: 50, size: 3, anim: "pulse" }, { id: "m", emoji: "🏔️", x: 72, y: 50, size: 3, enter: "grow" }] },
+    { caption: "Recolour.", say: "She makes the colours warmer. The sky turns a pale blue.",
+      items: [{ id: "s", emoji: "🌤️", label: "warmer", x: 50, y: 45, size: 3, effect: "glow" }] },
+    { caption: "Save a copy.", say: "She saves her edit as a new file. The original photo stays safe.",
+      items: [{ id: "o", emoji: "📁", label: "original", x: 30, y: 50, size: 3 }, { id: "n", emoji: "📁", label: "copy", x: 72, y: 50, size: 3, effect: "sparkle" }] },
+    { caption: "A temptation.", say: "A friend says, add a rainbow! But no rainbow was there that day.",
+      items: [{ id: "r", emoji: "🌈", label: "never there", x: 40, y: 48, size: 3 }, { id: "w", emoji: "⚠️", x: 75, y: 35, size: 3, anim: "pulse" }] },
+    { caption: "Honest.", say: "Zara says no. She writes, lightly edited by Zara, on her poster.",
+      items: [{ id: "z", emoji: "👧", x: 28, y: 56, size: 3 }, { id: "t", emoji: "📝", label: "lightly edited", x: 72, y: 50, size: 3, effect: "glow" }] },
+    { caption: "Credit.", say: "She credits the photographer for a second photo. The poster is honest and fair.",
+      items: [{ id: "p", emoji: "🖼️", x: 35, y: 50, size: 3 }, { id: "c", emoji: "🎉", x: 75, y: 40, size: 3, effect: "hearts" }] },
+  ],
+};
+
+// ---------------------------------------------------------------------------------------------- quiz
+const quiz = [
+  // ----- images (q1-q8)
+  Q(mc("What is a pixel in a digital picture?", "One tiny square of colour", ["A type of camera", "A picture frame"], { hint: "Zoom in far enough.", why: "A pixel is one tiny coloured square.", tag: "photo.pixel_def" }), "images", "recall",
+    [mc("A digital photo is made from a grid of what?", "Tiny coloured pixels", ["Thin glass layers", "Paper squares"], { hint: "Zoom in far enough.", why: "A digital picture is a grid of pixels.", tag: "photo.pixel_def" })]),
+  Q(mc("What does it mean to crop a photo?", "Cut away the edges", ["Change its colours", "Make it black and white"], { hint: "Think of a frame.", why: "To crop is to cut away the edges.", tag: "photo.crop_def" }), "images", "recall",
+    [mc("Zara removes the empty sky at the top of her photo. What did she do?", "She cropped it", ["She recoloured it", "She cloned it"], { hint: "She cut away part.", why: "Cutting away the edges is cropping.", tag: "photo.crop_def" })]),
+  Q(tf("More pixels in a photo usually means more detail.", true, { hint: "Think about the squares.", why: "More pixels show finer detail.", tag: "photo.more_pixels" }), "images", "recall",
+    [tf("A photo with only a few pixels shows lots of fine detail.", false, { hint: "Think about the squares.", why: "Few pixels look blocky and show little detail.", tag: "photo.more_pixels" })]),
+  Q(mat("Match each action to what it does.", [["Crop", "Cuts away the edges"], ["Resize", "Makes the picture bigger or smaller"], ["Save a copy", "Keeps the original safe"]], { hint: "Think about each action.", why: "Each action has its own job.", tag: "photo.action_match" }), "images", "apply",
+    [mat("Pair each word with its meaning.", [["Pixel", "One tiny square of colour"], ["Digital image", "A picture made of pixels"], ["Edit", "To change a picture"]], { hint: "Think about each word.", why: "Each word has its own meaning.", tag: "photo.action_match" })]),
+  Q(hot("Tap the picture that is made of pixels.", [["📱", "Photo on a tablet screen", 22, 50], ["🖼️", "Oil painting on canvas", 50, 50], ["🪨", "Pebble on a beach", 78, 50]], ["Photo on a tablet screen"], { labels: true, hint: "Which one is digital?", why: "A photo on a screen is made of pixels.", tag: "photo.tap_pixels" }), "images", "recall",
+    [hot("Tap the one that stores a digital image.", [["📷", "Phone camera roll", 22, 50], ["🪑", "Wooden chair", 50, 50], ["🍎", "Real apple", 78, 50]], ["Phone camera roll"], { labels: true, hint: "Which one is digital?", why: "A camera roll stores digital images.", tag: "photo.tap_pixels" })]),
+  Q(mc("Hamza says it is safest to save an edited photo over the original. Is he right?", "No. Save a copy so the original is kept", ["Yes, the original is not needed", "Yes, a copy takes up too much room"], { hint: "Think about starting again.", why: "A saved original lets you go back and compare.", tag: "photo.reason_original" }), "images", "reason",
+    [mc("Maryam says she can delete the original once a photo is edited. Is she right?", "No. Keep the original so you can compare or start again", ["Yes, originals are useless", "Yes, edits can never be undone anyway"], { hint: "Think about starting again.", why: "A kept original lets you go back.", tag: "photo.reason_original" })]),
+  Q(mc("Zara stretches a small photo to fill a huge poster. What may happen?", "It may look blurry or blocky", ["It becomes sharper", "It gains new detail"], { hint: "The pixels get stretched.", why: "Stretching spreads pixels out, so it looks blurry.", tag: "photo.stretch" }), "images", "apply",
+    [mc("A tiny photo is stretched to four times its width. What is likely?", "It looks blurry or blocky", ["It looks clearer", "The pixels disappear"], { hint: "The pixels get stretched.", why: "Stretching makes pixels bigger and blurrier.", tag: "photo.stretch" })]),
+  Q(fill("Finish the sentences about digital images.", "A digital image is made of {b1}. To {b2} a picture is to cut away its edges.", [["pixels", "pebbles", "pages"], ["crop", "bake", "fold"]], { hint: "Think about the squares and the frame.", why: "Pictures are made of pixels, and to crop is to cut away edges.", tag: "photo.fill_images" }), "images", "recall",
+    [fill("Complete the sentences about size.", "To make a photo bigger or smaller is to {b1} it. A big stretch can make it {b2}.", [["resize", "taste", "wrap"], ["blurry", "tasty", "round"]], { hint: "Think about the size.", why: "Changing the size is resizing, and stretching can blur.", tag: "photo.fill_images" })]),
+  // ----- recolour (q9-q15)
+  Q(ord("Put the steps of editing a photo safely in order.", ["Save a copy of the original", "Make your edit", "Compare with the original", "Say what you changed"], { hint: "Copy first.", why: "Copy, edit, compare, then say what changed.", tag: "photo.edit_steps" }), "recolour", "apply",
+    [ord("Put these steps for fixing a dark photo in order.", ["Open a copy", "Raise the brightness a little", "Look at the result", "Save it with a new name"], { hint: "Open a copy first.", why: "Open a copy, adjust, check, then save.", tag: "photo.edit_steps" })]),
+  Q(mc("What does the clone tool do?", "Copies one part of a picture onto another place", ["Deletes the whole photo", "Turns the photo into sound"], { hint: "Think copy and paste.", why: "Clone copies part of a picture to somewhere else.", tag: "photo.clone_def" }), "recolour", "recall",
+    [mc("Zara hides a bin by copying nearby grass over it. Which tool is this?", "Clone", ["Crop", "Resize"], { hint: "She copied grass over it.", why: "Copying one part onto another is cloning.", tag: "photo.clone_def" })]),
+  Q(fill("Finish the sentences about recolouring.", "To {b1} a photo is to change its colours. A {b2} changes the whole look in one click.", [["recolour", "recycle", "relabel"], ["filter", "fence", "flag"]], { hint: "Think about colours.", why: "Recolour changes colours, and a filter changes the whole look.", tag: "photo.fill_recolour" }), "recolour", "recall",
+    [fill("Complete the sentences about cloning.", "The clone tool {b1} part of a picture and puts it in a {b2} place.", [["copies", "eats", "counts"], ["different", "hungry", "silent"]], { hint: "Think copy and paste.", why: "Clone copies a part and puts it somewhere different.", tag: "photo.fill_recolour" })]),
+  Q(mc("A filter makes a photo look warmer and more orange. What has changed?", "The colours, not what is in the photo", ["The people in the photo", "The place where it was taken"], { hint: "Think about what a filter touches.", why: "A filter changes how colours look.", tag: "photo.filter_change" }), "recolour", "apply",
+    [mc("Zara adds a black and white filter. What does she change?", "Only how the colours look", ["What really happened", "Where the photo was taken"], { hint: "Think about what a filter touches.", why: "A filter changes colours, not the place.", tag: "photo.filter_change" })]),
+  Q(sld("A photo is 12 squares wide. Zara crops 2 squares off each side. Slide to show the new width.", { min: 0, max: 15 }, 8, 0, { hint: "Take off 2 twice.", why: "12 - 2 - 2 = 8 squares.", tag: "photo.crop_width" }), "recolour", "apply",
+    [sld("A photo is 10 squares wide. Maryam crops 3 squares off each side. Slide to show the new width.", { min: 0, max: 15 }, 4, 0, { hint: "Take off 3 twice.", why: "10 - 3 - 3 = 4 squares.", tag: "photo.crop_width" })]),
+  Q(tf("Recolouring a photo can change how a place looks without changing the place.", true, { hint: "Think about the flower.", why: "The edit changes the picture, not the real place.", tag: "photo.recolour_place" }), "recolour", "apply",
+    [tf("A filter changes the real place where a photo was taken.", false, { hint: "Think about the flower.", why: "A filter changes only the picture.", tag: "photo.recolour_place" })]),
+  Q(mc("Maryam says one edit is always enough, so she never checks the result. Is she right?", "No. Always look at the result and compare with the original", ["Yes, the first edit is always perfect", "Yes, checking wastes time"], { hint: "Think about comparing.", why: "Comparing shows whether the edit helped or harmed.", tag: "photo.reason_check" }), "recolour", "reason",
+    [mc("Idris says an edit cannot go wrong, so he skips comparing it. Is he right?", "No. Comparing shows whether the edit helped or harmed", ["Yes, edits never go wrong", "Yes, originals do not matter"], { hint: "Think about comparing.", why: "Edits can go wrong, so we compare.", tag: "photo.reason_check" })]),
+  // ----- edited (q16-q23)
+  Q(ms("Which two are clues that a photo may have been edited? Pick two.", ["Shadows that point different ways", "Blurry edges around one object"], ["The photo has a date", "The photo is in colour"], { hint: "Look for odd details.", why: "Odd shadows and rough edges can show editing.", tag: "photo.clues_ms" }), "edited", "apply",
+    [ms("Which two clues suggest a picture was changed? Pick two.", ["Two identical clouds side by side", "A glowing outline around a person"], ["The picture is a JPEG file", "The picture has a frame"], { hint: "Look for odd details.", why: "Repeated parts and glowing outlines suggest editing.", tag: "photo.clues_ms" })]),
+  Q(num("Zara has 24 holiday photos. She edits one third of them. How many does she edit?", 8, { hint: "24 divided by 3.", why: "24 / 3 = 8 photos.", tag: "photo.third" }), "edited", "apply",
+    [num("Idris has 30 photos and edits one fifth of them. How many does he edit?", 6, { hint: "30 divided by 5.", why: "30 / 5 = 6 photos.", tag: "photo.third" })]),
+  Q(mc("Zara finds a photo of a snowman standing in a hot desert. What should she think first?", "It may be edited or made up", ["It must be real", "It must be from the news"], { hint: "Is that likely?", why: "An unlikely scene is a clue it may be edited.", tag: "photo.snowman" }), "edited", "apply",
+    [mc("A photo shows a cow flying over a school. What should you think first?", "It may be edited or made up", ["It must be real", "It is certainly a news photo"], { hint: "Is that likely?", why: "An impossible scene is a clue it was edited.", tag: "photo.snowman" })]),
+  Q(mc("Idris says any recoloured photo is a lie. Is he right?", "No. It is honest if you say you changed it and it does not mislead", ["Yes, every edit is a lie", "Yes, colours are always true"], { hint: "Think about the aim of the edit.", why: "Honest editing does not mislead.", tag: "photo.reason_lie" }), "edited", "reason",
+    [mc("Hana says brightening a dark family photo is always cheating. Is she right?", "No. Small fixes that do not change the story are fine", ["Yes, any change is cheating", "Yes, only cameras may fix photos"], { hint: "Think about the aim of the edit.", why: "Fixing light does not change the story.", tag: "photo.reason_lie" })]),
+  Q(mc("Idris says every photo he sees online is unedited. Is he right?", "No. Many online photos are edited or filtered", ["Yes, online photos are always raw", "Yes, websites check every photo"], { hint: "Think about filters.", why: "Many photos online are edited.", tag: "photo.reason_online" }), "edited", "reason",
+    [mc("Hira says a photo on a serious-looking website cannot be edited. Is she right?", "No. Any photo can be edited, so check where it came from", ["Yes, those sites never edit", "Yes, only drawings can be edited"], { hint: "Think about filters.", why: "Any photo can be edited.", tag: "photo.reason_online" })]),
+  Q(mc("Nadia says a filter can never mislead because it only changes colours. Is she right?", "No. Colour changes can hide the truth, such as making dirty water look clean", ["Yes, colours never mislead", "Yes, filters cannot change a picture at all"], { hint: "Think about a dirty sea.", why: "A filter can change how true a scene seems.", tag: "photo.reason_filter" }), "edited", "reason",
+    [mc("Layla says a filter that makes a dirty sea look clean is harmless. Is she right?", "No. It could mislead people about the sea", ["Yes, a filter is harmless", "Yes, the sea is always clean"], { hint: "Think about a dirty sea.", why: "A filter can hide the truth.", tag: "photo.reason_filter" })]),
+  Q(mat("Match each edit to the question it raises.", [["Crop out a bin", "Is the full scene still shown?"], ["Recolour the sky", "Is it still the real weather?"], ["Clone a person away", "Was someone really there?"]], { hint: "Think about what each edit hides.", why: "Each edit changes what we are shown.", tag: "photo.edit_question" }), "edited", "apply",
+    [mat("Pair each edit with its honest label.", [["Brightened a dark photo", "Lightly edited"], ["Added a filter", "Filter used"], ["Cloned a person out", "Changed: person removed"]], { hint: "Think about what to tell people.", why: "A label says what was changed.", tag: "photo.edit_question" })]),
+  Q(hot("Tap the clue that this photo has been edited.", [["☀️", "Shadows pointing left and right", 22, 50], ["🌳", "A tree with a normal shadow", 50, 50], ["🏔️", "Mountains in the distance", 78, 50]], ["Shadows pointing left and right"], { labels: true, hint: "One sun, one direction.", why: "Shadows from one sun should match.", tag: "photo.tap_shadow" }), "edited", "apply",
+    [hot("Tap the detail that looks edited.", [["🚗", "A car with a clear shadow", 22, 50], ["🌤️", "Soft natural clouds", 50, 50], ["🧍", "A person with a hard glowing outline", 78, 50]], ["A person with a hard glowing outline"], { labels: true, hint: "Look for rough edges.", why: "A hard glowing outline suggests pasting.", tag: "photo.tap_shadow" })]),
+  // ----- poster (q24-q30)
+  Q(ord("Put the steps of sharing an edited poster picture in order.", ["Pick a photo you may use", "Edit it lightly", "Add a caption saying what you changed", "Credit the photographer"], { hint: "Permission first.", why: "Choose legally, edit, explain, credit.", tag: "photo.share_steps" }), "poster", "apply",
+    [ord("Put these steps for sharing an edited photo in order.", ["Decide if it still tells the truth", "Add a note that it was edited", "Ask permission if it shows someone", "Share it"], { hint: "Think before sharing.", why: "Check truth, note edits, ask permission, then share.", tag: "photo.share_steps" })]),
+  Q(ms("Which two things should an honest poster include? Pick two.", ["A credit for the photographer", "A note when a photo was edited"], ["A hidden edit", "A copied logo"], { hint: "Think about honesty and fairness.", why: "Credit and edit notes keep a poster honest.", tag: "photo.poster_ms" }), "poster", "apply",
+    [ms("Which two are good habits when using an online picture? Pick two.", ["Check you are allowed to use it", "Say where it came from"], ["Remove the maker's name", "Pretend you took it"], { hint: "Think about the maker.", why: "Check permission and credit the source.", tag: "photo.poster_ms" })]),
+  Q(mc("Hamza says he can edit his friend's photo and share it without asking. Is he right?", "No. Ask permission first, especially if the photo shows someone", ["Yes, photos belong to everyone", "Yes, editing makes it his"], { hint: "Think about the person in it.", why: "We ask before editing and sharing others' photos.", tag: "photo.reason_ask" }), "poster", "reason",
+    [mc("Sana says she can post a funny edit of a classmate. Is she right?", "No. An edit could upset them, so ask first", ["Yes, funny is always fine", "Yes, nobody minds"], { hint: "Think about the person in it.", why: "We ask first to be kind.", tag: "photo.reason_ask" })]),
+  Q(mc("Zara says she can copy any picture from a website onto her poster. Is she right?", "No. Pictures have owners, so check you may use them", ["Yes, all online pictures are free", "Yes, a school poster never needs permission"], { hint: "Think about copyright.", why: "The maker owns their picture.", tag: "photo.reason_copy" }), "poster", "reason",
+    [mc("Idris says an image on a search page is free because it is easy to save. Is he right?", "No. Easy to save does not mean free to use", ["Yes, saving makes it his", "Yes, search engines own them all"], { hint: "Think about copyright.", why: "Ownership stays with the maker.", tag: "photo.reason_copy" })]),
+  Q(mc("Maryam says cropping cannot change the story because nothing is added. Is she right?", "No. Cutting parts out can change what a photo seems to show", ["Yes, only adding things matters", "Yes, crops never change meaning"], { hint: "Think about what is left out.", why: "A crop can leave out important context.", tag: "photo.reason_crop" }), "poster", "reason",
+    [mc("Omar says cutting half a photo away is always harmless. Is he right?", "No. A crop can leave out important context", ["Yes, always harmless", "Yes, nobody notices crops"], { hint: "Think about what is left out.", why: "Removing parts can change the story.", tag: "photo.reason_crop" })]),
+  Q(num("A poster has 3 photos. Each has 1 credit line and 1 edit note. How many lines in all?", 6, { hint: "2 lines for each photo.", why: "3 x 2 = 6 lines.", tag: "photo.lines" }), "poster", "apply",
+    [num("A poster has 4 photos. Each has 1 credit line and 1 edit note. How many lines in all?", 8, { hint: "2 lines for each photo.", why: "4 x 2 = 8 lines.", tag: "photo.lines" })]),
+  Q(sld("Zara's class makes 5 posters. Each uses 2 photos. Slide to show how many photos in all.", { min: 0, max: 15 }, 10, 0, { hint: "5 groups of 2.", why: "5 x 2 = 10 photos.", tag: "photo.poster_count" }), "poster", "apply",
+    [sld("Maryam's group makes 4 posters. Each uses 3 photos. Slide to show how many photos in all.", { min: 0, max: 15 }, 12, 0, { hint: "4 groups of 3.", why: "4 x 3 = 12 photos.", tag: "photo.poster_count" })]),
+];
+
+export const topics = [
+  topicLesson({
+    slug: "data-ai-class-4-photo-editing-and-truth", subject: "data-ai", cls: 4, topic: 5, title: "Photo Editing: Changing Pictures",
+    summary: "Crop, resize, recolour and clone pictures, spot edited photos and make an honest poster.",
+    unit: "Topic 5: Photo editing and truth", difficulty: 2,
+    objectives: ["Explain how digital pictures are made of pixels and how crop, resize, recolour and clone change them", "Spot clues that a picture may be edited", "Edit honestly, keep originals and credit the maker"],
+    success_criteria: ["I can explain pixels, crop, recolour and clone", "I can spot clues of editing", "I can make an honest poster that credits the maker"],
+    real_life: "Editing Eid or Hunza holiday photos for a family album or school poster, and checking which photos online have been changed.",
+    standards: [
+      { framework: "nc_england", code: "KS2 computing", text: "Select, use and combine a variety of software on digital devices to design and create digital content" },
+      { framework: "nc_england", code: "KS2 online safety", text: "Use technology safely, respectfully and responsibly; recognise acceptable and unacceptable behaviour" },
+    ],
+    warm_up: [
+      mc("What does a computer use to store a picture?", "Numbers", ["Ink", "Wood"], { hint: "Computers store everything as data.", why: "A digital picture is stored as numbers." }),
+      mc("What does it mean to edit something?", "To change it", ["To lose it", "To print it"], { hint: "Think about changing a story.", why: "To edit is to change." }),
+      num("What is 24 divided by 4?", 6, { hint: "4 times what is 24?", why: "24 / 4 = 6." }),
+    ],
+    intro: [],
+    subs: [images, recolour, edited, poster],
+    clip,
+    quiz,
+  }),
+];

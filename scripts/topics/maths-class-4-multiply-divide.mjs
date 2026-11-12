@@ -1,19 +1,29 @@
-import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, ROW, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
+import { SAY, SS, H, T, IMG, TIP, FACT, REVEAL, ACT, MAN, BRAIN, SUM, CHK, NLINE, TABLE, S, EXP, ROW, PHOTO, GLOSS, mc, ms, tf, num, ord, mat, fill, hot, sld } from "../lesson-kit.mjs";
 import { topicLesson } from "../topic-kit.mjs";
 
+// Coteach diagrams (see content/media/manifest.d/maths-class-4-multiply-divide.json).
+const COTEACH_A = {"type":"image","asset":"maths-class-4-multiply-divide-d1-33d506f0.png","alt":"An array of 6 by 8 split into a 5 by 8 block and a 1 by 8 row","caption":"6 × 8 = 5 × 8 + 1 × 8."};
+const COTEACH_B = {"type":"image","asset":"maths-class-4-multiply-divide-d2-a1f7bcdf.png","alt":"A bar model for 53 divided by 8 with six full bars of 8 and a remainder of 5","caption":"53 ÷ 8 = 6 remainder 5."};
 // Class 4 (Fatima) Maths topic 2: Multiplying and dividing. Standards from docs/CURRICULUM_V2.md.
 const EXPP = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "plain" });
 const EXPK = (title, ...scenes) => ({ ...EXP(title, ...scenes), backdrop: "kitchen" });
+const EGG_PHOTO = "maths-class-4-multiply-divide-1-d47b623f.jpg";
 
 const tables = {
   id: "tables_factors", kind: "learn", title: "Tables, factors and multiples",
   blocks: [
+    H("Welcome back, number explorer!"),
+    SAY("Welcome back, number explorer! Imagine your family is planning a big Eid party. How many dates do you need for seven gift bags? How many cars for thirty-two guests? Multiplying and dividing help us answer questions like these quickly. Today you will use times tables, factors, grids and sharing to solve them. Let's go!",
+      PHOTO(EGG_PHOTO, "A tray of twelve eggs in two columns of six", "Eggs in a tray make a neat array of rows and columns.", "Photo by Kelly Neil on Unsplash")),
+    T("Today's big question: how can multiplying and dividing help us plan a party?"),
+    IMG("🎁", "Gift bags, tables and cars: all solved by multiplying and dividing."),
     H("Stop 1: Arrays and times tables"),
     SAY("A times table is just repeated adding. An array is a picture of it, with rows and columns. Look at the eggs. Three rows, with four eggs in every row. Three fours are twelve. And if we turn it round, four threes are twelve too. Multiplying in any order gives the same answer.", T("An **array** shows multiplying in rows and columns.", "3 × 4 = 12 and 4 × 3 = 12. Multiplying works in any order.")),
     EXPK("Eggs in rows",
       SS("Here is the first row of four eggs.", S("1 row of 4 eggs = 4", ...ROW("a", "🥚", 4, 30, 70, 30))),
       SS("Add a second row of four. Two rows of four make eight.", S("2 rows of 4 = 8", ...ROW("a", "🥚", 4, 30, 70, 30), ...ROW("b", "🥚", 4, 30, 70, 55))),
       SS("And a third row. Three rows of four make twelve. Three times four is twelve.", S("3 rows of 4 = 12", ...ROW("a", "🥚", 4, 30, 70, 25), ...ROW("b", "🥚", 4, 30, 70, 50), ...ROW("c", "🥚", 4, 30, 70, 75)))),
+    SAY("Split six by eight into five by eight and one by eight. Forty plus eight is forty-eight.", COTEACH_A),
     CHK(mc("What is 7 × 6?", "42", ["36", "48"], { hint: "Count in sixes: 6, 12, 18...", why: "7 × 6 = 42, and 6 × 7 = 42 too.", tag: "muldiv.tables" })),
     H("Stop 2: Factors and multiples"),
     SAY("Two big words. A multiple is a number in a times table. The multiples of three are three, six, nine, twelve and so on. A factor is a number that divides exactly into another. We find factors in pairs. Twelve has the factor pairs one and twelve, two and six, three and four. So the factors of twelve are one, two, three, four, six and twelve.", T("**Multiples** are in the times table: 3, 6, 9, 12 ...", "**Factors** divide exactly: the factors of 12 are 1, 2, 3, 4, 6 and 12.")),
@@ -25,9 +35,10 @@ const tables = {
     H("Stop 3: Divisibility tricks"),
     SAY("Here are some speedy tricks to see if a number divides exactly. A number is divisible by two if it ends in an even digit. By five if it ends in five or zero. By ten if it ends in zero. And by three if its digits add up to a number in the three times table. Take one hundred and forty-seven. One plus four plus seven is twelve. Twelve is in the three times table, so one hundred and forty-seven is divisible by three.", T("Divisible by 2: ends in an even digit. By 5: ends in 0 or 5. By 10: ends in 0.", "By 3: the digits add to a number in the 3 times table.")),
     TABLE("Digit sums", [["123: 1+2+3", 6], ["147: 1+4+7", 12], ["250: 2+5+0", 7]], "123 and 147 have digit sums in the 3 times table. 250 does not."),
+    SAY("Fifty-three divided by eight gives six full groups of eight. Five are left over.", COTEACH_B),
     CHK(tf("225 is divisible by 5.", true, { hint: "Look at the last digit.", why: "225 ends in 5, so it is divisible by 5.", tag: "muldiv.divisible" })),
     SAY("Remember. Multiples are in the times table. Factors divide exactly. Use the tricks to check quickly.", SUM("A multiple is in a times table", "A factor divides exactly, and factors come in pairs", "Use divisibility tricks for 2, 3, 5 and 10")),
-    GLOSS({ array: "Objects in rows and columns to show multiplying.", multiples: "Numbers in a times table, like 3, 6, 9.", factors: "Numbers that divide exactly into another number.", divisible: "Can be divided exactly with nothing left over." }),
+    GLOSS({ "multiplying and dividing": "Multiplying finds equal groups; dividing shares equally.", array: "Objects in rows and columns to show multiplying.", multiples: "Numbers in a times table, like 3, 6, 9.", factors: "Numbers that divide exactly into another number.", divisible: "Can be divided exactly with nothing left over." }),
   ],
   mini: [
     num("What is 9 × 8?", 72, { hint: "9 × 8 is 10 × 8 take away 8.", why: "9 × 8 = 72." }),
@@ -139,6 +150,24 @@ const ALTS = [
   [num("Egg boxes hold 6. How many boxes are needed for 40 eggs?", 7, { hint: "6 × 6 = 36, with eggs left.", why: "40 ÷ 6 = 6 remainder 4, so 7 boxes.", tag: "muldiv.remainder_context" }), num("Rickshaws carry 3 people. How many are needed for 22 people?", 8, { hint: "22 ÷ 3 has a remainder.", why: "22 ÷ 3 = 7 remainder 1, so 8 rickshaws.", tag: "muldiv.remainder_context" })],
 ];
 
+const clip = {
+  title: "Eggs in a tray", backdrop: "kitchen", caption: "Aisha packs eggs for the Eid party and finds the remainder.",
+  scenes: [
+    { caption: "Aisha and the eggs.", say: "This is Aisha. She is packing eggs for the Eid party.",
+      items: [{ id: "a", emoji: "👧", label: "Aisha", x: 22, y: 56, size: 3, anim: "bounce", enter: "walk_right" }, { id: "e", emoji: "🥚", label: "12 eggs", x: 72, y: 40, size: 3, enter: "pop" }] },
+    { caption: "Rows of four.", say: "Four eggs in a row. Three rows make an array of twelve.",
+      items: [{ id: "r1", emoji: "🥚🥚🥚🥚", label: "row 1", x: 50, y: 30, size: 2, enter: "slide_left" }, { id: "r2", emoji: "🥚🥚🥚🥚", label: "row 2", x: 50, y: 48, size: 2, enter: "slide_right" }, { id: "r3", emoji: "🥚🥚🥚🥚", label: "row 3", x: 50, y: 66, size: 2, enter: "grow" }] },
+    { caption: "3 × 4 = 12.", say: "Three times four is twelve. Four times three is twelve too.",
+      items: [{ id: "f", emoji: "✖️", label: "3 × 4 = 12", x: 50, y: 46, size: 3, effect: "glow" }] },
+    { caption: "Boxes of six.", say: "Now Aisha packs eight boxes, with six eggs in each box.",
+      items: [{ id: "b", emoji: "📦", label: "8 × 6", x: 50, y: 46, size: 3, enter: "pop" }] },
+    { caption: "Two eggs are left.", say: "There are 50 eggs. Eight boxes hold 48. Two eggs are left over.",
+      items: [{ id: "b2", emoji: "📦", label: "48 in boxes", x: 30, y: 46, size: 2 }, { id: "l", emoji: "🥚", label: "2 left", x: 72, y: 40, size: 2, anim: "bounce" }] },
+    { caption: "50 ÷ 6 = 8 remainder 2.", say: "Fifty shared into boxes of six is eight boxes, with two left over. Shukriya, Aisha!",
+      items: [{ id: "a", emoji: "👧", label: "Aisha", x: 22, y: 56, size: 3, anim: "bounce" }, { id: "r", emoji: "🎉", label: "8 r 2", x: 60, y: 40, size: 3, effect: "sparkle" }] },
+  ],
+};
+
 export const topics = [
   topicLesson({
     slug: "maths-class-4-multiply-divide", subject: "maths", cls: 4, topic: 2, title: "Multiplying and Dividing",
@@ -157,13 +186,9 @@ export const topics = [
       mc("Round 3,462 to the nearest 100.", "3,500", ["3,400", "3,000"], { hint: "Look at the tens digit.", why: "6 rounds up, so 3,500." }),
       tf("−5 is smaller than −1.", true, { hint: "Think of a thermometer.", why: "−5 is further below zero." }),
     ],
-    intro: [
-      H("Welcome back, number explorer!"),
-      SAY("Welcome back, number explorer! Imagine your family is planning a big Eid party. How many dates do you need for seven gift bags? How many cars for thirty-two guests? Multiplying and dividing help us answer questions like these quickly. Today you will use times tables, factors, grids and sharing to solve them. Let's go!", T("Today's big question: how can multiplying and dividing help us plan a party?")),
-      IMG("🎁", "Gift bags, tables and cars: all solved by multiplying and dividing."),
-      GLOSS({ "multiplying and dividing": "Multiplying finds equal groups; dividing shares equally." }),
-    ],
+    intro: [],
     subs: [tables, multiply, divide, useIt],
+    clip,
     quiz: [
       { q: mc("What is 8 × 7?", "56", ["54", "63"], { hint: "Count in sevens.", why: "8 × 7 = 56.", tag: "muldiv.tables" }), sub: "tables_factors", depth: "recall" },
       { q: num("What is 72 ÷ 9?", 8, { hint: "9 × ? = 72", why: "9 × 8 = 72.", tag: "muldiv.divide_facts" }), sub: "tables_factors", depth: "recall" },
@@ -180,6 +205,36 @@ export const topics = [
       { q: num("What is 96 ÷ 4?", 24, { hint: "80 ÷ 4 and 16 ÷ 4.", why: "20 + 4 = 24.", tag: "muldiv.divide" }), sub: "division", depth: "apply" },
       { q: mc("Ali says every number in the 6 times table is even. Is he right?", "Yes, 6 is even, so adding 6 always gives an even number", ["No, some are odd", "Only the first few are even"], { hint: "List 6, 12, 18, 24.", why: "Even plus even is always even.", tag: "muldiv.pattern_reason" }), sub: "tables_factors", depth: "reason" },
       { q: num("Minibuses seat 8. How many minibuses are needed for 53 people?", 7, { hint: "53 ÷ 8 has a remainder.", why: "53 ÷ 8 = 6 remainder 5, so 7 minibuses.", tag: "muldiv.remainder_context" }), sub: "real_world", depth: "reason" },
-    ].map((x, i) => ({ ...x, alts: ALTS[i] })),
+      { q: tf("8 is a factor of 40.", true, { hint: "8 × 5 = ?", why: "8 × 5 = 40, so 8 divides into 40 exactly.", tag: "muldiv.factors" }), sub: "tables_factors", depth: "recall",
+        alts: [tf("7 is a factor of 40.", false, { hint: "Count in sevens: 35, 42.", why: "7 does not divide into 40 exactly.", tag: "muldiv.factors" })] },
+      { q: fill("Fill in the gaps about 45.", "45 ÷ 9 = {b1}, so 9 is a {b2} of 45.", [["5", "9", "54"], ["factor", "multiple", "remainder"]], { hint: "9 × 5 = 45.", why: "45 ÷ 9 = 5, so 9 divides exactly into 45: it is a factor.", tag: "muldiv.fact_language" }), sub: "division", depth: "apply",
+        alts: [fill("Fill in the gaps about 50.", "50 ÷ 5 = {b1}, so 5 is a {b2} of 50.", [["10", "15", "25"], ["factor", "multiple", "remainder"]], { hint: "5 × 10 = 50.", why: "50 ÷ 5 = 10, so 5 divides exactly into 50: it is a factor.", tag: "muldiv.fact_language" })] },
+      { q: ms("Which two numbers are multiples of 4? Pick two.", ["12", "20"], ["14", "22"], { hint: "Count in fours: 4, 8, 12, 16, 20.", why: "4 × 3 = 12 and 4 × 5 = 20.", tag: "muldiv.multiples" }), sub: "tables_factors", depth: "apply",
+        alts: [ms("Which two numbers are multiples of 6? Pick two.", ["18", "30"], ["16", "20"], { hint: "Count in sixes: 6, 12, 18, 24, 30.", why: "6 × 3 = 18 and 6 × 5 = 30.", tag: "muldiv.multiples" })] },
+      { q: ord("Order these from the largest answer to the smallest.", ["9 × 9", "8 × 8", "7 × 9", "6 × 6"], { hint: "Work out each answer.", why: "81, then 64, then 63, then 36.", tag: "muldiv.order" }), sub: "tables_factors", depth: "apply",
+        alts: [ord("Put these in order, largest answer first.", ["5 × 9", "11 × 4", "3 × 12", "2 × 10"], { hint: "Work out each answer.", why: "45, 44, 36 and 20.", tag: "muldiv.order" })] },
+      { q: sld("Slide to show the answer to 9 × 9.", { min: 0, max: 100 }, 81, 0, { hint: "Count in nines.", why: "9 × 9 = 81.", tag: "muldiv.tables" }), sub: "tables_factors", depth: "apply",
+        alts: [sld("Slide to show the answer to 11 × 8.", { min: 0, max: 100 }, 88, 0, { hint: "10 × 8 and 1 × 8.", why: "11 × 8 = 88.", tag: "muldiv.tables" })] },
+      { q: mat("Match each times fact to its answer.", [["6 × 8", "48"], ["7 × 9", "63"], ["5 × 11", "55"]], { hint: "Use the facts you know.", why: "6 × 8 = 48, 7 × 9 = 63 and 5 × 11 = 55.", tag: "muldiv.tables" }), sub: "tables_factors", depth: "apply",
+        alts: [mat("Join each fact to its answer.", [["9 × 3", "27"], ["12 × 6", "72"], ["8 × 4", "32"]], { hint: "Use the facts you know.", why: "9 × 3 = 27, 12 × 6 = 72 and 8 × 4 = 32.", tag: "muldiv.tables" })] },
+      { q: hot("Tap the number that is a multiple of 7.", [["🔢", "26", 22, 50], ["🔢", "35", 50, 50], ["🔢", "38", 78, 50]], ["35"], { labels: true, hint: "Count in sevens.", why: "7 × 5 = 35. The others are not in the 7 times table.", tag: "muldiv.multiples" }), sub: "tables_factors", depth: "apply",
+        alts: [hot("Tap the number that is a multiple of 8.", [["🔢", "36", 22, 50], ["🔢", "40", 50, 50], ["🔢", "42", 78, 50]], ["40"], { labels: true, hint: "Count in eights.", why: "8 × 5 = 40.", tag: "muldiv.multiples" })] },
+      { q: mc("Nadia says 6 × 7 is 40 because 6 × 6 is 36 and 4 is more. Is she right?", "No. 6 × 7 = 36 + 6 = 42, not 40", ["Yes, 40 is right", "No, it is 46"], { hint: "One more group of six is added.", why: "6 × 7 is one more group of 6 after 6 × 6, so it is 36 + 6 = 42.", tag: "muldiv.reason_facts" }), sub: "tables_factors", depth: "reason",
+        alts: [mc("Sara says 4 × 8 is 36 because 4 × 9 is 36. Is she right?", "No. 4 × 8 = 32, which is 4 less than 36", ["Yes, 4 × 8 is 36", "No, it is 30"], { hint: "One group of four is taken away.", why: "4 × 9 = 36, so 4 × 8 = 36 − 4 = 32.", tag: "muldiv.reason_facts" })] },
+      { q: mc("Ben says 40 ÷ 5 is 7 because 5 × 7 is 35 and that is close to 40. Is he right?", "No. 5 × 8 = 40, so 40 ÷ 5 = 8", ["Yes, the answer is 7", "No, it is 9"], { hint: "Find the fact that is exactly 40.", why: "5 × 8 = 40, so 40 ÷ 5 = 8. Close is not exact.", tag: "muldiv.reason_divide" }), sub: "division", depth: "reason",
+        alts: [mc("Mia says 63 ÷ 9 = 6 because 9 × 6 is 54. Is she right?", "No. 9 × 7 = 63, so 63 ÷ 9 = 7", ["Yes, the answer is 6", "No, it is 8"], { hint: "Find the fact that is exactly 63.", why: "9 × 7 = 63, so 63 ÷ 9 = 7.", tag: "muldiv.reason_divide" })] },
+      { q: num("What is 75 ÷ 5?", 15, { hint: "50 ÷ 5 and 25 ÷ 5.", why: "10 + 5 = 15.", tag: "muldiv.divide" }), sub: "division", depth: "apply",
+        alts: [num("What is 88 ÷ 8?", 11, { hint: "80 ÷ 8 and 8 ÷ 8.", why: "10 + 1 = 11.", tag: "muldiv.divide" })] },
+      { q: num("What is 37 × 4?", 148, { hint: "30 × 4 and 7 × 4.", why: "120 + 28 = 148.", tag: "muldiv.grid" }), sub: "multiply", depth: "apply",
+        alts: [num("What is 64 × 3?", 192, { hint: "60 × 3 and 4 × 3.", why: "180 + 12 = 192.", tag: "muldiv.grid" })] },
+      { q: num("A bus seats 6. How many buses are needed for 40 children?", 7, { hint: "40 ÷ 6 leaves a remainder.", why: "40 ÷ 6 = 6 remainder 4, so 7 buses.", tag: "muldiv.remainder_context" }), sub: "real_world", depth: "apply",
+        alts: [num("Each table seats 4. How many tables are needed for 15 guests?", 4, { hint: "15 ÷ 4 leaves a remainder.", why: "4 × 3 = 12 with 3 left, so 4 tables.", tag: "muldiv.remainder_context" })] },
+      { q: mc("Omar says 42 ÷ 6 = 6 because 7 × 6 = 42. Is he right?", "No. 42 ÷ 6 = 7, because 6 × 7 = 42", ["Yes, both are 6", "No, it is 8"], { hint: "Which number times 6 makes 42?", why: "6 × 7 = 42, so 42 ÷ 6 = 7, not 6.", tag: "muldiv.reason_divide" }), sub: "division", depth: "reason",
+        alts: [mc("Zain says 24 ÷ 3 = 3 because 3 × 8 = 24. Is he right?", "No. 24 ÷ 3 = 8, because 3 × 8 = 24", ["Yes, both are 3", "No, it is 6"], { hint: "Which number times 3 makes 24?", why: "3 × 8 = 24, so 24 ÷ 3 = 8, not 3.", tag: "muldiv.reason_divide" })] },
+      { q: mc("Hana says 17 ÷ 4 = 5 remainder 1 because 4 × 5 = 20. Is she right?", "No. 4 × 5 is more than 17, so the answer is 4 remainder 1", ["Yes, 5 remainder 1", "No, it is 4 remainder 5"], { hint: "The remainder must be smaller than 4.", why: "4 × 4 = 16 and 17 − 16 = 1, so 4 remainder 1.", tag: "muldiv.reason_remainder" }), sub: "division", depth: "reason",
+        alts: [mc("Ali says 26 ÷ 5 = 5 remainder 1 because 5 × 5 is 25. Is he right?", "Yes. 5 × 5 = 25 and 26 − 25 = 1, so 5 remainder 1", ["No, it is 4 remainder 6", "No, it is 6 remainder 4"], { hint: "Subtract 25 from 26.", why: "5 × 5 = 25, and the remainder 1 is smaller than 5, so Ali is right.", tag: "muldiv.reason_remainder" })] },
+      { q: mc("Sam says 84 is divisible by 4 because the last two digits, 84, are in the 4 times table. Is he right?", "Yes. 84 is in the 4 times table, so 84 is divisible by 4", ["No, 84 is not in any table", "No, 4 does not divide into 84"], { hint: "Is 84 in the 4 times table?", why: "4 × 21 = 84, so 84 is divisible by 4.", tag: "muldiv.reason_divisible" }), sub: "tables_factors", depth: "reason",
+        alts: [mc("Ali says 128 is divisible by 4 because 28 is in the 4 times table. Is he right?", "Yes. 28 is in the 4 times table, so 128 is divisible by 4", ["No, 128 is odd", "No, 28 is only in the 7 times table"], { hint: "Is 28 in the 4 times table?", why: "4 × 7 = 28. Also 4 × 32 = 128.", tag: "muldiv.reason_divisible" })] },
+    ].map((x, i) => ({ alts: ALTS[i], ...x })),
   }),
 ];

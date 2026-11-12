@@ -1,0 +1,113 @@
+{
+ "title": "The naan that is more than one",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "The baker.",
+   "say": "This is Uncle Hamid. He bakes naan for the Eid lunch in Karachi.",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👨",
+     "label": "Uncle Hamid",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce",
+     "enter": "walk_right"
+    },
+    {
+     "id": "n",
+     "emoji": "🫓",
+     "label": "naan",
+     "x": 72,
+     "y": 46,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Cut into quarters.",
+   "say": "He cuts one naan into four equal quarters. Each piece is one quarter.",
+   "items": [
+    {
+     "id": "q",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 4,
+      "shaded": 4
+     },
+     "label": "4/4 = 1",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "enter": "grow"
+    }
+   ]
+  },
+  {
+   "caption": "Seven quarters.",
+   "say": "Now he has seven quarters. That is more than one whole naan.",
+   "items": [
+    {
+     "id": "q",
+     "prop": {
+      "kind": "fraction_bar",
+      "parts": 4,
+      "shaded": 3
+     },
+     "label": "3 more quarters",
+     "x": 50,
+     "y": 46,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Regroup.",
+   "say": "One whole naan and three quarters. We write it as one and three quarters.",
+   "camera": {
+    "zoom": 1.2,
+    "x": 50,
+    "y": 46
+   },
+   "items": [
+    {
+     "id": "m",
+     "emoji": "🫓",
+     "label": "1 3/4",
+     "x": 50,
+     "y": 42,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya!",
+   "say": "Seven quarters is one and three quarters. Shukriya, Uncle Hamid!",
+   "items": [
+    {
+     "id": "h",
+     "emoji": "👨",
+     "label": "Uncle Hamid",
+     "x": 22,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "r",
+     "emoji": "🎉",
+     "label": "7/4 = 1 3/4",
+     "x": 70,
+     "y": 40,
+     "size": 2,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

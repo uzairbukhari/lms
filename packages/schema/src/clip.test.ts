@@ -14,7 +14,7 @@ describe("clip spec", () => {
     expect(r.ok).toBe(true);
     const s = estimateClipSeconds(must(sample));
     expect(s).toBeGreaterThan(45);
-    expect(s).toBeLessThan(75);
+    expect(s).toBeLessThan(85);
     expect(clipWarnings(must(sample))).toEqual([]);
   });
 
@@ -85,12 +85,13 @@ describe("clip timeline", () => {
     expect(t.stageFrames).toBe(at - 36);
   });
 
-  it("uses measured sentence lengths: each scene lasts its sentences plus half a second", () => {
+  it("uses measured sentence lengths: the voice is played a little slower, with a pause between sentences and a long one after each scene", () => {
     const t = buildClipTimeline(s.spec, { durations: [[2, 3], undefined, [1.5]] });
-    expect(t.scenes[0]!.frames).toBe(48 + 72 + 12);
-    expect(t.scenes[0]!.sentences.map((x) => x.frames)).toEqual([48, 72]);
-    expect(t.scenes[2]!.frames).toBe(36 + 12);
-    expect(t.scenes[1]!.frames).toBe(Math.round(2.6 * 24) + 12);
+    // a 2 s file is played at 0.9 speed: 2 / 0.9 s = 53 frames; 3 s is 80 frames; 0.8 s between sentences = 19 frames; 2 s after the scene = 48 frames
+    expect(t.scenes[0]!.sentences.map((x) => x.frames)).toEqual([53, 80]);
+    expect(t.scenes[0]!.frames).toBe(53 + 19 + 80 + 48);
+    expect(t.scenes[2]!.frames).toBe(40 + 48);
+    expect(t.scenes[1]!.frames).toBe(Math.round(2.6 * 24) + 48);
   });
 
   it("finds the scene on screen at a frame", () => {

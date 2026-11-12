@@ -1,0 +1,3205 @@
+{
+ "schema_version": "3.0",
+ "lesson": {
+  "slug": "data-ai-class-1-sensors-and-smart-things",
+  "subject": "data-ai",
+  "title": "Sensors and Smart Things",
+  "summary": "Learn how sensors help machines notice light, heat, sound and movement.",
+  "age_band": "7-8",
+  "difficulty": 1,
+  "estimated_minutes": 60,
+  "unit": "Topic 11: Sensors and smart things",
+  "learning_objectives": [
+   "Name a sensor and what it senses",
+   "Match sensors to smart things",
+   "Say what a machine does with what it senses"
+  ],
+  "tags": [
+   "topic",
+   "topic-11"
+  ],
+  "curriculum": {
+   "course": "data-ai-class-1-topics",
+   "semester": 1,
+   "topic": 11
+  },
+  "standards": [
+   {
+    "framework": "ai4k12",
+    "code": "Big Idea 1",
+    "text": "Perception: computers perceive the world using sensors"
+   },
+   {
+    "framework": "csta",
+    "code": "1A-CS-01",
+    "text": "Select and operate appropriate software and hardware to perform a variety of tasks"
+   }
+  ],
+  "success_criteria": [
+   "I can name a sensor and what it notices",
+   "I can say a sensor is an input",
+   "I know a sensor does not think and can be wrong"
+  ],
+  "real_life": "Street lights in Lahore and London, automatic doors at airports and solar lanterns.",
+  "warm_up": [
+   {
+    "type": "multiple_choice",
+    "prompt": "What is a pattern?",
+    "hint": "Think about red, blue, red, blue.",
+    "explanation": "A pattern repeats.",
+    "options": [
+     {
+      "id": "a",
+      "text": "A wall"
+     },
+     {
+      "id": "b",
+      "text": "Something that repeats"
+     },
+     {
+      "id": "c",
+      "text": "A mess"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "multiple_choice",
+    "prompt": "What is IT?",
+    "hint": "Computers.",
+    "explanation": "IT is information technology.",
+    "options": [
+     {
+      "id": "a",
+      "text": "Instant tea"
+     },
+     {
+      "id": "b",
+      "text": "Information technology"
+     },
+     {
+      "id": "c",
+      "text": "Indoor toys"
+     }
+    ],
+    "answer": [
+     "b"
+    ]
+   },
+   {
+    "type": "number",
+    "prompt": "What is 7 + 5?",
+    "hint": "Count on from 7.",
+    "explanation": "7 + 5 = 12.",
+    "answer": {
+     "value": 12,
+     "tolerance": 0
+    }
+   }
+  ]
+ },
+ "blocks": [],
+ "sub_lessons": [
+  {
+   "id": "senses",
+   "kind": "learn",
+   "title": "Machines have senses",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Welcome back, smart-thing spotter!"
+    },
+    {
+     "type": "text",
+     "markdown": "Today's big question: how do machines notice the world?",
+     "say": "Today we meet sensors. Zainab's nightlight comes on when her room gets dark."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-sensors-and-smart-things-1-51c4d9c8.jpg",
+     "alt": "A single street lamp glowing orange in the dark night",
+     "caption": "A street lamp that glows in the dark.",
+     "credit": "Photo by Julian Hochgesang on Unsplash",
+     "say": "This street light glows after dark. Many street lights use a light sensor."
+    },
+    {
+     "type": "heading",
+     "text": "Stop 1: A sensor notices"
+    },
+    {
+     "type": "text",
+     "markdown": "A **sensor** is a part that notices light, sound, heat or movement.",
+     "say": "A sensor is a part that notices something. It can notice light, sound, heat or movement."
+    },
+    {
+     "type": "explainer",
+     "title": "Sensors notice",
+     "scenes": [
+      {
+       "caption": "Light sensor.",
+       "items": [
+        {
+         "id": "l",
+         "emoji": "💡",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "s",
+         "emoji": "🌙",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "A light sensor notices if a room is bright or dark."
+      },
+      {
+       "caption": "Sound and heat.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "👏",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "h",
+         "emoji": "🌡️",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "A sound sensor notices a clap. A heat sensor notices warmth."
+      },
+      {
+       "caption": "Movement.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🚶",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "noticed"
+        }
+       ],
+       "say": "A movement sensor notices when something moves past it."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "Which sensor notices light?",
+      "hint": "Its name tells you.",
+      "explanation": "A light sensor notices bright or dark.",
+      "skill_tag": "sensor.light",
+      "options": [
+       {
+        "id": "a",
+        "text": "A sound sensor"
+       },
+       {
+        "id": "b",
+        "text": "A light sensor"
+       },
+       {
+        "id": "c",
+        "text": "A heat sensor"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Eyes, ears and touch"
+    },
+    {
+     "type": "text",
+     "markdown": "A **camera** is like an eye. A **microphone** is like an ear.",
+     "say": "A camera is a bit like an eye. A microphone is a bit like an ear. A touch sensor feels a press."
+    },
+    {
+     "type": "explainer",
+     "title": "Machine senses",
+     "scenes": [
+      {
+       "caption": "Camera.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📷",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "eye"
+        }
+       ],
+       "say": "A camera takes pictures. It is like an eye for a machine."
+      },
+      {
+       "caption": "Microphone.",
+       "items": [
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "ear"
+        }
+       ],
+       "say": "A microphone hears sound. It is like an ear."
+      },
+      {
+       "caption": "A program.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📷",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "💻",
+         "x": 78,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "a program"
+        }
+       ],
+       "say": "But a machine does not think or feel like us. It only follows a program."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A microphone is a bit like which body part?",
+      "hint": "It listens.",
+      "explanation": "A microphone hears, like an ear.",
+      "skill_tag": "sensor.mic",
+      "options": [
+       {
+        "id": "a",
+        "text": "An eye"
+       },
+       {
+        "id": "b",
+        "text": "An ear"
+       },
+       {
+        "id": "c",
+        "text": "A foot"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Movie time"
+    },
+    {
+     "type": "clip",
+     "title": "Zainab's nightlight",
+     "asset": "clip-data-ai-class-1-sensors-and-smart-things-85f54511.mp4",
+     "poster": "clip-data-ai-class-1-sensors-and-smart-things-85f54511.webp",
+     "seconds": 59,
+     "transcript": "It is bedtime. Zainab's room gets dark. A light sensor in her nightlight notices the dark. The program says: if dark, then turn on. The nightlight glows. Zainab feels safe. At school, a door opens by itself. A movement sensor noticed her. The door does not know her name. It only notices movement. Sometimes a sensor gets it wrong. A person can fix it. Zainab asks her mum before using any new smart thing.",
+     "caption": "Zainab works out which sensor switches on her nightlight."
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A sensor notices light, sound, heat or movement",
+      "A camera is like an eye, a microphone like an ear",
+      "A machine only follows its program"
+     ],
+     "say": "Let us remember. Sensors notice the world. A program decides what to do."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "sensor",
+       "meaning": "A part that notices something, like light or sound."
+      },
+      {
+       "term": "camera",
+       "meaning": "A machine that takes pictures."
+      },
+      {
+       "term": "microphone",
+       "meaning": "A machine that hears sound."
+      },
+      {
+       "term": "program",
+       "meaning": "Instructions a machine follows."
+      },
+      {
+       "term": "notice",
+       "meaning": "To find out that something is there."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a sensor do?",
+     "hint": "It picks up information.",
+     "explanation": "A sensor notices something.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cooks food"
+      },
+      {
+       "id": "b",
+       "text": "Notices something"
+      },
+      {
+       "id": "c",
+       "text": "Paints a picture"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A sound sensor can notice a clap.",
+     "hint": "A clap is a sound.",
+     "explanation": "Sound sensors notice sound.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which one is like an eye for a machine?",
+     "hint": "It sees.",
+     "explanation": "A camera sees pictures.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A speaker"
+      },
+      {
+       "id": "b",
+       "text": "A camera"
+      },
+      {
+       "id": "c",
+       "text": "A microphone"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hunt",
+   "kind": "try",
+   "title": "Sensor hunt at home",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Lights that switch on"
+    },
+    {
+     "type": "text",
+     "markdown": "If it is **dark**, then the light turns on.",
+     "say": "Zainab's nightlight has a light sensor. When it gets dark, the light turns on."
+    },
+    {
+     "type": "explainer",
+     "title": "The nightlight",
+     "scenes": [
+      {
+       "caption": "Bright: off.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "💡",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none",
+         "label": "off"
+        },
+        {
+         "id": "s",
+         "emoji": "☀️",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "In the daytime the room is bright. The nightlight is off."
+      },
+      {
+       "caption": "Dark: sensor notices.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "sensor"
+        },
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 70,
+         "y": 30,
+         "size": 3,
+         "anim": "float"
+        }
+       ],
+       "say": "At night the room is dark. The light sensor notices."
+      },
+      {
+       "caption": "Light on.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "💡",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "on"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "if dark, then on"
+        }
+       ],
+       "say": "The program says: if dark, then light on. The nightlight glows."
+      }
+     ]
+    },
+    {
+     "type": "manipulative",
+     "title": "Lights out",
+     "goal": "Move the 6 lights as the evening gets dark: the ones that turn on go in On.",
+     "emoji": "💡",
+     "count": 6,
+     "zones": [
+      "On",
+      "Off"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A light sensor notices it is dark. What does the nightlight do?",
+      "hint": "If dark, then light.",
+      "explanation": "The program says: if dark, light on.",
+      "skill_tag": "sensor.nightlight",
+      "options": [
+       {
+        "id": "a",
+        "text": "Turns off"
+       },
+       {
+        "id": "b",
+        "text": "Turns on"
+       },
+       {
+        "id": "c",
+        "text": "Sings"
+       }
+      ],
+      "answer": [
+       "b"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Doors that open"
+    },
+    {
+     "type": "text",
+     "markdown": "An **automatic** door opens when its sensor notices movement.",
+     "say": "Some doors open by themselves. A sensor notices someone coming. The door slides open."
+    },
+    {
+     "type": "image",
+     "asset": "data-ai-class-1-sensors-and-smart-things-2-1c057573.jpg",
+     "alt": "A glass lantern with small flames glowing in a garden at dusk",
+     "caption": "A lantern glowing as the evening gets dark.",
+     "credit": "Photo by John Oswald on Unsplash",
+     "say": "Here is a different light. It glows in the evening in a garden."
+    },
+    {
+     "type": "explainer",
+     "title": "An automatic door",
+     "scenes": [
+      {
+       "caption": "Watch.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 50,
+         "y": 20,
+         "size": 3,
+         "anim": "pulse",
+         "label": "sensor"
+        },
+        {
+         "id": "d",
+         "emoji": "🚪",
+         "x": 50,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A movement sensor above the door watches for someone."
+      },
+      {
+       "caption": "Movement.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🚶",
+         "x": 20,
+         "y": 60,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 50,
+         "y": 20,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "d",
+         "emoji": "🚪",
+         "x": 70,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A person walks up. The sensor notices movement."
+      },
+      {
+       "caption": "Open.",
+       "items": [
+        {
+         "id": "d",
+         "emoji": "🚪",
+         "x": 70,
+         "y": 60,
+         "size": 3,
+         "anim": "grow"
+        },
+        {
+         "id": "p",
+         "emoji": "🚶",
+         "x": 40,
+         "y": 60,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "opens for anyone"
+        }
+       ],
+       "say": "The door slides open. It does not know who the person is."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Sensor hunt",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Walk round your home or school.",
+      "Find three things that notice light, sound or movement.",
+      "Draw each one and say what it senses."
+     ],
+     "say": "Now you try. Find sensors at home with a grown-up."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "An automatic door knows who you are.",
+      "hint": "It only notices movement.",
+      "explanation": "It notices movement, not who you are.",
+      "skill_tag": "sensor.door",
+      "answer": [
+       false
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A light sensor turns lights on in the dark",
+      "A movement sensor opens automatic doors",
+      "Sensors do not know who you are"
+     ],
+     "say": "Let us remember. Sensors help lights and doors work by themselves."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "dark",
+       "meaning": "With no light, or very little."
+      },
+      {
+       "term": "automatic",
+       "meaning": "Working by itself, without a person pressing a button."
+      },
+      {
+       "term": "movement",
+       "meaning": "Moving from place to place."
+      },
+      {
+       "term": "nightlight",
+       "meaning": "A small light that turns on in the dark."
+      },
+      {
+       "term": "dusk",
+       "meaning": "The time when the evening gets dark."
+      },
+      {
+       "term": "light sensor",
+       "meaning": "A sensor that notices light."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What turns on an automatic door?",
+     "hint": "It notices movement.",
+     "explanation": "A movement sensor opens the door.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wish"
+      },
+      {
+       "id": "b",
+       "text": "A sensor noticing movement"
+      },
+      {
+       "id": "c",
+       "text": "A broom"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A nightlight can use a light sensor.",
+     "hint": "It notices dark.",
+     "explanation": "Light sensors notice dark.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "If it is dark, then the nightlight...",
+     "hint": "That is its job.",
+     "explanation": "Dark makes it turn on.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Falls over"
+      },
+      {
+       "id": "b",
+       "text": "Turns on"
+      },
+      {
+       "id": "c",
+       "text": "Turns blue"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "which",
+   "kind": "play",
+   "title": "Which sensor?",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Match sensor to job"
+    },
+    {
+     "type": "text",
+     "markdown": "A sensor is an **input**. What the machine does is the **output**.",
+     "say": "Sensors are inputs. They send information in. The machine then does an output, like light or sound."
+    },
+    {
+     "type": "explainer",
+     "title": "Input and output",
+     "scenes": [
+      {
+       "caption": "Input.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "input"
+        },
+        {
+         "id": "m",
+         "emoji": "🌙",
+         "x": 70,
+         "y": 40,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A light sensor notices dark. That is the input."
+      },
+      {
+       "caption": "Output.",
+       "items": [
+        {
+         "id": "n",
+         "emoji": "💡",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce",
+         "label": "output"
+        }
+       ],
+       "say": "The program tells the nightlight to turn on. That is the output."
+      },
+      {
+       "caption": "In then out.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 25,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "a",
+         "emoji": "➡️",
+         "x": 50,
+         "y": 50,
+         "size": 2,
+         "anim": "none"
+        },
+        {
+         "id": "n",
+         "emoji": "💡",
+         "x": 75,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "sense then act"
+        }
+       ],
+       "say": "Sense first, then act. In, then out."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A sensor is an...",
+      "hint": "It sends information in.",
+      "explanation": "A sensor is an input.",
+      "skill_tag": "sensor.input",
+      "options": [
+       {
+        "id": "a",
+        "text": "Output"
+       },
+       {
+        "id": "b",
+        "text": "Insect"
+       },
+       {
+        "id": "c",
+        "text": "Input"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Brain game"
+    },
+    {
+     "type": "text",
+     "markdown": "Play the memory game. Then match sensors to jobs.",
+     "say": "First a memory game. Then match each sensor to its job."
+    },
+    {
+     "type": "brain_game",
+     "game": "memory_match",
+     "title": "Sensor pairs",
+     "goal": "Find the pairs.",
+     "emojis": [
+      "📡",
+      "💡",
+      "🔊",
+      "🌡️"
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "match",
+      "prompt": "Match each sensor to what it notices.",
+      "hint": "Think about each name.",
+      "explanation": "Each sensor notices one thing.",
+      "skill_tag": "sensor.match",
+      "points": 2,
+      "left": [
+       {
+        "id": "l1",
+        "text": "Light sensor"
+       },
+       {
+        "id": "l2",
+        "text": "Sound sensor"
+       },
+       {
+        "id": "l3",
+        "text": "Heat sensor"
+       }
+      ],
+      "right": [
+       {
+        "id": "r2",
+        "text": "Noise"
+       },
+       {
+        "id": "r3",
+        "text": "Warm or cold"
+       },
+       {
+        "id": "r1",
+        "text": "Bright or dark"
+       }
+      ],
+      "answer": {
+       "l1": "r1",
+       "l2": "r2",
+       "l3": "r3"
+      }
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "A sensor is an input",
+      "The machine does an output next",
+      "Each sensor notices one kind of thing"
+     ],
+     "say": "Let us remember. Sensors are inputs. The machine acts after it senses."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "input",
+       "meaning": "Information that goes into a machine."
+      },
+      {
+       "term": "output",
+       "meaning": "What a machine does or shows."
+      },
+      {
+       "term": "sense",
+       "meaning": "To notice something."
+      },
+      {
+       "term": "act",
+       "meaning": "To do something."
+      },
+      {
+       "term": "job",
+       "meaning": "What something is for."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What does a machine do after it senses?",
+     "hint": "It follows its program.",
+     "explanation": "It acts as the program says.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Eats a snack"
+      },
+      {
+       "id": "b",
+       "text": "Acts, like turning on a light"
+      },
+      {
+       "id": "c",
+       "text": "Falls asleep"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "A light turning on is an output.",
+     "hint": "It is what the machine does.",
+     "explanation": "An output is what the machine does.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Which is an input?",
+     "hint": "It sends information in.",
+     "explanation": "A sensor is an input.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A light turning on"
+      },
+      {
+       "id": "b",
+       "text": "A sensor"
+      },
+      {
+       "id": "c",
+       "text": "A buzzer"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "kind": "use",
+   "title": "Plan a smart helper",
+   "blocks": [
+    {
+     "type": "heading",
+     "text": "Stop 1: Pick sensor and action"
+    },
+    {
+     "type": "text",
+     "markdown": "A smart helper uses a sensor and an **action**.",
+     "say": "Zainab wants a smart plant helper. It should water the plant when the soil is dry."
+    },
+    {
+     "type": "text",
+     "markdown": "Choose the sensor first, then the action.",
+     "say": "She picks a sensor: one that notices dry soil. She picks an action: pour some water."
+    },
+    {
+     "type": "text",
+     "markdown": "Use if-then to plan what the helper does.",
+     "say": "She writes the plan as if-then. If the soil is dry, then pour water."
+    },
+    {
+     "type": "explainer",
+     "title": "The plant helper",
+     "scenes": [
+      {
+       "caption": "Sense.",
+       "items": [
+        {
+         "id": "s",
+         "emoji": "📡",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse",
+         "label": "dry soil"
+        },
+        {
+         "id": "p",
+         "emoji": "🪴",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        }
+       ],
+       "say": "A sensor in the soil notices if the soil is dry."
+      },
+      {
+       "caption": "Act.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "p",
+         "emoji": "🪴",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "pulse"
+        }
+       ],
+       "say": "If the soil is dry, then the helper pours water."
+      },
+      {
+       "caption": "Done.",
+       "items": [
+        {
+         "id": "p",
+         "emoji": "🪴",
+         "x": 50,
+         "y": 50,
+         "size": 3,
+         "anim": "bounce"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "sense then act"
+        }
+       ],
+       "say": "The plant is happy. Sense first, then act."
+      }
+     ]
+    },
+    {
+     "type": "activity",
+     "title": "Plan a helper",
+     "materials": [
+      "Paper and a pencil",
+      "A grown-up"
+     ],
+     "instructions": [
+      "Pick a job, like watering a plant or lighting a path.",
+      "Choose a sensor that fits the job.",
+      "Write: if ..., then ..."
+     ],
+     "say": "A plan helps her check that the helper will work."
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "multiple_choice",
+      "prompt": "A plant helper should water dry soil. Which sensor fits?",
+      "hint": "It must notice the soil.",
+      "explanation": "The sensor must notice what matters for the job.",
+      "skill_tag": "sensor.pick",
+      "options": [
+       {
+        "id": "a",
+        "text": "A sound sensor"
+       },
+       {
+        "id": "b",
+        "text": "A speaker"
+       },
+       {
+        "id": "c",
+        "text": "A sensor that notices dry soil"
+       }
+      ],
+      "answer": [
+       "c"
+      ]
+     }
+    },
+    {
+     "type": "heading",
+     "text": "Stop 2: Check it is safe"
+    },
+    {
+     "type": "text",
+     "markdown": "Check **safety** and privacy with a grown-up.",
+     "say": "A smart helper must be safe. Check it with a grown-up. A camera in a bedroom is not private."
+    },
+    {
+     "type": "explainer",
+     "title": "Safe and private",
+     "scenes": [
+      {
+       "caption": "Safe.",
+       "items": [
+        {
+         "id": "w",
+         "emoji": "💧",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "p",
+         "emoji": "🔌",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "x",
+         "emoji": "⚠️",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse"
+        }
+       ],
+       "say": "Water and electricity do not mix. The helper must be safe."
+      },
+      {
+       "caption": "Private.",
+       "items": [
+        {
+         "id": "c",
+         "emoji": "📷",
+         "x": 30,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "m",
+         "emoji": "🎤",
+         "x": 70,
+         "y": 50,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "l",
+         "emoji": "🔒",
+         "x": 50,
+         "y": 20,
+         "size": 2,
+         "anim": "pulse",
+         "label": "private"
+        }
+       ],
+       "say": "Cameras and microphones can hear and see private things."
+      },
+      {
+       "caption": "Ask first.",
+       "items": [
+        {
+         "id": "g",
+         "emoji": "👩",
+         "x": 30,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "h",
+         "emoji": "🧒",
+         "x": 70,
+         "y": 52,
+         "size": 3,
+         "anim": "none"
+        },
+        {
+         "id": "ok",
+         "emoji": "✅",
+         "x": 50,
+         "y": 88,
+         "size": 2,
+         "anim": "bounce",
+         "label": "ask first"
+        }
+       ],
+       "say": "Always ask a grown-up first. They help keep us safe."
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "question": {
+      "type": "true_false",
+      "prompt": "We should ask a grown-up before using a smart helper.",
+      "hint": "Safety first.",
+      "explanation": "A grown-up helps check safety.",
+      "skill_tag": "sensor.ask",
+      "answer": [
+       true
+      ]
+     }
+    },
+    {
+     "type": "summary",
+     "points": [
+      "Choose a sensor that fits the job",
+      "Write an if-then plan",
+      "Ask a grown-up and keep things private"
+     ],
+     "say": "Let us remember. Pick a sensor, pick an action, and check it is safe."
+    },
+    {
+     "type": "glossary",
+     "terms": [
+      {
+       "term": "action",
+       "meaning": "What the helper does after it senses."
+      },
+      {
+       "term": "safety",
+       "meaning": "Being safe from harm."
+      },
+      {
+       "term": "private",
+       "meaning": "Only for you and your family."
+      },
+      {
+       "term": "plan",
+       "meaning": "Steps you decide before you build."
+      },
+      {
+       "term": "helper",
+       "meaning": "Something that does a job for you."
+      }
+     ]
+    }
+   ],
+   "mini_quiz": [
+    {
+     "type": "multiple_choice",
+     "prompt": "What do we choose first for a helper?",
+     "hint": "What must it notice?",
+     "explanation": "The sensor fits the job.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A paint colour"
+      },
+      {
+       "id": "b",
+       "text": "A new name"
+      },
+      {
+       "id": "c",
+       "text": "A sensor to fit the job"
+      }
+     ],
+     "answer": [
+      "c"
+     ]
+    },
+    {
+     "type": "true_false",
+     "prompt": "Cameras at home can notice private things.",
+     "hint": "Think about the bedroom.",
+     "explanation": "Cameras can see private things.",
+     "answer": [
+      true
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Who checks that a helper is safe?",
+     "hint": "Someone who looks after you.",
+     "explanation": "A grown-up checks safety.",
+     "options": [
+      {
+       "id": "a",
+       "text": "A stranger online"
+      },
+      {
+       "id": "b",
+       "text": "A grown-up"
+      },
+      {
+       "id": "c",
+       "text": "Nobody"
+      }
+     ],
+     "answer": [
+      "b"
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": {
+  "pass_percent": 70,
+  "shuffle_questions": true,
+  "shuffle_options": true,
+  "max_attempts": null,
+  "questions": [
+   {
+    "ref": "q1",
+    "type": "multiple_choice",
+    "prompt": "What is a sensor?",
+    "hint": "It notices.",
+    "explanation": "A sensor notices things.",
+    "skill_tag": "sensor.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "A toy robot"
+     },
+     {
+      "id": "b",
+      "text": "A part that notices something like light or sound"
+     },
+     {
+      "id": "c",
+      "text": "A kind of battery"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q2",
+    "type": "multiple_choice",
+    "prompt": "What does a light sensor do?",
+    "hint": "Its name tells you.",
+    "explanation": "A light sensor notices bright or dark.",
+    "skill_tag": "sensor.light_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "Notices a clap"
+     },
+     {
+      "id": "b",
+      "text": "Notices if it is bright or dark"
+     },
+     {
+      "id": "c",
+      "text": "Notices warmth"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q3",
+    "type": "true_false",
+    "prompt": "A microphone is a bit like an ear for a machine.",
+    "hint": "It hears sounds.",
+    "explanation": "A microphone picks up sound.",
+    "skill_tag": "sensor.mic_ear",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q4",
+    "type": "match",
+    "prompt": "Match every sensor to the thing it notices.",
+    "hint": "Think about each name.",
+    "explanation": "Each sensor notices one thing.",
+    "skill_tag": "sensor.match_notice",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Light sensor"
+     },
+     {
+      "id": "l2",
+      "text": "Sound sensor"
+     },
+     {
+      "id": "l3",
+      "text": "Movement sensor"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A clap"
+     },
+     {
+      "id": "r3",
+      "text": "Someone walking past"
+     },
+     {
+      "id": "r1",
+      "text": "Bright or dark"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "senses",
+    "depth": "apply"
+   },
+   {
+    "ref": "q5",
+    "type": "hotspot",
+    "prompt": "Tap the sensor on the door.",
+    "hint": "It notices someone coming.",
+    "explanation": "The movement sensor notices people.",
+    "skill_tag": "sensor.tap_door",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📡",
+       "label": "Movement sensor",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🚪",
+       "label": "Door",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🧱",
+       "label": "Wall",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q6",
+    "type": "multiple_choice",
+    "prompt": "Sam says a sensor can think about what it feels. Is he right?",
+    "hint": "Think about the nightlight.",
+    "explanation": "A sensor only notices things.",
+    "skill_tag": "sensor.reason_think",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, sensors think"
+     },
+     {
+      "id": "b",
+      "text": "Yes, sensors have feelings"
+     },
+     {
+      "id": "c",
+      "text": "No. A sensor only notices. A program decides what to do"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "senses",
+    "depth": "reason"
+   },
+   {
+    "ref": "q7",
+    "type": "multiple_choice",
+    "prompt": "Aisha says only phones have sensors. Is she right?",
+    "hint": "Think about the street light.",
+    "explanation": "Sensors are in many machines.",
+    "skill_tag": "sensor.reason_phones",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only phones"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only laptops"
+     },
+     {
+      "id": "c",
+      "text": "No. Many machines have sensors, like doors and street lights"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "senses",
+    "depth": "reason"
+   },
+   {
+    "ref": "q8",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about sensors.",
+    "hint": "Think about senses.",
+    "explanation": "A sensor notices things. A camera is like an eye.",
+    "skill_tag": "sensor.fill_senses",
+    "points": 2,
+    "text": "A {b1} notices light, sound, heat or movement. A camera is like an {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "spoon"
+       },
+       {
+        "id": "b",
+        "text": "sensor"
+       },
+       {
+        "id": "c",
+        "text": "table"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "foot"
+       },
+       {
+        "id": "b",
+        "text": "eye"
+       },
+       {
+        "id": "c",
+        "text": "ear"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "senses",
+    "depth": "recall"
+   },
+   {
+    "ref": "q9",
+    "type": "number",
+    "prompt": "A street has 6 lights. 4 are on. How many lights are off?",
+    "hint": "6 take away 4.",
+    "explanation": "6 - 4 = 2 lights off.",
+    "skill_tag": "sensor.lights_off",
+    "answer": {
+     "value": 2,
+     "tolerance": 0
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply"
+   },
+   {
+    "ref": "q10",
+    "type": "order",
+    "prompt": "Put the steps for the nightlight in order.",
+    "hint": "Dark first.",
+    "explanation": "Dark, notice, then light on.",
+    "skill_tag": "sensor.nightlight_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The light sensor notices"
+     },
+     {
+      "id": "i1",
+      "text": "The room gets dark"
+     },
+     {
+      "id": "i3",
+      "text": "The nightlight turns on"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "apply"
+   },
+   {
+    "ref": "q11",
+    "type": "slider",
+    "prompt": "The nightlight is on from 7 o'clock until 10 o'clock. Slide to show how many hours it is on.",
+    "hint": "10 take away 7.",
+    "explanation": "7 to 10 is 3 hours.",
+    "skill_tag": "sensor.hours_on",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply"
+   },
+   {
+    "ref": "q12",
+    "type": "true_false",
+    "prompt": "If it is dark, then a street light with a light sensor can turn on.",
+    "hint": "Think about the nightlight.",
+    "explanation": "A light sensor notices dark.",
+    "skill_tag": "sensor.if_dark",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "hunt",
+    "depth": "recall"
+   },
+   {
+    "ref": "q13",
+    "type": "multiple_choice",
+    "prompt": "Omar says sensors never go wrong. Is he right?",
+    "hint": "Think about a dirty window.",
+    "explanation": "Sensors can get things wrong.",
+    "skill_tag": "sensor.reason_wrong",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, never wrong"
+     },
+     {
+      "id": "b",
+      "text": "No. Sensors can make mistakes, like a dirty sensor missing a signal"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sensors are perfect"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "reason"
+   },
+   {
+    "ref": "q14",
+    "type": "multiple_choice",
+    "prompt": "Aisha says automatic doors know who you are. Is she right?",
+    "hint": "Think about the door.",
+    "explanation": "A door notices movement only.",
+    "skill_tag": "sensor.reason_door",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, they know your name"
+     },
+     {
+      "id": "b",
+      "text": "No. They only notice movement"
+     },
+     {
+      "id": "c",
+      "text": "Yes, they know your age"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "reason"
+   },
+   {
+    "ref": "q15",
+    "type": "match",
+    "prompt": "Match each device to its sensor.",
+    "hint": "Think about each device.",
+    "explanation": "Each device uses its own sensor.",
+    "skill_tag": "sensor.match_device",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Nightlight"
+     },
+     {
+      "id": "l2",
+      "text": "Automatic door"
+     },
+     {
+      "id": "l3",
+      "text": "Clap lamp"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Movement sensor"
+     },
+     {
+      "id": "r1",
+      "text": "Light sensor"
+     },
+     {
+      "id": "r3",
+      "text": "Sound sensor"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply"
+   },
+   {
+    "ref": "q16",
+    "type": "multiple_choice",
+    "prompt": "Which of these is an input to a machine?",
+    "hint": "It sends information in.",
+    "explanation": "A sensor is an input.",
+    "skill_tag": "sensor.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A light turning on"
+     },
+     {
+      "id": "b",
+      "text": "A sensor noticing something"
+     },
+     {
+      "id": "c",
+      "text": "A speaker playing"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "which",
+    "depth": "recall"
+   },
+   {
+    "ref": "q17",
+    "type": "multi_select",
+    "prompt": "Which two are outputs? Pick two.",
+    "hint": "They are what the machine does.",
+    "explanation": "Light and buzzer are outputs.",
+    "skill_tag": "sensor.outputs",
+    "options": [
+     {
+      "id": "a",
+      "text": "A buzzer sounding"
+     },
+     {
+      "id": "b",
+      "text": "A microphone"
+     },
+     {
+      "id": "c",
+      "text": "A light sensor"
+     },
+     {
+      "id": "d",
+      "text": "A light turning on"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "which",
+    "depth": "apply"
+   },
+   {
+    "ref": "q18",
+    "type": "number",
+    "prompt": "A robot vacuum bumps into 3 chairs and 2 tables. How many things does it bump into?",
+    "hint": "3 + 2.",
+    "explanation": "3 + 2 = 5 things.",
+    "skill_tag": "sensor.bumps",
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "which",
+    "depth": "apply"
+   },
+   {
+    "ref": "q19",
+    "type": "hotspot",
+    "prompt": "Tap the sensor.",
+    "hint": "It notices.",
+    "explanation": "The light sensor notices.",
+    "skill_tag": "sensor.tap_sensor",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📡",
+       "label": "Light sensor",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💡",
+       "label": "Light",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔊",
+       "label": "Speaker",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h1"
+    ],
+    "sub_lesson": "which",
+    "depth": "recall"
+   },
+   {
+    "ref": "q20",
+    "type": "multiple_choice",
+    "prompt": "Sam says a sensor is an output. Is he right?",
+    "hint": "It sends information in.",
+    "explanation": "A sensor is an input.",
+    "skill_tag": "sensor.reason_output",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, an output"
+     },
+     {
+      "id": "b",
+      "text": "Yes, both"
+     },
+     {
+      "id": "c",
+      "text": "No. A sensor is an input"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "which",
+    "depth": "reason"
+   },
+   {
+    "ref": "q21",
+    "type": "multiple_choice",
+    "prompt": "Zainab says a camera sees like a person. Is she right?",
+    "hint": "Think about the program.",
+    "explanation": "A camera does not understand like a person.",
+    "skill_tag": "sensor.reason_camera",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a camera understands everything"
+     },
+     {
+      "id": "b",
+      "text": "No. A camera records dots of colour and a program works out patterns"
+     },
+     {
+      "id": "c",
+      "text": "Yes, exactly like a person"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "which",
+    "depth": "reason"
+   },
+   {
+    "ref": "q22",
+    "type": "true_false",
+    "prompt": "A machine only does what its program tells it to do.",
+    "hint": "Think about the nightlight.",
+    "explanation": "A machine follows its program.",
+    "skill_tag": "sensor.only_program",
+    "answer": [
+     true
+    ],
+    "sub_lesson": "which",
+    "depth": "recall"
+   },
+   {
+    "ref": "q23",
+    "type": "order",
+    "prompt": "Put these in order: act, notice, decide.",
+    "hint": "Sense first.",
+    "explanation": "Notice, decide, then act.",
+    "skill_tag": "sensor.sense_act",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "Decide with the program"
+     },
+     {
+      "id": "i1",
+      "text": "Notice with a sensor"
+     },
+     {
+      "id": "i3",
+      "text": "Act with an output"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "which",
+    "depth": "apply"
+   },
+   {
+    "ref": "q24",
+    "type": "multiple_choice",
+    "prompt": "Which sensor fits a path light that turns on when someone walks by?",
+    "hint": "It must notice walking.",
+    "explanation": "A movement sensor notices people.",
+    "skill_tag": "sensor.pick_path",
+    "options": [
+     {
+      "id": "a",
+      "text": "A speaker"
+     },
+     {
+      "id": "b",
+      "text": "A movement sensor"
+     },
+     {
+      "id": "c",
+      "text": "A sound sensor"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q25",
+    "type": "multi_select",
+    "prompt": "Which two actions could a smart helper do? Pick two.",
+    "hint": "Think about outputs.",
+    "explanation": "A light and a buzzer are outputs.",
+    "skill_tag": "sensor.actions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sound a buzzer"
+     },
+     {
+      "id": "b",
+      "text": "Read a book"
+     },
+     {
+      "id": "c",
+      "text": "Eat a sandwich"
+     },
+     {
+      "id": "d",
+      "text": "Turn on a light"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q26",
+    "type": "slider",
+    "prompt": "Zainab plans 7 smart things. She has planned 4. Slide to show how many are left to plan.",
+    "hint": "7 take away 4.",
+    "explanation": "7 - 4 = 3 left.",
+    "skill_tag": "sensor.plan_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q27",
+    "type": "multiple_choice",
+    "prompt": "Layla says a smart home needs no rules. Is she right?",
+    "hint": "Think about cameras and privacy.",
+    "explanation": "Rules help keep us safe and private.",
+    "skill_tag": "sensor.reason_rules",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, no rules at all"
+     },
+     {
+      "id": "b",
+      "text": "Yes, devices make their own rules"
+     },
+     {
+      "id": "c",
+      "text": "No. Families need rules to stay safe and keep things private"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason"
+   },
+   {
+    "ref": "q28",
+    "type": "multiple_choice",
+    "prompt": "Omar says smart things need no electricity. Is he right?",
+    "hint": "Think about the nightlight.",
+    "explanation": "Smart things need power.",
+    "skill_tag": "sensor.reason_power",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, no power needed"
+     },
+     {
+      "id": "b",
+      "text": "Yes, they run on wishes"
+     },
+     {
+      "id": "c",
+      "text": "No. Smart things need power, from a plug, battery or the Sun"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason"
+   },
+   {
+    "ref": "q29",
+    "type": "multiple_choice",
+    "prompt": "Which is a safe choice about a camera at home?",
+    "hint": "Think about privacy.",
+    "explanation": "A grown-up decides where a camera goes.",
+    "skill_tag": "sensor.privacy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Put it in the bathroom"
+     },
+     {
+      "id": "b",
+      "text": "Ask a grown-up where it can be placed"
+     },
+     {
+      "id": "c",
+      "text": "Share its pictures with strangers"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q30",
+    "type": "fill_blank",
+    "prompt": "Finish the sentences about helpers.",
+    "hint": "Think about the plan.",
+    "explanation": "If-then plans use sensors as inputs.",
+    "skill_tag": "sensor.fill_plan",
+    "points": 2,
+    "text": "Write the plan as an {b1}-then rule. The sensor is the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "go"
+       },
+       {
+        "id": "b",
+        "text": "blue"
+       },
+       {
+        "id": "c",
+        "text": "if"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "output"
+       },
+       {
+        "id": "b",
+        "text": "input"
+       },
+       {
+        "id": "c",
+        "text": "bug"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "c",
+     "b2": "b"
+    },
+    "sub_lesson": "plan",
+    "depth": "apply"
+   },
+   {
+    "ref": "q1a",
+    "type": "multiple_choice",
+    "prompt": "Which word means a part that notices light, sound, heat or movement?",
+    "hint": "It notices.",
+    "explanation": "A sensor notices things.",
+    "skill_tag": "sensor.meaning",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sprite"
+     },
+     {
+      "id": "b",
+      "text": "Sensor"
+     },
+     {
+      "id": "c",
+      "text": "Cable"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall",
+    "variant_of": "q1"
+   },
+   {
+    "ref": "q2a",
+    "type": "multiple_choice",
+    "prompt": "Which sensor would tell if a room is dark?",
+    "hint": "Its name tells you.",
+    "explanation": "A light sensor notices dark.",
+    "skill_tag": "sensor.light_job",
+    "options": [
+     {
+      "id": "a",
+      "text": "A heat sensor"
+     },
+     {
+      "id": "b",
+      "text": "A light sensor"
+     },
+     {
+      "id": "c",
+      "text": "A sound sensor"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall",
+    "variant_of": "q2"
+   },
+   {
+    "ref": "q3a",
+    "type": "true_false",
+    "prompt": "A microphone is like an eye for a machine.",
+    "hint": "It hears sounds.",
+    "explanation": "A microphone is more like an ear.",
+    "skill_tag": "sensor.mic_ear",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall",
+    "variant_of": "q3"
+   },
+   {
+    "ref": "q4a",
+    "type": "match",
+    "prompt": "Join each sensor to what it notices.",
+    "hint": "Think about each name.",
+    "explanation": "Each sensor notices one thing.",
+    "skill_tag": "sensor.match_notice",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Heat sensor"
+     },
+     {
+      "id": "l2",
+      "text": "Touch sensor"
+     },
+     {
+      "id": "l3",
+      "text": "Camera"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "A press"
+     },
+     {
+      "id": "r1",
+      "text": "Warmth"
+     },
+     {
+      "id": "r3",
+      "text": "A picture"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "senses",
+    "depth": "apply",
+    "variant_of": "q4"
+   },
+   {
+    "ref": "q5a",
+    "type": "hotspot",
+    "prompt": "Tap the part that hears sound.",
+    "hint": "It is like an ear.",
+    "explanation": "A microphone hears sound.",
+    "skill_tag": "sensor.tap_mic",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📡",
+       "label": "Sensor",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "🎤",
+       "label": "Microphone",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🔋",
+       "label": "Battery",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "senses",
+    "depth": "recall",
+    "variant_of": "q5"
+   },
+   {
+    "ref": "q6a",
+    "type": "multiple_choice",
+    "prompt": "Mina says a sensor decides how to feel. Is she right?",
+    "hint": "Think about the nightlight.",
+    "explanation": "A sensor only notices things.",
+    "skill_tag": "sensor.reason_think",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it decides feelings"
+     },
+     {
+      "id": "b",
+      "text": "No. A sensor notices, and the program decides what to do"
+     },
+     {
+      "id": "c",
+      "text": "Yes, sensors have moods"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "senses",
+    "depth": "reason",
+    "variant_of": "q6"
+   },
+   {
+    "ref": "q7a",
+    "type": "multiple_choice",
+    "prompt": "Ben says sensors are only inside phones. Is he right?",
+    "hint": "Think about the street light.",
+    "explanation": "Sensors are in many places.",
+    "skill_tag": "sensor.reason_phones",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only phones"
+     },
+     {
+      "id": "b",
+      "text": "Yes, only tablets"
+     },
+     {
+      "id": "c",
+      "text": "No. They are in doors, lights and cars too"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "senses",
+    "depth": "reason",
+    "variant_of": "q7"
+   },
+   {
+    "ref": "q8a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about the senses.",
+    "hint": "Think about senses.",
+    "explanation": "A microphone is like an ear and a touch sensor feels a press.",
+    "skill_tag": "sensor.fill_senses",
+    "points": 2,
+    "text": "A microphone is like an {b1}. A touch sensor feels a {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "eye"
+       },
+       {
+        "id": "b",
+        "text": "ear"
+       },
+       {
+        "id": "c",
+        "text": "nose"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "song"
+       },
+       {
+        "id": "b",
+        "text": "press"
+       },
+       {
+        "id": "c",
+        "text": "smell"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "senses",
+    "depth": "recall",
+    "variant_of": "q8"
+   },
+   {
+    "ref": "q9a",
+    "type": "number",
+    "prompt": "A corridor has 8 lights. 5 are on. How many lights are off?",
+    "hint": "8 take away 5.",
+    "explanation": "8 - 5 = 3 lights off.",
+    "skill_tag": "sensor.lights_off",
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply",
+    "variant_of": "q9"
+   },
+   {
+    "ref": "q10a",
+    "type": "order",
+    "prompt": "Put the steps for an automatic door in order.",
+    "hint": "Walking first.",
+    "explanation": "Walk, notice, then open.",
+    "skill_tag": "sensor.nightlight_steps",
+    "points": 2,
+    "items": [
+     {
+      "id": "i2",
+      "text": "The sensor notices movement"
+     },
+     {
+      "id": "i1",
+      "text": "Someone walks up"
+     },
+     {
+      "id": "i3",
+      "text": "The door opens"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "apply",
+    "variant_of": "q10"
+   },
+   {
+    "ref": "q11a",
+    "type": "slider",
+    "prompt": "A lantern is on from 6 o'clock until 11 o'clock. Slide to show how many hours it is on.",
+    "hint": "11 take away 6.",
+    "explanation": "6 to 11 is 5 hours.",
+    "skill_tag": "sensor.hours_on",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 12
+    },
+    "answer": {
+     "value": 5,
+     "tolerance": 0
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply",
+    "variant_of": "q11"
+   },
+   {
+    "ref": "q12a",
+    "type": "true_false",
+    "prompt": "A street light with a light sensor turns on in bright sunshine.",
+    "hint": "Think about dark.",
+    "explanation": "It turns on when dark, not in bright sun.",
+    "skill_tag": "sensor.if_dark",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "hunt",
+    "depth": "recall",
+    "variant_of": "q12"
+   },
+   {
+    "ref": "q13a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a sensor is always right. Is she right?",
+    "hint": "Think about a dirty window.",
+    "explanation": "Sensors can fail.",
+    "skill_tag": "sensor.reason_wrong",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, sensors cannot fail"
+     },
+     {
+      "id": "b",
+      "text": "No. A sensor can be wrong, for example in bad weather"
+     },
+     {
+      "id": "c",
+      "text": "Yes, always right"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "reason",
+    "variant_of": "q13"
+   },
+   {
+    "ref": "q14a",
+    "type": "multiple_choice",
+    "prompt": "Layla says an automatic door knows if you are kind. Is she right?",
+    "hint": "Think about the door.",
+    "explanation": "A door notices movement only.",
+    "skill_tag": "sensor.reason_door",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it knows"
+     },
+     {
+      "id": "b",
+      "text": "Yes, it reads minds"
+     },
+     {
+      "id": "c",
+      "text": "No. It only notices that something moved"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "hunt",
+    "depth": "reason",
+    "variant_of": "q14"
+   },
+   {
+    "ref": "q15a",
+    "type": "match",
+    "prompt": "Join each device to its sensor.",
+    "hint": "Think about each device.",
+    "explanation": "Each device uses its own sensor.",
+    "skill_tag": "sensor.match_device",
+    "points": 2,
+    "left": [
+     {
+      "id": "l1",
+      "text": "Street light"
+     },
+     {
+      "id": "l2",
+      "text": "Fire alarm"
+     },
+     {
+      "id": "l3",
+      "text": "Doorbell camera"
+     }
+    ],
+    "right": [
+     {
+      "id": "r2",
+      "text": "Heat or smoke sensor"
+     },
+     {
+      "id": "r3",
+      "text": "Camera"
+     },
+     {
+      "id": "r1",
+      "text": "Light sensor"
+     }
+    ],
+    "answer": {
+     "l1": "r1",
+     "l2": "r2",
+     "l3": "r3"
+    },
+    "sub_lesson": "hunt",
+    "depth": "apply",
+    "variant_of": "q15"
+   },
+   {
+    "ref": "q16a",
+    "type": "multiple_choice",
+    "prompt": "Which is an output?",
+    "hint": "It is what the machine does.",
+    "explanation": "A light turning on is an output.",
+    "skill_tag": "sensor.in_out",
+    "options": [
+     {
+      "id": "a",
+      "text": "A microphone hearing"
+     },
+     {
+      "id": "b",
+      "text": "A light turning on"
+     },
+     {
+      "id": "c",
+      "text": "A sensor noticing dark"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "which",
+    "depth": "recall",
+    "variant_of": "q16"
+   },
+   {
+    "ref": "q17a",
+    "type": "multi_select",
+    "prompt": "Which two are inputs? Pick two.",
+    "hint": "They send information in.",
+    "explanation": "Sensors are inputs.",
+    "skill_tag": "sensor.inputs",
+    "options": [
+     {
+      "id": "a",
+      "text": "A touch sensor"
+     },
+     {
+      "id": "b",
+      "text": "A screen"
+     },
+     {
+      "id": "c",
+      "text": "A speaker"
+     },
+     {
+      "id": "d",
+      "text": "A light sensor"
+     }
+    ],
+    "answer": [
+     "d",
+     "a"
+    ],
+    "sub_lesson": "which",
+    "depth": "apply",
+    "variant_of": "q17"
+   },
+   {
+    "ref": "q18a",
+    "type": "number",
+    "prompt": "A robot vacuum bumps into 4 chairs and 3 toys. How many things does it bump into?",
+    "hint": "4 + 3.",
+    "explanation": "4 + 3 = 7 things.",
+    "skill_tag": "sensor.bumps",
+    "answer": {
+     "value": 7,
+     "tolerance": 0
+    },
+    "sub_lesson": "which",
+    "depth": "apply",
+    "variant_of": "q18"
+   },
+   {
+    "ref": "q19a",
+    "type": "hotspot",
+    "prompt": "Tap the output.",
+    "hint": "It is what the machine does.",
+    "explanation": "The light is the output.",
+    "skill_tag": "sensor.tap_output",
+    "scene": {
+     "items": [
+      {
+       "id": "h1",
+       "emoji": "📡",
+       "label": "Sensor",
+       "x": 22,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h2",
+       "emoji": "💡",
+       "label": "Light",
+       "x": 50,
+       "y": 50,
+       "size": 3
+      },
+      {
+       "id": "h3",
+       "emoji": "🎤",
+       "label": "Microphone",
+       "x": 78,
+       "y": 50,
+       "size": 3
+      }
+     ],
+     "show_labels": true
+    },
+    "answer": [
+     "h2"
+    ],
+    "sub_lesson": "which",
+    "depth": "recall",
+    "variant_of": "q19"
+   },
+   {
+    "ref": "q20a",
+    "type": "multiple_choice",
+    "prompt": "Noor says the nightlight turning on is an input. Is she right?",
+    "hint": "It is what the machine does.",
+    "explanation": "A light turning on is an output.",
+    "skill_tag": "sensor.reason_output",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, a sensor"
+     },
+     {
+      "id": "b",
+      "text": "No. It is an output"
+     },
+     {
+      "id": "c",
+      "text": "Yes, an input"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "which",
+    "depth": "reason",
+    "variant_of": "q20"
+   },
+   {
+    "ref": "q21a",
+    "type": "multiple_choice",
+    "prompt": "Hana says a camera understands what it sees. Is she right?",
+    "hint": "Think about the program.",
+    "explanation": "A camera records. A program works out patterns.",
+    "skill_tag": "sensor.reason_camera",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it understands"
+     },
+     {
+      "id": "b",
+      "text": "No. A program looks for patterns and can make mistakes"
+     },
+     {
+      "id": "c",
+      "text": "Yes, it never errs"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "which",
+    "depth": "reason",
+    "variant_of": "q21"
+   },
+   {
+    "ref": "q22a",
+    "type": "true_false",
+    "prompt": "A machine can do anything it likes, whatever its program.",
+    "hint": "Think about the nightlight.",
+    "explanation": "A machine follows its program.",
+    "skill_tag": "sensor.only_program",
+    "answer": [
+     false
+    ],
+    "sub_lesson": "which",
+    "depth": "recall",
+    "variant_of": "q22"
+   },
+   {
+    "ref": "q23a",
+    "type": "order",
+    "prompt": "Put these steps in order for a clap lamp.",
+    "hint": "Clap first.",
+    "explanation": "Clap, notice, then lamp on.",
+    "skill_tag": "sensor.sense_act",
+    "points": 2,
+    "items": [
+     {
+      "id": "i3",
+      "text": "The lamp turns on"
+     },
+     {
+      "id": "i1",
+      "text": "You clap"
+     },
+     {
+      "id": "i2",
+      "text": "The sound sensor notices"
+     }
+    ],
+    "answer": [
+     "i1",
+     "i2",
+     "i3"
+    ],
+    "sub_lesson": "which",
+    "depth": "apply",
+    "variant_of": "q23"
+   },
+   {
+    "ref": "q24a",
+    "type": "multiple_choice",
+    "prompt": "Which sensor fits a lamp that turns on when you clap?",
+    "hint": "It must notice a clap.",
+    "explanation": "A sound sensor notices clapping.",
+    "skill_tag": "sensor.pick_clap",
+    "options": [
+     {
+      "id": "a",
+      "text": "A light sensor"
+     },
+     {
+      "id": "b",
+      "text": "A heat sensor"
+     },
+     {
+      "id": "c",
+      "text": "A sound sensor"
+     }
+    ],
+    "answer": [
+     "c"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q24"
+   },
+   {
+    "ref": "q25a",
+    "type": "multi_select",
+    "prompt": "Which two could a helper do after a sensor notices? Pick two.",
+    "hint": "Think about outputs.",
+    "explanation": "Opening a door and a fan are outputs.",
+    "skill_tag": "sensor.actions",
+    "options": [
+     {
+      "id": "a",
+      "text": "Sing a lullaby for ever"
+     },
+     {
+      "id": "b",
+      "text": "Climb a tree"
+     },
+     {
+      "id": "c",
+      "text": "Switch on a fan"
+     },
+     {
+      "id": "d",
+      "text": "Open a door"
+     }
+    ],
+    "answer": [
+     "d",
+     "c"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q25"
+   },
+   {
+    "ref": "q26a",
+    "type": "slider",
+    "prompt": "A plan has 8 steps. 5 are done. Slide to show how many are left.",
+    "hint": "8 take away 5.",
+    "explanation": "8 - 5 = 3 left.",
+    "skill_tag": "sensor.plan_left",
+    "range": {
+     "step": 1,
+     "min": 0,
+     "max": 10
+    },
+    "answer": {
+     "value": 3,
+     "tolerance": 0
+    },
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q26"
+   },
+   {
+    "ref": "q27a",
+    "type": "multiple_choice",
+    "prompt": "Ben says a smart home can decide its own rules. Is he right?",
+    "hint": "Think about grown-ups.",
+    "explanation": "Grown-ups set the rules.",
+    "skill_tag": "sensor.reason_rules",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, it decides"
+     },
+     {
+      "id": "b",
+      "text": "No. Grown-ups decide the rules for smart things"
+     },
+     {
+      "id": "c",
+      "text": "Yes, the devices vote"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q27"
+   },
+   {
+    "ref": "q28a",
+    "type": "multiple_choice",
+    "prompt": "Sana says a smart lamp works without any power. Is she right?",
+    "hint": "Think about the nightlight.",
+    "explanation": "A lamp needs power.",
+    "skill_tag": "sensor.reason_power",
+    "options": [
+     {
+      "id": "a",
+      "text": "Yes, only in the dark"
+     },
+     {
+      "id": "b",
+      "text": "No. It needs a plug, a battery or sunlight"
+     },
+     {
+      "id": "c",
+      "text": "Yes, no power"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "reason",
+    "variant_of": "q28"
+   },
+   {
+    "ref": "q29a",
+    "type": "multiple_choice",
+    "prompt": "Which keeps private things private?",
+    "hint": "Think about privacy.",
+    "explanation": "Cameras should not go in private places.",
+    "skill_tag": "sensor.privacy",
+    "options": [
+     {
+      "id": "a",
+      "text": "Putting a camera everywhere"
+     },
+     {
+      "id": "b",
+      "text": "Not putting a camera in a bedroom"
+     },
+     {
+      "id": "c",
+      "text": "Telling strangers the password"
+     }
+    ],
+    "answer": [
+     "b"
+    ],
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q29"
+   },
+   {
+    "ref": "q30a",
+    "type": "fill_blank",
+    "prompt": "Complete the sentences about plans.",
+    "hint": "Think about the plan.",
+    "explanation": "We choose a sensor and then an action.",
+    "skill_tag": "sensor.fill_plan",
+    "points": 2,
+    "text": "First choose the {b1}. Then choose the {b2}.",
+    "blanks": [
+     {
+      "id": "b1",
+      "options": [
+       {
+        "id": "a",
+        "text": "snack"
+       },
+       {
+        "id": "b",
+        "text": "sensor"
+       },
+       {
+        "id": "c",
+        "text": "colour"
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "options": [
+       {
+        "id": "a",
+        "text": "shoe"
+       },
+       {
+        "id": "b",
+        "text": "action"
+       },
+       {
+        "id": "c",
+        "text": "nap"
+       }
+      ]
+     }
+    ],
+    "answer": {
+     "b1": "b",
+     "b2": "b"
+    },
+    "sub_lesson": "plan",
+    "depth": "apply",
+    "variant_of": "q30"
+   }
+  ]
+ }
+}

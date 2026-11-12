@@ -1,0 +1,186 @@
+{
+ "title": "Zara cuts the roti fairly",
+ "backdrop": "home",
+ "scenes": [
+  {
+   "caption": "One whole roti.",
+   "say": "Zara has one whole roti. She wants to share it fairly.",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "label": "Zara",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "p",
+     "prop": {
+      "kind": "fraction_pizza",
+      "parts": 1,
+      "shaded": 1
+     },
+     "label": "1 whole",
+     "x": 72,
+     "y": 44,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Cut in 2 equal parts.",
+   "say": "First she cuts it in two. Both parts are the same size.",
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "fraction_pizza",
+      "parts": 2,
+      "shaded": 1
+     },
+     "label": "1/2",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Two halves = 1 whole.",
+   "say": "Each part is one half. Two halves make a whole.",
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "fraction_pizza",
+      "parts": 2,
+      "shaded": 2
+     },
+     "label": "2 halves",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Cut again: quarters.",
+   "say": "Now she cuts each half again. That makes four equal parts.",
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "fraction_pizza",
+      "parts": 4,
+      "shaded": 1
+     },
+     "label": "1/4",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "2 quarters = 1 half.",
+   "say": "Two quarters cover the same space as one half!",
+   "items": [
+    {
+     "id": "p",
+     "prop": {
+      "kind": "fraction_pizza",
+      "parts": 4,
+      "shaded": 2
+     },
+     "label": "2/4 = 1/2",
+     "x": 50,
+     "y": 44,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "A quarter of 12.",
+   "say": "Zara has twelve dates. She shares them into four equal groups.",
+   "items": [
+    {
+     "id": "d",
+     "emoji": "🌴",
+     "label": "12 dates",
+     "x": 50,
+     "y": 40,
+     "size": 3,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "3 in each group.",
+   "say": "Three dates in each group. A quarter of twelve is three!",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🌴🌴🌴",
+     "label": "3",
+     "x": 20,
+     "y": 46,
+     "size": 2
+    },
+    {
+     "id": "b",
+     "emoji": "🌴🌴🌴",
+     "label": "3",
+     "x": 40,
+     "y": 46,
+     "size": 2
+    },
+    {
+     "id": "c",
+     "emoji": "🌴🌴🌴",
+     "label": "3",
+     "x": 60,
+     "y": 46,
+     "size": 2
+    },
+    {
+     "id": "e",
+     "emoji": "🌴🌴🌴",
+     "label": "3",
+     "x": 80,
+     "y": 46,
+     "size": 2,
+     "effect": "sparkle"
+    }
+   ]
+  },
+  {
+   "caption": "Shukriya, Zara!",
+   "say": "Equal parts make fair shares. Shukriya, Zara!",
+   "items": [
+    {
+     "id": "z",
+     "emoji": "👧",
+     "x": 30,
+     "y": 56,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "h",
+     "emoji": "❤️",
+     "x": 70,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}

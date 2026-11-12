@@ -1,0 +1,178 @@
+{
+ "title": "Fatima's dice game",
+ "backdrop": "classroom",
+ "scenes": [
+  {
+   "caption": "A big problem.",
+   "say": "Fatima wants to make a dice game. It feels like a very big problem.",
+   "items": [
+    {
+     "id": "f",
+     "emoji": "👧",
+     "label": "Fatima",
+     "x": 25,
+     "y": 56,
+     "size": 3,
+     "enter": "walk_right"
+    },
+    {
+     "id": "d",
+     "emoji": "🎲",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "caption": "Break it down.",
+   "say": "She breaks it into small parts. This is called decomposition.",
+   "items": [
+    {
+     "id": "a",
+     "emoji": "🎲",
+     "label": "roll",
+     "x": 25,
+     "y": 50,
+     "size": 2
+    },
+    {
+     "id": "b",
+     "emoji": "🔢",
+     "label": "score",
+     "x": 50,
+     "y": 50,
+     "size": 2
+    },
+    {
+     "id": "c",
+     "emoji": "🏆",
+     "label": "win",
+     "x": 75,
+     "y": 50,
+     "size": 2
+    }
+   ]
+  },
+  {
+   "caption": "A flowchart.",
+   "say": "She draws a flowchart. A diamond asks whether the roll is a six.",
+   "items": [
+    {
+     "id": "q",
+     "emoji": "🔶",
+     "label": "six?",
+     "x": 50,
+     "y": 48,
+     "size": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "caption": "A loop.",
+   "say": "A loop repeats the roll three times. Fatima does not copy the steps.",
+   "items": [
+    {
+     "id": "l",
+     "emoji": "🔁",
+     "label": "repeat 3",
+     "x": 40,
+     "y": 48,
+     "size": 3,
+     "anim": "spin"
+    },
+    {
+     "id": "d",
+     "emoji": "🎲",
+     "x": 75,
+     "y": 50,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A variable.",
+   "say": "A variable called score remembers the points. It starts at zero.",
+   "items": [
+    {
+     "id": "v",
+     "emoji": "📦",
+     "label": "score: 0",
+     "x": 50,
+     "y": 52,
+     "size": 3
+    }
+   ]
+  },
+  {
+   "caption": "A bug!",
+   "say": "She runs it. The score stays at zero. There is a bug.",
+   "items": [
+    {
+     "id": "v",
+     "emoji": "📦",
+     "label": "score: 0",
+     "x": 40,
+     "y": 52,
+     "size": 3
+    },
+    {
+     "id": "b",
+     "emoji": "🐛",
+     "x": 75,
+     "y": 35,
+     "size": 2,
+     "anim": "bounce"
+    }
+   ]
+  },
+  {
+   "caption": "Trace it.",
+   "say": "She traces it step by step. She forgot to add one to the score.",
+   "items": [
+    {
+     "id": "t",
+     "emoji": "🔍",
+     "x": 35,
+     "y": 50,
+     "size": 3,
+     "effect": "sparkle"
+    },
+    {
+     "id": "p",
+     "emoji": "➕",
+     "label": "score + 1",
+     "x": 72,
+     "y": 50,
+     "size": 3,
+     "effect": "glow"
+    }
+   ]
+  },
+  {
+   "caption": "Fixed.",
+   "say": "She adds the line and tests again. Now the score goes up.",
+   "items": [
+    {
+     "id": "v",
+     "emoji": "📦",
+     "label": "score: 3",
+     "x": 40,
+     "y": 52,
+     "size": 3,
+     "anim": "bounce"
+    },
+    {
+     "id": "f",
+     "emoji": "🎉",
+     "x": 75,
+     "y": 40,
+     "size": 3,
+     "effect": "hearts"
+    }
+   ]
+  }
+ ]
+}
