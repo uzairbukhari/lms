@@ -138,6 +138,22 @@ describe("the pilot topic lesson", () => {
   });
 });
 
+describe("the parent's preview of a topic lesson", () => {
+  it("lists the four parts and opens each one, saving nothing", async () => {
+    const file = JSON.parse(readFileSync(join(process.cwd(), "../content/topics/maths-class-1-place-value.json"), "utf8"));
+    const r = await json<{ lesson: { lessonId: string } }>(await call("/api/admin/lessons/import", { body: { publish: false, file } }));
+    const p = await json<{ blocks: unknown[]; parts: { id: string; kind: string; title: string }[]; readOnly: boolean }>(await call(`/api/admin/lessons/${r.lesson.lessonId}/preview`));
+    expect(p.parts.map((s) => s.kind)).toEqual(["learn", "try", "play", "use"]);
+    expect(p.readOnly).toBe(true);
+    const part = await json<{ blocks: unknown[]; miniQuiz: unknown[]; sub: { kind: string }; readOnly: boolean }>(await call(`/api/admin/lessons/${r.lesson.lessonId}/parts/${p.parts[0]!.id}`));
+    expect(part.sub.kind).toBe("learn");
+    expect(part.blocks.length).toBeGreaterThan(3);
+    expect(part.miniQuiz.length).toBeGreaterThanOrEqual(3);
+    expect(part.readOnly).toBe(true);
+    expect((await call(`/api/admin/lessons/${r.lesson.lessonId}/parts/no-such-part`)).status).toBe(404);
+  });
+});
+
 describe("retakes get fresh questions", () => {
   it("rejects a variant of a missing or mismatched question", () => {
     const f = topicFile("maths-v", 1);

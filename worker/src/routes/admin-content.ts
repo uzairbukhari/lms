@@ -105,15 +105,26 @@ adminContentRoutes.get("/lessons/:id/preview", async (c) => {
     .bind(c.req.param("id"))
     .first<{ id: string; slug: string; title: string; subject: string; summary: string; minutes: number; unit: string | null; content_json: string; source_json: string }>();
   if (!row) return fail(c, 404, "not_found");
-  const file = JSON.parse(row.source_json) as { lesson: { learning_objectives: string[] }; quiz: { questions: unknown[]; pass_percent?: number } };
+  const file = JSON.parse(row.source_json) as { lesson: { learning_objectives: string[] }; quiz: { questions: unknown[]; pass_percent?: number }; sub_lessons?: { id: string; kind: string; title: string }[] };
   return c.json({
     lesson: { id: row.id, slug: row.slug, title: row.title, subject: row.subject, summary: row.summary, minutes: row.minutes, unit: row.unit, objectives: file.lesson.learning_objectives, semester: null, week: null, phase: "current" },
     blocks: JSON.parse(row.content_json),
     quiz: { questionCount: (file.quiz.questions as { variant_of?: string }[]).filter((q) => !q.variant_of).length, passPercent: file.quiz.pass_percent ?? 70 },
     progress: null,
+    // A topic lesson keeps its slides in its four parts, not in `blocks`: the player lists them so the parent can open each one.
+    parts: file.sub_lessons?.map((s) => ({ id: s.id, kind: s.kind, title: s.title })),
     readOnly: true, // previews never record progress
     preview: true,
   });
+});
+
+/** One part (learn, try, play or use) of a topic lesson, exactly as a child's player receives it, for the parent's preview. */
+adminContentRoutes.get("/lessons/:id/parts/:subId", async (c) => {
+  const row = await c.env.DB.prepare("SELECT title, subject_id AS subject, source_json FROM lessons WHERE id = ?").bind(c.req.param("id")).first<{ title: string; subject: string; source_json: string }>();
+  if (!row) return fail(c, 404, "not_found");
+  const sub = (JSON.parse(row.source_json) as { sub_lessons?: { id: string; kind: string; title: string; blocks: unknown[]; mini_quiz: unknown[] }[] }).sub_lessons?.find((x) => x.id === c.req.param("subId"));
+  if (!sub) return fail(c, 404, "not_found");
+  return c.json({ topicTitle: row.title, subject: row.subject, sub: { id: sub.id, kind: sub.kind, title: sub.title }, blocks: sub.blocks, miniQuiz: sub.mini_quiz, readOnly: true });
 });
 
 adminContentRoutes.patch("/lessons/:id", async (c) => {
