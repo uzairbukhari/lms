@@ -302,6 +302,11 @@ character. Images: `/mnt/project-files/screens/student-home-v3/`; mock in `docs/
 - **B. Subject worlds.** Each subject is a planet on a dotted path with a progress ring; "You are here" on the
   current one; a dock at the bottom with Up next + Go, Today's cards and Brain teaser. More playful, less text.
 
+**How the big card is chosen (decided 12 Nov):** no suggestion engine. The card is "Carry on" for whatever the child
+did last (the topic part she last opened, in any subject). On first login, or when that topic is finished, it reads
+"Pick a subject to start" and points at the list. All subjects in "My subjects" look the same (no highlighted row);
+the child can open any of them. The mock's highlighted Maths row is dropped.
+
 **Chosen 12 Nov: A.** It answers "what do I do now?" in one tap and reads well in every theme.
 
 The fixes above still apply to the subject map. All of this is layout and CSS in `apps/web/src/pages/StudentHome.tsx`, `SubjectPath.tsx` and `index.css`, and can
