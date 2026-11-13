@@ -141,3 +141,45 @@ adminV3Routes.get("/activity", async (c) => {
   ).all();
   return c.json({ activity: results });
 });
+
+// ---- Course builder: ordered lessons with optional section headings ----
+adminV3Routes.get("/courses/:id/builder", async (c) => {
+  const id = c.req.param("id");
+  const course = await c.env.DB.prepare("SELECT id, title, subject_id AS subject, age_min AS ageMin, age_max AS ageMax, status, owner_id AS ownerId FROM courses WHERE id = ?").bind(id).first();
+  if (!course) return fail(c, 404, "not_found");
+  const { results } = await c.env.DB.prepare(
+    `SELECT cl.lesson_id AS lessonId, cl.section, l.title, l.subject_id AS subject, l.status, l.age_min AS ageMin, l.age_max AS ageMax, l.estimated_minutes AS minutes
+       FROM course_lessons cl JOIN lessons l ON l.id = cl.lesson_id WHERE cl.course_id = ? ORDER BY cl.position, l.title`,
+  ).bind(id).all();
+  const used = await c.env.DB.prepare("SELECT cc.class_id AS classId, k.name FROM class_courses cc JOIN classes k ON k.id = cc.class_id WHERE cc.course_id = ?").bind(id).all();
+  return c.json({ course, items: results, classes: used.results });
+});
+
+/** Saves the order and sections. A lesson's old semester and week are kept, so classes still on weekly unlocking carry on working. */
+adminV3Routes.put("/courses/:id/builder", async (c) => {
+  const id = c.req.param("id");
+  const course = await c.env.DB.prepare("SELECT owner_id AS ownerId FROM courses WHERE id = ?").bind(id).first<{ ownerId: string | null }>();
+  if (!course) return fail(c, 404, "not_found");
+  const used = await c.env.DB.prepare("SELECT class_id AS classId FROM class_courses WHERE course_id = ?").bind(id).all<{ classId: string }>();
+  if (!can(c.get("admin").actor, "course.edit", { ownerId: course.ownerId, usedInClasses: used.results.map((r) => r.classId) })) return fail(c, 403, "forbidden");
+  const b = await parseBody(c, z.object({
+    title: z.string().trim().min(1).max(80).optional(),
+    ageMin: z.number().int().min(3).max(18).nullable().optional(),
+    ageMax: z.number().int().min(3).max(18).nullable().optional(),
+    items: z.array(z.object({ lessonId: z.string(), section: z.string().trim().max(60).nullable().optional() })).max(500),
+  }));
+  if (new Set(b.items.map((i) => i.lessonId)).size !== b.items.length) return fail(c, 400, "duplicate_lesson");
+  const old = await c.env.DB.prepare("SELECT lesson_id AS lessonId, semester, week FROM course_lessons WHERE course_id = ?").bind(id).all<{ lessonId: string; semester: number | null; week: number | null }>();
+  const keep = new Map(old.results.map((o) => [o.lessonId, o]));
+  const db = c.env.DB;
+  await db.batch([
+    db.prepare("DELETE FROM course_lessons WHERE course_id = ?").bind(id),
+    ...b.items.map((it, i) =>
+      db.prepare("INSERT INTO course_lessons (course_id, lesson_id, position, semester, week, section) SELECT ?, id, ?, ?, ?, ? FROM lessons WHERE id = ?")
+        .bind(id, i, keep.get(it.lessonId)?.semester ?? null, keep.get(it.lessonId)?.week ?? null, it.section ?? null, it.lessonId),
+    ),
+    db.prepare("UPDATE courses SET title = COALESCE(?, title), age_min = COALESCE(?, age_min), age_max = COALESCE(?, age_max) WHERE id = ?").bind(b.title ?? null, b.ageMin ?? null, b.ageMax ?? null, id),
+  ]);
+  await audit(c, "course.edit", id, { count: b.items.length });
+  return c.json({ ok: true });
+});

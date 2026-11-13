@@ -45,3 +45,21 @@ describe("admin v3 routes", () => {
     expect(act.activity.map((a) => a.action)).toContain("staff.create");
   });
 });
+
+describe("course builder", () => {
+  it("saves order and sections and keeps old weekly placement", async () => {
+    const subj = await env.DB.prepare("SELECT id FROM subjects LIMIT 1").first<{ id: string }>();
+    for (const n of ["x1", "x2"]) await env.DB.prepare("INSERT INTO lessons (id, slug, subject_id, title, age_band, difficulty, content_json, source_json) VALUES (?, ?, ?, ?, '7-8', 1, '[]', '{}')").bind(n, n, subj!.id, n).run();
+    const lessons = { results: [{ id: "x1" }, { id: "x2" }] };
+    await env.DB.prepare("INSERT INTO courses (id, title) VALUES ('cb','Builder')").run();
+    await env.DB.prepare("INSERT INTO course_lessons (course_id, lesson_id, position, semester, week) VALUES ('cb', ?, 0, 1, 2)").bind(lessons.results[0]!.id).run();
+    const [a, b] = lessons.results.map((l) => l.id);
+    const res = await call("/api/admin/courses/cb/builder", "PUT", { items: [{ lessonId: b, section: "Part B" }, { lessonId: a }] });
+    expect(res.status).toBe(200);
+    const got = await j<{ items: { lessonId: string; section: string | null }[] }>(await call("/api/admin/courses/cb/builder"));
+    expect(got.items.map((x) => x.lessonId)).toEqual([b, a]);
+    expect(got.items[0]!.section).toBe("Part B");
+    const kept = await env.DB.prepare("SELECT semester, week FROM course_lessons WHERE course_id='cb' AND lesson_id = ?").bind(a).first();
+    expect(kept).toMatchObject({ semester: 1, week: 2 });
+  });
+});
