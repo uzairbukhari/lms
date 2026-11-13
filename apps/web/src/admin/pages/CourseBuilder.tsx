@@ -30,7 +30,7 @@ export function CourseBuilder() {
 
   const inCourse = useMemo(() => new Set(items.map((i) => i.lessonId)), [items]);
   const results = useMemo(() => (lib.data?.lessons ?? []).filter((l) =>
-    !inCourse.has(l.id) && (!q || l.title.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) &&
+    !inCourse.has(l.id) && l.status !== "archived" && (!q || l.title.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) &&
     (!tag || l.tags.some((t) => t.id === tag)) && (!age || (l.ageMin !== null && l.ageMax !== null && Number(age) >= l.ageMin && Number(age) <= l.ageMax))), [lib.data, inCourse, q, subject, tag, age]);
 
   const change = (next: Item[]) => { setItems(next); setDirty(true); };

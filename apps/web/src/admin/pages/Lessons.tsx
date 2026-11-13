@@ -31,7 +31,7 @@ export function Lessons() {
 
   const rows = useMemo(() => {
     const list = (lessons.data?.lessons ?? []).filter((l) =>
-      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (!status || l.status === status) && (!tag || l.tags.some((t) => t.id === tag)) && (!age || (l.ageMin !== null && l.ageMax !== null && Number(age) >= l.ageMin && Number(age) <= l.ageMax)) &&
+      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (status ? l.status === status : l.status !== "archived") && (!tag || l.tags.some((t) => t.id === tag)) && (!age || (l.ageMin !== null && l.ageMax !== null && Number(age) >= l.ageMin && Number(age) <= l.ageMax)) &&
       (!cls && !semester && !week ? true : l.slots.some((s) => (!cls || s.classIds.includes(cls)) && (!semester || String(s.semester) === semester) && (!week || String(s.week) === week))));
     const val = (l: LessonRow) => (sort.key === "title" ? l.title : sort.key === "subject" ? `${SUBJECT_NAMES[l.subject] ?? l.subject}${l.title}` : l.updatedAt);
     return list.sort((a, b) => compare(val(a), val(b)) * sort.dir);
@@ -62,7 +62,7 @@ export function Lessons() {
             <option value="">All subjects</option>{SUBJECTS.map((s) => <option key={s} value={s}>{SUBJECT_NAMES[s]}</option>)}
           </select>
           <select className="a-select" aria-label="Status" value={status} onChange={(e) => setStatus(e.target.value)}>
-            <option value="">Any status</option><option value="published">Published</option><option value="draft">Draft</option><option value="archived">Archived</option>
+            <option value="">Not archived</option><option value="published">Published</option><option value="draft">Draft</option><option value="archived">Archived only</option>
           </select>
           <select className="a-select" aria-label="Tag" value={tag} onChange={(e) => setTag(e.target.value)}>
             <option value="">Any tag</option>{(tagList.data?.tags ?? []).map((t) => <option key={t.id} value={t.id}>{t.label}</option>)}

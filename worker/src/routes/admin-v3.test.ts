@@ -88,3 +88,13 @@ describe("delete a class", () => {
     expect((await call("/api/admin/classes/del1", "DELETE")).status).toBe(404);
   });
 });
+
+describe("archived classes", () => {
+  it("are left out of the class list unless asked for", async () => {
+    await env.DB.prepare("INSERT INTO classes (id, name, is_active) VALUES ('arc1','Old club',0)").run();
+    const plain = await j<{ classes: { id: string }[] }>(await call("/api/admin/classes"));
+    expect(plain.classes.map((c) => c.id)).not.toContain("arc1");
+    const all = await j<{ classes: { id: string }[] }>(await call("/api/admin/classes?archived=1"));
+    expect(all.classes.map((c) => c.id)).toContain("arc1");
+  });
+});

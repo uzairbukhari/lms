@@ -57,12 +57,13 @@ adminRoutes.route("/", adminV3Routes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 
+/** Active classes only, so every picker hides archived ones. `?archived=1` returns all, for the Classes page filter. */
 adminRoutes.get("/classes", async (c) => {
   const { results } = await c.env.DB
     .prepare(
       `SELECT c.id, c.name, c.description, c.is_active AS isActive,
               (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS studentCount
-         FROM classes c ORDER BY c.name`,
+         FROM classes c ${c.req.query("archived") === "1" ? "" : "WHERE c.is_active = 1"} ORDER BY c.name`,
     )
     .all();
   return c.json({ classes: results });
