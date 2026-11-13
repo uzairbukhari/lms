@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
+import { archiveClassStudents } from "../lib/classArchive";
 import { addDays, generateTerms, isMonday, parseDate } from "../lib/terms";
 
 /** Class detail, calendar and course assignments. Mounted under /api/admin, behind requireAdmin. */
@@ -22,7 +23,8 @@ adminClassRoutes.get("/classes/:id", async (c) => {
     db.prepare("SELECT number, name, start_date AS startDate, end_date AS endDate, teaching_weeks AS teachingWeeks, exam_week AS examWeek FROM terms WHERE class_id = ? ORDER BY number").bind(id).all(),
     db.prepare("SELECT a.id, a.course_id AS courseId, co.title AS courseTitle, a.due_date AS dueDate FROM course_assignments a JOIN courses co ON co.id = a.course_id WHERE a.class_id = ? ORDER BY co.title").bind(id).all(),
   ]);
-  return c.json({ class: cls, members: members.results, terms: terms.results, assignments: assignments.results });
+  const archived = (await db.prepare("SELECT user_id AS userId, record_user_id AS recordId, display_name AS displayName, archived_at AS archivedAt FROM class_archive_members WHERE class_id = ? ORDER BY display_name COLLATE NOCASE").bind(id).all()).results;
+  return c.json({ class: cls, members: members.results, archived, terms: terms.results, assignments: assignments.results });
 });
 
 adminClassRoutes.patch("/classes/:id", async (c) => {
@@ -54,7 +56,10 @@ adminClassRoutes.patch("/classes/:id", async (c) => {
       id,
     )
     .run();
-  return c.json({ ok: true });
+  // Archiving a class gives its students a fresh start; their record stays tied to the class.
+  let archivedStudents = 0;
+  if (row.is_active === 1 && body.isActive === false) archivedStudents = await archiveClassStudents(c.env.DB, id, new Date().toISOString().slice(0, 10));
+  return c.json({ ok: true, archivedStudents });
 });
 
 adminClassRoutes.put("/classes/:id/members", async (c) => {

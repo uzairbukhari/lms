@@ -4,15 +4,15 @@ import type { ClassReport } from "../reportParts";
 import { day } from "../reportParts";
 import { Card, compare, EmptyState, ErrorNote, PageHeader, pct, Skeleton, SortTh, useLoad, useSort } from "../ui";
 
-type ClassRow = { id: string; name: string };
+type ClassRow = { id: string; name: string; isActive?: number };
 type Row = ClassReport["students"][number];
 
 export function Reports() {
-  const classes = useLoad<{ classes: ClassRow[] }>("/api/admin/classes");
+  const classes = useLoad<{ classes: ClassRow[] }>("/api/admin/classes?archived=1");
   const [params, setParams] = useSearchParams();
   const [practice, setPractice] = useState(false);
   const list = classes.data?.classes ?? [];
-  const classId = params.get("class") ?? list[0]?.id ?? "";
+  const classId = params.get("class") ?? list.find((c) => c.isActive !== 0)?.id ?? list[0]?.id ?? "";
   const report = useLoad<ClassReport>(classId ? `/api/admin/reports/classes/${classId}${practice ? "?includePractice=1" : ""}` : null);
   const sort = useSort<"name" | "lessons" | "graded" | "avg" | "last">("name");
 
@@ -28,7 +28,8 @@ export function Reports() {
       <Card flush>
         <div className="a-toolbar">
           <select className="a-select" aria-label="Class" value={classId} onChange={(e) => setParams({ class: e.target.value })}>
-            {list.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+            <optgroup label="Active classes">{list.filter((c) => c.isActive !== 0).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}</optgroup>
+            {list.some((c) => c.isActive === 0) && <optgroup label="Archived classes">{list.filter((c) => c.isActive === 0).map((c) => <option key={c.id} value={c.id}>{c.name} (archived)</option>)}</optgroup>}
           </select>
           <label className="a-check"><input type="checkbox" checked={practice} onChange={(e) => setPractice(e.target.checked)} /> Include practice attempts in the numbers</label>
         </div>
