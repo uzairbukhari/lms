@@ -73,10 +73,10 @@ export function StudentDetail() {
         <Card flush>
           {r.lessons.length === 0 ? <EmptyState title="No quizzes yet" /> : (
             <div className="a-table-wrap"><table className="a-table">
-              <thead><tr><th>Lesson</th><th>Subject</th><th>Sem.</th><th className="num">First try (graded)</th><th className="num">Best retake (practice)</th><th>Attempts</th></tr></thead>
+              <thead><tr><th>Lesson</th><th>Subject</th><th>Course</th><th className="num">First try (graded)</th><th className="num">Best retake (practice)</th><th>Attempts</th></tr></thead>
               <tbody>{r.lessons.map((l) => (
                 <tr key={l.lessonId}>
-                  <td className="a-cell-title">{l.title}</td><td>{subjectName(l.subject)}</td><td>{l.semester ?? "–"}</td>
+                  <td className="a-cell-title">{l.title}</td><td>{subjectName(l.subject)}</td><td>{l.courses.join(", ") || "–"}</td>
                   <td className="num">{pct(l.bestGraded)}</td><td className="num">{pct(l.bestPractice)}</td>
                   <td><div className="a-row" style={{ gap: 4 }}>{l.attempts.map((a) => (
                     <Button key={a.id} size="sm" onClick={() => setAttempt(a.id)} title={day(a.submittedAt)}>#{a.attemptNumber}{a.mode === "practice" ? " practice" : ""} · {pct(a.percent)}</Button>
@@ -90,12 +90,17 @@ export function StudentDetail() {
 
       {tab === "card" && (
         <Card flush>
-          {r.reportCard.length === 0 ? <EmptyState title="Nothing to report yet" /> : (
+          {r.byCourse.length === 0 && r.classExams.length === 0 ? <EmptyState title="Nothing to report yet" /> : (
             <div className="a-table-wrap"><table className="a-table">
-              <thead><tr><th>Semester</th><th>Subject</th><th className="num">Lessons quizzed</th><th className="num">Average of best scores</th><th className="num">Exam (best)</th></tr></thead>
-              <tbody>{r.reportCard.map((c) => (
-                <tr key={`${c.subject}${c.semester}`}><td>Semester {c.semester}</td><td>{subjectName(c.subject)}</td><td className="num">{c.lessons}</td><td className="num">{pct(c.lessonAverage)}</td><td className="num">{pct(c.examBest)}</td></tr>
-              ))}</tbody>
+              <thead><tr><th>Course</th><th>Subject</th><th className="num">Lessons quizzed</th><th className="num">Average of best scores</th><th className="num">Course exam (best)</th></tr></thead>
+              <tbody>
+                {r.byCourse.map((c) => (
+                  <tr key={c.courseId}><td className="a-cell-title">{c.title}</td><td>{subjectName(c.subject)}</td><td className="num">{c.lessonsQuizzed} of {c.lessonsTotal}</td><td className="num">{pct(c.lessonAverage)}</td><td className="num">{pct(c.examBest)}</td></tr>
+                ))}
+                {r.classExams.map((x) => (
+                  <tr key={x.title}><td className="a-cell-title">{x.title}</td><td>Class exam</td><td className="num">–</td><td className="num">–</td><td className="num">{pct(x.best)}</td></tr>
+                ))}
+              </tbody>
             </table></div>
           )}
         </Card>

@@ -83,27 +83,38 @@ export function ClassDetail() {
 
       {tab === "exams" && <ClassExams classId={id} courses={classCourses.data?.courses ?? []} />}
 
-      {tab === "calendar" && <Calendar detail={d} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
+      {tab === "calendar" && <Calendar detail={d} v3={!!d.class.structureV3} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
 
       {tab === "access" && (
         <>
           <Card title="What children can see">
-            <Field label="Lesson release" help="Future weeks stay hidden unless you choose the open library.">
+            <Field label="Lesson release" help={d.class.structureV3 ? "Locked lessons stay hidden unless you choose the open library." : "Future weeks stay hidden unless you choose the open library."}>
               <select className="a-select" style={{ maxWidth: 380 }} value={d.class.visibilityMode} onChange={(e) => void act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body: { visibilityMode: e.target.value } }), "Saved.")}>
-                <option value="released">Week by week (this week and earlier weeks)</option>
+                <option value="released">{d.class.structureV3 ? "Only lessons the course rules have opened" : "Week by week (this week and earlier weeks)"}</option>
                 <option value="all_published">Everything published (open library)</option>
               </select>
             </Field>
           </Card>
-          <Card title="How lessons open">
-            <Field label="Unlock mode" help="Topic path: each topic opens only when the child passes the big quiz of the one before (70%). Weeks are ignored for this class's courses.">
-              <select className="a-select" style={{ maxWidth: 380 }} value={d.class.unlockMode ?? "weekly"} onChange={(e) => void act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body: { unlockMode: e.target.value } }), "Saved.")}>
-                <option value="weekly">By week (the school calendar)</option>
-                <option value="path">Topic path (open when the last topic is passed)</option>
-              </select>
-            </Field>
-          </Card>
-          {d.class.unlockMode === "path" ? <OpenTopic classId={id} /> : <OpenEarly classId={id} courses={d.assignments} unlocks={classUnlocks} onChange={act} />}
+          {d.class.structureV3 ? (
+            <>
+              <Card title="How lessons open">
+                <p className="a-muted" style={{ margin: 0 }}>Each course in this class has its own rule: <strong>mastery path</strong> (the next topic opens when the big quiz is passed), <strong>open</strong> (everything open) or <strong>drip</strong> (one more lesson every few days). Change it on the <button type="button" className="a-link" onClick={() => setTab("courses")}>Courses tab</button>.</p>
+              </Card>
+              <OpenTopic classId={id} />
+            </>
+          ) : (
+            <>
+              <Card title="How lessons open">
+                <Field label="Unlock mode" help="Mastery path: each topic opens only when the child passes the big quiz of the one before (70%). Weeks are ignored for this class's courses.">
+                  <select className="a-select" style={{ maxWidth: 380 }} value={d.class.unlockMode ?? "weekly"} onChange={(e) => void act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body: { unlockMode: e.target.value } }), "Saved.")}>
+                    <option value="weekly">By week (the school calendar)</option>
+                    <option value="path">Mastery path (open when the last topic is passed)</option>
+                  </select>
+                </Field>
+              </Card>
+              {d.class.unlockMode === "path" ? <OpenTopic classId={id} /> : <OpenEarly classId={id} courses={d.assignments} unlocks={classUnlocks} onChange={act} />}
+            </>
+          )}
         </>
       )}
 
@@ -114,44 +125,86 @@ export function ClassDetail() {
   );
 }
 
-function Calendar({ detail, onSave }: { detail: Detail; onSave: (path: string, body: unknown, method: string) => Promise<void> }) {
+function Calendar({ detail, v3, onSave }: { detail: Detail; v3: boolean; onSave: (path: string, body: unknown, method: string) => Promise<void> }) {
+  const base = `/api/admin/classes/${detail.class.id}/terms`;
+  const last = [...detail.terms].sort((x, y) => y.number - x.number)[0];
+  const nextStart = last ? nextMonday(last.endDate) : "";
   const [start, setStart] = useState("");
-  const [gap, setGap] = useState(0);
+  const [weeks, setWeeks] = useState(12);
+  const [editing, setEditing] = useState<number | null>(null);
+  const [eStart, setEStart] = useState("");
+  const [eWeeks, setEWeeks] = useState(12);
+  const [all, setAll] = useState({ start: "", gap: 0 });
   const now = today();
-  const generate = (e: FormEvent) => { e.preventDefault(); void onSave(`/api/admin/classes/${detail.class.id}/terms/generate`, { startDate: start, gapWeeks: gap }, "POST"); };
+  const full = detail.terms.length >= 4;
+  const add = (e: FormEvent) => { e.preventDefault(); void onSave(base, { startDate: start || nextStart, teachingWeeks: weeks }, "POST").then(() => setStart("")); };
+  const save = (e: FormEvent, n: number) => { e.preventDefault(); void onSave(`${base}/${n}`, { startDate: eStart, teachingWeeks: eWeeks }, "PATCH").then(() => setEditing(null)); };
   return (
     <>
       <Card title="School year">
         {detail.terms.length === 0 ? (
-          <div className="a-alert blue">No dates yet. Without them, no weekly lessons are released to this class.</div>
+          <div className="a-alert blue">{v3 ? "No semesters yet. Add one below when you want exam weeks or weekly release. Courses on a mastery path or open rule do not need dates." : "No dates yet. Without them, no weekly lessons are released to this class."}</div>
         ) : (
           <div className="a-timeline">
             {detail.terms.map((t) => {
-              const weeks = t.teachingWeeks + 1;
+              const weeksTotal = t.teachingWeeks + 1;
               const here = now >= t.startDate && now <= t.endDate ? Math.floor((dayMs(now) - dayMs(t.startDate)) / (7 * 86400000)) + 1 : 0;
               return (
                 <div key={t.number} className={`a-sem ${here ? "now" : ""}`}>
                   <div className="a-row" style={{ justifyContent: "space-between" }}><strong>{t.name}</strong>{here > 0 && <Badge tone="blue">{here >= t.examWeek ? "Exam week" : `Week ${here}`}</Badge>}</div>
-                  <div className="a-faint">{t.startDate} → {t.endDate}</div>
-                  <div className="a-weekbar" aria-label={`${t.teachingWeeks} teaching weeks and an exam week`}>
-                    {Array.from({ length: weeks }, (_, i) => <i key={i} className={`${i + 1 === weeks ? "exam" : ""} ${i + 1 === here ? "here" : ""}`} />)}
-                  </div>
-                  <div className="a-faint">{t.teachingWeeks} teaching weeks + exam week</div>
+                  {editing === t.number ? (
+                    <form className="a-stack" onSubmit={(e) => save(e, t.number)}>
+                      <Field label="Starts (a Monday)"><input className="a-input" type="date" value={eStart} onChange={(e) => setEStart(e.target.value)} required /></Field>
+                      <Field label="Teaching weeks"><input className="a-input" type="number" min={1} max={12} value={eWeeks} onChange={(e) => setEWeeks(Number(e.target.value))} /></Field>
+                      <div className="a-row"><Button variant="primary" size="sm" type="submit">Save</Button><Button size="sm" type="button" onClick={() => setEditing(null)}>Cancel</Button></div>
+                    </form>
+                  ) : (
+                    <>
+                      <div className="a-faint">{t.startDate} → {t.endDate}</div>
+                      <div className="a-weekbar" aria-label={`${t.teachingWeeks} teaching weeks and an exam week`}>
+                        {Array.from({ length: weeksTotal }, (_, i) => <i key={i} className={`${i + 1 === weeksTotal ? "exam" : ""} ${i + 1 === here ? "here" : ""}`} />)}
+                      </div>
+                      <div className="a-faint">{t.teachingWeeks} teaching weeks + exam week</div>
+                      <div className="a-row">
+                        <Button size="sm" onClick={() => { setEditing(t.number); setEStart(t.startDate); setEWeeks(t.teachingWeeks); }}>Edit</Button>
+                        <Button size="sm" onClick={() => void onSave(`${base}/${t.number}`, undefined, "DELETE")}>Delete</Button>
+                      </div>
+                    </>
+                  )}
                 </div>
               );
             })}
           </div>
         )}
       </Card>
-      <Card title={detail.terms.length ? "Reset the calendar" : "Set up the calendar"}>
-        <form className="a-row" style={{ alignItems: "flex-end" }} onSubmit={generate}>
-          <Field label="Semester 1 starts (a Monday)"><input className="a-input" type="date" value={start} onChange={(e) => setStart(e.target.value)} required /></Field>
-          <Field label="Holiday weeks between semesters"><input className="a-input" style={{ width: 90 }} type="number" min={0} max={12} value={gap} onChange={(e) => setGap(Number(e.target.value))} /></Field>
-          <Button variant="primary" type="submit">{detail.terms.length ? "Regenerate 4 semesters" : "Set up 4 semesters"}</Button>
-        </form>
-      </Card>
+      {!full && (
+        <Card title="Add a semester">
+          <form className="a-row" style={{ alignItems: "flex-end" }} onSubmit={add}>
+            <Field label="Starts (a Monday)" help={nextStart ? "Leave as suggested to follow on from the last semester." : undefined}><input className="a-input" type="date" value={start || nextStart} onChange={(e) => setStart(e.target.value)} required /></Field>
+            <Field label="Teaching weeks"><input className="a-input" style={{ width: 90 }} type="number" min={1} max={12} value={weeks} onChange={(e) => setWeeks(Number(e.target.value))} /></Field>
+            <Button variant="primary" type="submit">Add Semester {[1, 2, 3, 4].find((n) => !detail.terms.some((t) => t.number === n))}</Button>
+          </form>
+        </Card>
+      )}
+      {detail.terms.length === 0 && (
+        <details className="a-card" style={{ padding: 12 }}>
+          <summary>Set up all four semesters at once</summary>
+          <form className="a-row" style={{ alignItems: "flex-end", marginTop: 12 }} onSubmit={(e) => { e.preventDefault(); void onSave(`${base}/generate`, { startDate: all.start, gapWeeks: all.gap }, "POST"); }}>
+            <Field label="Semester 1 starts (a Monday)"><input className="a-input" type="date" value={all.start} onChange={(e) => setAll({ ...all, start: e.target.value })} required /></Field>
+            <Field label="Holiday weeks between semesters"><input className="a-input" style={{ width: 90 }} type="number" min={0} max={12} value={all.gap} onChange={(e) => setAll({ ...all, gap: Number(e.target.value) })} /></Field>
+            <Button type="submit">Set up 4 semesters</Button>
+          </form>
+        </details>
+      )}
     </>
   );
+}
+
+function nextMonday(endIso: string): string {
+  const d = new Date(`${endIso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + 1);
+  while (d.getUTCDay() !== 1) d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
 }
 
 type PathUnlock = { id: string; lessonId: string; lessonTitle: string; classId: string | null };
