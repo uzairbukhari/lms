@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import type { HomeCharacter as CharacterId } from "@lms/schema";
 import { isCalm } from "../anim/cues";
 
 /**
@@ -7,12 +8,17 @@ import { isCalm } from "../anim/cues";
  * background is see-through on every browser, including iPad Safari, which cannot play transparent WebM.
  * Calm mode and "reduce motion" show the still picture instead. Every child uses the same clips for now.
  */
-const CLIPS = ["/home-clips/wave.mp4", "/home-clips/book.mp4", "/home-clips/magnify.mp4"];
+const CLIP_SETS: Record<CharacterId, string[]> = {
+  zainab: ["/home-clips/wave.mp4", "/home-clips/book.mp4", "/home-clips/magnify.mp4"],
+  fatima: ["/home-clips/fatima-wave.mp4", "/home-clips/fatima-book.mp4", "/home-clips/fatima-magnify.mp4", "/home-clips/fatima-cheer.mp4", "/home-clips/fatima-think.mp4"],
+};
 const W = 540;
 const H = 724;
 const PAUSE_MS = 2500;
 
-export function HomeCharacter({ still = "/kids/zainab-stand.webp" }: { still?: string }) {
+export function HomeCharacter({ character = "zainab" }: { character?: CharacterId }) {
+  const CLIPS = CLIP_SETS[character] ?? CLIP_SETS.zainab;
+  const still = `/kids/${character}-stand.webp`;
   const canvas = useRef<HTMLCanvasElement>(null);
   const video = useRef<HTMLVideoElement>(null);
   const [live, setLive] = useState(false);
@@ -57,7 +63,7 @@ export function HomeCharacter({ still = "/kids/zainab-stand.webp" }: { still?: s
       document.removeEventListener("visibilitychange", onVisible);
       v.pause(); v.removeAttribute("src"); v.load();
     };
-  }, []);
+  }, [character]);
 
   return (
     <div className="hv3-kid" aria-hidden="true">

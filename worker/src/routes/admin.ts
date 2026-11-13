@@ -11,7 +11,7 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { hashPassword } from "../lib/password";
-import { getUserById, getUserByUsername, isReservedUsername, uniqueUsername } from "../lib/users";
+import { getUserById, getUserByUsername, isReservedUsername, toHomeCharacter, uniqueUsername } from "../lib/users";
 import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
 import { addDays, currentSlot, type TermRow } from "../lib/terms";
@@ -87,6 +87,7 @@ type StudentRow = {
   username: string;
   avatar: string | null;
   theme: string;
+  home_character: string | null;
   is_active: number;
   created_at: string;
   is_test: number;
@@ -105,7 +106,7 @@ function previewOf(r: StudentRow, classIds: string[], terms: (TermRow & { class_
 async function listStudents(db: D1Database, onlyId?: string): Promise<StudentSummary[]> {
   const where = onlyId ? "AND id = ?" : "";
   const stmt = db.prepare(
-    `SELECT id, display_name, username, avatar, theme, is_active, created_at, is_test, preview_date
+    `SELECT id, display_name, username, avatar, theme, home_character, is_active, created_at, is_test, preview_date
        FROM users WHERE role = 'student' ${where} ORDER BY display_name COLLATE NOCASE`,
   );
   const { results } = await (onlyId ? stmt.bind(onlyId) : stmt).all<StudentRow>();
@@ -121,6 +122,7 @@ async function listStudents(db: D1Database, onlyId?: string): Promise<StudentSum
     username: r.username,
     avatar: (r.avatar as StudentSummary["avatar"]) ?? null,
     theme: r.theme as StudentSummary["theme"],
+    homeCharacter: toHomeCharacter(r.home_character),
     isActive: r.is_active === 1,
     createdAt: r.created_at,
     classes: memberships.results.filter((m) => m.user_id === r.id).map((m) => ({ id: m.id, name: m.name })),
@@ -241,12 +243,13 @@ adminRoutes.patch("/students/:id", async (c) => {
   const body = await parseBody(c, updateStudentSchema);
   await c.env.DB
     .prepare(
-      `UPDATE users SET display_name = ?, avatar = ?, theme = ?, is_active = ? WHERE id = ?`,
+      `UPDATE users SET display_name = ?, avatar = ?, theme = ?, home_character = ?, is_active = ? WHERE id = ?`,
     )
     .bind(
       body.displayName ?? row.display_name,
       body.avatar === undefined ? row.avatar : body.avatar,
       body.theme ?? row.theme,
+      body.homeCharacter ?? row.home_character,
       body.isActive === undefined ? row.is_active : body.isActive ? 1 : 0,
       id,
     )

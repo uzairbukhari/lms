@@ -1,5 +1,5 @@
 import type { SessionUser } from "@lms/schema";
-import { isThemeId, DEFAULT_THEME } from "@lms/schema";
+import { isThemeId, DEFAULT_THEME, HOME_CHARACTERS, type HomeCharacter } from "@lms/schema";
 import type { AvatarId } from "@lms/schema";
 import { usernameBase } from "./words";
 
@@ -12,6 +12,7 @@ export type UserRow = {
   admin_email: string | null;
   avatar: string | null;
   theme: string;
+  home_character: string | null;
   is_active: number;
   must_change_password: number;
   is_test: number;
@@ -21,6 +22,8 @@ export type UserRow = {
 
 const RESERVED = new Set(["admin", "administrator", "parent", "teacher", "root", "support"]);
 
+export const toHomeCharacter = (v: string | null): HomeCharacter => ((HOME_CHARACTERS as readonly string[]).includes(v ?? "") ? (v as HomeCharacter) : HOME_CHARACTERS[0]);
+
 export function toSessionUser(row: UserRow): SessionUser {
   return {
     id: row.id,
@@ -29,6 +32,7 @@ export function toSessionUser(row: UserRow): SessionUser {
     displayName: row.display_name,
     avatar: (row.avatar as AvatarId | null) ?? null,
     theme: isThemeId(row.theme) ? row.theme : DEFAULT_THEME,
+    homeCharacter: toHomeCharacter(row.home_character),
     mustChangePassword: row.must_change_password === 1,
     ...(row.is_test === 1 ? { isTest: true } : {}),
   };
