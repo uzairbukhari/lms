@@ -61,7 +61,7 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
 /** What a teacher may call for now: read the library and see who they are. Class actions are added with their own permission checks. */
 export function teacherMayCall(method: string, path: string): boolean {
   if (method.toUpperCase() !== "GET") return false;
-  return /^\/api\/admin\/(me|lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets(\/file\/[^/]+)?)$/.test(path);
+  return /^\/api\/admin\/(me|tags|classes\/[^/]+\/courses|lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets(\/file\/[^/]+)?)$/.test(path);
 }
 
 /** What a service token may do: check, import and read lessons and courses, and upload images. Nothing about children, classes, results or settings. */
