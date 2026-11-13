@@ -309,6 +309,8 @@ adminV3Routes.delete("/classes/:id", async (c) => {
       return fail(c, 409, "has_attempts", "A child has already sat one of this class's exams, so its results must be kept. Archive the class instead.");
     }
   }
+  const kept = (await db.prepare("SELECT COUNT(*) AS n FROM class_archive_members WHERE class_id = ?").bind(id).first<{ n: number }>())?.n ?? 0;
+  if (kept > 0) return fail(c, 409, "has_records", `This class holds the saved records of ${kept} student${kept === 1 ? "" : "s"}. Deleting it would lose them, so keep it archived.`);
   await db.batch([
     ...exams.flatMap((e) => [db.prepare("DELETE FROM questions WHERE quiz_id = ?").bind(e), db.prepare("DELETE FROM quizzes WHERE id = ?").bind(e)]),
     db.prepare("UPDATE users SET class_id = NULL WHERE class_id = ?").bind(id),

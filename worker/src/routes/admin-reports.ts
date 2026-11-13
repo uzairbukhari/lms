@@ -141,7 +141,12 @@ async function studentReport(db: D1Database, userId: string, includePractice: bo
 
 adminReportRoutes.get("/reports/students/:id", async (c) => {
   const report = await studentReport(c.env.DB, c.req.param("id"), c.req.query("includePractice") === "1");
-  return report ? c.json(report) : fail(c, 404, "not_found");
+  if (!report) return fail(c, 404, "not_found");
+  const id = c.req.param("id");
+  // A saved record from an archived class says so; a current student lists the classes they have been through.
+  const rec = await c.env.DB.prepare("SELECT u.archive_of AS ofId, u.archived_at AS archivedAt, c.id AS classId, c.name AS className FROM users u JOIN classes c ON c.id = u.archive_class_id WHERE u.id = ? AND u.archive_of IS NOT NULL").bind(id).first<{ ofId: string; archivedAt: string; classId: string; className: string }>();
+  const previous = (await c.env.DB.prepare("SELECT m.record_user_id AS recordId, m.class_id AS classId, c.name AS className, m.archived_at AS archivedAt FROM class_archive_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? ORDER BY m.archived_at DESC").bind(id).all()).results;
+  return c.json({ ...report, archive: rec ?? null, previousClasses: previous });
 });
 
 /** Everything about one attempt, question by question, so the parent can see exactly what was answered. */
@@ -168,20 +173,22 @@ adminReportRoutes.get("/reports/classes/:id", async (c) => {
   const cls = await c.env.DB.prepare("SELECT id, name FROM classes WHERE id = ?").bind(id).first<{ id: string; name: string }>();
   if (!cls) return fail(c, 404, "not_found");
   const includePractice = c.req.query("includePractice") === "1";
-  const { results: members } = await c.env.DB.prepare("SELECT u.id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0 ORDER BY u.display_name COLLATE NOCASE").bind(id).all<{ id: string }>();
+  // An archived class is read from the records saved when it was archived.
+  const { results: members } = await c.env.DB.prepare("SELECT u.id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0 UNION SELECT record_user_id FROM class_archive_members WHERE class_id = ? ORDER BY 1").bind(id, id).all<{ id: string }>();
   const students = [];
   for (const m of members) {
     const r = await studentReport(c.env.DB, m.id, includePractice);
     if (r) students.push({ id: r.student.id, displayName: r.student.displayName, ...r.totals, weakest: r.weakestSkills[0]?.skill ?? null });
   }
+  students.sort((a, b) => a.displayName.localeCompare(b.displayName));
   const { results: hardest } = await c.env.DB
     .prepare(
       `SELECT q.id, q.prompt, l.title AS lesson, SUM(aa.is_correct) AS correct, COUNT(*) AS total
          FROM attempt_answers aa JOIN quiz_attempts a ON a.id = aa.attempt_id JOIN questions q ON q.id = aa.question_id JOIN quizzes z ON z.id = q.quiz_id LEFT JOIN lessons l ON l.id = z.lesson_id
-        WHERE a.user_id IN (SELECT m.user_id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0) AND a.status = 'submitted' AND a.mode = 'graded' AND z.kind = 'lesson'
+        WHERE a.user_id IN (SELECT m.user_id FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? AND u.is_test = 0 UNION SELECT record_user_id FROM class_archive_members WHERE class_id = ?) AND a.status = 'submitted' AND a.mode = 'graded' AND z.kind = 'lesson'
         GROUP BY q.id HAVING COUNT(*) >= 1 ORDER BY (1.0 * SUM(aa.is_correct) / COUNT(*)) ASC LIMIT 5`,
     )
-    .bind(id)
+    .bind(id, id)
     .all();
   return c.json({ class: cls, includePractice, students, hardestQuestions: hardest });
 });

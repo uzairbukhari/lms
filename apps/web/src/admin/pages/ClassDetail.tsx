@@ -9,6 +9,7 @@ import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton
 type Detail = {
   class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path"; structureV3?: number };
   members: { id: string; displayName: string; username: string }[];
+  archived?: { userId: string; recordId: string; displayName: string; archivedAt: string }[];
   terms: { number: number; name: string; startDate: string; endDate: string; teachingWeeks: number; examWeek: number }[];
   assignments: { id: string; courseId: string; courseTitle: string }[];
 };
@@ -56,6 +57,21 @@ export function ClassDetail() {
         { id: "members", label: `Members (${d.members.length})` }, { id: "courses", label: `Courses (${d.assignments.length})` },
         { id: "exams", label: "Exams" }, { id: "calendar", label: "Calendar" }, { id: "access", label: "Access" }, { id: "settings", label: "Settings" },
       ]} />
+
+      {tab === "members" && !d.class.isActive && (d.archived?.length ?? 0) > 0 && (
+        <Card flush title={`Saved records (${d.archived!.length})`} actions={<span className="a-faint">Progress, scores and exams as they were when the class was archived</span>}>
+          <div className="a-table-wrap"><table className="a-table">
+            <thead><tr><th>Student</th><th>Archived</th><th /></tr></thead>
+            <tbody>{d.archived!.map((a) => (
+              <tr key={a.recordId}>
+                <td><Link to={`/admin/students/${a.recordId}`} className="a-cell-title">{a.displayName}</Link></td>
+                <td className="a-muted">{a.archivedAt.slice(0, 10)}</td>
+                <td className="actions"><Link className="a-btn a-btn-sm" to={`/admin/students/${a.recordId}`}>View record</Link>{" "}<Link className="a-btn a-btn-sm" to={`/admin/students/${a.recordId}/report-card`}>Report card</Link></td>
+              </tr>
+            ))}</tbody>
+          </table></div>
+        </Card>
+      )}
 
       {tab === "members" && (
         <Card flush title="Members" actions={available.length > 0 && (
@@ -278,9 +294,9 @@ function Settings({ detail, onSave, onDelete, confirm }: { detail: Detail; onDel
         </form>
       </Card>
       <Card title={active ? "Archive this class" : "Restore this class"}>
-        <p className="a-muted">{active ? "Archived classes stop releasing lessons to their students. Scores are kept." : "Restoring starts releasing lessons to this class again."}</p>
+        <p className="a-muted">{active ? "Archiving gives every student in this class a fresh start so you can assign them to a new class. Their scores, attempts and exams stay saved with this class, and you can review them under Classes, Archived classes." : "Restoring brings the class back. Students are not moved back into it: their saved records stay with the archive."}</p>
         <div><Button variant={active ? "danger" : undefined} onClick={() => void (async () => {
-          if (!active || await confirm({ title: "Archive this class?", message: "Its students will stop seeing lessons from it until you restore it. Nothing is deleted.", confirmLabel: "Archive", danger: true })) await onSave({ isActive: !active }, active ? "Class archived." : "Class restored.");
+          if (!active || await confirm({ title: "Archive this class?", message: `${detail.members.length} student${detail.members.length === 1 ? "" : "s"} will leave this class with a fresh start. Their progress is saved here for you to review. Points, stickers and shop items stay with the child. Nothing is deleted.`, confirmLabel: "Archive and start fresh", danger: true })) await onSave({ isActive: !active }, active ? "Class archived." : "Class restored.");
         })()}>{active ? "Archive class" : "Restore class"}</Button></div>
       </Card>
       <Card title="Delete this class">

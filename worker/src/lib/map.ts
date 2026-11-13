@@ -96,6 +96,8 @@ async function allTotals(db: D1Database, userId: string, vis: Visibility, slots:
   // A few extra points for finishing the day's flashcards and the Boost round.
   const cards = await db.prepare("SELECT COALESCE(SUM(points), 0) AS n FROM card_days WHERE user_id = ?").bind(userId).first<{ n: number }>();
   total += cards?.n ?? 0;
+  // Points carried over when a class of the child was archived.
+  total += (await db.prepare("SELECT carried_points AS n FROM users WHERE id = ?").bind(userId).first<{ n: number }>())?.n ?? 0;
   // 50 bonus points once for each course's grand quiz the child has passed.
   const grand = await db
     .prepare("SELECT COUNT(DISTINCT scope_key) AS n FROM quiz_attempts WHERE user_id = ? AND status = 'submitted' AND passed = 1 AND scope_key LIKE 'grand:%'")

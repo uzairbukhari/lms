@@ -11,6 +11,7 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { hashPassword } from "../lib/password";
+import { deleteStudentEverything } from "../lib/classArchive";
 import { getUserById, getUserByUsername, isReservedUsername, toHomeCharacter, uniqueUsername } from "../lib/users";
 import { listBackups, runBackup } from "../lib/backup";
 import { generatePassword, randomInt } from "../lib/words";
@@ -107,7 +108,7 @@ async function listStudents(db: D1Database, onlyId?: string): Promise<StudentSum
   const where = onlyId ? "AND id = ?" : "";
   const stmt = db.prepare(
     `SELECT id, display_name, username, avatar, theme, home_character, is_active, created_at, is_test, preview_date
-       FROM users WHERE role = 'student' ${where} ORDER BY display_name COLLATE NOCASE`,
+       FROM users WHERE role = 'student' AND archive_of IS NULL ${where} ORDER BY display_name COLLATE NOCASE`,
   );
   const { results } = await (onlyId ? stmt.bind(onlyId) : stmt).all<StudentRow>();
   const memberships = await db
@@ -294,27 +295,6 @@ adminRoutes.delete("/students/:id", async (c) => {
   const id = c.req.param("id");
   const row = await getUserById(c.env.DB, id);
   if (!row || row.role !== "student") return fail(c, 404, "not_found");
-  const db = c.env.DB;
-  await db.batch([
-    db.prepare("DELETE FROM attempt_answers WHERE attempt_id IN (SELECT id FROM quiz_attempts WHERE user_id = ?)").bind(id),
-    db.prepare("DELETE FROM quiz_attempts WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM lesson_progress WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM ai_events WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM login_events WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM game_plays WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM card_reviews WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM word_book WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM card_days WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM stuck_flags WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM deck_assignments WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM sticker_awards WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM shop_purchases WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM shop_equipped WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM teaser_plays WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM lesson_unlocks WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM course_assignments WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM class_members WHERE user_id = ?").bind(id),
-    db.prepare("DELETE FROM users WHERE id = ? AND role = 'student'").bind(id),
-  ]);
+  await deleteStudentEverything(c.env.DB, id);
   return c.json({ ok: true });
 });

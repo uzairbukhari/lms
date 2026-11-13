@@ -44,6 +44,9 @@ export function StudentDetail() {
   const t = r.totals;
   return (
     <>
+      {r.archive && (
+        <div className="a-alert blue" role="note">Saved record from <Link to={`/admin/classes/${r.archive.classId}`}>{r.archive.className}</Link>, archived {r.archive.archivedAt.slice(0, 10)}. This is how {r.student.displayName} was doing when the class was archived.{" "}<Link to={`/admin/students/${r.archive.ofId}`}>Go to the current student</Link></div>
+      )}
       <div className="a-page-head">
         <div className="a-person" style={{ gap: 14 }}>
           <Avatar name={r.student.displayName} large />
@@ -77,6 +80,14 @@ export function StudentDetail() {
         <StatTile label="Time learning" value={`${t.minutesSpent} min`} hint={`${t.hintsUsed} hints used`} />
         <StatTile label="Last active" value={ago(t.lastActive)} />
       </div>
+
+      {(r.previousClasses?.length ?? 0) > 0 && (
+        <Card title="Previous classes" actions={<span className="a-faint">Saved records from classes that were archived</span>}>
+          <ul className="a-list">{r.previousClasses!.map((p) => (
+            <li key={p.recordId}><span><Link to={`/admin/classes/${p.classId}`}>{p.className}</Link> <span className="a-faint">archived {p.archivedAt.slice(0, 10)}</span></span><Link className="a-btn a-btn-sm" to={`/admin/students/${p.recordId}`}>View record</Link></li>
+          ))}</ul>
+        </Card>
+      )}
 
       <Tabs<Tab> value={tab} onChange={setTab} tabs={[{ id: "overview", label: "Overview" }, { id: "lessons", label: "Lessons and attempts" }, { id: "card", label: "Report card" }, { id: "skills", label: "Skills to practise" }, { id: "signins", label: "Sign-ins" }]} />
 

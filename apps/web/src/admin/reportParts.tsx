@@ -9,6 +9,8 @@ export type Report = {
   curve: { at: string; percent: number; mode: string; kind: string; title: string }[];
   lessons: { lessonId: string; title: string; subject: string | null; semester: number | null; courses: string[]; bestGraded: number | null; bestPractice: number | null; attemptCount: number; attempts: { id: string; attemptNumber: number; mode: string; percent: number; submittedAt: string }[] }[];
   weakestSkills: { skill: string; percent: number; correct: number; total: number }[];
+  archive?: { ofId: string; archivedAt: string; classId: string; className: string } | null;
+  previousClasses?: { recordId: string; classId: string; className: string; archivedAt: string }[];
   reportCard: { subject: string; semester: number; lessons: number; lessonAverage: number | null; examBest: number | null }[];
   byCourse: { courseId: string; title: string; subject: string | null; lessonsTotal: number; lessonsQuizzed: number; lessonAverage: number | null; examBest: number | null }[];
   classExams: { title: string; best: number; attempts: number }[];
