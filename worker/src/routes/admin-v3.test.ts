@@ -75,3 +75,16 @@ describe("lesson details", () => {
     expect(await env.DB.prepare("SELECT age_min AS a, age_max AS b FROM lessons WHERE id='m1'").first()).toMatchObject({ a: 6, b: 8 });
   });
 });
+
+describe("delete a class", () => {
+  it("removes the class and its links but keeps the students", async () => {
+    await env.DB.prepare("INSERT INTO classes (id, name) VALUES ('del1','Gone')").run();
+    await env.DB.prepare("INSERT INTO users (id, role, username, display_name, password_hash) VALUES ('s1','student','delkid','Kid','x')").run();
+    await env.DB.prepare("INSERT INTO class_members (class_id, user_id) VALUES ('del1','s1')").run();
+    await env.DB.prepare("UPDATE users SET class_id = 'del1' WHERE id = 's1'").run();
+    expect((await call("/api/admin/classes/del1", "DELETE")).status).toBe(200);
+    expect(await env.DB.prepare("SELECT 1 FROM classes WHERE id='del1'").first()).toBeNull();
+    expect(await env.DB.prepare("SELECT class_id AS c FROM users WHERE id='s1'").first()).toMatchObject({ c: null });
+    expect((await call("/api/admin/classes/del1", "DELETE")).status).toBe(404);
+  });
+});

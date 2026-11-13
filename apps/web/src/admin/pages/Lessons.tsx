@@ -15,7 +15,7 @@ type LessonRow = {
 
 export function Lessons() {
   const lessons = useLoad<{ lessons: LessonRow[]; classes: { id: string; name: string }[] }>("/api/admin/lessons");
-  const { toast } = useFeedback();
+  const { toast, confirm } = useFeedback();
   const [q, setQ] = useState("");
   const [subject, setSubject] = useState("");
   const [status, setStatus] = useState("");
@@ -38,6 +38,7 @@ export function Lessons() {
   }, [lessons.data, q, subject, status, tag, age, cls, semester, week, sort.key, sort.dir]);
 
   async function setLessonStatus(l: LessonRow, next: LessonRow["status"]) {
+    if (next === "archived" && l.slots.length > 0 && !(await confirm({ title: `Archive “${l.title}”?`, message: `It is in ${l.slots.length} course${l.slots.length === 1 ? "" : "s"}. Children will stop seeing it, but their scores are kept and you can restore it any time.`, confirmLabel: "Archive", danger: true }))) return;
     try { await api(`/api/admin/lessons/${l.id}`, { method: "PATCH", body: { status: next } }); toast(`"${l.title}" is now ${next}.`); await lessons.reload(); }
     catch (e) { toast(e instanceof Error ? e.message : "Could not update the lesson.", true); }
   }
@@ -101,11 +102,11 @@ export function Lessons() {
                   <Button size="sm" onClick={() => setOutline(l)}>Outline</Button>
                   <LinkButton to={`/admin/lessons/${l.id}/videos`} size="sm">Videos</LinkButton>
                   {l.status !== "published" && <Button size="sm" variant="primary" onClick={() => void setLessonStatus(l, "published")}>Publish</Button>}
-                  {!l.slots.some((s) => s.week) && <RowMenu label={`Actions for ${l.title}`} items={[
+                  <RowMenu label={`Actions for ${l.title}`} items={[
                     ...(l.status === "published" ? [{ label: "Unpublish", onClick: () => void setLessonStatus(l, "draft") }] : []),
                     ...(l.status !== "archived" ? [{ label: "Archive", onClick: () => void setLessonStatus(l, "archived") }] : [{ label: "Restore as draft", onClick: () => void setLessonStatus(l, "draft") }]),
                     { label: "Copy JSON", onClick: () => void copySource(l) },
-                  ]} />}
+                  ]} />
                 </div></td>
               </tr>
             ))}</tbody>

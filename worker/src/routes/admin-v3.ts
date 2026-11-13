@@ -295,3 +295,33 @@ adminV3Routes.put("/lessons/:id/meta", async (c) => {
   await audit(c, "lesson.meta", id, b);
   return c.json({ ok: true });
 });
+
+// ---- Delete a class completely (students are kept, just unassigned) ----
+adminV3Routes.delete("/classes/:id", async (c) => {
+  if (!can(c.get("admin").actor, "delete")) return fail(c, 403, "forbidden");
+  const id = c.req.param("id");
+  const db = c.env.DB;
+  const cls = await db.prepare("SELECT name FROM classes WHERE id = ?").bind(id).first<{ name: string }>();
+  if (!cls) return fail(c, 404, "not_found");
+  const exams = (await db.prepare("SELECT id FROM quizzes WHERE class_id = ?").bind(id).all<{ id: string }>()).results.map((r) => r.id);
+  for (const e of exams) {
+    if (await db.prepare("SELECT 1 FROM quiz_attempts WHERE quiz_id = ? LIMIT 1").bind(e).first()) {
+      return fail(c, 409, "has_attempts", "A child has already sat one of this class's exams, so its results must be kept. Archive the class instead.");
+    }
+  }
+  await db.batch([
+    ...exams.flatMap((e) => [db.prepare("DELETE FROM questions WHERE quiz_id = ?").bind(e), db.prepare("DELETE FROM quizzes WHERE id = ?").bind(e)]),
+    db.prepare("UPDATE users SET class_id = NULL WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM class_members WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM class_staff WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM class_courses WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM course_assignments WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM lesson_unlocks WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM path_unlocks WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM deck_assignments WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM terms WHERE class_id = ?").bind(id),
+    db.prepare("DELETE FROM classes WHERE id = ?").bind(id),
+  ]);
+  await audit(c, "class.delete", id, { name: cls.name });
+  return c.json({ ok: true });
+});

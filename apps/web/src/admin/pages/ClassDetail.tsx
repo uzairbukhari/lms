@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { api } from "../../api";
 import { useCrumb } from "../Shell";
 import { ClassCourses } from "./ClassCourses";
@@ -28,6 +28,7 @@ export function ClassDetail() {
   const classCourses = useLoad<{ courses: { courseId: string; title: string }[] }>(`/api/admin/classes/${id}/courses`);
   const unlocks = useLoad<{ unlocks: Unlock[] }>("/api/admin/unlocks");
   const { toast, confirm } = useFeedback();
+  const nav = useNavigate();
   const [tab, setTab] = useState<Tab>("members");
   const d = detail.data;
   useCrumb(d?.class.name);
@@ -107,7 +108,7 @@ export function ClassDetail() {
       )}
 
       {tab === "settings" && (
-        <Settings detail={d} onSave={(body, msg) => act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body }), msg)} confirm={confirm} />
+        <Settings detail={d} onDelete={async () => { try { await api(`/api/admin/classes/${id}`, { method: "DELETE" }); toast("Class deleted."); nav("/admin/classes"); } catch (e) { toast(e instanceof Error ? e.message : "Could not delete the class.", true); } }} onSave={(body, msg) => act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body }), msg)} confirm={confirm} />
       )}
     </>
   );
@@ -210,7 +211,7 @@ function OpenEarly({ classId, courses, unlocks, onChange }: { classId: string; c
   );
 }
 
-function Settings({ detail, onSave, confirm }: { detail: Detail; onSave: (body: unknown, msg: string) => Promise<void>; confirm: (o: { title: string; message: string; confirmLabel?: string; danger?: boolean }) => Promise<boolean> }) {
+function Settings({ detail, onSave, onDelete, confirm }: { detail: Detail; onDelete: () => Promise<void>; onSave: (body: unknown, msg: string) => Promise<void>; confirm: (o: { title: string; message: string; confirmLabel?: string; danger?: boolean }) => Promise<boolean> }) {
   const [name, setName] = useState(detail.class.name);
   const [desc, setDesc] = useState(detail.class.description ?? "");
   const active = !!detail.class.isActive;
@@ -228,6 +229,12 @@ function Settings({ detail, onSave, confirm }: { detail: Detail; onSave: (body: 
         <div><Button variant={active ? "danger" : undefined} onClick={() => void (async () => {
           if (!active || await confirm({ title: "Archive this class?", message: "Its students will stop seeing lessons from it until you restore it. Nothing is deleted.", confirmLabel: "Archive", danger: true })) await onSave({ isActive: !active }, active ? "Class archived." : "Class restored.");
         })()}>{active ? "Archive class" : "Restore class"}</Button></div>
+      </Card>
+      <Card title="Delete this class">
+        <p className="a-muted">Deletes the class, its course list, unlocks and any exams nobody has sat. Students and their scores are kept; they just have no class until you add them to one. This cannot be undone. If you only want it out of the way, archive it instead.</p>
+        <div><Button variant="solid-danger" onClick={() => void (async () => {
+          if (await confirm({ title: `Delete “${detail.class.name}”?`, message: `${detail.members.length} student${detail.members.length === 1 ? "" : "s"} will be left without a class. This cannot be undone.`, confirmLabel: "Delete class", danger: true })) await onDelete();
+        })()}>Delete class</Button></div>
       </Card>
     </>
   );
