@@ -15,6 +15,8 @@ export type Checkpoint = {
 };
 
 export type MapData = {
+  /** The Journey map: a stop every 3 topics passed. */
+  journey?: boolean;
   semester: number;
   semesters: number[];
   now: { semester: number; week: number; exam: boolean } | null;

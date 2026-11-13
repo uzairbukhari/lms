@@ -160,7 +160,7 @@ export function SemesterMap() {
                 {map.semesters.length > 1 && (
                   <button type="button" className="rounded-full px-2 text-xl font-bold disabled:opacity-30" disabled={map.semester <= (map.semesters[0] ?? 1)} onClick={() => setParams({ semester: String(map.semester - 1) })} aria-label="Earlier semester">◀</button>
                 )}
-                <span className="font-bold">Semester {map.semester}</span>
+                <span className="font-bold">{map.journey ? `Journey part ${map.semester}` : `Semester ${map.semester}`}</span>
                 {map.semesters.length > 1 && (
                   <button type="button" className="rounded-full px-2 text-xl font-bold disabled:opacity-30" disabled={map.semester >= (map.semesters[map.semesters.length - 1] ?? 1)} onClick={() => setParams({ semester: String(map.semester + 1) })} aria-label="Later semester">▶</button>
                 )}
@@ -202,13 +202,13 @@ export function SemesterMap() {
             </StopShell>
 
             {map.checkpoints.map((cp) => (
-              <WeekStop key={cp.week} cp={cp} icon={skin.stops[cp.week - 1] ?? "⭐"} wobble={wobble === cp.week} arrived={arrived === cp.week} onTap={() => tapStop(cp)} />
+              <WeekStop key={cp.week} journey={!!map.journey} cp={cp} icon={skin.stops[cp.week - 1] ?? "⭐"} wobble={wobble === cp.week} arrived={arrived === cp.week} onTap={() => tapStop(cp)} />
             ))}
 
             {/* Finish: exam week */}
-            <StopShell i={STOPS - 1} onClick={() => { sfx(map.exam.reached ? "fanfare" : "tap"); setSheet("finish"); }} label="Exam week castle">
+            <StopShell i={STOPS - 1} onClick={() => { sfx(map.exam.reached ? "fanfare" : "tap"); setSheet("finish"); }} label={map.journey ? "The finish" : "Exam week castle"}>
               <span className={"text-6xl " + (map.exam.reached ? "anim-bounce" : "")} aria-hidden="true">{skin.finish}</span>
-              <span className="absolute -bottom-7 whitespace-nowrap rounded-full bg-surface px-3 font-display text-base font-extrabold" style={{ border: "var(--border-width) solid var(--surface-border)" }}>Exam week</span>
+              <span className="absolute -bottom-7 whitespace-nowrap rounded-full bg-surface px-3 font-display text-base font-extrabold" style={{ border: "var(--border-width) solid var(--surface-border)" }}>{map.journey ? "The finish" : "Exam week"}</span>
             </StopShell>
 
             {/* The character */}
@@ -216,7 +216,7 @@ export function SemesterMap() {
               ref={charRef}
               className="pointer-events-none absolute z-20"
               style={{ left: `${(here.x / W) * 100}%`, top: `${(here.y / H) * 100}%`, transform: "translate(-50%, calc(-100% - 46px))" }}
-              aria-label={`You are at ${Math.round(pos) === 0 ? "the start" : `week ${Math.round(pos)}`}`}
+              aria-label={`You are at ${Math.round(pos) === 0 ? "the start" : `${map?.journey ? "stop" : "week"} ${Math.round(pos)}`}`}
               role="img"
             >
               <div className={walking ? "map-walk" : "intro-bob"}>
@@ -244,7 +244,7 @@ export function SemesterMap() {
         <div role="status" className="pop-in fixed inset-x-4 bottom-6 z-40 mx-auto flex max-w-lg items-center gap-3 p-4 card">
           <span aria-hidden="true" className="text-5xl">{skin.stops[arrived - 1]}</span>
           <div className="flex-1">
-            <p className="font-display text-2xl font-extrabold">You reached week {arrived}!</p>
+            <p className="font-display text-2xl font-extrabold">{map?.journey ? `You reached stop ${arrived}!` : `You reached week ${arrived}!`}</p>
             <p className="text-lg">A new game is waiting: {GAME_INFO[(map.checkpoints[arrived - 1] as Checkpoint).game].title}</p>
           </div>
           <button type="button" className="btn btn-primary" onClick={() => { setArrived(null); navigate(`/map/play/${map.semester}/${arrived}`); }}>Play!</button>
@@ -271,10 +271,10 @@ function StopShell({ i, children, onClick, label, className = "", style }: { i: 
   );
 }
 
-function WeekStop({ cp, icon, wobble, arrived, onTap }: { cp: Checkpoint; icon: string; wobble: boolean; arrived: boolean; onTap: () => void }) {
+function WeekStop({ journey, cp, icon, wobble, arrived, onTap }: { journey: boolean; cp: Checkpoint; icon: string; wobble: boolean; arrived: boolean; onTap: () => void }) {
   const locked = cp.state === "locked";
   const reached = cp.state === "reached";
-  const label = `Week ${cp.week}: ${locked ? "locked" : reached ? `reached, ${cp.stars} stars, play ${GAME_INFO[cp.game].title}` : `${cp.lessons.done} of ${cp.lessons.total} lessons done`}`;
+  const label = `${journey ? "Stop" : "Week"} ${cp.week}: ${locked ? "locked" : reached ? `reached, ${cp.stars} stars, play ${GAME_INFO[cp.game].title}` : `${cp.lessons.done} of ${cp.lessons.total} ${journey ? "topics" : "lessons"} done`}`;
   return (
     <StopShell
       i={cp.week}
@@ -299,7 +299,7 @@ function WeekStop({ cp, icon, wobble, arrived, onTap }: { cp: Checkpoint; icon: 
           {reached || cp.stars > 0 ? [1, 2, 3].map((s) => <span key={s} style={{ opacity: s <= cp.stars ? 1 : 0.25 }}>⭐</span>) : <span className="font-display text-base font-extrabold">{cp.lessons.done}/{cp.lessons.total}</span>}
         </span>
       )}
-      {cp.isCurrentWeek && !reached && <span aria-hidden="true" className="absolute -top-10 whitespace-nowrap rounded-full bg-accent px-3 font-display text-base font-extrabold text-on-accent">This week</span>}
+      {cp.isCurrentWeek && !reached && <span aria-hidden="true" className="absolute -top-10 whitespace-nowrap rounded-full bg-accent px-3 font-display text-base font-extrabold text-on-accent">{journey ? "You are here" : "This week"}</span>}
     </StopShell>
   );
 }
@@ -315,14 +315,14 @@ function StopSheet({ sheet, map, onClose, onPlay }: { sheet: Checkpoint | "finis
     body = (
       <>
         <h2 className="font-display text-3xl font-extrabold">Ready, explorer?</h2>
-        <p className="text-lg">Finish every lesson in a week and you'll travel to that week's stop. Each stop has a game to play and a treasure chest full of points from your quizzes!</p>
+        <p className="text-lg">{map.journey ? "Pass 3 topics and you'll travel to the next stop. Each stop has a game to play and a treasure chest full of points!" : "Finish every lesson in a week and you'll travel to that week's stop. Each stop has a game to play and a treasure chest full of points from your quizzes!"}</p>
       </>
     );
   } else if (sheet === "finish") {
     body = (
       <>
-        <h2 className="font-display text-3xl font-extrabold">The exam week castle</h2>
-        <p className="text-lg">{map.exam.reached ? "You made it all the way! Well done, superstar! 🎉" : "Reach all 12 stops, then finish the semester with your exams here."}</p>
+        <h2 className="font-display text-3xl font-extrabold">{map.journey ? "The finish" : "The exam week castle"}</h2>
+        <p className="text-lg">{map.exam.reached ? "You made it all the way! Well done, superstar! 🎉" : (map.journey ? "Pass every topic to reach the finish." : "Reach all 12 stops, then finish the semester with your exams here.")}</p>
       </>
     );
   } else {
@@ -331,16 +331,16 @@ function StopSheet({ sheet, map, onClose, onPlay }: { sheet: Checkpoint | "finis
     if (cp.state === "locked") {
       body = (
         <>
-          <h2 className="font-display text-3xl font-extrabold">Week {cp.week} <span aria-hidden="true">🔒</span></h2>
-          <p className="text-lg">This stop opens in a future week. Keep exploring!</p>
+          <h2 className="font-display text-3xl font-extrabold">{map.journey ? "Stop" : "Week"} {cp.week} <span aria-hidden="true">🔒</span></h2>
+          <p className="text-lg">{map.journey ? "Pass the topics before this one to open it. Keep going!" : "This stop opens in a future week. Keep exploring!"}</p>
         </>
       );
     } else if (cp.state === "open") {
       const left = cp.lessons.total - cp.lessons.done;
       body = (
         <>
-          <h2 className="font-display text-3xl font-extrabold">Week {cp.week}</h2>
-          <p className="text-lg">Finish {left} more {left === 1 ? "lesson" : "lessons"} to travel here and unlock <b>{info.title}</b>.</p>
+          <h2 className="font-display text-3xl font-extrabold">{map.journey ? "Stop" : "Week"} {cp.week}</h2>
+          <p className="text-lg">Finish {left} more {map.journey ? (left === 1 ? "topic" : "topics") : left === 1 ? "lesson" : "lessons"} to travel here and unlock <b>{info.title}</b>.</p>
           <div className="h-4 overflow-hidden rounded-full border-2 border-line" style={{ background: "var(--track)" }} role="progressbar" aria-valuemin={0} aria-valuemax={cp.lessons.total} aria-valuenow={cp.lessons.done} aria-label="Lessons done">
             <div className="h-full bg-accent" style={{ width: `${(cp.lessons.done / Math.max(1, cp.lessons.total)) * 100}%` }} />
           </div>
@@ -353,7 +353,7 @@ function StopSheet({ sheet, map, onClose, onPlay }: { sheet: Checkpoint | "finis
           <div className="flex items-center gap-4">
             <span aria-hidden="true" className="anim-bounce text-6xl">{GAMES[cp.game].icon}</span>
             <div>
-              <p className="font-bold text-muted">Week {cp.week} game{cp.level === 2 ? " · level 2" : ""}</p>
+              <p className="font-bold text-muted">{map.journey ? "Stop" : "Week"} {cp.week} game{cp.level === 2 ? " · level 2" : ""}</p>
               <h2 className="font-display text-3xl font-extrabold">{info.title}</h2>
             </div>
           </div>

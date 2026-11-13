@@ -34,7 +34,7 @@ export function GamePlay() {
     api<MapData>(`/api/map?semester=${semester}`)
       .then((m) => {
         const c = m.checkpoints.find((x) => x.week === week);
-        if (!c || c.state !== "reached" || m.semester !== semester) setFailed("Finish this week's lessons to play here.");
+        if (!c || c.state !== "reached" || m.semester !== semester) setFailed("Reach this stop to play here.");
         else setCp(c);
       })
       .catch(() => setFailed("We couldn't load this game. Please try again."));
