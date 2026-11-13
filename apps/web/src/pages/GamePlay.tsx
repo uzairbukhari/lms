@@ -9,6 +9,7 @@ import { GAMES } from "../games/registry";
 import { skinFor } from "../games/skins";
 import { getSoundOn, setSoundOn, sfx, startMusic, stopMusic } from "../lib/sound";
 import { useTheme } from "../theme";
+import { SpaceChest } from "../journey/space3d";
 
 // One checkpoint's mini game: how to play, a 3-2-1 countdown, the game itself, then the reward screen
 // (bonus stars count up, the chest bursts open the first time).
@@ -164,6 +165,7 @@ function Result({ score, result, cp, onAgain }: { score: number; result: PlayRes
   const bonus = result?.bonus ?? gameBonus(cp.game, cp.level, score);
   const [shown, setShown] = useState(0);
   const [chest, setChest] = useState<"shut" | "open">("shut");
+  const [theme] = useTheme();
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   useEffect(() => {
     timers.current.forEach(clearTimeout);
@@ -198,7 +200,7 @@ function Result({ score, result, cp, onAgain }: { score: number; result: PlayRes
       <p className="text-xl font-bold">Game bonus: +{bonus}{result && !result.newBest && !result.firstPlay ? " (your best still counts)" : result?.newBest && !result.firstPlay ? " · new best!" : ""}</p>
       {result?.firstPlay && (
         <div className="flex flex-col items-center gap-1">
-          <span aria-hidden="true" className={"text-7xl " + (chest === "open" ? "chest-burst" : "chest-wiggle")}>{chest === "open" ? "🪙" : "🎁"}</span>
+          {theme === "space" ? <SpaceChest open={chest === "open"} /> : <span aria-hidden="true" className={"text-7xl " + (chest === "open" ? "chest-burst" : "chest-wiggle")}>{chest === "open" ? "🪙" : "🎁"}</span>}
           {chest === "open" && <p className="pop-in text-2xl font-extrabold">Chest opened! +{cp.quizPoints} quiz points</p>}
         </div>
       )}

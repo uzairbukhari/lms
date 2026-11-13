@@ -12,6 +12,7 @@ import { GAMES } from "../games/registry";
 import { skinFor } from "../games/skins";
 import { getSoundOn, setSoundOn, sfx } from "../lib/sound";
 import { useTheme } from "../theme";
+import { ClipOverlay, SPACE, SpaceBackdrop, calmMotion, useIntroToday } from "../journey/space3d";
 
 // The semester map (docs/SEMESTER_MAP.md): a winding trail from Start (bottom) up through 12 weekly checkpoints to
 // the exam-week castle. The character walks to each checkpoint once all of that week's lessons are done.
@@ -46,6 +47,7 @@ export function SemesterMap() {
   const { user } = useAuth();
   const [theme] = useTheme();
   const skin = skinFor(theme);
+  const s3d = theme === "space"; // the 3D art set
   const navigate = useNavigate();
   const [params, setParams] = useSearchParams();
   const [map, setMap] = useState<MapData | null>(null);
@@ -58,6 +60,8 @@ export function SemesterMap() {
   const [sound, setSound] = useState(getSoundOn);
   const [worn, setWorn] = useState<Rewards | null>(null);
   const charRef = useRef<HTMLDivElement>(null);
+  const [intro, endIntro] = useIntroToday(user?.id, s3d);
+  const [clip, setClip] = useState(false);
   const semester = Number(params.get("semester")) || undefined;
 
   useEffect(() => { api<Rewards>("/api/rewards").then(setWorn).catch(() => undefined); }, []);
@@ -68,7 +72,7 @@ export function SemesterMap() {
 
   // Place the character, then walk to any newly reached checkpoint.
   useEffect(() => {
-    if (!map || !user) return;
+    if (!map || !user || intro) return;
     const target = targetStop(map);
     const seen = lastSeenStop(user.id, map.semester);
     const from = seen === null || seen > target ? target : seen;
@@ -109,7 +113,9 @@ export function SemesterMap() {
       cancelAnimationFrame(raf);
       if (stepTimer) clearInterval(stepTimer);
     };
-  }, [map, user]);
+  }, [map, user, intro]);
+
+  useEffect(() => { if (arrived !== null && s3d && !calmMotion()) setClip(true); }, [arrived, s3d]);
 
   const decor = useMemo(
     () =>
@@ -126,7 +132,7 @@ export function SemesterMap() {
 
   if (!user) return null;
   // While the map loads, show only a centred loader.
-  if (!map && !failed) return <Loader label="Unrolling your map…" fullScreen />;
+  if (!map && !failed) return intro ? <ClipOverlay mode="full" src={SPACE.intro} poster={SPACE.introPoster} onDone={endIntro} /> : <Loader label="Unrolling your map…" fullScreen />;
   const toggleSound = () => {
     const on = !sound;
     setSoundOn(on);
@@ -136,6 +142,8 @@ export function SemesterMap() {
 
   const seg = Math.min(STOPS - 2, Math.floor(pos));
   const here = along(seg, pos - seg);
+  const ahead = along(seg, Math.min(1, pos - seg + 0.04)), behind = along(seg, Math.max(0, pos - seg - 0.04));
+  const heading = walking ? Math.max(-35, Math.min(35, (Math.atan2(ahead.x - behind.x, -(ahead.y - behind.y)) * 180) / Math.PI)) : 0;
   const reachedTrail = Array.from({ length: Math.floor(pos) }, (_, i) => segment(i)).join(" ");
 
   const tapStop = (cp: Checkpoint) => {
@@ -150,6 +158,8 @@ export function SemesterMap() {
 
   return (
     <main className="relative mx-auto flex min-h-screen max-w-5xl flex-col">
+      {s3d && <SpaceBackdrop />}
+      {intro && map && <ClipOverlay mode="full" src={SPACE.intro} poster={SPACE.introPoster} onDone={endIntro} />}
       <header className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6" style={{ background: "color-mix(in srgb, var(--bg) 88%, transparent)", backdropFilter: "blur(6px)", borderBottom: "var(--border-width) solid var(--surface-border)" }}>
         <div className="flex items-center gap-3">
           <Link to="/" className="btn !min-h-12" aria-label="Back to my lessons"><span aria-hidden="true">🏠</span> Home</Link>
@@ -171,7 +181,7 @@ export function SemesterMap() {
         <div className="flex items-center gap-2">
           {map && (
             <span className="inline-flex items-center gap-2 rounded-full border-[length:var(--border-width)] border-line bg-surface px-4 py-2 font-display text-xl font-extrabold" aria-label={`${map.points.total} points`}>
-              <span aria-hidden="true" className="coin-spin inline-block">🪙</span> {map.points.total}
+              {s3d ? <img src={SPACE.coin} alt="" width={30} className="coin-spin inline-block" /> : <span aria-hidden="true" className="coin-spin inline-block">🪙</span>} {map.points.total}
               {map.points.waiting > 0 && <span className="text-base font-bold text-muted">· 🎁 {map.points.waiting} waiting</span>}
             </span>
           )}
@@ -183,11 +193,11 @@ export function SemesterMap() {
 
       {map && (
         <div className="relative flex-1 px-2 pb-10 pt-4">
-          {decor.map((d) => (
+          {!s3d && decor.map((d) => (
             <span key={d.i} aria-hidden="true" className="map-twinkle pointer-events-none absolute" style={{ left: `${d.left}%`, top: `${d.top}%`, fontSize: d.size, animationDelay: `${d.delay}s` }}>{d.emoji}</span>
           ))}
-          <div className="relative mx-auto w-full" style={{ maxWidth: 540, aspectRatio: `${W} / ${H}` }}>
-            <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full" aria-hidden="true">
+          <div className={"relative mx-auto w-full " + (s3d ? "sp-open" : "")} style={{ maxWidth: 540, aspectRatio: `${W} / ${H}` }}>
+            <svg viewBox={`0 0 ${W} ${H}`} className={"absolute inset-0 h-full w-full " + (s3d ? "sp-trail sp-open-fade" : "")} aria-hidden="true">
               <path d={fullTrail} fill="none" stroke="var(--trail)" strokeWidth="26" strokeLinecap="round" opacity="0.55" />
               <path d={fullTrail} fill="none" stroke="var(--surface)" strokeWidth="6" strokeLinecap="round" strokeDasharray="2 16" opacity="0.9" />
               {reachedTrail && <path d={reachedTrail} fill="none" stroke="var(--accent)" strokeWidth="14" strokeLinecap="round" />}
@@ -197,17 +207,17 @@ export function SemesterMap() {
             </svg>
 
             {/* Start */}
-            <StopShell i={0} onClick={() => { sfx("tap"); setSheet("start"); }} label="Start">
-              <span className="text-5xl" aria-hidden="true">{skin.start}</span>
+            <StopShell i={0} onClick={() => { sfx("tap"); setSheet("start"); }} label="Start" box={s3d ? [130, 120] : undefined} className={s3d ? "sp-stop" : ""}>
+              {s3d ? <img className="planet" src={SPACE.launchpad} alt="" /> : <span className="text-5xl" aria-hidden="true">{skin.start}</span>}
             </StopShell>
 
             {map.checkpoints.map((cp) => (
-              <WeekStop key={cp.week} journey={!!map.journey} cp={cp} icon={skin.stops[cp.week - 1] ?? "⭐"} wobble={wobble === cp.week} arrived={arrived === cp.week} onTap={() => tapStop(cp)} />
+              <WeekStop key={cp.week} s3d={s3d} journey={!!map.journey} cp={cp} icon={skin.stops[cp.week - 1] ?? "⭐"} wobble={wobble === cp.week} arrived={arrived === cp.week} onTap={() => tapStop(cp)} />
             ))}
 
             {/* Finish: exam week */}
-            <StopShell i={STOPS - 1} onClick={() => { sfx(map.exam.reached ? "fanfare" : "tap"); setSheet("finish"); }} label={map.journey ? "The finish" : "Exam week castle"}>
-              <span className={"text-6xl " + (map.exam.reached ? "anim-bounce" : "")} aria-hidden="true">{skin.finish}</span>
+            <StopShell i={STOPS - 1} onClick={() => { sfx(map.exam.reached ? "fanfare" : "tap"); setSheet("finish"); }} label={map.journey ? "The finish" : "Exam week castle"} box={s3d ? [120, 150] : undefined} className={s3d ? "sp-stop " + (map.exam.reached ? "reached" : "") : ""}>
+              {s3d ? <img className="planet" src={SPACE.castle} alt="" /> : <span className={"text-6xl " + (map.exam.reached ? "anim-bounce" : "")} aria-hidden="true">{skin.finish}</span>}
               <span className="absolute -bottom-7 whitespace-nowrap rounded-full bg-surface px-3 font-display text-base font-extrabold" style={{ border: "var(--border-width) solid var(--surface-border)" }}>{map.journey ? "The finish" : "Exam week"}</span>
             </StopShell>
 
@@ -219,7 +229,14 @@ export function SemesterMap() {
               aria-label={`You are at ${Math.round(pos) === 0 ? "the start" : `${map?.journey ? "stop" : "week"} ${Math.round(pos)}`}`}
               role="img"
             >
-              <div className={walking ? "map-walk" : "intro-bob"}>
+              <div className={s3d ? (walking ? "" : "intro-bob") : walking ? "map-walk" : "intro-bob"} style={s3d ? { transform: `rotate(${heading}deg)`, transition: "transform 0.15s linear" } : undefined}>
+                {s3d ? (
+                  <div className="sp-rocket">
+                    <span className={"sp-flame " + (walking ? "" : "idle")} aria-hidden="true" />
+                    <img className="body" src={SPACE.rocket} alt="" />
+                    <span className="rider"><Avatar name={user.displayName} avatar={user.avatar} size={28} /></span>
+                  </div>
+                ) : (
                 <div className="relative">
                   <div className="rounded-full p-1" style={{ background: "var(--accent)", boxShadow: "0 6px 0 rgba(0,0,0,0.25)" }}>
                     <Avatar name={user.displayName} avatar={user.avatar} size={54} />
@@ -233,16 +250,18 @@ export function SemesterMap() {
                   )}
                   <span aria-hidden="true" className="absolute -bottom-3 -left-7 text-4xl">{skin.ride}</span>
                 </div>
+                )}
               </div>
             </div>
           </div>
         </div>
       )}
 
-      {arrived !== null && <Confetti />}
-      {arrived !== null && map && (
+      {arrived !== null && clip && <ClipOverlay mode="card" src={SPACE.arrive} onDone={() => setClip(false)} skipLabel="Continue" />}
+      {arrived !== null && !clip && <Confetti />}
+      {arrived !== null && !clip && map && (
         <div role="status" className="pop-in fixed inset-x-4 bottom-6 z-40 mx-auto flex max-w-lg items-center gap-3 p-4 card">
-          <span aria-hidden="true" className="text-5xl">{skin.stops[arrived - 1]}</span>
+          {s3d ? <img src={SPACE.stop(arrived)} alt="" width={64} /> : <span aria-hidden="true" className="text-5xl">{skin.stops[arrived - 1]}</span>}
           <div className="flex-1">
             <p className="font-display text-2xl font-extrabold">{map?.journey ? `You reached stop ${arrived}!` : `You reached week ${arrived}!`}</p>
             <p className="text-lg">A new game is waiting: {GAME_INFO[(map.checkpoints[arrived - 1] as Checkpoint).game].title}</p>
@@ -251,30 +270,51 @@ export function SemesterMap() {
         </div>
       )}
 
-      {sheet && map && <StopSheet sheet={sheet} map={map} onClose={() => setSheet(null)} onPlay={(w) => navigate(`/map/play/${map.semester}/${w}`)} />}
+      {sheet && map && <StopSheet s3d={s3d} sheet={sheet} map={map} onClose={() => setSheet(null)} onPlay={(w) => navigate(`/map/play/${map.semester}/${w}`)} />}
     </main>
   );
 }
 
-function StopShell({ i, children, onClick, label, className = "", style }: { i: number; children: React.ReactNode; onClick: () => void; label: string; className?: string; style?: React.CSSProperties }) {
+function StopShell({ i, children, onClick, label, className = "", style, box }: { i: number; children: React.ReactNode; onClick: () => void; label: string; className?: string; style?: React.CSSProperties; box?: [number, number] }) {
   const p = point(i);
   return (
     <button
       type="button"
       onClick={onClick}
       aria-label={label}
-      className={"absolute z-10 flex h-[84px] w-[84px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full " + className}
-      style={{ left: `${(p.x / W) * 100}%`, top: `${(p.y / H) * 100}%`, ...style }}
+      className={"absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center " + (box ? "" : "h-[84px] w-[84px] rounded-full ") + className}
+      style={{ left: `${(p.x / W) * 100}%`, top: `${(p.y / H) * 100}%`, ...(box ? { width: box[0], height: box[1] } : {}), ...style }}
     >
       {children}
     </button>
   );
 }
 
-function WeekStop({ journey, cp, icon, wobble, arrived, onTap }: { journey: boolean; cp: Checkpoint; icon: string; wobble: boolean; arrived: boolean; onTap: () => void }) {
+function WeekStop({ s3d, journey, cp, icon, wobble, arrived, onTap }: { s3d: boolean; journey: boolean; cp: Checkpoint; icon: string; wobble: boolean; arrived: boolean; onTap: () => void }) {
   const locked = cp.state === "locked";
   const reached = cp.state === "reached";
   const label = `${journey ? "Stop" : "Week"} ${cp.week}: ${locked ? "locked" : reached ? `reached, ${cp.stars} stars, play ${GAME_INFO[cp.game].title}` : `${cp.lessons.done} of ${cp.lessons.total} ${journey ? "topics" : "lessons"} done`}`;
+  if (s3d) {
+    return (
+      <StopShell
+        i={cp.week} onClick={onTap} label={label} box={[104, 104]}
+        className={`sp-stop ${wobble || arrived ? "" : "sp-pop"} ${locked ? "locked" : ""} ${reached ? "reached" : ""} ${cp.isCurrentWeek && !reached ? "current" : ""} ${wobble ? "shake" : ""} ${arrived ? "map-arrive" : ""}`}
+        style={{ animationDelay: `${Math.min(cp.week, 12) * 70}ms` }}
+      >
+        <img className="planet" src={SPACE.stop(cp.week)} alt="" />
+        {locked && <img className="lock3d absolute" src={SPACE.lock} alt="" width={36} style={{ bottom: 4, right: 4, filter: "drop-shadow(0 3px 4px rgba(0,0,0,.6))" }} />}
+        <span aria-hidden="true" className="absolute -left-1 -top-1 flex h-9 min-w-9 items-center justify-center rounded-full px-1 font-display text-lg font-extrabold" style={{ background: "var(--surface)", color: "var(--text)", border: "3px solid var(--surface-border)" }}>{cp.week}</span>
+        {reached && !cp.chestOpened && <img aria-hidden="true" className="chest-wiggle absolute" src={SPACE.chestClosed} alt="" width={46} style={{ right: -14, top: -12 }} />}
+        {reached && cp.chestOpened && <span aria-hidden="true" className="absolute -right-3 -top-3 text-2xl">{GAMES[cp.game].icon}</span>}
+        {!locked && (
+          <span aria-hidden="true" className="absolute -bottom-6 flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-0.5" style={{ background: "var(--surface)", border: "2px solid var(--surface-border)" }}>
+            {reached || cp.stars > 0 ? [1, 2, 3].map((s) => <img key={s} src={SPACE.star} alt="" width={20} style={{ opacity: s <= cp.stars ? 1 : 0.25, filter: s <= cp.stars ? undefined : "grayscale(1)" }} />) : <span className="font-display text-base font-extrabold">{cp.lessons.done}/{cp.lessons.total}</span>}
+          </span>
+        )}
+        {cp.isCurrentWeek && !reached && <span aria-hidden="true" className="absolute -top-8 whitespace-nowrap rounded-full bg-accent px-3 font-display text-base font-extrabold text-on-accent">{journey ? "You are here" : "This week"}</span>}
+      </StopShell>
+    );
+  }
   return (
     <StopShell
       i={cp.week}
@@ -304,7 +344,7 @@ function WeekStop({ journey, cp, icon, wobble, arrived, onTap }: { journey: bool
   );
 }
 
-function StopSheet({ sheet, map, onClose, onPlay }: { sheet: Checkpoint | "finish" | "start"; map: MapData; onClose: () => void; onPlay: (week: number) => void }) {
+function StopSheet({ s3d, sheet, map, onClose, onPlay }: { s3d: boolean; sheet: Checkpoint | "finish" | "start"; map: MapData; onClose: () => void; onPlay: (week: number) => void }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -321,6 +361,7 @@ function StopSheet({ sheet, map, onClose, onPlay }: { sheet: Checkpoint | "finis
   } else if (sheet === "finish") {
     body = (
       <>
+        {s3d && map.exam.reached && !calmMotion() && <video className="w-full rounded-2xl" src={SPACE.finish} autoPlay muted playsInline loop aria-hidden="true" />}
         <h2 className="font-display text-3xl font-extrabold">{map.journey ? "The finish" : "The exam week castle"}</h2>
         <p className="text-lg">{map.exam.reached ? "You made it all the way! Well done, superstar! 🎉" : (map.journey ? "Pass every topic to reach the finish." : "Reach all 12 stops, then finish the semester with your exams here.")}</p>
       </>

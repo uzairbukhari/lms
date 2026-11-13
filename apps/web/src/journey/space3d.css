@@ -1,0 +1,49 @@
+/* 3D Space Explorers journey map: backdrop, planets, rocket and clip overlays. */
+.sp-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #0d1030; }
+.sp-bg .tile { position: absolute; inset: -4%; background: url(/journey/space/bg.webp) center / cover no-repeat; animation: sp-tile 90s ease-in-out infinite alternate; }
+.sp-bg .neb { position: absolute; width: 70vw; max-width: 800px; mix-blend-mode: screen; opacity: 0.28; }
+.sp-bg .neb.a { top: 6%; left: -30%; animation: sp-drift-a 90s ease-in-out infinite alternate; }
+.sp-bg .neb.b { top: 52%; right: -35%; transform: scaleX(-1); filter: hue-rotate(70deg); opacity: 0.22; animation: sp-drift-b 110s ease-in-out infinite alternate; }
+.sp-bg .rock { position: absolute; opacity: 0.9; animation: sp-float 14s ease-in-out infinite; }
+.sp-bg .spark { position: absolute; animation: map-twinkle 3.6s ease-in-out infinite; }
+@keyframes sp-tile { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.1) translate(-2%, -2%); } }
+@keyframes sp-drift-a { to { transform: translate(18vw, 6vh) rotate(6deg); } }
+@keyframes sp-drift-b { to { transform: scaleX(-1) translate(18vw, -5vh) rotate(-5deg); } }
+@keyframes sp-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-18px) rotate(8deg); } }
+
+.sp-trail { filter: drop-shadow(0 0 6px rgba(255, 207, 90, 0.7)); }
+
+.sp-stop img.planet { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5)); animation: sp-bob 5s ease-in-out infinite; }
+.sp-stop.locked img.planet { filter: grayscale(0.85) brightness(0.62) drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5)); animation: none; }
+.sp-stop.reached img.planet { filter: drop-shadow(0 0 14px rgba(255, 207, 90, 0.85)) drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5)); }
+.sp-stop.current img.planet { animation: sp-bob 5s ease-in-out infinite, sp-glow 1.8s ease-in-out infinite; }
+.sp-stop.shake .lock3d { animation: sp-lock 0.5s ease-in-out; }
+.sp-stop:focus-visible { outline: 3px solid #ffd166; outline-offset: 4px; border-radius: 24px; }
+@keyframes sp-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes sp-glow { 0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)) drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5)); } 50% { filter: drop-shadow(0 0 22px rgba(255, 220, 120, 1)) drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5)); } }
+@keyframes sp-lock { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-18deg) scale(1.15); } 50% { transform: rotate(16deg) scale(1.15); } 80% { transform: rotate(-8deg); } }
+
+.sp-pop { animation: sp-pop 0.7s cubic-bezier(0.2, 1.4, 0.4, 1) backwards; }
+@keyframes sp-pop { from { opacity: 0; transform: scale(0.2); } to { opacity: 1; transform: scale(1); } }
+.sp-open-fade { animation: sp-fade-in 0.9s ease-out both; }
+@keyframes sp-fade-in { from { opacity: 0; transform: translateY(26px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+.sp-rocket { position: relative; width: 56px; }
+.sp-rocket img.body { width: 100%; display: block; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5)); }
+.sp-rocket .rider { position: absolute; left: 50%; top: 31%; transform: translateX(-50%); border-radius: 9999px; overflow: hidden; border: 2px solid #1b2a5e; background: #1b2a5e; }
+.sp-flame { position: absolute; left: 50%; top: 96%; width: 22px; height: 46px; transform: translateX(-50%); transform-origin: top center; border-radius: 50% 50% 60% 60% / 20% 20% 80% 80%; background: radial-gradient(ellipse at 50% 20%, #fff7c2 0%, #ffd166 35%, #ff8a3d 70%, rgba(255, 90, 30, 0) 100%); animation: sp-flame 0.14s ease-in-out infinite alternate; }
+.sp-flame.idle { width: 12px; height: 18px; opacity: 0.75; animation-duration: 0.4s; }
+@keyframes sp-flame { from { transform: translateX(-50%) scaleY(0.8) scaleX(0.9); } to { transform: translateX(-50%) scaleY(1.25) scaleX(1.05); } }
+
+.sp-clip { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; background: rgba(5, 8, 28, 0.78); transition: opacity 0.6s ease; }
+.sp-clip.full { background: #070a22; }
+.sp-clip.out { opacity: 0; pointer-events: none; }
+.sp-clip video { max-width: 100%; max-height: 100%; }
+.sp-clip.full video { width: 100%; height: 100%; object-fit: cover; }
+.sp-clip.card video { width: min(92vw, 760px); border-radius: 28px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); }
+.sp-skip { position: absolute; right: 16px; bottom: 16px; }
+
+.sp-chest-video { width: min(70vw, 320px); border-radius: 22px; display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .sp-bg .tile, .sp-bg .neb, .sp-bg .rock, .sp-stop img.planet, .sp-flame { animation: none !important; }
+}
