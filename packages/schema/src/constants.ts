@@ -2,6 +2,10 @@
 export const THEMES = ["space", "candy", "sunny", "forest"] as const;
 export type ThemeId = (typeof THEMES)[number];
 
+/** Characters that can show on a child's home page (each has its own clips). The default is the first. */
+export const HOME_CHARACTERS = ["zainab", "fatima"] as const;
+export type HomeCharacter = (typeof HOME_CHARACTERS)[number];
+
 /** Space Explorers is the default theme (docs/PLAN.md section 4a). */
 export const DEFAULT_THEME: ThemeId = "space";
 

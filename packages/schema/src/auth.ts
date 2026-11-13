@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { THEMES } from "./constants";
+import { HOME_CHARACTERS, THEMES, type HomeCharacter } from "./constants";
 
 /** Avatar colours a child can pick. The UI shows their initial on a coloured circle. */
 export const AVATARS = ["coral", "orange", "gold", "green", "teal", "blue", "purple", "pink"] as const;
@@ -15,6 +15,8 @@ export interface SessionUser {
   displayName: string;
   avatar: AvatarId | null;
   theme: (typeof THEMES)[number];
+  /** Which character animates on the home page. */
+  homeCharacter: HomeCharacter;
   mustChangePassword: boolean;
   /** The parent's test student: every AI feature (voice, hints, word help) is switched off for it. */
   isTest?: boolean;
@@ -62,6 +64,7 @@ export const updateStudentSchema = z.object({
   displayName: z.string().trim().min(1).max(40).optional(),
   avatar: z.enum(AVATARS).nullable().optional(),
   theme: themeSchema.optional(),
+  homeCharacter: z.enum(HOME_CHARACTERS).optional(),
   isActive: z.boolean().optional(),
 });
 
@@ -79,6 +82,7 @@ export interface StudentSummary {
   username: string;
   avatar: AvatarId | null;
   theme: (typeof THEMES)[number];
+  homeCharacter: HomeCharacter;
   isActive: boolean;
   createdAt: string;
   classes: { id: string; name: string }[];

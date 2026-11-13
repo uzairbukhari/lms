@@ -105,7 +105,7 @@ export function HomeV3(p: {
               <p className="hv3-part">{allDone ? "Try a grand quiz or a brain teaser." : "Choose any subject from the list."}</p>
             </>
           )}
-          <HomeCharacter />
+          <HomeCharacter character={user.homeCharacter} />
         </section>
 
         <div className="hv3-daily">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router";
-import type { StudentCredentials, StudentSummary } from "@lms/schema";
+import { HOME_CHARACTERS, type HomeCharacter, type StudentCredentials, type StudentSummary } from "@lms/schema";
 import { api } from "../../api";
 import { CredentialsModal } from "../Credentials";
 import { AttemptDrawer, Curve, day, subjectName, type Report } from "../reportParts";
@@ -23,6 +23,14 @@ export function StudentDetail() {
   const summary = students.data?.students.find((s) => s.id === id);
   const r = report.data;
   useCrumb(r?.student.displayName);
+
+  async function setCharacter(c: HomeCharacter) {
+    try {
+      await api(`/api/admin/students/${id}`, { method: "PATCH", body: { homeCharacter: c } });
+      await students.reload();
+      toast(`Home page character is now ${c[0]!.toUpperCase()}${c.slice(1)}.`);
+    } catch (e) { toast(e instanceof Error ? e.message : "Could not save the character.", true); }
+  }
 
   async function newPassword() {
     try {
@@ -48,6 +56,13 @@ export function StudentDetail() {
           </div>
         </div>
         <div className="a-actions">
+          {summary && (
+            <label className="a-check">Home character
+              <select className="a-select" style={{ width: "auto", marginLeft: 6 }} value={summary.homeCharacter} onChange={(e) => void setCharacter(e.target.value as HomeCharacter)}>
+                {HOME_CHARACTERS.map((c) => <option key={c} value={c}>{c[0]!.toUpperCase() + c.slice(1)}</option>)}
+              </select>
+            </label>
+          )}
           <label className="a-check"><input type="checkbox" checked={practice} onChange={(e) => setPractice(e.target.checked)} /> Include practice in numbers</label>
           <Link className="a-btn" to={`/admin/students/${id}/report-card`}>Report card</Link>
           <Link className="a-btn" to={`/admin/prompt?student=${id}`}>Next lesson prompt</Link>
