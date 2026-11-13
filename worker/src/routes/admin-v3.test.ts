@@ -32,6 +32,8 @@ describe("admin v3 routes", () => {
     const got = await j<{ courses: { courseId: string; unlockRule: string; dripEveryDays: number | null }[] }>(await call(`/api/admin/classes/${classId}/courses`));
     expect(got.courses.map((x) => x.courseId)).toEqual(["c2", "c1"]);
     expect(got.courses[1]).toMatchObject({ unlockRule: "drip", dripEveryDays: 7 });
+    const assigned = await env.DB.prepare("SELECT course_id AS c FROM course_assignments WHERE class_id = ? ORDER BY course_id").bind(classId).all<{ c: string }>();
+    expect(assigned.results.map((r) => r.c)).toEqual(expect.arrayContaining(["c1", "c2"]));
   });
 
   it("adds a teacher with class access and logs it", async () => {

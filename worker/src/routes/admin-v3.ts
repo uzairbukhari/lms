@@ -90,6 +90,11 @@ adminV3Routes.put("/classes/:id/courses", async (c) => {
         .bind(classId, i, x.unlockRule, x.passPercent, x.unlockRule === "drip" ? x.dripStart ?? null : null, x.unlockRule === "drip" ? x.dripEveryDays ?? null : null, x.courseId),
     ),
   ]);
+  // Bridge while the student app still reads course_assignments: keep the class-level assignments in step.
+  await c.env.DB.batch([
+    c.env.DB.prepare("DELETE FROM course_assignments WHERE class_id = ? AND course_id NOT IN (SELECT course_id FROM class_courses WHERE class_id = ?)").bind(classId, classId),
+    c.env.DB.prepare("INSERT INTO course_assignments (id, course_id, class_id) SELECT lower(hex(randomblob(16))), cc.course_id, cc.class_id FROM class_courses cc WHERE cc.class_id = ? AND NOT EXISTS (SELECT 1 FROM course_assignments a WHERE a.class_id = cc.class_id AND a.course_id = cc.course_id)").bind(classId),
+  ]);
   await audit(c, "class.courses", classId, { courses });
   return c.json({ ok: true });
 });

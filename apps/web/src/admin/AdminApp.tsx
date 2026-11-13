@@ -8,6 +8,9 @@ import { FeedbackProvider } from "./ui";
 import { AiLog } from "./pages/AiLog";
 import { ClassDetail } from "./pages/ClassDetail";
 import { Classes } from "./pages/Classes";
+import { Teachers } from "./pages/Teachers";
+import { Courses } from "./pages/Courses";
+import { CourseBuilder } from "./pages/CourseBuilder";
 import { DeckPrint, Decks } from "./pages/Decks";
 import { Stuck } from "./pages/Stuck";
 import { Dashboard } from "./pages/Dashboard";
@@ -59,6 +62,9 @@ export function AdminApp() {
                 <Route path="classes" element={<Classes />} />
                 <Route path="classes/:id" element={<ClassDetail />} />
                 <Route path="lessons" element={<Lessons />} />
+                <Route path="courses" element={<Courses />} />
+                <Route path="teachers" element={<Teachers />} />
+                <Route path="courses/:id" element={<CourseBuilder />} />
                 <Route path="lessons/import" element={<LessonImport />} />
                 <Route path="lessons/:id/edit" element={<LessonEdit />} />
                 <Route path="prompt" element={<PromptBuilder />} />

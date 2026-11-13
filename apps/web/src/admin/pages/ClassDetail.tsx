@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link, useParams } from "react-router";
 import { api } from "../../api";
 import { useCrumb } from "../Shell";
+import { ClassCourses } from "./ClassCourses";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, Tabs, ago, useFeedback, useLoad } from "../ui";
 
 type Detail = {
@@ -75,21 +76,7 @@ export function ClassDetail() {
         </Card>
       )}
 
-      {tab === "courses" && (
-        <Card flush title="Assigned courses" actions={unassigned.length > 0 && (
-          <select className="a-select" aria-label="Assign a course" value="" onChange={(e) => e.target.value && void act(() => api("/api/admin/assignments", { body: { courseId: e.target.value, classId: id } }), "Course assigned.")}>
-            <option value="">Assign a course…</option>
-            {unassigned.map((c) => <option key={c.id} value={c.id}>{c.title}</option>)}
-          </select>
-        )}>
-          {d.assignments.length === 0 ? <EmptyState title="No courses assigned">Children in this class see no lessons until you assign a course.</EmptyState> : (
-            <ul className="a-list">{d.assignments.map((a) => (
-              <li key={a.id}><Link to={`/admin/plan/${a.courseId}`} className="a-cell-title">{a.courseTitle}</Link>
-                <Button size="sm" onClick={() => void act(() => api(`/api/admin/assignments/${a.id}`, { method: "DELETE" }), "Course removed.")}>Remove</Button></li>
-            ))}</ul>
-          )}
-        </Card>
-      )}
+      {tab === "courses" && <ClassCourses classId={id} all={courses.data?.courses ?? []} onChanged={() => void detail.reload()} />}
 
       {tab === "calendar" && <Calendar detail={d} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
 
