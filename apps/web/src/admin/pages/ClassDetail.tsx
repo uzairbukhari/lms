@@ -6,7 +6,7 @@ import { ClassCourses } from "./ClassCourses";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, Tabs, ago, useFeedback, useLoad } from "../ui";
 
 type Detail = {
-  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path" };
+  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path"; structureV3?: number };
   members: { id: string; displayName: string; username: string }[];
   terms: { number: number; name: string; startDate: string; endDate: string; teachingWeeks: number; examWeek: number }[];
   assignments: { id: string; courseId: string; courseTitle: string }[];
@@ -76,7 +76,7 @@ export function ClassDetail() {
         </Card>
       )}
 
-      {tab === "courses" && <ClassCourses classId={id} all={courses.data?.courses ?? []} onChanged={() => void detail.reload()} />}
+      {tab === "courses" && <ClassCourses classId={id} all={courses.data?.courses ?? []} useRules={!!d.class.structureV3} onChanged={() => void detail.reload()} />}
 
       {tab === "calendar" && <Calendar detail={d} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
 

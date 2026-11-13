@@ -12,7 +12,7 @@ const RULES = [
 ] as const;
 
 /** The courses in a class and how each one unlocks. Saves the whole list in order. */
-export function ClassCourses({ classId, all, onChanged }: { classId: string; all: { id: string; title: string }[]; onChanged: () => void }) {
+export function ClassCourses({ classId, all, useRules, onChanged }: { classId: string; all: { id: string; title: string }[]; useRules: boolean; onChanged: () => void }) {
   const got = useLoad<{ courses: Row[] }>(`/api/admin/classes/${classId}/courses`);
   const { toast } = useFeedback();
   const [rows, setRows] = useState<Row[]>([]);
@@ -22,6 +22,11 @@ export function ClassCourses({ classId, all, onChanged }: { classId: string; all
   const patch = (i: number, p: Partial<Row>) => change(rows.map((r, k) => (k === i ? { ...r, ...p } : r)));
   const swap = (i: number, j: number) => { const n = [...rows]; [n[i], n[j]] = [n[j]!, n[i]!]; change(n); };
   const free = all.filter((c) => !rows.some((r) => r.courseId === c.id));
+
+  async function setRules(on: boolean) {
+    try { await api(`/api/admin/classes/${classId}`, { method: "PATCH", body: { structureV3: on } }); toast(on ? "This class now follows these unlock rules." : "This class is back on its old calendar."); onChanged(); }
+    catch (e) { toast(e instanceof Error ? e.message : "Could not change this.", true); }
+  }
 
   async function save() {
     try {
@@ -37,6 +42,7 @@ export function ClassCourses({ classId, all, onChanged }: { classId: string; all
       <Button variant="primary" disabled={!dirty} onClick={() => void save()}>{dirty ? "Save changes" : "Saved"}</Button>
     </div>}>
       <ErrorNote error={got.error} />
+      <label className="a-row" style={{ marginBottom: 12 }}><input type="checkbox" checked={useRules} onChange={(e) => void setRules(e.target.checked)} /> <b>Use these unlock rules for this class</b> <span className="a-faint">(off = the old school calendar or topic path)</span></label>
       {rows.length === 0 ? <EmptyState title="No courses in this class">Children see no lessons until you add a course.</EmptyState> : (
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 12 }}>
           {rows.map((r, i) => (
@@ -63,7 +69,7 @@ export function ClassCourses({ classId, all, onChanged }: { classId: string; all
           ))}
         </ul>
       )}
-      <p className="a-faint" style={{ marginTop: 12 }}>Unlock rules are saved now. The student app switches over to them class by class in the next step, so nothing changes for children yet.</p>
+      <p className="a-faint" style={{ marginTop: 12 }}>Turn the box on to make children in this class follow these rules. Pass mark per course is saved but the quiz pass mark still decides for now.</p>
     </Card>
   );
 }

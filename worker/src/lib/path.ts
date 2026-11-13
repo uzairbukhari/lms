@@ -1,5 +1,6 @@
 import { IS_GRAND, grandScopeKey, type GrandInfo } from "./grand";
-import { pathStatuses, type PathStatus } from "./visibility";
+import { loadRules, MASTERY, ruleStatuses } from "./pathrules";
+import type { PathStatus } from "./visibility";
 
 export type PathTopic = { lessonId: string; title: string; position: number; status: PathStatus; bestPercent: number | null; attempts: number; partsDone: number; partsTotal: number };
 export type SubjectPath = { courseId: string; subject: string; topics: PathTopic[]; grand: GrandInfo | null };
@@ -10,10 +11,10 @@ const marks = (n: number) => Array.from({ length: n }, () => "?").join(",");
  * Every subject path a child is on (classes with unlock_mode "path"), with locked topics included so the star map can
  * show them with a padlock. Locked topics carry only a title; the lesson itself stays hidden by visibleLessonsFor.
  */
-export async function pathsFor(db: D1Database, userId: string): Promise<SubjectPath[]> {
+export async function pathsFor(db: D1Database, userId: string, today: string = new Date().toISOString().slice(0, 10)): Promise<SubjectPath[]> {
   const classIds = (
     await db
-      .prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1 AND c.unlock_mode = 'path'")
+      .prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1 AND (c.unlock_mode = 'path' OR c.structure_v3 = 1)")
       .bind(userId)
       .all<{ id: string }>()
   ).results.map((r) => r.id);
@@ -79,11 +80,12 @@ export async function pathsFor(db: D1Database, userId: string): Promise<SubjectP
     return { quizId: quiz.id, status: tries?.passed === 1 ? "passed" : ready ? "ready" : "locked", bestPercent: tries?.best ?? null, attempts: tries?.attempts ?? 0, questionCount: quiz.questionCount };
   };
 
+  const rules = await loadRules(db, classIds);
   const groups = new Map<string, typeof rows>();
   for (const r of rows) groups.set(`${r.courseId}:${r.subject}`, [...(groups.get(`${r.courseId}:${r.subject}`) ?? []), r]);
   return [...groups.values()].map((group) => {
     group.sort((a, b) => a.position - b.position);
-    const statuses = pathStatuses(group.map((g) => g.lessonId), passed, opened);
+    const statuses = ruleStatuses(group.map((g) => g.lessonId), passed, opened, rules.get(group[0]!.courseId) ?? MASTERY, today);
     return {
       courseId: group[0]!.courseId,
       grand: grandFor(group[0]!.courseId),
