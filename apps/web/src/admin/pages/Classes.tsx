@@ -7,11 +7,12 @@ import type { Overview } from "./Dashboard";
 type ClassRow = { id: string; name: string; description: string | null; isActive: number; studentCount: number };
 
 export function Classes() {
-  const classes = useLoad<{ classes: ClassRow[] }>("/api/admin/classes");
+  const classes = useLoad<{ classes: ClassRow[] }>("/api/admin/classes?archived=1");
   const overview = useLoad<Overview>("/api/admin/overview");
   const [creating, setCreating] = useState(false);
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
+  const [show, setShow] = useState<"active" | "archived">("active");
   const { toast } = useFeedback();
   const nav = useNavigate();
   const info = new Map((overview.data?.classes ?? []).map((c) => [c.id, c]));
@@ -29,13 +30,20 @@ export function Classes() {
     }
   }
 
-  const rows = classes.data?.classes ?? [];
+  const everyClass = classes.data?.classes ?? [];
+  const rows = everyClass.filter((c) => (show === "archived" ? !c.isActive : !!c.isActive));
   return (
     <>
       <PageHeader title="Classes" description="Groups of students that share a school-year calendar and a set of courses." actions={<Button variant="primary" icon="plus" onClick={() => setCreating(true)}>New class</Button>} />
       <ErrorNote error={classes.error} />
       <Card flush>
-        {classes.loading && !classes.data ? <Skeleton /> : rows.length === 0 ? (
+        <div className="a-toolbar">
+          <select className="a-select" aria-label="Show classes" value={show} onChange={(e) => setShow(e.target.value as "active" | "archived")}>
+            <option value="active">Active classes</option><option value="archived">Archived classes</option>
+          </select>
+          <span className="a-spacer" /><span className="a-faint">{rows.length} {show === "archived" ? "archived" : "active"}</span>
+        </div>
+        {classes.loading && !classes.data ? <Skeleton /> : rows.length === 0 && show === "archived" ? <EmptyState title="No archived classes">Classes you archive show up here.</EmptyState> : rows.length === 0 ? (
           <EmptyState title="No classes yet" action={<Button variant="primary" icon="plus" onClick={() => setCreating(true)}>Create a class</Button>}>A class holds students and the courses they follow.</EmptyState>
         ) : (
           <div className="a-table-wrap"><table className="a-table">

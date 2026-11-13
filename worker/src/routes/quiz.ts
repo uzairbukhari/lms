@@ -1,3 +1,4 @@
+import { classExamScopeKey, classExamsFor } from "../lib/classExams";
 import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
@@ -139,6 +140,8 @@ quizRoutes.post("/quiz/attempts/:id/hint", async (c) => {
 // --- Semester exams ---------------------------------------------------------------------------------------
 
 /** The exams this child can sit now, with how many tries they have used. */
+const classExamBlueprint = (json: string | null) => { try { return (JSON.parse(json ?? "null") as { scope?: string } | null)?.scope === "class"; } catch { return false; } };
+
 quizRoutes.get("/exams", async (c) => {
   const user = c.get("user");
   const db = c.env.DB;
@@ -154,6 +157,16 @@ quizRoutes.get("/exams", async (c) => {
       .first<{ used: number; best: number | null; passed: number | null }>();
     out.push({ ...e, attemptsUsed: stats?.used ?? 0, bestPercent: stats?.best ?? null, passed: stats?.passed === 1 });
   }
+  // Exams a teacher built for the class: visible from the day they open.
+  const today = todayIn(c.env.TIMEZONE);
+  for (const e of await classExamsFor(db, classIds)) {
+    if (!e.opensOn || e.opensOn > today) continue;
+    const stats = await db
+      .prepare("SELECT COUNT(*) AS used, MAX(percent) AS best, MAX(passed) AS passed FROM quiz_attempts WHERE user_id = ? AND quiz_id = ? AND status = 'submitted'")
+      .bind(user.id, e.id)
+      .first<{ used: number; best: number | null; passed: number | null }>();
+    out.push({ id: e.id, courseId: "", title: e.title, subject: null, semester: 0, questionCount: e.questionCount, maxAttempts: e.maxAttempts, passPercent: e.passPercent, attemptsUsed: stats?.used ?? 0, bestPercent: stats?.best ?? null, passed: stats?.passed === 1 });
+  }
   return c.json({ exams: out });
 });
 
@@ -162,6 +175,14 @@ quizRoutes.post("/exams/:id/start", async (c) => {
   const db = c.env.DB;
   const quiz = await db.prepare(`SELECT ${QUIZ_COLUMNS}, course_id, semester, blueprint_json FROM quizzes WHERE id = ? AND kind = 'exam' AND is_current = 1`).bind(c.req.param("id")).first<QuizRow & { course_id: string; semester: number | null; blueprint_json: string | null }>();
   if (!quiz) return fail(c, 404, "not_found");
+  if (quiz.semester === null && classExamBlueprint(quiz.blueprint_json)) {
+    const classIds = (await db.prepare("SELECT c.id FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1").bind(user.id).all<{ id: string }>()).results.map((r) => r.id);
+    const mine = (await classExamsFor(db, classIds)).find((e) => e.id === quiz.id);
+    if (!mine || !mine.opensOn || mine.opensOn > todayIn(c.env.TIMEZONE)) return fail(c, 404, "not_found");
+    const started = await startAttempt(db, { userId: user.id, quiz, lessonId: null, scopeKey: classExamScopeKey(quiz.id), mode: "graded" });
+    if (!started.ok) return fail(c, 403, started.reason, started.reason === "no_attempts_left" ? "You have used all your tries for this exam." : "This exam has no questions yet.");
+    return c.json(startedBody(started.attempt, quiz, await attemptQuestions(db, started.attempt, quiz), started.resumed, null));
+  }
   if (quiz.semester === null) {
     // A course's grand quiz: only for a child on the course, and only once every published topic is passed.
     if (!blueprintIsCourse(quiz.blueprint_json)) return fail(c, 404, "not_found");

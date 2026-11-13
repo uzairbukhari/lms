@@ -79,8 +79,9 @@ describe("a class on a mastery path", () => {
     const h = await visible();
     expect(h.thisWeek.map((l) => l.id)).toEqual([lessons[0]]);
     expect((await call(`/api/lessons/${lessons[1]}`, { cookie: ava.cookie })).status).toBe(404);
-    const paths = await json<{ paths: { topics: { lessonId: string; status: string }[] }[] }>(await call("/api/paths", { cookie: ava.cookie }));
+    const paths = await json<{ paths: { topics: { lessonId: string; status: string }[] }[]; upNext: { kind: string; lessonId: string } | null }>(await call("/api/paths", { cookie: ava.cookie }));
     expect(paths.paths[0]?.topics.map((t) => t.status)).toEqual(["current", "locked", "locked"]);
+    expect(paths.upNext).toMatchObject({ kind: "balance", lessonId: lessons[0] });
   });
 
   it("keeps a failed topic graded on every retry, and does not unlock the next", async () => {

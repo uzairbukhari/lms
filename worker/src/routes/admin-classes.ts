@@ -13,7 +13,7 @@ adminClassRoutes.get("/classes/:id", async (c) => {
   const id = c.req.param("id");
   const db = c.env.DB;
   const cls = await db
-    .prepare("SELECT id, name, description, is_active AS isActive, visibility_mode AS visibilityMode, unlock_mode AS unlockMode FROM classes WHERE id = ?")
+    .prepare("SELECT id, name, description, is_active AS isActive, visibility_mode AS visibilityMode, unlock_mode AS unlockMode, structure_v3 AS structureV3 FROM classes WHERE id = ?")
     .bind(id)
     .first();
   if (!cls) return fail(c, 404, "not_found");
@@ -27,7 +27,7 @@ adminClassRoutes.get("/classes/:id", async (c) => {
 
 adminClassRoutes.patch("/classes/:id", async (c) => {
   const id = c.req.param("id");
-  const row = await c.env.DB.prepare("SELECT name, description, is_active, visibility_mode, unlock_mode FROM classes WHERE id = ?").bind(id).first<{ name: string; description: string | null; is_active: number; visibility_mode: string; unlock_mode: string }>();
+  const row = await c.env.DB.prepare("SELECT name, description, is_active, visibility_mode, unlock_mode, structure_v3 FROM classes WHERE id = ?").bind(id).first<{ name: string; description: string | null; is_active: number; visibility_mode: string; unlock_mode: string; structure_v3: number }>();
   if (!row) return fail(c, 404, "not_found");
   const body = await parseBody(
     c,
@@ -38,16 +38,19 @@ adminClassRoutes.patch("/classes/:id", async (c) => {
       visibilityMode: z.enum(["released", "all_published"]).optional(),
       /** "weekly" opens lessons by school week; "path" opens the next topic when the last quiz is passed. */
       unlockMode: z.enum(["weekly", "path"]).optional(),
+      /** true = the class follows its courses' unlock rules (mastery, open, drip) instead of the school calendar. */
+      structureV3: z.boolean().optional(),
     }),
   );
   await c.env.DB
-    .prepare("UPDATE classes SET name = ?, description = ?, is_active = ?, visibility_mode = ?, unlock_mode = ? WHERE id = ?")
+    .prepare("UPDATE classes SET name = ?, description = ?, is_active = ?, visibility_mode = ?, unlock_mode = ?, structure_v3 = ? WHERE id = ?")
     .bind(
       body.name ?? row.name,
       body.description === undefined ? row.description : body.description,
       body.isActive === undefined ? row.is_active : body.isActive ? 1 : 0,
       body.visibilityMode ?? row.visibility_mode,
       body.unlockMode ?? row.unlock_mode,
+      body.structureV3 === undefined ? row.structure_v3 : body.structureV3 ? 1 : 0,
       id,
     )
     .run();

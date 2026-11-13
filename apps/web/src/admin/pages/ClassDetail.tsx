@@ -1,11 +1,13 @@
 import { useState, type FormEvent } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { api } from "../../api";
 import { useCrumb } from "../Shell";
+import { ClassCourses } from "./ClassCourses";
+import { ClassExams } from "./ClassExams";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, Tabs, ago, useFeedback, useLoad } from "../ui";
 
 type Detail = {
-  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path" };
+  class: { id: string; name: string; description: string | null; isActive: number; visibilityMode: "released" | "all_published"; unlockMode?: "weekly" | "path"; structureV3?: number };
   members: { id: string; displayName: string; username: string }[];
   terms: { number: number; name: string; startDate: string; endDate: string; teachingWeeks: number; examWeek: number }[];
   assignments: { id: string; courseId: string; courseTitle: string }[];
@@ -13,7 +15,7 @@ type Detail = {
 type Student = { id: string; displayName: string; username: string };
 type Course = { id: string; title: string };
 type Unlock = { id: string; courseId: string; courseTitle: string; semester: number; week: number; classId: string | null; userId: string | null; expiresAt: string | null };
-type Tab = "members" | "courses" | "calendar" | "access" | "settings";
+type Tab = "members" | "courses" | "exams" | "calendar" | "access" | "settings";
 
 const today = () => new Date().toISOString().slice(0, 10);
 const dayMs = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
@@ -23,8 +25,10 @@ export function ClassDetail() {
   const detail = useLoad<Detail>(`/api/admin/classes/${id}`);
   const students = useLoad<{ students: Student[] }>("/api/admin/students");
   const courses = useLoad<{ courses: Course[] }>("/api/admin/courses");
+  const classCourses = useLoad<{ courses: { courseId: string; title: string }[] }>(`/api/admin/classes/${id}/courses`);
   const unlocks = useLoad<{ unlocks: Unlock[] }>("/api/admin/unlocks");
   const { toast, confirm } = useFeedback();
+  const nav = useNavigate();
   const [tab, setTab] = useState<Tab>("members");
   const d = detail.data;
   useCrumb(d?.class.name);
@@ -50,7 +54,7 @@ export function ClassDetail() {
       />
       <Tabs<Tab> value={tab} onChange={setTab} tabs={[
         { id: "members", label: `Members (${d.members.length})` }, { id: "courses", label: `Courses (${d.assignments.length})` },
-        { id: "calendar", label: "Calendar" }, { id: "access", label: "Access" }, { id: "settings", label: "Settings" },
+        { id: "exams", label: "Exams" }, { id: "calendar", label: "Calendar" }, { id: "access", label: "Access" }, { id: "settings", label: "Settings" },
       ]} />
 
       {tab === "members" && (
@@ -75,21 +79,9 @@ export function ClassDetail() {
         </Card>
       )}
 
-      {tab === "courses" && (
-        <Card flush title="Assigned courses" actions={unassigned.length > 0 && (
-          <select className="a-select" aria-label="Assign a course" value="" onChange={(e) => e.target.value && void act(() => api("/api/admin/assignments", { body: { courseId: e.target.value, classId: id } }), "Course assigned.")}>
-            <option value="">Assign a course…</option>
-            {unassigned.map((c) => <option key={c.id} value={c.id}>{c.title}</option>)}
-          </select>
-        )}>
-          {d.assignments.length === 0 ? <EmptyState title="No courses assigned">Children in this class see no lessons until you assign a course.</EmptyState> : (
-            <ul className="a-list">{d.assignments.map((a) => (
-              <li key={a.id}><Link to={`/admin/plan/${a.courseId}`} className="a-cell-title">{a.courseTitle}</Link>
-                <Button size="sm" onClick={() => void act(() => api(`/api/admin/assignments/${a.id}`, { method: "DELETE" }), "Course removed.")}>Remove</Button></li>
-            ))}</ul>
-          )}
-        </Card>
-      )}
+      {tab === "courses" && <ClassCourses classId={id} all={courses.data?.courses ?? []} useRules={!!d.class.structureV3} onChanged={() => void detail.reload()} />}
+
+      {tab === "exams" && <ClassExams classId={id} courses={classCourses.data?.courses ?? []} />}
 
       {tab === "calendar" && <Calendar detail={d} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
 
@@ -116,7 +108,7 @@ export function ClassDetail() {
       )}
 
       {tab === "settings" && (
-        <Settings detail={d} onSave={(body, msg) => act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body }), msg)} confirm={confirm} />
+        <Settings detail={d} onDelete={async () => { try { await api(`/api/admin/classes/${id}`, { method: "DELETE" }); toast("Class deleted."); nav("/admin/classes"); } catch (e) { toast(e instanceof Error ? e.message : "Could not delete the class.", true); } }} onSave={(body, msg) => act(() => api(`/api/admin/classes/${id}`, { method: "PATCH", body }), msg)} confirm={confirm} />
       )}
     </>
   );
@@ -219,7 +211,7 @@ function OpenEarly({ classId, courses, unlocks, onChange }: { classId: string; c
   );
 }
 
-function Settings({ detail, onSave, confirm }: { detail: Detail; onSave: (body: unknown, msg: string) => Promise<void>; confirm: (o: { title: string; message: string; confirmLabel?: string; danger?: boolean }) => Promise<boolean> }) {
+function Settings({ detail, onSave, onDelete, confirm }: { detail: Detail; onDelete: () => Promise<void>; onSave: (body: unknown, msg: string) => Promise<void>; confirm: (o: { title: string; message: string; confirmLabel?: string; danger?: boolean }) => Promise<boolean> }) {
   const [name, setName] = useState(detail.class.name);
   const [desc, setDesc] = useState(detail.class.description ?? "");
   const active = !!detail.class.isActive;
@@ -237,6 +229,12 @@ function Settings({ detail, onSave, confirm }: { detail: Detail; onSave: (body: 
         <div><Button variant={active ? "danger" : undefined} onClick={() => void (async () => {
           if (!active || await confirm({ title: "Archive this class?", message: "Its students will stop seeing lessons from it until you restore it. Nothing is deleted.", confirmLabel: "Archive", danger: true })) await onSave({ isActive: !active }, active ? "Class archived." : "Class restored.");
         })()}>{active ? "Archive class" : "Restore class"}</Button></div>
+      </Card>
+      <Card title="Delete this class">
+        <p className="a-muted">Deletes the class, its course list, unlocks and any exams nobody has sat. Students and their scores are kept; they just have no class until you add them to one. This cannot be undone. If you only want it out of the way, archive it instead.</p>
+        <div><Button variant="solid-danger" onClick={() => void (async () => {
+          if (await confirm({ title: `Delete “${detail.class.name}”?`, message: `${detail.members.length} student${detail.members.length === 1 ? "" : "s"} will be left without a class. This cannot be undone.`, confirmLabel: "Delete class", danger: true })) await onDelete();
+        })()}>Delete class</Button></div>
       </Card>
     </>
   );

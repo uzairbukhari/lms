@@ -55,7 +55,7 @@ adminContentRoutes.get("/lessons", async (c) => {
     binds.push(status);
   }
   const sql = `SELECT l.id, l.slug, l.title, l.subject_id AS subject, l.status, l.current_version AS version, l.unit,
-                      l.age_band AS ageBand, l.difficulty, l.estimated_minutes AS minutes, l.updated_at AS updatedAt,
+                      l.age_band AS ageBand, l.age_min AS ageMin, l.age_max AS ageMax, l.difficulty, l.estimated_minutes AS minutes, l.updated_at AS updatedAt,
                       (SELECT COUNT(*) FROM questions q JOIN quizzes z ON z.id = q.quiz_id WHERE z.lesson_id = l.id AND z.is_current = 1 AND q.variant_of IS NULL) AS questionCount
                  FROM lessons l ${where.length ? "WHERE " + where.join(" AND ") : ""} ORDER BY l.subject_id, l.sort_order, l.title`;
   const { results } = await c.env.DB.prepare(sql).bind(...binds).all<{ id: string }>();
@@ -70,10 +70,14 @@ adminContentRoutes.get("/lessons", async (c) => {
     .prepare("SELECT course_id AS courseId, class_id AS classId FROM course_assignments WHERE class_id IS NOT NULL")
     .all<{ courseId: string; classId: string }>();
   const classes = await c.env.DB.prepare("SELECT id, name FROM classes ORDER BY name").all<{ id: string; name: string }>();
+  const tagRows = await c.env.DB
+    .prepare("SELECT lt.lesson_id AS lessonId, t.id, t.kind, t.label FROM lesson_tags lt JOIN tags t ON t.id = lt.tag_id")
+    .all<{ lessonId: string; id: string; kind: string; label: string }>();
   return c.json({
     classes: classes.results,
     lessons: results.map((l) => ({
       ...l,
+      tags: tagRows.results.filter((t) => t.lessonId === l.id).map(({ id, kind, label }) => ({ id, kind, label })),
       slots: slots.results
         .filter((s) => s.lessonId === l.id)
         .map((s) => ({ ...s, classIds: assigned.results.filter((a) => a.courseId === s.courseId).map((a) => a.classId) })),

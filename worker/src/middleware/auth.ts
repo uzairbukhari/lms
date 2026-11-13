@@ -2,6 +2,7 @@ import type { MiddlewareHandler } from "hono";
 import type { AppEnv } from "../env";
 import { verifyAccessJwt } from "../lib/access";
 import { fail } from "../lib/http";
+import { loadTeacher } from "../lib/staff";
 import { readSession } from "../lib/session";
 import { getUserById, toSessionUser } from "../lib/users";
 
@@ -43,12 +44,25 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
   }
 
   if (!email) return fail(c, 401, "access_required");
-  if (email !== adminEmail) return fail(c, 403, "not_admin");
+  if (email !== adminEmail) {
+    // Not the super admin: only a teacher added by the super admin gets in, and only to the routes teachers may use.
+    const teacher = await loadTeacher(env.DB, email);
+    if (!teacher) return fail(c, 403, "not_admin");
+    if (!teacherMayCall(c.req.method, c.req.path)) return fail(c, 403, "teacher_scope", "Teachers cannot use this part of the admin yet.");
+    c.set("admin", { userId: teacher.id, email, actor: teacher });
+    return next();
+  }
 
   const userId = await ensureAdminUser(env.DB, email);
-  c.set("admin", { userId, email });
+  c.set("admin", { userId, email, actor: { id: userId, level: "super", classes: {} } });
   await next();
 };
+
+/** What a teacher may call for now: read the library and see who they are. Class actions are added with their own permission checks. */
+export function teacherMayCall(method: string, path: string): boolean {
+  if (method.toUpperCase() !== "GET") return false;
+  return /^\/api\/admin\/(me|tags|classes\/[^/]+\/courses|lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets(\/file\/[^/]+)?)$/.test(path);
+}
 
 /** What a service token may do: check, import and read lessons and courses, and upload images. Nothing about children, classes, results or settings. */
 export function automationMayCall(method: string, path: string): boolean {

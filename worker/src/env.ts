@@ -1,3 +1,4 @@
+import type { Actor } from "./lib/permissions";
 import type { SessionUser } from "@lms/schema";
 
 /** Cloudflare bindings and variables declared in wrangler.jsonc (plus secrets set with `wrangler secret put`). */
@@ -31,7 +32,7 @@ export type Bindings = {
   DESKTOP_EXIT_PIN?: string;
 };
 
-export type AdminContext = { userId: string; email: string };
+export type AdminContext = { userId: string; email: string; actor: Actor };
 
 export type Variables = {
   /** Set by requireStudent: the signed-in child. */

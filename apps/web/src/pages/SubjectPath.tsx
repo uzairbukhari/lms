@@ -80,11 +80,13 @@ function GrandStop({ grand, allDone, x, y, dense }: { grand: GrandQuiz | null; a
         )}
         {state === "passed" && <span aria-hidden="true" className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full text-sm font-extrabold" style={{ background: "#161a40", color: "#ffd166" }}>✓</span>}
       </span>
+      <span className="absolute left-1/2 top-full mt-1 flex w-max -translate-x-1/2 flex-col items-center gap-1">
       <span className="max-w-[120px] text-center font-display text-base font-bold leading-tight">{label}</span>
       {grand && <span className="text-sm font-bold" style={{ color: lit ? "#ffd166" : undefined }}>{state === "locked" ? "Locked" : state === "ready" ? "Ready!" : `Passed · ${stars} ${stars === 1 ? "star" : "stars"}`}</span>}
+      </span>
     </>
   );
-  const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1";
+  const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center";
   const style = { left: `${x}%`, top: `${y}%`, opacity: lit ? 1 : 0.7 };
   if (grand && lit) return <Link to={`/exam/${grand.quizId}`} className={cls} style={style} aria-label={`Grand quiz: ${state === "passed" ? "passed" : "ready"}, ${grand.questionCount} questions`}>{body}</Link>;
   return <div className={cls} style={style} aria-label={`${label}${lit ? "" : " (locked)"}`}>{body}</div>;
@@ -100,7 +102,7 @@ function Trail({ path }: { path: SubjectPath }) {
   const reached = Math.max(0, path.topics.reduce((a, t, i) => (t.status !== "locked" ? i : a), 0));
   const allDone = path.topics.every((t) => t.status === "done");
   const upCard = up && (
-        <section className={"card z-10 flex flex-col gap-3 p-5 " + (dense ? "w-full max-w-[420px] self-end" : "absolute bottom-0 right-0 w-[min(380px,calc(100%-3rem))]")} aria-label="Up next">
+        <section className={"card z-10 flex flex-col gap-3 p-5 w-full max-w-[420px] self-end"} aria-label="Up next">
           <p className="text-sm font-extrabold uppercase tracking-wide" style={{ color: "#ffd166" }}>Topic {upIdx + 1} · Up next</p>
           <p className="font-display text-2xl font-bold leading-tight">{shortTitle(up.title)}</p>
           <div className="flex items-center gap-3">
@@ -112,7 +114,7 @@ function Trail({ path }: { path: SubjectPath }) {
   );
   return (
     <div className="flex flex-1 flex-col gap-4">
-    <div className={"relative flex-1 " + (dense ? "min-h-[680px]" : "min-h-[520px]")}>
+    <div className="relative min-h-[300px] flex-1">
       <svg aria-hidden="true" className="absolute inset-0 h-full w-full" viewBox="0 0 1180 820" preserveAspectRatio="none">
         <path className="m-march" d={curve(pts, 0, n)} fill="none" stroke="var(--trail)" strokeWidth="5" strokeDasharray="2 14" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
         {reached > 0 && <path d={curve(pts, 0, reached)} fill="none" stroke="#ffd166" strokeWidth="5" strokeLinecap="round" vectorEffect="non-scaling-stroke" />}
@@ -128,20 +130,21 @@ function Trail({ path }: { path: SubjectPath }) {
             <span className={"relative flex items-center justify-center rounded-full font-display font-extrabold " + (here ? "m-pulse" : "m-float")} style={{ "--i": i, width: size, height: size, fontSize: dense ? (here ? 44 : 32) : here ? 54 : 40, background: locked ? "#171c4d" : colourOf(i), color: locked ? "var(--done-text)" : "#161a40", border: locked ? "3px dashed rgba(140,150,230,0.45)" : "5px solid #ffd166", } as CSSProperties}>
               {locked ? <Lock size={30} /> : i + 1}
             </span>
-            <span className={"text-center font-display font-bold leading-tight " + (dense ? "max-w-[110px] text-sm" : "max-w-[150px] text-base")} style={{ opacity: locked ? 0.6 : 1 }}>{shortTitle(t.title)}</span>
+            <span className="absolute left-1/2 top-full mt-1 flex w-max -translate-x-1/2 flex-col items-center gap-1">
+            <span className={"text-center font-display font-bold leading-tight " + (dense ? "max-w-[110px] text-sm" : "max-w-[150px] text-base")} style={{ color: locked ? "var(--done-text)" : undefined }}>{shortTitle(t.title)}</span>
             {t.status === "done" && <span className="text-sm font-bold" style={{ color: "#ffd166" }}>{stars} {stars === 1 ? "star" : "stars"}</span>}
+            </span>
           </>
         );
-        const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1";
+        const cls = "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center";
         const style = { left: `${x}%`, top: `${y}%`, zIndex: here ? 2 : 1 };
         return locked
           ? <div key={t.lessonId} className={cls} style={style} aria-label={`Topic ${i + 1}: ${t.title} (locked)`}>{body}</div>
           : <Link key={t.lessonId} to={`/topic/${t.lessonId}`} className={cls} style={style} aria-label={`Topic ${i + 1}: ${t.title}${t.status === "done" ? " (done)" : ""}`}>{body}</Link>;
       })}
       <GrandStop grand={path.grand ?? null} allDone={allDone} x={pts[n]![0]} y={pts[n]![1]} dense={dense} />
-      {!dense && upCard}
     </div>
-    {dense && upCard}
+    {upCard}
     </div>
   );
 }

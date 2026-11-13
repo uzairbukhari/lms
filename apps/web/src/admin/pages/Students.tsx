@@ -9,7 +9,7 @@ import {
 } from "../ui";
 import type { Overview } from "./Dashboard";
 
-type ClassRow = { id: string; name: string };
+type ClassRow = { id: string; name: string; isActive?: number };
 
 export function Students() {
   const students = useLoad<{ students: StudentSummary[] }>("/api/admin/students");
@@ -18,6 +18,7 @@ export function Students() {
   const { toast, confirm } = useFeedback();
   const [q, setQ] = useState("");
   const [classFilter, setClassFilter] = useState("");
+  const [show, setShow] = useState<"active" | "archived">("active");
   const [creds, setCreds] = useState<StudentCredentials[]>([]);
   const [adding, setAdding] = useState(false);
   const sort = useSort<"name" | "last" | "avg">("name");
@@ -25,11 +26,11 @@ export function Students() {
   const stats = useMemo(() => new Map((overview.data?.students ?? []).map((s) => [s.id, s])), [overview.data]);
   const rows = useMemo(() => {
     const list = (students.data?.students ?? []).filter((s) => !s.isTest).filter((s) =>
-      (!q || `${s.displayName} ${s.username}`.toLowerCase().includes(q.toLowerCase())) &&
+      (show === "archived" ? !s.isActive : !!s.isActive) && (!q || `${s.displayName} ${s.username}`.toLowerCase().includes(q.toLowerCase())) &&
       (!classFilter || s.classes.some((c) => c.id === classFilter)));
     const val = (s: StudentSummary) => (sort.key === "name" ? s.displayName : sort.key === "last" ? stats.get(s.id)?.lastActive : stats.get(s.id)?.averagePercent);
     return list.sort((a, b) => compare(val(a), val(b)) * sort.dir);
-  }, [students.data, q, classFilter, sort.key, sort.dir, stats]);
+  }, [students.data, q, classFilter, show, sort.key, sort.dir, stats]);
 
   async function act(fn: () => Promise<void>) {
     try { await fn(); await students.reload(); } catch (e) { toast(e instanceof Error ? e.message : "Something went wrong", true); }
@@ -40,7 +41,7 @@ export function Students() {
   });
   const toggle = (s: StudentSummary) => act(async () => {
     await api(`/api/admin/students/${s.id}`, { method: "PATCH", body: { isActive: !s.isActive } });
-    toast(`${s.displayName} switched ${s.isActive ? "off" : "on"}.`);
+    toast(`${s.displayName} ${s.isActive ? "archived. They can no longer sign in" : "restored"}.`);
   });
   const remove = async (s: StudentSummary) => {
     if (await confirm({ title: `Delete ${s.displayName}?`, message: "This deletes their login and every score for good. It cannot be undone.", confirmLabel: "Delete student", danger: true })) {
@@ -60,7 +61,10 @@ export function Students() {
           <SearchBox value={q} onChange={setQ} placeholder="Search by name or username" />
           <select className="a-select" aria-label="Filter by class" value={classFilter} onChange={(e) => setClassFilter(e.target.value)}>
             <option value="">All classes</option>
-            {(classes.data?.classes ?? []).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+            {(classes.data?.classes ?? []).filter((c) => c.isActive !== 0).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+          </select>
+          <select className="a-select" aria-label="Show students" value={show} onChange={(e) => setShow(e.target.value as "active" | "archived")}>
+            <option value="active">Active students</option><option value="archived">Archived students</option>
           </select>
           <span className="a-spacer" />
           <span className="a-faint">{rows.length} of {all.length}</span>
@@ -82,13 +86,13 @@ export function Students() {
                     <td><Link to={`/admin/students/${s.id}`} className="a-person" style={{ color: "inherit" }}><Avatar name={s.displayName} /><span className="a-cell-title">{s.displayName}</span></Link></td>
                     <td><code>{s.username}</code></td>
                     <td>{s.classes.length ? s.classes.map((c) => <Link key={c.id} to={`/admin/classes/${c.id}`} style={{ marginRight: 8 }}>{c.name}</Link>) : <span className="a-faint">None</span>}</td>
-                    <td><Badge tone={s.isActive ? "green" : "slate"}>{s.isActive ? "Active" : "Off"}</Badge></td>
+                    <td><Badge tone={s.isActive ? "green" : "slate"}>{s.isActive ? "Active" : "Archived"}</Badge></td>
                     <td className="num">{pct(stats.get(s.id)?.averagePercent)}</td>
                     <td className="a-muted">{ago(stats.get(s.id)?.lastActive)}</td>
                     <td className="actions"><RowMenu label={`Actions for ${s.displayName}`} items={[
                       { label: "View progress", to: `/admin/students/${s.id}` },
                       { label: "New password", onClick: () => void resetPassword(s) },
-                      { label: s.isActive ? "Switch off" : "Switch on", onClick: () => void toggle(s) },
+                      { label: s.isActive ? "Archive" : "Restore", onClick: () => void toggle(s) },
                       { label: "Delete…", danger: true, onClick: () => void remove(s) },
                     ]} /></td>
                   </tr>

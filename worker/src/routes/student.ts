@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import type { AppEnv } from "../env";
 import { pathsFor } from "../lib/path";
+import { activityFor, chooseUpNext } from "../lib/upnext";
 import { fail, parseBody } from "../lib/http";
 import { todayIn, visibleLessonsFor, type Phase, type VisibleLesson } from "../lib/visibility";
 import { requireStudent } from "../middleware/auth";
@@ -81,7 +82,11 @@ studentRoutes.get("/home", async (c) => {
 });
 
 /** The subject paths for classes on a mastery path: each topic is done, current, opened early or locked. */
-studentRoutes.get("/paths", async (c) => c.json({ paths: await pathsFor(c.env.DB, c.get("user").id) }));
+studentRoutes.get("/paths", async (c) => {
+  const userId = c.get("user").id;
+  const paths = await pathsFor(c.env.DB, userId);
+  return c.json({ paths, upNext: chooseUpNext(paths, await activityFor(c.env.DB, userId, paths)) });
+});
 
 /** Everything the player needs for one lesson, if this child is allowed to open it. Quiz answers are never included. */
 studentRoutes.get("/lessons/:id", async (c) => {

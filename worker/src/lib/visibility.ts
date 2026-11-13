@@ -1,3 +1,4 @@
+import { loadRules, MASTERY, ruleStatuses } from "./pathrules";
 import { currentSlot, isReleased, type Now, type TermRow } from "./terms";
 
 /** Today's date (YYYY-MM-DD) in the family's timezone, so a school week starts at local midnight, not UTC midnight. */
@@ -69,9 +70,9 @@ export async function visibleLessonsFor(db: D1Database, userId: string, realToda
   const [today, classRows] = await Promise.all([
     effectiveToday(db, userId, realToday),
     db
-      .prepare("SELECT c.id, c.visibility_mode AS mode, c.unlock_mode AS unlockMode FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1")
+      .prepare("SELECT c.id, c.visibility_mode AS mode, c.unlock_mode AS unlockMode, c.structure_v3 AS v3 FROM class_members m JOIN classes c ON c.id = m.class_id WHERE m.user_id = ? AND c.is_active = 1")
       .bind(userId)
-      .all<{ id: string; mode: string; unlockMode: string }>(),
+      .all<{ id: string; mode: string; unlockMode: string; v3: number }>(),
   ]);
   const classes = classRows.results;
   const classIds = classes.map((c) => c.id);
@@ -95,7 +96,7 @@ export async function visibleLessonsFor(db: D1Database, userId: string, realToda
   const calendars = classIds.map((id) => termRows.filter((t) => t.class_id === id)).filter((t) => t.length > 0);
 
   // Courses assigned to a class on a mastery path are handled by the path rules below, not by the school calendar.
-  const pathClassIds = classes.filter((c) => c.unlockMode === "path").map((c) => c.id);
+  const pathClassIds = classes.filter((c) => c.unlockMode === "path" || c.v3 === 1).map((c) => c.id);
   const pathCourseIds = new Set(
     pathClassIds.length
       ? (await db.prepare(`SELECT DISTINCT course_id FROM course_assignments WHERE class_id IN (${marks(pathClassIds.length)})`).bind(...pathClassIds).all<{ course_id: string }>()).results.map((r) => r.course_id)
@@ -149,11 +150,12 @@ export async function visibleLessonsFor(db: D1Database, userId: string, realToda
     ]);
     const passed = new Set(passedRows.results.map((r) => r.lesson_id));
     const opened = new Set(openRows.results.map((r) => r.lesson_id));
+    const rules = await loadRules(db, pathClassIds);
     const groups = new Map<string, typeof pathLessons>();
     for (const c of pathLessons) groups.set(`${c.courseId}:${c.subject}`, [...(groups.get(`${c.courseId}:${c.subject}`) ?? []), c]);
     for (const group of groups.values()) {
       group.sort((a, b) => a.position - b.position);
-      const statuses = pathStatuses(group.map((g) => g.lessonId), passed, opened);
+      const statuses = ruleStatuses(group.map((g) => g.lessonId), passed, opened, rules.get(group[0]!.courseId) ?? MASTERY, today);
       group.forEach((c, i) => {
         const st = statuses[i];
         if (st === "locked") return;
