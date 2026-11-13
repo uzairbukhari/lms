@@ -281,3 +281,17 @@ adminV3Routes.patch("/classes/:id/exams/:examId", async (c) => {
   await audit(c, "exam.publish", c.req.param("examId"), b);
   return c.json({ ok: true });
 });
+
+// ---- Lesson details that do not need a new version: age range ----
+adminV3Routes.put("/lessons/:id/meta", async (c) => {
+  const id = c.req.param("id");
+  const lesson = await c.env.DB.prepare("SELECT owner_id AS ownerId FROM lessons WHERE id = ?").bind(id).first<{ ownerId: string | null }>();
+  if (!lesson) return fail(c, 404, "not_found");
+  const used = await c.env.DB.prepare("SELECT DISTINCT cc.class_id AS classId FROM course_lessons cl JOIN class_courses cc ON cc.course_id = cl.course_id WHERE cl.lesson_id = ?").bind(id).all<{ classId: string }>();
+  if (!can(c.get("admin").actor, "lesson.edit", { ownerId: lesson.ownerId, usedInClasses: used.results.map((r) => r.classId) })) return fail(c, 403, "forbidden");
+  const b = await parseBody(c, z.object({ ageMin: z.number().int().min(3).max(18), ageMax: z.number().int().min(3).max(18) }));
+  if (b.ageMin > b.ageMax) return fail(c, 400, "invalid_input", "The youngest age cannot be above the oldest.");
+  await c.env.DB.prepare("UPDATE lessons SET age_min = ?, age_max = ?, updated_at = datetime('now') WHERE id = ?").bind(b.ageMin, b.ageMax, id).run();
+  await audit(c, "lesson.meta", id, b);
+  return c.json({ ok: true });
+});

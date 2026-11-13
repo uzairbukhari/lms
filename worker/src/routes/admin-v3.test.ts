@@ -65,3 +65,13 @@ describe("course builder", () => {
     expect(kept).toMatchObject({ semester: 1, week: 2 });
   });
 });
+
+describe("lesson details", () => {
+  it("saves an age range and rejects a backwards one", async () => {
+    const subj = await env.DB.prepare("SELECT id FROM subjects LIMIT 1").first<{ id: string }>();
+    await env.DB.prepare("INSERT INTO lessons (id, slug, subject_id, title, age_band, difficulty, content_json, source_json) VALUES ('m1','m1',?, 'M', '7-8', 1, '[]', '{}')").bind(subj!.id).run();
+    expect((await call("/api/admin/lessons/m1/meta", "PUT", { ageMin: 9, ageMax: 6 })).status).toBe(400);
+    expect((await call("/api/admin/lessons/m1/meta", "PUT", { ageMin: 6, ageMax: 8 })).status).toBe(200);
+    expect(await env.DB.prepare("SELECT age_min AS a, age_max AS b FROM lessons WHERE id='m1'").first()).toMatchObject({ a: 6, b: 8 });
+  });
+});
