@@ -11,7 +11,7 @@ export const adminReportRoutes = new Hono<AppEnv>();
 
 type AttemptSummary = {
   id: string; attemptNumber: number; mode: "graded" | "practice"; percent: number; passed: number; submittedAt: string; durationSec: number | null;
-  lessonId: string | null; lessonTitle: string | null; subject: string | null; kind: "lesson" | "exam"; examSemester: number | null; courseId: string | null;
+  lessonId: string | null; lessonTitle: string | null; subject: string | null; kind: "lesson" | "exam"; examSemester: number | null; courseId: string | null; blueprint?: string | null;
 };
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
@@ -25,7 +25,7 @@ async function studentReport(db: D1Database, userId: string, includePractice: bo
     await db
       .prepare(
         `SELECT a.id, a.attempt_number AS attemptNumber, a.mode, a.percent, a.passed, a.submitted_at AS submittedAt, a.duration_sec AS durationSec,
-                a.lesson_id AS lessonId, l.title AS lessonTitle, COALESCE(l.subject_id, z.subject_id) AS subject, z.kind, z.semester AS examSemester, z.course_id AS courseId
+                a.lesson_id AS lessonId, l.title AS lessonTitle, COALESCE(l.subject_id, z.subject_id) AS subject, z.kind, z.semester AS examSemester, z.course_id AS courseId, z.blueprint_json AS blueprint
            FROM quiz_attempts a JOIN quizzes z ON z.id = a.quiz_id LEFT JOIN lessons l ON l.id = a.lesson_id
           WHERE a.user_id = ? AND a.status = 'submitted' ORDER BY a.submitted_at, a.attempt_number`,
       )
@@ -87,6 +87,34 @@ async function studentReport(db: D1Database, userId: string, includePractice: bo
     const e = entry(a.subject as string, a.examSemester as number);
     e.exam = Math.max(e.exam ?? 0, a.percent);
   }
+  // By course: the courses of the student's class (plus any course a quizzed lesson belongs to), with class exams listed apart.
+  const courseRows = (await db.prepare(
+    `SELECT c.id AS courseId, c.title, c.subject_id AS subject, cl.lesson_id AS lessonId
+       FROM courses c JOIN course_lessons cl ON cl.course_id = c.id
+      WHERE c.id IN (SELECT cc.course_id FROM class_courses cc JOIN class_members m ON m.class_id = cc.class_id WHERE m.user_id = ?)
+         OR cl.lesson_id IN (SELECT lesson_id FROM quiz_attempts WHERE user_id = ? AND lesson_id IS NOT NULL)`,
+  ).bind(userId, userId).all<{ courseId: string; title: string; subject: string | null; lessonId: string }>()).results;
+  const byCourseMap = new Map<string, { courseId: string; title: string; subject: string | null; lessonIds: Set<string> }>();
+  for (const r of courseRows) {
+    const e = byCourseMap.get(r.courseId) ?? { courseId: r.courseId, title: r.title, subject: r.subject, lessonIds: new Set<string>() };
+    e.lessonIds.add(r.lessonId);
+    byCourseMap.set(r.courseId, e);
+  }
+  const lessonScore = (l: (typeof lessonRows)[number]) => (includePractice ? Math.max(l.bestGraded ?? -1, l.bestPractice ?? -1) : l.bestGraded);
+  const byCourse = [...byCourseMap.values()].map((c) => {
+    const scores = lessonRows.filter((l) => c.lessonIds.has(l.lessonId)).map(lessonScore).filter((x): x is number => x !== null && x >= 0);
+    const exams = attempts.filter((a) => a.kind === "exam" && a.courseId === c.courseId).map((a) => a.percent);
+    return { courseId: c.courseId, title: c.title, subject: c.subject, lessonsTotal: c.lessonIds.size, lessonsQuizzed: scores.length, lessonAverage: avg(scores), examBest: exams.length ? Math.max(...exams) : null };
+  }).sort((a, b) => a.title.localeCompare(b.title));
+  const classExams = new Map<string, { title: string; best: number; attempts: number }>();
+  for (const a of attempts.filter((x) => x.kind === "exam" && x.blueprint)) {
+    let title = "";
+    try { const bp = JSON.parse(a.blueprint as string); if (bp?.scope === "class") title = String(bp.title ?? "Class exam"); } catch { /* not a class exam */ }
+    if (!title) continue;
+    const e = classExams.get(title) ?? { title, best: 0, attempts: 0 };
+    e.best = Math.max(e.best, a.percent); e.attempts++;
+    classExams.set(title, e);
+  }
   const reportCard = [...card.values()].map((e) => ({ subject: e.subject, semester: e.semester, lessons: e.lessonScores.length, lessonAverage: avg(e.lessonScores), examBest: e.exam })).sort((a, b) => a.semester - b.semester || a.subject.localeCompare(b.subject));
 
   const sorted = attempts.filter(counted);
@@ -101,11 +129,13 @@ async function studentReport(db: D1Database, userId: string, includePractice: bo
     includePractice,
     /** Chronological scores for the learning curve. */
     curve: sorted.map((a) => ({ at: a.submittedAt, percent: a.percent, mode: a.mode, kind: a.kind, title: a.lessonTitle ?? "Exam" })),
-    lessons: lessonRows.sort((a, b) => (a.semester ?? 9) - (b.semester ?? 9) || a.title.localeCompare(b.title)),
+    lessons: lessonRows.map((l) => ({ ...l, courses: [...byCourseMap.values()].filter((c) => c.lessonIds.has(l.lessonId)).map((c) => c.title) })).sort((a, b) => (a.semester ?? 9) - (b.semester ?? 9) || a.title.localeCompare(b.title)),
     exams: attempts.filter((a) => a.kind === "exam"),
     weakestSkills: skills.slice(0, 8),
     strongestSkills: [...skills].reverse().slice(0, 5),
     reportCard,
+    byCourse,
+    classExams: [...classExams.values()],
   };
 }
 

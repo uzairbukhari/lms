@@ -7,9 +7,11 @@ export type Report = {
   student: { id: string; displayName: string };
   totals: Totals;
   curve: { at: string; percent: number; mode: string; kind: string; title: string }[];
-  lessons: { lessonId: string; title: string; subject: string | null; semester: number | null; bestGraded: number | null; bestPractice: number | null; attemptCount: number; attempts: { id: string; attemptNumber: number; mode: string; percent: number; submittedAt: string }[] }[];
+  lessons: { lessonId: string; title: string; subject: string | null; semester: number | null; courses: string[]; bestGraded: number | null; bestPractice: number | null; attemptCount: number; attempts: { id: string; attemptNumber: number; mode: string; percent: number; submittedAt: string }[] }[];
   weakestSkills: { skill: string; percent: number; correct: number; total: number }[];
   reportCard: { subject: string; semester: number; lessons: number; lessonAverage: number | null; examBest: number | null }[];
+  byCourse: { courseId: string; title: string; subject: string | null; lessonsTotal: number; lessonsQuizzed: number; lessonAverage: number | null; examBest: number | null }[];
+  classExams: { title: string; best: number; attempts: number }[];
 };
 type Opt = { id: string; text: string };
 type Drill = { attempt: { mode: string; attemptNumber: number }; percent: number; questions: { questionId: string; prompt: string; type: string; options: { options?: Opt[]; items?: Opt[]; left?: Opt[]; right?: Opt[] } | null; correct: boolean; response: unknown; answer: unknown; usedHint: boolean; skill: string | null }[] };

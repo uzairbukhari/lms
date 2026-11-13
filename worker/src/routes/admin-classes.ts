@@ -126,6 +126,51 @@ adminClassRoutes.put("/classes/:id/terms", async (c) => {
   return c.json({ terms: rows });
 });
 
+/** Add one semester at a time. Takes the next free number (1 to 4) unless `number` is given. */
+const oneTerm = z.object({
+  number: z.number().int().min(1).max(4).optional(),
+  startDate: dateSchema,
+  teachingWeeks: z.number().int().min(1).max(12).optional(),
+});
+
+function termRow(number: number, startDate: string, teachingWeeks: number) {
+  return { number, name: `Semester ${number}`, start_date: startDate, end_date: addDays(startDate, (teachingWeeks + 1) * 7 - 1), teaching_weeks: teachingWeeks, exam_week: teachingWeeks + 1 };
+}
+
+adminClassRoutes.post("/classes/:id/terms", async (c) => {
+  const id = c.req.param("id");
+  if (!(await c.env.DB.prepare("SELECT 1 FROM classes WHERE id = ?").bind(id).first())) return fail(c, 404, "not_found");
+  const body = await parseBody(c, oneTerm);
+  if (!isMonday(body.startDate)) return fail(c, 400, "not_monday", "A semester starts on a Monday. Pick a Monday.");
+  const used = (await c.env.DB.prepare("SELECT number FROM terms WHERE class_id = ?").bind(id).all<{ number: number }>()).results.map((r) => r.number);
+  const number = body.number ?? [1, 2, 3, 4].find((n) => !used.includes(n));
+  if (!number) return fail(c, 400, "full", "This class already has 4 semesters. Edit or delete one first.");
+  if (used.includes(number)) return fail(c, 409, "exists", `Semester ${number} already exists. Edit it instead.`);
+  const t = termRow(number, body.startDate, body.teachingWeeks ?? 12);
+  await c.env.DB.prepare("INSERT INTO terms (id, class_id, number, name, start_date, end_date, teaching_weeks, exam_week) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
+    .bind(crypto.randomUUID(), id, t.number, t.name, t.start_date, t.end_date, t.teaching_weeks, t.exam_week).run();
+  return c.json({ term: t }, 201);
+});
+
+adminClassRoutes.patch("/classes/:id/terms/:number", async (c) => {
+  const id = c.req.param("id");
+  const number = Number(c.req.param("number"));
+  const existing = await c.env.DB.prepare("SELECT start_date, teaching_weeks FROM terms WHERE class_id = ? AND number = ?").bind(id, number).first<{ start_date: string; teaching_weeks: number }>();
+  if (!existing) return fail(c, 404, "not_found");
+  const body = await parseBody(c, z.object({ startDate: dateSchema.optional(), teachingWeeks: z.number().int().min(1).max(12).optional() }));
+  const t = termRow(number, body.startDate ?? existing.start_date, body.teachingWeeks ?? existing.teaching_weeks);
+  if (!isMonday(t.start_date)) return fail(c, 400, "not_monday", "A semester starts on a Monday. Pick a Monday.");
+  await c.env.DB.prepare("UPDATE terms SET start_date = ?, end_date = ?, teaching_weeks = ?, exam_week = ? WHERE class_id = ? AND number = ?")
+    .bind(t.start_date, t.end_date, t.teaching_weeks, t.exam_week, id, number).run();
+  return c.json({ term: t });
+});
+
+adminClassRoutes.delete("/classes/:id/terms/:number", async (c) => {
+  const res = await c.env.DB.prepare("DELETE FROM terms WHERE class_id = ? AND number = ?").bind(c.req.param("id"), Number(c.req.param("number"))).run();
+  if (!res.meta.changes) return fail(c, 404, "not_found");
+  return c.json({ ok: true });
+});
+
 // --- Giving courses to classes or to single students --------------------------------------------------
 
 adminClassRoutes.get("/assignments", async (c) => {
