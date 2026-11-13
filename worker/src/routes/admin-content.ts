@@ -148,10 +148,27 @@ adminContentRoutes.get("/courses", async (c) => {
     .prepare(
       `SELECT co.id, co.slug, co.title, co.subject_id AS subject, co.age_band AS ageBand, co.status,
               (SELECT COUNT(*) FROM course_lessons cl WHERE cl.course_id = co.id) AS lessonCount
-         FROM courses co ORDER BY co.title`,
+         FROM courses co ${c.req.query("archived") === "1" ? "" : "WHERE co.status <> 'archived'"} ORDER BY co.title`,
     )
     .all();
   return c.json({ courses: results });
+});
+
+/** Delete a course for good. Refused while a class uses it or an exam or score is tied to it; archive it instead. */
+adminContentRoutes.delete("/courses/:id", async (c) => {
+  const id = c.req.param("id");
+  const db = c.env.DB;
+  if (!(await db.prepare("SELECT 1 FROM courses WHERE id = ?").bind(id).first())) return fail(c, 404, "not_found");
+  const inClass = await db.prepare("SELECT (SELECT COUNT(*) FROM class_courses WHERE course_id = ?1) + (SELECT COUNT(*) FROM course_assignments WHERE course_id = ?1) AS n").bind(id).first<{ n: number }>();
+  if (inClass?.n) return fail(c, 409, "in_use", "A class still uses this course. Remove it from the class first, or archive it instead.");
+  const tied = await db.prepare("SELECT (SELECT COUNT(*) FROM quizzes WHERE course_id = ?1) AS n").bind(id).first<{ n: number }>();
+  if (tied?.n) return fail(c, 409, "has_records", "Exams were made from this course. Archive it instead.");
+  await db.batch([
+    db.prepare("DELETE FROM lesson_unlocks WHERE course_id = ?").bind(id),
+    db.prepare("DELETE FROM course_lessons WHERE course_id = ?").bind(id),
+    db.prepare("DELETE FROM courses WHERE id = ?").bind(id),
+  ]);
+  return c.json({ ok: true });
 });
 
 const slugSchema = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "Use lower case words joined with -").max(80);
