@@ -3,6 +3,8 @@ import { z } from "zod";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { can } from "../lib/permissions";
+import { classExamScopeKey, classExamsFor, lessonsForExam, mainQuestions, proposeQuestions } from "../lib/classExams";
+import type { SourceQuestion } from "../lib/grand";
 
 /** Tags, courses in a class (with unlock rules) and teachers. Mounted under /api/admin, behind requireAdmin. */
 export const adminV3Routes = new Hono<AppEnv>();
@@ -186,5 +188,96 @@ adminV3Routes.put("/courses/:id/builder", async (c) => {
     db.prepare("UPDATE courses SET title = COALESCE(?, title), age_min = COALESCE(?, age_min), age_max = COALESCE(?, age_max) WHERE id = ?").bind(b.title ?? null, b.ageMin ?? null, b.ageMax ?? null, id),
   ]);
   await audit(c, "course.edit", id, { count: b.items.length });
+  return c.json({ ok: true });
+});
+
+// ---- Class exams: cover -> blueprint -> generate (lock / swap) -> publish ----
+
+async function classCourseIds(db: D1Database, classId: string, only?: string[]): Promise<string[]> {
+  const { results } = await db.prepare("SELECT course_id AS id FROM class_courses WHERE class_id = ?").bind(classId).all<{ id: string }>();
+  const ids = results.map((r) => r.id);
+  return only?.length ? ids.filter((i) => only.includes(i)) : ids;
+}
+
+adminV3Routes.get("/classes/:id/exams", async (c) => {
+  const classId = c.req.param("id");
+  if (!can(c.get("admin").actor, "class.read", { classId })) return fail(c, 403, "forbidden");
+  return c.json({ exams: await classExamsFor(c.env.DB, [classId]) });
+});
+
+/** Proposes a question list from the chosen lessons. Nothing is saved. `avoid` lists question ids already used, so a swap gives a different one. */
+adminV3Routes.post("/classes/:id/exams/generate", async (c) => {
+  const classId = c.req.param("id");
+  if (!can(c.get("admin").actor, "class.exam", { classId })) return fail(c, 403, "forbidden");
+  const b = await parseBody(c, z.object({ courseIds: z.array(z.string()).default([]), lessonIds: z.array(z.string()).default([]), perLesson: z.number().int().min(1).max(6).default(2), avoid: z.array(z.string()).default([]) }));
+  const lessons = await lessonsForExam(c.env.DB, await classCourseIds(c.env.DB, classId, b.courseIds), b.lessonIds);
+  if (!lessons.length) return fail(c, 400, "no_lessons", "This class has no published lessons to examine.");
+  const questions = await proposeQuestions(c.env.DB, lessons, b.perLesson, new Set(b.avoid));
+  if (!questions.length) return fail(c, 400, "no_questions", "These lessons have no quiz questions yet.");
+  return c.json({ lessons: lessons.length, questions });
+});
+
+/** One replacement question from the same lesson, different from everything in `avoid`. */
+adminV3Routes.post("/classes/:id/exams/swap", async (c) => {
+  const classId = c.req.param("id");
+  if (!can(c.get("admin").actor, "class.exam", { classId })) return fail(c, 403, "forbidden");
+  const b = await parseBody(c, z.object({ lessonId: z.string(), avoid: z.array(z.string()) }));
+  const lessons = (await lessonsForExam(c.env.DB, await classCourseIds(c.env.DB, classId), [b.lessonId]));
+  if (!lessons.length) return fail(c, 404, "not_found");
+  const [q] = await proposeQuestions(c.env.DB, lessons, 1, new Set(b.avoid));
+  if (!q) return fail(c, 409, "nothing_else", "That lesson has no other question to swap in.");
+  return c.json({ question: q });
+});
+
+/** Saves the exam as frozen copies. `opensOn` null = draft (children cannot see it); a date publishes it from that day. */
+adminV3Routes.post("/classes/:id/exams", async (c) => {
+  const classId = c.req.param("id");
+  if (!can(c.get("admin").actor, "class.exam", { classId })) return fail(c, 403, "forbidden");
+  if (!(await c.env.DB.prepare("SELECT 1 FROM classes WHERE id = ?").bind(classId).first())) return fail(c, 404, "not_found");
+  const b = await parseBody(c, z.object({
+    title: z.string().trim().min(1).max(80),
+    questionIds: z.array(z.string()).min(1).max(100),
+    passPercent: z.number().int().min(1).max(100).default(70),
+    maxAttempts: z.number().int().min(1).max(20).nullable().default(2),
+    opensOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable().default(null),
+  }));
+  const db = c.env.DB;
+  const copies: { main: SourceQuestion; variant: SourceQuestion | null }[] = [];
+  for (const qid of b.questionIds) {
+    const row = await db.prepare("SELECT z.lesson_id AS lessonId FROM questions q JOIN quizzes z ON z.id = q.quiz_id WHERE q.id = ?").bind(qid).first<{ lessonId: string | null }>();
+    if (!row?.lessonId) return fail(c, 400, "bad_question", "One of the questions was not found.");
+    const all = await mainQuestions(db, row.lessonId);
+    const main = all.find((q) => q.id === qid);
+    if (!main) return fail(c, 400, "bad_question", "One of the questions is not in its lesson's current quiz.");
+    copies.push({ main, variant: all.find((q) => q.variant_of === main.ref) ?? null });
+  }
+  const quizId = crypto.randomUUID();
+  const insert = `INSERT INTO questions (id, quiz_id, ref, position, type, prompt, media_json, options_json, answer_json, hint, explanation, points, skill_tag, sub_lesson, depth, variant_of, source_question_id)
+                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+  let position = 0;
+  const rows: D1PreparedStatement[] = [];
+  copies.forEach(({ main, variant }, i) => {
+    const ref = `e${i + 1}`;
+    const add = (s: SourceQuestion, r: string, variantOf: string | null) => rows.push(db.prepare(insert).bind(crypto.randomUUID(), quizId, r, ++position, s.type, s.prompt, s.media_json, s.options_json, s.answer_json, s.hint, s.explanation, s.points, s.skill_tag, s.sub_lesson, s.depth, variantOf, s.id));
+    add(main, ref, null);
+    if (variant) add(variant, `${ref}v`, ref);
+  });
+  await db.batch([
+    db.prepare("INSERT INTO quizzes (id, kind, lesson_id, course_id, subject_id, semester, blueprint_json, version, is_current, pass_percent, shuffle_questions, shuffle_options, max_attempts, class_id) VALUES (?, 'exam', NULL, NULL, NULL, NULL, ?, 1, 1, ?, 1, 1, ?, ?)")
+      .bind(quizId, JSON.stringify({ scope: "class", title: b.title, opensOn: b.opensOn, key: classExamScopeKey(quizId) }), b.passPercent, b.maxAttempts, classId),
+    ...rows,
+  ]);
+  await audit(c, "exam.create", quizId, { classId, title: b.title, opensOn: b.opensOn, questions: copies.length });
+  return c.json({ id: quizId, questionCount: copies.length }, 201);
+});
+
+/** Publish (give a date) or pull back to draft (null). */
+adminV3Routes.patch("/classes/:id/exams/:examId", async (c) => {
+  const classId = c.req.param("id");
+  if (!can(c.get("admin").actor, "class.exam", { classId })) return fail(c, 403, "forbidden");
+  const b = await parseBody(c, z.object({ opensOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable() }));
+  const res = await c.env.DB.prepare("UPDATE quizzes SET blueprint_json = json_set(blueprint_json, '$.opensOn', ?) WHERE id = ? AND class_id = ? AND json_extract(blueprint_json, '$.scope') = 'class'").bind(b.opensOn, c.req.param("examId"), classId).run();
+  if (!res.meta.changes) return fail(c, 404, "not_found");
+  await audit(c, "exam.publish", c.req.param("examId"), b);
   return c.json({ ok: true });
 });

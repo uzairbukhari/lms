@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 import { api } from "../../api";
 import { useCrumb } from "../Shell";
 import { ClassCourses } from "./ClassCourses";
+import { ClassExams } from "./ClassExams";
 import { Badge, Button, Card, EmptyState, ErrorNote, Field, PageHeader, Skeleton, Tabs, ago, useFeedback, useLoad } from "../ui";
 
 type Detail = {
@@ -14,7 +15,7 @@ type Detail = {
 type Student = { id: string; displayName: string; username: string };
 type Course = { id: string; title: string };
 type Unlock = { id: string; courseId: string; courseTitle: string; semester: number; week: number; classId: string | null; userId: string | null; expiresAt: string | null };
-type Tab = "members" | "courses" | "calendar" | "access" | "settings";
+type Tab = "members" | "courses" | "exams" | "calendar" | "access" | "settings";
 
 const today = () => new Date().toISOString().slice(0, 10);
 const dayMs = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
@@ -24,6 +25,7 @@ export function ClassDetail() {
   const detail = useLoad<Detail>(`/api/admin/classes/${id}`);
   const students = useLoad<{ students: Student[] }>("/api/admin/students");
   const courses = useLoad<{ courses: Course[] }>("/api/admin/courses");
+  const classCourses = useLoad<{ courses: { courseId: string; title: string }[] }>(`/api/admin/classes/${id}/courses`);
   const unlocks = useLoad<{ unlocks: Unlock[] }>("/api/admin/unlocks");
   const { toast, confirm } = useFeedback();
   const [tab, setTab] = useState<Tab>("members");
@@ -51,7 +53,7 @@ export function ClassDetail() {
       />
       <Tabs<Tab> value={tab} onChange={setTab} tabs={[
         { id: "members", label: `Members (${d.members.length})` }, { id: "courses", label: `Courses (${d.assignments.length})` },
-        { id: "calendar", label: "Calendar" }, { id: "access", label: "Access" }, { id: "settings", label: "Settings" },
+        { id: "exams", label: "Exams" }, { id: "calendar", label: "Calendar" }, { id: "access", label: "Access" }, { id: "settings", label: "Settings" },
       ]} />
 
       {tab === "members" && (
@@ -77,6 +79,8 @@ export function ClassDetail() {
       )}
 
       {tab === "courses" && <ClassCourses classId={id} all={courses.data?.courses ?? []} useRules={!!d.class.structureV3} onChanged={() => void detail.reload()} />}
+
+      {tab === "exams" && <ClassExams classId={id} courses={classCourses.data?.courses ?? []} />}
 
       {tab === "calendar" && <Calendar detail={d} onSave={(path, body, method) => act(() => api(path, { method, body }), "Calendar saved.")} />}
 
