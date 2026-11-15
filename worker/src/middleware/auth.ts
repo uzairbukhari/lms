@@ -61,14 +61,16 @@ export const requireAdmin: MiddlewareHandler<AppEnv> = async (c, next) => {
 /** What a teacher may call for now: read the library and see who they are. Class actions are added with their own permission checks. */
 export function teacherMayCall(method: string, path: string): boolean {
   if (method.toUpperCase() !== "GET") return false;
-  return /^\/api\/admin\/(me|tags|classes\/[^/]+\/courses|lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets(\/file\/[^/]+)?)$/.test(path);
+  return /^\/api\/admin\/(me|tags|classes\/[^/]+\/courses|lessons(\/[^/]+(\/(outline|preview|worksheet|worksheet\.pdf|answers\.pdf))?)?|courses(\/[^/]+)?|assets(\/file\/[^/]+)?)$/.test(path);
 }
 
-/** What a service token may do: check, import and read lessons and courses, and upload images. Nothing about children, classes, results or settings. */
+/** What a service token may do: check, import and read lessons and courses, upload images, and store rendered worksheets. Nothing about children, classes, results or settings. */
 export function automationMayCall(method: string, path: string): boolean {
   const m = method.toUpperCase();
   if (m === "POST") return /^\/api\/admin\/(lessons\/(validate|import)|assets|voice\/prewarm)$/.test(path);
-  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview))?)?|courses(\/[^/]+)?|assets|voice\/audio)$/.test(path);
+  if (m === "GET") return /^\/api\/admin\/(lessons(\/[^/]+(\/(outline|preview|worksheet))?)?|courses(\/[^/]+)?|assets|voice\/audio)$/.test(path);
+  // Store a rendered worksheet (scripts/render-worksheets.mjs).
+  if (m === "PUT") return /^\/api\/admin\/lessons\/[^/]+\/worksheet$/.test(path);
   return false;
 }
 

@@ -11,6 +11,8 @@ type LessonRow = {
   id: string; slug: string; title: string; subject: string; status: "draft" | "published" | "archived";
   version: number; unit: string | null; ageBand: string; ageMin: number | null; ageMax: number | null; tags: { id: string; kind: string; label: string }[]; questionCount: number; updatedAt: string | null;
   slots: { courseTitle: string; semester: number | null; week: number | null; classIds: string[] }[];
+  /** Printable worksheet: ready, stale (the lesson changed since), none (not made yet) or ineligible (not in a published course). */
+  worksheet: { state: "ready" | "stale" | "none" | "ineligible"; pages: number | null; questions: number | null; updatedAt: string | null };
 };
 
 export function Lessons() {
@@ -24,6 +26,7 @@ export function Lessons() {
   const [week, setWeek] = useState("");
   const [tag, setTag] = useState("");
   const [age, setAge] = useState("");
+  const [sheet, setSheet] = useState("");
   const [tagFor, setTagFor] = useState<LessonRow | null>(null);
   const tagList = useLoad<{ tags: { id: string; kind: string; label: string }[] }>("/api/admin/tags");
   const [outline, setOutline] = useState<LessonRow | null>(null);
@@ -31,11 +34,11 @@ export function Lessons() {
 
   const rows = useMemo(() => {
     const list = (lessons.data?.lessons ?? []).filter((l) =>
-      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (status ? l.status === status : l.status !== "archived") && (!tag || l.tags.some((t) => t.id === tag)) && (!age || (l.ageMin !== null && l.ageMax !== null && Number(age) >= l.ageMin && Number(age) <= l.ageMax)) &&
+      (!q || `${l.title} ${l.unit ?? ""}`.toLowerCase().includes(q.toLowerCase())) && (!subject || l.subject === subject) && (status ? l.status === status : l.status !== "archived") && (!tag || l.tags.some((t) => t.id === tag)) && (!sheet || l.worksheet.state === sheet) && (!age || (l.ageMin !== null && l.ageMax !== null && Number(age) >= l.ageMin && Number(age) <= l.ageMax)) &&
       (!cls && !semester && !week ? true : l.slots.some((s) => (!cls || s.classIds.includes(cls)) && (!semester || String(s.semester) === semester) && (!week || String(s.week) === week))));
     const val = (l: LessonRow) => (sort.key === "title" ? l.title : sort.key === "subject" ? `${SUBJECT_NAMES[l.subject] ?? l.subject}${l.title}` : l.updatedAt);
     return list.sort((a, b) => compare(val(a), val(b)) * sort.dir);
-  }, [lessons.data, q, subject, status, tag, age, cls, semester, week, sort.key, sort.dir]);
+  }, [lessons.data, q, subject, status, tag, sheet, age, cls, semester, week, sort.key, sort.dir]);
 
   async function setLessonStatus(l: LessonRow, next: LessonRow["status"]) {
     if (next === "archived" && l.slots.length > 0 && !(await confirm({ title: `Archive “${l.title}”?`, message: `It is in ${l.slots.length} course${l.slots.length === 1 ? "" : "s"}. Children will stop seeing it, but their scores are kept and you can restore it any time.`, confirmLabel: "Archive", danger: true }))) return;
@@ -50,7 +53,11 @@ export function Lessons() {
     } catch { toast("Could not copy the lesson.", true); }
   }
 
+  const download = (l: LessonRow, file: "worksheet.pdf" | "answers.pdf") => { window.location.assign(`/api/admin/lessons/${l.id}/${file}`); };
+  const previewSheet = (l: LessonRow) => { window.open(`/api/admin/lessons/${l.id}/worksheet`, "_blank", "noopener"); };
+
   const all = lessons.data?.lessons ?? [];
+  const sheetCounts = { ready: all.filter((l) => l.worksheet.state === "ready").length, stale: all.filter((l) => l.worksheet.state === "stale").length, none: all.filter((l) => l.worksheet.state === "none").length };
   return (
     <>
       <PageHeader title="Lessons" description="Everything you have imported from Claude. Publish a lesson to make it available to its classes." actions={<LinkButton to="/admin/lessons/import" variant="primary" icon="plus">Import lesson</LinkButton>} />
@@ -70,6 +77,9 @@ export function Lessons() {
           <select className="a-select" aria-label="Age" value={age} onChange={(e) => setAge(e.target.value)}>
             <option value="">Any age</option>{[5, 6, 7, 8, 9, 10, 11].map((n) => <option key={n} value={n}>Age {n}</option>)}
           </select>
+          <select className="a-select" aria-label="Worksheet" value={sheet} onChange={(e) => setSheet(e.target.value)}>
+            <option value="">Worksheet: any</option><option value="ready">Worksheet ready</option><option value="stale">Worksheet out of date</option><option value="none">Worksheet not made yet</option>
+          </select>
           <select className="a-select" aria-label="Class" value={cls} onChange={(e) => setCls(e.target.value)}>
             <option value="">All classes</option>{(lessons.data?.classes ?? []).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
           </select>
@@ -79,7 +89,7 @@ export function Lessons() {
           <select className="a-select" aria-label="Week" value={week} onChange={(e) => setWeek(e.target.value)}>
             <option value="">Any week</option>{Array.from({ length: 13 }, (_, i) => i + 1).map((n) => <option key={n} value={n}>{n === 13 ? "Week 13 (exam)" : `Week ${n}`}</option>)}
           </select>
-          <span className="a-spacer" /><span className="a-faint">{rows.length} of {all.length}</span>
+          <span className="a-spacer" /><span className="a-faint">{rows.length} of {all.length} · worksheets: {sheetCounts.ready} ready, {sheetCounts.stale} out of date, {sheetCounts.none} not made yet</span>
         </div>
         {lessons.loading && !lessons.data ? <Skeleton /> : rows.length === 0 ? (
           <EmptyState title={all.length === 0 ? "No lessons yet" : "No lessons match"} action={all.length === 0 ? <LinkButton to="/admin/lessons/import" variant="primary" icon="plus">Import your first lesson</LinkButton> : undefined}>
@@ -101,8 +111,13 @@ export function Lessons() {
                   <LinkButton to={`/admin/lessons/${l.id}/edit`} size="sm">Edit</LinkButton>
                   <Button size="sm" onClick={() => setOutline(l)}>Outline</Button>
                   <LinkButton to={`/admin/lessons/${l.id}/videos`} size="sm">Videos</LinkButton>
+                  {l.worksheet.state === "ready" || l.worksheet.state === "stale"
+                    ? <Button size="sm" icon="download" onClick={() => download(l, "worksheet.pdf")} title={l.worksheet.state === "stale" ? "The lesson changed after this worksheet was made. It still downloads; ask Claude to make a new one." : `${l.worksheet.pages} page${l.worksheet.pages === 1 ? "" : "s"}, ${l.worksheet.questions} questions`}>{l.worksheet.state === "stale" ? "Worksheet (out of date)" : "Worksheet"}</Button>
+                    : <Button size="sm" disabled title={l.worksheet.state === "none" ? "No worksheet yet. Ask Claude to make it." : "Worksheets are made for lessons in a published course."}>{l.worksheet.state === "none" ? "Worksheet not made yet" : "No worksheet"}</Button>}
                   {l.status !== "published" && <Button size="sm" variant="primary" onClick={() => void setLessonStatus(l, "published")}>Publish</Button>}
                   <RowMenu label={`Actions for ${l.title}`} items={[
+                    ...(l.worksheet.state === "ready" || l.worksheet.state === "stale" ? [{ label: "Download worksheet (PDF)", onClick: () => download(l, "worksheet.pdf") }, { label: "Download answer key (PDF)", onClick: () => download(l, "answers.pdf") }] : []),
+                    { label: "Preview worksheet", onClick: () => previewSheet(l) },
                     ...(l.status === "published" ? [{ label: "Unpublish", onClick: () => void setLessonStatus(l, "draft") }] : []),
                     ...(l.status !== "archived" ? [{ label: "Archive", onClick: () => void setLessonStatus(l, "archived") }] : [{ label: "Restore as draft", onClick: () => void setLessonStatus(l, "draft") }]),
                     { label: "Copy JSON", onClick: () => void copySource(l) },
