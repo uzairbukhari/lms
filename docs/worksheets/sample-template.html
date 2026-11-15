@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Place Value to 100 worksheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink:#1d2433; --soft:#5b6475; --line:#c9cfdb; --accent:#3b5bdb; --tint:#eef2ff; --tint2:#f6f7fb; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:#e9ebf0; }
+  body { font-family: 'Andika', sans-serif; color: var(--ink); font-size: 12.5pt; line-height: 1.35; }
+  .page { width:210mm; height:297mm; padding:11mm 12mm 9mm; background:#fff; margin:0 auto; position:relative; overflow:hidden; display:flex; flex-direction:column; gap:4.2mm; page-break-after: always; }
+  @media screen { .page { margin: 8mm auto; box-shadow: 0 2px 12px rgba(0,0,0,.12);} }
+  h1,h2,h3 { font-family:'Fredoka', sans-serif; font-weight:600; margin:0; }
+  .head { display:flex; justify-content:space-between; align-items:flex-start; border-bottom: 2.5px solid var(--accent); padding-bottom:3mm; }
+  .kicker { font-family:'Fredoka'; font-weight:500; color:var(--accent); font-size:10.5pt; letter-spacing:.04em; text-transform:uppercase; }
+  .head h1 { font-size: 22pt; line-height:1.1; margin-top:1mm; }
+  .head .sub { color: var(--soft); font-size:10.5pt; margin-top:1mm; }
+  .who { display:grid; grid-template-columns: auto 48mm; gap:2.5mm 2mm; font-size:11pt; align-items:end; }
+  .who span.l { border-bottom:1.2px solid var(--ink); height:6.5mm; }
+  .badge { display:inline-block; border:1.5px solid var(--accent); color:var(--accent); border-radius:99px; padding:0 3mm; font-size:9.5pt; font-family:'Fredoka'; font-weight:500; margin-right:1.5mm; }
+  .box { border:1.5px solid var(--line); border-radius:4mm; padding:3.2mm 4mm; }
+  .remember { background: var(--tint); border-color: transparent; display:grid; grid-template-columns: 1fr 56mm; gap:4mm; }
+  .remember ul { margin:1mm 0 0; padding-left:5mm; font-size:11.5pt; }
+  .remember li { margin:.6mm 0; }
+  .words { display:flex; flex-wrap:wrap; gap:1.5mm; align-content:flex-start; margin-top:1.5mm; }
+  .words b { background:#fff; border-radius:2mm; padding:.6mm 2.2mm; font-size:10.5pt; font-weight:700; }
+  .sec { display:flex; align-items:center; gap:2.5mm; margin-bottom:2mm; }
+  .num { width:8mm; height:8mm; border-radius:50%; background:var(--accent); color:#fff; font-family:'Fredoka'; font-weight:600; display:grid; place-items:center; font-size:12pt; flex:none; }
+  .sec h2 { font-size: 14pt; }
+  .sec .tag { margin-left:auto; font-size:9.5pt; color:var(--soft); font-family:'Fredoka'; font-weight:500; }
+  .instr { font-size:11.5pt; margin:0 0 2mm; }
+  .row { display:flex; gap:4mm; }
+  .cell { flex:1; border:1.2px dashed var(--line); border-radius:3mm; padding:2mm; text-align:center; }
+  .cell .n { font-family:'Fredoka'; font-weight:600; font-size:16pt; }
+  .cell .space { height:36mm; display:flex; align-items:flex-end; justify-content:center; gap:1.3mm; }
+  .rod { width:3.4mm; height:27mm; border:1.2px solid var(--ink); background: repeating-linear-gradient(to bottom, #fff 0 2.5mm, var(--ink) 2.5mm 2.62mm); }
+  .cube { width:3.4mm; height:3.4mm; border:1.2px solid var(--ink); }
+  .ex { font-size:9pt; color:var(--soft); }
+  .nl svg { width:100%; height:auto; display:block; }
+  .partition { display:grid; grid-template-columns: repeat(2,1fr); gap:6mm 4mm; font-size:13pt; } .partition .p { white-space:nowrap; justify-content:flex-start !important; }
+  .partition .p { display:flex; align-items:center; justify-content:center; gap:1.5mm; }
+  .blank { display:inline-block; min-width:11mm; border-bottom:1.3px solid var(--ink); height:6mm; vertical-align:bottom; }
+  .q { display:grid; grid-template-columns: 7mm 1fr; gap:1.5mm; margin-bottom:2.6mm; break-inside:avoid; }
+  .q .qn { font-family:'Fredoka'; font-weight:600; color:var(--accent); }
+  .ticks { display:flex; gap:7mm; margin-top:1.2mm; }
+  .ticks span::before { content:""; display:inline-block; width:4.2mm; height:4.2mm; border:1.3px solid var(--ink); border-radius:1mm; margin-right:1.8mm; vertical-align:-0.7mm; }
+  .cmp { display:flex; gap:7mm; white-space:nowrap; margin-top:1.2mm; font-size:14pt; }
+  .circle { display:inline-block; width:8mm; height:8mm; border:1.3px solid var(--ink); border-radius:50%; vertical-align:middle; margin:0 1.5mm; }
+  .lines { margin-top:1.5mm; }
+  .lines div { border-bottom:1px solid var(--line); height:7.5mm; }
+  .order { display:flex; gap:3mm; margin-top:1.2mm; align-items:center; }
+  .order .b { width:13mm; height:9mm; border:1.3px solid var(--ink); border-radius:2mm; }
+  .match { display:grid; grid-template-columns: 18mm 30mm 18mm; row-gap:2mm; margin-top:1.5mm; align-items:center; font-size:13pt; font-family:'Fredoka'; font-weight:500; }
+  .match .dot { width:2.4mm; height:2.4mm; border-radius:50%; background:var(--ink); display:inline-block; }
+  .match .l { text-align:right; } .match .l .dot { margin-left:2mm; } .match .r .dot { margin-right:2mm; }
+  .two { display:grid; grid-template-columns: 1fr 1fr; gap:4mm; }
+  .challenge { border:1.8px solid var(--accent); background: #fff; }
+  .home { background: var(--tint2); border-color: transparent; }
+  .rate { display:grid; grid-template-columns: 1fr auto; gap:1.6mm 4mm; align-items:center; font-size:11.5pt; }
+  .faces { display:flex; gap:2.5mm; }
+  .faces svg { width:7.5mm; height:7.5mm; }
+  .foot { margin-top:auto; display:flex; justify-content:space-between; font-size:8.5pt; color:#8a93a5; border-top:1px solid #e3e6ee; padding-top:2mm; }
+  .grown { display:flex; gap:6mm; font-size:11pt; align-items:end; margin-top:2.5mm; }
+  .grown .blank { min-width:30mm; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="head">
+    <div>
+      <div class="kicker">Maths worksheet · Topic 1</div>
+      <h1>Place Value to 100</h1>
+      <div class="sub"><span class="badge">Ages 7–8</span><span class="badge">About 20 minutes</span></div>
+    </div>
+    <div class="who">
+      <span>Name</span><span class="l"></span>
+      <span>Date</span><span class="l"></span>
+    </div>
+  </div>
+
+  <div class="box remember">
+    <div>
+      <h3 style="font-size:13pt">Remember</h3>
+      <ul>
+        <li>A two-digit number is made of <b>tens</b> and <b>ones</b>. In 47 the 4 means 4 tens, which is 40.</li>
+        <li>To <b>partition</b> a number, split it into tens and ones: 47 = 40 + 7.</li>
+        <li>To compare, look at the tens first. The mouth of &lt; and &gt; eats the bigger number.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:11pt">Key words</h3>
+      <div class="words"><b>tens</b><b>ones</b><b>digit</b><b>partition</b><b>number line</b><b>greater than &gt;</b><b>less than &lt;</b></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sec"><div class="num">1</div><h2>Build it</h2><span class="tag">Activity · drawing</span></div>
+    <p class="instr">Draw tens sticks and ones cubes to show each number. The first one is done for you.</p>
+    <div class="row">
+      <div class="cell">
+        <div class="space">
+          <div class="rod"></div><div class="rod"></div><div class="rod"></div>
+          <div style="display:flex;flex-direction:column;gap:1mm;margin-left:2mm"><div class="cube"></div><div class="cube"></div></div>
+          <div style="display:flex;flex-direction:column;gap:1mm"><div class="cube"></div><div class="cube"></div></div>
+        </div>
+        <div class="n">34</div><div class="ex">example</div>
+      </div>
+      <div class="cell"><div class="space"></div><div class="n">26</div><div class="ex">&nbsp;</div></div>
+      <div class="cell"><div class="space"></div><div class="n">53</div><div class="ex">&nbsp;</div></div>
+      <div class="cell"><div class="space"></div><div class="n">70</div><div class="ex">&nbsp;</div></div>
+    </div>
+  </div>
+
+  <div class="nl">
+    <div class="sec"><div class="num">2</div><h2>Number line detective</h2><span class="tag">Activity · number line</span></div>
+    <p class="instr">Write the number each arrow points to. Then draw your own arrows to <b>45</b> and <b>82</b>.</p>
+    <svg viewBox="0 0 640 92" xmlns="http://www.w3.org/2000/svg" font-family="Fredoka" font-size="13">
+      <line x1="20" y1="58" x2="620" y2="58" stroke="#1d2433" stroke-width="2"/>
+      <g stroke="#1d2433" stroke-width="2">
+        <line x1="20" y1="48" x2="20" y2="68"/><line x1="80" y1="50" x2="80" y2="66"/><line x1="140" y1="50" x2="140" y2="66"/><line x1="200" y1="50" x2="200" y2="66"/><line x1="260" y1="50" x2="260" y2="66"/><line x1="320" y1="48" x2="320" y2="68"/><line x1="380" y1="50" x2="380" y2="66"/><line x1="440" y1="50" x2="440" y2="66"/><line x1="500" y1="50" x2="500" y2="66"/><line x1="560" y1="50" x2="560" y2="66"/><line x1="620" y1="48" x2="620" y2="68"/>
+      </g>
+      <g stroke="#9aa3b5" stroke-width="1">
+        <line x1="50" y1="54" x2="50" y2="62"/><line x1="110" y1="54" x2="110" y2="62"/><line x1="170" y1="54" x2="170" y2="62"/><line x1="230" y1="54" x2="230" y2="62"/><line x1="290" y1="54" x2="290" y2="62"/><line x1="350" y1="54" x2="350" y2="62"/><line x1="410" y1="54" x2="410" y2="62"/><line x1="470" y1="54" x2="470" y2="62"/><line x1="530" y1="54" x2="530" y2="62"/><line x1="590" y1="54" x2="590" y2="62"/>
+      </g>
+      <g text-anchor="middle" fill="#1d2433">
+        <text x="20" y="86">0</text><text x="80" y="86">10</text><text x="140" y="86">20</text><text x="200" y="86">30</text><text x="260" y="86">40</text><text x="320" y="86">50</text><text x="380" y="86">60</text><text x="440" y="86">70</text><text x="500" y="86">80</text><text x="560" y="86">90</text><text x="620" y="86">100</text>
+      </g>
+      <g fill="#3b5bdb" stroke="#3b5bdb" stroke-width="2">
+        <line x1="170" y1="22" x2="170" y2="46"/><path d="M164 40 L170 48 L176 40 Z"/>
+        <line x1="380" y1="22" x2="380" y2="46"/><path d="M374 40 L380 48 L386 40 Z"/>
+        <line x1="590" y1="22" x2="590" y2="46"/><path d="M584 40 L590 48 L596 40 Z"/>
+      </g>
+      <g fill="none" stroke="#1d2433" stroke-width="1.3">
+        <rect x="150" y="0" width="40" height="20" rx="4"/><rect x="360" y="0" width="40" height="20" rx="4"/><rect x="570" y="0" width="40" height="20" rx="4"/>
+      </g>
+    </svg>
+  </div>
+
+  <div>
+    <div class="sec"><div class="num">3</div><h2>Split it up</h2><span class="tag">Activity · partition</span></div>
+    <p class="instr">Fill in the gaps.</p>
+    <div class="partition">
+      <div class="p">58 = <span class="blank"></span> tens + <span class="blank"></span> ones</div>
+      <div class="p">47 = 40 + <span class="blank"></span></div>
+      <div class="p"><span class="blank"></span> = 90 + 3</div>
+      <div class="p">61 = <span class="blank"></span> + 1</div>
+      <div class="p">6 tens and 0 ones = <span class="blank"></span></div>
+      <div class="p">35 = 20 + <span class="blank"></span></div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Place Value to 100 · lesson v2</span><span>Page 1 of 2</span></div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="sec" style="margin-bottom:0"><div class="num">4</div><h2>Practice questions</h2><span class="tag">Use your best handwriting</span></div>
+
+  <div class="two">
+    <div>
+      <div class="q"><span class="qn">a</span><div>In the number <b>63</b>, what does the 6 mean? Tick one.
+        <div class="ticks"><span>6</span><span>60</span><span>3</span></div></div></div>
+      <div class="q"><span class="qn">b</span><div>Write &lt; or &gt; in each circle.
+        <div class="cmp"><span>38<i class="circle"></i>83</span><span>71<i class="circle"></i>17</span><span>55<i class="circle"></i>50</span></div></div></div>
+      <div class="q"><span class="qn">c</span><div>Put these numbers in order, smallest first: <b>64, 46, 60, 49</b>
+        <div class="order"><span class="b"></span><span class="b"></span><span class="b"></span><span class="b"></span></div></div></div>
+      <div class="q"><span class="qn">d</span><div>Hana has 5 bundles of ten beads and 2 loose beads. How many beads does she have?
+        <div style="margin-top:1.5mm">Answer: <span class="blank" style="min-width:20mm"></span> beads</div></div></div>
+    </div>
+    <div>
+      <div class="q"><span class="qn">e</span><div>Draw a line from each number to the number that is <b>10 less</b>.
+        <div class="match">
+          <span class="l">45<i class="dot"></i></span><span></span><span class="r"><i class="dot"></i>80</span>
+          <span class="l">72<i class="dot"></i></span><span></span><span class="r"><i class="dot"></i>35</span>
+          <span class="l">90<i class="dot"></i></span><span></span><span class="r"><i class="dot"></i>62</span>
+        </div></div></div>
+      <div class="q"><span class="qn">f</span><div>Riddle: I have 7 tens and 4 ones. What number am I?
+        <div style="margin-top:1.5mm">I am <span class="blank" style="min-width:20mm"></span></div></div></div>
+      <div class="q"><span class="qn">g</span><div>Mina says <b>82 is smaller than 28</b> because 82 ends in 2. Is she right? Explain why.
+        <div class="lines"><div></div><div></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="box challenge">
+    <div class="sec" style="margin-bottom:1mm"><div class="num" style="background:#fff;color:var(--accent);border:1.8px solid var(--accent)">★</div><h2>Challenge</h2><span class="tag">Have a go!</span></div>
+    <p class="instr" style="margin:0">Use the digit cards <b>3</b>, <b>8</b> and <b>5</b>. Make the <b>biggest</b> and the <b>smallest</b> two-digit numbers you can.</p>
+    <div style="display:flex;gap:10mm;margin-top:2mm">Biggest: <span class="blank" style="min-width:18mm"></span>  Smallest: <span class="blank" style="min-width:18mm"></span></div>
+  </div>
+
+  <div class="box home">
+    <div class="sec" style="margin-bottom:1mm"><div class="num" style="background:#5b6475">⌂</div><h2>Try it at home</h2><span class="tag">With a grown-up</span></div>
+    <p class="instr" style="margin:0">Ask for a handful of 10p and 1p coins. Put the 10p coins in one pile and the 1p coins in another. How much money is there? Write it as tens and ones.</p>
+    <div class="lines"><div></div></div>
+  </div>
+
+  <div class="box">
+    <h3 style="font-size:13pt;margin-bottom:2mm">How did I do? Colour one face for each.</h3>
+    <div class="rate">
+      <span>I can say the tens and ones in a number to 100.</span>
+      <span class="faces">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 14.5 Q12 19 16.5 14.5" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><line x1="8" y1="15.5" x2="16" y2="15.5" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 17 Q12 12.5 16.5 17" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+      </span>
+      <span>I can show a number on a number line.</span>
+      <span class="faces">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 14.5 Q12 19 16.5 14.5" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><line x1="8" y1="15.5" x2="16" y2="15.5" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 17 Q12 12.5 16.5 17" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+      </span>
+      <span>I can compare two numbers using &lt; and &gt;.</span>
+      <span class="faces">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 14.5 Q12 19 16.5 14.5" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><line x1="8" y1="15.5" x2="16" y2="15.5" stroke="#1d2433" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#1d2433" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.2"/><circle cx="15.5" cy="10" r="1.2"/><path d="M7.5 17 Q12 12.5 16.5 17" fill="none" stroke="#1d2433" stroke-width="1.4"/></svg>
+      </span>
+    </div>
+    <div class="grown">Grown-up check: <span class="blank" style="min-width:16mm"></span> / 12 correct  ·  Signed: <span class="blank"></span></div>
+  </div>
+
+  <div class="foot"><span>Place Value to 100 · lesson v2 · sheet 3f9a1c</span><span>Page 2 of 2</span></div>
+</section>
+
+<!-- ANSWER KEY (separate 1-page PDF for the grown-up) -->
+<section class="page" id="answers" style="font-size:11.5pt">
+  <div class="head">
+    <div>
+      <div class="kicker">Answer key · for grown-ups</div>
+      <h1 style="font-size:19pt">Place Value to 100</h1>
+    </div>
+    <div class="sub" style="color:var(--soft);font-size:10pt;text-align:right">Not for the child's copy<br>12 marks in all</div>
+  </div>
+  <div class="two">
+    <div class="box">
+      <h3 style="font-size:12pt;margin-bottom:1.5mm">Activities</h3>
+      <p style="margin:0 0 1.5mm"><b>1 Build it.</b> 26 = 2 sticks, 6 cubes. 53 = 5 sticks, 3 cubes. 70 = 7 sticks, no cubes. <i>Watch for: drawing 7 cubes for 70.</i></p>
+      <p style="margin:0 0 1.5mm"><b>2 Number line.</b> 25, 60, 95. Arrows for 45 (halfway between 40 and 50) and 82.</p>
+      <p style="margin:0"><b>3 Split it up.</b> 5 tens 8 ones; 7; 93; 60; 60; 15.</p>
+    </div>
+    <div class="box">
+      <h3 style="font-size:12pt;margin-bottom:1.5mm">Practice questions (1 mark each)</h3>
+      <p style="margin:0">a) 60 &nbsp; b) 38 &lt; 83, 71 &gt; 17, 55 &gt; 50 (3 marks) &nbsp; c) 46, 49, 60, 64 &nbsp; d) 52 &nbsp; e) 45→35, 72→62, 90→80 (3 marks) &nbsp; f) 74 &nbsp; g) No: compare the tens first, 8 tens is more than 2 tens.</p>
+    </div>
+  </div>
+  <div class="box"><b>Challenge.</b> Biggest 85, smallest 35. <i>Talk about it:</i> the biggest digit goes in the tens place.</div>
+  <div class="box home"><b>If they found it hard:</b> go back to the lesson part “Tens and ones” and the clip “Bundles of ten”. Use real objects (pencils in tens) before drawing.</div>
+  <div class="foot"><span>Place Value to 100 · lesson v2 · sheet 3f9a1c</span><span>Answer key</span></div>
+</section>
+</body>
+</html>
