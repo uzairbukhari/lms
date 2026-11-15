@@ -5,6 +5,7 @@ import { parseLessonFile, SUBJECTS } from "@lms/schema";
 import type { AppEnv } from "../env";
 import { fail, parseBody } from "../lib/http";
 import { importLesson, missingAssets } from "../lib/lessons";
+import { TEMPLATE_VERSION } from "../lib/worksheet";
 
 /** Lessons, courses (the curriculum planner) and uploaded files. Mounted under /api/admin, behind requireAdmin. */
 export const adminContentRoutes = new Hono<AppEnv>();
@@ -73,10 +74,24 @@ adminContentRoutes.get("/lessons", async (c) => {
   const tagRows = await c.env.DB
     .prepare("SELECT lt.lesson_id AS lessonId, t.id, t.kind, t.label FROM lesson_tags lt JOIN tags t ON t.id = lt.tag_id")
     .all<{ lessonId: string; id: string; kind: string; label: string }>();
+  // Worksheets (docs/WORKSHEETS_PLAN.md): one per lesson; only lessons in a published course are offered one.
+  const sheets = await c.env.DB
+    .prepare("SELECT lesson_id AS lessonId, lesson_version AS lessonVersion, template_version AS templateVersion, pages, questions, updated_at AS updatedAt FROM worksheets")
+    .all<{ lessonId: string; lessonVersion: number; templateVersion: number; pages: number; questions: number; updatedAt: string }>();
+  const inPublished = new Set(
+    (await c.env.DB.prepare("SELECT DISTINCT cl.lesson_id AS id FROM course_lessons cl JOIN courses co ON co.id = cl.course_id WHERE co.status = 'published'").all<{ id: string }>()).results.map((r) => r.id),
+  );
+  const sheetOf = new Map(sheets.results.map((w) => [w.lessonId, w]));
   return c.json({
     classes: classes.results,
     lessons: results.map((l) => ({
       ...l,
+      worksheet: (() => {
+        const w = sheetOf.get(l.id);
+        const lesson = l as unknown as { status: string; version: number };
+        if (w) return { state: w.lessonVersion < lesson.version || w.templateVersion < TEMPLATE_VERSION ? "stale" : "ready", pages: w.pages, questions: w.questions, updatedAt: w.updatedAt };
+        return { state: lesson.status === "published" && inPublished.has(l.id) ? "none" : "ineligible", pages: null, questions: null, updatedAt: null };
+      })(),
       tags: tagRows.results.filter((t) => t.lessonId === l.id).map(({ id, kind, label }) => ({ id, kind, label })),
       slots: slots.results
         .filter((s) => s.lessonId === l.id)

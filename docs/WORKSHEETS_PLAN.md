@@ -1,6 +1,12 @@
 # Printable lesson worksheets: plan
 
-Status: **plan only, waiting for approval.** Nothing is built yet.
+Status: **built** (15 Nov 2026). What shipped differs from the plan below in three ways, all to keep it simple and safe:
+
+1. **The worksheet is laid out from the lesson's own quiz** (`worker/src/lib/worksheet.ts`) instead of a separate hand-written spec. It fits as many questions as will go on two A4 pages, plus "We are learning", key words, an "I can" row and a "Try it at home" task, and a separate one-page answer key for exactly the questions on the sheet. Hand-written activities (drawing boxes, number lines, Challenge) are a later step.
+2. **PDFs are printed by `scripts/render-worksheets.mjs`** (Playwright, run by Claude with the service token) and stored in R2 through `PUT /api/admin/lessons/:id/worksheet`. The Cloudflare Browser Run binding is not switched on, so nothing in the live Worker depends on it. The Worker also serves the same page at `/api/admin/lessons/:id/worksheet`, which prints to PDF from any browser.
+3. **No combined course PDF yet.**
+
+Out of date means the lesson's version moved on, or `TEMPLATE_VERSION` in `worksheet.ts` was bumped. Table: `worksheets` (migration 0023).
 
 ## 1. What Uzair asked for
 

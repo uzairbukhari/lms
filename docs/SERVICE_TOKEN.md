@@ -3,7 +3,7 @@
 Claude cannot sign in through the Cloudflare Access login screen. A **service token** is a Client ID and Secret that Access accepts instead.
 The Worker lets it do only this (see `automationMayCall` in `worker/src/middleware/auth.ts`):
 
-- check (`/lessons/validate`) and import (`/lessons/import`) lesson files, read lessons and courses, and upload images (`/assets`).
+- check (`/lessons/validate`) and import (`/lessons/import`) lesson files, read lessons and courses, upload images (`/assets`), and read a lesson's worksheet page and store its rendered PDFs (`GET /lessons/:id/worksheet`, `PUT /lessons/:id/worksheet`).
 
 It cannot see children, classes, results, settings or backups, and it cannot delete or change anything else.
 
@@ -20,3 +20,9 @@ It cannot see children, classes, results, settings or backups, and it cannot del
 
 Re-importing the same slug creates a new version (children's earlier answers stay attached to the questions they saw).
 To stop access, delete the service token in Zero Trust.
+
+To make or refresh printable worksheets (docs/WORKSHEETS_PLAN.md):
+
+    node scripts/render-worksheets.mjs            # every lesson in a published course with no worksheet, or an out-of-date one
+    node scripts/render-worksheets.mjs --all      # redo them all
+    node scripts/render-worksheets.mjs --only maths-class-1-place-value

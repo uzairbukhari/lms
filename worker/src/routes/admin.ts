@@ -28,6 +28,7 @@ import { adminInsightRoutes } from "./admin-insight";
 import { adminOverviewRoutes } from "./admin-overview";
 import { adminReportRoutes } from "./admin-reports";
 import { adminV3Routes } from "./admin-v3";
+import { adminWorksheetRoutes } from "./admin-worksheets";
 import { adminVideoRoutes } from "./admin-videos";
 import { adminWeekRoutes } from "./admin-week";
 import { cachedAudio, prewarm } from "../lib/tts";
@@ -55,6 +56,7 @@ adminRoutes.get("/voice/audio", cachedAudio);
 adminRoutes.route("/", adminAiUsageRoutes);
 adminRoutes.route("/", adminVideoRoutes);
 adminRoutes.route("/", adminV3Routes);
+adminRoutes.route("/", adminWorksheetRoutes);
 
 // --- Classes (list and create; membership is managed from the student screens) -------------------
 
